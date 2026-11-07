@@ -1,5 +1,6 @@
 ---
 title: SysTutorials is Deprecated
+layout: default
 ---
 
 # SysTutorials is deprecated
