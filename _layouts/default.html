@@ -67,6 +67,19 @@
     <span class="badge">Deprecated</span>
     {{ content }}
   </main>
+  <!-- Email obfuscation: assemble the address with JS so scrapers
+       never see it in the raw HTML source -->
+  <script>
+  (function () {
+    var addr = ['con', 'tact', '@', 'systut', 'orials', '.', 'com'].join('');
+    document.querySelectorAll('.email-contact').forEach(function (el) {
+      var a = document.createElement('a');
+      a.href = 'mai' + 'lto:' + addr;
+      a.textContent = addr;
+      el.appendChild(a);
+    });
+  })();
+  </script>
   <!-- Default Statcounter code for SysTutorials
   https://www.systutorials.com/ -->
   <script type="text/javascript">
