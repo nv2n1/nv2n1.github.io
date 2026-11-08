@@ -1,6 +1,7 @@
 ---
 title: "Website Mirroring with Wget: A Practical Guide"
 date: 2019-06-13 10:01:46 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-mirror-a-website-using-wget-on-linux/
 ---

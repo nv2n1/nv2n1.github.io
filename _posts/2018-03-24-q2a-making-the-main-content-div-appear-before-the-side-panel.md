@@ -1,6 +1,7 @@
 ---
 title: "Making the Main Content Div Appear Before the Sidebar"
 date: 2018-03-24 08:15:02 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/q2a-making-the-main-content-div-appear-before-the-side-panel/
 ---

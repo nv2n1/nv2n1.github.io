@@ -1,6 +1,7 @@
 ---
 title: "Adding a Status Bar to GNU Screen on Linux"
 date: 2018-03-24 11:44:00 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-a-status-bar-to-screen-on-linux/
 ---

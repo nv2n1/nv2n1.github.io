@@ -1,6 +1,7 @@
 ---
 title: "Converting Managed Solutions to Unmanaged in Dynamics CRM"
 date: 2016-12-03 06:01:37 +0000
+author: "jameswarner"
 layout: post
 canonical: https://www.systutorials.com/convert-managed-solution-unmanaged-premise-crm-organisation/
 ---

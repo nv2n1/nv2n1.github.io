@@ -1,6 +1,7 @@
 ---
 title: "Checking if a Directory Exists in Your Bash PATH"
 date: 2018-03-24 11:50:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-test-whether-path-has-a-specific-directory-in-it-in-bash-on-linux/
 ---

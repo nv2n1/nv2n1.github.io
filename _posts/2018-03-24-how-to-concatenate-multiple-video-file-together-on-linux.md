@@ -1,6 +1,7 @@
 ---
 title: "How to Concatenate Multiple Video Files on Linux"
 date: 2018-03-24 08:20:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-concatenate-multiple-video-file-together-on-linux/
 ---

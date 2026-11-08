@@ -1,6 +1,7 @@
 ---
 title: "Latency Numbers Every Systems Engineer Should Know"
 date: 2013-07-19 05:47:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/software-engineering-advice-from-building-large-scale-distributed-systems-by-jeff-dean/
 ---

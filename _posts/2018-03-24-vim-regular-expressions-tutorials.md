@@ -1,6 +1,7 @@
 ---
 title: "Mastering Regular Expressions in Vim"
 date: 2018-03-24 08:17:38 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/vim-regular-expressions-tutorials/
 ---

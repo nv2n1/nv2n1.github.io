@@ -1,6 +1,7 @@
 ---
 title: "Standardizing Tree Output Across Linux Distributions"
 date: 2018-03-24 11:48:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-tree-output-consistent-on-linux/
 ---

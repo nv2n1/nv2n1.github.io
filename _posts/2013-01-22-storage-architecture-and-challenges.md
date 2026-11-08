@@ -1,6 +1,7 @@
 ---
 title: "Storage Architecture: Lessons from Google\u2019s Infrastructure"
 date: 2013-01-22 14:31:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/storage-architecture-and-challenges/
 ---

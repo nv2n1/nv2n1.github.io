@@ -1,6 +1,7 @@
 ---
 title: "Tunneling Git Traffic Through SSH Proxies"
 date: 2014-05-21 14:55:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/git-through-ssh-tunnel-as-proxy/
 ---

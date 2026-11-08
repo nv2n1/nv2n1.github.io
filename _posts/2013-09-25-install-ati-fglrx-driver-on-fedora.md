@@ -1,6 +1,7 @@
 ---
 title: "Installing AMD GPU Drivers on Fedora: A Setup Guide"
 date: 2013-09-25 10:32:06 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/install-ati-fglrx-driver-on-fedora/
 ---

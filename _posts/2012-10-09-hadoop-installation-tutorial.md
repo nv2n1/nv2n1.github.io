@@ -1,6 +1,7 @@
 ---
 title: "Installing Hadoop 1.x: A Complete Guide"
 date: 2012-10-09 08:41:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hadoop-installation-tutorial/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Automating Backups of Xen File-backed VMs"
 date: 2013-07-12 16:31:55 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/automatically-backing-up-xen-file-backed-domu/
 ---

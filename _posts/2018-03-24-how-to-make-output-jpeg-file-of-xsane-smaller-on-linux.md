@@ -1,6 +1,7 @@
 ---
 title: "How to Reduce JPEG File Size from XSane on Linux"
 date: 2018-03-24 11:51:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-output-jpeg-file-of-xsane-smaller-on-linux/
 ---

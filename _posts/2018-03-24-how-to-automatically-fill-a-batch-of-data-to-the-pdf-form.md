@@ -1,6 +1,7 @@
 ---
 title: "Automating PDF Form Data Population with Batch Processing"
 date: 2018-03-24 08:18:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-automatically-fill-a-batch-of-data-to-the-pdf-form/
 ---

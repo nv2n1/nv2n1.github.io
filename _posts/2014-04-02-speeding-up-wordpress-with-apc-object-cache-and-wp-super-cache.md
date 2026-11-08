@@ -1,6 +1,7 @@
 ---
 title: "WordPress Performance Tuning: OPcache, Caching, and Asset Optimization"
 date: 2014-04-02 17:34:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/speeding-up-wordpress-with-apc-object-cache-and-wp-super-cache/
 ---

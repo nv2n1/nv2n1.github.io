@@ -1,6 +1,7 @@
 ---
 title: "Bash Comparison Operators: Complete Guide to String, Integer, and File Tests"
 date: 2018-03-24 08:22:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/bash-comparison-operators/
 ---

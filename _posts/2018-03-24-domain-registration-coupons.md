@@ -1,6 +1,7 @@
 ---
 title: "Domain Registration Discounts & Coupons"
 date: 2018-03-24 08:20:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/domain-registration-coupons/
 ---

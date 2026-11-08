@@ -1,6 +1,7 @@
 ---
 title: "How to Read Environment Variables in Bash"
 date: 2018-03-24 11:52:10 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-an-environment-variable-in-bash/
 ---

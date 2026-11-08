@@ -1,6 +1,7 @@
 ---
 title: "Cryptographic Tokens: A Developer\u2019s Guide"
 date: 2023-09-16 06:42:31 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/cryptographic-token-101/
 ---

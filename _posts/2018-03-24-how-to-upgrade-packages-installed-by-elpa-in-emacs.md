@@ -1,6 +1,7 @@
 ---
 title: "Upgrading ELPA Packages in Emacs"
 date: 2018-03-24 11:44:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-upgrade-packages-installed-by-elpa-in-emacs/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Measuring System Performance: Lessons from Ousterhout"
 date: 2013-09-05 06:32:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/favorite-sayings-by-john-ousterhout-precious-experience-and-advice-for-building-systems/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Check CPU Core Count on Linux"
 date: 2018-03-24 08:17:38 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/find-out-the-number-of-cpu-cores-on-linux/
 ---

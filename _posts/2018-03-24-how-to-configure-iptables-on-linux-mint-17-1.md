@@ -1,6 +1,7 @@
 ---
 title: "Persisting iptables Rules on Linux"
 date: 2018-03-24 11:44:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-configure-iptables-on-linux-mint-17-1/
 ---

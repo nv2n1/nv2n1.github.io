@@ -1,6 +1,7 @@
 ---
 title: "Customizing Font Sizes in Gnuplot"
 date: 2018-03-24 08:16:12 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-font-sizes-in-gnuplot/
 ---

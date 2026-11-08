@@ -1,6 +1,7 @@
 ---
 title: "Comparing Dates in SQL: A Practical Guide"
 date: 2018-03-24 11:53:09 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-compare-date-in-sql/
 ---

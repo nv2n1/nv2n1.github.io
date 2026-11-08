@@ -1,6 +1,7 @@
 ---
 title: "Which HDFS Filesystem Operations Are Atomic?"
 date: 2018-03-24 11:53:09 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/which-filesystem-operations-in-hdfs-is-atomic/
 ---

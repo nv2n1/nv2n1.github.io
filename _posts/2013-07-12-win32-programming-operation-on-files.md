@@ -1,6 +1,7 @@
 ---
 title: "C++ std::filesystem Reference for Windows File Operations"
 date: 2013-07-12 16:47:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/win32-programming-operation-on-files/
 ---

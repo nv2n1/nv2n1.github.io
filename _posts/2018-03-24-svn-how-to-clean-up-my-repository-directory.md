@@ -1,6 +1,7 @@
 ---
 title: "How to Clean Up Your Subversion Repository"
 date: 2018-03-24 08:14:29 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/svn-how-to-clean-up-my-repository-directory/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Converting Unix Timestamps in C"
 date: 2018-03-24 11:52:20 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-c/
 ---

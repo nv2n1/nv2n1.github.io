@@ -1,6 +1,7 @@
 ---
 title: "Remapping Left Alt to Ctrl on Windows for macOS-like Behavior"
 date: 2024-05-15 13:31:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/mapping-left-alt-to-ctrl-for-windows-keyboard-to-be-similar-to-macos/
 ---

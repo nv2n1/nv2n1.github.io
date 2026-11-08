@@ -1,6 +1,7 @@
 ---
 title: "Using Root Access Safely on Ubuntu"
 date: 2013-08-23 06:35:00 +0000
+author: "Thirumal Venkat"
 layout: post
 canonical: https://www.systutorials.com/enabling-root-on-ubuntu/
 ---

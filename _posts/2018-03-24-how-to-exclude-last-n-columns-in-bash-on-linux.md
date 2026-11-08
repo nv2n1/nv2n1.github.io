@@ -1,6 +1,7 @@
 ---
 title: "Remove the Last N Delimited Fields in Bash"
 date: 2018-03-24 11:46:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-exclude-last-n-columns-in-bash-on-linux/
 ---

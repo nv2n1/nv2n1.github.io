@@ -1,6 +1,7 @@
 ---
 title: "Understanding Level 0 Overlaps in LevelDB"
 date: 2018-03-24 11:49:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/why-are-keys-overlap-in-sst-files-at-level-0-in-leveldb-system/
 ---

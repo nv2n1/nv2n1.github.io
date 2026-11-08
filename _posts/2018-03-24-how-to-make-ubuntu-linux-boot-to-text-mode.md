@@ -1,6 +1,7 @@
 ---
 title: "How to Boot Ubuntu to Text Mode (Runlevel 3)"
 date: 2018-03-24 11:50:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-ubuntu-linux-boot-to-text-mode/
 ---

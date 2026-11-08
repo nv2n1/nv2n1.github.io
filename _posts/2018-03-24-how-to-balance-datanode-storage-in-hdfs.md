@@ -1,6 +1,7 @@
 ---
 title: "Balancing HDFS DataNode Storage"
 date: 2018-03-24 11:43:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-balance-datanode-storage-in-hdfs/
 ---

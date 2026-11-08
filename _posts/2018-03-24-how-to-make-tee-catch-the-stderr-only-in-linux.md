@@ -1,6 +1,7 @@
 ---
 title: "Capturing stderr with tee in Linux"
 date: 2018-03-24 11:51:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-tee-catch-the-stderr-only-in-linux/
 ---

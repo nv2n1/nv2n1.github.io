@@ -1,6 +1,7 @@
 ---
 title: "Rotating iPhone Videos with FFmpeg on Linux"
 date: 2014-09-27 09:25:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/rotating-video-from-iphone-on-linux/
 ---

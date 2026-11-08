@@ -1,6 +1,7 @@
 ---
 title: "How to Work Around g++ Non-Trivial Designated Initializers"
 date: 2018-03-24 08:18:25 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/g-sorry-unimplemented-non-trivial-designated-initializers-not-supported/
 ---

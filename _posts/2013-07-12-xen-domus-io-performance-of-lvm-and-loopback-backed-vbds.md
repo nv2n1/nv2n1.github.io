@@ -1,6 +1,7 @@
 ---
 title: "Xen DomU I/O Performance: LVM vs. Loopback Block Devices"
 date: 2013-07-12 16:32:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/xen-domus-io-performance-of-lvm-and-loopback-backed-vbds/
 ---

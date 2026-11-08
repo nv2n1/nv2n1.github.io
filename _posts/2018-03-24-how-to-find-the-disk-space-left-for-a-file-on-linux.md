@@ -1,6 +1,7 @@
 ---
 title: "How to Check Available Disk Space on Linux"
 date: 2018-03-24 08:19:16 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-the-disk-space-left-for-a-file-on-linux/
 ---

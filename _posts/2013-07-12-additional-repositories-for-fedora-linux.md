@@ -1,6 +1,7 @@
 ---
 title: "Managing Multiple Repositories in Fedora Linux"
 date: 2013-07-12 16:32:27 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/additional-repositories-for-fedora-linux/
 ---

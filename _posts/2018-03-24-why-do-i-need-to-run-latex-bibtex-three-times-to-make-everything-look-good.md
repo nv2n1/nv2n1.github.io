@@ -1,6 +1,7 @@
 ---
 title: "Why You Need to Run LaTeX and BibTeX Multiple Times"
 date: 2018-03-24 11:54:37 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/why-do-i-need-to-run-latex-bibtex-three-times-to-make-everything-look-good/
 ---

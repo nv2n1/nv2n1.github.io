@@ -1,6 +1,7 @@
 ---
 title: "Writing Effective Peer Reviews for Academic Papers"
 date: 2018-03-24 08:20:10 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-write-paper-reviews/
 ---

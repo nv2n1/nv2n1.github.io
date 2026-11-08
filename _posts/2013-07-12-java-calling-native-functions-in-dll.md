@@ -1,6 +1,7 @@
 ---
 title: "Calling C/C++ DLLs from Java with JNI on Windows"
 date: 2013-07-12 16:47:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/java-calling-native-functions-in-dll/
 ---

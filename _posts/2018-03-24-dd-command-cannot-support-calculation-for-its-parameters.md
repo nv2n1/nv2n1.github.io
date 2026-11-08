@@ -1,6 +1,7 @@
 ---
 title: "Why `dd` Doesn\u2019t Support Arithmetic in Parameters"
 date: 2018-03-24 11:49:34 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/dd-command-cannot-support-calculation-for-its-parameters/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Multi-Hop SSH Connections with ProxyJump and ProxyCommand"
 date: 2018-03-24 08:22:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/direct-multi-hop-ssh-connection/
 ---

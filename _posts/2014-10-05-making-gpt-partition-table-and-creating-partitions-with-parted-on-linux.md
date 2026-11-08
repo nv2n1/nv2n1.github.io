@@ -1,6 +1,7 @@
 ---
 title: "Creating Linux Partitions with parted"
 date: 2014-10-05 13:14:00 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/making-gpt-partition-table-and-creating-partitions-with-parted-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Playing Video in the Background on iPhone"
 date: 2018-03-24 08:14:04 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-the-video-play-in-background-in-iphone/
 ---

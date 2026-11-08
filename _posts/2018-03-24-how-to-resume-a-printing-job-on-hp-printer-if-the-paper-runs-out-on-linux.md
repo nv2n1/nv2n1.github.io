@@ -1,6 +1,7 @@
 ---
 title: "Resuming Print Jobs on Linux After Paper Runs Out"
 date: 2018-03-24 08:21:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-resume-a-printing-job-on-hp-printer-if-the-paper-runs-out-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Running Cron Jobs with Environment Variables"
 date: 2018-03-24 08:18:11 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/run-cron-jobs-with-environmental-variables-for-an-account/
 ---

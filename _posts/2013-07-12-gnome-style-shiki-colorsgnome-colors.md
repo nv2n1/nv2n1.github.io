@@ -1,6 +1,7 @@
 ---
 title: "Gnome 2 Theme: Combining Shiki and Gnome Color Palettes"
 date: 2013-07-12 16:32:03 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/gnome-style-shiki-colorsgnome-colors/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Highlight Long Lines in Emacs"
 date: 2018-03-24 11:40:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/emacs-highlighting-part-of-lines-that-go-over-80-chars/
 ---

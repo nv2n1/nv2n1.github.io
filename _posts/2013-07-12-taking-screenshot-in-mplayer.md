@@ -1,6 +1,7 @@
 ---
 title: "Taking Screenshots in MPlayer"
 date: 2013-07-12 16:32:22 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/taking-screenshot-in-mplayer/
 ---

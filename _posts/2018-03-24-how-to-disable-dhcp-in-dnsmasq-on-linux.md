@@ -1,6 +1,7 @@
 ---
 title: "Disabling DHCP in dnsmasq on Linux"
 date: 2018-03-24 11:52:39 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-disable-dhcp-in-dnsmasq-on-linux/
 ---

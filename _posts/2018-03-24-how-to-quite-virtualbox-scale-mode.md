@@ -1,6 +1,7 @@
 ---
 title: "How to Exit VirtualBox Scaled Mode"
 date: 2018-03-24 11:46:29 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-quite-virtualbox-scale-mode/
 ---

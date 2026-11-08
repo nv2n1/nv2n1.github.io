@@ -1,6 +1,7 @@
 ---
 title: "Importing CMake Projects into Eclipse CDT"
 date: 2018-03-24 11:40:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-import-a-cmake-project-into-eclipse-cdt/
 ---

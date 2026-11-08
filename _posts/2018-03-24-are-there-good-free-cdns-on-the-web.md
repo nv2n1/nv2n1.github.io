@@ -1,6 +1,7 @@
 ---
 title: "Free CDN Options for Web Developers"
 date: 2018-03-24 08:04:50 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/are-there-good-free-cdns-on-the-web/
 ---

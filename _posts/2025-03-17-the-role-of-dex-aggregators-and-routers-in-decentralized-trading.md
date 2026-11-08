@@ -1,6 +1,7 @@
 ---
 title: "How DEX Aggregators Route Trades Across Multiple Exchanges"
 date: 2025-03-17 12:52:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/the-role-of-dex-aggregators-and-routers-in-decentralized-trading/
 ---

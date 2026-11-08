@@ -1,6 +1,7 @@
 ---
 title: "Remapping Windows Key to Ctrl on Linux"
 date: 2018-03-24 08:22:23 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-map-win-key-to-ctrl-on-linux/
 ---

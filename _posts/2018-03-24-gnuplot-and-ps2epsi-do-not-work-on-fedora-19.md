@@ -1,6 +1,7 @@
 ---
 title: "Troubleshooting gnuplot and ps2epsi on Fedora 19"
 date: 2018-03-24 08:17:17 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/gnuplot-and-ps2epsi-do-not-work-on-fedora-19/
 ---

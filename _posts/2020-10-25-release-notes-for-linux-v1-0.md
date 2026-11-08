@@ -1,6 +1,7 @@
 ---
 title: "Linux 1.0 Release Notes"
 date: 2020-10-25 14:43:03 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/release-notes-for-linux-v1-0/
 ---

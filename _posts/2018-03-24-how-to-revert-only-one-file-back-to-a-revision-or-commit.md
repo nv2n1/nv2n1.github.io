@@ -1,6 +1,7 @@
 ---
 title: "How to Revert a Single File to a Previous Commit"
 date: 2018-03-24 08:19:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-revert-only-one-file-back-to-a-revision-or-commit/
 ---

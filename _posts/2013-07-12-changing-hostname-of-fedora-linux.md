@@ -1,6 +1,7 @@
 ---
 title: "Changing Your Hostname on Fedora Linux"
 date: 2013-07-12 16:32:28 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/changing-hostname-of-fedora-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Install Broadcom WiFi Drivers on Linux Mint"
 date: 2018-03-24 11:42:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/wireless-driver-in-linux-mint-for-hp-mini-110-netbook/
 ---

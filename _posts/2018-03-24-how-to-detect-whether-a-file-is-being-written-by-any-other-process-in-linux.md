@@ -1,6 +1,7 @@
 ---
 title: "Detecting File Writes by Other Processes in Linux"
 date: 2018-03-24 11:53:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-detect-whether-a-file-is-being-written-by-any-other-process-in-linux/
 ---

@@ -3,11 +3,9 @@ title: SysTutorials
 layout: home
 ---
 
-<span class="badge">Deprecated</span>
-
-SysTutorials is no longer maintained. All posts are archived below as static
-pages. For up-to-date information, refer to official documentation. Questions?
-Contact <span class="email-contact"></span>.
+SysTutorials is a static archive of system tutorials and Q&A. For Linux man
+pages, see the [notice](/linux-manual-pages/). Questions? Contact
+<span class="email-contact"></span>.
 
 {% assign year = "" %}
 {% for post in site.posts %}

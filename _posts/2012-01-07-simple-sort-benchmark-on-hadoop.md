@@ -1,6 +1,7 @@
 ---
 title: "Sorting Performance Benchmarks on Hadoop"
 date: 2012-01-07 08:55:00 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/simple-sort-benchmark-on-hadoop/
 ---

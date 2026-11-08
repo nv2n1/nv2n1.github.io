@@ -1,6 +1,7 @@
 ---
 title: "Extracting Audio from Videos with MPlayer and LAME"
 date: 2013-07-12 16:31:33 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/convert-movie-file-to-wav-and-mp3-file-using-mplayer-and-lame/
 ---

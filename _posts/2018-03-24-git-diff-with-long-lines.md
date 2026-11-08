@@ -1,6 +1,7 @@
 ---
 title: "Handling Long Lines in Git Diff Output"
 date: 2018-03-24 11:42:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/git-diff-with-long-lines/
 ---

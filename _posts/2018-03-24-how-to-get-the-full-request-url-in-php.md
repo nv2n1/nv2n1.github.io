@@ -1,6 +1,7 @@
 ---
 title: "Getting the Full Request URL in PHP"
 date: 2018-03-24 11:53:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-full-request-url-in-php/
 ---

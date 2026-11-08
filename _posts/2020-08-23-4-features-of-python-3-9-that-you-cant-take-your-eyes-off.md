@@ -1,6 +1,7 @@
 ---
 title: "Python 3.9\u2019s Most Impactful New Features"
 date: 2020-08-23 03:19:25 +0000
+author: "Aaronjacobson"
 layout: post
 canonical: https://www.systutorials.com/4-features-of-python-3-9-that-you-cant-take-your-eyes-off/
 ---

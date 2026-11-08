@@ -1,6 +1,7 @@
 ---
 title: "Finding OCaml Core Library Interface Files"
 date: 2018-03-24 08:17:55 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/where-is-the-mli-files-for-core/
 ---

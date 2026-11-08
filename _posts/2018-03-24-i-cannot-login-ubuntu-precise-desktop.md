@@ -1,6 +1,7 @@
 ---
 title: "Debugging LightDM Login Failures in Ubuntu"
 date: 2018-03-24 11:46:48 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/i-cannot-login-ubuntu-precise-desktop/
 ---

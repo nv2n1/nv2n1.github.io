@@ -1,6 +1,7 @@
 ---
 title: "Syntax Differences Between OCaml, Scala, F#, and Haskell"
 date: 2018-03-24 08:20:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/syntactical-difference-among-ocaml-scala-f-and-haskell/
 ---

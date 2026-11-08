@@ -1,6 +1,7 @@
 ---
 title: "Visualizing CMake Project Dependencies with Graphviz"
 date: 2023-05-26 14:45:33 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/visualizing-cmake-project-dependencies-with-graphviz/
 ---

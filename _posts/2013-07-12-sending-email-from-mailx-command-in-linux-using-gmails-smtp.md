@@ -1,6 +1,7 @@
 ---
 title: "Sending Gmail Emails via mailx on Linux"
 date: 2013-07-12 16:31:59 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/sending-email-from-mailx-command-in-linux-using-gmails-smtp/
 ---

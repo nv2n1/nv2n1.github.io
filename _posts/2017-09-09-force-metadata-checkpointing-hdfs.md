@@ -1,6 +1,7 @@
 ---
 title: "HDFS NameNode Metadata Checkpointing: Resolving Sync Issues"
 date: 2017-09-09 04:37:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/force-metadata-checkpointing-hdfs/
 ---

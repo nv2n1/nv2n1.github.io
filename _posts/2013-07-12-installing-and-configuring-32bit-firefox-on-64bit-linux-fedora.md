@@ -1,6 +1,7 @@
 ---
 title: "Installing 32-bit Firefox on 64-bit Fedora"
 date: 2013-07-12 16:32:22 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-and-configuring-32bit-firefox-on-64bit-linux-fedora/
 ---

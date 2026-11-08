@@ -1,6 +1,7 @@
 ---
 title: "Setting Tab Widths in Vim: 2 and 4 Space Options"
 date: 2018-03-24 11:50:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/in-vim-are-there-shortcuts-to-set-tab-widths-to-2-and-4/
 ---

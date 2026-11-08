@@ -1,6 +1,7 @@
 ---
 title: "Choosing Stream Processing Tools Based on Latency Needs"
 date: 2018-11-27 15:05:37 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/do-big-data-stream-processing-in-the-stream-way/
 ---

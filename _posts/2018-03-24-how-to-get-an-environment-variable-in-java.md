@@ -1,6 +1,7 @@
 ---
 title: "Reading Environment Variables in Java"
 date: 2018-03-24 11:52:13 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-an-environment-variable-in-java/
 ---

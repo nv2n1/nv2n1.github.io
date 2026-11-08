@@ -1,6 +1,7 @@
 ---
 title: "Lock iPhone Screen Rotation: Control Center and Accessibility Settings"
 date: 2013-07-12 16:54:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/locking-iphone-screen-rotation/
 ---

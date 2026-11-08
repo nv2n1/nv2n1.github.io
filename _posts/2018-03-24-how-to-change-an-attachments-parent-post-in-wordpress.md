@@ -1,6 +1,7 @@
 ---
 title: "How to Move a WordPress Attachment to a Different Post"
 date: 2018-03-24 08:17:55 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-an-attachments-parent-post-in-wordpress/
 ---

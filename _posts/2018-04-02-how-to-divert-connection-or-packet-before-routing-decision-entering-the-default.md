@@ -1,6 +1,7 @@
 ---
 title: "Redirecting Packets to the FORWARD Chain with iptables and DNAT"
 date: 2018-04-02 15:25:40 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-divert-connection-or-packet-before-routing-decision-entering-the-default/
 ---

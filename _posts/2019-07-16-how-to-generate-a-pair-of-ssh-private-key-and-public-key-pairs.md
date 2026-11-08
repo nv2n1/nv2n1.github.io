@@ -1,6 +1,7 @@
 ---
 title: "SSH Key Pair Generation: Ed25519 and FIDO2 Best Practices"
 date: 2019-07-16 04:07:38 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-generate-a-pair-of-ssh-private-key-and-public-key-pairs/
 ---

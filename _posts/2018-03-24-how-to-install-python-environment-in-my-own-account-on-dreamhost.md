@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Python in Your Dreamhost Account"
 date: 2018-03-24 08:19:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-python-environment-in-my-own-account-on-dreamhost/
 ---

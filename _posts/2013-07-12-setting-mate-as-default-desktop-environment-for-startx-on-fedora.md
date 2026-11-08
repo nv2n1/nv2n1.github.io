@@ -1,6 +1,7 @@
 ---
 title: "Setting MATE as Your Default Desktop Environment on Fedora"
 date: 2013-07-12 16:32:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-mate-as-default-desktop-environment-for-startx-on-fedora/
 ---

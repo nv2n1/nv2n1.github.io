@@ -1,6 +1,7 @@
 ---
 title: "Retrieving VM IP Addresses in KVM with virsh"
 date: 2018-03-24 11:51:02 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-ip-addresses-of-vms-in-kvm-with-virsh/
 ---

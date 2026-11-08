@@ -1,6 +1,7 @@
 ---
 title: "Forcefully Unmount a Busy Filesystem in Linux"
 date: 2018-03-24 11:49:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-do-i-force-linux-to-unmount-a-filesystem/
 ---

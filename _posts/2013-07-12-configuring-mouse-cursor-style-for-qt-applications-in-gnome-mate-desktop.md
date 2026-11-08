@@ -1,6 +1,7 @@
 ---
 title: "Qt Cursor Theme Support in GNOME and MATE"
 date: 2013-07-12 16:32:33 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/configuring-mouse-cursor-style-for-qt-applications-in-gnome-mate-desktop/
 ---

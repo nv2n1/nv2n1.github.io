@@ -1,6 +1,7 @@
 ---
 title: "Fix GNOME Natural Scrolling on Mouse and Touchpad"
 date: 2018-07-31 10:00:03 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/gnome-3-natural-scrolling-mouse-option-does-not-work/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Installing aclocal on Fedora Linux"
 date: 2018-03-24 11:50:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-aclocal-on-fedora-linux/
 ---

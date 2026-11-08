@@ -1,6 +1,7 @@
 ---
 title: "Extracting EC Public Keys from Certificates with OpenSSL"
 date: 2024-08-23 14:20:18 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/extracting-ec-public-keys-with-openssl/
 ---

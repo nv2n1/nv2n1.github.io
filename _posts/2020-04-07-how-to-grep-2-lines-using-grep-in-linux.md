@@ -1,6 +1,7 @@
 ---
 title: "Matching Consecutive Lines with grep in Linux"
 date: 2020-04-07 13:35:08 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-grep-2-lines-using-grep-in-linux/
 ---

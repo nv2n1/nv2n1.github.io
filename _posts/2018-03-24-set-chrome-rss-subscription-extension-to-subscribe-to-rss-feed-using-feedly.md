@@ -1,6 +1,7 @@
 ---
 title: "How to Subscribe to RSS Feeds in Chrome Using Feedly"
 date: 2018-03-24 08:16:12 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/set-chrome-rss-subscription-extension-to-subscribe-to-rss-feed-using-feedly/
 ---

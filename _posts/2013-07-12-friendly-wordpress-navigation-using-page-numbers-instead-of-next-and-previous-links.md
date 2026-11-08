@@ -1,6 +1,7 @@
 ---
 title: "Implementing Numbered Pagination in WordPress"
 date: 2013-07-12 16:46:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/friendly-wordpress-navigation-using-page-numbers-instead-of-next-and-previous-links/
 ---

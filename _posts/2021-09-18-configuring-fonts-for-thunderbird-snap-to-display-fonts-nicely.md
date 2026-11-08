@@ -1,6 +1,7 @@
 ---
 title: "Configuring Custom Fonts in Thunderbird Snap"
 date: 2021-09-18 14:41:17 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/
 ---

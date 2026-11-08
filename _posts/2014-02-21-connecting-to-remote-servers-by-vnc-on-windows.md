@@ -1,6 +1,7 @@
 ---
 title: "Securing VNC Access to Linux Servers Using SSH Tunneling"
 date: 2014-02-21 07:36:37 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/connecting-to-remote-servers-by-vnc-on-windows/
 ---

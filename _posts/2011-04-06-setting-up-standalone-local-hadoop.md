@@ -1,6 +1,7 @@
 ---
 title: "Setting Up a Local Hadoop Development Environment"
 date: 2011-04-06 08:56:02 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-up-standalone-local-hadoop/
 ---

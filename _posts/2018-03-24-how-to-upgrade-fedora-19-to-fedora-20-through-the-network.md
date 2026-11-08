@@ -1,6 +1,7 @@
 ---
 title: "Upgrading Fedora with dnf system-upgrade: A Complete Guide"
 date: 2018-03-24 08:21:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-upgrade-fedora-19-to-fedora-20-through-the-network/
 ---

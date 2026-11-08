@@ -1,6 +1,7 @@
 ---
 title: "Stack-Based Algorithm for the Skyline Problem"
 date: 2020-02-28 11:47:02 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/a-stonewall-solution-in-c/
 ---

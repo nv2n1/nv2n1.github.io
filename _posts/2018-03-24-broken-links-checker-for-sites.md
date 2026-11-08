@@ -1,6 +1,7 @@
 ---
 title: "Link Checker: Finding and Fixing Broken URLs"
 date: 2018-03-24 08:18:05 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/broken-links-checker-for-sites/
 ---

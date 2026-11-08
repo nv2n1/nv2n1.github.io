@@ -1,6 +1,7 @@
 ---
 title: "Installing NS-2 and NS-3 on Fedora"
 date: 2013-07-12 16:32:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/install-ns-2-and-ns-3-on-fedora-linux/
 ---

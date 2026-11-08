@@ -1,6 +1,7 @@
 ---
 title: "Installing and Configuring No-IP DynamicDNS on Linux"
 date: 2013-07-15 12:48:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-noip2-on-linux/
 ---

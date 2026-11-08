@@ -1,6 +1,7 @@
 ---
 title: "Reading Excel Files in R"
 date: 2020-11-01 09:30:03 +0000
+author: "Daniel"
 layout: post
 canonical: https://www.systutorials.com/reading-excel-xls-xlsx-files-in-r/
 ---

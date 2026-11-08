@@ -1,6 +1,7 @@
 ---
 title: "Parse RSS Feeds and Display as HTML in PHP"
 date: 2015-03-08 08:02:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/a-php-function-for-fetching-rss-feed-and-outputing-feed-items-as-html/
 ---

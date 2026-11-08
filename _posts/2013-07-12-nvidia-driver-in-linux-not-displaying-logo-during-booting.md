@@ -1,6 +1,7 @@
 ---
 title: "NVIDIA Driver Logo Not Appearing on Linux Boot"
 date: 2013-07-12 16:32:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/nvidia-driver-in-linux-not-displaying-logo-during-booting/
 ---

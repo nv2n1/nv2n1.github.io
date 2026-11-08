@@ -1,6 +1,7 @@
 ---
 title: "Syncing iPhone Contacts with Gmail"
 date: 2018-03-24 08:15:39 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-sync-the-contacts-in-my-iphone-with-google-gmail-account/
 ---

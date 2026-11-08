@@ -1,6 +1,7 @@
 ---
 title: "Automating RSS Feed Distribution to Social Media"
 date: 2018-03-24 11:46:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-automatically-post-blog-rss-feed-to-google-plus-pages/
 ---

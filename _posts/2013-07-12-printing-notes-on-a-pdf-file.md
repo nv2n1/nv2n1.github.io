@@ -1,6 +1,7 @@
 ---
 title: "Printing PDF Annotations in Acrobat, Adobe Reader, and Foxit"
 date: 2013-07-12 16:54:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/printing-notes-on-a-pdf-file/
 ---

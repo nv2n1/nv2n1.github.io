@@ -1,6 +1,7 @@
 ---
 title: "How to Set Up 301 Redirects for Domain Migrations in Apache and Nginx"
 date: 2013-07-12 16:46:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-redirect-old-domain-to-new-domain-using-htaccess-redirect/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Identifying Top Contributors in Git Repositories"
 date: 2018-03-24 11:49:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-top-committers-in-git/
 ---

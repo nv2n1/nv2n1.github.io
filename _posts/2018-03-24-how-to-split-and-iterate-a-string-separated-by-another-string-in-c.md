@@ -1,6 +1,7 @@
 ---
 title: "Splitting and Iterating Strings by Delimiter in C++"
 date: 2018-03-24 11:55:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-split-and-iterate-a-string-separated-by-another-string-in-c/
 ---

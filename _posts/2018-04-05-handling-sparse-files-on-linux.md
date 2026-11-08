@@ -1,6 +1,7 @@
 ---
 title: "Handling Sparse Files on Linux"
 date: 2018-04-05 11:33:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/handling-sparse-files-on-linux/
 ---

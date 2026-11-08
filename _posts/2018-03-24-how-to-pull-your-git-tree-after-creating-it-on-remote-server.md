@@ -1,6 +1,7 @@
 ---
 title: "Fixing Git Pull on Feature Branches Without Tracking"
 date: 2018-03-24 11:44:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-pull-your-git-tree-after-creating-it-on-remote-server/
 ---

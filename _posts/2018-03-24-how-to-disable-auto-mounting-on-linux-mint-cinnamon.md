@@ -1,6 +1,7 @@
 ---
 title: "Disable Auto-Mounting in Linux Mint Cinnamon"
 date: 2018-03-24 11:44:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-disable-auto-mounting-on-linux-mint-cinnamon/
 ---

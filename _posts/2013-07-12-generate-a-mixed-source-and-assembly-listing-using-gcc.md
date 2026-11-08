@@ -1,6 +1,7 @@
 ---
 title: "Generating Mixed C and Assembly Listings with GCC and objdump"
 date: 2013-07-12 16:47:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/generate-a-mixed-source-and-assembly-listing-using-gcc/
 ---

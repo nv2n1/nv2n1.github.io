@@ -1,6 +1,7 @@
 ---
 title: "Eclipse Code Formatting: Shortcuts and Configuration"
 date: 2018-03-24 11:40:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/formatting-code-shortcuts-in-eclipse/
 ---

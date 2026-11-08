@@ -1,6 +1,7 @@
 ---
 title: "Crypto Options Explained: Calls, Puts, and Premiums"
 date: 2025-08-16 10:27:21 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/crypto-options-explained-a-guide-to-calls-puts-and-premiums/
 ---

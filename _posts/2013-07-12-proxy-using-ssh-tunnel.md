@@ -1,6 +1,7 @@
 ---
 title: "Setting Up a SOCKS Proxy Over SSH Tunnels"
 date: 2013-07-12 16:31:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/proxy-using-ssh-tunnel/
 ---

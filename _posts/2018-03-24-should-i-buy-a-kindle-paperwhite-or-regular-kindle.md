@@ -1,6 +1,7 @@
 ---
 title: "Kindle Paperwhite vs Standard Kindle: Which Should You Buy?"
 date: 2018-03-24 08:20:04 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/should-i-buy-a-kindle-paperwhite-or-regular-kindle/
 ---

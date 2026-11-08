@@ -1,6 +1,7 @@
 ---
 title: "Customizing Fonts in GNOME: GUI and CLI Methods"
 date: 2014-03-30 08:01:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/customizing-fonts-in-gnome-3/
 ---

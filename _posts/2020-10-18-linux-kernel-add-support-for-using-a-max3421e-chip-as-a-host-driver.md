@@ -1,6 +1,7 @@
 ---
 title: "MAX3421E USB Host Driver for Linux Kernel"
 date: 2020-10-18 04:49:29 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-add-support-for-using-a-max3421e-chip-as-a-host-driver/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Hadoop MapReduce: When to Use It and Deployment Strategies"
 date: 2013-07-17 09:37:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hadoop-mapreduce-tutorials/
 ---

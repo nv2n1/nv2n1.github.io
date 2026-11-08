@@ -1,6 +1,7 @@
 ---
 title: "OpenLDAP and NFS for Centralized User Authentication"
 date: 2013-09-25 09:59:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/unified-linux-login-and-home-directory-using-openldap-and-nfsautomount/
 ---

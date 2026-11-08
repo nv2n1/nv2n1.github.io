@@ -1,6 +1,7 @@
 ---
 title: "Converting Unix Timestamps to Dates in Linux"
 date: 2018-03-24 08:19:02 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-seconds-since-the-epoch-to-a-date-in-linux/
 ---

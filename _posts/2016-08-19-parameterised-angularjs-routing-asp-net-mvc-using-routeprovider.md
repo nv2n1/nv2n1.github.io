@@ -1,6 +1,7 @@
 ---
 title: "Client-Side Routing in AngularJS: Managing Route Parameters"
 date: 2016-08-19 08:04:42 +0000
+author: "jameswarner"
 layout: post
 canonical: https://www.systutorials.com/parameterised-angularjs-routing-asp-net-mvc-using-routeprovider/
 ---

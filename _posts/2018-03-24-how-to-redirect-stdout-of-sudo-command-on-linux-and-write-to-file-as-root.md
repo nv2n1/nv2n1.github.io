@@ -1,6 +1,7 @@
 ---
 title: "Redirecting stdout with sudo: Why > fails and how to fix it"
 date: 2018-03-24 11:45:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-redirect-stdout-of-sudo-command-on-linux-and-write-to-file-as-root/
 ---

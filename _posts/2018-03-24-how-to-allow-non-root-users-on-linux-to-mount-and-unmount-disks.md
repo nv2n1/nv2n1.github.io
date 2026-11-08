@@ -1,6 +1,7 @@
 ---
 title: "Allowing Non-Root Users to Mount Disks on Linux"
 date: 2018-03-24 11:45:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-allow-non-root-users-on-linux-to-mount-and-unmount-disks/
 ---

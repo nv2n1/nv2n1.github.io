@@ -1,6 +1,7 @@
 ---
 title: "Sharing Data Between QEMU/KVM Host and Guest"
 date: 2018-03-24 11:54:03 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/for-qemu-kvm-how-to-share-data-between-host-and-guest/
 ---

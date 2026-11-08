@@ -1,6 +1,7 @@
 ---
 title: "Remotely Enable or Disable GNOME on Linux Hosts"
 date: 2018-03-24 08:14:55 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-activate-or-deactivate-a-linux-host-with-gnome-remotely/
 ---

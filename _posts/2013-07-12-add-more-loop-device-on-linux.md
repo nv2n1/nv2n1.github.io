@@ -1,6 +1,7 @@
 ---
 title: "Adding Loop Devices in Linux: A Practical Guide"
 date: 2013-07-12 16:31:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/add-more-loop-device-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Using Google Custom Search for WordPress Queries"
 date: 2018-03-24 11:46:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-redirect-wordpress-search-query-to-google-cse/
 ---

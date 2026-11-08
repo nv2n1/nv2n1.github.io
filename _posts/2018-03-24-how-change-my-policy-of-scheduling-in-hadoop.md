@@ -1,6 +1,7 @@
 ---
 title: "Configuring Hadoop\u2019s Job Scheduling Policy"
 date: 2018-03-24 11:50:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-change-my-policy-of-scheduling-in-hadoop/
 ---

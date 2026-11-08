@@ -1,6 +1,7 @@
 ---
 title: "WPS wpp program missing libbz2.so.1.0 on CentOS 7"
 date: 2018-03-24 11:53:27 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/wps-wpp-program-reports-libbz2-so-1-0-cannot-open-shared-object-file-on-centos-7/
 ---

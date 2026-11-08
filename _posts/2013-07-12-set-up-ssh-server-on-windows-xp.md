@@ -1,6 +1,7 @@
 ---
 title: "Setting Up SSH Server on Windows 10, 11, and Server 2019"
 date: 2013-07-12 16:54:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/set-up-ssh-server-on-windows-xp/
 ---

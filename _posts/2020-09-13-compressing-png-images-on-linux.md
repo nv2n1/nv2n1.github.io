@@ -1,6 +1,7 @@
 ---
 title: "Compress PNG Images on Linux"
 date: 2020-09-13 06:57:49 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/compressing-png-images-on-linux/
 ---

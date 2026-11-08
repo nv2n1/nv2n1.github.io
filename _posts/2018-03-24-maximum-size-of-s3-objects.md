@@ -1,6 +1,7 @@
 ---
 title: "AWS S3 Multipart Upload: Handling Large Objects"
 date: 2018-03-24 08:22:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/maximum-size-of-s3-objects/
 ---

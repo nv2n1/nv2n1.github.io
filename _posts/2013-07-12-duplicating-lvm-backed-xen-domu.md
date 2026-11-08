@@ -1,6 +1,7 @@
 ---
 title: "Cloning LVM-Backed Xen Domains"
 date: 2013-07-12 16:32:18 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/duplicating-lvm-backed-xen-domu/
 ---

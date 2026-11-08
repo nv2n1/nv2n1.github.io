@@ -1,6 +1,7 @@
 ---
 title: "Generating ECDSA Keys with OpenSSL: K1 and R1 Curves"
 date: 2023-03-17 16:40:55 +0000
+author: "David Wong"
 layout: post
 canonical: https://www.systutorials.com/generating-ecdsa-keys-using-openssl-in-linux/
 ---

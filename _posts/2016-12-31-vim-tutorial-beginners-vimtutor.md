@@ -1,6 +1,7 @@
 ---
 title: "Mastering Vim: A Practical Guide to vimtutor"
 date: 2016-12-31 02:49:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/vim-tutorial-beginners-vimtutor/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Generate a Git Patch File for a Specific Commit"
 date: 2018-03-29 16:00:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-produce-a-patch-file-for-a-specific-git-commit/
 ---

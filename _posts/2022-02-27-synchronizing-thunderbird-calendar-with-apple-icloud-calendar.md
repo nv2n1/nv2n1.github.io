@@ -1,6 +1,7 @@
 ---
 title: "Syncing Thunderbird Calendar with iCloud"
 date: 2022-02-27 10:31:02 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/synchronizing-thunderbird-calendar-with-apple-icloud-calendar/
 ---

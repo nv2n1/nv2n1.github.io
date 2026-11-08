@@ -1,6 +1,7 @@
 ---
 title: "SSH Port Forwarding: Local, Remote, and Dynamic Tunnels"
 date: 2013-09-29 12:56:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/port-forwarding-using-ssh-tunnel/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Find and Change a User\u2019s UID on Linux"
 date: 2018-03-24 11:43:05 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-and-change-a-users-uid-on-linux/
 ---

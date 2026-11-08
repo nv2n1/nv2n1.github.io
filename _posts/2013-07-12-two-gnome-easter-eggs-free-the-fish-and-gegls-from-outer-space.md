@@ -1,6 +1,7 @@
 ---
 title: "GNOME\u2019s Hidden Easter Eggs: Free the Fish and Gegl from Outer Space"
 date: 2013-07-12 16:32:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/two-gnome-easter-eggs-free-the-fish-and-gegls-from-outer-space/
 ---

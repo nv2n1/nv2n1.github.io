@@ -1,6 +1,7 @@
 ---
 title: "UTop Keyboard Shortcuts and Keybindings"
 date: 2018-03-24 08:19:32 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/utop-key-bindings-key-shortcuts/
 ---

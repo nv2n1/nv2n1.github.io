@@ -1,6 +1,7 @@
 ---
 title: "Screen Recording on Wayland: GNOME, OBS, and Kooha"
 date: 2019-01-25 08:06:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-do-screen-recording-on-wayland-in-linux/
 ---

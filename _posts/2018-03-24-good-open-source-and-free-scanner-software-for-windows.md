@@ -1,6 +1,7 @@
 ---
 title: "Open Source Document Scanning Tools for Windows"
 date: 2018-03-24 11:45:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/good-open-source-and-free-scanner-software-for-windows/
 ---

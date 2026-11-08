@@ -1,6 +1,7 @@
 ---
 title: "Inspecting Linux Network Configuration"
 date: 2013-07-12 16:32:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/finding-out-linux-network-configuration-information/
 ---

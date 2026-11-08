@@ -1,6 +1,7 @@
 ---
 title: "How to Access Another User\u2019s PATH in Bash"
 date: 2018-03-24 11:50:05 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-another-users-path-in-bash-on-linux/
 ---

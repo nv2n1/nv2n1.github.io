@@ -1,6 +1,7 @@
 ---
 title: "URL-Encoding Spaces in curl GET Requests"
 date: 2018-03-24 11:47:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-encode-spaces-in-curl-get-request-url-on-linux/
 ---

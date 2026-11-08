@@ -1,6 +1,7 @@
 ---
 title: "AddThis Welcome Bar Conflict with WordPress Twenty Fourteen Theme"
 date: 2018-03-24 08:20:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/wordpress-theme-twentyfourteen-interfere-with-addthis-welcome-bar/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Flushing stdout in Python"
 date: 2018-03-24 11:54:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-flush-stdout-buffer-in-python/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Designing Scalable Data Storage and Processing Architectures"
 date: 2012-12-11 15:15:53 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/large-scale-data-storage-and-processing-system-in-datacenters/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "NUMA vs SMP: Key Architectural Differences"
 date: 2018-03-24 11:54:41 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/what-are-the-differences-between-numa-architecture-and-smp-architecture/
 ---

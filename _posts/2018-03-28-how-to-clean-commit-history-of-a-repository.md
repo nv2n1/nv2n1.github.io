@@ -1,6 +1,7 @@
 ---
 title: "Cleaning Up Git Commit History: A Practical Guide"
 date: 2018-03-28 10:10:29 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-clean-commit-history-of-a-repository/
 ---

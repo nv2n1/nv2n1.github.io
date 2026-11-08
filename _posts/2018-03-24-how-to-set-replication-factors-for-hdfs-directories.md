@@ -1,6 +1,7 @@
 ---
 title: "Configuring HDFS Replication Factors by Directory"
 date: 2018-03-24 11:45:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-replication-factors-for-hdfs-directories/
 ---

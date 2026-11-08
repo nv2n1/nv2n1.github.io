@@ -1,6 +1,7 @@
 ---
 title: "High Availability in Distributed Storage: RDA Fundamentals"
 date: 2018-03-24 11:43:19 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/whats-the-difference-between-reliability-durability-and-availability-for-data-storage-system/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "GNOME Shell Themes in Ubuntu: Setup and Management"
 date: 2018-09-14 12:24:43 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-enable-user-themes-in-ubuntu-18-04/
 ---

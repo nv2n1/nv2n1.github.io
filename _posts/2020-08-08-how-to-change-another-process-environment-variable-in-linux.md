@@ -1,6 +1,7 @@
 ---
 title: "Modifying Another Process\u2019s Environment Variables in Linux"
 date: 2020-08-08 06:13:07 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-another-process-environment-variable-in-linux/
 ---

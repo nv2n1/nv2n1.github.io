@@ -1,6 +1,7 @@
 ---
 title: "Adding Bind Mounts to /etc/fstab"
 date: 2018-03-24 11:43:23 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-write-etc-fstab-entry-for-bind-mounting/
 ---

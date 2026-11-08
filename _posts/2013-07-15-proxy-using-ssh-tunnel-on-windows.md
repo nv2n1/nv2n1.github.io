@@ -1,6 +1,7 @@
 ---
 title: "SSH Tunneling on Windows: Creating a SOCKS Proxy with OpenSSH"
 date: 2013-07-15 13:01:08 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/proxy-using-ssh-tunnel-on-windows/
 ---

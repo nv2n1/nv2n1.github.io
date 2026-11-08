@@ -1,6 +1,7 @@
 ---
 title: "Using Google Apps Accounts in Pidgin with GTalk"
 date: 2013-07-12 16:32:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/using-google-apps-account-for-gtalk-in-pidgin/
 ---

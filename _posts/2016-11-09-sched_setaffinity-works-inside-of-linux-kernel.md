@@ -1,6 +1,7 @@
 ---
 title: "How sched_setaffinity Works in the Linux Kernel"
 date: 2016-11-09 15:46:57 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/sched_setaffinity-works-inside-of-linux-kernel/
 ---

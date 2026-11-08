@@ -1,6 +1,7 @@
 ---
 title: "Migrating Your Feedly RSS Feeds to Follow.it"
 date: 2020-10-04 08:53:30 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-move-rss-readling-list-from-feedly-to-follow-it/
 ---

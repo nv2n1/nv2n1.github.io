@@ -1,6 +1,7 @@
 ---
 title: "Emoji Support on iPhone: How to Use Smileys"
 date: 2018-03-24 08:04:25 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/smiley-faces-in-iphone/
 ---

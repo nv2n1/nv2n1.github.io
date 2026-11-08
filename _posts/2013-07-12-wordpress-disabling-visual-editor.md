@@ -1,6 +1,7 @@
 ---
 title: "Disable WordPress Block Editor and Classic Editor"
 date: 2013-07-12 16:46:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/wordpress-disabling-visual-editor/
 ---

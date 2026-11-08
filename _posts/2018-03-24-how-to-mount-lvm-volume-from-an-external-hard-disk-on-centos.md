@@ -1,6 +1,7 @@
 ---
 title: "Mount LVM Volumes from External Hard Drives on Linux"
 date: 2018-03-24 11:47:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-mount-lvm-volume-from-an-external-hard-disk-on-centos/
 ---

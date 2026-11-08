@@ -1,6 +1,7 @@
 ---
 title: "Resolving Git Push 403 Forbidden: Authentication and Permissions"
 date: 2018-03-24 11:47:40 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/git-push-error/
 ---

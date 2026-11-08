@@ -1,6 +1,7 @@
 ---
 title: "Disabling PHP Short Open Tags"
 date: 2018-03-24 11:53:43 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-disable-php-short-open-tags/
 ---

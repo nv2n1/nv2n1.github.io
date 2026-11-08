@@ -1,6 +1,7 @@
 ---
 title: "Setting Up and Verifying RAID 0 on MegaRAID Controllers"
 date: 2013-12-30 08:54:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-new-disks-and-setting-up-raid0-in-megaraid-bios-on-ibm-x3620m3/
 ---

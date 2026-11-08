@@ -1,6 +1,7 @@
 ---
 title: "Disable Cron Email Notifications: A Practical Guide"
 date: 2018-03-24 11:40:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-disable-the-email-notification-by-crond/
 ---

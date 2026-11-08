@@ -1,6 +1,7 @@
 ---
 title: "Printing Fields After a Specific Field in awk"
 date: 2018-03-24 11:53:43 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-print-all-fields-after-a-certain-field-with-awk-on-linux/
 ---

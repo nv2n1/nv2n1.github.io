@@ -1,6 +1,7 @@
 ---
 title: "Understanding Proof of Stake: A Beginner\u2019s Guide"
 date: 2023-09-16 06:46:27 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/proof-of-stake-pos-101/
 ---

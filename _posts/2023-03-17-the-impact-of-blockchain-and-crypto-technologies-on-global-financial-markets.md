@@ -1,6 +1,7 @@
 ---
 title: "How Blockchain Is Reshaping Global Finance"
 date: 2023-03-17 16:29:56 +0000
+author: "Btcman.io"
 layout: post
 canonical: https://www.systutorials.com/the-impact-of-blockchain-and-crypto-technologies-on-global-financial-markets/
 ---

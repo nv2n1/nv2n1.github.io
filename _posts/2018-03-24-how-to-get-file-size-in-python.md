@@ -1,6 +1,7 @@
 ---
 title: "Get File Size in Python"
 date: 2018-03-24 11:48:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-file-size-in-python/
 ---

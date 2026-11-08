@@ -1,6 +1,7 @@
 ---
 title: "Count Files in Each Linux Subdirectory"
 date: 2018-03-24 11:44:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-the-number-of-files-in-each-directories-on-linux/
 ---

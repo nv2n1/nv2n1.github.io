@@ -1,6 +1,7 @@
 ---
 title: "Terminal Web Browsers: Lynx, w3m, and ELinks Compared"
 date: 2018-03-24 11:46:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/any-good-web-browser-in-command-line-in-linux/
 ---

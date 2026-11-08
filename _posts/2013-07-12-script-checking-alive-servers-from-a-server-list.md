@@ -1,6 +1,7 @@
 ---
 title: "Bash Script for Monitoring Server Uptime"
 date: 2013-07-12 16:32:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/script-checking-alive-servers-from-a-server-list/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Configuring /dev/shm Size on Linux"
 date: 2018-03-31 16:20:50 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-configure-dev-shm-size-of-linux/
 ---

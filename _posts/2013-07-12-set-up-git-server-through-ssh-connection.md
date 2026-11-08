@@ -1,6 +1,7 @@
 ---
 title: "Setting Up a Git Server with SSH"
 date: 2013-07-12 16:31:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/set-up-git-server-through-ssh-connection/
 ---

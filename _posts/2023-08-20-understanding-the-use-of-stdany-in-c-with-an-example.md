@@ -1,6 +1,7 @@
 ---
 title: "Using std::any for Type-Safe Polymorphism in C++"
 date: 2023-08-20 09:01:44 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/understanding-the-use-of-stdany-in-c-with-an-example/
 ---

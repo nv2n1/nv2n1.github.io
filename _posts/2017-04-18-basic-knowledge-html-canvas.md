@@ -1,6 +1,7 @@
 ---
 title: "HTML5 Canvas: Drawing Graphics with JavaScript"
 date: 2017-04-18 03:45:23 +0000
+author: "Colin"
 layout: post
 canonical: https://www.systutorials.com/basic-knowledge-html-canvas/
 ---

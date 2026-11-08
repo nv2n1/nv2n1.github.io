@@ -1,6 +1,7 @@
 ---
 title: "Monitoring All IMAP Folders for New Messages in Thunderbird"
 date: 2018-03-24 11:43:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-thunderbird-check-for-new-messages-in-all-imap-folders/
 ---

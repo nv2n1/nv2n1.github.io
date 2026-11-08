@@ -1,6 +1,7 @@
 ---
 title: "Building a REST API with ASP.NET MVC and JavaScript"
 date: 2016-11-25 03:53:04 +0000
+author: "jameswarner"
 layout: post
 canonical: https://www.systutorials.com/push-pull-data-restful-service-asp-net-mvc-application-using-angular-js/
 ---

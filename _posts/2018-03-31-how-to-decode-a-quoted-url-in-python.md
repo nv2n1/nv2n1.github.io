@@ -1,6 +1,7 @@
 ---
 title: "Decoding URL-Encoded Strings in Python"
 date: 2018-03-31 16:22:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-decode-a-quoted-url-in-python/
 ---

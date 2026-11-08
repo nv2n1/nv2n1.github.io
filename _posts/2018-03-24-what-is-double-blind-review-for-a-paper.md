@@ -1,6 +1,7 @@
 ---
 title: "Double-Blind Peer Review: How It Works"
 date: 2018-03-24 11:46:40 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/what-is-double-blind-review-for-a-paper/
 ---

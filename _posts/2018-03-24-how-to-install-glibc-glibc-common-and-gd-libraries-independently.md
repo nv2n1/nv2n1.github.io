@@ -1,6 +1,7 @@
 ---
 title: "Installing glibc, glibc-common, and GD Libraries Separately"
 date: 2018-03-24 11:50:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-glibc-glibc-common-and-gd-libraries-independently/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Hexadecimal Input and Output in C++"
 date: 2013-07-12 16:47:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/inputing-and-outputing-hex-numbers-with-iostream/
 ---

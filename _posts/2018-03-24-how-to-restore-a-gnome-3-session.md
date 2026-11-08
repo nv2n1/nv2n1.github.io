@@ -1,6 +1,7 @@
 ---
 title: "Restoring a GNOME 3 Session: A Developer\u2019s Guide"
 date: 2018-03-24 08:15:39 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-restore-a-gnome-3-session/
 ---

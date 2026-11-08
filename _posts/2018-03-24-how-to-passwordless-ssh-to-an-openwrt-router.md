@@ -1,6 +1,7 @@
 ---
 title: "Passwordless SSH Setup for OpenWrt with Dropbear"
 date: 2018-03-24 11:47:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-passwordless-ssh-to-an-openwrt-router/
 ---

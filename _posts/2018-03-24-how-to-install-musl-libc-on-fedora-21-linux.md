@@ -1,6 +1,7 @@
 ---
 title: "Building musl libc on Fedora: From Source or Packages"
 date: 2018-03-24 11:45:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-musl-libc-on-fedora-21-linux/
 ---

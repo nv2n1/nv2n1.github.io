@@ -1,6 +1,7 @@
 ---
 title: "Installing Hyperledger Fabric 2.5 on Ubuntu 24.04 LTS"
 date: 2020-04-07 17:44:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-hyperledger-fabric-2-0-in-ubuntu-18-04/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Memory Leak Detection Tools for C on Linux"
 date: 2018-03-24 08:22:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-detect-memory-leaks-of-c-programs-in-linux/
 ---

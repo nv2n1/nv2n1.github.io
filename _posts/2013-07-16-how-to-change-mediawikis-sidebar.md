@@ -1,6 +1,7 @@
 ---
 title: "Customizing MediaWiki\u2019s Sidebar: A Configuration Guide"
 date: 2013-07-16 01:32:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-mediawikis-sidebar/
 ---

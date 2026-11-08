@@ -1,6 +1,7 @@
 ---
 title: "How to Enable and Disable Call Forwarding on iPhone"
 date: 2017-05-12 03:40:43 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/call-forwarding-iphone-set-disable-call-forwarding-ios/
 ---

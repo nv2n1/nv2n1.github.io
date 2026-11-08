@@ -1,6 +1,7 @@
 ---
 title: "Replacing GDM with LightDM on Fedora"
 date: 2018-03-24 08:19:02 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-replace-gdm-with-lightdm-on-fedora/
 ---

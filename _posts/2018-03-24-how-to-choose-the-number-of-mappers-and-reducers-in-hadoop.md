@@ -1,6 +1,7 @@
 ---
 title: "Tuning MapReduce: Choosing Mapper and Reducer Counts"
 date: 2018-03-24 08:17:12 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-choose-the-number-of-mappers-and-reducers-in-hadoop/
 ---

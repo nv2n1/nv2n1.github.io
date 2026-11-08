@@ -1,6 +1,7 @@
 ---
 title: "Changing Fonts in GNOME 3"
 date: 2018-03-24 08:20:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-fonts-used-in-gnome-3/
 ---

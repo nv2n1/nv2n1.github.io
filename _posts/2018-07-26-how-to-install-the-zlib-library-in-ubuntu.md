@@ -1,6 +1,7 @@
 ---
 title: "Building Zlib from Source on Ubuntu"
 date: 2018-07-26 10:09:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
 ---

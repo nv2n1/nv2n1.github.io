@@ -1,6 +1,7 @@
 ---
 title: "Generate and Store HTML Forms from Database Data"
 date: 2018-03-24 08:18:51 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/html-form-generation-from-the-database-and-store-value-into-the-database/
 ---

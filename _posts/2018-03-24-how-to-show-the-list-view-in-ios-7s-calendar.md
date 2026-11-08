@@ -1,6 +1,7 @@
 ---
 title: "iOS 7 Calendar: Switching to List View"
 date: 2018-03-24 08:18:30 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-show-the-list-view-in-ios-7s-calendar/
 ---

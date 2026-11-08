@@ -1,6 +1,7 @@
 ---
 title: "How to Change the Default make Target"
 date: 2018-03-24 11:54:49 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-default-target-of-make/
 ---

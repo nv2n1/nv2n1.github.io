@@ -1,6 +1,7 @@
 ---
 title: "Installing Xen on Fedora 17 as Domain-0"
 date: 2013-07-12 16:32:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-xen-domain-0-on-fedora-17/
 ---

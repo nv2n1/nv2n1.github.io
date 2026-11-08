@@ -1,6 +1,7 @@
 ---
 title: "Creating a Bootable Fedora Live USB"
 date: 2013-07-12 16:32:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/creating-fedora-live-usb-media/
 ---

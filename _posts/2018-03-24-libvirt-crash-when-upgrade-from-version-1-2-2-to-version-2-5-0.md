@@ -1,6 +1,7 @@
 ---
 title: "Libvirt Crash After Upgrading to Version 2.5.0"
 date: 2018-03-24 11:51:39 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/libvirt-crash-when-upgrade-from-version-1-2-2-to-version-2-5-0/
 ---

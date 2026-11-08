@@ -1,6 +1,7 @@
 ---
 title: "Importing Self-Signed Certificates into Chrome on Linux"
 date: 2014-10-08 04:29:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/making-chrome-accept-self-signed-certificates-on-linux/
 ---

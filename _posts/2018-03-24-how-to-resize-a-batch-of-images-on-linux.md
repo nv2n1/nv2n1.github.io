@@ -1,6 +1,7 @@
 ---
 title: "Batch Resize Images on Linux with ImageMagick"
 date: 2018-03-24 11:44:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-resize-a-batch-of-images-on-linux/
 ---

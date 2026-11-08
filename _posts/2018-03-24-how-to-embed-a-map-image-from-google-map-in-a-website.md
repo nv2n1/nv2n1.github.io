@@ -1,6 +1,7 @@
 ---
 title: "Embed Google Maps in Your Website"
 date: 2018-03-24 11:53:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-embed-a-map-image-from-google-map-in-a-website/
 ---

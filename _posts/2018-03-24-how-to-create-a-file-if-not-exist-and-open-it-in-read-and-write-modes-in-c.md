@@ -1,6 +1,7 @@
 ---
 title: "Opening or Creating a File in Read-Write Mode with C++"
 date: 2018-03-24 11:55:24 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-create-a-file-if-not-exist-and-open-it-in-read-and-write-modes-in-c/
 ---

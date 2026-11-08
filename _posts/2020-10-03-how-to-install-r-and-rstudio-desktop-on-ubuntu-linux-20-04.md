@@ -1,6 +1,7 @@
 ---
 title: "Installing R and RStudio on Ubuntu"
 date: 2020-10-03 11:49:20 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-r-and-rstudio-desktop-on-ubuntu-linux-20-04/
 ---

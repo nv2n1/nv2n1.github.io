@@ -1,6 +1,7 @@
 ---
 title: "Setting Up LVM-Backed Xen DomUs"
 date: 2013-07-12 16:32:18 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-up-lvm-backed-xen-domu/
 ---

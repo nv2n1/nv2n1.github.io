@@ -1,6 +1,7 @@
 ---
 title: "Hosting a Domain from Another Account on Dreamhost"
 date: 2018-03-24 08:18:01 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-host-a-domain-registered-in-another-account-in-a-dreamhost-account/
 ---

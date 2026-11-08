@@ -1,6 +1,7 @@
 ---
 title: "Understanding Fast-Forward vs. Non-Fast-Forward Merges in Git"
 date: 2018-03-24 11:45:13 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-merge-git-branches-quickly-and-correctly/
 ---

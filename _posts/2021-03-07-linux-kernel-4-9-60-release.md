@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel 4.9.60: What\u2019s New"
 date: 2021-03-07 06:51:12 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-4-9-60-release/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Modern C++ References: Best Practices and Guidelines"
 date: 2013-07-12 19:06:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/c-reference-and-styles/
 ---

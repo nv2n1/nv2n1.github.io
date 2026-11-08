@@ -1,6 +1,7 @@
 ---
 title: "Configuring QEMU Guest Network Access Over Wireless"
 date: 2018-03-24 11:43:30 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-config-network-in-host-wireless-network-for-qemu-guest-os/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Set Google as Default Search in Firefox on Linux Mint"
 date: 2015-12-12 08:13:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-google-to-firefox-in-linux-mint-as-default-search-engine/
 ---

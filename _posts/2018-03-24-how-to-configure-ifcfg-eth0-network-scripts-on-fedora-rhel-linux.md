@@ -1,6 +1,7 @@
 ---
 title: "Configuring Network Interfaces with ifcfg Files on RHEL"
 date: 2018-03-24 11:49:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-configure-ifcfg-eth0-network-scripts-on-fedora-rhel-linux/
 ---

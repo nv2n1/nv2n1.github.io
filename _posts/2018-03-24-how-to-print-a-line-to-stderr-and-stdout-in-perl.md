@@ -1,6 +1,7 @@
 ---
 title: "Printing to STDERR and STDOUT in Perl"
 date: 2018-03-24 11:53:05 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-perl/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Optimizing Large File Uploads to S3 with AWS CLI"
 date: 2015-11-29 01:01:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/uploading-large-files-amazon-s3-aws-cli/
 ---

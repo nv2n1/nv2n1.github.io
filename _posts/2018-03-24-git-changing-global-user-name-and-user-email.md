@@ -1,6 +1,7 @@
 ---
 title: "How to Change Your Global Git User Name and Email"
 date: 2018-03-24 08:04:07 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/git-changing-global-user-name-and-user-email/
 ---

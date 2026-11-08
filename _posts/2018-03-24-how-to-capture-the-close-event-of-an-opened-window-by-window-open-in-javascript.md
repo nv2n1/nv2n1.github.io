@@ -1,6 +1,7 @@
 ---
 title: "Detecting Window Popup Closure in JavaScript"
 date: 2018-03-24 11:48:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-capture-the-close-event-of-an-opened-window-by-window-open-in-javascript/
 ---

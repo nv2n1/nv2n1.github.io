@@ -1,6 +1,7 @@
 ---
 title: "Disabling IPv6 on Linux: Step-by-Step Guide"
 date: 2013-07-12 16:32:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/disabling-ipv6-on-fedora-17-linux/
 ---

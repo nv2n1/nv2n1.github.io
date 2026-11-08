@@ -1,6 +1,7 @@
 ---
 title: "Dynamic Function Calls in PHP: Variables, call_user_func(), and Callables"
 date: 2018-04-08 09:05:57 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-call-a-function-by-its-name-as-a-string-in-php/
 ---

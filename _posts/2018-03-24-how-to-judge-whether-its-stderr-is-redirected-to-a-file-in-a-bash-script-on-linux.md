@@ -1,6 +1,7 @@
 ---
 title: "How to Detect If stderr Is Redirected in Bash"
 date: 2018-03-24 11:54:37 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-judge-whether-its-stderr-is-redirected-to-a-file-in-a-bash-script-on-linux/
 ---

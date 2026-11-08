@@ -1,6 +1,7 @@
 ---
 title: "How to Add noindex Meta Tags to WordPress Archives"
 date: 2013-07-12 16:46:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/use-noindex-meta-tag-in-wordpress-to-prevent-search-engine-indexing-categories-tags-and-archives/
 ---

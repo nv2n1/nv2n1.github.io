@@ -1,6 +1,7 @@
 ---
 title: "Poster Design Best Practices"
 date: 2018-03-24 08:14:00 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/designing-posters-systutorials-qa/
 ---

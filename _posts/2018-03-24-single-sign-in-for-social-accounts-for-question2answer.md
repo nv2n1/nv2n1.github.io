@@ -1,6 +1,7 @@
 ---
 title: "Single Sign-On for Social Accounts in Question2Answer"
 date: 2018-03-24 08:14:55 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/single-sign-in-for-social-accounts-for-question2answer/
 ---

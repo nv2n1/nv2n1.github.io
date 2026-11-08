@@ -1,6 +1,7 @@
 ---
 title: "Removing Newline Characters from Strings in C++"
 date: 2018-03-24 11:54:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-remove-newline-characters-from-a-string-in-c/
 ---

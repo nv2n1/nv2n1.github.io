@@ -1,6 +1,7 @@
 ---
 title: "String Splitting in C++: Building a Flexible Utility Function"
 date: 2023-05-01 13:59:01 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/splitting-a-string-by-another-string-in-cpp/
 ---

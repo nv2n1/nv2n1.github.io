@@ -1,6 +1,7 @@
 ---
 title: "Regenerating GRUB2 Configuration Files on Linux"
 date: 2015-04-29 01:20:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-regenerate-grub2-config-file-on-linux/
 ---

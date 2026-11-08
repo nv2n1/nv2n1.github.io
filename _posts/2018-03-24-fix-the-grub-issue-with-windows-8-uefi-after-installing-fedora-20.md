@@ -1,6 +1,7 @@
 ---
 title: "GRUB Not Detecting Windows on UEFI Systems"
 date: 2018-03-24 11:41:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/fix-the-grub-issue-with-windows-8-uefi-after-installing-fedora-20/
 ---

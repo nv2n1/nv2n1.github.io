@@ -1,6 +1,7 @@
 ---
 title: "Installing and Configuring MySQL Cluster on CentOS 6.3"
 date: 2018-03-24 08:14:16 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-and-configure-a-mysql-cluster-on-centos-rhel-6-3/
 ---

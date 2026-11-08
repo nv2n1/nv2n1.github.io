@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu Chinese Input: IBus vs Fcitx5 Setup"
 date: 2018-07-26 04:53:40 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-chinese-input-method-to-unbuntu-18-04/
 ---

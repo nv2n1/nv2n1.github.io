@@ -1,6 +1,7 @@
 ---
 title: "Key Features of C++ Every Developer Should Know"
 date: 2018-03-24 11:52:30 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/most-important-aspects-or-features-of-the-c-programming-language/
 ---

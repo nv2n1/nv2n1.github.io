@@ -1,6 +1,7 @@
 ---
 title: "System Call Tracing with eBPF: Move Beyond ptrace"
 date: 2018-05-11 15:22:48 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/system-call-tracking-without-ptracestraceetc/
 ---

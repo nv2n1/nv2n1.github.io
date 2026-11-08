@@ -1,6 +1,7 @@
 ---
 title: "Customizing bbPress Forums with WordPress Hooks"
 date: 2018-04-14 05:58:06 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-filter-bbpress-content-in-wordpress/
 ---

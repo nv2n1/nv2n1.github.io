@@ -1,6 +1,7 @@
 ---
 title: "Reading an entire file into a string in Go"
 date: 2018-03-24 11:51:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-read-the-whole-file-content-into-a-string-in-go/
 ---

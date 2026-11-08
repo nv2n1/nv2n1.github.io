@@ -1,6 +1,7 @@
 ---
 title: "Converting Hex to ASCII With xxd"
 date: 2020-10-26 10:58:39 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/convert-hex-to-ascii-using-xxd/
 ---

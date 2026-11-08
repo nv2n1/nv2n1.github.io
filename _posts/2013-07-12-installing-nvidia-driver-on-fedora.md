@@ -1,6 +1,7 @@
 ---
 title: "Installing NVIDIA Drivers with Akmod on Fedora"
 date: 2013-07-12 16:32:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-nvidia-driver-on-fedora/
 ---

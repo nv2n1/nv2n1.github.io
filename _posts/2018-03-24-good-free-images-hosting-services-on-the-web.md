@@ -1,6 +1,7 @@
 ---
 title: "Image Hosting Services for Developers and Creators"
 date: 2018-03-24 11:47:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/good-free-images-hosting-services-on-the-web/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Running Chrome Over SSH With X11 Forwarding: Issues and Alternatives"
 date: 2018-03-24 11:40:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/running-chrome-over-ssh-tunnel/
 ---

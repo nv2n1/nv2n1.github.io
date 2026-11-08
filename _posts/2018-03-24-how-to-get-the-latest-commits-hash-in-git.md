@@ -1,6 +1,7 @@
 ---
 title: "Getting the Latest Commit Hash in Git"
 date: 2018-03-24 11:48:07 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-latest-commits-hash-in-git/
 ---

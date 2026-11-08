@@ -1,6 +1,7 @@
 ---
 title: "Simulating Multiple Simultaneous Key Presses in Linux with xdotool"
 date: 2018-03-24 11:48:43 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-simulate-pressing-multiple-keys-together-on-linux/
 ---

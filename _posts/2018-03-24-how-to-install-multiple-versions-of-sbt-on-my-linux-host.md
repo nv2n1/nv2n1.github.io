@@ -1,6 +1,7 @@
 ---
 title: "Managing Multiple sbt Versions on Linux"
 date: 2018-03-24 11:41:00 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-multiple-versions-of-sbt-on-my-linux-host/
 ---

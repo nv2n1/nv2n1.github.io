@@ -1,6 +1,7 @@
 ---
 title: "Using Type Erasure in C++11 Lambda Parameters"
 date: 2018-03-24 11:55:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-not-use-concrete-types-in-lambda-function-parameters-in-c11/
 ---

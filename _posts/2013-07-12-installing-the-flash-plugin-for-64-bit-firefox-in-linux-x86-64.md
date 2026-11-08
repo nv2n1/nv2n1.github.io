@@ -1,6 +1,7 @@
 ---
 title: "Installing Flash Plugin on 64-bit Firefox for Linux"
 date: 2013-07-12 16:32:23 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-the-flash-plugin-for-64-bit-firefox-in-linux-x86-64/
 ---

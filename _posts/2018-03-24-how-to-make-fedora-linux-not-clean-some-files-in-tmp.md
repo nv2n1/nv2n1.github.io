@@ -1,6 +1,7 @@
 ---
 title: "Prevent systemd-tmpfiles from Deleting Specific /tmp Files"
 date: 2018-03-24 11:47:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-fedora-linux-not-clean-some-files-in-tmp/
 ---

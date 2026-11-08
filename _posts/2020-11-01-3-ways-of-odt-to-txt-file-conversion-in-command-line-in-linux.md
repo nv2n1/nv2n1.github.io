@@ -1,6 +1,7 @@
 ---
 title: "Converting ODT Files to TXT in Linux: 3 Command-Line Methods"
 date: 2020-11-01 07:35:51 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/3-ways-of-odt-to-txt-file-conversion-in-command-line-in-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Getting the Hostname in Bash: 3 Methods"
 date: 2018-03-24 11:52:23 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-hostname-of-the-node-in-bash/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "PDF Margin Cropping Tool for Linux"
 date: 2018-03-24 08:18:57 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/gui-tool-to-crop-pdf-file-margins-on-linux/
 ---

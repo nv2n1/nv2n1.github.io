@@ -1,6 +1,7 @@
 ---
 title: "iptables Configuration Guide for Linux Firewalls"
 date: 2018-03-24 11:44:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/basic-iptables-configuration-for-linux/
 ---

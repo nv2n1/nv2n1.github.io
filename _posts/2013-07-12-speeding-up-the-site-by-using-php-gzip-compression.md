@@ -1,6 +1,7 @@
 ---
 title: "When and How to Use GZIP Compression in PHP"
 date: 2013-07-12 16:46:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/speeding-up-the-site-by-using-php-gzip-compression/
 ---

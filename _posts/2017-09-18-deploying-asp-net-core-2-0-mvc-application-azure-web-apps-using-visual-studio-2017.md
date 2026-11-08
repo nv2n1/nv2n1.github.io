@@ -1,6 +1,7 @@
 ---
 title: "Deploy ASP.NET Core MVC Apps to Azure App Service"
 date: 2017-09-18 13:11:58 +0000
+author: "Johnnymorgan"
 layout: post
 canonical: https://www.systutorials.com/deploying-asp-net-core-2-0-mvc-application-azure-web-apps-using-visual-studio-2017/
 ---

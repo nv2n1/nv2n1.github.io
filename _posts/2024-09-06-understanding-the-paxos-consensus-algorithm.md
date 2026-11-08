@@ -1,6 +1,7 @@
 ---
 title: "Understanding Paxos: Distributed Consensus Made Clear"
 date: 2024-09-06 14:19:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/understanding-the-paxos-consensus-algorithm/
 ---

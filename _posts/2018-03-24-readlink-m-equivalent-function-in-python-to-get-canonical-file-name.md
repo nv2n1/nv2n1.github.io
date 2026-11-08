@@ -1,6 +1,7 @@
 ---
 title: "Getting the Canonical Path Without Following Symlinks in Python"
 date: 2018-03-24 11:55:14 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/readlink-m-equivalent-function-in-python-to-get-canonical-file-name/
 ---

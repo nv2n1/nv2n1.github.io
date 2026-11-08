@@ -1,6 +1,7 @@
 ---
 title: "Remapping Alt and Ctrl Keys in Linux for Emacs"
 date: 2018-03-24 08:22:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-swap-alt-and-ctrl-on-linux-for-emacs/
 ---

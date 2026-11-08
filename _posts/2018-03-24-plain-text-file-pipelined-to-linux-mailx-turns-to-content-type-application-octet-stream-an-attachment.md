@@ -1,6 +1,7 @@
 ---
 title: "Fixing mailx Content-Type Issues with Plain Text Files"
 date: 2018-03-24 08:16:39 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/plain-text-file-pipelined-to-linux-mailx-turns-to-content-type-application-octet-stream-an-attachment/
 ---

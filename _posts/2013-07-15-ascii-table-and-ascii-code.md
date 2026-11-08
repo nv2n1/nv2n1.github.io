@@ -1,6 +1,7 @@
 ---
 title: "ASCII Table, Character Codes, and Linux Text Tools"
 date: 2013-07-15 10:05:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/ascii-table-and-ascii-code/
 ---

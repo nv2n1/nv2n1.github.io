@@ -1,6 +1,7 @@
 ---
 title: "SSH, File Transfer, and Remote Access: Linux from Windows"
 date: 2017-11-14 14:49:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/list-common-software-windows/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Detecting Blank or Nearly Blank Images on Linux"
 date: 2018-03-24 11:44:00 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-detect-whether-an-image-is-almost-blank-on-linux/
 ---

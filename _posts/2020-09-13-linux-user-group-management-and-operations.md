@@ -1,6 +1,7 @@
 ---
 title: "Managing Linux Users and Groups Effectively"
 date: 2020-09-13 10:29:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/linux-user-group-management-and-operations/
 ---

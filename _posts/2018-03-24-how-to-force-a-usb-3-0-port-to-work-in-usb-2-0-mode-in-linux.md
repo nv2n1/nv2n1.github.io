@@ -1,6 +1,7 @@
 ---
 title: "Force USB 3.0 Ports to USB 2.0 Mode on Linux"
 date: 2018-03-24 11:48:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-a-usb-3-0-port-to-work-in-usb-2-0-mode-in-linux/
 ---

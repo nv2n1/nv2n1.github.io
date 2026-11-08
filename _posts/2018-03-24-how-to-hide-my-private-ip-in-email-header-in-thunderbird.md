@@ -1,6 +1,7 @@
 ---
 title: "Hide Your Private IP from Thunderbird Email Headers"
 date: 2018-03-24 11:55:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-hide-my-private-ip-in-email-header-in-thunderbird/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "GNOME 2 Desktop Environment: macOS-Inspired Setup for Linux"
 date: 2013-07-12 16:31:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/beautiful-desktop-gnome-of-osx-style-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Loading a Kernel Module Automatically at Boot on CentOS"
 date: 2018-03-24 11:53:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-centos-linux-to-load-a-module-automatically-at-boot-time/
 ---

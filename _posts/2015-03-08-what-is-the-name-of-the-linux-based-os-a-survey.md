@@ -1,6 +1,7 @@
 ---
 title: "Understanding Linux Distribution Naming Conventions"
 date: 2015-03-08 09:05:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/what-is-the-name-of-the-linux-based-os-a-survey/
 ---

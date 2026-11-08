@@ -1,6 +1,7 @@
 ---
 title: "Using Your iPhone as a Wireless Mouse"
 date: 2018-03-24 08:15:26 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-turn-my-iphone-to-a-mouse/
 ---

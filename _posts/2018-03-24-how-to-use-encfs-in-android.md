@@ -1,6 +1,7 @@
 ---
 title: "EncFS on Android: Setup and Usage Guide"
 date: 2018-03-24 11:53:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-use-encfs-in-android/
 ---

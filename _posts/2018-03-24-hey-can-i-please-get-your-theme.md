@@ -1,6 +1,7 @@
 ---
 title: "WordPress and Q2A Theme Setup Guide"
 date: 2018-03-24 11:41:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hey-can-i-please-get-your-theme/
 ---

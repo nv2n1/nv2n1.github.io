@@ -1,6 +1,7 @@
 ---
 title: "PUMA: Benchmarking MapReduce Performance"
 date: 2012-12-21 02:07:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/puma-a-mapreduce-benchmark-suite/
 ---

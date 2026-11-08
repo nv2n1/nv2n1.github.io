@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel 4.19.70 Released"
 date: 2020-09-27 12:55:44 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-4-19-70-release/
 ---

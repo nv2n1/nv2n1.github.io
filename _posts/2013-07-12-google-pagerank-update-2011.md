@@ -1,6 +1,7 @@
 ---
 title: "How SEO Signals Have Evolved Beyond PageRank"
 date: 2013-07-12 16:46:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/google-pagerank-update-2011/
 ---

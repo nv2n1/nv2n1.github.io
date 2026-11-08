@@ -1,6 +1,7 @@
 ---
 title: "Removing Remote Tags in Git"
 date: 2020-09-20 13:25:36 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-delete-a-remote-git-tag-from-the-git-server/
 ---

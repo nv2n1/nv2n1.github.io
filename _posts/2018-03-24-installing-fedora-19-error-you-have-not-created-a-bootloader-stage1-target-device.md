@@ -1,6 +1,7 @@
 ---
 title: "Creating a Bootloader Stage1 Target Device in Fedora 19"
 date: 2018-03-24 08:17:38 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/installing-fedora-19-error-you-have-not-created-a-bootloader-stage1-target-device/
 ---

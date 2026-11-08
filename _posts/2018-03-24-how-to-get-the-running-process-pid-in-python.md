@@ -1,6 +1,7 @@
 ---
 title: "Getting Your Own Process ID in Python"
 date: 2018-03-24 11:52:47 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-running-process-pid-in-python/
 ---

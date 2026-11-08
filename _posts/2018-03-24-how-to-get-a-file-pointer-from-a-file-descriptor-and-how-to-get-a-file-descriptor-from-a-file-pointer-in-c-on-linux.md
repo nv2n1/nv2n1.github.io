@@ -1,6 +1,7 @@
 ---
 title: "Converting Between File Descriptors and FILE Pointers in C"
 date: 2018-03-24 11:48:07 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-a-file-pointer-from-a-file-descriptor-and-how-to-get-a-file-descriptor-from-a-file-pointer-in-c-on-linux/
 ---

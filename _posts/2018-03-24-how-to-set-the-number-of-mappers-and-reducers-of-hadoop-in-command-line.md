@@ -1,6 +1,7 @@
 ---
 title: "Configuring Mappers and Reducers in Hadoop: CLI and Code Approaches"
 date: 2018-03-24 11:41:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-the-number-of-mappers-and-reducers-of-hadoop-in-command-line/
 ---

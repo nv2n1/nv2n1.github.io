@@ -1,6 +1,7 @@
 ---
 title: "Comparing Files Line-by-Line on Linux Without Git"
 date: 2018-03-24 11:48:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-do-diff-like-git-diff-word-diff-without-git-on-linux/
 ---

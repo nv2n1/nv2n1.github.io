@@ -1,6 +1,7 @@
 ---
 title: "Adjusting Font Size in the WordPress Block Editor"
 date: 2013-07-12 16:46:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/changing-the-font-size-of-wordpresss-visual-editor/
 ---

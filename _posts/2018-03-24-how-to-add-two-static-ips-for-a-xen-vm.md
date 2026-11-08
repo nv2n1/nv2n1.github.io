@@ -1,6 +1,7 @@
 ---
 title: "Configuring Multiple Static IP Addresses on a Xen VM"
 date: 2018-03-24 11:50:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-two-static-ips-for-a-xen-vm/
 ---

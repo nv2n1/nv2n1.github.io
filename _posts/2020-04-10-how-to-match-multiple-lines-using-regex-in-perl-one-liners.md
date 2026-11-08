@@ -1,6 +1,7 @@
 ---
 title: "Reading Multiline Strings in Perl with -0777"
 date: 2020-04-10 07:45:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-match-multiple-lines-using-regex-in-perl-one-liners/
 ---

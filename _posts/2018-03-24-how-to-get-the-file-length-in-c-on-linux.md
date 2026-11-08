@@ -1,6 +1,7 @@
 ---
 title: "Getting File Size in C on Linux"
 date: 2018-03-24 11:40:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-file-length-in-c-on-linux/
 ---

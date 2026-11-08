@@ -1,6 +1,7 @@
 ---
 title: "Profiling Vim Startup and Runtime Performance"
 date: 2018-03-24 11:46:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/vim-turns-to-be-slow-after-enabling-some-plugins-how-to-find-which-leads-the-problem/
 ---

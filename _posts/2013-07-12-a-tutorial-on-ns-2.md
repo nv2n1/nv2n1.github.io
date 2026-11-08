@@ -1,6 +1,7 @@
 ---
 title: "NS-2 Network Simulator: A Practical Tutorial"
 date: 2013-07-12 16:32:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/a-tutorial-on-ns-2/
 ---

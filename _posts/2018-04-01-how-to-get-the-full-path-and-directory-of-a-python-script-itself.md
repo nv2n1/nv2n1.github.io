@@ -1,6 +1,7 @@
 ---
 title: "Getting the Full Path of a Python Script"
 date: 2018-04-01 14:41:12 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-full-path-and-directory-of-a-python-script-itself/
 ---

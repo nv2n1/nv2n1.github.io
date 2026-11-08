@@ -1,6 +1,7 @@
 ---
 title: "How to Configure DNF and YUM to Cache Downloaded RPM Packages"
 date: 2020-09-13 13:01:26 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-dnf-and-yum-save-downloaded-rpm-packages/
 ---

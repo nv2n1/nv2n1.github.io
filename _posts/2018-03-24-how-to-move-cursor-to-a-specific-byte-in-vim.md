@@ -1,6 +1,7 @@
 ---
 title: "Navigating to a Specific Byte Position in Vim"
 date: 2018-03-24 11:49:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-move-cursor-to-a-specific-byte-in-vim/
 ---

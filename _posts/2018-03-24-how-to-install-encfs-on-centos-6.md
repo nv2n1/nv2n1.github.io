@@ -1,6 +1,7 @@
 ---
 title: "Installing EncFS on CentOS 6"
 date: 2018-03-24 11:51:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-encfs-on-centos-6/
 ---

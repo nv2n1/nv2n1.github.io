@@ -1,6 +1,7 @@
 ---
 title: "Caching Strategies at Facebook"
 date: 2018-03-24 08:16:59 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/cache-at-facebook/
 ---

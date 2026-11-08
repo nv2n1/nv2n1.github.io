@@ -1,6 +1,7 @@
 ---
 title: "Understanding YARN: Resource Management and Cluster Fundamentals"
 date: 2018-03-24 08:22:28 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/good-introductions-to-hadoop-2-0-yarn/
 ---

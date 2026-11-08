@@ -1,6 +1,7 @@
 ---
 title: "How to Clone Xen DomU Virtual Machines"
 date: 2013-07-12 16:31:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-duplicate-xen-domu-virtual-machines/
 ---

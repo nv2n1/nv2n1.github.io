@@ -1,6 +1,7 @@
 ---
 title: "TPM 2.0: Understanding Platform Configuration Registers"
 date: 2024-12-14 09:09:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/understanding-tpm-2-0-and-platform-configuration-registers-pcrs/
 ---

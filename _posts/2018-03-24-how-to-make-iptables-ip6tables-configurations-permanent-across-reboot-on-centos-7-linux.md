@@ -1,6 +1,7 @@
 ---
 title: "Persisting iptables Rules on CentOS 7"
 date: 2018-03-24 11:53:59 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-iptables-ip6tables-configurations-permanent-across-reboot-on-centos-7-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Deactivate LVM Logical Volumes on Linux"
 date: 2018-03-24 11:47:22 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-deactivate-a-lvm-logical-volume-on-linux/
 ---

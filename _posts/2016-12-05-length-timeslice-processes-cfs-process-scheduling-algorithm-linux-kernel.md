@@ -1,6 +1,7 @@
 ---
 title: "Measuring CFS Scheduler Timeslices in Linux"
 date: 2016-12-05 02:47:34 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/length-timeslice-processes-cfs-process-scheduling-algorithm-linux-kernel/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Where Windows 10 Stores Metro App Data"
 date: 2018-03-24 11:50:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/where-are-the-data-of-metro-apps-stored-in-windows-10/
 ---

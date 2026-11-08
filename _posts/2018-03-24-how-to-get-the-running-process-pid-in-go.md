@@ -1,6 +1,7 @@
 ---
 title: "Getting a Process ID in Go"
 date: 2018-03-24 11:52:50 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-running-process-pid-in-go/
 ---

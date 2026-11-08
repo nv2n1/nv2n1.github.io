@@ -1,6 +1,7 @@
 ---
 title: "How to View Partition Start and End Sectors with Parted"
 date: 2018-03-24 11:55:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-list-start-and-end-sectors-of-a-partition-by-parted-in-linux/
 ---

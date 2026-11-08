@@ -1,6 +1,7 @@
 ---
 title: "Improving Video Rendering Quality in MPlayer"
 date: 2018-03-31 17:28:30 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/good-mplayer-options-to-improve-video-rendering-quality/
 ---

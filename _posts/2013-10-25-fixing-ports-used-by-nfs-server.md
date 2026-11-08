@@ -1,6 +1,7 @@
 ---
 title: "Configuring Static Ports for NFSv3 RPC Services"
 date: 2013-10-25 12:47:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/fixing-ports-used-by-nfs-server/
 ---

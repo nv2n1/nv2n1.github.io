@@ -1,6 +1,7 @@
 ---
 title: "Mastering pkill and pgrep for Process Management"
 date: 2013-07-12 16:32:20 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/pkill-and-pgrep-process-management-commands/
 ---

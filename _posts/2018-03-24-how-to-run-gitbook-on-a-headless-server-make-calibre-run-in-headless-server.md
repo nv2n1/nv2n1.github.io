@@ -1,6 +1,7 @@
 ---
 title: "Running Calibre\u2019s ebook-convert on Headless Servers with Xvfb"
 date: 2018-03-24 11:43:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-run-gitbook-on-a-headless-server-make-calibre-run-in-headless-server/
 ---

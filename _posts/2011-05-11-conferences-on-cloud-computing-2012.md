@@ -1,6 +1,7 @@
 ---
 title: "Conferences on Cloud Computing 2012"
 date: 2011-05-11 23:50:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/conferences-on-cloud-computing-2012/
 ---

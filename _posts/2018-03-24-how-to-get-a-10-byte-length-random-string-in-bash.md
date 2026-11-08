@@ -1,6 +1,7 @@
 ---
 title: "Generating a 10-Byte Random String in Bash"
 date: 2018-03-24 08:18:16 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-a-10-byte-length-random-string-in-bash/
 ---

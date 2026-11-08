@@ -1,6 +1,7 @@
 ---
 title: "Running Firefox Remotely Over SSH"
 date: 2018-03-24 08:04:15 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/run-firefox-on-remote-host-over-ssh/
 ---

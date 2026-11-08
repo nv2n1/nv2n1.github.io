@@ -1,6 +1,7 @@
 ---
 title: "Connecting Multiple Clusters with iptables NAT"
 date: 2013-07-12 16:32:20 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-up-vpn-like-network-between-several-clusters-using-iptables/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Apache GZIP vs. Brotli: Setup and Testing Guide"
 date: 2013-07-12 16:46:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/speeding-up-the-site-with-apache-gzip-compression/
 ---

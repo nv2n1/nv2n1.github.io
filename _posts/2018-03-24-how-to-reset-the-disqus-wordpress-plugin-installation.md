@@ -1,6 +1,7 @@
 ---
 title: "Resetting Your Disqus WordPress Plugin: A Step-by-Step Guide"
 date: 2018-03-24 08:18:11 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-reset-the-disqus-wordpress-plugin-installation/
 ---

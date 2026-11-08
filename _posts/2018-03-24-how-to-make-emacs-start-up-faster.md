@@ -1,6 +1,7 @@
 ---
 title: "Speeding Up Emacs Startup with Daemon Mode and Native Compilation"
 date: 2018-03-24 08:20:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-emacs-start-up-faster/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Installing Xen Dom0 on Fedora: Common Issues and Fixes"
 date: 2013-07-12 16:32:15 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/problems-during-installing-xen-dom0-in-fedora/
 ---

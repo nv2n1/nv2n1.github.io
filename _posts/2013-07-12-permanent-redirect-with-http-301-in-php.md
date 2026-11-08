@@ -1,6 +1,7 @@
 ---
 title: "Setting Up HTTP 301 Redirects in PHP"
 date: 2013-07-12 16:46:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/permanent-redirect-with-http-301-in-php/
 ---

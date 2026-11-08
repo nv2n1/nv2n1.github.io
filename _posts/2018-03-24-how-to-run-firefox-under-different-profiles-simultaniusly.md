@@ -1,6 +1,7 @@
 ---
 title: "Running Multiple Firefox Profiles at the Same Time"
 date: 2018-03-24 11:47:46 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-run-firefox-under-different-profiles-simultaniusly/
 ---

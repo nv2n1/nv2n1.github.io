@@ -1,6 +1,7 @@
 ---
 title: "Checking Your Linux Firmware Version"
 date: 2013-07-12 16:32:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-out-the-firmware-version-in-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Recovering Deleted Photos from Samsung Devices"
 date: 2018-03-24 11:45:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-can-i-recover-deleted-photos-from-samsung/
 ---

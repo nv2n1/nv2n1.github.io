@@ -1,6 +1,7 @@
 ---
 title: "Copy Command Output to Clipboard in Linux"
 date: 2013-07-18 03:45:02 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/copying-output-of-commands-in-linux-terminals-to-x-selection-clipboard/
 ---

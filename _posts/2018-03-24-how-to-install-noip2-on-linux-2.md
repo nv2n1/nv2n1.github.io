@@ -1,6 +1,7 @@
 ---
 title: "Installing noip2 on Linux: A Setup Guide"
 date: 2018-03-24 08:04:25 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-noip2-on-linux-2/
 ---

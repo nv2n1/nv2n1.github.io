@@ -1,6 +1,7 @@
 ---
 title: "Moving a Windows User Profile to Another Drive"
 date: 2018-03-24 11:46:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-move-all-the-files-under-users-for-a-user-to-another-drive-on-windows/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Handling Floating Point Math in Bash with bc, awk, and dc"
 date: 2013-07-12 16:47:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/floating-point-in-bash-shell/
 ---

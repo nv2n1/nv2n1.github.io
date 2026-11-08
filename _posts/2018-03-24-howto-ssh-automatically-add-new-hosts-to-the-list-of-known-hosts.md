@@ -1,6 +1,7 @@
 ---
 title: "Automatically Adding New SSH Hosts to Known Hosts"
 date: 2018-03-24 08:04:42 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/howto-ssh-automatically-add-new-hosts-to-the-list-of-known-hosts/
 ---

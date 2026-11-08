@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel 5.4.102 Released"
 date: 2021-03-07 06:54:22 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-5-4-102-release/
 ---

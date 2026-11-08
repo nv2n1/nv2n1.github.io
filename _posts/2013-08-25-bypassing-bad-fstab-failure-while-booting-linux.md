@@ -1,6 +1,7 @@
 ---
 title: "Recovering from fstab Boot Failures: A Practical Guide"
 date: 2013-08-25 10:43:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/bypassing-bad-fstab-failure-while-booting-linux/
 ---

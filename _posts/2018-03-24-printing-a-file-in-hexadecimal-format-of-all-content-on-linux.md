@@ -1,6 +1,7 @@
 ---
 title: "Comparing Linux Hex Viewers: xxd, od, hexdump, and hd"
 date: 2018-03-24 11:40:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/printing-a-file-in-hexadecimal-format-of-all-content-on-linux/
 ---

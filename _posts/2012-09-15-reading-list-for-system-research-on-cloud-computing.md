@@ -1,6 +1,7 @@
 ---
 title: "Distributed Systems and Cloud Computing: Essential Reading Guide"
 date: 2012-09-15 22:41:05 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/reading-list-for-system-research-on-cloud-computing/
 ---

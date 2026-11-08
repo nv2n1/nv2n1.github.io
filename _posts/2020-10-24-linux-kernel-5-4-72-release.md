@@ -1,6 +1,7 @@
 ---
 title: "Linux 5.4.72 Kernel Release Notes"
 date: 2020-10-24 14:29:21 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-5-4-72-release/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Adjusting HDFS Replication Factor on Live Clusters"
 date: 2018-03-24 11:43:49 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-an-running-hdfs-clusters-replication-factor/
 ---

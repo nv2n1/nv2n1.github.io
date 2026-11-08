@@ -1,6 +1,7 @@
 ---
 title: "Safely Disabling FirewallD on Fedora"
 date: 2018-03-24 08:21:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-totally-disable-firewall-or-iptables-on-fedora-20/
 ---

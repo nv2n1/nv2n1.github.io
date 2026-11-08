@@ -1,6 +1,7 @@
 ---
 title: "How to Check Your DNS Server on Linux"
 date: 2018-03-24 11:44:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-check-the-dns-i-am-using-on-linux/
 ---

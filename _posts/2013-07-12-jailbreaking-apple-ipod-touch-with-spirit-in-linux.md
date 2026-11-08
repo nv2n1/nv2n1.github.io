@@ -1,6 +1,7 @@
 ---
 title: "Jailbreaking an iPod Touch with Spirit on Linux"
 date: 2013-07-12 16:32:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/jailbreaking-apple-ipod-touch-with-spirit-in-linux/
 ---

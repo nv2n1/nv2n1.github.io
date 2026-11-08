@@ -1,6 +1,7 @@
 ---
 title: "Converting Strings to Integers in C++: Modern Approaches and Trade-offs"
 date: 2013-07-12 16:47:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/convert-string-to-int-and-reverse/
 ---

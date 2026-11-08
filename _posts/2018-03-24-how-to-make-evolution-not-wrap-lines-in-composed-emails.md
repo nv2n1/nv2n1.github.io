@@ -1,6 +1,7 @@
 ---
 title: "Prevent Line Wrapping in Evolution\u2019s Compose Window"
 date: 2018-03-24 11:55:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-evolution-not-wrap-lines-in-composed-emails/
 ---

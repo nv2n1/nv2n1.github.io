@@ -1,6 +1,7 @@
 ---
 title: "GCC Inline Assembly on Linux: Extended Syntax and Examples"
 date: 2013-07-12 16:47:46 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/inline-assembly-with-gcc-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Enable GNOME Classic Desktop on Fedora, CentOS, and RHEL"
 date: 2013-07-15 03:16:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-enable-gnome-classic-mode-in-fedora/
 ---

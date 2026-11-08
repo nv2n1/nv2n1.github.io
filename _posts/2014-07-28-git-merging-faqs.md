@@ -1,6 +1,7 @@
 ---
 title: "Git Merge vs. Rebase vs. Cherry-Pick: When to Use Each"
 date: 2014-07-28 08:56:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/git-merging-faqs/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Balancing Text Columns on the Last Page in LaTeX"
 date: 2018-03-24 08:22:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-balance-the-two-columns-of-text-on-the-last-page-of-a-latex-doc/
 ---

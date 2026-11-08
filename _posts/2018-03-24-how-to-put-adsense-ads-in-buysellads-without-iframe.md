@@ -1,6 +1,7 @@
 ---
 title: "Implement AdSense Backfill in BuySellAds Without iFrames"
 date: 2018-03-24 11:47:22 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-put-adsense-ads-in-buysellads-without-iframe/
 ---

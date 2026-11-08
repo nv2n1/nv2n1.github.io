@@ -1,6 +1,7 @@
 ---
 title: "Setting and Getting Environment Variables in C on Linux"
 date: 2018-03-24 08:18:35 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-and-get-an-environment-variable-in-c-on-linux/
 ---

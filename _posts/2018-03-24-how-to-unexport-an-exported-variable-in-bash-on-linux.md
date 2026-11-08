@@ -1,6 +1,7 @@
 ---
 title: "Unset Exported Variables in Bash"
 date: 2018-03-24 11:46:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-unexport-an-exported-variable-in-bash-on-linux/
 ---

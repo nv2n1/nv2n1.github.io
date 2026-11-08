@@ -1,6 +1,7 @@
 ---
 title: "Transactional Memory: Core Concepts and Implementation"
 date: 2018-03-24 08:15:46 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/transactional-memory-learning-materials/
 ---

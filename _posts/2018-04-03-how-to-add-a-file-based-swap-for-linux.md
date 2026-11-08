@@ -1,6 +1,7 @@
 ---
 title: "How to Set Up and Manage File-Based Swap on Linux"
 date: 2018-04-03 15:01:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-a-file-based-swap-for-linux/
 ---

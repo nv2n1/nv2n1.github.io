@@ -1,6 +1,7 @@
 ---
 title: "Configuring MediaWiki\u2019s Main Page: Redirects and Best Practices"
 date: 2013-07-16 01:38:27 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-mediawikis-main-page-title-and-url/
 ---

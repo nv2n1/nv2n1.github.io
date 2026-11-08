@@ -1,6 +1,7 @@
 ---
 title: "Boot Linux Mint into Console Mode by Default"
 date: 2018-03-24 11:42:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-boot-linux-mint-to-the-console-by-default/
 ---

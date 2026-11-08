@@ -1,6 +1,7 @@
 ---
 title: "EC2 Instance Control with IAM Tags: Allowing Developers to Start Only Dev Instances"
 date: 2019-03-10 08:43:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-limit-shared-aws-ec2-accounts-access-to-view-and-start-all-vms-yet-stop-only-certain-vms/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "GNU Screen Tutorial: Master Terminal Multiplexing"
 date: 2018-03-24 11:45:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/good-tutorials-for-screen-on-linux/
 ---

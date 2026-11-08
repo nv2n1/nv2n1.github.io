@@ -1,6 +1,7 @@
 ---
 title: "Chinese Character Support on Fedora 11"
 date: 2013-07-12 16:31:37 +0000
+author: "Eric Ma"
 layout: post
 permalink: /fedora-11-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
 canonical: https://www.systutorials.com/fedora-11-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/

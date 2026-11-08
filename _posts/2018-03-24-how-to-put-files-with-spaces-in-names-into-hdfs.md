@@ -1,6 +1,7 @@
 ---
 title: "Handling Files with Spaces in HDFS"
 date: 2018-03-24 11:51:55 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-put-files-with-spaces-in-names-into-hdfs/
 ---

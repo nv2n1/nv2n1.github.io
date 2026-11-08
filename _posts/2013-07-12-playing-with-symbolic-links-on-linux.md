@@ -1,6 +1,7 @@
 ---
 title: "Creating and Managing Symbolic Links in Linux"
 date: 2013-07-12 19:16:05 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/playing-with-symbolic-links-on-linux/
 ---

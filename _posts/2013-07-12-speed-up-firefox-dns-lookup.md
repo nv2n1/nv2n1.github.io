@@ -1,6 +1,7 @@
 ---
 title: "Optimizing Firefox DNS Resolution on Linux"
 date: 2013-07-12 16:31:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/speed-up-firefox-dns-lookup/
 ---

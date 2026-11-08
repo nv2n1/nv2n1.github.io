@@ -1,6 +1,7 @@
 ---
 title: "Deploying Dynamics 365 Web Resources with Visual Studio"
 date: 2020-04-02 06:57:52 +0000
+author: "jameswarner"
 layout: post
 canonical: https://www.systutorials.com/dynamics-365-developer-extension-is-now-working-in-visual-studio-2017/
 ---

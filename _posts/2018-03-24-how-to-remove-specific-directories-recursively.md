@@ -1,6 +1,7 @@
 ---
 title: "Find and Delete Directories Recursively"
 date: 2018-03-24 11:43:49 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-remove-specific-directories-recursively/
 ---

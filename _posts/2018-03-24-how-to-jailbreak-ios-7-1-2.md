@@ -1,6 +1,7 @@
 ---
 title: "Why iOS 7.1.2 Jailbreaking Isn\u2019t Worth Your Time Anymore"
 date: 2018-03-24 11:41:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-jailbreak-ios-7-1-2/
 ---

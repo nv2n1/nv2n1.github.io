@@ -1,6 +1,7 @@
 ---
 title: "Migrating a Git Repository from Google Code to GitHub"
 date: 2018-03-24 11:41:48 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-import-a-googlecode-git-project-to-github-project/
 ---

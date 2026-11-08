@@ -1,6 +1,7 @@
 ---
 title: "Shared Hosting Providers That Support SSH Access"
 date: 2018-03-24 08:18:05 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/shared-hosting-services-with-ssh-enabled/
 ---

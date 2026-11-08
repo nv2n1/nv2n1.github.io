@@ -1,6 +1,7 @@
 ---
 title: "mkfs Error: Device Apparently in Use by the System"
 date: 2018-03-24 11:47:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/mkfs-refuses-to-make-filesystem-with-message-is-apparently-in-use-by-the-system-will-not-make-a-filesystem-here/
 ---

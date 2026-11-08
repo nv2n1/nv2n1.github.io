@@ -1,6 +1,7 @@
 ---
 title: "Controlling SCP Bandwidth with the -l Flag"
 date: 2018-03-24 11:46:29 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-limit-the-network-rate-used-by-scp-in-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Safely Allow Code Blocks in WordPress Comments"
 date: 2018-03-24 11:40:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-allow-pre-tag-in-wordpress-comments/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Configuring HDFS Replication: Cluster and Per-File Settings"
 date: 2018-03-24 08:22:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-the-data-replication-factor-of-hadoop-hdfs/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "DEX vs. CEX: Technical Trade-offs Explained"
 date: 2023-03-19 08:11:11 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/decentralized-exchanges-dex-vs-centralized-exchanges-cex-a-technical-comparison/
 ---

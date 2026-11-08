@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel\u2019s taskstats: Per-Task Performance Metrics"
 date: 2017-02-14 01:56:21 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-collect-task-stats-data/
 ---

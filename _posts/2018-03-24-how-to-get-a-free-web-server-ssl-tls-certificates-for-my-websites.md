@@ -1,6 +1,7 @@
 ---
 title: "Free SSL/TLS Certificates: Let\u2019s Encrypt and Alternatives"
 date: 2018-03-24 11:46:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-a-free-web-server-ssl-tls-certificates-for-my-websites/
 ---

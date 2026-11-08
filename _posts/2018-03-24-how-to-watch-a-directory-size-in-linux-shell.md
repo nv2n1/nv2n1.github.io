@@ -1,6 +1,7 @@
 ---
 title: "Monitor Directory Size Growth in Linux"
 date: 2018-03-24 11:49:14 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-watch-a-directory-size-in-linux-shell/
 ---

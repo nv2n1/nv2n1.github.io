@@ -1,6 +1,7 @@
 ---
 title: "Comments in Page Margins: Printing with LibreOffice"
 date: 2020-10-18 00:20:46 +0000
+author: "David Wong"
 layout: post
 canonical: https://www.systutorials.com/how-to-print-comments-in-page-margins-in-libreoffice/
 ---

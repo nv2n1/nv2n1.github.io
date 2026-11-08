@@ -1,6 +1,7 @@
 ---
 title: "Pasting Text in Vim Without Auto-Indentation"
 date: 2018-03-24 08:04:42 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/vim-pasting-text-as-is-in-vim-in-paste-mode/
 ---

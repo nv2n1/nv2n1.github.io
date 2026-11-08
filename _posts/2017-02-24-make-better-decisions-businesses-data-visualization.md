@@ -1,6 +1,7 @@
 ---
 title: "Linux System Monitoring with Data Visualization"
 date: 2017-02-24 06:39:22 +0000
+author: "Joseph Macwan"
 layout: post
 canonical: https://www.systutorials.com/make-better-decisions-businesses-data-visualization/
 ---

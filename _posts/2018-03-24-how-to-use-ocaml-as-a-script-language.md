@@ -1,6 +1,7 @@
 ---
 title: "Using OCaml as a Script Language"
 date: 2018-03-24 08:16:32 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-use-ocaml-as-a-script-language/
 ---

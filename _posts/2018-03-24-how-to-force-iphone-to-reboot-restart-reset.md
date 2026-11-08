@@ -1,6 +1,7 @@
 ---
 title: "Force Restart a Frozen iPhone"
 date: 2018-03-24 11:44:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-iphone-to-reboot-restart-reset/
 ---

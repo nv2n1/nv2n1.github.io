@@ -1,6 +1,7 @@
 ---
 title: "Creating a Swap Partition on Linux"
 date: 2018-03-24 08:14:11 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-a-swap-partition/
 ---

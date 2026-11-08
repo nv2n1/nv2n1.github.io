@@ -1,6 +1,7 @@
 ---
 title: "Pushing a Git Branch to a Remote Repository"
 date: 2018-03-24 11:44:15 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-create-a-git-branch-on-remote-git-server/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Fixing Skype Crashes When Temp Directory Is Inaccessible"
 date: 2018-03-24 11:47:40 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/skype-crashes-because-it-cannot-read-data-from-cdocuments-and-settingsadministratorlocal-settingstemp/
 ---

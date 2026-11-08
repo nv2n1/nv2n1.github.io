@@ -1,6 +1,7 @@
 ---
 title: "Spark SQL: DDL and DML Operations Explained"
 date: 2018-03-24 11:44:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/what-are-the-ddl-and-dml-of-shark-spark-sql/
 ---

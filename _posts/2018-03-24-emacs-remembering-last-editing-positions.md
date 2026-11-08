@@ -1,6 +1,7 @@
 ---
 title: "Restore Cursor Position in Emacs with save-place-mode"
 date: 2018-03-24 11:41:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/emacs-remembering-last-editing-positions/
 ---

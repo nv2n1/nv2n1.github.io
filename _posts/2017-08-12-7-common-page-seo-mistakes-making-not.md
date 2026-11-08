@@ -1,6 +1,7 @@
 ---
 title: "Common On-Page SEO Mistakes and How to Fix Them"
 date: 2017-08-12 02:44:24 +0000
+author: "irfanahmedkhan"
 layout: post
 canonical: https://www.systutorials.com/7-common-page-seo-mistakes-making-not/
 ---

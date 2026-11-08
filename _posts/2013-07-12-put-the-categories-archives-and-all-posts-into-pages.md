@@ -1,6 +1,7 @@
 ---
 title: "Custom WordPress Archives: Categories, Dates, and Posts"
 date: 2013-07-12 16:46:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/put-the-categories-archives-and-all-posts-into-pages/
 ---

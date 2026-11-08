@@ -1,6 +1,7 @@
 ---
 title: "Managing CPU and Memory in Xen Dom0 Environments"
 date: 2013-09-25 10:27:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/managing-xen-dom0s-cpu-and-memory/
 ---

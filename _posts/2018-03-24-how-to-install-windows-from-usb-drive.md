@@ -1,6 +1,7 @@
 ---
 title: "Creating a Bootable Windows USB Drive from an ISO"
 date: 2018-03-24 11:49:22 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-windows-from-usb-drive/
 ---

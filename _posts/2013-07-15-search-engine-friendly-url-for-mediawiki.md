@@ -1,6 +1,7 @@
 ---
 title: "Enabling SEO-Friendly URLs in MediaWiki with Apache and Nginx"
 date: 2013-07-15 12:56:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/search-engine-friendly-url-for-mediawiki/
 ---

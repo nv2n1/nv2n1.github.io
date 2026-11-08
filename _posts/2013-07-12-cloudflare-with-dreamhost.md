@@ -1,6 +1,7 @@
 ---
 title: "Configuring Cloudflare DNS with DreamHost"
 date: 2013-07-12 16:46:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/cloudflare-with-dreamhost/
 ---

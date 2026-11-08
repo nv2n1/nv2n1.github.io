@@ -1,6 +1,7 @@
 ---
 title: "Improving SSH Performance with Faster Ciphers"
 date: 2014-04-24 13:39:43 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/improving-sshscp-performance-by-choosing-ciphers/
 ---

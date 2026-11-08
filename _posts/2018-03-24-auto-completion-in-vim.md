@@ -1,6 +1,7 @@
 ---
 title: "Vim\u2019s Autocompletion: A Complete Guide"
 date: 2018-03-24 08:14:42 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/auto-completion-in-vim/
 ---

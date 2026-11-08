@@ -1,6 +1,7 @@
 ---
 title: "How the CFS Scheduler Controls Process Timeslices and Preemption"
 date: 2016-12-01 06:31:04 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/sched_min_granularity_ns-sched_latency_ns-cfs-affect-timeslice-processes/
 ---

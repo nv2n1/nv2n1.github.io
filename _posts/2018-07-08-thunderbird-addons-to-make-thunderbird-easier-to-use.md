@@ -1,6 +1,7 @@
 ---
 title: "Thunderbird Add-ons for Better Email Organization"
 date: 2018-07-08 07:05:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/thunderbird-addons-to-make-thunderbird-easier-to-use/
 ---

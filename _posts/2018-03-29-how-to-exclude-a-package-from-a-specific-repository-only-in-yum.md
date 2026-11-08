@@ -1,6 +1,7 @@
 ---
 title: "Exclude a Package from a Specific Repository in Yum"
 date: 2018-03-29 08:47:37 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-exclude-a-package-from-a-specific-repository-only-in-yum/
 ---

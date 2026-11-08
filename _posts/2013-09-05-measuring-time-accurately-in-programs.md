@@ -1,6 +1,7 @@
 ---
 title: "Choosing the Right Timer: clock_gettime vs TSC in Linux"
 date: 2013-09-05 12:19:15 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/measuring-time-accurately-in-programs/
 ---

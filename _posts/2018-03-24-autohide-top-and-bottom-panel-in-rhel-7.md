@@ -1,6 +1,7 @@
 ---
 title: "Auto-hiding Panels in RHEL 7: A Setup Guide"
 date: 2018-03-24 11:54:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/autohide-top-and-bottom-panel-in-rhel-7/
 ---

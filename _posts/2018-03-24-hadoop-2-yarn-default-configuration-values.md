@@ -1,6 +1,7 @@
 ---
 title: "Understanding Hadoop Configuration Files: Locations and Defaults"
 date: 2018-03-24 08:22:28 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hadoop-2-yarn-default-configuration-values/
 ---

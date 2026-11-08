@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel: Disable GuC/HuC Auto Mode on Pre-Gen11"
 date: 2020-10-01 14:25:35 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-drm-i915-guc-dont-enable-guc-huc-in-auto-mode-on-pre-gen11/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Reload fstab Changes in systemd on Linux"
 date: 2018-03-24 11:53:12 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-systemd-to-refresh-or-reloaded-a-changed-fstab-on-linux/
 ---

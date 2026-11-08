@@ -1,6 +1,7 @@
 ---
 title: "Upgrading Vim to Version 8 on CentOS 7"
 date: 2018-03-24 11:53:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-upgrade-vim-to-version-8-on-centos-7/
 ---

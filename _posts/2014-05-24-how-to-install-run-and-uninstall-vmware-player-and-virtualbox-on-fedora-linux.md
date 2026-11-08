@@ -1,6 +1,7 @@
 ---
 title: "Running VMware Player and VirtualBox on Fedora"
 date: 2014-05-24 14:03:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-run-and-uninstall-vmware-player-and-virtualbox-on-fedora-linux/
 ---

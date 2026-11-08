@@ -1,6 +1,7 @@
 ---
 title: "Tuning Linux UDP Buffer Sizes to Prevent Packet Loss"
 date: 2018-03-24 11:41:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-enlarge-linux-udp-buffer-size/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Troubleshooting \u201cinvalid syntax, continuing\u201d errors in sysctl"
 date: 2018-03-24 11:50:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/why-i-got-message-invalid-syntax-continuing-when-i-execute-sysctl/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu GUI Performance Slowdown: Causes and Fixes"
 date: 2018-03-24 11:51:24 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/ubuntus-gui-response-is-very-slow/
 ---

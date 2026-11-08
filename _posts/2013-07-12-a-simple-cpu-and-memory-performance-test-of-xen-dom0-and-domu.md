@@ -1,6 +1,7 @@
 ---
 title: "CPU and Memory Performance: Xen Dom0 vs DomU Comparison"
 date: 2013-07-12 16:31:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/a-simple-cpu-and-memory-performance-test-of-xen-dom0-and-domu/
 ---

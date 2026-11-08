@@ -1,6 +1,7 @@
 ---
 title: "How GCC Inlines Recursive Functions at -O3"
 date: 2020-04-05 13:45:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/gcc-may-save-you-some-recursive-functions-calls-an-analysis-of-a-function-call-stack-length-example/
 ---

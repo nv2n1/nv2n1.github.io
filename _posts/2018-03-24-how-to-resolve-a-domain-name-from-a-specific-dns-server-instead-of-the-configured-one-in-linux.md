@@ -1,6 +1,7 @@
 ---
 title: "Query DNS Records from a Specific Server with dig"
 date: 2018-03-24 11:46:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-resolve-a-domain-name-from-a-specific-dns-server-instead-of-the-configured-one-in-linux/
 ---

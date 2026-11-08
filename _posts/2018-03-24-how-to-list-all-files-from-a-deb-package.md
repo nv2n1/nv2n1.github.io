@@ -1,6 +1,7 @@
 ---
 title: "Extract Files from a .deb Package Without Installing"
 date: 2018-03-24 11:43:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-list-all-files-from-a-deb-package/
 ---

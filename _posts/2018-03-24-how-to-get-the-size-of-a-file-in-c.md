@@ -1,6 +1,7 @@
 ---
 title: "Getting File Size in C"
 date: 2018-03-24 08:08:22 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-size-of-a-file-in-c/
 ---

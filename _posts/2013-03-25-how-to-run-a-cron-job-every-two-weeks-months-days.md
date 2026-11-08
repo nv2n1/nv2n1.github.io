@@ -1,6 +1,7 @@
 ---
 title: "How to Schedule Cron Jobs at Custom Intervals"
 date: 2013-03-25 13:06:06 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-run-a-cron-job-every-two-weeks-months-days/
 ---

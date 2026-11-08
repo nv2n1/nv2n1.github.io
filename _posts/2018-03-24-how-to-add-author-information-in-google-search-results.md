@@ -1,6 +1,7 @@
 ---
 title: "How to Add Author Information to Google Search Results"
 date: 2018-03-24 08:04:42 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-author-information-in-google-search-results/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Disable Emoji Hotkey in Linux with GSettings"
 date: 2023-05-20 07:58:03 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/disabling-the-emoji-hotkey-in-linux-using-gsettings/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Managing VirtualBox VMs from the Linux Command Line"
 date: 2020-02-29 12:47:30 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-list-and-start-virtualbox-vms-in-command-line-in-linux/
 ---

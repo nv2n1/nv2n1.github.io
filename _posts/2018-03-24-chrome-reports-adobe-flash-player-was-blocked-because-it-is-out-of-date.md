@@ -1,6 +1,7 @@
 ---
 title: "Flash Player Blocked: How to Handle Outdated Version Warnings"
 date: 2018-03-24 08:14:48 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/chrome-reports-adobe-flash-player-was-blocked-because-it-is-out-of-date/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Detecting Uncommitted Changes in Git Repositories"
 date: 2018-03-24 11:48:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-test-whether-the-git-repository-is-dirty/
 ---

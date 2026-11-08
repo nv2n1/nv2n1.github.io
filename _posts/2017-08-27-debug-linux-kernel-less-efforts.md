@@ -1,6 +1,7 @@
 ---
 title: "Debugging Kernel Modules with Runtime Parameters"
 date: 2017-08-27 16:05:37 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/debug-linux-kernel-less-efforts/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Converting DOC Files to ODT Format on Linux"
 date: 2020-11-01 07:22:32 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/docx-doc-to-odt-file-conversion-in-linux-command-line/
 ---

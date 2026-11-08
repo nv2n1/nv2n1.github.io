@@ -1,6 +1,7 @@
 ---
 title: "Getting a User\u2019s Home Directory in Bash"
 date: 2018-03-24 11:49:54 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-a-users-home-directory-from-the-username-in-a-variables-in-bash/
 ---

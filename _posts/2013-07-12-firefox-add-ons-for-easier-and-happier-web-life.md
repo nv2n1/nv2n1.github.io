@@ -1,6 +1,7 @@
 ---
 title: "Firefox Extensions Worth Using in 2026"
 date: 2013-07-12 16:54:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/firefox-add-ons-for-easier-and-happier-web-life/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Automatically Move Spam to Junk in Thunderbird"
 date: 2016-05-07 05:49:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/automatically-move-spam-emails-junk-folder-thunderbird/
 ---

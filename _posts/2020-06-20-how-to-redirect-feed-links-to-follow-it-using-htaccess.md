@@ -1,6 +1,7 @@
 ---
 title: "Redirect RSS Feeds to follow.it with .htaccess"
 date: 2020-06-20 03:35:41 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-redirect-feed-links-to-follow-it-using-htaccess/
 ---

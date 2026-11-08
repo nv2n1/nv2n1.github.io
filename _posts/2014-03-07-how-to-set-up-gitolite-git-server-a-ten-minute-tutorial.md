@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Gitolite for SSH-Based Git Repositories"
 date: 2014-03-07 00:13:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-up-gitolite-git-server-a-ten-minute-tutorial/
 ---

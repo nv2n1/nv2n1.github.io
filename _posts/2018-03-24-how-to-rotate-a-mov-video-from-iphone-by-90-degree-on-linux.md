@@ -1,6 +1,7 @@
 ---
 title: "How to Rotate iPhone MOV Videos with FFmpeg on Linux"
 date: 2018-03-24 11:42:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-rotate-a-mov-video-from-iphone-by-90-degree-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Automating File Encryption with OpenSSL"
 date: 2019-11-16 03:53:09 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-encrypt-a-file-using-openssl-on-linux-non-interactively/
 ---

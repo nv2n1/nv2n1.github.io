@@ -1,6 +1,7 @@
 ---
 title: "Setting the Default Boot Entry in GRUB2"
 date: 2013-07-12 16:32:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-default-entry-in-grub2-and-grub/
 ---

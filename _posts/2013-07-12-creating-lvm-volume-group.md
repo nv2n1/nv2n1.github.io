@@ -1,6 +1,7 @@
 ---
 title: "Managing LVM Volume Groups: Setup and Configuration"
 date: 2013-07-12 16:32:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/creating-lvm-volume-group/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Capturing Webcam Photos and Videos on Linux"
 date: 2018-03-24 11:43:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-capture-camera-photo-video-using-mplayer-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Check if a Function Is Defined in Bash"
 date: 2018-03-24 11:50:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-check-whether-a-function-has-been-defined-in-bash/
 ---

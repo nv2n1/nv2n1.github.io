@@ -1,6 +1,7 @@
 ---
 title: "Paxos vs. Raft: Consensus Algorithms Compared"
 date: 2024-09-06 14:19:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/comparing-paxos-and-raft/
 ---

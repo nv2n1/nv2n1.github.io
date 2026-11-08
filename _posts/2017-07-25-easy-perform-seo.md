@@ -1,6 +1,7 @@
 ---
 title: "SEO Results Timeline: What to Expect in 2026"
 date: 2017-07-25 14:07:21 +0000
+author: "Colin"
 layout: post
 canonical: https://www.systutorials.com/easy-perform-seo/
 ---

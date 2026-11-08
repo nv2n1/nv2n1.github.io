@@ -1,6 +1,7 @@
 ---
 title: "Setting Process Priority to Lowest"
 date: 2018-03-24 11:51:42 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-process-with-lowest-priority/
 ---

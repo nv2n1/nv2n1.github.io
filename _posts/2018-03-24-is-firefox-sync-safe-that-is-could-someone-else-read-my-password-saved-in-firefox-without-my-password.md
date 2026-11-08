@@ -1,6 +1,7 @@
 ---
 title: "Can Firefox Sync Access Your Passwords Without Your Master Password?"
 date: 2018-03-24 11:48:53 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/is-firefox-sync-safe-that-is-could-someone-else-read-my-password-saved-in-firefox-without-my-password/
 ---

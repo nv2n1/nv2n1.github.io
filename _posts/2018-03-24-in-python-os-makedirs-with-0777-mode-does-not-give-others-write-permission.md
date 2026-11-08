@@ -1,6 +1,7 @@
 ---
 title: "Python\u2019s os.makedirs() with mode 0o777 doesn\u2019t grant write permissions to others"
 date: 2018-03-24 11:54:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/in-python-os-makedirs-with-0777-mode-does-not-give-others-write-permission/
 ---

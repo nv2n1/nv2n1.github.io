@@ -1,6 +1,7 @@
 ---
 title: "Display Post Excerpts Instead of Full Content on WordPress Archives"
 date: 2013-07-12 16:46:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/use-excerpt-in-index-category-tag-and-arhieve-pages-for-wordpress/
 ---

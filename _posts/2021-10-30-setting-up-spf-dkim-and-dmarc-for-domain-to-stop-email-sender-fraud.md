@@ -1,6 +1,7 @@
 ---
 title: "Email Authentication Fundamentals: SPF, DKIM, and DMARC Explained"
 date: 2021-10-30 16:17:04 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/
 ---

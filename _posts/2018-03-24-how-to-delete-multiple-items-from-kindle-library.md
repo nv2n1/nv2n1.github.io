@@ -1,6 +1,7 @@
 ---
 title: "How to Remove Multiple Items from Your Kindle Library"
 date: 2018-03-24 08:18:42 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-delete-multiple-items-from-kindle-library/
 ---

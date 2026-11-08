@@ -1,6 +1,7 @@
 ---
 title: "Show Question Excerpts in Question2Answer RSS Feeds"
 date: 2018-03-24 08:16:46 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/question2answer-show-excerpt-in-the-rss-feed/
 ---

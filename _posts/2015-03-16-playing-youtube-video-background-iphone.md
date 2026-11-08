@@ -1,6 +1,7 @@
 ---
 title: "Background YouTube Playback on iPhone: What Actually Works"
 date: 2015-03-16 05:40:52 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/playing-youtube-video-background-iphone/
 ---

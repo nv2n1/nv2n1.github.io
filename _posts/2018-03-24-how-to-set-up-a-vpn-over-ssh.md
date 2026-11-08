@@ -1,6 +1,7 @@
 ---
 title: "VPN Over SSH: Using sshuttle and Alternatives"
 date: 2018-03-24 11:41:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-up-a-vpn-over-ssh/
 ---

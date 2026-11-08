@@ -1,6 +1,7 @@
 ---
 title: "Building a Secure Random Password Generator in Scala"
 date: 2018-03-24 08:20:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/random-string-password-generator-in-scala/
 ---

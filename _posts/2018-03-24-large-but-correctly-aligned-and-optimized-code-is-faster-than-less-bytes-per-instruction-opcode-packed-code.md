@@ -1,6 +1,7 @@
 ---
 title: "Code alignment matters more than code size for performance"
 date: 2018-03-24 07:56:40 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/large-but-correctly-aligned-and-optimized-code-is-faster-than-less-bytes-per-instruction-opcode-packed-code/
 ---

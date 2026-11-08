@@ -1,6 +1,7 @@
 ---
 title: "Generate Passwords in Bash and Shell Scripts"
 date: 2018-03-24 11:55:14 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-generate-a-password-in-shell-on-linux/
 ---

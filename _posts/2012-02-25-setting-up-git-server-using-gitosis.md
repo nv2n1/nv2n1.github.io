@@ -1,6 +1,7 @@
 ---
 title: "Git Server Setup with Gitosis"
 date: 2012-02-25 13:17:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-up-git-server-using-gitosis/
 ---

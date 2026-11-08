@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with OCaml: Learning Resources and Setup"
 date: 2013-07-12 16:47:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/materials-for-learning-ocaml/
 ---

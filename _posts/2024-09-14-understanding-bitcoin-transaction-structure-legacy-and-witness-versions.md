@@ -1,6 +1,7 @@
 ---
 title: "Bitcoin Transaction Formats: Legacy vs. SegWit Explained"
 date: 2024-09-14 07:31:55 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/understanding-bitcoin-transaction-structure-legacy-and-witness-versions/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Debugging C++ Projects with CMake"
 date: 2018-03-24 08:13:44 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/enable-debugging-with-cmake/
 ---

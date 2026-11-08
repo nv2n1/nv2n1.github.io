@@ -1,6 +1,7 @@
 ---
 title: "Prevent Firefox from Closing When Last Tab Closes"
 date: 2013-07-12 16:54:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/keep-firefox-open-after-closing-the-last-tab/
 ---

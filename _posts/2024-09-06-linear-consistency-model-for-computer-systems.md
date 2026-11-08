@@ -1,6 +1,7 @@
 ---
 title: "Linear Consistency Model in Distributed Systems"
 date: 2024-09-06 14:45:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/linear-consistency-model-for-computer-systems/
 ---

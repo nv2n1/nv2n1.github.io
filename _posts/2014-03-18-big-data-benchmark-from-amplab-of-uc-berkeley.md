@@ -1,6 +1,7 @@
 ---
 title: "AMPLab Big Data Benchmark: Key Metrics and Lasting Impact"
 date: 2014-03-18 05:00:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/big-data-benchmark-from-amplab-of-uc-berkeley/
 ---

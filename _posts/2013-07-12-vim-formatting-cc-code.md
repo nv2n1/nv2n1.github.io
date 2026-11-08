@@ -1,6 +1,7 @@
 ---
 title: "Configuring Indentation in Vim for C and C++"
 date: 2013-07-12 16:47:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/vim-formatting-cc-code/
 ---

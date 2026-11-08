@@ -1,6 +1,7 @@
 ---
 title: "Find Files Without a Specific String in Their Name on Linux"
 date: 2018-03-24 11:45:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-files-without-certain-strings-in-their-files-names-reverse-of-string-on-linux/
 ---

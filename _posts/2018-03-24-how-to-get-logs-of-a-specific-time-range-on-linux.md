@@ -1,6 +1,7 @@
 ---
 title: "Extract Linux Logs Within a Specific Time Range"
 date: 2018-03-24 11:43:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-logs-of-a-specific-time-range-on-linux/
 ---

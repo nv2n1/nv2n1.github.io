@@ -1,6 +1,7 @@
 ---
 title: "How to Unmount a Busy Filesystem in Linux"
 date: 2016-05-21 02:54:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/force-linux-unmount-filesystem-reporting-device-busy/
 ---

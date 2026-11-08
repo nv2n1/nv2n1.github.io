@@ -1,6 +1,7 @@
 ---
 title: "Export Chrome Passwords to a Text File on Linux"
 date: 2018-03-24 11:48:01 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-export-google-chrome-password-on-linux/
 ---

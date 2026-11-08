@@ -1,6 +1,7 @@
 ---
 title: "Email Backup: Comparing offlineimap, mbsync, and doveadm"
 date: 2018-03-24 08:20:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-back-up-a-complete-imap-account/
 ---

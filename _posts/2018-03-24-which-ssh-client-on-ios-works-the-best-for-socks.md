@@ -1,6 +1,7 @@
 ---
 title: "Best iOS SSH Clients for SOCKS Proxy Support"
 date: 2018-03-24 11:50:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/which-ssh-client-on-ios-works-the-best-for-socks/
 ---

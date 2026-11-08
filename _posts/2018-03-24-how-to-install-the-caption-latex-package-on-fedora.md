@@ -1,6 +1,7 @@
 ---
 title: "Installing the Caption LaTeX Package on Fedora"
 date: 2018-03-24 08:14:22 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-the-caption-latex-package-on-fedora/
 ---

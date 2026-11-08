@@ -1,6 +1,7 @@
 ---
 title: "SSH Auto-Login Without Passwords: Troubleshooting Guide"
 date: 2018-03-24 08:04:15 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/pass-less-ssh-auto-login-problem/
 ---

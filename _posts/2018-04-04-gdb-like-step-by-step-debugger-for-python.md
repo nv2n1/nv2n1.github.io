@@ -1,6 +1,7 @@
 ---
 title: "Python Debugging with pdb: A Step-by-Step Command Guide"
 date: 2018-04-04 07:36:03 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/gdb-like-step-by-step-debugger-for-python/
 ---

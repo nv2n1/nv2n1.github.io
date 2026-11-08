@@ -1,6 +1,7 @@
 ---
 title: "Resolving UnrecovData 10B8B BadCRC and READ FPDMA QUEUED Errors"
 date: 2018-03-24 11:47:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/whats-wrong-with-the-messages-like-unrecovdata-10b8b-badcrc-and-failed-command-read-fpdma-queued-on-linux/
 ---

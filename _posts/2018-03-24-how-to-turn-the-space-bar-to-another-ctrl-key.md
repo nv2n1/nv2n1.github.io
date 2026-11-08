@@ -1,6 +1,7 @@
 ---
 title: "Remap Space Bar to Ctrl with Tap-for-Space on Linux"
 date: 2018-03-24 08:22:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-turn-the-space-bar-to-another-ctrl-key/
 ---

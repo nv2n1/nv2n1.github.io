@@ -1,6 +1,7 @@
 ---
 title: "The Best Go REPL Tools and Implementations"
 date: 2018-03-24 11:51:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/any-good-go-repl-implementation-tool/
 ---

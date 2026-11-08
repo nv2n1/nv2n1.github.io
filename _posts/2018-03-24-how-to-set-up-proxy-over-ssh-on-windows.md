@@ -1,6 +1,7 @@
 ---
 title: "Setting Up SSH Tunneling as a Proxy on Windows"
 date: 2018-03-24 08:14:48 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-up-proxy-over-ssh-on-windows/
 ---

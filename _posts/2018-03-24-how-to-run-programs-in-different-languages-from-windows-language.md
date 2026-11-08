@@ -1,6 +1,7 @@
 ---
 title: "Running Legacy Applications in Different Windows Locales"
 date: 2018-03-24 11:42:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-run-programs-in-different-languages-from-windows-language/
 ---

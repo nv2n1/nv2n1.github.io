@@ -1,6 +1,7 @@
 ---
 title: "Benchmarking SSD Performance on Shared Hosting Without Root"
 date: 2015-03-06 11:02:22 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/ssd-enabled-for-dreamhost-shared-hosting-performance-measurement/
 ---

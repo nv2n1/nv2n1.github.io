@@ -1,6 +1,7 @@
 ---
 title: "Managing Third-Party Repositories on CentOS, Rocky Linux, and AlmaLinux"
 date: 2016-10-15 09:38:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/additional-repositories-centos-linux/
 ---

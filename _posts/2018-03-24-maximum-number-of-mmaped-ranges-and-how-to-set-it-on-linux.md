@@ -1,6 +1,7 @@
 ---
 title: "Resolving ENOMEM Errors When mmap() Exceeds vm.max_map_count"
 date: 2018-03-24 11:49:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/maximum-number-of-mmaped-ranges-and-how-to-set-it-on-linux/
 ---

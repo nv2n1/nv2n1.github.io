@@ -1,6 +1,7 @@
 ---
 title: "Inline Comments in Multi-Line Bash Commands"
 date: 2020-04-10 10:56:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-inline-comments-for-multi-line-command-in-bash-script/
 ---

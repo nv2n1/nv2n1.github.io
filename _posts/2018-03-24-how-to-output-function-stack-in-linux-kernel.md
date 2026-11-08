@@ -1,6 +1,7 @@
 ---
 title: "How to Print the Function Call Stack in Linux Kernel"
 date: 2018-03-24 11:51:30 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-output-function-stack-in-linux-kernel/
 ---

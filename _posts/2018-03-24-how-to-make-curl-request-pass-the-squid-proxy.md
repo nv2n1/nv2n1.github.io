@@ -1,6 +1,7 @@
 ---
 title: "Squid Proxy Blocking curl POST Requests With Expect: 100-continue"
 date: 2018-03-24 11:47:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-curl-request-pass-the-squid-proxy/
 ---

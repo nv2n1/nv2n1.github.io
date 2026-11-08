@@ -1,6 +1,7 @@
 ---
 title: "Finding a Bash Script\u2019s Directory Reliably"
 date: 2018-03-24 11:49:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-a-scripts-directory-reliably-in-bash-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Using .htaccess to Redirect WordPress Feeds to Feedburner"
 date: 2013-07-12 16:46:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-redirect-wordpress-feed-to-feedburner-using-htaccess/
 ---

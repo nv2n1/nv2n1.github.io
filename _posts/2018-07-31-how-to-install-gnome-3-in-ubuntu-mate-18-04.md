@@ -1,6 +1,7 @@
 ---
 title: "Dual Boot GNOME and MATE on Ubuntu"
 date: 2018-07-31 02:27:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-gnome-3-in-ubuntu-mate-18-04/
 ---

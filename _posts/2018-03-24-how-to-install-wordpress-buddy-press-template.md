@@ -1,6 +1,7 @@
 ---
 title: "Installing and Configuring BuddyPress Themes in WordPress"
 date: 2018-03-24 11:42:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-wordpress-buddy-press-template/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Choosing Between Python\u2019s zoneinfo and pytz"
 date: 2018-09-19 04:48:56 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-date-and-time-from-another-timezone-in-python/
 ---

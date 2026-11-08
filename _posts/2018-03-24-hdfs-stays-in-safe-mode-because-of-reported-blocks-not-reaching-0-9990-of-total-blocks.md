@@ -1,6 +1,7 @@
 ---
 title: "Recovering HDFS from Safe Mode After DataNode Failures"
 date: 2018-03-24 11:46:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hdfs-stays-in-safe-mode-because-of-reported-blocks-not-reaching-0-9990-of-total-blocks/
 ---

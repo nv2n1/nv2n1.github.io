@@ -1,6 +1,7 @@
 ---
 title: "Automating Password Changes on Linux: passwd, chpasswd, and Safer Methods"
 date: 2013-08-25 10:09:35 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/changing-linux-users-password-in-one-command-line/
 ---

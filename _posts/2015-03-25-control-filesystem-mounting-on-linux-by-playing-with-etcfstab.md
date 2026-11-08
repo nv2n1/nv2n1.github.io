@@ -1,6 +1,7 @@
 ---
 title: "Configuring /etc/fstab: Mount Options and Boot Behavior"
 date: 2015-03-25 14:05:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/control-filesystem-mounting-on-linux-by-playing-with-etcfstab/
 ---

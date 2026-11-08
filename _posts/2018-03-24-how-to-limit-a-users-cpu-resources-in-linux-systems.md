@@ -1,6 +1,7 @@
 ---
 title: "Limiting CPU Resources for Linux Users"
 date: 2018-03-24 11:54:09 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-limit-a-users-cpu-resources-in-linux-systems/
 ---

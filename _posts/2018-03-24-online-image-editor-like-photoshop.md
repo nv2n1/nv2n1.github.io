@@ -1,6 +1,7 @@
 ---
 title: "Building a Web-Based Image Editor"
 date: 2018-03-24 08:17:17 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/online-image-editor-like-photoshop/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Update String Values in MySQL Tables"
 date: 2018-03-24 08:17:32 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-strings-in-mysql-tables/
 ---

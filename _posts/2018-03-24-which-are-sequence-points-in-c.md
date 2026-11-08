@@ -1,6 +1,7 @@
 ---
 title: "Sequence Points in C: Understanding Evaluation Order and Side Effects"
 date: 2018-03-24 11:44:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/which-are-sequence-points-in-c/
 ---

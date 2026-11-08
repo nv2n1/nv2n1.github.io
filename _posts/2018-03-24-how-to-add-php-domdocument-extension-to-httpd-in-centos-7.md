@@ -1,6 +1,7 @@
 ---
 title: "How to Enable PHP DOM Extension in Apache on CentOS 7"
 date: 2018-03-24 11:53:59 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-php-domdocument-extension-to-httpd-in-centos-7/
 ---

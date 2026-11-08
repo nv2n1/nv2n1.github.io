@@ -1,6 +1,7 @@
 ---
 title: "Customizing the WordPress HTML Editor with Custom Buttons"
 date: 2018-03-24 08:04:50 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/adding-custom-buttons-to-the-wordpress-html-editor/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel 4.19.178 Released"
 date: 2021-03-07 07:05:42 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-4-19-178-release/
 ---

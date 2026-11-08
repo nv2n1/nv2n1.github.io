@@ -1,6 +1,7 @@
 ---
 title: "Configuring and Troubleshooting HP DesignJet Large-Format Printing"
 date: 2015-03-28 02:48:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-print-powerpoint-poster-by-hp-designjet-500-plotter/
 ---

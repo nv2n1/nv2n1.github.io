@@ -1,6 +1,7 @@
 ---
 title: "Viewing Package Installation History with apt and dpkg"
 date: 2018-03-24 11:42:59 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-the-history-of-updated-packages-by-apt-get-or-aptitude/
 ---

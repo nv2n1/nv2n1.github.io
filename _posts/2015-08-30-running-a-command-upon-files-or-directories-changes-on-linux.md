@@ -1,6 +1,7 @@
 ---
 title: "Monitor File Changes and Trigger Commands with inotifywait"
 date: 2015-08-30 04:30:05 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/running-a-command-upon-files-or-directories-changes-on-linux/
 ---

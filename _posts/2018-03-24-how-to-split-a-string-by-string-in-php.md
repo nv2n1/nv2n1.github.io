@@ -1,6 +1,7 @@
 ---
 title: "How to Split Strings in PHP"
 date: 2018-03-24 11:52:34 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-split-a-string-by-string-in-php/
 ---

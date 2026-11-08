@@ -1,6 +1,7 @@
 ---
 title: "Graceful Node.js Process Shutdown: Methods and Best Practices"
 date: 2018-03-24 11:48:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-exit-the-program-in-node-js/
 ---

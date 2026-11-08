@@ -1,6 +1,7 @@
 ---
 title: "Passing Data Between Parent and Child Windows in JavaScript"
 date: 2018-03-24 11:48:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-pass-results-from-the-opened-window-to-the-openning-window-in-javascript/
 ---

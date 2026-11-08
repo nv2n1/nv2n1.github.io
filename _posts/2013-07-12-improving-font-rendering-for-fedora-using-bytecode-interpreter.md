@@ -1,6 +1,7 @@
 ---
 title: "Font Rendering Optimization in Fedora with Bytecode Interpretation"
 date: 2013-07-12 16:32:20 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/improving-font-rendering-for-fedora-using-bytecode-interpreter/
 ---

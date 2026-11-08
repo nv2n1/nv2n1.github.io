@@ -1,6 +1,7 @@
 ---
 title: "Building MPlayer with libdvdnav Support"
 date: 2018-03-24 11:45:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-build-mplayer-with-libdvdnav-on-linux/
 ---

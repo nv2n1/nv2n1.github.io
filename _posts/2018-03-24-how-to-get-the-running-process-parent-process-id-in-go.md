@@ -1,6 +1,7 @@
 ---
 title: "How to Get a Running Process\u2019s Parent PID in Go"
 date: 2018-03-24 11:52:54 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-running-process-parent-process-id-in-go/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Customizing the Plymouth Boot Logo in Ubuntu"
 date: 2018-07-31 10:32:47 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-logo-shown-during-booting-in-ubuntu/
 ---

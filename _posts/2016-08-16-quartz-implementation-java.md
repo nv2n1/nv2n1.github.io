@@ -1,6 +1,7 @@
 ---
 title: "Quartz Job Scheduling in Java: Setup, Triggers, and Best Practices"
 date: 2016-08-16 10:39:09 +0000
+author: "Aaronjacobson"
 layout: post
 canonical: https://www.systutorials.com/quartz-implementation-java/
 ---

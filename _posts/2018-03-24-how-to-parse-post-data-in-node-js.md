@@ -1,6 +1,7 @@
 ---
 title: "Parsing POST Request Data in Node.js"
 date: 2018-03-24 11:48:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-parse-post-data-in-node-js/
 ---

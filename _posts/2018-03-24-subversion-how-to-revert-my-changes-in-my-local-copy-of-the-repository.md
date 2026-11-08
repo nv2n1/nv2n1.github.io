@@ -1,6 +1,7 @@
 ---
 title: "Reverting Local Changes in Subversion"
 date: 2018-03-24 08:14:22 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/subversion-how-to-revert-my-changes-in-my-local-copy-of-the-repository/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Adding BBCode Support to WordPress: A Practical Guide"
 date: 2013-07-12 16:46:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/bbcode-support-in-wordpress/
 ---

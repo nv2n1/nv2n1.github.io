@@ -1,6 +1,7 @@
 ---
 title: "Getting Started: How to Choose Your First Programming Language"
 date: 2017-02-06 11:52:01 +0000
+author: "Joseph Macwan"
 layout: post
 canonical: https://www.systutorials.com/wanting-learn-programming-language-read-make-choice/
 ---

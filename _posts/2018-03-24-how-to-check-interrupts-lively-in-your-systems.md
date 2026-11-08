@@ -1,6 +1,7 @@
 ---
 title: "Monitoring System Interrupts in Real Time"
 date: 2018-03-24 11:54:21 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-check-interrupts-lively-in-your-systems/
 ---

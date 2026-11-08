@@ -1,6 +1,7 @@
 ---
 title: "Importing OCaml Libraries: A Practical Guide"
 date: 2018-03-24 08:17:50 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-import-ocaml-libraries/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Securing Linux VNC Access with SSH Tunneling"
 date: 2013-07-12 16:31:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-remote-control-linux-server-using-vnc-through-ssh-tunnel/
 ---

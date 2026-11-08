@@ -1,6 +1,7 @@
 ---
 title: "Hash Tables in C: Building and Using Them Effectively"
 date: 2013-07-12 16:47:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hashing-library-for-c/
 ---

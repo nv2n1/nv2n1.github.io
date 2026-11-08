@@ -1,6 +1,7 @@
 ---
 title: "Switching Audio Tracks in MKV Files with MPlayer"
 date: 2018-03-24 08:14:54 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-audio-track-for-mkv-files-in-mplayer/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Log and Block Rate-Limited SSH Connections with iptables"
 date: 2018-03-24 11:44:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-log-connections-hitting-certain-rules-in-iptables-on-linux/
 ---

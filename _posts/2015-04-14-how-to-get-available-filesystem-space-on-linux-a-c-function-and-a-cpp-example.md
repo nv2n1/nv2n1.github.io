@@ -1,6 +1,7 @@
 ---
 title: "Using statvfs() to Check Disk Space on Linux"
 date: 2015-04-14 01:48:02 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-available-filesystem-space-on-linux-a-c-function-and-a-cpp-example/
 ---

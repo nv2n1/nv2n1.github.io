@@ -1,6 +1,7 @@
 ---
 title: "Querying Package Files and Reverse Lookups in Fedora"
 date: 2013-07-12 16:32:03 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/query-installed-files-from-package-and-package-for-installed-file-in-fedora/
 ---

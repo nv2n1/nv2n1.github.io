@@ -1,6 +1,7 @@
 ---
 title: "Gmail SMTP Rate Limits and Sending Quotas"
 date: 2018-03-24 11:46:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/max-number-of-emails-allowed-to-sent-from-gmail-smtp-per-day/
 ---

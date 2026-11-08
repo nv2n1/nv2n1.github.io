@@ -1,6 +1,7 @@
 ---
 title: "Xen DomU Configuration File Format"
 date: 2013-07-12 16:31:55 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/unified-xen-domu-configuration-file/
 ---

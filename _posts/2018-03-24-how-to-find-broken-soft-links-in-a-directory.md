@@ -1,6 +1,7 @@
 ---
 title: "How to Find Broken Symlinks in a Directory"
 date: 2018-03-24 08:20:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-broken-soft-links-in-a-directory/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Windows 7 64-bit Installation Fails with Error 0xc0000225 on VirtualBox"
 date: 2018-03-24 08:04:25 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/windows-7-64-bit-fails-to-install-on-virtualbox-linux-with-status-code-0xc0000225/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Converting A4 PDFs for Kindle: A Complete Guide"
 date: 2018-03-24 08:20:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-a4-paper-format-to-read-on-kindle-5/
 ---

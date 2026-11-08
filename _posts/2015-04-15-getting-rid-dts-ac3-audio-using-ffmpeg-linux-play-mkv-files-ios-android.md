@@ -1,6 +1,7 @@
 ---
 title: "Converting AC3 and DTS Audio to AAC in MKV Files"
 date: 2015-04-15 06:38:26 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/getting-rid-dts-ac3-audio-using-ffmpeg-linux-play-mkv-files-ios-android/
 ---

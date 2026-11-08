@@ -1,6 +1,7 @@
 ---
 title: "Boot Windows from GRUB2 Command Line"
 date: 2018-03-24 08:21:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-manually-set-the-boot-entry-for-windows-in-grub2/
 ---

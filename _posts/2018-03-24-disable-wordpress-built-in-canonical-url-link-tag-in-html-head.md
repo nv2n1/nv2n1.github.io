@@ -1,6 +1,7 @@
 ---
 title: "Remove WordPress Canonical Tags from HTML Head"
 date: 2018-03-24 08:04:50 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/disable-wordpress-built-in-canonical-url-link-tag-in-html-head/
 ---

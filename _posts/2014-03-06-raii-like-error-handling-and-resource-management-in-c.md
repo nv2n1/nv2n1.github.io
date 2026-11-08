@@ -1,6 +1,7 @@
 ---
 title: "RAII-Style Error Handling and Resource Management in C"
 date: 2014-03-06 08:10:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/raii-like-error-handling-and-resource-management-in-c/
 ---

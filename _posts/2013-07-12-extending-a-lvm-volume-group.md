@@ -1,6 +1,7 @@
 ---
 title: "Expanding an LVM Volume Group"
 date: 2013-07-12 16:32:28 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/extending-a-lvm-volume-group/
 ---

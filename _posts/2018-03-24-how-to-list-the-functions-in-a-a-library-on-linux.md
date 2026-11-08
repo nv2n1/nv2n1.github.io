@@ -1,6 +1,7 @@
 ---
 title: "How to List Functions in a Linux Static Library"
 date: 2018-03-24 08:18:25 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-list-the-functions-in-a-a-library-on-linux/
 ---

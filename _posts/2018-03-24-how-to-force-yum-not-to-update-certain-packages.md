@@ -1,6 +1,7 @@
 ---
 title: "Prevent Packages from Being Updated with yum and dnf"
 date: 2018-03-24 11:40:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-yum-not-to-update-certain-packages/
 ---

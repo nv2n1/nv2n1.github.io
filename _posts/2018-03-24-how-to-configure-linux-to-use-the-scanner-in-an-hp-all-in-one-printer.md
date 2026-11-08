@@ -1,6 +1,7 @@
 ---
 title: "Setting Up HP Scanner on Linux with SANE"
 date: 2018-03-24 11:48:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-configure-linux-to-use-the-scanner-in-an-hp-all-in-one-printer/
 ---

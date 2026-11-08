@@ -1,6 +1,7 @@
 ---
 title: "Configuring GNOME Desktop Settings with GConf Editor"
 date: 2013-07-12 16:31:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/gconf-editor-gnome-desktop-configuration-tool/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Extracting or Removing Trailing Numbers in Bash"
 date: 2018-03-24 11:52:34 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-delete-or-get-the-number-in-the-tail-from-a-string-in-shell-script/
 ---

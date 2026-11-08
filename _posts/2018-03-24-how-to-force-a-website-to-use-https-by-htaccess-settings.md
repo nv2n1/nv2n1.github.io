@@ -1,6 +1,7 @@
 ---
 title: "Force HTTPS Redirects with .htaccess"
 date: 2018-03-24 11:45:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-a-website-to-use-https-by-htaccess-settings/
 ---

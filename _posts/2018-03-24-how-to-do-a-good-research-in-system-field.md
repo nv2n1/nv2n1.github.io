@@ -1,6 +1,7 @@
 ---
 title: "Conducting Rigorous Research in Systems Engineering"
 date: 2018-03-24 11:51:42 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-do-a-good-research-in-system-field/
 ---

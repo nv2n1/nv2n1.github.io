@@ -1,6 +1,7 @@
 ---
 title: "Colossus: Google\u2019s Next-Generation Distributed File System"
 date: 2012-11-30 01:27:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/colossus-successor-to-google-file-system-gfs/
 ---

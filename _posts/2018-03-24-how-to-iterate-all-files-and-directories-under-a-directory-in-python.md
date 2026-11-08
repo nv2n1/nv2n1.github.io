@@ -1,6 +1,7 @@
 ---
 title: "Iterating Over Files and Directories in Python"
 date: 2018-03-24 11:48:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-iterate-all-files-and-directories-under-a-directory-in-python/
 ---

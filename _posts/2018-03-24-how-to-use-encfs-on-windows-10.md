@@ -1,6 +1,7 @@
 ---
 title: "Using EncFS on Windows 10: A Setup Guide"
 date: 2018-03-24 11:53:24 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-use-encfs-on-windows-10/
 ---

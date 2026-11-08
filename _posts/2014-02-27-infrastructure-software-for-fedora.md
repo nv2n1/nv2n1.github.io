@@ -1,6 +1,7 @@
 ---
 title: "Essential Tools and Infrastructure for Fedora Development"
 date: 2014-02-27 08:37:44 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/infrastructure-software-for-fedora/
 ---

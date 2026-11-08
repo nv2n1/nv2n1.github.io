@@ -1,6 +1,7 @@
 ---
 title: "Fixing the \u201cProfile Could Not Be Opened\u201d Error in Chrome on Linux"
 date: 2018-03-24 11:45:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-fix-your-profile-could-not-be-opened-correctly-on-linux/
 ---

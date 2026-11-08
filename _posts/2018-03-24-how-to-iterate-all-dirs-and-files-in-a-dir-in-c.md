@@ -1,6 +1,7 @@
 ---
 title: "Recursively List All Files and Directories in C++"
 date: 2018-03-24 11:54:56 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-iterate-all-dirs-and-files-in-a-dir-in-c/
 ---

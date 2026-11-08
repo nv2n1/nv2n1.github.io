@@ -1,6 +1,7 @@
 ---
 title: "Show Git Blame in Eclipse Editor"
 date: 2020-10-31 11:26:09 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/configure-eclipse-to-show-git-revision-information-in-editor/
 ---

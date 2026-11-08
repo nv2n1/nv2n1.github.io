@@ -1,6 +1,7 @@
 ---
 title: "MPlayer: Setting Startup Volume and Position"
 date: 2013-07-12 16:31:53 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/mplayer-startup-volume-and-postion/
 ---

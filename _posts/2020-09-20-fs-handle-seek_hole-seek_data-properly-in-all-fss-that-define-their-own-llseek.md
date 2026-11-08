@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers"
 date: 2020-09-20 14:38:33 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/
 ---

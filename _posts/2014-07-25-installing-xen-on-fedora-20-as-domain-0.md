@@ -1,6 +1,7 @@
 ---
 title: "Installing and Configuring Xen Hypervisor on Fedora"
 date: 2014-07-25 02:33:06 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-xen-on-fedora-20-as-domain-0/
 ---

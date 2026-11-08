@@ -1,6 +1,7 @@
 ---
 title: "Checking if a Path is a Directory or File in C++"
 date: 2018-03-24 11:54:49 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-test-whether-a-given-path-is-a-directory-or-a-file-in-c/
 ---

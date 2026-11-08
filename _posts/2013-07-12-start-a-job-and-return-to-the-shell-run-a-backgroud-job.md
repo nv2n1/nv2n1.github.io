@@ -1,6 +1,7 @@
 ---
 title: "Start a Background Job and Return to the Shell"
 date: 2013-07-12 16:31:53 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/start-a-job-and-return-to-the-shell-run-a-backgroud-job/
 ---

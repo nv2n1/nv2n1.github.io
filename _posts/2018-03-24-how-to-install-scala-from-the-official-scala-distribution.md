@@ -1,6 +1,7 @@
 ---
 title: "Installing Scala from Official Sources"
 date: 2018-03-24 08:16:53 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-scala-from-the-official-scala-distribution/
 ---

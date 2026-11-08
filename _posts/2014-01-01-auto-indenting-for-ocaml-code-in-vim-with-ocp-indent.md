@@ -1,6 +1,7 @@
 ---
 title: "Setting Up OCaml Indentation in Vim with ocp-indent"
 date: 2014-01-01 03:28:49 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/auto-indenting-for-ocaml-code-in-vim-with-ocp-indent/
 ---

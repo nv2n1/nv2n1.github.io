@@ -1,6 +1,7 @@
 ---
 title: "Installing WordPress on Fedora 19"
 date: 2018-03-24 08:17:26 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-wordpress-on-fedora-19/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SCP Multiple Files from Remote Server to Linux"
 date: 2018-03-24 11:50:02 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-scp-multiple-files-from-remote-to-local-on-linux/
 ---

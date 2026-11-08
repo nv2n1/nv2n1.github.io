@@ -1,6 +1,7 @@
 ---
 title: "Finding and Controlling Windows with the Win32 API"
 date: 2013-07-12 16:47:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/send-messages-to-other-windows/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Self-Hosting WordPress on a Budget: A Practical Guide"
 date: 2013-07-12 16:46:15 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/a-free-personal-wordpress-blog-solution/
 ---

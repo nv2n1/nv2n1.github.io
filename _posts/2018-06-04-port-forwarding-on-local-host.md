@@ -1,6 +1,7 @@
 ---
 title: "Port Forwarding with iptables and nftables"
 date: 2018-06-04 15:26:08 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/port-forwarding-on-local-host/
 ---

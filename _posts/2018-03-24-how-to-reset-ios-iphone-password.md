@@ -1,6 +1,7 @@
 ---
 title: "How to Reset Your iPhone Passcode in Recovery Mode"
 date: 2018-03-24 11:46:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-reset-ios-iphone-password/
 ---

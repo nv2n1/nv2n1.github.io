@@ -1,6 +1,7 @@
 ---
 title: "Creating a Reader from a String in Go"
 date: 2018-03-24 11:50:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-create-a-reader-from-a-string-in-go/
 ---

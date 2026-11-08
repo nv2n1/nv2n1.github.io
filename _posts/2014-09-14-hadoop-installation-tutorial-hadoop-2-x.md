@@ -1,6 +1,7 @@
 ---
 title: "Setting Up a Hadoop 2.x Cluster for Development and Legacy Systems"
 date: 2014-09-14 18:13:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hadoop-installation-tutorial-hadoop-2-x/
 ---

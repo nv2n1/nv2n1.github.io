@@ -1,6 +1,7 @@
 ---
 title: "SPF Configuration for DreamHost-Hosted Email Domains"
 date: 2018-03-24 11:54:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-configure-spf-for-my-email-domain-hosted-by-dreamhost/
 ---

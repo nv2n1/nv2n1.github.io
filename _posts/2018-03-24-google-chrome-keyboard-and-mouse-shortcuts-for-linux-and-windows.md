@@ -1,6 +1,7 @@
 ---
 title: "Keyboard and Mouse Shortcuts in Chrome for Linux and Windows"
 date: 2018-03-24 08:04:32 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/google-chrome-keyboard-and-mouse-shortcuts-for-linux-and-windows/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Clearing DNS Cache on Linux and Windows"
 date: 2013-07-12 16:31:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/flush-dns-cache-of-linux-and-windows-client/
 ---

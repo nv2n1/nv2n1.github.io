@@ -1,6 +1,7 @@
 ---
 title: "Hadoop Port Reference Guide"
 date: 2012-01-15 23:18:22 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hadoop-default-ports/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Parallelize Sorting with Multi-Threading"
 date: 2018-03-24 11:52:05 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-sort-using-multiple-threads-to-run-faster/
 ---

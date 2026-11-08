@@ -1,6 +1,7 @@
 ---
 title: "How I Transformed My Blog into a Structured Learning Platform Using OpenClaw and LLM"
 date: 2026-04-13 15:28:27 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-i-transformed-my-blog-into-a-structured-learning-platform-using-openclaw-and-llm/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Save a File in Vim Without Restarting with sudo"
 date: 2019-03-23 11:20:41 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-write-file-content-with-sudo-in-vim/
 ---

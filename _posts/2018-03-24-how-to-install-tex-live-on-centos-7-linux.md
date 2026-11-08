@@ -1,6 +1,7 @@
 ---
 title: "Installing TeX Live on CentOS 7"
 date: 2018-03-24 11:51:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-tex-live-on-centos-7-linux/
 ---

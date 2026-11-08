@@ -1,6 +1,7 @@
 ---
 title: "Linux v0.97 Release Notes"
 date: 2020-10-25 09:09:21 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/release-notes-for-linux-v0-97/
 ---

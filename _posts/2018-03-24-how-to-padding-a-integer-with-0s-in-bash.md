@@ -1,6 +1,7 @@
 ---
 title: "How to Pad an Integer with Zeros in Bash"
 date: 2018-03-24 08:19:16 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-padding-a-integer-with-0s-in-bash/
 ---

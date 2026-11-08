@@ -1,6 +1,7 @@
 ---
 title: "Passing Kernel Parameters to Xen DomU Guests"
 date: 2018-03-24 08:04:15 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/xen-passing-kernel-parameters-to-domus/
 ---

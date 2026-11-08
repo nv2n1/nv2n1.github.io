@@ -1,6 +1,7 @@
 ---
 title: "BibTeX Web References in IEEE Format"
 date: 2018-03-24 08:22:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-generate-reference-of-web-pages-in-the-ieee-citation-format-with-bibtex/
 ---

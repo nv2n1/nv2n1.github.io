@@ -1,6 +1,7 @@
 ---
 title: "Safe Process Creation with posix_spawn() in C"
 date: 2014-09-23 14:35:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/a-posix_spawn-example-in-c-to-create-child-process-on-linux/
 ---

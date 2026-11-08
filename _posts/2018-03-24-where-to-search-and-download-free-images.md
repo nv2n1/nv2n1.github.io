@@ -1,6 +1,7 @@
 ---
 title: "Free Stock Images: Legal Sources and Best Practices"
 date: 2018-03-24 11:49:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/where-to-search-and-download-free-images/
 ---

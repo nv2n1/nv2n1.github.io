@@ -1,6 +1,7 @@
 ---
 title: "HP Compaq Laptop BIOS Recovery Guide"
 date: 2013-07-12 16:54:49 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hp-compaq-bios-crisis-recovery-from-a-failed-bios-flashing/
 ---

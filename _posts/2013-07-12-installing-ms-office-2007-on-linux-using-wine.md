@@ -1,6 +1,7 @@
 ---
 title: "Installing Microsoft Office 2007 on Linux with Wine"
 date: 2013-07-12 16:32:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-ms-office-2007-on-linux-using-wine/
 ---

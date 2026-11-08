@@ -1,6 +1,7 @@
 ---
 title: "How to Enable File Uploads for WordPress Contributors"
 date: 2018-03-24 08:20:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-allow-contributors-to-upload-files-in-wordpress/
 ---

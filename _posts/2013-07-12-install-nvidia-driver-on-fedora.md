@@ -1,6 +1,7 @@
 ---
 title: "Installing NVIDIA Drivers on Fedora"
 date: 2013-07-12 16:31:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/install-nvidia-driver-on-fedora/
 ---

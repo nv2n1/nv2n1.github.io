@@ -1,6 +1,7 @@
 ---
 title: "Extract Directory and Filename from File Paths in Bash"
 date: 2018-03-24 11:46:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-directory-path-and-file-name-from-a-absolute-path-in-bash-on-linux/
 ---

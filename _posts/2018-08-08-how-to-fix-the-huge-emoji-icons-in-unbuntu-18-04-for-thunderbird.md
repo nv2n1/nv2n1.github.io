@@ -1,6 +1,7 @@
 ---
 title: "Fixing Oversized Emoji in Thunderbird: Font Configuration Guide"
 date: 2018-08-08 04:09:21 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-fix-the-huge-emoji-icons-in-unbuntu-18-04-for-thunderbird/
 ---

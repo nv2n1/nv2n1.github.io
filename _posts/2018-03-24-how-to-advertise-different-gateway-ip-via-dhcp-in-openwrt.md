@@ -1,6 +1,7 @@
 ---
 title: "Configure Custom DHCP Gateway IP in OpenWrt"
 date: 2018-03-24 11:48:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-advertise-different-gateway-ip-via-dhcp-in-openwrt/
 ---

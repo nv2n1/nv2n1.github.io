@@ -1,6 +1,7 @@
 ---
 title: "GNOME Shell Extensions to Enhance GNOME 45"
 date: 2016-10-22 10:22:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/essential-gnome-shell-extensions-gnome-3-users/
 ---

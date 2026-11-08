@@ -1,6 +1,7 @@
 ---
 title: "Understanding When to Use fclose() in File Operations"
 date: 2018-03-24 08:13:49 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/why-setting-up-fclose-questions/
 ---

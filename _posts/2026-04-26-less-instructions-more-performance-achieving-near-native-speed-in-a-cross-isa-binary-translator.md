@@ -1,6 +1,7 @@
 ---
 title: "Less Instructions, More Performance: Achieving Near-Native Speed in a Cross-ISA Binary Translator"
 date: 2026-04-26 09:03:59 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/less-instructions-more-performance-achieving-near-native-speed-in-a-cross-isa-binary-translator/
 ---

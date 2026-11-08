@@ -1,6 +1,7 @@
 ---
 title: "How to Write WordPress Posts with Markdown"
 date: 2018-03-24 08:15:02 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/wordpress-how-to-use-markdown-for-writing-posts/
 ---

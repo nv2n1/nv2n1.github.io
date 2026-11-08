@@ -1,6 +1,7 @@
 ---
 title: "Increase the Maximum Open Files Limit on Linux"
 date: 2018-03-24 11:43:23 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-increase-the-number-of-files-allowed-to-be-opened-on-linux/
 ---

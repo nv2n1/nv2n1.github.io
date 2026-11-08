@@ -1,6 +1,7 @@
 ---
 title: "Finding the Root Filesystem Disk in Linux Bash"
 date: 2018-03-24 11:52:43 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-the-disk-where-root-is-on-in-bash-on-linux/
 ---

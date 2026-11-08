@@ -1,6 +1,7 @@
 ---
 title: "Mapping Linux Disk Names to SATA Ports"
 date: 2018-03-24 08:14:29 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-quickly-find-out-failed-disks-sata-port-in-linux-how-to-map-linux-disk-names-to-sata-ports/
 ---

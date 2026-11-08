@@ -1,6 +1,7 @@
 ---
 title: "Open Source SSH, SCP, SFTP, and VNC Clients for Windows"
 date: 2013-07-12 16:32:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/open-source-and-portable-ssh-scp-sftp-and-vnc-clients-for-windows-to-remote-control-linux/
 ---

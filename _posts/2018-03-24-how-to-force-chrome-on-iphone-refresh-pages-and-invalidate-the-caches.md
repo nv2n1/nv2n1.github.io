@@ -1,6 +1,7 @@
 ---
 title: "Clearing Cache and Hard Refreshing Pages in Chrome for iOS"
 date: 2018-03-24 08:16:59 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-chrome-on-iphone-refresh-pages-and-invalidate-the-caches/
 ---

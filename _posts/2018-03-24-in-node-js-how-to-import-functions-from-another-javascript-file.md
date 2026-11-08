@@ -1,6 +1,7 @@
 ---
 title: "Importing Functions Between Node.js Modules"
 date: 2018-03-24 11:50:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/in-node-js-how-to-import-functions-from-another-javascript-file/
 ---

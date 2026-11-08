@@ -1,6 +1,7 @@
 ---
 title: "Configuring Heap Size for Hadoop NameNode, DataNode, and YARN"
 date: 2018-03-24 11:43:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/making-hadoop-java-process-heap-larger/
 ---

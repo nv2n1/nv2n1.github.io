@@ -1,6 +1,7 @@
 ---
 title: "Querying MX Records on Linux with dig and host"
 date: 2018-03-24 11:47:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-out-the-mx-record-for-a-domain-on-linux/
 ---

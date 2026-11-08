@@ -1,6 +1,7 @@
 ---
 title: "Switching from OpenClaw to Qwen on OpenRouter"
 date: 2026-04-06 08:30:29 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/switching-openclaw-to-qwen-free-via-openrouter/
 ---

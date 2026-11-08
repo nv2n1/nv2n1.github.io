@@ -1,6 +1,7 @@
 ---
 title: "Recovering Data from a Failed Hard Drive"
 date: 2018-03-24 11:45:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-can-i-recover-data-from-my-crashed-hard-drive/
 ---

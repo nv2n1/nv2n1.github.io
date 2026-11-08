@@ -1,6 +1,7 @@
 ---
 title: "Playing DVDs with MPlayer: Directories, ISO Files, and Disks"
 date: 2013-07-12 16:32:29 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/mplayer-playing-dvd-directories-iso-files-disks/
 ---

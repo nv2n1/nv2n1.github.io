@@ -1,6 +1,7 @@
 ---
 title: "Starting KDE Desktop from the Command Line with startx"
 date: 2013-07-12 16:32:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/starting-kde-from-command-line-by-startx/
 ---

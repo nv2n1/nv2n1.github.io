@@ -1,6 +1,7 @@
 ---
 title: ".NET Core 2.1: What\u2019s New in 2018"
 date: 2017-11-21 05:37:33 +0000
+author: "Johnnymorgan"
 layout: post
 canonical: https://www.systutorials.com/net-core-2-1-release-feature-expect-2018/
 ---

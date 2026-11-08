@@ -1,6 +1,7 @@
 ---
 title: "Converting LaTeX to Single-Page HTML"
 date: 2018-03-24 08:19:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-a-latex-file-to-a-single-page-html/
 ---

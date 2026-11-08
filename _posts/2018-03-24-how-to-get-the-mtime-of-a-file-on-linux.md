@@ -1,6 +1,7 @@
 ---
 title: "Getting File Modification Time on Linux"
 date: 2018-03-24 11:53:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-mtime-of-a-file-on-linux/
 ---

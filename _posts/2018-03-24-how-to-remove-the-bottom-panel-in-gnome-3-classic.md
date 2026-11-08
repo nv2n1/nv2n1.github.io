@@ -1,6 +1,7 @@
 ---
 title: "Removing the Bottom Panel in GNOME 3 Classic"
 date: 2018-03-24 11:51:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-remove-the-bottom-panel-in-gnome-3-classic/
 ---

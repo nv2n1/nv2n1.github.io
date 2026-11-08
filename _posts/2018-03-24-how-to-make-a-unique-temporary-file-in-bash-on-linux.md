@@ -1,6 +1,7 @@
 ---
 title: "Creating Unique Temporary Files in Bash"
 date: 2018-03-24 11:51:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-a-unique-temporary-file-in-bash-on-linux/
 ---

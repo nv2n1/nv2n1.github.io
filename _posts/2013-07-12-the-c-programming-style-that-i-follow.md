@@ -1,6 +1,7 @@
 ---
 title: "C Code Organization: Structuring Headers and Source Files"
 date: 2013-07-12 16:47:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/the-c-programming-style-that-i-follow/
 ---

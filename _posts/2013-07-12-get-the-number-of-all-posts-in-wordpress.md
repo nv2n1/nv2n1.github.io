@@ -1,6 +1,7 @@
 ---
 title: "Querying WordPress Posts by Type and Status"
 date: 2013-07-12 16:46:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/get-the-number-of-all-posts-in-wordpress/
 ---

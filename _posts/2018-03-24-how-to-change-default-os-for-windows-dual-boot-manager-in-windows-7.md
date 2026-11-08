@@ -1,6 +1,7 @@
 ---
 title: "Changing the Default OS in a Windows Dual Boot Setup"
 date: 2018-03-24 08:22:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-default-os-for-windows-dual-boot-manager-in-windows-7/
 ---

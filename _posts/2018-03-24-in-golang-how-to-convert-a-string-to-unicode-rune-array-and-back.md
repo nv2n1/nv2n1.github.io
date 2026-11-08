@@ -1,6 +1,7 @@
 ---
 title: "Converting Strings to Rune Arrays in Go"
 date: 2018-03-24 11:50:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/in-golang-how-to-convert-a-string-to-unicode-rune-array-and-back/
 ---

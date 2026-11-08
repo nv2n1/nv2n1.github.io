@@ -1,6 +1,7 @@
 ---
 title: "Switching Linux Systemd Boot Targets"
 date: 2016-09-17 02:15:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/change-systemd-boot-target-linux/
 ---

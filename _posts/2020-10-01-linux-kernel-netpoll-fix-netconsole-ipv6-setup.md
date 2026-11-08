@@ -1,6 +1,7 @@
 ---
 title: "Fix netconsole IPv6 configuration in Linux kernel netpoll"
 date: 2020-10-01 01:30:11 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-netpoll-fix-netconsole-ipv6-setup/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Installing RTL8192CU WiFi Driver on CentOS 7"
 date: 2018-03-24 11:50:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/rtl8192cu-driver-for-centos-7/
 ---

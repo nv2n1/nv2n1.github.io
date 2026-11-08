@@ -1,6 +1,7 @@
 ---
 title: "Looking up Hostnames from IP Addresses in /etc/hosts on Linux"
 date: 2018-03-24 11:53:12 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-the-hostname-of-an-ip-using-etc-hosts-if-it-has-the-mapping-on-linux/
 ---

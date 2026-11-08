@@ -1,6 +1,7 @@
 ---
 title: "How glibc Implements strstr with the Two-Way Algorithm"
 date: 2018-03-24 11:46:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/implementation-of-strstr-in-glibc/
 ---

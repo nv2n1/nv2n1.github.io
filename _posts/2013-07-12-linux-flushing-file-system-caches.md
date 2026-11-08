@@ -1,6 +1,7 @@
 ---
 title: "Clearing Linux Filesystem Caches: Methods and Best Practices"
 date: 2013-07-12 16:32:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/linux-flushing-file-system-caches/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Spoofing MAC Addresses in Linux"
 date: 2013-07-12 16:32:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/changing-mac-address-in-linux-aka-mac-spoofing/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Web2 Icon Libraries for Social Media: Setup & Modern Alternatives"
 date: 2013-07-12 16:46:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/web2-icons-icons-of-social-networking-in-iphone-style/
 ---

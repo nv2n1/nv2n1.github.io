@@ -1,6 +1,7 @@
 ---
 title: "Exporting NFSv4 Shares to External Networks"
 date: 2017-12-16 03:22:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/export-nfsv4-server-external-networks/
 ---

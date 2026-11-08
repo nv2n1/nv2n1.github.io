@@ -1,6 +1,7 @@
 ---
 title: "Finding HDFS Files with Replication Factor 1"
 date: 2018-03-24 11:53:43 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-out-all-files-with-replication-factor-1-in-hdfs/
 ---

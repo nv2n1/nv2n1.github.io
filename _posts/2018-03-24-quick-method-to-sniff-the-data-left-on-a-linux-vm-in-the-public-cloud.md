@@ -1,6 +1,7 @@
 ---
 title: "Recovering Data Left on Linux VMs in Public Clouds"
 date: 2018-03-24 08:19:28 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/quick-method-to-sniff-the-data-left-on-a-linux-vm-in-the-public-cloud/
 ---

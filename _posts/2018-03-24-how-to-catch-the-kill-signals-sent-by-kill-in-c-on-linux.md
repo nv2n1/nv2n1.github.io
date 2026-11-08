@@ -1,6 +1,7 @@
 ---
 title: "Handling Linux Signals in C"
 date: 2018-03-24 11:40:55 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-catch-the-kill-signals-sent-by-kill-in-c-on-linux/
 ---

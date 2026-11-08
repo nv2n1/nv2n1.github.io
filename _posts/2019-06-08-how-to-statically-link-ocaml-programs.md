@@ -1,6 +1,7 @@
 ---
 title: "Static Linking OCaml Programs for Better Portability"
 date: 2019-06-08 03:25:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-statically-link-ocaml-programs/
 ---

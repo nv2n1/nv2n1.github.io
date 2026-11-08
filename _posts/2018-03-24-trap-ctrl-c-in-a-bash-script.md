@@ -1,6 +1,7 @@
 ---
 title: "Handling Ctrl-C Interrupts in Bash Scripts"
 date: 2018-03-24 08:17:12 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/trap-ctrl-c-in-a-bash-script/
 ---

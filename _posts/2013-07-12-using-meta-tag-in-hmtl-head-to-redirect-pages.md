@@ -1,6 +1,7 @@
 ---
 title: "Meta Refresh Redirects: When and Why to Avoid Them"
 date: 2013-07-12 16:46:08 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/using-meta-tag-in-hmtl-head-to-redirect-pages/
 ---

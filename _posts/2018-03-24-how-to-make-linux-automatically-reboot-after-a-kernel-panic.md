@@ -1,6 +1,7 @@
 ---
 title: "Enabling Automatic Reboot on Kernel Panic in Linux"
 date: 2018-03-24 11:45:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-linux-automatically-reboot-after-a-kernel-panic/
 ---

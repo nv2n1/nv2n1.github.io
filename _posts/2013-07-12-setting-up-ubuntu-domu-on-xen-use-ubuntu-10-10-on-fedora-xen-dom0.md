@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Ubuntu 10.10 as a Xen DomU on Fedora"
 date: 2013-07-12 16:32:23 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-up-ubuntu-domu-on-xen-use-ubuntu-10-10-on-fedora-xen-dom0/
 ---

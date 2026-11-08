@@ -1,6 +1,7 @@
 ---
 title: "Backing Up Your iPhone on Linux Without iTunes"
 date: 2018-03-24 11:42:59 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-backup-iphone-on-linux/
 ---

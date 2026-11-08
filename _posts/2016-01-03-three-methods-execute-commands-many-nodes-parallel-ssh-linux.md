@@ -1,6 +1,7 @@
 ---
 title: "Running Commands Across Multiple Linux Servers in Parallel"
 date: 2016-01-03 08:36:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/three-methods-execute-commands-many-nodes-parallel-ssh-linux/
 ---

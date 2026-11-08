@@ -1,6 +1,7 @@
 ---
 title: "Bitcoin SegWit: How It Reduces Transaction Fees"
 date: 2024-09-14 07:40:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/what-is-btc-segwit-and-its-impact-on-transaction-fees/
 ---

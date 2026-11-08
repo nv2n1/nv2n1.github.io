@@ -1,6 +1,7 @@
 ---
 title: "Lessons from Building Large-Scale Distributed Systems"
 date: 2013-01-22 14:28:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/designs-lessons-and-advice-from-building-large-distributed-systems/
 ---

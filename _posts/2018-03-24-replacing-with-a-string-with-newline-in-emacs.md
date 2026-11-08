@@ -1,6 +1,7 @@
 ---
 title: "Replace Strings with Newlines in Emacs"
 date: 2018-03-24 11:41:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/replacing-with-a-string-with-newline-in-emacs/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Converting HTML to Plain Text in PHP"
 date: 2018-03-24 11:53:54 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-a-piece-of-html-code-to-plain-text-in-php/
 ---

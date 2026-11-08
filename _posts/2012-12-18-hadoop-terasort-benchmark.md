@@ -1,6 +1,7 @@
 ---
 title: "Hadoop TeraSort Benchmark Performance Guide"
 date: 2012-12-18 08:51:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/hadoop-terasort-benchmark/
 ---

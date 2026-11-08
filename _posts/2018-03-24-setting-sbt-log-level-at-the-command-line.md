@@ -1,6 +1,7 @@
 ---
 title: "Controlling SBT Log Levels from the CLI and Configuration"
 date: 2018-03-24 11:41:06 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-sbt-log-level-at-the-command-line/
 ---

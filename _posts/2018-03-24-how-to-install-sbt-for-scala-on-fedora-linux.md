@@ -1,6 +1,7 @@
 ---
 title: "Installing sbt on Fedora Linux"
 date: 2018-03-24 08:19:38 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-sbt-for-scala-on-fedora-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Set Up MySQL Replication"
 date: 2018-03-24 08:18:01 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-up-mysql-replication/
 ---

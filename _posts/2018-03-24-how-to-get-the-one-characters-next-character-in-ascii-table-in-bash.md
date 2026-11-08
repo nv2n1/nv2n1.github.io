@@ -1,6 +1,7 @@
 ---
 title: "Getting the Next ASCII Character in Bash"
 date: 2018-03-24 11:52:40 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-one-characters-next-character-in-ascii-table-in-bash/
 ---

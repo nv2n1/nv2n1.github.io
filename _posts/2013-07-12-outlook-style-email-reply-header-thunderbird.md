@@ -1,6 +1,7 @@
 ---
 title: "Add Outlook-Style Reply Headers to Thunderbird"
 date: 2013-07-12 16:54:53 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/outlook-style-email-reply-header-thunderbird/
 ---

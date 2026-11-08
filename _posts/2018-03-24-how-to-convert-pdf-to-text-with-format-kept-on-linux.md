@@ -1,6 +1,7 @@
 ---
 title: "Converting PDFs to Text While Preserving Layout on Linux"
 date: 2018-03-24 11:48:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-pdf-to-text-with-format-kept-on-linux/
 ---

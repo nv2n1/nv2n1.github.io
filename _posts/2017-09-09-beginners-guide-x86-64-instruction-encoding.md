@@ -1,6 +1,7 @@
 ---
 title: "x86-64 Instruction Encoding: From Assembly to Machine Code"
 date: 2017-09-09 05:29:08 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/beginners-guide-x86-64-instruction-encoding/
 ---

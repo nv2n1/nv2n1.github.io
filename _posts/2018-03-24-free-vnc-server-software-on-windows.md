@@ -1,6 +1,7 @@
 ---
 title: "Best Free VNC Servers for Windows in 2026"
 date: 2018-03-24 11:49:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/free-vnc-server-software-on-windows/
 ---

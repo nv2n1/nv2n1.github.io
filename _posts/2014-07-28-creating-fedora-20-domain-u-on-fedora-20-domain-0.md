@@ -1,6 +1,7 @@
 ---
 title: "Creating a Xen DomU Guest on Fedora Dom0"
 date: 2014-07-28 00:03:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/creating-fedora-20-domain-u-on-fedora-20-domain-0/
 ---

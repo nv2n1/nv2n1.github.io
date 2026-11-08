@@ -1,6 +1,7 @@
 ---
 title: "Reading PHP Files Line by Line"
 date: 2018-03-24 11:52:05 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-process-a-file-line-by-line-in-php/
 ---

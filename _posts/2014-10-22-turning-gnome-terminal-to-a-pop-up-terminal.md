@@ -1,6 +1,7 @@
 ---
 title: "Pop-up Terminal Hotkey for GNOME"
 date: 2014-10-22 06:22:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/turning-gnome-terminal-to-a-pop-up-terminal/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Linux 2.0 Release Notes"
 date: 2020-10-25 15:07:39 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/release-notes-for-linux-v2-0/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Git Branching Strategies: Create, Merge, and Manage Branches"
 date: 2018-03-24 11:40:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/git-branching-tutorial/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Printing to stderr and stdout in Go"
 date: 2018-03-24 11:52:57 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-go/
 ---

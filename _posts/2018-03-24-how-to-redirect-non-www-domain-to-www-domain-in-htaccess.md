@@ -1,6 +1,7 @@
 ---
 title: "Redirect Non-WWW URLs to WWW with .htaccess"
 date: 2018-03-24 11:51:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-redirect-non-www-domain-to-www-domain-in-htaccess/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Accessing Self-Signed SSL Certificates in Chrome on iOS"
 date: 2018-03-24 11:45:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-chrome-on-iphone-ios-accept-self-assigned-ssl-keys-fir-websites/
 ---

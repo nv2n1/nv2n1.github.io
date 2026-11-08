@@ -1,6 +1,7 @@
 ---
 title: "Where Linux Stores Routing Table Entries on Disk"
 date: 2018-03-24 08:16:39 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/where-are-the-linux-routing-table-entries-stored-on-disk/
 ---

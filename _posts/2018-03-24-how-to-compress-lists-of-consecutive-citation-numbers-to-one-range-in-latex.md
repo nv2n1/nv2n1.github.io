@@ -1,6 +1,7 @@
 ---
 title: "Compressing Consecutive Citation Numbers in LaTeX"
 date: 2018-03-24 11:40:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-compress-lists-of-consecutive-citation-numbers-to-one-range-in-latex/
 ---

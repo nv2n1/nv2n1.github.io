@@ -1,6 +1,7 @@
 ---
 title: "Hardware Upgrades Every Developer Should Consider in 2026"
 date: 2019-05-30 15:35:54 +0000
+author: "James Clark"
 layout: post
 canonical: https://www.systutorials.com/5-necessary-pc-hardware-that-a-programmer-needs-to-upgrade/
 ---

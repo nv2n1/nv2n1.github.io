@@ -1,6 +1,7 @@
 ---
 title: "Block JavaScript on Specific Sites in Chrome"
 date: 2015-03-28 14:32:19 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/blocking-javascripts-from-a-site-in-chrome-in-2-easy-steps/
 ---

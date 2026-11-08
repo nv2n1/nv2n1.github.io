@@ -1,6 +1,7 @@
 ---
 title: "WordPress Anti-Spam: Essential Plugins and Setup Tips"
 date: 2013-08-08 05:56:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/anti-spam-in-wordpress/
 ---

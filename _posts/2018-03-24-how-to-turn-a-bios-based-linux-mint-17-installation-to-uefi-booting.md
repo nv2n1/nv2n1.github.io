@@ -1,6 +1,7 @@
 ---
 title: "Converting Linux from BIOS to UEFI Boot Mode"
 date: 2018-03-24 11:42:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-turn-a-bios-based-linux-mint-17-installation-to-uefi-booting/
 ---

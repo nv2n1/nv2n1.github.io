@@ -1,6 +1,7 @@
 ---
 title: "How to Change Your Hostname on Linux Mint"
 date: 2018-03-24 11:41:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-hostname-on-linux-mint/
 ---

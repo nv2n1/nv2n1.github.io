@@ -1,6 +1,7 @@
 ---
 title: "Handling Spaces in File Paths with rsync"
 date: 2018-03-24 11:51:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-handle-spaces-in-paths-with-rsync-on-linux/
 ---

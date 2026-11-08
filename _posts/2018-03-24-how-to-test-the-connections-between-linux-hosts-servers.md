@@ -1,6 +1,7 @@
 ---
 title: "Testing Network Connectivity Between Linux Servers"
 date: 2018-03-24 07:43:06 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-test-the-connections-between-linux-hosts-servers/
 ---

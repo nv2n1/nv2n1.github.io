@@ -1,6 +1,7 @@
 ---
 title: "Memory Coherence vs. Consistency: Key Differences"
 date: 2018-03-24 11:51:27 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/whats-the-difference-between-memory-coherence-and-consistency/
 ---

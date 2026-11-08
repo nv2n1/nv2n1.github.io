@@ -1,6 +1,7 @@
 ---
 title: "Backing Up Emails from IMAP and POP3 Servers"
 date: 2018-03-24 11:42:59 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-back-up-emails-from-the-email-server/
 ---

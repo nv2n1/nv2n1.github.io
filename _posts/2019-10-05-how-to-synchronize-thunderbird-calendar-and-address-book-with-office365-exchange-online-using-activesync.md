@@ -1,6 +1,7 @@
 ---
 title: "Sync Thunderbird with Office 365 Using TbSync"
 date: 2019-10-05 12:09:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-synchronize-thunderbird-calendar-and-address-book-with-office365-exchange-online-using-activesync/
 ---

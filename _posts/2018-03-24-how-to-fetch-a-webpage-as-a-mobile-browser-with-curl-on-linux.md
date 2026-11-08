@@ -1,6 +1,7 @@
 ---
 title: "Fetching Webpages as a Mobile Browser Using curl"
 date: 2018-03-24 11:40:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-fetch-a-webpage-as-a-mobile-browser-with-curl-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Setting Up R and RStudio Server on Ubuntu"
 date: 2020-10-03 10:33:28 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-r-and-rstudio-server-on-ubuntu-linux-20-04/
 ---

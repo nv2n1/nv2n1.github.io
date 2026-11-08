@@ -1,6 +1,7 @@
 ---
 title: "Installing Fedora 17 PV Guest on Xen with PXE Boot"
 date: 2013-07-12 16:32:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/installing-fedora-17-domain-u-on-xen-with-pxe-booting/
 ---

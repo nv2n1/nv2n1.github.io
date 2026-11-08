@@ -1,6 +1,7 @@
 ---
 title: "Detecting USB Devices on Remote Linux Servers via SSH"
 date: 2018-03-24 11:45:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-check-whether-a-usb-disk-is-connected-to-a-linux-server/
 ---

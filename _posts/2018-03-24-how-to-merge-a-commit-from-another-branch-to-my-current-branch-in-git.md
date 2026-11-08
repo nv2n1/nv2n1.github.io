@@ -1,6 +1,7 @@
 ---
 title: "Merging a Commit from Another Git Branch"
 date: 2018-03-24 08:14:48 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-merge-a-commit-from-another-branch-to-my-current-branch-in-git/
 ---

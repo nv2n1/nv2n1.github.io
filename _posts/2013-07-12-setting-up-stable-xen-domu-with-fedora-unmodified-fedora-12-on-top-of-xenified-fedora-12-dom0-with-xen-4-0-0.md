@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Xen DomU on Fedora 12"
 date: 2013-07-12 16:32:13 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-up-stable-xen-domu-with-fedora-unmodified-fedora-12-on-top-of-xenified-fedora-12-dom0-with-xen-4-0-0/
 ---

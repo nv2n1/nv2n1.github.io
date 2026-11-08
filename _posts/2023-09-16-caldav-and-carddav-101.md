@@ -1,6 +1,7 @@
 ---
 title: "CalDAV and CardDAV: A Developer\u2019s Guide"
 date: 2023-09-16 06:44:11 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/caldav-and-carddav-101/
 ---

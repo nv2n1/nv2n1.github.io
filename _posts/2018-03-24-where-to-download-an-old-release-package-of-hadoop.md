@@ -1,6 +1,7 @@
 ---
 title: "How to Download Older Versions of Hadoop"
 date: 2018-03-24 11:51:35 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/where-to-download-an-old-release-package-of-hadoop/
 ---

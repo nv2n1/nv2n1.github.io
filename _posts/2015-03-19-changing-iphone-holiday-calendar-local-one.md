@@ -1,6 +1,7 @@
 ---
 title: "Fix iPhone Holiday Calendar for Your Country Without Changing Language"
 date: 2015-03-19 06:00:13 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/changing-iphone-holiday-calendar-local-one/
 ---

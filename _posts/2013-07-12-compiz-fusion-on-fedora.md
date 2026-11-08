@@ -1,6 +1,7 @@
 ---
 title: "Installing Compiz Fusion on Fedora"
 date: 2013-07-12 16:31:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/compiz-fusion-on-fedora/
 ---

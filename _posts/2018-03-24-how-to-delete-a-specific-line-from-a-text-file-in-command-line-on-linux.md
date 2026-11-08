@@ -1,6 +1,7 @@
 ---
 title: "Remove Specific Lines from Text Files with sed"
 date: 2018-03-24 11:45:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-delete-a-specific-line-from-a-text-file-in-command-line-on-linux/
 ---

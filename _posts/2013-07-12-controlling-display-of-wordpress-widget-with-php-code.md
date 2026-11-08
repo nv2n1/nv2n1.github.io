@@ -1,6 +1,7 @@
 ---
 title: "Conditionally Display WordPress Widgets with PHP"
 date: 2013-07-12 16:46:16 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/controlling-display-of-wordpress-widget-with-php-code/
 ---

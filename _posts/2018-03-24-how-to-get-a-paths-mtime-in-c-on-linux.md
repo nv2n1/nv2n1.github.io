@@ -1,6 +1,7 @@
 ---
 title: "Getting File Modification Time in C++ on Linux"
 date: 2018-03-24 11:54:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-a-paths-mtime-in-c-on-linux/
 ---

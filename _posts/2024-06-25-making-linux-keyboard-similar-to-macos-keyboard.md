@@ -1,6 +1,7 @@
 ---
 title: "Making Your Linux Keyboard Work Like macOS"
 date: 2024-06-25 14:03:20 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/making-linux-keyboard-similar-to-macos-keyboard/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Force Rectangle Ads in AdSense Responsive Formats"
 date: 2018-03-24 11:47:03 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-adsense-responsive-ads-show-rectangle-ads-instead-of-horizontal-ones/
 ---

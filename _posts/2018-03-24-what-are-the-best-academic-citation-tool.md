@@ -1,6 +1,7 @@
 ---
 title: "Best Academic Citation Tools for Researchers"
 date: 2018-03-24 11:53:24 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/what-are-the-best-academic-citation-tool/
 ---

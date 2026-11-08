@@ -1,6 +1,7 @@
 ---
 title: "Cloud Storage Consistency Models Explained"
 date: 2024-09-06 14:35:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/understanding-cloud-storage-consistency-models/
 ---

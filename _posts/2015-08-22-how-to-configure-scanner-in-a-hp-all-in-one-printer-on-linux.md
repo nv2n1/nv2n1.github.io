@@ -1,6 +1,7 @@
 ---
 title: "Setting Up an HP Scanner on Linux with HPLIP and SANE"
 date: 2015-08-22 13:27:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-configure-scanner-in-a-hp-all-in-one-printer-on-linux/
 ---

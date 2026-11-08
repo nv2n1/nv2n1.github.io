@@ -1,6 +1,7 @@
 ---
 title: "Configuring Thunderbird\u2019s Default Sort Order and Reply Quoting"
 date: 2013-07-12 16:54:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/default-descending-sort-order-and-inline-quote-when-reply-in-thunderbird/
 ---

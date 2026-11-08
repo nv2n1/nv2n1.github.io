@@ -1,6 +1,7 @@
 ---
 title: "Extract Images from PDF Files in Linux"
 date: 2018-03-24 11:51:30 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-extract-images-from-a-pdf-file-in-linux/
 ---

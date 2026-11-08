@@ -1,6 +1,7 @@
 ---
 title: "Safely Rewriting Git Commit Messages After Push"
 date: 2018-03-24 11:40:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/changing-a-git-commit-message-after-i-have-pushed-it-to-the-server/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Configuring Custom Error Pages on Apache and Nginx"
 date: 2013-07-12 16:46:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-sites-default-404-error-not-found-page/
 ---

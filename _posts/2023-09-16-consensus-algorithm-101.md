@@ -1,6 +1,7 @@
 ---
 title: "Understanding Blockchain Consensus Mechanisms"
 date: 2023-09-16 06:49:12 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/consensus-algorithm-101/
 ---

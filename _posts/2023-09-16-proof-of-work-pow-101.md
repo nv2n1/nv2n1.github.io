@@ -1,6 +1,7 @@
 ---
 title: "Understanding Proof of Work: A Technical Guide"
 date: 2023-09-16 06:46:58 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/proof-of-work-pow-101/
 ---

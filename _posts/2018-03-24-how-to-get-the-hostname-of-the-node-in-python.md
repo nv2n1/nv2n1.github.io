@@ -1,6 +1,7 @@
 ---
 title: "Getting a Node\u2019s Hostname in Python"
 date: 2018-03-24 11:52:23 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-hostname-of-the-node-in-python/
 ---

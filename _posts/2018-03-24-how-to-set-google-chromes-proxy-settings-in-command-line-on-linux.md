@@ -1,6 +1,7 @@
 ---
 title: "Configuring Chrome\u2019s Proxy Settings from the Linux Command Line"
 date: 2018-03-24 08:15:46 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-google-chromes-proxy-settings-in-command-line-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Setting CPU Affinity for a Single Task"
 date: 2018-03-24 11:54:16 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-one-tasks-cpu-affinity-quickly/
 ---

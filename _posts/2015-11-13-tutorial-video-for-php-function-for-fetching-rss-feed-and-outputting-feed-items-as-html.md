@@ -1,6 +1,7 @@
 ---
 title: "Robust PHP RSS Feed Parsing with Caching and Error Handling"
 date: 2015-11-13 14:07:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/tutorial-video-for-php-function-for-fetching-rss-feed-and-outputting-feed-items-as-html/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Essential MPlayer and Mencoder Commands"
 date: 2013-07-12 16:32:08 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/useful-mplayermencoder-commands/
 ---

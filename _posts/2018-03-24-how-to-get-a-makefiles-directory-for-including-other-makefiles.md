@@ -1,6 +1,7 @@
 ---
 title: "Finding the Directory of a Makefile for Includes"
 date: 2018-03-24 08:20:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-a-makefiles-directory-for-including-other-makefiles/
 ---

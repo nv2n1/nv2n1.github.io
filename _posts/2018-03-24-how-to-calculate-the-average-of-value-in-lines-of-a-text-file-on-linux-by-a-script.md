@@ -1,6 +1,7 @@
 ---
 title: "Calculate Average Values from Text Files Using awk, sed, and Python"
 date: 2018-03-24 11:41:06 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-calculate-the-average-of-value-in-lines-of-a-text-file-on-linux-by-a-script/
 ---

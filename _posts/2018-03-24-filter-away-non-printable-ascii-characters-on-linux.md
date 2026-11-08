@@ -1,6 +1,7 @@
 ---
 title: "Remove Non-Printable Characters in Linux"
 date: 2018-03-24 11:41:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/filter-away-non-printable-ascii-characters-on-linux/
 ---

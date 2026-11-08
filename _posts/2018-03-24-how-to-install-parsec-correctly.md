@@ -1,6 +1,7 @@
 ---
 title: "How to Install PARSEC: A Step-by-Step Guide"
 date: 2018-03-24 11:50:48 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-parsec-correctly/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Optimizing MTU Size for WiFi Performance on Linux"
 date: 2013-07-12 16:32:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/smaller-mtu-faster-wifi-linux/
 ---

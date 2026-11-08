@@ -1,6 +1,7 @@
 ---
 title: "Hadoop in 2026: What\u2019s Changed in Big Data Analytics"
 date: 2019-07-18 12:30:30 +0000
+author: "manchun"
 layout: post
 canonical: https://www.systutorials.com/what-is-the-future-of-big-data-analytics-and-hadoop/
 ---

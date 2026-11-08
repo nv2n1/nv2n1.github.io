@@ -1,6 +1,7 @@
 ---
 title: "Understanding Double-Spending Attacks in Blockchain"
 date: 2023-09-16 06:48:43 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/double-spending-101/
 ---

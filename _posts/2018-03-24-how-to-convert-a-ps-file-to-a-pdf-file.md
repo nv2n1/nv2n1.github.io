@@ -1,6 +1,7 @@
 ---
 title: "Converting PostScript Files to PDF"
 date: 2018-03-24 08:04:15 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-a-ps-file-to-a-pdf-file/
 ---

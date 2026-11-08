@@ -1,6 +1,7 @@
 ---
 title: "Adding Multiple Window.onload Handlers Without Conflicts"
 date: 2018-03-24 19:40:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/add-my-own-window-onload-safely-without-overwriting-old-ones/
 ---

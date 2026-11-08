@@ -1,6 +1,7 @@
 ---
 title: "Prevent Chrome from Closing When You Close the Last Tab"
 date: 2018-03-24 08:04:15 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/prevent-chrome-closing-after-closing-the-last-tab/
 ---

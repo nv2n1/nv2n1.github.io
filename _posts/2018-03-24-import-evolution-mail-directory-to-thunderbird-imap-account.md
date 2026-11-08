@@ -1,6 +1,7 @@
 ---
 title: "Importing Evolution Mail to Thunderbird via IMAP"
 date: 2018-03-24 08:19:32 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/import-evolution-mail-directory-to-thunderbird-imap-account/
 ---

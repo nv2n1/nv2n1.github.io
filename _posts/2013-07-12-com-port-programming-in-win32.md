@@ -1,6 +1,7 @@
 ---
 title: "Serial Port Programming with Win32 API"
 date: 2013-07-12 16:47:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/com-port-programming-in-win32/
 ---

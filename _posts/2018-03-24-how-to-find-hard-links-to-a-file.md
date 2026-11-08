@@ -1,6 +1,7 @@
 ---
 title: "Finding Hard Links to a File"
 date: 2018-03-24 07:43:06 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-hard-links-to-a-file/
 ---

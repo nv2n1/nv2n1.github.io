@@ -1,6 +1,7 @@
 ---
 title: "Font Configuration on Fedora: Using Open Source Fonts"
 date: 2014-07-23 05:15:53 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/improving-fedora-font-rendering-with-open-software-and-fonts-only/
 ---

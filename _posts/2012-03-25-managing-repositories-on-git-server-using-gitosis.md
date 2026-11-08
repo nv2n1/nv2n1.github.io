@@ -1,6 +1,7 @@
 ---
 title: "Managing Git Repositories with Gitosis"
 date: 2012-03-25 13:14:24 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/managing-repositories-on-git-server-using-gitosis/
 ---

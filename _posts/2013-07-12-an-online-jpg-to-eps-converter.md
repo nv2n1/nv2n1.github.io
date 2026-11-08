@@ -1,6 +1,7 @@
 ---
 title: "Converting JPG to EPS on Linux with ImageMagick and Ghostscript"
 date: 2013-07-12 16:46:15 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/an-online-jpg-to-eps-converter/
 ---

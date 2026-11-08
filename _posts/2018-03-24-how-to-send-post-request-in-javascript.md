@@ -1,6 +1,7 @@
 ---
 title: "Sending POST Requests in JavaScript: Fetch vs jQuery vs Axios"
 date: 2018-03-24 11:48:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-send-post-request-in-javascript/
 ---

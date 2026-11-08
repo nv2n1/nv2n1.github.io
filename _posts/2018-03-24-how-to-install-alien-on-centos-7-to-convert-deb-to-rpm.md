@@ -1,6 +1,7 @@
 ---
 title: "Installing Alien on CentOS 7: Convert .deb to .rpm"
 date: 2018-03-24 11:54:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-alien-on-centos-7-to-convert-deb-to-rpm/
 ---

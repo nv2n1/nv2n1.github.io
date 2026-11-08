@@ -1,6 +1,7 @@
 ---
 title: "HTML Entity Reference Guide"
 date: 2017-04-20 08:31:57 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/reference-special-html-characters/
 ---

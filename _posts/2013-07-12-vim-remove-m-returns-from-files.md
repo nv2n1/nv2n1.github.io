@@ -1,6 +1,7 @@
 ---
 title: "Removing ^M Line Endings in Vim"
 date: 2013-07-12 16:31:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/vim-remove-m-returns-from-files/
 ---

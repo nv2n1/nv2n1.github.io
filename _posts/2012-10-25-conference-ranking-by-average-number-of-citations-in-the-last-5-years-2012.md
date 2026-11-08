@@ -1,6 +1,7 @@
 ---
 title: "Conference Ranking by Average Number of Citations in the Last 5 Years, 2012"
 date: 2012-10-25 05:51:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/conference-ranking-by-average-number-of-citations-in-the-last-5-years-2012/
 ---

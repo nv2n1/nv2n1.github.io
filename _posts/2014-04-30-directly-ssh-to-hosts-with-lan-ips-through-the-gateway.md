@@ -1,6 +1,7 @@
 ---
 title: "SSH Through a Gateway to Internal Networks Using ProxyCommand"
 date: 2014-04-30 04:38:18 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/directly-ssh-to-hosts-with-lan-ips-through-the-gateway/
 ---

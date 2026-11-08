@@ -1,6 +1,7 @@
 ---
 title: "Controlling Linux Console Blanking and Power Settings"
 date: 2018-03-24 11:42:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/manage-linux-console-screen-by-commands/
 ---

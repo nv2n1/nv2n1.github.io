@@ -1,6 +1,7 @@
 ---
 title: "Copying Text to a File in Python"
 date: 2013-07-12 16:32:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/quickly-copying-text-to-a-file/
 ---

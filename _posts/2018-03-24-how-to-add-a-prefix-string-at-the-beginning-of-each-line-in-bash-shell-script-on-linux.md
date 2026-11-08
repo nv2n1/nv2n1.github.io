@@ -1,6 +1,7 @@
 ---
 title: "Adding a Prefix to Each Line in Bash"
 date: 2018-03-24 11:53:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-add-a-prefix-string-at-the-beginning-of-each-line-in-bash-shell-script-on-linux/
 ---

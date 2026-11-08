@@ -1,6 +1,7 @@
 ---
 title: "Setting Up HP Printers on Fedora Linux 19"
 date: 2018-03-24 08:17:26 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/hp-printer-with-fedora-linux-19/
 ---

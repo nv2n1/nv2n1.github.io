@@ -1,6 +1,7 @@
 ---
 title: "Switching Display Managers on Fedora Linux"
 date: 2018-03-24 11:47:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-display-manager-on-fedora-linux/
 ---

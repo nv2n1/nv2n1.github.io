@@ -1,6 +1,7 @@
 ---
 title: "Distributed Consensus Algorithms: Paxos vs. Raft"
 date: 2018-03-24 11:45:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-understand-some-key-system-consistency-algorithoms/
 ---

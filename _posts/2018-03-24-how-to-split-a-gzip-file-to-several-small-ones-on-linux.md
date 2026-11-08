@@ -1,6 +1,7 @@
 ---
 title: "Splitting a gzip file into smaller files on Linux"
 date: 2018-03-24 11:53:20 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-split-a-gzip-file-to-several-small-ones-on-linux/
 ---

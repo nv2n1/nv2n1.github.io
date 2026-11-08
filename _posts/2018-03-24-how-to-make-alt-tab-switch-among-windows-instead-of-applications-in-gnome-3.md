@@ -1,6 +1,7 @@
 ---
 title: "Alt-Tab Between Windows Only in GNOME"
 date: 2018-03-24 08:22:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-alt-tab-switch-among-windows-instead-of-applications-in-gnome-3/
 ---

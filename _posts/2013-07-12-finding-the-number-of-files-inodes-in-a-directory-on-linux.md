@@ -1,6 +1,7 @@
 ---
 title: "Counting Files and Inodes in a Linux Directory"
 date: 2013-07-12 16:32:30 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/finding-the-number-of-files-inodes-in-a-directory-on-linux/
 ---

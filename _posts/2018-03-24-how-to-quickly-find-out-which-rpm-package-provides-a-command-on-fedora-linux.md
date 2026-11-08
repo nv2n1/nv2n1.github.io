@@ -1,6 +1,7 @@
 ---
 title: "Find Which RPM Package Provides a Command in Fedora"
 date: 2018-03-24 08:21:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-quickly-find-out-which-rpm-package-provides-a-command-on-fedora-linux/
 ---

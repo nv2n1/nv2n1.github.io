@@ -1,6 +1,7 @@
 ---
 title: "Parallel Download Tools for Linux: aria2, axel, and curl"
 date: 2018-03-24 08:21:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/multi-connection-multi-part-file-downloading-tools-on-linux/
 ---

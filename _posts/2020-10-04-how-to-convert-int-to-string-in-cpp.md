@@ -1,6 +1,7 @@
 ---
 title: "Converting Integers to Strings in C++"
 date: 2020-10-04 09:17:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-int-to-string-in-cpp/
 ---

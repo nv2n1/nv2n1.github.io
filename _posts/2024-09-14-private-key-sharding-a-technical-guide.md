@@ -1,6 +1,7 @@
 ---
 title: "Private Key Sharding: A Technical Guide"
 date: 2024-09-14 08:33:08 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/private-key-sharding-a-technical-guide/
 ---

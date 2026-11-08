@@ -1,6 +1,7 @@
 ---
 title: "Expanding Root Partition on Cloud Linux VMs Without Rebooting"
 date: 2018-12-29 06:23:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-enlarge-root-partition-and-filesystem-size-of-cloud-linux-vm-at-runtime-without-rebooting-linux/
 ---

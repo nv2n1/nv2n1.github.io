@@ -1,6 +1,7 @@
 ---
 title: "Reducing QEMU/KVM Lock Contention with IOThreads and Dataplane"
 date: 2016-12-17 21:59:26 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/x-data-plane-feature-qemukvm/
 ---

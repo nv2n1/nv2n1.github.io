@@ -1,6 +1,7 @@
 ---
 title: "Printing Google Docs with Comments in the Margins"
 date: 2020-10-18 10:07:02 +0000
+author: "David Wong"
 layout: post
 canonical: https://www.systutorials.com/how-to-print-google-doc-with-comments-in-page-margins/
 ---

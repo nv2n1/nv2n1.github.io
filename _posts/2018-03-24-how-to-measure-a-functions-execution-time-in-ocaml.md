@@ -1,6 +1,7 @@
 ---
 title: "Measuring Function Execution Time in OCaml"
 date: 2018-03-24 11:45:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-measure-a-functions-execution-time-in-ocaml/
 ---

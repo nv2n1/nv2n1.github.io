@@ -1,6 +1,7 @@
 ---
 title: "Installing .deb Packages on Fedora with Alien"
 date: 2018-03-24 08:15:26 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-deb-packages-on-fedora/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Configuring PHP Upload Size Limits on Linux Apache"
 date: 2018-03-24 11:53:38 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-maximum-uploading-size-for-php-with-apache-on-linux/
 ---

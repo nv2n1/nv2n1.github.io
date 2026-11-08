@@ -1,6 +1,7 @@
 ---
 title: "Setting Up OpenVPN on iPhone with Ovpn Spider"
 date: 2018-03-24 11:46:25 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-use-openvpn-together-with-ovpn-spider-on-iphone/
 ---

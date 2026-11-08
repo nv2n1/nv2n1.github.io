@@ -1,6 +1,7 @@
 ---
 title: "How to Enable Natural Scrolling on MATE Linux Touchpads"
 date: 2018-03-24 11:49:54 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-enable-natual-scroll-of-touchpad-in-mate-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "EncFS mounting issues for non-root users on CentOS 6"
 date: 2018-03-24 11:51:27 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/encfs-on-centos-6-cant-mount-as-normal-user/
 ---

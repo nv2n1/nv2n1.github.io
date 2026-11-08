@@ -1,6 +1,7 @@
 ---
 title: "Centering MPlayer and mpv Windows on Linux"
 date: 2018-03-24 08:22:36 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-mplayer-to-start-a-video-at-the-center-of-the-screen/
 ---

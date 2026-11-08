@@ -1,6 +1,7 @@
 ---
 title: "Query Transaction Details by ID in Hyperledger Fabric"
 date: 2020-04-09 07:48:29 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-query-transaction-by-id-in-hyperledger-fabric-2-0/
 ---

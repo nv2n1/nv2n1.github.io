@@ -1,6 +1,7 @@
 ---
 title: "Using GNU Screen as a Non-Root User with SCREENDIR"
 date: 2018-03-24 11:47:11 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-run-screen-on-a-linux-host-reporting-cannot-make-directory-var-run-screen-permission-denied/
 ---

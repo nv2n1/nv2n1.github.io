@@ -1,6 +1,7 @@
 ---
 title: "Building 32-bit Wine on CentOS/RHEL 8+"
 date: 2020-03-27 16:28:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-wine-32-bit-on-centos-8/
 ---

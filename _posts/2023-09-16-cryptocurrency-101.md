@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with Cryptocurrency Basics"
 date: 2023-09-16 06:26:52 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/cryptocurrency-101/
 ---

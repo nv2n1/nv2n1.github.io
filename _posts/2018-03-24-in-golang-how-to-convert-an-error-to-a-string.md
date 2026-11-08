@@ -1,6 +1,7 @@
 ---
 title: "Error Handling in Go: Converting Errors to Strings"
 date: 2018-03-24 11:50:41 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/in-golang-how-to-convert-an-error-to-a-string/
 ---

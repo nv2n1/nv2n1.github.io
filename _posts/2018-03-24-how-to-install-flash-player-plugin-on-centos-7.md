@@ -1,6 +1,7 @@
 ---
 title: "Installing Flash Player on CentOS 7"
 date: 2018-03-24 11:50:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-flash-player-plugin-on-centos-7/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Customizing Cinnamon Themes and Fonts on Fedora"
 date: 2018-03-24 11:45:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/good-cinnamon-theme-for-fedora-21-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Using xargs to Pass Arguments Multiple Times in One Command"
 date: 2018-03-24 11:49:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-use-the-xargs-argument-twice-in-the-command-on-linux/
 ---

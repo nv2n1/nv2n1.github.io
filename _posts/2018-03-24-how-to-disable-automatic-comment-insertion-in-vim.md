@@ -1,6 +1,7 @@
 ---
 title: "Disabling Automatic Comment Insertion in Vim"
 date: 2018-03-24 08:04:32 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-disable-automatic-comment-insertion-in-vim/
 ---

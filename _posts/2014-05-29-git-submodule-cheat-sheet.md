@@ -1,6 +1,7 @@
 ---
 title: "Managing Git Submodules: Add, Update, and Remove"
 date: 2014-05-29 12:04:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/git-submodule-cheat-sheet/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Installing Dropbox on Linux"
 date: 2018-03-24 08:04:07 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/installing-dropbox-on-linux/
 ---

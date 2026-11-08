@@ -1,6 +1,7 @@
 ---
 title: "Rate-Limiting SSH Connections with iptables and firewalld"
 date: 2018-03-24 11:44:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-use-iptables-to-limit-rates-new-ssh-incoming-connections-from-each-ip-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Amending Git Commit Messages: A Practical Guide"
 date: 2018-03-24 11:44:26 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-commit-message-of-a-commit-in-the-history-not-head/
 ---

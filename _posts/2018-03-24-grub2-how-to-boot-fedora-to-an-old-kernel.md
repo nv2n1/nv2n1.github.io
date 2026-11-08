@@ -1,6 +1,7 @@
 ---
 title: "Booting Fedora with an Old Kernel in GRUB2"
 date: 2018-03-24 08:16:12 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/grub2-how-to-boot-fedora-to-an-old-kernel/
 ---

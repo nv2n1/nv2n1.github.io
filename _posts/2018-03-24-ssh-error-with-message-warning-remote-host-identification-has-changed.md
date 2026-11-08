@@ -1,6 +1,7 @@
 ---
 title: "Resolving SSH \u201cRemote Host Identification Has Changed\u201d Errors"
 date: 2018-03-24 11:44:00 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/ssh-error-with-message-warning-remote-host-identification-has-changed/
 ---

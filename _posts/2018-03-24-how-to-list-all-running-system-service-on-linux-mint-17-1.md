@@ -1,6 +1,7 @@
 ---
 title: "Listing Running Services on Linux with systemctl"
 date: 2018-03-24 11:44:56 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-list-all-running-system-service-on-linux-mint-17-1/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Renaming Git Branches Locally and Remotely"
 date: 2018-11-15 08:47:45 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-rename-a-branch-name-in-the-remote-git-server/
 ---

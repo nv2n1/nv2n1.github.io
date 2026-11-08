@@ -1,6 +1,7 @@
 ---
 title: "Linux v0.12 Release Notes"
 date: 2020-10-25 06:59:35 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/release-notes-for-linux-v0-12/
 ---

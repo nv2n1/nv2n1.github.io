@@ -1,6 +1,7 @@
 ---
 title: "Remove All Topics and Posts from a User in MyBB"
 date: 2018-03-24 08:16:46 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-delete-all-topics-and-posts-from-a-user-spammer-in-mybb/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Setting Your Default Text Editor on Linux"
 date: 2018-03-24 08:20:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-default-text-editor-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Safely Shrinking Ext4 Filesystems on LVM"
 date: 2015-01-09 08:04:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/shrinking-a-ext4-file-system-on-lvm-in-linux/
 ---

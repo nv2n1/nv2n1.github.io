@@ -1,6 +1,7 @@
 ---
 title: "Fix PowerNow-k8 Frequency Scaling Errors on Xen"
 date: 2018-03-24 11:46:57 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/printing-powernow-k8-transition-frequency-failed-after-install-xen/
 ---

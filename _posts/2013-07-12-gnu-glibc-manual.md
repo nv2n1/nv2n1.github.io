@@ -1,6 +1,7 @@
 ---
 title: "Understanding glibc: The Linux C Standard Library"
 date: 2013-07-12 16:47:45 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/gnu-glibc-manual/
 ---

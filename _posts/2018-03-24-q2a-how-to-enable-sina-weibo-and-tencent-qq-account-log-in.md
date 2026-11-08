@@ -1,6 +1,7 @@
 ---
 title: "Enable Sina Weibo and QQ Login in Q2A"
 date: 2018-03-24 08:15:02 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/q2a-how-to-enable-sina-weibo-and-tencent-qq-account-log-in/
 ---

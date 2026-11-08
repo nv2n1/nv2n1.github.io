@@ -1,6 +1,7 @@
 ---
 title: "How to Embed MP4 Videos in HTML"
 date: 2018-03-24 11:41:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-embed-mp4-video-in-html-pages/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Getting the Full Path of a Makefile"
 date: 2018-03-24 11:50:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-full-path-and-directory-of-a-makefile-itself/
 ---

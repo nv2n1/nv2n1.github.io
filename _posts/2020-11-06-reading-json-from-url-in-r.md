@@ -1,6 +1,7 @@
 ---
 title: "Reading JSON Data from URLs in R"
 date: 2020-11-06 14:43:34 +0000
+author: "Daniel"
 layout: post
 canonical: https://www.systutorials.com/reading-json-from-url-in-r/
 ---

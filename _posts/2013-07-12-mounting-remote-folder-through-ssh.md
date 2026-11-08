@@ -1,6 +1,7 @@
 ---
 title: "Mounting Remote Folders via SSH with SSHFS"
 date: 2013-07-12 16:32:02 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/mounting-remote-folder-through-ssh/
 ---

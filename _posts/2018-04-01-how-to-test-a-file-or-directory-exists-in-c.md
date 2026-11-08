@@ -1,6 +1,7 @@
 ---
 title: "Checking if a File or Directory Exists in C++"
 date: 2018-04-01 14:36:38 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-test-a-file-or-directory-exists-in-c/
 ---

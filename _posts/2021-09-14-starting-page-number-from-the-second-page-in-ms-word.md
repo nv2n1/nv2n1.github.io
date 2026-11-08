@@ -1,6 +1,7 @@
 ---
 title: "Set Starting Page Number to 2 in Word"
 date: 2021-09-14 06:49:58 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/starting-page-number-from-the-second-page-in-ms-word/
 ---

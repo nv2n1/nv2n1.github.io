@@ -1,6 +1,7 @@
 ---
 title: "x86-64 Assembly: Essential Reference Guide"
 date: 2013-07-12 16:47:46 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/x86-64-isa-assembly-references/
 ---

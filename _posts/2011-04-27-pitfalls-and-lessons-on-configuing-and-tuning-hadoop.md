@@ -1,6 +1,7 @@
 ---
 title: "Configuring and Tuning Hadoop: Common Pitfalls and Lessons"
 date: 2011-04-27 00:41:12 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/pitfalls-and-lessons-on-configuing-and-tuning-hadoop/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Finding File Differences on Windows Without diff"
 date: 2018-03-24 11:54:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/diff-alternative-on-windows-to-find-differences-between-2-files/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Hard Reset Your Amazon Kindle: Step-by-Step Guide"
 date: 2018-03-24 08:19:09 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-hard-reset-an-amazon-kindle/
 ---

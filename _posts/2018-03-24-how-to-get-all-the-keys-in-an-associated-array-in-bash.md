@@ -1,6 +1,7 @@
 ---
 title: "Extracting Keys from Bash Associative Arrays"
 date: 2018-03-24 11:52:43 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-all-the-keys-in-an-associated-array-in-bash/
 ---

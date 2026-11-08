@@ -1,6 +1,7 @@
 ---
 title: "Escaping Special Characters in Bash Strings"
 date: 2018-03-24 11:55:19 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-escape-special-characters-in-a-bash-string-in-linux/
 ---

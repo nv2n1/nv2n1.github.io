@@ -1,6 +1,7 @@
 ---
 title: "Fix clock validation in __pm_clk_add()"
 date: 2020-10-01 01:50:57 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/linux-kernel-pm-clk-fix-clock-error-check-in-__pm_clk_add/
 ---

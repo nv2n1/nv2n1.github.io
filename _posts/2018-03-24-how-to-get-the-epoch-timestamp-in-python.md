@@ -1,6 +1,7 @@
 ---
 title: "Getting Epoch Timestamps in Python"
 date: 2018-03-24 11:52:13 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-python/
 ---

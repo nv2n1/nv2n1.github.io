@@ -1,6 +1,7 @@
 ---
 title: "Docker Containers as Background Services: Detached Mode and Production Patterns"
 date: 2018-08-20 02:26:54 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-detach-a-docker-container-to-be-a-running-daemon/
 ---

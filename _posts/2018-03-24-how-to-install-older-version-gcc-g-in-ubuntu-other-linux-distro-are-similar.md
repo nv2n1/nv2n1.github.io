@@ -1,6 +1,7 @@
 ---
 title: "Managing Multiple GCC Versions on Ubuntu"
 date: 2018-03-24 11:47:07 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-older-version-gcc-g-in-ubuntu-other-linux-distro-are-similar/
 ---

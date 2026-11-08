@@ -1,6 +1,7 @@
 ---
 title: "Understanding Cryptographic Hash Functions"
 date: 2023-09-16 06:28:42 +0000
+author: "Tony"
 layout: post
 canonical: https://www.systutorials.com/cryptographic-hash-101/
 ---

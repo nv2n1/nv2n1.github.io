@@ -1,6 +1,7 @@
 ---
 title: "Why scanf() Is Unsafe: Causes and Solutions"
 date: 2018-03-24 08:08:16 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/scanf-is-dangerous-but-what-is-the-reason/
 ---

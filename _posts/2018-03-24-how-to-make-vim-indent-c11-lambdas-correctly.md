@@ -1,6 +1,7 @@
 ---
 title: "Configuring Vim to Indent C++11 Lambdas Properly"
 date: 2018-03-24 11:55:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-vim-indent-c11-lambdas-correctly/
 ---

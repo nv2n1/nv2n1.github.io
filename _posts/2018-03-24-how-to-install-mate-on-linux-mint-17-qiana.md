@@ -1,6 +1,7 @@
 ---
 title: "Installing MATE Desktop on Linux Mint 17 Qiana"
 date: 2018-03-24 11:49:54 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-mate-on-linux-mint-17-qiana/
 ---

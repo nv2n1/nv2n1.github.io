@@ -1,6 +1,7 @@
 ---
 title: "Where Linux Applications Store Configuration and Data Files"
 date: 2017-12-31 06:57:03 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/evolution-save-data-configure-files-linux/
 ---

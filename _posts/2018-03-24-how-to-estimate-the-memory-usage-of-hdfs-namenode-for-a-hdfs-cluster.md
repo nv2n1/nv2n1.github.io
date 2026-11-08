@@ -1,6 +1,7 @@
 ---
 title: "Estimating HDFS NameNode Memory Usage"
 date: 2018-03-24 11:53:20 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-estimate-the-memory-usage-of-hdfs-namenode-for-a-hdfs-cluster/
 ---

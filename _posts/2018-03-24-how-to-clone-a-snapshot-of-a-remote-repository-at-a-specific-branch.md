@@ -1,6 +1,7 @@
 ---
 title: "Clone a Git Branch with Shallow History"
 date: 2018-03-24 11:42:06 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-clone-a-snapshot-of-a-remote-repository-at-a-specific-branch/
 ---

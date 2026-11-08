@@ -1,6 +1,7 @@
 ---
 title: "Force Unmounting a Stale NFS Mount Without Rebooting"
 date: 2018-03-24 11:47:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-force-umount-a-nfs-directory-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Rsync with Sudo on Remote Systems"
 date: 2019-04-06 08:39:02 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-write-to-remote-side-with-sudo-in-rsync/
 ---

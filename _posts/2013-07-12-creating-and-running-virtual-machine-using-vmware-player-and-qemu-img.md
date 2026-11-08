@@ -1,6 +1,7 @@
 ---
 title: "Building VMs with VMware Player and QEMU Images"
 date: 2013-07-12 16:31:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/creating-and-running-virtual-machine-using-vmware-player-and-qemu-img/
 ---

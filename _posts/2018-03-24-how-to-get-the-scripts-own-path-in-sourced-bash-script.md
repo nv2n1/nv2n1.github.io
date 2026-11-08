@@ -1,6 +1,7 @@
 ---
 title: "Getting a Sourced Bash Script\u2019s Own Path"
 date: 2018-03-24 11:49:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-scripts-own-path-in-sourced-bash-script/
 ---

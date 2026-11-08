@@ -1,6 +1,7 @@
 ---
 title: "Free VPNs for iPhone: OpenVPN Setup and App Options"
 date: 2015-02-28 08:51:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/openvpn-ovpn-spider-free-vpns-for-iphone-users/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Using the GNU C Reference Manual: A Practical Guide"
 date: 2013-07-12 16:47:46 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/gnu-c-reference-manual/
 ---

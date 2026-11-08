@@ -1,6 +1,7 @@
 ---
 title: "How to Add Custom Content to Receipts"
 date: 2017-12-11 07:00:38 +0000
+author: "jameswarner"
 layout: post
 canonical: https://www.systutorials.com/adding-customized-content-receipt/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Checking if a Path is a Block Device in Python"
 date: 2018-04-02 09:09:41 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-check-whether-a-file-of-a-given-path-is-a-block-device-in-python/
 ---

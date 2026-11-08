@@ -1,6 +1,7 @@
 ---
 title: "How to Split a String by Delimiter in Bash"
 date: 2018-03-24 11:52:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-split-a-string-by-string-in-bash/
 ---

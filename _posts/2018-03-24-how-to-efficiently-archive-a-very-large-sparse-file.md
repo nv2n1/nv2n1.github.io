@@ -1,6 +1,7 @@
 ---
 title: "Efficiently Copy Large Sparse Files with SEEK_HOLE and SEEK_DATA"
 date: 2018-03-24 07:54:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-efficiently-archive-a-very-large-sparse-file/
 ---

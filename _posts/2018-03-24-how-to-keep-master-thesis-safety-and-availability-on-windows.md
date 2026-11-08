@@ -1,6 +1,7 @@
 ---
 title: "Backing Up Your Thesis With Git and Remote Storage on Windows"
 date: 2018-03-24 11:49:09 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-keep-master-thesis-safety-and-availability-on-windows/
 ---

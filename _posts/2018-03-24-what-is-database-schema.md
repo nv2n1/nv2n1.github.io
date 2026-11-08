@@ -1,6 +1,7 @@
 ---
 title: "Database Schema Design: Best Practices and Examples"
 date: 2018-03-24 11:44:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/what-is-database-schema/
 ---

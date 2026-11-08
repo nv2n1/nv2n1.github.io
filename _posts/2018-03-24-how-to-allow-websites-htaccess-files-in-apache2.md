@@ -1,6 +1,7 @@
 ---
 title: "Enabling .htaccess in Apache2"
 date: 2018-03-24 11:47:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-allow-websites-htaccess-files-in-apache2/
 ---

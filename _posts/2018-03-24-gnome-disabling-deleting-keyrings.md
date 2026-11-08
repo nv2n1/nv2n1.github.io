@@ -1,6 +1,7 @@
 ---
 title: "Deleting GNOME Keyrings: A Step-by-Step Guide"
 date: 2018-03-24 08:04:32 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/gnome-disabling-deleting-keyrings/
 ---

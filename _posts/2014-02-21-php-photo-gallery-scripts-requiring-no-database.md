@@ -1,6 +1,7 @@
 ---
 title: "When to Use File-Based Photo Galleries in PHP"
 date: 2014-02-21 04:13:55 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/php-photo-gallery-scripts-requiring-no-database/
 ---

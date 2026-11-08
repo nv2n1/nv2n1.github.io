@@ -1,6 +1,7 @@
 ---
 title: "Installing and Configuring Insync for Google Drive on Linux"
 date: 2018-11-25 05:54:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-up-insync-to-synchronize-google-drive-and-google-docs-files-in-ubuntu-18-04-linux/
 ---

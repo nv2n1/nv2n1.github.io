@@ -1,6 +1,7 @@
 ---
 title: "Hosting Multiple Websites on Apache with Virtual Hosts"
 date: 2018-03-24 11:47:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-host-multiple-websites-on-a-apache-linux-web-server/
 ---

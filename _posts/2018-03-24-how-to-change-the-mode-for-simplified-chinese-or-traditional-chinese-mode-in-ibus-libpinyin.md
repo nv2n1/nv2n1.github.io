@@ -1,6 +1,7 @@
 ---
 title: "Switching Between Simplified and Traditional Chinese in iBus Libpinyin"
 date: 2018-03-24 08:22:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-the-mode-for-simplified-chinese-or-traditional-chinese-mode-in-ibus-libpinyin/
 ---

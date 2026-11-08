@@ -1,6 +1,7 @@
 ---
 title: "Decrypting Password-Protected RSA Private Keys"
 date: 2018-03-24 11:46:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-decrypt-a-password-protected-rsa-private-key/
 ---

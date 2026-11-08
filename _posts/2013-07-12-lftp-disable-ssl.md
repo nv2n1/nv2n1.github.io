@@ -1,6 +1,7 @@
 ---
 title: "Disabling SSL in lftp: Configuration & Security Considerations"
 date: 2013-07-12 16:31:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/lftp-disable-ssl/
 ---

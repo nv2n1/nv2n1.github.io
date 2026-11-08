@@ -1,6 +1,7 @@
 ---
 title: "Debugging File Access in Linux: Using strace and lsof"
 date: 2018-03-24 08:22:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-which-files-are-opened-by-a-linux-program/
 ---

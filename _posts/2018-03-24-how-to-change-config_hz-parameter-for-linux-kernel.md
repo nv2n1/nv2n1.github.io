@@ -1,6 +1,7 @@
 ---
 title: "Configuring CONFIG_HZ in the Linux Kernel"
 date: 2018-03-24 11:50:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-change-config_hz-parameter-for-linux-kernel/
 ---

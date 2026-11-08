@@ -1,6 +1,7 @@
 ---
 title: "Opening Ports with iptables: A Practical Guide"
 date: 2018-04-04 02:22:34 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-open-a-port-in-iptables/
 ---

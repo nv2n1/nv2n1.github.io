@@ -1,6 +1,7 @@
 ---
 title: "Managing Multiple Go Versions on Ubuntu"
 date: 2020-04-07 09:21:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-go-1-13-x-on-ubuntu-18-04/
 ---

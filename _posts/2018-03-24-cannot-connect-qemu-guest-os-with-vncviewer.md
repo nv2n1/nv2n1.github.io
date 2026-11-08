@@ -1,6 +1,7 @@
 ---
 title: "QEMU VNC Connection Refused: Troubleshooting Guide"
 date: 2018-03-24 11:42:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/cannot-connect-qemu-guest-os-with-vncviewer/
 ---

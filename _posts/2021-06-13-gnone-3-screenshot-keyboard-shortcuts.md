@@ -1,6 +1,7 @@
 ---
 title: "GNOME 3 Keyboard Shortcuts for Screenshots"
 date: 2021-06-13 12:26:31 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/gnone-3-screenshot-keyboard-shortcuts/
 ---

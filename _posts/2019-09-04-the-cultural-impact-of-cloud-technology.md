@@ -1,6 +1,7 @@
 ---
 title: "How Cloud Infrastructure Transforms Remote Work and Reduces Costs"
 date: 2019-09-04 15:19:31 +0000
+author: "Ethan Millar"
 layout: post
 canonical: https://www.systutorials.com/the-cultural-impact-of-cloud-technology/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Testing if a File or Directory Exists in Python"
 date: 2018-03-24 11:50:05 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-test-a-file-or-directory-exists-in-python/
 ---

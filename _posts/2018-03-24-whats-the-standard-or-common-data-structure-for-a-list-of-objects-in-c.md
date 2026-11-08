@@ -1,6 +1,7 @@
 ---
 title: "Standard Data Structures for Object Lists in C++"
 date: 2018-03-24 11:52:30 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/whats-the-standard-or-common-data-structure-for-a-list-of-objects-in-c/
 ---

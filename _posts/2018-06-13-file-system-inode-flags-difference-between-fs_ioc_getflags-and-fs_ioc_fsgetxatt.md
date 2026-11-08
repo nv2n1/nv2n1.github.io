@@ -1,6 +1,7 @@
 ---
 title: "Understanding Linux Inode Flags: FS_IOC_GETFLAGS vs FS_IOC_FSGETXATTR"
 date: 2018-06-13 02:21:25 +0000
+author: "sameerkhurd"
 layout: post
 canonical: https://www.systutorials.com/file-system-inode-flags-difference-between-fs_ioc_getflags-and-fs_ioc_fsgetxatt/
 ---

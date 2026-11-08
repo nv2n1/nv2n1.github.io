@@ -1,6 +1,7 @@
 ---
 title: "How to Display Child Pages in WordPress"
 date: 2018-03-24 08:14:16 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/wordpress-how-to-list-a-pages-child-pages/
 ---

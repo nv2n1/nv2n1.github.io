@@ -1,6 +1,7 @@
 ---
 title: "Counting reads per chromosome in BAM files"
 date: 2018-03-24 11:53:27 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-count-the-number-of-reads-in-each-chromosome-in-a-bam-file/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with SSH: Connecting to Linux Servers"
 date: 2013-07-12 16:32:28 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/howto-ssh-to-linux-hosts-for-beginners/
 ---

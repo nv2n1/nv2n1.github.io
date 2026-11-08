@@ -1,6 +1,7 @@
 ---
 title: "Using Rsync with Non-Standard SSH Ports"
 date: 2018-03-24 08:19:58 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/rsync-with-non-standard-ssh-ports/
 ---

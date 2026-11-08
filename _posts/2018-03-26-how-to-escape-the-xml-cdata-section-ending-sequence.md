@@ -1,6 +1,7 @@
 ---
 title: "Handling `]]>` in XML CDATA Sections"
 date: 2018-03-26 15:40:07 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-escape-the-xml-cdata-section-ending-sequence/
 ---

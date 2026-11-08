@@ -1,6 +1,7 @@
 ---
 title: "Understanding Exit Codes in Linux and Windows"
 date: 2018-03-24 08:21:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/convention-of-error-codes-on-linux-and-windows/
 ---

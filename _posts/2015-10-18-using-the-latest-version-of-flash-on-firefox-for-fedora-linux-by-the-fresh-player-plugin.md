@@ -1,6 +1,7 @@
 ---
 title: "Running Flash Content on Linux: Ruffle and Legacy Options"
 date: 2015-10-18 10:50:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/using-the-latest-version-of-flash-on-firefox-for-fedora-linux-by-the-fresh-player-plugin/
 ---

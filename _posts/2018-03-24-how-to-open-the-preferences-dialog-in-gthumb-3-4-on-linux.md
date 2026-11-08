@@ -1,6 +1,7 @@
 ---
 title: "Accessing Preferences in gThumb on Linux"
 date: 2018-03-24 11:48:07 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-open-the-preferences-dialog-in-gthumb-3-4-on-linux/
 ---

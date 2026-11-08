@@ -1,6 +1,7 @@
 ---
 title: "Converting Objects to JSON in Node.js"
 date: 2018-03-24 11:48:48 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-an-object-to-json-in-node-js/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Reset All Git Submodules"
 date: 2020-10-11 15:03:16 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-reset-all-submodules-in-git/
 ---

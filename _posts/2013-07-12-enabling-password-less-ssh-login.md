@@ -1,6 +1,7 @@
 ---
 title: "Passwordless SSH Authentication on Linux"
 date: 2013-07-12 16:32:02 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/enabling-password-less-ssh-login/
 ---

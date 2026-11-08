@@ -1,6 +1,7 @@
 ---
 title: "Managing Virtual Machines on Xen: A Getting Started Guide"
 date: 2013-07-12 16:31:39 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/create-and-manage-virtual-machines-on-xen/
 ---

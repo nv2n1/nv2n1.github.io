@@ -1,6 +1,7 @@
 ---
 title: "Syncing Your Git Fork with Upstream Changes"
 date: 2018-03-24 11:47:35 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/git-how-to-merge-upstream-with-fork-repo/
 ---

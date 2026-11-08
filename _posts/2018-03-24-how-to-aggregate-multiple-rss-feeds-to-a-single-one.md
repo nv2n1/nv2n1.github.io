@@ -1,6 +1,7 @@
 ---
 title: "Self-Hosted RSS Feed Aggregators: Build Your Own"
 date: 2018-03-24 08:22:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-aggregate-multiple-rss-feeds-to-a-single-one/
 ---

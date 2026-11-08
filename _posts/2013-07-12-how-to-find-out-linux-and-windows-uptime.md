@@ -1,6 +1,7 @@
 ---
 title: "Checking System Uptime on Linux and Windows"
 date: 2013-07-12 16:32:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-find-out-linux-and-windows-uptime/
 ---

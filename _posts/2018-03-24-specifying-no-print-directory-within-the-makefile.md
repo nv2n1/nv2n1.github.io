@@ -1,6 +1,7 @@
 ---
 title: "Using `\u2013no-print-directory` in Makefiles"
 date: 2018-03-24 08:17:12 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/specifying-no-print-directory-within-the-makefile/
 ---

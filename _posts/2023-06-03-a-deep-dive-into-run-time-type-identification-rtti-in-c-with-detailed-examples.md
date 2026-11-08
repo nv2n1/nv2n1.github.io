@@ -1,6 +1,7 @@
 ---
 title: "RTTI in C++: Dynamic Type Checking with Examples"
 date: 2023-06-03 09:56:46 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/a-deep-dive-into-run-time-type-identification-rtti-in-c-with-detailed-examples/
 ---

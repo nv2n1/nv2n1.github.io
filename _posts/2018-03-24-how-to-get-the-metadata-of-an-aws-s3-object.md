@@ -1,6 +1,7 @@
 ---
 title: "Retrieving AWS S3 Object Metadata"
 date: 2018-03-24 11:50:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-get-the-metadata-of-an-aws-s3-object/
 ---

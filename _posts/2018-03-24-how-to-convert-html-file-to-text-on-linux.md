@@ -1,6 +1,7 @@
 ---
 title: "Converting HTML to Plain Text on Linux"
 date: 2018-03-24 08:19:09 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-html-file-to-text-on-linux/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Building Static Libraries on Linux"
 date: 2018-03-24 08:18:42 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-a-static-library-a-on-linux/
 ---

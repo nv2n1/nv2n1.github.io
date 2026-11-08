@@ -1,6 +1,7 @@
 ---
 title: "Setting Custom Replication Factor for Individual HDFS Files"
 date: 2018-03-24 11:48:34 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-set-the-replication-factor-for-one-file-when-it-is-uploaded-by-hdfs-dfs-put-command-line-in-hdfs/
 ---

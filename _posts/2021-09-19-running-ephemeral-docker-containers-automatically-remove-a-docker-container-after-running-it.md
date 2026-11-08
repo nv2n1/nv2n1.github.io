@@ -1,6 +1,7 @@
 ---
 title: "Running Ephemeral Docker Containers with Automatic Cleanup"
 date: 2021-09-19 03:59:29 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/running-ephemeral-docker-containers-automatically-remove-a-docker-container-after-running-it/
 ---

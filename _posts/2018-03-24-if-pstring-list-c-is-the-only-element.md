@@ -1,6 +1,7 @@
 ---
 title: "Pattern Matching Single-Element Lists in OCaml and Scala"
 date: 2018-03-24 11:43:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/if-pstring-list-c-is-the-only-element/
 ---

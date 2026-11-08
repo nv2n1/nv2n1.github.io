@@ -1,6 +1,7 @@
 ---
 title: "How to Fix `/var/run/screen/S-apache` Permission Denied Error"
 date: 2018-03-24 11:54:03 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/cannot-make-directory-var-run-screen-s-apache-permission-denied/
 ---

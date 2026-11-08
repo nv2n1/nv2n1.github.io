@@ -1,6 +1,7 @@
 ---
 title: "Enable RPM Fusion Repository on RHEL 9 and Rocky Linux"
 date: 2018-03-24 11:45:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-enable-rpm-fusion-for-centos-6-6/
 ---

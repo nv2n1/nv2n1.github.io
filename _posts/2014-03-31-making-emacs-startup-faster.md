@@ -1,6 +1,7 @@
 ---
 title: "Using Emacs Server and Client for Faster Editing Sessions"
 date: 2014-03-31 02:59:40 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/making-emacs-startup-faster/
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Resizing a KVM Virtual Disk: A Step-by-Step Guide"
 date: 2018-03-24 11:55:28 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-resize-a-virtual-disk-of-kvm/
 ---

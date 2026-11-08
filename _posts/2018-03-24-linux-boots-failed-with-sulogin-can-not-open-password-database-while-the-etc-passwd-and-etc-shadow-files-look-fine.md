@@ -1,6 +1,7 @@
 ---
 title: "Fix \u201csulogin: can not open password database\u201d on Linux"
 date: 2018-03-24 11:49:47 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/linux-boots-failed-with-sulogin-can-not-open-password-database-while-the-etc-passwd-and-etc-shadow-files-look-fine/
 ---

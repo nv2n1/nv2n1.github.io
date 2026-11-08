@@ -1,6 +1,7 @@
 ---
 title: "WordPress Multisite: Running from a Subdirectory"
 date: 2018-03-24 08:18:05 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/installing-wordpress-in-a-sub-directory-while-working-for-the-whole-site/
 ---

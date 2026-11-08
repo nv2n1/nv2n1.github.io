@@ -1,6 +1,7 @@
 ---
 title: "NFS Server on tmpfs: Setup and Caveats"
 date: 2013-07-12 16:32:04 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/setting-up-a-nfs-server-on-top-of-tmpfs-devshm/
 ---

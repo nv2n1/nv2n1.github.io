@@ -1,6 +1,7 @@
 ---
 title: "Removing RAID Metadata from Linux Disks"
 date: 2015-08-15 13:00:49 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-clean-raid-signatures-on-linux/
 ---

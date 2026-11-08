@@ -1,6 +1,7 @@
 ---
 title: "Calling C Functions from OCaml"
 date: 2018-03-24 08:15:56 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-call-c-functions-from-ocaml-code/
 ---

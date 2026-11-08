@@ -1,6 +1,7 @@
 ---
 title: "Working with Shared Memory in Linux: List and Delete"
 date: 2018-03-24 11:54:46 +0000
+author: "Weiwei Jia"
 layout: post
 canonical: https://www.systutorials.com/how-to-list-and-delete-shared-memory-in-linux/
 ---

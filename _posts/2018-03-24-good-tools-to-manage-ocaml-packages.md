@@ -1,6 +1,7 @@
 ---
 title: "OCaml Package Management Tools"
 date: 2018-03-24 08:16:05 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/good-tools-to-manage-ocaml-packages/
 ---

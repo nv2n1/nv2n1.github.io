@@ -1,6 +1,7 @@
 ---
 title: "Converting Linux dmesg Timestamps to Readable Format"
 date: 2018-03-24 11:50:38 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-the-dmesg-timestamps-to-easier-to-read-format-on-linux/
 ---

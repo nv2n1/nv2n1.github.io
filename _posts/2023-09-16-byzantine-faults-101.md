@@ -1,6 +1,7 @@
 ---
 title: "Understanding Byzantine Fault Tolerance"
 date: 2023-09-16 06:50:09 +0000
+author: "Ethan Ainsworth"
 layout: post
 canonical: https://www.systutorials.com/byzantine-faults-101/
 ---

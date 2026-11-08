@@ -1,6 +1,7 @@
 ---
 title: "Installing MATE Desktop on Fedora 17"
 date: 2018-03-24 07:54:05 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-install-the-mate-fork-of-gnome-2-on-fedora-17/
 ---

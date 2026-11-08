@@ -1,6 +1,7 @@
 ---
 title: "Sort Lines by Length in Linux"
 date: 2018-03-24 11:49:37 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-sort-lines-by-length-in-linux/
 ---

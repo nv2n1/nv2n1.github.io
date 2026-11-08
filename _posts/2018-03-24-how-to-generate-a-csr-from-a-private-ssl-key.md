@@ -1,6 +1,7 @@
 ---
 title: "Generating a CSR from an Existing Private Key"
 date: 2018-03-24 11:49:51 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-generate-a-csr-from-a-private-ssl-key/
 ---

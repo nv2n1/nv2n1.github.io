@@ -1,6 +1,7 @@
 ---
 title: "Count Words in a PHP File"
 date: 2020-09-20 10:08:58 +0000
+author: "David Yang"
 layout: post
 canonical: https://www.systutorials.com/how-to-count-the-number-of-words-in-a-file-in-php/
 ---

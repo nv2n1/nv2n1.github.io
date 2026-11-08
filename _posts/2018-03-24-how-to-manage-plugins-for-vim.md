@@ -1,6 +1,7 @@
 ---
 title: "Managing Vim Plugins: A Practical Guide"
 date: 2018-03-24 08:14:42 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-manage-plugins-for-vim/
 ---

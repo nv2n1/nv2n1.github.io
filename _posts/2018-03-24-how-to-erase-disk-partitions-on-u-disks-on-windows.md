@@ -1,6 +1,7 @@
 ---
 title: "How to Erase and Partition USB Drives on Windows"
 date: 2018-03-24 11:41:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-erase-disk-partitions-on-u-disks-on-windows/
 ---

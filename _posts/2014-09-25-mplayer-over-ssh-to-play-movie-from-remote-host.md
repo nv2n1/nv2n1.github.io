@@ -1,6 +1,7 @@
 ---
 title: "Stream Movies from a Remote Server Over SSH with SSHFS"
 date: 2014-09-25 09:11:57 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/mplayer-over-ssh-to-play-movie-from-remote-host/
 ---

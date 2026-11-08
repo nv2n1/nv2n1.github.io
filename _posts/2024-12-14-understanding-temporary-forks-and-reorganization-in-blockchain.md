@@ -1,6 +1,7 @@
 ---
 title: "Blockchain Forks and Chain Reorganizations Explained"
 date: 2024-12-14 09:59:01 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/understanding-temporary-forks-and-reorganization-in-blockchain/
 ---

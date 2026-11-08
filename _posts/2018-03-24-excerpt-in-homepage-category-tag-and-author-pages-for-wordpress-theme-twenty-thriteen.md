@@ -1,6 +1,7 @@
 ---
 title: "WordPress Twenty Thirteen: Using Excerpts on Archive Pages"
 date: 2018-03-24 08:17:50 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/excerpt-in-homepage-category-tag-and-author-pages-for-wordpress-theme-twenty-thriteen/
 ---

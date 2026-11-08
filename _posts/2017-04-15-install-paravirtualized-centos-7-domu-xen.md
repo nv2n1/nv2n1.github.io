@@ -1,6 +1,7 @@
 ---
 title: "Installing a Paravirtualized DomU on Xen with Rocky Linux 9"
 date: 2017-04-15 06:48:14 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/install-paravirtualized-centos-7-domu-xen/
 ---

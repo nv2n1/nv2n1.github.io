@@ -1,6 +1,7 @@
 ---
 title: "Merging SAM Files on Linux"
 date: 2018-03-24 11:49:09 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-merge-sam-files-on-linux/
 ---

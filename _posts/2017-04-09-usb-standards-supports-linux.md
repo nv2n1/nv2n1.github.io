@@ -1,6 +1,7 @@
 ---
 title: "USB Standards in Linux: Speeds and Driver Troubleshooting"
 date: 2017-04-09 06:36:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/usb-standards-supports-linux/
 ---

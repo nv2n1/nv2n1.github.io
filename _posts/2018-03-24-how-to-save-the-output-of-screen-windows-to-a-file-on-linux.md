@@ -1,6 +1,7 @@
 ---
 title: "Saving Linux Screen Sessions to a File"
 date: 2018-03-24 11:51:21 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-save-the-output-of-screen-windows-to-a-file-on-linux/
 ---

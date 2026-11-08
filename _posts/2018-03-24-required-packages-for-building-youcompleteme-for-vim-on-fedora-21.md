@@ -1,6 +1,7 @@
 ---
 title: "Fix YouCompleteMe Build Errors on Fedora"
 date: 2018-03-24 11:46:44 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/required-packages-for-building-youcompleteme-for-vim-on-fedora-21/
 ---

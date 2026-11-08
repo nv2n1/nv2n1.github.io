@@ -1,6 +1,7 @@
 ---
 title: "Migrating from firewalld to iptables on CentOS 7 and Fedora"
 date: 2018-03-24 08:21:31 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-enable-iptables-on-centos-7-fedora-20/
 ---

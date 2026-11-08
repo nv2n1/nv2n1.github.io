@@ -1,6 +1,7 @@
 ---
 title: "Resetting Your Linux Keyboard Layout with xmodmap and setxkbmap"
 date: 2018-03-24 08:22:17 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-reset-the-keyboard-set-by-xmodmap-on-linux/
 ---

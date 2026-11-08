@@ -1,6 +1,7 @@
 ---
 title: "Checking if a Key Exists in a Python Dictionary"
 date: 2018-03-24 11:51:10 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/in-python-how-to-check-whether-a-key-already-exists-in-a-dict/
 ---

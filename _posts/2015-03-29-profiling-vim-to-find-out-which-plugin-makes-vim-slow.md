@@ -1,6 +1,7 @@
 ---
 title: "Profiling Vim Startup and Runtime Performance"
 date: 2015-03-29 04:51:52 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/profiling-vim-to-find-out-which-plugin-makes-vim-slow/
 ---

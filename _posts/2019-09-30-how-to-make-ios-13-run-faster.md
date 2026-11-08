@@ -1,6 +1,7 @@
 ---
 title: "iPhone Performance Tuning: Disabling Unnecessary Battery-Draining Features"
 date: 2019-09-30 16:01:50 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-make-ios-13-run-faster/
 ---

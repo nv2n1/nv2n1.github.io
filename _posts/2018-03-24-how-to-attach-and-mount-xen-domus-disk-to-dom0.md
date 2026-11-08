@@ -1,6 +1,7 @@
 ---
 title: "How to Attach and Mount a Xen DomU Disk in Dom0"
 date: 2018-03-24 08:19:23 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-attach-and-mount-xen-domus-disk-to-dom0/
 ---

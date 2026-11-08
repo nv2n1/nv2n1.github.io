@@ -1,6 +1,7 @@
 ---
 title: "Checking if a File is a Block Device in Python"
 date: 2018-03-24 11:55:24 +0000
+author: "Q A"
 layout: post
 canonical: https://www.systutorials.com/how-to-test-whether-a-file-exists-and-is-a-block-special-file-in-python-on-linux/
 ---

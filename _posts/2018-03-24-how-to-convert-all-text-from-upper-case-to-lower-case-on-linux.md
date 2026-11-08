@@ -1,6 +1,7 @@
 ---
 title: "Text Conversion to Lowercase on Linux: tr, awk, sed, and Bash"
 date: 2018-03-24 11:45:42 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/how-to-convert-all-text-from-upper-case-to-lower-case-on-linux/
 ---

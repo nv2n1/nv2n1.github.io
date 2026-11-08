@@ -1,6 +1,7 @@
 ---
 title: "How to Transfer Videos to iPhone on Linux"
 date: 2018-03-24 11:41:32 +0000
+author: "Eric Ma"
 layout: post
 canonical: https://www.systutorials.com/video-player-for-iphone-for-uploading-video-files-and-watching-them/
 ---

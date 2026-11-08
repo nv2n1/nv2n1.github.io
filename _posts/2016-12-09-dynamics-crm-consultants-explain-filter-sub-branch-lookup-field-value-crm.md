@@ -1,6 +1,7 @@
 ---
 title: "Filter Dependent Lookup Fields in Dynamics 365 and Power Apps"
 date: 2016-12-09 07:55:17 +0000
+author: "jameswarner"
 layout: post
 canonical: https://www.systutorials.com/dynamics-crm-consultants-explain-filter-sub-branch-lookup-field-value-crm/
 ---
