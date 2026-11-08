@@ -53,24 +53,24 @@ Welcome to SysTutorials! Learn through 5 focused learning academies. Explore sys
 ## Browse by Category
 
 <ul class="cat-grid">
-<li><a href="/category/linux-systems-administration/">Linux & Systems Administration</a> <span>(726)</span></li>
-<li><a href="/category/programming-languages/">Programming Languages</a> <span>(129)</span></li>
-<li><a href="/category/development-best-practices/">Development Best Practices</a> <span>(104)</span></li>
-<li><a href="/category/languages-frameworks/">Languages & Frameworks</a> <span>(97)</span></li>
-<li><a href="/category/scripting-utilities/">Scripting & Utilities</a> <span>(68)</span></li>
-<li><a href="/category/systems-architecture/">Systems & Architecture</a> <span>(36)</span></li>
-<li><a href="/category/linux-system-configuration/">Linux System Configuration</a> <span>(33)</span></li>
-<li><a href="/category/system-administration-cloud/">System Administration & Cloud</a> <span>(33)</span></li>
-<li><a href="/category/testing-devops/">Testing & DevOps</a> <span>(33)</span></li>
-<li><a href="/category/web-development/">Web Development</a> <span>(25)</span></li>
-<li><a href="/category/design-patterns-architecture/">Design Patterns & Architecture</a> <span>(18)</span></li>
-<li><a href="/category/security-cryptography-2/">Security & Cryptography</a> <span>(17)</span></li>
-<li><a href="/category/blockchain-cryptocurrency/">Blockchain & Cryptocurrency</a> <span>(16)</span></li>
-<li><a href="/category/algorithms-data-structures/">Algorithms & Data Structures</a> <span>(14)</span></li>
-<li><a href="/category/databases-storage/">Databases & Storage</a> <span>(11)</span></li>
-<li><a href="/category/code-optimization/">Code Optimization</a> <span>(8)</span></li>
-<li><a href="/category/functional-programming/">Functional Programming</a> <span>(4)</span></li>
-<li><a href="/category/object-oriented-programming/">Object-Oriented Programming</a> <span>(4)</span></li>
-<li><a href="/category/ai-engineering/">AI Engineering</a> <span>(4)</span></li>
+<li><a href="/category/linux-systems-administration/">linux systems administration</a> <span>(722)</span></li>
+<li><a href="/category/programming-languages/">programming languages</a> <span>(129)</span></li>
+<li><a href="/category/development-best-practices/">development best practices</a> <span>(99)</span></li>
+<li><a href="/category/languages-frameworks/">languages frameworks</a> <span>(89)</span></li>
+<li><a href="/category/scripting-utilities/">scripting utilities</a> <span>(68)</span></li>
+<li><a href="/category/systems-architecture/">systems architecture</a> <span>(36)</span></li>
+<li><a href="/category/testing-devops/">testing devops</a> <span>(32)</span></li>
+<li><a href="/category/system-administration-cloud/">system administration cloud</a> <span>(31)</span></li>
+<li><a href="/category/linux-system-configuration/">linux system configuration</a> <span>(28)</span></li>
+<li><a href="/category/web-development/">web development</a> <span>(25)</span></li>
+<li><a href="/category/design-patterns-architecture/">design patterns architecture</a> <span>(17)</span></li>
+<li><a href="/category/security-cryptography-2/">security cryptography 2</a> <span>(17)</span></li>
+<li><a href="/category/blockchain-cryptocurrency/">blockchain cryptocurrency</a> <span>(15)</span></li>
+<li><a href="/category/databases-storage/">databases storage</a> <span>(11)</span></li>
+<li><a href="/category/algorithms-data-structures/">algorithms data structures</a> <span>(10)</span></li>
+<li><a href="/category/code-optimization/">code optimization</a> <span>(8)</span></li>
+<li><a href="/category/object-oriented-programming/">object oriented programming</a> <span>(4)</span></li>
+<li><a href="/category/functional-programming/">functional programming</a> <span>(4)</span></li>
+<li><a href="/category/ai-engineering/">ai engineering</a> <span>(4)</span></li>
 </ul>
 

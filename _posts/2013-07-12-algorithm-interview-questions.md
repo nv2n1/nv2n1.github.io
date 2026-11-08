@@ -5,9 +5,11 @@ modified: 2026-04-11 17:51:44 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]
-permalink: /micosoft%e6%8b%9b%e8%81%98%e9%83%a8%e5%88%86%e7%ae%97%e6%b3%95%e9%a2%98/
-canonical: /micosoft%e6%8b%9b%e8%81%98%e9%83%a8%e5%88%86%e7%ae%97%e6%b3%95%e9%a2%98/
+permalink: /algorithm-interview-questions/
+canonical: /algorithm-interview-questions/
 ---
+
+This post walks through common algorithm and data-structure questions that come up in software engineering interviews, with worked explanations of the tradeoffs behind each answer.
 
 Understanding tradeoffs between these structures is essential for algorithm design:
 
