@@ -1,6 +1,6 @@
 title: SysTutorials
 description: Tutorials and Q&A on Linux, systems, and software.
-url: https://nv2n1.github.io
+url: https://www.systutorials.com
 permalink: /:title/
 plugins:
   - jekyll-sitemap
