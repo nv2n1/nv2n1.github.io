@@ -30,19 +30,15 @@ apt-cache policy thunderbird
 
 This shows the currently installed version (if any), the candidate version that will be installed by default, and a table of all available versions with their repository sources.
 
-## Using apt-cache search with grep
+## Using apt-cache madison
 
-If you just want version numbers without the noise:
-
-``` bash
-apt-cache search thunderbird | grep thunderbird
-```
-
-Or to see versions more explicitly:
+To list available versions with their repositories in a compact table:
 
 ``` bash
-apt-cache policy thunderbird | grep -E '^\s+[0-9]+'
+apt-cache madison thunderbird
 ```
+
+Note: `apt-cache search` returns package names and descriptions only, never versions, so it cannot be used to list versions.
 
 ## Using apt list (modern approach)
 
@@ -66,10 +62,10 @@ Once you’ve identified the version you want, install it explicitly:
 sudo apt install thunderbird=1:31.1.1+build1-0ubuntu0.14.04.1
 ```
 
-You can also use the `=` operator to hold a package at a specific version:
+Then keep it from being upgraded; `apt-mark hold` takes a package name, not a version:
 
 ``` bash
-sudo apt-mark hold thunderbird=1:31.1.1+build1-0ubuntu0.14.04.1
+sudo apt-mark hold thunderbird
 ```
 
 Later, unhold it with:
