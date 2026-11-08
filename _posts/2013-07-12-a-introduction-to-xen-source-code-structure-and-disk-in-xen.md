@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /a-introduction-to-xen-source-code-structure-and-disk-in-xen/
 ---
 
-Xen remains a production hypervisor used by AWS EC2, Citrix Hypervisor, and other cloud providers, though most general-purpose Linux distributions have shifted toward KVM as their default. If you’re working with Xen in production or developing drivers, understanding its source code layout is essential.
+Xen remains a production hypervisor used by Citrix Hypervisor, XCP-ng, and other clouds (and historically by AWS EC2, which has moved to its KVM-based Nitro system), though most general-purpose Linux distributions have shifted toward KVM as their default. If you’re working with Xen in production or developing drivers, understanding its source code layout is essential.
 
 ## Top-Level Directory Structure
 
@@ -20,7 +20,7 @@ The Xen source repository (hosted on xenbits.xen.org) is organized into these pr
 
 **xen/** — The hypervisor core, written primarily in C with assembly for architecture-specific operations.
 
-**linux/** or **linux-xxx-xen/** — Paravirtualized Linux kernel source with Xen support. Modern versions patch upstream Linux directly rather than maintaining separate kernel trees.
+Paravirtualized Linux kernels live in the separate Linux source tree (early Xen kernels as linux-2.6.x-xen patches, modern ones in mainline); the xen tree itself contains no kernel.
 
 **extras/** — Optional utilities and experimental features.
 
@@ -34,13 +34,13 @@ Inside the hypervisor source directory:
 
 **arch/** — Architecture-specific implementations for x86, x86-64, and ARM64. Includes boot code, paging, interrupt handlers, and CPU features detection.
 
-**drivers/** — Backend drivers (disk, network, USB, IOMMU management). These handle physical device access and run with dom0 privileges.
+**drivers/** — Hypervisor device support such as IOMMU/VFIO management and the console. The PV disk and network backends (blkback, netback) are Linux dom0 kernel drivers, not part of this tree.
 
 **xsm/** — Xen Security Modules implementing mandatory access control (MAC). The FLASK security policy engine is the primary implementation; others include dummy (no policy) and ACM (deprecated).
 
 **include/** — Header files defining interfaces between hypervisor components and between hypervisor and guest kernels.
 
-**tools/** — Hypervisor build utilities and low-level domain management tools like `xenstore-clients` and event channel utilities.
+**tools/** — Hypervisor build utilities only (for example `symbols`); the user-facing tools such as `xenstore-clients` live under the top-level tools/ directory.
 
 ## Backend and Frontend Driver Architecture
 
@@ -55,14 +55,14 @@ The split-driver model is Xen’s mechanism for safe device virtualization. Fron
 
 **Frontend drivers** run in guest domains (domU) and interface with virtual devices:
 
-- Implemented as drivers in the guest OS kernel or userspace via PV backends
+- Implemented as drivers in the guest OS kernel, or in userspace
 - Present standard block/net device abstractions to guest applications
 - Use xenstore for configuration and XenBus for initialization
 - Access shared memory via grant references without hypervisor mediation
 
 **XenBus** is the out-of-band control path—a shared memory region and event channel mechanism allowing frontend/backend negotiation. State machines govern device initialization: Initialising → InitWait → Initialised → Connected.
 
-**XenStore** is a key-value database accessible from all domains, storing device configuration, domain metadata, and runtime parameters. The daemon `xenstore-read` and `xenstore-write` tools allow query access.
+**XenStore** is a key-value database accessible from all domains, storing device configuration, domain metadata, and runtime parameters. The `xenstored` daemon serves it, and the `xenstore-read`/`xenstore-write` client tools allow query access.
 
 **Grant tables** allow domains to grant other domains access to specific memory pages without copying. Backend drivers use grants to safely read/write guest buffers.
 
