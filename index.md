@@ -55,7 +55,7 @@ Welcome to SysTutorials! Learn through 5 focused learning academies. Explore sys
 <ul class="cat-grid">
 <li><a href="/category/linux-systems-administration/">linux systems administration</a> <span>(722)</span></li>
 <li><a href="/category/programming-languages/">programming languages</a> <span>(129)</span></li>
-<li><a href="/category/development-best-practices/">development best practices</a> <span>(98)</span></li>
+<li><a href="/category/development-best-practices/">development best practices</a> <span>(99)</span></li>
 <li><a href="/category/languages-frameworks/">languages frameworks</a> <span>(89)</span></li>
 <li><a href="/category/scripting-utilities/">scripting utilities</a> <span>(68)</span></li>
 <li><a href="/category/systems-architecture/">systems architecture</a> <span>(36)</span></li>

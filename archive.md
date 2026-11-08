@@ -6,7 +6,7 @@ permalink: /archive/
 
 ## Archive
 
-1348 posts from 2010 to 2026.
+1349 posts from 2010 to 2026.
 
 ### By year
 
@@ -24,7 +24,7 @@ permalink: /archive/
   <li><a href="/archive/2016/">2016</a> (16)</li>
   <li><a href="/archive/2015/">2015</a> (27)</li>
   <li><a href="/archive/2014/">2014</a> (37)</li>
-  <li><a href="/archive/2013/">2013</a> (225)</li>
+  <li><a href="/archive/2013/">2013</a> (226)</li>
   <li><a href="/archive/2012/">2012</a> (13)</li>
   <li><a href="/archive/2011/">2011</a> (3)</li>
   <li><a href="/archive/2010/">2010</a> (1)</li>
@@ -35,7 +35,7 @@ permalink: /archive/
 <ul class="posts">
   <li><a href="/category/linux-systems-administration/">linux systems administration</a> (722)</li>
   <li><a href="/category/programming-languages/">programming languages</a> (129)</li>
-  <li><a href="/category/development-best-practices/">development best practices</a> (98)</li>
+  <li><a href="/category/development-best-practices/">development best practices</a> (99)</li>
   <li><a href="/category/languages-frameworks/">languages frameworks</a> (89)</li>
   <li><a href="/category/scripting-utilities/">scripting utilities</a> (68)</li>
   <li><a href="/category/systems-architecture/">systems architecture</a> (36)</li>

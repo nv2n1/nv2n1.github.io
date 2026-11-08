@@ -9,7 +9,7 @@ permalink: /categories/
 <ul class="posts">
   <li><a href="/category/linux-systems-administration/">linux systems administration</a> (722)</li>
   <li><a href="/category/programming-languages/">programming languages</a> (129)</li>
-  <li><a href="/category/development-best-practices/">development best practices</a> (98)</li>
+  <li><a href="/category/development-best-practices/">development best practices</a> (99)</li>
   <li><a href="/category/languages-frameworks/">languages frameworks</a> (89)</li>
   <li><a href="/category/scripting-utilities/">scripting utilities</a> (68)</li>
   <li><a href="/category/systems-architecture/">systems architecture</a> (36)</li>
