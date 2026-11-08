@@ -15,10 +15,10 @@ VM exits occur when a guest VM transitions to hypervisor mode to handle privileg
 The debugfs interface provides a simple view of exit counts:
 
 ``` bash
-cat /sys/kernel/debug/kvm/exits
+kvm_stat
 ```
 
-This shows aggregate exit counts across all VMs on the system. The output format lists exit reason codes and their frequencies. Note that this requires `CONFIG_KVM_DEBUG_STATS` enabled in the kernel and debugfs mounted at `/sys/kernel/debug`.
+`kvm_stat` ships with KVM (sometimes as `/usr/share/kvm/kvm_stat`) and reads KVM tracepoints to show a live breakdown of exit reasons and their frequencies across all VMs. Run it as root. It needs tracing support enabled in the kernel and debugfs mounted at `/sys/kernel/debug`.
 
 If you’re running with SELinux or AppArmor, ensure your user has appropriate access to debugfs. On hardened systems, you may need to disable enforcing mode temporarily:
 
@@ -32,10 +32,10 @@ restorecon -Rv /sys/kernel/debug
 For per-VM statistics, check the VM-specific stats:
 
 ``` bash
-cat /sys/kernel/debug/kvm/*/exits
+kvm_stat -p <qemu-pid>
 ```
 
-This gives you visibility into which VMs are generating the most exits. High exit rates from specific guests indicate either workload characteristics (expected) or tuning opportunities.
+This focuses the live view on one VM, showing which workloads generate the most exits. High exit rates from specific guests indicate either workload characteristics (expected) or tuning opportunities.
 
 ## Detailed Tracing with perf
 
@@ -89,14 +89,14 @@ Use `perf stat -e kvm:*` to get a quick breakdown across your running VMs, then 
 
 Exit statistics require:
 
-- `CONFIG_KVM_DEBUG_STATS=y` in kernel config
+- KVM tracepoint support (part of standard KVM builds)
 - debugfs mounted (usually automatic on modern systems)
 - Sufficient permissions (typically requires `root` or `kvm` group membership)
 
 Check your kernel config:
 
 ``` bash
-grep KVM_DEBUG_STATS /boot/config-$(uname -r)
+grep -E 'CONFIG_KVM=|CONFIG_DEBUG_FS' /boot/config-$(uname -r)
 ```
 
 For production workloads, reserve detailed tracing for specific troubleshooting windows—continuous high-frequency KVM event tracing adds measurable overhead.
