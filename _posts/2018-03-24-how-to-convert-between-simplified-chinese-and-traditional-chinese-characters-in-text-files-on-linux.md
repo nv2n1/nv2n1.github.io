@@ -1,6 +1,7 @@
 ---
 title: "Convert Between Simplified and Traditional Chinese on Linux Using OpenCC"
 date: 2018-03-24 11:45:16 +0000
+modified: 2026-04-12 16:56:59 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

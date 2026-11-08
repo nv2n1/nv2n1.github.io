@@ -1,6 +1,7 @@
 ---
 title: "Firefox iOS Bookmark Sync: What Actually Works in 2026"
 date: 2018-03-24 11:49:17 +0000
+modified: 2026-04-12 17:00:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Stream Movies from a Remote Server Over SSH with SSHFS"
 date: 2014-09-25 09:11:57 +0000
+modified: 2026-04-11 16:22:14 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

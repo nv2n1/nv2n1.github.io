@@ -1,6 +1,7 @@
 ---
 title: "Detecting Window Popup Closure in JavaScript"
 date: 2018-03-24 11:48:48 +0000
+modified: 2026-04-12 16:47:56 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

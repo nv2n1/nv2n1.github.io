@@ -1,6 +1,7 @@
 ---
 title: "Reading an entire file into a string in Go"
 date: 2018-03-24 11:51:42 +0000
+modified: 2026-04-12 16:04:19 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

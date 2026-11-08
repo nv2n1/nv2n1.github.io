@@ -1,6 +1,7 @@
 ---
 title: "Installing and Configuring No-IP DynamicDNS on Linux"
 date: 2013-07-15 12:48:58 +0000
+modified: 2026-04-11 16:41:07 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

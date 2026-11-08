@@ -1,6 +1,7 @@
 ---
 title: "When and How to Use GZIP Compression in PHP"
 date: 2013-07-12 16:46:12 +0000
+modified: 2026-04-11 17:45:51 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

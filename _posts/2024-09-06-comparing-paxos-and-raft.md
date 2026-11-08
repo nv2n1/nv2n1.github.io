@@ -1,6 +1,7 @@
 ---
 title: "Paxos vs. Raft: Consensus Algorithms Compared"
 date: 2024-09-06 14:19:36 +0000
+modified: 2026-04-11 16:11:39 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

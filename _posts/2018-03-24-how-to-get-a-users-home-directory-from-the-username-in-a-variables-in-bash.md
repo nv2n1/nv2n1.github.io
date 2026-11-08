@@ -1,6 +1,7 @@
 ---
 title: "Getting a User\u2019s Home Directory in Bash"
 date: 2018-03-24 11:49:54 +0000
+modified: 2026-04-12 16:05:43 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

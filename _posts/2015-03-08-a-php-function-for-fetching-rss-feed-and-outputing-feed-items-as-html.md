@@ -1,6 +1,7 @@
 ---
 title: "Parse RSS Feeds and Display as HTML in PHP"
 date: 2015-03-08 08:02:12 +0000
+modified: 2026-04-11 17:16:13 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

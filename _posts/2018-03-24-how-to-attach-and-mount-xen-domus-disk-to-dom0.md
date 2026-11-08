@@ -1,6 +1,7 @@
 ---
 title: "How to Attach and Mount a Xen DomU Disk in Dom0"
 date: 2018-03-24 08:19:23 +0000
+modified: 2026-04-13 01:03:43 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

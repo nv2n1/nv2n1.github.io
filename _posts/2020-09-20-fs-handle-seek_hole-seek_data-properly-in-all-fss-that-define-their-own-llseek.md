@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers"
 date: 2020-09-20 14:38:33 +0000
+modified: 2026-04-11 16:14:00 +0000
 author: "Tony"
 layout: post
 categories: [linux-systems-administration]

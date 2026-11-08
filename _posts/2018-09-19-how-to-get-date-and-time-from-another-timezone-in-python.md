@@ -1,6 +1,7 @@
 ---
 title: "Choosing Between Python\u2019s zoneinfo and pytz"
 date: 2018-09-19 04:48:56 +0000
+modified: 2026-04-11 17:11:57 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

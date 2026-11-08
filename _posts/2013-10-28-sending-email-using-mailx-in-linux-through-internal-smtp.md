@@ -1,6 +1,7 @@
 ---
 title: "Sending Email from Linux with mailx via Internal SMTP"
 date: 2013-10-28 05:30:00 +0000
+modified: 2026-04-11 16:40:38 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

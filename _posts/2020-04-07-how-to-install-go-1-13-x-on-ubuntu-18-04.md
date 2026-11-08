@@ -1,6 +1,7 @@
 ---
 title: "Managing Multiple Go Versions on Ubuntu"
 date: 2020-04-07 09:21:32 +0000
+modified: 2026-04-11 15:42:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

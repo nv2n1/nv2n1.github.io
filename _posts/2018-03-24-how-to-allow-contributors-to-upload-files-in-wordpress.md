@@ -1,6 +1,7 @@
 ---
 title: "How to Enable File Uploads for WordPress Contributors"
 date: 2018-03-24 08:20:04 +0000
+modified: 2026-04-12 16:35:15 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

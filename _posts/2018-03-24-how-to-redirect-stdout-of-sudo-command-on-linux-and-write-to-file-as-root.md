@@ -1,6 +1,7 @@
 ---
 title: "Redirecting stdout with sudo: Why > fails and how to fix it"
 date: 2018-03-24 11:45:52 +0000
+modified: 2026-04-12 16:44:38 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

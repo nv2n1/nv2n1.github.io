@@ -1,6 +1,7 @@
 ---
 title: "Building a REST API with ASP.NET MVC and JavaScript"
 date: 2016-11-25 03:53:04 +0000
+modified: 2026-04-11 17:16:00 +0000
 author: "jameswarner"
 layout: post
 categories: [languages-frameworks]

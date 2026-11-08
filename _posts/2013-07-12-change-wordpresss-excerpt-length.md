@@ -1,6 +1,7 @@
 ---
 title: "Customize WordPress Excerpt Length via Functions.php"
 date: 2013-07-12 16:46:10 +0000
+modified: 2026-04-12 17:00:02 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

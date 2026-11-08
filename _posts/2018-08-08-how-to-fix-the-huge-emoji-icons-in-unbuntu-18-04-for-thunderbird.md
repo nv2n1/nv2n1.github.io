@@ -1,6 +1,7 @@
 ---
 title: "Fixing Oversized Emoji in Thunderbird: Font Configuration Guide"
 date: 2018-08-08 04:09:21 +0000
+modified: 2026-04-11 17:46:47 +0000
 author: "Q A"
 layout: post
 categories: [programming-languages]

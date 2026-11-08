@@ -1,6 +1,7 @@
 ---
 title: "SSH, File Transfer, and Remote Access: Linux from Windows"
 date: 2017-11-14 14:49:21 +0000
+modified: 2026-04-11 17:41:14 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

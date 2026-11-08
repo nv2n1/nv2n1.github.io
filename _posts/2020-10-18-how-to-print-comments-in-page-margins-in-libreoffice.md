@@ -1,6 +1,7 @@
 ---
 title: "Comments in Page Margins: Printing with LibreOffice"
 date: 2020-10-18 00:20:46 +0000
+modified: 2026-04-12 16:48:47 +0000
 author: "David Wong"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Disabling Automatic Comment Insertion in Vim"
 date: 2018-03-24 08:04:32 +0000
+modified: 2026-04-12 16:46:57 +0000
 author: "Q A"
 layout: post
 categories: [development-best-practices]

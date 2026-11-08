@@ -1,6 +1,7 @@
 ---
 title: "How to Get a Process\u2019s Port Number"
 date: 2018-03-24 11:54:46 +0000
+modified: 2026-04-12 16:33:10 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [programming-languages]

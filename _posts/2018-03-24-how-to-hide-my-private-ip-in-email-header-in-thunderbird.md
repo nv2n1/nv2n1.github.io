@@ -1,6 +1,7 @@
 ---
 title: "Hide Your Private IP from Thunderbird Email Headers"
 date: 2018-03-24 11:55:09 +0000
+modified: 2026-05-17 16:50:32 +0000
 author: "Eric Ma"
 layout: post
 categories: [security-cryptography-2]

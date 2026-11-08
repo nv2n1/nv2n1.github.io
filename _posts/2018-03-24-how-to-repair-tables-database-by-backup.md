@@ -1,6 +1,7 @@
 ---
 title: "How to Repair Database Tables Using Backups"
 date: 2018-03-24 08:17:17 +0000
+modified: 2026-04-12 16:39:50 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

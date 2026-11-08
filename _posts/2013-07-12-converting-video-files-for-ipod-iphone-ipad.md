@@ -1,6 +1,7 @@
 ---
 title: "Convert Video Files for iPhone, iPad, and iPod"
 date: 2013-07-12 16:32:27 +0000
+modified: 2026-04-11 16:42:20 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

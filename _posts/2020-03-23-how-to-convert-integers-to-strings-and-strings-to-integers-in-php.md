@@ -1,6 +1,7 @@
 ---
 title: "Safe Integer and String Conversion in PHP"
 date: 2020-03-23 15:51:58 +0000
+modified: 2026-04-11 17:11:47 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

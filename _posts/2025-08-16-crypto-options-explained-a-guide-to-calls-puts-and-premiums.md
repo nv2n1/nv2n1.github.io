@@ -1,6 +1,7 @@
 ---
 title: "Crypto Options Explained: Calls, Puts, and Premiums"
 date: 2025-08-16 10:27:21 +0000
+modified: 2026-05-17 15:38:28 +0000
 author: "Ethan Ainsworth"
 layout: post
 categories: [blockchain-cryptocurrency]

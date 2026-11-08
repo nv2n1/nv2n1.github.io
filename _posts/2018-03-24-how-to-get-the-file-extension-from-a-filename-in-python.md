@@ -1,6 +1,7 @@
 ---
 title: "Extracting File Extensions in Python with pathlib and os.path"
 date: 2018-03-24 11:48:34 +0000
+modified: 2026-04-12 16:32:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

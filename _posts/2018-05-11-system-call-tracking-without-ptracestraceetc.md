@@ -1,6 +1,7 @@
 ---
 title: "System Call Tracing with eBPF: Move Beyond ptrace"
 date: 2018-05-11 15:22:48 +0000
+modified: 2026-04-11 17:12:05 +0000
 author: "Q A"
 layout: post
 categories: [testing-devops]

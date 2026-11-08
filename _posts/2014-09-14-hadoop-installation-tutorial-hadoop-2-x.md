@@ -1,6 +1,7 @@
 ---
 title: "Setting Up a Hadoop 2.x Cluster for Development and Legacy Systems"
 date: 2014-09-14 18:13:09 +0000
+modified: 2026-04-11 16:22:19 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

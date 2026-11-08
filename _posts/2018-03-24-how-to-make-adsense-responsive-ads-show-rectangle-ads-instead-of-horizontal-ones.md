@@ -1,6 +1,7 @@
 ---
 title: "Force Rectangle Ads in AdSense Responsive Formats"
 date: 2018-03-24 11:47:03 +0000
+modified: 2026-04-12 16:05:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Upgrading Fedora with dnf system-upgrade: A Complete Guide"
 date: 2018-03-24 08:21:39 +0000
+modified: 2026-04-11 17:49:41 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

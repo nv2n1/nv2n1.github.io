@@ -1,6 +1,7 @@
 ---
 title: "Crypto Futures vs. Perpetuals: What You Need to Know"
 date: 2025-08-16 10:02:48 +0000
+modified: 2026-05-17 15:39:18 +0000
 author: "Ethan Ainsworth"
 layout: post
 categories: [blockchain-cryptocurrency]

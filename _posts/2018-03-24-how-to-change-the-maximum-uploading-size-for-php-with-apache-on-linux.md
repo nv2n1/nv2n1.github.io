@@ -1,6 +1,7 @@
 ---
 title: "Configuring PHP Upload Size Limits on Linux Apache"
 date: 2018-03-24 11:53:38 +0000
+modified: 2026-04-12 08:03:36 +0000
 author: "Q A"
 layout: post
 categories: [system-administration-cloud]

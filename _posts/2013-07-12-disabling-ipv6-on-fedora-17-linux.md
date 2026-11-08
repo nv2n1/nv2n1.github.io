@@ -1,6 +1,7 @@
 ---
 title: "Disabling IPv6 on Linux: Step-by-Step Guide"
 date: 2013-07-12 16:32:30 +0000
+modified: 2026-04-12 16:33:50 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

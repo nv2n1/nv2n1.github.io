@@ -1,6 +1,7 @@
 ---
 title: "EncFS on Android: Setup and Usage Guide"
 date: 2018-03-24 11:53:24 +0000
+modified: 2026-05-17 16:50:37 +0000
 author: "Eric Ma"
 layout: post
 categories: [security-cryptography-2]

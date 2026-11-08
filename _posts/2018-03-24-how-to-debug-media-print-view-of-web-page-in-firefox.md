@@ -1,6 +1,7 @@
 ---
 title: "Debugging Print Styles in Firefox: A Practical Guide"
 date: 2018-03-24 11:49:43 +0000
+modified: 2026-04-12 16:54:22 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Proving Bitcoin Address Ownership: A Technical Guide"
 date: 2024-09-14 07:20:43 +0000
+modified: 2026-05-17 15:39:12 +0000
 author: "Eric Ma"
 layout: post
 categories: [blockchain-cryptocurrency]

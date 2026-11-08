@@ -1,6 +1,7 @@
 ---
 title: "Installing MATE Desktop on Linux Mint 17 Qiana"
 date: 2018-03-24 11:49:54 +0000
+modified: 2026-04-12 09:40:18 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

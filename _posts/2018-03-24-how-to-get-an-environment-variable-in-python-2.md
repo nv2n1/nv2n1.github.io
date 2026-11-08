@@ -1,6 +1,7 @@
 ---
 title: "Reading Environment Variables in Python"
 date: 2018-03-24 11:52:10 +0000
+modified: 2026-04-12 16:09:24 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

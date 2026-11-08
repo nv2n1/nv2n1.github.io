@@ -1,6 +1,7 @@
 ---
 title: "Linux System Monitoring with Data Visualization"
 date: 2017-02-24 06:39:22 +0000
+modified: 2026-04-11 17:41:17 +0000
 author: "Joseph Macwan"
 layout: post
 categories: [linux-system-configuration]

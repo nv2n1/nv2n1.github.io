@@ -1,6 +1,7 @@
 ---
 title: "Display Post Excerpts Instead of Full Content on WordPress Archives"
 date: 2013-07-12 16:46:09 +0000
+modified: 2026-04-11 17:48:50 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Conferences on Cloud Computing 2012"
 date: 2011-05-11 23:50:38 +0000
+modified: 2026-04-12 04:39:18 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

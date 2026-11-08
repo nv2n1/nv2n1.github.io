@@ -1,6 +1,7 @@
 ---
 title: "SSH Port Forwarding: Local, Remote, and Dynamic Tunnels"
 date: 2013-09-29 12:56:21 +0000
+modified: 2026-04-11 16:40:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

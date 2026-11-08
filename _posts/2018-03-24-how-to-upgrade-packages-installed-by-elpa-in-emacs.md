@@ -1,6 +1,7 @@
 ---
 title: "Upgrading ELPA Packages in Emacs"
 date: 2018-03-24 11:44:52 +0000
+modified: 2026-04-12 08:38:56 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-system-configuration]

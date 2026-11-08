@@ -1,6 +1,7 @@
 ---
 title: "Setting Date and Time from the Linux Command Line"
 date: 2018-03-24 11:54:34 +0000
+modified: 2026-04-12 16:04:00 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

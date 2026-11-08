@@ -1,6 +1,7 @@
 ---
 title: "OpenLDAP and NFS for Centralized User Authentication"
 date: 2013-09-25 09:59:36 +0000
+modified: 2026-04-11 16:40:48 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

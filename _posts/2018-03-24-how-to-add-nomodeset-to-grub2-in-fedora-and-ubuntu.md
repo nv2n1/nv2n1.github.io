@@ -1,6 +1,7 @@
 ---
 title: "Adding nomodeset to GRUB2 on Fedora and Ubuntu"
 date: 2018-03-24 11:47:46 +0000
+modified: 2026-04-12 08:38:54 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Limit SQL Query Results to N Rows in MySQL"
 date: 2018-03-24 11:53:09 +0000
+modified: 2026-04-12 16:51:51 +0000
 author: "David Yang"
 layout: post
 categories: [databases-storage]

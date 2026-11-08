@@ -1,6 +1,7 @@
 ---
 title: "How DEX Aggregators Route Trades Across Multiple Exchanges"
 date: 2025-03-17 12:52:32 +0000
+modified: 2026-05-17 15:40:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [blockchain-cryptocurrency]

@@ -1,6 +1,7 @@
 ---
 title: "Mapping Linux Disk Names to SATA Ports"
 date: 2018-03-24 08:14:29 +0000
+modified: 2026-04-11 16:20:52 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

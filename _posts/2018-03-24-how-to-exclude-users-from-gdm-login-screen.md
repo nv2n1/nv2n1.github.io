@@ -1,6 +1,7 @@
 ---
 title: "Hide User Accounts from the GDM Login Screen"
 date: 2018-03-24 11:40:21 +0000
+modified: 2026-04-12 16:58:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

@@ -1,6 +1,7 @@
 ---
 title: "Converting Between File Descriptors and FILE Pointers in C"
 date: 2018-03-24 11:48:07 +0000
+modified: 2026-04-12 16:55:55 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

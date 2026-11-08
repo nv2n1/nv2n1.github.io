@@ -1,6 +1,7 @@
 ---
 title: "Expanding Root Partition on Cloud Linux VMs Without Rebooting"
 date: 2018-12-29 06:23:57 +0000
+modified: 2026-04-11 15:42:56 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

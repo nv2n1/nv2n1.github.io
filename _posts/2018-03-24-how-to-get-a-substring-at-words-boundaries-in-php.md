@@ -1,6 +1,7 @@
 ---
 title: "Extracting Substrings at Word Boundaries in PHP"
 date: 2018-03-24 11:53:54 +0000
+modified: 2026-04-11 17:39:14 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

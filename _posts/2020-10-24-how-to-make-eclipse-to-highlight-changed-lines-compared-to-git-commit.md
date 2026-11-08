@@ -1,6 +1,7 @@
 ---
 title: "Highlight Changed Lines in Eclipse Using Git"
 date: 2020-10-24 13:53:23 +0000
+modified: 2026-04-12 16:58:14 +0000
 author: "David Yang"
 layout: post
 categories: [testing-devops]

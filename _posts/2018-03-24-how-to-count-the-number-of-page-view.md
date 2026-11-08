@@ -1,6 +1,7 @@
 ---
 title: "How to Count Page Views in Your Web Application"
 date: 2018-03-24 08:18:51 +0000
+modified: 2026-04-11 16:06:18 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

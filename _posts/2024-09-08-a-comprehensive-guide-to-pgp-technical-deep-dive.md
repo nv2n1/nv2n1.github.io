@@ -1,6 +1,7 @@
 ---
 title: "Understanding PGP: A Technical Reference Guide"
 date: 2024-09-08 08:27:52 +0000
+modified: 2026-05-17 15:40:41 +0000
 author: "Eric Ma"
 layout: post
 categories: [security-cryptography-2]

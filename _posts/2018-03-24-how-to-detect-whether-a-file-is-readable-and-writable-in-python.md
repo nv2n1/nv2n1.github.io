@@ -1,6 +1,7 @@
 ---
 title: "Check File Readability and Writability in Python"
 date: 2018-03-24 11:51:14 +0000
+modified: 2026-04-11 17:13:49 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

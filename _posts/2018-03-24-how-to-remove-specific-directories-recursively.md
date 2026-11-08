@@ -1,6 +1,7 @@
 ---
 title: "Find and Delete Directories Recursively"
 date: 2018-03-24 11:43:49 +0000
+modified: 2026-04-12 16:35:02 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

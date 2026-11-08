@@ -1,6 +1,7 @@
 ---
 title: "Getting Started: How to Choose Your First Programming Language"
 date: 2017-02-06 11:52:01 +0000
+modified: 2026-04-11 17:15:52 +0000
 author: "Joseph Macwan"
 layout: post
 categories: [languages-frameworks]

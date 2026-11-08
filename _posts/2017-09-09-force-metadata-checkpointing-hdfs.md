@@ -1,6 +1,7 @@
 ---
 title: "HDFS NameNode Metadata Checkpointing: Resolving Sync Issues"
 date: 2017-09-09 04:37:04 +0000
+modified: 2026-04-11 16:24:42 +0000
 author: "Eric Ma"
 layout: post
 categories: [systems-architecture]

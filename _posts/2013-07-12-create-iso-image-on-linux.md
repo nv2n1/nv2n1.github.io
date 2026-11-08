@@ -1,6 +1,7 @@
 ---
 title: "Creating ISO Images from DVDs on Linux"
 date: 2013-07-12 16:31:42 +0000
+modified: 2026-04-12 04:40:47 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

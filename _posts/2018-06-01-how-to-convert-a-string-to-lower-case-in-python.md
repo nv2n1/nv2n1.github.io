@@ -1,6 +1,7 @@
 ---
 title: "Converting Strings to Lowercase in Python"
 date: 2018-06-01 08:45:43 +0000
+modified: 2026-04-12 16:07:58 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

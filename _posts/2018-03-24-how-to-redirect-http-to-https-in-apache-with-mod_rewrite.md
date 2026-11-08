@@ -1,6 +1,7 @@
 ---
 title: "Redirect HTTP to HTTPS Using Apache mod_rewrite"
 date: 2018-03-24 11:42:11 +0000
+modified: 2026-04-12 16:07:53 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

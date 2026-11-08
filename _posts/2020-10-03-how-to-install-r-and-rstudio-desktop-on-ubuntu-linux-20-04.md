@@ -1,6 +1,7 @@
 ---
 title: "Installing R and RStudio on Ubuntu"
 date: 2020-10-03 11:49:20 +0000
+modified: 2026-04-12 14:24:35 +0000
 author: "David Yang"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "NUMA vs SMP: Key Architectural Differences"
 date: 2018-03-24 11:54:41 +0000
+modified: 2026-05-17 16:50:34 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [security-cryptography-2]

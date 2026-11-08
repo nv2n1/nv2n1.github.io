@@ -1,6 +1,7 @@
 ---
 title: "Monitoring System Interrupts in Real Time"
 date: 2018-03-24 11:54:21 +0000
+modified: 2026-04-11 17:47:01 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [programming-languages]

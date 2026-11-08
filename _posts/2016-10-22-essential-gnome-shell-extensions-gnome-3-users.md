@@ -1,6 +1,7 @@
 ---
 title: "GNOME Shell Extensions to Enhance GNOME 45"
 date: 2016-10-22 10:22:39 +0000
+modified: 2026-04-11 17:41:19 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

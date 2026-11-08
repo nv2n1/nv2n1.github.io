@@ -1,6 +1,7 @@
 ---
 title: "How to Exit VirtualBox Scaled Mode"
 date: 2018-03-24 11:46:29 +0000
+modified: 2026-04-12 16:09:54 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

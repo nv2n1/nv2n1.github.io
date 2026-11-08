@@ -1,6 +1,7 @@
 ---
 title: "Web2 Icon Libraries for Social Media: Setup & Modern Alternatives"
 date: 2013-07-12 16:46:16 +0000
+modified: 2026-04-12 16:56:02 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

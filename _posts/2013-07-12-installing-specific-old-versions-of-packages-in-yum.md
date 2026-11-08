@@ -1,6 +1,7 @@
 ---
 title: "Installing Specific Package Versions with Yum"
 date: 2013-07-12 16:32:14 +0000
+modified: 2026-04-12 14:22:16 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

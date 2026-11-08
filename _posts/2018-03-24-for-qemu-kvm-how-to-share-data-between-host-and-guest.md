@@ -1,6 +1,7 @@
 ---
 title: "Sharing Data Between QEMU/KVM Host and Guest"
 date: 2018-03-24 11:54:03 +0000
+modified: 2026-04-12 16:58:39 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [system-administration-cloud]

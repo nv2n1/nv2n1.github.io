@@ -1,6 +1,7 @@
 ---
 title: "Terminal Web Browsers: Lynx, w3m, and ELinks Compared"
 date: 2018-03-24 11:46:19 +0000
+modified: 2026-04-12 16:56:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Clearing Git History: Local and Remote Branches"
 date: 2020-10-17 13:06:25 +0000
+modified: 2026-04-11 17:11:30 +0000
 author: "David Yang"
 layout: post
 categories: [testing-devops]

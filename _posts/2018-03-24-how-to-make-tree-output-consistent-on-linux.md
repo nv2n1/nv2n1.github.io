@@ -1,6 +1,7 @@
 ---
 title: "Standardizing Tree Output Across Linux Distributions"
 date: 2018-03-24 11:48:14 +0000
+modified: 2026-04-12 16:05:46 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

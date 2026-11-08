@@ -1,6 +1,7 @@
 ---
 title: "Changing GNOME 3 Window Title Font and Size"
 date: 2018-03-24 08:19:52 +0000
+modified: 2026-04-12 16:33:27 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-system-configuration]

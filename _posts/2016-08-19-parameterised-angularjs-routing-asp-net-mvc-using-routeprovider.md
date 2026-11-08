@@ -1,6 +1,7 @@
 ---
 title: "Client-Side Routing in AngularJS: Managing Route Parameters"
 date: 2016-08-19 08:04:42 +0000
+modified: 2026-04-11 17:16:01 +0000
 author: "jameswarner"
 layout: post
 categories: [languages-frameworks]

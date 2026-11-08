@@ -1,6 +1,7 @@
 ---
 title: "Measuring CFS Scheduler Timeslices in Linux"
 date: 2016-12-05 02:47:34 +0000
+modified: 2026-04-11 16:21:20 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

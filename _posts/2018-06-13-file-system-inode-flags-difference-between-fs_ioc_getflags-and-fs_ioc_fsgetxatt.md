@@ -1,6 +1,7 @@
 ---
 title: "Understanding Linux Inode Flags: FS_IOC_GETFLAGS vs FS_IOC_FSGETXATTR"
 date: 2018-06-13 02:21:25 +0000
+modified: 2026-04-11 15:43:35 +0000
 author: "sameerkhurd"
 layout: post
 categories: [linux-systems-administration]

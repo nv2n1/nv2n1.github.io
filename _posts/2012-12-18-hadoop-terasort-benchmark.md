@@ -1,6 +1,7 @@
 ---
 title: "Hadoop TeraSort Benchmark Performance Guide"
 date: 2012-12-18 08:51:41 +0000
+modified: 2026-04-12 16:55:26 +0000
 author: "Eric Ma"
 layout: post
 categories: [design-patterns-architecture]

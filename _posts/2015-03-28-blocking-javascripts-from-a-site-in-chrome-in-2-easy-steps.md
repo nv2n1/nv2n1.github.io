@@ -1,6 +1,7 @@
 ---
 title: "Block JavaScript on Specific Sites in Chrome"
 date: 2015-03-28 14:32:19 +0000
+modified: 2026-04-12 16:48:20 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

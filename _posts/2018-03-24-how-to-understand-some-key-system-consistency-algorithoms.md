@@ -1,6 +1,7 @@
 ---
 title: "Distributed Consensus Algorithms: Paxos vs. Raft"
 date: 2018-03-24 11:45:09 +0000
+modified: 2026-04-11 17:48:33 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

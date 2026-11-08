@@ -1,6 +1,7 @@
 ---
 title: "Understanding Hadoop Configuration Files: Locations and Defaults"
 date: 2018-03-24 08:22:28 +0000
+modified: 2026-04-12 16:55:43 +0000
 author: "Eric Ma"
 layout: post
 categories: [design-patterns-architecture]

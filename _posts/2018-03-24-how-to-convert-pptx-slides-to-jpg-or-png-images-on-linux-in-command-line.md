@@ -1,6 +1,7 @@
 ---
 title: "Converting PowerPoint Slides to PNG and JPG on Linux"
 date: 2018-03-24 11:45:16 +0000
+modified: 2026-04-12 16:45:56 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

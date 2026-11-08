@@ -1,6 +1,7 @@
 ---
 title: "glibc\u2019s strcmp and strncmp: Implementation Details"
 date: 2018-03-24 08:13:44 +0000
+modified: 2026-04-11 17:50:54 +0000
 author: "Q A"
 layout: post
 categories: [development-best-practices]

@@ -1,6 +1,7 @@
 ---
 title: "Find the K Largest Files in a Linux Directory"
 date: 2018-03-24 08:20:28 +0000
+modified: 2026-04-11 16:04:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

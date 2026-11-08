@@ -1,6 +1,7 @@
 ---
 title: "Consistency Models in Distributed Systems"
 date: 2018-03-24 08:15:46 +0000
+modified: 2026-04-19 03:47:09 +0000
 author: "Q A"
 layout: post
 categories: [systems-architecture]

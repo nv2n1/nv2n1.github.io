@@ -1,6 +1,7 @@
 ---
 title: "Installing MATE Desktop on Fedora 17"
 date: 2018-03-24 07:54:05 +0000
+modified: 2026-04-12 16:04:35 +0000
 author: "Q A"
 layout: post
 categories: [linux-system-configuration]

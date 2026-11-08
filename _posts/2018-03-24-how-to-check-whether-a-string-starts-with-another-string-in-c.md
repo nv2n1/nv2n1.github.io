@@ -1,6 +1,7 @@
 ---
 title: "Checking if a String Starts With Another in C++"
 date: 2018-03-24 11:55:19 +0000
+modified: 2026-04-12 16:58:37 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

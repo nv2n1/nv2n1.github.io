@@ -1,6 +1,7 @@
 ---
 title: "HTML Entity Reference Guide"
 date: 2017-04-20 08:31:57 +0000
+modified: 2026-04-11 17:15:49 +0000
 author: "David Yang"
 layout: post
 categories: [web-development]

@@ -1,6 +1,7 @@
 ---
 title: "Getting the Full Path of a Python Script"
 date: 2018-04-01 14:41:12 +0000
+modified: 2026-04-12 16:07:10 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

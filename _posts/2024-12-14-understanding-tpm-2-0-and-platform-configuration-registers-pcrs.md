@@ -1,6 +1,7 @@
 ---
 title: "TPM 2.0: Understanding Platform Configuration Registers"
 date: 2024-12-14 09:09:40 +0000
+modified: 2026-04-11 16:11:24 +0000
 author: "Eric Ma"
 layout: post
 categories: [systems-architecture]

@@ -1,6 +1,7 @@
 ---
 title: "Installing Microsoft Office 2007 on Linux with Wine"
 date: 2013-07-12 16:32:30 +0000
+modified: 2026-04-12 16:48:54 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

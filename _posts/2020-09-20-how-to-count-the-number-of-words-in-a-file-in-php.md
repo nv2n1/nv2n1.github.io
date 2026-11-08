@@ -1,6 +1,7 @@
 ---
 title: "Count Words in a PHP File"
 date: 2020-09-20 10:08:58 +0000
+modified: 2026-04-12 16:56:09 +0000
 author: "David Yang"
 layout: post
 categories: [languages-frameworks]

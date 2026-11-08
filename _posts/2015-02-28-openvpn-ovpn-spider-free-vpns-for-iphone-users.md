@@ -1,6 +1,7 @@
 ---
 title: "Free VPNs for iPhone: OpenVPN Setup and App Options"
 date: 2015-02-28 08:51:52 +0000
+modified: 2026-04-11 16:21:58 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

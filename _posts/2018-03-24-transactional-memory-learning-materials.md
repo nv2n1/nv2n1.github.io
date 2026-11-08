@@ -1,6 +1,7 @@
 ---
 title: "Transactional Memory: Core Concepts and Implementation"
 date: 2018-03-24 08:15:46 +0000
+modified: 2026-04-11 17:15:14 +0000
 author: "Q A"
 layout: post
 categories: [databases-storage]

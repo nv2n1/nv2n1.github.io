@@ -1,6 +1,7 @@
 ---
 title: "Installing Scala on Fedora Linux"
 date: 2018-03-24 08:16:53 +0000
+modified: 2026-04-12 10:43:36 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

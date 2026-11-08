@@ -1,6 +1,7 @@
 ---
 title: "Resolving ENOMEM Errors When mmap() Exceeds vm.max_map_count"
 date: 2018-03-24 11:49:14 +0000
+modified: 2026-04-12 16:58:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

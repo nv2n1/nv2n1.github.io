@@ -1,6 +1,7 @@
 ---
 title: "Conditional Dropdown Filtering in Dynamics 365: Filter Salutation by Gender"
 date: 2016-12-15 11:02:30 +0000
+modified: 2026-04-11 17:15:55 +0000
 author: "Ethan Millar"
 layout: post
 categories: [algorithms-data-structures]

@@ -1,6 +1,7 @@
 ---
 title: "Converting DOC Files to ODT Format on Linux"
 date: 2020-11-01 07:22:32 +0000
+modified: 2026-04-12 16:45:41 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Getting the Next ASCII Character in Bash"
 date: 2018-03-24 11:52:40 +0000
+modified: 2026-04-11 15:48:19 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

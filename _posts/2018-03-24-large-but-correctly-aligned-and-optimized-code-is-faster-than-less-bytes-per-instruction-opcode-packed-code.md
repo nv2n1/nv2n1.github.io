@@ -1,6 +1,7 @@
 ---
 title: "Code alignment matters more than code size for performance"
 date: 2018-03-24 07:56:40 +0000
+modified: 2026-04-12 05:28:39 +0000
 author: "Q A"
 layout: post
 categories: [system-administration-cloud]

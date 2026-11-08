@@ -1,6 +1,7 @@
 ---
 title: "Setting Up LFTP for SFTP Key-Based Authentication"
 date: 2018-03-24 11:50:11 +0000
+modified: 2026-04-12 16:44:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

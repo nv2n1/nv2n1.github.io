@@ -1,6 +1,7 @@
 ---
 title: "Force HTTPS Redirects with .htaccess"
 date: 2018-03-24 11:45:52 +0000
+modified: 2026-04-13 00:02:33 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

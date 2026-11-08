@@ -1,6 +1,7 @@
 ---
 title: "Migrating from MediaWiki Back to WordPress"
 date: 2013-07-12 14:20:56 +0000
+modified: 2026-04-12 16:46:47 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

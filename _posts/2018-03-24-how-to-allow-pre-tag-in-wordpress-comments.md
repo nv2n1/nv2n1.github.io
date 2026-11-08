@@ -1,6 +1,7 @@
 ---
 title: "Safely Allow Code Blocks in WordPress Comments"
 date: 2018-03-24 11:40:17 +0000
+modified: 2026-04-12 16:58:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

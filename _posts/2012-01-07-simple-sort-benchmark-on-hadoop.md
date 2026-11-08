@@ -1,6 +1,7 @@
 ---
 title: "Sorting Performance Benchmarks on Hadoop"
 date: 2012-01-07 08:55:00 +0000
+modified: 2026-04-12 04:39:21 +0000
 author: "Eric Ma"
 layout: post
 categories: [algorithms-data-structures]

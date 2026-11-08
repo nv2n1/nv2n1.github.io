@@ -1,6 +1,7 @@
 ---
 title: "How to Install PARSEC: A Step-by-Step Guide"
 date: 2018-03-24 11:50:48 +0000
+modified: 2026-04-12 16:08:22 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [programming-languages]

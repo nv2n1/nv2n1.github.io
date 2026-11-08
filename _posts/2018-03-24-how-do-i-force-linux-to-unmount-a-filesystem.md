@@ -1,6 +1,7 @@
 ---
 title: "Forcefully Unmount a Busy Filesystem in Linux"
 date: 2018-03-24 11:49:51 +0000
+modified: 2026-04-11 15:51:50 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

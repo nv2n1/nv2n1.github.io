@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel 5.0: Key Features and Modern Impact"
 date: 2019-04-13 10:08:35 +0000
+modified: 2026-04-12 04:41:37 +0000
 author: "Anjaneyulu Naini"
 layout: post
 categories: [linux-system-configuration]

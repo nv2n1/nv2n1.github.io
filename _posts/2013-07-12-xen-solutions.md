@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Linux Xen Dom0 and DomU Virtual Machines"
 date: 2013-07-12 16:32:15 +0000
+modified: 2026-04-12 05:28:09 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

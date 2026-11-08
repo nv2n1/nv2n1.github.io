@@ -1,6 +1,7 @@
 ---
 title: "Checking if Files and Directories Exist in Go"
 date: 2018-07-01 07:43:51 +0000
+modified: 2026-04-11 17:12:01 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

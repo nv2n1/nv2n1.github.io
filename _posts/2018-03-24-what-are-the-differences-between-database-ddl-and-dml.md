@@ -1,6 +1,7 @@
 ---
 title: "DDL vs DML: Key Differences in Database Commands"
 date: 2018-03-24 11:44:30 +0000
+modified: 2026-05-17 16:50:45 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [security-cryptography-2]

@@ -1,6 +1,7 @@
 ---
 title: "Mastering Git Log: Essential Commands for Filtering Commits"
 date: 2019-12-28 10:25:13 +0000
+modified: 2026-04-11 15:42:24 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

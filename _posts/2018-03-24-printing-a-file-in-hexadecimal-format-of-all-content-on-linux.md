@@ -1,6 +1,7 @@
 ---
 title: "Comparing Linux Hex Viewers: xxd, od, hexdump, and hd"
 date: 2018-03-24 11:40:36 +0000
+modified: 2026-04-11 16:01:27 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

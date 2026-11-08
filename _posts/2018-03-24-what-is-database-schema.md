@@ -1,6 +1,7 @@
 ---
 title: "Database Schema Design: Best Practices and Examples"
 date: 2018-03-24 11:44:21 +0000
+modified: 2026-05-17 16:51:02 +0000
 author: "Eric Ma"
 layout: post
 categories: [systems-architecture]

@@ -1,6 +1,7 @@
 ---
 title: "Managing Bandwidth Hogging Among Roommates"
 date: 2018-03-24 08:20:38 +0000
+modified: 2026-04-11 17:49:51 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

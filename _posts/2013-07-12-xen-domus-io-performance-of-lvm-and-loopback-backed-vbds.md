@@ -1,6 +1,7 @@
 ---
 title: "Xen DomU I/O Performance: LVM vs. Loopback Block Devices"
 date: 2013-07-12 16:32:16 +0000
+modified: 2026-04-12 05:28:10 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

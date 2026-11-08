@@ -1,6 +1,7 @@
 ---
 title: "Share Your Windows PC\u2019s Internet with iPhone via USB"
 date: 2015-02-27 15:47:30 +0000
+modified: 2026-04-11 16:22:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

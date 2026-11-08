@@ -1,6 +1,7 @@
 ---
 title: "Renaming Git Branches Locally and Remotely"
 date: 2018-11-15 08:47:45 +0000
+modified: 2026-04-11 17:11:56 +0000
 author: "Q A"
 layout: post
 categories: [testing-devops]

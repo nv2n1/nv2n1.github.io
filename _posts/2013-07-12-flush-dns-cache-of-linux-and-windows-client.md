@@ -1,6 +1,7 @@
 ---
 title: "Clearing DNS Cache on Linux and Windows"
 date: 2013-07-12 16:31:51 +0000
+modified: 2026-04-12 16:31:44 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Fix Ghostscript stackunderflow Error in PDF Conversion"
 date: 2018-03-24 08:21:12 +0000
+modified: 2026-04-12 16:08:57 +0000
 author: "Eric Ma"
 layout: post
 categories: [algorithms-data-structures]

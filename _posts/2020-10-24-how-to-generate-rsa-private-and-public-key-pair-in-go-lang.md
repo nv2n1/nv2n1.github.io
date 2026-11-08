@@ -1,6 +1,7 @@
 ---
 title: "Generating RSA Key Pairs in Go"
 date: 2020-10-24 09:27:59 +0000
+modified: 2026-04-11 17:11:25 +0000
 author: "David Yang"
 layout: post
 categories: [languages-frameworks]

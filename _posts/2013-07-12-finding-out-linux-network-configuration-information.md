@@ -1,6 +1,7 @@
 ---
 title: "Inspecting Linux Network Configuration"
 date: 2013-07-12 16:32:14 +0000
+modified: 2026-04-12 05:28:06 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

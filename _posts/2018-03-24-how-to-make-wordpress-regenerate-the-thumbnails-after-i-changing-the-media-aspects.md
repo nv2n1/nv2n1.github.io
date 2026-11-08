@@ -1,6 +1,7 @@
 ---
 title: "Regenerate WordPress Thumbnails After Changing Image Sizes"
 date: 2018-03-24 11:46:40 +0000
+modified: 2026-04-12 16:08:24 +0000
 author: "Q A"
 layout: post
 categories: [programming-languages]

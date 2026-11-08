@@ -1,6 +1,7 @@
 ---
 title: "Configuring HDFS Replication Factors by Directory"
 date: 2018-03-24 11:45:26 +0000
+modified: 2026-04-11 17:48:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

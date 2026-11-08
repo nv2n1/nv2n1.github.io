@@ -1,6 +1,7 @@
 ---
 title: "How Technical Leaders Can Apply Google\u2019s Innovation Strategy"
 date: 2019-09-07 01:02:57 +0000
+modified: 2026-04-11 17:11:50 +0000
 author: "Btcman.io"
 layout: post
 categories: [languages-frameworks]

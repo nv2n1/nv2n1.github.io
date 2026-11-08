@@ -1,6 +1,7 @@
 ---
 title: "EncFS mounting issues for non-root users on CentOS 6"
 date: 2018-03-24 11:51:27 +0000
+modified: 2026-04-12 16:59:05 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

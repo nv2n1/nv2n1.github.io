@@ -1,6 +1,7 @@
 ---
 title: "Visualizing CMake Project Dependencies with Graphviz"
 date: 2023-05-26 14:45:33 +0000
+modified: 2026-04-11 17:11:07 +0000
 author: "Ethan Ainsworth"
 layout: post
 categories: [algorithms-data-structures]

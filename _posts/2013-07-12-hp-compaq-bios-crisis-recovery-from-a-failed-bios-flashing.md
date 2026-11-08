@@ -1,6 +1,7 @@
 ---
 title: "HP Compaq Laptop BIOS Recovery Guide"
 date: 2013-07-12 16:54:49 +0000
+modified: 2026-04-11 17:51:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

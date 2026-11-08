@@ -1,6 +1,7 @@
 ---
 title: "Navigating to a Specific Byte Position in Vim"
 date: 2018-03-24 11:49:58 +0000
+modified: 2026-04-12 16:53:53 +0000
 author: "Eric Ma"
 layout: post
 categories: [testing-devops]

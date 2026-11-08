@@ -1,6 +1,7 @@
 ---
 title: "Proving Ownership of Bitcoin Multisig Addresses"
 date: 2024-09-14 07:22:04 +0000
+modified: 2026-05-17 15:39:11 +0000
 author: "Eric Ma"
 layout: post
 categories: [blockchain-cryptocurrency]

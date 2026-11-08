@@ -1,6 +1,7 @@
 ---
 title: "Website Mirroring with Wget: A Practical Guide"
 date: 2019-06-13 10:01:46 +0000
+modified: 2026-04-11 17:11:52 +0000
 author: "Q A"
 layout: post
 categories: [web-development]

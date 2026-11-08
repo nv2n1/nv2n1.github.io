@@ -1,6 +1,7 @@
 ---
 title: "SSH to Internal Hosts via Gateway"
 date: 2018-03-24 08:20:51 +0000
+modified: 2026-04-12 16:44:49 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

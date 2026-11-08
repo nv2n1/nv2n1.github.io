@@ -1,6 +1,7 @@
 ---
 title: "Using IBus for Chinese Input in Cinnamon on Fedora"
 date: 2018-03-24 08:19:02 +0000
+modified: 2026-04-12 16:55:11 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

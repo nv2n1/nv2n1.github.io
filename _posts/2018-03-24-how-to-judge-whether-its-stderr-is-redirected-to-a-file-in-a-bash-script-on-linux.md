@@ -1,6 +1,7 @@
 ---
 title: "How to Detect If stderr Is Redirected in Bash"
 date: 2018-03-24 11:54:37 +0000
+modified: 2026-04-11 15:45:29 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

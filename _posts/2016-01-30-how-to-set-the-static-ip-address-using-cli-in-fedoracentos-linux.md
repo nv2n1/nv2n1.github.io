@@ -1,6 +1,7 @@
 ---
 title: "Configuring a Static IP Address on Fedora, RHEL, and CentOS"
 date: 2016-01-30 03:14:33 +0000
+modified: 2026-04-12 16:54:42 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

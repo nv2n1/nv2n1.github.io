@@ -1,6 +1,7 @@
 ---
 title: "Python Debugging with pdb: A Step-by-Step Command Guide"
 date: 2018-04-04 07:36:03 +0000
+modified: 2026-04-11 17:12:09 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

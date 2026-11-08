@@ -1,6 +1,7 @@
 ---
 title: "Remapping Caps Lock to Control on Linux: X11 and Wayland"
 date: 2018-03-24 08:22:04 +0000
+modified: 2026-04-11 16:03:02 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

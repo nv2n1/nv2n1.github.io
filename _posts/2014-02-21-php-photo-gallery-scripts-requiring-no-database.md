@@ -1,6 +1,7 @@
 ---
 title: "When to Use File-Based Photo Galleries in PHP"
 date: 2014-02-21 04:13:55 +0000
+modified: 2026-04-11 17:16:15 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

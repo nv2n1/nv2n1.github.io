@@ -1,6 +1,7 @@
 ---
 title: "Cloning LVM-Backed Xen Domains"
 date: 2013-07-12 16:32:18 +0000
+modified: 2026-04-12 05:28:20 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

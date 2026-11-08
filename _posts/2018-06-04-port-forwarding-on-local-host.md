@@ -1,6 +1,7 @@
 ---
 title: "Port Forwarding with iptables and nftables"
 date: 2018-06-04 15:26:08 +0000
+modified: 2026-04-11 17:12:02 +0000
 author: "Q A"
 layout: post
 categories: [databases-storage]

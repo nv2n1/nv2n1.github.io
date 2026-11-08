@@ -1,6 +1,7 @@
 ---
 title: "Configuring and Troubleshooting HP DesignJet Large-Format Printing"
 date: 2015-03-28 02:48:36 +0000
+modified: 2026-04-11 17:16:11 +0000
 author: "Eric Ma"
 layout: post
 categories: [design-patterns-architecture]

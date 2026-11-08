@@ -1,6 +1,7 @@
 ---
 title: "Removing Remote Tags in Git"
 date: 2020-09-20 13:25:36 +0000
+modified: 2026-04-12 16:41:24 +0000
 author: "David Yang"
 layout: post
 categories: [testing-devops]

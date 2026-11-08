@@ -1,6 +1,7 @@
 ---
 title: "Writing Effective Peer Reviews for Academic Papers"
 date: 2018-03-24 08:20:10 +0000
+modified: 2026-04-11 17:45:26 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [development-best-practices]

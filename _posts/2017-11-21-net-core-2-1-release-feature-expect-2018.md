@@ -1,6 +1,7 @@
 ---
 title: ".NET Core 2.1: What\u2019s New in 2018"
 date: 2017-11-21 05:37:33 +0000
+modified: 2026-04-12 16:59:44 +0000
 author: "Johnnymorgan"
 layout: post
 categories: [development-best-practices]

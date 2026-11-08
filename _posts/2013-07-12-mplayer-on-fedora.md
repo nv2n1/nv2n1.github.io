@@ -1,6 +1,7 @@
 ---
 title: "How to Install MPlayer and MEncoder on Fedora"
 date: 2013-07-12 16:32:01 +0000
+modified: 2026-04-12 14:25:27 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

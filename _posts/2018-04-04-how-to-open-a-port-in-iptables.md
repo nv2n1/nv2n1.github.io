@@ -1,6 +1,7 @@
 ---
 title: "Opening Ports with iptables: A Practical Guide"
 date: 2018-04-04 02:22:34 +0000
+modified: 2026-04-11 17:12:11 +0000
 author: "Q A"
 layout: post
 categories: [databases-storage]

@@ -1,6 +1,7 @@
 ---
 title: "Installing TL-WN725N v2 USB Wireless Adapter on Fedora 19"
 date: 2018-03-24 08:20:38 +0000
+modified: 2026-05-17 17:30:54 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-system-configuration]

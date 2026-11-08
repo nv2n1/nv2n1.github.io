@@ -1,6 +1,7 @@
 ---
 title: "Configuring /etc/fstab: Mount Options and Boot Behavior"
 date: 2015-03-25 14:05:14 +0000
+modified: 2026-04-11 16:21:50 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Bash Command History: Search and Navigation Tips"
 date: 2018-03-24 11:55:00 +0000
+modified: 2026-04-12 16:47:03 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

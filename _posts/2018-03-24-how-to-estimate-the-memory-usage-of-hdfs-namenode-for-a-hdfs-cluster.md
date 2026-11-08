@@ -1,6 +1,7 @@
 ---
 title: "Estimating HDFS NameNode Memory Usage"
 date: 2018-03-24 11:53:20 +0000
+modified: 2026-04-11 17:44:55 +0000
 author: "Eric Ma"
 layout: post
 categories: [code-optimization]

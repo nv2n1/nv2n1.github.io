@@ -1,6 +1,7 @@
 ---
 title: "How to Write Output to STDERR and STDOUT in PHP"
 date: 2018-03-24 11:53:02 +0000
+modified: 2026-04-12 16:47:25 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

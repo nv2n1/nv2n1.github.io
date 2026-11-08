@@ -1,6 +1,7 @@
 ---
 title: "Sync OneDrive and OneDrive for Business on Linux with Insync"
 date: 2020-01-28 10:05:37 +0000
+modified: 2026-04-11 15:42:21 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

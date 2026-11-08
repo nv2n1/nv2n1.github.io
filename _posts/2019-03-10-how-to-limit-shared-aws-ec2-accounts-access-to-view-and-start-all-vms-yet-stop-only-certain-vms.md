@@ -1,6 +1,7 @@
 ---
 title: "EC2 Instance Control with IAM Tags: Allowing Developers to Start Only Dev Instances"
 date: 2019-03-10 08:43:01 +0000
+modified: 2026-04-11 17:38:31 +0000
 author: "Eric Ma"
 layout: post
 categories: [system-administration-cloud]

@@ -1,6 +1,7 @@
 ---
 title: "Xen DomU Configuration File Format"
 date: 2013-07-12 16:31:55 +0000
+modified: 2026-04-12 16:59:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

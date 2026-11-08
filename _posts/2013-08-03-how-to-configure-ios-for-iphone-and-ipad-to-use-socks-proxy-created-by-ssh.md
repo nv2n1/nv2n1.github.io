@@ -1,6 +1,7 @@
 ---
 title: "Setting Up a SOCKS5 Proxy on iOS via SSH Tunnel"
 date: 2013-08-03 08:09:04 +0000
+modified: 2026-04-11 16:40:58 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Making Vim Recognize Custom File Extensions as C"
 date: 2018-03-24 11:44:15 +0000
+modified: 2026-04-12 10:43:34 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

@@ -1,6 +1,7 @@
 ---
 title: "Checking if a File is a Block Device in Python"
 date: 2018-03-24 11:55:24 +0000
+modified: 2026-04-12 16:39:05 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

@@ -1,6 +1,7 @@
 ---
 title: "Listing Running Services on Linux with systemctl"
 date: 2018-03-24 11:44:56 +0000
+modified: 2026-04-12 16:06:20 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

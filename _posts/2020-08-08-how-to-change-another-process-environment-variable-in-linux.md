@@ -1,6 +1,7 @@
 ---
 title: "Modifying Another Process\u2019s Environment Variables in Linux"
 date: 2020-08-08 06:13:07 +0000
+modified: 2026-04-11 17:38:15 +0000
 author: "David Yang"
 layout: post
 categories: [linux-system-configuration]

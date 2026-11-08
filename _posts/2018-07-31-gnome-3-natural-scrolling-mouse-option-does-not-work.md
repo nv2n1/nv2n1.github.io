@@ -1,6 +1,7 @@
 ---
 title: "Fix GNOME Natural Scrolling on Mouse and Touchpad"
 date: 2018-07-31 10:00:03 +0000
+modified: 2026-04-11 17:38:34 +0000
 author: "Q A"
 layout: post
 categories: [linux-system-configuration]

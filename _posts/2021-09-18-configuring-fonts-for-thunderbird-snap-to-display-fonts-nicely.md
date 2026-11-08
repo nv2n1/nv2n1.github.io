@@ -1,6 +1,7 @@
 ---
 title: "Configuring Custom Fonts in Thunderbird Snap"
 date: 2021-09-18 14:41:17 +0000
+modified: 2026-04-12 16:05:33 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

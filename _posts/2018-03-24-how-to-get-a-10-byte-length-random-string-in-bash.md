@@ -1,6 +1,7 @@
 ---
 title: "Generating a 10-Byte Random String in Bash"
 date: 2018-03-24 08:18:16 +0000
+modified: 2026-04-12 16:47:36 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

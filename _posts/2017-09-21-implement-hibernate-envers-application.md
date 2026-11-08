@@ -1,6 +1,7 @@
 ---
 title: "Implementing Hibernate Envers for Entity Auditing"
 date: 2017-09-21 03:50:03 +0000
+modified: 2026-04-11 17:51:15 +0000
 author: "Joseph Macwan"
 layout: post
 categories: [development-best-practices]

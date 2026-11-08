@@ -1,6 +1,7 @@
 ---
 title: "How to Back Up Linux Home Directories with rsync"
 date: 2013-07-12 16:32:03 +0000
+modified: 2026-04-12 04:41:13 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

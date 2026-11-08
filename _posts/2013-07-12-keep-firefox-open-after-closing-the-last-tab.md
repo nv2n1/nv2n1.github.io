@@ -1,6 +1,7 @@
 ---
 title: "Prevent Firefox from Closing When Last Tab Closes"
 date: 2013-07-12 16:54:48 +0000
+modified: 2026-04-12 10:58:27 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

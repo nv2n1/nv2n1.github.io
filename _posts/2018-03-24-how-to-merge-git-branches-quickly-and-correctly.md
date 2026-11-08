@@ -1,6 +1,7 @@
 ---
 title: "Understanding Fast-Forward vs. Non-Fast-Forward Merges in Git"
 date: 2018-03-24 11:45:13 +0000
+modified: 2026-04-12 16:45:34 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [scripting-utilities]

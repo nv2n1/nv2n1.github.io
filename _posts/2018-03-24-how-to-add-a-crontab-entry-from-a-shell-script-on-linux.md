@@ -1,6 +1,7 @@
 ---
 title: "Adding Cron Jobs Programmatically with Shell Scripts"
 date: 2018-03-24 11:45:31 +0000
+modified: 2026-04-12 16:09:32 +0000
 author: "Q A"
 layout: post
 categories: [scripting-utilities]

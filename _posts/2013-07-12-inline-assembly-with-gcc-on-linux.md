@@ -1,6 +1,7 @@
 ---
 title: "GCC Inline Assembly on Linux: Extended Syntax and Examples"
 date: 2013-07-12 16:47:46 +0000
+modified: 2026-04-11 16:41:19 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

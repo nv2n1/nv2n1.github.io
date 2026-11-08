@@ -1,6 +1,7 @@
 ---
 title: "Splitting Text Files by Lines on Linux: A split Command Guide"
 date: 2018-03-24 08:22:17 +0000
+modified: 2026-04-11 16:02:49 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

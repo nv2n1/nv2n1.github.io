@@ -1,6 +1,7 @@
 ---
 title: "Installing TP-Link T2U WiFi Drivers on Linux"
 date: 2018-03-24 11:48:53 +0000
+modified: 2026-04-12 16:55:18 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

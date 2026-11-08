@@ -1,6 +1,7 @@
 ---
 title: "Running Firefox Remotely Over SSH"
 date: 2018-03-24 08:04:15 +0000
+modified: 2026-04-12 16:57:20 +0000
 author: "Q A"
 layout: post
 categories: [scripting-utilities]

@@ -1,6 +1,7 @@
 ---
 title: "Safely Shutting Down All Xen Virtual Machines on a Server"
 date: 2013-07-12 16:32:35 +0000
+modified: 2026-04-12 16:54:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [system-administration-cloud]

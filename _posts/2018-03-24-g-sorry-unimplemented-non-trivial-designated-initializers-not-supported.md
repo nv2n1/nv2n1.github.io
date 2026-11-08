@@ -1,6 +1,7 @@
 ---
 title: "How to Work Around g++ Non-Trivial Designated Initializers"
 date: 2018-03-24 08:18:25 +0000
+modified: 2026-04-12 16:10:04 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

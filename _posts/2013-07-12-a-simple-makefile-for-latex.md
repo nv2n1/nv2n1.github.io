@@ -1,6 +1,7 @@
 ---
 title: "Building LaTeX Documents with Make"
 date: 2013-07-12 16:32:05 +0000
+modified: 2026-04-12 16:04:15 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

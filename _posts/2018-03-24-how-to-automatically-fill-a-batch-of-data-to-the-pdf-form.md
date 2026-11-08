@@ -1,6 +1,7 @@
 ---
 title: "Automating PDF Form Data Population with Batch Processing"
 date: 2018-03-24 08:18:11 +0000
+modified: 2026-04-11 16:06:50 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

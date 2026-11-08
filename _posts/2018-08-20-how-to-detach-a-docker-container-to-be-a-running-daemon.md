@@ -1,6 +1,7 @@
 ---
 title: "Docker Containers as Background Services: Detached Mode and Production Patterns"
 date: 2018-08-20 02:26:54 +0000
+modified: 2026-04-11 17:11:59 +0000
 author: "Q A"
 layout: post
 categories: [design-patterns-architecture]

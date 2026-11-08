@@ -1,6 +1,7 @@
 ---
 title: "Disabling IPv6 on Older Linux Kernels"
 date: 2013-07-12 16:32:23 +0000
+modified: 2026-04-12 16:08:53 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-system-configuration]

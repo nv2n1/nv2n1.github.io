@@ -1,6 +1,7 @@
 ---
 title: "Static Linking C and C++ Programs with GCC on Linux"
 date: 2014-01-01 03:50:47 +0000
+modified: 2026-04-11 16:40:33 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

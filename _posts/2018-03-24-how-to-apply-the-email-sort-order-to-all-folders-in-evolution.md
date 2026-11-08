@@ -1,6 +1,7 @@
 ---
 title: "Applying Email Sort Order to All Folders in Evolution"
 date: 2018-03-24 11:55:00 +0000
+modified: 2026-04-12 16:08:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [functional-programming]

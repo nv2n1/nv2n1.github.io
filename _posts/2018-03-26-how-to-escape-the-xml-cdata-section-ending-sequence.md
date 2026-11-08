@@ -1,6 +1,7 @@
 ---
 title: "Handling `]]>` in XML CDATA Sections"
 date: 2018-03-26 15:40:07 +0000
+modified: 2026-04-12 16:52:44 +0000
 author: "Q A"
 layout: post
 categories: [testing-devops]

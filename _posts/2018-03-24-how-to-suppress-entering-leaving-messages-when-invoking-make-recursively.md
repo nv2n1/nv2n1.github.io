@@ -1,6 +1,7 @@
 ---
 title: "Suppress \u201cEntering/Leaving Directory\u201d Messages in Recursive Make"
 date: 2018-03-24 11:44:04 +0000
+modified: 2026-04-12 08:43:14 +0000
 author: "Eric Ma"
 layout: post
 categories: [algorithms-data-structures]

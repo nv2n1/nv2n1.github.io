@@ -1,6 +1,7 @@
 ---
 title: "Bash: From Basics to Production-Ready Scripts"
 date: 2020-03-30 06:13:57 +0000
+modified: 2026-04-11 15:42:09 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "How to Add noindex Meta Tags to WordPress Archives"
 date: 2013-07-12 16:46:10 +0000
+modified: 2026-04-11 17:48:49 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

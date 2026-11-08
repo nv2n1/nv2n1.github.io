@@ -1,6 +1,7 @@
 ---
 title: "Printing to STDERR and STDOUT in Perl"
 date: 2018-03-24 11:53:05 +0000
+modified: 2026-04-11 17:44:58 +0000
 author: "Q A"
 layout: post
 categories: [programming-languages]

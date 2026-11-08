@@ -1,6 +1,7 @@
 ---
 title: "Set Starting Page Number to 2 in Word"
 date: 2021-09-14 06:49:58 +0000
+modified: 2026-04-11 17:46:33 +0000
 author: "David Yang"
 layout: post
 categories: [programming-languages]

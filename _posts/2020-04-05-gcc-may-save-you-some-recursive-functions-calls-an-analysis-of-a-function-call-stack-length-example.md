@@ -1,6 +1,7 @@
 ---
 title: "How GCC Inlines Recursive Functions at -O3"
 date: 2020-04-05 13:45:50 +0000
+modified: 2026-04-11 15:42:05 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Deploy ASP.NET Core MVC Apps to Azure App Service"
 date: 2017-09-18 13:11:58 +0000
+modified: 2026-04-11 17:15:47 +0000
 author: "Johnnymorgan"
 layout: post
 categories: [testing-devops]

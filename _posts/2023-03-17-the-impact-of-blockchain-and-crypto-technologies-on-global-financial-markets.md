@@ -1,6 +1,7 @@
 ---
 title: "How Blockchain Is Reshaping Global Finance"
 date: 2023-03-17 16:29:56 +0000
+modified: 2026-05-17 17:30:25 +0000
 author: "Btcman.io"
 layout: post
 categories: [blockchain-cryptocurrency]

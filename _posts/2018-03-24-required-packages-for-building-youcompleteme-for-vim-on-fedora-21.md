@@ -1,6 +1,7 @@
 ---
 title: "Fix YouCompleteMe Build Errors on Fedora"
 date: 2018-03-24 11:46:44 +0000
+modified: 2026-04-12 16:49:26 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Chinese Character Support on Fedora 11"
 date: 2013-07-12 16:31:37 +0000
+modified: 2026-04-12 04:40:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

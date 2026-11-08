@@ -1,6 +1,7 @@
 ---
 title: "Getting the Hostname in Go"
 date: 2018-03-24 11:52:27 +0000
+modified: 2026-04-12 16:05:50 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

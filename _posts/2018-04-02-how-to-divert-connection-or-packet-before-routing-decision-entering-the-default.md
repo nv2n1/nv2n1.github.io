@@ -1,6 +1,7 @@
 ---
 title: "Redirecting Packets to the FORWARD Chain with iptables and DNAT"
 date: 2018-04-02 15:25:40 +0000
+modified: 2026-04-11 17:12:12 +0000
 author: "Q A"
 layout: post
 categories: [databases-storage]

@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel: Disable GuC/HuC Auto Mode on Pre-Gen11"
 date: 2020-10-01 14:25:35 +0000
+modified: 2026-04-12 16:59:37 +0000
 author: "Tony"
 layout: post
 categories: [linux-systems-administration]

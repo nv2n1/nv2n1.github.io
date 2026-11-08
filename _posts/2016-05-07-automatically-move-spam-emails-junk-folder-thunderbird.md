@@ -1,6 +1,7 @@
 ---
 title: "Automatically Move Spam to Junk in Thunderbird"
 date: 2016-05-07 05:49:50 +0000
+modified: 2026-04-11 17:51:22 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

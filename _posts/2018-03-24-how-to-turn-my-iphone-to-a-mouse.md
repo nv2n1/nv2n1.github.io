@@ -1,6 +1,7 @@
 ---
 title: "Using Your iPhone as a Wireless Mouse"
 date: 2018-03-24 08:15:26 +0000
+modified: 2026-04-12 16:47:14 +0000
 author: "Q A"
 layout: post
 categories: [development-best-practices]

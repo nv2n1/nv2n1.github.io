@@ -1,6 +1,7 @@
 ---
 title: "Running Ephemeral Docker Containers with Automatic Cleanup"
 date: 2021-09-19 03:59:29 +0000
+modified: 2026-04-12 16:54:08 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

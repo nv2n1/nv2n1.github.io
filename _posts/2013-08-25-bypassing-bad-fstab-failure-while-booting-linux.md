@@ -1,6 +1,7 @@
 ---
 title: "Recovering from fstab Boot Failures: A Practical Guide"
 date: 2013-08-25 10:43:45 +0000
+modified: 2026-04-11 16:40:53 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

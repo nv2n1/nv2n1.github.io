@@ -1,6 +1,7 @@
 ---
 title: "Installing Hadoop 1.x: A Complete Guide"
 date: 2012-10-09 08:41:39 +0000
+modified: 2026-04-12 04:39:54 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

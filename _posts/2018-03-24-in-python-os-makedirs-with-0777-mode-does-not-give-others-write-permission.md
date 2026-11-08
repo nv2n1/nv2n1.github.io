@@ -1,6 +1,7 @@
 ---
 title: "Python\u2019s os.makedirs() with mode 0o777 doesn\u2019t grant write permissions to others"
 date: 2018-03-24 11:54:30 +0000
+modified: 2026-04-12 16:07:14 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

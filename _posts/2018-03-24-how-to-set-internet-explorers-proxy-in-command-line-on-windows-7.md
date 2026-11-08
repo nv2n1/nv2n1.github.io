@@ -1,6 +1,7 @@
 ---
 title: "Configure Windows Proxy Settings via Command Line"
 date: 2018-03-24 08:21:45 +0000
+modified: 2026-05-17 17:30:52 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

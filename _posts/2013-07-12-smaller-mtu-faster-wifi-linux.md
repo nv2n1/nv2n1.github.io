@@ -1,6 +1,7 @@
 ---
 title: "Optimizing MTU Size for WiFi Performance on Linux"
 date: 2013-07-12 16:32:31 +0000
+modified: 2026-04-11 16:41:52 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

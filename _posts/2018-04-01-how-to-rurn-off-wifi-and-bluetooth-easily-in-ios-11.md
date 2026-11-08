@@ -1,6 +1,7 @@
 ---
 title: "How to Disable WiFi and Bluetooth in iOS 11"
 date: 2018-04-01 04:04:24 +0000
+modified: 2026-04-12 16:48:22 +0000
 author: "Q A"
 layout: post
 categories: [programming-languages]

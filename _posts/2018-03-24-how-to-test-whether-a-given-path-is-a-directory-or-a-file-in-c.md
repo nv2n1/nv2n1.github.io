@@ -1,6 +1,7 @@
 ---
 title: "Checking if a Path is a Directory or File in C++"
 date: 2018-03-24 11:54:49 +0000
+modified: 2026-04-11 17:38:44 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

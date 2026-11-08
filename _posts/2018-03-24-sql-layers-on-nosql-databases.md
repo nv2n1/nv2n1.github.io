@@ -1,6 +1,7 @@
 ---
 title: "Building SQL Interfaces on NoSQL Databases"
 date: 2018-03-24 08:15:16 +0000
+modified: 2026-04-12 17:00:12 +0000
 author: "Q A"
 layout: post
 categories: [design-patterns-architecture]

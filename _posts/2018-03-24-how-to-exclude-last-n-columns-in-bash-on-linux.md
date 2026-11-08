@@ -1,6 +1,7 @@
 ---
 title: "Remove the Last N Delimited Fields in Bash"
 date: 2018-03-24 11:46:48 +0000
+modified: 2026-04-12 16:07:17 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

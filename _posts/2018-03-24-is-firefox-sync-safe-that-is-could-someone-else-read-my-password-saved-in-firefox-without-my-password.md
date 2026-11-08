@@ -1,6 +1,7 @@
 ---
 title: "Can Firefox Sync Access Your Passwords Without Your Master Password?"
 date: 2018-03-24 11:48:53 +0000
+modified: 2026-04-12 16:58:17 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

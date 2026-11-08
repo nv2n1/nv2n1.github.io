@@ -1,6 +1,7 @@
 ---
 title: "How to Force fsck on Next Linux Reboot"
 date: 2018-03-24 11:54:21 +0000
+modified: 2026-04-11 15:45:47 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

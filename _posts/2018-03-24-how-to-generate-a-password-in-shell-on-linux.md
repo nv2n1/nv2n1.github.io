@@ -1,6 +1,7 @@
 ---
 title: "Generate Passwords in Bash and Shell Scripts"
 date: 2018-03-24 11:55:14 +0000
+modified: 2026-04-12 16:35:25 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

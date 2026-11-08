@@ -1,6 +1,7 @@
 ---
 title: "Generating TAGS Files Recursively for Emacs Projects"
 date: 2018-03-24 08:22:50 +0000
+modified: 2026-04-12 16:58:07 +0000
 author: "Eric Ma"
 layout: post
 categories: [algorithms-data-structures]

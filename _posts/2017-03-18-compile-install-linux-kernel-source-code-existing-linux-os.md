@@ -1,6 +1,7 @@
 ---
 title: "Building and Installing a Linux Kernel from Source"
 date: 2017-03-18 11:32:13 +0000
+modified: 2026-04-11 16:21:15 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

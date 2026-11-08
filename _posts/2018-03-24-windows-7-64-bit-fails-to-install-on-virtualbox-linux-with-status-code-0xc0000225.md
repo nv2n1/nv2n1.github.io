@@ -1,6 +1,7 @@
 ---
 title: "Windows 7 64-bit Installation Fails with Error 0xc0000225 on VirtualBox"
 date: 2018-03-24 08:04:25 +0000
+modified: 2026-04-12 14:22:10 +0000
 author: "Q A"
 layout: post
 categories: [system-administration-cloud]

@@ -1,6 +1,7 @@
 ---
 title: "How to Change Systemd Targets on Fedora Linux"
 date: 2013-07-12 16:32:32 +0000
+modified: 2026-04-12 16:06:44 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

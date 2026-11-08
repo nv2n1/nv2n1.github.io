@@ -1,6 +1,7 @@
 ---
 title: "Finding a Bash Script\u2019s Directory Reliably"
 date: 2018-03-24 11:49:30 +0000
+modified: 2026-04-12 16:09:52 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

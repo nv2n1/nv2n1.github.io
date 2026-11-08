@@ -1,6 +1,7 @@
 ---
 title: "Securing Linux VNC Access with SSH Tunneling"
 date: 2013-07-12 16:31:51 +0000
+modified: 2026-04-12 05:27:15 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

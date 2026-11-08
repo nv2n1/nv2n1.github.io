@@ -1,6 +1,7 @@
 ---
 title: "Common On-Page SEO Mistakes and How to Fix Them"
 date: 2017-08-12 02:44:24 +0000
+modified: 2026-04-11 17:51:16 +0000
 author: "irfanahmedkhan"
 layout: post
 categories: [development-best-practices]

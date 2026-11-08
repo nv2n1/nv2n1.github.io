@@ -1,6 +1,7 @@
 ---
 title: "Reading Multiline Strings in Perl with -0777"
 date: 2020-04-10 07:45:50 +0000
+modified: 2026-04-12 16:06:56 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

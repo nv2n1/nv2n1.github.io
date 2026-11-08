@@ -1,6 +1,7 @@
 ---
 title: "Configuring Email Notifications for Git Push Events"
 date: 2014-03-07 10:09:09 +0000
+modified: 2026-04-11 16:40:27 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

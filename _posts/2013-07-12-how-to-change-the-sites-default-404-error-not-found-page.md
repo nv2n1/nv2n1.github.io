@@ -1,6 +1,7 @@
 ---
 title: "Configuring Custom Error Pages on Apache and Nginx"
 date: 2013-07-12 16:46:09 +0000
+modified: 2026-04-11 17:41:48 +0000
 author: "Eric Ma"
 layout: post
 categories: [system-administration-cloud]

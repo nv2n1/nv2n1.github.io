@@ -1,6 +1,7 @@
 ---
 title: "Running Cron Jobs with Environment Variables"
 date: 2018-03-24 08:18:11 +0000
+modified: 2026-04-13 00:02:11 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

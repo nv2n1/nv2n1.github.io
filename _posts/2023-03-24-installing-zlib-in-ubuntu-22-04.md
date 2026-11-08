@@ -1,6 +1,7 @@
 ---
 title: "Installing Zlib on Ubuntu 24.04 and 22.04 LTS"
 date: 2023-03-24 12:49:20 +0000
+modified: 2026-04-12 16:40:00 +0000
 author: "Ethan Ainsworth"
 layout: post
 categories: [linux-systems-administration]

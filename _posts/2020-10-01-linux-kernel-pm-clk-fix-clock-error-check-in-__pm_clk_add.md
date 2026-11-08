@@ -1,6 +1,7 @@
 ---
 title: "Fix clock validation in __pm_clk_add()"
 date: 2020-10-01 01:50:57 +0000
+modified: 2026-04-12 08:30:33 +0000
 author: "Tony"
 layout: post
 categories: [linux-systems-administration]

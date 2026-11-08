@@ -1,6 +1,7 @@
 ---
 title: "How SEO Signals Have Evolved Beyond PageRank"
 date: 2013-07-12 16:46:14 +0000
+modified: 2026-04-11 17:48:42 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

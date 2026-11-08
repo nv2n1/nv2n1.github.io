@@ -1,6 +1,7 @@
 ---
 title: "Setting Up R and RStudio Server on Ubuntu"
 date: 2020-10-03 10:33:28 +0000
+modified: 2026-04-11 17:11:34 +0000
 author: "David Yang"
 layout: post
 categories: [web-development]

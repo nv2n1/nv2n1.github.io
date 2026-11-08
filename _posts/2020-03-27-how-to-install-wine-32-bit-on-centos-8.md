@@ -1,6 +1,7 @@
 ---
 title: "Building 32-bit Wine on CentOS/RHEL 8+"
 date: 2020-03-27 16:28:26 +0000
+modified: 2026-04-11 15:42:12 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

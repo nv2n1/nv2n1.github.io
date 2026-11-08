@@ -1,6 +1,7 @@
 ---
 title: "Switching Between Simplified and Traditional Chinese in iBus Libpinyin"
 date: 2018-03-24 08:22:31 +0000
+modified: 2026-04-12 16:21:19 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

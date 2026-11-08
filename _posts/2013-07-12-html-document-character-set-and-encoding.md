@@ -1,6 +1,7 @@
 ---
 title: "Character Encoding and HTML Entities: A Modern Guide"
 date: 2013-07-12 16:46:16 +0000
+modified: 2026-04-11 17:48:42 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

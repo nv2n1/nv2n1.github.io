@@ -1,6 +1,7 @@
 ---
 title: "Where Windows 10 Stores Metro App Data"
 date: 2018-03-24 11:50:30 +0000
+modified: 2026-04-12 16:37:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

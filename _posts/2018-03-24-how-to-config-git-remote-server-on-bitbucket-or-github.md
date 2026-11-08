@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Git Remote Repositories on GitHub and Bitbucket"
 date: 2018-03-24 11:50:02 +0000
+modified: 2026-04-12 14:24:54 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [testing-devops]

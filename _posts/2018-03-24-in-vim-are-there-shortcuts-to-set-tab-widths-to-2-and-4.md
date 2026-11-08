@@ -1,6 +1,7 @@
 ---
 title: "Setting Tab Widths in Vim: 2 and 4 Space Options"
 date: 2018-03-24 11:50:45 +0000
+modified: 2026-04-12 16:08:05 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

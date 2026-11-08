@@ -1,6 +1,7 @@
 ---
 title: "Using Type Erasure in C++11 Lambda Parameters"
 date: 2018-03-24 11:55:24 +0000
+modified: 2026-04-11 17:12:26 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

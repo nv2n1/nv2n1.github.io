@@ -1,6 +1,7 @@
 ---
 title: "Enabling Automatic Reboot on Kernel Panic in Linux"
 date: 2018-03-24 11:45:31 +0000
+modified: 2026-04-12 16:59:20 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

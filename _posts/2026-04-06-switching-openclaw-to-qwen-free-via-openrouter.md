@@ -1,6 +1,7 @@
 ---
 title: "Switching from OpenClaw to Qwen on OpenRouter"
 date: 2026-04-06 08:30:29 +0000
+modified: 2026-04-13 16:34:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [ai-engineering]

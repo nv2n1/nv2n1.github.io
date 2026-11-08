@@ -1,6 +1,7 @@
 ---
 title: "Moving a Windows User Profile to Another Drive"
 date: 2018-03-24 11:46:35 +0000
+modified: 2026-04-12 16:57:25 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

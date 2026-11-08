@@ -1,6 +1,7 @@
 ---
 title: "Installing EncFS on CentOS 6"
 date: 2018-03-24 11:51:35 +0000
+modified: 2026-04-12 08:38:53 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

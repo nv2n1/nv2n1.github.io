@@ -1,6 +1,7 @@
 ---
 title: "Building with musl libc on Debian and Ubuntu"
 date: 2018-03-24 11:44:46 +0000
+modified: 2026-04-12 16:05:55 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Fixing the \u201cProfile Could Not Be Opened\u201d Error in Chrome on Linux"
 date: 2018-03-24 11:45:58 +0000
+modified: 2026-04-12 16:53:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

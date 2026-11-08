@@ -1,6 +1,7 @@
 ---
 title: "Checking if a Key Exists in a Python Dictionary"
 date: 2018-03-24 11:51:10 +0000
+modified: 2026-04-12 16:03:04 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

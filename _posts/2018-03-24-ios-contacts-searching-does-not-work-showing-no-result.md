@@ -1,6 +1,7 @@
 ---
 title: "iOS Contacts Search Broken After Updates: How to Fix"
 date: 2018-03-24 11:49:17 +0000
+modified: 2026-04-11 15:52:28 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

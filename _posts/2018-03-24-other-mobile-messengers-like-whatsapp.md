@@ -1,6 +1,7 @@
 ---
 title: "Open-Source Alternatives to WhatsApp"
 date: 2018-03-24 08:20:09 +0000
+modified: 2026-04-12 16:49:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

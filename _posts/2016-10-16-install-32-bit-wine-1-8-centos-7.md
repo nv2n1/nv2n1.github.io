@@ -1,6 +1,7 @@
 ---
 title: "Building 32-bit Wine on CentOS 7, Rocky Linux, and AlmaLinux"
 date: 2016-10-16 08:46:38 +0000
+modified: 2026-04-11 16:21:26 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

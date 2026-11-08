@@ -1,6 +1,7 @@
 ---
 title: "How to Add Custom Content to Receipts"
 date: 2017-12-11 07:00:38 +0000
+modified: 2026-04-11 17:51:13 +0000
 author: "jameswarner"
 layout: post
 categories: [development-best-practices]

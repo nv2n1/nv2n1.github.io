@@ -1,6 +1,7 @@
 ---
 title: "How to Print to STDOUT and STDERR in Python"
 date: 2018-03-24 11:52:57 +0000
+modified: 2026-04-12 16:11:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

@@ -1,6 +1,7 @@
 ---
 title: "WhatsApp on iPad: Web Client Setup and Alternatives"
 date: 2014-10-09 03:33:59 +0000
+modified: 2026-04-11 16:22:09 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

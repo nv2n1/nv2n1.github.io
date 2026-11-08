@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu GUI Performance Slowdown: Causes and Fixes"
 date: 2018-03-24 11:51:24 +0000
+modified: 2026-04-12 16:52:55 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

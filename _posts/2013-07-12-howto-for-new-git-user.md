@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with Git: A Beginner\u2019s Guide"
 date: 2013-07-12 16:32:25 +0000
+modified: 2026-04-11 16:42:24 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

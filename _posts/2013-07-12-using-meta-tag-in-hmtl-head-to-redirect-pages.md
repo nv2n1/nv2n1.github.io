@@ -1,6 +1,7 @@
 ---
 title: "Meta Refresh Redirects: When and Why to Avoid Them"
 date: 2013-07-12 16:46:08 +0000
+modified: 2026-04-12 04:41:49 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

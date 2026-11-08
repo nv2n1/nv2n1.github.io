@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Git Branch Tracking for Remote Branches"
 date: 2018-03-24 11:46:04 +0000
+modified: 2026-04-12 16:09:11 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

@@ -1,6 +1,7 @@
 ---
 title: "Troubleshooting \u201cinvalid syntax, continuing\u201d errors in sysctl"
 date: 2018-03-24 11:50:45 +0000
+modified: 2026-04-11 17:47:43 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

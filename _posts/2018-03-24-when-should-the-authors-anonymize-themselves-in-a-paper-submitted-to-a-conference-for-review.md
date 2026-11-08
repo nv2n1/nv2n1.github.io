@@ -1,6 +1,7 @@
 ---
 title: "When should the authors anonymize themselves in a paper submitted to a conference for review?"
 date: 2018-03-24 11:45:09 +0000
+modified: 2026-05-17 16:50:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [security-cryptography-2]

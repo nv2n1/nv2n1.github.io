@@ -1,6 +1,7 @@
 ---
 title: "Migrating a Git Repository from Google Code to GitHub"
 date: 2018-03-24 11:41:48 +0000
+modified: 2026-04-12 16:45:18 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

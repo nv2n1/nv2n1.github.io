@@ -1,6 +1,7 @@
 ---
 title: "How to Install aria2 on CentOS 7"
 date: 2018-03-24 11:51:07 +0000
+modified: 2026-04-12 14:25:21 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

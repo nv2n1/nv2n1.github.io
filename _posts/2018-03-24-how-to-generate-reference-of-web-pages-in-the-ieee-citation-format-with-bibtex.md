@@ -1,6 +1,7 @@
 ---
 title: "BibTeX Web References in IEEE Format"
 date: 2018-03-24 08:22:44 +0000
+modified: 2026-04-11 17:14:43 +0000
 author: "Eric Ma"
 layout: post
 categories: [web-development]

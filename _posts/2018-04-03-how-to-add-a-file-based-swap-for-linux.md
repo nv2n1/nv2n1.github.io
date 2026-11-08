@@ -1,6 +1,7 @@
 ---
 title: "How to Set Up and Manage File-Based Swap on Linux"
 date: 2018-04-03 15:01:38 +0000
+modified: 2026-04-11 15:44:04 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

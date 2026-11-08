@@ -1,6 +1,7 @@
 ---
 title: "Generate a Git Patch File for a Specific Commit"
 date: 2018-03-29 16:00:10 +0000
+modified: 2026-04-12 16:46:58 +0000
 author: "Eric Ma"
 layout: post
 categories: [testing-devops]

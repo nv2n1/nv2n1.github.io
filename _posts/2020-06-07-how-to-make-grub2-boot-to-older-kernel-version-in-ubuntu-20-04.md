@@ -1,6 +1,7 @@
 ---
 title: "Booting an Older Kernel Version with GRUB2 on Ubuntu 20.04"
 date: 2020-06-07 11:59:27 +0000
+modified: 2026-04-11 15:41:49 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

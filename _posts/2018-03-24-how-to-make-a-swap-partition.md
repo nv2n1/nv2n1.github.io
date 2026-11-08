@@ -1,6 +1,7 @@
 ---
 title: "Creating a Swap Partition on Linux"
 date: 2018-03-24 08:14:11 +0000
+modified: 2026-04-12 16:33:45 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

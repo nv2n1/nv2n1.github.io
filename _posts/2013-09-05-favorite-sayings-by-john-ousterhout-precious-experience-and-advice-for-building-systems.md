@@ -1,6 +1,7 @@
 ---
 title: "Measuring System Performance: Lessons from Ousterhout"
 date: 2013-09-05 06:32:57 +0000
+modified: 2026-04-11 17:41:27 +0000
 author: "Eric Ma"
 layout: post
 categories: [system-administration-cloud]

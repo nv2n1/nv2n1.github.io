@@ -1,6 +1,7 @@
 ---
 title: "How to Manually Set Vim\u2019s Filetype"
 date: 2018-03-24 11:49:47 +0000
+modified: 2026-04-12 10:58:22 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

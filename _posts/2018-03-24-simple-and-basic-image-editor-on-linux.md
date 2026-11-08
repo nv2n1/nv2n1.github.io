@@ -1,6 +1,7 @@
 ---
 title: "Lightweight Image Editors for Linux: GIMP Alternatives"
 date: 2018-03-24 11:44:11 +0000
+modified: 2026-04-12 14:18:46 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Controlling Linux Console Blanking and Power Settings"
 date: 2018-03-24 11:42:51 +0000
+modified: 2026-04-12 16:08:26 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

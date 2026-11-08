@@ -1,6 +1,7 @@
 ---
 title: "Measuring Function Execution Time in OCaml"
 date: 2018-03-24 11:45:01 +0000
+modified: 2026-04-12 16:37:05 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

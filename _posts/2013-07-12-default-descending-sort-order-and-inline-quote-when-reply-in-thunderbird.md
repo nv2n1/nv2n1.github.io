@@ -1,6 +1,7 @@
 ---
 title: "Configuring Thunderbird\u2019s Default Sort Order and Reply Quoting"
 date: 2013-07-12 16:54:48 +0000
+modified: 2026-04-12 16:45:26 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

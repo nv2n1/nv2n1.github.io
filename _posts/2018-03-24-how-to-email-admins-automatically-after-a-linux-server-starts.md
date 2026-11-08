@@ -1,6 +1,7 @@
 ---
 title: "Linux Server Boot Notifications via Email"
 date: 2018-03-24 11:45:36 +0000
+modified: 2026-04-12 16:48:01 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Installing TeX Live on CentOS 7"
 date: 2018-03-24 11:51:30 +0000
+modified: 2026-04-12 16:37:29 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

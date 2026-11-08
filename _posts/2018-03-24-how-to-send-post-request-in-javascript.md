@@ -1,6 +1,7 @@
 ---
 title: "Sending POST Requests in JavaScript: Fetch vs jQuery vs Axios"
 date: 2018-03-24 11:48:39 +0000
+modified: 2026-04-12 16:49:20 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

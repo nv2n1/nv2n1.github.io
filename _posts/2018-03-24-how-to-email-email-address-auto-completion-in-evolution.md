@@ -1,6 +1,7 @@
 ---
 title: "Enabling Email Auto-Completion in Evolution"
 date: 2018-03-24 11:55:04 +0000
+modified: 2026-04-12 16:54:48 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Custom WordPress Archives: Categories, Dates, and Posts"
 date: 2013-07-12 16:46:10 +0000
+modified: 2026-04-11 17:45:54 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

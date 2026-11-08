@@ -1,6 +1,7 @@
 ---
 title: "Linux Kernel: Fix CIFS Auth Key Memory Leak on Reconnect"
 date: 2020-10-01 01:22:32 +0000
+modified: 2026-04-12 16:49:13 +0000
 author: "Tony"
 layout: post
 categories: [linux-systems-administration]

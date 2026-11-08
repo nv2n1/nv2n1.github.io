@@ -1,6 +1,7 @@
 ---
 title: "Hide Thunderbird to the System Tray"
 date: 2013-07-12 16:31:48 +0000
+modified: 2026-04-12 16:08:35 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

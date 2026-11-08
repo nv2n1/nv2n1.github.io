@@ -1,6 +1,7 @@
 ---
 title: "Display Date and Time Across Multiple Timezones on Linux"
 date: 2018-09-14 09:29:53 +0000
+modified: 2026-04-11 15:43:10 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Building Zlib from Source on Ubuntu"
 date: 2018-07-26 10:09:01 +0000
+modified: 2026-04-11 15:43:24 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Memory-mapping Ranges Larger Than Available RAM and Swap"
 date: 2018-03-24 07:43:06 +0000
+modified: 2026-04-11 17:45:40 +0000
 author: "Q A"
 layout: post
 categories: [functional-programming]

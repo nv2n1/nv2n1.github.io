@@ -1,6 +1,7 @@
 ---
 title: "Printing to STDERR and STDOUT in Bash"
 date: 2018-03-24 11:52:57 +0000
+modified: 2026-04-11 15:47:56 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

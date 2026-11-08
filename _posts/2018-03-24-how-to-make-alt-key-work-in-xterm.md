@@ -1,6 +1,7 @@
 ---
 title: "Configuring Alt and Meta Keys in Xterm and Terminal Emulators"
 date: 2018-03-24 11:44:46 +0000
+modified: 2026-05-17 16:50:43 +0000
 author: "Eric Ma"
 layout: post
 categories: [security-cryptography-2]

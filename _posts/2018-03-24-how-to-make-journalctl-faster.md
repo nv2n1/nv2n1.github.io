@@ -1,6 +1,7 @@
 ---
 title: "Speeding Up journalctl: Performance Tips and Filtering Strategies"
 date: 2018-03-24 11:49:37 +0000
+modified: 2026-04-11 15:52:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

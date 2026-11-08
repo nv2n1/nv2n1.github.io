@@ -1,6 +1,7 @@
 ---
 title: "Reading and Managing .mbox Files in Linux"
 date: 2018-03-24 11:43:10 +0000
+modified: 2026-04-11 15:59:14 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu Chinese Input: IBus vs Fcitx5 Setup"
 date: 2018-07-26 04:53:40 +0000
+modified: 2026-04-11 15:43:26 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Git Server Setup with Gitosis"
 date: 2012-02-25 13:17:48 +0000
+modified: 2026-04-12 04:39:25 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

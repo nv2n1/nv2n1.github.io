@@ -1,6 +1,7 @@
 ---
 title: "Configuring HDFS Replication: Cluster and Per-File Settings"
 date: 2018-03-24 08:22:40 +0000
+modified: 2026-04-11 17:40:13 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

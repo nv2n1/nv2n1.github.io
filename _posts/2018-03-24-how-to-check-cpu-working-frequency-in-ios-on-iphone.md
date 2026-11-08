@@ -1,6 +1,7 @@
 ---
 title: "How to Check CPU Clock Speed on iPhone"
 date: 2018-03-24 11:54:56 +0000
+modified: 2026-04-11 17:44:45 +0000
 author: "Eric Ma"
 layout: post
 categories: [code-optimization]

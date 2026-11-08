@@ -1,6 +1,7 @@
 ---
 title: "Rate-Limiting SSH Connections with iptables and firewalld"
 date: 2018-03-24 11:44:52 +0000
+modified: 2026-04-11 17:39:57 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

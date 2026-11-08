@@ -1,6 +1,7 @@
 ---
 title: "SSH Through a Gateway to Internal Networks Using ProxyCommand"
 date: 2014-04-30 04:38:18 +0000
+modified: 2026-04-11 16:22:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

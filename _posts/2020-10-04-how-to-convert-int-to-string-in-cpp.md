@@ -1,6 +1,7 @@
 ---
 title: "Converting Integers to Strings in C++"
 date: 2020-10-04 09:17:11 +0000
+modified: 2026-04-12 16:58:54 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

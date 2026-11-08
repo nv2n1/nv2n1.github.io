@@ -1,6 +1,7 @@
 ---
 title: "Creating and Managing Symbolic Links in Linux"
 date: 2013-07-12 19:16:05 +0000
+modified: 2026-04-11 16:41:11 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

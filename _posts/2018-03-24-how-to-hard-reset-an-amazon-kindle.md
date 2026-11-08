@@ -1,6 +1,7 @@
 ---
 title: "Hard Reset Your Amazon Kindle: Step-by-Step Guide"
 date: 2018-03-24 08:19:09 +0000
+modified: 2026-04-12 16:46:43 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Running Flash Content on Linux: Ruffle and Legacy Options"
 date: 2015-10-18 10:50:34 +0000
+modified: 2026-04-11 16:21:36 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

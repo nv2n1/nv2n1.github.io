@@ -1,6 +1,7 @@
 ---
 title: "Monitor File Changes and Trigger Commands with inotifywait"
 date: 2015-08-30 04:30:05 +0000
+modified: 2026-04-11 16:21:40 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Querying MX Records on Linux with dig and host"
 date: 2018-03-24 11:47:56 +0000
+modified: 2026-04-12 16:59:39 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

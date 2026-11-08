@@ -1,6 +1,7 @@
 ---
 title: "Controlling SCP Bandwidth with the -l Flag"
 date: 2018-03-24 11:46:29 +0000
+modified: 2026-04-12 08:38:55 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

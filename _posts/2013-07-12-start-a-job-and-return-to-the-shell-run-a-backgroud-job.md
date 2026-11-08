@@ -1,6 +1,7 @@
 ---
 title: "Start a Background Job and Return to the Shell"
 date: 2013-07-12 16:31:53 +0000
+modified: 2026-04-12 16:54:05 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

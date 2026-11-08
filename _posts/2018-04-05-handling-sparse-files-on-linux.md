@@ -1,6 +1,7 @@
 ---
 title: "Handling Sparse Files on Linux"
 date: 2018-04-05 11:33:04 +0000
+modified: 2026-04-11 15:43:44 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

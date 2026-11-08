@@ -1,6 +1,7 @@
 ---
 title: "Configuring GNOME Desktop Settings with GConf Editor"
 date: 2013-07-12 16:31:30 +0000
+modified: 2026-04-12 16:59:02 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

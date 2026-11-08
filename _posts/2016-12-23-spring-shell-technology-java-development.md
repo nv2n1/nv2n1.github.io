@@ -1,6 +1,7 @@
 ---
 title: "Building Java CLI Applications with Spring Shell 3.x"
 date: 2016-12-23 13:16:48 +0000
+modified: 2026-04-11 17:15:53 +0000
 author: "Johnnymorgan"
 layout: post
 categories: [languages-frameworks]

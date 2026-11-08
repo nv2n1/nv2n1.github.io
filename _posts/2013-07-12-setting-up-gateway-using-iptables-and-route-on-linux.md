@@ -1,6 +1,7 @@
 ---
 title: "Configuring a Linux Network Gateway with iptables and route"
 date: 2013-07-12 16:31:58 +0000
+modified: 2026-04-12 04:41:05 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

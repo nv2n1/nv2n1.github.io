@@ -1,6 +1,7 @@
 ---
 title: "Hexadecimal Input and Output in C++"
 date: 2013-07-12 16:47:41 +0000
+modified: 2026-04-11 17:51:46 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

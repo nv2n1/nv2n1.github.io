@@ -1,6 +1,7 @@
 ---
 title: "Deploying Dynamics 365 Web Resources with Visual Studio"
 date: 2020-04-02 06:57:52 +0000
+modified: 2026-04-11 17:11:45 +0000
 author: "jameswarner"
 layout: post
 categories: [algorithms-data-structures]

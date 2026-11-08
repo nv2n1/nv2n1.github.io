@@ -1,6 +1,7 @@
 ---
 title: "Finding Files Larger Than a Specific Size"
 date: 2018-03-24 08:20:28 +0000
+modified: 2026-04-11 17:15:09 +0000
 author: "Eric Ma"
 layout: post
 categories: [testing-devops]

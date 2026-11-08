@@ -1,6 +1,7 @@
 ---
 title: "x86-64 Assembly: Essential Reference Guide"
 date: 2013-07-12 16:47:46 +0000
+modified: 2026-04-11 17:51:34 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

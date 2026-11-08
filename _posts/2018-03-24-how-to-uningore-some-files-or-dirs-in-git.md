@@ -1,6 +1,7 @@
 ---
 title: "How to Unignore Files and Directories in Git"
 date: 2018-03-24 11:54:52 +0000
+modified: 2026-04-12 16:34:42 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

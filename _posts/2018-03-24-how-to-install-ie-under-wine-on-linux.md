@@ -1,6 +1,7 @@
 ---
 title: "Running Internet Explorer on Wine: Limitations and Alternatives"
 date: 2018-03-24 11:40:36 +0000
+modified: 2026-04-11 16:01:28 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

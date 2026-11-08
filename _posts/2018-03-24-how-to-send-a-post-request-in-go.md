@@ -1,6 +1,7 @@
 ---
 title: "Sending POST Requests in Go"
 date: 2018-03-24 11:53:38 +0000
+modified: 2026-04-12 16:46:29 +0000
 author: "Q A"
 layout: post
 categories: [programming-languages]

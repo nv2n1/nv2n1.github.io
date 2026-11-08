@@ -1,6 +1,7 @@
 ---
 title: "Debugging File Access in Linux: Using strace and lsof"
 date: 2018-03-24 08:22:44 +0000
+modified: 2026-04-11 16:02:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

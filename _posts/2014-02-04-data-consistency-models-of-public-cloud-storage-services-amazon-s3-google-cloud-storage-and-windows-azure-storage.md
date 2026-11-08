@@ -1,6 +1,7 @@
 ---
 title: "Cloud Storage Consistency Models: S3, GCS, and Azure Storage"
 date: 2014-02-04 13:48:31 +0000
+modified: 2026-04-11 16:24:57 +0000
 author: "Eric Ma"
 layout: post
 categories: [systems-architecture]

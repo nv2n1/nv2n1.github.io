@@ -1,6 +1,7 @@
 ---
 title: "Switching Linux Systemd Boot Targets"
 date: 2016-09-17 02:15:12 +0000
+modified: 2026-04-11 16:21:27 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

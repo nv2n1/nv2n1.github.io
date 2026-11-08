@@ -1,6 +1,7 @@
 ---
 title: "Fix Headphone Mic Recording Issue on ALC256"
 date: 2020-09-21 00:25:27 +0000
+modified: 2026-04-12 16:36:21 +0000
 author: "Tony"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Configuring Vim to Indent C++11 Lambdas Properly"
 date: 2018-03-24 11:55:09 +0000
+modified: 2026-04-12 16:47:02 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

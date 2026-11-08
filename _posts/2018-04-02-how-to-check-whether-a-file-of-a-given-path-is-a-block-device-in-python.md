@@ -1,6 +1,7 @@
 ---
 title: "Checking if a Path is a Block Device in Python"
 date: 2018-04-02 09:09:41 +0000
+modified: 2026-04-11 17:12:13 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

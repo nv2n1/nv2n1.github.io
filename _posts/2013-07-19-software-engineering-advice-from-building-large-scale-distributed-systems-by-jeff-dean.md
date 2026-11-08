@@ -1,6 +1,7 @@
 ---
 title: "Latency Numbers Every Systems Engineer Should Know"
 date: 2013-07-19 05:47:44 +0000
+modified: 2026-04-11 16:41:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

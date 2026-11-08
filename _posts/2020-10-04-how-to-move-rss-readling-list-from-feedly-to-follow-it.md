@@ -1,6 +1,7 @@
 ---
 title: "Migrating Your Feedly RSS Feeds to Follow.it"
 date: 2020-10-04 08:53:30 +0000
+modified: 2026-04-12 16:59:54 +0000
 author: "David Yang"
 layout: post
 categories: [programming-languages]

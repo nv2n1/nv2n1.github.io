@@ -1,6 +1,7 @@
 ---
 title: "Installing WordPress on Fedora 19"
 date: 2018-03-24 08:17:26 +0000
+modified: 2026-04-12 16:40:47 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Reading Files from Tar Archives Without Extraction"
 date: 2019-07-14 06:06:45 +0000
+modified: 2026-04-11 17:38:26 +0000
 author: "Q A"
 layout: post
 categories: [scripting-utilities]

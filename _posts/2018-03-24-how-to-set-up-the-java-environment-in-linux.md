@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Java Environment Variables on Linux"
 date: 2018-03-24 08:22:40 +0000
+modified: 2026-04-11 16:02:13 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

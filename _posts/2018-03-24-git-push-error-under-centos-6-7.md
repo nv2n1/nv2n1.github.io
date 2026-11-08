@@ -1,6 +1,7 @@
 ---
 title: "Git Push 403 Forbidden: Common Causes and Solutions"
 date: 2018-03-24 11:48:57 +0000
+modified: 2026-04-11 15:52:53 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

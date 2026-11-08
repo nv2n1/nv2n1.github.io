@@ -1,6 +1,7 @@
 ---
 title: "Extracting or Removing Trailing Numbers in Bash"
 date: 2018-03-24 11:52:34 +0000
+modified: 2026-04-12 16:53:09 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

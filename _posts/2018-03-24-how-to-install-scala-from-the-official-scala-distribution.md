@@ -1,6 +1,7 @@
 ---
 title: "Installing Scala from Official Sources"
 date: 2018-03-24 08:16:53 +0000
+modified: 2026-04-12 14:25:10 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

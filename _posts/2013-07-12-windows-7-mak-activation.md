@@ -1,6 +1,7 @@
 ---
 title: "Setting Up and Troubleshooting Windows 7 Enterprise MAK Activation"
 date: 2013-07-12 16:54:52 +0000
+modified: 2026-04-12 16:10:09 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

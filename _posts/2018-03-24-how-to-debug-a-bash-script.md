@@ -1,6 +1,7 @@
 ---
 title: "Debugging Bash Scripts: Essential Techniques"
 date: 2018-03-24 11:52:47 +0000
+modified: 2026-04-12 16:55:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

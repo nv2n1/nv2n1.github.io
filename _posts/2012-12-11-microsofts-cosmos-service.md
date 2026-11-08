@@ -1,6 +1,7 @@
 ---
 title: "Microsoft\u2019s Cosmos DB: A Distributed NoSQL Database"
 date: 2012-12-11 07:04:20 +0000
+modified: 2026-04-12 16:38:59 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

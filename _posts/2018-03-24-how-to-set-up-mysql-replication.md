@@ -1,6 +1,7 @@
 ---
 title: "How to Set Up MySQL Replication"
 date: 2018-03-24 08:18:01 +0000
+modified: 2026-04-11 16:07:04 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

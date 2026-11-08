@@ -1,6 +1,7 @@
 ---
 title: "How to Clone Xen DomU Virtual Machines"
 date: 2013-07-12 16:31:50 +0000
+modified: 2026-04-12 17:00:34 +0000
 author: "Eric Ma"
 layout: post
 categories: [system-administration-cloud]

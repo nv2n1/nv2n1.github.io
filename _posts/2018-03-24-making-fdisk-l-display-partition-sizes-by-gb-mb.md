@@ -1,6 +1,7 @@
 ---
 title: "Check Partition Sizes in Human-Readable Format with parted"
 date: 2018-03-24 11:44:30 +0000
+modified: 2026-04-12 16:05:13 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

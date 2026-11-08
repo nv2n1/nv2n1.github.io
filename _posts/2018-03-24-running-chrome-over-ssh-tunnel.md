@@ -1,6 +1,7 @@
 ---
 title: "Running Chrome Over SSH With X11 Forwarding: Issues and Alternatives"
 date: 2018-03-24 11:40:40 +0000
+modified: 2026-04-12 16:59:23 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

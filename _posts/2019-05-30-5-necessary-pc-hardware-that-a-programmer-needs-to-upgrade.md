@@ -1,6 +1,7 @@
 ---
 title: "Hardware Upgrades Every Developer Should Consider in 2026"
 date: 2019-05-30 15:35:54 +0000
+modified: 2026-04-11 17:38:27 +0000
 author: "James Clark"
 layout: post
 categories: [linux-system-configuration]

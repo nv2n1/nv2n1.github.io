@@ -1,6 +1,7 @@
 ---
 title: "Real-Time System Resource Monitoring with WebSockets"
 date: 2013-07-12 16:47:43 +0000
+modified: 2026-04-11 17:16:31 +0000
 author: "Eric Ma"
 layout: post
 categories: [web-development]

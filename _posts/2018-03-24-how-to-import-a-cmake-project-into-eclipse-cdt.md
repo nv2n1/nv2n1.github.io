@@ -1,6 +1,7 @@
 ---
 title: "Importing CMake Projects into Eclipse CDT"
 date: 2018-03-24 11:40:56 +0000
+modified: 2026-04-11 16:00:58 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

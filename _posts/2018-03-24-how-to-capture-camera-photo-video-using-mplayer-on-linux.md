@@ -1,6 +1,7 @@
 ---
 title: "Capturing Webcam Photos and Videos on Linux"
 date: 2018-03-24 11:43:10 +0000
+modified: 2026-04-12 16:37:45 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

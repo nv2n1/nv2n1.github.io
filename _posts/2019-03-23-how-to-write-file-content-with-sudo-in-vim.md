@@ -1,6 +1,7 @@
 ---
 title: "How to Save a File in Vim Without Restarting with sudo"
 date: 2019-03-23 11:20:41 +0000
+modified: 2026-04-11 17:11:53 +0000
 author: "Q A"
 layout: post
 categories: [web-development]

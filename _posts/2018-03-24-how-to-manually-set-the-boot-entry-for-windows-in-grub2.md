@@ -1,6 +1,7 @@
 ---
 title: "Boot Windows from GRUB2 Command Line"
 date: 2018-03-24 08:21:51 +0000
+modified: 2026-04-12 16:59:42 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-system-configuration]

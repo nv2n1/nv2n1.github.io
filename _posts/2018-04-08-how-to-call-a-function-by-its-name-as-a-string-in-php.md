@@ -1,6 +1,7 @@
 ---
 title: "Dynamic Function Calls in PHP: Variables, call_user_func(), and Callables"
 date: 2018-04-08 09:05:57 +0000
+modified: 2026-04-11 17:12:07 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

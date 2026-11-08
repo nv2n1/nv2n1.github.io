@@ -1,6 +1,7 @@
 ---
 title: "Installing R and RStudio on macOS"
 date: 2020-10-10 14:23:36 +0000
+modified: 2026-04-12 16:21:29 +0000
 author: "David Yang"
 layout: post
 categories: [programming-languages]

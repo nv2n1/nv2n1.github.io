@@ -1,6 +1,7 @@
 ---
 title: "Disabling SSL in lftp: Configuration & Security Considerations"
 date: 2013-07-12 16:31:52 +0000
+modified: 2026-04-12 16:59:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

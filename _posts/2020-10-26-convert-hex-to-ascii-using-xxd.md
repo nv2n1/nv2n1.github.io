@@ -1,6 +1,7 @@
 ---
 title: "Converting Hex to ASCII With xxd"
 date: 2020-10-26 10:58:39 +0000
+modified: 2026-04-12 16:58:44 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Setting up Xen Dom0 on Fedora 12 with Kernel 2.6.32.13"
 date: 2013-07-12 16:32:16 +0000
+modified: 2026-04-12 05:28:13 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

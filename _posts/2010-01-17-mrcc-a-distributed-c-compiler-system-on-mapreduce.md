@@ -1,6 +1,7 @@
 ---
 title: "mrcc \u2013 A Distributed C Compiler System on MapReduce (Archived 2010)"
 date: 2010-01-17 07:18:29 +0000
+modified: 2026-04-12 04:37:39 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

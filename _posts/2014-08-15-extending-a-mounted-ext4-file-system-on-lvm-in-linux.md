@@ -1,6 +1,7 @@
 ---
 title: "Extend an Ext4 Filesystem on LVM Without Downtime"
 date: 2014-08-15 02:26:38 +0000
+modified: 2026-04-11 16:22:21 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

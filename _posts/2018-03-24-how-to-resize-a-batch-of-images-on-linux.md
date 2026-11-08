@@ -1,6 +1,7 @@
 ---
 title: "Batch Resize Images on Linux with ImageMagick"
 date: 2018-03-24 11:44:04 +0000
+modified: 2026-04-12 16:57:04 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

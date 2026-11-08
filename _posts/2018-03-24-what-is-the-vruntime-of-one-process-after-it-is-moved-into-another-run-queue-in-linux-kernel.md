@@ -1,6 +1,7 @@
 ---
 title: "How vruntime Changes When Moving Between CPU Run Queues"
 date: 2018-03-24 11:51:39 +0000
+modified: 2026-04-12 16:52:12 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [algorithms-data-structures]

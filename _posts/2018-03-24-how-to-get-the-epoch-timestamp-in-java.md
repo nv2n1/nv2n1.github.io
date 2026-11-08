@@ -1,6 +1,7 @@
 ---
 title: "Getting the Current Epoch Timestamp in Java"
 date: 2018-03-24 11:52:19 +0000
+modified: 2026-04-12 16:03:54 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

@@ -1,6 +1,7 @@
 ---
 title: "Opening or Creating a File in Read-Write Mode with C++"
 date: 2018-03-24 11:55:24 +0000
+modified: 2026-04-11 17:12:25 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

@@ -1,6 +1,7 @@
 ---
 title: "Reading JSON Data from URLs in R"
 date: 2020-11-06 14:43:34 +0000
+modified: 2026-04-12 16:48:06 +0000
 author: "Daniel"
 layout: post
 categories: [programming-languages]

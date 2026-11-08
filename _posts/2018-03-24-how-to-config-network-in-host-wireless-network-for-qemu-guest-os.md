@@ -1,6 +1,7 @@
 ---
 title: "Configuring QEMU Guest Network Access Over Wireless"
 date: 2018-03-24 11:43:30 +0000
+modified: 2026-04-11 15:58:46 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [linux-systems-administration]

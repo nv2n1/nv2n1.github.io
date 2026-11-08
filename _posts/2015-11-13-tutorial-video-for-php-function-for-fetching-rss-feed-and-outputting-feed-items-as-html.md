@@ -1,6 +1,7 @@
 ---
 title: "Robust PHP RSS Feed Parsing with Caching and Error Handling"
 date: 2015-11-13 14:07:32 +0000
+modified: 2026-04-11 17:16:08 +0000
 author: "Eric Ma"
 layout: post
 categories: [languages-frameworks]

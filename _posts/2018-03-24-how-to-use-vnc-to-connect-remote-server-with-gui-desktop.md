@@ -1,6 +1,7 @@
 ---
 title: "Connecting to a Remote Server with VNC"
 date: 2018-03-24 11:51:02 +0000
+modified: 2026-04-12 16:48:13 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [web-development]

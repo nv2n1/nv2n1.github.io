@@ -1,6 +1,7 @@
 ---
 title: "Converting AC3 and DTS Audio to AAC in MKV Files"
 date: 2015-04-15 06:38:26 +0000
+modified: 2026-04-11 16:21:46 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

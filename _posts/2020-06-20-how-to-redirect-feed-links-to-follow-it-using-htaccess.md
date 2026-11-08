@@ -1,6 +1,7 @@
 ---
 title: "Redirect RSS Feeds to follow.it with .htaccess"
 date: 2020-06-20 03:35:41 +0000
+modified: 2026-04-12 16:52:14 +0000
 author: "David Yang"
 layout: post
 categories: [programming-languages]

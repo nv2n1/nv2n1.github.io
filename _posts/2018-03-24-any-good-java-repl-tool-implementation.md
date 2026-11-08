@@ -1,6 +1,7 @@
 ---
 title: "Java REPL Tools: A Practical Comparison"
 date: 2018-03-24 11:51:58 +0000
+modified: 2026-04-12 16:03:33 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

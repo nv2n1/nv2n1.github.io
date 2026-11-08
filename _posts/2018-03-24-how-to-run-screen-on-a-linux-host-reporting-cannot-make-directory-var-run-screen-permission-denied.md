@@ -1,6 +1,7 @@
 ---
 title: "Using GNU Screen as a Non-Root User with SCREENDIR"
 date: 2018-03-24 11:47:11 +0000
+modified: 2026-04-12 16:08:09 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

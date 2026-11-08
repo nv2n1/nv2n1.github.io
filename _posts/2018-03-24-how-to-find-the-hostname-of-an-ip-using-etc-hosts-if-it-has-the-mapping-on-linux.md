@@ -1,6 +1,7 @@
 ---
 title: "Looking up Hostnames from IP Addresses in /etc/hosts on Linux"
 date: 2018-03-24 11:53:12 +0000
+modified: 2026-04-12 16:45:46 +0000
 author: "David Yang"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Map Failed Disks to Physical SATA Ports in Linux"
 date: 2013-11-13 12:28:17 +0000
+modified: 2026-04-11 16:40:37 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "How to Download Older Versions of Hadoop"
 date: 2018-03-24 11:51:35 +0000
+modified: 2026-04-12 08:30:30 +0000
 author: "Q A"
 layout: post
 categories: [design-patterns-architecture]

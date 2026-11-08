@@ -1,6 +1,7 @@
 ---
 title: "Installing HP Printer Drivers on Linux Mint and Ubuntu"
 date: 2018-03-24 11:42:06 +0000
+modified: 2026-04-11 16:00:03 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Background YouTube Playback on iPhone: What Actually Works"
 date: 2015-03-16 05:40:52 +0000
+modified: 2026-04-12 16:49:37 +0000
 author: "David Yang"
 layout: post
 categories: [linux-systems-administration]

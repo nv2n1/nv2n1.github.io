@@ -1,6 +1,7 @@
 ---
 title: "Git Branches and Remote Repositories: A Practical Guide"
 date: 2014-07-24 05:36:22 +0000
+modified: 2026-04-11 16:22:29 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

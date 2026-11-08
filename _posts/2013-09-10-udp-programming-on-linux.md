@@ -1,6 +1,7 @@
 ---
 title: "UDP Socket Programming in C: Building Practical Applications"
 date: 2013-09-10 10:24:25 +0000
+modified: 2026-04-11 16:40:51 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

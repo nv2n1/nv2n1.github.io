@@ -1,6 +1,7 @@
 ---
 title: "Show Git Blame in Eclipse Editor"
 date: 2020-10-31 11:26:09 +0000
+modified: 2026-04-11 17:11:14 +0000
 author: "David Yang"
 layout: post
 categories: [testing-devops]

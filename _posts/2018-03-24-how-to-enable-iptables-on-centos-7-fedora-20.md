@@ -1,6 +1,7 @@
 ---
 title: "Migrating from firewalld to iptables on CentOS 7 and Fedora"
 date: 2018-03-24 08:21:31 +0000
+modified: 2026-04-11 17:15:04 +0000
 author: "Eric Ma"
 layout: post
 categories: [databases-storage]

@@ -1,6 +1,7 @@
 ---
 title: "Guake: A Quake-Style Dropdown Terminal for GNOME"
 date: 2013-07-12 16:31:57 +0000
+modified: 2026-04-12 05:27:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

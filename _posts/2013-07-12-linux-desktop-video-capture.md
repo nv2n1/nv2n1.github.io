@@ -1,6 +1,7 @@
 ---
 title: "Capturing Desktop Video on Linux with ffmpeg"
 date: 2013-07-12 16:32:02 +0000
+modified: 2026-04-12 05:27:33 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

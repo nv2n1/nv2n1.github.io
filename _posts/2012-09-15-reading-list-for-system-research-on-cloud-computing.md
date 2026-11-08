@@ -1,6 +1,7 @@
 ---
 title: "Distributed Systems and Cloud Computing: Essential Reading Guide"
 date: 2012-09-15 22:41:05 +0000
+modified: 2026-05-17 16:51:06 +0000
 author: "Eric Ma"
 layout: post
 categories: [systems-architecture]

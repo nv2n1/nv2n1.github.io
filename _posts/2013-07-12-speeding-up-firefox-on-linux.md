@@ -1,6 +1,7 @@
 ---
 title: "Optimizing Firefox Performance on Linux"
 date: 2013-07-12 16:32:03 +0000
+modified: 2026-04-12 05:27:41 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

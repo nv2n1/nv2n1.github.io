@@ -1,6 +1,7 @@
 ---
 title: "Installing FFmpeg on Linux Mint"
 date: 2018-03-24 11:42:17 +0000
+modified: 2026-04-12 16:09:35 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

@@ -1,6 +1,7 @@
 ---
 title: "Visualizing Git Commit History as a Tree"
 date: 2018-03-24 11:40:21 +0000
+modified: 2026-04-12 16:54:52 +0000
 author: "Q A"
 layout: post
 categories: [algorithms-data-structures]

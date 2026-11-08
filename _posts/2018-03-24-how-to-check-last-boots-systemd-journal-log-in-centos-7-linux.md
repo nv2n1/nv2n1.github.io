@@ -1,6 +1,7 @@
 ---
 title: "Viewing the Previous Boot\u2019s systemd Journal on CentOS 7"
 date: 2018-03-24 11:53:12 +0000
+modified: 2026-04-12 16:30:37 +0000
 author: "David Yang"
 layout: post
 categories: [linux-system-configuration]

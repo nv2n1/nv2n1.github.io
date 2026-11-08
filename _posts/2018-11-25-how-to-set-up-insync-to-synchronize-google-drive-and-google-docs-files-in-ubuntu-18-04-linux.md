@@ -1,6 +1,7 @@
 ---
 title: "Installing and Configuring Insync for Google Drive on Linux"
 date: 2018-11-25 05:54:57 +0000
+modified: 2026-04-11 15:43:01 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

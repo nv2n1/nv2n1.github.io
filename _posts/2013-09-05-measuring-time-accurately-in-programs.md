@@ -1,6 +1,7 @@
 ---
 title: "Choosing the Right Timer: clock_gettime vs TSC in Linux"
 date: 2013-09-05 12:19:15 +0000
+modified: 2026-04-11 17:41:26 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-system-configuration]

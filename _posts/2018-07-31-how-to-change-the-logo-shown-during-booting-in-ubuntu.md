@@ -1,6 +1,7 @@
 ---
 title: "Customizing the Plymouth Boot Logo in Ubuntu"
 date: 2018-07-31 10:32:47 +0000
+modified: 2026-04-11 15:43:19 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

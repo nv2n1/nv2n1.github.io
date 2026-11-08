@@ -1,6 +1,7 @@
 ---
 title: "Using std::any for Type-Safe Polymorphism in C++"
 date: 2023-08-20 09:01:44 +0000
+modified: 2026-04-11 17:11:02 +0000
 author: "Ethan Ainsworth"
 layout: post
 categories: [languages-frameworks]

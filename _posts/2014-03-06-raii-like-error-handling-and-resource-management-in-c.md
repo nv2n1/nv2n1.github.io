@@ -1,6 +1,7 @@
 ---
 title: "RAII-Style Error Handling and Resource Management in C"
 date: 2014-03-06 08:10:04 +0000
+modified: 2026-04-11 17:51:24 +0000
 author: "Eric Ma"
 layout: post
 categories: [development-best-practices]

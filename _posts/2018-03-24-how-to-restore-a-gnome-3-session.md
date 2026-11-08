@@ -1,6 +1,7 @@
 ---
 title: "Restoring a GNOME 3 Session: A Developer\u2019s Guide"
 date: 2018-03-24 08:15:39 +0000
+modified: 2026-04-12 16:05:24 +0000
 author: "Q A"
 layout: post
 categories: [web-development]

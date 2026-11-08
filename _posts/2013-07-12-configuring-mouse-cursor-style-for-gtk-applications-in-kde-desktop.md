@@ -1,6 +1,7 @@
 ---
 title: "Customizing GTK Cursor Themes in KDE"
 date: 2013-07-12 16:32:12 +0000
+modified: 2026-04-12 16:04:42 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

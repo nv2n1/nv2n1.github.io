@@ -1,6 +1,7 @@
 ---
 title: "Rsync with Sudo on Remote Systems"
 date: 2019-04-06 08:39:02 +0000
+modified: 2026-04-11 17:38:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

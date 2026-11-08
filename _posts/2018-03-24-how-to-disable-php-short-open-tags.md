@@ -1,6 +1,7 @@
 ---
 title: "Disabling PHP Short Open Tags"
 date: 2018-03-24 11:53:43 +0000
+modified: 2026-04-12 16:05:07 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "Fetching Webpages as a Mobile Browser Using curl"
 date: 2018-03-24 11:40:17 +0000
+modified: 2026-04-11 17:14:38 +0000
 author: "Eric Ma"
 layout: post
 categories: [web-development]

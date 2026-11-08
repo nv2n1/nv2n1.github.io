@@ -1,6 +1,7 @@
 ---
 title: "Fixed-Size Path Buffers in C: Using PATH_MAX and NAME_MAX"
 date: 2018-03-24 11:46:09 +0000
+modified: 2026-04-13 00:02:28 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

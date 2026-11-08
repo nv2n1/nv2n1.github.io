@@ -1,6 +1,7 @@
 ---
 title: "Recovering HDFS from Safe Mode After DataNode Failures"
 date: 2018-03-24 11:46:19 +0000
+modified: 2026-04-11 17:48:15 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

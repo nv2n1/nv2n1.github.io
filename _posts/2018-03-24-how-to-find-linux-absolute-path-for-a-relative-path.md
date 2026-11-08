@@ -1,6 +1,7 @@
 ---
 title: "Converting Relative Paths to Absolute Paths in Linux"
 date: 2018-03-24 08:04:07 +0000
+modified: 2026-04-12 16:03:16 +0000
 author: "Q A"
 layout: post
 categories: [linux-systems-administration]

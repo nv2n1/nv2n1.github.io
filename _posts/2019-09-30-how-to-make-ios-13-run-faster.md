@@ -1,6 +1,7 @@
 ---
 title: "iPhone Performance Tuning: Disabling Unnecessary Battery-Draining Features"
 date: 2019-09-30 16:01:50 +0000
+modified: 2026-04-11 17:38:23 +0000
 author: "Eric Ma"
 layout: post
 categories: [system-administration-cloud]

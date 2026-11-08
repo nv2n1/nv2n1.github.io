@@ -1,6 +1,7 @@
 ---
 title: "Conference Ranking by Average Number of Citations in the Last 5 Years, 2012"
 date: 2012-10-25 05:51:47 +0000
+modified: 2026-04-12 04:39:56 +0000
 author: "Eric Ma"
 layout: post
 categories: [testing-devops]

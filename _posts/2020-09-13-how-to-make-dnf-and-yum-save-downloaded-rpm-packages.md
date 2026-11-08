@@ -1,6 +1,7 @@
 ---
 title: "How to Configure DNF and YUM to Cache Downloaded RPM Packages"
 date: 2020-09-13 13:01:26 +0000
+modified: 2026-04-12 16:58:25 +0000
 author: "David Yang"
 layout: post
 categories: [databases-storage]

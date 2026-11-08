@@ -1,6 +1,7 @@
 ---
 title: "Inline Comments in Multi-Line Bash Commands"
 date: 2020-04-10 10:56:34 +0000
+modified: 2026-04-12 16:48:11 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

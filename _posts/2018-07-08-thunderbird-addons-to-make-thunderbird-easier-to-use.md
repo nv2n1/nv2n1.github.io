@@ -1,6 +1,7 @@
 ---
 title: "Thunderbird Add-ons for Better Email Organization"
 date: 2018-07-08 07:05:25 +0000
+modified: 2026-04-11 17:46:48 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

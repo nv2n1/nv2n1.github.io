@@ -1,6 +1,7 @@
 ---
 title: "SSH Keep-Alive: Preventing Idle Connection Timeouts"
 date: 2015-09-13 03:44:41 +0000
+modified: 2026-04-11 16:21:37 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

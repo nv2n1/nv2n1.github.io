@@ -1,6 +1,7 @@
 ---
 title: "How to Reset All Git Submodules"
 date: 2020-10-11 15:03:16 +0000
+modified: 2026-04-12 16:47:21 +0000
 author: "David Yang"
 layout: post
 categories: [testing-devops]

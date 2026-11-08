@@ -1,6 +1,7 @@
 ---
 title: "Auto-hiding Panels in RHEL 7: A Setup Guide"
 date: 2018-03-24 11:54:26 +0000
+modified: 2026-04-12 14:23:08 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

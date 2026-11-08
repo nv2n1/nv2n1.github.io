@@ -1,6 +1,7 @@
 ---
 title: "Print Text Files with Line Numbers: nl, cat, and More"
 date: 2018-03-24 08:21:12 +0000
+modified: 2026-04-11 17:40:29 +0000
 author: "Eric Ma"
 layout: post
 categories: [scripting-utilities]

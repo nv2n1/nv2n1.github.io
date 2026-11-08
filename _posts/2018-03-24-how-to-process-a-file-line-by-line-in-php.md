@@ -1,6 +1,7 @@
 ---
 title: "Reading PHP Files Line by Line"
 date: 2018-03-24 11:52:05 +0000
+modified: 2026-04-12 17:00:10 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

@@ -1,6 +1,7 @@
 ---
 title: "x86-64 Instruction Encoding: From Assembly to Machine Code"
 date: 2017-09-09 05:29:08 +0000
+modified: 2026-04-11 16:21:10 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

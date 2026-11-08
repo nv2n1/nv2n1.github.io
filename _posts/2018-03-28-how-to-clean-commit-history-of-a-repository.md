@@ -1,6 +1,7 @@
 ---
 title: "Cleaning Up Git Commit History: A Practical Guide"
 date: 2018-03-28 10:10:29 +0000
+modified: 2026-04-11 17:12:22 +0000
 author: "Q A"
 layout: post
 categories: [testing-devops]

@@ -1,6 +1,7 @@
 ---
 title: "Converting Managed Solutions to Unmanaged in Dynamics CRM"
 date: 2016-12-03 06:01:37 +0000
+modified: 2026-04-11 17:15:58 +0000
 author: "jameswarner"
 layout: post
 categories: [algorithms-data-structures]

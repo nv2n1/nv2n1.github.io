@@ -1,6 +1,7 @@
 ---
 title: "Installing PHP on Apache with Fedora"
 date: 2018-03-24 08:14:36 +0000
+modified: 2026-04-12 14:18:55 +0000
 author: "Q A"
 layout: post
 categories: [programming-languages]

@@ -1,6 +1,7 @@
 ---
 title: "DEX vs. CEX: Technical Trade-offs Explained"
 date: 2023-03-19 08:11:11 +0000
+modified: 2026-04-11 16:12:31 +0000
 author: "Ethan Ainsworth"
 layout: post
 categories: [systems-architecture]

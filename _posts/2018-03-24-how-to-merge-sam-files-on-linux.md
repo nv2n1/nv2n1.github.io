@@ -1,6 +1,7 @@
 ---
 title: "Merging SAM Files on Linux"
 date: 2018-03-24 11:49:09 +0000
+modified: 2026-04-12 16:41:30 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

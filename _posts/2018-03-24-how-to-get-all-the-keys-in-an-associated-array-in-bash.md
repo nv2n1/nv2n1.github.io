@@ -1,6 +1,7 @@
 ---
 title: "Extracting Keys from Bash Associative Arrays"
 date: 2018-03-24 11:52:43 +0000
+modified: 2026-04-12 16:35:48 +0000
 author: "David Yang"
 layout: post
 categories: [testing-devops]

@@ -1,6 +1,7 @@
 ---
 title: "Conditionally Display WordPress Widgets with PHP"
 date: 2013-07-12 16:46:16 +0000
+modified: 2026-04-11 17:45:49 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

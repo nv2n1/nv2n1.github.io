@@ -1,6 +1,7 @@
 ---
 title: "CalDAV and CardDAV: A Developer\u2019s Guide"
 date: 2023-09-16 06:44:11 +0000
+modified: 2026-04-11 16:12:04 +0000
 author: "Ethan Ainsworth"
 layout: post
 categories: [systems-architecture]

@@ -1,6 +1,7 @@
 ---
 title: "Compressing Files in Linux: gzip, bzip2, 7z, rar, and zip"
 date: 2013-03-25 12:52:29 +0000
+modified: 2026-04-12 04:40:11 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

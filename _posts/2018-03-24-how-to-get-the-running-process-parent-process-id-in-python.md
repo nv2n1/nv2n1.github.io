@@ -1,6 +1,7 @@
 ---
 title: "How to Get a Process\u2019s Parent ID in Python"
 date: 2018-03-24 11:52:54 +0000
+modified: 2026-04-12 16:44:25 +0000
 author: "Q A"
 layout: post
 categories: [languages-frameworks]

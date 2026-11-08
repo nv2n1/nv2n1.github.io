@@ -1,6 +1,7 @@
 ---
 title: "Reducing Whitespace in LaTeX Documents"
 date: 2018-03-24 08:13:54 +0000
+modified: 2026-04-12 16:10:32 +0000
 author: "Q A"
 layout: post
 categories: [development-best-practices]

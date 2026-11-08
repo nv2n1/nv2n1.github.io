@@ -1,6 +1,7 @@
 ---
 title: "Why You Need to Run LaTeX and BibTeX Multiple Times"
 date: 2018-03-24 11:54:37 +0000
+modified: 2026-04-12 16:57:57 +0000
 author: "Weiwei Jia"
 layout: post
 categories: [programming-languages]

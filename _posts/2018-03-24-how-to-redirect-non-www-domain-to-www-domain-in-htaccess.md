@@ -1,6 +1,7 @@
 ---
 title: "Redirect Non-WWW URLs to WWW with .htaccess"
 date: 2018-03-24 11:51:21 +0000
+modified: 2026-04-12 16:10:38 +0000
 author: "Eric Ma"
 layout: post
 categories: [programming-languages]

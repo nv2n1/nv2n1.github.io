@@ -1,6 +1,7 @@
 ---
 title: "Checking HDFS File Replication Factor"
 date: 2018-03-24 11:43:56 +0000
+modified: 2026-04-12 16:08:00 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]

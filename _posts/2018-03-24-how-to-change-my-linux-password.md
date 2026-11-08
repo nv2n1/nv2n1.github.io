@@ -1,6 +1,7 @@
 ---
 title: "Changing Your Linux Password: A Guide"
 date: 2018-03-24 08:20:16 +0000
+modified: 2026-04-12 16:48:43 +0000
 author: "Eric Ma"
 layout: post
 categories: [linux-systems-administration]
