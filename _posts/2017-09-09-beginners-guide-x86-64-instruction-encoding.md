@@ -59,7 +59,7 @@ The ModR/M byte breaks down as `[mod][reg][r/m]` (8 bits total):
 
 ### SIB Byte Format (When Needed)
 
-The SIB byte is `[scale][index][base]` and only appears when ModR/M.r/m = `100`:
+The SIB byte is `[scale][index][base]` and only appears when mod ≠ `11` and ModR/M.r/m = `100` (with mod = `11`, r/m `100` is simply the RSP register):
 
 - **scale (2 bits)** — `00`=1x, `01`=2x, `10`=4x, `11`=8x
 - **index (3 bits)** — index register (extended by REX.X)
@@ -93,21 +93,21 @@ Output (AT&T syntax):
 
     0000000000000000 <.text>:
        0:   48 83 c0 0a             add    $0xa,%rax
-       4:   4c 01 c1                add    %r8,%r9
+       4:   4d 01 c1                add    %r8,%r9
        7:   4c 03 47 0a             add    0xa(%rdi),%r8
 
 For Intel syntax output:
 
 ``` bash
-$ objdump -d --disassembler-options=intel-mnemonic test.o
+$ objdump -d -M intel test.o
 ```
 
     0000000000000000 <.text>:
        0:   48 83 c0 0a             add    rax,0xa
-       4:   4c 01 c1                add    r9,r8
+       4:   4d 01 c1                add    r9,r8
        7:   4c 03 47 0a             add    r8,QWORD PTR [rdi+0xa]
 
-## Manual Decoding Example: ADD r8, \[rdi+0xa\]
+## Manual Decoding Example: ADD r8, [rdi+0xa]
 
 Let’s decode the bytes `4c 03 47 0a` from the third instruction above.
 
@@ -137,7 +137,7 @@ Let’s decode the bytes `4c 03 47 0a` from the third instruction above.
 
 `0a` is the 8-bit displacement (10 in decimal).
 
-**Result:** The instruction reads “ADD r8 to \[rdi+0x0a\]”. In AT&T syntax: `add 0xa(%rdi), %r8`. In Intel syntax: `add r8, [rdi+0xa]`.
+**Result:** The instruction adds the qword at [rdi+0xa] to r8. In AT&T syntax: `add 0xa(%rdi), %r8`. In Intel syntax: `add r8, [rdi+0xa]`.
 
 ## General-Purpose Register Encoding
 
@@ -158,50 +158,177 @@ When using r8–r15, you encode the low 3 bits in ModR/M (or SIB) and set the co
 
 ## Another Example: ADD r9, r8
 
-Bytes: `4c 01 c1`
+Bytes: `4d 01 c1`
 
-- `4c` — REX.W=1, REX.R=1 (r9 as dest), REX.B=1 (r8 as src)
+- `4d` — REX.W=1, REX.R=1 (extends the reg field for r8, the source), REX.B=1 (extends the r/m field for r9, the destination)
 - `01` — ADD r/m64, r64 opcode (note: source is in reg field, destination in r/m)
-- `c1` — mod=`11` (register mode), reg=`000` (r8 with REX.B=1), r/m=`001` (r9 with REX.B=1)
+- `c1` — mod=`11` (register mode), reg=`000` (r8 with REX.R=1), r/m=`001` (r9 with REX.B=1)
 
 In AT&T syntax: `add %r8, %r9` (source first, destination second).
 
-## SIB Encoding Example: ADD \[rax+rcx\*4+10\], r8
+## SIB Encoding Example: ADD r8, [rax+rcx*4]
 
-Bytes: `4c 03 84 88 0a 00 00 00`
-
-- `4c` — REX.W=1, REX.R=1 (r8 as dest)
-- `03` — ADD r/m64, r64 opcode
-- `84` — mod=`10` (32-bit displacement), reg=`000` (r8), r/m=`100` (SIB follows)
-- `88` — SIB byte: scale=`10` (4x), index=`000` (rax), base=`000` (rax)
-- `0a 00 00 00` — 32-bit displacement (10 in little-endian)
-
-Wait—this example has an issue. Let me correct it: if you want base=rax and index=rcx, the SIB byte should be `8c` (scale=`10`, index=`001`, base=`100`). The mod should reflect that both registers and displacement are used.
-
-Actually, let’s use: `[rax+rcx*4+10]`
-
-- `4c` — REX.W=1, REX.R=1
-- `03` — ADD opcode
-- `84` — mod=`10`, reg=`000`, r/m=`100` (SIB)
-- `8c` — SIB: scale=`10` (4x), index=`001` (rcx), base=`100` (rsp)
-
-No—base=`100` is rsp. Use base=`000` (rax):
-
-- `88` — SIB: scale=`10` (4x), index=`000` (rax), base=`000` (rax)
-
-This is getting confusing. A clearer example: `[rdi+rsi*2]`
+Assembly (AT&T syntax), adding the memory operand to r8:
 
 ``` asm
-add %r8, 0(%rdi,%rsi,2)
+add (%rax,%rcx,4), %r8
 ```
 
-Bytes: `4c 03 84 77 00`
+Bytes: `4c 03 04 88`
+
+- `4c` — REX.W=1, REX.R=1 (r8 in the reg field, the destination)
+- `03` — ADD r64, r/m64 opcode
+- `04` — mod=`00` (no displacement), reg=`000` (r8), r/m=`100` (SIB follows)
+- `88` — SIB byte: scale=`10` (4x), index=`001` (rcx), base=`000` (rax)
+
+With a displacement, mod changes and the displacement bytes follow the SIB. For `add 8(%rdi,%rsi,2), %r8`:
+
+Bytes: `4c 03 44 77 08`
 
 - `4c` — REX.W=1, REX.R=1
-- `03` — ADD opcode
-- `84` — mod=`10` (displacement follows), reg=`000` (r8), r/m=`100` (SIB)
+- `03` — ADD r64, r/m64 opcode
+- `44` — mod=`01` (8-bit displacement), reg=`000` (r8), r/m=`100` (SIB)
 - `77` — SIB: scale=`01` (2x), index=`110` (rsi), base=`111` (rdi)
-- `00` — 32-bit displacement (0)
+- `08` — 8-bit displacement (8)
+
+Note that GNU `as` prefers the opcode `01` form (ADD r/m64, r64, destination in r/m) when the memory operand is the destination, so `add %r8, (%rax,%rcx,4)` assembles to `4c 01 04 88` instead.
+
+## Verifying the Encodings in C
+
+The encodings above can be checked at runtime: copy the instruction bytes into
+executable memory, call them like tiny functions, and compare the results. The
+program below verifies every byte sequence used in this guide (and shows that
+`4c 01 c1`, the wrong REX byte from an earlier version of this post, targets
+`%rcx` and leaves `%r9` untouched).
+
+``` c
+#include <stdint.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/mman.h>
+
+typedef uint64_t u64;
+
+static unsigned char *code;
+
+/* Copy the instruction bytes into executable memory and append RET
+ * (0xC3) so the snippet works as a tiny function. */
+static void load(const unsigned char *b, size_t n) {
+    if (!code)
+        code = mmap(NULL, 4096, PROT_READ | PROT_WRITE | PROT_EXEC,
+                    MAP_PRIVATE | MAP_ANON, -1, 0);
+    memcpy(code, b, n);
+    code[n] = 0xC3;
+    __builtin___clear_cache((char *)code, (char *)code + n + 1);
+}
+
+static int fails;
+
+static void report(const char *what, const unsigned char *b, size_t n,
+                   u64 got, u64 want) {
+    size_t i;
+    printf("%-42s bytes: ", what);
+    for (i = 0; i < n; i++)
+        printf("%02x ", b[i]);
+    printf("-> %llu  [%s]\n", (unsigned long long)got, got == want ? "PASS" : "FAIL");
+    fails += got != want;
+}
+
+#define CLOBBERS "rax", "rcx", "rdx", "rsi", "rdi", \
+                "r8", "r9", "r10", "r11", "cc", "memory"
+
+int main(void) {
+    u64 out;
+
+    /* 4d 01 c1  (ADD r9, r8): r9 = r9 + r8 = 12 + 30 */
+    {
+        static const unsigned char b[] = {0x4d, 0x01, 0xc1};
+        u64 a = 30, c = 12;
+        load(b, sizeof b);
+        asm volatile("movq %1, %%r8\n\tmovq %2, %%r9\n\tcall *%3\n\tmovq %%r9, %0"
+                     : "=r"(out) : "r"(a), "r"(c), "r"(code) : CLOBBERS);
+        report("add %r8, %r9        (12 + 30)", b, sizeof b, out, 42);
+    }
+
+    /* 4c 01 c1  (the bytes the guide first showed): ADD rcx, r8.
+     * r9 must be untouched, proving these bytes target rcx, not r9. */
+    {
+        static const unsigned char b[] = {0x4c, 0x01, 0xc1};
+        u64 a = 30, c = 12;
+        load(b, sizeof b);
+        asm volatile("movq %1, %%r8\n\tmovq %2, %%r9\n\tcall *%3\n\tmovq %%r9, %0"
+                     : "=r"(out) : "r"(a), "r"(c), "r"(code) : CLOBBERS);
+        report("add %r8, %rcx       (r9 stays 12)", b, sizeof b, out, 12);
+    }
+
+    /* 4c 03 47 0a  (ADD r8, [rdi+0xa]): r8 = 100 + *(u64*)(buf+10) */
+    {
+        static const unsigned char b[] = {0x4c, 0x03, 0x47, 0x0a};
+        unsigned char buf[32];
+        memset(buf, 0, sizeof buf);
+        *(u64 *)(buf + 10) = 555;
+        u64 base = 100;
+        load(b, sizeof b);
+        asm volatile("movq %1, %%rdi\n\tmovq %2, %%r8\n\tcall *%3\n\tmovq %%r8, %0"
+                     : "=r"(out) : "r"(buf), "r"(base), "r"(code) : CLOBBERS);
+        report("add 0xa(%rdi), %r8  (100 + 555)", b, sizeof b, out, 655);
+    }
+
+    /* 4c 03 04 88  (ADD r8, [rax+rcx*4]): rcx=2 scales to byte offset
+     * 2*4=8, so the qword at arr+8, which is arr[1] */
+    {
+        static const unsigned char b[] = {0x4c, 0x03, 0x04, 0x88};
+        u64 arr[8] = {9, 55, 9, 9, 9, 9, 9, 9};
+        u64 idx = 2, base = 1000;
+        load(b, sizeof b);
+        asm volatile("movq %1, %%rax\n\tmovq %2, %%rcx\n\tmovq %3, %%r8\n\t"
+                     "call *%4\n\tmovq %%r8, %0"
+                     : "=r"(out)
+                     : "r"(arr), "r"(idx), "r"(base), "r"(code) : CLOBBERS);
+        report("add (%rax,%rcx,4), %r8   (1000 + arr[1])", b, sizeof b, out, 1055);
+    }
+
+    /* 4c 03 44 77 08  (ADD r8, [rdi+rsi*2+8]): r8 = 1 + *(u64*)(e+8+3*2) */
+    {
+        static const unsigned char b[] = {0x4c, 0x03, 0x44, 0x77, 0x08};
+        unsigned char e[32];
+        memset(e, 0, sizeof e);
+        *(u64 *)(e + 8 + 3 * 2) = 999;
+        u64 idx = 3, base = 1;
+        load(b, sizeof b);
+        asm volatile("movq %1, %%rdi\n\tmovq %2, %%rsi\n\tmovq %3, %%r8\n\t"
+                     "call *%4\n\tmovq %%r8, %0"
+                     : "=r"(out)
+                     : "r"(e), "r"(idx), "r"(base), "r"(code) : CLOBBERS);
+        report("add 8(%rdi,%rsi,2), %r8  (1 + 999)", b, sizeof b, out, 1000);
+    }
+
+    printf(fails ? "%d check(s) FAILED\n" : "all checks passed\n", fails);
+    return fails != 0;
+}
+```
+
+Build and run on an x86-64 Linux/BSD/macOS box:
+
+``` bash
+$ cc -Wall -O2 -o verify_encoding verify_encoding.c
+$ ./verify_encoding
+```
+
+Output:
+
+``` text
+add %r8, %r9        (12 + 30)              bytes: 4d 01 c1 -> 42  [PASS]
+add %r8, %rcx       (r9 stays 12)          bytes: 4c 01 c1 -> 12  [PASS]
+add 0xa(%rdi), %r8  (100 + 555)            bytes: 4c 03 47 0a -> 655  [PASS]
+add (%rax,%rcx,4), %r8   (1000 + arr[1])   bytes: 4c 03 04 88 -> 1055  [PASS]
+add 8(%rdi,%rsi,2), %r8  (1 + 999)         bytes: 4c 03 44 77 08 -> 1000  [PASS]
+all checks passed
+```
+
+Each line executes the raw bytes on a real CPU and checks the arithmetic,
+including the SIB scale (`rcx=2` with scale 4 reads the qword at byte offset
+`2*4=8`, which is `arr[1]`).
 
 ## Working with Instruction References
 
