@@ -29,7 +29,7 @@ The letters indicate the symbol type:
 
 - `T` — function or data in the text (code) section
 - `D` — initialized global data
-- B\` — uninitialized global data (BSS section)
+- `B` — uninitialized global data (BSS section)
 - `U` — undefined symbol (external reference)
 - `a` — absolute symbol
 - `R` — read-only data
@@ -129,13 +129,13 @@ For shared objects (`.so` files), `nm` still works but `objdump` provides more d
 objdump -t lib.so
 ```
 
-For a tree view of dependencies between object files in a library:
+To list the object files contained in a static library archive:
 
 ``` bash
 ar t lib.a
 ```
 
-This lists the object files contained in the archive, which you can then inspect individually with `nm`.
+This lists each member's name, which you can then inspect individually with `nm`.
 
 ## Troubleshooting Common Issues
 
