@@ -91,7 +91,7 @@ While module parameters still work, several modern approaches often provide clea
 **eBPF with bpftrace**: Attach lightweight probes without modifying source code:
 
 ``` bash
-bpftrace -e 'tracepoint:sched:sched_switch { @us[args->prev_pid] = sum(args->prev_runtime); }'
+bpftrace -e 'tracepoint:sched:sched_stat_runtime { @us[args->pid] = sum(args->runtime); }'
 ```
 
 This aggregates runtime by PID across all context switches without touching kernel code.
@@ -135,7 +135,7 @@ If you’re modifying scheduler code anyway, module parameters cost almost nothi
 
 ## Best Practices
 
-**Timing functions**: Use `ktime_get_ns()` for nanosecond precision instead of legacy `do_gettimeofday()`. For very frequent calls, consider `local_clock_ns()` or `sched_clock_cpu()`.
+**Timing functions**: Use `ktime_get_ns()` for nanosecond precision instead of legacy `do_gettimeofday()`. For very frequent calls, consider `local_clock()` (already nanoseconds) or `sched_clock_cpu()`.
 
 **Lock safety**: Avoid acquiring locks or doing heavy work in hot paths like schedulers. Keep instrumentation minimal—a few reads and conditional branches only.
 
