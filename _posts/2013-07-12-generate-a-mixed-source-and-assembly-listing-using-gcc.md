@@ -149,13 +149,13 @@ objdump -S binary | grep -A 50 "<main>:"
 Or use awk to print lines around a specific function:
 
 ``` bash
-objdump -S binary | awk '/^[0-9a-f]* <my_function>:/,/^[0-9a-f]* <[^>]*>:/' | head -n 50
+objdump -S binary | awk '/^[0-9a-f]* </ && !/my_function>/ && f {exit} /<my_function>:/ {f=1} f' | head -n 50
 ```
 
 To extract and save a function’s assembly:
 
 ``` bash
-objdump -S binary | sed -n '/^[0-9a-f]* <target_function>:/,/^[0-9a-f]* <[^>]*>:/p' > function.asm
+objdump -S binary | awk '/^[0-9a-f]* </ && !/target_function>/ && f {exit} /<target_function>:/ {f=1} f' > function.asm
 ```
 
 ## Understanding the Output Format
