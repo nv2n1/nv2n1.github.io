@@ -22,7 +22,7 @@ Converting a managed solution to unmanaged in on-premise Dynamics CRM requires d
 
 Before running any SQL, take a full backup:
 
-``` bash
+``` powershell
 sqlcmd -S <SERVER> -U <USERNAME> -P <PASSWORD> -Q "BACKUP DATABASE [OrganizationName_MSCRM] TO DISK = 'D:\Backups\PreUnmanage_$(Get-Date -Format yyyyMMdd_HHmmss).bak'"
 ```
 
