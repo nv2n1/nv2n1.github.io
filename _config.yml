@@ -1,1 +1,5 @@
-title: SysTutorials is Deprecated
+title: SysTutorials
+description: Archive of SysTutorials posts on Linux, systems, and software.
+permalink: /:title/
+plugins:
+  - jekyll-sitemap
