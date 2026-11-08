@@ -8,14 +8,14 @@ categories: [programming-languages]
 canonical: /how-to-make-iptables-ip6tables-configurations-permanent-across-reboot-on-centos-7-linux/
 ---
 
-Rocky Linux 9 and later distributions use FirewallD as the default firewall management tool. However, if you need direct control over iptables and ip6tables rules, you can disable FirewallD and use the `iptables-services` package to restore your rules at boot.
+CentOS 7 uses FirewallD as the default firewall management tool. However, if you need direct control over iptables and ip6tables rules, you can disable FirewallD and use the `iptables-services` package to restore your rules at boot.
 
 ## Install and Configure iptables-services
 
 Start by installing the iptables-services package:
 
 ``` bash
-dnf install iptables-services
+yum install iptables-services
 ```
 
 Create the rule files if they don’t exist:
