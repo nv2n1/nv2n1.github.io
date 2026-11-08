@@ -14,7 +14,7 @@ The `scp` command supports bandwidth limiting through the `-l` flag, which caps 
 
 The `-l` flag specifies the maximum bandwidth in kilobits per second (Kbit/s):
 
-```wp-block-code
+``` bash
 # Limit to 1000 Kbit/s (approximately 125 KB/s)
 scp -l 1000 largefile.tar.gz user@remote:/path/to/destination/
 
@@ -32,7 +32,7 @@ scp -l 500 user@remote:/path/to/file ./
 
 **Don’t saturate a shared office connection:**
 
-```wp-block-code
+``` bash
 scp -l 4000 backup.tar.gz server:/backups/
 ```
 
@@ -40,14 +40,14 @@ This limits transfers to about 500 KB/s — enough for the transfer to complete 
 
 **Transfer large files overnight without impacting daytime usage:**
 
-```wp-block-code
+``` bash
 # Use with nohup for unattended transfers
 nohup scp -l 2000 dataset.iso server:/data/ &
 ```
 
 **Keep an interactive SSH session responsive during transfer:**
 
-```wp-block-code
+``` bash
 scp -l 8000 bigfile user@host:/tmp/
 ```
 
@@ -55,7 +55,7 @@ scp -l 8000 bigfile user@host:/tmp/
 
 The `-l` flag has several limitations:
 
-- **Only works with SCP protocol:** It doesn’t work with SFTP (`scp -s`) or rsync
+- **SFTP mode:** recent OpenSSH applies `-l` in SFTP mode too (the limit is enforced client-side); it does not affect rsync over ssh
 - **Rough limiting:** The bandwidth cap is approximate, not precise
 - **SCP protocol is deprecated:** OpenSSH has deprecated the SCP protocol in favor of SFTP since OpenSSH 9.0
 - **No burst control:** Short transfers may exceed the limit before throttling kicks in
@@ -64,7 +64,7 @@ The `-l` flag has several limitations:
 
 `rsync` provides more precise bandwidth control and is generally preferred over SCP:
 
-```wp-block-code
+``` bash
 # rsync uses KB/s (not Kbit/s like scp)
 rsync -avz --progress --bwlimit=500 largefile user@remote:/path/
 
@@ -84,7 +84,7 @@ Advantages of rsync over scp:
 
 `trickle` is a userspace bandwidth shaper that works with any TCP application:
 
-```wp-block-code
+``` bash
 sudo apt install trickle    # Ubuntu/Debian
 sudo dnf install trickle    # Fedora
 
@@ -101,10 +101,11 @@ Trickle works by intercepting socket calls, so it works with any program that us
 
 For system-wide bandwidth management, use Linux traffic control:
 
-```wp-block-code
-# Limit all outgoing SSH traffic to 1 Mbps
-sudo tc qdisc add dev eth0 root handle 1: htb default 10
+``` bash
+# Rate-limit outgoing SSH (port 22) to 1 Mbps
+sudo tc qdisc add dev eth0 root handle 1: htb default 30
 sudo tc class add dev eth0 parent 1: classid 1:10 htb rate 1mbit
+sudo tc filter add dev eth0 protocol ip parent 1: prio 1 u32 match ip dport 22 0xffff flowid 1:10
 
 # Remove the rule
 sudo tc qdisc del dev eth0 root
