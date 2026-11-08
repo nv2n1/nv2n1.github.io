@@ -20,7 +20,7 @@ hdfs fsck / -files -blocks -replicaDetails | grep "Replica.*1$"
 
 This command traverses the entire filesystem starting from root, reports block details, and filters for blocks with only one replica. However, this approach can be slow on large clusters and generates substantial output.
 
-A more efficient method uses `hdfs fsck` with `-storagepolicies` flag and direct inspection:
+A more efficient method uses `hdfs fsck` with block reporting and direct inspection:
 
 ``` bash
 hdfs fsck / -files -blocks 2>/dev/null | awk '/UNDER_REPLICATED|Block.*Replica/ {print}'
@@ -31,23 +31,27 @@ hdfs fsck / -files -blocks 2>/dev/null | awk '/UNDER_REPLICATED|Block.*Replica/ 
 To list only the actual files (not blocks) with replication factor 1:
 
 ``` bash
-hdfs fsck / -files -blocks 2>/dev/null | grep -B2 "under replicated Block"
+hdfs fsck / -files -blocks 2>/dev/null | grep -B2 -i "under.replicated"
 ```
 
 For a cleaner output showing just the file paths:
 
+Hadoop's `hdfs dfs -find` does not support `-exec` (it only matches and prints paths), so drive it with a shell loop:
+
 ``` bash
-hdfs dfs -find / -type f -exec hdfs fsck {} \; 2>/dev/null | grep -i "under.replicated" | awk '{print $NF}'
+hdfs dfs -find / -type f | while read -r f; do
+  hdfs fsck "$f" 2>/dev/null | grep -qi "under.replicated" && echo "$f"
+done
 ```
 
 A better approach uses the NameNode WebUI or queries the fsimage directly. If you have access to the NameNode, use:
 
 ``` bash
-hdfs oiv -p Delimited -i /path/to/fsimage -o /tmp/fsimage.txt
-cat /tmp/fsimage.txt | awk -F',' '$6 == 1 {print $2}' | sort -u
+hdfs oiv -p Delimited -delimiter , -i /path/to/fsimage -o /tmp/fsimage.txt
+cat /tmp/fsimage.txt | awk -F',' '$2 == 1 {print $1}' | sort -u
 ```
 
-This reads the fsimage file and extracts filenames where the replication factor (column 6) equals 1.
+This reads the fsimage file and extracts filenames where the replication factor (column 2; column 1 is the path) equals 1.
 
 ## Using JMX Metrics
 
