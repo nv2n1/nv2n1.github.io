@@ -24,7 +24,7 @@ For most technical blogs, you have several solid options:
 1.  Create a Zapier account and connect your RSS feed as a trigger
 2.  Select your RSS feed URL and test the connection
 3.  Add an action for each platform (Twitter, LinkedIn, Bluesky, etc.)
-4.  Customize the post format—most tools let you use feed fields like `{{title}}`, `{{link}}`, `{{description}}`
+4.  Customize the post format—most tools let you use feed fields like `{% raw %}{{{% endraw %}title}}`, `{% raw %}{{{% endraw %}link}}`, `{% raw %}{{{% endraw %}description}}`
 5.  Set posting frequency (typically 1-24 hours)
 6.  Enable the Zap and monitor the first few posts
 

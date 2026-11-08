@@ -2,6 +2,7 @@
 title: "Fedora \u4e2d\u6587\u5b57\u4f53\u914d\u7f6e\u6307\u5357"
 date: 2013-07-12 16:31:44 +0000
 layout: post
+permalink: /fedora-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
 canonical: https://www.systutorials.com/fedora-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
 ---
 

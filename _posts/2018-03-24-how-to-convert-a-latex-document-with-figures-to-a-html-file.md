@@ -72,7 +72,7 @@ If figures reference absolute paths, convert them to relative paths in your LaTe
 
 ``` latex
 \usepackage{graphicx}
-\graphicspath{{./figures/}}
+\graphicspath{% raw %}{{{% endraw %}./figures/}}
 ```
 
 ## Math Rendering

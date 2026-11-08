@@ -216,9 +216,9 @@ Create `Views/PartMaster/Part/CustomerPart.cshtml`:
     </thead>
     <tbody>
         <tr ng-repeat="part in parts">
-            <td>{{part.PartId}}</td>
-            <td>{{part.PartName}}</td>
-            <td>{{part.Type}}</td>
+            <td>{% raw %}{{{% endraw %}part.PartId}}</td>
+            <td>{% raw %}{{{% endraw %}part.PartName}}</td>
+            <td>{% raw %}{{{% endraw %}part.Type}}</td>
         </tr>
     </tbody>
 </table>
@@ -241,9 +241,9 @@ Create `Views/PartMaster/Part/SupplierPart.cshtml` similarly:
     </thead>
     <tbody>
         <tr ng-repeat="part in parts">
-            <td>{{part.PartId}}</td>
-            <td>{{part.PartName}}</td>
-            <td>{{part.Supplier}}</td>
+            <td>{% raw %}{{{% endraw %}part.PartId}}</td>
+            <td>{% raw %}{{{% endraw %}part.PartName}}</td>
+            <td>{% raw %}{{{% endraw %}part.Supplier}}</td>
         </tr>
     </tbody>
 </table>
@@ -276,8 +276,8 @@ The resolved `parts` data is automatically injected into the controller. Use `$l
 Link to parameterized routes using `ng-href` to prevent broken links during parsing:
 
 ``` html
-<a ng-href="#!/PartMaster/SPart/{{vendor.Id}}" class="btn btn-primary">
-    View Parts for {{vendor.Name}}
+<a ng-href="#!/PartMaster/SPart/{% raw %}{{{% endraw %}vendor.Id}}" class="btn btn-primary">
+    View Parts for {% raw %}{{{% endraw %}vendor.Name}}
 </a>
 ```
 

@@ -142,7 +142,7 @@ This sets the password change date to epoch, forcing a password change at next l
 ``` bash
 # Ansible with vault
 ansible-vault create group_vars/webservers/vault.yml
-# Then reference: {{ vault_password }}
+# Then reference: {% raw %}{{{% endraw %} vault_password }}
 ```
 
 **Centralized authentication** — LDAP, Active Directory, FreeIPA, or RADIUS offload password management and policy enforcement to dedicated servers.

@@ -353,10 +353,10 @@ Create `Views/PartJson/Index.cshtml`:
 
     <!-- Messages -->
     <div ng-if="successMessage" class="alert alert-success" role="alert">
-        {{successMessage}}
+        {% raw %}{{{% endraw %}successMessage}}
     </div>
     <div ng-if="errorMessage" class="alert alert-danger" role="alert">
-        {{errorMessage}}
+        {% raw %}{{{% endraw %}errorMessage}}
     </div>
 
     <!-- Add Part Button -->
@@ -369,7 +369,7 @@ Create `Views/PartJson/Index.cshtml`:
 
     <!-- Edit Form Modal -->
     <div ng-if="editingPart" class="modal-form">
-        <h4>{{editingPart.id == 0 ? 'Add New Part' : 'Edit Part'}}</h4>
+        <h4>{% raw %}{{{% endraw %}editingPart.id == 0 ? 'Add New Part' : 'Edit Part'}}</h4>
         <form name="partForm" ng-submit="savePart(editingPart)">
             <div class="form-row">
                 <div class="form-group col-md-3">
@@ -400,16 +400,16 @@ Create `Views/PartJson/Index.cshtml`:
             <thead>
                 <tr>
                     <th ng-click="sortBy('id')">
-                        ID <span class="sort-indicator" ng-if="sortField === 'id'">{{sortReverse ? '▼' : '▲'}}</span>
+                        ID <span class="sort-indicator" ng-if="sortField === 'id'">{% raw %}{{{% endraw %}sortReverse ? '▼' : '▲'}}</span>
                     </th>
                     <th ng-click="sortBy('partNum')">
-                        Part Number <span class="sort-indicator" ng-if="sortField === 'partNum'">{{sortReverse ? '▼' : '▲'}}</span>
+                        Part Number <span class="sort-indicator" ng-if="sortField === 'partNum'">{% raw %}{{{% endraw %}sortReverse ? '▼' : '▲'}}</span>
                     </th>
                     <th ng-click="sortBy('name')">
-                        Name <span class="sort-indicator" ng-if="sortField === 'name'">{{sortReverse ? '▼' : '▲'}}</span>
+                        Name <span class="sort-indicator" ng-if="sortField === 'name'">{% raw %}{{{% endraw %}sortReverse ? '▼' : '▲'}}</span>
                     </th>
                     <th ng-click="sortBy('supplier')">
-                        Supplier <span class="sort-indicator" ng-if="sortField === 'supplier'">{{sortReverse ? '▼' : '▲'}}</span>
+                        Supplier <span class="sort-indicator" ng-if="sortField === 'supplier'">{% raw %}{{{% endraw %}sortReverse ? '▼' : '▲'}}</span>
                     </th>
                     <th ng-click="sortBy('type')">
                         Type <span class="sort-indicator"

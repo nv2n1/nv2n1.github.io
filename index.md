@@ -1,16 +1,23 @@
 ---
-title: SysTutorials is Deprecated
-layout: default
+title: SysTutorials
+layout: home
 ---
 
-# SysTutorials is deprecated
+<span class="badge">Deprecated</span>
 
-SysTutorials is no longer maintained and has been deprecated.
+SysTutorials is no longer maintained. All posts are archived below as static
+pages. For up-to-date information, refer to official documentation. Questions?
+Contact <span class="email-contact"></span>.
 
-Please refer to official documentation for up-to-date system tutorials and information.
-
-For help or questions, feel free to reach out to <span class="email-contact"></span>.
-
----
-
-*Last updated: November 2026*
+{% assign year = "" %}
+{% for post in site.posts %}
+  {% assign y = post.date | date: "%Y" %}
+  {% if y != year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    {% assign year = y %}
+<h2>{{ y }}</h2>
+<ul class="posts">
+  {% endif %}
+  <li><time>{{ post.date | date: "%b %-d" }}</time> <a href="{{ post.url }}">{{ post.title | escape }}</a></li>
+{% endfor %}
+</ul>

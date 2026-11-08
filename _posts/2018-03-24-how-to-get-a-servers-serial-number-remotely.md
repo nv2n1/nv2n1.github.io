@@ -87,7 +87,7 @@ For larger deployments, combine with Ansible:
 
 - name: Display serial number
   ansible.builtin.debug:
-    msg: "{{ inventory_hostname }}: {{ serial_output.stdout }}"
+    msg: "{% raw %}{{{% endraw %} inventory_hostname }}: {% raw %}{{{% endraw %} serial_output.stdout }}"
 ```
 
 ## Handling permission issues

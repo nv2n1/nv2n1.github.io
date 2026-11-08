@@ -20,7 +20,7 @@ struct Stat {
 
 int main() {
     vector<int> init = {1, 2, 3};
-    vector<pair<int, int>> tv = {{0, 1}, {2, 3}};
+    vector<pair<int, int>> tv = {% raw %}{{{% endraw %}0, 1}, {2, 3}};
 
     Stat init_stat {.depth = 0, .moves = tv, .vec = init};
     return 0;
@@ -82,7 +82,7 @@ init_stat.moves = tv;
 **3. Brace initialization (works in C++11)**
 
 ``` cpp
-Stat init_stat {{init}, 0, {tv}};
+Stat init_stat {% raw %}{{{% endraw %}init}, 0, {tv}};
 ```
 
 ### Compiler Version Considerations

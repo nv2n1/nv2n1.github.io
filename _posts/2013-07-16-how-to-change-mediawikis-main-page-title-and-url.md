@@ -68,10 +68,10 @@ Restart any background services or clear your application cache if using one.
 Search your wiki for pages that hardcode references to “Main Page” in templates, transclusions, or navigation elements. Use the **Special:Search** page or the search function and look for:
 
 - Pages linking to `[[Main Page]]`
-- Templates that include `{{MAINPAGENAME}}`
+- Templates that include `{% raw %}{{{% endraw %}MAINPAGENAME}}`
 - Navigation boxes or sidebar configurations
 
-Update these references to use your new main page title. If you use the `{{MAINPAGENAME}}` magic word, it will automatically resolve to your new main page, so you may not need to change these.
+Update these references to use your new main page title. If you use the `{% raw %}{{{% endraw %}MAINPAGENAME}}` magic word, it will automatically resolve to your new main page, so you may not need to change these.
 
 ## Step 6: Verify and Test
 

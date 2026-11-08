@@ -74,7 +74,7 @@ cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 grep "pattern" largefile.txt | xclip -selection clipboard
 
 # Copy Docker container IDs and names
-docker ps --format "table {{.ID}}\t{{.Names}}" | xclip -selection clipboard
+docker ps --format "table {% raw %}{{{% endraw %}.ID}}\t{% raw %}{{{% endraw %}.Names}}" | xclip -selection clipboard
 
 # Copy a systemctl status for pasting in reports
 systemctl status nginx | xclip -selection clipboard
