@@ -52,7 +52,7 @@ vncserver -geometry 1024x768 -depth 24
 
 Still respects geometry better than older VNC servers, though GNOME 3+ may still override it.
 
-**GNOME Remote Desktop** (built-in, Wayland-compatible):\
+**GNOME Remote Desktop** (built-in, Wayland-compatible):
 Uses RDP protocol natively and handles resolution negotiation more intelligently with the desktop environment.
 
 **RDP via xrdp**:
@@ -64,7 +64,7 @@ systemctl start xrdp
 
 Better integration with GNOME display settings than VNC.
 
-**Headless Approach** (if no local display needed):\
+**Headless Approach** (if no local display needed):
 For server environments, disable the display manager entirely and use SSH port forwarding or web-based tools instead of VNC.
 
 ## Persistent Resolution Configuration

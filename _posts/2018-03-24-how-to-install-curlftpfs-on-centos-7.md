@@ -111,20 +111,20 @@ curlftpfs localhost:2121/path ~/ftp-mount
 
 ## Troubleshooting
 
-**Permission denied errors:**\
+**Permission denied errors:**
 Ensure the mount directory is writable and FUSE is properly configured. Check `/etc/fuse.conf` for user mount restrictions.
 
-**Slow performance:**\
+**Slow performance:**
 Use `-o direct_io` to disable caching, or adjust `entry_timeout` and `attr_timeout` values based on your needs.
 
-**Connection timeouts:**\
+**Connection timeouts:**
 Increase libcurl timeouts with environment variables:
 
 ``` bash
 LIBCURL_TIMEOUT=30 curlftpfs ftp://user:pass@ftp.example.com ~/ftp-mount
 ```
 
-**FTP mode issues:**\
+**FTP mode issues:**
 Some servers require passive mode. curlftpfs uses passive by default, but if you encounter issues, verify your firewall rules allow data connections.
 
 ## Alternatives

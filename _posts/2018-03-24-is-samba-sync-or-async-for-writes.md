@@ -24,10 +24,10 @@ This approach maximizes throughput but risks data loss if the system crashes bet
 
 Windows clients can request synchronous writes via the `FILE_FLAG_WRITE_THROUGH` flag in the CreateFile API. Samba honors this flag through two configuration options:
 
-**strict sync** (default: no)\
+**strict sync** (default: no)
 : When set to `yes`, Samba respects the `FILE_FLAG_WRITE_THROUGH` flag from clients. Writes are flushed to disk before returning to the caller. This is slow but provides per-request control.
 
-**sync always** (default: no)\
+**sync always** (default: no)
 : When set to `yes`, all writes execute synchronously regardless of client flags. This guarantees data hits disk before acknowledgment but severely impacts performance. Requires `strict sync = yes` to function.
 
 ### Configuration Matrix

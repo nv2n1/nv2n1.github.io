@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /how-to-disable-the-coredump-function-of-systemd-on-linux/
 ---
 
-\[md\]\
+\[md\]
 Systemd’s coredump handler captures process crash dumps by default, which can consume significant disk space on development or test systems. Here’s how to disable or control coredump storage.
 
 \## Quick Solution
@@ -32,16 +32,16 @@ This prevents coredumps from being stored permanently while still logging crash 
 
 The `Storage=` directive in `coredump.conf` controls where crashes are saved:
 
-– `none` — Logs crashes but discards dumps immediately\
-– `external` — Stores dumps in `/var/lib/systemd/coredump/` (default)\
-– `journal` — Stores dumps in the systemd journal with rotation\
+– `none` — Logs crashes but discards dumps immediately
+– `external` — Stores dumps in `/var/lib/systemd/coredump/` (default)
+– `journal` — Stores dumps in the systemd journal with rotation
 – `both` — Stores in both external storage and journal
 
 Other useful directives:
 
-– `Compress=yes` — Compress stored coredumps (default on most distributions)\
-– `ProcessSizeMax=2G` — Maximum size of core dumps to process\
-– `MaxUse=` — Maximum disk space for stored dumps\
+– `Compress=yes` — Compress stored coredumps (default on most distributions)
+– `ProcessSizeMax=2G` — Maximum size of core dumps to process
+– `MaxUse=` — Maximum disk space for stored dumps
 – `KeepFree=` — Minimum free disk space to maintain
 
 \## Common Scenarios

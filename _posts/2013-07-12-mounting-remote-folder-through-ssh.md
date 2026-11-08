@@ -146,24 +146,24 @@ For high-performance remote storage, consider NFS, SMB/CIFS, or dedicated block 
 
 ## Troubleshooting
 
-**Permission denied errors:**\
+**Permission denied errors:**
 Check that your SSH user has read permissions on the remote path and that `allow_other` is set if needed.
 
-**Host key verification fails:**\
+**Host key verification fails:**
 Add the server to your `known_hosts`:
 
 ``` bash
 ssh-keyscan server >> ~/.ssh/known_hosts
 ```
 
-**Mount appears empty:**\
+**Mount appears empty:**
 Verify the remote path exists and contains files:
 
 ``` bash
 ssh username@server ls -la /path/to/folder
 ```
 
-**Resource busy on unmount:**\
+**Resource busy on unmount:**
 Close any open files or shells using the mount:
 
 ``` bash

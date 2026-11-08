@@ -16,7 +16,7 @@ iTunes backups are stored in device-specific directories. The location depends o
 
 **Windows:**
 
-    %APPDATA%\Apple Computer\MobileSync\Backup\
+    %APPDATA%\Apple Computer\MobileSync\Backup
 
 On Windows, the easiest way to navigate there is to press `Win + R`, type `%appdata%` and hit Enter, then navigate to `Apple Computer\MobileSync\Backup\`.
 

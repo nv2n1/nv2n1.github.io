@@ -72,8 +72,8 @@ Many applications already use Ctrl for their common shortcuts (Ctrl+C, Ctrl+V, C
 
 Check your desktop environment’s keyboard settings:
 
-**GNOME**: `Settings > Keyboard > Keyboard Shortcuts`\
-**KDE Plasma**: `System Settings > Shortcuts > Standard Shortcuts`\
+**GNOME**: `Settings > Keyboard > Keyboard Shortcuts`
+**KDE Plasma**: `System Settings > Shortcuts > Standard Shortcuts`
 **XFCE**: `Settings > Keyboard > Application Shortcuts`
 
 Look for shortcuts using Alt and either disable them or rebind them to something less common. Window manager shortcuts (Alt+Tab, Alt+F4) typically don’t conflict since you’re mapping both modifier and key combination together, but verify they work as expected after remapping.
@@ -101,7 +101,7 @@ For X11, modify `~/.xbindkeysrc` or use `xset r rate 660 30`.
 
 **Invert scrolling direction**: If you’re accustomed to macOS’s “natural” scrolling:
 
-**GNOME**: `Settings > Mouse & Touchpad > Natural Scrolling > On`\
+**GNOME**: `Settings > Mouse & Touchpad > Natural Scrolling > On`
 **KDE**: `System Settings > Input Devices > Mouse > Pointer > Scrolling direction`
 
 Or via command line for GNOME:

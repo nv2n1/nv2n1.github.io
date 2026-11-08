@@ -65,7 +65,7 @@ Your Name
 ```
 
 5.  Enable “Apply the following template to the replied message” and “Use instead of default quote header”
-6.  Check “Use HTML” and leave “Replace line breaks with\
+6.  Check “Use HTML” and leave “Replace line breaks with
     ” unchecked (you’re controlling breaks manually)
 
 **Common template variables:**

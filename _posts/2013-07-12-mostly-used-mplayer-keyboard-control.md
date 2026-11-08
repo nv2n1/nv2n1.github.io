@@ -14,165 +14,165 @@ MPlayer uses a fully configurable keyboard control layer. Most of these shortcut
 
 ## Playback Control
 
-**p** or **space**\
+**p** or **space**
 : Pause/unpause playback.
 
-**q** or **esc**\
+**q** or **esc**
 : Stop and quit.
 
-**u**\
+**u**
 : Stop playback (quit only if `-idle` not set).
 
-**.** (period)\
+**.** (period)
 : Frame-by-frame stepping. First press pauses; each subsequent press advances one frame. Any other key unpauses.
 
 ## Seeking
 
-**← →** (left/right arrow)\
+**← →** (left/right arrow)
 : Seek backward/forward 10 seconds.
 
-**↑ ↓** (up/down arrow)\
+**↑ ↓** (up/down arrow)
 : Seek forward/backward 1 minute.
 
-**Page Up / Page Down**\
+**Page Up / Page Down**
 : Seek forward/backward 10 minutes.
 
-**! @**\
+**! @**
 : Seek to beginning of previous/next chapter.
 
 ## Playback Speed
 
-**\[ \]**\
+**\[ \]**
 : Decrease/increase playback speed by 10%.
 
-**{ }**\
+**{ }**
 : Halve/double playback speed.
 
-**backspace**\
+**backspace**
 : Reset to normal speed.
 
 ## Playlist Navigation
 
-**\< \>**\
+**\< \>**
 : Previous/next file in playlist.
 
-**Enter**\
+**Enter**
 : Next file (continues past end of playlist).
 
-**Home / End**\
+**Home / End**
 : Next/previous entry in parent playtree list.
 
 ## Volume and Audio
 
-\*\*/ \* **or** 9 0\*\*\
+\*\*/ \* **or** 9 0\*\*
 : Decrease/increase volume.
 
-**m**\
+**m**
 : Toggle mute.
 
-**( )**\
+**( )**
 : Adjust audio balance (favor left or right channel).
 
-**+ –**\
+**+ –**
 : Adjust audio delay by ±0.1 seconds.
 
 ## Audio and Subtitle Tracks
 
-**\#** (DVDs, MPEG, Matroska, AVI)\
+**\#** (DVDs, MPEG, Matroska, AVI)
 : Cycle available audio tracks.
 
-**\_** (MPEG-TS, AVI, libavformat)\
+**\_** (MPEG-TS, AVI, libavformat)
 : Cycle available video tracks.
 
-**v**\
+**v**
 : Toggle subtitle visibility.
 
-**j**\
+**j**
 : Cycle through available subtitles.
 
-**y g**\
+**y g**
 : Step forward/backward in subtitle list.
 
-**a**\
+**a**
 : Toggle subtitle alignment (top/middle/bottom).
 
-**x z**\
+**x z**
 : Adjust subtitle delay by ±0.1 seconds.
 
-**r t**\
+**r t**
 : Move subtitles up/down.
 
-**f**\
+**f**
 : Toggle “forced subtitles” display.
 
 ## Display and Video
 
-**f**\
+**f**
 : Toggle fullscreen.
 
-**t**\
+**t**
 : Toggle always-on-top window.
 
-**o**\
+**o**
 : Cycle OSD states (none → seek indicator → seek + timer → seek + timer + total time).
 
-**d**\
+**d**
 : Cycle frame dropping (none → skip display → skip decoding).
 
-**w e**\
+**w e**
 : Decrease/increase pan-and-scan range.
 
-**i**\
+**i**
 : Show filename on OSD.
 
-**s** (requires `-vf screenshot`)\
+**s** (requires `-vf screenshot`)
 : Take screenshot or start/stop continuous screenshot mode.
 
-**d** (hardware video output: xvmc, vdpau, or software filters: yadif, kerndeint)\
+**d** (hardware video output: xvmc, vdpau, or software filters: yadif, kerndeint)
 : Activate/deactivate deinterlacer.
 
-**a** (DVD playback)\
+**a** (DVD playback)
 : Cycle through available DVD angles.
 
 ## Hardware-Accelerated Video Output
 
 The following apply when using hardware acceleration (xv, vidix, mga) or software filters (`-vf eq`, `-vf eq2`, `-vf hue`):
 
-**1 2**\
+**1 2**
 : Adjust contrast.
 
-**3 4**\
+**3 4**
 : Adjust brightness.
 
-**5 6**\
+**5 6**
 : Adjust hue.
 
-**7 8**\
+**7 8**
 : Adjust saturation.
 
 ## Legacy GUI Mode
 
 If MPlayer was compiled with GUI support, these keys take precedence:
 
-**Enter**\
+**Enter**
 : Start playback.
 
-**Esc**\
+**Esc**
 : Stop playback.
 
-**l**\
+**l**
 : Load file.
 
-**t**\
+**t**
 : Load subtitle.
 
-**c**\
+**c**
 : Open skin browser.
 
-**p**\
+**p**
 : Open playlist.
 
-**r**\
+**r**
 : Open preferences.
 
 ## Modern Alternative: mpv

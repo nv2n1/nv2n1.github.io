@@ -174,17 +174,17 @@ Hold space—should show Ctrl. Tap space quickly—should show space character. 
 
 ## Common Issues
 
-**Rapid typing registers as Ctrl instead of space**\
+**Rapid typing registers as Ctrl instead of space**
 Increase the timeout: `space = oneshot(ctrl, timeout=250)` in keyd, or `xcape -t 150` for xcape.
 
-**Nothing happens after enabling the service**\
+**Nothing happens after enabling the service**
 Check logs: `journalctl --user -u xcape -f` for xcape, or `journalctl -u udevmon -f` for interception-tools. Ensure systemd service has proper paths.
 
-**Works in some apps but not others**\
+**Works in some apps but not others**
 Some applications bypass normal key handling (games, some terminals). Test with a simple text editor first. For games, you may need separate profiles or disable the mapping temporarily.
 
-**Wayland session not working with xcape**\
+**Wayland session not working with xcape**
 xcape only works on X11. Switch to keyd or interception-tools for Wayland, or set `QT_QPA_PLATFORM=xcb` as a workaround (not reliable long-term).
 
-**Small delay before space is recognized**\
+**Small delay before space is recognized**
 This is normal—the system waits for the timeout before deciding “tap” vs “hold.” Reduce timeout if acceptable (trade-off: faster Ctrl, slower space).

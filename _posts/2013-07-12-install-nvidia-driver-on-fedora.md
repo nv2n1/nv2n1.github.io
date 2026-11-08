@@ -99,7 +99,7 @@ echo $XDG_SESSION_TYPE
 
 ### Troubleshooting
 
-**Driver module fails to build:**\
+**Driver module fails to build:**
 Ensure kernel headers match your running kernel version:
 
 ``` bash
@@ -114,7 +114,7 @@ sudo dnf reinstall kernel-devel-$(uname -r) kernel-headers-$(uname -r)
 sudo akmods --force
 ```
 
-**NVIDIA settings crashes or X session unstable:**\
+**NVIDIA settings crashes or X session unstable:**
 Check for driver/X compatibility issues:
 
 ``` bash
@@ -124,7 +124,7 @@ DISPLAY=:99 glxgears
 
 If rendering fails, verify the driver actually loaded via `nvidia-smi` first.
 
-**System boots to black screen:**\
+**System boots to black screen:**
 Boot into emergency mode with `Ctrl+Alt+F2` and check:
 
 ``` bash

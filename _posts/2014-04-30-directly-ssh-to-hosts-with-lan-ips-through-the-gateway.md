@@ -171,10 +171,10 @@ Look for lines starting with `Executing proxy command` to confirm ProxyCommand i
 ssh -J gateway.example.org user@10.0.3.100
 ```
 
-**For broader network access (not just SSH):**\
+**For broader network access (not just SSH):**
 Consider a VPN. ProxyCommand is SSH-specific.
 
-**For teams and complex access control:**\
+**For teams and complex access control:**
 A bastion host with restricted commands and audit logging beats simple ProxyCommand.
 
 ## Summary

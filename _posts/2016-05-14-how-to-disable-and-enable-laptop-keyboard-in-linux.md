@@ -143,8 +143,8 @@ Then run them as needed:
 
 You can bind these scripts to keyboard shortcuts in your desktop environment for one-key toggling:
 
-**GNOME/MATE:** Settings → Keyboard Shortcuts → Custom Shortcuts\
-**KDE Plasma:** System Settings → Shortcuts → Custom Shortcuts\
+**GNOME/MATE:** Settings → Keyboard Shortcuts → Custom Shortcuts
+**KDE Plasma:** System Settings → Shortcuts → Custom Shortcuts
 **Xfce:** Settings → Keyboard → Application Shortcuts
 
 ## Important Notes

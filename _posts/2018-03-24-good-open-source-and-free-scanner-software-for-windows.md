@@ -26,7 +26,7 @@ NAPS2 remains the top recommendation for Windows scanning. It’s straightforwar
 - Windows 7 or later
 - .NET Framework 4.5 or higher (usually already installed)
 
-**Getting it:**\
+**Getting it:**
 Download from the official GitHub repository: <a href="https://github.com/cyanfish/naps2" rel="nofollow noopener" target="_blank">https://github.com/cyanfish/naps2</a>
 
 The project moved from SourceForge years ago, so grab it from GitHub where active development happens.

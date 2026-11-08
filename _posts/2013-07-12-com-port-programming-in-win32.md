@@ -80,7 +80,7 @@ if (!SetCommState(hCOM, &dcb)) {
 - Use the `CBR_*` constants for baud rates: `CBR_9600`, `CBR_115200`, `CBR_921600`
 - `CBR_115200` is standard for modern microcontroller boards; verify your device’s specification
 
-**Flow control configuration:**\
+**Flow control configuration:**
 The `fDtrControl` and `fRtsControl` flags manage DTR and RTS lines. Set both to `ENABLE` when communicating with devices that require handshaking. For devices without hardware flow control, use `DTR_CONTROL_DISABLE` and `RTS_CONTROL_DISABLE`:
 
 ``` c

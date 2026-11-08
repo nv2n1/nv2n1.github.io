@@ -47,13 +47,13 @@ These URLs are standardized across most servers. iOS and Android apps auto-disco
 
 ## Client Setup Examples
 
-**Desktop clients** (GNOME Evolution, Thunderbird):\
+**Desktop clients** (GNOME Evolution, Thunderbird):
 Enter the server URL and credentials. The client queries the `.well-known/caldav` and `.well-known/carddav` endpoints for auto-discovery.
 
-**Mobile apps** (iOS Calendar/Contacts apps, Android’s built-in apps, or third-party options like Davx⁵):\
+**Mobile apps** (iOS Calendar/Contacts apps, Android’s built-in apps, or third-party options like Davx⁵):
 Use the calendar/contact settings, add account, select “CalDAV” or “CardDAV,” enter server URL and credentials.
 
-**Syncing from Google Calendar or iCloud**:\
+**Syncing from Google Calendar or iCloud**:
 Import your existing calendars as `.ics` files into your server, or use tools like `vdirsyncer` to bridge your existing accounts with your CalDAV server.
 
 ## Important Considerations

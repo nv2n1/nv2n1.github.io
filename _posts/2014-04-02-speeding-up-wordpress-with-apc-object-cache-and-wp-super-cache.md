@@ -142,7 +142,7 @@ Install from **Plugins → Add New**, activate, and configure under **Settings �
 - Enable “Optimize HTML code” to remove comments and whitespace
 - Disable “Keep HTML comments” in production (safe in development for debugging)
 
-**Image optimization:**\
+**Image optimization:**
 Autoptimize doesn’t handle images well—use a dedicated plugin:
 
 - **ShortPixel** (free tier: 100 images/month)

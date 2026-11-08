@@ -78,13 +78,13 @@ items.forEach((item, index) => {
 
 ### Troubleshooting
 
-**“Uncaught TypeError: Cannot read property ‘click’ of undefined”**\
+**“Uncaught TypeError: Cannot read property ‘click’ of undefined”**
 The DOM selectors may have changed. Inspect the delete buttons with right-click → Inspect and verify the data attributes match what’s in the script.
 
-**Script runs but nothing happens**\
+**Script runs but nothing happens**
 Amazon may be rate-limiting your account. Increase the delay to 1500ms and try again after waiting an hour.
 
-**Items reappear after deletion**\
+**Items reappear after deletion**
 This usually means the deletion didn’t complete. Check your internet connection and try again with a longer delay.
 
 ### Alternative: Manage from Device

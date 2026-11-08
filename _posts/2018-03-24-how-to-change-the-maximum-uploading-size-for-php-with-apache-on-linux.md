@@ -8,7 +8,7 @@ categories: [system-administration-cloud]
 canonical: /how-to-change-the-maximum-uploading-size-for-php-with-apache-on-linux/
 ---
 
-\[md\]\
+\[md\]
 PHP upload limits are controlled through the `php.ini` configuration file. On Ubuntu/Debian systems, the file location depends on your PHP version:
 
 ```wp-block-code

@@ -23,7 +23,7 @@ Zotero is the strongest choice for researchers who want full control over their 
 - Sync across devices with 300MB free storage (paid plans available)
 - Group libraries for collaborative research
 
-**Practical workflow:**\
+**Practical workflow:**
 Install the browser extension, then click the icon when viewing an article, book listing, or research database. Zotero captures the full citation metadata automatically. You can then organize into projects, add notes and PDFs, and generate formatted citations on demand.
 
 The desktop application lets you organize large libraries efficiently. You can create saved searches, filter by tags, and even full-text search within PDFs stored in Zotero.
@@ -41,7 +41,7 @@ Mendeley is now a web-first application owned by Elsevier. The free plan offers 
 - Collaboration features for team research
 - Mobile app for accessing your library on the go
 
-**Trade-offs:**\
+**Trade-offs:**
 Mendeley’s free tier is sufficient for most individual researchers, but collaborative features and unlimited storage require a paid subscription. Since Elsevier owns it, your reference data is hosted on their servers.
 
 ### Other Options to Consider

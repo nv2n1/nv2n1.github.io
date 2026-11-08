@@ -20,9 +20,9 @@ SOSP’13: The 24th ACM Symposium on Operating Systems Principles. November 3-6,
 
 Link: <a href="http://sigops.org/sosp/sosp13/" rel="nofollow noopener" target="_blank" title="http://sigops.org/sosp/sosp13/">http://sigops.org/sosp/sosp13/</a>
 
-*Important Dates*\
-Deadline to register abstracts: March 21, 2013, 11:59 PM GMT\
-Submission deadline: March 28, 2013, 11:59 PM GMT\
+*Important Dates*
+Deadline to register abstracts: March 21, 2013, 11:59 PM GMT
+Submission deadline: March 28, 2013, 11:59 PM GMT
 Acceptance notification: July 1, 2013
 
 ## **USENIX ATC ’13**
@@ -33,10 +33,10 @@ The 2013 USENIX Annual Technical Conference. San Jose, CA, June 26–28, 2013.
 
 Link: <a href="https://www.usenix.org/conference/atc13" rel="nofollow noopener" target="_blank" title="https://www.usenix.org/conference/atc13">https://www.usenix.org/conference/atc13</a>
 
-*Important Dates*\
-Paper titles and abstracts: Wednesday, January 23, 2013, 11:59 p.m. EST\
-Complete paper submissions: Wednesday, January 30, 2013, 11:59 p.m. EST\
-Notification to authors: Monday, April 8, 2013\
+*Important Dates*
+Paper titles and abstracts: Wednesday, January 23, 2013, 11:59 p.m. EST
+Complete paper submissions: Wednesday, January 30, 2013, 11:59 p.m. EST
+Notification to authors: Monday, April 8, 2013
 Final papers: Monday, May 20, 2013
 
 ## **NSDI 2013**
@@ -47,9 +47,9 @@ The 10th USENIX Symposium on Networked Systems Design and Implementation. April 
 
 Link: <a href="https://www.usenix.org/conference/nsdi13" rel="nofollow noopener" target="_blank" title="https://www.usenix.org/conference/nsdi13">https://www.usenix.org/conference/nsdi13</a>
 
-*Important Dates*\
-Paper titles and abstracts: September 12, 2012, 8:00 p.m. PDT\
-Complete paper submissions: September 19, 2012, 8:00 p.m. PDT (hard deadline)\
+*Important Dates*
+Paper titles and abstracts: September 12, 2012, 8:00 p.m. PDT
+Complete paper submissions: September 19, 2012, 8:00 p.m. PDT (hard deadline)
 Notification of acceptance: December 10, 2012
 
 ## **EuroSys 2013**
@@ -60,9 +60,9 @@ EuroSys 2013. April 15-17, 2013 Prague, Czech Republic
 
 Link: <a href="http://eurosys2013.tudos.org/" rel="nofollow noopener" target="_blank" title="http://eurosys2013.tudos.org/">http://eurosys2013.tudos.org/</a>
 
-*Important Dates*\
-Abstract submission: October 14, 2012\
-Full paper submission: October 20, 2012\
+*Important Dates*
+Abstract submission: October 14, 2012
+Full paper submission: October 20, 2012
 Notification to authors: January 8, 2013
 
 ## **ASPLOS 2013**
@@ -73,9 +73,9 @@ Eighteenth International Conference on Architectural Support for Programming Lan
 
 Link: <a href="http://asplos13.rice.edu/" rel="nofollow noopener" target="_blank" title="http://asplos13.rice.edu/">http://asplos13.rice.edu/</a>
 
-*Important Dates*\
-Abstract deadline: Monday, July 16, 2012 (3pm, PDT)\
-Full paper deadline: Monday, July 23, 2012 (3pm, PDT)\
+*Important Dates*
+Abstract deadline: Monday, July 16, 2012 (3pm, PDT)
+Full paper deadline: Monday, July 23, 2012 (3pm, PDT)
 Notification of acceptance: Friday, November 9, 2012
 
 ## **VEE 2013**
@@ -88,9 +88,9 @@ Ninth Annual International Conference on Virtual Execution Environments (VEE 201
 
 Link: [http: //labs.vmware.com/vee2013](http://http:%20//labs.vmware.com/vee2013)
 
-*Important Dates*\
-Full paper Deadline: Sunday, November 18, 2012 (11:59pm, PST)\
-Notification of acceptance: Tuesday, February 5, 2013\
+*Important Dates*
+Full paper Deadline: Sunday, November 18, 2012 (11:59pm, PST)
+Notification of acceptance: Tuesday, February 5, 2013
 Camera Ready Deadline: Sunday, February 17, 2013
 
 ## **SoCC2013**
@@ -115,6 +115,6 @@ Link: <a href="http://www.usenix.org/conference/hotcloud13" rel="nofollow noopen
 
 *Important Dates*
 
-Paper submissions due: *March 7, 2013, 9:00 p.m. PST*\
-Notification to authors: *April 22, 2013*\
+Paper submissions due: *March 7, 2013, 9:00 p.m. PST*
+Notification to authors: *April 22, 2013*
 Final paper files due: *May 16, 2013*

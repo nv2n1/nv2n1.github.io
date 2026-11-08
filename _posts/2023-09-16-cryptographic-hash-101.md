@@ -12,35 +12,35 @@ A cryptographic hash function is a mathematical algorithm that takes any input�
 
 ## Core Properties
 
-**Deterministic**\
+**Deterministic**
 The same input always produces identical output. This is foundational: if hashing isn’t deterministic, it’s not cryptographically secure.
 
-**One-Way (Preimage Resistance)**\
+**One-Way (Preimage Resistance)**
 Given a hash, you cannot feasibly compute the original input. This is computationally irreversible—trying to reverse it requires brute force across an astronomically large keyspace.
 
-**Avalanche Effect (Sensitivity)**\
+**Avalanche Effect (Sensitivity)**
 A single bit change in input produces a completely different hash. Change one character in a file, and the hash becomes unrecognizable. This property catches tampering immediately.
 
-**Collision Resistance**\
+**Collision Resistance**
 Two different inputs should never produce the same hash. A strong hash function makes finding collisions computationally infeasible. This is critical for security—if collisions exist, an attacker could forge transactions or files.
 
 ## Common Cryptographic Hash Functions
 
-**SHA-2 Family (SHA-256, SHA-512)**\
+**SHA-2 Family (SHA-256, SHA-512)**
 Industry standard. SHA-256 produces 256-bit digests and is used in Bitcoin, TLS certificates, and most Unix password systems. Still considered secure as of 2026, though NIST recommends SHA-512 for new applications due to larger digest size.
 
-**SHA-3 (Keccak)**\
+**SHA-3 (Keccak)**
 NIST’s newer standard. Used in Ethereum and some modern protocols. More resistant to certain theoretical attacks than SHA-2, though SHA-2 remains secure.
 
-**BLAKE2 / BLAKE3**\
+**BLAKE2 / BLAKE3**
 Faster than MD5, SHA-2, and SHA-3 while being at least as secure. BLAKE3 offers parallelization and streaming hashing. Popular in modern systems like Kubernetes and distributed storage.
 
-**MD5 and SHA-1**\
+**MD5 and SHA-1**
 Cryptographically broken. Do not use for security-sensitive applications. MD5 collisions are trivial to generate; SHA-1 has practical collision attacks. Legacy systems still encounter them, but they’re deprecated.
 
 ## Practical Applications
 
-**Data Integrity**\
+**Data Integrity**
 Hash files to verify they haven’t been modified. A single bit flip in a file changes its hash completely. This catches network transmission errors or tampering:
 
 ``` bash
@@ -48,7 +48,7 @@ sha256sum file.tar.gz > file.sha256
 sha256sum -c file.sha256
 ```
 
-**Password Storage**\
+**Password Storage**
 Hash passwords with a salt (random data) so identical passwords produce different hashes. Never store plaintext passwords. Modern approach uses Argon2 or bcrypt with salt:
 
 ``` bash
@@ -56,13 +56,13 @@ Hash passwords with a salt (random data) so identical passwords produce differen
 python3 -c "import bcrypt; print(bcrypt.hashpw(b'password', bcrypt.gensalt()).decode())"
 ```
 
-**Blockchain and Distributed Systems**\
+**Blockchain and Distributed Systems**
 Bitcoin uses SHA-256 to secure transactions and create the immutable ledger. Changing a single transaction requires recalculating every subsequent block’s hash—computationally prohibitive. Ethereum uses Keccak-256 similarly.
 
-**Certificate Pinning and TLS**\
+**Certificate Pinning and TLS**
 Hash values of public certificates are pinned in applications to prevent MITM attacks. If a certificate changes, the hash changes, triggering an alert.
 
-**Git Commits**\
+**Git Commits**
 Git uses SHA-1 (being phased to SHA-256) to hash commits. Each commit’s hash is based on its contents, parent commit, timestamp, and author. Tamper with history, and hashes diverge from the network’s version.
 
 ## Hash Collisions and Vulnerabilities
@@ -77,17 +77,17 @@ A “length extension attack” affects some hash functions (like SHA-1, SHA-256
 
 ## Modern Hashing: Beyond Digests
 
-**HMAC (Hash-based Message Authentication Code)**\
+**HMAC (Hash-based Message Authentication Code)**
 Combines hashing with a secret key. Verifies both authenticity and integrity:
 
 ``` bash
 echo -n "message" | openssl dgst -sha256 -mac HMAC -macopt key:secret
 ```
 
-**Zero-Knowledge Proofs (ZKPs)**\
+**Zero-Knowledge Proofs (ZKPs)**
 Use hashing alongside other cryptographic primitives to prove statements without revealing underlying data. A blockchain can verify a transaction is valid (correct nonce, sufficient balance) without exposing user account details.
 
-**Content-Addressable Storage**\
+**Content-Addressable Storage**
 Systems like IPFS use content hashes as immutable identifiers. Files are stored and retrieved by their SHA-256 hash. Corruption is immediately detectable.
 
 ## Best Practices

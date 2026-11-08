@@ -28,7 +28,7 @@ fc file1.txt file2.txt
 
 Add the `/u` flag for Unicode files or `/b` for binary comparison.
 
-**Git Bash or WSL** (Windows Subsystem for Linux):\
+**Git Bash or WSL** (Windows Subsystem for Linux):
 If you have Git installed or WSL enabled, you get native `diff` access:
 
 ``` bash
@@ -41,20 +41,20 @@ WSL is increasingly the standard for developers on Windows who need Unix tools. 
 
 For visual comparison, several cross-platform tools work well on Windows:
 
-**Meld**\
+**Meld**
 Meld is a straightforward open-source visual diff and merge tool available for Windows, macOS, and Linux. It handles both file and directory diffs, making it useful for comparing entire folders. Install via the official Windows installer or Chocolatey:
 
 ``` powershell
 choco install meld
 ```
 
-**Beyond Compare**\
+**Beyond Compare**
 A commercial option with powerful features: three-way merge, folder sync, and binary file comparison. Worth it if you do heavy merging work.
 
-**WinMerge**\
+**WinMerge**
 Free, open-source, and Windows-native. Handles file and folder comparison with a clean interface. Good choice if you want something lightweight without external dependencies.
 
-**VSCode Built-in Diff**\
+**VSCode Built-in Diff**
 If you already use Visual Studio Code, the built-in diff viewer is solid:
 
 ``` powershell

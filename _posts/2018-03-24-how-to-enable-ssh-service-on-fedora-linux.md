@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /how-to-enable-ssh-service-on-fedora-linux/
 ---
 
-\[md\]\
+\[md\]
 By default, Fedora doesn’t enable SSH access. You’ll need to install OpenSSH server, start the service, and configure your firewall to allow connections.
 
 \## Install OpenSSH Server

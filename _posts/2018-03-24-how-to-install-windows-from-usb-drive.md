@@ -102,7 +102,7 @@ Open Disks, select your USB, use the menu to restore the ISO image.
 - The Media Creation Tool and Etcher handle this automatically
 - Manual `dd` writes create a hybrid MBR/GPT partition suitable for UEFI/BIOS
 
-**Verify Your Download:**\
+**Verify Your Download:**
 After writing, don’t immediately delete the ISO. Verify it worked by booting the USB on a test machine before using it in production.
 
 ## Troubleshooting

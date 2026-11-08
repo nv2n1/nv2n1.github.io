@@ -121,18 +121,18 @@ As an example, we assume hadoop command’s full path is: /lhome/zma/hadoop/bin/
 
 Set the variables as follows (We use the full path to avoid bad PATH environment).
 
-const char\* put_file_fs_cmd = "/lhome/zma/hadoop/bin/hadoop dfs -put";\
-const char\* get_file_fs_cmd = "/lhome/zma/hadoop/bin/hadoop dfs -get";\
-const char\* del_file_fs_cmd = "/lhome/zma/hadoop/bin/hadoop dfs -rm";\
+const char\* put_file_fs_cmd = "/lhome/zma/hadoop/bin/hadoop dfs -put";
+const char\* get_file_fs_cmd = "/lhome/zma/hadoop/bin/hadoop dfs -get";
+const char\* del_file_fs_cmd = "/lhome/zma/hadoop/bin/hadoop dfs -rm";
 const char\* del_dir_fs_cmd = "/lhome/zma/hadoop/bin/hadoop dfs -rmr";
 
 **In mrutils.c**
 
 Set the variables and We also use the full path.
 
-const char\* mr_exec_cmd_prefix = "/lhome/zma/hadoop/bin/hadoop jar /lhome/zma/hadoop/contrib/streaming/hadoop-0.20.2-streaming.jar -mapper ";\
-const char\* mr_exec_cmd_mapper = "/home/zma/bin/mrcc-map ";\
-const char\* mr_exec_cmd_parameter = "-numReduceTasks 0 -input null -output ";\
+const char\* mr_exec_cmd_prefix = "/lhome/zma/hadoop/bin/hadoop jar /lhome/zma/hadoop/contrib/streaming/hadoop-0.20.2-streaming.jar -mapper ";
+const char\* mr_exec_cmd_mapper = "/home/zma/bin/mrcc-map ";
+const char\* mr_exec_cmd_parameter = "-numReduceTasks 0 -input null -output ";
 
 #### Compile and install:
 
@@ -145,7 +145,7 @@ const char\* mr_exec_cmd_parameter = "-numReduceTasks 0 -input null -out
 
 As building a project:
 
-\$ make -j16 CC=mrcc\
+\$ make -j16 CC=mrcc
 
 -jN: N is the maximum parallel compilation number. N may be set to the number of CPUs in the cluster.
 
@@ -153,14 +153,14 @@ As building a project:
 
 On master node in the same shell where mrcc runs:
 
-\$ . docs/mrcc.export\
+\$ . docs/mrcc.export
 
 Or set environment variables:
 
-MRCC_LOG=./mrcc.log\
-MRCC_VERBOSE=1\
-export MRCC_LOG\
-export MRCC_VERBOSE\
+MRCC_LOG=./mrcc.log
+MRCC_VERBOSE=1
+export MRCC_LOG
+export MRCC_VERBOSE
 
 ### Related work
 

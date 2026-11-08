@@ -213,7 +213,7 @@ yt-dlp -f bestvideo+bestaudio --merge-output-format mp4 https://www.youtube.com/
 
 ## Troubleshooting
 
-**“No video found” or extraction fails:**\
+**“No video found” or extraction fails:**
 Update yt-dlp first — YouTube changes frequently:
 
 ``` bash
@@ -222,10 +222,10 @@ pip install --upgrade yt-dlp
 
 Check if the video is still available, region-restricted, or requires login. Age-restricted videos need the `--cookies-from-browser` flag.
 
-**Slow downloads:**\
+**Slow downloads:**
 Check your connection speed. Rate-limit with `-r` if you’re on a shared network. Download during off-peak hours if possible.
 
-**ffmpeg errors:**\
+**ffmpeg errors:**
 If post-processing fails, install ffmpeg:
 
 ``` bash
@@ -234,7 +234,7 @@ sudo dnf install ffmpeg  # Fedora
 brew install ffmpeg      # macOS
 ```
 
-**Permission denied when saving:**\
+**Permission denied when saving:**
 Verify the output directory exists and you have write permissions:
 
 ``` bash

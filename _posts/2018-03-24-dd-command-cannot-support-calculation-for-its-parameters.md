@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /dd-command-cannot-support-calculation-for-its-parameters/
 ---
 
-\[md\]\
+\[md\]
 The `dd` command doesn’t evaluate arithmetic expressions in its parameters. If you try this:
 
 ```wp-block-code
@@ -117,11 +117,11 @@ dd if=/dev/zero of=file bs=1K count=$COUNT
 
 `dd` does understand size suffixes:
 
-– `c` or `w` — bytes (1 or 2)\
-– `b` — 512 bytes\
-– `K` — 1024 bytes (KiB)\
-– `M` — 1048576 bytes (MiB)\
-– `G` — 1073741824 bytes (GiB)\
+– `c` or `w` — bytes (1 or 2)
+– `b` — 512 bytes
+– `K` — 1024 bytes (KiB)
+– `M` — 1048576 bytes (MiB)
+– `G` — 1073741824 bytes (GiB)
 – `T` — 1099511627776 bytes (TiB)
 
 Note: Use uppercase `K`, `M`, `G` for binary multipliers. Lowercase `k` means 1000 (decimal) in some dd implementations, which can cause subtle size mismatches.

@@ -8,7 +8,7 @@ categories: [programming-languages]
 canonical: /rtl8192cu-driver-for-centos-7/
 ---
 
-\[md\]\
+\[md\]
 The RTL8192cu is a legacy USB WiFi adapter that’s still in use, but it has known stability issues on modern kernels. If your adapter keeps dropping connections or fails to resume after sleep, you’re likely hitting the same power management bug that affects many devices.
 
 \## Disable Power Management
@@ -152,9 +152,9 @@ echo 'options usbcore autosuspend=-1' | sudo tee /etc/modprobe.d/disable-usb-aut
 
 If stability remains an issue even with power management disabled, the RTL8192cu is aging by 2026 standards. Modern USB WiFi adapters using MediaTek (MT7921AU) or newer Realtek chipsets (RTL8852) have better driver support and kernel integration. Most modern distributions include these drivers out-of-the-box without additional configuration.
 
-Recommended modern alternatives:\
-\- \*\*Alfa AWUS036ACHM\*\* — MT7610U chipset, excellent Linux support\
-\- \*\*Panda PAU09\*\* — RT5572 chipset, dual-band, well-supported\
+Recommended modern alternatives:
+\- \*\*Alfa AWUS036ACHM\*\* — MT7610U chipset, excellent Linux support
+\- \*\*Panda PAU09\*\* — RT5572 chipset, dual-band, well-supported
 \- \*\*Any MT7921-based adapter\*\* — Mainline kernel driver, no compilation needed
 
 If you must continue using this adapter, disabling power management is the most practical solution for production use.

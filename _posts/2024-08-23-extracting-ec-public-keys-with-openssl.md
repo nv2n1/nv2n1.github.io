@@ -8,9 +8,9 @@ categories: [security-cryptography-2]
 canonical: /extracting-ec-public-keys-with-openssl/
 ---
 
-Verification: You need the public key to verify digital signatures (e.g., in Bitcoin or TLS).\
-Sharing: Public keys are meant to be shared, while the private key must remain secret.\
-Conversion: Sometimes you need to convert a private key file into a public-only certificate for a web server or blockchain application.\
+Verification: You need the public key to verify digital signatures (e.g., in Bitcoin or TLS).
+Sharing: Public keys are meant to be shared, while the private key must remain secret.
+Conversion: Sometimes you need to convert a private key file into a public-only certificate for a web server or blockchain application.
 System Integration: Many tools require public keys in specific formats for authentication, encryption, or policy enforcement.
 
 ## Generate and Extract Keys

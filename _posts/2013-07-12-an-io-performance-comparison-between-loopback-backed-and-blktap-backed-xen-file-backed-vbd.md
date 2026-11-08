@@ -54,7 +54,7 @@ blktap provides more balanced performance across read and write operations with 
 
 ## Why Choose blktap Over Loopback
 
-**Scalability Limits:**\
+**Scalability Limits:**
 Linux loopback device driver defaults to supporting only 8 file-backed VBDs system-wide. To increase this, you must either:
 
 - Pass `max_loop=N` kernel boot parameter
@@ -62,7 +62,7 @@ Linux loopback device driver defaults to supporting only 8 file-backed VBDs syst
 
 blktap has no such architectural limitation and scales to many more concurrent block devices.
 
-**I/O-Intensive Workloads:**\
+**I/O-Intensive Workloads:**
 Loopback backend suffers substantial performance degradation under heavy sustained I/O because all block operations are serialized through a single Linux block device in dom0. This causes:
 
 - CPU starvation in dom0
@@ -71,7 +71,7 @@ Loopback backend suffers substantial performance degradation under heavy sustain
 
 blktap bypasses the loopback layer entirely, handling I/O more efficiently.
 
-**Advanced Disk Features:**\
+**Advanced Disk Features:**
 blktap natively supports:
 
 - Copy-on-Write (CoW) disk images
@@ -82,7 +82,7 @@ blktap natively supports:
 
 Loopback treats files as raw block devices, making these features difficult to implement without external tooling.
 
-**Memory Efficiency:**\
+**Memory Efficiency:**
 Loopback relies on Linux page cache and dirty page writeback mechanisms, which can cause unexpected I/O stalls and memory pressure. blktap manages its own buffering more efficiently.
 
 ## Migration Considerations

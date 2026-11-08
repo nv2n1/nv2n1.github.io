@@ -178,7 +178,7 @@ On very large disks (8TB+), increase the zero regions accordingly — use 8MB or
 
 ## Troubleshooting
 
-**Device remains busy after dmsetup remove:**\
+**Device remains busy after dmsetup remove:**
 Check for open file handles:
 
 ``` bash
@@ -188,7 +188,7 @@ fuser -m /dev/sdb
 
 Kill or close any processes holding the device, then retry removal.
 
-**mkfs fails with “Device busy”:**\
+**mkfs fails with “Device busy”:**
 The device might still be registered. Reload partitions:
 
 ``` bash
@@ -197,7 +197,7 @@ partprobe /dev/sdb
 udevadm settle
 ```
 
-**Metadata still appears after dd:**\
+**Metadata still appears after dd:**
 RAID controllers sometimes store multiple copies. Increase the zero region or repeat the process. Use larger counts:
 
 ``` bash
@@ -205,7 +205,7 @@ dd if=/dev/zero of=$DEVICE bs=1M seek=0 count=32 conv=fsync
 dd if=/dev/zero of=$DEVICE bs=1M seek=$((SECTORS/2048 - 32)) count=32 conv=fsync
 ```
 
-**cryptsetup needed for dmsetup:**\
+**cryptsetup needed for dmsetup:**
 Some distributions split device mapper tools. Install if required:
 
 ``` bash

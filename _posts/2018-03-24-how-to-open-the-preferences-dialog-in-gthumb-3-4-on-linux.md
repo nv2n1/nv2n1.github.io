@@ -8,15 +8,15 @@ categories: [linux-systems-administration]
 canonical: /how-to-open-the-preferences-dialog-in-gthumb-3-4-on-linux/
 ---
 
-\[md\]\
+\[md\]
 gThumb’s preferences aren’t always obvious when you’re looking through the traditional menu bar. The location depends on your desktop environment and gThumb version.
 
 \## GNOME Desktop
 
 On GNOME 3 and later, preferences are accessed through the application menu rather than the window menu:
 
-1\. Open gThumb\
-2\. Click the application name (“gThumb”) in the top bar\
+1\. Open gThumb
+2\. Click the application name (“gThumb”) in the top bar
 3\. Select \*\*Preferences\*\* from the dropdown
 
 In GNOME’s Activities overview, you can also search for “Preferences” while gThumb has focus.
@@ -25,15 +25,15 @@ In GNOME’s Activities overview, you can also search for “Preferences” whil
 
 On GNOME 2, Xfce, MATE, or other traditional desktop environments, the preferences dialog is in the standard location:
 
-1\. Open gThumb\
+1\. Open gThumb
 2\. Click \*\*Edit\*\* → \*\*Preferences\*\*
 
 \## KDE Plasma
 
 On KDE, gThumb follows the GNOME convention since it’s a GTK application:
 
-1\. Open gThumb\
-2\. Look for the hamburger menu (☰) or the application menu in the title bar\
+1\. Open gThumb
+2\. Look for the hamburger menu (☰) or the application menu in the title bar
 3\. Select \*\*Preferences\*\*
 
 If you don’t see the menu, press \*\*F10\*\* to show it, or right-click the title bar.
@@ -42,42 +42,42 @@ If you don’t see the menu, press \*\*F10\*\* to show it, or right-click the ti
 
 The preferences dialog in gThumb 3.4+ provides several configuration sections:
 
-\*\*General settings:\*\*\
-– Startup directory — choose whether to open the last visited folder or a specific location\
-– Thumbnail size — adjust preview quality vs. speed\
+\*\*General settings:\*\*
+– Startup directory — choose whether to open the last visited folder or a specific location
+– Thumbnail size — adjust preview quality vs. speed
 – File properties — configure which metadata to display
 
-\*\*Viewer settings:\*\*\
-– Image quality for zooming\
-– Transparency style (checkered pattern or solid color)\
-– Scroll behavior when zoomed in\
+\*\*Viewer settings:\*\*
+– Image quality for zooming
+– Transparency style (checkered pattern or solid color)
+– Scroll behavior when zoomed in
 – Fit-to-window vs. actual size default
 
-\*\*Browser settings:\*\*\
-– Show hidden files\
-– Sort order for images\
-– Thumbnail caption format\
+\*\*Browser settings:\*\*
+– Show hidden files
+– Sort order for images
+– Thumbnail caption format
 – Whether to show file extensions
 
 \## Keyboard Shortcuts for Quick Access
 
 Instead of navigating menus, you can use keyboard shortcuts:
 
-– \*\*Ctrl+P\*\* — Open preferences (in some gThumb versions)\
-– \*\*F10\*\* — Show/hide the application menu\
+– \*\*Ctrl+P\*\* — Open preferences (in some gThumb versions)
+– \*\*F10\*\* — Show/hide the application menu
 – \*\*Shift+F10\*\* — Show context menu
 
 \## gThumb Extensions
 
 Beyond the preferences dialog, gThumb’s real power comes from its extensions. Access them via \*\*Edit\*\* → \*\*Extensions\*\* (or the equivalent menu path for your version):
 
-\*\*Useful extensions to enable:\*\*\
-– \*\*Image Viewer\*\* — Enhanced zoom and pan controls\
-– \*\*Rename Files\*\* — Batch renaming with patterns\
-– \*\*Convert Format\*\* — Batch image conversion (JPEG, PNG, WebP)\
-– \*\*Resize Images\*\* — Batch resize with custom dimensions or percentages\
-– \*\*Contact Sheet\*\* — Generate thumbnail grids from selected images\
-– \*\*Photo Importer\*\* — Import from cameras and mobile devices\
+\*\*Useful extensions to enable:\*\*
+– \*\*Image Viewer\*\* — Enhanced zoom and pan controls
+– \*\*Rename Files\*\* — Batch renaming with patterns
+– \*\*Convert Format\*\* — Batch image conversion (JPEG, PNG, WebP)
+– \*\*Resize Images\*\* — Batch resize with custom dimensions or percentages
+– \*\*Contact Sheet\*\* — Generate thumbnail grids from selected images
+– \*\*Photo Importer\*\* — Import from cameras and mobile devices
 – \*\*Web Albums\*\* — Upload to online services
 
 To install additional extensions on Fedora:
@@ -118,8 +118,8 @@ This resets all preferences to defaults. Your image files are not affected — o
 
 gThumb has changed significantly over versions:
 
-– \*\*gThumb 3.4\*\* — Uses traditional Edit menu on most desktops\
-– \*\*gThumb 3.10+\*\* — Uses GNOME-style application menu in the top bar\
+– \*\*gThumb 3.4\*\* — Uses traditional Edit menu on most desktops
+– \*\*gThumb 3.10+\*\* — Uses GNOME-style application menu in the top bar
 – \*\*gThumb 3.12+\*\* — Modern header bar with integrated preferences access
 
 Check your version:

@@ -20,7 +20,7 @@ The first step is finding which update is causing the failure. You have a few op
 2.  Look for updates with a “Failed” status
 3.  Note the KB number (e.g., KB3033929) and installation date
 
-**Check the Windows Update log:**\
+**Check the Windows Update log:**
 Open a command prompt as Administrator and run:
 
     Get-WinEvent -LogName "System" | Where-Object {$_.ProviderName -match "Windows Update"} | Select-Object TimeCreated, Message | Format-List
@@ -64,7 +64,7 @@ Replace `3033929` with your actual KB number. This removes the failed update ent
 
 This bypasses Windows Update’s automatic process and often succeeds where the automatic updater fails.
 
-**Option 3: Delay or block the update**\
+**Option 3: Delay or block the update**
 If the update is known to cause issues on certain systems, you can prevent it from installing:
 
 1.  Open **Control Panel** → **Windows Update** → **Change settings**

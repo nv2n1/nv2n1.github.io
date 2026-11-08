@@ -39,22 +39,22 @@ sudo dnf install libdvdcss
 
 ## Essential mpv DVD options
 
-**–dvd-device=PATH**\
+**–dvd-device=PATH**
 Specify the DVD device, ISO file, or directory path. Defaults to `/dev/dvd` if omitted.
 
-**–alang=LANGUAGE**\
+**–alang=LANGUAGE**
 Set audio language preference (e.g., `--alang=en` for English). Use `--alang=help` to list available tracks.
 
-**–slang=LANGUAGE**\
+**–slang=LANGUAGE**
 Set subtitle language preference. Use `--slang=help` to list available tracks.
 
-**–sub-codepage=ENCODING**\
+**–sub-codepage=ENCODING**
 Specify subtitle encoding if they display incorrectly (e.g., `--sub-codepage=cp1252` for Windows-1252).
 
-**–dvd-speed=N**\
+**–dvd-speed=N**
 Set DVD drive speed (useful for reducing noise or drive stress). Example: `--dvd-speed=2` for 2x speed.
 
-**–fullscreen**\
+**–fullscreen**
 Start in fullscreen mode.
 
 ## Runtime keyboard controls

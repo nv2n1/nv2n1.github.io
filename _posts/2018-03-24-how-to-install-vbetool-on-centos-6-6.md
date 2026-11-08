@@ -8,16 +8,16 @@ categories: [linux-systems-administration]
 canonical: /how-to-install-vbetool-on-centos-6-6/
 ---
 
-\[md\]\
+\[md\]
 vbetool is a utility for executing real-mode x86 BIOS calls, commonly used for power management and display mode switching on legacy systems. Rocky Linux 9 doesn’t include it in standard repositories, so you’ll need to build it from source.
 
 \## What vbetool Does
 
 vbetool communicates with the video BIOS through the Video BIOS Extensions (VBE) interface. It can:
 
-– \*\*Change display modes\*\* — Switch resolutions on legacy VGA outputs\
-– \*\*Power management\*\* — Control monitor power states (DPMS standby, suspend, off)\
-– \*\*Save/restore video state\*\* — Preserve and restore the VGA register state across operations\
+– \*\*Change display modes\*\* — Switch resolutions on legacy VGA outputs
+– \*\*Power management\*\* — Control monitor power states (DPMS standby, suspend, off)
+– \*\*Save/restore video state\*\* — Preserve and restore the VGA register state across operations
 – \*\*Post video cards\*\* — Re-initialize a video BIOS after certain hardware changes
 
 This makes it particularly useful for headless servers that need occasional display management, or legacy systems where the kernel video drivers don’t fully support power management.
@@ -170,15 +170,15 @@ If it shows `integrity` or `confidentiality`, vbetool won't work unless you disa
 
 vbetool is primarily designed for legacy BIOS systems with classic VGA hardware. Here's what to consider on modern hardware:
 
-\- \*\*UEFI systems\*\* typically don't need vbetool — the GOP (Graphics Output Protocol) handles display initialization\
-\- \*\*Kernel mode setting (KMS)\*\* manages display power states on most modern drivers (i915, amdgpu, nouveau)\
-\- \*\*systemd-logind\*\* handles lid-switch-based display power management automatically\
+\- \*\*UEFI systems\*\* typically don't need vbetool — the GOP (Graphics Output Protocol) handles display initialization
+\- \*\*Kernel mode setting (KMS)\*\* manages display power states on most modern drivers (i915, amdgpu, nouveau)
+\- \*\*systemd-logind\*\* handles lid-switch-based display power management automatically
 \- For display brightness control on modern systems, use `xrandr` or write to `/sys/class/backlight/` instead
 
-vbetool remains relevant for:\
-\- Legacy BIOS-only hardware still in production\
-\- Headless servers with old GPU passthrough configurations\
-\- Embedded systems with custom video BIOS implementations\
+vbetool remains relevant for:
+\- Legacy BIOS-only hardware still in production
+\- Headless servers with old GPU passthrough configurations
+\- Embedded systems with custom video BIOS implementations
 \- Debugging VBE mode support on older hardware
 
 \## Uninstalling

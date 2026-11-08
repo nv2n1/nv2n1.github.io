@@ -82,10 +82,10 @@ Navigate to “Edit a connection” → “Add” → “Wi-Fi”, then enter th
 - Confirm your password is current
 - Check that PEAP is set to “Automatic” and inner auth is “MSCHAPv2”
 
-**CA certificate warning:**\
+**CA certificate warning:**
 This is expected behavior with sMobileNet. The warning is safe to ignore — the connection will still function properly.
 
-**No PEAP option available:**\
+**No PEAP option available:**
 Ensure you have the required packages installed:
 
 ``` bash
@@ -99,7 +99,7 @@ sudo dnf install wpa_supplicant NetworkManager
 sudo pacman -S wpa_supplicant networkmanager
 ```
 
-**Connection drops or reconnects frequently:**\
+**Connection drops or reconnects frequently:**
 Check your system’s power management settings. Disable wireless power saving if needed:
 
 ``` bash

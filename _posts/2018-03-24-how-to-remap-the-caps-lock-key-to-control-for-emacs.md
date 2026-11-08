@@ -154,7 +154,7 @@ C-k   # Kill to end of line
 - Log out and back in, or restart your display server (`killall X` for X11, then log out)
 - For Wayland, changes from `localectl` require a full logout/login cycle
 
-**Keycode varies by keyboard:**\
+**Keycode varies by keyboard:**
 The keycode shown above (66) is standard for most keyboards, but ergonomic or international layouts may differ. Always verify with `xev` first.
 
 ## Muscle Memory Across Systems

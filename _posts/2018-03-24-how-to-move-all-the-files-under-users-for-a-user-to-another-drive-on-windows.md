@@ -39,10 +39,10 @@ The primary approach involves modifying `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\W
 
 ## Modern Alternatives
 
-**Use Storage Spaces (Windows 8+/Server 2012+):**\
+**Use Storage Spaces (Windows 8+/Server 2012+):**
 Pool multiple drives into a single logical volume, then move the profile there. This is safer than registry hacking and survives OS updates.
 
-**Relocate Specific Folders:**\
+**Relocate Specific Folders:**
 Rather than move the entire profile, selectively relocate large folders:
 
 - Right-click `Documents` → Properties → Location tab → Move to new drive
@@ -50,7 +50,7 @@ Rather than move the entire profile, selectively relocate large folders:
 
 This approach is safer and supported by Windows. Most user data lives in these directories anyway.
 
-**Use External Storage:**\
+**Use External Storage:**
 For new installations, consider OneDrive or other cloud sync solutions that offload Documents and Desktop to cloud storage, with local caching.
 
 ## If You Must Use the Registry Method

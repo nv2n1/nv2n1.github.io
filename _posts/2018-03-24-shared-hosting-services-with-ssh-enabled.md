@@ -12,22 +12,22 @@ SSH is essential for serious shared hosting management — it beats FTP by a mil
 
 ## Major Providers with SSH Support
 
-**DreamHost**\
+**DreamHost**
 DreamHost has long supported SSH on shared hosting. You’ll need to enable shell access in your control panel. Once enabled, connect with `ssh username@your-domain.com`. They support key-based authentication, which is more secure than passwords.
 
-**Bluehost**\
+**Bluehost**
 Bluehost provides SSH access on shared hosting plans. Enable it through their cPanel interface, then connect to your account hostname. They support both password and key authentication.
 
-**GoDaddy**\
+**GoDaddy**
 GoDaddy offers SSH on their shared hosting, though it requires enabling through their account management system. Connection details are similar: `ssh username@your-server.com`.
 
-**HostGator**\
+**HostGator**
 HostGator includes SSH access on most shared plans. Access the cPanel to enable shell access, then use standard SSH connection methods.
 
-**Hostwinds**\
+**Hostwinds**
 Hostwinds provides SSH on shared hosting with straightforward enablement through their control panel.
 
-**A2 Hosting**\
+**A2 Hosting**
 A2 Hosting explicitly advertises SSH access on all hosting tiers and supports both password and key-based authentication.
 
 ## Things to Know Before Choosing

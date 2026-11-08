@@ -77,7 +77,7 @@ env:
         fieldPath: status.podIP
 ```
 
-**Consul Integration:**\
+**Consul Integration:**
 For microservices requiring dynamic service registration, use the Consul API:
 
 ``` go

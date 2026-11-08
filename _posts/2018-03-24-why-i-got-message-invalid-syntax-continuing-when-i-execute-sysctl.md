@@ -54,7 +54,7 @@ Ensure there are no hidden tabs or extra spaces at the end of lines. Use `cat -A
 cat -A /etc/sysctl.conf | grep -n "line_number"
 ```
 
-**Missing or mismatched quotes:**\
+**Missing or mismatched quotes:**
 Some parameters might accidentally have quotes where they shouldn’t:
 
 ``` bash
@@ -62,10 +62,10 @@ net.ipv4.ip_forward = "0"  # Wrong
 net.ipv4.ip_forward = 0     # Correct
 ```
 
-**Tabs instead of spaces:**\
+**Tabs instead of spaces:**
 While `sysctl.conf` is generally flexible with whitespace around the `=` sign, mixing tabs and spaces inconsistently can cause issues. Use spaces consistently.
 
-**Non-ASCII characters:**\
+**Non-ASCII characters:**
 If you copy-pasted from a web browser or document processor, you might have picked up Unicode quote characters or other invisible characters. View the problematic line in hex:
 
 ``` bash
@@ -111,7 +111,7 @@ The safest approach is to:
 
     Make sure your editor shows line numbers (`:set number` in vi).
 
-3.  **Remove the problematic line and re-add it correctly:**\
+3.  **Remove the problematic line and re-add it correctly:**
     Find line 44, delete it, and make sure the previous line is complete.
 
 4.  **Verify with `sysctl -p` again:**

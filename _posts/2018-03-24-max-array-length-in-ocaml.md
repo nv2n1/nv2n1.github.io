@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /max-array-length-in-ocaml/
 ---
 
-\[md\]\
+\[md\]
 The maximum array length in OCaml is platform-dependent and can be queried at runtime using `Sys.max_array_length`:
 
 ```wp-block-code
@@ -40,16 +40,16 @@ OCaml’s array length limit stems from how the runtime represents values in mem
 
 The practical limit accounts for:
 
-– The tag bit reserved by OCaml’s garbage collector\
-– Memory alignment requirements\
+– The tag bit reserved by OCaml’s garbage collector
+– Memory alignment requirements
 – The need to distinguish between different value types
 
 \## Memory Consumption
 
 While the theoretical limits are enormous, you’ll hit memory constraints long before reaching `Sys.max_array_length`. Here’s the actual memory usage for OCaml arrays:
 
-– `int array` — 8 bytes per element on 64-bit (tagged integers)\
-– `float array` — 8 bytes per element (unboxed in dedicated float arrays)\
+– `int array` — 8 bytes per element on 64-bit (tagged integers)
+– `float array` — 8 bytes per element (unboxed in dedicated float arrays)
 – `string array` — 8 bytes per pointer + string data
 
 A float array with 100 million elements uses ~800MB. A billion elements requires ~8GB — feasible on modern hardware but beyond typical workstation workloads.
@@ -90,8 +90,8 @@ let arr = Array.of_list [1; 2; 3]
 
 OCaml 5.0 introduced major changes to the runtime that affect array behavior in parallel contexts:
 
-– \*\*Domains\*\* — OCaml 5’s parallelism unit. Each domain has its own minor heap but shares the major heap.\
-– Arrays in shared memory are accessible from multiple domains, but you need proper synchronization for mutation.\
+– \*\*Domains\*\* — OCaml 5’s parallelism unit. Each domain has its own minor heap but shares the major heap.
+– Arrays in shared memory are accessible from multiple domains, but you need proper synchronization for mutation.
 – The `Domain` module enables parallel computation on array segments:
 
 ```wp-block-code

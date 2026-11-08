@@ -124,7 +124,7 @@ While VNC remains functional, consider these modern options for better performan
 - Reduce guest resolution or color depth if performance is poor
 - Consider switching to SPICE for better performance
 
-**Need to change VNC settings after QEMU starts?**\
+**Need to change VNC settings after QEMU starts?**
 Access the QEMU monitor with Ctrl+Alt+2 and use commands like `info vnc` to check status.
 
 ## 2026 Best Practices and Advanced Techniques

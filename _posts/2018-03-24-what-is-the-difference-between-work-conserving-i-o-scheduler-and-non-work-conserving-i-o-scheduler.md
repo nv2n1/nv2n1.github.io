@@ -36,7 +36,7 @@ The rationale is workload-dependent. For workloads with strong spatial locality 
 
 The tradeoff becomes obvious under different conditions:
 
-**Single-process intensive I/O workload:**\
+**Single-process intensive I/O workload:**
 In controlled tests, Deadline can nearly double throughput compared to CFQ on a single heavy process. This happens because:
 
 - CFQ waits for requests closer to the current disk head position
@@ -44,29 +44,29 @@ In controlled tests, Deadline can nearly double throughput compared to CFQ on a 
 - Deadline dispatches pending work immediately, keeping the disk saturated
 - The waiting in CFQ becomes pure overhead
 
-**Multi-process or highly concurrent workload:**\
+**Multi-process or highly concurrent workload:**
 Non-work-conserving schedulers shine here. They maintain per-process fairness and exploit locality from multiple sources. CFQ ensures one process doesn’t starve others while still grouping related requests together.
 
-**Highly fragmented filesystem data:**\
+**Highly fragmented filesystem data:**
 When files are scattered across the disk (common on ext4 with many small files or long-running systems), anticipatory scheduling provides diminishing returns. AS assumes nearby blocks will be requested soon — but if they’re actually distant, waiting wastes time.
 
 ### Practical Considerations
 
 Several factors determine which scheduler works best for your specific case:
 
-**1. Block layout and filesystem fragmentation**\
+**1. Block layout and filesystem fragmentation**
 Files stored non-consecutively on disk reduce anticipatory scheduler effectiveness. A 100K+ file directory with 1–5MB files written via Windows/Samba through ext4 will likely have scattered blocks. RAID controllers can mitigate this by handling parallel I/O across multiple spindles.
 
-**2. Application-level blocking behavior**\
+**2. Application-level blocking behavior**
 Programs typically block on I/O completion. If a process reads a file and immediately waits for its read to complete before issuing the next request, the scheduler can’t anticipate future requests. Non-work-conserving schedulers fail here because they’re waiting for requests that won’t arrive for another application-level cycle.
 
-**3. Thread behavior**\
+**3. Thread behavior**
 Linux treats user-space threads as separate kernel tasks. A multi-threaded process reading files in parallel presents requests from different kernel tasks (same TGID, different PIDs). Schedulers treat these as separate streams, reducing their ability to recognize locality patterns.
 
-**4. Virtual environments**\
+**4. Virtual environments**
 In KVM or Xen, you add another layer of scheduling. The hypervisor schedules vCPUs, the guest kernel schedules I/O, and the storage backend may reorder further. Non-work-conserving heuristics often fail entirely because the scheduler can’t see actual physical block positions.
 
-**5. Storage hardware**\
+**5. Storage hardware**
 Modern RAID controllers with battery-backed cache, deep command queues, and parallel channel handling reduce I/O scheduler importance. The controller’s firmware often reorders requests more effectively than the kernel scheduler. NVMe devices with native command queuing also diminish scheduler impact.
 
 ### Choosing a Scheduler

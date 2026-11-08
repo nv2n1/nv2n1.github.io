@@ -8,7 +8,7 @@ categories: [scripting-utilities]
 canonical: /why-valueerror-zero-length-field-name-in-format-error-in-python-on-centos-6/
 ---
 
-\[md\]\
+\[md\]
 The error `ValueError: zero length field name in format` occurs when using implicit positional arguments in `.format()` strings with Python versions that don’t support this syntax.
 
 \## The Problematic Code

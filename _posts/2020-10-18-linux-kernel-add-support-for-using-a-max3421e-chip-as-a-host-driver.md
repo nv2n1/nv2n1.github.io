@@ -62,7 +62,7 @@ Control transfers always follow: SETUP → TRANSFER (if data exists) → TERMINA
 
 The driver implements a two-pass scheduler running once per USB frame:
 
-**SCHED_PASS_PERIODIC**: Handles interrupt and isochronous endpoints\
+**SCHED_PASS_PERIODIC**: Handles interrupt and isochronous endpoints
 **SCHED_PASS_NON_PERIODIC**: Handles control and bulk endpoints
 
 This ensures periodic transfers get priority while allowing bulk transfers to use remaining frame bandwidth. Each control endpoint is limited to one transaction per frame.

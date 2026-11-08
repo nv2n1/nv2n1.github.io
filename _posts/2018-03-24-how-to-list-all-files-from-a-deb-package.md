@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /how-to-list-all-files-from-a-deb-package/
 ---
 
-\[md\]\
+\[md\]
 When you need to inspect what files a .deb package contains or will install, `dpkg` is your primary tool. This is useful for understanding package contents before installation, checking what files a package added to your system, or troubleshooting file conflicts.
 
 \## Listing Files in an Installed Package
@@ -35,9 +35,9 @@ dpkg-deb -c package.deb
 
 This shows the file listing with permissions, ownership, and size — similar to `tar -tvf` output. The format shows:
 
-– File permissions (drwxr-xr-x for directories, -rw-r–r– for files)\
-– Owner and group\
-– File size\
+– File permissions (drwxr-xr-x for directories, -rw-r–r– for files)
+– Owner and group
+– File size
 – Full installation path
 
 To see just the file names without metadata:
@@ -153,8 +153,8 @@ dpkg -L package-name | grep bin/
 
 Quick reference for the most common operations:
 
-– `dpkg -L pkg` — list files from installed package\
-– `dpkg-deb -c file.deb` — list files in .deb archive\
-– `dpkg -S /path` — find which package owns a file\
-– `dpkg -V pkg` — verify installed files\
+– `dpkg -L pkg` — list files from installed package
+– `dpkg-deb -c file.deb` — list files in .deb archive
+– `dpkg -S /path` — find which package owns a file
+– `dpkg -V pkg` — verify installed files
 – `apt-file list pkg` — list files from remote package

@@ -66,7 +66,7 @@ Then simply `ssh remotehost` for subsequent connections that reuse the tunnel.
 
 ## Troubleshooting
 
-**Firefox won’t start or crashes immediately:**\
+**Firefox won’t start or crashes immediately:**
 Verify X11 forwarding is working with a simpler test:
 
 ``` bash
@@ -81,7 +81,7 @@ echo $DISPLAY
 
 You should see something like `localhost:10.0`. If it’s unset, X11 forwarding failed.
 
-**Permission denied errors:**\
+**Permission denied errors:**
 X11 socket permissions can cause issues. Run:
 
 ``` bash
@@ -90,7 +90,7 @@ xhost +local:
 
 This allows local connections to your X server. Be cautious with this on shared systems.
 
-**Firefox still reports lock errors:**\
+**Firefox still reports lock errors:**
 Kill any lingering Firefox processes on the remote host:
 
 ``` bash

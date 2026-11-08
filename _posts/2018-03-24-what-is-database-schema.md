@@ -14,13 +14,13 @@ A database schema is the blueprint that defines how data is organized and stored
 
 A schema encompasses several key elements:
 
-**Tables and Columns**\
+**Tables and Columns**
 Tables are the containers for data, organized into named columns. Each column has a defined data type (integer, string, date, etc.) that constrains what values can be stored.
 
-**Data Types**\
+**Data Types**
 Schemas enforce data types like VARCHAR(255), INT, DECIMAL(10,2), TIMESTAMP, or BOOLEAN. This prevents invalid data from being inserted and optimizes storage.
 
-**Constraints**\
+**Constraints**
 These are rules that maintain data integrity:
 
 - **Primary Key**: Uniquely identifies each row
@@ -30,7 +30,7 @@ These are rules that maintain data integrity:
 - **Check**: Validates data against a condition
 - **Default**: Assigns a default value if none is provided
 
-**Indexes**\
+**Indexes**
 While not always part of the schema definition itself, indexes are typically designed alongside the schema to optimize query performance.
 
 ## Schema Example
@@ -76,16 +76,16 @@ The schema is like a form template; instances are the completed forms filled wit
 
 ## Schema Design Considerations
 
-**Normalization**\
+**Normalization**
 Organize data to minimize redundancy and improve consistency. Most production systems use at least third normal form (3NF) or BCNF, though denormalization is sometimes necessary for performance.
 
-**Scalability**\
+**Scalability**
 Consider whether your schema will support growth. Avoid wide tables with hundreds of columns; use separate tables and joins instead.
 
-**Access Patterns**\
+**Access Patterns**
 Design with your queries in mind. Knowing whether you’ll frequently fetch users with all their orders helps determine optimal table structure and indexing.
 
-**Version Control**\
+**Version Control**
 Treat schema migrations like code. Use tools like Flyway, Liquibase, or framework-specific migration tools (Django migrations, Alembic for SQLAlchemy) to track and apply schema changes safely.
 
 ## Viewing Your Schema

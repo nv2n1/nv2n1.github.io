@@ -166,14 +166,14 @@ Press the Win key and watch the logs confirm the remap.
 
 ## Troubleshooting
 
-**evremap fails to start on Wayland:**\
+**evremap fails to start on Wayland:**
 Ensure you have `cap_sys_admin` capability:
 
 ``` bash
 sudo setcap cap_sys_admin=ep $(which evremap)
 ```
 
-**xmodmap changes don’t persist:**\
+**xmodmap changes don’t persist:**
 Verify your startup file is being sourced. Check `~/.bashrc` vs `~/.bash_profile` — graphical sessions use the latter. Alternatively, place a desktop file in `~/.config/autostart/`:
 
 ``` ini
@@ -184,5 +184,5 @@ Hidden=false
 Name=xmodmap
 ```
 
-**Mapping works in one app but not another:**\
+**Mapping works in one app but not another:**
 Some applications intercept Super before the window manager sees it. Check the application’s preferences for keybinding configuration or file a bug report.

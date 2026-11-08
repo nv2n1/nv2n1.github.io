@@ -65,11 +65,11 @@ If you’re using usbmuxd, the directory might also be under `/var/lib/usbmux/`.
 
 Windows stores lockdown data in:
 
-    C:\ProgramData\Apple\Lockdown\
+    C:\ProgramData\Apple\Lockdown
 
 or
 
-    C:\Users\<username>\AppData\Roaming\Apple Computer\Lockdown\
+    C:\Users\<username>\AppData\Roaming\Apple Computer\Lockdown
 
 You’ll need administrator privileges to delete these folders. Right-click the folder, select **Delete**, and confirm. Disconnect and reconnect your device afterward.
 

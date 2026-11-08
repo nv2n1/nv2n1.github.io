@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /how-to-set-an-environment-variable-in-csh/
 ---
 
-\[md\]\
+\[md\]
 Use `setenv` to set an environment variable in csh:
 
 ```wp-block-code
@@ -43,7 +43,7 @@ setenv LD_LIBRARY_PATH /opt/lib
 
 csh distinguishes between shell variables and environment variables:
 
-– `setenv` — creates an environment variable (inherited by child processes)\
+– `setenv` — creates an environment variable (inherited by child processes)
 – `set` — creates a shell variable (local to current shell only)
 
 ```wp-block-code
@@ -133,21 +133,21 @@ unset prompt
 
 If you’re coming from bash, these differences catch people out:
 
-– csh uses `setenv` instead of `export`\
-– csh uses `unsetenv` instead of `unset` (for env vars)\
-– csh syntax doesn’t support `VARIABLE=value` at the shell prompt (that’s a POSIX shell feature)\
-– Variable references require `$` prefix\
-– No `export` command — use `setenv` directly\
+– csh uses `setenv` instead of `export`
+– csh uses `unsetenv` instead of `unset` (for env vars)
+– csh syntax doesn’t support `VARIABLE=value` at the shell prompt (that’s a POSIX shell feature)
+– Variable references require `$` prefix
+– No `export` command — use `setenv` directly
 – No inline variable assignment like bash’s `VAR=val command`
 
 Quick reference for common bash-to-csh translations:
 
-\| Bash \| csh/tcsh \|\
-\|——\|———-\|\
-\| `export VAR=val` \| `setenv VAR val` \|\
-\| `VAR=val` \| `set VAR = val` \|\
-\| `unset VAR` \| `unsetenv VAR` \|\
-\| `echo $VAR` \| `echo $VAR` \|\
+\| Bash \| csh/tcsh \|
+\|——\|———-\|
+\| `export VAR=val` \| `setenv VAR val` \|
+\| `VAR=val` \| `set VAR = val` \|
+\| `unset VAR` \| `unsetenv VAR` \|
+\| `echo $VAR` \| `echo $VAR` \|
 \| `export -n VAR` \| `unsetenv VAR` \|
 
 \## Common Setup Patterns

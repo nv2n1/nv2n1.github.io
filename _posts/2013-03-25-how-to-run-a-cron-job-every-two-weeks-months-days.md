@@ -87,8 +87,8 @@ else
 fi
 ```
 
-First run: marker doesn’t exist, so it’s created and the script exits.\
-Second run: marker exists, so it’s removed and the command runs.\
+First run: marker doesn’t exist, so it’s created and the script exits.
+Second run: marker exists, so it’s removed and the command runs.
 Third run: repeats cycle.
 
 If this script runs weekly via cron, the job executes every two weeks.

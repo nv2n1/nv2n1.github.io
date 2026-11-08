@@ -81,14 +81,14 @@ Then navigate to `http://localhost:631` in your browser and add the printer via 
 - Run `sudo hp-probe -buslist` to manually detect connected devices
 - Try unplugging and replugging the USB cable
 
-**Plugin installation needed:**\
+**Plugin installation needed:**
 Some newer HP printers require proprietary plugins. The setup wizard will prompt you to download these if needed. If it fails, try:
 
 ``` bash
 sudo hp-plugin -i
 ```
 
-**Permission denied errors:**\
+**Permission denied errors:**
 Ensure your user is in the `lp` and `lpadmin` groups:
 
 ``` bash
@@ -97,7 +97,7 @@ sudo usermod -aG lp,lpadmin $USER
 
 You’ll need to log out and back in for group changes to take effect.
 
-**Printer queue stuck:**\
+**Printer queue stuck:**
 Clear the print queue if jobs won’t process:
 
 ``` bash

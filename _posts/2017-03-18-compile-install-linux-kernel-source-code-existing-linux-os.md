@@ -149,7 +149,7 @@ This runs sequentially and fails fast if any step breaks. Successful completion 
 
     INSTALL /lib/firmware/...
     DEPMOD  6.12.0
-    sh ./arch/x86/boot/install.sh 6.12.0 arch/x86/boot/bzImage \
+    sh ./arch/x86/boot/install.sh 6.12.0 arch/x86/boot/bzImage
             System.map "/boot"
 
 The `make install` step updates your bootloader automatically on most distributions.

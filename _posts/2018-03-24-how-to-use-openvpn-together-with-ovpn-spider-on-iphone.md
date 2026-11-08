@@ -38,7 +38,7 @@ Open the OpenVPN Connect app on your iPhone. The import process differs slightly
 5.  Review the profile details and tap “Add”
 6.  You may be prompted to allow VPN configuration — tap “Allow”
 
-**For older iOS versions:**\
+**For older iOS versions:**
 Use the Files app to navigate to your .ovpn file, then tap it directly. iOS will prompt you to open it with OpenVPN Connect.
 
 ## Connecting to the VPN

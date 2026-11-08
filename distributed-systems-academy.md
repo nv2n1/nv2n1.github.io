@@ -6,22 +6,22 @@ permalink: /distributed-systems-academy/
 
 Master distributed systems design, consensus algorithms, and modern architecture patterns. Learn the fundamentals of building scalable, fault-tolerant systems.
 
-Learning Paths\
+Learning Paths
 ---------------
 
-### Advanced Systems & Architecture\
+### Advanced Systems & Architecture
 
 Distributed systems, consensus algorithms (Paxos, Raft), consistency models, system design patterns, fault tolerance, scalability
 
 [Start Learning →](/advanced-systems-path/)
 
-### Security & Cryptography\
+### Security & Cryptography
 
 Cryptographic fundamentals, public key infrastructure, security hardening, key management, encryption algorithms, digital signatures
 
 [Start Learning →](/security-cryptography-path/)
 
-Featured Posts\
+Featured Posts
 ---------------
 
 - [Understanding the Raft Consensus Protocol](/understanding-the-raft-consensus-protocol/)
@@ -35,12 +35,12 @@ Featured Posts\
 - [x86-64 Instruction Encoding: From Assembly to Machine Code](/beginners-guide-x86-64-instruction-encoding/)
 - [Debugging Kernel Modules with Runtime Parameters](/debug-linux-kernel-less-efforts/)
 
-Resources\
+Resources
 ----------
 
 - [View all distributed systems posts](/category/systems-architecture/)
 
-Back to Learning\
+Back to Learning
 -----------------
 
 [← Back to SysTutorials Home](/)

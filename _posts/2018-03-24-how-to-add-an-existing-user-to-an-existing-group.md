@@ -22,10 +22,10 @@ usermod -a -G group1,group2,group3 user_name
 
 ### Options explained
 
-`-a, --append`\
+`-a, --append`
 Append the user to the supplementary groups. Only works with `-G`. Without `-a`, usermod replaces the entire group list, removing the user from unlisted groups.
 
-`-G, --groups GROUP1[,GROUP2,...[,GROUPN]]`\
+`-G, --groups GROUP1[,GROUP2,...[,GROUPN]]`
 Specify supplementary groups as a comma-separated list with no spaces. Each group must already exist.
 
 ### Verifying group membership

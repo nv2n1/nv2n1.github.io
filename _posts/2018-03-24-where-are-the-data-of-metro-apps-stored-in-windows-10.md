@@ -14,7 +14,7 @@ Modern Universal Windows Platform (UWP) apps store their data in protected user-
 
 UWP app data lives here:
 
-    C:\Users\<YourUsername>\AppData\Local\Packages\<AppPackageName>\
+    C:\Users\<YourUsername>\AppData\Local\Packages\<AppPackageName>
 
 The `<AppPackageName>` is a unique identifier assigned by Windows—typically a long alphanumeric string like `Microsoft.WindowsCalculator_8wekyb3d8bbwe`. This naming convention ensures apps from different publishers don’t collide.
 
