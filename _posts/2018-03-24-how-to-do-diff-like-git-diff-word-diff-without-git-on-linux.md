@@ -59,12 +59,12 @@ Check differences in log entries word by word:
 wdiff syslog.old syslog.new | colordiff
 ```
 
-## Alternative: unified word diff output
+## Note on the -u option
 
-If you prefer a more unified format similar to `git diff --word-diff=unified`, you can use `wdiff` with the `-u` option to get context:
+Unlike `diff`, `wdiff` has no `-u` option. Its word-level output is all it produces; if you want a unified context around word changes, use `git diff --word-diff=plain` with some surrounding lines:
 
 ``` bash
-wdiff -u file1.txt file2.txt | colordiff
+git diff --word-diff=plain -U3 file1.txt file2.txt
 ```
 
 ## Combining with other tools

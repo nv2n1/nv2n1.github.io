@@ -8,7 +8,7 @@ categories: [linux-systems-administration]
 canonical: /how-to-download-a-youtube-video-to-my-computer/
 ---
 
-The most reliable way to download YouTube videos is **yt-dlp**, a maintained fork of youtube-dl that handles modern YouTube changes and DRM protections. It works on Linux, macOS, and Windows.
+The most reliable way to download YouTube videos is **yt-dlp**, a maintained fork of youtube-dl that handles modern YouTube changes. It works on Linux, macOS, and Windows.
 
 ## Installation
 
@@ -30,7 +30,7 @@ sudo dnf install yt-dlp
 brew install yt-dlp
 ```
 
-**Windows or any system with Python 3.8+:**
+**Windows or any system with Python 3.9+:**
 
 ``` bash
 pip install yt-dlp
@@ -70,8 +70,8 @@ This shows resolution, bitrate, and format codes. Example output:
 
     [youtube] Extracting video information
     Format ID  | Extension | Resolution | FPS | Video Codec    | Audio Codec | Audio Bitrate
-    18         | mp4       | 360x640    |     | h.264          | aac         | 96k
-    22         | mp4       | 720x1280   |     | h.264          | aac         | 192k
+    18         | mp4       | 640x360    |     | h.264          | aac         | 96k
+    22         | mp4       | 1280x720   |     | h.264          | aac         | 128k
 
 **Download specific quality (e.g., 1080p with best audio):**
 
@@ -129,7 +129,7 @@ Record a live stream as it happens:
 yt-dlp --wait-for-video 3600 https://www.youtube.com/watch?v=VIDEO_ID
 ```
 
-This waits up to 3600 seconds (1 hour) for the stream to start. Once recording begins, it continues until the stream ends.
+This polls for the scheduled stream every 3600 seconds until it starts; the value is the retry interval, not a total wait limit. Once recording begins, it continues until the stream ends.
 
 For already-completed streams (VODs), download normally:
 
