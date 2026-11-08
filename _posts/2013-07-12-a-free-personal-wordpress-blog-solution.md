@@ -18,7 +18,7 @@ Hosted solutions lock you in. You can’t control your domain, customize templat
 
 Start here, because your domain is the only part of your setup you truly own.
 
-**Free domains**: Services like Freenom offer .ml, .ga, and .cf domains at no cost, but registrations expire after a few months and renewals are unreliable. Use them only for testing locally or on a staging server.
+**Free domains**: Freenom, which once offered free .ml, .ga, and .cf domains, stopped registrations in 2023 and is now defunct. There is no reliable source of free domains today; budget for a regular registrar instead.
 
 **Paid domains**: This is your real choice. Common TLDs (.com, .net, .org) cost \$10–15 yearly with registrars like Namecheap, Route53, or Porkbun. Cheaper alternatives like .info or regional domains run \$2–5/year but damage credibility. Buy for multiple years upfront to lock in renewal rates.
 
@@ -30,8 +30,8 @@ This is where budget decisions matter most. Free hosting seems attractive until 
 
 **The practical minimum** (~\$3–6/month):
 
-- Shared hosting from providers like DreamHost, Kinsta, or Bluehost
-- DigitalOcean droplets (\$4–6/month) with managed databases
+- Shared hosting from providers like DreamHost, Hostinger, or Bluehost
+- DigitalOcean droplets (\$4–6/month; managed databases are a separate add-on)
 - Linode Nanode (\$5/month) for more control and slightly better performance
 - Hetzner Cloud (\$4–7/month) if you’re in Europe
 
@@ -57,7 +57,7 @@ If you absolutely must start free, use it only for local testing with Docker or 
 
 **Host requirements checklist**:
 
-- PHP 8.1+ (WordPress 6.x minimum)
+- PHP 8.1+ (recommended; WordPress 6.x also runs on PHP 7.x)
 - MariaDB 10.5+ or MySQL 8.0+
 - SSH access for backups and troubleshooting
 - Automated daily backups, or the ability to run them yourself
@@ -98,7 +98,7 @@ Copy the output into your `wp-config.php` file (replace the placeholder lines).
 ``` php
 // In wp-config.php
 define('WP_AUTO_UPDATE_CORE', 'minor');
-define('DISABLE_FILE_EDIT', true);
+define('DISALLOW_FILE_EDIT', true);
 define('WP_MEMORY_LIMIT', '256M');
 ```
 
@@ -188,9 +188,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 - Domain: \$12–15/year
 - Shared hosting: \$36–72/year (\$3–6/month)
 - Premium plugins: \$0–20/year (optional)
-- **Total: \$50–90/year**
+- **Total: \$48–107/year**
 
-WordPress.com’s cheapest paid plan costs \$240/year for equivalent features. Self-hosting saves money while giving you full control.
+WordPress.com’s cheapest paid plan (Starter) costs roughly \$48/year. Self-hosting saves money while giving you full control.
 
 ## Performance Tuning for Small Budgets
 
@@ -233,4 +233,4 @@ Premature VPS upgrades waste money. Use a performance monitoring tool like Query
 
 ## Summary
 
-A self-hosted WordPress blog on a \$5/month hosting plan with a \$12 domain gives you full control, security, and growth potential for under \$70 annually. Skip free hosting entirely—the hidden costs (lost traffic, setup time, migration headaches) outweigh any savings. Invest minimally, monitor performance, and upgrade only when data shows you need it.
+A self-hosted WordPress blog on a \$5/month hosting plan with a \$12 domain gives you full control, security, and growth potential for about \$72 annually (\$60 hosting + \$12 domain). Skip free hosting entirely—the hidden costs (lost traffic, setup time, migration headaches) outweigh any savings. Invest minimally, monitor performance, and upgrade only when data shows you need it.
