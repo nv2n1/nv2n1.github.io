@@ -40,11 +40,11 @@ diff -rupN -U5 original/ new/ > detailed.patch
 If your tree includes binary files, `diff` will flag them but won’t generate usable patches. You have two options:
 
 ``` bash
-# Exclude binary files entirely
-diff -rupN --binary original/ new/ > patchfile.patch
+# Skip binary files: exclude them from the comparison
+diff -rupN -x '*.o' -x '*.png' original/ new/ > patchfile.patch
 
-# Use git diff for better binary handling
-git diff > changes.patch
+# Binary-safe patches: git diff --binary stores binary deltas
+git diff --binary > changes.patch
 ```
 
 ## Applying Patches with patch

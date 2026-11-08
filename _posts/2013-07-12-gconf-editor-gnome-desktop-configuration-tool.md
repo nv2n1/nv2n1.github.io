@@ -28,7 +28,7 @@ If you want a graphical interface to explore available settings:
 ``` bash
 sudo apt install dconf-editor        # Debian/Ubuntu
 sudo dnf install dconf-editor         # Fedora
-sudo pacman -S dconf                  # Arch
+sudo pacman -S dconf-editor                  # Arch
 ```
 
 Launch it with `dconf-editor` from your application menu or terminal. The tree structure mirrors `/org/gnome/` paths and shows descriptions for most settings.
