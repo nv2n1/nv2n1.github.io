@@ -59,7 +59,7 @@ The ModR/M byte breaks down as `[mod][reg][r/m]` (8 bits total):
 
 ### SIB Byte Format (When Needed)
 
-The SIB byte is `[scale][index][base]` and only appears when ModR/M.r/m = `100`:
+The SIB byte is `[scale][index][base]` and only appears when mod ≠ `11` and ModR/M.r/m = `100` (with mod = `11`, r/m `100` is simply the RSP register):
 
 - **scale (2 bits)** — `00`=1x, `01`=2x, `10`=4x, `11`=8x
 - **index (3 bits)** — index register (extended by REX.X)
@@ -93,21 +93,21 @@ Output (AT&T syntax):
 
     0000000000000000 <.text>:
        0:   48 83 c0 0a             add    $0xa,%rax
-       4:   4c 01 c1                add    %r8,%r9
+       4:   4d 01 c1                add    %r8,%r9
        7:   4c 03 47 0a             add    0xa(%rdi),%r8
 
 For Intel syntax output:
 
 ``` bash
-$ objdump -d --disassembler-options=intel-mnemonic test.o
+$ objdump -d -M intel test.o
 ```
 
     0000000000000000 <.text>:
        0:   48 83 c0 0a             add    rax,0xa
-       4:   4c 01 c1                add    r9,r8
+       4:   4d 01 c1                add    r9,r8
        7:   4c 03 47 0a             add    r8,QWORD PTR [rdi+0xa]
 
-## Manual Decoding Example: ADD r8, \[rdi+0xa\]
+## Manual Decoding Example: ADD r8, [rdi+0xa]
 
 Let’s decode the bytes `4c 03 47 0a` from the third instruction above.
 
@@ -137,7 +137,7 @@ Let’s decode the bytes `4c 03 47 0a` from the third instruction above.
 
 `0a` is the 8-bit displacement (10 in decimal).
 
-**Result:** The instruction reads “ADD r8 to \[rdi+0x0a\]”. In AT&T syntax: `add 0xa(%rdi), %r8`. In Intel syntax: `add r8, [rdi+0xa]`.
+**Result:** The instruction adds the qword at [rdi+0xa] to r8. In AT&T syntax: `add 0xa(%rdi), %r8`. In Intel syntax: `add r8, [rdi+0xa]`.
 
 ## General-Purpose Register Encoding
 
@@ -158,50 +158,40 @@ When using r8–r15, you encode the low 3 bits in ModR/M (or SIB) and set the co
 
 ## Another Example: ADD r9, r8
 
-Bytes: `4c 01 c1`
+Bytes: `4d 01 c1`
 
-- `4c` — REX.W=1, REX.R=1 (r9 as dest), REX.B=1 (r8 as src)
+- `4d` — REX.W=1, REX.R=1 (extends the reg field for r8, the source), REX.B=1 (extends the r/m field for r9, the destination)
 - `01` — ADD r/m64, r64 opcode (note: source is in reg field, destination in r/m)
-- `c1` — mod=`11` (register mode), reg=`000` (r8 with REX.B=1), r/m=`001` (r9 with REX.B=1)
+- `c1` — mod=`11` (register mode), reg=`000` (r8 with REX.R=1), r/m=`001` (r9 with REX.B=1)
 
 In AT&T syntax: `add %r8, %r9` (source first, destination second).
 
-## SIB Encoding Example: ADD \[rax+rcx\*4+10\], r8
+## SIB Encoding Example: ADD r8, [rax+rcx*4]
 
-Bytes: `4c 03 84 88 0a 00 00 00`
-
-- `4c` — REX.W=1, REX.R=1 (r8 as dest)
-- `03` — ADD r/m64, r64 opcode
-- `84` — mod=`10` (32-bit displacement), reg=`000` (r8), r/m=`100` (SIB follows)
-- `88` — SIB byte: scale=`10` (4x), index=`000` (rax), base=`000` (rax)
-- `0a 00 00 00` — 32-bit displacement (10 in little-endian)
-
-Wait—this example has an issue. Let me correct it: if you want base=rax and index=rcx, the SIB byte should be `8c` (scale=`10`, index=`001`, base=`100`). The mod should reflect that both registers and displacement are used.
-
-Actually, let’s use: `[rax+rcx*4+10]`
-
-- `4c` — REX.W=1, REX.R=1
-- `03` — ADD opcode
-- `84` — mod=`10`, reg=`000`, r/m=`100` (SIB)
-- `8c` — SIB: scale=`10` (4x), index=`001` (rcx), base=`100` (rsp)
-
-No—base=`100` is rsp. Use base=`000` (rax):
-
-- `88` — SIB: scale=`10` (4x), index=`000` (rax), base=`000` (rax)
-
-This is getting confusing. A clearer example: `[rdi+rsi*2]`
+Assembly (AT&T syntax), adding the memory operand to r8:
 
 ``` asm
-add %r8, 0(%rdi,%rsi,2)
+add (%rax,%rcx,4), %r8
 ```
 
-Bytes: `4c 03 84 77 00`
+Bytes: `4c 03 04 88`
+
+- `4c` — REX.W=1, REX.R=1 (r8 in the reg field, the destination)
+- `03` — ADD r64, r/m64 opcode
+- `04` — mod=`00` (no displacement), reg=`000` (r8), r/m=`100` (SIB follows)
+- `88` — SIB byte: scale=`10` (4x), index=`001` (rcx), base=`000` (rax)
+
+With a displacement, mod changes and the displacement bytes follow the SIB. For `add 8(%rdi,%rsi,2), %r8`:
+
+Bytes: `4c 03 44 77 08`
 
 - `4c` — REX.W=1, REX.R=1
-- `03` — ADD opcode
-- `84` — mod=`10` (displacement follows), reg=`000` (r8), r/m=`100` (SIB)
+- `03` — ADD r64, r/m64 opcode
+- `44` — mod=`01` (8-bit displacement), reg=`000` (r8), r/m=`100` (SIB)
 - `77` — SIB: scale=`01` (2x), index=`110` (rsi), base=`111` (rdi)
-- `00` — 32-bit displacement (0)
+- `08` — 8-bit displacement (8)
+
+Note that GNU `as` prefers the opcode `01` form (ADD r/m64, r64, destination in r/m) when the memory operand is the destination, so `add %r8, (%rax,%rcx,4)` assembles to `4c 01 04 88` instead.
 
 ## Working with Instruction References
 
