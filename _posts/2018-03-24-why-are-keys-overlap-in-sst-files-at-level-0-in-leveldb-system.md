@@ -3,7 +3,8 @@ title: "Understanding Level 0 Overlaps in LevelDB"
 date: 2018-03-24 11:49:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/why-are-keys-overlap-in-sst-files-at-level-0-in-leveldb-system/
+categories: [linux-systems-administration]
+canonical: /why-are-keys-overlap-in-sst-files-at-level-0-in-leveldb-system/
 ---
 
 LevelDB allows key ranges to overlap across SSTables in Level 0, unlike higher levels where overlaps are eliminated through compaction. This design choice is fundamental to LevelDB’s write performance and is worth understanding in detail.

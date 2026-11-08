@@ -3,7 +3,8 @@ title: "Extracting EC Public Keys from Certificates with OpenSSL"
 date: 2024-08-23 14:20:18 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/extracting-ec-public-keys-with-openssl/
+categories: [security-cryptography-2]
+canonical: /extracting-ec-public-keys-with-openssl/
 ---
 
 Verification: You need the public key to verify digital signatures (e.g., in Bitcoin or TLS).\

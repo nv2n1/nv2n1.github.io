@@ -3,7 +3,8 @@ title: "Querying Package Files and Reverse Lookups in Fedora"
 date: 2013-07-12 16:32:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/query-installed-files-from-package-and-package-for-installed-file-in-fedora/
+categories: [linux-systems-administration]
+canonical: /query-installed-files-from-package-and-package-for-installed-file-in-fedora/
 ---
 
 The `rpm` and `dnf` commands let you inspect exactly which files a package installed and find the package that owns a specific file. These queries work on both the host system and inside containers like Toolbox or Distrobox.

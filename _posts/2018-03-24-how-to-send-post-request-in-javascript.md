@@ -3,7 +3,8 @@ title: "Sending POST Requests in JavaScript: Fetch vs jQuery vs Axios"
 date: 2018-03-24 11:48:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-send-post-request-in-javascript/
+categories: [linux-systems-administration]
+canonical: /how-to-send-post-request-in-javascript/
 ---
 
 Sending POST requests from client-side JavaScript is a common task, and you have several modern options. The approach you choose depends on your project’s dependencies and browser support requirements.

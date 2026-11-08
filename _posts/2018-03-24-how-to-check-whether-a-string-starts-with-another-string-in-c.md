@@ -3,7 +3,8 @@ title: "Checking if a String Starts With Another in C++"
 date: 2018-03-24 11:55:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-whether-a-string-starts-with-another-string-in-c/
+categories: [languages-frameworks]
+canonical: /how-to-check-whether-a-string-starts-with-another-string-in-c/
 ---
 
 C++20 introduced `std::string::starts_with()`, which is the most straightforward way to check if a string begins with a specific substring:

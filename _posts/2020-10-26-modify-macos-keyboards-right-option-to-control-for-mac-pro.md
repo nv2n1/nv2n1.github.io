@@ -3,7 +3,8 @@ title: "Remapping Mac Pro\u2019s Right Option Key to Control"
 date: 2020-10-26 12:01:13 +0000
 author: "Daniel"
 layout: post
-canonical: https://www.systutorials.com/modify-macos-keyboards-right-option-to-control-for-mac-pro/
+categories: [security-cryptography-2]
+canonical: /modify-macos-keyboards-right-option-to-control-for-mac-pro/
 ---
 
 macOS provides built-in keyboard modifier remapping without third-party software. Open System Settings → Keyboard → Modifier Keys and you can reassign any modifier key globally or per-device.

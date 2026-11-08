@@ -3,7 +3,8 @@ title: "Free CDN Options for Web Developers"
 date: 2018-03-24 08:04:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/are-there-good-free-cdns-on-the-web/
+categories: [web-development]
+canonical: /are-there-good-free-cdns-on-the-web/
 ---
 
 If you’re running a site with limited resources, a free CDN can significantly improve performance and reduce bandwidth costs. Here are the current options worth considering.

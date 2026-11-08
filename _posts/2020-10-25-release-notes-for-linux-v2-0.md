@@ -3,7 +3,8 @@ title: "Linux 2.0 Release Notes"
 date: 2020-10-25 15:07:39 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/release-notes-for-linux-v2-0/
+categories: [linux-systems-administration]
+canonical: /release-notes-for-linux-v2-0/
 ---
 
 This document provides the essential software versions and upgrade instructions for running Linux 2.0.x kernels successfully. It covers package compatibility, known issues, and practical solutions for system administrators upgrading from earlier kernel releases.

@@ -3,7 +3,8 @@ title: "How to Enable Natural Scrolling on MATE Linux Touchpads"
 date: 2018-03-24 11:49:54 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-enable-natual-scroll-of-touchpad-in-mate-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-enable-natual-scroll-of-touchpad-in-mate-on-linux/
 ---
 
 MATE’s mouse settings don’t include a graphical toggle for natural (or inverted) scrolling on touchpads, unlike GNOME or Cinnamon. You’ll need to configure it through the command line or configuration files.

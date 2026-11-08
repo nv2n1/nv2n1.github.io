@@ -3,7 +3,8 @@ title: "Converting Strings to Rune Arrays in Go"
 date: 2018-03-24 11:50:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/in-golang-how-to-convert-a-string-to-unicode-rune-array-and-back/
+categories: [languages-frameworks]
+canonical: /in-golang-how-to-convert-a-string-to-unicode-rune-array-and-back/
 ---
 
 In Go, a string is a read-only slice of bytes, while a rune is an alias for int32 representing a Unicode code point. Understanding this distinction is essential when you need to work with individual characters, especially in multilingual text.

@@ -3,7 +3,8 @@ title: "Docker Containers as Background Services: Detached Mode and Production P
 date: 2018-08-20 02:26:54 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-detach-a-docker-container-to-be-a-running-daemon/
+categories: [design-patterns-architecture]
+canonical: /how-to-detach-a-docker-container-to-be-a-running-daemon/
 ---
 
 Use the `-d` flag to run a container in the background and return terminal control immediately:

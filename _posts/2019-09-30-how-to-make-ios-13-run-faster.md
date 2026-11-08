@@ -3,7 +3,8 @@ title: "iPhone Performance Tuning: Disabling Unnecessary Battery-Draining Featur
 date: 2019-09-30 16:01:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-ios-13-run-faster/
+categories: [system-administration-cloud]
+canonical: /how-to-make-ios-13-run-faster/
 ---
 
 If your iPhone feels sluggish after a major iOS update, you’re running into resource contention. Newer iOS versions add features that demand CPU, GPU, and memory cycles. You can’t strip down iOS itself, but you can selectively disable features that drain resources without matching your actual workflow.

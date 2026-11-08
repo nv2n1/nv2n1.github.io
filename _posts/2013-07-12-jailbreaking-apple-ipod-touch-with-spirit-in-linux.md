@@ -3,7 +3,8 @@ title: "Jailbreaking an iPod Touch with Spirit on Linux"
 date: 2013-07-12 16:32:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/jailbreaking-apple-ipod-touch-with-spirit-in-linux/
+categories: [linux-systems-administration]
+canonical: /jailbreaking-apple-ipod-touch-with-spirit-in-linux/
 ---
 
 This post documents jailbreaking procedures for legacy iOS devices (iPod Touch, early iPhone) using Spirit—an untethered jailbreak tool from the late 2000s. Modern iOS devices (2010 and later) use entirely different security models and jailbreak methods. This information is preserved for historical reference only and has no practical application to current iOS versions.

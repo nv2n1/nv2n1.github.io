@@ -3,7 +3,8 @@ title: "Customizing MediaWiki\u2019s Sidebar: A Configuration Guide"
 date: 2013-07-16 01:32:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-mediawikis-sidebar/
+categories: [linux-system-configuration]
+canonical: /how-to-change-mediawikis-sidebar/
 ---
 
 MediaWiki’s sidebar is managed through the `MediaWiki:Sidebar` special page, a simple text-based system that controls navigation for your entire wiki. Changes take effect immediately across all pages.

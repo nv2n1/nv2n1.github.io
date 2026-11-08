@@ -3,7 +3,8 @@ title: "Troubleshooting Windows Update Failures and Boot Loops on Windows 7"
 date: 2018-03-24 11:47:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/windows-7-repetitively-tried-to-update-but-failed-every-time-i-boot-windows-7/
+categories: [linux-systems-administration]
+canonical: /windows-7-repetitively-tried-to-update-but-failed-every-time-i-boot-windows-7/
 ---
 
 Windows 7 stuck in an update loop—where Windows Update fails repeatedly and triggers automatic reboots—is a frustrating problem that stems from a corrupted or problematic update package. The system keeps attempting to install the same failed update on each boot, creating a cycle you can’t escape without intervention.

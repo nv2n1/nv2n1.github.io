@@ -3,7 +3,8 @@ title: "Remapping Left Alt to Ctrl on Windows for macOS-like Behavior"
 date: 2024-05-15 13:31:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/mapping-left-alt-to-ctrl-for-windows-keyboard-to-be-similar-to-macos/
+categories: [functional-programming]
+canonical: /mapping-left-alt-to-ctrl-for-windows-keyboard-to-be-similar-to-macos/
 ---
 
 If you’re a macOS user switching to Windows, the keyboard layout feels wrong immediately. The Command key is gone, and you have to relearn muscle memory for every shortcut. The Windows equivalent of Command is Ctrl, but on a standard Windows keyboard, Alt sits in the Command position—making the muscle memory fight even harder.

@@ -3,7 +3,8 @@ title: "Debugging Kernel Modules with Runtime Parameters"
 date: 2017-08-27 16:05:37 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/debug-linux-kernel-less-efforts/
+categories: [linux-systems-administration]
+canonical: /debug-linux-kernel-less-efforts/
 ---
 
 When you need to debug kernel behavior without full instrumentation frameworks, module parameters offer a pragmatic shortcut. Rather than immediately reaching for perf, kprobes, or eBPF, you can add simple toggles and state tracking directly in the code you’re investigating, then control them at runtime through sysfs.

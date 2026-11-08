@@ -3,7 +3,8 @@ title: "Automatically Adding New SSH Hosts to Known Hosts"
 date: 2018-03-24 08:04:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/howto-ssh-automatically-add-new-hosts-to-the-list-of-known-hosts/
+categories: [scripting-utilities]
+canonical: /howto-ssh-automatically-add-new-hosts-to-the-list-of-known-hosts/
 ---
 
 When managing many systems, manually confirming host keys for each new connection gets tedious fast. You can configure SSH to automatically add unknown hosts to `~/.ssh/known_hosts` without prompting.

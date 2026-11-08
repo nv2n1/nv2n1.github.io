@@ -3,7 +3,8 @@ title: "Common Data Structures for Object Lists in C"
 date: 2018-03-24 11:52:30 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/whats-the-standard-or-common-data-structure-for-a-list-of-objects-in-c-2/
+categories: [design-patterns-architecture]
+canonical: /whats-the-standard-or-common-data-structure-for-a-list-of-objects-in-c-2/
 ---
 
 In C, the most straightforward way to store a homogeneous collection of objects is an array. An array is a contiguous block of memory holding elements of identical type, with the first element at the lowest address and subsequent elements following immediately after.

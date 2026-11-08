@@ -3,7 +3,8 @@ title: "Safely Disabling FirewallD on Fedora"
 date: 2018-03-24 08:21:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-totally-disable-firewall-or-iptables-on-fedora-20/
+categories: [development-best-practices]
+canonical: /how-to-totally-disable-firewall-or-iptables-on-fedora-20/
 ---
 
 Fedora uses FirewallD as its default firewall management service. If you’re running servers in a trusted internal cluster or isolated environment where network-level filtering isn’t needed, you can disable it entirely.

@@ -3,7 +3,8 @@ title: "Handling Variable Spacing in Linux Field Extraction"
 date: 2018-03-24 11:48:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-cut-by-multiple-spaces-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-cut-by-multiple-spaces-in-linux/
 ---
 
 When you’re processing text with varying amounts of whitespace between fields, the standard `cut` command falls short. Given input like this:

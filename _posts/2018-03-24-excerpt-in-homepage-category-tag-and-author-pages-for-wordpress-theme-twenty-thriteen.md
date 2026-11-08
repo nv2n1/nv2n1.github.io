@@ -3,7 +3,8 @@ title: "WordPress Twenty Thirteen: Using Excerpts on Archive Pages"
 date: 2018-03-24 08:17:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/excerpt-in-homepage-category-tag-and-author-pages-for-wordpress-theme-twenty-thriteen/
+categories: [linux-systems-administration]
+canonical: /excerpt-in-homepage-category-tag-and-author-pages-for-wordpress-theme-twenty-thriteen/
 ---
 
 WordPress Twenty Thirteen theme shows full post content on archive pages by default. Using excerpts instead keeps archive pages clean and improves page load speed by showing just a summary of each post.

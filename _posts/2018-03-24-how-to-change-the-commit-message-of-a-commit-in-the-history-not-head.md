@@ -3,7 +3,8 @@ title: "Amending Git Commit Messages: A Practical Guide"
 date: 2018-03-24 11:44:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-commit-message-of-a-commit-in-the-history-not-head/
+categories: [scripting-utilities]
+canonical: /how-to-change-the-commit-message-of-a-commit-in-the-history-not-head/
 ---
 
 When you need to change the commit message of a past commit that isn’t HEAD, `git commit --amend` alone won’t help. You’ll need to use interactive rebase to stop at that commit, amend it, and then continue.

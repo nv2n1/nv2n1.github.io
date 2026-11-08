@@ -3,7 +3,8 @@ title: "Testing if a File or Directory Exists in Python"
 date: 2018-03-24 11:50:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-a-file-or-directory-exists-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-test-a-file-or-directory-exists-in-python/
 ---
 
 Python provides several ways to check if files or directories exist, with different trade-offs depending on your use case.

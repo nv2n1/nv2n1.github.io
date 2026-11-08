@@ -3,7 +3,8 @@ title: "Reading and Processing Files Line by Line in C++"
 date: 2018-03-24 11:52:05 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-process-a-file-line-by-line-in-c/
+categories: [languages-frameworks]
+canonical: /how-to-process-a-file-line-by-line-in-c/
 ---
 
 Processing files line by line is a common task in systems programming, data processing, and log analysis. C++ provides several approaches with different trade-offs in performance, memory usage, and code clarity.

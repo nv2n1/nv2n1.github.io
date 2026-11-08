@@ -3,7 +3,8 @@ title: "Switching from OpenClaw to Qwen on OpenRouter"
 date: 2026-04-06 08:30:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/switching-openclaw-to-qwen-free-via-openrouter/
+categories: [ai-engineering]
+canonical: /switching-openclaw-to-qwen-free-via-openrouter/
 ---
 
 For months, I’ve been running OpenClaw — a personal AI assistant integrated with Telegram that monitors my crypto portfolio and handles daily tasks. Initially, I used Anthropic’s Claude Sonnet, but the recurring costs add up fast for a 24/7 agent.

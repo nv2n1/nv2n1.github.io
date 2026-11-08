@@ -3,7 +3,8 @@ title: "Generating a 10-Byte Random String in Bash"
 date: 2018-03-24 08:18:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-10-byte-length-random-string-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-get-a-10-byte-length-random-string-in-bash/
 ---
 
 There are several reliable methods to generate random strings of a specific length in bash. The choice depends on your character set requirements and use case.

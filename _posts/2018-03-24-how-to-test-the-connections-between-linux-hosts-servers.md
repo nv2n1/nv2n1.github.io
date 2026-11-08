@@ -3,7 +3,8 @@ title: "Testing Network Connectivity Between Linux Servers"
 date: 2018-03-24 07:43:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-the-connections-between-linux-hosts-servers/
+categories: [linux-systems-administration]
+canonical: /how-to-test-the-connections-between-linux-hosts-servers/
 ---
 
 When you need to verify that two Linux systems can communicate over a specific protocol and port, you have several solid options. Let’s cover the most practical approaches.

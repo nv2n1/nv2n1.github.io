@@ -3,7 +3,8 @@ title: "NVIDIA Driver Logo Not Appearing on Linux Boot"
 date: 2013-07-12 16:32:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/nvidia-driver-in-linux-not-displaying-logo-during-booting/
+categories: [linux-systems-administration]
+canonical: /nvidia-driver-in-linux-not-displaying-logo-during-booting/
 ---
 
 Modern Linux distributions typically auto-detect and load NVIDIA drivers without requiring manual xorg.conf configuration. However, if you’re using an older setup with an explicitly configured xorg.conf file, or if you need to customize NVIDIA driver behavior, you can disable the NVIDIA logo that displays during X server startup.

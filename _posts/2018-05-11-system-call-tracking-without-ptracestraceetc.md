@@ -3,7 +3,8 @@ title: "System Call Tracing with eBPF: Move Beyond ptrace"
 date: 2018-05-11 15:22:48 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/system-call-tracking-without-ptracestraceetc/
+categories: [testing-devops]
+canonical: /system-call-tracking-without-ptracestraceetc/
 ---
 
 Traditionally, tools like `strace` used `ptrace` to monitor system calls. While effective for development debugging, `ptrace` stops the entire process for every syscall, causing 2-10x slowdown. This makes it unsuitable for production workloads where you need real-time visibility without tanking performance.

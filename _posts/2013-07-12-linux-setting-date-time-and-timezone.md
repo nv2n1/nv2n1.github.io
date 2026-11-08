@@ -3,7 +3,8 @@ title: "Setting Date, Time, and Timezone in Linux"
 date: 2013-07-12 16:32:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/linux-setting-date-time-and-timezone/
+categories: [linux-systems-administration]
+canonical: /linux-setting-date-time-and-timezone/
 ---
 
 Understanding and managing system time is crucial for logging, cron jobs, SSL certificates, and system synchronization. Here’s how to handle it properly on modern Linux systems.

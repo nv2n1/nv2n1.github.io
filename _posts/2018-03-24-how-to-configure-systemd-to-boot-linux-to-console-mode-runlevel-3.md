@@ -3,7 +3,8 @@ title: "Boot Linux to Console Mode with systemd"
 date: 2018-03-24 11:47:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-systemd-to-boot-linux-to-console-mode-runlevel-3/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-systemd-to-boot-linux-to-console-mode-runlevel-3/
 ---
 
 systemd uses *targets* instead of the old sysvinit runlevels. Runlevel 3 (console mode) maps to `multi-user.target`. Here’s how to boot directly to console on Fedora, RHEL, Debian, Ubuntu, and other systemd-based distributions.

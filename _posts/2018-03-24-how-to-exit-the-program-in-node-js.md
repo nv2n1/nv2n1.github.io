@@ -3,7 +3,8 @@ title: "Graceful Node.js Process Shutdown: Methods and Best Practices"
 date: 2018-03-24 11:48:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-exit-the-program-in-node-js/
+categories: [linux-systems-administration]
+canonical: /how-to-exit-the-program-in-node-js/
 ---
 
 When your Node.js application encounters a fatal error or needs to terminate, you need a reliable way to shut it down. Understanding how to exit gracefully—or forcefully when necessary—is essential for production applications.

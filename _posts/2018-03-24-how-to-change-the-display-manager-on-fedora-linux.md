@@ -3,7 +3,8 @@ title: "Switching Display Managers on Fedora Linux"
 date: 2018-03-24 11:47:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-display-manager-on-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-change-the-display-manager-on-fedora-linux/
 ---
 
 The default display manager on Fedora is GNOME Display Manager (GDM). If you want to switch to another display manager like KDE Plasma (SDDM), LightDM, or another option, you need a reliable method that won’t break your system.

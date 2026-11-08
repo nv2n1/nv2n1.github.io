@@ -3,7 +3,8 @@ title: "Reverting Local Changes in Subversion"
 date: 2018-03-24 08:14:22 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/subversion-how-to-revert-my-changes-in-my-local-copy-of-the-repository/
+categories: [development-best-practices]
+canonical: /subversion-how-to-revert-my-changes-in-my-local-copy-of-the-repository/
 ---
 
 If you’ve made changes to your working copy but haven’t committed them yet, you can discard them using `svn revert`. This is useful when you want to abandon edits and go back to the last committed version.

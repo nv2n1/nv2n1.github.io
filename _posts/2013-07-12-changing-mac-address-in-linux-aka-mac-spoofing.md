@@ -3,7 +3,8 @@ title: "Spoofing MAC Addresses in Linux"
 date: 2013-07-12 16:32:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/changing-mac-address-in-linux-aka-mac-spoofing/
+categories: [linux-systems-administration]
+canonical: /changing-mac-address-in-linux-aka-mac-spoofing/
 ---
 
 MAC stands for Media Access Control — a six-byte identifier (usually written as twelve hexadecimal digits) that uniquely identifies a network interface on a LAN. The Address Resolution Protocol (ARP) maps IP addresses to MAC addresses at layer 2.

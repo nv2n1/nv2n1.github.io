@@ -3,7 +3,8 @@ title: "Setting Up Ubuntu 10.10 as a Xen DomU on Fedora"
 date: 2013-07-12 16:32:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-ubuntu-domu-on-xen-use-ubuntu-10-10-on-fedora-xen-dom0/
+categories: [linux-systems-administration]
+canonical: /setting-up-ubuntu-domu-on-xen-use-ubuntu-10-10-on-fedora-xen-dom0/
 ---
 
 This post describes Xen DomU setup procedures from the early 2010s. While Xen remains critical infrastructure for cloud providers like AWS EC2 and Citrix Hypervisor, it’s rarely deployed for new on-premises virtualization projects.

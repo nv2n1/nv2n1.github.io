@@ -3,7 +3,8 @@ title: "Viewing the Previous Boot\u2019s systemd Journal on CentOS 7"
 date: 2018-03-24 11:53:12 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-last-boots-systemd-journal-log-in-centos-7-linux/
+categories: [linux-system-configuration]
+canonical: /how-to-check-last-boots-systemd-journal-log-in-centos-7-linux/
 ---
 
 The command `journalctl -b -1` should show the previous boot’s journal, but on many systems it returns:

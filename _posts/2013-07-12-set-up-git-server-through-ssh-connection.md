@@ -3,7 +3,8 @@ title: "Setting Up a Git Server with SSH"
 date: 2013-07-12 16:31:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/set-up-git-server-through-ssh-connection/
+categories: [linux-systems-administration]
+canonical: /set-up-git-server-through-ssh-connection/
 ---
 
 Git and SSH integrate seamlessly for version control infrastructure. An SSH-based Git server works well for small teams where all members are trusted and have administrator-level access to all repositories. This approach is straightforward to deploy, but lacks fine-grained access control.

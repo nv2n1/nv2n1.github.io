@@ -3,7 +3,8 @@ title: "How to Check Available Disk Space on Linux"
 date: 2018-03-24 08:19:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-the-disk-space-left-for-a-file-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-the-disk-space-left-for-a-file-on-linux/
 ---
 
 When a program appends data to a file, you need to know how much space remains on the partition containing that file. This determines whether the file can grow or if you’re about to hit a capacity limit.

@@ -3,7 +3,8 @@ title: "Setting Up eCryptFS on Linux"
 date: 2013-07-12 16:32:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-ecryptfs-in-linux/
+categories: [linux-systems-administration]
+canonical: /setting-up-ecryptfs-in-linux/
 ---
 
 On Fedora/RHEL-based systems:

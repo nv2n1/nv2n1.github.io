@@ -3,7 +3,8 @@ title: "WPS wpp program missing libbz2.so.1.0 on CentOS 7"
 date: 2018-03-24 11:53:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/wps-wpp-program-reports-libbz2-so-1-0-cannot-open-shared-object-file-on-centos-7/
+categories: [programming-languages]
+canonical: /wps-wpp-program-reports-libbz2-so-1-0-cannot-open-shared-object-file-on-centos-7/
 ---
 
 When launching WPS Office on Rocky Linux 9+ or similar distributions, you may encounter this error:

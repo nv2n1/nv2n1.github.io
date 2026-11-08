@@ -3,7 +3,8 @@ title: "Configuring GNOME 3 Window Geometry on VNC"
 date: 2018-03-24 08:18:51 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-the-geometry-for-gnome-3-under-a-vnc-server/
+categories: [linux-systems-administration]
+canonical: /how-to-set-the-geometry-for-gnome-3-under-a-vnc-server/
 ---
 
 When you start a VNC server with the `-geometry` flag under GNOME 3, you’ll notice the display resolution doesn’t match what you specified:

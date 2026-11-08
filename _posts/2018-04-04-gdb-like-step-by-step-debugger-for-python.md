@@ -3,7 +3,8 @@ title: "Python Debugging with pdb: A Step-by-Step Command Guide"
 date: 2018-04-04 07:36:03 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/gdb-like-step-by-step-debugger-for-python/
+categories: [languages-frameworks]
+canonical: /gdb-like-step-by-step-debugger-for-python/
 ---
 
 The built-in pdb module is Python’s equivalent to gdb — a command-line debugger that lets you step through code, set breakpoints, inspect variables, and control execution flow. It’s essential for server-side debugging and situations where IDE graphical debuggers aren’t available.

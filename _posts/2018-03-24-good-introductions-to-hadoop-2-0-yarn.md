@@ -3,7 +3,8 @@ title: "Understanding YARN: Resource Management and Cluster Fundamentals"
 date: 2018-03-24 08:22:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/good-introductions-to-hadoop-2-0-yarn/
+categories: [development-best-practices]
+canonical: /good-introductions-to-hadoop-2-0-yarn/
 ---
 
 YARN (Yet Another Resource Negotiator) fundamentally restructured Hadoop 2.0 by decoupling resource management from application logic. If you’re transitioning from Hadoop 1.x or building systems on top of YARN, understanding its architecture is essential for effective cluster administration and application development.

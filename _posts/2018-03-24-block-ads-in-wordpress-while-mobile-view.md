@@ -3,7 +3,8 @@ title: "Hide AdSense Ads on Mobile and WebView in WordPress"
 date: 2018-03-24 11:47:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/block-ads-in-wordpress-while-mobile-view/
+categories: [linux-systems-administration]
+canonical: /block-ads-in-wordpress-while-mobile-view/
 ---
 
 When you wrap your WordPress site in a native Android app using WebView, Google’s AdSense policy prohibits serving those ads through the app wrapper. You need to hide AdSense on mobile views while keeping them on desktop, and ideally detect when your site is loaded inside a WebView to block ads there too.

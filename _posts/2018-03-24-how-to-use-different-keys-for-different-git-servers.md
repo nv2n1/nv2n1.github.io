@@ -3,7 +3,8 @@ title: "Managing Multiple Git Server Keys"
 date: 2018-03-24 08:19:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-different-keys-for-different-git-servers/
+categories: [web-development]
+canonical: /how-to-use-different-keys-for-different-git-servers/
 ---
 
 When you work with multiple git servers or need different credentials for different hosts, SSH’s config file lets you specify which key to use for each server. This is cleaner than managing aliases or environment variables.

@@ -3,7 +3,8 @@ title: "Static Linking OCaml Programs for Better Portability"
 date: 2019-06-08 03:25:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-statically-link-ocaml-programs/
+categories: [programming-languages]
+canonical: /how-to-statically-link-ocaml-programs/
 ---
 
 Static linking is essential when distributing OCaml binaries across systems without managing runtime dependencies. OCaml supports two main approaches: glibc-based static linking (which retains some dynamic dependencies) and musl-based static linking (producing truly portable binaries).

@@ -3,7 +3,8 @@ title: "Crypto Futures vs. Perpetuals: What You Need to Know"
 date: 2025-08-16 10:02:48 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/crypto-futures-vs-perpetuals-key-differences-explained/
+categories: [blockchain-cryptocurrency]
+canonical: /crypto-futures-vs-perpetuals-key-differences-explained/
 ---
 
 Crypto futures are contracts to buy or sell an asset at a predetermined price on a specific expiry date. They function similarly to traditional financial futures but operate within crypto markets.

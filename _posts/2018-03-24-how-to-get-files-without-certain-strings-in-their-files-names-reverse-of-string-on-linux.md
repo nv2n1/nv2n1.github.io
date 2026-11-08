@@ -3,7 +3,8 @@ title: "Find Files Without a Specific String in Their Name on Linux"
 date: 2018-03-24 11:45:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-files-without-certain-strings-in-their-files-names-reverse-of-string-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-files-without-certain-strings-in-their-files-names-reverse-of-string-on-linux/
 ---
 
 Finding files that match a pattern is straightforward with `ls *string*` or `find . -name '*string*'`. But excluding files with a certain string in their filename requires a different approach.

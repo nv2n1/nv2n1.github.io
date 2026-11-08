@@ -3,7 +3,8 @@ title: "How to Split a String by Another String in Python"
 date: 2018-03-24 11:54:30 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-split-a-string-by-string-in-python/
+categories: [scripting-utilities]
+canonical: /how-to-split-a-string-by-string-in-python/
 ---
 
 Python’s `str.split()` method splits a string by a separator and returns a list. Here are the common patterns:

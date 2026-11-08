@@ -3,7 +3,8 @@ title: "Configuring /dev/shm Size on Linux"
 date: 2018-03-31 16:20:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-dev-shm-size-of-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-dev-shm-size-of-linux/
 ---
 
 /dev/shm is a tmpfs mount that allocates storage from your system’s RAM rather than disk. It’s commonly used for inter-process communication (IPC), shared memory segments, and temporary data that needs low-latency access. By default, Linux allocates half your total RAM to /dev/shm, but you’ll often need to adjust this for specific workloads.

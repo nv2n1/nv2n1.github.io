@@ -3,7 +3,8 @@ title: "Setting Up Firefox Sync: A Step-by-Step Guide"
 date: 2018-03-24 08:04:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-firefox-sync/
+categories: [development-best-practices]
+canonical: /how-to-set-up-firefox-sync/
 ---
 
 Firefox Sync lets you keep bookmarks, passwords, history, open tabs, and settings synchronized across all your devices. It’s built on Mozilla’s infrastructure and doesn’t require a separate account beyond your Firefox account.

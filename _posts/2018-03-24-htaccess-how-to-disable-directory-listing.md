@@ -3,7 +3,8 @@ title: "Disabling Directory Listing in .htaccess"
 date: 2018-03-24 08:14:22 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/htaccess-how-to-disable-directory-listing/
+categories: [development-best-practices]
+canonical: /htaccess-how-to-disable-directory-listing/
 ---
 
 Directory listing exposes your file structure to visitors and can be a security concern. Apache’s `.htaccess` file provides a straightforward way to disable this behavior while still allowing direct file access.

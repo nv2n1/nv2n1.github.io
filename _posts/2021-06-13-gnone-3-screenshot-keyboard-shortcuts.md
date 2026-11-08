@@ -3,7 +3,8 @@ title: "GNOME 3 Keyboard Shortcuts for Screenshots"
 date: 2021-06-13 12:26:31 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/gnone-3-screenshot-keyboard-shortcuts/
+categories: [linux-systems-administration]
+canonical: /gnone-3-screenshot-keyboard-shortcuts/
 ---
 
 GNOME 3 and later versions include built-in screenshot functionality accessible via keyboard shortcuts. These work without opening any application, making them faster than the dedicated Screenshot utility. The shortcuts split into two categories: saving directly to the Pictures folder, and copying to the clipboard for immediate pasting.

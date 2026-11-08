@@ -3,7 +3,8 @@ title: "Implement AdSense Backfill in BuySellAds Without iFrames"
 date: 2018-03-24 11:47:22 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-put-adsense-ads-in-buysellads-without-iframe/
+categories: [linux-systems-administration]
+canonical: /how-to-put-adsense-ads-in-buysellads-without-iframe/
 ---
 
 BuySellAds wraps backfill ads in iframes by default, which violates Google AdSense’s terms of service. If you’re using AdSense as your backfill network, you need to inline the ad code directly on the page instead.

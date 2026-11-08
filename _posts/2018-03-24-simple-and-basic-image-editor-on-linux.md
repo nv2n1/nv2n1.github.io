@@ -3,7 +3,8 @@ title: "Lightweight Image Editors for Linux: GIMP Alternatives"
 date: 2018-03-24 11:44:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/simple-and-basic-image-editor-on-linux/
+categories: [linux-systems-administration]
+canonical: /simple-and-basic-image-editor-on-linux/
 ---
 
 GIMP is the most full-featured image editor on Linux, but it can be overkill for quick edits. Several lighter alternatives provide essential editing features without the complexity or resource usage of GIMP.

@@ -3,7 +3,8 @@ title: "Configuring Multiple Static IP Addresses on a Xen VM"
 date: 2018-03-24 11:50:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-two-static-ips-for-a-xen-vm/
+categories: [programming-languages]
+canonical: /how-to-add-two-static-ips-for-a-xen-vm/
 ---
 
 Configuring multiple static IP addresses on a Xen VM is useful for hosting multiple services, SSL certificates, or failover scenarios. The approach depends on your underlying Linux distribution and whether you’re using traditional network configuration or modern network managers.

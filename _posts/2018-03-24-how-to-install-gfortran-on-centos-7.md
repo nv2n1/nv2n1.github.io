@@ -3,7 +3,8 @@ title: "Installing gfortran on CentOS 7"
 date: 2018-03-24 11:54:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-gfortran-on-centos-7/
+categories: [programming-languages]
+canonical: /how-to-install-gfortran-on-centos-7/
 ---
 
 GFortran is the GNU Fortran compiler from the GCC toolchain. It’s essential for scientific computing, numerical simulations, and legacy Fortran code maintenance.

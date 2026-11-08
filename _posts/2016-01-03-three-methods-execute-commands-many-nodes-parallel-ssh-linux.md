@@ -3,7 +3,8 @@ title: "Running Commands Across Multiple Linux Servers in Parallel"
 date: 2016-01-03 08:36:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/three-methods-execute-commands-many-nodes-parallel-ssh-linux/
+categories: [web-development]
+canonical: /three-methods-execute-commands-many-nodes-parallel-ssh-linux/
 ---
 
 Running commands across multiple servers is fundamental to cluster management and infrastructure automation. While orchestration tools like Ansible and Terraform dominate modern deployments, sometimes you need lightweight solutions that work without dependencies—or you’re already invested in SSH-based infrastructure.

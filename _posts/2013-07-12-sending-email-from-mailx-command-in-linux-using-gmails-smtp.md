@@ -3,7 +3,8 @@ title: "Sending Gmail Emails via mailx on Linux"
 date: 2013-07-12 16:31:59 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/sending-email-from-mailx-command-in-linux-using-gmails-smtp/
+categories: [linux-systems-administration]
+canonical: /sending-email-from-mailx-command-in-linux-using-gmails-smtp/
 ---
 
 The mailx (or s-nail on modern distributions) command remains useful for scripted email delivery, particularly when you need to send alerts or notifications automatically. Gmail’s SMTP service works well for this, though it requires TLS authentication and specific configuration.

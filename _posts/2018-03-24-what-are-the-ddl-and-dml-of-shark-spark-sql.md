@@ -3,7 +3,8 @@ title: "Spark SQL: DDL and DML Operations Explained"
 date: 2018-03-24 11:44:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/what-are-the-ddl-and-dml-of-shark-spark-sql/
+categories: [development-best-practices]
+canonical: /what-are-the-ddl-and-dml-of-shark-spark-sql/
 ---
 
 Spark SQL doesn’t have a separate DDL/DML specification distinct from Hive QL — it inherits its SQL dialect directly from Hive. If you’re designing a SQL engine or looking to understand Spark SQL’s data definition and manipulation capabilities, you need to reference Hive’s DDL and DML documentation.

@@ -3,7 +3,8 @@ title: "Optimizing MTU Size for WiFi Performance on Linux"
 date: 2013-07-12 16:32:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/smaller-mtu-faster-wifi-linux/
+categories: [linux-systems-administration]
+canonical: /smaller-mtu-faster-wifi-linux/
 ---
 
 If your Linux machine is getting noticeably slower WiFi speeds than other devices on the same network, MTU (Maximum Transmission Unit) misconfiguration can be a culprit. While MTU tuning won’t be the answer in every case, it’s worth investigating if you’re seeing symptoms like high latency, dropped packets, or intermittent connection issues.

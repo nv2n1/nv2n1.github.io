@@ -3,7 +3,8 @@ title: "Getting the Full Path of a Python Script"
 date: 2018-04-01 14:41:12 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-full-path-and-directory-of-a-python-script-itself/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-full-path-and-directory-of-a-python-script-itself/
 ---
 
 When you need to load configuration files, data files, or assets relative to your script’s location, the current working directory won’t work — it depends entirely on where you called the script from, not where the script actually lives.

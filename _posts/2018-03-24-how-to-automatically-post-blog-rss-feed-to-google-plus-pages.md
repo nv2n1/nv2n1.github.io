@@ -3,7 +3,8 @@ title: "Automating RSS Feed Distribution to Social Media"
 date: 2018-03-24 11:46:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-automatically-post-blog-rss-feed-to-google-plus-pages/
+categories: [programming-languages]
+canonical: /how-to-automatically-post-blog-rss-feed-to-google-plus-pages/
 ---
 
 Google+ shut down in 2019, so the original premise of this post no longer applies. However, the broader problem—automatically sharing blog RSS feeds across social platforms—remains relevant. Here’s how to handle RSS-to-social distribution in 2026.

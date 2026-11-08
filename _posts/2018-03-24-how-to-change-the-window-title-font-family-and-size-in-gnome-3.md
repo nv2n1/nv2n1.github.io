@@ -3,7 +3,8 @@ title: "Changing GNOME 3 Window Title Font and Size"
 date: 2018-03-24 08:19:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-window-title-font-family-and-size-in-gnome-3/
+categories: [linux-system-configuration]
+canonical: /how-to-change-the-window-title-font-family-and-size-in-gnome-3/
 ---
 
 GNOME 3 removed the GUI option for customizing window title fonts that existed in earlier versions. The setting is still configurable, but you’ll need to access it through command-line tools or configuration editors.

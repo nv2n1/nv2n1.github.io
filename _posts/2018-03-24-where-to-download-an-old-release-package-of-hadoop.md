@@ -3,7 +3,8 @@ title: "How to Download Older Versions of Hadoop"
 date: 2018-03-24 11:51:35 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/where-to-download-an-old-release-package-of-hadoop/
+categories: [design-patterns-architecture]
+canonical: /where-to-download-an-old-release-package-of-hadoop/
 ---
 
 Sometimes you need an older version of Hadoop — for compatibility with existing jobs, to reproduce bugs, or to match a specific cluster environment. The Apache Hadoop project maintains an archive of all past releases.

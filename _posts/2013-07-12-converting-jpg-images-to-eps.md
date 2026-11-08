@@ -3,7 +3,8 @@ title: "Converting JPG Images to EPS Format"
 date: 2013-07-12 16:32:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/converting-jpg-images-to-eps/
+categories: [linux-systems-administration]
+canonical: /converting-jpg-images-to-eps/
 ---
 
 If you’re working with LaTeX documents that need to include JPG or PNG images, converting them to EPS (Encapsulated PostScript) format is a straightforward approach. While modern LaTeX workflows often handle JPG directly, EPS conversion remains useful for compatibility with certain tools, print workflows, or when working with legacy build systems.

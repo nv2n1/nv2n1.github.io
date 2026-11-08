@@ -3,7 +3,8 @@ title: "Modifying Another Process\u2019s Environment Variables in Linux"
 date: 2020-08-08 06:13:07 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-another-process-environment-variable-in-linux/
+categories: [linux-system-configuration]
+canonical: /how-to-change-another-process-environment-variable-in-linux/
 ---
 
 Each process on Linux has its own environment variable namespace. While normally isolated, there are scenarios where you might need to modify a running process’s environment—usually for debugging, testing, or dynamic configuration changes.

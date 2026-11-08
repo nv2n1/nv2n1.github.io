@@ -3,7 +3,8 @@ title: "Installing GitBook on Linux"
 date: 2018-03-24 11:43:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-gitbook/
+categories: [linux-systems-administration]
+canonical: /how-to-install-gitbook/
 ---
 
 GitBook is a tool for building documentation and ebooks from Markdown content. Here’s how to set it up on a Linux system.

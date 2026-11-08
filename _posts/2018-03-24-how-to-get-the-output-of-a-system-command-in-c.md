@@ -3,7 +3,8 @@ title: "Capturing System Command Output in C"
 date: 2018-03-24 08:19:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-output-of-a-system-command-in-c/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-output-of-a-system-command-in-c/
 ---
 
 When you need to execute a system command and capture its output in C, `popen()` is the standard approach. Unlike `system()`, which just runs a command, `popen()` gives you a file stream connected to the command’s stdout or stdin.

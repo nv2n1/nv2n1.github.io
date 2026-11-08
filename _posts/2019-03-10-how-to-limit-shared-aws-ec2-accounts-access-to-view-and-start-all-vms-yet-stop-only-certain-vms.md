@@ -3,7 +3,8 @@ title: "EC2 Instance Control with IAM Tags: Allowing Developers to Start Only De
 date: 2019-03-10 08:43:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-limit-shared-aws-ec2-accounts-access-to-view-and-start-all-vms-yet-stop-only-certain-vms/
+categories: [system-administration-cloud]
+canonical: /how-to-limit-shared-aws-ec2-accounts-access-to-view-and-start-all-vms-yet-stop-only-certain-vms/
 ---
 
 Shared AWS accounts across multiple teams require careful access controls to prevent costly mistakes. A common requirement is allowing developers to view and start all instances, but restrict stopping to only non-production resources. IAM policies with resource tags give you fine-grained control over who can do what.

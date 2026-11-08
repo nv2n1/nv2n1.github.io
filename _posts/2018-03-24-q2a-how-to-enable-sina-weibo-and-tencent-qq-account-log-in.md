@@ -3,7 +3,8 @@ title: "Enable Sina Weibo and QQ Login in Q2A"
 date: 2018-03-24 08:15:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/q2a-how-to-enable-sina-weibo-and-tencent-qq-account-log-in/
+categories: [development-best-practices]
+canonical: /q2a-how-to-enable-sina-weibo-and-tencent-qq-account-log-in/
 ---
 
 Question2Answer supports third-party authentication through social login plugins. Here’s how to set up Sina Weibo and Tencent QQ login integration.

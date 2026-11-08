@@ -3,7 +3,8 @@ title: "Adding Loop Devices in Linux: A Practical Guide"
 date: 2013-07-12 16:31:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/add-more-loop-device-on-linux/
+categories: [linux-systems-administration]
+canonical: /add-more-loop-device-on-linux/
 ---
 
 The default number of loop devices on most Linux systems is 8, which is often insufficient for scenarios like running multiple virtual machines with loop device-backed storage, containerized environments, or disk image management. If you need more than the default allocation, you’ll need to increase `max_loop`.

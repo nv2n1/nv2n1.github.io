@@ -3,7 +3,8 @@ title: "Setting Up Gitolite for SSH-Based Git Repositories"
 date: 2014-03-07 00:13:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-gitolite-git-server-a-ten-minute-tutorial/
+categories: [linux-systems-administration]
+canonical: /how-to-set-up-gitolite-git-server-a-ten-minute-tutorial/
 ---
 
 Gitolite provides fine-grained access control over Git repositories without the overhead of a full-featured platform. It uses SSH keys for authentication and handles per-user, per-repository, and even per-branch permissions through a simple configuration file. This guide covers a working installation on modern Linux distributions.

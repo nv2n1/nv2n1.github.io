@@ -3,7 +3,8 @@ title: "Converting JPG to EPS on Linux with ImageMagick and Ghostscript"
 date: 2013-07-12 16:46:15 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/an-online-jpg-to-eps-converter/
+categories: [scripting-utilities]
+canonical: /an-online-jpg-to-eps-converter/
 ---
 
 Converting raster images to EPS format is necessary when working with LaTeX documents or professional publishing workflows that require PostScript compatibility. While online converters exist, command-line tools give you reproducibility, automation, and batch processing capabilities—essential for production work.

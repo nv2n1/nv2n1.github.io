@@ -3,7 +3,8 @@ title: "Enable GNOME Classic Desktop on Fedora, CentOS, and RHEL"
 date: 2013-07-15 03:16:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-enable-gnome-classic-mode-in-fedora/
+categories: [linux-systems-administration]
+canonical: /how-to-enable-gnome-classic-mode-in-fedora/
 ---
 
 GNOME Classic is a session mode that provides a traditional desktop experience with an application menu, places menu, and window switcher. It’s useful if you prefer a layout closer to GNOME 2 or want a traditional taskbar-based interface instead of GNOME Shell’s Activities overview.

@@ -3,7 +3,8 @@ title: "Querying Maximum Temperature Across Linux Server Sensors"
 date: 2018-03-24 11:53:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-highest-temperature-from-all-sensors-in-a-server-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-highest-temperature-from-all-sensors-in-a-server-on-linux/
 ---
 
 Monitoring server temperatures is essential for preventing hardware damage and maintaining system stability. Linux provides several tools to query thermal sensors and identify which components are running hot.

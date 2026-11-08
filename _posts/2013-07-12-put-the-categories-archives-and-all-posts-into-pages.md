@@ -3,7 +3,8 @@ title: "Custom WordPress Archives: Categories, Dates, and Posts"
 date: 2013-07-12 16:46:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/put-the-categories-archives-and-all-posts-into-pages/
+categories: [programming-languages]
+canonical: /put-the-categories-archives-and-all-posts-into-pages/
 ---
 
 Consolidating categories, archives, and post listings into a dedicated page keeps your WordPress site structure clean and prevents search engines from treating navigation elements as content. Rather than scattering these across sidebar widgets, a dedicated archives page improves both user navigation and SEO by creating a single destination for content discovery.

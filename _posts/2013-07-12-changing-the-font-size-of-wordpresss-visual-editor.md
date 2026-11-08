@@ -3,7 +3,8 @@ title: "Adjusting Font Size in the WordPress Block Editor"
 date: 2013-07-12 16:46:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/changing-the-font-size-of-wordpresss-visual-editor/
+categories: [programming-languages]
+canonical: /changing-the-font-size-of-wordpresss-visual-editor/
 ---
 
 The default 13px font size in WordPress’s block editor can strain your eyes, especially on high-resolution displays or during extended editing sessions. Several approaches let you adjust editor typography without touching core files.

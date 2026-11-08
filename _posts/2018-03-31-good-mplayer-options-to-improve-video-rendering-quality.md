@@ -3,7 +3,8 @@ title: "Improving Video Rendering Quality in MPlayer"
 date: 2018-03-31 17:28:30 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/good-mplayer-options-to-improve-video-rendering-quality/
+categories: [development-best-practices]
+canonical: /good-mplayer-options-to-improve-video-rendering-quality/
 ---
 
 MPlayer reached end-of-life in 2010 and hasn’t received updates since. If you’re still using it, you’re missing years of improvements in video decoding, filtering, and performance. For new projects, use **mpv** instead—it’s the maintained fork that incorporates MPlayer’s codebase with significant enhancements.

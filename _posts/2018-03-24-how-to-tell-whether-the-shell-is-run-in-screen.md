@@ -3,7 +3,8 @@ title: "Detecting if Your Shell is Running in GNU Screen"
 date: 2018-03-24 08:18:57 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-tell-whether-the-shell-is-run-in-screen/
+categories: [linux-systems-administration]
+canonical: /how-to-tell-whether-the-shell-is-run-in-screen/
 ---
 
 You sometimes need to know whether your shell is running inside screen or tmux. The most straightforward approach is checking the `TERM` environment variable.

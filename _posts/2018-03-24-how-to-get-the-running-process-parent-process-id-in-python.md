@@ -3,7 +3,8 @@ title: "How to Get a Process\u2019s Parent ID in Python"
 date: 2018-03-24 11:52:54 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-running-process-parent-process-id-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-running-process-parent-process-id-in-python/
 ---
 
 To get the parent process ID (PPID) of the running process, use the `os.getppid()` function:

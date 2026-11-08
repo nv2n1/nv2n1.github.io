@@ -3,7 +3,8 @@ title: "Emoji Support on iPhone: How to Use Smileys"
 date: 2018-03-24 08:04:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/smiley-faces-in-iphone/
+categories: [development-best-practices]
+canonical: /smiley-faces-in-iphone/
 ---
 
 iPhones have built-in emoji support that doesn’t require any third-party apps. The emoji keyboard is part of iOS and can be enabled directly through system settings.

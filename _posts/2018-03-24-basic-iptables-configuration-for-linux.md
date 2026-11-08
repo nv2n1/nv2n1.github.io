@@ -3,7 +3,8 @@ title: "iptables Configuration Guide for Linux Firewalls"
 date: 2018-03-24 11:44:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/basic-iptables-configuration-for-linux/
+categories: [linux-systems-administration]
+canonical: /basic-iptables-configuration-for-linux/
 ---
 
 iptables remains the standard firewall configuration tool on Linux systems, though many distributions now layer it with ufw or firewalld. Understanding the basics helps you troubleshoot, migrate, or work on systems without those abstractions.

@@ -3,7 +3,8 @@ title: "GCC Inline Assembly on Linux: Extended Syntax and Examples"
 date: 2013-07-12 16:47:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/inline-assembly-with-gcc-on-linux/
+categories: [linux-systems-administration]
+canonical: /inline-assembly-with-gcc-on-linux/
 ---
 
 GCC allows you to embed assembly code directly in C/C++ programs through inline assembly (`asm` and `__asm__`). This is useful when you need fine-grained control over processor execution—forcing variables into specific registers, reading CPU state efficiently, or hand-optimizing critical sections verified by profiling.

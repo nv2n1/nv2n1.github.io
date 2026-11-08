@@ -3,7 +3,8 @@ title: "Setting Up Python in Your Dreamhost Account"
 date: 2018-03-24 08:19:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-python-environment-in-my-own-account-on-dreamhost/
+categories: [languages-frameworks]
+canonical: /how-to-install-python-environment-in-my-own-account-on-dreamhost/
 ---
 
 Running your own Python installation on Dreamhost (or similar shared hosting) gives you control over the version, packages, and dependencies without relying on system-wide Python. This is especially useful when you need specific Python versions or packages the hosting provider doesn’t support.

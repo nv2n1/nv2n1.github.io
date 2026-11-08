@@ -3,7 +3,8 @@ title: "Creating Unique Temporary Files in Bash"
 date: 2018-03-24 11:51:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-a-unique-temporary-file-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-make-a-unique-temporary-file-in-bash-on-linux/
 ---
 
 Temporary files are essential for any non-trivial Bash script. Whether you’re processing data, staging changes, or handling inter-process communication, you need reliable ways to create uniquely-named files that won’t collide with other processes.

@@ -3,7 +3,8 @@ title: "Image Hosting Services for Developers and Creators"
 date: 2018-03-24 11:47:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/good-free-images-hosting-services-on-the-web/
+categories: [linux-systems-administration]
+canonical: /good-free-images-hosting-services-on-the-web/
 ---
 
 Finding reliable, free image hosting is essential for developers, bloggers, and content creators. Your choice depends on your use case — whether you need temporary sharing, permanent hosting with transformations, or stock imagery.

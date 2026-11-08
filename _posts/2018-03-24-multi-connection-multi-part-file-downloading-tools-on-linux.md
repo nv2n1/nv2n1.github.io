@@ -3,7 +3,8 @@ title: "Parallel Download Tools for Linux: aria2, axel, and curl"
 date: 2018-03-24 08:21:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/multi-connection-multi-part-file-downloading-tools-on-linux/
+categories: [linux-systems-administration]
+canonical: /multi-connection-multi-part-file-downloading-tools-on-linux/
 ---
 
 When you need to download large files faster, parallelizing across multiple connections can significantly improve throughput. Standard tools like `wget` and `curl` use single connections by default, but several alternatives support multi-connection downloads that can achieve 3-5x speedups on capable networks.

@@ -3,7 +3,8 @@ title: "Print Text Files with Line Numbers: nl, cat, and More"
 date: 2018-03-24 08:21:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-out-text-with-line-numbers-in-linux/
+categories: [scripting-utilities]
+canonical: /how-to-print-out-text-with-line-numbers-in-linux/
 ---
 
 The `nl` command is purpose-built for adding line numbers to text files:

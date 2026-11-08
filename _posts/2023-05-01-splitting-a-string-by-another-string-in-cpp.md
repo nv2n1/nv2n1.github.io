@@ -3,7 +3,8 @@ title: "String Splitting in C++: Building a Flexible Utility Function"
 date: 2023-05-01 13:59:01 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/splitting-a-string-by-another-string-in-cpp/
+categories: [languages-frameworks]
+canonical: /splitting-a-string-by-another-string-in-cpp/
 ---
 
 Unlike Python or JavaScript, C++ doesn’t provide a built-in `split()` method for strings. You’ll need to use library functions or write your own utility. The best approach depends on your compiler version, performance requirements, and whether you’re handling edge cases.

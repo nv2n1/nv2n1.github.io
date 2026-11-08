@@ -3,7 +3,8 @@ title: "Running Flash Content on Linux: Ruffle and Legacy Options"
 date: 2015-10-18 10:50:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/using-the-latest-version-of-flash-on-firefox-for-fedora-linux-by-the-fresh-player-plugin/
+categories: [linux-systems-administration]
+canonical: /using-the-latest-version-of-flash-on-firefox-for-fedora-linux-by-the-fresh-player-plugin/
 ---
 
 Flash is dead on the web. Adobe ended support on December 31, 2020, and all modern browsers removed plugin support years ago. If you need to view Flash content in 2026, you have two practical options: the Ruffle emulator or running legacy applications in isolated environments.

@@ -3,7 +3,8 @@ title: "Installing Xen Dom0 on Fedora: Common Issues and Fixes"
 date: 2013-07-12 16:32:15 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/problems-during-installing-xen-dom0-in-fedora/
+categories: [linux-systems-administration]
+canonical: /problems-during-installing-xen-dom0-in-fedora/
 ---
 
 Xen remains relevant in production environments (AWS EC2, Citrix Hypervisor), though KVM has become the default for most Linux distributions. This guide covers frequent installation and configuration issues specific to Fedora Dom0 setups, with many tips applicable to other Linux platforms.

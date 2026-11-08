@@ -3,7 +3,8 @@ title: "Running Legacy Applications in Different Windows Locales"
 date: 2018-03-24 11:42:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-run-programs-in-different-languages-from-windows-language/
+categories: [linux-systems-administration]
+canonical: /how-to-run-programs-in-different-languages-from-windows-language/
 ---
 
 Legacy non-Unicode applications often display garbled text when run on Windows systems with mismatched language settings. A program compiled for Chinese text encoding will show corruption on an English Windows installation. This guide covers practical solutions for 2026.

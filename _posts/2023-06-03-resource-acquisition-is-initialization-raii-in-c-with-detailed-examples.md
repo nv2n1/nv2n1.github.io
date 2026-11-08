@@ -3,7 +3,8 @@ title: "RAII in C++: Managing Resources Safely with Examples"
 date: 2023-06-03 10:57:51 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/resource-acquisition-is-initialization-raii-in-c-with-detailed-examples/
+categories: [languages-frameworks]
+canonical: /resource-acquisition-is-initialization-raii-in-c-with-detailed-examples/
 ---
 
 Resource Acquisition Is Initialization (RAII) is a fundamental programming idiom in C++ that ties the lifecycle of a resource—memory, file handles, network sockets, database connections, locks—to the lifecycle of an object. When the object is created, the resource is acquired. When the object is destroyed and goes out of scope, the resource is automatically released.

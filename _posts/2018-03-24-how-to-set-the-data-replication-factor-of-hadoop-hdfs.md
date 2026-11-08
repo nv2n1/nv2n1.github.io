@@ -3,7 +3,8 @@ title: "Configuring HDFS Replication: Cluster and Per-File Settings"
 date: 2018-03-24 08:22:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-the-data-replication-factor-of-hadoop-hdfs/
+categories: [scripting-utilities]
+canonical: /how-to-set-the-data-replication-factor-of-hadoop-hdfs/
 ---
 
 The replication factor determines how many copies of each data block HDFS maintains across your cluster. The default is 3, which provides adequate fault tolerance for most deployments by surviving both node and rack failures simultaneously.

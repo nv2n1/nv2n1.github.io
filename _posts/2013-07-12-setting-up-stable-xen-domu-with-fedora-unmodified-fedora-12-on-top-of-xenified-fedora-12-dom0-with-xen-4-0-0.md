@@ -3,7 +3,8 @@ title: "Setting Up Xen DomU on Fedora 12"
 date: 2013-07-12 16:32:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-stable-xen-domu-with-fedora-unmodified-fedora-12-on-top-of-xenified-fedora-12-dom0-with-xen-4-0-0/
+categories: [linux-systems-administration]
+canonical: /setting-up-stable-xen-domu-with-fedora-unmodified-fedora-12-on-top-of-xenified-fedora-12-dom0-with-xen-4-0-0/
 ---
 
 Xen remains production-grade virtualization for specific use cases (AWS EC2, Citrix Hypervisor), but most Linux distributions default to KVM. This guide covers Xen DomU setup using modern tools and practices. For new deployments, evaluate KVM/libvirt or container solutions like Podman/Kubernetes first.

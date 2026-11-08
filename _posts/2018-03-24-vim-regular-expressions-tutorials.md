@@ -3,7 +3,8 @@ title: "Mastering Regular Expressions in Vim"
 date: 2018-03-24 08:17:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/vim-regular-expressions-tutorials/
+categories: [linux-systems-administration]
+canonical: /vim-regular-expressions-tutorials/
 ---
 
 Vim’s regex engine is powerful but requires understanding its syntax rules, which differ significantly from standard POSIX extended regex. Whether you’re doing basic substitutions or complex text transformations, knowing how Vim handles regex patterns will save you hours of frustration.

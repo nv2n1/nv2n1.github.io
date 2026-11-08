@@ -3,7 +3,8 @@ title: "Comparing 2G, 3G, and Wireless Network Speeds"
 date: 2013-07-12 16:32:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/wireless-3g-and-2g-network-speed/
+categories: [code-optimization]
+canonical: /wireless-3g-and-2g-network-speed/
 ---
 
 Network speed varies dramatically across connection types. Here’s a practical breakdown of real-world performance across different technologies, using actual test data and modern measurement approaches.

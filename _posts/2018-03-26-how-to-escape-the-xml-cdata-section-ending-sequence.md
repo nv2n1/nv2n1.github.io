@@ -3,7 +3,8 @@ title: "Handling `]]>` in XML CDATA Sections"
 date: 2018-03-26 15:40:07 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-escape-the-xml-cdata-section-ending-sequence/
+categories: [testing-devops]
+canonical: /how-to-escape-the-xml-cdata-section-ending-sequence/
 ---
 
 In XML, CDATA (Character Data) sections let you include text without worrying about XML special characters. Everything inside `<![CDATA[` and `]]>` is treated as literal text — no parsing, no entity references. This is useful for embedding code snippets, scripts, or any content with lots of `<`, `>`, or `&` characters.

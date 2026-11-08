@@ -3,7 +3,8 @@ title: "Editing EPS Files on Linux: Tools and Methods"
 date: 2018-03-24 11:46:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-edit-eps-file/
+categories: [linux-systems-administration]
+canonical: /how-to-edit-eps-file/
 ---
 
 EPS (Encapsulated PostScript) files are vector graphics commonly used in academic papers, technical documentation, and professional publishing. If you need to modify an EPS file, you have several options depending on your workflow and the complexity of edits required.

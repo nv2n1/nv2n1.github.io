@@ -3,7 +3,8 @@ title: "Understanding Exit Codes in Linux and Windows"
 date: 2018-03-24 08:21:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/convention-of-error-codes-on-linux-and-windows/
+categories: [linux-systems-administration]
+canonical: /convention-of-error-codes-on-linux-and-windows/
 ---
 
 Exit codes are how programs communicate success or failure to the shell and parent processes. Understanding them is essential for writing reliable scripts and debugging applications. Linux and Windows handle these differently, so knowing both conventions matters if you work across platforms.

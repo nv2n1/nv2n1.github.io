@@ -3,7 +3,8 @@ title: "Comparing cin and scanf Performance in C++"
 date: 2018-03-24 08:16:05 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/is-cin-much-slower-than-scanf-in-c/
+categories: [linux-systems-administration]
+canonical: /is-cin-much-slower-than-scanf-in-c/
 ---
 
 The common claim that `cin` is significantly slower than `scanf` in C++ is partially true, but only when comparing default configurations. The reality is more nuanced.

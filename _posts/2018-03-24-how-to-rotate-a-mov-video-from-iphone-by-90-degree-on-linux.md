@@ -3,7 +3,8 @@ title: "How to Rotate iPhone MOV Videos with FFmpeg on Linux"
 date: 2018-03-24 11:42:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-rotate-a-mov-video-from-iphone-by-90-degree-on-linux/
+categories: [linux-systems-administration, linux-systems-administration]
+canonical: /how-to-rotate-a-mov-video-from-iphone-by-90-degree-on-linux/
 ---
 
 iPhone videos often have rotation metadata embedded in the file rather than actual video frame rotation. This causes playback issues on Linux systems that don’t properly read the metadata. You’ll need to either apply the rotation during playback or permanently rotate the video frames.

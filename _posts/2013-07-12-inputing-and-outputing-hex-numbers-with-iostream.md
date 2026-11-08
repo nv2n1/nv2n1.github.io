@@ -3,7 +3,8 @@ title: "Hexadecimal Input and Output in C++"
 date: 2013-07-12 16:47:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/inputing-and-outputing-hex-numbers-with-iostream/
+categories: [development-best-practices]
+canonical: /inputing-and-outputing-hex-numbers-with-iostream/
 ---
 
 Use `std::hex` to format output as hexadecimal. This manipulator sets the basefield of the stream, affecting all subsequent integer output until you change it.

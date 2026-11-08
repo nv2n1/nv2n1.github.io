@@ -3,7 +3,8 @@ title: "Remove Specific Lines from Text Files with sed"
 date: 2018-03-24 11:45:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-delete-a-specific-line-from-a-text-file-in-command-line-on-linux/
+categories: [scripting-utilities]
+canonical: /how-to-delete-a-specific-line-from-a-text-file-in-command-line-on-linux/
 ---
 
 The `sed` stream editor is the go-to tool for deleting lines from files in Linux. It’s fast, works on large files without loading everything into memory, and handles complex patterns easily.

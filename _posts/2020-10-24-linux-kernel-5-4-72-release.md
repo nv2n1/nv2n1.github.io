@@ -3,7 +3,8 @@ title: "Linux 5.4.72 Kernel Release Notes"
 date: 2020-10-24 14:29:21 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-5-4-72-release/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-5-4-72-release/
 ---
 
 Linux 5.4.72 is a stable kernel update containing 23 commits and approximately 126,508 lines of code changes compared to the base 5.4 release. This release focuses on critical security and stability fixes across cryptography, filesystem, USB, Bluetooth, and architecture-specific code paths.

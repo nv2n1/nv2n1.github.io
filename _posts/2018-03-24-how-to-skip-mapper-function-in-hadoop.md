@@ -3,7 +3,8 @@ title: "Caching Mapper Output in Hadoop: Strategies for Reusing Intermediate Res
 date: 2018-03-24 11:45:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-skip-mapper-function-in-hadoop/
+categories: [programming-languages]
+canonical: /how-to-skip-mapper-function-in-hadoop/
 ---
 
 The core problem here is legitimate: if you’re running multiple jobs on the same dataset where the mapper phase produces identical intermediate results, recomputing those results is wasteful. However, skipping the mapper phase entirely breaks MapReduce’s processing model. There are better approaches.

@@ -3,7 +3,8 @@ title: "Safe Process Creation with posix_spawn() in C"
 date: 2014-09-23 14:35:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-posix_spawn-example-in-c-to-create-child-process-on-linux/
+categories: [linux-systems-administration]
+canonical: /a-posix_spawn-example-in-c-to-create-child-process-on-linux/
 ---
 
 The traditional fork-exec pattern works, but it’s error-prone. `posix_spawn()` handles process creation in a single call with several advantages:

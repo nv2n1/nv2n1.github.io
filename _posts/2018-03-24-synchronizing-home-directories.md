@@ -3,7 +3,8 @@ title: "Syncing Home Directories Across Systems"
 date: 2018-03-24 08:04:07 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/synchronizing-home-directories/
+categories: [testing-devops]
+canonical: /synchronizing-home-directories/
 ---
 
 Keeping home directories synchronized across multiple machines is a practical problem for anyone managing several laptops, workstations, or servers. You need something that handles bidirectional sync, understands which changes win when conflicts occur, and doesn’t destroy data on either side.

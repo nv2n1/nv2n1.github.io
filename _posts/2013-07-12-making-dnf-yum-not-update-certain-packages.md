@@ -3,7 +3,8 @@ title: "Preventing dnf/yum from Updating Specific Packages"
 date: 2013-07-12 16:32:07 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-dnf-yum-not-update-certain-packages/
+categories: [linux-systems-administration]
+canonical: /making-dnf-yum-not-update-certain-packages/
 ---
 
 You may need to prevent certain packages from being updated during system maintenance—the kernel on production servers, or specific library versions you’ve carefully tuned. When you run `dnf update` or `yum update`, you want those packages skipped entirely.

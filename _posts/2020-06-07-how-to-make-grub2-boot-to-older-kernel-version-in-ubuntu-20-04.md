@@ -3,7 +3,8 @@ title: "Booting an Older Kernel Version with GRUB2 on Ubuntu 20.04"
 date: 2020-06-07 11:59:27 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-grub2-boot-to-older-kernel-version-in-ubuntu-20-04/
+categories: [linux-systems-administration]
+canonical: /how-to-make-grub2-boot-to-older-kernel-version-in-ubuntu-20-04/
 ---
 
 Start by viewing the GRUB menu entries that will be generated during the next boot:

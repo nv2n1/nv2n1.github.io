@@ -3,7 +3,8 @@ title: "How to Check Your DNS Server on Linux"
 date: 2018-03-24 11:44:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-the-dns-i-am-using-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-check-the-dns-i-am-using-on-linux/
 ---
 
 When you run `cat /etc/resolv.conf` on a modern Linux system, you’ll often see `nameserver 127.0.0.1` or `127.0.1.1` pointing to localhost. This doesn’t mean you’re actually using your ISP’s DNS directly — it usually means your system is running a local DNS stub resolver or caching service like systemd-resolved or dnsmasq. To find out which actual upstream DNS servers you’re using, you need to look elsewhere.

@@ -3,7 +3,8 @@ title: "Adding nomodeset to GRUB2 on Fedora and Ubuntu"
 date: 2018-03-24 11:47:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-nomodeset-to-grub2-in-fedora-and-ubuntu/
+categories: [linux-systems-administration]
+canonical: /how-to-add-nomodeset-to-grub2-in-fedora-and-ubuntu/
 ---
 
 The `nomodeset` kernel parameter tells Linux to disable kernel mode setting (KMS), forcing the graphics driver to use basic VESA modes instead of native driver features. This is useful for troubleshooting display issues during boot or installation.

@@ -3,7 +3,8 @@ title: "Installing Zlib on Ubuntu 24.04 and 22.04 LTS"
 date: 2023-03-24 12:49:20 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/installing-zlib-in-ubuntu-22-04/
+categories: [linux-systems-administration]
+canonical: /installing-zlib-in-ubuntu-22-04/
 ---
 
 Zlib is a critical compression library used across the Linux ecosystem. You’ll need it for compiling software from source, as it’s a dependency for git, libpng, openssl, and countless other tools. If you’ve hit a “zlib.h: No such file or directory” error during compilation, this is what you need.

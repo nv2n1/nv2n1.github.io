@@ -3,7 +3,8 @@ title: "BIOS vs UEFI: Key Differences Explained"
 date: 2018-03-24 11:54:46 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/what-are-the-differences-between-bios-and-uefi/
+categories: [security-cryptography-2]
+canonical: /what-are-the-differences-between-bios-and-uefi/
 ---
 
 **Storage Limitations**

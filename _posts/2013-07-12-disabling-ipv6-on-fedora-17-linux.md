@@ -3,7 +3,8 @@ title: "Disabling IPv6 on Linux: Step-by-Step Guide"
 date: 2013-07-12 16:32:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/disabling-ipv6-on-fedora-17-linux/
+categories: [linux-systems-administration]
+canonical: /disabling-ipv6-on-fedora-17-linux/
 ---
 
 IPv6 is enabled by default on most Linux distributions. While IPv6 adoption has grown, there are legitimate reasons to disable it: some legacy applications don’t handle dual-stack networks well, it can complicate firewall rules, or you might be operating in an environment that doesn’t support it. Disabling IPv6 requires kernel-level configuration through sysctl.

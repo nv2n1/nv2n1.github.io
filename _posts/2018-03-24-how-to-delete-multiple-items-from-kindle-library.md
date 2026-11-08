@@ -3,7 +3,8 @@ title: "How to Remove Multiple Items from Your Kindle Library"
 date: 2018-03-24 08:18:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-delete-multiple-items-from-kindle-library/
+categories: [linux-systems-administration]
+canonical: /how-to-delete-multiple-items-from-kindle-library/
 ---
 
 Amazon’s Kindle Library web interface forces you to delete books one at a time through the UI. If you’ve accumulated hundreds of items, this becomes tedious. Here are practical approaches to bulk-delete from your Kindle Library.

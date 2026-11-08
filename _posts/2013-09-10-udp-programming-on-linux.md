@@ -3,7 +3,8 @@ title: "UDP Socket Programming in C: Building Practical Applications"
 date: 2013-09-10 10:24:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/udp-programming-on-linux/
+categories: [linux-systems-administration]
+canonical: /udp-programming-on-linux/
 ---
 
 UDP (User Datagram Protocol) defined in RFC 768 provides a lightweight alternative to TCP. Unlike TCP’s stream-oriented approach, UDP delivers discrete packets — each `recvfrom()` or `recvmsg()` call returns one complete datagram. The tradeoff is real: you gain speed and lower overhead, but lose automatic reliability guarantees. Your application must handle packet loss, reordering, and out-of-order delivery.

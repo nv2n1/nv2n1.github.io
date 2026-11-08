@@ -3,7 +3,8 @@ title: "Rsync with Sudo on Remote Systems"
 date: 2019-04-06 08:39:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-write-to-remote-side-with-sudo-in-rsync/
+categories: [scripting-utilities]
+canonical: /how-to-write-to-remote-side-with-sudo-in-rsync/
 ---
 
 By default, rsync connects as your standard user. When you need to write to protected directories like `/etc`, `/var/www`, or other root-owned locations, use the `--rsync-path` option to invoke rsync with sudo privileges on the remote side.

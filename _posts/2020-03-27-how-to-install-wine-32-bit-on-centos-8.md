@@ -3,7 +3,8 @@ title: "Building 32-bit Wine on CentOS/RHEL 8+"
 date: 2020-03-27 16:28:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-wine-32-bit-on-centos-8/
+categories: [linux-systems-administration]
+canonical: /how-to-install-wine-32-bit-on-centos-8/
 ---
 
 RHEL and CentOS 8+ ship 64-bit only by default. Some Windows applications require 32-bit Wine or run better under it. Since the distribution repositories don’t provide prebuilt 32-bit Wine, you’ll need to compile from source. The process requires building 64-bit Wine first, then 32-bit, then rebuilding 64-bit to establish proper cross-architecture linking.

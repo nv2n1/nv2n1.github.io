@@ -3,7 +3,8 @@ title: "Customizing GNOME Shell Fonts in GNOME 3"
 date: 2018-03-24 08:20:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-fonts-of-gnome-shell-for-gnome3/
+categories: [scripting-utilities]
+canonical: /how-to-change-the-fonts-of-gnome-shell-for-gnome3/
 ---
 
 GNOME Shell in GNOME 3 uses a specific font for the top bar, activities overview, and system notifications. You can customize these fonts using GNOME Tweaks or dconf to match your preferences.

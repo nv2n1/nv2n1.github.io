@@ -3,7 +3,8 @@ title: "Debugging Print Styles in Firefox: A Practical Guide"
 date: 2018-03-24 11:49:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-debug-media-print-view-of-web-page-in-firefox/
+categories: [programming-languages]
+canonical: /how-to-debug-media-print-view-of-web-page-in-firefox/
 ---
 
 Webpages often render differently when printed than on screen. Firefox’s developer tools make it straightforward to preview and debug print stylesheets without wasting paper.

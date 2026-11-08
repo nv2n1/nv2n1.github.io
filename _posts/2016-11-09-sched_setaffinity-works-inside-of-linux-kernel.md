@@ -3,7 +3,8 @@ title: "How sched_setaffinity Works in the Linux Kernel"
 date: 2016-11-09 15:46:57 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/sched_setaffinity-works-inside-of-linux-kernel/
+categories: [linux-systems-administration]
+canonical: /sched_setaffinity-works-inside-of-linux-kernel/
 ---
 
 CPU affinity binds a process or thread to specific CPU cores, reducing cache misses, improving performance isolation, and managing NUMA locality. The `sched_setaffinity()` system call is the primary mechanism in Linux. Understanding how it works at the kernel level clarifies scheduler internals and helps you use it effectively.

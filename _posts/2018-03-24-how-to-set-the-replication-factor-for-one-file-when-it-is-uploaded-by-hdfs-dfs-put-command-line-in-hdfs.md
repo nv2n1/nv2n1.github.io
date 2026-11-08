@@ -3,7 +3,8 @@ title: "Setting Custom Replication Factor for Individual HDFS Files"
 date: 2018-03-24 11:48:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-the-replication-factor-for-one-file-when-it-is-uploaded-by-hdfs-dfs-put-command-line-in-hdfs/
+categories: [linux-systems-administration]
+canonical: /how-to-set-the-replication-factor-for-one-file-when-it-is-uploaded-by-hdfs-dfs-put-command-line-in-hdfs/
 ---
 
 When uploading files to HDFS using `hdfs dfs -put`, the replication factor defaults to the cluster-wide setting in `hdfs-site.xml` (typically 3). For temporary files, logs, or staging data, you often want a lower replication factor to reduce write latency and disk usage.

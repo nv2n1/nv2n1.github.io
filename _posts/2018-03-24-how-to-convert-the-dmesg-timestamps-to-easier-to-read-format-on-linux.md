@@ -3,7 +3,8 @@ title: "Converting Linux dmesg Timestamps to Readable Format"
 date: 2018-03-24 11:50:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-the-dmesg-timestamps-to-easier-to-read-format-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-the-dmesg-timestamps-to-easier-to-read-format-on-linux/
 ---
 
 The kernel log buffer (`dmesg`) outputs timestamps in seconds since boot by default, making it difficult to correlate events with wall-clock time or other system logs. Here’s how to convert them to human-readable format.

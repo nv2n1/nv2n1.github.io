@@ -3,7 +3,8 @@ title: "Copying Text to a File in Python"
 date: 2013-07-12 16:32:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/quickly-copying-text-to-a-file/
+categories: [linux-systems-administration]
+canonical: /quickly-copying-text-to-a-file/
 ---
 
 Copying text to a file is a common operation on Linux, and there are several approaches depending on your workflow. Opening an editor like vim or nano works fine, but for quick pastes there are faster methods worth knowing.

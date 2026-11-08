@@ -3,7 +3,8 @@ title: "Monitor File Changes and Trigger Commands with inotifywait"
 date: 2015-08-30 04:30:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/running-a-command-upon-files-or-directories-changes-on-linux/
+categories: [linux-systems-administration]
+canonical: /running-a-command-upon-files-or-directories-changes-on-linux/
 ---
 
 Watching for filesystem changes and triggering actions is essential for development workflows—recompiling after source edits, restarting services when configs update, or running tests during coding. Linux’s inotify subsystem provides kernel-level file monitoring, and `inotifywait` makes it accessible from the command line.

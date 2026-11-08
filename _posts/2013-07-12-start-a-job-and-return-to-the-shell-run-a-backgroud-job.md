@@ -3,7 +3,8 @@ title: "Start a Background Job and Return to the Shell"
 date: 2013-07-12 16:31:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/start-a-job-and-return-to-the-shell-run-a-backgroud-job/
+categories: [linux-systems-administration]
+canonical: /start-a-job-and-return-to-the-shell-run-a-backgroud-job/
 ---
 
 When you need to start long-running commands while continuing to work in the shell, run them in the background. Bash and other modern shells maintain a job list and allow you to switch jobs between foreground and background execution. Only one job can run in the foreground at a time.

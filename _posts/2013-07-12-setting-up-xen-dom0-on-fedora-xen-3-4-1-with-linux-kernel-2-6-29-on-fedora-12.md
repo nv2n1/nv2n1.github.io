@@ -3,7 +3,8 @@ title: "Setting Up Xen Dom0 on Fedora 12 with Kernel 2.6.29"
 date: 2013-07-12 16:32:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-xen-dom0-on-fedora-xen-3-4-1-with-linux-kernel-2-6-29-on-fedora-12/
+categories: [linux-systems-administration]
+canonical: /setting-up-xen-dom0-on-fedora-xen-3-4-1-with-linux-kernel-2-6-29-on-fedora-12/
 ---
 
 Xen remains a production hypervisor for enterprise deployments (AWS EC2, Citrix Hypervisor), though KVM has become the default for most Linux distributions. If you’re deploying Xen in 2026, you’ll likely be working with recent stable releases rather than the legacy versions covered in older guides.

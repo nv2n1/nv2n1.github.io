@@ -3,7 +3,8 @@ title: "Building Executable JARs in Scala with sbt"
 date: 2018-03-24 11:41:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-package-a-scala-project-to-a-jar-with-sbt/
+categories: [linux-systems-administration]
+canonical: /how-to-package-a-scala-project-to-a-jar-with-sbt/
 ---
 
 The simplest approach creates a JAR with just your project’s compiled classes:

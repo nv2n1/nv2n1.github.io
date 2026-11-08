@@ -3,7 +3,8 @@ title: "How to Check if a String Contains a Substring in Bash"
 date: 2018-03-24 11:49:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-do-contains-string-test-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-do-contains-string-test-in-bash/
 ---
 
 Bash provides several straightforward ways to test whether a string contains a substring. The best approach depends on your use case and performance requirements.

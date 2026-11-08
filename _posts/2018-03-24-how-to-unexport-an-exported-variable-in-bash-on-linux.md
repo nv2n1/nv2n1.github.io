@@ -3,7 +3,8 @@ title: "Unset Exported Variables in Bash"
 date: 2018-03-24 11:46:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-unexport-an-exported-variable-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-unexport-an-exported-variable-in-bash-on-linux/
 ---
 
 When you export a variable in Bash, it becomes available to all child processes spawned from your shell. Sometimes you need to remove that exported status or delete the variable entirely. There are two main approaches depending on what you want to achieve.

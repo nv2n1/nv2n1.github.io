@@ -3,7 +3,8 @@ title: "Disable Auto Line Wrapping in Thunderbird"
 date: 2014-05-29 07:30:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-thunderbird-not-wrap-lines-automatically/
+categories: [linux-systems-administration]
+canonical: /making-thunderbird-not-wrap-lines-automatically/
 ---
 
 Thunderbird wraps lines at 72 characters by default—a sensible standard from the SMTP era, but one that can break formatting when sending code, logs, or plain text that needs to stay on single lines. The fix is straightforward: tell Thunderbird to let the recipient’s client handle line breaking instead.

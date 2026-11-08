@@ -3,7 +3,8 @@ title: "Upgrading Fedora with dnf system-upgrade: A Complete Guide"
 date: 2018-03-24 08:21:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-upgrade-fedora-19-to-fedora-20-through-the-network/
+categories: [development-best-practices]
+canonical: /how-to-upgrade-fedora-19-to-fedora-20-through-the-network/
 ---
 
 Fedora upgrades are straightforward with `dnf system-upgrade`, the standard tool for network-based distribution upgrades. This replaces the older `fedup` tool and handles everything from downloading packages to managing the upgrade environment.

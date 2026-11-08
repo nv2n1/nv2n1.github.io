@@ -3,7 +3,8 @@ title: "Using Emacs Server and Client for Faster Editing Sessions"
 date: 2014-03-31 02:59:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-emacs-startup-faster/
+categories: [linux-systems-administration]
+canonical: /making-emacs-startup-faster/
 ---
 
 Emacs startup is slow. If you’re using it for quick edits alongside other tools, waiting 2-3 seconds every time becomes friction. Heavy mode configurations, lazy loading chains, and initialization hooks add up fast.

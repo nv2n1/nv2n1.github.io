@@ -3,7 +3,8 @@ title: "Setting Up SSH Tunneling as a Proxy on Windows"
 date: 2018-03-24 08:14:48 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-proxy-over-ssh-on-windows/
+categories: [scripting-utilities]
+canonical: /how-to-set-up-proxy-over-ssh-on-windows/
 ---
 
 SSH tunneling is one of the most reliable ways to create a secure proxy on Windows. You can route traffic through a remote SSH server, encrypting your connection and bypassing local network restrictions.

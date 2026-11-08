@@ -3,7 +3,8 @@ title: "Creating Linux Partitions with parted"
 date: 2014-10-05 13:14:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-gpt-partition-table-and-creating-partitions-with-parted-on-linux/
+categories: [linux-systems-administration]
+canonical: /making-gpt-partition-table-and-creating-partitions-with-parted-on-linux/
 ---
 
 GPT (GUID Partition Table) is required for disks larger than 2TB. The older MBR format maxes out at 2.2TB due to 32-bit sector addressing. Tools like `fdisk` will refuse to work properly with large drives and recommend switching to GPT. While `parted` has a steeper learning curve than some alternatives, it’s the standard for GPT manipulation on Linux.

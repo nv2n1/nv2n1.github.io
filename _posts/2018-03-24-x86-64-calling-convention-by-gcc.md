@@ -3,7 +3,8 @@ title: "GCC x86-64 Calling Conventions Explained"
 date: 2018-03-24 08:13:44 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/x86-64-calling-convention-by-gcc/
+categories: [development-best-practices]
+canonical: /x86-64-calling-convention-by-gcc/
 ---
 
 The x86-64 architecture on Linux follows the System V AMD64 ABI calling convention. Understanding this is essential when writing assembly, optimizing code, debugging, or interfacing with C libraries.

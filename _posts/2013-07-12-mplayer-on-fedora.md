@@ -3,7 +3,8 @@ title: "How to Install MPlayer and MEncoder on Fedora"
 date: 2013-07-12 16:32:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/mplayer-on-fedora/
+categories: [linux-systems-administration]
+canonical: /mplayer-on-fedora/
 ---
 
 MPlayer and MEncoder are no longer actively maintained, but they’re still available through RPM Fusion if you need them for legacy content or specific workflows. Most users should consider modern alternatives like `mpv` (MPlayer’s successor) or `ffmpeg` for transcoding, but this guide covers the traditional setup.

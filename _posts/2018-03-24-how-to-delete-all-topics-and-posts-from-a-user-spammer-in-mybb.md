@@ -3,7 +3,8 @@ title: "Remove All Topics and Posts from a User in MyBB"
 date: 2018-03-24 08:16:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-delete-all-topics-and-posts-from-a-user-spammer-in-mybb/
+categories: [linux-systems-administration]
+canonical: /how-to-delete-all-topics-and-posts-from-a-user-spammer-in-mybb/
 ---
 
 If you need to clean up spam content across your MyBB forum quickly, the Goodbye Spammer plugin automates the process of banning a user and removing all their content in one operation.

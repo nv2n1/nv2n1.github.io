@@ -3,7 +3,8 @@ title: "Converting Word Documents to PDF in Office 2007"
 date: 2018-03-24 08:16:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-save-a-word-as-a-pdf-in-office-2007/
+categories: [linux-systems-administration]
+canonical: /how-to-save-a-word-as-a-pdf-in-office-2007/
 ---
 
 Converting Word documents to PDF is a fundamental task in most workflows. Modern versions of Office have native PDF export built in, but understanding your options and potential gotchas will save you time.

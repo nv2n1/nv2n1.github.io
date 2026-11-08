@@ -3,7 +3,8 @@ title: "Installing Xen on Fedora 17 as Domain-0"
 date: 2013-07-12 16:32:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-xen-domain-0-on-fedora-17/
+categories: [linux-systems-administration]
+canonical: /installing-xen-domain-0-on-fedora-17/
 ---
 
 Xen remains relevant for certain production workloads, particularly in cloud infrastructure (AWS EC2, Citrix Hypervisor) and enterprise environments requiring strong VM isolation. However, most Linux distributions now default to KVM for virtualization due to simpler setup and broader ecosystem support. If you’re evaluating hypervisors, consider KVM or container-based solutions like Podman and Kubernetes for new deployments.

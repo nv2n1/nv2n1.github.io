@@ -3,7 +3,8 @@ title: "Sequence Points in C: Understanding Evaluation Order and Side Effects"
 date: 2018-03-24 11:44:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/which-are-sequence-points-in-c/
+categories: [development-best-practices]
+canonical: /which-are-sequence-points-in-c/
 ---
 
 A sequence point is a point in execution where all side effects from previous evaluations are guaranteed to be complete and visible. Understanding sequence points is critical for writing correct C code, especially when dealing with expressions that modify variables.

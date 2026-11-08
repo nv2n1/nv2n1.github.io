@@ -3,7 +3,8 @@ title: "Git Patches: Create, Apply, and Debug Issues"
 date: 2018-03-24 11:41:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/patching-with-git/
+categories: [linux-systems-administration]
+canonical: /patching-with-git/
 ---
 
 The standard way to generate patches from git commits is `git format-patch`. This creates email-ready patch files that include commit messages, author information, and metadata.

@@ -3,7 +3,8 @@ title: "Xterm Color Codes in Vim: A Complete Guide"
 date: 2018-03-24 11:47:22 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/xterm-color-codes-for-vim-on-linux/
+categories: [linux-systems-administration]
+canonical: /xterm-color-codes-for-vim-on-linux/
 ---
 
 Vim supports Xterm 256-color codes on Linux and modern terminals. Understanding the color palette and how to use it in your configuration is essential for building readable syntax highlighting schemes and custom colorschemes.

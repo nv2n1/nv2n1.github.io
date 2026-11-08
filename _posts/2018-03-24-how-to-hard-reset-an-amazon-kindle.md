@@ -3,7 +3,8 @@ title: "Hard Reset Your Amazon Kindle: Step-by-Step Guide"
 date: 2018-03-24 08:19:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-hard-reset-an-amazon-kindle/
+categories: [linux-systems-administration]
+canonical: /how-to-hard-reset-an-amazon-kindle/
 ---
 
 A hard reset (also called a force restart) clears the device’s RAM and stops any stuck processes without erasing your content or Amazon account data. It’s the first troubleshooting step for freezing, unresponsive screens, or software glitches.

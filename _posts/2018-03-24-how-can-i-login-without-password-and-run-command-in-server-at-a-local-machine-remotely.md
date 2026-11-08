@@ -3,7 +3,8 @@ title: "SSH Key-Based Authentication for Passwordless Remote Command Execution"
 date: 2018-03-24 11:54:37 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-can-i-login-without-password-and-run-command-in-server-at-a-local-machine-remotely/
+categories: [linux-systems-administration]
+canonical: /how-can-i-login-without-password-and-run-command-in-server-at-a-local-machine-remotely/
 ---
 
 Password-less SSH login is faster, more secure, and essential for automation. Combining it with remote command execution lets you run tasks on servers from your local machine without interactive authentication.

@@ -3,7 +3,8 @@ title: "Git Branches and Remote Repositories: A Practical Guide"
 date: 2014-07-24 05:36:22 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/cheatsheet-git-branching-with-a-git-server/
+categories: [linux-systems-administration]
+canonical: /cheatsheet-git-branching-with-a-git-server/
 ---
 
 ``` bash

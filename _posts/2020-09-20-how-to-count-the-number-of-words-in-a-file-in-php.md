@@ -3,7 +3,8 @@ title: "Count Words in a PHP File"
 date: 2020-09-20 10:08:58 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-count-the-number-of-words-in-a-file-in-php/
+categories: [languages-frameworks]
+canonical: /how-to-count-the-number-of-words-in-a-file-in-php/
 ---
 
 Counting words in a file is a straightforward task in PHP, but the approach varies depending on file size and memory constraints. Here are the most practical methods.

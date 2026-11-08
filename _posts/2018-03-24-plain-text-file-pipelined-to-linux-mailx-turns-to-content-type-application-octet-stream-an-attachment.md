@@ -3,7 +3,8 @@ title: "Fixing mailx Content-Type Issues with Plain Text Files"
 date: 2018-03-24 08:16:39 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/plain-text-file-pipelined-to-linux-mailx-turns-to-content-type-application-octet-stream-an-attachment/
+categories: [linux-systems-administration]
+canonical: /plain-text-file-pipelined-to-linux-mailx-turns-to-content-type-application-octet-stream-an-attachment/
 ---
 
 When you pipe a plain text file to `mailx`, it analyzes the content to determine the MIME type. If it detects non-standard characters (anything other than newlines and horizontal tabs), it defaults to `application/octet-stream` and base64-encodes the message. Most email clients then treat this as an attachment rather than inline content.

@@ -3,7 +3,8 @@ title: "Inspecting Linux Network Configuration"
 date: 2013-07-12 16:32:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/finding-out-linux-network-configuration-information/
+categories: [linux-systems-administration]
+canonical: /finding-out-linux-network-configuration-information/
 ---
 
 Linux provides multiple ways to query network configuration. While the underlying concepts remain consistent, modern tools have evolved from the older net-tools utilities.

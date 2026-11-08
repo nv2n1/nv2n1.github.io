@@ -3,7 +3,8 @@ title: "Tuning Linux UDP Buffer Sizes to Prevent Packet Loss"
 date: 2018-03-24 11:41:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-enlarge-linux-udp-buffer-size/
+categories: [linux-systems-administration]
+canonical: /how-to-enlarge-linux-udp-buffer-size/
 ---
 
 UDP packet loss on Linux commonly stems from undersized kernel buffers. When packets arrive faster than the application can process them, the kernel drops excess datagrams silently. Unlike TCP, UDP offers no retransmission, so these losses are permanent. Proper buffer tuning is essential for DNS servers, NTP, monitoring systems, video streaming, and any high-throughput UDP service.

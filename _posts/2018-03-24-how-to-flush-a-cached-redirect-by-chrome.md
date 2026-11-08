@@ -3,7 +3,8 @@ title: "Clear Cached Redirects in Chrome: A Developer\u2019s Guide"
 date: 2018-03-24 11:40:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-flush-a-cached-redirect-by-chrome/
+categories: [databases-storage]
+canonical: /how-to-flush-a-cached-redirect-by-chrome/
 ---
 
 Chrome aggressively caches HTTP redirects—especially 301 (permanent) and 308 redirects—as a performance optimization. The cache persists across browser sessions, which causes real problems when you’ve updated redirect rules and need to test them immediately.

@@ -3,7 +3,8 @@ title: "Common On-Page SEO Mistakes and How to Fix Them"
 date: 2017-08-12 02:44:24 +0000
 author: "irfanahmedkhan"
 layout: post
-canonical: https://www.systutorials.com/7-common-page-seo-mistakes-making-not/
+categories: [development-best-practices]
+canonical: /7-common-page-seo-mistakes-making-not/
 ---
 
 Google’s search algorithms have become significantly more sophisticated. What passed for acceptable SEO a decade ago—keyword stuffing, aggressive link manipulation, deceptive tactics—now triggers manual penalties or algorithmic demotions. If you’re managing websites, understanding these mistakes can prevent serious ranking damage.

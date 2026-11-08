@@ -3,7 +3,8 @@ title: "Understanding Cryptographic Hash Functions"
 date: 2023-09-16 06:28:42 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/cryptographic-hash-101/
+categories: [systems-architecture]
+canonical: /cryptographic-hash-101/
 ---
 
 A cryptographic hash function is a mathematical algorithm that takes any input—a file, password, transaction, or string of any length—and produces a fixed-length output called a “hash” or “digest.” The output is always the same size regardless of input size. SHA-256, for example, always produces a 256-bit (64 hexadecimal character) output.

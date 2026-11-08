@@ -3,7 +3,8 @@ title: "Setting Up and Verifying RAID 0 on MegaRAID Controllers"
 date: 2013-12-30 08:54:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-new-disks-and-setting-up-raid0-in-megaraid-bios-on-ibm-x3620m3/
+categories: [linux-systems-administration]
+canonical: /installing-new-disks-and-setting-up-raid0-in-megaraid-bios-on-ibm-x3620m3/
 ---
 
 RAID0 (striping) on enterprise RAID controllers like Broadcom MegaRAID is used to expose multiple disks as a single logical volume with no redundancy. This configuration is appropriate only for performance-critical workloads where data loss from a single disk failure is acceptable, or for temporary/cache storage. This guide covers the full setup process on servers with MegaRAID controllers.

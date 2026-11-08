@@ -3,7 +3,8 @@ title: "Understanding Proof of Stake: A Beginner\u2019s Guide"
 date: 2023-09-16 06:46:27 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/proof-of-stake-pos-101/
+categories: [blockchain-cryptocurrency]
+canonical: /proof-of-stake-pos-101/
 ---
 
 Proof of Stake is a consensus mechanism that secures blockchain networks by having validators lock up cryptocurrency as collateral. Instead of the energy-intensive mining required by Proof of Work, PoS creates economic incentives: validators earn rewards for honest participation, and lose staked funds if they misbehave or go offline. This “slashing” mechanism makes attacking the network prohibitively expensive.

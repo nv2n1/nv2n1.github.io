@@ -3,7 +3,8 @@ title: "Customize WordPress Excerpt Length via Functions.php"
 date: 2013-07-12 16:46:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/change-wordpresss-excerpt-length/
+categories: [programming-languages]
+canonical: /change-wordpresss-excerpt-length/
 ---
 
 WordPress generates excerpts by default using the first 55 words of post content. You can override this globally or per-post type by adding filters to your theme or a must-use plugin.

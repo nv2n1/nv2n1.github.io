@@ -3,7 +3,8 @@ title: "Changing the Default OS in a Windows Dual Boot Setup"
 date: 2018-03-24 08:22:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-default-os-for-windows-dual-boot-manager-in-windows-7/
+categories: [linux-system-configuration]
+canonical: /how-to-change-default-os-for-windows-dual-boot-manager-in-windows-7/
 ---
 
 If you’re running a dual-boot system with Windows, you’ll need to configure which operating system loads by default. The method depends on your Windows version and whether you’re using legacy BIOS or UEFI firmware.

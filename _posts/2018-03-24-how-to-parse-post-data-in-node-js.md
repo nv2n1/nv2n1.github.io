@@ -3,7 +3,8 @@ title: "Parsing POST Request Data in Node.js"
 date: 2018-03-24 11:48:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-parse-post-data-in-node-js/
+categories: [linux-systems-administration]
+canonical: /how-to-parse-post-data-in-node-js/
 ---
 
 When handling POST requests in Node.js, you need to read the incoming data stream and parse it. The approach varies depending on whether you’re using raw Node.js `http` module, Express, or another framework.

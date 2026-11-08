@@ -3,7 +3,8 @@ title: "Changing Your Linux Password Over SSH"
 date: 2016-08-07 02:00:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/change-linux-account-password-ssh-beginers-tutorials/
+categories: [linux-systems-administration]
+canonical: /change-linux-account-password-ssh-beginers-tutorials/
 ---
 
 Open a terminal and connect to the server:

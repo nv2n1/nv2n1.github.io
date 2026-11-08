@@ -3,7 +3,8 @@ title: "How to Check CPU Temperature in Linux"
 date: 2018-03-24 11:50:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-cpu-temperatur-in-command-linux-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-cpu-temperatur-in-command-linux-on-linux/
 ---
 
 Most modern systems have thermal sensors built into the CPU and motherboard. Reading these sensors is essential for monitoring system health, diagnosing performance issues, and preventing thermal throttling or hardware damage.

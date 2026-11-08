@@ -3,7 +3,8 @@ title: "Capturing RTMP Streams on Linux: A Practical Guide"
 date: 2018-03-24 11:43:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-download-a-rtmp-stream-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-download-a-rtmp-stream-on-linux/
 ---
 
 RTMP (Real Time Messaging Protocol) streams are still used for live broadcasts and on-demand video delivery, though less commonly than HLS or DASH. If you need to capture an RTMP stream, there are several solid tools available on Linux.

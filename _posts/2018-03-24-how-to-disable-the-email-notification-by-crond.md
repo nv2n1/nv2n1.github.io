@@ -3,7 +3,8 @@ title: "Disable Cron Email Notifications: A Practical Guide"
 date: 2018-03-24 11:40:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-the-email-notification-by-crond/
+categories: [development-best-practices]
+canonical: /how-to-disable-the-email-notification-by-crond/
 ---
 
 By default, crond sends email notifications whenever a cron job produces output or encounters an error. For high-volume cron jobs or systems without a mail server, you’ll want to disable these notifications.

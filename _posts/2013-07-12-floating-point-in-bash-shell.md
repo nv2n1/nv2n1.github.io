@@ -3,7 +3,8 @@ title: "Handling Floating Point Math in Bash with bc, awk, and dc"
 date: 2013-07-12 16:47:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/floating-point-in-bash-shell/
+categories: [linux-systems-administration]
+canonical: /floating-point-in-bash-shell/
 ---
 
 Bash has no native floating point support. The `(( ))` and `$(( ))` arithmetic expansions only handle integers. For decimals, you need external tools — primarily `bc`, `awk`, or `dc`.

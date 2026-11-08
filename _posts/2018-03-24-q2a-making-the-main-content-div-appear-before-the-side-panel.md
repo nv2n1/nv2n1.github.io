@@ -3,7 +3,8 @@ title: "Making the Main Content Div Appear Before the Sidebar"
 date: 2018-03-24 08:15:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/q2a-making-the-main-content-div-appear-before-the-side-panel/
+categories: [development-best-practices]
+canonical: /q2a-making-the-main-content-div-appear-before-the-side-panel/
 ---
 
 In many WordPress themes, the sidebar loads before the main content area in the HTML source. This affects SEO and accessibility, since search engines and screen readers process content in source order. Moving the main content div before the sidebar in HTML while keeping the visual layout intact improves your site’s structure.

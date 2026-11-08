@@ -3,7 +3,8 @@ title: "Flushing stdout in Python"
 date: 2018-03-24 11:54:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-flush-stdout-buffer-in-python/
+categories: [scripting-utilities]
+canonical: /how-to-flush-stdout-buffer-in-python/
 ---
 
 By default, Python buffers stdout when it’s not connected to a terminal — typically when you redirect output to a file, pipe to another command, or run inside a container. This buffering can hide output until the buffer fills or the program exits, making debugging and log monitoring difficult.

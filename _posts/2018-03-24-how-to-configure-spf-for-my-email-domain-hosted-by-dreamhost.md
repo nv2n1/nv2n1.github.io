@@ -3,7 +3,8 @@ title: "SPF Configuration for DreamHost-Hosted Email Domains"
 date: 2018-03-24 11:54:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-spf-for-my-email-domain-hosted-by-dreamhost/
+categories: [programming-languages]
+canonical: /how-to-configure-spf-for-my-email-domain-hosted-by-dreamhost/
 ---
 
 SPF (Sender Policy Framework) is a DNS-based authentication mechanism that helps prevent email spoofing by specifying which mail servers are authorized to send emails on behalf of your domain. If your domain is hosted with DreamHost, you’ll need to add an SPF record to your DNS configuration.

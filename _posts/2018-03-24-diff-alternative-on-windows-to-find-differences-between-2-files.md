@@ -3,7 +3,8 @@ title: "Finding File Differences on Windows Without diff"
 date: 2018-03-24 11:54:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/diff-alternative-on-windows-to-find-differences-between-2-files/
+categories: [scripting-utilities]
+canonical: /diff-alternative-on-windows-to-find-differences-between-2-files/
 ---
 
 The `diff` command on Linux is standard, but Windows doesn’t ship with an equivalent by default. You have several solid options depending on whether you prefer command-line or GUI tools.

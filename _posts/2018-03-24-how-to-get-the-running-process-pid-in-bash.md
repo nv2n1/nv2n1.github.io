@@ -3,7 +3,8 @@ title: "Getting a Process PID in Bash"
 date: 2018-03-24 11:52:47 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-running-process-pid-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-running-process-pid-in-bash/
 ---
 
 Every shell script runs as a process with a unique ID (PID). You need this ID for process management, logging, temporary file naming, and cleanup operations.

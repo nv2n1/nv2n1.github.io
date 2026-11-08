@@ -3,7 +3,8 @@ title: "Configuring Vim to Indent C++11 Lambdas Properly"
 date: 2018-03-24 11:55:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-vim-indent-c11-lambdas-correctly/
+categories: [languages-frameworks]
+canonical: /how-to-make-vim-indent-c11-lambdas-correctly/
 ---
 
 Vim’s default indentation can mangle C++11 lambdas, treating them like nested blocks instead of closures. The lambda body gets indented too far relative to the enclosing statement.

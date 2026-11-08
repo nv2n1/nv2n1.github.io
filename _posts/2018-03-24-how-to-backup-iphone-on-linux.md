@@ -3,7 +3,8 @@ title: "Backing Up Your iPhone on Linux Without iTunes"
 date: 2018-03-24 11:42:59 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-backup-iphone-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-backup-iphone-on-linux/
 ---
 
 The primary tool for iPhone backups on Linux is `libimobiledevice`, a cross-platform library that communicates with iOS devices without iTunes. It works with modern iOS versions (iOS 7 through current releases) and supports encrypted backups.

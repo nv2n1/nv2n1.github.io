@@ -3,7 +3,8 @@ title: "Background YouTube Playback on iPhone: What Actually Works"
 date: 2015-03-16 05:40:52 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/playing-youtube-video-background-iphone/
+categories: [linux-systems-administration]
+canonical: /playing-youtube-video-background-iphone/
 ---
 
 Playing YouTube audio in the background on iPhone is restricted by design—the official YouTube app only supports it with a Premium subscription. Here are the legitimate approaches and their tradeoffs.

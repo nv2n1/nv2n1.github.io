@@ -3,7 +3,8 @@ title: "How to Set Up and Manage File-Based Swap on Linux"
 date: 2018-04-03 15:01:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-a-file-based-swap-for-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-add-a-file-based-swap-for-linux/
 ---
 
 When you need additional swap space but all partitions are allocated, creating a swap file lets you add capacity without repartitioning. This is especially useful on systems with fixed disk layouts or cloud instances where you can’t modify the underlying disk structure.

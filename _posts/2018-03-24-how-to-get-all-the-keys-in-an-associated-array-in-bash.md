@@ -3,7 +3,8 @@ title: "Extracting Keys from Bash Associative Arrays"
 date: 2018-03-24 11:52:43 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-all-the-keys-in-an-associated-array-in-bash/
+categories: [testing-devops]
+canonical: /how-to-get-all-the-keys-in-an-associated-array-in-bash/
 ---
 
 Bash associative arrays store key-value pairs, and you’ll often need to iterate over or collect just the keys. There are multiple approaches, each with different use cases.

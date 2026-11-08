@@ -3,7 +3,8 @@ title: "Troubleshooting gnuplot and ps2epsi on Fedora 19"
 date: 2018-03-24 08:17:17 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/gnuplot-and-ps2epsi-do-not-work-on-fedora-19/
+categories: [linux-systems-administration]
+canonical: /gnuplot-and-ps2epsi-do-not-work-on-fedora-19/
 ---
 
 If gnuplot or ps2epsi fails to run or produces excessive warnings on modern Fedora systems, you’re likely hitting a fontconfig deprecation issue. The symptom is repeated warnings like:

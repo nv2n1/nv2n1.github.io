@@ -3,7 +3,8 @@ title: "Vim\u2019s Autocompletion: A Complete Guide"
 date: 2018-03-24 08:14:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/auto-completion-in-vim/
+categories: [development-best-practices]
+canonical: /auto-completion-in-vim/
 ---
 
 Vim ships with built-in completion that many people don’t fully leverage. Before reaching for plugins, understand what’s already available:

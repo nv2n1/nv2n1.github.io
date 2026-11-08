@@ -3,7 +3,8 @@ title: "Stack-Based Algorithm for the Skyline Problem"
 date: 2020-02-28 11:47:02 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/a-stonewall-solution-in-c/
+categories: [languages-frameworks]
+canonical: /a-stonewall-solution-in-c/
 ---
 
 The StoneWall problem is a classic algorithmic challenge that tests your ability to recognize when a stack data structure enables a greedy O(N) solution.

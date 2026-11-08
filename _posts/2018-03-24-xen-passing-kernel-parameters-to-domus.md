@@ -3,7 +3,8 @@ title: "Passing Kernel Parameters to Xen DomU Guests"
 date: 2018-03-24 08:04:15 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/xen-passing-kernel-parameters-to-domus/
+categories: [linux-systems-administration]
+canonical: /xen-passing-kernel-parameters-to-domus/
 ---
 
 Kernel parameters often need to be passed to Xen DomUs during boot or for troubleshooting. Common scenarios include booting into single-user mode for recovery, enabling kernel debugging, or adjusting memory/CPU settings at runtime.

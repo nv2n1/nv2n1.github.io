@@ -3,7 +3,8 @@ title: "Converting ODT Files to TXT in Linux: 3 Command-Line Methods"
 date: 2020-11-01 07:35:51 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/3-ways-of-odt-to-txt-file-conversion-in-command-line-in-linux/
+categories: [linux-systems-administration]
+canonical: /3-ways-of-odt-to-txt-file-conversion-in-command-line-in-linux/
 ---
 
 ODT files often contain formatting that you don’t need. Whether you’re archiving content, preparing text for further processing, or just need readability without markup, converting to plain text is straightforward. Here are the practical approaches and their tradeoffs.

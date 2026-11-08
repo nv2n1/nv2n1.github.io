@@ -3,7 +3,8 @@ title: "Linux Kernel 5.0: Key Features and Modern Impact"
 date: 2019-04-13 10:08:35 +0000
 author: "Anjaneyulu Naini"
 layout: post
-canonical: https://www.systutorials.com/new-linux-kernel-5-0-features-and-improvements/
+categories: [linux-system-configuration]
+canonical: /new-linux-kernel-5-0-features-and-improvements/
 ---
 
 Linux Kernel 5.0 shipped in March 2019 as a symbolic milestone—the first major version bump from the 4.x series. The kernel project switched to semantic versioning at that point, so the jump to 5.0 was more about naming convention than revolutionary technical changes. That said, the release included several features and hardware improvements worth understanding, particularly if you’re maintaining systems across different architectures or evaluating kernel versions for specific hardware.

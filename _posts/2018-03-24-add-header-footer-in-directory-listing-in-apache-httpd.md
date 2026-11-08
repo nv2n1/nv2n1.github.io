@@ -3,7 +3,8 @@ title: "Custom Headers and Footers in Apache Directory Listings"
 date: 2018-03-24 08:22:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/add-header-footer-in-directory-listing-in-apache-httpd/
+categories: [system-administration-cloud]
+canonical: /add-header-footer-in-directory-listing-in-apache-httpd/
 ---
 
 Custom headers and footers in Apache directory listings let you add branding, instructions, or navigation without modifying the core file listing. This is useful for public file archives, download directories, or any indexed directory you want to customize.

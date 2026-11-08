@@ -3,7 +3,8 @@ title: "Font Rendering Optimization in Fedora with Bytecode Interpretation"
 date: 2013-07-12 16:32:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/improving-font-rendering-for-fedora-using-bytecode-interpreter/
+categories: [linux-systems-administration]
+canonical: /improving-font-rendering-for-fedora-using-bytecode-interpreter/
 ---
 
 Fedora’s default font rendering can look subpar, particularly on laptops with standard LCD screens. TrueType bytecode interpreter (BCI) support significantly improves rendering quality, but licensing restrictions have kept it disabled in Fedora’s default FreeType builds.

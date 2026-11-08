@@ -3,7 +3,8 @@ title: "Persisting iptables Rules on Linux"
 date: 2018-03-24 11:44:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-iptables-on-linux-mint-17-1/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-iptables-on-linux-mint-17-1/
 ---
 
 Making firewall rules persistent across system reboots is essential for any production Linux system. While the original `iptables-persistent` approach works, modern systems typically use `ufw` (Uncomplicated Firewall) or `firewalld`, but understanding the underlying `iptables` mechanism is still valuable for lower-level control.

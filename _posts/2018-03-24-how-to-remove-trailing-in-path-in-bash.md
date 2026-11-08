@@ -3,7 +3,8 @@ title: "Remove Trailing Slashes from Bash Path Variables"
 date: 2018-03-24 11:49:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-remove-trailing-in-path-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-remove-trailing-in-path-in-bash/
 ---
 
 When accepting path input in Bash scripts, users might provide `/path/to/dir/` or `/path/to/dir`. Normalizing these to a consistent format without the trailing slash is a common requirement.

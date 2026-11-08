@@ -3,7 +3,8 @@ title: "Force Unmounting a Stale NFS Mount Without Rebooting"
 date: 2018-03-24 11:47:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-umount-a-nfs-directory-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-force-umount-a-nfs-directory-on-linux/
 ---
 
 When an NFS server goes down or becomes unreachable, client mounts can end up in a “Stale NFS file handle” state. Standard `umount` and `umount -f` commands fail, leaving you stuck with an unusable mount point and no clean way to recover without rebooting.

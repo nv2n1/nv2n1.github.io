@@ -3,7 +3,8 @@ title: "Running VMware Player and VirtualBox on Fedora"
 date: 2014-05-24 14:03:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-run-and-uninstall-vmware-player-and-virtualbox-on-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-install-run-and-uninstall-vmware-player-and-virtualbox-on-fedora-linux/
 ---
 
 VMware Player and VirtualBox are two free virtualization platforms that run on Linux hosts. Both offer full virtualization capabilities, though they differ in performance characteristics, ease of use, and licensing models. This guide covers installation, basic operation, and removal on current Fedora releases.

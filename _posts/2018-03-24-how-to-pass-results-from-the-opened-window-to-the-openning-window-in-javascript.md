@@ -3,7 +3,8 @@ title: "Passing Data Between Parent and Child Windows in JavaScript"
 date: 2018-03-24 11:48:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-pass-results-from-the-opened-window-to-the-openning-window-in-javascript/
+categories: [linux-systems-administration]
+canonical: /how-to-pass-results-from-the-opened-window-to-the-openning-window-in-javascript/
 ---
 
 When you open a new window with `window.open()`, you often need to communicate between the parent (opener) window and the child (opened) window. The most straightforward approach is to access the opener window directly through the `opener` property.

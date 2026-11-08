@@ -3,7 +3,8 @@ title: "CalDAV and CardDAV: A Developer\u2019s Guide"
 date: 2023-09-16 06:44:11 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/caldav-and-carddav-101/
+categories: [systems-architecture]
+canonical: /caldav-and-carddav-101/
 ---
 
 CalDAV and CardDAV are open, internet-based standards for syncing calendar and contact data across different devices and services. They’re built on WebDAV and the iCalendar/vCard formats, making them vendor-agnostic and suitable for both personal deployments and enterprise environments.

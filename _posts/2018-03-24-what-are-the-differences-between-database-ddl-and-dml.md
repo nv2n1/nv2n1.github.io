@@ -3,7 +3,8 @@ title: "DDL vs DML: Key Differences in Database Commands"
 date: 2018-03-24 11:44:30 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/what-are-the-differences-between-database-ddl-and-dml/
+categories: [security-cryptography-2]
+canonical: /what-are-the-differences-between-database-ddl-and-dml/
 ---
 
 Database commands fall into distinct categories based on what they do. The two most fundamental are DDL (Data Definition Language) and DML (Data Manipulation Language). Understanding the difference is essential for anyone working with databases, from writing migrations to managing production systems.

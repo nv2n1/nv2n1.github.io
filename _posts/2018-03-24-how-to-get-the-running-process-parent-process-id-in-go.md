@@ -3,7 +3,8 @@ title: "How to Get a Running Process\u2019s Parent PID in Go"
 date: 2018-03-24 11:52:54 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-running-process-parent-process-id-in-go/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-running-process-parent-process-id-in-go/
 ---
 
 Getting a process’s parent process ID (PPID) is useful for monitoring, debugging, and process management tasks. Go provides straightforward ways to access this information across different platforms.

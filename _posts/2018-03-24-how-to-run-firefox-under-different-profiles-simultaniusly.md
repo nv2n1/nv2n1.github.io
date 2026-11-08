@@ -3,7 +3,8 @@ title: "Running Multiple Firefox Profiles at the Same Time"
 date: 2018-03-24 11:47:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-run-firefox-under-different-profiles-simultaniusly/
+categories: [linux-systems-administration]
+canonical: /how-to-run-firefox-under-different-profiles-simultaniusly/
 ---
 
 Firefox uses a profile system to isolate settings, extensions, bookmarks, and browsing data. By default, Firefox only allows one instance per profile to run at a time—new instances redirect to the existing process. If you need multiple Firefox windows with different profiles open at once, you need to disable this behavior.

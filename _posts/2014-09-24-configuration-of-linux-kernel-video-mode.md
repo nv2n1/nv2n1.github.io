@@ -3,7 +3,8 @@ title: "Configuring Video Modes on UEFI and Legacy BIOS Systems"
 date: 2014-09-24 16:58:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/configuration-of-linux-kernel-video-mode/
+categories: [linux-systems-administration]
+canonical: /configuration-of-linux-kernel-video-mode/
 ---
 
 The Linux kernel handles video mode configuration through bootloader parameters and kernel graphics drivers. Modern UEFI systems use Kernel Mode Setting (KMS) automatically, but you can override modes when needed. Legacy BIOS systems still use older mechanisms if you’re maintaining older hardware.

@@ -3,7 +3,8 @@ title: "Dual Boot GNOME and MATE on Ubuntu"
 date: 2018-07-31 02:27:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-gnome-3-in-ubuntu-mate-18-04/
+categories: [linux-systems-administration]
+canonical: /how-to-install-gnome-3-in-ubuntu-mate-18-04/
 ---
 
 Ubuntu MATE ships with the MATE desktop environment, but you might prefer GNOME’s modern interface and tighter integration with system tools. Installing GNOME alongside MATE is straightforward and lets you switch between them at login without removing either one.

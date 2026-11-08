@@ -3,7 +3,8 @@ title: "Handling Sparse Files on Linux"
 date: 2018-04-05 11:33:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/handling-sparse-files-on-linux/
+categories: [linux-systems-administration]
+canonical: /handling-sparse-files-on-linux/
 ---
 
 Sparse files optimize storage by storing only metadata for contiguous zero-filled ranges instead of allocating actual disk blocks. They’re essential for VM images, virtual block devices, and large databases where much of the allocated space remains unused.

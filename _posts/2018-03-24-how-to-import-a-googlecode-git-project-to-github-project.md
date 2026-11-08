@@ -3,7 +3,8 @@ title: "Migrating a Git Repository from Google Code to GitHub"
 date: 2018-03-24 11:41:48 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-import-a-googlecode-git-project-to-github-project/
+categories: [linux-systems-administration]
+canonical: /how-to-import-a-googlecode-git-project-to-github-project/
 ---
 
 Google Code was shut down in 2016, but you might still need to migrate legacy projects that were hosted there. If you have a local Git repository from Google Code or an archived mirror, here’s how to push it to GitHub while preserving all history.

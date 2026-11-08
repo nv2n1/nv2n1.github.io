@@ -3,7 +3,8 @@ title: "Terminating a Bash Script and Its Child Processes in Linux"
 date: 2018-03-24 11:53:20 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/in-linux-how-to-kill-a-process-and-all-its-child-processes/
+categories: [scripting-utilities]
+canonical: /in-linux-how-to-kill-a-process-and-all-its-child-processes/
 ---
 
 When a Bash script spawns child processes—say script A starts B, which starts C, which runs rsync—you need a way to terminate the entire process tree cleanly. Simply killing the parent leaves orphaned children running in the background.

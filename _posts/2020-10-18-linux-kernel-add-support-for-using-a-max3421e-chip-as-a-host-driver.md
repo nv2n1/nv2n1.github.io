@@ -3,7 +3,8 @@ title: "MAX3421E USB Host Driver for Linux Kernel"
 date: 2020-10-18 04:49:29 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-add-support-for-using-a-max3421e-chip-as-a-host-driver/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-add-support-for-using-a-max3421e-chip-as-a-host-driver/
 ---
 
 The Linux kernel includes a USB host controller driver for the Maxim MAX3421E chip, which implements a USB 2.0 full-speed and low-speed host controller over SPI. This was introduced in commit 2d53139 by David Mosberger-Tang and is maintained in the kernel’s USB subsystem.

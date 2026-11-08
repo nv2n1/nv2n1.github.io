@@ -3,7 +3,8 @@ title: "Share Windows 8 Internet with iPhone 4S via USB"
 date: 2018-03-24 11:50:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-pc-internet-of-window8-on-iphone-4s-via-usb/
+categories: [programming-languages]
+canonical: /how-to-use-pc-internet-of-window8-on-iphone-4s-via-usb/
 ---
 
 Tethering your iPhone to your computer’s internet connection via USB is useful when you need a stable, low-power connection or want to avoid wireless overhead. This guide covers the practical setup on Windows and how to configure your iPhone to use your PC’s internet.

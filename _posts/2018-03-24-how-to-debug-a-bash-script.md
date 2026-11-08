@@ -3,7 +3,8 @@ title: "Debugging Bash Scripts: Essential Techniques"
 date: 2018-03-24 11:52:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-debug-a-bash-script/
+categories: [linux-systems-administration]
+canonical: /how-to-debug-a-bash-script/
 ---
 
 Bash has several native flags that help you trace and validate script execution before and during runtime.

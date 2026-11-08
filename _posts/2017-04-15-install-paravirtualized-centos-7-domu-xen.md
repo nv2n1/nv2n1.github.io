@@ -3,7 +3,8 @@ title: "Installing a Paravirtualized DomU on Xen with Rocky Linux 9"
 date: 2017-04-15 06:48:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/install-paravirtualized-centos-7-domu-xen/
+categories: [system-administration-cloud]
+canonical: /install-paravirtualized-centos-7-domu-xen/
 ---
 
 Xen remains a solid hypervisor choice for specific workloads, though KVM dominates most Linux distributions today. This guide covers installing a paravirtualized DomU on Xen using modern tooling and Rocky Linux 9, which requires specific kernel parameters during installation.

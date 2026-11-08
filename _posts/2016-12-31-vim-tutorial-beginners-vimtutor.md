@@ -3,7 +3,8 @@ title: "Mastering Vim: A Practical Guide to vimtutor"
 date: 2016-12-31 02:49:42 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/vim-tutorial-beginners-vimtutor/
+categories: [linux-systems-administration]
+canonical: /vim-tutorial-beginners-vimtutor/
 ---
 
 vimtutor is the most practical way to learn Vim. It’s an interactive lesson built directly into your editor that teaches through practice rather than passive reading. You launch it from the terminal with no setup required, and you get immediate feedback on every command you type.

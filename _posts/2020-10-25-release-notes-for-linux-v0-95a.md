@@ -3,7 +3,8 @@ title: "Linux v0.95a Release Notes"
 date: 2020-10-25 08:58:53 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/release-notes-for-linux-v0-95a/
+categories: [linux-systems-administration]
+canonical: /release-notes-for-linux-v0-95a/
 ---
 
 This document covers the Linux v0.95a root diskette release from March 17, 1992. It documents the changes between v0.95/0.12 and v0.95a. For context on the base 0.95 release, read RELNOTES-0.95 first — this only covers the delta.

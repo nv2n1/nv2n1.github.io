@@ -3,7 +3,8 @@ title: "How to Find and Extract Files from iPhone iTunes Backups"
 date: 2018-03-24 08:16:20 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/where-are-the-backup-files-of-my-iphone-by-itune-and-how-to-get-the-real-files-from-them/
+categories: [linux-systems-administration]
+canonical: /where-are-the-backup-files-of-my-iphone-by-itune-and-how-to-get-the-real-files-from-them/
 ---
 
 iTunes backups are stored in device-specific directories. The location depends on your operating system:

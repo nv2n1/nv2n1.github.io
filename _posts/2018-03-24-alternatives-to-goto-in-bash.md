@@ -3,7 +3,8 @@ title: "Control Flow in Bash: Using Functions Instead of goto"
 date: 2018-03-24 08:21:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/alternatives-to-goto-in-bash/
+categories: [linux-systems-administration]
+canonical: /alternatives-to-goto-in-bash/
 ---
 
 Bash doesn’t have a goto statement, and that’s intentional. The language is designed to encourage cleaner control flow patterns that are easier to debug and maintain. When you feel the urge to jump around in your script, there’s almost always a better approach.

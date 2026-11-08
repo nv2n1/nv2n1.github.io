@@ -3,7 +3,8 @@ title: "Fix YouCompleteMe Build Errors on Fedora"
 date: 2018-03-24 11:46:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/required-packages-for-building-youcompleteme-for-vim-on-fedora-21/
+categories: [programming-languages]
+canonical: /required-packages-for-building-youcompleteme-for-vim-on-fedora-21/
 ---
 
 YouCompleteMe’s installation script fails on Fedora with a CMake error about missing `PYTHON_LIBRARIES` and `PYTHON_INCLUDE_DIRS`, even when Python is already installed. The error looks like this:

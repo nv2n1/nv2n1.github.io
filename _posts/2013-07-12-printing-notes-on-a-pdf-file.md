@@ -3,7 +3,8 @@ title: "Printing PDF Annotations in Acrobat, Adobe Reader, and Foxit"
 date: 2013-07-12 16:54:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/printing-notes-on-a-pdf-file/
+categories: [development-best-practices]
+canonical: /printing-notes-on-a-pdf-file/
 ---
 
 Printing PDF annotations with fidelity across different readers requires understanding each tool’s specific workflow. The fundamentals haven’t changed much, but modern versions offer more reliable options than they did years ago.

@@ -3,7 +3,8 @@ title: "Setting Up Git Remote Repositories on GitHub and Bitbucket"
 date: 2018-03-24 11:50:02 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-config-git-remote-server-on-bitbucket-or-github/
+categories: [testing-devops]
+canonical: /how-to-config-git-remote-server-on-bitbucket-or-github/
 ---
 
 When you initialize a new repository locally and try to push to GitHub or Bitbucket for the first time, you’ll likely encounter errors like:

@@ -3,7 +3,8 @@ title: "Adding Bind Mounts to /etc/fstab"
 date: 2018-03-24 11:43:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-write-etc-fstab-entry-for-bind-mounting/
+categories: [linux-systems-administration]
+canonical: /how-to-write-etc-fstab-entry-for-bind-mounting/
 ---
 
 Bind mounts let you mount a directory or file at another location in your filesystem hierarchy without duplicating the underlying data. They’re useful for directory reorganization, containerization, and working around path constraints. Here’s how to configure them in `/etc/fstab`.

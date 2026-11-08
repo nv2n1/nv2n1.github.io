@@ -3,7 +3,8 @@ title: "xt_quota: Report Initial Quota Value to Userspace"
 date: 2020-12-05 04:16:35 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-xt_quota-report-initial-quota-value-instead-of-current-value-to-userspace/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-xt_quota-report-initial-quota-value-instead-of-current-value-to-userspace/
 ---
 
 The `xt_quota` netfilter module reports quota values back to userspace for tools like `iptables-save` and rule management. A critical kernel patch changed how these values are communicated to ensure proper handling of quota rule removal and persistence.

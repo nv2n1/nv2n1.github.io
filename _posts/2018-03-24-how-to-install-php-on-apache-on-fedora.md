@@ -3,7 +3,8 @@ title: "Installing PHP on Apache with Fedora"
 date: 2018-03-24 08:14:36 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-php-on-apache-on-fedora/
+categories: [programming-languages]
+canonical: /how-to-install-php-on-apache-on-fedora/
 ---
 
 Setting up PHP with Apache on Fedora involves installing the PHP module, configuring Apache to process PHP files, and verifying the setup works correctly.

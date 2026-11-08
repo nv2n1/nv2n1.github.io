@@ -3,7 +3,8 @@ title: "Installing sbt on Fedora Linux"
 date: 2018-03-24 08:19:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-sbt-for-scala-on-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-install-sbt-for-scala-on-fedora-linux/
 ---
 
 sbt (Scala Build Tool) isn’t available in the default Fedora repositories, though Scala itself is. Here’s how to install it properly.

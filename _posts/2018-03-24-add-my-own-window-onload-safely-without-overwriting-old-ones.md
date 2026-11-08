@@ -3,7 +3,8 @@ title: "Adding Multiple Window.onload Handlers Without Conflicts"
 date: 2018-03-24 19:40:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/add-my-own-window-onload-safely-without-overwriting-old-ones/
+categories: [linux-systems-administration]
+canonical: /add-my-own-window-onload-safely-without-overwriting-old-ones/
 ---
 
 Direct assignment to `window.onload` overwrites any existing handler. If a plugin, library, or another script has already set a handler, your code will replace it completely:

@@ -3,7 +3,8 @@ title: "RTTI in C++: Dynamic Type Checking with Examples"
 date: 2023-06-03 09:56:46 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/a-deep-dive-into-run-time-type-identification-rtti-in-c-with-detailed-examples/
+categories: [languages-frameworks]
+canonical: /a-deep-dive-into-run-time-type-identification-rtti-in-c-with-detailed-examples/
 ---
 
 RTTI is a C++ mechanism that allows you to determine an object’s type at runtime. It’s essential when working with polymorphism and inheritance hierarchies, but it comes with trade-offs you need to understand.

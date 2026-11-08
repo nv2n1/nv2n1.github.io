@@ -3,7 +3,8 @@ title: "Configuring Cloudflare DNS with DreamHost"
 date: 2013-07-12 16:46:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/cloudflare-with-dreamhost/
+categories: [system-administration-cloud]
+canonical: /cloudflare-with-dreamhost/
 ---
 
 Cloudflare is a widely-used CDN and DDoS mitigation service that caches content globally and improves performance. DreamHost offers native integration, though understanding the DNS setup—particularly for apex domains—is critical for avoiding routing issues.

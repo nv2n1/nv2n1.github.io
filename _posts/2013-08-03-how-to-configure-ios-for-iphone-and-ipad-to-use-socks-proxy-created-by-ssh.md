@@ -3,7 +3,8 @@ title: "Setting Up a SOCKS5 Proxy on iOS via SSH Tunnel"
 date: 2013-08-03 08:09:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-ios-for-iphone-and-ipad-to-use-socks-proxy-created-by-ssh/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-ios-for-iphone-and-ipad-to-use-socks-proxy-created-by-ssh/
 ---
 
 iOS doesn’t expose SOCKS proxy settings in the Settings UI, but it supports Proxy Auto-Config (PAC) files natively. This lets you route iOS traffic through an SSH tunnel on a Linux/Unix host without installing a VPN app.

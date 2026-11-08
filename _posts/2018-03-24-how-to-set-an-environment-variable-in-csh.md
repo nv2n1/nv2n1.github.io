@@ -3,7 +3,8 @@ title: "Setting Environment Variables in C Shell"
 date: 2018-03-24 08:18:35 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-an-environment-variable-in-csh/
+categories: [linux-systems-administration]
+canonical: /how-to-set-an-environment-variable-in-csh/
 ---
 
 \[md\]\

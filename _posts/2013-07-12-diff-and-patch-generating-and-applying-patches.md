@@ -3,7 +3,8 @@ title: "Generating and Applying Patches with diff and patch"
 date: 2013-07-12 16:32:33 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/diff-and-patch-generating-and-applying-patches/
+categories: [linux-systems-administration]
+canonical: /diff-and-patch-generating-and-applying-patches/
 ---
 
 The `diff` utility generates unified diffs that show changes between file versions. Always use the `-u` flag to create unified diffs, which are the standard format for patches.

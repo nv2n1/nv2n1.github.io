@@ -3,7 +3,8 @@ title: "Compressing Consecutive Citation Numbers in LaTeX"
 date: 2018-03-24 11:40:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-compress-lists-of-consecutive-citation-numbers-to-one-range-in-latex/
+categories: [testing-devops]
+canonical: /how-to-compress-lists-of-consecutive-citation-numbers-to-one-range-in-latex/
 ---
 
 When you have multiple consecutive citations like \[14\], \[15\], \[16\], \[17\], \[19\], LaTeX renders them individually by default, wasting space. Citation management packages automatically compress these to \[14–17\], \[19\], which is standard practice for numerical citation styles.

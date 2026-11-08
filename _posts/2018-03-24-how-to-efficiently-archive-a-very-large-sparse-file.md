@@ -3,7 +3,8 @@ title: "Efficiently Copy Large Sparse Files with SEEK_HOLE and SEEK_DATA"
 date: 2018-03-24 07:54:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-efficiently-archive-a-very-large-sparse-file/
+categories: [testing-devops]
+canonical: /how-to-efficiently-archive-a-very-large-sparse-file/
 ---
 
 Archiving or copying a 1TB sparse file containing only 32MB of actual data is impractical with naive approaches—you’ll waste time and I/O bandwidth copying zeros. The solution is using `SEEK_HOLE` and `SEEK_DATA` flags with `lseek()`, which allow tools to skip over hole regions entirely.

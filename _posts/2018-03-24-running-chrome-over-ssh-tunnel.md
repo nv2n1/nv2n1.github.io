@@ -3,7 +3,8 @@ title: "Running Chrome Over SSH With X11 Forwarding: Issues and Alternatives"
 date: 2018-03-24 11:40:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/running-chrome-over-ssh-tunnel/
+categories: [linux-systems-administration]
+canonical: /running-chrome-over-ssh-tunnel/
 ---
 
 X11 forwarding lets you run Chrome on a remote host and display it on your local machine. It’s quick to set up for occasional use, but for regular work or modern Linux systems, you’ll want to know when to use alternatives.

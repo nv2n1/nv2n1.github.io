@@ -3,7 +3,8 @@ title: "Converting Strings to Lowercase in Python"
 date: 2018-06-01 08:45:43 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-a-string-to-lower-case-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-convert-a-string-to-lower-case-in-python/
 ---
 
 The simplest way to convert a string to lowercase is using the `lower()` method:

@@ -3,7 +3,8 @@ title: "Locating procps Utilities Source Code"
 date: 2018-03-24 11:48:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/where-is-the-source-code-for-the-free-command-on-linux/
+categories: [linux-systems-administration]
+canonical: /where-is-the-source-code-for-the-free-command-on-linux/
 ---
 
 The `free` command—along with `ps`, `top`, `kill`, `pgrep`, and dozens of other system utilities—is maintained as part of the **procps-ng** project.

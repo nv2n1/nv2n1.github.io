@@ -3,7 +3,8 @@ title: "x86-64 Assembly: Essential Reference Guide"
 date: 2013-07-12 16:47:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/x86-64-isa-assembly-references/
+categories: [development-best-practices]
+canonical: /x86-64-isa-assembly-references/
 ---
 
 x86-64 (Intel 64, AMD64) is the dominant 64-bit instruction set architecture for consumer and enterprise computing. Whether you’re reverse-engineering binaries, writing performance-critical code, or understanding system internals, a solid grasp of x86-64 assembly is essential.

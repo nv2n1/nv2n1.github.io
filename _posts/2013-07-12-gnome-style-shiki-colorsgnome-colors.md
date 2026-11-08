@@ -3,7 +3,8 @@ title: "Gnome 2 Theme: Combining Shiki and Gnome Color Palettes"
 date: 2013-07-12 16:32:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/gnome-style-shiki-colorsgnome-colors/
+categories: [linux-systems-administration]
+canonical: /gnome-style-shiki-colorsgnome-colors/
 ---
 
 This guide documents theme configuration for GNOME 2 and early KDE environments. If you’re running GNOME 40+, KDE Plasma 5, or later, refer to your desktop’s modern theming systems instead—most of these packages and configuration methods no longer apply.

@@ -3,7 +3,8 @@ title: "Building Java CLI Applications with Spring Shell 3.x"
 date: 2016-12-23 13:16:48 +0000
 author: "Johnnymorgan"
 layout: post
-canonical: https://www.systutorials.com/spring-shell-technology-java-development/
+categories: [languages-frameworks]
+canonical: /spring-shell-technology-java-development/
 ---
 
 Spring Shell is a framework for building command-line interfaces (CLIs) in Java applications. It provides structured command definition, argument parsing, tab completion, and history management—all integrated with the Spring ecosystem.

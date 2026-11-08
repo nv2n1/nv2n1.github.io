@@ -3,7 +3,8 @@ title: "Getting the Next ASCII Character in Bash"
 date: 2018-03-24 11:52:40 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-one-characters-next-character-in-ascii-table-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-one-characters-next-character-in-ascii-table-in-bash/
 ---
 
 Sometimes you need to find the ASCII character that comes after a given character. This is useful for generating sequences, creating substitution ciphers, or manipulating character ranges in shell scripts.

@@ -3,7 +3,8 @@ title: "Converting Unix Timestamps to Dates in Linux"
 date: 2018-03-24 08:19:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-seconds-since-the-epoch-to-a-date-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-seconds-since-the-epoch-to-a-date-in-linux/
 ---
 
 The Unix epoch (January 1, 1970 00:00:00 UTC) is the standard reference point for timestamps across Linux systems. When you need to convert a timestamp like `1349361711.169942` into a readable date, the `date` command is your primary tool.

@@ -3,7 +3,8 @@ title: "Profiling Vim Startup and Runtime Performance"
 date: 2015-03-29 04:51:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/profiling-vim-to-find-out-which-plugin-makes-vim-slow/
+categories: [linux-systems-administration]
+canonical: /profiling-vim-to-find-out-which-plugin-makes-vim-slow/
 ---
 
 Vim is generally fast, but dozens of plugins can create noticeable slowdowns. Since Vim’s core remains single-threaded, any blocking operation in a loaded plugin will freeze your editor until it completes. Rather than disable plugins randomly, use Vim’s built-in profiling tools to identify the actual culprit.

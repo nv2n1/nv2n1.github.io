@@ -3,7 +3,8 @@ title: "Managing LVM Storage with libvirt"
 date: 2018-03-24 08:19:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-lvm-groups-with-libvirt/
+categories: [system-administration-cloud]
+canonical: /how-to-use-lvm-groups-with-libvirt/
 ---
 
 By default, libvirt stores VM images as files in `/var/lib/libvirt/images/`. While functional, this approach limits flexibility. LVM (Logical Volume Management) provides better control over disk space, snapshots, and performance tuning. Using LVM volumes as libvirt storage pools lets you manage VM storage like block devices rather than files, giving you faster provisioning, atomic snapshots, and better resource allocation.

@@ -3,7 +3,8 @@ title: "Fix netconsole IPv6 configuration in Linux kernel netpoll"
 date: 2020-10-01 01:30:11 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-netpoll-fix-netconsole-ipv6-setup/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-netpoll-fix-netconsole-ipv6-setup/
 ---
 
 The `netconsole` kernel module allows logging kernel messages over the network to a remote syslog server. A bug in the IPv6 configuration handling within the netpoll subsystem could cause incorrect addressing or kernel warnings when using IPv6 targets.

@@ -3,7 +3,8 @@ title: "Configuring Thunderbird\u2019s Default Sort Order and Reply Quoting"
 date: 2013-07-12 16:54:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/default-descending-sort-order-and-inline-quote-when-reply-in-thunderbird/
+categories: [development-best-practices]
+canonical: /default-descending-sort-order-and-inline-quote-when-reply-in-thunderbird/
 ---
 
 Thunderbird’s most powerful settings live outside the UI—buried in the config editor or preferences file. This guide covers setting emails to sort newest-first by default and enabling inline quoting for replies, two changes that significantly improve daily usability.

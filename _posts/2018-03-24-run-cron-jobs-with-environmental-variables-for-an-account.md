@@ -3,7 +3,8 @@ title: "Running Cron Jobs with Environment Variables"
 date: 2018-03-24 08:18:11 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/run-cron-jobs-with-environmental-variables-for-an-account/
+categories: [linux-systems-administration]
+canonical: /run-cron-jobs-with-environmental-variables-for-an-account/
 ---
 
 Cron is a minimal execution environment. Unlike your interactive shell, cron runs with a stripped-down environment containing only a few variables like `PATH`, `MAILTO`, and `SHELL`. Any variables you’ve defined in your shell profile won’t be available unless you explicitly source them in your crontab entries.

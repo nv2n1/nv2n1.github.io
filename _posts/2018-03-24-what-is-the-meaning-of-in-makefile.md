@@ -3,7 +3,8 @@ title: "Understanding the @ Symbol in Makefiles"
 date: 2018-03-24 08:21:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/what-is-the-meaning-of-in-makefile/
+categories: [scripting-utilities]
+canonical: /what-is-the-meaning-of-in-makefile/
 ---
 
 The `@` symbol in Makefiles suppresses the echo of the command itself before execution. When you run a target, make normally prints each command to stdout before running it. Adding `@` before a command hides that echo, showing only the command’s output.

@@ -3,7 +3,8 @@ title: "Detecting File Writes by Other Processes in Linux"
 date: 2018-03-24 11:53:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-detect-whether-a-file-is-being-written-by-any-other-process-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-detect-whether-a-file-is-being-written-by-any-other-process-in-linux/
 ---
 
 Several approaches exist to detect active file access in Linux, ranging from simple procfs inspection to sophisticated kernel-level tracking.

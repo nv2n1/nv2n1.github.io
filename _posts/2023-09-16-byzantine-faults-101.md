@@ -3,7 +3,8 @@ title: "Understanding Byzantine Fault Tolerance"
 date: 2023-09-16 06:50:09 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/byzantine-faults-101/
+categories: [systems-architecture]
+canonical: /byzantine-faults-101/
 ---
 
 A Byzantine Fault occurs when a component in a distributed system behaves unpredictably or maliciously—sending contradictory information to different parts of the system, corrupting data, or deviating entirely from the protocol. The result is potential inconsistency across the network, making consensus impossible without proper safeguards.

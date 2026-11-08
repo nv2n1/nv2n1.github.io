@@ -3,7 +3,8 @@ title: "How to Back Up Linux Home Directories with rsync"
 date: 2013-07-12 16:32:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/backup-linux-home-directory-using-rsync/
+categories: [linux-systems-administration]
+canonical: /backup-linux-home-directory-using-rsync/
 ---
 
 rsync is a reliable choice for backing up your Linux home directory, especially when dealing with large files and incremental changes. Unlike git (which struggles with files \>5GB), rsync efficiently handles large files and only transfers what’s changed on subsequent runs.

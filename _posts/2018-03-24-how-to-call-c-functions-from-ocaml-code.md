@@ -3,7 +3,8 @@ title: "Calling C Functions from OCaml"
 date: 2018-03-24 08:15:56 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-call-c-functions-from-ocaml-code/
+categories: [development-best-practices]
+canonical: /how-to-call-c-functions-from-ocaml-code/
 ---
 
 OCaml provides robust FFI (Foreign Function Interface) capabilities for calling C code. This is essential when you need to use existing C libraries or write performance-critical sections in C.

@@ -3,7 +3,8 @@ title: "How to Access Another User\u2019s PATH in Bash"
 date: 2018-03-24 11:50:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-another-users-path-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-another-users-path-in-bash-on-linux/
 ---
 
 When running scripts as root, you often need to execute commands with the environment of a different user. The most reliable way to retrieve another user’s PATH is by spawning a login shell under that user’s context.

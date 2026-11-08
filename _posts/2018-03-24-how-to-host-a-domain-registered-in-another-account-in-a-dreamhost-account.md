@@ -3,7 +3,8 @@ title: "Hosting a Domain from Another Account on Dreamhost"
 date: 2018-03-24 08:18:01 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-host-a-domain-registered-in-another-account-in-a-dreamhost-account/
+categories: [linux-systems-administration]
+canonical: /how-to-host-a-domain-registered-in-another-account-in-a-dreamhost-account/
 ---
 
 If you’re trying to add a domain to a Dreamhost account and get the error “You can’t add that domain: already in our system,” the domain is already configured for DNS hosting in another Dreamhost account. You need to remove the DNS hosting from the original account before you can host it elsewhere.

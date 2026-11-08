@@ -3,7 +3,8 @@ title: "Secure Email Best Practices"
 date: 2018-03-24 08:17:55 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/sending-emails-securely/
+categories: [linux-systems-administration]
+canonical: /sending-emails-securely/
 ---
 
 Sending sensitive information via email requires careful consideration. Whether you’re sharing financial details, credentials, or confidential documents, there’s no single “secure email” solution that eliminates all risk — you need to match the method to your threat model.

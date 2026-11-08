@@ -3,7 +3,8 @@ title: "Configuring xterm for CJK Character Display"
 date: 2018-03-24 08:20:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-xterm-display-chinese-characters/
+categories: [development-best-practices]
+canonical: /how-to-make-xterm-display-chinese-characters/
 ---
 
 If xterm displays Chinese, Japanese, or Korean characters as empty boxes or rectangles, the problem is almost always a missing or improperly configured font with CJK glyphs.

@@ -3,7 +3,8 @@ title: "How to Apply sysctl.conf Changes Without Rebooting"
 date: 2018-03-24 08:14:29 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/make-changes-to-sysctl-conf-take-effect-without-rebooting-linux/
+categories: [development-best-practices]
+canonical: /make-changes-to-sysctl-conf-take-effect-without-rebooting-linux/
 ---
 
 When you modify `/etc/sysctl.conf`, the changes take effect on the next reboot. To apply them immediately without rebooting, use the `sysctl -p` command:

@@ -3,7 +3,8 @@ title: "Lock iPhone Screen Rotation: Control Center and Accessibility Settings"
 date: 2013-07-12 16:54:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/locking-iphone-screen-rotation/
+categories: [linux-systems-administration]
+canonical: /locking-iphone-screen-rotation/
 ---
 
 iPhone’s automatic screen rotation is useful most of the time, but it gets annoying when you’re reading in bed, watching video in a fixed orientation, or using apps that work better in portrait mode. iOS gives you straightforward ways to lock rotation when you need it.

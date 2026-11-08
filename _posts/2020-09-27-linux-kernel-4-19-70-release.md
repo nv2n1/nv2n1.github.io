@@ -3,7 +3,8 @@ title: "Linux Kernel 4.19.70 Released"
 date: 2020-09-27 12:55:44 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-4-19-70-release/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-4-19-70-release/
 ---
 
 Linux kernel 4.19.70 is a stable release containing 95 fixes and improvements across multiple subsystems. This release addresses critical issues in audio, networking, storage, virtualization, DMA handling, and various device drivers.

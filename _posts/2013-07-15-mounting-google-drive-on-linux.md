@@ -3,7 +3,8 @@ title: "Mount Google Drive on Linux Using rclone"
 date: 2013-07-15 12:55:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/mounting-google-drive-on-linux/
+categories: [linux-systems-administration]
+canonical: /mounting-google-drive-on-linux/
 ---
 
 rclone is the modern standard for mounting Google Drive on Linux — it’s actively maintained, handles authentication reliably, and works across distributions without compilation.

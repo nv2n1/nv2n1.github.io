@@ -3,7 +3,8 @@ title: "Generating TAGS Files Recursively for Emacs Projects"
 date: 2018-03-24 08:22:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/generating-tags-file-for-emacs-recursively/
+categories: [algorithms-data-structures]
+canonical: /generating-tags-file-for-emacs-recursively/
 ---
 
 The built-in etags command doesn’t recursively traverse directories by default, but generating TAGS files across your entire project is straightforward with the right tools and setup.

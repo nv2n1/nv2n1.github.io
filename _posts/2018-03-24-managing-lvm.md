@@ -3,7 +3,8 @@ title: "Managing LVM Logical Volumes on Linux"
 date: 2018-03-24 07:43:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/managing-lvm/
+categories: [linux-systems-administration]
+canonical: /managing-lvm/
 ---
 
 LVM (Logical Volume Management) abstracts physical storage into logical volumes, giving you flexibility to resize filesystems, snapshot data, and manage disk space without downtime. It sits between your physical disks and the filesystems you mount.

@@ -3,7 +3,8 @@ title: "Identifying Which Process Listens on a Port in Linux"
 date: 2018-03-24 11:46:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-which-program-or-process-is-listening-on-a-certain-port-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-which-program-or-process-is-listening-on-a-certain-port-in-linux/
 ---
 
 When your application fails to bind to a port, you need to identify what’s already using it. This is one of the most common debugging tasks in Linux system administration.

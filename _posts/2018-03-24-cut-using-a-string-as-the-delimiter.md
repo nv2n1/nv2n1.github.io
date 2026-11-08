@@ -3,7 +3,8 @@ title: "Extracting Substrings by Delimiter in Bash"
 date: 2018-03-24 08:20:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/cut-using-a-string-as-the-delimiter/
+categories: [linux-systems-administration]
+canonical: /cut-using-a-string-as-the-delimiter/
 ---
 
 The `cut` command is designed for simple field splitting, but it has a hard limitation: the delimiter must be a single character.

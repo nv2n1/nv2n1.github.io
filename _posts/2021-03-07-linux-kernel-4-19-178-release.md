@@ -3,7 +3,8 @@ title: "Linux Kernel 4.19.178 Released"
 date: 2021-03-07 07:05:42 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-4-19-178-release/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-4-19-178-release/
 ---
 
 Linux kernel 4.19.178 is a stable release from the 4.19 LTS series, containing 248 patches addressing security fixes, memory leaks, and driver corrections. This release modified approximately 239,909 lines of source code compared to the base 4.19 release.

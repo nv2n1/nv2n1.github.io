@@ -3,7 +3,8 @@ title: "Printing Text Files from Linux Terminal with lp and CUPS"
 date: 2018-03-24 08:21:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-a-plain-text-file-to-printers-from-a-terminal-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-print-a-plain-text-file-to-printers-from-a-terminal-in-linux/
 ---
 
 The `lp` command is the standard tool for printing from the Linux command line. It interfaces with CUPS (Common Unix Printing System), the printing backbone on virtually all modern Linux distributions.

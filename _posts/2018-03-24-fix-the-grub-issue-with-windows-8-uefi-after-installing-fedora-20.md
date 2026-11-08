@@ -3,7 +3,8 @@ title: "GRUB Not Detecting Windows on UEFI Systems"
 date: 2018-03-24 11:41:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/fix-the-grub-issue-with-windows-8-uefi-after-installing-fedora-20/
+categories: [linux-systems-administration]
+canonical: /fix-the-grub-issue-with-windows-8-uefi-after-installing-fedora-20/
 ---
 
 When you install Fedora (or other Linux distributions) alongside Windows on a UEFI system, GRUB sometimes fails to generate a functional boot entry for Windows. The symptom is a missing or non-working “Windows Boot Manager” entry in the GRUB menu, or GRUB drops you to a shell prompt when you select it.

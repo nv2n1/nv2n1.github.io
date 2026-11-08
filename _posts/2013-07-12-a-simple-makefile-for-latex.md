@@ -3,7 +3,8 @@ title: "Building LaTeX Documents with Make"
 date: 2013-07-12 16:32:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-simple-makefile-for-latex/
+categories: [linux-systems-administration]
+canonical: /a-simple-makefile-for-latex/
 ---
 
 Compiling LaTeX documents with BibTeX involves multiple passes—typically three runs of `latex` followed by one `bibtex` run to resolve citations. This sequence is identical across most documents, making it perfect for automation with a Makefile.

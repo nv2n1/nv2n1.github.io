@@ -3,7 +3,8 @@ title: "Identifying Top Contributors in Git Repositories"
 date: 2018-03-24 11:49:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-top-committers-in-git/
+categories: [programming-languages]
+canonical: /how-to-get-the-top-committers-in-git/
 ---
 
 To identify the developers who’ve contributed the most commits to a repository, use `git log` with some text processing:

@@ -3,7 +3,8 @@ title: "Linear Consistency Model in Distributed Systems"
 date: 2024-09-06 14:45:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/linear-consistency-model-for-computer-systems/
+categories: [systems-architecture]
+canonical: /linear-consistency-model-for-computer-systems/
 ---
 
 Linear consistency (also called linearizability) is a formal correctness condition for concurrent systems. It guarantees that all operations appear to execute atomically in some sequential order, with each operation taking effect instantaneously between its invocation and response.

@@ -3,7 +3,8 @@ title: "Reading JSON Data from URLs in R"
 date: 2020-11-06 14:43:34 +0000
 author: "Daniel"
 layout: post
-canonical: https://www.systutorials.com/reading-json-from-url-in-r/
+categories: [programming-languages]
+canonical: /reading-json-from-url-in-r/
 ---
 
 R handles JSON data effectively through packages designed for parsing and manipulating structured data. The most practical approach for fetching JSON from REST APIs is using the `jsonlite` package.

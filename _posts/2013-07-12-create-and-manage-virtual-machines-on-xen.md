@@ -3,7 +3,8 @@ title: "Managing Virtual Machines on Xen: A Getting Started Guide"
 date: 2013-07-12 16:31:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/create-and-manage-virtual-machines-on-xen/
+categories: [linux-systems-administration]
+canonical: /create-and-manage-virtual-machines-on-xen/
 ---
 
 Xen remains a robust hypervisor for production environments—AWS EC2, Citrix Hypervisor, and many hosting providers still rely on it. However, KVM has become the default for most Linux distributions due to simpler management and better integration with standard tooling. For new deployments on standard Linux, evaluate KVM with libvirt or container solutions like Docker and Kubernetes. That said, if you’re working with existing Xen infrastructure or need its advanced features, here’s how to create and manage virtual machines.

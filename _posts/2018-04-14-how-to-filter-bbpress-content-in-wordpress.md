@@ -3,7 +3,8 @@ title: "Customizing bbPress Forums with WordPress Hooks"
 date: 2018-04-14 05:58:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-filter-bbpress-content-in-wordpress/
+categories: [programming-languages]
+canonical: /how-to-filter-bbpress-content-in-wordpress/
 ---
 
 bbPress is WordPress’s standard forum plugin. When you need to modify how forum topics, replies, or other content displays, you’ll use WordPress filter hooks to intercept and transform the content before it reaches users.

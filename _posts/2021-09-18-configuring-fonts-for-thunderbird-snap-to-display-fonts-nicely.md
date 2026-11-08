@@ -3,7 +3,8 @@ title: "Configuring Custom Fonts in Thunderbird Snap"
 date: 2021-09-18 14:41:17 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/
+categories: [linux-systems-administration]
+canonical: /configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/
 ---
 
 Snaps bundle applications with their dependencies to work across distributions, but this isolation creates compatibility gaps. One common problem with Thunderbird snap is missing or incorrectly rendered fonts—a direct result of how fontconfig is handled inside the snap sandbox.

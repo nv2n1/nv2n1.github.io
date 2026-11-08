@@ -3,7 +3,8 @@ title: "Converting A4 PDFs for Kindle: A Complete Guide"
 date: 2018-03-24 08:20:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-a4-paper-format-to-read-on-kindle-5/
+categories: [development-best-practices]
+canonical: /how-to-convert-a4-paper-format-to-read-on-kindle-5/
 ---
 
 A4-sized PDFs—particularly technical papers and academic documents—render poorly on Kindle devices. The small fonts become nearly unreadable, and Amazon’s “Send to Kindle” feature often destroys formatting in the process. You need a tool designed specifically for this workflow.

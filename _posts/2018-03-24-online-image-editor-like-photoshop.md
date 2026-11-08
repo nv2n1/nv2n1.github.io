@@ -3,7 +3,8 @@ title: "Building a Web-Based Image Editor"
 date: 2018-03-24 08:17:17 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/online-image-editor-like-photoshop/
+categories: [linux-systems-administration]
+canonical: /online-image-editor-like-photoshop/
 ---
 
 If you need basic image editing without installing software or paying Photoshop’s subscription, several solid online options exist. Here’s what works well in 2026.

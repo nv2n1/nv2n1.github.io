@@ -3,7 +3,8 @@ title: "Paxos vs. Raft: Consensus Algorithms Compared"
 date: 2024-09-06 14:19:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/comparing-paxos-and-raft/
+categories: [linux-systems-administration]
+canonical: /comparing-paxos-and-raft/
 ---
 
 Paxos and Raft are foundational consensus algorithms for distributed systems. Both solve the same core problem — achieving agreement across multiple nodes despite failures — but take fundamentally different approaches.

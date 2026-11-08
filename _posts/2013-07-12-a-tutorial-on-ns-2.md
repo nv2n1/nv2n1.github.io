@@ -3,7 +3,8 @@ title: "NS-2 Network Simulator: A Practical Tutorial"
 date: 2013-07-12 16:32:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-tutorial-on-ns-2/
+categories: [programming-languages]
+canonical: /a-tutorial-on-ns-2/
 ---
 
 ns-2 reached end-of-life in 2011 and is no longer maintained. If you’re looking to simulate network behavior, you should use **ns-3** instead, which is actively developed and provides significantly better accuracy and modern tooling.

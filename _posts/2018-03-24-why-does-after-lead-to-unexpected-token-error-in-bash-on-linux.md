@@ -3,7 +3,8 @@ title: "Bash Semicolons After Ampersands: Why They Cause Syntax Errors"
 date: 2018-03-24 11:49:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/why-does-after-lead-to-unexpected-token-error-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /why-does-after-lead-to-unexpected-token-error-in-bash-on-linux/
 ---
 
 When you run a command like this in Bash:

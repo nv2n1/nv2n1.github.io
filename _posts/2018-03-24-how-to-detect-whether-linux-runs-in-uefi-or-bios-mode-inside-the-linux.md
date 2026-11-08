@@ -3,7 +3,8 @@ title: "How to Check If Linux Is Running in UEFI or BIOS Mode"
 date: 2018-03-24 11:48:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-detect-whether-linux-runs-in-uefi-or-bios-mode-inside-the-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-detect-whether-linux-runs-in-uefi-or-bios-mode-inside-the-linux/
 ---
 
 The simplest way to detect whether your Linux system booted in UEFI or BIOS (Legacy) mode is to check for the existence of the EFI firmware directory.

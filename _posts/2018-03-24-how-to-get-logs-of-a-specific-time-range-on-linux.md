@@ -3,7 +3,8 @@ title: "Extract Linux Logs Within a Specific Time Range"
 date: 2018-03-24 11:43:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-logs-of-a-specific-time-range-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-logs-of-a-specific-time-range-on-linux/
 ---
 
 When processing application logs (like Hadoop/log4j output), you often need to extract entries from a specific time window. This is especially common in automated routines that run periodically—for example, pulling the last 4 hours of logs every 4 hours via cron.

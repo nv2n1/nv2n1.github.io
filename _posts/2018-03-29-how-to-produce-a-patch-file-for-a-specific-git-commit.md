@@ -3,7 +3,8 @@ title: "Generate a Git Patch File for a Specific Commit"
 date: 2018-03-29 16:00:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-produce-a-patch-file-for-a-specific-git-commit/
+categories: [testing-devops]
+canonical: /how-to-produce-a-patch-file-for-a-specific-git-commit/
 ---
 
 Patch files are essential for projects that use email-based code review or maintainer-driven workflows. They’re especially common in Linux kernel development, embedded systems, and projects that don’t rely on pull requests.

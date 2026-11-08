@@ -3,7 +3,8 @@ title: "Installing R and RStudio on macOS"
 date: 2020-10-10 14:23:36 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-r-and-rstudio-desktop-in-macos/
+categories: [programming-languages]
+canonical: /how-to-install-r-and-rstudio-desktop-in-macos/
 ---
 
 The simplest way to install R on macOS is through Homebrew:

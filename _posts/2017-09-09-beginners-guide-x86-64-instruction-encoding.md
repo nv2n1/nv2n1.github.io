@@ -3,7 +3,8 @@ title: "x86-64 Instruction Encoding: From Assembly to Machine Code"
 date: 2017-09-09 05:29:08 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/beginners-guide-x86-64-instruction-encoding/
+categories: [linux-systems-administration]
+canonical: /beginners-guide-x86-64-instruction-encoding/
 ---
 
 Before encoding instructions, you need to understand the two assembly syntaxes you’ll encounter—they differ fundamentally in operand order and addressing format.

@@ -3,7 +3,8 @@ title: "Forcing a User Logout on Linux"
 date: 2018-03-24 11:44:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-kick-off-a-user-on-a-linux-box/
+categories: [linux-systems-administration]
+canonical: /how-to-kick-off-a-user-on-a-linux-box/
 ---
 
 When managing a Linux system remotely, you sometimes need to terminate all sessions for a specific user—whether they’re logged in locally at the console, via SSH, through X11 forwarding, VNC, or any other method. Here’s how to do it.

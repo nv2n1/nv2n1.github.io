@@ -3,7 +3,8 @@ title: "How to Add Google Custom Search to Question2Answer"
 date: 2018-03-24 08:15:39 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-google-custom-search-to-question2answer/
+categories: [languages-frameworks]
+canonical: /how-to-add-google-custom-search-to-question2answer/
 ---
 
 If you’re running Question2Answer and want to replace the default search with Google Custom Search without modifying your theme, a plugin is the cleanest approach.

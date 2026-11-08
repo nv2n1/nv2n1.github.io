@@ -3,7 +3,8 @@ title: "How to Manually Set Vim\u2019s Filetype"
 date: 2018-03-24 11:49:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-manually-set-vims-filetype/
+categories: [programming-languages]
+canonical: /how-to-manually-set-vims-filetype/
 ---
 
 Vim’s filetype detection usually works automatically, but sometimes you need to manually override or set the filetype for a specific buffer. This guide covers manual filetype setting, debugging detection issues, and creating custom filetype definitions.

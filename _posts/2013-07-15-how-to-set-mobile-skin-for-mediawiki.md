@@ -3,7 +3,8 @@ title: "Device-Specific Skins in MediaWiki: Setup & Configuration"
 date: 2013-07-15 12:57:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-mobile-skin-for-mediawiki/
+categories: [testing-devops]
+canonical: /how-to-set-mobile-skin-for-mediawiki/
 ---
 
 Modern MediaWiki installations should prioritize responsive design, but you may still need explicit device-based skin switching for specific use cases. This guide covers both approaches and how to implement them correctly.

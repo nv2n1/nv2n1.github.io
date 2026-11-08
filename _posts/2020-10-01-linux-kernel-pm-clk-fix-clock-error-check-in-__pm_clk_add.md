@@ -3,7 +3,8 @@ title: "Fix clock validation in __pm_clk_add()"
 date: 2020-10-01 01:50:57 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-pm-clk-fix-clock-error-check-in-__pm_clk_add/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-pm-clk-fix-clock-error-check-in-__pm_clk_add/
 ---
 
 The `__pm_clk_add()` function in the Linux kernel handles clock registration for power management. A clock validation bug in this function could cause incorrect power state transitions or kernel warnings when managing device clocks.

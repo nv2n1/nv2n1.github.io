@@ -3,7 +3,8 @@ title: "Attaching a Disk to a Running Xen DomU"
 date: 2018-03-24 11:44:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-dynamically-attach-a-disk-to-running-domu-in-xen/
+categories: [development-best-practices]
+canonical: /how-to-dynamically-attach-a-disk-to-running-domu-in-xen/
 ---
 
 Attaching storage to a running Xen DomU without rebooting is straightforward using the `xl` toolstack. This is useful when you need to add capacity, attach backup storage, or provision new volumes without downtime.

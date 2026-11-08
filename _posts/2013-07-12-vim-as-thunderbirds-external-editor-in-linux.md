@@ -3,7 +3,8 @@ title: "Using Vim as Thunderbird\u2019s External Editor on Linux"
 date: 2013-07-12 16:32:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/vim-as-thunderbirds-external-editor-in-linux/
+categories: [linux-systems-administration]
+canonical: /vim-as-thunderbirds-external-editor-in-linux/
 ---
 
 Thunderbird’s built-in compose window is functional but limited. Using Vim as an external editor gives you the full power of modal editing and your customizations for email composition.

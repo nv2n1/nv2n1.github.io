@@ -3,7 +3,8 @@ title: "How to Download Videos from Chrome"
 date: 2018-03-24 08:04:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/download-the-video-playing-in-chrome/
+categories: [development-best-practices]
+canonical: /download-the-video-playing-in-chrome/
 ---
 
 When you need to download a video playing in your browser, Chrome offers several solid options depending on your workflow and the video source.

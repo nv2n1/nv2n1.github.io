@@ -3,7 +3,8 @@ title: "Converting Word Documents to PDF on Linux"
 date: 2018-03-24 08:19:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-a-docx-doc-ms-word-file-to-pdf-in-command-line-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-a-docx-doc-ms-word-file-to-pdf-in-command-line-on-linux/
 ---
 
 Several tools can convert `.doc` and `.docx` files to PDF from the command line. Here’s what works in practice.

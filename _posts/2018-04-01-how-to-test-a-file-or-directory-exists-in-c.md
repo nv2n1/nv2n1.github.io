@@ -3,7 +3,8 @@ title: "Checking if a File or Directory Exists in C++"
 date: 2018-04-01 14:36:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-a-file-or-directory-exists-in-c/
+categories: [languages-frameworks]
+canonical: /how-to-test-a-file-or-directory-exists-in-c/
 ---
 
 The `stat()` system call is the traditional approach for checking file existence:

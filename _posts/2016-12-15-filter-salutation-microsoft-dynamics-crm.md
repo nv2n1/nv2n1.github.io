@@ -3,7 +3,8 @@ title: "Conditional Dropdown Filtering in Dynamics 365: Filter Salutation by Gen
 date: 2016-12-15 11:02:30 +0000
 author: "Ethan Millar"
 layout: post
-canonical: https://www.systutorials.com/filter-salutation-microsoft-dynamics-crm/
+categories: [algorithms-data-structures]
+canonical: /filter-salutation-microsoft-dynamics-crm/
 ---
 
 Filtering dependent fields based on parent field values is a common requirement in Dynamics 365 CRM. This guide walks through implementing conditional filtering so the salutation dropdown only shows values relevant to the selected gender.

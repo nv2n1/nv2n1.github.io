@@ -3,7 +3,8 @@ title: "Setting Up OpenVPN on iPhone with Ovpn Spider"
 date: 2018-03-24 11:46:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-openvpn-together-with-ovpn-spider-on-iphone/
+categories: [programming-languages]
+canonical: /how-to-use-openvpn-together-with-ovpn-spider-on-iphone/
 ---
 
 Setting up OpenVPN on an iPhone with Ovpn Spider requires a few specific steps since iOS has limitations compared to desktop environments. This guide walks you through the process.

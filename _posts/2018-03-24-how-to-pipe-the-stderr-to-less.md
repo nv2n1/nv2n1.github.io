@@ -3,7 +3,8 @@ title: "Piping stderr to less: Redirect and view error streams"
 date: 2018-03-24 08:18:30 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-pipe-the-stderr-to-less/
+categories: [linux-systems-administration]
+canonical: /how-to-pipe-the-stderr-to-less/
 ---
 
 When you need to page through error output from a command, you’ll run into the issue that `less` only receives stdout by default. Error messages go to stderr (file descriptor 2), so they’ll still scroll past on your terminal while stdout gets paged.

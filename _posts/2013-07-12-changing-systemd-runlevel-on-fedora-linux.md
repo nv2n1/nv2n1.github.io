@@ -3,7 +3,8 @@ title: "How to Change Systemd Targets on Fedora Linux"
 date: 2013-07-12 16:32:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/changing-systemd-runlevel-on-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /changing-systemd-runlevel-on-fedora-linux/
 ---
 
 Fedora switched to systemd for service management years ago, replacing the traditional `/etc/inittab` file with a target-based system. While `systemctl set-default` is the standard approach, understanding the manual method gives you insight into how systemd actually manages boot targets.

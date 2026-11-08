@@ -3,7 +3,8 @@ title: "Force Rectangle Ads in AdSense Responsive Formats"
 date: 2018-03-24 11:47:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-adsense-responsive-ads-show-rectangle-ads-instead-of-horizontal-ones/
+categories: [linux-systems-administration]
+canonical: /how-to-make-adsense-responsive-ads-show-rectangle-ads-instead-of-horizontal-ones/
 ---
 
 If you’re running AdSense responsive ads on a content area narrower than full viewport width, you’ve probably noticed the ads default to horizontal (leaderboard) formats instead of the vertical rectangle ads that typically perform better. You can control which ad sizes appear by modifying the ad format parameter.

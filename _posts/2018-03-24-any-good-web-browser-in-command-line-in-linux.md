@@ -3,7 +3,8 @@ title: "Terminal Web Browsers: Lynx, w3m, and ELinks Compared"
 date: 2018-03-24 11:46:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/any-good-web-browser-in-command-line-in-linux/
+categories: [programming-languages]
+canonical: /any-good-web-browser-in-command-line-in-linux/
 ---
 
 When you need to browse the web over SSH or in a headless environment, graphical browsers aren’t an option. Several terminal-based browsers exist that actually handle modern websites reasonably well, though with limitations around JavaScript and CSS.

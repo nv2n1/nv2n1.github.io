@@ -3,7 +3,8 @@ title: "Merging SAM Files on Linux"
 date: 2018-03-24 11:49:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-merge-sam-files-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-merge-sam-files-on-linux/
 ---
 
 Merging SAM files is a common task in bioinformatics workflows, and while `samtools merge` works directly with BAM files, you need a different approach for SAM files. The most efficient method leverages the SAM format structure: headers start with `@`, and alignment records don’t.

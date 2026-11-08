@@ -3,7 +3,8 @@ title: "Installing Flash Plugin on 64-bit Firefox for Linux"
 date: 2013-07-12 16:32:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-the-flash-plugin-for-64-bit-firefox-in-linux-x86-64/
+categories: [linux-systems-administration]
+canonical: /installing-the-flash-plugin-for-64-bit-firefox-in-linux-x86-64/
 ---
 
 Flash Player reached end-of-life on December 31, 2020, and modern browsers no longer support it. However, if you’re working with legacy systems, archived content, or old web applications that still require Flash, here’s what you need to know about the historical setup and modern alternatives.

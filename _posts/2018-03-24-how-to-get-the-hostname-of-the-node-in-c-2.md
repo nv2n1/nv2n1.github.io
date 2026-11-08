@@ -3,7 +3,8 @@ title: "Retrieving the Node\u2019s Hostname in C++"
 date: 2018-03-24 11:52:27 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-hostname-of-the-node-in-c-2/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-hostname-of-the-node-in-c-2/
 ---
 
 Retrieving the hostname of the current system is a common task in systems programming, network applications, and monitoring tools. C++ provides several approaches depending on your platform and requirements.

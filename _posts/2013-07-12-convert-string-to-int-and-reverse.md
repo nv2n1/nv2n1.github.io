@@ -3,7 +3,8 @@ title: "Converting Strings to Integers in C++: Modern Approaches and Trade-offs"
 date: 2013-07-12 16:47:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/convert-string-to-int-and-reverse/
+categories: [scripting-utilities]
+canonical: /convert-string-to-int-and-reverse/
 ---
 
 Converting strings to integers is a fundamental operation in C++, but the method you choose affects both code clarity and performance. Here are the four main approaches, ranked by use case.

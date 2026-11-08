@@ -3,7 +3,8 @@ title: "Best iOS SSH Clients for SOCKS Proxy Support"
 date: 2018-03-24 11:50:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/which-ssh-client-on-ios-works-the-best-for-socks/
+categories: [web-development]
+canonical: /which-ssh-client-on-ios-works-the-best-for-socks/
 ---
 
 iOS SSH clients have matured significantly, and if you need SOCKS proxy support, there are several solid options worth evaluating. The key difference from desktop clients is that iOS imposes sandbox restrictions, so dynamic forwarding requires apps built with that constraint in mind.

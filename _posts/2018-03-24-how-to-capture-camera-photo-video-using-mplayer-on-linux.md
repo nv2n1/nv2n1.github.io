@@ -3,7 +3,8 @@ title: "Capturing Webcam Photos and Videos on Linux"
 date: 2018-03-24 11:43:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-capture-camera-photo-video-using-mplayer-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-capture-camera-photo-video-using-mplayer-on-linux/
 ---
 
 MPlayer is largely obsolete for modern webcam capture tasks. FFmpeg and simpler tools like `ffplay` now handle camera input more reliably across different hardware and driver configurations. That said, if you’re working with legacy systems or specifically need MPlayer’s features, here’s how to use it alongside more current alternatives.

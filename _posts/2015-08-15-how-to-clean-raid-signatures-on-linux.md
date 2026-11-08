@@ -3,7 +3,8 @@ title: "Removing RAID Metadata from Linux Disks"
 date: 2015-08-15 13:00:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-clean-raid-signatures-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-clean-raid-signatures-on-linux/
 ---
 
 When you repurpose disks from one RAID array to another system, Linux keeps the old RAID metadata intact as a safety measure. This prevents accidental data corruption, but it also blocks you from reusing the disk until the signatures are cleared.

@@ -3,7 +3,8 @@ title: "Getting the Canonical Path Without Following Symlinks in Python"
 date: 2018-03-24 11:55:14 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/readlink-m-equivalent-function-in-python-to-get-canonical-file-name/
+categories: [languages-frameworks]
+canonical: /readlink-m-equivalent-function-in-python-to-get-canonical-file-name/
 ---
 
 The Linux command `readlink -m` resolves a path to its absolute, canonical form, following all symlinks and resolving `..` and `.` components. Python provides several ways to do this, depending on your needs and Python version.

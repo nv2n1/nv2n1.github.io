@@ -3,7 +3,8 @@ title: "Hide Google AdSense Ads on Mobile Devices Only"
 date: 2018-03-24 11:44:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-remove-adsense-ads-for-mobile-devices-while-keep-them-for-desktops/
+categories: [linux-system-configuration]
+canonical: /how-to-remove-adsense-ads-for-mobile-devices-while-keep-them-for-desktops/
 ---
 
 If you’re running Google AdSense on your site, you might want to show ads only to desktop visitors and hide them on mobile devices. This reduces clutter on smaller screens and can sometimes improve user experience—though test your bounce rates to confirm it actually helps your metrics.

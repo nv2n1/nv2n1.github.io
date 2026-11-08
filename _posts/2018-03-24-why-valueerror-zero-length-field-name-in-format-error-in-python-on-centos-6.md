@@ -3,7 +3,8 @@ title: "ValueError: zero length field name in format \u2013 Python fix"
 date: 2018-03-24 11:54:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/why-valueerror-zero-length-field-name-in-format-error-in-python-on-centos-6/
+categories: [scripting-utilities]
+canonical: /why-valueerror-zero-length-field-name-in-format-error-in-python-on-centos-6/
 ---
 
 \[md\]\

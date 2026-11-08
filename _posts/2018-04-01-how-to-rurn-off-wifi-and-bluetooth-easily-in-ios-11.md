@@ -3,7 +3,8 @@ title: "How to Disable WiFi and Bluetooth in iOS 11"
 date: 2018-04-01 04:04:24 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-rurn-off-wifi-and-bluetooth-easily-in-ios-11/
+categories: [programming-languages]
+canonical: /how-to-rurn-off-wifi-and-bluetooth-easily-in-ios-11/
 ---
 
 The Control Center in iOS provides the quickest way to toggle wireless connections. Here’s what you need to know across iOS versions.

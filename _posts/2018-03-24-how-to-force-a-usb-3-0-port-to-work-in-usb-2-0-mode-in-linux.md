@@ -3,7 +3,8 @@ title: "Force USB 3.0 Ports to USB 2.0 Mode on Linux"
 date: 2018-03-24 11:48:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-a-usb-3-0-port-to-work-in-usb-2-0-mode-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-force-a-usb-3-0-port-to-work-in-usb-2-0-mode-in-linux/
 ---
 
 While BIOS settings are the preferred way to disable USB 3.0, you can also force USB 2.0 mode on a running Linux system by manipulating the xHCI controller’s port routing register directly using `setpci`.

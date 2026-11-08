@@ -3,8 +3,9 @@ title: "Managing Proxy Settings on Windows via Command Line"
 date: 2013-07-12 16:47:43 +0000
 author: "Eric Ma"
 layout: post
+categories: [development-best-practices]
 permalink: /setproxy-%e4%b8%80%e4%b8%aa%e8%ae%be%e7%bd%aeie%e4%bb%a3%e7%90%86%e7%9a%84%e5%b0%8f%e5%b7%a5%e5%85%b7/
-canonical: https://www.systutorials.com/setproxy-%e4%b8%80%e4%b8%aa%e8%ae%be%e7%bd%aeie%e4%bb%a3%e7%90%86%e7%9a%84%e5%b0%8f%e5%b7%a5%e5%85%b7/
+canonical: /setproxy-%e4%b8%80%e4%b8%aa%e8%ae%be%e7%bd%aeie%e4%bb%a3%e7%90%86%e7%9a%84%e5%b0%8f%e5%b7%a5%e5%85%b7/
 ---
 
 Managing proxy settings through the GUI is tedious, especially when you need to switch between multiple proxy servers frequently. Rather than hunting through settings menus each time, command-line tools eliminate friction and enable scripted deployments across your infrastructure.

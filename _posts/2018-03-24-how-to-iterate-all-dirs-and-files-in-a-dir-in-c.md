@@ -3,7 +3,8 @@ title: "Recursively List All Files and Directories in C++"
 date: 2018-03-24 11:54:56 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-iterate-all-dirs-and-files-in-a-dir-in-c/
+categories: [scripting-utilities]
+canonical: /how-to-iterate-all-dirs-and-files-in-a-dir-in-c/
 ---
 
 For iterating through directories and files in C++, you have several options depending on your needs and C++ standard version.

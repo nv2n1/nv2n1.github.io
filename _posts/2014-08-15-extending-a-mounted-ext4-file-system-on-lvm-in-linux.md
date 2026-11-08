@@ -3,7 +3,8 @@ title: "Extend an Ext4 Filesystem on LVM Without Downtime"
 date: 2014-08-15 02:26:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/extending-a-mounted-ext4-file-system-on-lvm-in-linux/
+categories: [linux-systems-administration]
+canonical: /extending-a-mounted-ext4-file-system-on-lvm-in-linux/
 ---
 
 LVM abstracts physical storage into logical volumes, letting you resize filesystems online, add drives transparently, and manage capacity without downtime. This guide covers the most common task: extending a mounted ext4 filesystem when you need more space.

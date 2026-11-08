@@ -3,7 +3,8 @@ title: "Configuring Custom Error Pages on Apache and Nginx"
 date: 2013-07-12 16:46:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-sites-default-404-error-not-found-page/
+categories: [system-administration-cloud]
+canonical: /how-to-change-the-sites-default-404-error-not-found-page/
 ---
 
 Apache’s default 404 error page is generic and often displays hosting provider branding. Customizing it gives you control over the user experience when they land on missing pages. The same applies to other HTTP error responses like 403 Forbidden or 500 Internal Server Error.

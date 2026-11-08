@@ -3,7 +3,8 @@ title: "Adding Cron Jobs Programmatically with Shell Scripts"
 date: 2018-03-24 11:45:31 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-a-crontab-entry-from-a-shell-script-on-linux/
+categories: [scripting-utilities]
+canonical: /how-to-add-a-crontab-entry-from-a-shell-script-on-linux/
 ---
 
 The standard `crontab -e` command opens an interactive editor, which doesn’t work in automated scripts. To add crontab entries non-interactively, you need to pipe a list of cron jobs directly to `crontab -`.

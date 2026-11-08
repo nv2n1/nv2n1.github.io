@@ -3,7 +3,8 @@ title: "Extract Directory and Filename from File Paths in Bash"
 date: 2018-03-24 11:46:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-directory-path-and-file-name-from-a-absolute-path-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-directory-path-and-file-name-from-a-absolute-path-in-bash-on-linux/
 ---
 
 When you have an absolute path like `/foo/bar/baz.txt` and need to split it into its components, Bash provides two essential utilities: `dirname` and `basename`.

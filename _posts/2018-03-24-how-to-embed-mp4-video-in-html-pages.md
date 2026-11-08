@@ -3,7 +3,8 @@ title: "How to Embed MP4 Videos in HTML"
 date: 2018-03-24 11:41:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-embed-mp4-video-in-html-pages/
+categories: [linux-systems-administration]
+canonical: /how-to-embed-mp4-video-in-html-pages/
 ---
 
 The HTML5 `<video>` element is the standard for embedding video content without plugins. It’s supported across all modern browsers and provides native playback controls, accessibility features, and performance benefits.

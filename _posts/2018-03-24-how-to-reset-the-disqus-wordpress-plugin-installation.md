@@ -3,7 +3,8 @@ title: "Resetting Your Disqus WordPress Plugin: A Step-by-Step Guide"
 date: 2018-03-24 08:18:11 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-reset-the-disqus-wordpress-plugin-installation/
+categories: [linux-systems-administration]
+canonical: /how-to-reset-the-disqus-wordpress-plugin-installation/
 ---
 
 If you’ve deactivated and reactivated the Disqus WordPress plugin but it’s still using the old forum ID and configuration, you need to clear the stored settings from your database. This is the most reliable way to force the plugin to re-initialize and prompt you for fresh configuration.

@@ -3,7 +3,8 @@ title: "Bash Command History: Search and Navigation Tips"
 date: 2018-03-24 11:55:00 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-search-history-commands-very-effectively-in-bash-shell-command-line/
+categories: [linux-systems-administration]
+canonical: /how-to-search-history-commands-very-effectively-in-bash-shell-command-line/
 ---
 
 The up arrow works, but it’s tedious for finding commands from weeks ago. Bash offers several practical methods to search your history efficiently.

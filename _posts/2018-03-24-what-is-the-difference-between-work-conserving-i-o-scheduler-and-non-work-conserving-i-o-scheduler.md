@@ -3,7 +3,8 @@ title: "Understanding Work-Conserving vs. Non-Work-Conserving I/O Schedulers"
 date: 2018-03-24 11:54:34 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/what-is-the-difference-between-work-conserving-i-o-scheduler-and-non-work-conserving-i-o-scheduler/
+categories: [programming-languages]
+canonical: /what-is-the-difference-between-work-conserving-i-o-scheduler-and-non-work-conserving-i-o-scheduler/
 ---
 
 I/O schedulers in Linux sit between application requests and physical disk hardware, deciding the order in which I/O operations execute. The fundamental difference between work-conserving and non-work-conserving schedulers comes down to how they handle idle periods.

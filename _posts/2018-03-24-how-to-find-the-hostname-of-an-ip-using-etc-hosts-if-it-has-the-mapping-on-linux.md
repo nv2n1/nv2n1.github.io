@@ -3,7 +3,8 @@ title: "Looking up Hostnames from IP Addresses in /etc/hosts on Linux"
 date: 2018-03-24 11:53:12 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-the-hostname-of-an-ip-using-etc-hosts-if-it-has-the-mapping-on-linux/
+categories: [programming-languages]
+canonical: /how-to-find-the-hostname-of-an-ip-using-etc-hosts-if-it-has-the-mapping-on-linux/
 ---
 
 When you need to reverse-lookup an IP address against your local `/etc/hosts` file, several tools can help. This is different from a full DNS reverse lookup — you’re checking only against the static mappings on your local system.

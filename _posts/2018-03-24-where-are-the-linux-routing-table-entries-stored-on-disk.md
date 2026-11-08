@@ -3,7 +3,8 @@ title: "Where Linux Stores Routing Table Entries on Disk"
 date: 2018-03-24 08:16:39 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/where-are-the-linux-routing-table-entries-stored-on-disk/
+categories: [linux-systems-administration]
+canonical: /where-are-the-linux-routing-table-entries-stored-on-disk/
 ---
 
 Linux routing tables exist in kernel memory during runtime. To persist routes across reboots, you need to store them on disk and have them reloaded during system startup. The mechanism varies depending on your network management setup.

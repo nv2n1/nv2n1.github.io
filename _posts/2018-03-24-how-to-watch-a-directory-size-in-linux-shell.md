@@ -3,7 +3,8 @@ title: "Monitor Directory Size Growth in Linux"
 date: 2018-03-24 11:49:14 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-watch-a-directory-size-in-linux-shell/
+categories: [linux-systems-administration]
+canonical: /how-to-watch-a-directory-size-in-linux-shell/
 ---
 
 Monitoring directory growth is essential for tracking logs, temporary files, and catching runaway disk usage before it becomes a problem. Linux offers several approaches depending on whether you need simple periodic checks, interactive exploration, or event-driven monitoring.

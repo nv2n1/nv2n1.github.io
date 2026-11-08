@@ -3,7 +3,8 @@ title: "Calling C/C++ DLLs from Java with JNI on Windows"
 date: 2013-07-12 16:47:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/java-calling-native-functions-in-dll/
+categories: [development-best-practices]
+canonical: /java-calling-native-functions-in-dll/
 ---
 
 JNI lets you call native C/C++ functions from Java on Windows. This guide covers the complete workflow with modern tooling.

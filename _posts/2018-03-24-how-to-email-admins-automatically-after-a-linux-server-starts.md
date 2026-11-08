@@ -3,7 +3,8 @@ title: "Linux Server Boot Notifications via Email"
 date: 2018-03-24 11:45:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-email-admins-automatically-after-a-linux-server-starts/
+categories: [linux-systems-administration]
+canonical: /how-to-email-admins-automatically-after-a-linux-server-starts/
 ---
 
 Managing a cluster of servers, you’ll want to be notified when they come back online after restarts or unexpected reboots. Email notifications on boot let you track infrastructure changes and catch potential issues early.

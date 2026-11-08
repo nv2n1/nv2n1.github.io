@@ -3,7 +3,8 @@ title: "Linux Kernel: Fix CIFS Auth Key Memory Leak on Reconnect"
 date: 2020-10-01 01:22:32 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-cifs-release-auth_key-response-for-reconnect/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-cifs-release-auth_key-response-for-reconnect/
 ---
 
 This Linux kernel change addresses a memory leak in the CIFS client code where `auth_key.response` was not being freed during session reconnection. The fix ensures that any existing authentication key response is released before setting up a new session, preventing memory exhaustion over repeated reconnect cycles.

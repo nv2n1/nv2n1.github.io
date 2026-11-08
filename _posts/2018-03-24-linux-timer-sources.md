@@ -3,7 +3,8 @@ title: "Understanding Linux Timer Sources"
 date: 2018-03-24 08:19:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/linux-timer-sources/
+categories: [linux-systems-administration]
+canonical: /linux-timer-sources/
 ---
 
 Linux systems can have multiple timer sources available, and the kernel selects one as the active clocksource. Understanding what’s available and how to view or change the current source is essential for performance tuning and troubleshooting timing-related issues.

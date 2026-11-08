@@ -3,7 +3,8 @@ title: "Where Linux Applications Store Configuration and Data Files"
 date: 2017-12-31 06:57:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/evolution-save-data-configure-files-linux/
+categories: [linux-systems-administration]
+canonical: /evolution-save-data-configure-files-linux/
 ---
 
 Evolution is a full-featured personal information management suite that handles email, contacts, calendars, and tasks. It includes enterprise features like native Microsoft Exchange support and integrates deeply with GNOME’s ecosystem. To troubleshoot issues, migrate data, back up configurations, or secure your setup, you need to know where Evolution stores everything.

@@ -3,7 +3,8 @@ title: "How to Install aria2 on CentOS 7"
 date: 2018-03-24 11:51:07 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-tinstall-aria2-on-centos-7/
+categories: [programming-languages]
+canonical: /how-tinstall-aria2-on-centos-7/
 ---
 
 aria2 is a lightweight, multi-protocol download manager that supports HTTP(S), FTP, BitTorrent, and Metalink protocols. It’s particularly useful for resumable downloads, parallel connections, and command-line automation.

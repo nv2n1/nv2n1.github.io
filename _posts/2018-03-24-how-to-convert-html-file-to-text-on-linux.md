@@ -3,7 +3,8 @@ title: "Converting HTML to Plain Text on Linux"
 date: 2018-03-24 08:19:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-html-file-to-text-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-html-file-to-text-on-linux/
 ---
 
 You have several options for converting HTML files to plain text, each with different strengths depending on your use case.

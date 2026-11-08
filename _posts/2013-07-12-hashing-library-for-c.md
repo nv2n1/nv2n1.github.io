@@ -3,7 +3,8 @@ title: "Hash Tables in C: Building and Using Them Effectively"
 date: 2013-07-12 16:47:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hashing-library-for-c/
+categories: [algorithms-data-structures]
+canonical: /hashing-library-for-c/
 ---
 
 When building applications requiring fast key-value lookups, hash tables are fundamental. C offers several options—from POSIX standard library functions to specialized third-party libraries. The right choice depends on your dataset characteristics, memory constraints, and whether you need dynamic resizing.

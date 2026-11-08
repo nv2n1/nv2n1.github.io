@@ -3,7 +3,8 @@ title: "Formatting Output with C++ cout"
 date: 2018-03-24 08:18:30 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/c-cout-formatting-output/
+categories: [linux-systems-administration]
+canonical: /c-cout-formatting-output/
 ---
 
 C++ provides the `<iomanip>` header for controlling how data appears when printed to standard output. These manipulators give you precise control over formatting, alignment, precision, and radix.

@@ -3,7 +3,8 @@ title: "Writing Effective Peer Reviews for Academic Papers"
 date: 2018-03-24 08:20:10 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-write-paper-reviews/
+categories: [development-best-practices]
+canonical: /how-to-write-paper-reviews/
 ---
 
 Writing effective paper reviews is essential work in academic fields like information retrieval, machine learning, systems research, and most technical disciplines. Whether you’re reviewing for a conference, journal, or internal research group, the goal is the same: provide constructive, specific feedback that helps authors improve their work and helps decision-makers assess contribution.

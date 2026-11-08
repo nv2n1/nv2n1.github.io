@@ -3,7 +3,8 @@ title: "The Best Go REPL Tools and Implementations"
 date: 2018-03-24 11:51:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/any-good-go-repl-implementation-tool/
+categories: [languages-frameworks]
+canonical: /any-good-go-repl-implementation-tool/
 ---
 
 Go compiles quickly and `go run` handles small scripts, but a REPL is more practical for interactive testing and exploration. Here are the best options available today.

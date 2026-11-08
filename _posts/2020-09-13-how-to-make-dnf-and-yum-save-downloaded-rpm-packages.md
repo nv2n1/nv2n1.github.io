@@ -3,7 +3,8 @@ title: "How to Configure DNF and YUM to Cache Downloaded RPM Packages"
 date: 2020-09-13 13:01:26 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-dnf-and-yum-save-downloaded-rpm-packages/
+categories: [databases-storage]
+canonical: /how-to-make-dnf-and-yum-save-downloaded-rpm-packages/
 ---
 
 DNF and YUM automatically download RPM packages and their dependencies during installation. If you need to build offline installation media, create local mirrors, or avoid repeated downloads across multiple systems, you’ll want to preserve those packages instead of letting them disappear from cache after installation.

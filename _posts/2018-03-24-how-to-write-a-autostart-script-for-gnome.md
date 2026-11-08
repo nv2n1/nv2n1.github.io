@@ -3,7 +3,8 @@ title: "How to Create an Autostart Script for GNOME"
 date: 2018-03-24 08:14:04 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-write-a-autostart-script-for-gnome/
+categories: [development-best-practices]
+canonical: /how-to-write-a-autostart-script-for-gnome/
 ---
 
 GNOME uses `.desktop` files in `~/.config/autostart/` to launch applications when you log in. This mechanism works across GNOME, XFCE, KDE, and most other modern desktop environments.

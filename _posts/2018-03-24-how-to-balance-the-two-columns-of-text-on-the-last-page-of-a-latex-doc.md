@@ -3,7 +3,8 @@ title: "Balancing Text Columns on the Last Page in LaTeX"
 date: 2018-03-24 08:22:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-balance-the-two-columns-of-text-on-the-last-page-of-a-latex-doc/
+categories: [testing-devops]
+canonical: /how-to-balance-the-two-columns-of-text-on-the-last-page-of-a-latex-doc/
 ---
 
 When using two-column layouts, the last page often ends with uneven column heights—one column noticeably longer than the other. This looks sloppy in formal documents. Two main packages solve this: `balance` and `flushend`.

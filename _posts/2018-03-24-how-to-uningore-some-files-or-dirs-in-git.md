@@ -3,7 +3,8 @@ title: "How to Unignore Files and Directories in Git"
 date: 2018-03-24 11:54:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-uningore-some-files-or-dirs-in-git/
+categories: [scripting-utilities]
+canonical: /how-to-uningore-some-files-or-dirs-in-git/
 ---
 
 Sometimes you have a global gitignore rule—like ignoring all `*.log` files—but need to track one specific exception. Git lets you negate patterns using the `!` character.

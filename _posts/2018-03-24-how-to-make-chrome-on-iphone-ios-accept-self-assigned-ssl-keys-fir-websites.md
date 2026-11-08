@@ -3,7 +3,8 @@ title: "Accessing Self-Signed SSL Certificates in Chrome on iOS"
 date: 2018-03-24 11:45:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-chrome-on-iphone-ios-accept-self-assigned-ssl-keys-fir-websites/
+categories: [systems-architecture]
+canonical: /how-to-make-chrome-on-iphone-ios-accept-self-assigned-ssl-keys-fir-websites/
 ---
 
 Chrome on iOS has a fundamental limitation: it cannot accept self-signed SSL certificates or custom Certificate Authorities (CAs) because iOS restricts all browsers to use the system’s certificate validation. Unlike desktop Chrome, you cannot bypass this through browser settings.

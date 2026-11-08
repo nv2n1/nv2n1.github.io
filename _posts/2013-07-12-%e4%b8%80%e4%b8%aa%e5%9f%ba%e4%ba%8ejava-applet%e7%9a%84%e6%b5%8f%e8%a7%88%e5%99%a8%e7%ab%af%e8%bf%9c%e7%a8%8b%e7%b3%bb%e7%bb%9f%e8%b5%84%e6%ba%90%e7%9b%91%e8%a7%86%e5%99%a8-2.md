@@ -3,8 +3,9 @@ title: "Real-Time System Resource Monitoring with WebSockets"
 date: 2013-07-12 16:47:43 +0000
 author: "Eric Ma"
 layout: post
+categories: [web-development]
 permalink: /%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8ejava-applet%e7%9a%84%e6%b5%8f%e8%a7%88%e5%99%a8%e7%ab%af%e8%bf%9c%e7%a8%8b%e7%b3%bb%e7%bb%9f%e8%b5%84%e6%ba%90%e7%9b%91%e8%a7%86%e5%99%a8-2/
-canonical: https://www.systutorials.com/%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8ejava-applet%e7%9a%84%e6%b5%8f%e8%a7%88%e5%99%a8%e7%ab%af%e8%bf%9c%e7%a8%8b%e7%b3%bb%e7%bb%9f%e8%b5%84%e6%ba%90%e7%9b%91%e8%a7%86%e5%99%a8-2/
+canonical: /%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8ejava-applet%e7%9a%84%e6%b5%8f%e8%a7%88%e5%99%a8%e7%ab%af%e8%bf%9c%e7%a8%8b%e7%b3%bb%e7%bb%9f%e8%b5%84%e6%ba%90%e7%9b%91%e8%a7%86%e5%99%a8-2/
 ---
 
 Java Applets were obsolete by 2016 and removed from Java 9+. If you need a browser-based system monitoring dashboard, use WebSockets or Server-Sent Events paired with modern JavaScript charting libraries.

@@ -3,7 +3,8 @@ title: "How GCC Inlines Recursive Functions at -O3"
 date: 2020-04-05 13:45:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/gcc-may-save-you-some-recursive-functions-calls-an-analysis-of-a-function-call-stack-length-example/
+categories: [linux-systems-administration]
+canonical: /gcc-may-save-you-some-recursive-functions-calls-an-analysis-of-a-function-call-stack-length-example/
 ---
 
 GCC applies sophisticated optimizations to recursive functions, and recursive inlining is one of the most dramatic. When the compiler can’t use simple tail-call optimization—because a function has side effects like `printf` that reference stack parameters—it often unrolls multiple recursion iterations into a single function body. Understanding this behavior matters for performance tuning, debugging, and predicting stack usage.

@@ -3,7 +3,8 @@ title: "Reading Files Line by Line in Bash"
 date: 2018-03-24 11:52:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-process-a-file-line-by-line-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-process-a-file-line-by-line-in-bash/
 ---
 
 Bash provides several methods to process files line by line, each with different performance characteristics and use cases.

@@ -3,7 +3,8 @@ title: "Cryptographic Tokens: A Developer\u2019s Guide"
 date: 2023-09-16 06:42:31 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/cryptographic-token-101/
+categories: [systems-architecture]
+canonical: /cryptographic-token-101/
 ---
 
 A cryptographic token is a digital asset issued on top of an existing blockchain. While Bitcoin is the native coin of its own chain, tokens like USDC or Chainlink (LINK) typically run on other chains such as Ethereum or Solana. Tokens are created through smart contracts and represent value, ownership, or access rights—all verifiable and transferable on-chain.

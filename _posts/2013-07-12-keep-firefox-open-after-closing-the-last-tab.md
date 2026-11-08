@@ -3,7 +3,8 @@ title: "Prevent Firefox from Closing When Last Tab Closes"
 date: 2013-07-12 16:54:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/keep-firefox-open-after-closing-the-last-tab/
+categories: [development-best-practices]
+canonical: /keep-firefox-open-after-closing-the-last-tab/
 ---
 
 By default, Firefox closes the entire window when you close the last tab. This can be annoying if you’re used to keeping the browser window open. Here’s how to change this behavior and other useful tab management tips.

@@ -3,7 +3,8 @@ title: "HDFS Snapshots: Architecture and Implementation Details"
 date: 2018-03-24 11:43:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/what-is-the-design-of-snapshots-in-hdfs/
+categories: [linux-systems-administration]
+canonical: /what-is-the-design-of-snapshots-in-hdfs/
 ---
 
 HDFS snapshots provide a way to create read-only point-in-time copies of the filesystem or specific directories without duplicating data. Understanding their design helps you implement efficient backup strategies and recover from accidental deletions in production clusters.

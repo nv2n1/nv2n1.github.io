@@ -3,7 +3,8 @@ title: "Remove a Trusted Computer from Your iOS Device"
 date: 2018-03-24 11:42:35 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-un-trust-a-computer-that-i-have-trusted-with-ios-7-device/
+categories: [linux-systems-administration]
+canonical: /how-to-un-trust-a-computer-that-i-have-trusted-with-ios-7-device/
 ---
 
 When you connect an iPhone or iPad to a computer and tap “Trust,” iOS stores a pairing record that allows that computer to communicate with the device without asking for permission again. If you want to revoke that trust relationship, you need to delete the pairing data on both the device and the computer.

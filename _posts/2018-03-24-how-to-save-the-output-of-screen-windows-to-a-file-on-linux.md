@@ -3,7 +3,8 @@ title: "Saving Linux Screen Sessions to a File"
 date: 2018-03-24 11:51:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-save-the-output-of-screen-windows-to-a-file-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-save-the-output-of-screen-windows-to-a-file-on-linux/
 ---
 
 The `screen` terminal multiplexer can capture window output in several ways. Here are the most practical approaches depending on your use case.

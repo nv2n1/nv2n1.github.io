@@ -3,7 +3,8 @@ title: "Enabling Email Auto-Completion in Evolution"
 date: 2018-03-24 11:55:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-email-email-address-auto-completion-in-evolution/
+categories: [programming-languages]
+canonical: /how-to-email-email-address-auto-completion-in-evolution/
 ---
 
 GNOME Evolution’s email address auto-completion works by querying your local address books and, optionally, external sources. Here’s how to get it working properly.

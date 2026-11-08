@@ -3,7 +3,8 @@ title: "Restart the IBus Daemon in GNOME: Quick Guide"
 date: 2018-03-24 11:40:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-ibus-to-restart-in-gnome-3/
+categories: [linux-systems-administration]
+canonical: /how-to-force-ibus-to-restart-in-gnome-3/
 ---
 
 IBus daemon restarts aren’t always straightforward in GNOME, especially since menu options have been removed. You’ll need to kill the daemon and start a fresh one.

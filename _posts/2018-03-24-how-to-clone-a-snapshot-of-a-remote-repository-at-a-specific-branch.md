@@ -3,7 +3,8 @@ title: "Clone a Git Branch with Shallow History"
 date: 2018-03-24 11:42:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-clone-a-snapshot-of-a-remote-repository-at-a-specific-branch/
+categories: [linux-systems-administration]
+canonical: /how-to-clone-a-snapshot-of-a-remote-repository-at-a-specific-branch/
 ---
 
 When you need just the files from a specific branch without downloading the entire repository history, use shallow cloning. This is useful for large repositories where full history takes time to transfer, or when you only care about the current state of a particular branch.

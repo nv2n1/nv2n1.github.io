@@ -3,7 +3,8 @@ title: "Reading Environment Variables in Go"
 date: 2018-03-24 11:51:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-an-environment-variable-in-go/
+categories: [languages-frameworks]
+canonical: /how-to-get-an-environment-variable-in-go/
 ---
 
 Use `os.Getenv()` to read an environment variable:

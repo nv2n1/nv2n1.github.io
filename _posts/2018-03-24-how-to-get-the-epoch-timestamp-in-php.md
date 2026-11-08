@@ -3,7 +3,8 @@ title: "Getting Epoch Timestamps in PHP"
 date: 2018-03-24 11:52:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-php/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-epoch-timestamp-in-php/
 ---
 
 The epoch timestamp (also called Unix time) represents the number of seconds since January 1, 1970, 00:00:00 UTC. PHP provides several straightforward methods to obtain this value.

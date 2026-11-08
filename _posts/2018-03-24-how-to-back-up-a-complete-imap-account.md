@@ -3,7 +3,8 @@ title: "Email Backup: Comparing offlineimap, mbsync, and doveadm"
 date: 2018-03-24 08:20:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-back-up-a-complete-imap-account/
+categories: [functional-programming]
+canonical: /how-to-back-up-a-complete-imap-account/
 ---
 
 Backing up a complete IMAP account with thousands of messages across nested folders requires automation to preserve folder structure and avoid manual errors. This guide covers three modern tools and provides detailed setup for the most flexible option.

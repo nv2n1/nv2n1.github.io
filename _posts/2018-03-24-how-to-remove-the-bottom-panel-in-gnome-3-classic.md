@@ -3,7 +3,8 @@ title: "Removing the Bottom Panel in GNOME 3 Classic"
 date: 2018-03-24 11:51:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-remove-the-bottom-panel-in-gnome-3-classic/
+categories: [design-patterns-architecture]
+canonical: /how-to-remove-the-bottom-panel-in-gnome-3-classic/
 ---
 
 The bottom panel in GNOME Classic displays the window list via the “Window List” extension. If you don’t use it, there are several ways to remove it depending on your approach.

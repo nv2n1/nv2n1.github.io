@@ -3,7 +3,8 @@ title: "How to View Partition Start and End Sectors with Parted"
 date: 2018-03-24 11:55:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-list-start-and-end-sectors-of-a-partition-by-parted-in-linux/
+categories: [linux-system-configuration]
+canonical: /how-to-list-start-and-end-sectors-of-a-partition-by-parted-in-linux/
 ---
 
 By default, `parted` displays partition boundaries in bytes. To view start and end positions in sectors instead, you need to set the unit explicitly using the `unit` command.

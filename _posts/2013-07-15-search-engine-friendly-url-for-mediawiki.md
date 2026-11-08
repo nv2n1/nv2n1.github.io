@@ -3,7 +3,8 @@ title: "Enabling SEO-Friendly URLs in MediaWiki with Apache and Nginx"
 date: 2013-07-15 12:56:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/search-engine-friendly-url-for-mediawiki/
+categories: [system-administration-cloud]
+canonical: /search-engine-friendly-url-for-mediawiki/
 ---
 
 MediaWiki’s default URL structure — `www.example.com/w/index.php?title=TITLE` — works functionally but creates poor SEO signals and awkward shareable links. Clean URLs like `www.example.com/w/TITLE` improve search visibility, readability, and user experience while making pages easier to reference.

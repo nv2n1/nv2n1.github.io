@@ -3,7 +3,8 @@ title: "Retrieving VM IP Addresses in KVM with virsh"
 date: 2018-03-24 11:51:02 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-ip-addresses-of-vms-in-kvm-with-virsh/
+categories: [programming-languages]
+canonical: /how-to-get-the-ip-addresses-of-vms-in-kvm-with-virsh/
 ---
 
 When you create VMs in KVM, they’re typically assigned IP addresses via DHCP. Finding those addresses so you can SSH in requires a few steps. Here are the practical approaches.

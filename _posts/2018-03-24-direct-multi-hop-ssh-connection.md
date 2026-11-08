@@ -3,7 +3,8 @@ title: "Multi-Hop SSH Connections with ProxyJump and ProxyCommand"
 date: 2018-03-24 08:22:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/direct-multi-hop-ssh-connection/
+categories: [scripting-utilities]
+canonical: /direct-multi-hop-ssh-connection/
 ---
 
 When you need to reach a server through one or more intermediate hosts, you can establish a direct connection without manually chaining SSH sessions. This is essential for accessing internal servers that aren’t directly reachable from your workstation.

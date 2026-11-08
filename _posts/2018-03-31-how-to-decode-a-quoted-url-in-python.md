@@ -3,7 +3,8 @@ title: "Decoding URL-Encoded Strings in Python"
 date: 2018-03-31 16:22:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-decode-a-quoted-url-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-decode-a-quoted-url-in-python/
 ---
 
 URL encoding (percent-encoding) converts special characters into a format safe for transmission over HTTP. In Python, the `urllib.parse` module provides straightforward functions for decoding these strings.

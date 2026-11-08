@@ -3,7 +3,8 @@ title: "Boot Linux Mint into Console Mode by Default"
 date: 2018-03-24 11:42:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-boot-linux-mint-to-the-console-by-default/
+categories: [linux-systems-administration]
+canonical: /how-to-boot-linux-mint-to-the-console-by-default/
 ---
 
 Linux Mint defaults to graphical mode, but you can boot directly to the console if you prefer a text-only environment or need to troubleshoot display issues. There are two main approaches: using GRUB parameters or disabling the display manager entirely.

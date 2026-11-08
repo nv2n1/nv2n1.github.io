@@ -3,7 +3,8 @@ title: "Visualizing Git Commit History as a Tree"
 date: 2018-03-24 11:40:21 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-git-commit-tree/
+categories: [algorithms-data-structures]
+canonical: /how-to-get-the-git-commit-tree/
 ---
 
 The simplest way to see your commit history as a tree structure:

@@ -3,7 +3,8 @@ title: "Debugging C/C++ with GDB on Linux"
 date: 2013-07-12 16:47:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/gdb-cheat-sheet/
+categories: [languages-frameworks]
+canonical: /gdb-cheat-sheet/
 ---
 
 GDB is the standard debugger for C/C++ development on Linux. This reference covers essential commands for breakpoints, execution control, inspection, and troubleshooting common debugging scenarios.

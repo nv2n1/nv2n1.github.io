@@ -3,7 +3,8 @@ title: "WordPress Anti-Spam: Essential Plugins and Setup Tips"
 date: 2013-08-08 05:56:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/anti-spam-in-wordpress/
+categories: [development-best-practices]
+canonical: /anti-spam-in-wordpress/
 ---
 
 WordPress spam attacks come in three distinct categories: comment spam, user registration abuse, and brute-force login attempts. A layered defense using complementary plugins and server-level hardening handles all three effectively.

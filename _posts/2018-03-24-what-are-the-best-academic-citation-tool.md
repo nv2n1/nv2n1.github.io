@@ -3,7 +3,8 @@ title: "Best Academic Citation Tools for Researchers"
 date: 2018-03-24 11:53:24 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/what-are-the-best-academic-citation-tool/
+categories: [scripting-utilities]
+canonical: /what-are-the-best-academic-citation-tool/
 ---
 
 If you’re managing academic references, you need a tool that integrates seamlessly into your workflow. Here are the most practical open-source and free options available.

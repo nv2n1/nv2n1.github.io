@@ -3,7 +3,8 @@ title: "Adjusting HDFS Replication Factor on Live Clusters"
 date: 2018-03-24 11:43:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-an-running-hdfs-clusters-replication-factor/
+categories: [linux-systems-administration]
+canonical: /how-to-change-an-running-hdfs-clusters-replication-factor/
 ---
 
 When you need to increase data redundancy or reduce storage overhead on a running HDFS cluster, you’ll often need to adjust the replication factor. Before making changes, understand that HDFS replication works differently than you might expect.

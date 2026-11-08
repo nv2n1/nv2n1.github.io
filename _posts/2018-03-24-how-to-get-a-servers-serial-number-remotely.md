@@ -3,7 +3,8 @@ title: "Retrieve a Server\u2019s Serial Number Remotely"
 date: 2018-03-24 11:54:41 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-servers-serial-number-remotely/
+categories: [system-administration-cloud]
+canonical: /how-to-get-a-servers-serial-number-remotely/
 ---
 
 Retrieving hardware serial numbers is essential for inventory management, warranty tracking, and identifying physical servers across your infrastructure. The standard approach uses `dmidecode`, which reads the system’s DMI (Desktop Management Interface) data.

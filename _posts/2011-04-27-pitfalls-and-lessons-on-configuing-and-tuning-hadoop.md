@@ -3,7 +3,8 @@ title: "Configuring and Tuning Hadoop: Common Pitfalls and Lessons"
 date: 2011-04-27 00:41:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/pitfalls-and-lessons-on-configuing-and-tuning-hadoop/
+categories: [design-patterns-architecture]
+canonical: /pitfalls-and-lessons-on-configuing-and-tuning-hadoop/
 ---
 
 Hadoop 3.x remains the current stable version with YARN improvements, HDFS federation, and erasure coding. Hadoop 1.x and 2.x are no longer maintained. For new deployments, evaluate whether Hadoop fits your needs or if managed services like AWS EMR, Google Dataproc, or Azure HDInsight better suit your infrastructure.

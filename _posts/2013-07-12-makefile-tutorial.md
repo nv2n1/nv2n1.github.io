@@ -3,7 +3,8 @@ title: "Getting Started with Makefiles: A Practical Guide"
 date: 2013-07-12 16:47:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/makefile-tutorial/
+categories: [linux-systems-administration]
+canonical: /makefile-tutorial/
 ---
 
 Make is a build automation tool that reads configuration files (makefiles) to compile programs and manage project workflows. It’s been a standard in Unix/Linux development for decades and remains essential for managing builds where dependencies matter.

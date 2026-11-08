@@ -3,7 +3,8 @@ title: "When to Use File-Based Photo Galleries in PHP"
 date: 2014-02-21 04:13:55 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/php-photo-gallery-scripts-requiring-no-database/
+categories: [languages-frameworks]
+canonical: /php-photo-gallery-scripts-requiring-no-database/
 ---
 
 Self-hosting a photo gallery gives you control over your content. If you want to skip database management entirely, a handful of PHP solutions still work—though most are unmaintained. This post covers what’s still functional, where the limits are, and when you should choose something else instead.

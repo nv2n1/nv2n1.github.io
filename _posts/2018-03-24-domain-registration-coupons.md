@@ -3,7 +3,8 @@ title: "Domain Registration Discounts & Coupons"
 date: 2018-03-24 08:20:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/domain-registration-coupons/
+categories: [development-best-practices]
+canonical: /domain-registration-coupons/
 ---
 
 Domain registration pricing has commoditized significantly over the past few years. Most registrars cluster around similar price points, and permanent discounts are increasingly rare. Rather than chasing one-off coupons that expire or have restrictive terms, understanding how registrars price domains and what you actually need will serve you better.

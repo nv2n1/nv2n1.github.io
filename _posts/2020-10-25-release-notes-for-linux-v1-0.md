@@ -3,7 +3,8 @@ title: "Linux 1.0 Release Notes"
 date: 2020-10-25 14:43:03 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/release-notes-for-linux-v1-0/
+categories: [linux-systems-administration]
+canonical: /release-notes-for-linux-v1-0/
 ---
 
 This document preserves the original Linux 1.0 release notes (source: linux-1.0.tar.gz), released in March 1994. It’s a snapshot of early Linux kernel development and shows the rapid pace of improvement during the pre-1.0 era. The original ASCII formatted version appears at the end of this post.

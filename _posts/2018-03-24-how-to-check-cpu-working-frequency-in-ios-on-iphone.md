@@ -3,7 +3,8 @@ title: "How to Check CPU Clock Speed on iPhone"
 date: 2018-03-24 11:54:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-cpu-working-frequency-in-ios-on-iphone/
+categories: [code-optimization]
+canonical: /how-to-check-cpu-working-frequency-in-ios-on-iphone/
 ---
 
 iOS deliberately restricts direct access to CPU clock speeds through its public APIs — Apple treats this as implementation detail rather than user-facing information. That said, there are legitimate approaches depending on your needs.

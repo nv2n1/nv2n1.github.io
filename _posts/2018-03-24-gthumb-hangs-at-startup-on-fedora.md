@@ -3,7 +3,8 @@ title: "Fix gthumb Hanging When USB Devices Are Connected"
 date: 2018-03-24 08:21:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/gthumb-hangs-at-startup-on-fedora/
+categories: [linux-system-configuration]
+canonical: /gthumb-hangs-at-startup-on-fedora/
 ---
 
 When gthumb hangs during startup after connecting an iPhone, external drive, or other USB device, the issue typically stems from gthumb attempting to enumerate mounted storage devices during initialization. Certain filesystem states, permissions misconfigurations, or slow I/O can cause the process to block indefinitely.

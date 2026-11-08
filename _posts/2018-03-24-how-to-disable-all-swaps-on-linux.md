@@ -3,7 +3,8 @@ title: "Disabling All Swap on Linux"
 date: 2018-03-24 08:13:49 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-all-swaps-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-all-swaps-on-linux/
 ---
 
 To disable all active swap spaces on Linux, run:

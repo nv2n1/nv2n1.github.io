@@ -3,7 +3,8 @@ title: "DEX vs. CEX: Technical Trade-offs Explained"
 date: 2023-03-19 08:11:11 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/decentralized-exchanges-dex-vs-centralized-exchanges-cex-a-technical-comparison/
+categories: [systems-architecture]
+canonical: /decentralized-exchanges-dex-vs-centralized-exchanges-cex-a-technical-comparison/
 ---
 
 Centralized exchanges operate like traditional financial intermediaries. You deposit cryptocurrency into a wallet controlled by the exchange, which maintains an internal ledger tracking balances and executing trades against its order book. The exchange acts as the counterparty to every transaction.

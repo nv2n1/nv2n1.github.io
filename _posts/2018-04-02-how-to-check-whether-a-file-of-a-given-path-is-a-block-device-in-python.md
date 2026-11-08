@@ -3,7 +3,8 @@ title: "Checking if a Path is a Block Device in Python"
 date: 2018-04-02 09:09:41 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-whether-a-file-of-a-given-path-is-a-block-device-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-check-whether-a-file-of-a-given-path-is-a-block-device-in-python/
 ---
 
 In Linux, everything is a file—including hardware devices. Block devices like disks, SSDs, and USB drives appear as files in /dev and handle I/O in fixed-size blocks. You need reliable ways to detect them in your Python scripts, especially when automating storage operations.

@@ -3,7 +3,8 @@ title: "Java REPL Tools: A Practical Comparison"
 date: 2018-03-24 11:51:58 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/any-good-java-repl-tool-implementation/
+categories: [languages-frameworks]
+canonical: /any-good-java-repl-tool-implementation/
 ---
 
 Java has several solid REPL implementations available. Here are the main options and how to use them.

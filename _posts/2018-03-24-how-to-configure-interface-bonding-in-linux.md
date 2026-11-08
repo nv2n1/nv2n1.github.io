@@ -3,7 +3,8 @@ title: "Network Interface Bonding in Linux: Configuration Guide"
 date: 2018-03-24 11:46:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-interface-bonding-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-interface-bonding-in-linux/
 ---
 
 Network bonding aggregates multiple network interfaces into a single logical interface, providing redundancy, load balancing, or increased throughput. The method you use depends on your distribution and whether you’re managing a desktop, workstation, or server environment.

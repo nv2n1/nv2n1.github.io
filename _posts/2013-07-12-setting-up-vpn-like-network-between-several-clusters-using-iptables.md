@@ -3,7 +3,8 @@ title: "Connecting Multiple Clusters with iptables NAT"
 date: 2013-07-12 16:32:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-vpn-like-network-between-several-clusters-using-iptables/
+categories: [linux-systems-administration]
+canonical: /setting-up-vpn-like-network-between-several-clusters-using-iptables/
 ---
 
 Connecting servers with internal IPs across multiple clusters over the internet is a common infrastructure requirement. While a traditional VPN is the standard approach, you can implement similar functionality using iptables and Network Address Translation (NAT) rules, often with lower overhead than VPN solutions.

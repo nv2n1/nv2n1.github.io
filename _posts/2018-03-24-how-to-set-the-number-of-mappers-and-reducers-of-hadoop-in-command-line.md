@@ -3,7 +3,8 @@ title: "Configuring Mappers and Reducers in Hadoop: CLI and Code Approaches"
 date: 2018-03-24 11:41:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-the-number-of-mappers-and-reducers-of-hadoop-in-command-line/
+categories: [linux-systems-administration]
+canonical: /how-to-set-the-number-of-mappers-and-reducers-of-hadoop-in-command-line/
 ---
 
 To set the number of mappers and reducers when submitting a Hadoop job, use the `-D` flag with the appropriate property names. The correct properties depend on your Hadoop version.

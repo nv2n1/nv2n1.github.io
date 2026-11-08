@@ -3,7 +3,8 @@ title: "Generating ECDSA Keys with OpenSSL: K1 and R1 Curves"
 date: 2023-03-17 16:40:55 +0000
 author: "David Wong"
 layout: post
-canonical: https://www.systutorials.com/generating-ecdsa-keys-using-openssl-in-linux/
+categories: [blockchain-cryptocurrency]
+canonical: /generating-ecdsa-keys-using-openssl-in-linux/
 ---
 
 ECDSA (Elliptic Curve Digital Signature Algorithm) remains a core cryptographic standard across blockchain systems, HTTPS/TLS, and cryptocurrency wallets. Understanding how to generate and work with different ECDSA curve variants is essential for secure key management.

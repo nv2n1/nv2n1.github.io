@@ -3,7 +3,8 @@ title: "Set Google as Default Search in Firefox on Linux Mint"
 date: 2015-12-12 08:13:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-google-to-firefox-in-linux-mint-as-default-search-engine/
+categories: [linux-systems-administration]
+canonical: /how-to-add-google-to-firefox-in-linux-mint-as-default-search-engine/
 ---
 
 Firefox on Linux Mint doesn’t include Google in its default search engine list. Linux Mint deliberately curates search engines based on revenue-sharing agreements — only search engines that share ad revenue with Linux Mint appear by default. Google doesn’t participate in this arrangement, so you need to add it manually if you prefer it over the included options.

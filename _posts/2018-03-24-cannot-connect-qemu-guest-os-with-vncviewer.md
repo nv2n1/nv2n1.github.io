@@ -3,7 +3,8 @@ title: "QEMU VNC Connection Refused: Troubleshooting Guide"
 date: 2018-03-24 11:42:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/cannot-connect-qemu-guest-os-with-vncviewer/
+categories: [linux-systems-administration]
+canonical: /cannot-connect-qemu-guest-os-with-vncviewer/
 ---
 
 When you start a QEMU guest without explicitly configuring VNC, the display server may not bind to an address your VNC client can reach. You’ll see an error like:

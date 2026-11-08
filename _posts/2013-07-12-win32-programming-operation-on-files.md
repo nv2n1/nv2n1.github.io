@@ -3,7 +3,8 @@ title: "C++ std::filesystem Reference for Windows File Operations"
 date: 2013-07-12 16:47:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/win32-programming-operation-on-files/
+categories: [languages-frameworks]
+canonical: /win32-programming-operation-on-files/
 ---
 
 Use `std::filesystem` for all new code. It’s exception-safe, cross-platform, and requires no external dependencies.

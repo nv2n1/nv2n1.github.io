@@ -3,7 +3,8 @@ title: "Export Chrome Passwords to a Text File on Linux"
 date: 2018-03-24 11:48:01 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-export-google-chrome-password-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-export-google-chrome-password-on-linux/
 ---
 
 Chrome stores passwords encrypted in the system keyring (GNOME Keyring, KWallet, or Pass depending on your desktop environment). To export them in plain text, you’ll need to create a temporary Chrome profile with basic (unencrypted) password storage, sync your passwords from Google Cloud, then extract them from the SQLite database.

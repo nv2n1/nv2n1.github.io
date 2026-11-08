@@ -3,7 +3,8 @@ title: "Importing OCaml Libraries: A Practical Guide"
 date: 2018-03-24 08:17:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-import-ocaml-libraries/
+categories: [linux-systems-administration]
+canonical: /how-to-import-ocaml-libraries/
 ---
 
 The OCaml compiler only finds the standard library (List, Array, etc.) by default. Third-party libraries require you to explicitly tell the compiler where to find them.

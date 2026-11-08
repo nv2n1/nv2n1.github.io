@@ -3,7 +3,8 @@ title: "Git Branching Strategies: Create, Merge, and Manage Branches"
 date: 2018-03-24 11:40:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/git-branching-tutorial/
+categories: [linux-systems-administration]
+canonical: /git-branching-tutorial/
 ---
 
 Git branching is fundamental to modern development workflows. A branch is a lightweight pointer to a commit that lets you work on multiple features, fixes, or experiments in parallel without affecting the main codebase. Understanding branching well is essential for team collaboration and maintaining a clean project history.

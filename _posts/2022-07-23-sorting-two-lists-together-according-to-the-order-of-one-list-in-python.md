@@ -3,7 +3,8 @@ title: "Sorting One List Based on Another List\u2019s Order in Python"
 date: 2022-07-23 09:17:23 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/sorting-two-lists-together-according-to-the-order-of-one-list-in-python/
+categories: [languages-frameworks]
+canonical: /sorting-two-lists-together-according-to-the-order-of-one-list-in-python/
 ---
 
 When working with paired data across multiple lists—like x and y coordinates—you often need to sort one list while maintaining the correspondence with another. The standard approach is using `zip()`, `sorted()`, and tuple unpacking.

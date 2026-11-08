@@ -3,7 +3,8 @@ title: "Generating a CSR from an Existing Private Key"
 date: 2018-03-24 11:49:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-generate-a-csr-from-a-private-ssl-key/
+categories: [programming-languages]
+canonical: /how-to-generate-a-csr-from-a-private-ssl-key/
 ---
 
 When renewing an SSL certificate, your CA will request a Certificate Signing Request (CSR). If you have the private key but need to generate a fresh CSR, OpenSSL handles this straightforwardly.

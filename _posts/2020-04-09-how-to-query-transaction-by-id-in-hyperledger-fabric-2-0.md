@@ -3,7 +3,8 @@ title: "Query Transaction Details by ID in Hyperledger Fabric"
 date: 2020-04-09 07:48:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-query-transaction-by-id-in-hyperledger-fabric-2-0/
+categories: [systems-architecture]
+canonical: /how-to-query-transaction-by-id-in-hyperledger-fabric-2-0/
 ---
 
 Querying transaction details from a Hyperledger Fabric ledger is critical for auditing, compliance verification, and debugging chaincode behavior. The QSCC (Query System Chaincode) provides the `GetTransactionByID` function to retrieve complete transaction metadata including endorsements, read/write sets, and validation status.

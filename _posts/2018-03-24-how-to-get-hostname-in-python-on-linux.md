@@ -3,7 +3,8 @@ title: "Getting the Hostname in Python on Linux"
 date: 2018-03-24 11:51:55 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-hostname-in-python-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-hostname-in-python-on-linux/
 ---
 
 There are several ways to retrieve the hostname on a Linux system from Python. The choice depends on your use case and whether you need the simple hostname or the fully qualified domain name (FQDN).

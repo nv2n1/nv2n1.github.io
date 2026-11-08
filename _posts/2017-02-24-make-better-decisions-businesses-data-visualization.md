@@ -3,7 +3,8 @@ title: "Linux System Monitoring with Data Visualization"
 date: 2017-02-24 06:39:22 +0000
 author: "Joseph Macwan"
 layout: post
-canonical: https://www.systutorials.com/make-better-decisions-businesses-data-visualization/
+categories: [linux-system-configuration]
+canonical: /make-better-decisions-businesses-data-visualization/
 ---
 
 Data visualization transforms raw metrics into actionable insights. When you’re managing infrastructure metrics, application logs, business KPIs, or system performance data, visualization is how you extract signal from noise. The human brain processes visual information faster and more reliably than log files or spreadsheet rows—which is why dashboards have become essential infrastructure in modern operations.

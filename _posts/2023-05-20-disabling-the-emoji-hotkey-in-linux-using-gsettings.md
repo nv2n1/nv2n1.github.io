@@ -3,7 +3,8 @@ title: "Disable Emoji Hotkey in Linux with GSettings"
 date: 2023-05-20 07:58:03 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/disabling-the-emoji-hotkey-in-linux-using-gsettings/
+categories: [linux-systems-administration]
+canonical: /disabling-the-emoji-hotkey-in-linux-using-gsettings/
 ---
 
 In many Linux desktop environments (especially GNOME), the Super + . (Windows key + period) shortcut is used to open the Emoji picker. While useful for some, it can interfere with gaming, terminal workflows, or other custom keybindings.
@@ -105,7 +106,7 @@ This restores GNOME’s default behavior (Super + . opens the emoji picker).
 
 ## Continue Learning
 
-Explore more in the [Linux Essentials Path](https://www.systutorials.com/linux-essentials-path/) for deeper mastery of system administration and command-line tools.
+Explore more in the [Linux Essentials Path](/linux-essentials-path/) for deeper mastery of system administration and command-line tools.
 
 ## 2026 Best Practices and Advanced Techniques
 

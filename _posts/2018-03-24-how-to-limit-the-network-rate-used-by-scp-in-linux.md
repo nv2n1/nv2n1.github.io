@@ -3,7 +3,8 @@ title: "Controlling SCP Bandwidth with the -l Flag"
 date: 2018-03-24 11:46:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-limit-the-network-rate-used-by-scp-in-linux/
+categories: [programming-languages]
+canonical: /how-to-limit-the-network-rate-used-by-scp-in-linux/
 ---
 
 The `scp` command supports bandwidth limiting through the `-l` flag, which caps the transfer rate in Kbit/s. This prevents large file transfers from saturating your network connection.

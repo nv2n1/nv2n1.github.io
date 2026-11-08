@@ -3,7 +3,8 @@ title: "Configure Windows Proxy Settings via Command Line"
 date: 2018-03-24 08:21:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-internet-explorers-proxy-in-command-line-on-windows-7/
+categories: [scripting-utilities]
+canonical: /how-to-set-internet-explorers-proxy-in-command-line-on-windows-7/
 ---
 
 For any current Windows system, `netsh winhttp` is the standard command-line tool for proxy configuration. WinHTTP handles system-level proxy settings used by Windows Update, built-in applications, and services that don’t rely on browser-specific configuration.

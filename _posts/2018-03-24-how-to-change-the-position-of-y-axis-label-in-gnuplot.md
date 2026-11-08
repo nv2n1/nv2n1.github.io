@@ -3,7 +3,8 @@ title: "Positioning Y-Axis Labels in Gnuplot"
 date: 2018-03-24 08:16:20 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-position-of-y-axis-label-in-gnuplot/
+categories: [linux-systems-administration]
+canonical: /how-to-change-the-position-of-y-axis-label-in-gnuplot/
 ---
 
 Y-axis labels in Gnuplot can end up positioned awkwardly depending on your terminal, font, and tick label width. The most straightforward solution is using the `offset` option in the `set ylabel` command.

@@ -3,7 +3,8 @@ title: "Building musl libc on Fedora: From Source or Packages"
 date: 2018-03-24 11:45:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-musl-libc-on-fedora-21-linux/
+categories: [linux-system-configuration]
+canonical: /how-to-install-musl-libc-on-fedora-21-linux/
 ---
 
 Fedora’s default repositories don’t include musl libc, but you have two practical options: install it from a community repository if available, or build from source. Building from source gives you full control and is the most reliable approach across Fedora versions.

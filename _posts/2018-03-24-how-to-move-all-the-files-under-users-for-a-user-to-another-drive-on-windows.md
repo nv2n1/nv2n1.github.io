@@ -3,7 +3,8 @@ title: "Moving a Windows User Profile to Another Drive"
 date: 2018-03-24 11:46:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-move-all-the-files-under-users-for-a-user-to-another-drive-on-windows/
+categories: [programming-languages]
+canonical: /how-to-move-all-the-files-under-users-for-a-user-to-another-drive-on-windows/
 ---
 
 When your C: drive fills up with user profile data, moving the entire user directory to another drive is a legitimate solution—but it requires careful execution and understanding of the tradeoffs involved.

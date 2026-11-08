@@ -3,7 +3,8 @@ title: "ANSI C Grammar Definition in YACC"
 date: 2018-03-24 08:08:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/ansi-c-grammar/
+categories: [development-best-practices]
+canonical: /ansi-c-grammar/
 ---
 
 ANSI C is the standardized version of C defined in 1989, specifying the language’s syntax and semantics formally through a grammar. Understanding this grammar is essential for building tools that parse, analyze, or transform C code.

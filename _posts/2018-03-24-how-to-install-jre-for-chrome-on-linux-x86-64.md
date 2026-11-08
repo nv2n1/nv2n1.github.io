@@ -3,7 +3,8 @@ title: "Installing Java Runtime Environment on Linux x86-64"
 date: 2018-03-24 08:18:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-jre-for-chrome-on-linux-x86-64/
+categories: [linux-systems-administration]
+canonical: /how-to-install-jre-for-chrome-on-linux-x86-64/
 ---
 
 Java Runtime Environment (JRE) is required to run Java applications on Linux. On x86-64 systems, you have several installation options ranging from open-source to Oracle’s commercial builds.

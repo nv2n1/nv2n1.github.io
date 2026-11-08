@@ -3,7 +3,8 @@ title: "Remapping Caps Lock to Control on Linux: X11 and Wayland"
 date: 2018-03-24 08:22:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-remap-the-caps-lock-key-to-control-for-emacs/
+categories: [linux-systems-administration]
+canonical: /how-to-remap-the-caps-lock-key-to-control-for-emacs/
 ---
 
 Remapping Caps Lock to Control is a worthwhile investment if you spend significant time in Emacs or vim. Your pinky will benefit from years of reduced strain.

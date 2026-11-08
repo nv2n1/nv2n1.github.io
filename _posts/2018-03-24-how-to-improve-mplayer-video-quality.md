@@ -3,7 +3,8 @@ title: "Optimizing Video Quality in MPlayer and MPV"
 date: 2018-03-24 08:22:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-improve-mplayer-video-quality/
+categories: [development-best-practices]
+canonical: /how-to-improve-mplayer-video-quality/
 ---
 
 MPlayer is effectively unmaintained. If you’re starting fresh, use **mpv** — the actively maintained fork with better codec support, hardware acceleration, and improved filter performance. That said, if you’re working with existing MPlayer setups, you can still improve playback quality through filters.

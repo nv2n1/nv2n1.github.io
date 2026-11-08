@@ -3,7 +3,8 @@ title: "Estimating HDFS NameNode Memory Usage"
 date: 2018-03-24 11:53:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-estimate-the-memory-usage-of-hdfs-namenode-for-a-hdfs-cluster/
+categories: [code-optimization]
+canonical: /how-to-estimate-the-memory-usage-of-hdfs-namenode-for-a-hdfs-cluster/
 ---
 
 The HDFS NameNode holds the entire filesystem namespace and block map in memory. Estimating memory requirements accurately is critical for cluster planning and preventing out-of-memory failures that can cripple your entire cluster.

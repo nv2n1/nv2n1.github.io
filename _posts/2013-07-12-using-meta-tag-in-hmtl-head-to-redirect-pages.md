@@ -3,7 +3,8 @@ title: "Meta Refresh Redirects: When and Why to Avoid Them"
 date: 2013-07-12 16:46:08 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/using-meta-tag-in-hmtl-head-to-redirect-pages/
+categories: [programming-languages]
+canonical: /using-meta-tag-in-hmtl-head-to-redirect-pages/
 ---
 
 The `<meta>` refresh tag provides a client-side redirect mechanism when server-side options aren’t available. While inferior to HTTP redirects for SEO and performance, it serves legitimate use cases: static hosting environments without backend access, transition screens for deprecated pages, or temporary migration notices.
@@ -28,11 +29,11 @@ For instant redirection without user feedback:
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://www.systutorials.com/">
+    <meta http-equiv="refresh" content="0; url=/">
     <title>Redirecting...</title>
   </head>
   <body>
-    <p>If you are not redirected automatically, follow this <a href="https://www.systutorials.com/">link to systutorials.com</a>.</p>
+    <p>If you are not redirected automatically, follow this <a href="/">link to systutorials.com</a>.</p>
   </body>
 </html>
 ```
@@ -48,7 +49,7 @@ A delayed redirect with visible countdown gives users context and time to react:
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5; url=https://www.systutorials.com/">
+    <meta http-equiv="refresh" content="5; url=/">
     <title>Page Moved</title>
     <style>
       body {
@@ -72,7 +73,7 @@ A delayed redirect with visible countdown gives users context and time to react:
   </head>
   <body>
     <h1>This page has moved</h1>
-    <p>Redirecting to <a href="https://www.systutorials.com/">systutorials.com</a> in <span class="countdown">5</span> seconds...</p>
+    <p>Redirecting to <a href="/">systutorials.com</a> in <span class="countdown">5</span> seconds...</p>
     <script>
       let count = 5;
       const span = document.querySelector('.countdown');
@@ -98,12 +99,12 @@ Meta refresh doesn’t automatically carry query strings. Use JavaScript to forw
     <title>Redirecting...</title>
     <script>
       const params = new URLSearchParams(window.location.search);
-      const newUrl = `https://www.systutorials.com/page?${params.toString()}`;
+      const newUrl = `/page?${params.toString()}`;
       window.location.replace(newUrl);
     </script>
   </head>
   <body>
-    <p><a href="https://www.systutorials.com/page">Continue if not redirected</a></p>
+    <p><a href="/page">Continue if not redirected</a></p>
   </body>
 </html>
 ```
@@ -111,7 +112,7 @@ Meta refresh doesn’t automatically carry query strings. Use JavaScript to forw
 Alternatively, hardcode the full target URL with parameters:
 
 ``` html
-<meta http-equiv="refresh" content="0; url=https://www.systutorials.com/page?id=123&cat=linux">
+<meta http-equiv="refresh" content="0; url=/page?id=123&cat=linux">
 ```
 
 ## Meta Refresh vs. Server-Side Redirects
@@ -133,14 +134,14 @@ Server-side redirects are faster (happen before the page loads), preserve search
 
 ``` apache
 # Apache .htaccess
-Redirect 301 /old-page https://www.systutorials.com/new-page
+Redirect 301 /old-page /new-page
 ```
 
 ``` nginx
 # Nginx
 server {
   location /old-page {
-    return 301 https://www.systutorials.com/new-page;
+    return 301 /new-page;
   }
 }
 ```
@@ -154,8 +155,8 @@ Always include a visible, clickable fallback link with descriptive text. Screen 
 ``` html
 <body>
   <h1>Page Moved</h1>
-  <p>This page has moved to <a href="https://www.systutorials.com/new-location">our new location</a>. You will be redirected automatically.</p>
-  <meta http-equiv="refresh" content="5; url=https://www.systutorials.com/new-location">
+  <p>This page has moved to <a href="/new-location">our new location</a>. You will be redirected automatically.</p>
+  <meta http-equiv="refresh" content="5; url=/new-location">
 </body>
 ```
 

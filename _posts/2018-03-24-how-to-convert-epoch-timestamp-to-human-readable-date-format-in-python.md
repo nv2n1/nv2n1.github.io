@@ -3,7 +3,8 @@ title: "Converting Epoch Timestamps to Readable Dates in Python"
 date: 2018-03-24 11:52:20 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-epoch-timestamp-to-human-readable-date-format-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-convert-epoch-timestamp-to-human-readable-date-format-in-python/
 ---
 
 Epoch timestamps (seconds since January 1, 1970 UTC) are common in logs, databases, and APIs. Python’s `datetime` module handles conversion cleanly.

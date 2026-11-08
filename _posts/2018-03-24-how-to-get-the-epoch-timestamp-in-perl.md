@@ -3,7 +3,8 @@ title: "Getting Epoch Timestamps in Perl"
 date: 2018-03-24 11:52:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-perl/
+categories: [programming-languages]
+canonical: /how-to-get-the-epoch-timestamp-in-perl/
 ---
 
 The Unix epoch (seconds since January 1, 1970 UTC) is the standard for representing time across systems. Perl gives you straightforward access to this value.

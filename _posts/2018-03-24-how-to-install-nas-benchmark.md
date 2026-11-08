@@ -3,7 +3,8 @@ title: "Setting Up NAS Benchmarking Tools"
 date: 2018-03-24 11:50:48 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-nas-benchmark/
+categories: [code-optimization]
+canonical: /how-to-install-nas-benchmark/
 ---
 
 The NAS Parallel Benchmarks (NPB) remain a standard tool for evaluating HPC system performance, though landscape has shifted toward additional metrics like HPCG and memory bandwidth tests. This guide covers installation and basic usage.

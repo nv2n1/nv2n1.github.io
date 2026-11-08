@@ -3,7 +3,8 @@ title: "Get File Size in Python"
 date: 2018-03-24 11:48:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-file-size-in-python/
+categories: [linux-systems-administration]
+canonical: /how-to-get-file-size-in-python/
 ---
 
 Getting a file’s size is a common task in Python. There are several ways to do it, depending on what you need and how much detail you want about the file.

@@ -3,7 +3,8 @@ title: "Linux Kernel\u2019s taskstats: Per-Task Performance Metrics"
 date: 2017-02-14 01:56:21 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-collect-task-stats-data/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-collect-task-stats-data/
 ---
 
 The Linux kernel provides the taskstats API to monitor detailed per-task statistics, including I/O wait time, CPU scheduling delays, and memory reclamation waits. Understanding how these metrics are collected at the kernel level is essential for diagnosing performance issues and understanding process behavior.

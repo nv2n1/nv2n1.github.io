@@ -3,7 +3,8 @@ title: "WordPress Performance Tuning: OPcache, Caching, and Asset Optimization"
 date: 2014-04-02 17:34:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/speeding-up-wordpress-with-apc-object-cache-and-wp-super-cache/
+categories: [linux-systems-administration]
+canonical: /speeding-up-wordpress-with-apc-object-cache-and-wp-super-cache/
 ---
 
 WordPress performance depends on three complementary caching layers: PHP bytecode caching (OPcache), page caching (WP Super Cache), and asset optimization (Autoptimize). Combined properly, they’ll cut your Time to First Byte in half and significantly improve Core Web Vitals.

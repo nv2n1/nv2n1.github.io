@@ -3,7 +3,8 @@ title: "Checking if a Directory Exists in Your Bash PATH"
 date: 2018-03-24 11:50:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-whether-path-has-a-specific-directory-in-it-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-test-whether-path-has-a-specific-directory-in-it-in-bash-on-linux/
 ---
 
 You need to check whether a directory exists in your `$PATH` variable. This is useful when verifying that a tool installation succeeded, or when debugging shell initialization scripts.

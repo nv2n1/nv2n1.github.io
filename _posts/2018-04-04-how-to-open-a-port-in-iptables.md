@@ -3,7 +3,8 @@ title: "Opening Ports with iptables: A Practical Guide"
 date: 2018-04-04 02:22:34 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-open-a-port-in-iptables/
+categories: [databases-storage]
+canonical: /how-to-open-a-port-in-iptables/
 ---
 
 iptables remains the standard firewall interface across most Linux distributions, though it’s technically a compatibility layer over nftables. Whether you’re managing legacy systems or prefer the familiar syntax, here’s what you need to know.

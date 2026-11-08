@@ -3,7 +3,8 @@ title: "Crypto Options Explained: Calls, Puts, and Premiums"
 date: 2025-08-16 10:27:21 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/crypto-options-explained-a-guide-to-calls-puts-and-premiums/
+categories: [blockchain-cryptocurrency]
+canonical: /crypto-options-explained-a-guide-to-calls-puts-and-premiums/
 ---
 
 A crypto option gives you the right — but not the obligation — to buy or sell a cryptocurrency at a fixed price before a set date. Unlike a futures contract, where you’re locked in, an option lets you walk away if the trade goes against you. Your downside is capped at the premium you paid.

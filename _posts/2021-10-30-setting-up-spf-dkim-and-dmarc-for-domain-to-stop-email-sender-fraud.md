@@ -3,7 +3,8 @@ title: "Email Authentication Fundamentals: SPF, DKIM, and DMARC Explained"
 date: 2021-10-30 16:17:04 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/
+categories: [systems-architecture]
+canonical: /setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/
 ---
 
 Email sender fraud remains a persistent problem in email infrastructure. Attackers send messages spoofing legitimate domains, damaging sender reputation and causing rejected mail that creates administrative overhead. SPF, DKIM, and DMARC are DNS-based authentication standards designed to verify email senders and prevent domain spoofing.

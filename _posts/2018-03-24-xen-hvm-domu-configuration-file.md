@@ -3,7 +3,8 @@ title: "Configuring Xen HVM DomU Systems"
 date: 2018-03-24 08:19:28 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/xen-hvm-domu-configuration-file/
+categories: [linux-systems-administration]
+canonical: /xen-hvm-domu-configuration-file/
 ---
 
 Xen HVM (Hardware Virtual Machine) guests require a configuration file that defines virtual hardware, networking, and boot parameters. Here are practical examples for common scenarios.

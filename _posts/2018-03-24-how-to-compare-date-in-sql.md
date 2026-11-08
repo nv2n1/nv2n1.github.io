@@ -3,7 +3,8 @@ title: "Comparing Dates in SQL: A Practical Guide"
 date: 2018-03-24 11:53:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-compare-date-in-sql/
+categories: [databases-storage]
+canonical: /how-to-compare-date-in-sql/
 ---
 
 Date comparison is one of the most common operations in SQL queries, whether you’re filtering orders, analyzing logs, or generating reports. The approach varies slightly across database systems, but the underlying principles remain consistent.

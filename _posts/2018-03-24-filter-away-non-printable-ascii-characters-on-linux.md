@@ -3,7 +3,8 @@ title: "Remove Non-Printable Characters in Linux"
 date: 2018-03-24 11:41:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/filter-away-non-printable-ascii-characters-on-linux/
+categories: [linux-systems-administration]
+canonical: /filter-away-non-printable-ascii-characters-on-linux/
 ---
 
 When processing text files or command output, non-printable ASCII characters corrupt formatting, break parsing, or create unexpected behavior. You need the right tool for your specific case — whether you’re stripping control characters, handling UTF-8, or cleaning up embedded escape sequences.

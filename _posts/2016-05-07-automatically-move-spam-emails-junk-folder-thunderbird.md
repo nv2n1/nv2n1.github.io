@@ -3,7 +3,8 @@ title: "Automatically Move Spam to Junk in Thunderbird"
 date: 2016-05-07 05:49:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/automatically-move-spam-emails-junk-folder-thunderbird/
+categories: [development-best-practices]
+canonical: /automatically-move-spam-emails-junk-folder-thunderbird/
 ---
 
 Thunderbird’s adaptive junk filter can effectively reduce spam once configured and trained, but it doesn’t automatically move flagged messages by default. Here’s how to set it up properly.

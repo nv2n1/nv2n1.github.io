@@ -3,7 +3,8 @@ title: "Mount LVM Volumes from External Hard Drives on Linux"
 date: 2018-03-24 11:47:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-mount-lvm-volume-from-an-external-hard-disk-on-centos/
+categories: [linux-systems-administration]
+canonical: /how-to-mount-lvm-volume-from-an-external-hard-disk-on-centos/
 ---
 
 When you connect an external hard drive with LVM volumes to a RHEL, CentOS, or Rocky Linux system, the logical volumes don’t automatically appear in `/dev`. Unlike some distributions that handle this automatically, you need to manually activate them using `vgchange`.

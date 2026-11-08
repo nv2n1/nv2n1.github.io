@@ -3,7 +3,8 @@ title: "Getting the Hostname in Bash: 3 Methods"
 date: 2018-03-24 11:52:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-hostname-of-the-node-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-hostname-of-the-node-in-bash/
 ---
 
 Retrieving the hostname of the machine running your script is essential for logging, node identification in distributed systems, monitoring, and conditional logic based on where code executes. Bash offers multiple approaches with different tradeoffs.

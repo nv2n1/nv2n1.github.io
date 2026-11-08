@@ -3,7 +3,8 @@ title: "Getting the Full Path of a Makefile"
 date: 2018-03-24 11:50:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-full-path-and-directory-of-a-makefile-itself/
+categories: [programming-languages]
+canonical: /how-to-get-the-full-path-and-directory-of-a-makefile-itself/
 ---
 
 When you’re working in a Makefile, you often need to reference files relative to where the Makefile itself is located. This is especially useful for multi-directory projects or when your build system needs to know its own location.

@@ -3,7 +3,8 @@ title: "Merge JPG Images into PDF on Linux"
 date: 2018-03-24 11:43:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-merge-multiple-jpg-images-to-a-pdf-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-merge-multiple-jpg-images-to-a-pdf-on-linux/
 ---
 
 Converting a series of JPG images into a single PDF is useful for creating documents, presentations, or archiving scanned photos. Linux offers several tools for this task, each with different trade-offs between simplicity, quality preservation, and features.

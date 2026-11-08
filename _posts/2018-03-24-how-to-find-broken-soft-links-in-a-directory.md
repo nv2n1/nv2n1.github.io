@@ -3,7 +3,8 @@ title: "How to Find Broken Symlinks in a Directory"
 date: 2018-03-24 08:20:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-broken-soft-links-in-a-directory/
+categories: [development-best-practices]
+canonical: /how-to-find-broken-soft-links-in-a-directory/
 ---
 
 Broken symbolic links accumulate over time and can cause confusion or errors when scripts rely on their targets. Identifying and cleaning them up is a regular maintenance task.

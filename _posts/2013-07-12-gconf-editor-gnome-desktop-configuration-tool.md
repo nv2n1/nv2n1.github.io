@@ -3,7 +3,8 @@ title: "Configuring GNOME Desktop Settings with GConf Editor"
 date: 2013-07-12 16:31:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/gconf-editor-gnome-desktop-configuration-tool/
+categories: [linux-systems-administration]
+canonical: /gconf-editor-gnome-desktop-configuration-tool/
 ---
 
 Modern GNOME uses dconf as its configuration backend, replacing the older GConf system. Whether you’re managing a single workstation or deploying across multiple systems, understanding dconf and gsettings is essential for customizing GNOME environments efficiently.

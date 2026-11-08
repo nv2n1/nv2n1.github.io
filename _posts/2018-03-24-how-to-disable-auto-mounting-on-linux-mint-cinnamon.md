@@ -3,7 +3,8 @@ title: "Disable Auto-Mounting in Linux Mint Cinnamon"
 date: 2018-03-24 11:44:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-auto-mounting-on-linux-mint-cinnamon/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-auto-mounting-on-linux-mint-cinnamon/
 ---
 
 Linux Mint’s Cinnamon desktop automatically mounts removable media like USB drives and external hard drives by default. If you prefer manual control over when and how storage devices are mounted, you can disable this behavior through Nemo, the Cinnamon file manager.

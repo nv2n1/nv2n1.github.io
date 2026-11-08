@@ -3,7 +3,8 @@ title: "Disabling Options in Bash Scripts"
 date: 2018-03-24 11:50:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-an-option-with-a-bash-script/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-an-option-with-a-bash-script/
 ---
 
 Bash maintains a set of built-in options that control script behavior. You disable them using `set +o` followed by the option name, or with short flags like `set +x`.

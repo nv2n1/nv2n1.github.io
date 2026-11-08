@@ -3,7 +3,8 @@ title: "Reading Excel Files in R"
 date: 2020-11-01 09:30:03 +0000
 author: "Daniel"
 layout: post
-canonical: https://www.systutorials.com/reading-excel-xls-xlsx-files-in-r/
+categories: [scripting-utilities]
+canonical: /reading-excel-xls-xlsx-files-in-r/
 ---
 
 Excel files remain a common data format you’ll encounter. The `readxl` package handles both .xls and .xlsx formats efficiently without external dependencies, making it the standard choice for Excel import in R.

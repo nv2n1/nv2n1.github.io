@@ -3,7 +3,8 @@ title: "Suppress \u201cEntering/Leaving Directory\u201d Messages in Recursive Ma
 date: 2018-03-24 11:44:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-suppress-entering-leaving-messages-when-invoking-make-recursively/
+categories: [algorithms-data-structures]
+canonical: /how-to-suppress-entering-leaving-messages-when-invoking-make-recursively/
 ---
 
 When running `make` recursively with `$(MAKE)` or `make -C`, you’ll see verbose messages like “Entering directory” and “Leaving directory” for each subdirectory. These messages clutter the build output and make it harder to spot actual errors.

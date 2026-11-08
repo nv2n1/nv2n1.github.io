@@ -3,7 +3,8 @@ title: "Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers"
 date: 2020-09-20 14:38:33 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/
+categories: [linux-systems-administration]
+canonical: /fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/
 ---
 
 The kernel commit “fs: handle SEEK_HOLE/SEEK_DATA properly in all fs’s that define their own llseek” (06222e4) by Josef Bacik ensures that all filesystems with custom `llseek` implementations properly handle the `SEEK_HOLE` and `SEEK_DATA` whence values introduced in Linux 3.1.

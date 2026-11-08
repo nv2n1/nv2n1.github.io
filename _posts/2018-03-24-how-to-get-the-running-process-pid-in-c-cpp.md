@@ -3,7 +3,8 @@ title: "Getting the Current Process ID in C and C++"
 date: 2018-03-24 11:52:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-running-process-pid-in-c-cpp/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-running-process-pid-in-c-cpp/
 ---
 
 Every running process gets a unique identifier from the operating system called a PID (Process ID). You’ll need this when managing processes, logging, creating lock files, or coordinating between parent and child processes.

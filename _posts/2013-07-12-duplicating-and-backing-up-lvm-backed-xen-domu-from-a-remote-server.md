@@ -3,7 +3,8 @@ title: "Backing Up LVM-Based Xen DomUs Over the Network"
 date: 2013-07-12 16:32:18 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/duplicating-and-backing-up-lvm-backed-xen-domu-from-a-remote-server/
+categories: [linux-systems-administration]
+canonical: /duplicating-and-backing-up-lvm-backed-xen-domu-from-a-remote-server/
 ---
 
 LVM snapshots provide a fast, efficient way to duplicate virtual machines across servers. This technique applies to any LVM-backed hypervisor including Xen, KVM, and Proxmox. The process uses LVM snapshots on the source server, then transfers the snapshot image to the destination using standard Unix tools.

@@ -3,7 +3,8 @@ title: "Pushing a Git Branch to a Remote Repository"
 date: 2018-03-24 11:44:15 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-create-a-git-branch-on-remote-git-server/
+categories: [testing-devops]
+canonical: /how-to-create-a-git-branch-on-remote-git-server/
 ---
 
 When you need to share work in progress or maintain a separate feature branch on a remote Git server, you’ll need to create a local branch and push it upstream. Here’s how to do it properly.

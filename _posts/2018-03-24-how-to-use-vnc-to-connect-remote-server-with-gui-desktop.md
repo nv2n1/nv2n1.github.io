@@ -3,7 +3,8 @@ title: "Connecting to a Remote Server with VNC"
 date: 2018-03-24 11:51:02 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-vnc-to-connect-remote-server-with-gui-desktop/
+categories: [web-development]
+canonical: /how-to-use-vnc-to-connect-remote-server-with-gui-desktop/
 ---
 
 VNC (Virtual Network Computing) provides a graphical remote desktop connection to Linux servers. It’s straightforward to set up and useful when you need GUI access to a headless or distant system.

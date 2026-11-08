@@ -3,7 +3,8 @@ title: "Linux Kernel 4.14.223 Released"
 date: 2021-03-07 07:04:37 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-4-14-223-release/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-4-14-223-release/
 ---
 
 Linux kernel 4.14.223 is a stable release in the long-term support (LTS) 4.14 series. This patch version includes 176 changes and bug fixes across 277,921 lines of code modifications compared to the base 4.14 release.

@@ -3,7 +3,8 @@ title: "Splitting a gzip file into smaller files on Linux"
 date: 2018-03-24 11:53:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-split-a-gzip-file-to-several-small-ones-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-split-a-gzip-file-to-several-small-ones-on-linux/
 ---
 
 When you need to break up a large gzip file into smaller chunks, you have several practical options depending on your constraints.

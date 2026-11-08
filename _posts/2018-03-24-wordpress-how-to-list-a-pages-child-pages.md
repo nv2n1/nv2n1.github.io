@@ -3,7 +3,8 @@ title: "How to Display Child Pages in WordPress"
 date: 2018-03-24 08:14:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/wordpress-how-to-list-a-pages-child-pages/
+categories: [development-best-practices]
+canonical: /wordpress-how-to-list-a-pages-child-pages/
 ---
 
 The `wp_list_pages()` function is the standard way to display child pages of a page in WordPress. This is useful for building navigation menus, sidebars, or displaying page hierarchies.

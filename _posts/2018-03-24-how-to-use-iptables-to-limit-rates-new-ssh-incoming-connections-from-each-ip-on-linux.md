@@ -3,7 +3,8 @@ title: "Rate-Limiting SSH Connections with iptables and firewalld"
 date: 2018-03-24 11:44:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-iptables-to-limit-rates-new-ssh-incoming-connections-from-each-ip-on-linux/
+categories: [scripting-utilities]
+canonical: /how-to-use-iptables-to-limit-rates-new-ssh-incoming-connections-from-each-ip-on-linux/
 ---
 
 Rate-limiting SSH brute-force attempts is essential for any server exposed to the internet. Using iptables with the `recent` module, you can drop connections from IPs that exceed a threshold in a given time window—for example, blocking IPs that attempt more than 6 connections in 60 seconds.

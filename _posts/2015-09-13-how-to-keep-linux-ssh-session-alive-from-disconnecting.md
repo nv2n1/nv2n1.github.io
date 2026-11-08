@@ -3,7 +3,8 @@ title: "SSH Keep-Alive: Preventing Idle Connection Timeouts"
 date: 2015-09-13 03:44:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-keep-linux-ssh-session-alive-from-disconnecting/
+categories: [linux-systems-administration]
+canonical: /how-to-keep-linux-ssh-session-alive-from-disconnecting/
 ---
 
 SSH connections dropping during idle periods is a persistent issue in production environments. Both client and server configurations provide built-in keep-alive mechanisms designed specifically for this problem. Stop running `while true; do uptime; sleep 30; done` — there are proper solutions.

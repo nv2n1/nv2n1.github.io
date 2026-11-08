@@ -3,7 +3,8 @@ title: "Passwordless SSH Authentication on Linux"
 date: 2013-07-12 16:32:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/enabling-password-less-ssh-login/
+categories: [linux-systems-administration]
+canonical: /enabling-password-less-ssh-login/
 ---
 
 If you don’t already have a key pair, use Ed25519 — it’s faster and more secure than RSA:

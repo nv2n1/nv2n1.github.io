@@ -3,7 +3,8 @@ title: "Viewing and Converting DVI Files on Linux"
 date: 2018-03-24 08:22:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-view-dvi-files-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-view-dvi-files-on-linux/
 ---
 
 DVI (Device Independent) files are the output format from TeX and LaTeX compilers. While modern workflows typically generate PDF directly with `pdflatex`, you’ll still encounter DVI files in legacy documents, archived projects, and specific publishing pipelines that require intermediate processing.

@@ -3,7 +3,8 @@ title: "Installing SSHFS on CentOS 7"
 date: 2018-03-24 11:51:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-sshfs-on-centos-7/
+categories: [programming-languages]
+canonical: /how-to-install-sshfs-on-centos-7/
 ---
 
 SSHFS (SSH Filesystem) mounts a remote filesystem over SSH, letting you interact with remote files as if they were local. It uses SFTP under the hood, so no additional server configuration is needed beyond SSH access.

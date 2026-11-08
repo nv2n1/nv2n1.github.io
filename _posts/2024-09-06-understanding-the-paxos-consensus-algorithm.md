@@ -3,7 +3,8 @@ title: "Understanding Paxos: Distributed Consensus Made Clear"
 date: 2024-09-06 14:19:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/understanding-the-paxos-consensus-algorithm/
+categories: [linux-systems-administration]
+canonical: /understanding-the-paxos-consensus-algorithm/
 ---
 
 Paxos is a fundamental consensus algorithm for distributed systems that guarantees agreement on a single value even when nodes fail or messages are delayed. Developed by Leslie Lamport in 1998, it remains a cornerstone for building fault-tolerant distributed systems where strong consistency is required.

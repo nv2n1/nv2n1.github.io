@@ -3,7 +3,8 @@ title: "Responsive CSS Loading with Media Queries and @import"
 date: 2018-03-24 08:21:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-import-a-css-file-only-for-wide-screens/
+categories: [web-development]
+canonical: /how-to-import-a-css-file-only-for-wide-screens/
 ---
 
 You can use `@import` with media queries to conditionally load CSS files only for specific viewport sizes. This is useful for loading layout-specific stylesheets, web fonts, or icon libraries only when needed.

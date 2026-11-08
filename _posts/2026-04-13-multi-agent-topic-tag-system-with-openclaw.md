@@ -3,7 +3,8 @@ title: "Multi-Agent Topic/Tag System with OpenClaw"
 date: 2026-04-13 15:15:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/multi-agent-topic-tag-system-with-openclaw/
+categories: [ai-engineering]
+canonical: /multi-agent-topic-tag-system-with-openclaw/
 ---
 
 When running multiple OpenClaw agents on the same Telegram group, you can use Telegram’s topic feature to enable agent isolation. This guide explains the actual setup used for Eric’s OpenClaw group with multi-agent support.

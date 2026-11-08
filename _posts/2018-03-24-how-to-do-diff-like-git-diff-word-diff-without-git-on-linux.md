@@ -3,7 +3,8 @@ title: "Comparing Files Line-by-Line on Linux Without Git"
 date: 2018-03-24 11:48:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-do-diff-like-git-diff-word-diff-without-git-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-do-diff-like-git-diff-word-diff-without-git-on-linux/
 ---
 
 The `git diff --word-diff` output is clean and readable for tracking changes at the word level instead of line-by-line. If you need that functionality outside a git repository—or just want a standalone tool—`wdiff` is purpose-built for exactly this.

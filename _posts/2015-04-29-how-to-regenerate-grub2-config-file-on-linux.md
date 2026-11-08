@@ -3,7 +3,8 @@ title: "Regenerating GRUB2 Configuration Files on Linux"
 date: 2015-04-29 01:20:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-regenerate-grub2-config-file-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-regenerate-grub2-config-file-on-linux/
 ---
 
 GRUB2 configuration needs to be regenerated when you modify boot parameters, install new kernels, or adjust default boot entries. The process varies slightly between BIOS and UEFI systems, and between distributions, but follows a consistent pattern once you understand your system layout.

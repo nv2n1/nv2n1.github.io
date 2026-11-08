@@ -3,7 +3,8 @@ title: "ASCII Table, Character Codes, and Linux Text Tools"
 date: 2013-07-15 10:05:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/ascii-table-and-ascii-code/
+categories: [databases-storage]
+canonical: /ascii-table-and-ascii-code/
 ---
 
 ASCII stands for American Standard Code for Information Interchange. It’s a 7-bit character encoding standard mapping numeric values (0-127) to printable characters and control codes. Since computers work with numbers at the lowest level, ASCII provides a universal way to represent text—each character has a unique numeric value.

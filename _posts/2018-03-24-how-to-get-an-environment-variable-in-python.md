@@ -3,7 +3,8 @@ title: "Reading Environment Variables in Python"
 date: 2018-03-24 11:51:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-an-environment-variable-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-get-an-environment-variable-in-python/
 ---
 
 The most straightforward way to read an environment variable in Python is with `os.getenv()`:

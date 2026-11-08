@@ -3,7 +3,8 @@ title: "Show Git Blame in Eclipse Editor"
 date: 2020-10-31 11:26:09 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/configure-eclipse-to-show-git-revision-information-in-editor/
+categories: [testing-devops]
+canonical: /configure-eclipse-to-show-git-revision-information-in-editor/
 ---
 
 Eclipse’s EGit plugin includes Git blame functionality built-in, allowing you to view revision details directly in the editor. This feature shows commit information, author, and date for each line without leaving your editor.

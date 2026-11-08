@@ -3,7 +3,8 @@ title: "Fix Ghostscript stackunderflow Error in PDF Conversion"
 date: 2018-03-24 08:21:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/ghostscript-reports-unrecoverable-error-stackunderflow-in-setdistillerparams/
+categories: [algorithms-data-structures]
+canonical: /ghostscript-reports-unrecoverable-error-stackunderflow-in-setdistillerparams/
 ---
 
 When converting PostScript to PDF using ps2pdf with certain PDFSETTINGS options, you may hit this error:

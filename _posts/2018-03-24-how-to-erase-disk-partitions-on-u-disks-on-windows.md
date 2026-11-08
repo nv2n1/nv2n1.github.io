@@ -3,7 +3,8 @@ title: "How to Erase and Partition USB Drives on Windows"
 date: 2018-03-24 11:41:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-erase-disk-partitions-on-u-disks-on-windows/
+categories: [linux-systems-administration]
+canonical: /how-to-erase-disk-partitions-on-u-disks-on-windows/
 ---
 
 When you need to completely wipe a USB drive on Windows, you have several reliable options. Choose based on your security requirements: Disk Management for quick reformatting, DiskPart for automation, or secure erasure tools if the drive contained sensitive data.

@@ -3,7 +3,8 @@ title: "Find the K Largest Files in a Linux Directory"
 date: 2018-03-24 08:20:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-top-k-largest-files-in-a-directory-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-top-k-largest-files-in-a-directory-on-linux/
 ---
 
 When a disk fills up or you’re doing a cleanup pass, finding the biggest files quickly saves a lot of time. Here are the practical approaches on Linux.

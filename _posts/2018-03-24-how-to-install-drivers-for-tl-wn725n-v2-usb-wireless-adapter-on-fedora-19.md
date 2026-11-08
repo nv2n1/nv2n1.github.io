@@ -3,7 +3,8 @@ title: "Installing TL-WN725N v2 USB Wireless Adapter on Fedora 19"
 date: 2018-03-24 08:20:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-drivers-for-tl-wn725n-v2-usb-wireless-adapter-on-fedora-19/
+categories: [linux-system-configuration]
+canonical: /how-to-install-drivers-for-tl-wn725n-v2-usb-wireless-adapter-on-fedora-19/
 ---
 
 The TP-Link TL-WN725N v2 uses the Realtek RTL8188EU chipset. While kernel support has improved significantly, you may still need to compile drivers manually on recent Fedora releases.

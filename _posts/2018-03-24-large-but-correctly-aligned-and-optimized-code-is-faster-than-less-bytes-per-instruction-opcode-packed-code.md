@@ -3,7 +3,8 @@ title: "Code alignment matters more than code size for performance"
 date: 2018-03-24 07:56:40 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/large-but-correctly-aligned-and-optimized-code-is-faster-than-less-bytes-per-instruction-opcode-packed-code/
+categories: [system-administration-cloud]
+canonical: /large-but-correctly-aligned-and-optimized-code-is-faster-than-less-bytes-per-instruction-opcode-packed-code/
 ---
 
 The conventional wisdom that smaller code is always better has been thoroughly invalidated on modern processors. A statement from kernel development circles captured this well: for performance-critical paths like interrupt handlers, large-but-correctly-aligned-and-optimized code consistently outperforms byte-packed alternatives.

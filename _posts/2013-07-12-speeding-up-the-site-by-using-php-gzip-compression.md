@@ -3,7 +3,8 @@ title: "When and How to Use GZIP Compression in PHP"
 date: 2013-07-12 16:46:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/speeding-up-the-site-by-using-php-gzip-compression/
+categories: [programming-languages]
+canonical: /speeding-up-the-site-by-using-php-gzip-compression/
 ---
 
 Compressing HTTP responses with gzip reduces bandwidth usage and improves page load times. However, **server-level compression should be your first choice**—PHP-level compression is a workaround for constrained hosting environments.

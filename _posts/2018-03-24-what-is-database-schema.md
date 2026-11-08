@@ -3,7 +3,8 @@ title: "Database Schema Design: Best Practices and Examples"
 date: 2018-03-24 11:44:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/what-is-database-schema/
+categories: [systems-architecture]
+canonical: /what-is-database-schema/
 ---
 
 A database schema is the blueprint that defines how data is organized and stored in a database. Think of it as the architectural plan for your database—it specifies tables, columns, data types, relationships, constraints, and rules that govern how data can be stored and accessed.

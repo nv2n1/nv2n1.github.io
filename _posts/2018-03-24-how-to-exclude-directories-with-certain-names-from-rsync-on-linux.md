@@ -3,7 +3,8 @@ title: "Excluding Directories by Name Pattern in rsync"
 date: 2018-03-24 11:44:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-exclude-directories-with-certain-names-from-rsync-on-linux/
+categories: [scripting-utilities]
+canonical: /how-to-exclude-directories-with-certain-names-from-rsync-on-linux/
 ---
 
 When backing up with rsync, you often need to skip directories like `cache/`, `node_modules/`, or `.git/` that appear at multiple levels in your directory tree. Listing every instance individually is impractical, but rsync’s exclude patterns handle this elegantly.

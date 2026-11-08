@@ -3,7 +3,8 @@ title: "Resolving ENOMEM Errors When mmap() Exceeds vm.max_map_count"
 date: 2018-03-24 11:49:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/maximum-number-of-mmaped-ranges-and-how-to-set-it-on-linux/
+categories: [linux-systems-administration]
+canonical: /maximum-number-of-mmaped-ranges-and-how-to-set-it-on-linux/
 ---
 
 When a process mmaps and mprotects many memory ranges, you’ll eventually hit the kernel limit and start seeing `ENOMEM` errors from mprotect() calls. This happens because Linux maintains internal kernel structures for each mapped range, and there’s a hard ceiling on how many the kernel will track per process.

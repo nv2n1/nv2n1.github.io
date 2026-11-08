@@ -3,7 +3,8 @@ title: "Migrating from MediaWiki Back to WordPress"
 date: 2013-07-12 14:20:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/moved-back-to-wordpress-from-mediawiki/
+categories: [programming-languages]
+canonical: /moved-back-to-wordpress-from-mediawiki/
 ---
 
 After running on MediaWiki, we migrated back to WordPress. Both platforms have their strengths, but WordPress proved to be the better fit for our site’s goals.

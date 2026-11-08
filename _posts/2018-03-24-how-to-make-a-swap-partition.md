@@ -3,7 +3,8 @@ title: "Creating a Swap Partition on Linux"
 date: 2018-03-24 08:14:11 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-a-swap-partition/
+categories: [linux-systems-administration]
+canonical: /how-to-make-a-swap-partition/
 ---
 
 Swap space is essential for system stability, allowing the kernel to move less-frequently-used memory pages to disk when physical RAM is exhausted. Here’s how to set up a dedicated swap partition.

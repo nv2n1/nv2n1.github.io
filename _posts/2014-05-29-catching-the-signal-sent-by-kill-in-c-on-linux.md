@@ -3,7 +3,8 @@ title: "Catching and Handling Signals in C on Linux"
 date: 2014-05-29 05:38:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/catching-the-signal-sent-by-kill-in-c-on-linux/
+categories: [linux-systems-administration]
+canonical: /catching-the-signal-sent-by-kill-in-c-on-linux/
 ---
 
 Programs need to shut down gracefully—saving state, closing connections, flushing buffers—rather than terminating abruptly. A daemon might receive a termination signal and need to persist in-memory data before exiting. The challenge is catching these signals in C and responding appropriately.

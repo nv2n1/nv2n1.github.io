@@ -3,7 +3,8 @@ title: "Securing VNC Access to Linux Servers Using SSH Tunneling"
 date: 2014-02-21 07:36:37 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/connecting-to-remote-servers-by-vnc-on-windows/
+categories: [linux-systems-administration]
+canonical: /connecting-to-remote-servers-by-vnc-on-windows/
 ---
 
 VNC provides graphical remote access to Linux servers. For security, tunnel VNC traffic through SSH rather than expose it directly to the network. This guide covers Windows client setup with SSH tunneling.

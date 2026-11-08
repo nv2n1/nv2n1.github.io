@@ -3,7 +3,8 @@ title: "Managing Git Repositories with Gitosis"
 date: 2012-03-25 13:14:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/managing-repositories-on-git-server-using-gitosis/
+categories: [linux-systems-administration]
+canonical: /managing-repositories-on-git-server-using-gitosis/
 ---
 
 Gitosis provides a lightweight way to manage Git repositories and user access on a self-hosted server. This post covers user management, repository configuration, and access control. For initial server setup, refer to your Gitosis installation documentation.

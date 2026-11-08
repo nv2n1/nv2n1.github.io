@@ -3,7 +3,8 @@ title: "Renaming a Windows User Account in Local Users and Groups"
 date: 2019-07-14 06:05:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-windows-user-name-on-windows-10-using-computer-management/
+categories: [programming-languages]
+canonical: /how-to-change-windows-user-name-on-windows-10-using-computer-management/
 ---
 
 The Windows user account name can be changed through several methods, but Computer Management’s Local Users and Groups tool is the most reliable approach—its interface remains stable across Windows updates, unlike Settings which frequently changes.

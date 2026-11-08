@@ -3,7 +3,8 @@ title: "How to Split a String by Delimiter in Bash"
 date: 2018-03-24 11:52:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-split-a-string-by-string-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-split-a-string-by-string-in-bash/
 ---
 
 Bash doesn’t have a built-in split function, but you can achieve string splitting through several methods. The most common approach uses IFS (Internal Field Separator), though other techniques exist depending on your needs.

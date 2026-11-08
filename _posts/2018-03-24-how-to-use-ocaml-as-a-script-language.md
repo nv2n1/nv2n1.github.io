@@ -3,7 +3,8 @@ title: "Using OCaml as a Script Language"
 date: 2018-03-24 08:16:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-ocaml-as-a-script-language/
+categories: [linux-systems-administration]
+canonical: /how-to-use-ocaml-as-a-script-language/
 ---
 
 You can run OCaml scripts directly from the command line with a shebang, similar to bash or Python. This requires making the file executable and using the proper interpreter directive.

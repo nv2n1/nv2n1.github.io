@@ -3,7 +3,8 @@ title: "Where Windows 10 Stores Metro App Data"
 date: 2018-03-24 11:50:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/where-are-the-data-of-metro-apps-stored-in-windows-10/
+categories: [programming-languages]
+canonical: /where-are-the-data-of-metro-apps-stored-in-windows-10/
 ---
 
 Modern Universal Windows Platform (UWP) apps store their data in protected user-specific directories. Understanding this structure is essential if you need to back up app settings, troubleshoot issues, or migrate data between systems.

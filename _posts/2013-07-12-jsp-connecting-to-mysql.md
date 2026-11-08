@@ -3,7 +3,8 @@ title: "MySQL Database Connections in JSP: JDBC Setup and Connection Pooling"
 date: 2013-07-12 16:47:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/jsp-connecting-to-mysql/
+categories: [system-administration-cloud]
+canonical: /jsp-connecting-to-mysql/
 ---
 
 Connecting to MySQL from JSP requires the mysql-connector-j JDBC driver and proper connection handling. The old mysql-connector-java artifact is deprecated—switch to mysql-connector-j, which supports MySQL 8.0+ with modern SSL/TLS, authentication plugins, and performance improvements.

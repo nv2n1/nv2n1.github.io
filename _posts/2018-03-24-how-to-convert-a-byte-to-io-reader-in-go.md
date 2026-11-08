@@ -3,7 +3,8 @@ title: "Converting byte[] to io.Reader in Go"
 date: 2018-03-24 11:51:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-a-byte-to-io-reader-in-go/
+categories: [languages-frameworks]
+canonical: /how-to-convert-a-byte-to-io-reader-in-go/
 ---
 
 Go’s `io.Reader` interface is fundamental to working with streams of data. When you have a byte slice and need to pass it to a function expecting an `io.Reader`, the standard library provides straightforward solutions.

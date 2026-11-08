@@ -3,7 +3,8 @@ title: "Why std::vector Outperforms Other C++ Data Structures"
 date: 2023-03-21 06:52:21 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/why-stdvector-is-the-optimal-choice-for-data-structures-for-performance-in-c/
+categories: [languages-frameworks]
+canonical: /why-stdvector-is-the-optimal-choice-for-data-structures-for-performance-in-c/
 ---
 
 std::vector is the right default choice for almost every container need in C++. It’s the foundation of high-performance applications—game engines, financial systems, data processing pipelines—because it aligns with how modern CPUs actually work.

@@ -3,7 +3,8 @@ title: "How to Check if a Package is Installed on Linux Mint"
 date: 2018-03-24 11:42:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-whether-a-package-is-installed-on-linux-mint/
+categories: [linux-systems-administration]
+canonical: /how-to-find-whether-a-package-is-installed-on-linux-mint/
 ---
 
 Linux Mint uses the APT package management system (derived from Debian). There are several straightforward methods to verify whether a specific package is installed.

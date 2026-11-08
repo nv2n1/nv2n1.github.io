@@ -3,7 +3,8 @@ title: "Getting Unix Timestamp in Go"
 date: 2018-03-24 11:52:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-go-lang/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-epoch-timestamp-in-go-lang/
 ---
 
 Getting the current epoch timestamp is straightforward using the `time` package:

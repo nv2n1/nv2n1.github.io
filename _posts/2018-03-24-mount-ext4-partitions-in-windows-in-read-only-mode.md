@@ -3,7 +3,8 @@ title: "Mount Ext4 Partitions as Read-Only in Windows"
 date: 2018-03-24 08:18:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/mount-ext4-partitions-in-windows-in-read-only-mode/
+categories: [linux-systems-administration]
+canonical: /mount-ext4-partitions-in-windows-in-read-only-mode/
 ---
 
 Accessing Linux filesystems from Windows is useful when dual-booting, migrating data, or recovering files. Read-only access is essential to prevent accidental corruption of ext4 metadata and data.

@@ -3,7 +3,8 @@ title: "Configuring MediaWiki\u2019s Main Page: Redirects and Best Practices"
 date: 2013-07-16 01:38:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-mediawikis-main-page-title-and-url/
+categories: [development-best-practices]
+canonical: /how-to-change-mediawikis-main-page-title-and-url/
 ---
 
 MediaWiki stores its main page configuration in the `MediaWiki:Mainpage` system message. By default, this points to “Main Page”, but you can change it to any title that suits your wiki’s purpose. This process involves updating the system message, creating your new homepage, and handling redirects properly to avoid breaking external links and SEO.

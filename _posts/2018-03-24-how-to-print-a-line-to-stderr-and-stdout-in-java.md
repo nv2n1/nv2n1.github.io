@@ -3,7 +3,8 @@ title: "Printing to STDERR and STDOUT in Java"
 date: 2018-03-24 11:53:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-java/
+categories: [languages-frameworks]
+canonical: /how-to-print-a-line-to-stderr-and-stdout-in-java/
 ---
 
 Java provides straightforward ways to direct output to standard output and standard error streams. Understanding the difference between them is essential for proper logging and error handling.

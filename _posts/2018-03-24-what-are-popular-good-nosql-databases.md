@@ -3,7 +3,8 @@ title: "Popular NoSQL Databases: A Comparison"
 date: 2018-03-24 08:15:33 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/what-are-popular-good-nosql-databases/
+categories: [databases-storage]
+canonical: /what-are-popular-good-nosql-databases/
 ---
 
 NoSQL databases have matured considerably and now handle a significant portion of production workloads. The landscape has shifted toward specialized solutions rather than one-size-fits-all approaches. Here’s a breakdown of the most widely deployed options:

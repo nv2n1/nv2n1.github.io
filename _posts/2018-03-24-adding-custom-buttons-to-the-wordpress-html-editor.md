@@ -3,7 +3,8 @@ title: "Customizing the WordPress HTML Editor with Custom Buttons"
 date: 2018-03-24 08:04:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/adding-custom-buttons-to-the-wordpress-html-editor/
+categories: [web-development]
+canonical: /adding-custom-buttons-to-the-wordpress-html-editor/
 ---
 
 WordPress’s Text/HTML editor can be extended with custom buttons for frequently used code snippets or shortcodes. This is useful for inserting boilerplate markup, custom shortcodes, or formatting helpers without manually typing them each time.

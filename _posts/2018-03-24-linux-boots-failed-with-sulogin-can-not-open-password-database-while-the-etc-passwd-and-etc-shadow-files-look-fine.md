@@ -3,7 +3,8 @@ title: "Fix \u201csulogin: can not open password database\u201d on Linux"
 date: 2018-03-24 11:49:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/linux-boots-failed-with-sulogin-can-not-open-password-database-while-the-etc-passwd-and-etc-shadow-files-look-fine/
+categories: [linux-systems-administration]
+canonical: /linux-boots-failed-with-sulogin-can-not-open-password-database-while-the-etc-passwd-and-etc-shadow-files-look-fine/
 ---
 
 When Linux fails to boot with the error message “sulogin: can not open password database” despite `/etc/passwd` and `/etc/shadow` appearing intact, SELinux is often the culprit. The files exist and have correct content, but SELinux context labels are missing or corrupted, preventing the login process from reading them.

@@ -3,7 +3,8 @@ title: "Managing LVM Volume Groups: Setup and Configuration"
 date: 2013-07-12 16:32:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/creating-lvm-volume-group/
+categories: [linux-systems-administration]
+canonical: /creating-lvm-volume-group/
 ---
 
 LVM (Logical Volume Manager) lets you combine multiple physical disks into flexible storage pools. This guide covers creating a volume group from multiple disk partitions—a common setup for servers that need flexible storage allocation across Xen guests, databases, or other demanding workloads.

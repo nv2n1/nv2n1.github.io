@@ -3,7 +3,8 @@ title: "Cloud Storage Consistency Models Explained"
 date: 2024-09-06 14:35:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/understanding-cloud-storage-consistency-models/
+categories: [systems-architecture]
+canonical: /understanding-cloud-storage-consistency-models/
 ---
 
 Cloud storage systems face a fundamental trade-off: you can’t have everything at once. The consistency model you choose directly impacts latency, availability, and how complex your application logic needs to be. Here’s what you actually need to know to pick the right one.

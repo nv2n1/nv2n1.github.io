@@ -3,7 +3,8 @@ title: "Safely Shutting Down All Xen Virtual Machines on a Server"
 date: 2013-07-12 16:32:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/script-shutting-down-all-xen-vms-on-a-server/
+categories: [system-administration-cloud]
+canonical: /script-shutting-down-all-xen-vms-on-a-server/
 ---
 
 When managing Xen Dom0 hosts, shutting down guest VMs (DomUs) before powering off the physical server is essential to prevent data loss and filesystem corruption. Modern Xen distributions (including Citrix Hypervisor and AWS infrastructure) still rely on this principle, though the tooling has evolved.

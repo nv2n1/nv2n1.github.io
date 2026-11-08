@@ -3,7 +3,8 @@ title: "Understanding PGP: A Technical Reference Guide"
 date: 2024-09-08 08:27:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-comprehensive-guide-to-pgp-technical-deep-dive/
+categories: [security-cryptography-2]
+canonical: /a-comprehensive-guide-to-pgp-technical-deep-dive/
 ---
 
 PGP combines symmetric and asymmetric encryption to achieve both speed and security:

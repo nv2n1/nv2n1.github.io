@@ -3,7 +3,8 @@ title: "Getting the Full Request URL in PHP"
 date: 2018-03-24 11:53:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-full-request-url-in-php/
+categories: [programming-languages]
+canonical: /how-to-get-the-full-request-url-in-php/
 ---
 
 The full URL is commonly needed for redirects, canonical link headers, or logging. While PHP superglobals provide the raw components, how you assemble them matters for security and reliability.

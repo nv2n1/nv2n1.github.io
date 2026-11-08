@@ -3,7 +3,8 @@ title: "WordPress Multisite: Running from a Subdirectory"
 date: 2018-03-24 08:18:05 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/installing-wordpress-in-a-sub-directory-while-working-for-the-whole-site/
+categories: [linux-systems-administration]
+canonical: /installing-wordpress-in-a-sub-directory-while-working-for-the-whole-site/
 ---
 
 Installing WordPress in a subdirectory keeps your site root cleaner and makes it easier to manage core files separately from content. Here’s how to configure WordPress so the admin and core files live in `/wordpress` while the site appears at your domain root.

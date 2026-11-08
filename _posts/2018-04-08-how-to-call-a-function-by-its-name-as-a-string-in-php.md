@@ -3,7 +3,8 @@ title: "Dynamic Function Calls in PHP: Variables, call_user_func(), and Callable
 date: 2018-04-08 09:05:57 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-call-a-function-by-its-name-as-a-string-in-php/
+categories: [languages-frameworks]
+canonical: /how-to-call-a-function-by-its-name-as-a-string-in-php/
 ---
 
 PHP lets you call functions dynamically when you don’t know the function name until runtime. This is essential for plugin systems, routing handlers, API dispatchers, and configuration-driven logic. The approach you choose affects both performance and safety.

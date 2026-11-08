@@ -3,7 +3,8 @@ title: "Install Broadcom WiFi Drivers on Linux Mint"
 date: 2018-03-24 11:42:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/wireless-driver-in-linux-mint-for-hp-mini-110-netbook/
+categories: [linux-systems-administration]
+canonical: /wireless-driver-in-linux-mint-for-hp-mini-110-netbook/
 ---
 
 Linux Mint’s Driver Manager makes installing proprietary wireless drivers straightforward, but the process varies depending on your hardware and kernel version. For older HP Mini 110 netbooks with Broadcom BCM43xx chipsets, the bcmwl-kernel-source driver remains the most reliable option.

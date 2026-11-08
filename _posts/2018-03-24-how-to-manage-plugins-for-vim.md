@@ -3,7 +3,8 @@ title: "Managing Vim Plugins: A Practical Guide"
 date: 2018-03-24 08:14:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-manage-plugins-for-vim/
+categories: [development-best-practices]
+canonical: /how-to-manage-plugins-for-vim/
 ---
 
 The default Vim plugin directory structure under ~/.vim is inherently messy. Without a plugin manager, files from different plugins scatter across autoload/, plugin/, ftplugin/, colors/, and other directories, making it difficult to track which files belong to which plugin. Removing a plugin requires manually hunting down and deleting its files across multiple locations.

@@ -3,7 +3,8 @@ title: "Optimizing Firefox DNS Resolution on Linux"
 date: 2013-07-12 16:31:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/speed-up-firefox-dns-lookup/
+categories: [linux-systems-administration]
+canonical: /speed-up-firefox-dns-lookup/
 ---
 
 DNS lookups can be a bottleneck in Firefox browsing performance. Here are practical methods to optimize DNS resolution and related network behavior.

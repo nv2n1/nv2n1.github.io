@@ -3,7 +3,8 @@ title: "Screen Recording on Wayland: GNOME, OBS, and Kooha"
 date: 2019-01-25 08:06:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-do-screen-recording-on-wayland-in-linux/
+categories: [linux-system-configuration]
+canonical: /how-to-do-screen-recording-on-wayland-in-linux/
 ---
 
 Wayland screen recording has matured significantly. Here are the tools that actually work well in 2026, with their tradeoffs and setup.

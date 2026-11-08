@@ -3,7 +3,8 @@ title: "Detecting Blank or Nearly Blank Images on Linux"
 date: 2018-03-24 11:44:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-detect-whether-an-image-is-almost-blank-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-detect-whether-an-image-is-almost-blank-on-linux/
 ---
 
 Detecting whether an image is predominantly blank, black, or contains minimal content is useful for automated workflows like batch processing, quality control, or identifying failed captures. Here’s how to do it reliably on Linux.

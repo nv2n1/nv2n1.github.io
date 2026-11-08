@@ -3,7 +3,8 @@ title: "Splitting Text Files by Lines on Linux: A split Command Guide"
 date: 2018-03-24 08:22:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-split-a-text-file-by-lines-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-split-a-text-file-by-lines-on-linux/
 ---
 
 The `split` command is the standard tool for breaking large text files into smaller chunks on Linux. Here’s the basic syntax:

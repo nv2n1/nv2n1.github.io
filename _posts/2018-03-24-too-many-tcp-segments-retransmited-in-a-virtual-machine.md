@@ -3,7 +3,8 @@ title: "Troubleshooting High TCP Retransmission Rates in VMs"
 date: 2018-03-24 08:16:59 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/too-many-tcp-segments-retransmited-in-a-virtual-machine/
+categories: [linux-systems-administration]
+canonical: /too-many-tcp-segments-retransmited-in-a-virtual-machine/
 ---
 
 If you’re seeing elevated TCP segment retransmission counts on Xen VMs, this typically signals network congestion, packet loss, or CPU contention. Here’s how to identify the root cause and fix it.

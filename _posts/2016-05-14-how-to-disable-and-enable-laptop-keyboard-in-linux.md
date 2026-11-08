@@ -3,7 +3,8 @@ title: "How to Enable and Disable Your Laptop Keyboard in Linux"
 date: 2016-05-14 02:45:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-and-enable-laptop-keyboard-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-and-enable-laptop-keyboard-in-linux/
 ---
 
 When you dock a laptop with an external USB keyboard, the built-in keyboard becomes a nuisance—it’s too easy to brush keys while typing and trigger unwanted input. Rather than disabling the keyboard at the BIOS level or physically disconnecting it, you can use the `xinput` tool to disable and re-enable it from within your Linux session.

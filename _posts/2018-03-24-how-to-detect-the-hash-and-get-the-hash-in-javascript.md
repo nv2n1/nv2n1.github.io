@@ -3,7 +3,8 @@ title: "Detecting URL Hash Changes in JavaScript"
 date: 2018-03-24 11:48:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-detect-the-hash-and-get-the-hash-in-javascript/
+categories: [linux-systems-administration]
+canonical: /how-to-detect-the-hash-and-get-the-hash-in-javascript/
 ---
 
 The URL hash — the fragment identifier after the `#` — serves several purposes: in-page navigation, client-side routing, and preserving application state. JavaScript provides straightforward APIs to read and monitor hash changes.

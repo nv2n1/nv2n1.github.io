@@ -3,7 +3,8 @@ title: "Opening Links in New Windows and Tabs with JavaScript"
 date: 2018-03-24 11:48:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-open-a-url-in-a-new-window-in-javascript/
+categories: [linux-systems-administration]
+canonical: /how-to-open-a-url-in-a-new-window-in-javascript/
 ---
 
 The `window.open()` method is the standard way to open URLs in a new browser window or tab. Here’s how to use it effectively in modern JavaScript.

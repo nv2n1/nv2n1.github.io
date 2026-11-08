@@ -3,7 +3,8 @@ title: "Setting Your Default Text Editor on Linux"
 date: 2018-03-24 08:20:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-default-text-editor-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-change-the-default-text-editor-on-linux/
 ---
 
 When you run `crontab -e`, `git commit`, `visudo`, or similar commands, Linux applications need to know which text editor to launch. This is controlled by environment variables and system configuration, with several methods available depending on your needs.

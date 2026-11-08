@@ -3,7 +3,8 @@ title: "Understanding Linux Distribution Naming Conventions"
 date: 2015-03-08 09:05:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/what-is-the-name-of-the-linux-based-os-a-survey/
+categories: [linux-systems-administration]
+canonical: /what-is-the-name-of-the-linux-based-os-a-survey/
 ---
 
 You’re using a Linux-based OS right now, either directly or indirectly. But what do you actually call it? The naming question matters more than it seems — different distributions frame themselves differently, and understanding the terminology affects how you talk about infrastructure, apply for jobs, and read documentation.

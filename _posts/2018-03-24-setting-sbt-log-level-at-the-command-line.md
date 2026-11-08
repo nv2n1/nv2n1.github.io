@@ -3,7 +3,8 @@ title: "Controlling SBT Log Levels from the CLI and Configuration"
 date: 2018-03-24 11:41:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-sbt-log-level-at-the-command-line/
+categories: [linux-systems-administration]
+canonical: /setting-sbt-log-level-at-the-command-line/
 ---
 
 The simplest approach is passing log level flags directly to sbt:

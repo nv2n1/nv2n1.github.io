@@ -3,8 +3,9 @@ title: "Fedora \u4e2d\u6587\u5b57\u4f53\u914d\u7f6e\u6307\u5357"
 date: 2013-07-12 16:31:44 +0000
 author: "Eric Ma"
 layout: post
+categories: [linux-systems-administration]
 permalink: /fedora-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
-canonical: https://www.systutorials.com/fedora-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
+canonical: /fedora-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
 ---
 
 Fedora 中文字体的显示一直是个常见问题，特别是在英文环境中。通过合理的字体配置，可以获得清晰舒适的中文显示效果。本文介绍的方案使用开源字体，这些字体在 Fedora 的标准仓库中都可以获得。

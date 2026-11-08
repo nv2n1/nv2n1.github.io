@@ -3,7 +3,8 @@ title: "Importing Evolution Mail to Thunderbird via IMAP"
 date: 2018-03-24 08:19:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/import-evolution-mail-directory-to-thunderbird-imap-account/
+categories: [linux-systems-administration]
+canonical: /import-evolution-mail-directory-to-thunderbird-imap-account/
 ---
 
 If you have emails stuck in Evolution’s local directory structure that you want to move to an IMAP account via Thunderbird, you’ll need to convert them to a format Thunderbird can import, then push them to your mail server.

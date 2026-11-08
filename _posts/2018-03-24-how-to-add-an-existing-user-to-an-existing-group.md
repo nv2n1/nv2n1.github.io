@@ -3,7 +3,8 @@ title: "Adding an Existing User to an Existing Group"
 date: 2018-03-24 08:15:15 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-an-existing-user-to-an-existing-group/
+categories: [development-best-practices]
+canonical: /how-to-add-an-existing-user-to-an-existing-group/
 ---
 
 Use `usermod` to add a user to supplementary groups. The `-a` (append) flag is critical — without it, you’ll remove the user from all groups not explicitly listed.

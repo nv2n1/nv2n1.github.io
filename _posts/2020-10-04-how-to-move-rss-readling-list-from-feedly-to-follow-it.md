@@ -3,7 +3,8 @@ title: "Migrating Your Feedly RSS Feeds to Follow.it"
 date: 2020-10-04 08:53:30 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-move-rss-readling-list-from-feedly-to-follow-it/
+categories: [programming-languages]
+canonical: /how-to-move-rss-readling-list-from-feedly-to-follow-it/
 ---
 
 RSS feed readers have become essential for staying on top of content from multiple sources. If you’re switching from Feedly to Follow.it, the migration is straightforward — both services support OPML (Outline Processor Markup Language), a standard format for exporting and importing feed lists.

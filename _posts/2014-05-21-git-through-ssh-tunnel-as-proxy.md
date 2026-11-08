@@ -3,7 +3,8 @@ title: "Tunneling Git Traffic Through SSH Proxies"
 date: 2014-05-21 14:55:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/git-through-ssh-tunnel-as-proxy/
+categories: [linux-systems-administration]
+canonical: /git-through-ssh-tunnel-as-proxy/
 ---
 
 You often need to access a Git server that only accepts internal connections, but you have SSH access to an intermediate host that can reach it. This is common in corporate environments where the Git server sits behind a firewall. You can tunnel Git traffic through the intermediate host without manually managing tunnels for each operation.

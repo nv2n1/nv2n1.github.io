@@ -3,7 +3,8 @@ title: "Linux Kernel 5.4.102 Released"
 date: 2021-03-07 06:54:22 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-5-4-102-release/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-5-4-102-release/
 ---
 
 This post covers the changes, bugfixes, and new features in Linux kernel 5.4.102. The release includes 338 patches totaling approximately 160,715 lines of changed or added source code compared to the 5.4 baseline.

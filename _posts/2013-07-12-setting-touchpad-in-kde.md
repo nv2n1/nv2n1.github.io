@@ -3,7 +3,8 @@ title: "Configuring Touchpad Tap-to-Click in KDE"
 date: 2013-07-12 16:32:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-touchpad-in-kde/
+categories: [linux-systems-administration]
+canonical: /setting-touchpad-in-kde/
 ---
 
 KDE Plasma 6 provides straightforward touchpad configuration through the graphical Settings interface, with optional command-line customization for advanced cases.

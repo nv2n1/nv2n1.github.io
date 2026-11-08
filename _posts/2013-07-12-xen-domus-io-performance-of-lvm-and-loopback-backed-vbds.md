@@ -3,7 +3,8 @@ title: "Xen DomU I/O Performance: LVM vs. Loopback Block Devices"
 date: 2013-07-12 16:32:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/xen-domus-io-performance-of-lvm-and-loopback-backed-vbds/
+categories: [linux-systems-administration]
+canonical: /xen-domus-io-performance-of-lvm-and-loopback-backed-vbds/
 ---
 
 This post covers Xen virtualization benchmarks from 2013. While Xen remains in production use (AWS EC2, Citrix Hypervisor), KVM has become the default hypervisor for most Linux distributions. For current production environments, evaluate KVM with libvirt, direct container solutions (Docker, Kubernetes), or cloud-native platforms. This post is preserved for historical reference and understanding legacy Xen deployments.

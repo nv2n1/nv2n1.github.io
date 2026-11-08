@@ -3,7 +3,8 @@ title: "Safely Shrinking Ext4 Filesystems on LVM"
 date: 2015-01-09 08:04:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/shrinking-a-ext4-file-system-on-lvm-in-linux/
+categories: [linux-systems-administration]
+canonical: /shrinking-a-ext4-file-system-on-lvm-in-linux/
 ---
 
 Shrinking an ext4 filesystem on LVM is riskier than expanding—it requires the filesystem offline and careful size planning. The operation can take hours on large volumes, and mistakes can destroy data. This guide walks through the safe path with verification at each step.

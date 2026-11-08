@@ -3,7 +3,8 @@ title: "Using statvfs() to Check Disk Space on Linux"
 date: 2015-04-14 01:48:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-available-filesystem-space-on-linux-a-c-function-and-a-cpp-example/
+categories: [linux-systems-administration]
+canonical: /how-to-get-available-filesystem-space-on-linux-a-c-function-and-a-cpp-example/
 ---
 
 When writing to disk, you need to know if space is available — especially in systems software, daemons, and critical applications. The POSIX `statvfs()` call provides filesystem statistics across all POSIX systems, making it more reliable than Linux-specific alternatives like `statfs()`.

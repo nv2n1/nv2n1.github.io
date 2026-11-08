@@ -3,7 +3,8 @@ title: "Prevent Packages from Being Updated with yum and dnf"
 date: 2018-03-24 11:40:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-yum-not-to-update-certain-packages/
+categories: [linux-systems-administration]
+canonical: /how-to-force-yum-not-to-update-certain-packages/
 ---
 
 If you’ve compiled a kernel module for a specific kernel version or need to pin a package to prevent automatic updates, you’ll want to exclude it from yum or dnf. There are several approaches depending on whether you need a permanent exclusion, per-repository exclusion, or temporary lockdown.

@@ -3,7 +3,8 @@ title: "Redirect Output to Multiple Files with tee and Monitoring"
 date: 2018-03-24 11:47:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-redirect-anything-written-on-a-file-to-another-file-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-redirect-anything-written-on-a-file-to-another-file-in-linux/
 ---
 
 When you need writes to one or more files to automatically go to another file, you have several options depending on your exact use case. The most common scenario is capturing output from commands, monitoring file changes, or duplicating writes across multiple destinations.

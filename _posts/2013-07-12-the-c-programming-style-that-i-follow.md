@@ -3,7 +3,8 @@ title: "C Code Organization: Structuring Headers and Source Files"
 date: 2013-07-12 16:47:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/the-c-programming-style-that-i-follow/
+categories: [scripting-utilities]
+canonical: /the-c-programming-style-that-i-follow/
 ---
 
 C allows flexibility in coding style, but discipline matters. Consistent structure makes code readable, maintainable, and less prone to bugs. Here’s a practical approach that scales from small utilities to large projects.

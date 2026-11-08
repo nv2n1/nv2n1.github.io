@@ -3,7 +3,8 @@ title: "Conferences on Cloud Computing 2012"
 date: 2011-05-11 23:50:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/conferences-on-cloud-computing-2012/
+categories: [programming-languages]
+canonical: /conferences-on-cloud-computing-2012/
 ---
 
 > **Historical Archive:** This post lists conferences from 2011. The submission deadlines and venues are no longer current. For up-to-date conference information, check the official conference websites or resources like <a href="https://www.conferencealert.com/" rel="nofollow noopener" target="_blank">Conference Alert</a> and <a href="https://ccfddl.github.io/" rel="nofollow noopener" target="_blank">CCF Deadlines</a>.
@@ -108,7 +109,7 @@ Complete paper submissions: October 4, 2011, 5:00 p.m. PDT
 
 Notification of acceptance: December 20, 2011
 
-### <a href="https://www.systutorials.com/t/go/hotpar12/" rel="nofollow">HotPar ’12</a>
+### <a href="https://www.usenix.org/legacy/events/hotpar12/" rel="nofollow">HotPar ’12</a>
 
 4th USENIX Workshop on Hot Topics in Parallelism (HotPar ’12)
 
@@ -126,7 +127,7 @@ Notification to authors: Late March 2012
 
 Electronic files of final papers due: Monday, April 30, 2012
 
-### <a href="https://www.systutorials.com/t/go/socc2012/" rel="nofollow">SOCC 2012</a>
+### <a href="https://web.archive.org/web/20210228043206/http://www.socc2012.org/" rel="nofollow">SOCC 2012</a>
 
 ACM Symposium on Cloud Computing 2012
 

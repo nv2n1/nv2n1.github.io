@@ -3,7 +3,8 @@ title: "Robust PHP RSS Feed Parsing with Caching and Error Handling"
 date: 2015-11-13 14:07:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/tutorial-video-for-php-function-for-fetching-rss-feed-and-outputting-feed-items-as-html/
+categories: [languages-frameworks]
+canonical: /tutorial-video-for-php-function-for-fetching-rss-feed-and-outputting-feed-items-as-html/
 ---
 
 Parsing RSS feeds in PHP remains a common requirement for content aggregation. This guide covers practical patterns for fetching feeds, caching results, extracting content, and sanitizing output — with implementations that work reliably in production.

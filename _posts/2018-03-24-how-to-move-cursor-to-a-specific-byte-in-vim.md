@@ -3,7 +3,8 @@ title: "Navigating to a Specific Byte Position in Vim"
 date: 2018-03-24 11:49:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-move-cursor-to-a-specific-byte-in-vim/
+categories: [testing-devops]
+canonical: /how-to-move-cursor-to-a-specific-byte-in-vim/
 ---
 
 If you need to jump to a particular byte position in a file, Vim provides the `goto` command. This is useful when debugging binary files, working with hex editors, or when error messages reference byte offsets.

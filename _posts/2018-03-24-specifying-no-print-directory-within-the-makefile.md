@@ -3,7 +3,8 @@ title: "Using `\u2013no-print-directory` in Makefiles"
 date: 2018-03-24 08:17:12 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/specifying-no-print-directory-within-the-makefile/
+categories: [linux-systems-administration]
+canonical: /specifying-no-print-directory-within-the-makefile/
 ---
 
 The `--no-print-directory` flag suppresses make’s default behavior of printing messages when entering and leaving subdirectories. If you invoke make frequently with recursive calls or have a deeply nested project structure, these messages clutter your output. Rather than passing the flag on every invocation, you can set it once in your Makefile.

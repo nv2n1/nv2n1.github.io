@@ -3,7 +3,8 @@ title: "How to Find Which Package Provides a File"
 date: 2018-03-24 11:43:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-which-package-can-be-installed-for-a-file-like-yum-provides/
+categories: [linux-systems-administration]
+canonical: /how-to-find-which-package-can-be-installed-for-a-file-like-yum-provides/
 ---
 
 When you need a command or library file but don’t have the package installed, you need to search for which package provides it. On Red Hat/Fedora systems, `yum provides` or `dnf provides` does this. On Debian/Ubuntu, the equivalent is `apt-file`.

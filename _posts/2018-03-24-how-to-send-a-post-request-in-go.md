@@ -3,7 +3,8 @@ title: "Sending POST Requests in Go"
 date: 2018-03-24 11:53:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-send-a-post-request-in-go/
+categories: [programming-languages]
+canonical: /how-to-send-a-post-request-in-go/
 ---
 
 Go’s `net/http` package provides straightforward methods for sending POST requests. The two main approaches are `Post()` for raw body content and `PostForm()` for URL-encoded form data.

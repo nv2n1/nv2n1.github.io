@@ -3,7 +3,8 @@ title: "How to Write WordPress Posts with Markdown"
 date: 2018-03-24 08:15:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/wordpress-how-to-use-markdown-for-writing-posts/
+categories: [development-best-practices]
+canonical: /wordpress-how-to-use-markdown-for-writing-posts/
 ---
 
 WordPress’s default block editor works fine for most users, but if you’re comfortable with Markdown—especially for code-heavy technical posts—you’ll want a solid setup that doesn’t corrupt existing content or create maintenance headaches.

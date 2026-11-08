@@ -3,7 +3,8 @@ title: "Checking Network Adapter Speed with ethtool in Linux"
 date: 2018-03-24 11:47:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-a-network-adapters-speed-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-a-network-adapters-speed-in-linux/
 ---
 
 When you need to verify the current link speed of a network interface — whether it’s running at 10Mbps, 100Mbps, 1Gbps, or higher — `ethtool` is the standard tool for the job.

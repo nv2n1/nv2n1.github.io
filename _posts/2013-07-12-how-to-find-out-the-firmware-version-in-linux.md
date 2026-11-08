@@ -3,7 +3,8 @@ title: "Checking Your Linux Firmware Version"
 date: 2013-07-12 16:32:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-out-the-firmware-version-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-out-the-firmware-version-in-linux/
 ---
 
 The firmware (BIOS/UEFI) on your system contains critical hardware settings and boot information. Knowing your firmware version is essential for updates, compatibility checks, and troubleshooting. Here’s how to find it.

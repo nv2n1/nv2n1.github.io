@@ -3,7 +3,8 @@ title: "Setting Environment Variables in Bash"
 date: 2018-03-24 08:18:35 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-an-environment-variable-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-set-an-environment-variable-in-bash/
 ---
 
 Setting environment variables in Bash is one of the most fundamental skills for working with Linux command lines and shell scripts. Bash provides several ways to define and manage variables.

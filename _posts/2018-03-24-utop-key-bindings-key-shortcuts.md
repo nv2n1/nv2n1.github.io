@@ -3,7 +3,8 @@ title: "UTop Keyboard Shortcuts and Keybindings"
 date: 2018-03-24 08:19:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/utop-key-bindings-key-shortcuts/
+categories: [linux-systems-administration]
+canonical: /utop-key-bindings-key-shortcuts/
 ---
 
 utop is an improved OCaml REPL with line editing, history, context-sensitive completion, and syntax highlighting. While powerful, its key bindings differ from standard GNU readline, which can be jarring if you’re used to standard shell behavior.

@@ -3,7 +3,8 @@ title: "How to Install PARSEC: A Step-by-Step Guide"
 date: 2018-03-24 11:50:48 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-parsec-correctly/
+categories: [programming-languages]
+canonical: /how-to-install-parsec-correctly/
 ---
 
 PARSEC is a widely-used CPU-bound benchmark suite containing real applications and complex third-party library dependencies. The installation can be challenging due to these external requirements, but following this guide will get you up and running.

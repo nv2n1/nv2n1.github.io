@@ -3,7 +3,8 @@ title: "Eclipse Code Formatting: Shortcuts and Configuration"
 date: 2018-03-24 11:40:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/formatting-code-shortcuts-in-eclipse/
+categories: [linux-systems-administration]
+canonical: /formatting-code-shortcuts-in-eclipse/
 ---
 
 The primary keyboard shortcut for formatting code in Eclipse is **Ctrl + Shift + F**. This reformats your entire active file according to your configured code style settings without requiring any text selection.

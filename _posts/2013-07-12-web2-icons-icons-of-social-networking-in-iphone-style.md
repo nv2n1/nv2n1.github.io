@@ -3,7 +3,8 @@ title: "Web2 Icon Libraries for Social Media: Setup & Modern Alternatives"
 date: 2013-07-12 16:46:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/web2-icons-icons-of-social-networking-in-iphone-style/
+categories: [development-best-practices]
+canonical: /web2-icons-icons-of-social-networking-in-iphone-style/
 ---
 
 Web2 Icons is a free, unencumbered icon set designed with a clean, iPhone-inspired aesthetic that works well for social media links. It’s straightforward to integrate and requires no licensing overhead — useful when you need social icons fast without design work.

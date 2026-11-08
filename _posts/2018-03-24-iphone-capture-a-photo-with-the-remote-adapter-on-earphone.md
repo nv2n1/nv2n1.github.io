@@ -3,7 +3,8 @@ title: "Capturing Photos with iPhone\u2019s Remote Adapter"
 date: 2018-03-24 08:14:04 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/iphone-capture-a-photo-with-the-remote-adapter-on-earphone/
+categories: [scripting-utilities]
+canonical: /iphone-capture-a-photo-with-the-remote-adapter-on-earphone/
 ---
 
 Taking photos with iPhone earphone remotes provides a practical way to reduce hand shake and camera blur, especially useful for self-portraits, group photos, or situations where you need stable hands-free operation.

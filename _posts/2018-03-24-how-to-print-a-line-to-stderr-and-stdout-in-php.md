@@ -3,7 +3,8 @@ title: "How to Write Output to STDERR and STDOUT in PHP"
 date: 2018-03-24 11:53:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-php/
+categories: [languages-frameworks]
+canonical: /how-to-print-a-line-to-stderr-and-stdout-in-php/
 ---
 
 In PHP, STDOUT and STDERR are standard output streams that handle different types of output. STDOUT carries normal program output, while STDERR carries error messages and diagnostic information. Properly directing output to the correct stream is essential for building reliable scripts and applications.

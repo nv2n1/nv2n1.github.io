@@ -3,7 +3,8 @@ title: "OCaml Array Length Limits Explained"
 date: 2018-03-24 08:17:45 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/max-array-length-in-ocaml/
+categories: [linux-systems-administration]
+canonical: /max-array-length-in-ocaml/
 ---
 
 \[md\]\

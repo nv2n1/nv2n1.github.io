@@ -3,7 +3,8 @@ title: "Transactional Memory: Core Concepts and Implementation"
 date: 2018-03-24 08:15:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/transactional-memory-learning-materials/
+categories: [databases-storage]
+canonical: /transactional-memory-learning-materials/
 ---
 
 Transactional memory (TM) is a synchronization mechanism that simplifies concurrent programming by allowing multiple threads to execute code atomically without explicit lock management. If you’re getting into this area, here are the best resources and practical approaches to build solid understanding.

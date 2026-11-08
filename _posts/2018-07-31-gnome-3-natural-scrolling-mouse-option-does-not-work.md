@@ -3,7 +3,8 @@ title: "Fix GNOME Natural Scrolling on Mouse and Touchpad"
 date: 2018-07-31 10:00:03 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/gnome-3-natural-scrolling-mouse-option-does-not-work/
+categories: [linux-system-configuration]
+canonical: /gnome-3-natural-scrolling-mouse-option-does-not-work/
 ---
 
 GNOME’s natural scrolling setting can be frustrating — especially when the GUI option is missing or doesn’t apply to your mouse while leaving your touchpad alone. The issue usually comes down to your session type, GNOME version, and how input devices are registered on your system.

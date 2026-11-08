@@ -3,7 +3,8 @@ title: "Checking if Files and Directories Exist in Go"
 date: 2018-07-01 07:43:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-a-file-or-directory-exists-in-go/
+categories: [languages-frameworks]
+canonical: /how-to-test-a-file-or-directory-exists-in-go/
 ---
 
 Go doesn’t have a dedicated `FileExists()` function. Instead, use `os.Stat()` to retrieve file metadata and inspect the error type to determine what actually happened.

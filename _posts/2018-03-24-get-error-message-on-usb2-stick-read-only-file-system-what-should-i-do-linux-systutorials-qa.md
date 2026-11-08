@@ -3,7 +3,8 @@ title: "How to Fix a Read-Only USB Drive Error"
 date: 2018-03-24 11:44:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/get-error-message-on-usb2-stick-read-only-file-system-what-should-i-do-linux-systutorials-qa/
+categories: [programming-languages]
+canonical: /get-error-message-on-usb2-stick-read-only-file-system-what-should-i-do-linux-systutorials-qa/
 ---
 
 A USB drive that’s mounted as read-only is frustrating — you can read files but can’t write, delete, or modify anything. This usually happens due to filesystem issues, hardware problems, or missing drivers.

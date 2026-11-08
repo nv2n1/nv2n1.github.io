@@ -3,7 +3,8 @@ title: "Getting File Size in C on Linux"
 date: 2018-03-24 11:40:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-file-length-in-c-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-file-length-in-c-on-linux/
 ---
 
 To determine file size in C, use `stat()` to populate a `struct stat` and read the `st_size` field. Here’s the correct approach:

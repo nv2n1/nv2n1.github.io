@@ -3,7 +3,7 @@ title: "Installing and Configuring a PDF Reader on Linux Mint"
 date: 2018-03-24 11:42:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-adobe-reader-on-linux-mint-17/
+canonical: /how-to-install-adobe-reader-on-linux-mint-17/
 ---
 
 Adobe Reader (acroread) is rarely the best choice for Linux users anymore. It’s unmaintained, doesn’t receive security updates, and performs poorly compared to modern alternatives. This guide covers better options and how to set up a functional PDF viewer on Linux Mint.

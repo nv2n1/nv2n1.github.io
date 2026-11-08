@@ -3,7 +3,8 @@ title: "Refreshing 1,375 Blog Posts with OpenClaw and Claude for \u20ac66"
 date: 2026-04-10 16:12:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/refreshing-1375-blog-posts-with-openclaw-and-claude-for-e66/
+categories: [ai-engineering]
+canonical: /refreshing-1375-blog-posts-with-openclaw-and-claude-for-e66/
 ---
 
 Running a blog for over a decade means accumulating a lot of technical debt. Commands change, tools get deprecated, Python 2 becomes Python 3, and posts that were accurate in 2013 start quietly misleading readers in 2026. For systutorials.com, that meant roughly 1,375 posts needed attention — some desperately.
@@ -113,7 +114,7 @@ Sonnet produces noticeably better prose, but at this scale and tier the rate lim
 
 The full run — 1,375 posts revised, 1,375 retitled — cost **€66.01** in Anthropic API credits (via Claude.ai’s extra usage billing).
 
-<img src="https://www.systutorials.com/wp/files/2026/04/claude-api-cost-66-euros.jpg" decoding="async" alt="Claude API cost screenshot showing €66.01 spent" />
+<img src="/files/2026/04/claude-api-cost-66-euros.jpg" decoding="async" alt="Claude API cost screenshot showing €66.01 spent" />
 
 Breaking it down roughly:
 

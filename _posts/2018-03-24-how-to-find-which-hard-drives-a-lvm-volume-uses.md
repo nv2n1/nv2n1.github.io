@@ -3,7 +3,8 @@ title: "Mapping LVM Logical Volumes to Physical Disks"
 date: 2018-03-24 11:41:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-which-hard-drives-a-lvm-volume-uses/
+categories: [linux-systems-administration]
+canonical: /how-to-find-which-hard-drives-a-lvm-volume-uses/
 ---
 
 When managing LVM storage, you need to know which physical disks support each logical volume — especially for risk assessment when hardware fails. This guide shows you how to trace those relationships.

@@ -3,7 +3,8 @@ title: "Updating String Values in MySQL with REPLACE()"
 date: 2018-03-24 11:53:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-write-a-sql-to-replace-strings-in-a-column-in-a-mysql-database-table/
+categories: [system-administration-cloud]
+canonical: /how-to-write-a-sql-to-replace-strings-in-a-column-in-a-mysql-database-table/
 ---
 
 The `REPLACE()` function is your primary tool for modifying string values within a column. It scans for a substring and replaces all occurrences with a new value.

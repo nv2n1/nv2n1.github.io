@@ -3,7 +3,8 @@ title: "Opening XPS Files on Linux"
 date: 2013-07-12 16:32:33 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/view-xps-files-linux/
+categories: [linux-systems-administration]
+canonical: /view-xps-files-linux/
 ---
 
 The mupdf package is available in most major Linux distributions. On RHEL/CentOS/Fedora:

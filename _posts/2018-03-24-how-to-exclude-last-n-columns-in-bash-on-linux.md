@@ -3,7 +3,8 @@ title: "Remove the Last N Delimited Fields in Bash"
 date: 2018-03-24 11:46:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-exclude-last-n-columns-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-exclude-last-n-columns-in-bash-on-linux/
 ---
 
 When processing delimited data in Bash, you often need to drop the last N fields from each line without knowing the total field count. The naive `cut -d'.' -f1` approach fails immediately when field counts vary.

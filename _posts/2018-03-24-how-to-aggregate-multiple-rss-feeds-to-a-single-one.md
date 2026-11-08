@@ -3,7 +3,8 @@ title: "Self-Hosted RSS Feed Aggregators: Build Your Own"
 date: 2018-03-24 08:22:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-aggregate-multiple-rss-feeds-to-a-single-one/
+categories: [testing-devops]
+canonical: /how-to-aggregate-multiple-rss-feeds-to-a-single-one/
 ---
 
 Aggregating multiple RSS feeds into a single source is essential for monitoring diverse content — whether tracking news, blogs, project updates, or monitoring systems. Here are the practical approaches with working examples for 2026.

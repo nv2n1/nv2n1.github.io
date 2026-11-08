@@ -3,7 +3,8 @@ title: "How to Read a Single File from a Tar Archive on Linux"
 date: 2018-03-24 11:54:49 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-cat-a-single-files-content-from-a-tar-without-unpacking-it-on-linux/
+categories: [scripting-utilities]
+canonical: /how-to-cat-a-single-files-content-from-a-tar-without-unpacking-it-on-linux/
 ---
 
 You can extract and display a single file’s content from a tar archive without unpacking the entire archive using `tar`‘s standard output option.

@@ -3,7 +3,8 @@ title: "Using Vim as an External Editor in KMail"
 date: 2013-07-12 16:32:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/vim-as-kmails-external-editor/
+categories: [linux-systems-administration]
+canonical: /vim-as-kmails-external-editor/
 ---
 
 Vim is an excellent choice for email composition, and KMail makes it straightforward to use as your external editor. This setup is particularly useful if you already live in Vim and want consistent keybindings across your workflow.

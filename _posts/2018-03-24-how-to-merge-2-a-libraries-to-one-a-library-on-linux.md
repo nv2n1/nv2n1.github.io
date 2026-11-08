@@ -3,7 +3,8 @@ title: "Combining Multiple Static Libraries into a Single .a File on Linux"
 date: 2018-03-24 11:47:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-merge-2-a-libraries-to-one-a-library-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-merge-2-a-libraries-to-one-a-library-on-linux/
 ---
 
 When you have multiple static libraries (.a files) and need to combine them into a single archive, GNU `ar` provides several approaches. The most straightforward method uses `ar`‘s MRI mode for clarity and maintainability.

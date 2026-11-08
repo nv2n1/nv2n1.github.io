@@ -3,7 +3,8 @@ title: "Speeding Up Emacs Startup with Daemon Mode and Native Compilation"
 date: 2018-03-24 08:20:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-emacs-start-up-faster/
+categories: [code-optimization]
+canonical: /how-to-make-emacs-start-up-faster/
 ---
 
 Emacs startup time matters when you’re opening files frequently from the command line or in scripts. A few targeted optimizations can reduce perceived startup overhead from seconds to near-instant.

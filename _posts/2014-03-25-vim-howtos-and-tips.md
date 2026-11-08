@@ -3,7 +3,8 @@ title: "Vim Workflows and Config Tips for Linux Sysadmins"
 date: 2014-03-25 11:42:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/vim-howtos-and-tips/
+categories: [linux-systems-administration]
+canonical: /vim-howtos-and-tips/
 ---
 
 Vim remains one of the most efficient editors available on Linux and Unix systems. While it has a steep learning curve, the payoff in speed and capability is substantial once you develop muscle memory. This guide covers practical configuration strategies, essential keybindings, and workflow improvements that actually matter in daily use.

@@ -3,7 +3,8 @@ title: "Installing LaTeX and Compiling Documents on Linux"
 date: 2018-03-24 08:04:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-compile-latex-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-compile-latex-on-linux/
 ---
 
 LaTeX is a document preparation system widely used for scientific and technical documents. Most modern workflows use `pdflatex` or `xelatex` to compile directly to PDF, avoiding the outdated DVI → PostScript → PDF pipeline.

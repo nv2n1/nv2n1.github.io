@@ -3,7 +3,8 @@ title: "Capturing Desktop Video on Linux with ffmpeg"
 date: 2013-07-12 16:32:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/linux-desktop-video-capture/
+categories: [linux-systems-administration]
+canonical: /linux-desktop-video-capture/
 ---
 
 ffmpeg is the de facto tool for desktop recording on Linux. It can capture your X11 or Wayland display and encode directly to MP4, WebM, or other formats without requiring intermediate files.

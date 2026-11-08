@@ -3,7 +3,8 @@ title: "Configuring and Troubleshooting HP DesignJet Large-Format Printing"
 date: 2015-03-28 02:48:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-powerpoint-poster-by-hp-designjet-500-plotter/
+categories: [design-patterns-architecture]
+canonical: /how-to-print-powerpoint-poster-by-hp-designjet-500-plotter/
 ---
 
 The HP DesignJet 500 and similar wide-format plotters handle posters, technical drawings, and large documents well—but they require careful configuration. This guide covers printing a 24″ × 36″ PowerPoint poster on a 36″ roll, though the process generalizes to other sizes.

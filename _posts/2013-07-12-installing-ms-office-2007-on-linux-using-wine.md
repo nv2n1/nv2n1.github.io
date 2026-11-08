@@ -3,7 +3,8 @@ title: "Installing Microsoft Office 2007 on Linux with Wine"
 date: 2013-07-12 16:32:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-ms-office-2007-on-linux-using-wine/
+categories: [linux-systems-administration]
+canonical: /installing-ms-office-2007-on-linux-using-wine/
 ---
 
 If you need to work with Office files (.doc, .docx, .xls, .ppt) on Linux, Wine can run Microsoft Office 2007, though this approach has largely been superseded by cloud-based alternatives and native Linux tools. That said, for specific compatibility requirements, here’s how to set it up.

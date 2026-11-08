@@ -3,7 +3,8 @@ title: "Enable rpcbind.service to Auto-Start with systemd"
 date: 2018-03-24 11:50:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-the-rpcbind-service-auto-start-in-systemd-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-make-the-rpcbind-service-auto-start-in-systemd-on-linux/
 ---
 
 The standard `systemctl enable` command should work for rpcbind.service, but if you’re seeing it fail to start after reboot, there are several approaches to troubleshoot and fix the issue.

@@ -3,7 +3,8 @@ title: "Changing Your Hostname on Fedora Linux"
 date: 2013-07-12 16:32:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/changing-hostname-of-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /changing-hostname-of-fedora-linux/
 ---
 
 Fedora has evolved its hostname management over the years. Modern versions use systemd and the `/etc/hostname` file, while older releases relied on `/etc/sysconfig/network`. Here’s how to handle both scenarios.

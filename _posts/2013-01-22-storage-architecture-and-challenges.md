@@ -3,7 +3,8 @@ title: "Storage Architecture: Lessons from Google\u2019s Infrastructure"
 date: 2013-01-22 14:31:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/storage-architecture-and-challenges/
+categories: [systems-architecture]
+canonical: /storage-architecture-and-challenges/
 ---
 
 Andrew Fikes, Principal Engineer at Google, presented on storage architecture and the fundamental challenges that emerge when operating at scale. The presentation from the 2010 Faculty Summit remains relevant for understanding how distributed storage systems must be designed and the trade-offs inherent in large-scale deployments.

@@ -3,7 +3,8 @@ title: "Creating ISO Images from DVDs on Linux"
 date: 2013-07-12 16:31:42 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/create-iso-image-on-linux/
+categories: [linux-systems-administration]
+canonical: /create-iso-image-on-linux/
 ---
 
 ISO images are sector-by-sector copies of optical media stored as binary files. They’re useful for archiving DVDs or creating portable copies without keeping physical disks around. On Linux, several tools can accomplish this—`dd` is the simplest, but modern alternatives offer better features.

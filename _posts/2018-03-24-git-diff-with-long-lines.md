@@ -3,7 +3,8 @@ title: "Handling Long Lines in Git Diff Output"
 date: 2018-03-24 11:42:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/git-diff-with-long-lines/
+categories: [linux-systems-administration]
+canonical: /git-diff-with-long-lines/
 ---
 
 When working with files containing long lines, `git diff` output becomes hard to read — the diff spans beyond your terminal width, forcing you to scroll horizontally or losing context entirely. While you can’t force all files to use short lines, several strategies make diff output much more manageable.

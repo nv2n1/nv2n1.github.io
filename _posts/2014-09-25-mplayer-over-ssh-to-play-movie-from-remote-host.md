@@ -3,7 +3,8 @@ title: "Stream Movies from a Remote Server Over SSH with SSHFS"
 date: 2014-09-25 09:11:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/mplayer-over-ssh-to-play-movie-from-remote-host/
+categories: [linux-systems-administration]
+canonical: /mplayer-over-ssh-to-play-movie-from-remote-host/
 ---
 
 Playing video files stored on a remote server without downloading them locally is practical with modern tools. Whether you’re accessing a home NAS, media server, or remote workstation, SSH combined with a media player gives you several approaches depending on network conditions and your use case.

@@ -3,7 +3,8 @@ title: "Understanding Fast-Forward vs. Non-Fast-Forward Merges in Git"
 date: 2018-03-24 11:45:13 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-merge-git-branches-quickly-and-correctly/
+categories: [scripting-utilities]
+canonical: /how-to-merge-git-branches-quickly-and-correctly/
 ---
 
 Merging branches is one of the most common Git workflows. The basic process is straightforward, but understanding the different merge strategies and when to use them prevents silent mistakes and keeps your history clean.

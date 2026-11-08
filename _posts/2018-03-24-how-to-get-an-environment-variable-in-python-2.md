@@ -3,7 +3,8 @@ title: "Reading Environment Variables in Python"
 date: 2018-03-24 11:52:10 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-an-environment-variable-in-python-2/
+categories: [languages-frameworks]
+canonical: /how-to-get-an-environment-variable-in-python-2/
 ---
 
 Environment variables are essential for configuration management—API keys, database URLs, feature flags, and environment-specific settings should never be hardcoded. Python provides straightforward mechanisms to access them.

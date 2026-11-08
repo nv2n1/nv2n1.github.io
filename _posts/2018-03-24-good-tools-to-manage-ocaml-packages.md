@@ -3,7 +3,8 @@ title: "OCaml Package Management Tools"
 date: 2018-03-24 08:16:05 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/good-tools-to-manage-ocaml-packages/
+categories: [scripting-utilities]
+canonical: /good-tools-to-manage-ocaml-packages/
 ---
 
 Managing OCaml packages effectively depends on your workflow and environment. The current standard is OPAM (OCaml Package Manager), which handles dependency resolution, version switching, and sandboxed environments.

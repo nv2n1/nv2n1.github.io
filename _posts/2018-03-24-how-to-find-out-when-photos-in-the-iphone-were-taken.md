@@ -3,7 +3,8 @@ title: "How to Check Photo Timestamps on iPhone"
 date: 2018-03-24 08:15:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-out-when-photos-in-the-iphone-were-taken/
+categories: [development-best-practices]
+canonical: /how-to-find-out-when-photos-in-the-iphone-were-taken/
 ---
 
 iPhone’s Photos app doesn’t display EXIF metadata by default, but the timestamp information is embedded in every photo. You need to access the EXIF data to see when a photo was actually taken.

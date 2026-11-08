@@ -3,7 +3,8 @@ title: "Export PowerPoint Slides at Higher DPI for Better Print Quality"
 date: 2015-11-03 14:31:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-dpi-exported-images-slides-powerpoint/
+categories: [development-best-practices]
+canonical: /how-to-change-dpi-exported-images-slides-powerpoint/
 ---
 
 PowerPoint exports slides at 96 DPI by default, which is too low for professional printing. Print shops typically require 150 DPI for acceptable quality or 300 DPI for high-quality output. The UI export options in PowerPoint don’t reliably control the actual output DPI—you need to change a registry setting on Windows or use alternative methods on macOS.

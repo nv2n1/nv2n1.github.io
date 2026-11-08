@@ -3,7 +3,8 @@ title: "Removing a Disk from an LVM Volume Group"
 date: 2018-03-24 08:19:28 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-delete-a-disk-from-a-lvm-group-while-keeping-the-data/
+categories: [linux-systems-administration]
+canonical: /how-to-delete-a-disk-from-a-lvm-group-while-keeping-the-data/
 ---
 
 You have an LVM physical volume (PV) you need to remove from a volume group (VG), but the data needs to be preserved and moved to other available PVs. This is a straightforward but important operation that requires careful execution.

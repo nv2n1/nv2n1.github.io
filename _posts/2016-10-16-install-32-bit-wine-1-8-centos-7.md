@@ -3,7 +3,8 @@ title: "Building 32-bit Wine on CentOS 7, Rocky Linux, and AlmaLinux"
 date: 2016-10-16 08:46:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/install-32-bit-wine-1-8-centos-7/
+categories: [linux-systems-administration]
+canonical: /install-32-bit-wine-1-8-centos-7/
 ---
 
 RHEL-based distributions only provide 64-bit Wine packages in their standard repositories. Many Windows applications—especially legacy software—require 32-bit Wine. Building Wine from source is the most reliable approach to get a working 32-bit installation alongside 64-bit support.

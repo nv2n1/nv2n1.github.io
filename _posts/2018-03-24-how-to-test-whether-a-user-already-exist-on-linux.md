@@ -3,7 +3,8 @@ title: "Checking if a User Exists on Linux"
 date: 2018-03-24 11:49:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-whether-a-user-already-exist-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-test-whether-a-user-already-exist-on-linux/
 ---
 
 When writing system administration scripts, you often need to check if a user account exists before taking action. There are several reliable methods to accomplish this.

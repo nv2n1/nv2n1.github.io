@@ -3,7 +3,8 @@ title: "Windows 7 64-bit Installation Fails with Error 0xc0000225 on VirtualBox"
 date: 2018-03-24 08:04:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/windows-7-64-bit-fails-to-install-on-virtualbox-linux-with-status-code-0xc0000225/
+categories: [system-administration-cloud]
+canonical: /windows-7-64-bit-fails-to-install-on-virtualbox-linux-with-status-code-0xc0000225/
 ---
 
 The error “Windows failed to start” with status code `0xc0000225` during Windows 7 64-bit installation on VirtualBox typically indicates a hardware abstraction layer (HAL) compatibility issue. This happens because the VM’s default configuration doesn’t properly expose interrupt controller details to the guest OS.

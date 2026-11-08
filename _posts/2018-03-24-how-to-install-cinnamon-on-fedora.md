@@ -3,7 +3,8 @@ title: "Installing Cinnamon Desktop on Fedora"
 date: 2018-03-24 08:18:57 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-cinnamon-on-fedora/
+categories: [linux-systems-administration]
+canonical: /how-to-install-cinnamon-on-fedora/
 ---
 
 Cinnamon is a modern, feature-rich desktop environment forked from GNOME. It’s lightweight compared to full GNOME installations and offers a traditional taskbar-based interface. Installing it on Fedora is straightforward.

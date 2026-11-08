@@ -3,7 +3,8 @@ title: "How SEO Signals Have Evolved Beyond PageRank"
 date: 2013-07-12 16:46:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/google-pagerank-update-2011/
+categories: [programming-languages]
+canonical: /google-pagerank-update-2011/
 ---
 
 Google stopped updating the PageRank toolbar in 2016 and fully deprecated the public metric by 2024. If you’re still thinking about PageRank as a ranking factor, you’re optimizing for something that hasn’t mattered in over a decade.

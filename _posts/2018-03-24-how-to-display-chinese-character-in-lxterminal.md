@@ -3,7 +3,8 @@ title: "Fix Chinese Character Display in LXTerminal"
 date: 2018-03-24 11:45:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-display-chinese-character-in-lxterminal/
+categories: [programming-languages]
+canonical: /how-to-display-chinese-character-in-lxterminal/
 ---
 
 LXTerminal may fail to display Chinese characters correctly if fonts aren’t properly configured. This is typically a font availability or configuration issue rather than a terminal limitation.

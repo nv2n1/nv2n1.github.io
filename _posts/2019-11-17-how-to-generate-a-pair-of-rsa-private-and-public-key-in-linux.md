@@ -3,7 +3,8 @@ title: "Generating RSA Key Pairs with OpenSSL"
 date: 2019-11-17 05:04:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-generate-a-pair-of-rsa-private-and-public-key-in-linux/
+categories: [security-cryptography-2]
+canonical: /how-to-generate-a-pair-of-rsa-private-and-public-key-in-linux/
 ---
 
 RSA (Rivest–Shamir–Adleman) underpins SSH authentication, TLS certificates, code signing, and encryption across most Linux systems. OpenSSL is the standard tool for generating and managing these keys.

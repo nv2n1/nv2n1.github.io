@@ -3,7 +3,8 @@ title: "Managing CPU and Memory in Xen Dom0 Environments"
 date: 2013-09-25 10:27:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/managing-xen-dom0s-cpu-and-memory/
+categories: [linux-systems-administration]
+canonical: /managing-xen-dom0s-cpu-and-memory/
 ---
 
 Xen remains in production use at scale across AWS EC2, Citrix Hypervisor, and various cloud providers, though KVM has become the default hypervisor for most Linux distributions. If you’re operating a Xen environment, Dom0 resource management is critical to system stability.

@@ -3,7 +3,8 @@ title: "Expanding C: Drive Beyond Disk Management Limitations"
 date: 2018-03-24 11:41:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-adjust-the-system-partition-c-size-of-windows/
+categories: [linux-systems-administration]
+canonical: /how-to-adjust-the-system-partition-c-size-of-windows/
 ---
 
 Windows Disk Management has built-in limitations for resizing partitions — it often won’t let you extend the C: drive even when unallocated space exists on the disk. If you’ve hit that wall, third-party partition tools can handle the job more flexibly.

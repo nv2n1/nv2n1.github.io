@@ -3,7 +3,8 @@ title: "How to Export and Backup PuTTY Sessions"
 date: 2018-03-24 08:18:01 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-save-putty-profiles-sessions/
+categories: [linux-systems-administration]
+canonical: /how-to-save-putty-profiles-sessions/
 ---
 
 PuTTY stores session configurations in the Windows Registry. If you’re migrating to a new computer, setting up multiple workstations, or just want a backup, here’s how to export and backup your PuTTY sessions.

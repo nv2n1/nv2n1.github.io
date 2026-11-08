@@ -3,7 +3,8 @@ title: "Installing Alien on CentOS 7: Convert .deb to .rpm"
 date: 2018-03-24 11:54:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-alien-on-centos-7-to-convert-deb-to-rpm/
+categories: [linux-system-configuration]
+canonical: /how-to-install-alien-on-centos-7-to-convert-deb-to-rpm/
 ---
 
 `alien` is a straightforward package converter available in EPEL that handles conversion between .deb, .rpm, Slackware, and other package formats. This is useful when you need to install Debian packages on RPM-based systems.

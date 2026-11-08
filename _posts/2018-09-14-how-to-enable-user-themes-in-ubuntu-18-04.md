@@ -3,7 +3,8 @@ title: "GNOME Shell Themes in Ubuntu: Setup and Management"
 date: 2018-09-14 12:24:43 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-enable-user-themes-in-ubuntu-18-04/
+categories: [linux-systems-administration]
+canonical: /how-to-enable-user-themes-in-ubuntu-18-04/
 ---
 
 By default, GNOME Shell restricts theme customization to GTK application themes. To modify the shell itself — the top bar, Activities overview, lock screen, and system UI elements — you need the User Themes extension. This remains the primary method for shell theming across Ubuntu and GNOME.

@@ -3,7 +3,8 @@ title: "How to Deactivate LVM Logical Volumes on Linux"
 date: 2018-03-24 11:47:22 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-deactivate-a-lvm-logical-volume-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-deactivate-a-lvm-logical-volume-on-linux/
 ---
 
 You may need to deactivate a LVM volume group to make it unknown to the kernel — typically before removing disks, migrating storage, or performing maintenance. The `vgchange` command handles this with the `-a` (or `--activate`) flag.

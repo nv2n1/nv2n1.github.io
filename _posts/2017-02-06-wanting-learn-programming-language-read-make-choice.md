@@ -3,7 +3,8 @@ title: "Getting Started: How to Choose Your First Programming Language"
 date: 2017-02-06 11:52:01 +0000
 author: "Joseph Macwan"
 layout: post
-canonical: https://www.systutorials.com/wanting-learn-programming-language-read-make-choice/
+categories: [languages-frameworks]
+canonical: /wanting-learn-programming-language-read-make-choice/
 ---
 
 Picking your first programming language matters, but it’s not the career-defining decision some make it out to be. What matters more is that you pick something reasonable and start building. That said, some choices will save you months of frustration.

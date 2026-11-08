@@ -3,7 +3,8 @@ title: "Convert Between Simplified and Traditional Chinese on Linux Using OpenCC
 date: 2018-03-24 11:45:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-between-simplified-chinese-and-traditional-chinese-characters-in-text-files-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-between-simplified-chinese-and-traditional-chinese-characters-in-text-files-on-linux/
 ---
 
 Converting between Simplified Chinese (SC) and Traditional Chinese (TC) characters on Linux is straightforward with OpenCC, a mature open-source tool designed specifically for this task.

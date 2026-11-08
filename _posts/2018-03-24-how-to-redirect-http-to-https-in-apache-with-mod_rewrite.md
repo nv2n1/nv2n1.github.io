@@ -3,7 +3,8 @@ title: "Redirect HTTP to HTTPS Using Apache mod_rewrite"
 date: 2018-03-24 11:42:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-redirect-http-to-https-in-apache-with-mod_rewrite/
+categories: [linux-systems-administration]
+canonical: /how-to-redirect-http-to-https-in-apache-with-mod_rewrite/
 ---
 
 If you want to force HTTPS on your site, add this to your `.htaccess` file:

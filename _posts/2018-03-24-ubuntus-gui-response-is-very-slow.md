@@ -3,7 +3,8 @@ title: "Ubuntu GUI Performance Slowdown: Causes and Fixes"
 date: 2018-03-24 11:51:24 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/ubuntus-gui-response-is-very-slow/
+categories: [linux-systems-administration]
+canonical: /ubuntus-gui-response-is-very-slow/
 ---
 
 When running Ubuntu on older servers like Dell PowerEdge systems with legacy graphics cards (Matrox G200eR2, etc.), you may encounter extremely slow desktop performance. The issue typically stems from the X server falling back to unoptimized drivers or incorrect video mode detection.

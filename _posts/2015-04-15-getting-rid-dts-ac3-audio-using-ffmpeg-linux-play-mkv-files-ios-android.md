@@ -3,7 +3,8 @@ title: "Converting AC3 and DTS Audio to AAC in MKV Files"
 date: 2015-04-15 06:38:26 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/getting-rid-dts-ac3-audio-using-ffmpeg-linux-play-mkv-files-ios-android/
+categories: [linux-systems-administration]
+canonical: /getting-rid-dts-ac3-audio-using-ffmpeg-linux-play-mkv-files-ios-android/
 ---
 
 MKV files encoded with AC3 or DTS audio won’t play sound on most iOS and Android devices. These are proprietary formats with licensing restrictions—mobile players either don’t support them or refuse to decode them by default. The video plays fine, but you get silence.

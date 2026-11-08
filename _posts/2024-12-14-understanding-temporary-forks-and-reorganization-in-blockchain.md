@@ -3,7 +3,8 @@ title: "Blockchain Forks and Chain Reorganizations Explained"
 date: 2024-12-14 09:59:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/understanding-temporary-forks-and-reorganization-in-blockchain/
+categories: [blockchain-cryptocurrency]
+canonical: /understanding-temporary-forks-and-reorganization-in-blockchain/
 ---
 
 In decentralized networks like Bitcoin and Ethereum, temporary forks are an inevitable part of consensus. They happen when two miners or validators produce valid blocks at nearly the same time.

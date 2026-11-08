@@ -3,7 +3,8 @@ title: "Building and Installing a Linux Kernel from Source"
 date: 2017-03-18 11:32:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/compile-install-linux-kernel-source-code-existing-linux-os/
+categories: [linux-systems-administration]
+canonical: /compile-install-linux-kernel-source-code-existing-linux-os/
 ---
 
 Grab a release from <a href="https://www.kernel.org" rel="nofollow noopener" target="_blank">kernel.org</a>. Recent stable versions (6.x and later) are recommended for production systems:

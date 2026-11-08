@@ -3,7 +3,8 @@ title: "Guake: A Quake-Style Dropdown Terminal for GNOME"
 date: 2013-07-12 16:31:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/guake-an-excellent-quake-like-drop-down-terminal-for-gnome/
+categories: [linux-systems-administration]
+canonical: /guake-an-excellent-quake-like-drop-down-terminal-for-gnome/
 ---
 
 Guake is a drop-down terminal emulator for GNOME that brings the Quake-style console experience to Linux desktops. When you press a hotkey (F12 by default), a terminal slides down from the top of the screen. Press it again and it retracts. It’s fast, minimal, and designed purely around keyboard efficiency.

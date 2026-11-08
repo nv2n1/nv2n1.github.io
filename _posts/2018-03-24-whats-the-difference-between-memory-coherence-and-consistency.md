@@ -3,7 +3,8 @@ title: "Memory Coherence vs. Consistency: Key Differences"
 date: 2018-03-24 11:51:27 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/whats-the-difference-between-memory-coherence-and-consistency/
+categories: [code-optimization]
+canonical: /whats-the-difference-between-memory-coherence-and-consistency/
 ---
 
 These are often confused terms in concurrent programming and multiprocessor systems, but they address different problems in shared memory architectures.

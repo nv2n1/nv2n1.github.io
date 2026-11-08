@@ -3,7 +3,8 @@ title: "How to Verify MFi-Certified Lightning Cables"
 date: 2018-03-24 11:47:07 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-identify-a-certificated-lightning-cable-for-iphone-6/
+categories: [linux-systems-administration]
+canonical: /how-to-identify-a-certificated-lightning-cable-for-iphone-6/
 ---
 
 Lightning cables are everywhere, but not all of them work reliably with iPhones. If you’ve bought a cheap third-party cable that stopped working or wouldn’t charge properly, you’ve hit the core problem: counterfeit and non-certified cables are rampant online and in retail stores.

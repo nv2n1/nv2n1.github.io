@@ -3,7 +3,8 @@ title: "Installing TP-Link T2U WiFi Drivers on Linux"
 date: 2018-03-24 11:48:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-driver-for-tp-link-t2u-wifi-adapter-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-install-driver-for-tp-link-t2u-wifi-adapter-on-linux/
 ---
 
 The TP-LINK T2U is a USB WiFi adapter based on the MediaTek MT7650U chipset. While Linux kernel support has improved significantly, you may still need to manually compile drivers on some distributions. This guide covers installation on modern Fedora and RHEL-based systems.

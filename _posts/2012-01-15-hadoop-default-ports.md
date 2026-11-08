@@ -3,7 +3,8 @@ title: "Hadoop Port Reference Guide"
 date: 2012-01-15 23:18:22 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hadoop-default-ports/
+categories: [design-patterns-architecture]
+canonical: /hadoop-default-ports/
 ---
 
 Hadoop daemons communicate over specific TCP ports that you’ll need to know for cluster setup, firewall configuration, and application development. These ports are configurable but come with sensible defaults in Hadoop 3.x.

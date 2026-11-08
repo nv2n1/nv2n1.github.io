@@ -3,7 +3,8 @@ title: "Hadoop MapReduce: When to Use It and Deployment Strategies"
 date: 2013-07-17 09:37:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hadoop-mapreduce-tutorials/
+categories: [linux-systems-administration]
+canonical: /hadoop-mapreduce-tutorials/
 ---
 
 MapReduce is a foundational distributed computing model, but it’s no longer the default choice for new projects. Hadoop’s MapReduce (via YARN in Hadoop 2.x+) remains production-stable and useful for specific scenarios, while Apache Spark, Flink, and cloud-native services handle most modern workloads more efficiently.

@@ -3,7 +3,8 @@ title: "How to Undo Git Commits and Changes"
 date: 2013-07-12 16:32:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-revert-changes-in-git/
+categories: [linux-systems-administration]
+canonical: /how-to-revert-changes-in-git/
 ---
 
 Mistakes happen during development. Git provides several commands to undo changes at different stages—before committing, after committing, or in specific files. Understanding which tool to use depends on where you are in the workflow.

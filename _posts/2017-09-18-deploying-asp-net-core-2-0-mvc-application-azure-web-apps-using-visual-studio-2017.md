@@ -3,7 +3,8 @@ title: "Deploy ASP.NET Core MVC Apps to Azure App Service"
 date: 2017-09-18 13:11:58 +0000
 author: "Johnnymorgan"
 layout: post
-canonical: https://www.systutorials.com/deploying-asp-net-core-2-0-mvc-application-azure-web-apps-using-visual-studio-2017/
+categories: [testing-devops]
+canonical: /deploying-asp-net-core-2-0-mvc-application-azure-web-apps-using-visual-studio-2017/
 ---
 
 ASP.NET Core remains one of the most efficient frameworks for building scalable web applications. This guide walks through deploying an ASP.NET Core MVC application to Azure App Service using Visual Studio — the quickest path from local development to production.

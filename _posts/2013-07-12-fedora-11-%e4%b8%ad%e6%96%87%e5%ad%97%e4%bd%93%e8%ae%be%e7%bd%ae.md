@@ -3,8 +3,9 @@ title: "Chinese Character Support on Fedora 11"
 date: 2013-07-12 16:31:37 +0000
 author: "Eric Ma"
 layout: post
+categories: [linux-systems-administration]
 permalink: /fedora-11-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
-canonical: https://www.systutorials.com/fedora-11-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
+canonical: /fedora-11-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
 ---
 
 Configuring proper Chinese character rendering in Fedora requires attention to font selection and system settings. This guide covers configuration for contemporary Fedora/RHEL systems where you run an English locale but need reliable Chinese character display.

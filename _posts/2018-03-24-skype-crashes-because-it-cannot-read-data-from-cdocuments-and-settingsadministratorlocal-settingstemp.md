@@ -3,7 +3,8 @@ title: "Fixing Skype Crashes When Temp Directory Is Inaccessible"
 date: 2018-03-24 11:47:40 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/skype-crashes-because-it-cannot-read-data-from-cdocuments-and-settingsadministratorlocal-settingstemp/
+categories: [linux-systems-administration]
+canonical: /skype-crashes-because-it-cannot-read-data-from-cdocuments-and-settingsadministratorlocal-settingstemp/
 ---
 
 Skype periodically fails to start with a “system is unavailable” error when it can’t read or write to the user’s temporary directory. This typically happens when the temp folder becomes corrupted, has permission issues, or contains orphaned Skype cache files that prevent proper initialization.

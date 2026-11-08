@@ -3,7 +3,8 @@ title: "Removing ^M Line Endings in Vim"
 date: 2013-07-12 16:31:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/vim-remove-m-returns-from-files/
+categories: [linux-systems-administration]
+canonical: /vim-remove-m-returns-from-files/
 ---
 
 When you open a Windows file in Vim (or Neovim), you’ll often see `^M` characters at the end of lines. These are carriage returns (`\r`) from Windows line endings (CRLF), which don’t display properly on Unix-like systems that expect LF-only line endings.

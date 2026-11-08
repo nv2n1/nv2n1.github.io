@@ -3,7 +3,8 @@ title: "Getting Your Own Process ID in Python"
 date: 2018-03-24 11:52:47 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-running-process-pid-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-running-process-pid-in-python/
 ---
 
 The process ID (PID) is essential for logging, creating lock files, inter-process communication, and debugging. Knowing how to reliably retrieve it matters in production systems.

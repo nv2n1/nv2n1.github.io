@@ -3,7 +3,8 @@ title: "Understanding Blockchain Consensus Mechanisms"
 date: 2023-09-16 06:49:12 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/consensus-algorithm-101/
+categories: [blockchain-cryptocurrency]
+canonical: /consensus-algorithm-101/
 ---
 
 In distributed systems like blockchains, consensus is the mechanism by which all nodes agree on a single version of the ledger state. Without it, a decentralized network falls apart—you’d have conflicting transaction histories, double-spending, and no way to determine which version is authoritative. Consensus algorithms solve this by providing cryptographic or economic guarantees that make dishonest behavior either computationally infeasible or financially irrational.

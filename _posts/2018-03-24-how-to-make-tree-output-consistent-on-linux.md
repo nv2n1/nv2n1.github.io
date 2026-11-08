@@ -3,7 +3,8 @@ title: "Standardizing Tree Output Across Linux Distributions"
 date: 2018-03-24 11:48:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-tree-output-consistent-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-make-tree-output-consistent-on-linux/
 ---
 
 When running `tree` across multiple servers or sharing output with teammates, you’ll notice the formatting can vary significantly. Some systems display box-drawing characters while others use ASCII pipes and dashes, making diff comparisons and documentation inconsistent.

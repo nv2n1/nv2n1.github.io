@@ -3,7 +3,8 @@ title: "How to Change Your GNOME Keyring Password"
 date: 2018-03-24 08:14:00 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-gnome-keyring-password/
+categories: [development-best-practices]
+canonical: /how-to-change-the-gnome-keyring-password/
 ---
 
 GNOME Keyring stores passwords, SSH keys, and certificates. If you need to update your keyring password, you can do this through the Seahorse graphical interface or directly from the command line.

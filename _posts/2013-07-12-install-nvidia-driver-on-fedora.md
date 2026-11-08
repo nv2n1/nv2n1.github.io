@@ -3,7 +3,8 @@ title: "Installing NVIDIA Drivers on Fedora"
 date: 2013-07-12 16:31:42 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/install-nvidia-driver-on-fedora/
+categories: [linux-systems-administration]
+canonical: /install-nvidia-driver-on-fedora/
 ---
 
 Installing NVIDIA drivers on Fedora is straightforward when using RPM Fusion repositories. This guide covers modern Fedora releases (39+) using DNF package management.

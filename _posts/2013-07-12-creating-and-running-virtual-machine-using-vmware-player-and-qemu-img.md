@@ -3,7 +3,8 @@ title: "Building VMs with VMware Player and QEMU Images"
 date: 2013-07-12 16:31:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/creating-and-running-virtual-machine-using-vmware-player-and-qemu-img/
+categories: [testing-devops]
+canonical: /creating-and-running-virtual-machine-using-vmware-player-and-qemu-img/
 ---
 
 Free virtualization on Linux has multiple solid options. While VMware Player is still available, QEMU combined with libvirt has become the standard approach for most sysadmins. This guide covers creating VM disk images and configurations that work across multiple hypervisors.

@@ -3,7 +3,8 @@ title: "Converting HTML to Plain Text in PHP"
 date: 2018-03-24 11:53:54 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-a-piece-of-html-code-to-plain-text-in-php/
+categories: [programming-languages]
+canonical: /how-to-convert-a-piece-of-html-code-to-plain-text-in-php/
 ---
 
 HTML to plain text conversion is a common task in PHP applications — whether you’re sanitizing user input, preparing content for email, generating text previews, or creating searchable indexes. Here are the practical approaches.

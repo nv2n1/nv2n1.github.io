@@ -3,7 +3,8 @@ title: "Getting Started with Linux for Developers"
 date: 2015-11-29 02:20:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/notes-software-development-linux-beginners/
+categories: [linux-system-configuration]
+canonical: /notes-software-development-linux-beginners/
 ---
 
 Before writing code, get comfortable with fundamental Linux commands. You’ll use these daily:

@@ -3,7 +3,8 @@ title: "Linux Kernel 4.9.60: What\u2019s New"
 date: 2021-03-07 06:51:12 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-4-9-60-release/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-4-9-60-release/
 ---
 
 The Linux 4.9.60 stable release was published on November 2, 2017, introducing 24 fixes and improvements across 64,224 lines of code changes compared to the 4.9 baseline. This point release addresses critical security vulnerabilities, buffer overrun issues, and device driver fixes that affected several subsystems.

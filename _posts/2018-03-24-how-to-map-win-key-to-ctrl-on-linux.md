@@ -3,7 +3,8 @@ title: "Remapping Windows Key to Ctrl on Linux"
 date: 2018-03-24 08:22:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-map-win-key-to-ctrl-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-map-win-key-to-ctrl-on-linux/
 ---
 
 The Windows (Super) key can be remapped to function as an additional Ctrl key, useful if you work across multiple systems or prefer the extra modifier. The approach varies significantly by display server and desktop environment.

@@ -3,7 +3,8 @@ title: "Syncing Your Git Fork with Upstream Changes"
 date: 2018-03-24 11:47:35 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/git-how-to-merge-upstream-with-fork-repo/
+categories: [linux-systems-administration]
+canonical: /git-how-to-merge-upstream-with-fork-repo/
 ---
 
 When you fork a repository on GitHub or GitLab, your copy diverges from the original as upstream maintainers merge new changes. To keep your fork current, you need to regularly sync it with the upstream repository.

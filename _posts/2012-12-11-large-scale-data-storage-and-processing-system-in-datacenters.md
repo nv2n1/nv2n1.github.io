@@ -3,7 +3,8 @@ title: "Designing Scalable Data Storage and Processing Architectures"
 date: 2012-12-11 15:15:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/large-scale-data-storage-and-processing-system-in-datacenters/
+categories: [linux-systems-administration]
+canonical: /large-scale-data-storage-and-processing-system-in-datacenters/
 ---
 
 Modern datacenters rely on distributed storage and processing systems designed to handle massive datasets across clusters of commodity hardware. Understanding these systems is essential for anyone working with infrastructure at scale. Here’s an overview of the major architectures and implementations you’ll encounter.

@@ -3,7 +3,8 @@ title: "How to Get a Process\u2019s Parent ID in Bash"
 date: 2018-03-24 11:52:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-running-process-parent-process-id-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-running-process-parent-process-id-in-bash/
 ---
 
 Every process running on a Unix-like system has a parent process. The parent process ID (PPID) identifies which process spawned the current one — critical information when debugging process hierarchies, managing child processes, or writing robust shell scripts.

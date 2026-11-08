@@ -3,7 +3,8 @@ title: "Installing Hyperledger Fabric 2.5 on Ubuntu 24.04 LTS"
 date: 2020-04-07 17:44:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-hyperledger-fabric-2-0-in-ubuntu-18-04/
+categories: [systems-architecture]
+canonical: /how-to-install-hyperledger-fabric-2-0-in-ubuntu-18-04/
 ---
 
 Hyperledger Fabric is a modular, enterprise-grade consortium blockchain platform. While its official documentation is comprehensive, deploying a test network from scratch requires configuring multiple dependencies and tools—a process that’s time-consuming for new users. This guide covers both automated and manual setup approaches to get a working Fabric network running quickly.

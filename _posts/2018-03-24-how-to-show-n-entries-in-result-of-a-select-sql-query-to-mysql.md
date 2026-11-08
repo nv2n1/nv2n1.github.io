@@ -3,7 +3,8 @@ title: "Limit SQL Query Results to N Rows in MySQL"
 date: 2018-03-24 11:53:09 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-show-n-entries-in-result-of-a-select-sql-query-to-mysql/
+categories: [databases-storage]
+canonical: /how-to-show-n-entries-in-result-of-a-select-sql-query-to-mysql/
 ---
 
 The `LIMIT` clause in MySQL lets you control how many rows a `SELECT` query returns. This is essential for pagination, performance tuning, and working with large datasets.

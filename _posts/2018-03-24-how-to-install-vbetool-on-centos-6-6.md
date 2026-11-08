@@ -3,7 +3,8 @@ title: "Building vbetool from Source on Rocky Linux 9"
 date: 2018-03-24 11:45:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-vbetool-on-centos-6-6/
+categories: [linux-systems-administration]
+canonical: /how-to-install-vbetool-on-centos-6-6/
 ---
 
 \[md\]\

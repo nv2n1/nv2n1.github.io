@@ -3,7 +3,8 @@ title: "Flash Player Blocked: How to Handle Outdated Version Warnings"
 date: 2018-03-24 08:14:48 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/chrome-reports-adobe-flash-player-was-blocked-because-it-is-out-of-date/
+categories: [development-best-practices]
+canonical: /chrome-reports-adobe-flash-player-was-blocked-because-it-is-out-of-date/
 ---
 
 If you’re still seeing Chrome warnings about Flash Player being out of date on Linux, understand that **Adobe discontinued Flash Player entirely in December 2020**. Chrome removed all Flash support in version 88 (early 2021) and has no mechanism to run Flash content anymore.

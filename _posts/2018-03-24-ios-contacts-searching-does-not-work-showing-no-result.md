@@ -3,7 +3,8 @@ title: "iOS Contacts Search Broken After Updates: How to Fix"
 date: 2018-03-24 11:49:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/ios-contacts-searching-does-not-work-showing-no-result/
+categories: [linux-systems-administration]
+canonical: /ios-contacts-searching-does-not-work-showing-no-result/
 ---
 
 If your iPhone contacts search is returning “No results” after an iOS update, the issue is often a corrupted contacts database or a syncing problem with your contacts source. Here are the most effective fixes.

@@ -3,7 +3,8 @@ title: "Finding the Directory of a Makefile for Includes"
 date: 2018-03-24 08:20:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-makefiles-directory-for-including-other-makefiles/
+categories: [scripting-utilities]
+canonical: /how-to-get-a-makefiles-directory-for-including-other-makefiles/
 ---
 
 When you have shared Makefiles included across multiple projects in different directory structures, relative includes break. If `common.mk` tries to `include release.mk` and both files are in a subdirectory like `external/`, the include fails because Make uses the current working directory, not the location of the including file.

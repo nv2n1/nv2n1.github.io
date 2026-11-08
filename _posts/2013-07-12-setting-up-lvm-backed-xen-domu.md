@@ -3,7 +3,8 @@ title: "Setting Up LVM-Backed Xen DomUs"
 date: 2013-07-12 16:32:18 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-lvm-backed-xen-domu/
+categories: [linux-systems-administration]
+canonical: /setting-up-lvm-backed-xen-domu/
 ---
 
 LVM logical volumes are a practical choice for Xen guest storage. They support dynamic resizing, snapshots, and efficient cloning — capabilities that make capacity management and guest provisioning straightforward compared to fixed disk images.

@@ -3,7 +3,8 @@ title: "How to Concatenate Multiple Video Files on Linux"
 date: 2018-03-24 08:20:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-concatenate-multiple-video-file-together-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-concatenate-multiple-video-file-together-on-linux/
 ---
 
 When you need to combine multiple video files (like video1.mp4, video2.mp4, and video3.mp4) into a single output file, FFmpeg is the standard tool on Linux. It’s faster, more reliable, and better maintained than older tools like mencoder.

@@ -3,7 +3,8 @@ title: "Counting Files in a Directory: Common Pitfalls and Best Practices"
 date: 2018-03-24 08:21:39 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/get-the-number-of-files-in-a-directory/
+categories: [scripting-utilities]
+canonical: /get-the-number-of-files-in-a-directory/
 ---
 
 The most reliable one-liner to count files in the current directory is:

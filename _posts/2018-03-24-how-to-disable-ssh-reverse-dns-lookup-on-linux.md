@@ -3,7 +3,8 @@ title: "Speed Up SSH Login by Disabling Reverse DNS Lookups"
 date: 2018-03-24 11:46:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-ssh-reverse-dns-lookup-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-ssh-reverse-dns-lookup-on-linux/
 ---
 
 SSH performs reverse DNS lookups on connecting clients by default. If your DNS infrastructure is slow or misconfigured, this can add several seconds to every login attempt. Disabling this lookup is a straightforward performance optimization, especially in cloud environments where internal IPs often lack valid PTR records.

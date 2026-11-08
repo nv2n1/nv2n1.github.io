@@ -3,7 +3,8 @@ title: "Sorting Performance Benchmarks on Hadoop"
 date: 2012-01-07 08:55:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/simple-sort-benchmark-on-hadoop/
+categories: [algorithms-data-structures]
+canonical: /simple-sort-benchmark-on-hadoop/
 ---
 
 Running benchmarks after a Hadoop installation helps validate that your cluster works correctly and gives you baseline performance metrics. The Sort benchmark is a standard test that exercises the MapReduce execution engine and HDFS, making it useful for stress-testing both the distributed storage layer and computation framework.

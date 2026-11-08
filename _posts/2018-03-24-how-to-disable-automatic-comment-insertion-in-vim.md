@@ -3,7 +3,8 @@ title: "Disabling Automatic Comment Insertion in Vim"
 date: 2018-03-24 08:04:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-automatic-comment-insertion-in-vim/
+categories: [development-best-practices]
+canonical: /how-to-disable-automatic-comment-insertion-in-vim/
 ---
 
 When you’re editing code in Vim and press Enter after a comment line, Vim automatically continues the comment on the next line. This is useful sometimes, but often gets in the way. Here’s how to disable it.

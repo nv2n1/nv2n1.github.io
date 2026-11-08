@@ -3,7 +3,8 @@ title: "Disabling PHP Short Open Tags"
 date: 2018-03-24 11:53:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-php-short-open-tags/
+categories: [programming-languages]
+canonical: /how-to-disable-php-short-open-tags/
 ---
 
 Short open tags (`<?` `?>`) create compatibility issues with XML declarations and are considered poor practice. While they’re disabled by default in modern PHP versions, you may need to manage this setting when working with legacy code or specific server configurations.

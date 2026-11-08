@@ -3,7 +3,8 @@ title: "Setting Up Git Branch Tracking for Remote Branches"
 date: 2018-03-24 11:46:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/what-about-the-master-branch-for-local-git-configuration-in-a-git-repository-to-make-it-track-remote-master-branch/
+categories: [scripting-utilities]
+canonical: /what-about-the-master-branch-for-local-git-configuration-in-a-git-repository-to-make-it-track-remote-master-branch/
 ---
 
 By default, Git doesn’t automatically configure your local branch to track its remote counterpart. You need to explicitly set up this tracking relationship so that `git pull` and `git push` know which remote branch to synchronize with.

@@ -3,7 +3,8 @@ title: "Opening or Creating a File in Read-Write Mode with C++"
 date: 2018-03-24 11:55:24 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-create-a-file-if-not-exist-and-open-it-in-read-and-write-modes-in-c/
+categories: [languages-frameworks]
+canonical: /how-to-create-a-file-if-not-exist-and-open-it-in-read-and-write-modes-in-c/
 ---
 
 When you need to open a file for both reading and writing, creating it if it doesn’t exist, C++ offers several approaches. The choice depends on your project’s requirements and how much control you need over the process.

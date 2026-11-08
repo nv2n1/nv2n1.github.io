@@ -3,7 +3,8 @@ title: "Applying Email Sort Order to All Folders in Evolution"
 date: 2018-03-24 11:55:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-apply-the-email-sort-order-to-all-folders-in-evolution/
+categories: [functional-programming]
+canonical: /how-to-apply-the-email-sort-order-to-all-folders-in-evolution/
 ---
 
 Evolution stores sort preferences individually per folder by default. If you want emails consistently sorted across your entire mailbox, you need to set a global default.

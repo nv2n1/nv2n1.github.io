@@ -3,7 +3,8 @@ title: "Best PDF Annotation Tools for Linux"
 date: 2018-03-24 08:17:26 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/pdf-annotation-tools-on-linux/
+categories: [linux-systems-administration]
+canonical: /pdf-annotation-tools-on-linux/
 ---
 
 Several native options now exist for annotating PDFs directly on Linux, though each has trade-offs between features and ease of use.

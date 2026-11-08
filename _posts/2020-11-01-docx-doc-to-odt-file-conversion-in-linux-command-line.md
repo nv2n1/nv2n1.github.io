@@ -3,7 +3,8 @@ title: "Converting DOC Files to ODT Format on Linux"
 date: 2020-11-01 07:22:32 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/docx-doc-to-odt-file-conversion-in-linux-command-line/
+categories: [linux-systems-administration]
+canonical: /docx-doc-to-odt-file-conversion-in-linux-command-line/
 ---
 
 LibreOffice is the most reliable tool for command-line document conversion, offering robust support for Microsoft Office formats. Install it on Ubuntu/Debian/Linux Mint:

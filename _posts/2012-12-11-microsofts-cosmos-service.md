@@ -3,7 +3,8 @@ title: "Microsoft\u2019s Cosmos DB: A Distributed NoSQL Database"
 date: 2012-12-11 07:04:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/microsofts-cosmos-service/
+categories: [linux-systems-administration]
+canonical: /microsofts-cosmos-service/
 ---
 
 Cosmos is Microsoft’s internal petabyte-scale distributed data storage and query system, built to handle massive analytical workloads across their infrastructure. While Microsoft hasn’t published formal technical papers on Cosmos, information has surfaced through conference talks and engineering blogs over the years.

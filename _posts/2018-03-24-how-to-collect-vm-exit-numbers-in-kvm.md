@@ -3,7 +3,8 @@ title: "Tracking VM Exit Events in KVM"
 date: 2018-03-24 11:51:07 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-collect-vm-exit-numbers-in-kvm/
+categories: [programming-languages]
+canonical: /how-to-collect-vm-exit-numbers-in-kvm/
 ---
 
 VM exits occur when a guest VM transitions to hypervisor mode to handle privileged operations, I/O requests, or other events. Tracking exit counts and types helps identify performance bottlenecks, inefficient guest behavior, and hypervisor overhead.

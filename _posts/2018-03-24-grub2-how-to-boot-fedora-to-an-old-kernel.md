@@ -3,7 +3,8 @@ title: "Booting Fedora with an Old Kernel in GRUB2"
 date: 2018-03-24 08:16:12 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/grub2-how-to-boot-fedora-to-an-old-kernel/
+categories: [linux-systems-administration]
+canonical: /grub2-how-to-boot-fedora-to-an-old-kernel/
 ---
 
 Modern Fedora systems keep multiple kernel versions available, but older kernels are tucked in a submenu rather than appearing as top-level GRUB2 entries. This requires a slightly different approach when setting them as your default boot option.

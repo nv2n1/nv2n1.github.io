@@ -3,7 +3,8 @@ title: "Building Zlib from Source on Ubuntu"
 date: 2018-07-26 10:09:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
+categories: [linux-systems-administration]
+canonical: /how-to-install-the-zlib-library-in-ubuntu/
 ---
 
 Zlib is a foundational open-source compression library implementing the DEFLATE algorithm. It powers gzip, PNG, HTTP compression, and countless applications. While Ubuntu’s package repositories provide pre-built binaries, compiling from source lets you use the latest version, customize the installation path, enable specific compile-time features, and maintain multiple versions simultaneously. This guide covers building zlib on Ubuntu 24.04 LTS and other recent releases.

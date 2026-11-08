@@ -3,7 +3,8 @@ title: "Converting PowerPoint Slides to High-DPI TIFF for Print"
 date: 2018-03-24 11:49:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-dpi-of-tiff-images-exported-by-powerpoint/
+categories: [linux-systems-administration]
+canonical: /how-to-change-the-dpi-of-tiff-images-exported-by-powerpoint/
 ---
 
 PowerPoint’s export function defaults to 96 DPI, which is suitable for screen display but inadequate for printing posters, documents, or any material requiring high resolution. While PowerPoint includes DPI settings, they’re often unreliable or have limited effect on TIFF output. Here are the practical methods to generate proper high-DPI TIFF files from PowerPoint slides.

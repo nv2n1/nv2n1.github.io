@@ -3,7 +3,8 @@ title: "Retrieving Hostname in C Programs on Linux"
 date: 2018-03-24 11:52:27 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-hostname-of-the-node-in-c/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-hostname-of-the-node-in-c/
 ---
 
 The `gethostname()` function is the standard POSIX way to retrieve the system’s hostname. It’s straightforward to use and works across Unix-like systems.

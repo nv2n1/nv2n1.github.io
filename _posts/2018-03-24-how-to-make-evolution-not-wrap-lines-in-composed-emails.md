@@ -3,7 +3,8 @@ title: "Prevent Line Wrapping in Evolution\u2019s Compose Window"
 date: 2018-03-24 11:55:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-evolution-not-wrap-lines-in-composed-emails/
+categories: [programming-languages]
+canonical: /how-to-make-evolution-not-wrap-lines-in-composed-emails/
 ---
 
 Evolution automatically wraps long lines in Plain Text mode, which can be frustrating if you need to preserve line breaks exactly as you’ve written them. Unlike some email clients, Evolution doesn’t support “soft wrapping” where text reflows visually in the composer but sends without hard line breaks.

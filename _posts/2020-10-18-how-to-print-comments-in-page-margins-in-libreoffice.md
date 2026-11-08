@@ -3,7 +3,8 @@ title: "Comments in Page Margins: Printing with LibreOffice"
 date: 2020-10-18 00:20:46 +0000
 author: "David Wong"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-comments-in-page-margins-in-libreoffice/
+categories: [programming-languages]
+canonical: /how-to-print-comments-in-page-margins-in-libreoffice/
 ---
 
 Comments and tracked changes are essential features for collaborative document work in LibreOffice. Both ODT and DOCX/DOC formats preserve comments and revisions, but controlling how they appear in printed output requires specific configuration.

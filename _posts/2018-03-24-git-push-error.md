@@ -3,7 +3,8 @@ title: "Resolving Git Push 403 Forbidden: Authentication and Permissions"
 date: 2018-03-24 11:47:40 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/git-push-error/
+categories: [linux-systems-administration]
+canonical: /git-push-error/
 ---
 
 A 403 Forbidden error when running `git push` means your credentials aren’t valid or you lack permission to access the repository. This is one of the most common Git frustrations, but it’s usually fixable once you understand what’s actually happening.

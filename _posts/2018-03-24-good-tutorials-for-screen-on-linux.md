@@ -3,7 +3,8 @@ title: "GNU Screen Tutorial: Master Terminal Multiplexing"
 date: 2018-03-24 11:45:42 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/good-tutorials-for-screen-on-linux/
+categories: [programming-languages]
+canonical: /good-tutorials-for-screen-on-linux/
 ---
 
 GNU Screen is a terminal multiplexer that lets you manage multiple shell sessions within a single window. If you’re new to it, here are the best resources to get up to speed, plus practical tips for getting started.

@@ -3,7 +3,8 @@ title: "glibc\u2019s strcmp and strncmp: Implementation Details"
 date: 2018-03-24 08:13:44 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/strcmp-and-strncmp-implementation-in-glibc/
+categories: [development-best-practices]
+canonical: /strcmp-and-strncmp-implementation-in-glibc/
 ---
 
 The `strcmp()` and `strncmp()` functions are fundamental string comparison utilities in the C standard library. Understanding their implementations reveals important aspects of character comparison, null-termination handling, and performance optimization.

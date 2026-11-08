@@ -3,7 +3,8 @@ title: "Passwordless SSH Setup for OpenWrt with Dropbear"
 date: 2018-03-24 11:47:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-passwordless-ssh-to-an-openwrt-router/
+categories: [linux-systems-administration]
+canonical: /how-to-passwordless-ssh-to-an-openwrt-router/
 ---
 
 OpenWrt runs Dropbear as its SSH server instead of OpenSSH. While Dropbear supports RSA and modern key types, the authorized_keys file lives in a different location, which causes `ssh-copy-id` to fail silently. Here’s how to set up key-based authentication properly.

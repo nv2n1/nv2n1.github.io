@@ -3,7 +3,8 @@ title: "Disable a Linux User Account: Methods and Best Practices"
 date: 2018-03-24 11:51:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-effectively-disable-a-linux-user-account/
+categories: [linux-systems-administration]
+canonical: /how-to-effectively-disable-a-linux-user-account/
 ---
 
 Disabling a user account is a common administrative task. Whether you’re offboarding an employee, removing an unused service account, or securing a compromised account, there are several approaches depending on your requirements.

@@ -3,7 +3,8 @@ title: "Fixed-Size Path Buffers in C: Using PATH_MAX and NAME_MAX"
 date: 2018-03-24 11:46:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/maximum-allowed-file-path-length-for-c-programming-on-linux/
+categories: [programming-languages]
+canonical: /maximum-allowed-file-path-length-for-c-programming-on-linux/
 ---
 
 When writing C programs on Linux that handle file paths, you need to allocate buffers safely. The kernel defines maximum path and filename lengths through standard macros in `<linux/limits.h>`.

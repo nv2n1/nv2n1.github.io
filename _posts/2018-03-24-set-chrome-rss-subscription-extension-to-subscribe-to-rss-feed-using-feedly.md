@@ -3,7 +3,8 @@ title: "How to Subscribe to RSS Feeds in Chrome Using Feedly"
 date: 2018-03-24 08:16:12 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/set-chrome-rss-subscription-extension-to-subscribe-to-rss-feed-using-feedly/
+categories: [linux-systems-administration]
+canonical: /set-chrome-rss-subscription-extension-to-subscribe-to-rss-feed-using-feedly/
 ---
 
 If you use both the Chrome RSS Subscription Extension and Feedly, you can integrate them so that clicking the RSS icon in your browser automatically opens your feed in Feedly instead of the browser’s default handler.
@@ -16,11 +17,11 @@ When you subscribe to an RSS feed through the Chrome extension, it needs a targe
 
 First, locate the RSS feed URL you want to subscribe to. For example:
 
-    https://www.systutorials.com/b/feed/
+    /feed/
 
 Feedly’s subscription link for this feed would be:
 
-    http://www.feedly.com/home#subscription/feed/https://www.systutorials.com/b/feed/
+    http://www.feedly.com/home#subscription/feed//feed/
 
 ## Configuring the Extension
 

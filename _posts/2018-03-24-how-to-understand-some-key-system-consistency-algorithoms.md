@@ -3,7 +3,8 @@ title: "Distributed Consensus Algorithms: Paxos vs. Raft"
 date: 2018-03-24 11:45:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-understand-some-key-system-consistency-algorithoms/
+categories: [programming-languages]
+canonical: /how-to-understand-some-key-system-consistency-algorithoms/
 ---
 
 Distributed systems need consensus — a way for multiple nodes to agree on state despite failures and network partitions. Understanding the key algorithms behind consensus is essential for anyone designing reliable systems.

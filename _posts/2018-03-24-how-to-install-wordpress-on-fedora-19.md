@@ -3,7 +3,8 @@ title: "Installing WordPress on Fedora 19"
 date: 2018-03-24 08:17:26 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-wordpress-on-fedora-19/
+categories: [linux-systems-administration]
+canonical: /how-to-install-wordpress-on-fedora-19/
 ---
 
 Install the required LAMP stack components. Fedora 41 and later use `dnf` instead of `yum`:

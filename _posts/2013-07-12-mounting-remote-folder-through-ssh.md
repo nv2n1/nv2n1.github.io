@@ -3,7 +3,8 @@ title: "Mounting Remote Folders via SSH with SSHFS"
 date: 2013-07-12 16:32:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/mounting-remote-folder-through-ssh/
+categories: [linux-systems-administration]
+canonical: /mounting-remote-folder-through-ssh/
 ---
 
 `sshfs` is the standard tool for mounting remote filesystems over SSH. It’s available in most distribution repositories.

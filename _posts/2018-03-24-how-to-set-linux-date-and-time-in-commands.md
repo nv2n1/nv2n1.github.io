@@ -3,7 +3,8 @@ title: "Setting Date and Time from the Linux Command Line"
 date: 2018-03-24 11:54:34 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-linux-date-and-time-in-commands/
+categories: [linux-systems-administration]
+canonical: /how-to-set-linux-date-and-time-in-commands/
 ---
 
 Accurate system time is critical for log timestamps, security operations, certificate validation, and coordinating across distributed systems. Modern Linux distributions handle time synchronization automatically, but you’ll occasionally need to set the time manually.

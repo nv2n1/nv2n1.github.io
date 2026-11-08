@@ -3,7 +3,8 @@ title: "Finding a Bash Script\u2019s Directory Reliably"
 date: 2018-03-24 11:49:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-scripts-directory-reliably-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-a-scripts-directory-reliably-in-bash-on-linux/
 ---
 
 Getting the directory path of a running script is a common requirement in bash, whether you’re sourcing files, building paths to config directories, or navigating relative to the script itself. The naive approach often fails with symbolic links or when the script is sourced rather than executed directly.

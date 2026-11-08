@@ -3,7 +3,8 @@ title: "Building a Mingle Forum Class"
 date: 2018-03-24 08:15:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/new-mingle-forum-class/
+categories: [design-patterns-architecture]
+canonical: /new-mingle-forum-class/
 ---
 
 If you’re working with Mingle Forum and need to remove canonical links from forum pages while preserving them elsewhere, you’ll need to locate the specific code in your theme’s class file.

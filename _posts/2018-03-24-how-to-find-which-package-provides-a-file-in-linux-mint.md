@@ -3,7 +3,8 @@ title: "How to Find Which Package Provides a File in Ubuntu and Debian"
 date: 2018-03-24 11:42:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-which-package-provides-a-file-in-linux-mint/
+categories: [linux-systems-administration]
+canonical: /how-to-find-which-package-provides-a-file-in-linux-mint/
 ---
 
 The most straightforward way to identify which installed package provides a specific file is with `dpkg`:

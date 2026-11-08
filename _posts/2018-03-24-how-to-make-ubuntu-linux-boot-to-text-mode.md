@@ -3,7 +3,8 @@ title: "How to Boot Ubuntu to Text Mode (Runlevel 3)"
 date: 2018-03-24 11:50:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-ubuntu-linux-boot-to-text-mode/
+categories: [linux-systems-administration]
+canonical: /how-to-make-ubuntu-linux-boot-to-text-mode/
 ---
 
 Ubuntu boots to the graphical desktop by default, but you can change it to boot directly to a text-mode login prompt. This is useful for headless servers, troubleshooting, or resource-constrained systems.

@@ -3,7 +3,8 @@ title: "Installing EncFS on CentOS 6"
 date: 2018-03-24 11:51:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-encfs-on-centos-6/
+categories: [programming-languages]
+canonical: /how-to-install-encfs-on-centos-6/
 ---
 
 EncFS provides an encrypted filesystem in user space — files are encrypted on the fly and stored in an existing directory. It’s lighter than LUKS and doesn’t require root access or dedicated partitions. Here’s how to set it up on CentOS 6.

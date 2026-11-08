@@ -3,7 +3,8 @@ title: "Sending Email from Linux with mailx via Internal SMTP"
 date: 2013-10-28 05:30:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/sending-email-using-mailx-in-linux-through-internal-smtp/
+categories: [linux-systems-administration]
+canonical: /sending-email-using-mailx-in-linux-through-internal-smtp/
 ---
 
 mailx (heirloom-mailx) and s-nail are lightweight CLI tools for sending email from scripts, cron jobs, and system alerts. They’re especially useful in corporate or campus networks with internal SMTP servers that don’t require authentication.

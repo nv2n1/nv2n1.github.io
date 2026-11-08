@@ -3,7 +3,8 @@ title: "Installing Hadoop 1.x: A Complete Guide"
 date: 2012-10-09 08:41:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hadoop-installation-tutorial/
+categories: [linux-systems-administration]
+canonical: /hadoop-installation-tutorial/
 ---
 
 Hadoop 1.x reached end-of-life in 2014 and is no longer maintained. This post documents a deprecated architecture for historical reference only.

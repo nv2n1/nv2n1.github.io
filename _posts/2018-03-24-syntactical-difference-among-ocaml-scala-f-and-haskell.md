@@ -3,7 +3,8 @@ title: "Syntax Differences Between OCaml, Scala, F#, and Haskell"
 date: 2018-03-24 08:20:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/syntactical-difference-among-ocaml-scala-f-and-haskell/
+categories: [programming-languages]
+canonical: /syntactical-difference-among-ocaml-scala-f-and-haskell/
 ---
 
 These four languages share functional programming roots but diverge significantly in syntax and design philosophy. Here’s a practical reference for anyone transitioning between them or evaluating which to use.

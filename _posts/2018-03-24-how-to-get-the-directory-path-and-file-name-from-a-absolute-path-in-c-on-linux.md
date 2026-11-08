@@ -3,7 +3,8 @@ title: "Extracting Directory and Filename from a Path in C"
 date: 2018-03-24 08:21:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-directory-path-and-file-name-from-a-absolute-path-in-c-on-linux/
+categories: [scripting-utilities]
+canonical: /how-to-get-the-directory-path-and-file-name-from-a-absolute-path-in-c-on-linux/
 ---
 
 Parsing directory and filename components from an absolute path is a common task in systems programming. Linux provides `dirname()` and `basename()` functions for this purpose, but they have implementation-specific behaviors that can cause bugs if you’re not careful.

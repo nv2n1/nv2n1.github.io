@@ -3,7 +3,8 @@ title: "How to Print Web Page Content with JavaScript"
 date: 2018-03-24 08:16:20 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-the-text-in-a-web-page/
+categories: [linux-systems-administration]
+canonical: /how-to-print-the-text-in-a-web-page/
 ---
 
 Copying webpage content directly into a document often produces poor formatting, missing images, or broken layouts. Here are several practical approaches to get clean, readable output.
@@ -31,7 +32,7 @@ Third-party services can clean up messy layouts and remove ads/sidebars. **Print
 
 For example:
 
-    https://www.printfriendly.com/print/?url=https://www.systutorials.com/guides/linux/git-server-ssh/
+    https://www.printfriendly.com/print/?url=/set-up-git-server-through-ssh-connection/
 
 The service removes navigation elements, ads, and formatting clutter. You can preview before saving as PDF or printing.
 

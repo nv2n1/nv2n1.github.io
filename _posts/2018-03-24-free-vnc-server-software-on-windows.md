@@ -3,7 +3,8 @@ title: "Best Free VNC Servers for Windows in 2026"
 date: 2018-03-24 11:49:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/free-vnc-server-software-on-windows/
+categories: [linux-systems-administration]
+canonical: /free-vnc-server-software-on-windows/
 ---
 
 RealVNC’s free tier is limited to personal use and restricts advanced features, making it unsuitable for many production or semi-commercial scenarios. If you need a fully-functional open-source alternative, several solid options exist.

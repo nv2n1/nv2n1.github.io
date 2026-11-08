@@ -3,7 +3,8 @@ title: "Restoring a GNOME 3 Session: A Developer\u2019s Guide"
 date: 2018-03-24 08:15:39 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-restore-a-gnome-3-session/
+categories: [web-development]
+canonical: /how-to-restore-a-gnome-3-session/
 ---
 
 GNOME can automatically restore your session—reopening all applications and windows that were running when you last logged out. This differs from autostart scripts, which launch specific programs on every login regardless of what was running before.

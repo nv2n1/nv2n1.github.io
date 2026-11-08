@@ -3,7 +3,8 @@ title: "Running Emacs in Terminal-Only Mode"
 date: 2018-03-24 08:21:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-emacs-run-in-command-line-by-default/
+categories: [development-best-practices]
+canonical: /how-to-make-emacs-run-in-command-line-by-default/
 ---
 
 If you want Emacs to run in the terminal without opening an X window, you have several practical options depending on your setup and workflow.

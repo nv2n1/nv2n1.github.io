@@ -3,7 +3,8 @@ title: "Loop Videos in Fullscreen with mpv on Linux"
 date: 2018-03-24 11:49:37 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-play-video-in-full-screen-and-keep-it-looping-with-mplayer/
+categories: [linux-systems-administration]
+canonical: /how-to-play-video-in-full-screen-and-keep-it-looping-with-mplayer/
 ---
 
 mpv is a powerful media player for Linux that supports looping videos with minimal configuration. Here’s how to loop videos in fullscreen mode using mpv.

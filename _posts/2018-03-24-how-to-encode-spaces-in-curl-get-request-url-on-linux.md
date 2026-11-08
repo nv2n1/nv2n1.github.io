@@ -3,7 +3,8 @@ title: "URL-Encoding Spaces in curl GET Requests"
 date: 2018-03-24 11:47:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-encode-spaces-in-curl-get-request-url-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-encode-spaces-in-curl-get-request-url-on-linux/
 ---
 
 When you run a curl GET request with spaces in the query string, the shell interprets the space as a separator and truncates the URL:

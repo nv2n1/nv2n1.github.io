@@ -3,7 +3,8 @@ title: "Which HDFS Filesystem Operations Are Atomic?"
 date: 2018-03-24 11:53:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/which-filesystem-operations-in-hdfs-is-atomic/
+categories: [programming-languages]
+canonical: /which-filesystem-operations-in-hdfs-is-atomic/
 ---
 
 Atomicity is fundamental to distributed filesystems. When multiple processes across a cluster access the same files, operations must either complete fully or not at all—no partial states. HDFS provides specific atomic guarantees that applications can rely on for implementing distributed locks and coordinating access patterns.

@@ -3,7 +3,8 @@ title: "Handling Spaces in File Paths with rsync"
 date: 2018-03-24 11:51:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-handle-spaces-in-paths-with-rsync-on-linux/
+categories: [programming-languages]
+canonical: /how-to-handle-spaces-in-paths-with-rsync-on-linux/
 ---
 
 Spaces in file and directory paths are a common source of rsync failures. When paths contain spaces, the shell interprets them as argument separators unless you properly escape or quote them. Here’s how to handle this correctly.

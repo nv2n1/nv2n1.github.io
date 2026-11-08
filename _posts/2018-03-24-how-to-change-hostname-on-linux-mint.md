@@ -3,7 +3,8 @@ title: "How to Change Your Hostname on Linux Mint"
 date: 2018-03-24 11:41:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-hostname-on-linux-mint/
+categories: [linux-systems-administration]
+canonical: /how-to-change-hostname-on-linux-mint/
 ---
 
 The hostname identifies your system on the network. On Linux Mint, you can change it through the GUI or command line depending on your preference and situation.

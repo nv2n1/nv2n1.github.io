@@ -3,7 +3,8 @@ title: "Filter RSS Feeds by Keywords and Custom Rules"
 date: 2018-03-24 11:45:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-filter-rss-feed-items/
+categories: [security-cryptography-2]
+canonical: /how-to-filter-rss-feed-items/
 ---
 
 Filtering RSS feeds lets you reduce noise and focus on content that actually matters. Whether you want to exclude posts mentioning certain topics or only see items matching specific keywords, there are several practical approaches depending on your setup.

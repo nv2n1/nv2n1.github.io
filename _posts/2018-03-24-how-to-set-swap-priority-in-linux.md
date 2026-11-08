@@ -3,7 +3,8 @@ title: "Setting Process Swap Priority in Linux"
 date: 2018-03-24 08:14:11 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-swap-priority-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-set-swap-priority-in-linux/
 ---
 
 Linux can manage multiple swap partitions or files simultaneously, each with an assigned priority. The kernel allocates swap pages from highest to lowest priority, with round-robin allocation among equally-prioritized areas.

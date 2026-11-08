@@ -3,7 +3,8 @@ title: "Installing AMD GPU Drivers on Fedora: A Setup Guide"
 date: 2013-09-25 10:32:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/install-ati-fglrx-driver-on-fedora/
+categories: [linux-systems-administration]
+canonical: /install-ati-fglrx-driver-on-fedora/
 ---
 
 The proprietary fglrx driver reached end-of-life in 2015 and is incompatible with current Fedora releases. For modern AMD GPUs, use AMDGPU—AMD’s actively maintained open-source driver that supports Wayland, current kernel versions, and both desktop and compute workloads.

@@ -3,7 +3,8 @@ title: "Git Push 403 Forbidden: Common Causes and Solutions"
 date: 2018-03-24 11:48:57 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/git-push-error-under-centos-6-7/
+categories: [linux-systems-administration]
+canonical: /git-push-error-under-centos-6-7/
 ---
 
 When pushing to GitHub over HTTPS, you’ll see:

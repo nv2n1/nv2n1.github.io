@@ -3,7 +3,8 @@ title: "Setting Up Linux Xen Dom0 and DomU Virtual Machines"
 date: 2013-07-12 16:32:15 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/xen-solutions/
+categories: [linux-systems-administration]
+canonical: /xen-solutions/
 ---
 
 Xen remains a critical hypervisor in production environments—AWS EC2, Citrix Hypervisor, and other cloud platforms rely on it—but most Linux distributions now default to KVM for general-purpose virtualization. If you’re working with Xen specifically, this guide covers Dom0 and DomU setup on modern distributions.

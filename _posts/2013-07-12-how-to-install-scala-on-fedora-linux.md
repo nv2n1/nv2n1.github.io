@@ -3,7 +3,8 @@ title: "Installing Scala on Linux"
 date: 2013-07-12 16:32:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-scala-on-fedora-linux/
+categories: [linux-system-configuration]
+canonical: /how-to-install-scala-on-fedora-linux/
 ---
 
 Scala runs on the Java Virtual Machine, so you’ll need Java 11 or later installed first. Check your current version:

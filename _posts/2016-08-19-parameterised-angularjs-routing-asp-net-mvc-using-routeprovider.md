@@ -3,7 +3,8 @@ title: "Client-Side Routing in AngularJS: Managing Route Parameters"
 date: 2016-08-19 08:04:42 +0000
 author: "jameswarner"
 layout: post
-canonical: https://www.systutorials.com/parameterised-angularjs-routing-asp-net-mvc-using-routeprovider/
+categories: [languages-frameworks]
+canonical: /parameterised-angularjs-routing-asp-net-mvc-using-routeprovider/
 ---
 
 AngularJS routing enables single-page applications by dynamically switching views based on URL patterns without full page reloads. Unlike server-side routing, AngularJS handles routing on the client, eliminating network round-trips and improving responsiveness—particularly useful when displaying different datasets based on route parameters.

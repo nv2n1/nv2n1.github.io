@@ -3,7 +3,8 @@ title: "Prevent systemd-tmpfiles from Deleting Specific /tmp Files"
 date: 2018-03-24 11:47:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-fedora-linux-not-clean-some-files-in-tmp/
+categories: [linux-systems-administration]
+canonical: /how-to-make-fedora-linux-not-clean-some-files-in-tmp/
 ---
 
 Fedora uses `systemd-tmpfiles` to automatically clean up temporary files and directories. By default, this includes volatile files in `/tmp/`, which can cause problems for applications that rely on files persisting there — like HDFS DataNodes that store their PID files as `hadoop-hadoop-datanode.pid`.

@@ -3,7 +3,8 @@ title: "How to Add Author Information to Google Search Results"
 date: 2018-03-24 08:04:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-author-information-in-google-search-results/
+categories: [languages-frameworks]
+canonical: /how-to-add-author-information-in-google-search-results/
 ---
 
 Google no longer displays author information in search results the way it did when Google+ existed. However, you can still control how your content appears in search results by using schema markup—specifically the `author` property in JSON-LD structured data.

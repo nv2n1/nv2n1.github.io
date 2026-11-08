@@ -3,7 +3,8 @@ title: "Measuring SSD Performance: Practical Benchmarking Techniques"
 date: 2018-03-24 11:48:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/common-ssd-read-write-throughput/
+categories: [linux-systems-administration]
+canonical: /common-ssd-read-write-throughput/
 ---
 
 SSD performance varies significantly based on drive model, interface (NVMe vs SATA), and workload characteristics. Understanding how to benchmark your drives is more useful than memorizing typical specs—here’s how to measure actual throughput on your hardware.

@@ -3,7 +3,8 @@ title: "Lessons from Building Large-Scale Distributed Systems"
 date: 2013-01-22 14:28:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/designs-lessons-and-advice-from-building-large-distributed-systems/
+categories: [systems-architecture]
+canonical: /designs-lessons-and-advice-from-building-large-distributed-systems/
 ---
 
 Jeff Dean’s “Designs, Lessons and Advice from Building Large Distributed Systems” is essential reading for anyone building or operating distributed infrastructure. This talk, presented at multiple conferences including LADIS and various tech events, distills decades of experience at Google and now at Google Research. If you’re designing systems that scale beyond a single machine, you need these patterns.

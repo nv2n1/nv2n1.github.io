@@ -3,7 +3,8 @@ title: "Configuring Chrome\u2019s Proxy Settings from the Linux Command Line"
 date: 2018-03-24 08:15:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-google-chromes-proxy-settings-in-command-line-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-set-google-chromes-proxy-settings-in-command-line-on-linux/
 ---
 
 Chrome supports proxy configuration via command-line flags, which is useful for scripting, automation, or testing without touching the GUI settings. This works across all major Linux distributions.

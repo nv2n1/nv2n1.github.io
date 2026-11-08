@@ -3,7 +3,8 @@ title: "GNOME 2 Desktop Environment: macOS-Inspired Setup for Linux"
 date: 2013-07-12 16:31:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/beautiful-desktop-gnome-of-osx-style-on-linux/
+categories: [linux-systems-administration]
+canonical: /beautiful-desktop-gnome-of-osx-style-on-linux/
 ---
 
 Customizing your desktop environment to match macOS aesthetics remains popular on Linux, though the approach differs significantly from GNOME 2 era configurations. Modern desktop environments like GNOME (40+) and KDE Plasma (5/6) use different theming systems, but achieving an Apple-inspired look is still straightforward.

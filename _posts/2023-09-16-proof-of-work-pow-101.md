@@ -3,7 +3,8 @@ title: "Understanding Proof of Work: A Technical Guide"
 date: 2023-09-16 06:46:58 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/proof-of-work-pow-101/
+categories: [blockchain-cryptocurrency]
+canonical: /proof-of-work-pow-101/
 ---
 
 Proof of Work is the consensus mechanism that secures Bitcoin and a handful of other major blockchain networks. Introduced by Satoshi Nakamoto in 2009, it requires network participants (miners) to solve computationally expensive cryptographic puzzles. The first miner to solve the puzzle earns the right to add the next block of transactions and receives a block reward in newly minted cryptocurrency.

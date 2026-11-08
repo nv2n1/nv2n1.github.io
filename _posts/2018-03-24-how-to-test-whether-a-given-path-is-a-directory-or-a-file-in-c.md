@@ -3,7 +3,8 @@ title: "Checking if a Path is a Directory or File in C++"
 date: 2018-03-24 11:54:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-whether-a-given-path-is-a-directory-or-a-file-in-c/
+categories: [scripting-utilities]
+canonical: /how-to-test-whether-a-given-path-is-a-directory-or-a-file-in-c/
 ---
 
 Determining whether a path points to a directory or regular file is a common task in system programming. You need to stat the path and inspect the file mode.

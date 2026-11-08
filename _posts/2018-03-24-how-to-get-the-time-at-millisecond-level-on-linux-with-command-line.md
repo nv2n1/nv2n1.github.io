@@ -3,7 +3,8 @@ title: "Getting Millisecond-Precision Timestamps on Linux"
 date: 2018-03-24 11:41:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-time-at-millisecond-level-on-linux-with-command-line/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-time-at-millisecond-level-on-linux-with-command-line/
 ---
 
 If you need millisecond precision timestamps from the command line, there are several approaches depending on your use case and system requirements.

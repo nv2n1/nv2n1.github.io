@@ -3,7 +3,8 @@ title: "Listing Running Services on Linux with systemctl"
 date: 2018-03-24 11:44:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-list-all-running-system-service-on-linux-mint-17-1/
+categories: [linux-systems-administration]
+canonical: /how-to-list-all-running-system-service-on-linux-mint-17-1/
 ---
 
 Listing active services is essential for system monitoring and troubleshooting. Whether you’re investigating a hung process, checking if a daemon started correctly, or auditing what’s actually running on your system, knowing how to query service status quickly saves time.

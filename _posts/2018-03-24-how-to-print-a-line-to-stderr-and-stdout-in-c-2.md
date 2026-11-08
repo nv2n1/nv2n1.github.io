@@ -3,7 +3,8 @@ title: "Printing to STDERR and STDOUT in C++"
 date: 2018-03-24 11:53:05 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-c-2/
+categories: [languages-frameworks]
+canonical: /how-to-print-a-line-to-stderr-and-stdout-in-c-2/
 ---
 
 In C++, you have several ways to output to standard output and standard error streams. The choice depends on your project’s requirements and whether you’re working with older codebases or modern C++.

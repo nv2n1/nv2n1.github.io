@@ -3,7 +3,8 @@ title: "Recovering Deleted Photos from Samsung Devices"
 date: 2018-03-24 11:45:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-can-i-recover-deleted-photos-from-samsung/
+categories: [linux-system-configuration]
+canonical: /how-can-i-recover-deleted-photos-from-samsung/
 ---
 
 Deleted photos from your Samsung phone aren’t necessarily gone forever—they remain on disk until overwritten. Here’s how to recover them.

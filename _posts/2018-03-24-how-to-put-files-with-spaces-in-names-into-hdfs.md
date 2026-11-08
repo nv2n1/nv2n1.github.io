@@ -3,7 +3,8 @@ title: "Handling Files with Spaces in HDFS"
 date: 2018-03-24 11:51:55 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-put-files-with-spaces-in-names-into-hdfs/
+categories: [programming-languages]
+canonical: /how-to-put-files-with-spaces-in-names-into-hdfs/
 ---
 
 When working with Hadoop Distributed File System (HDFS), files containing spaces in their names require special handling during the `hdfs dfs -put` command. Without proper escaping or quoting, the shell interprets spaces as delimiters, splitting the filename into multiple arguments.

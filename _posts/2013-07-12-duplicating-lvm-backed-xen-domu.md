@@ -3,7 +3,8 @@ title: "Cloning LVM-Backed Xen Domains"
 date: 2013-07-12 16:32:18 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/duplicating-lvm-backed-xen-domu/
+categories: [linux-systems-administration]
+canonical: /duplicating-lvm-backed-xen-domu/
 ---
 
 LVM snapshots provide an efficient way to duplicate virtual machines in seconds rather than minutes. Instead of copying an entire filesystem, snapshots leverage copy-on-write semantics—physical blocks are only duplicated when the source or snapshot is modified. This approach works well for any LVM-backed virtualization platform, though Xen is used here as an example.

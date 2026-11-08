@@ -3,7 +3,8 @@ title: "Configure Custom DHCP Gateway IP in OpenWrt"
 date: 2018-03-24 11:48:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-advertise-different-gateway-ip-via-dhcp-in-openwrt/
+categories: [linux-systems-administration]
+canonical: /how-to-advertise-different-gateway-ip-via-dhcp-in-openwrt/
 ---
 
 When clients connect to your OpenWRT router via DHCP, they typically receive the router itself as the default gateway. Sometimes you need to advertise a different gateway — whether you’re running a proxy, load balancer, or multi-gateway setup on your network. This is done via DHCP option 3 (the router option in the DHCP specification).

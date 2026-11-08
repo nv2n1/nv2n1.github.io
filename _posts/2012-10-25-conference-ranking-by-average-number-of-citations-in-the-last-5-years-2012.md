@@ -3,7 +3,8 @@ title: "Conference Ranking by Average Number of Citations in the Last 5 Years, 2
 date: 2012-10-25 05:51:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/conference-ranking-by-average-number-of-citations-in-the-last-5-years-2012/
+categories: [testing-devops]
+canonical: /conference-ranking-by-average-number-of-citations-in-the-last-5-years-2012/
 ---
 
 > **Historical Archive:** This post lists conferences from 2012. The submission deadlines and venues are no longer current. For up-to-date conference information, check the official conference websites or resources like <a href="https://www.conferencealert.com/" rel="nofollow noopener" target="_blank">Conference Alert</a> and <a href="https://ccfddl.github.io/" rel="nofollow noopener" target="_blank">CCF Deadlines</a>.
@@ -367,6 +368,6 @@ I first choose the 300 conferences that are most cited and then rank them by the
 
 I marked the conferences that I am familiar with—SOSP, NSDI, OSDI, EuroSys, VEE and USENIX ATC. These conferences are indeed very good ones in the cloud computing system research area.
 
-I also attached a PDF file that contains all the 300 conferences that I examine. [Download the PDF](https://www.systutorials.com/f/2012/conf-rank-average-citation-2012.pdf).
+I also attached a PDF file that contains all the 300 conferences that I examine. [Download the PDF](/files/2012/conf-rank-average-citation-2012.pdf).
 
 Claim: This “ranking” is for my personal entertainment only and the ranking/numbers here are from the Internet and are not guaranteed to be accurate or correct. Hence, no one should consider this as a serious ranking of the conferences.

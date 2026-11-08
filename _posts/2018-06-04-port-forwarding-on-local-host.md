@@ -3,7 +3,8 @@ title: "Port Forwarding with iptables and nftables"
 date: 2018-06-04 15:26:08 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/port-forwarding-on-local-host/
+categories: [databases-storage]
+canonical: /port-forwarding-on-local-host/
 ---
 
 Local port forwarding on the same host requires understanding how netfilter processes packets based on their origin. The critical distinction: traffic from external sources hits the PREROUTING chain, but packets originating locally traverse the OUTPUT chain instead. Miss either one, and your forwarding won’t work.

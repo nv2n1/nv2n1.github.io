@@ -3,7 +3,8 @@ title: "Hosting Multiple Websites on Apache with Virtual Hosts"
 date: 2018-03-24 11:47:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-host-multiple-websites-on-a-apache-linux-web-server/
+categories: [linux-systems-administration]
+canonical: /how-to-host-multiple-websites-on-a-apache-linux-web-server/
 ---
 
 Virtual hosts allow you to serve multiple websites from a single Apache server and IP address. This is the standard approach for shared hosting and cost-effective server deployments.

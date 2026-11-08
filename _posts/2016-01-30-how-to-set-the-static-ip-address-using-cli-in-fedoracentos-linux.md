@@ -3,7 +3,8 @@ title: "Configuring a Static IP Address on Fedora, RHEL, and CentOS"
 date: 2016-01-30 03:14:33 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-the-static-ip-address-using-cli-in-fedoracentos-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-set-the-static-ip-address-using-cli-in-fedoracentos-linux/
 ---
 
 NetworkManager is the default network management tool on modern Fedora, RHEL, and CentOS systems. You can configure static IPs either through the CLI or by editing configuration files directly. This guide covers both approaches for Fedora 41+ and RHEL 9+.

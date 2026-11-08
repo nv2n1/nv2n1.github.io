@@ -3,7 +3,8 @@ title: "How to Work Around g++ Non-Trivial Designated Initializers"
 date: 2018-03-24 08:18:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/g-sorry-unimplemented-non-trivial-designated-initializers-not-supported/
+categories: [linux-systems-administration]
+canonical: /g-sorry-unimplemented-non-trivial-designated-initializers-not-supported/
 ---
 
 Designated initializers for aggregate types with non-trivial members (like `std::vector`) have inconsistent support across GCC versions. This error typically appears when you try to initialize a struct containing standard library containers using designated initializer syntax in the wrong order.

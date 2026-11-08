@@ -3,7 +3,8 @@ title: "Using .htaccess to Redirect WordPress Feeds to Feedburner"
 date: 2013-07-12 16:46:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-redirect-wordpress-feed-to-feedburner-using-htaccess/
+categories: [programming-languages]
+canonical: /how-to-redirect-wordpress-feed-to-feedburner-using-htaccess/
 ---
 
 Feed redirection lets you centralize analytics and distribution while keeping your original feed accessible to feed aggregators. By routing requests through Feedburner (or similar services), you gain subscriber tracking, ads, and optimization features without breaking feed readers that depend on your WordPress feed URL.
@@ -57,13 +58,13 @@ Before deploying, verify the rewrite works correctly:
 
 ``` bash
 # Test a normal browser request (should redirect)
-curl -A "Mozilla/5.0" -I https://www.systutorials.com/feed/
+curl -A "Mozilla/5.0" -I /feed/
 
 # Test FeedBurner's request (should pass through with 200)
-curl -A "FeedBurner" -I https://www.systutorials.com/feed/
+curl -A "FeedBurner" -I /feed/
 
 # Test with verbose output to see redirect chain
-curl -v -A "Mozilla/5.0" https://www.systutorials.com/feed/
+curl -v -A "Mozilla/5.0" /feed/
 ```
 
 Browser requests should return a 301 status code. FeedBurner requests should return 200 (allowed through).

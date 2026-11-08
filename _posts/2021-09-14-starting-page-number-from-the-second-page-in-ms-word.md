@@ -3,7 +3,8 @@ title: "Set Starting Page Number to 2 in Word"
 date: 2021-09-14 06:49:58 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/starting-page-number-from-the-second-page-in-ms-word/
+categories: [programming-languages]
+canonical: /starting-page-number-from-the-second-page-in-ms-word/
 ---
 
 When you use the first page as a title or cover page, you typically want page numbering to start from the second page as “1”. Word makes this straightforward using the header/footer tools.

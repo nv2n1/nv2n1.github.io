@@ -3,7 +3,8 @@ title: "Hardware Upgrades Every Developer Should Consider in 2026"
 date: 2019-05-30 15:35:54 +0000
 author: "James Clark"
 layout: post
-canonical: https://www.systutorials.com/5-necessary-pc-hardware-that-a-programmer-needs-to-upgrade/
+categories: [linux-system-configuration]
+canonical: /5-necessary-pc-hardware-that-a-programmer-needs-to-upgrade/
 ---
 
 Most programmers underestimate RAM until they’re juggling Docker containers, running a database locally, and compiling code simultaneously. Modern development involves multiple resource-heavy applications: your IDE, browser with 20+ tabs, container runtime, language servers, and build tools all competing for memory.

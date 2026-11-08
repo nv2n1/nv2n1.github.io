@@ -3,7 +3,8 @@ title: "Using the Jane Street OPAM Repository"
 date: 2018-03-24 08:17:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/add-the-jane-street-opam-repository/
+categories: [linux-systems-administration]
+canonical: /add-the-jane-street-opam-repository/
 ---
 
 The Jane Street OPAM repository contains specialized OCaml packages and libraries maintained by Jane Street, including their popular Core library and related tools. You’ll need to add this repository to your OPAM configuration to access these packages.

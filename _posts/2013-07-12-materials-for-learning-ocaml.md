@@ -3,7 +3,8 @@ title: "Getting Started with OCaml: Learning Resources and Setup"
 date: 2013-07-12 16:47:42 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/materials-for-learning-ocaml/
+categories: [development-best-practices]
+canonical: /materials-for-learning-ocaml/
 ---
 
 OCaml is a practical functional language with strong static typing and pattern matching. If you’re coming from systems programming or looking to add functional paradigms to your toolkit, these resources will accelerate your learning.

@@ -3,7 +3,8 @@ title: "Clearing Linux Filesystem Caches: Methods and Best Practices"
 date: 2013-07-12 16:32:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/linux-flushing-file-system-caches/
+categories: [linux-systems-administration]
+canonical: /linux-flushing-file-system-caches/
 ---
 
 Dropping file system caches reclaims memory for applications. Linux kernels 2.6.16+ provide a `/proc/sys/vm/drop_caches` interface to trigger cache eviction. This is safe — the kernel only frees clean cache pages and unreferenced inodes/dentries. Dirty data stays in memory until explicitly synced to disk.

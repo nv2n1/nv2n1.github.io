@@ -3,7 +3,8 @@ title: "SSH Tunneling on Windows: Creating a SOCKS Proxy with OpenSSH"
 date: 2013-07-15 13:01:08 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/proxy-using-ssh-tunnel-on-windows/
+categories: [scripting-utilities]
+canonical: /proxy-using-ssh-tunnel-on-windows/
 ---
 
 SSH tunneling on Windows routes your traffic through a remote server over an encrypted connection, letting you bypass network restrictions and access resources as if you were on the remote network. The setup creates a SOCKS proxy that listens locally and forwards all traffic through the SSH tunnel.

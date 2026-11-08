@@ -3,7 +3,8 @@ title: "Configuring Alt and Meta Keys in Xterm and Terminal Emulators"
 date: 2018-03-24 11:44:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-alt-key-work-in-xterm/
+categories: [security-cryptography-2]
+canonical: /how-to-make-alt-key-work-in-xterm/
 ---
 
 Xterm doesn’t send Alt key escape sequences by default, which breaks Alt-based keybindings in Vim, Emacs, shell readline, and other applications. Here’s how to fix it across different terminal setups.

@@ -3,7 +3,8 @@ title: "Setting Up a Local Hadoop Development Environment"
 date: 2011-04-06 08:56:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-standalone-local-hadoop/
+categories: [design-patterns-architecture]
+canonical: /setting-up-standalone-local-hadoop/
 ---
 
 Hadoop’s default configuration runs in standalone (local) mode as a single JVM process — no HDFS daemons, no YARN, no distributed overhead. This mode is useful for development, testing MapReduce jobs, and debugging before moving to a clustered deployment.

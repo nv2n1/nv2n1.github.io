@@ -3,7 +3,8 @@ title: "Making Vim Recognize Custom File Extensions as C"
 date: 2018-03-24 11:44:15 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-taglist-recognize-specific-files-with-certain-extensions-as-c-source-files/
+categories: [scripting-utilities]
+canonical: /how-to-make-taglist-recognize-specific-files-with-certain-extensions-as-c-source-files/
 ---
 
 Vim determines file types by extension to apply syntax highlighting and indentation. If you have custom file extensions that should be treated as C files, you need to configure Vim to recognize them.

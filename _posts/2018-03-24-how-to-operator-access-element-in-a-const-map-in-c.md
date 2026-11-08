@@ -3,7 +3,8 @@ title: "Accessing Elements in a const Map with operator[] in C++"
 date: 2018-03-24 11:55:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-operator-access-element-in-a-const-map-in-c/
+categories: [languages-frameworks]
+canonical: /how-to-operator-access-element-in-a-const-map-in-c/
 ---
 
 Using `operator[]` on a const map will fail to compile. This code:

@@ -3,7 +3,8 @@ title: "How to List All Remote Branches in Git"
 date: 2018-03-24 08:16:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-list-a-git-repositorys-all-branches-on-the-remote-server/
+categories: [linux-systems-administration]
+canonical: /how-to-list-a-git-repositorys-all-branches-on-the-remote-server/
 ---
 
 ### Local branches

@@ -3,7 +3,8 @@ title: "Allowing Non-Root Users to Mount Disks on Linux"
 date: 2018-03-24 11:45:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-allow-non-root-users-on-linux-to-mount-and-unmount-disks/
+categories: [linux-systems-administration]
+canonical: /how-to-allow-non-root-users-on-linux-to-mount-and-unmount-disks/
 ---
 
 On a Linux system, you often need to let regular users mount and unmount specific devices without requiring sudo or the root password. This is common for external drives, USB devices, or secondary internal disks. There are several approaches, each with different security and usability tradeoffs.

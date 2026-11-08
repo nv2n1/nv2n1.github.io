@@ -3,7 +3,8 @@ title: "Granting Root Access to NFS Shares"
 date: 2018-03-24 11:50:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-allow-root-access-to-nfs/
+categories: [programming-languages]
+canonical: /how-to-allow-root-access-to-nfs/
 ---
 
 NFS squashes root access to an anonymous user (typically `nobody`) by default as a security measure. When a client connects as root, the server remaps that user to an unprivileged account, preventing root from having unrestricted access to exported shares. This can cause permission issues if your application genuinely requires root-level file operations.

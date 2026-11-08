@@ -3,7 +3,8 @@ title: "Enable SSH on Fedora Linux"
 date: 2018-03-24 11:47:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-enable-ssh-service-on-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-enable-ssh-service-on-fedora-linux/
 ---
 
 \[md\]\

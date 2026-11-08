@@ -3,7 +3,8 @@ title: "SEO Results Timeline: What to Expect in 2026"
 date: 2017-07-25 14:07:21 +0000
 author: "Colin"
 layout: post
-canonical: https://www.systutorials.com/easy-perform-seo/
+categories: [development-best-practices]
+canonical: /easy-perform-seo/
 ---
 
 SEO is not quick. This is the reality that catches most people off guard. The internet has conditioned us to expect instant results — viral content, overnight success, algorithmic magic that transforms a website in weeks. None of that applies to SEO.

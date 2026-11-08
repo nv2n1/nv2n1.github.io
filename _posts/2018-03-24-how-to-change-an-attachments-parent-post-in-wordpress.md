@@ -3,7 +3,8 @@ title: "How to Move a WordPress Attachment to a Different Post"
 date: 2018-03-24 08:17:55 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-an-attachments-parent-post-in-wordpress/
+categories: [linux-systems-administration]
+canonical: /how-to-change-an-attachments-parent-post-in-wordpress/
 ---
 
 Attachments in WordPress are tied to specific posts through a parent-child relationship stored in the database. This matters more than you’d think — attachment metadata, URLs, and admin filtering all depend on that parent assignment. Sometimes you need to reassign an image or document to a different post, whether because of organizational restructuring, post merging, or just fixing a mess from bulk uploads.

@@ -3,7 +3,8 @@ title: "How to Check Wireless Network Speed on Linux"
 date: 2018-03-24 11:47:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-a-wireless-network-adapters-speed-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-a-wireless-network-adapters-speed-in-linux/
 ---
 
 When troubleshooting wireless performance, you need to know both the negotiated link speed and actual throughput. `ethtool` won’t help here — it’s for wired interfaces. For wireless adapters, you’ll need different tools depending on what information you’re after.

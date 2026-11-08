@@ -3,7 +3,8 @@ title: "Setting Up a SOCKS Proxy Over SSH Tunnels"
 date: 2013-07-12 16:31:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/proxy-using-ssh-tunnel/
+categories: [linux-systems-administration]
+canonical: /proxy-using-ssh-tunnel/
 ---
 
 A SOCKS5 proxy tunneled through SSH provides encrypted communication between your client and a remote server. This is useful for bypassing network restrictions, securing connections on untrusted networks, or routing traffic through a trusted server.

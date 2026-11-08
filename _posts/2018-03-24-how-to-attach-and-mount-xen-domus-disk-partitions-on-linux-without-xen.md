@@ -3,7 +3,8 @@ title: "Mount Xen DomU Disk Images with kpartx on Linux"
 date: 2018-03-24 11:49:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-attach-and-mount-xen-domus-disk-partitions-on-linux-without-xen/
+categories: [linux-systems-administration]
+canonical: /how-to-attach-and-mount-xen-domus-disk-partitions-on-linux-without-xen/
 ---
 
 When you need to access files from a Xen guest’s disk image without booting the VM, you can attach and mount its partitions directly on the host using `kpartx`. This is useful for recovery, forensics, backup verification, or migrating data between systems.

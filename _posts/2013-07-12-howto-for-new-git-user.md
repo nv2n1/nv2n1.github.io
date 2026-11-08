@@ -3,7 +3,8 @@ title: "Getting Started with Git: A Beginner\u2019s Guide"
 date: 2013-07-12 16:32:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/howto-for-new-git-user/
+categories: [linux-systems-administration]
+canonical: /howto-for-new-git-user/
 ---
 
 Every user working with Git needs an SSH key pair for authentication. Generate one if you don’t have it:

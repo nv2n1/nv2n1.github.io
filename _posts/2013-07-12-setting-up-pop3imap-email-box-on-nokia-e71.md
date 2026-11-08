@@ -3,7 +3,8 @@ title: "Setting Up POP3 and IMAP on Nokia E71"
 date: 2013-07-12 16:54:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-pop3imap-email-box-on-nokia-e71/
+categories: [linux-systems-administration]
+canonical: /setting-up-pop3imap-email-box-on-nokia-e71/
 ---
 
 The Nokia E71 includes native POP3 and IMAP support without requiring additional messaging apps. This guide covers manual configuration of both protocols with modern best practices.

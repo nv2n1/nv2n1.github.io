@@ -3,7 +3,8 @@ title: "Generate Passwords in Bash and Shell Scripts"
 date: 2018-03-24 11:55:14 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-generate-a-password-in-shell-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-generate-a-password-in-shell-on-linux/
 ---
 
 Generating secure, random passwords is a fundamental task for sysadmins. You have several reliable options depending on your use case and environment.

@@ -3,7 +3,8 @@ title: "How to Set Image Size in Markdown"
 date: 2018-03-24 08:14:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/set-the-image-size-in-markdown-syntax/
+categories: [development-best-practices]
+canonical: /set-the-image-size-in-markdown-syntax/
 ---
 
 Standard Markdown syntax doesn’t include built-in parameters for image dimensions. The basic syntax `![alt text](image.url)` produces images at their original size or constrained by container width, with no way to specify explicit dimensions.

@@ -3,7 +3,8 @@ title: "Distributed Systems and Cloud Computing: Essential Reading Guide"
 date: 2012-09-15 22:41:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/reading-list-for-system-research-on-cloud-computing/
+categories: [systems-architecture]
+canonical: /reading-list-for-system-research-on-cloud-computing/
 ---
 
 Understanding distributed systems and cloud computing starts with the literature. These papers form the foundation for anyone working in the space — they’re not just historical artifacts, they’re still actively referenced and their design principles remain relevant.

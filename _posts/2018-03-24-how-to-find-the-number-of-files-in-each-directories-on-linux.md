@@ -3,7 +3,8 @@ title: "Count Files in Each Linux Subdirectory"
 date: 2018-03-24 11:44:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-the-number-of-files-in-each-directories-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-the-number-of-files-in-each-directories-on-linux/
 ---
 
 When you need to audit disk usage or understand directory structure, counting files in each subdirectory is a common task. This is especially useful when dealing with large directory trees where you need a quick overview of distribution.

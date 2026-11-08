@@ -3,7 +3,8 @@ title: "Printing Google Docs with Comments in the Margins"
 date: 2020-10-18 10:07:02 +0000
 author: "David Wong"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-google-doc-with-comments-in-page-margins/
+categories: [languages-frameworks]
+canonical: /how-to-print-google-doc-with-comments-in-page-margins/
 ---
 
 Google Docs comments are invaluable for collaborative work, but the web interface doesn’t provide a native way to print them in document margins. The most reliable approach is to export the document and use LibreOffice or Microsoft Word to handle the layout.

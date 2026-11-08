@@ -3,7 +3,8 @@ title: "Recovering Data from a Failed Hard Drive"
 date: 2018-03-24 11:45:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-can-i-recover-data-from-my-crashed-hard-drive/
+categories: [programming-languages]
+canonical: /how-can-i-recover-data-from-my-crashed-hard-drive/
 ---
 
 When a hard drive fails physically, data recovery becomes challenging but sometimes possible. If the drive isn’t recognized by the system or showing signs of mechanical failure, professional recovery services may be necessary—but they’re expensive. Before going that route, you can attempt recovery yourself using open-source tools.

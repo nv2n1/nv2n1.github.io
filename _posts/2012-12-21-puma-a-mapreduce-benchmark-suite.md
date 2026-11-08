@@ -3,7 +3,8 @@ title: "PUMA: Benchmarking MapReduce Performance"
 date: 2012-12-21 02:07:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/puma-a-mapreduce-benchmark-suite/
+categories: [linux-systems-administration]
+canonical: /puma-a-mapreduce-benchmark-suite/
 ---
 
 MapReduce remains a foundational programming model for processing large-scale distributed datasets, though its role has evolved alongside modern data processing frameworks. Hadoop implementations and other MapReduce systems require objective performance evaluation to guide infrastructure decisions and optimization efforts.

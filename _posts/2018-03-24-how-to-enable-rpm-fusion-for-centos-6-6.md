@@ -3,7 +3,8 @@ title: "Enable RPM Fusion Repository on RHEL 9 and Rocky Linux"
 date: 2018-03-24 11:45:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-enable-rpm-fusion-for-centos-6-6/
+categories: [linux-systems-administration]
+canonical: /how-to-enable-rpm-fusion-for-centos-6-6/
 ---
 
 RPM Fusion provides packages that Fedora and RHEL can’t ship by default due to patent, licensing, or trademark restrictions. This includes multimedia codecs, proprietary drivers, and other software. Here’s how to enable it on RHEL 9 and Rocky Linux.

@@ -3,7 +3,8 @@ title: "Reading Files from Tar Archives Without Extraction"
 date: 2019-07-14 06:06:45 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-cat-a-text-file-out-from-a-tar-archive-without-having-to-extracting-it/
+categories: [scripting-utilities]
+canonical: /how-to-cat-a-text-file-out-from-a-tar-archive-without-having-to-extracting-it/
 ---
 
 You don’t need to fully extract a `.tar` archive just to read one file inside it. The `tar` command can stream individual files directly to stdout, which saves time and disk space—especially useful for large archives.

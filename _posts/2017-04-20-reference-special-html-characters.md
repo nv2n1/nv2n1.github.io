@@ -3,7 +3,8 @@ title: "HTML Entity Reference Guide"
 date: 2017-04-20 08:31:57 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/reference-special-html-characters/
+categories: [web-development]
+canonical: /reference-special-html-characters/
 ---
 
 HTML entities represent characters that either have special meaning in HTML or benefit from explicit encoding. You have three syntax options:

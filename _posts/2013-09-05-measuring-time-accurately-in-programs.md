@@ -3,7 +3,8 @@ title: "Choosing the Right Timer: clock_gettime vs TSC in Linux"
 date: 2013-09-05 12:19:15 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/measuring-time-accurately-in-programs/
+categories: [linux-system-configuration]
+canonical: /measuring-time-accurately-in-programs/
 ---
 
 Measuring time accurately matters for performance profiling, benchmarking, and latency-sensitive applications. Linux provides several APIs with different tradeoffs in resolution, overhead, and reliability. Understanding which to use prevents subtle bugs in production code.

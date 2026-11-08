@@ -3,7 +3,8 @@ title: "Converting PDFs to Text While Preserving Layout on Linux"
 date: 2018-03-24 11:48:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-pdf-to-text-with-format-kept-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-pdf-to-text-with-format-kept-on-linux/
 ---
 
 Many PDF-to-text conversions strip away formatting and spatial relationships, making tables unreadable and multi-column layouts collapse into linear text. If you need to preserve the relative positions of text elements—especially tables, columns, and indentation—you have several solid options.

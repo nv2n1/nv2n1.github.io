@@ -3,7 +3,8 @@ title: "Finding HDFS Files with Replication Factor 1"
 date: 2018-03-24 11:53:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-out-all-files-with-replication-factor-1-in-hdfs/
+categories: [scripting-utilities]
+canonical: /how-to-find-out-all-files-with-replication-factor-1-in-hdfs/
 ---
 
 Files with replication factor 1 are a liability in production HDFS clusters. They have no redundancy, meaning a single node failure results in data loss. Identifying and fixing these files should be part of your regular cluster maintenance.

@@ -3,7 +3,8 @@ title: "Building Decentralized Systems: Core Concepts and Design Patterns"
 date: 2023-09-16 06:43:43 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/decentralization-101/
+categories: [systems-architecture]
+canonical: /decentralization-101/
 ---
 
 Decentralization is the transfer of control and decision-making from a centralized entity—typically a company, government, or institution—to a distributed network of participants. In practice, this means no single actor can unilaterally control the system, change its rules, or shut it down.

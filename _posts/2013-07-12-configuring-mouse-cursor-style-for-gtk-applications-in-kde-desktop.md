@@ -3,7 +3,8 @@ title: "Customizing GTK Cursor Themes in KDE"
 date: 2013-07-12 16:32:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/configuring-mouse-cursor-style-for-gtk-applications-in-kde-desktop/
+categories: [linux-systems-administration]
+canonical: /configuring-mouse-cursor-style-for-gtk-applications-in-kde-desktop/
 ---
 
 When using KDE Plasma with GTK applications, you’ll notice the mouse cursor switches to a default style when moving from the desktop to applications like Firefox or GIMP. This happens because GTK and Qt use separate cursor theme configurations by default.

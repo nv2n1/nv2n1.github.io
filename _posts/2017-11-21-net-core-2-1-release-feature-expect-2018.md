@@ -3,7 +3,8 @@ title: ".NET Core 2.1: What\u2019s New in 2018"
 date: 2017-11-21 05:37:33 +0000
 author: "Johnnymorgan"
 layout: post
-canonical: https://www.systutorials.com/net-core-2-1-release-feature-expect-2018/
+categories: [development-best-practices]
+canonical: /net-core-2-1-release-feature-expect-2018/
 ---
 
 This post covers .NET Core 2.1, which released in May 2018. Some of the predicted features below didn’t materialize as described; we’ll clarify what actually landed versus what was speculated.

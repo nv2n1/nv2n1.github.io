@@ -3,7 +3,8 @@ title: "Visualizing CMake Project Dependencies with Graphviz"
 date: 2023-05-26 14:45:33 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/visualizing-cmake-project-dependencies-with-graphviz/
+categories: [algorithms-data-structures]
+canonical: /visualizing-cmake-project-dependencies-with-graphviz/
 ---
 
 As C++ projects grow, understanding the web of dependencies between libraries and executables becomes critical for maintenance, build optimization, and architectural decisions. Graphviz provides a straightforward way to visualize your CMake build structure as a dependency graph.

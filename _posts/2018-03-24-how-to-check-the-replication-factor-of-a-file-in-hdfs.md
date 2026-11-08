@@ -3,7 +3,8 @@ title: "Checking HDFS File Replication Factor"
 date: 2018-03-24 11:43:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-the-replication-factor-of-a-file-in-hdfs/
+categories: [linux-systems-administration]
+canonical: /how-to-check-the-replication-factor-of-a-file-in-hdfs/
 ---
 
 When managing HDFS clusters, you often need to verify the replication factor of specific files to ensure data redundancy meets your requirements. Here are the practical methods to check this.

@@ -3,7 +3,8 @@ title: "Setting Up HP Printers on Fedora Linux 19"
 date: 2018-03-24 08:17:26 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/hp-printer-with-fedora-linux-19/
+categories: [linux-systems-administration]
+canonical: /hp-printer-with-fedora-linux-19/
 ---
 
 HP printers work well on Fedora when you install the right packages and drivers. Here’s what you need to do to get a USB or network-connected HP printer working reliably.

@@ -3,7 +3,8 @@ title: "Locating Which DataNodes Store a Specific HDFS File"
 date: 2018-03-24 11:43:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-the-datanodes-that-actually-store-a-file-in-hdfs/
+categories: [linux-systems-administration]
+canonical: /how-to-find-the-datanodes-that-actually-store-a-file-in-hdfs/
 ---
 
 In HDFS, files are split into blocks and replicated across multiple DataNodes for fault tolerance and parallelism. When you need to know exactly which DataNodes hold a specific file’s blocks, use `hdfs fsck` with the `-locations` and `-blocks` flags.

@@ -3,7 +3,8 @@ title: "Installing Calibre on Linux"
 date: 2018-03-24 11:43:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-latest-version-of-calibre/
+categories: [linux-systems-administration]
+canonical: /how-to-install-latest-version-of-calibre/
 ---
 
 Distribution repositories often lag behind Calibre’s latest releases. If your package manager shows an older version and you need current features or bug fixes, installing directly from the official installer is straightforward.

@@ -3,7 +3,8 @@ title: "Managing Bandwidth Hogging Among Roommates"
 date: 2018-03-24 08:20:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-prevent-roommates-from-hogging-bandwidth/
+categories: [development-best-practices]
+canonical: /how-to-prevent-roommates-from-hogging-bandwidth/
 ---
 
 Sharing a router with roommates means dealing with bandwidth conflicts. When someone’s running torrent clients, streaming, or other bandwidth-intensive applications without limits, everyone else suffers. Here’s how to handle it systematically.

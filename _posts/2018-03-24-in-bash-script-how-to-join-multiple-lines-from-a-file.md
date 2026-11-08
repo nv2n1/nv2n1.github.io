@@ -3,7 +3,8 @@ title: "Joining Multiple Lines in Bash Scripts"
 date: 2018-03-24 11:51:24 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/in-bash-script-how-to-join-multiple-lines-from-a-file/
+categories: [linux-systems-administration]
+canonical: /in-bash-script-how-to-join-multiple-lines-from-a-file/
 ---
 
 The most common need is collapsing multi-line records into single lines. Here are the practical approaches:

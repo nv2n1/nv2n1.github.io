@@ -3,7 +3,8 @@ title: "Free SSL/TLS Certificates: Let\u2019s Encrypt and Alternatives"
 date: 2018-03-24 11:46:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-free-web-server-ssl-tls-certificates-for-my-websites/
+categories: [systems-architecture]
+canonical: /how-to-get-a-free-web-server-ssl-tls-certificates-for-my-websites/
 ---
 
 Securing your website with HTTPS is no longer optional—it’s essential for SEO, user trust, and browser compatibility. The good news: Let’s Encrypt provides free certificates, and the tooling has matured significantly.

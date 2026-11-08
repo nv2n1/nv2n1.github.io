@@ -3,7 +3,8 @@ title: "Automatic Server Recovery: Handling Reboots and Panic Detection"
 date: 2015-02-02 13:03:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/lazy-linux-admins-going-to-server-rooms-less-forced-reboot-auto-reboot-after-kernel-panic-and-email-notification-after-reboot/
+categories: [linux-systems-administration]
+canonical: /lazy-linux-admins-going-to-server-rooms-less-forced-reboot-auto-reboot-after-kernel-panic-and-email-notification-after-reboot/
 ---
 
 When SSH fails but the daemon still runs, or when kernel panics strike, you need automated recovery without physical access. This guide covers three essential techniques: forcing reboots when the system is unresponsive, auto-recovery from kernel panics, and alerting you when it happens.

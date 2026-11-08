@@ -3,7 +3,8 @@ title: "Safely Rewriting Git Commit Messages After Push"
 date: 2018-03-24 11:40:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/changing-a-git-commit-message-after-i-have-pushed-it-to-the-server/
+categories: [linux-systems-administration]
+canonical: /changing-a-git-commit-message-after-i-have-pushed-it-to-the-server/
 ---
 
 If you’ve pushed a commit with a bad message, you can fix it—but the approach depends on whether others have pulled that commit yet.

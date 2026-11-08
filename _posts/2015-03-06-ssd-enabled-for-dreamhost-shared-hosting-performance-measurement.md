@@ -3,7 +3,8 @@ title: "Benchmarking SSD Performance on Shared Hosting Without Root"
 date: 2015-03-06 11:02:22 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/ssd-enabled-for-dreamhost-shared-hosting-performance-measurement/
+categories: [linux-systems-administration]
+canonical: /ssd-enabled-for-dreamhost-shared-hosting-performance-measurement/
 ---
 
 SSD storage is standard across modern hosting providers. DreamHost and competitors have shifted entirely to SSD-backed shared hosting. The marketing claim of “200% faster page loads” deserves skepticism, but SSD-backed hosting does deliver measurable I/O improvements for realistic workloads.

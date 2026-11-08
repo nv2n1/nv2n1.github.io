@@ -3,7 +3,8 @@ title: "Add Outlook-Style Reply Headers to Thunderbird"
 date: 2013-07-12 16:54:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/outlook-style-email-reply-header-thunderbird/
+categories: [linux-systems-administration]
+canonical: /outlook-style-email-reply-header-thunderbird/
 ---
 
 Thunderbird’s default reply headers are minimal—just a simple line showing who sent what and when. If you need detailed formatted headers showing From, To, Cc, Subject, and Date for compliance, audits, or professional correspondence, you’ll need to add an extension or configure a template.

@@ -3,7 +3,8 @@ title: "Forcefully Unmount a Busy Filesystem in Linux"
 date: 2018-03-24 11:49:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-do-i-force-linux-to-unmount-a-filesystem/
+categories: [linux-systems-administration]
+canonical: /how-do-i-force-linux-to-unmount-a-filesystem/
 ---
 
 When you try to unmount a filesystem, Linux sometimes refuses with a “device is busy” error. This safety mechanism prevents data loss when processes are actively using the filesystem. But there are legitimate cases where you need to force an unmount: a dead NFS server, a failed USB device, or a hung mount that won’t recover.

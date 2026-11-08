@@ -3,7 +3,8 @@ title: "Remap Space Bar to Ctrl with Tap-for-Space on Linux"
 date: 2018-03-24 08:22:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-turn-the-space-bar-to-another-ctrl-key/
+categories: [linux-systems-administration]
+canonical: /how-to-turn-the-space-bar-to-another-ctrl-key/
 ---
 
 Remapping space to Ctrl while preserving space on tap is useful for modal editors and power users. The challenge: distinguish between a held key (Ctrl) and a quick tap (space). Kernel-level remapping can’t do this, so you need userspace solutions.

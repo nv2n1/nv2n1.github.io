@@ -3,7 +3,8 @@ title: "Colossus: Google\u2019s Next-Generation Distributed File System"
 date: 2012-11-30 01:27:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/colossus-successor-to-google-file-system-gfs/
+categories: [systems-architecture]
+canonical: /colossus-successor-to-google-file-system-gfs/
 ---
 
 Colossus is Google’s successor to the Google File System (GFS), designed to handle the massive scale of data storage across Google’s infrastructure. While GFS was documented in detail in the 2003 SOSP paper, Colossus information remains sparse in academic literature—much of what we know comes from talks and interviews with Google engineers. Colossus serves as the underlying storage layer for systems like Spanner, Google’s globally distributed database.

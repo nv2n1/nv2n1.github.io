@@ -3,7 +3,8 @@ title: "Detecting USB Devices on Remote Linux Servers via SSH"
 date: 2018-03-24 11:45:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-whether-a-usb-disk-is-connected-to-a-linux-server/
+categories: [linux-systems-administration]
+canonical: /how-to-check-whether-a-usb-disk-is-connected-to-a-linux-server/
 ---
 
 When you’re managing a Linux server remotely over SSH, determining whether a USB drive has been connected requires checking kernel messages and device listings since you can’t visually inspect the hardware.

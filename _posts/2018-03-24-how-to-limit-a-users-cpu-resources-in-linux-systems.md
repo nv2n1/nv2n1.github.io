@@ -3,7 +3,8 @@ title: "Limiting CPU Resources for Linux Users"
 date: 2018-03-24 11:54:09 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-limit-a-users-cpu-resources-in-linux-systems/
+categories: [linux-systems-administration]
+canonical: /how-to-limit-a-users-cpu-resources-in-linux-systems/
 ---
 
 Limiting CPU resources for individual users is essential for preventing resource exhaustion, maintaining fair system performance, and isolating workloads. Whether you’re managing multi-user systems, shared hosting environments, or need to constrain specific applications, Linux provides several proven methods.

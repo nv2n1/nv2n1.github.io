@@ -3,7 +3,8 @@ title: "Sort Files Recursively by Modification Time in Linux"
 date: 2018-03-24 11:46:44 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-sort-all-files-recursively-by-modification-time-in-a-directory-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-sort-all-files-recursively-by-modification-time-in-a-directory-on-linux/
 ---
 
 Finding and sorting files by modification time across directories is a common task for log rotation, cleanup scripts, and audit purposes. Here are the most practical approaches.

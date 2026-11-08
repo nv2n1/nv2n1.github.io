@@ -3,7 +3,8 @@ title: "Removing Trailing Spaces from Files"
 date: 2018-03-24 08:19:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/remove-trailing-spaces-at-the-end-of-each-line-in-a-file/
+categories: [linux-systems-administration]
+canonical: /remove-trailing-spaces-at-the-end-of-each-line-in-a-file/
 ---
 
 Trailing spaces and tabs at the end of lines are common annoyances in source code and configuration files. They’re invisible, waste space, and can cause issues with certain tools or version control systems. Here’s how to remove them efficiently.

@@ -3,7 +3,8 @@ title: "Getting File Extensions in JavaScript"
 date: 2018-03-24 11:50:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-file-extension-in-javascript/
+categories: [languages-frameworks]
+canonical: /how-to-get-file-extension-in-javascript/
 ---
 
 Extracting a file extension from a filename is a common task. Here are the main approaches, with modern best practices.

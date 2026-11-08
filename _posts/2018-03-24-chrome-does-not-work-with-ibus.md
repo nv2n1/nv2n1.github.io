@@ -3,7 +3,8 @@ title: "Chrome not working with IBus input method"
 date: 2018-03-24 08:04:07 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/chrome-does-not-work-with-ibus/
+categories: [object-oriented-programming]
+canonical: /chrome-does-not-work-with-ibus/
 ---
 
 IBus is the default input method framework on many Linux distributions, but Chrome and Chromium-based browsers have historically struggled with proper IBus integration. Other applications like Thunderbird, Firefox, and GNOME applications typically work fine, which points to Chrome’s specific handling of input methods.

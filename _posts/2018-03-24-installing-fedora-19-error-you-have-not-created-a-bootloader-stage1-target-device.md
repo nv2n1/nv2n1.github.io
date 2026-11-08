@@ -3,7 +3,8 @@ title: "Creating a Bootloader Stage1 Target Device in Fedora 19"
 date: 2018-03-24 08:17:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/installing-fedora-19-error-you-have-not-created-a-bootloader-stage1-target-device/
+categories: [linux-systems-administration]
+canonical: /installing-fedora-19-error-you-have-not-created-a-bootloader-stage1-target-device/
 ---
 
 This error occurs when Fedora’s Anaconda installer cannot properly configure the bootloader, typically when it encounters conflicts between EFI and legacy boot modes or when the partition table format doesn’t match the system firmware expectations.

@@ -3,7 +3,8 @@ title: "How to Get File Size in Python Without os Module"
 date: 2018-03-24 11:51:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-size-of-python-file-without-using-the-os-namespace/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-size-of-python-file-without-using-the-os-namespace/
 ---
 
 There are several ways to get a file’s size without importing the `os` module. Each approach has different use cases depending on your needs.

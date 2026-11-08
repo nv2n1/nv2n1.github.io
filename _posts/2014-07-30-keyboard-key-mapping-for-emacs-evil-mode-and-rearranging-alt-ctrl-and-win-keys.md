@@ -3,7 +3,8 @@ title: "Remapping Keyboard Keys in Emacs: Evil Mode and System-Level Options"
 date: 2014-07-30 09:11:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/keyboard-key-mapping-for-emacs-evil-mode-and-rearranging-alt-ctrl-and-win-keys/
+categories: [linux-systems-administration]
+canonical: /keyboard-key-mapping-for-emacs-evil-mode-and-rearranging-alt-ctrl-and-win-keys/
 ---
 
 Emacs keybindings rely heavily on Ctrl because the editor was designed for Lisp machines in the 1970s—machines where Ctrl sat near the spacebar. Modern PC keyboards moved it to the corner, making constant reaches painful. Once millions of users built muscle memory around these bindings, changing them became impractical.

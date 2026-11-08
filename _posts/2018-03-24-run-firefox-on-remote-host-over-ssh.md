@@ -3,7 +3,8 @@ title: "Running Firefox Remotely Over SSH"
 date: 2018-03-24 08:04:15 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/run-firefox-on-remote-host-over-ssh/
+categories: [scripting-utilities]
+canonical: /run-firefox-on-remote-host-over-ssh/
 ---
 
 X11 forwarding over SSH lets you run graphical applications on remote systems and display them locally. Firefox is a common use case, though it requires careful configuration to avoid crashes and permission issues.

@@ -3,7 +3,8 @@ title: "SSH, File Transfer, and Remote Access: Linux from Windows"
 date: 2017-11-14 14:49:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/list-common-software-windows/
+categories: [scripting-utilities]
+canonical: /list-common-software-windows/
 ---
 
 If you’re working on Windows but need to interact with Linux systems, you’ll need reliable remote access tools. SSH is the standard—it’s secure, scriptable, and works everywhere. Here’s what actually matters.

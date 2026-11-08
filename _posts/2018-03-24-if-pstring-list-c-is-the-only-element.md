@@ -3,7 +3,8 @@ title: "Pattern Matching Single-Element Lists in OCaml and Scala"
 date: 2018-03-24 11:43:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/if-pstring-list-c-is-the-only-element/
+categories: [linux-systems-administration]
+canonical: /if-pstring-list-c-is-the-only-element/
 ---
 
 When you need to extract a value from a list that should contain exactly one element, pattern matching is the idiomatic way to handle it in functional languages. The error “unbound value c” typically occurs when you try to use a variable that wasn’t properly bound through pattern matching.

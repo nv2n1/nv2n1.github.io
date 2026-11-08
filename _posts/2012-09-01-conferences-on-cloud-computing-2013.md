@@ -3,7 +3,8 @@ title: "Conferences on Cloud Computing 2013"
 date: 2012-09-01 09:45:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/conferences-on-cloud-computing-2013/
+categories: [programming-languages]
+canonical: /conferences-on-cloud-computing-2013/
 ---
 
 > **Historical Archive:** This post lists conferences from 2012. The submission deadlines and venues are no longer current. For up-to-date conference information, check the official conference websites or resources like <a href="https://www.conferencealert.com/" rel="nofollow noopener" target="_blank">Conference Alert</a> and <a href="https://ccfddl.github.io/" rel="nofollow noopener" target="_blank">CCF Deadlines</a>.

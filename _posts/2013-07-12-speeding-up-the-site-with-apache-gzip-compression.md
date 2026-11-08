@@ -3,7 +3,8 @@ title: "Apache GZIP vs. Brotli: Setup and Testing Guide"
 date: 2013-07-12 16:46:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/speeding-up-the-site-with-apache-gzip-compression/
+categories: [system-administration-cloud]
+canonical: /speeding-up-the-site-with-apache-gzip-compression/
 ---
 
 HTTP compression reduces bandwidth usage and improves load times for clients. Apache’s mod_deflate and mod_brotli handle this transparently—the server compresses content before sending it, and modern browsers decompress it automatically.

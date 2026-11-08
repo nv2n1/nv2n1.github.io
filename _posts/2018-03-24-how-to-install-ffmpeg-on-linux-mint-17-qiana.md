@@ -3,7 +3,8 @@ title: "Installing FFmpeg on Linux Mint"
 date: 2018-03-24 11:42:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-ffmpeg-on-linux-mint-17-qiana/
+categories: [linux-systems-administration]
+canonical: /how-to-install-ffmpeg-on-linux-mint-17-qiana/
 ---
 
 FFmpeg is essential for video and audio processing on Linux. Installation methods vary depending on your Linux Mint version and whether you want the stable release or cutting-edge builds.

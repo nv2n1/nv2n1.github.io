@@ -3,7 +3,8 @@ title: "NFS Server on tmpfs: Setup and Caveats"
 date: 2013-07-12 16:32:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-a-nfs-server-on-top-of-tmpfs-devshm/
+categories: [linux-systems-administration]
+canonical: /setting-up-a-nfs-server-on-top-of-tmpfs-devshm/
 ---
 
 tmpfs delivers exceptional I/O performance since it lives entirely in RAM. Exporting it via NFS can be useful for temporary caches, build artifacts, or high-speed data sharing between systems on a trusted network.

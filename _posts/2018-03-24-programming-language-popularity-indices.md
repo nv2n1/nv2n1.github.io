@@ -3,7 +3,8 @@ title: "Language Popularity Index Trends: What the Data Shows"
 date: 2018-03-24 08:20:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/programming-language-popularity-indices/
+categories: [languages-frameworks]
+canonical: /programming-language-popularity-indices/
 ---
 
 Tracking programming language adoption helps inform hiring decisions, tool investment, and technology strategy. Several indices measure popularity across different dimensions — job postings, GitHub activity, Stack Overflow traffic, and search trends — so no single metric tells the complete story.

@@ -3,7 +3,8 @@ title: "Configuring Network Interfaces with ifcfg Files on RHEL"
 date: 2018-03-24 11:49:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-ifcfg-eth0-network-scripts-on-fedora-rhel-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-ifcfg-eth0-network-scripts-on-fedora-rhel-linux/
 ---
 
 The `/etc/sysconfig/network-scripts/` directory contains network configuration files on RHEL and Fedora systems. While newer systems increasingly use NetworkManager and systemd-networkd, understanding ifcfg files remains essential for legacy systems and certain enterprise environments.

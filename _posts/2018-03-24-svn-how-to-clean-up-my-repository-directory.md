@@ -3,7 +3,8 @@ title: "How to Clean Up Your Subversion Repository"
 date: 2018-03-24 08:14:29 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/svn-how-to-clean-up-my-repository-directory/
+categories: [development-best-practices]
+canonical: /svn-how-to-clean-up-my-repository-directory/
 ---
 
 Working in an SVN repository often leaves behind temporary build artifacts, compiled outputs, and editor cache files. Unlike Git’s `git clean` command, SVN has no built-in cleanup mechanism for untracked files.

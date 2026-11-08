@@ -3,7 +3,8 @@ title: "Processing Files Line by Line in Go"
 date: 2018-03-24 11:50:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-process-a-file-line-by-line-in-go/
+categories: [languages-frameworks]
+canonical: /how-to-process-a-file-line-by-line-in-go/
 ---
 
 Processing files line by line is a common task in Go. Here are the practical approaches, from simplest to most flexible.

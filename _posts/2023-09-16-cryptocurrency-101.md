@@ -3,7 +3,8 @@ title: "Getting Started with Cryptocurrency Basics"
 date: 2023-09-16 06:26:52 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/cryptocurrency-101/
+categories: [systems-architecture]
+canonical: /cryptocurrency-101/
 ---
 
 A cryptocurrency is a digital currency secured by cryptography and typically built on blockchain technology. Unlike traditional fiat money issued by central banks, most cryptocurrencies operate on decentralized networks where transactions can occur directly between peers without intermediaries like banks.

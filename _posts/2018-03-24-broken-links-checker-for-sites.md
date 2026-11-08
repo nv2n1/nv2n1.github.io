@@ -3,7 +3,8 @@ title: "Link Checker: Finding and Fixing Broken URLs"
 date: 2018-03-24 08:18:05 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/broken-links-checker-for-sites/
+categories: [linux-systems-administration]
+canonical: /broken-links-checker-for-sites/
 ---
 
 Broken links damage SEO, hurt user experience, and undermine site credibility. Checking for them should be part of your regular maintenance routine. Here’s what’s available in 2026.

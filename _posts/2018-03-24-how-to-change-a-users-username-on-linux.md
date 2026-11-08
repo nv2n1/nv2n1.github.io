@@ -3,7 +3,8 @@ title: "Changing a Linux Username: A Step-by-Step Guide"
 date: 2018-03-24 11:50:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-a-users-username-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-change-a-users-username-on-linux/
 ---
 
 The `usermod` command is the standard tool for modifying user accounts. To change a username, use the `-l` (or `--login`) option:

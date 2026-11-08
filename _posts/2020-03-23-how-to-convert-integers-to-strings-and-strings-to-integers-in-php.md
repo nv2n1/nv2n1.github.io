@@ -3,7 +3,8 @@ title: "Safe Integer and String Conversion in PHP"
 date: 2020-03-23 15:51:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-integers-to-strings-and-strings-to-integers-in-php/
+categories: [languages-frameworks]
+canonical: /how-to-convert-integers-to-strings-and-strings-to-integers-in-php/
 ---
 
 Type conversion is a constant necessity when handling user input, database results, and API responses in PHP. While PHP’s loose typing offers flexibility, explicit conversion remains essential for security, performance, and code clarity.

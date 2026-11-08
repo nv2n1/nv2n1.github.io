@@ -3,7 +3,8 @@ title: "Installing NS-2 and NS-3 on Fedora"
 date: 2013-07-12 16:32:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/install-ns-2-and-ns-3-on-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /install-ns-2-and-ns-3-on-fedora-linux/
 ---
 
 ns (Network Simulator) is a discrete-event simulator used primarily for research and educational purposes in networking. The two major versions—ns-2 and ns-3—are substantially different in architecture and usage patterns. This guide covers installation on current Fedora systems.

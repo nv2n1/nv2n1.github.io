@@ -3,7 +3,8 @@ title: "Error Handling in Go: Converting Errors to Strings"
 date: 2018-03-24 11:50:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/in-golang-how-to-convert-an-error-to-a-string/
+categories: [languages-frameworks]
+canonical: /in-golang-how-to-convert-an-error-to-a-string/
 ---
 
 Error handling is fundamental to Go development. Often you’ll need to convert an error to a string for logging, displaying to users, or including in API responses. Go provides several straightforward approaches.

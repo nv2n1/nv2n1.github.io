@@ -3,7 +3,8 @@ title: "VPN Over SSH: Using sshuttle and Alternatives"
 date: 2018-03-24 11:41:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-a-vpn-over-ssh/
+categories: [linux-systems-administration]
+canonical: /how-to-set-up-a-vpn-over-ssh/
 ---
 
 SSH tunneling and port forwarding work well for specific traffic, but they don’t give you a full VPN-like experience where all system traffic routes through the remote server. If you need transparent, system-wide traffic redirection over SSH, you have several solid options depending on your platform.

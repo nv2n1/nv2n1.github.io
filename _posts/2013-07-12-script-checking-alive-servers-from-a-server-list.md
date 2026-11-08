@@ -3,7 +3,8 @@ title: "Bash Script for Monitoring Server Uptime"
 date: 2013-07-12 16:32:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/script-checking-alive-servers-from-a-server-list/
+categories: [linux-systems-administration]
+canonical: /script-checking-alive-servers-from-a-server-list/
 ---
 
 When managing multiple servers, you need reliable ways to verify which hosts are reachable. While orchestration tools like Kubernetes and Ansible handle monitoring at scale, a lightweight Bash script works well for quick spot checks, operational tasks, or smaller deployments.

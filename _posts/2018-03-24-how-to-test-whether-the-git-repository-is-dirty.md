@@ -3,7 +3,8 @@ title: "Detecting Uncommitted Changes in Git Repositories"
 date: 2018-03-24 11:48:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-whether-the-git-repository-is-dirty/
+categories: [linux-systems-administration]
+canonical: /how-to-test-whether-the-git-repository-is-dirty/
 ---
 
 The `git status` command shows repository state visually, but when you need to detect it programmatically in bash — say, to fail a CI pipeline or prevent deployments — you need a different approach.

@@ -3,7 +3,8 @@ title: "Setting Tab Widths in Vim: 2 and 4 Space Options"
 date: 2018-03-24 11:50:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/in-vim-are-there-shortcuts-to-set-tab-widths-to-2-and-4/
+categories: [programming-languages]
+canonical: /in-vim-are-there-shortcuts-to-set-tab-widths-to-2-and-4/
 ---
 
 Different projects and languages have different indentation conventions. Rather than manually adjusting settings each time you switch contexts, you can define custom commands in Vim to toggle between common tab widths quickly.

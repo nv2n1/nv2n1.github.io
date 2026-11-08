@@ -3,7 +3,8 @@ title: "Detecting Bad Blocks on Storage Devices"
 date: 2018-03-24 07:54:11 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-search-bad-blocks-on-a-device/
+categories: [linux-system-configuration]
+canonical: /how-to-search-bad-blocks-on-a-device/
 ---
 
 If you suspect a disk has bad blocks, use the `badblocks` utility to scan for them. This tool probes a device (usually a disk partition) and reports which blocks are unreliable or unreadable.

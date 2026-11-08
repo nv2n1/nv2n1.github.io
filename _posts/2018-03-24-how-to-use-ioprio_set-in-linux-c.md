@@ -3,7 +3,8 @@ title: "Using ioprio_set to Control I/O Priority in Linux"
 date: 2018-03-24 11:51:39 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-ioprio_set-in-linux-c/
+categories: [linux-systems-administration]
+canonical: /how-to-use-ioprio_set-in-linux-c/
 ---
 
 Linux doesn’t provide a glibc wrapper for `ioprio_set()`, so you need to call it directly via `syscall()`. Here’s the basic approach:

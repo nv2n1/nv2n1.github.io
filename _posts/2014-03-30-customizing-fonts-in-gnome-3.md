@@ -3,7 +3,8 @@ title: "Customizing Fonts in GNOME: GUI and CLI Methods"
 date: 2014-03-30 08:01:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/customizing-fonts-in-gnome-3/
+categories: [linux-systems-administration]
+canonical: /customizing-fonts-in-gnome-3/
 ---
 
 GNOME’s default Settings app doesn’t expose comprehensive font options, but GNOME Tweaks and command-line tools give you full control over typefaces across the desktop, shell, and window decorations.

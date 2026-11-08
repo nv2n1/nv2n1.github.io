@@ -3,7 +3,8 @@ title: "Automating Keyboard Input in Linux: xvkbd and Alternatives"
 date: 2013-07-15 12:53:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/automatic-keyboard-presser-on-linux/
+categories: [linux-systems-administration]
+canonical: /automatic-keyboard-presser-on-linux/
 ---
 
 On most distributions:

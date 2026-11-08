@@ -3,7 +3,8 @@ title: "Converting Epoch Timestamps to Readable Dates in Bash"
 date: 2018-03-24 11:52:23 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-epoch-timestamp-to-human-readable-date-format-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-epoch-timestamp-to-human-readable-date-format-in-bash/
 ---
 
 Bash provides straightforward methods to convert Unix epoch timestamps into human-readable formats. This is essential for log parsing, system monitoring, and scripting across CI/CD pipelines and production environments.

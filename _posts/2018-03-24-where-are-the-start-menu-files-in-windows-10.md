@@ -3,7 +3,8 @@ title: "Windows 10 Start Menu File Locations"
 date: 2018-03-24 11:50:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/where-are-the-start-menu-files-in-windows-10/
+categories: [programming-languages]
+canonical: /where-are-the-start-menu-files-in-windows-10/
 ---
 
 The Windows Start Menu pulls shortcuts from two key directories. Understanding where these files live is essential if you’re managing deployments, troubleshooting pinned apps, or automating setups.

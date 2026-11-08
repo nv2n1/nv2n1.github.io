@@ -3,7 +3,8 @@ title: "Libvirt Crash After Upgrading to Version 2.5.0"
 date: 2018-03-24 11:51:39 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/libvirt-crash-when-upgrade-from-version-1-2-2-to-version-2-5-0/
+categories: [programming-languages]
+canonical: /libvirt-crash-when-upgrade-from-version-1-2-2-to-version-2-5-0/
 ---
 
 When upgrading libvirt from an older version (like 1.2.2) to 2.5.0 or later, you may encounter a socket connection error when trying to create VMs:

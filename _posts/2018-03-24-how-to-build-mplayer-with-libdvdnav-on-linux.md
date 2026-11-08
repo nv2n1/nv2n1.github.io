@@ -3,7 +3,8 @@ title: "Building MPlayer with libdvdnav Support"
 date: 2018-03-24 11:45:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-build-mplayer-with-libdvdnav-on-linux/
+categories: [programming-languages]
+canonical: /how-to-build-mplayer-with-libdvdnav-on-linux/
 ---
 
 MPlayer has been largely superseded by mpv in most Linux distributions, but if you need the classic MPlayer with DVD navigation support, building from source remains the way to get libdvdnav integrated. Most distribution packages omit this feature due to licensing complexity.

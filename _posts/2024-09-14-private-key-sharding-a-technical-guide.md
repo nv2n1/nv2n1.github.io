@@ -3,7 +3,8 @@ title: "Private Key Sharding: A Technical Guide"
 date: 2024-09-14 08:33:08 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/private-key-sharding-a-technical-guide/
+categories: [blockchain-cryptocurrency]
+canonical: /private-key-sharding-a-technical-guide/
 ---
 
 Private key sharding splits a private key into multiple parts called “shards” that must be combined to reconstruct the original key. This eliminates the single point of failure inherent in traditional seed phrase storage while maintaining on-chain simplicity. The most common implementation uses Shamir’s Secret Sharing (SSS), a cryptographic scheme that guarantees security even if some shards are compromised or lost.

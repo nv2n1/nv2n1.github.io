@@ -3,7 +3,8 @@ title: "MPlayer: Setting Startup Volume and Position"
 date: 2013-07-12 16:31:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/mplayer-startup-volume-and-postion/
+categories: [linux-systems-administration]
+canonical: /mplayer-startup-volume-and-postion/
 ---
 
 mpv inherits much of MPlayer’s command structure, but with modern improvements for hardware acceleration, Wayland support, and codec handling. Here’s how to configure default startup volume and playback position.

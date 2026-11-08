@@ -3,7 +3,8 @@ title: "Add a Via Parameter to AddThis Tweet Button"
 date: 2018-03-24 08:20:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/add-via-to-the-tweet-button-of-addthis-share/
+categories: [development-best-practices]
+canonical: /add-via-to-the-tweet-button-of-addthis-share/
 ---
 
 AddThis provides social sharing buttons for websites. If you’re using the AddThis Tweet button and want to add a `via` parameter (to attribute tweets to a specific Twitter account), here’s how to configure it.

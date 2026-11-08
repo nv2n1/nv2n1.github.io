@@ -3,7 +3,8 @@ title: "Check Partition Sizes in Human-Readable Format with parted"
 date: 2018-03-24 11:44:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-fdisk-l-display-partition-sizes-by-gb-mb/
+categories: [scripting-utilities]
+canonical: /making-fdisk-l-display-partition-sizes-by-gb-mb/
 ---
 
 `fdisk -l` displays partition information in sectors by default, which isn’t practical for most sysadmin tasks. While `fdisk` itself lacks options to change the unit display, `parted` shows partition sizes in GB/MB/KB automatically and is the better tool for this job.

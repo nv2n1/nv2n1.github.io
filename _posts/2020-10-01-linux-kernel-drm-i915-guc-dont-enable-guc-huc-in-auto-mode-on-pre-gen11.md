@@ -3,7 +3,8 @@ title: "Linux Kernel: Disable GuC/HuC Auto Mode on Pre-Gen11"
 date: 2020-10-01 14:25:35 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-drm-i915-guc-dont-enable-guc-huc-in-auto-mode-on-pre-gen11/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-drm-i915-guc-dont-enable-guc-huc-in-auto-mode-on-pre-gen11/
 ---
 
 This kernel change (commit 87d855e) prevents the Graphics Micro-Controller (GuC) and HEVC Video Codec (HuC) from being enabled by default on Intel GPU generations before Gen11, even when using automatic detection mode.

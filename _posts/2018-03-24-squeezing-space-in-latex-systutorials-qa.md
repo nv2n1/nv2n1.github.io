@@ -3,7 +3,8 @@ title: "Reducing Whitespace in LaTeX Documents"
 date: 2018-03-24 08:13:54 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/squeezing-space-in-latex-systutorials-qa/
+categories: [development-best-practices]
+canonical: /squeezing-space-in-latex-systutorials-qa/
 ---
 
 When you’re fighting page limits — conference submissions, journal requirements, or just fitting content on a poster — reducing LaTeX’s default spacing is essential. Here are the practical approaches, from gentle to aggressive.

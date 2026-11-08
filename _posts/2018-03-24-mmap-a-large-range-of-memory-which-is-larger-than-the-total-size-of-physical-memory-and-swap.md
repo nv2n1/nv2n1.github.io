@@ -3,7 +3,8 @@ title: "Memory-mapping Ranges Larger Than Available RAM and Swap"
 date: 2018-03-24 07:43:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/mmap-a-large-range-of-memory-which-is-larger-than-the-total-size-of-physical-memory-and-swap/
+categories: [functional-programming]
+canonical: /mmap-a-large-range-of-memory-which-is-larger-than-the-total-size-of-physical-memory-and-swap/
 ---
 
 When you mmap() a range larger than your system’s total physical memory plus swap, the kernel normally reserves swap space to back the mapping. If that reservation would exceed available swap, mmap() fails with ENOMEM. The MAP_NORESERVE flag lets you bypass this reservation requirement.

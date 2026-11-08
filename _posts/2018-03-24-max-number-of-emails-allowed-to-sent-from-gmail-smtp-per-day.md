@@ -3,7 +3,8 @@ title: "Gmail SMTP Rate Limits and Sending Quotas"
 date: 2018-03-24 11:46:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/max-number-of-emails-allowed-to-sent-from-gmail-smtp-per-day/
+categories: [linux-systems-administration]
+canonical: /max-number-of-emails-allowed-to-sent-from-gmail-smtp-per-day/
 ---
 
 Gmail’s SMTP service is widely used for automated mail sending, but it enforces strict rate limits to prevent abuse. Understanding these limits is critical when building mail applications or batch sending systems.

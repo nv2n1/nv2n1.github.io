@@ -3,7 +3,8 @@ title: "Linux Port Forwarding with iptables"
 date: 2013-07-12 16:32:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/port-forwarding-using-iptables/
+categories: [linux-systems-administration]
+canonical: /port-forwarding-using-iptables/
 ---
 
 Port forwarding allows external hosts to reach services inside a private network by mapping traffic from a public address to an internal one. On Linux, this is implemented through iptables rules that modify packet headers as they traverse the kernel’s netfilter framework.

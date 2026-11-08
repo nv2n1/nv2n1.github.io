@@ -3,7 +3,8 @@ title: "Display Date and Time Across Multiple Timezones on Linux"
 date: 2018-09-14 09:29:53 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-date-and-time-using-date-command-from-another-timezone-in-linux-2/
+categories: [linux-systems-administration]
+canonical: /how-to-get-date-and-time-using-date-command-from-another-timezone-in-linux-2/
 ---
 
 The simplest way to display the date and time in a different timezone is with the TZ environment variable:

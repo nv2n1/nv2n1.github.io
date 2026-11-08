@@ -3,7 +3,8 @@ title: "Latency Numbers Every Systems Engineer Should Know"
 date: 2013-07-19 05:47:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/software-engineering-advice-from-building-large-scale-distributed-systems-by-jeff-dean/
+categories: [linux-systems-administration]
+canonical: /software-engineering-advice-from-building-large-scale-distributed-systems-by-jeff-dean/
 ---
 
 Jeff Dean’s foundational work on large-scale distributed systems at Google established performance metrics that remain essential for making sound architectural decisions. While absolute numbers shift with hardware advances, the relative orders of magnitude have proven remarkably stable.

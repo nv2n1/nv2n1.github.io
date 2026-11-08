@@ -3,7 +3,8 @@ title: "SSH Through a Gateway to Internal Networks Using ProxyCommand"
 date: 2014-04-30 04:38:18 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/directly-ssh-to-hosts-with-lan-ips-through-the-gateway/
+categories: [linux-systems-administration]
+canonical: /directly-ssh-to-hosts-with-lan-ips-through-the-gateway/
 ---
 
 You’ve got internal hosts on RFC 1918 addresses (10.0.3.0/24, 172.16.0.0/12, etc.) behind a gateway, and you need SSH access to them from your workstation. Traditional solutions involve iptables port forwarding, non-standard ports, and a maintenance nightmare. ProxyCommand offers a cleaner approach: direct SSH connections to internal IPs that actually work.

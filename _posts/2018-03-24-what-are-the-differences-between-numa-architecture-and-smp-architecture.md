@@ -3,7 +3,8 @@ title: "NUMA vs SMP: Key Architectural Differences"
 date: 2018-03-24 11:54:41 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/what-are-the-differences-between-numa-architecture-and-smp-architecture/
+categories: [security-cryptography-2]
+canonical: /what-are-the-differences-between-numa-architecture-and-smp-architecture/
 ---
 
 **SMP (Symmetric Multiprocessing)** and **NUMA (Non-Uniform Memory Access)** represent two fundamentally different approaches to multi-processor system architecture. Understanding the distinction matters because it affects how you tune applications, configure kernel parameters, and optimize workloads.

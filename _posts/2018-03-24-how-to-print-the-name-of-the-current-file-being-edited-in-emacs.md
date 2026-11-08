@@ -3,7 +3,8 @@ title: "Getting the Current File Path in Emacs"
 date: 2018-03-24 11:40:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-the-name-of-the-current-file-being-edited-in-emacs/
+categories: [linux-systems-administration]
+canonical: /how-to-print-the-name-of-the-current-file-being-edited-in-emacs/
 ---
 
 To see the current file path immediately, use the Elisp evaluation prompt:

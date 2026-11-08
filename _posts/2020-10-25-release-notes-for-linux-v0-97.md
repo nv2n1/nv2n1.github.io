@@ -3,7 +3,8 @@ title: "Linux v0.97 Release Notes"
 date: 2020-10-25 09:09:21 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/release-notes-for-linux-v0-97/
+categories: [linux-systems-administration]
+canonical: /release-notes-for-linux-v0-97/
 ---
 
 This document preserves the original release notes for Linux kernel v0.97, an early milestone in kernel development that demonstrates the rapid evolution of core subsystems in the 1990s. The content below has been reformatted from the original ASCII release notes for readability while maintaining historical accuracy.

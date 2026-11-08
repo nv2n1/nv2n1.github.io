@@ -3,7 +3,8 @@ title: "Vim: Performing Case-Insensitive Searches"
 date: 2018-03-24 08:04:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/vim-case-insensitive-search/
+categories: [algorithms-data-structures]
+canonical: /vim-case-insensitive-search/
 ---
 
 Vim performs case-sensitive searches by default. If you search for `error`, it won’t match `Error` or `ERROR`. Here are several ways to enable case-insensitive searching.

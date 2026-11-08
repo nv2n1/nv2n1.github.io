@@ -3,7 +3,8 @@ title: "Adding BBCode Support to WordPress: A Practical Guide"
 date: 2013-07-12 16:46:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/bbcode-support-in-wordpress/
+categories: [programming-languages]
+canonical: /bbcode-support-in-wordpress/
 ---
 
 BBCode is a lightweight markup language commonly used in forums and legacy content systems. It’s simpler than HTML and more readable in raw form. While WordPress focuses on its block editor and native HTML support, you can add BBCode parsing if your content or users require it—though in most cases, modern alternatives are better choices.

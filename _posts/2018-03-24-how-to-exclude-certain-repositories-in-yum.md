@@ -3,7 +3,8 @@ title: "Excluding Specific Repositories in Yum"
 date: 2018-03-24 08:16:53 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-exclude-certain-repositories-in-yum/
+categories: [linux-systems-administration]
+canonical: /how-to-exclude-certain-repositories-in-yum/
 ---
 
 You’ll sometimes need to exclude specific repositories from package operations—typically when multiple repos provide the same package, mirror connectivity is unreliable, or you want to force installation from a trusted source. The `--disablerepo` flag lets you skip repos on a per-command basis.

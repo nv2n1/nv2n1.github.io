@@ -3,7 +3,8 @@ title: "Resuming Print Jobs on Linux After Paper Runs Out"
 date: 2018-03-24 08:21:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-resume-a-printing-job-on-hp-printer-if-the-paper-runs-out-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-resume-a-printing-job-on-hp-printer-if-the-paper-runs-out-on-linux/
 ---
 
 When your HP printer runs out of paper mid-job on Linux, the print queue pauses and won’t resume automatically once you reload paper. You need to either clear the error state physically or use CUPS commands to resume printing.

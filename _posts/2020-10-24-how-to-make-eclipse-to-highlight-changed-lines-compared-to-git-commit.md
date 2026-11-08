@@ -3,7 +3,8 @@ title: "Highlight Changed Lines in Eclipse Using Git"
 date: 2020-10-24 13:53:23 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-eclipse-to-highlight-changed-lines-compared-to-git-commit/
+categories: [testing-devops]
+canonical: /how-to-make-eclipse-to-highlight-changed-lines-compared-to-git-commit/
 ---
 
 Eclipse’s IDE capabilities make it useful for managing larger codebases, especially those version-controlled with Git. The Quick Diff feature lets you see at a glance which lines differ from your last commit—essential when reviewing your work before staging changes.

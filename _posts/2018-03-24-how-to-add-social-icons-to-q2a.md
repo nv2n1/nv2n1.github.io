@@ -3,7 +3,8 @@ title: "Adding Social Media Icons to Question2Answer"
 date: 2018-03-24 08:15:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-social-icons-to-q2a/
+categories: [testing-devops]
+canonical: /how-to-add-social-icons-to-q2a/
 ---
 
 The Question2Answer (Q2A) Share plugin enables social sharing functionality for questions and answers on your Q2A installation. This guide covers installation and configuration.

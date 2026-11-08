@@ -3,7 +3,8 @@ title: "Querying WordPress Posts by Type and Status"
 date: 2013-07-12 16:46:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/get-the-number-of-all-posts-in-wordpress/
+categories: [programming-languages]
+canonical: /get-the-number-of-all-posts-in-wordpress/
 ---
 
 The `wp_count_posts()` function returns a count object for any post type, making it essential for dashboards, theme displays, admin queries, and performance monitoring. Understanding how to use it correctly—and when to optimize—matters for WordPress development.

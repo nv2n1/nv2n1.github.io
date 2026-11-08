@@ -3,7 +3,8 @@ title: "Setting Up LFTP for SFTP Key-Based Authentication"
 date: 2018-03-24 11:50:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-lftp-to-use-key-for-authentication-for-sftp-on-linux/
+categories: [programming-languages]
+canonical: /how-to-make-lftp-to-use-key-for-authentication-for-sftp-on-linux/
 ---
 
 If you’ve set up passwordless SSH login with key-based authentication but lftp keeps prompting for a password, you need to explicitly configure it to use your SSH keys.

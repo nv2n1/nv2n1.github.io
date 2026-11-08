@@ -3,7 +3,8 @@ title: "Using Root Access Safely on Ubuntu"
 date: 2013-08-23 06:35:00 +0000
 author: "Thirumal Venkat"
 layout: post
-canonical: https://www.systutorials.com/enabling-root-on-ubuntu/
+categories: [linux-systems-administration]
+canonical: /enabling-root-on-ubuntu/
 ---
 
 Ubuntu locks the root account by default as a safety measure—it prevents accidental system damage and enforces audit trails through `sudo`. If you genuinely need direct root access, here’s how to enable it and the security tradeoffs involved.

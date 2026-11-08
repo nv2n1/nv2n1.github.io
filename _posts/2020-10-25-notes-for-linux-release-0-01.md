@@ -3,7 +3,8 @@ title: "Linux 0.01 Release Notes"
 date: 2020-10-25 05:12:39 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/notes-for-linux-release-0-01/
+categories: [linux-systems-administration]
+canonical: /notes-for-linux-release-0-01/
 ---
 
 This document preserves the original release notes for Linux kernel version 0.01, the first public release by Linus Torvalds in 1991. These notes provide historical context on the early design decisions and limitations of what would become the world’s most widely used operating system kernel.

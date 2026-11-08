@@ -3,7 +3,8 @@ title: "How to Monitor Process I/O Utilization"
 date: 2018-03-24 11:54:03 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-processes-i-o-utilization-percentage/
+categories: [programming-languages]
+canonical: /how-to-get-processes-i-o-utilization-percentage/
 ---
 
 Getting accurate I/O metrics per process is critical for troubleshooting performance issues, identifying storage bottlenecks, and capacity planning. Linux provides several tools for this task, each with different trade-offs between accuracy and overhead.

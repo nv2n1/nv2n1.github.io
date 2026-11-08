@@ -3,7 +3,8 @@ title: "Configure ctags to Recognize Custom File Extensions as C"
 date: 2018-03-24 11:44:15 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-ctags-recognize-specific-files-with-certain-extensions-as-c-source-files/
+categories: [scripting-utilities]
+canonical: /how-to-make-ctags-recognize-specific-files-with-certain-extensions-as-c-source-files/
 ---
 
 When working with codebases that use non-standard file extensions for C source files, ctags won’t recognize them by default. You can configure it to treat files with custom extensions like `.c0` or `.puc` as C source code.

@@ -3,7 +3,8 @@ title: "Prevent Non-Critical Mounts from Blocking Linux Boot"
 date: 2018-03-24 11:45:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-avoid-mounting-failures-blocking-linux-booting/
+categories: [linux-systems-administration]
+canonical: /how-to-avoid-mounting-failures-blocking-linux-booting/
 ---
 
 When a filesystem listed in `/etc/fstab` fails to mount during boot, the system can hang or drop to an emergency shell, preventing normal startup. This happens because the kernel treats all mount entries equally by default. Non-critical filesystems—network shares, external drives, or optional data partitions—shouldn’t block your entire system from booting.

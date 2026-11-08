@@ -3,7 +3,8 @@ title: "I/O Performance: Loopback vs. Blktap for Xen File-backed VBDs"
 date: 2013-07-12 16:31:54 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/an-io-performance-comparison-between-loopback-backed-and-blktap-backed-xen-file-backed-vbd/
+categories: [design-patterns-architecture]
+canonical: /an-io-performance-comparison-between-loopback-backed-and-blktap-backed-xen-file-backed-vbd/
 ---
 
 This post analyzes I/O performance between loopback and blktap backends for Xen file-backed virtual block devices (VBDs), based on testing from 2013. While Xen remains in production use (AWS EC2, Citrix Hypervisor), most Linux deployments now default to KVM. For modern virtualization needs, consider KVM/libvirt or container solutions like Docker and Kubernetes. This post is preserved as historical reference for legacy Xen environments.

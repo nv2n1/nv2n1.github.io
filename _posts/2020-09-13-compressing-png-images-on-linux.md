@@ -3,7 +3,8 @@ title: "Compress PNG Images on Linux"
 date: 2020-09-13 06:57:49 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/compressing-png-images-on-linux/
+categories: [linux-systems-administration]
+canonical: /compressing-png-images-on-linux/
 ---
 
 PNG images already use DEFLATE compression (a combination of LZ77 and Huffman coding), but you can reduce file sizes further by optimizing the PNG’s internal structure and removing metadata.

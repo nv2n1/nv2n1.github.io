@@ -3,7 +3,8 @@ title: "Installing No-IP DUC on Linux"
 date: 2018-03-24 11:42:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-no-ip-update-client-on-linux-mint/
+categories: [linux-systems-administration]
+canonical: /how-to-install-no-ip-update-client-on-linux-mint/
 ---
 
 The No-IP Dynamic Update Client (DUC) keeps your dynamic DNS hostname pointing to your current IP address. Here’s how to install and configure the noip2 client on modern Linux distributions.

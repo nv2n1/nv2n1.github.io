@@ -3,7 +3,8 @@ title: "Alt-Tab Between Windows Only in GNOME"
 date: 2018-03-24 08:22:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-alt-tab-switch-among-windows-instead-of-applications-in-gnome-3/
+categories: [linux-system-configuration]
+canonical: /how-to-make-alt-tab-switch-among-windows-instead-of-applications-in-gnome-3/
 ---
 
 GNOME’s default Alt-Tab behavior switches between applications, grouping all windows from the same app together. If you work with multiple windows in a single application—multiple browser tabs, text editors, or terminals—this becomes frustrating. Here’s how to change it to window-based switching.

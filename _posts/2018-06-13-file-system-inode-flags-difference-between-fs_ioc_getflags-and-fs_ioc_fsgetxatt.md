@@ -3,7 +3,8 @@ title: "Understanding Linux Inode Flags: FS_IOC_GETFLAGS vs FS_IOC_FSGETXATTR"
 date: 2018-06-13 02:21:25 +0000
 author: "sameerkhurd"
 layout: post
-canonical: https://www.systutorials.com/file-system-inode-flags-difference-between-fs_ioc_getflags-and-fs_ioc_fsgetxatt/
+categories: [linux-systems-administration]
+canonical: /file-system-inode-flags-difference-between-fs_ioc_getflags-and-fs_ioc_fsgetxatt/
 ---
 
 Both `FS_IOC_GETFLAGS` and `FS_IOC_FSGETXATTR` retrieve inode attributes, but they differ in scope, design, and what they’re meant to expose. Understanding which to use depends on your filesystem, compatibility requirements, and what metadata you actually need.

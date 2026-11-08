@@ -3,7 +3,8 @@ title: "Configuring Auto-Indentation for OCaml in Vim"
 date: 2018-03-24 08:19:23 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/auto-indenting-for-ocaml-code-in-vim/
+categories: [linux-systems-administration]
+canonical: /auto-indenting-for-ocaml-code-in-vim/
 ---
 
 Vim’s default OCaml indentation is limited and doesn’t handle the language’s syntax well. You’ll want to use `ocp-indent`, a dedicated indentation tool built specifically for OCaml that understands the language’s scoping and structure rules.

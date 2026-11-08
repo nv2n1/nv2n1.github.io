@@ -3,7 +3,8 @@ title: "How to Pad an Integer with Zeros in Bash"
 date: 2018-03-24 08:19:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-padding-a-integer-with-0s-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-padding-a-integer-with-0s-in-bash/
 ---
 
 When you need to format an integer with leading zeros in bash, `printf` is the standard approach. This is useful for generating zero-padded IDs, filenames, or any formatted output.

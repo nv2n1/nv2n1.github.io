@@ -3,7 +3,8 @@ title: "QEMU/KVM Networking: TAP, virtio, and vhost Explained"
 date: 2017-08-26 15:32:37 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/qemukvm-network-mechanisms/
+categories: [systems-architecture]
+canonical: /qemukvm-network-mechanisms/
 ---
 
 QEMU/KVM networking operates across multiple layers — TAP devices, QEMU’s packet queuing, virtio descriptors, and kernel bypass mechanisms. Understanding this stack is essential for debugging connectivity issues and tuning performance in production environments.

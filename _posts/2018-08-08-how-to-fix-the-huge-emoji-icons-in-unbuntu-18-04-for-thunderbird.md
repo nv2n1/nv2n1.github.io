@@ -3,7 +3,8 @@ title: "Fixing Oversized Emoji in Thunderbird: Font Configuration Guide"
 date: 2018-08-08 04:09:21 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-fix-the-huge-emoji-icons-in-unbuntu-18-04-for-thunderbird/
+categories: [programming-languages]
+canonical: /how-to-fix-the-huge-emoji-icons-in-unbuntu-18-04-for-thunderbird/
 ---
 
 Emoji rendering at incorrect sizes in Thunderbird usually comes down to font configuration. Unlike browsers that inherit system emoji rendering, Thunderbird manages its own font stack, which can drift out of sync with your system fonts or get corrupted in Thunderbird’s cache.

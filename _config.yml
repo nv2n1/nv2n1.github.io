@@ -1,5 +1,7 @@
 title: SysTutorials
-description: Archive of SysTutorials posts on Linux, systems, and software.
+description: Tutorials and Q&A on Linux, systems, and software.
+url: https://nv2n1.github.io
 permalink: /:title/
 plugins:
   - jekyll-sitemap
+  - jekyll-feed

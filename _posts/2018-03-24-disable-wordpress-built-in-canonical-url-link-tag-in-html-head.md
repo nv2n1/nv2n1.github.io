@@ -3,7 +3,8 @@ title: "Remove WordPress Canonical Tags from HTML Head"
 date: 2018-03-24 08:04:50 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/disable-wordpress-built-in-canonical-url-link-tag-in-html-head/
+categories: [web-development]
+canonical: /disable-wordpress-built-in-canonical-url-link-tag-in-html-head/
 ---
 
 WordPress has included automatic canonical URL generation since version 2.9. While this is usually beneficial for SEO, certain scenarios require disabling it — for example, when forum plugins generate incorrect canonical URLs that point all threads to a single page.

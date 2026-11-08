@@ -3,7 +3,8 @@ title: "Syncing Thunderbird Calendar with iCloud"
 date: 2022-02-27 10:31:02 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/synchronizing-thunderbird-calendar-with-apple-icloud-calendar/
+categories: [testing-devops]
+canonical: /synchronizing-thunderbird-calendar-with-apple-icloud-calendar/
 ---
 
 Thunderbird’s native calendar support doesn’t include direct iCloud integration, but you can sync iCloud calendars using CalDAV—Apple’s standard calendar protocol. This approach gives you read-write access to your iCloud calendars from within Thunderbird.

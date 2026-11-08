@@ -3,7 +3,8 @@ title: "Reading Environment Variables in Java"
 date: 2018-03-24 11:52:13 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-an-environment-variable-in-java/
+categories: [languages-frameworks]
+canonical: /how-to-get-an-environment-variable-in-java/
 ---
 
 There are two primary ways to access environment variables in Java: `System.getenv()` for reading variables and `System.getProperty()` for reading system properties. They’re different things, so understanding which one you need matters.

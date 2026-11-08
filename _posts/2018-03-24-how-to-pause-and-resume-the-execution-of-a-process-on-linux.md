@@ -3,7 +3,8 @@ title: "Pausing and Resuming Linux Processes with SIGSTOP and SIGCONT"
 date: 2018-03-24 11:53:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-pause-and-resume-the-execution-of-a-process-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-pause-and-resume-the-execution-of-a-process-on-linux/
 ---
 
 You can pause and resume any process on Linux using signals without stopping it completely. This is useful for managing resource-heavy jobs, debugging, or controlling execution flow without losing process state.

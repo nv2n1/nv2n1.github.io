@@ -3,7 +3,8 @@ title: "Saving Office 2007 Documents as PDF or XPS"
 date: 2018-03-24 08:04:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/office-2007-save-as-pdf-or-xps/
+categories: [development-best-practices]
+canonical: /office-2007-save-as-pdf-or-xps/
 ---
 
 If you’re working with Microsoft Office 2007, converting documents to PDF or XPS format requires an additional add-in since native support wasn’t built into the original release.

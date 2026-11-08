@@ -3,7 +3,8 @@ title: "Self-Hosting WordPress on a Budget: A Practical Guide"
 date: 2013-07-12 16:46:15 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-free-personal-wordpress-blog-solution/
+categories: [linux-systems-administration]
+canonical: /a-free-personal-wordpress-blog-solution/
 ---
 
 Self-hosting WordPress gives you control over your domain, design, content, and monetization—something you don’t get with WordPress.com or other hosted solutions. The reality: it’s feasible on a tight budget, but free hosting isn’t the answer.

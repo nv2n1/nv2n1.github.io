@@ -3,7 +3,8 @@ title: "Extracting Audio from Videos with MPlayer and LAME"
 date: 2013-07-12 16:31:33 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/convert-movie-file-to-wav-and-mp3-file-using-mplayer-and-lame/
+categories: [linux-systems-administration]
+canonical: /convert-movie-file-to-wav-and-mp3-file-using-mplayer-and-lame/
 ---
 
 Converting audio tracks from video files is useful for extracting soundtracks, creating audio-only versions for podcasts, or generating files optimized for audio playback. While MPlayer was historically used for this task, **ffmpeg** is now the standard tool—it’s actively maintained, more efficient, and handles both extraction and encoding in one step.

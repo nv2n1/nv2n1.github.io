@@ -3,7 +3,8 @@ title: "Finding Hard Links to a File"
 date: 2018-03-24 07:43:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-hard-links-to-a-file/
+categories: [linux-systems-administration]
+canonical: /how-to-find-hard-links-to-a-file/
 ---
 
 A hard link is an additional directory entry pointing to the same inode as the original file. Unlike symbolic links, hard links share the same inode number and have identical permissions, ownership, and content. To find all hard links to a file, you need to locate every directory entry with the same inode.

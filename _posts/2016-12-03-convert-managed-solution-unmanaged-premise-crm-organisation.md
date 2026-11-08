@@ -3,7 +3,8 @@ title: "Converting Managed Solutions to Unmanaged in Dynamics CRM"
 date: 2016-12-03 06:01:37 +0000
 author: "jameswarner"
 layout: post
-canonical: https://www.systutorials.com/convert-managed-solution-unmanaged-premise-crm-organisation/
+categories: [algorithms-data-structures]
+canonical: /convert-managed-solution-unmanaged-premise-crm-organisation/
 ---
 
 Converting a managed solution to unmanaged in on-premise Dynamics CRM requires direct database modification. You’ll need this when customizing third-party solutions that the publisher hasn’t provided in unmanaged form, or when you need to export and modify components before deployment.

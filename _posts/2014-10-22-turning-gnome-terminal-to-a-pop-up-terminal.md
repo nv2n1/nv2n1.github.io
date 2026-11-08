@@ -3,7 +3,8 @@ title: "Pop-up Terminal Hotkey for GNOME"
 date: 2014-10-22 06:22:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/turning-gnome-terminal-to-a-pop-up-terminal/
+categories: [linux-systems-administration]
+canonical: /turning-gnome-terminal-to-a-pop-up-terminal/
 ---
 
 A toggle-on-demand terminal you can summon and hide with a single keystroke is useful for quick commands without cluttering your workspace. This guide walks you through creating one using GNOME Terminal and basic shell scripting.

@@ -3,7 +3,8 @@ title: "An Introduction to Xen\u2019s paravirt_ops Interface"
 date: 2013-07-12 16:32:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/simple-introduction-to-paravirt_ops-for-xen/
+categories: [object-oriented-programming]
+canonical: /simple-introduction-to-paravirt_ops-for-xen/
 ---
 
 paravirt_ops is an abstraction layer in the Linux kernel that allows the same binary to run efficiently on both bare metal and various hypervisors through runtime patching. Rather than compiling separate kernels for each platform, paravirt_ops lets the kernel detect its environment at boot and optimize itself accordingly.

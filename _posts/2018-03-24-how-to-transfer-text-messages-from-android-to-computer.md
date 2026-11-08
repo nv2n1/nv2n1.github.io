@@ -3,7 +3,8 @@ title: "Transfer SMS and RCS Messages from Android to PC"
 date: 2018-03-24 11:49:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-transfer-text-messages-from-android-to-computer/
+categories: [programming-languages]
+canonical: /how-to-transfer-text-messages-from-android-to-computer/
 ---
 
 Backing up text messages from Android works best through Google Messages for real-time web access, or via ADB and third-party tools for local archives. Your approach depends on whether you need cloud sync, local storage, or both.

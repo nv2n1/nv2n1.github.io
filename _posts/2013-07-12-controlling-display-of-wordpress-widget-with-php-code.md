@@ -3,7 +3,8 @@ title: "Conditionally Display WordPress Widgets with PHP"
 date: 2013-07-12 16:46:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/controlling-display-of-wordpress-widget-with-php-code/
+categories: [programming-languages]
+canonical: /controlling-display-of-wordpress-widget-with-php-code/
 ---
 
 Displaying widgets selectively based on page context, user conditions, or post-specific rules is a common requirement in WordPress. Rather than relying on legacy plugins or wrestling with limited built-in options, you can implement this directly in your theme or custom plugin using WordPress hooks and conditional tags.

@@ -3,7 +3,8 @@ title: "Using Rsync with Non-Standard SSH Ports"
 date: 2018-03-24 08:19:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/rsync-with-non-standard-ssh-ports/
+categories: [scripting-utilities]
+canonical: /rsync-with-non-standard-ssh-ports/
 ---
 
 When you need to rsync against hosts behind NAT gateways or port-forwarded SSH services, the standard port 22 won’t work. The solution is the `-e` flag, which lets you specify a custom SSH command with your desired port.

@@ -3,7 +3,8 @@ title: "Cryptocurrency Fundamentals: A Technical Overview"
 date: 2025-01-15 14:05:07 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/understanding-cryptocurrency/
+categories: [blockchain-cryptocurrency]
+canonical: /understanding-cryptocurrency/
 ---
 
 Cryptocurrency is a digital currency secured through cryptography and typically operating on decentralized blockchain networks. Unlike government-issued fiat currencies, cryptocurrencies derive their security and validation from distributed consensus mechanisms rather than central authorities.

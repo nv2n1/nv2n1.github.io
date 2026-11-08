@@ -3,7 +3,8 @@ title: "Force Restart a Frozen iPhone"
 date: 2018-03-24 11:44:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-iphone-to-reboot-restart-reset/
+categories: [web-development]
+canonical: /how-to-force-iphone-to-reboot-restart-reset/
 ---
 
 When your iPhone completely freezes or becomes unresponsive, a force restart is usually the fastest way to get it working again. Unlike a regular restart, a force restart bypasses the normal shutdown process and forces the device to reboot immediately.

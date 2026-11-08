@@ -3,7 +3,8 @@ title: "Force a System Reboot on Linux"
 date: 2018-03-24 08:17:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/force-linux-to-reboot/
+categories: [linux-systems-administration]
+canonical: /force-linux-to-reboot/
 ---
 
 When standard reboot commands fail to work, the Magic SysRq key provides a kernel-level mechanism to force a reboot or shutdown. This works even when the system is mostly unresponsive.

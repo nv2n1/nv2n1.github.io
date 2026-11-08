@@ -3,7 +3,8 @@ title: "Mastering pkill and pgrep for Process Management"
 date: 2013-07-12 16:32:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/pkill-and-pgrep-process-management-commands/
+categories: [linux-systems-administration]
+canonical: /pkill-and-pgrep-process-management-commands/
 ---
 
 `pgrep` and `pkill` are essential tools for finding and signaling processes by name and attributes. They’re far more precise than grepping `ps` output and should be your go-to for process management scripts and one-liners.

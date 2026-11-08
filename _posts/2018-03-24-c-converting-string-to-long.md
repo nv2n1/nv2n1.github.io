@@ -3,7 +3,8 @@ title: "Converting Strings to Long Integers in C"
 date: 2018-03-24 08:08:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/c-converting-string-to-long/
+categories: [scripting-utilities]
+canonical: /c-converting-string-to-long/
 ---
 
 Converting strings to long integers is fundamental in C. The standard library provides `strtol()`, `strtoul()`, `strtoll()`, and `strtoull()` for this purpose. These functions handle the conversion robustly and let you detect parsing errors through their return value and `endptr` argument.

@@ -3,7 +3,8 @@ title: "Taking Screenshots in MPlayer"
 date: 2013-07-12 16:32:22 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/taking-screenshot-in-mplayer/
+categories: [linux-systems-administration]
+canonical: /taking-screenshot-in-mplayer/
 ---
 
 MPlayer reached end-of-life years ago. Its active fork, **mpv**, maintains all screenshot functionality with identical or simpler syntax. This guide covers mpv, which handles both single captures and burst sequences.

@@ -3,7 +3,8 @@ title: "Printing Strings to stderr in Go"
 date: 2018-03-24 11:50:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/in-golang-how-to-print-string-to-stderr/
+categories: [languages-frameworks]
+canonical: /in-golang-how-to-print-string-to-stderr/
 ---
 
 Sending output to stderr keeps error messages separate from normal program output, making it easier to redirect and filter logs in shell scripts and pipelines.

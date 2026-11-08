@@ -3,7 +3,8 @@ title: "Debugging Linux Network Drivers: Essential Tools and Techniques"
 date: 2018-03-24 08:21:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-debug-check-network-related-driver-information-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-debug-check-network-related-driver-information-on-linux/
 ---
 
 When network interfaces fail or behave unexpectedly, you need to inspect driver details, hardware state, and kernel messages. Here’s the practical toolkit for diagnosing network hardware and driver issues.

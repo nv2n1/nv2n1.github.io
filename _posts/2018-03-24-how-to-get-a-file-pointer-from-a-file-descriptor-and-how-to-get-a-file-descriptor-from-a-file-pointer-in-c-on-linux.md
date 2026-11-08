@@ -3,7 +3,8 @@ title: "Converting Between File Descriptors and FILE Pointers in C"
 date: 2018-03-24 11:48:07 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-file-pointer-from-a-file-descriptor-and-how-to-get-a-file-descriptor-from-a-file-pointer-in-c-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-a-file-pointer-from-a-file-descriptor-and-how-to-get-a-file-descriptor-from-a-file-pointer-in-c-on-linux/
 ---
 
 When working with file I/O in C on Linux, you’ll often need to convert between low-level file descriptors (returned by `open()`, `socket()`, etc.) and higher-level `FILE` pointers (returned by `fopen()`). This is common when integrating different libraries or mixing POSIX I/O with standard C I/O.

@@ -3,7 +3,8 @@ title: "Clearing iptables Rules on Fedora"
 date: 2013-07-12 16:32:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/flushing-iptables-on-fedora/
+categories: [linux-systems-administration]
+canonical: /flushing-iptables-on-fedora/
 ---
 
 Modern Fedora (29+) uses `firewalld` by default instead of the legacy `iptables` service. If you’re working with an older system or one configured for iptables, the concepts here still apply, but you should first check what’s actually managing your firewall:

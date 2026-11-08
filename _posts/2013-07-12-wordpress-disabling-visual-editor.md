@@ -3,7 +3,8 @@ title: "Disable WordPress Block Editor and Classic Editor"
 date: 2013-07-12 16:46:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/wordpress-disabling-visual-editor/
+categories: [object-oriented-programming]
+canonical: /wordpress-disabling-visual-editor/
 ---
 
 The WordPress block editor (Gutenberg) and legacy visual editor can mangle custom HTML, delete formatting, and cause frustration for users who work directly with code. If you prefer writing HTML directly or need to preserve complex markup, you can disable the visual editing experience entirely.

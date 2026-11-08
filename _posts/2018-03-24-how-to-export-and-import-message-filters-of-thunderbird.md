@@ -3,7 +3,8 @@ title: "Exporting and Importing Thunderbird Message Filters"
 date: 2018-03-24 08:21:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-export-and-import-message-filters-of-thunderbird/
+categories: [development-best-practices]
+canonical: /how-to-export-and-import-message-filters-of-thunderbird/
 ---
 
 Thunderbird stores message filters in per-account configuration files, making it inconvenient to replicate filters across multiple accounts or installations. Rather than recreating filters manually, you can copy filter files directly or use symbolic links to keep filters synchronized.

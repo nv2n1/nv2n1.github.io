@@ -3,7 +3,8 @@ title: "Converting Unix Timestamps in C"
 date: 2018-03-24 11:52:20 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-c/
+categories: [programming-languages]
+canonical: /how-to-get-the-epoch-timestamp-in-c/
 ---
 
 The epoch timestamp (seconds since January 1, 1970 UTC) is fundamental for Unix timekeeping. Every process needs reliable time access — whether for logging, scheduling, or benchmarking.

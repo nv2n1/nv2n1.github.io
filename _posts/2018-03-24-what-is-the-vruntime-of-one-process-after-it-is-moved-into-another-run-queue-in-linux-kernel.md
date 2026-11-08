@@ -3,7 +3,8 @@ title: "How vruntime Changes When Moving Between CPU Run Queues"
 date: 2018-03-24 11:51:39 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/what-is-the-vruntime-of-one-process-after-it-is-moved-into-another-run-queue-in-linux-kernel/
+categories: [algorithms-data-structures]
+canonical: /what-is-the-vruntime-of-one-process-after-it-is-moved-into-another-run-queue-in-linux-kernel/
 ---
 
 When the kernel migrates a process from one CPU’s runqueue to another, the Completely Fair Scheduler (CFS) must adjust the process’s virtual runtime (vruntime) to account for the different scheduling histories of each CPU. This prevents fairness issues where a migrated process could gain an unfair advantage on the destination CPU.

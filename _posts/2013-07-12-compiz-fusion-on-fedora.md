@@ -3,7 +3,8 @@ title: "Installing Compiz Fusion on Fedora"
 date: 2013-07-12 16:31:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/compiz-fusion-on-fedora/
+categories: [linux-systems-administration]
+canonical: /compiz-fusion-on-fedora/
 ---
 
 Compiz Fusion is a lightweight 3D window manager and compositing system that can replace your standard window manager. While it’s rarely the default choice on modern Fedora installations, it remains available for users who want its visual effects and functionality.

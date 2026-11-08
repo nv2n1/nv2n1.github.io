@@ -3,7 +3,8 @@ title: "How Facebook Scaled MySQL at Massive Scale"
 date: 2018-03-24 08:17:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/mysql-at-facebook/
+categories: [linux-systems-administration]
+canonical: /mysql-at-facebook/
 ---
 
 Facebook’s engineering team has long been vocal about their heavy reliance on MySQL to power one of the world’s largest platforms. Understanding their approach offers valuable insights for anyone managing databases at scale.

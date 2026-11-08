@@ -3,7 +3,8 @@ title: "Using xargs to Pass Arguments Multiple Times in One Command"
 date: 2018-03-24 11:49:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-the-xargs-argument-twice-in-the-command-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-use-the-xargs-argument-twice-in-the-command-on-linux/
 ---
 
 By default, `xargs` appends its input as arguments at the end of the command. This works fine when you need a utility once per item, but becomes problematic when you need to reference the same input multiple times in different positions.

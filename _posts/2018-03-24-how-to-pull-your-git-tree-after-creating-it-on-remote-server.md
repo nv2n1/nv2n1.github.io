@@ -3,7 +3,8 @@ title: "Fixing Git Pull on Feature Branches Without Tracking"
 date: 2018-03-24 11:44:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-pull-your-git-tree-after-creating-it-on-remote-server/
+categories: [scripting-utilities]
+canonical: /how-to-pull-your-git-tree-after-creating-it-on-remote-server/
 ---
 
 When you create a new branch locally and try to `git pull`, you’ll hit this error if the branch doesn’t have upstream tracking configured:

@@ -3,7 +3,8 @@ title: "Getting Unix Timestamps in Bash"
 date: 2018-03-24 11:52:13 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-epoch-timestamp-in-bash/
 ---
 
 The `date` command is your primary tool for retrieving Unix epoch timestamps. It’s available on virtually all Unix-like systems and integrates seamlessly into scripts and command pipelines.

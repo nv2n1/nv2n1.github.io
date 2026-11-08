@@ -3,7 +3,8 @@ title: "Balancing HDFS DataNode Storage"
 date: 2018-03-24 11:43:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-balance-datanode-storage-in-hdfs/
+categories: [linux-systems-administration]
+canonical: /how-to-balance-datanode-storage-in-hdfs/
 ---
 
 As nodes are added or removed from a Hadoop cluster, storage utilization becomes uneven across DataNodes. Some fill up while others remain mostly empty, leading to inefficient resource use and potential storage bottlenecks. HDFS provides the Balancer tool to redistribute blocks across DataNodes and even out disk usage.

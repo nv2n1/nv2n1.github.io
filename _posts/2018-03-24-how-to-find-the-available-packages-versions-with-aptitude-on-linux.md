@@ -3,7 +3,8 @@ title: "Checking Package Versions with Aptitude in Ubuntu and Debian"
 date: 2018-03-24 11:44:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-the-available-packages-versions-with-aptitude-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-the-available-packages-versions-with-aptitude-on-linux/
 ---
 
 When managing packages on Ubuntu or Debian systems, knowing what versions are available—and which one will be installed—is essential for dependency management and system stability. The `aptitude` command provides several ways to inspect package versions.

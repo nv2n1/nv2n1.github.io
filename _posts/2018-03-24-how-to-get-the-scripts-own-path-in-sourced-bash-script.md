@@ -3,7 +3,8 @@ title: "Getting a Sourced Bash Script\u2019s Own Path"
 date: 2018-03-24 11:49:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-scripts-own-path-in-sourced-bash-script/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-scripts-own-path-in-sourced-bash-script/
 ---
 
 When you source a script using `. script.sh` or `source script.sh`, the `$0` variable doesn’t point to the sourced script—it stays as the path of the parent shell or calling script. This creates a problem if you need the sourced script to know its own location.

@@ -3,7 +3,8 @@ title: "Serial Port Programming with Win32 API"
 date: 2013-07-12 16:47:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/com-port-programming-in-win32/
+categories: [web-development]
+canonical: /com-port-programming-in-win32/
 ---
 
 Serial communication remains essential for embedded systems, microcontroller programming, and legacy hardware integration. The Win32 API provides direct control over COM ports through a straightforward set of functions: `CreateFile()` to open the port, `GetCommState()` and `SetCommState()` to configure parameters, and `ReadFile()`/`WriteFile()` for I/O operations.

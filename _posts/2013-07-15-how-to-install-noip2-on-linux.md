@@ -3,7 +3,8 @@ title: "Installing and Configuring No-IP DynamicDNS on Linux"
 date: 2013-07-15 12:48:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-noip2-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-install-noip2-on-linux/
 ---
 
 The No-IP client automatically synchronizes your domain with your current public IP address. This is essential when hosting services on machines with DHCP-assigned IPs or when you need reliable DNS without paying for static IP assignments.

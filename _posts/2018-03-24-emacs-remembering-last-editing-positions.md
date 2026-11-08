@@ -3,7 +3,8 @@ title: "Restore Cursor Position in Emacs with save-place-mode"
 date: 2018-03-24 11:41:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/emacs-remembering-last-editing-positions/
+categories: [linux-systems-administration]
+canonical: /emacs-remembering-last-editing-positions/
 ---
 
 Emacs doesn’t restore your cursor to the last editing position by default—Vim does this out of the box. Fortunately, `save-place-mode` is built into Emacs and requires minimal configuration to enable this behavior.

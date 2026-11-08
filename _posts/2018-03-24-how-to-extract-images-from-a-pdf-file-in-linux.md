@@ -3,7 +3,8 @@ title: "Extract Images from PDF Files in Linux"
 date: 2018-03-24 11:51:30 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-extract-images-from-a-pdf-file-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-extract-images-from-a-pdf-file-in-linux/
 ---
 
 There are several tools available for extracting images from PDFs on Linux, each with different strengths depending on your use case and the PDF structure.

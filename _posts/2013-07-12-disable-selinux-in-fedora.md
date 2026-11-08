@@ -3,7 +3,8 @@ title: "Managing SELinux in Fedora and CentOS"
 date: 2013-07-12 16:31:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/disable-selinux-in-fedora/
+categories: [linux-systems-administration]
+canonical: /disable-selinux-in-fedora/
 ---
 
 SELinux provides mandatory access controls that catch security violations most firewall and file permission rules miss. Before disabling it, exhaust other options — SELinux warnings often reveal real security problems worth understanding.

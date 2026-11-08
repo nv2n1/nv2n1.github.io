@@ -3,7 +3,8 @@ title: "Using the GNU C Reference Manual: A Practical Guide"
 date: 2013-07-12 16:47:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/gnu-c-reference-manual/
+categories: [linux-systems-administration]
+canonical: /gnu-c-reference-manual/
 ---
 
 The GNU C Reference Manual is the authoritative resource for C as implemented by GCC. It’s a pure reference—not a tutorial—covering every linguistic construct, GCC-specific extensions, and implementation details you’ll encounter when compiling C code.

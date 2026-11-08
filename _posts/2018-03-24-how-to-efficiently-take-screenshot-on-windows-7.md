@@ -3,7 +3,8 @@ title: "Taking Screenshots on Windows 7: A Practical Guide"
 date: 2018-03-24 08:20:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-efficiently-take-screenshot-on-windows-7/
+categories: [development-best-practices]
+canonical: /how-to-efficiently-take-screenshot-on-windows-7/
 ---
 
 The built-in Print Screen workflow is cumbersome — capture, open Paint, paste, crop, save. There are better approaches depending on your needs.

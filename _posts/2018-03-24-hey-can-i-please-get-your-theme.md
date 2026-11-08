@@ -3,7 +3,8 @@ title: "WordPress and Q2A Theme Setup Guide"
 date: 2018-03-24 11:41:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hey-can-i-please-get-your-theme/
+categories: [linux-systems-administration]
+canonical: /hey-can-i-please-get-your-theme/
 ---
 
 systutorials.com runs on WordPress with the Twenty Fourteen theme (now legacy) and a custom Q2A installation for the Q&A section. If you’re rebuilding something similar, the approach differs between the two platforms.

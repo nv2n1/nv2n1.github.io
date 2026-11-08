@@ -3,7 +3,8 @@ title: "Running Background Processes in Bash Scripts"
 date: 2018-03-24 08:17:06 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-spawn-a-background-process-in-a-bash-script/
+categories: [linux-systems-administration]
+canonical: /how-to-spawn-a-background-process-in-a-bash-script/
 ---
 
 Spawning background processes in Bash is straightforward with the `&` operator, but there are several nuances depending on your use case.

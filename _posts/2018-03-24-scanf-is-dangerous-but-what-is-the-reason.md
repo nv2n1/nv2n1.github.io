@@ -3,7 +3,8 @@ title: "Why scanf() Is Unsafe: Causes and Solutions"
 date: 2018-03-24 08:08:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/scanf-is-dangerous-but-what-is-the-reason/
+categories: [development-best-practices]
+canonical: /scanf-is-dangerous-but-what-is-the-reason/
 ---
 
 The claim that `scanf` is dangerous gets thrown around frequently, but the reasons aren’t always clear. Most people point to `%s` causing buffer overflows and recommend `fgets` as the solution. That’s part of it, but not the core problem.

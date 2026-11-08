@@ -3,7 +3,8 @@ title: "How to Get the Size of Integers in OCaml"
 date: 2018-03-24 08:15:56 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/length-of-int-in-ocaml/
+categories: [development-best-practices]
+canonical: /length-of-int-in-ocaml/
 ---
 
 OCaml’s `int` type size depends on your platform’s architecture. On 64-bit systems, `int` is 63 bits; on 32-bit systems, it’s 31 bits. This catches many people off guard when they test bitwise operations.

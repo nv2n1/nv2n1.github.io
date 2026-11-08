@@ -3,7 +3,8 @@ title: "Using IBus for Chinese Input in Cinnamon on Fedora"
 date: 2018-03-24 08:19:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-ibus-for-inputting-chinese-in-cinnamon-on-fedora/
+categories: [linux-systems-administration]
+canonical: /how-to-use-ibus-for-inputting-chinese-in-cinnamon-on-fedora/
 ---
 
 By default, ibus isn’t automatically started on Fedora with Cinnamon. You might try launching the daemon manually:

@@ -3,7 +3,8 @@ title: "Reading Files Line by Line in Python"
 date: 2018-03-24 11:51:55 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-process-a-file-line-by-line-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-process-a-file-line-by-line-in-python/
 ---
 
 Reading a file line by line is memory-efficient and the standard approach for handling large text files in Python. The key is choosing the right method for your use case.

@@ -3,7 +3,8 @@ title: "Optimizing Firefox Performance on Linux"
 date: 2013-07-12 16:32:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/speeding-up-firefox-on-linux/
+categories: [linux-systems-administration]
+canonical: /speeding-up-firefox-on-linux/
 ---
 
 Firefox performance on Linux can be significantly improved through configuration tuning. Most of these settings apply across platforms, though this guide focuses on Linux-specific considerations.

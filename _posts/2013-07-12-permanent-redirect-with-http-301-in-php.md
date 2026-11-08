@@ -3,7 +3,8 @@ title: "Setting Up HTTP 301 Redirects in PHP"
 date: 2013-07-12 16:46:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/permanent-redirect-with-http-301-in-php/
+categories: [programming-languages]
+canonical: /permanent-redirect-with-http-301-in-php/
 ---
 
 HTTP 301 (Moved Permanently) redirects tell browsers and search engines that a resource has permanently moved to a new location. This preserves SEO value and prevents broken links when restructuring your site or changing domains.
@@ -14,7 +15,7 @@ The simplest approach uses PHP’s `header()` function with an explicit 301 stat
 
 ``` php
 <?php
-header("Location: https://www.systutorials.com/", true, 301);
+header("Location: /", true, 301);
 exit();
 ?>
 ```
@@ -26,7 +27,7 @@ For explicit control (useful in older PHP versions or debugging scenarios), set 
 ``` php
 <?php
 header("HTTP/1.1 301 Moved Permanently");
-header("Location: https://www.systutorials.com/");
+header("Location: /");
 exit();
 ?>
 ```
@@ -39,7 +40,7 @@ Order matters. Setting the status line first ensures PHP sends 301 instead of de
 
 ``` php
 <?php
-$redirect_url = "https://www.systutorials.com/" . $_SERVER['REQUEST_URI'];
+$redirect_url = "/" . $_SERVER['REQUEST_URI'];
 header("Location: " . $redirect_url, true, 301);
 exit();
 ?>

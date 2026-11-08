@@ -3,7 +3,8 @@ title: "Building SQL Interfaces on NoSQL Databases"
 date: 2018-03-24 08:15:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/sql-layers-on-nosql-databases/
+categories: [design-patterns-architecture]
+canonical: /sql-layers-on-nosql-databases/
 ---
 
 SQL layers abstract traditional relational query interfaces over distributed NoSQL and big data systems, enabling applications to leverage SQL’s familiarity while benefiting from horizontal scalability. Here are the key approaches and systems that have emerged in this space.

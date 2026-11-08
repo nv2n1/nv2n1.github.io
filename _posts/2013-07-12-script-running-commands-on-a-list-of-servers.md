@@ -3,7 +3,8 @@ title: "Running Commands Across Multiple Servers with Bash and Ansible"
 date: 2013-07-12 16:32:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/script-running-commands-on-a-list-of-servers/
+categories: [linux-systems-administration]
+canonical: /script-running-commands-on-a-list-of-servers/
 ---
 
 Running the same command across dozens of servers is a routine task in infrastructure work. Whether you’re checking disk usage, deploying updates, or gathering system metrics, doing this manually wastes time and introduces errors. The straightforward approach: iterate through a list of hosts and execute commands via SSH on each one.

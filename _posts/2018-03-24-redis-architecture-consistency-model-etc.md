@@ -3,7 +3,8 @@ title: "Redis Architecture and Consistency Models Explained"
 date: 2018-03-24 08:17:45 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/redis-architecture-consistency-model-etc/
+categories: [linux-systems-administration]
+canonical: /redis-architecture-consistency-model-etc/
 ---
 
 Redis is an in-memory data structure store designed for speed and simplicity. Understanding its architecture and consistency guarantees is essential for deploying it correctly in production systems.

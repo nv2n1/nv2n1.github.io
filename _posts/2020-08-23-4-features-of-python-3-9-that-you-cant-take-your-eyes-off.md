@@ -3,7 +3,8 @@ title: "Python 3.9\u2019s Most Impactful New Features"
 date: 2020-08-23 03:19:25 +0000
 author: "Aaronjacobson"
 layout: post
-canonical: https://www.systutorials.com/4-features-of-python-3-9-that-you-cant-take-your-eyes-off/
+categories: [languages-frameworks]
+canonical: /4-features-of-python-3-9-that-you-cant-take-your-eyes-off/
 ---
 
 Python 3.9 brought several substantial improvements over earlier versions. While it’s now past EOL as of October 2025, understanding its features provides context for migration planning and why the Python ecosystem shifted toward 3.10+. That said, if you’re maintaining legacy 3.9 code, these features remain relevant to your codebase.

@@ -3,7 +3,8 @@ title: "Matching Consecutive Lines with grep in Linux"
 date: 2020-04-07 13:35:08 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-grep-2-lines-using-grep-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-grep-2-lines-using-grep-in-linux/
 ---
 
 grep processes input line-by-line by design, which makes matching patterns across multiple lines challenging. However, several approaches exist to search for consecutive lines as a single block, each with different tradeoffs.

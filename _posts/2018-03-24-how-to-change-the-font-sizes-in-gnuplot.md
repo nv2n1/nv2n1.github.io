@@ -3,7 +3,8 @@ title: "Customizing Font Sizes in Gnuplot"
 date: 2018-03-24 08:16:12 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-font-sizes-in-gnuplot/
+categories: [linux-systems-administration]
+canonical: /how-to-change-the-font-sizes-in-gnuplot/
 ---
 
 Font sizes in Gnuplot plots often appear too small when scaling images down for papers or presentations. You can control font sizes at multiple levels: globally for the terminal, for axis labels and tick marks, for legends, and for individual text elements.

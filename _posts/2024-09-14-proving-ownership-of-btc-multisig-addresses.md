@@ -3,7 +3,8 @@ title: "Proving Ownership of Bitcoin Multisig Addresses"
 date: 2024-09-14 07:22:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/proving-ownership-of-btc-multisig-addresses/
+categories: [blockchain-cryptocurrency]
+canonical: /proving-ownership-of-btc-multisig-addresses/
 ---
 
 Proving ownership of a multisig address differs fundamentally from proving ownership of a standard single-key wallet. With multisig, there’s no single private key to demonstrate. Instead, you need to prove control over enough keys to satisfy the wallet’s m-of-n threshold (for example, 2-of-3 or 3-of-5).

@@ -3,7 +3,8 @@ title: "Configuring HDFS Replication Factors by Directory"
 date: 2018-03-24 11:45:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-replication-factors-for-hdfs-directories/
+categories: [programming-languages]
+canonical: /how-to-set-replication-factors-for-hdfs-directories/
 ---
 
 HDFS doesn’t natively support directory-level replication factor inheritance. Even if you set a specific replication factor on a directory and its files, new files created in that directory will default to the cluster’s global `dfs.replication` setting (typically 3).

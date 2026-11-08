@@ -3,7 +3,8 @@ title: "Simulating Multiple Simultaneous Key Presses in Linux with xdotool"
 date: 2018-03-24 11:48:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-simulate-pressing-multiple-keys-together-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-simulate-pressing-multiple-keys-together-on-linux/
 ---
 
 Automating keyboard input on Linux is useful for testing, accessibility workflows, and automation scripts. If you need to simulate pressing multiple keys simultaneously and holding them, `xdotool` is the standard tool for this job.

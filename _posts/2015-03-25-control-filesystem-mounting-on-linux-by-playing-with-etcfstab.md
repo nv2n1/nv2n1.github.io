@@ -3,7 +3,8 @@ title: "Configuring /etc/fstab: Mount Options and Boot Behavior"
 date: 2015-03-25 14:05:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/control-filesystem-mounting-on-linux-by-playing-with-etcfstab/
+categories: [linux-systems-administration]
+canonical: /control-filesystem-mounting-on-linux-by-playing-with-etcfstab/
 ---
 
 The /etc/fstab file defines how Linux mounts filesystems at boot and controls mounting behavior for both the system and individual users. Understanding its format and options is essential for reliable storage management.

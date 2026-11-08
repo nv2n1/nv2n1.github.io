@@ -3,7 +3,8 @@ title: "HTML5 Canvas: Drawing Graphics with JavaScript"
 date: 2017-04-18 03:45:23 +0000
 author: "Colin"
 layout: post
-canonical: https://www.systutorials.com/basic-knowledge-html-canvas/
+categories: [languages-frameworks]
+canonical: /basic-knowledge-html-canvas/
 ---
 
 The HTML5 `<canvas>` element lets you draw graphics programmatically using JavaScript. Unlike static images or SVG, canvas renders raster (bitmap) graphics directly to a 2D or 3D surface, making it ideal for animations, games, real-time visualizations, and interactive graphics that need frequent updates.

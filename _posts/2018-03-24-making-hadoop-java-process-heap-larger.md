@@ -3,7 +3,8 @@ title: "Configuring Heap Size for Hadoop NameNode, DataNode, and YARN"
 date: 2018-03-24 11:43:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-hadoop-java-process-heap-larger/
+categories: [linux-systems-administration]
+canonical: /making-hadoop-java-process-heap-larger/
 ---
 
 When running Hadoop on systems with substantial memory, the default 1GB heap size is often inadequate. If you check running processes with `ps aux` and see `-Xmx1000m`, you’re working with the default configuration that doesn’t scale to modern hardware.

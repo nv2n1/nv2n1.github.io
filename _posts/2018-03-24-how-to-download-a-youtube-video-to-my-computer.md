@@ -3,7 +3,8 @@ title: "Download YouTube Videos with yt-dlp"
 date: 2018-03-24 11:41:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-download-a-youtube-video-to-my-computer/
+categories: [linux-systems-administration]
+canonical: /how-to-download-a-youtube-video-to-my-computer/
 ---
 
 The most reliable way to download YouTube videos is **yt-dlp**, a maintained fork of youtube-dl that handles modern YouTube changes and DRM protections. It works on Linux, macOS, and Windows.

@@ -3,7 +3,8 @@ title: "Find and Delete Directories Recursively"
 date: 2018-03-24 11:43:49 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-remove-specific-directories-recursively/
+categories: [linux-systems-administration]
+canonical: /how-to-remove-specific-directories-recursively/
 ---
 
 Removing version control or build artifact directories across a large directory tree is a common sysadmin task. SVN directories (`.svn`), Git metadata (`.git`), or node modules (`node_modules`) often need to be purged before deployment or archiving.

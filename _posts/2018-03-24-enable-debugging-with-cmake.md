@@ -3,7 +3,8 @@ title: "Debugging C++ Projects with CMake"
 date: 2018-03-24 08:13:44 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/enable-debugging-with-cmake/
+categories: [languages-frameworks]
+canonical: /enable-debugging-with-cmake/
 ---
 
 To enable debugging, configure your CMake build with `CMAKE_BUILD_TYPE` set to `Debug`. This tells CMake to invoke the compiler with the `-g` flag, generating debug symbols that tools like gdb and lldb need. From your project’s root directory:

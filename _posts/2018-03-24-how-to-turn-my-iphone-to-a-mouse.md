@@ -3,7 +3,8 @@ title: "Using Your iPhone as a Wireless Mouse"
 date: 2018-03-24 08:15:26 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-turn-my-iphone-to-a-mouse/
+categories: [development-best-practices]
+canonical: /how-to-turn-my-iphone-to-a-mouse/
 ---
 
 Your iPhone’s touchscreen can serve as a remote input device for your Linux desktop or laptop. Here are the most practical approaches.

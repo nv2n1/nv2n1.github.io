@@ -3,7 +3,8 @@ title: "Getting the Latest Commit Hash in Git"
 date: 2018-03-24 11:48:07 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-latest-commits-hash-in-git/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-latest-commits-hash-in-git/
 ---
 
 When you need the commit hash of the latest commit, there are several ways to get it. The most direct approach is using `git log` with format options rather than parsing output with grep.

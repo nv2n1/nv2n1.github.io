@@ -3,7 +3,8 @@ title: "Firefox Extensions Worth Using in 2026"
 date: 2013-07-12 16:54:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/firefox-add-ons-for-easier-and-happier-web-life/
+categories: [development-best-practices]
+canonical: /firefox-add-ons-for-easier-and-happier-web-life/
 ---
 
 Firefox’s extension ecosystem is mature enough that you should install conservatively. Each extension consumes memory, introduces potential compatibility issues, and creates another surface for security problems. The extensions listed here solve genuine problems; install only what you use.

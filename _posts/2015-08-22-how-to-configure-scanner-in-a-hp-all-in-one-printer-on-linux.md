@@ -3,7 +3,8 @@ title: "Setting Up an HP Scanner on Linux with HPLIP and SANE"
 date: 2015-08-22 13:27:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-scanner-in-a-hp-all-in-one-printer-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-scanner-in-a-hp-all-in-one-printer-on-linux/
 ---
 
 Configuring an HP all-in-one printer’s scanner on Linux requires HPLIP (HP Linux Imaging and Printing) for device support and SANE (Scanner Access Now Easy) for scanning functionality. The main gotcha is that a working printer doesn’t guarantee a working scanner — they use different subsystems and need separate configuration.

@@ -3,7 +3,8 @@ title: "Printing Integers as Hexadecimal in Python"
 date: 2018-03-24 08:13:49 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/python-printing-integers-in-hexadecimal-format/
+categories: [programming-languages]
+canonical: /python-printing-integers-in-hexadecimal-format/
 ---
 
 The `hex()` function converts an integer to a hexadecimal string with a `0x` prefix:

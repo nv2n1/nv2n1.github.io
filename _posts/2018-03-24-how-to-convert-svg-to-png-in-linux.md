@@ -3,7 +3,8 @@ title: "Converting SVG to PNG on Linux"
 date: 2018-03-24 11:51:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-svg-to-png-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-svg-to-png-in-linux/
 ---
 
 The most straightforward way to convert SVG files to PNG is using **ImageMagick** or **Inkscape**. Both are widely available in standard repositories and handle the conversion reliably.

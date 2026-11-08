@@ -3,7 +3,8 @@ title: "Using DVDs as Local Package Repositories in DNF"
 date: 2013-07-12 16:33:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/yum-using-dvd-as-package-repository/
+categories: [linux-systems-administration]
+canonical: /yum-using-dvd-as-package-repository/
 ---
 
 Insert the installation media and create a mount point:

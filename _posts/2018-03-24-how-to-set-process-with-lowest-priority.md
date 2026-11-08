@@ -3,7 +3,8 @@ title: "Setting Process Priority to Lowest"
 date: 2018-03-24 11:51:42 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-process-with-lowest-priority/
+categories: [programming-languages]
+canonical: /how-to-set-process-with-lowest-priority/
 ---
 
 Process priority management is essential for ensuring critical tasks get CPU resources when needed. Linux provides several mechanisms to control how the kernel scheduler allocates CPU time to processes.

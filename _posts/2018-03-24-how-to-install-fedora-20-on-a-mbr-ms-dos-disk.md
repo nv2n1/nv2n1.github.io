@@ -3,7 +3,8 @@ title: "Installing Fedora on MBR Disks"
 date: 2018-03-24 08:21:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-fedora-20-on-a-mbr-ms-dos-disk/
+categories: [development-best-practices]
+canonical: /how-to-install-fedora-20-on-a-mbr-ms-dos-disk/
 ---
 
 If you’re working with legacy BIOS systems and MBR partition tables, Fedora’s installer can sometimes misdetect your firmware mode and attempt UEFI/GPT setup on hardware that only supports legacy BIOS. This guide covers the proper approach for Fedora 39+ on MBR systems.

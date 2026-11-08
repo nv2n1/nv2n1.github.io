@@ -3,7 +3,8 @@ title: "Merging a Commit from Another Git Branch"
 date: 2018-03-24 08:14:48 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-merge-a-commit-from-another-branch-to-my-current-branch-in-git/
+categories: [development-best-practices]
+canonical: /how-to-merge-a-commit-from-another-branch-to-my-current-branch-in-git/
 ---
 
 You have two branches with diverging histories and need to apply only certain commits from one branch to another. Git’s `cherry-pick` command lets you do exactly that.

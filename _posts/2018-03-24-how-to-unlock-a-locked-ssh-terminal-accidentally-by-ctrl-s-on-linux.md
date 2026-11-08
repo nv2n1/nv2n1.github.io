@@ -3,7 +3,8 @@ title: "Fix a Frozen SSH Session with Ctrl+Q"
 date: 2018-03-24 11:43:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-unlock-a-locked-ssh-terminal-accidentally-by-ctrl-s-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-unlock-a-locked-ssh-terminal-accidentally-by-ctrl-s-on-linux/
 ---
 
 If you’ve accidentally frozen your SSH terminal with Ctrl+S, you’re experiencing flow control lock — a terminal feature that dates back to the era of slow serial connections. Your session isn’t actually hung; it’s just paused.

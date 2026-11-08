@@ -3,7 +3,8 @@ title: "Loading a Kernel Module Automatically at Boot on CentOS"
 date: 2018-03-24 11:53:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-centos-linux-to-load-a-module-automatically-at-boot-time/
+categories: [linux-systems-administration]
+canonical: /how-to-make-centos-linux-to-load-a-module-automatically-at-boot-time/
 ---
 
 To load a kernel module automatically at system startup, create a configuration file in `/etc/modules-load.d/` with a `.conf` extension. The systemd-modules-load.service daemon reads these files during early boot and loads the specified modules.

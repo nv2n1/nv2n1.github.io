@@ -3,7 +3,8 @@ title: "Tracing Function Calls in OCaml"
 date: 2018-03-24 08:18:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/tutorial-how-to-trace-a-function-in-ocaml/
+categories: [linux-systems-administration]
+canonical: /tutorial-how-to-trace-a-function-in-ocaml/
 ---
 
 The `#trace` directive in OCaml’s interactive toplevel (ocaml or utop) logs function calls and returns, showing you exactly what arguments go in and what values come back out. This is invaluable for debugging recursive functions and understanding execution flow.

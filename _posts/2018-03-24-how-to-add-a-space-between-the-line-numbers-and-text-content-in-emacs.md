@@ -3,7 +3,8 @@ title: "Display Line Numbers Separately from Text in Emacs"
 date: 2018-03-24 08:21:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-a-space-between-the-line-numbers-and-text-content-in-emacs/
+categories: [development-best-practices]
+canonical: /how-to-add-a-space-between-the-line-numbers-and-text-content-in-emacs/
 ---
 
 Line number displays in Emacs can feel cramped without proper spacing. Modern Emacs provides built-in control over line number formatting and width—no external packages needed.

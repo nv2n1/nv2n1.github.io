@@ -3,7 +3,8 @@ title: "Fix iPhone Holiday Calendar for Your Country Without Changing Language"
 date: 2015-03-19 06:00:13 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/changing-iphone-holiday-calendar-local-one/
+categories: [linux-systems-administration]
+canonical: /changing-iphone-holiday-calendar-local-one/
 ---
 
 If you’re using an iPhone set to English but living outside the US, you’ve probably noticed US holidays cluttering your Calendar app. This happens because iOS ties holiday calendars directly to your region setting — not your language preference.

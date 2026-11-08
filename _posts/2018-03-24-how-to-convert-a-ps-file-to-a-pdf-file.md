@@ -3,7 +3,8 @@ title: "Converting PostScript Files to PDF"
 date: 2018-03-24 08:04:15 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-a-ps-file-to-a-pdf-file/
+categories: [scripting-utilities]
+canonical: /how-to-convert-a-ps-file-to-a-pdf-file/
 ---
 
 To convert a PostScript file to PDF suitable for publishing, use `ps2pdf` from the Ghostscript suite:

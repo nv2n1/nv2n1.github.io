@@ -3,7 +3,8 @@ title: "Linux Network Monitoring Tools Like Top"
 date: 2018-03-24 08:19:23 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/top-like-tools-on-linux-for-network/
+categories: [linux-systems-administration]
+canonical: /top-like-tools-on-linux-for-network/
 ---
 
 Linux gives you `top` and `htop` to monitor CPU and memory by process, but network traffic is different. You need specific tools designed to show which processes are consuming bandwidth. Here are the practical options.

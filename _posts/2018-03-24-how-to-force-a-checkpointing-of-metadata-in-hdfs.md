@@ -3,7 +3,8 @@ title: "Forcing HDFS Metadata Checkpoints"
 date: 2018-03-24 11:54:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-a-checkpointing-of-metadata-in-hdfs/
+categories: [programming-languages]
+canonical: /how-to-force-a-checkpointing-of-metadata-in-hdfs/
 ---
 
 The NameNode in HDFS maintains the filesystem namespace in memory. The Secondary NameNode (or Checkpoint Node in HA setups) periodically merges the namespace image (fsimage) with the edit logs to create a new checkpoint. Understanding how to force this process is essential for cluster maintenance and recovery operations.

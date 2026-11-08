@@ -3,7 +3,8 @@ title: "Iterating Over Files and Directories in Python"
 date: 2018-03-24 11:48:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-iterate-all-files-and-directories-under-a-directory-in-python/
+categories: [linux-systems-administration]
+canonical: /how-to-iterate-all-files-and-directories-under-a-directory-in-python/
 ---
 
 When you need to traverse a directory tree in Python, you have several options. The choice depends on whether you want recursive traversal, how you want to handle the results, and your Python version.

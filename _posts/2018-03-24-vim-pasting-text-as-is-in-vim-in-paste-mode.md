@@ -3,7 +3,8 @@ title: "Pasting Text in Vim Without Auto-Indentation"
 date: 2018-03-24 08:04:42 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/vim-pasting-text-as-is-in-vim-in-paste-mode/
+categories: [development-best-practices]
+canonical: /vim-pasting-text-as-is-in-vim-in-paste-mode/
 ---
 
 Pasting external code into Vim often triggers unwanted autoindent behavior, adding extra indentation and breaking formatting. Vim’s paste mode disables all automatic indentation while inserting text, letting you paste code exactly as-is.

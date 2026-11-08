@@ -3,7 +3,8 @@ title: "HP Compaq Laptop BIOS Recovery Guide"
 date: 2013-07-12 16:54:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hp-compaq-bios-crisis-recovery-from-a-failed-bios-flashing/
+categories: [development-best-practices]
+canonical: /hp-compaq-bios-crisis-recovery-from-a-failed-bios-flashing/
 ---
 
 A failed BIOS flash can leave your HP Compaq laptop completely unresponsive — white screen, no boot, just LED blinking. Before declaring it dead, try HP’s built-in crisis recovery mechanism. This procedure has recovered many laptops that appeared permanently bricked.

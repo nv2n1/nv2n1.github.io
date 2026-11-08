@@ -3,7 +3,8 @@ title: "VirtualBox Kernel Driver Error on Fedora with Secure Boot"
 date: 2018-03-24 11:46:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/virtualbox-report-kernel-driver-not-installed-on-fedora-21/
+categories: [linux-systems-administration]
+canonical: /virtualbox-report-kernel-driver-not-installed-on-fedora-21/
 ---
 
 VirtualBox on Fedora reports “The vboxdrv kernel module is not loaded” when you try to launch it, even though the virtualbox and kernel module packages are installed. This typically happens on systems with UEFI Secure Boot enabled, which requires kernel modules to be cryptographically signed.

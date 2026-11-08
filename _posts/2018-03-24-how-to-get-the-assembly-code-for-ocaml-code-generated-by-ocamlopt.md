@@ -3,7 +3,8 @@ title: "Viewing Assembly Output from OCaml\u2019s ocamlopt Compiler"
 date: 2018-03-24 08:16:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-assembly-code-for-ocaml-code-generated-by-ocamlopt/
+categories: [linux-systems-administration]
+canonical: /how-to-get-the-assembly-code-for-ocaml-code-generated-by-ocamlopt/
 ---
 
 To generate native assembly code (x86-64 asm, ARM64, etc.) from OCaml’s native compiler, use the `-S` flag along with other optimization-related options:

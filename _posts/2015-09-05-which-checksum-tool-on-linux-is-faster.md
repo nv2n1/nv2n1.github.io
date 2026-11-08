@@ -3,7 +3,8 @@ title: "Linux Checksum Tools: Performance Comparison"
 date: 2015-09-05 06:07:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/which-checksum-tool-on-linux-is-faster/
+categories: [linux-systems-administration]
+canonical: /which-checksum-tool-on-linux-is-faster/
 ---
 
 When verifying file integrity on Linux, you’ll typically reach for one of several checksum utilities. A natural question: which one is fastest? The answer depends heavily on whether I/O or CPU is your bottleneck.

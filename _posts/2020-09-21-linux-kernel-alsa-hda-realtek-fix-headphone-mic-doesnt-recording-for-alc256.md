@@ -3,7 +3,8 @@ title: "Fix Headphone Mic Recording Issue on ALC256"
 date: 2020-09-21 00:25:27 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/linux-kernel-alsa-hda-realtek-fix-headphone-mic-doesnt-recording-for-alc256/
+categories: [linux-systems-administration]
+canonical: /linux-kernel-alsa-hda-realtek-fix-headphone-mic-doesnt-recording-for-alc256/
 ---
 
 This commit addresses a recording issue on systems using the Realtek ALC256 audio codec where headphone microphone input wasn’t functioning properly.

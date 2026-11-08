@@ -3,7 +3,8 @@ title: "How to Update String Values in MySQL Tables"
 date: 2018-03-24 08:17:32 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-strings-in-mysql-tables/
+categories: [linux-systems-administration]
+canonical: /how-to-change-strings-in-mysql-tables/
 ---
 
 To replace strings across one or more columns in MySQL tables, use the `REPLACE()` function with an `UPDATE` statement. This is useful when migrating domains, fixing URLs, updating API endpoints, or correcting data patterns at scale.

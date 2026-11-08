@@ -3,7 +3,8 @@ title: "Wrapping Long Lines in Text Files on Linux"
 date: 2018-03-24 11:47:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-wrap-long-lines-in-a-text-file-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-wrap-long-lines-in-a-text-file-on-linux/
 ---
 
 Long lines in text files can be difficult to read in a terminal. Linux provides several built-in tools to wrap or fold long lines to fit your screen width, each with different strengths.

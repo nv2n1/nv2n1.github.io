@@ -3,7 +3,8 @@ title: "Redirecting Packets to the FORWARD Chain with iptables and DNAT"
 date: 2018-04-02 15:25:40 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-divert-connection-or-packet-before-routing-decision-entering-the-default/
+categories: [databases-storage]
+canonical: /how-to-divert-connection-or-packet-before-routing-decision-entering-the-default/
 ---
 
 Intercepting traffic before normal routing decisions requires understanding packet flow through iptables chains. If you need incoming packets to bypass the INPUT chain and process through FORWARD instead, you’ll use the PREROUTING chain with Destination NAT (DNAT).

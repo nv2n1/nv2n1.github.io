@@ -3,7 +3,8 @@ title: "Using std::any for Type-Safe Polymorphism in C++"
 date: 2023-08-20 09:01:44 +0000
 author: "Ethan Ainsworth"
 layout: post
-canonical: https://www.systutorials.com/understanding-the-use-of-stdany-in-c-with-an-example/
+categories: [languages-frameworks]
+canonical: /understanding-the-use-of-stdany-in-c-with-an-example/
 ---
 
 `std::any` (C++17) is a type-safe container for single values of any type. It lets you store an `int`, string, custom struct, or vector in the same variable without losing type information—unlike `void*` pointers, which are inherently unsafe.

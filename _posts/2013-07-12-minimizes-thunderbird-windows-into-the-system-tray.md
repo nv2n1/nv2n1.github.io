@@ -3,7 +3,8 @@ title: "Hide Thunderbird to the System Tray"
 date: 2013-07-12 16:31:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/minimizes-thunderbird-windows-into-the-system-tray/
+categories: [linux-systems-administration]
+canonical: /minimizes-thunderbird-windows-into-the-system-tray/
 ---
 
 Keeping Thunderbird running constantly makes sense for monitoring incoming mail, but leaving it on the taskbar consumes screen real estate. System tray integration is cleaner—minimize to a small icon and optionally display unread message counts.

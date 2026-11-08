@@ -3,7 +3,8 @@ title: "Case-Insensitive Search in Vim: 3 Methods"
 date: 2018-03-24 08:14:36 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-case-insensitive-search-in-vim-vi/
+categories: [object-oriented-programming]
+canonical: /how-to-make-case-insensitive-search-in-vim-vi/
 ---
 
 By default, Vim searches case sensitively. You can match `dog`, `Dog`, `DOG`, and other case variations using one of three approaches.

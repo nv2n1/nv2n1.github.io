@@ -3,7 +3,8 @@ title: "Customizing the Plymouth Boot Logo in Ubuntu"
 date: 2018-07-31 10:32:47 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-logo-shown-during-booting-in-ubuntu/
+categories: [linux-systems-administration]
+canonical: /how-to-change-the-logo-shown-during-booting-in-ubuntu/
 ---
 
 Plymouth manages the splash screen (boot logo) displayed during Ubuntu startup and shutdown. Switching themes involves selecting a Plymouth theme, regenerating the initramfs, and verifying the change takes effect on reboot.

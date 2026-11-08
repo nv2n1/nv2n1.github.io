@@ -3,7 +3,8 @@ title: "Monitoring System Interrupts in Real Time"
 date: 2018-03-24 11:54:21 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-check-interrupts-lively-in-your-systems/
+categories: [programming-languages]
+canonical: /how-to-check-interrupts-lively-in-your-systems/
 ---
 
 Interrupts are fundamental to how your Linux system handles hardware and software events. Monitoring them in real-time helps identify performance bottlenecks, device driver issues, and CPU load imbalances. Here’s how to check interrupts effectively.

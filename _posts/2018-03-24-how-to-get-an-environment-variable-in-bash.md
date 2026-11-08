@@ -3,7 +3,8 @@ title: "How to Read Environment Variables in Bash"
 date: 2018-03-24 11:52:10 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-an-environment-variable-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-get-an-environment-variable-in-bash/
 ---
 
 Environment variables store configuration settings for your shell and applications. They’re essential for configuring containers, serverless functions, application runtime behavior, and system services.

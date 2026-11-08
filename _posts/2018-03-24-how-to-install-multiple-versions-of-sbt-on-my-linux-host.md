@@ -3,7 +3,8 @@ title: "Managing Multiple sbt Versions on Linux"
 date: 2018-03-24 11:41:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-multiple-versions-of-sbt-on-my-linux-host/
+categories: [linux-systems-administration]
+canonical: /how-to-install-multiple-versions-of-sbt-on-my-linux-host/
 ---
 
 When working with multiple Scala projects, you’ll often need different sbt versions. A project using sbt 1.9.x may not be compatible with sbt 0.13.x, and manually switching between system-wide installations becomes tedious and error-prone.

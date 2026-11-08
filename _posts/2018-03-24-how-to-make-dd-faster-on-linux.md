@@ -3,7 +3,8 @@ title: "Optimizing dd Performance on Linux"
 date: 2018-03-24 11:45:13 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-dd-faster-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-make-dd-faster-on-linux/
 ---
 
 The default `dd` command can feel sluggish because it uses a small block size (512 bytes) by default. You can dramatically improve throughput by increasing the `bs` (block size) parameter.

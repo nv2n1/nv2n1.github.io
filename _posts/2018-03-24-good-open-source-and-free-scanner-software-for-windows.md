@@ -3,7 +3,8 @@ title: "Open Source Document Scanning Tools for Windows"
 date: 2018-03-24 11:45:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/good-open-source-and-free-scanner-software-for-windows/
+categories: [scripting-utilities]
+canonical: /good-open-source-and-free-scanner-software-for-windows/
 ---
 
 If you need to scan documents on Windows, several solid open-source options exist. Here are the most practical choices.

@@ -3,7 +3,8 @@ title: "Rotating iPhone Videos with FFmpeg on Linux"
 date: 2014-09-27 09:25:42 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/rotating-video-from-iphone-on-linux/
+categories: [linux-systems-administration]
+canonical: /rotating-video-from-iphone-on-linux/
 ---
 
 iPhone videos often play rotated 90 degrees when opened in non-Apple software on Linux because the rotation data is stored as metadata rather than baked into the video stream itself. FFmpeg handles this reliably by re-encoding with the transpose filter, which physically rotates the frame data.

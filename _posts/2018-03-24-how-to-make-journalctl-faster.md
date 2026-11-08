@@ -3,7 +3,8 @@ title: "Speeding Up journalctl: Performance Tips and Filtering Strategies"
 date: 2018-03-24 11:49:37 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-journalctl-faster/
+categories: [linux-systems-administration]
+canonical: /how-to-make-journalctl-faster/
 ---
 
 When you run `journalctl` without options on a system with years of log history, it can take seconds or even minutes to parse everything. The slowness comes from journalctl loading and deserializing potentially gigabytes of journal data. The solution is targeted querying — you almost never need the entire journal, so restrict what journalctl reads from disk.

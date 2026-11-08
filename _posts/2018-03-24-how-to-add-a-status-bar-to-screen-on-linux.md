@@ -3,7 +3,8 @@ title: "Adding a Status Bar to GNU Screen on Linux"
 date: 2018-03-24 11:44:00 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-a-status-bar-to-screen-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-add-a-status-bar-to-screen-on-linux/
 ---
 
 GNU Screen’s status bar (called the hardstatus line) displays useful information about your current session—which window you’re on, the time, hostname, and more. It’s especially helpful when you’re running multiple windows and need a quick visual reference without typing commands.

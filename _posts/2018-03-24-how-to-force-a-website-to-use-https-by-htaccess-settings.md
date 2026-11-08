@@ -3,7 +3,8 @@ title: "Force HTTPS Redirects with .htaccess"
 date: 2018-03-24 11:45:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-a-website-to-use-https-by-htaccess-settings/
+categories: [programming-languages]
+canonical: /how-to-force-a-website-to-use-https-by-htaccess-settings/
 ---
 
 Forcing HTTPS on your website protects visitor data and improves SEO. The most common method is using `.htaccess` with Apache’s `mod_rewrite` module to redirect all HTTP requests to HTTPS.

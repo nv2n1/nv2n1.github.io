@@ -3,7 +3,8 @@ title: "Playing Video in the Background on iPhone"
 date: 2018-03-24 08:14:04 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-the-video-play-in-background-in-iphone/
+categories: [development-best-practices]
+canonical: /how-to-make-the-video-play-in-background-in-iphone/
 ---
 
 iOS automatically pauses video playback when you lock your device to save battery and comply with app guidelines. If you want to listen to audio from a video while your screen is locked — say, watching a music video or podcast while walking — you need to enable background audio mode in your player app.

@@ -3,7 +3,8 @@ title: "Log and Block Rate-Limited SSH Connections with iptables"
 date: 2018-03-24 11:44:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-log-connections-hitting-certain-rules-in-iptables-on-linux/
+categories: [scripting-utilities]
+canonical: /how-to-log-connections-hitting-certain-rules-in-iptables-on-linux/
 ---
 
 Logging connections that hit rate-limit rules helps you identify brute force attempts and troubleshoot legitimate clients that are being blocked. The standard approach is to create a dedicated chain that logs packets before dropping them.

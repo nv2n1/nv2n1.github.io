@@ -3,7 +3,8 @@ title: "Finding Your Bash Script\u2019s Location: $0 vs ${BASH_SOURCE[0]}"
 date: 2016-02-13 17:49:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-bash-scripts-own-path/
+categories: [scripting-utilities]
+canonical: /how-to-get-bash-scripts-own-path/
 ---
 
 When a Bash script needs to reference its own location — for sourcing additional files, logging, or managing relative paths — `$0` seems like the obvious choice. But it’s a trap: `$0` behaves differently depending on whether your script is executed directly or sourced.

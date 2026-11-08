@@ -3,7 +3,8 @@ title: "Improving SSH Performance with Faster Ciphers"
 date: 2014-04-24 13:39:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/improving-sshscp-performance-by-choosing-ciphers/
+categories: [linux-systems-administration]
+canonical: /improving-sshscp-performance-by-choosing-ciphers/
 ---
 
 SSH performance is constrained by cipher choice, especially for large file transfers over high-bandwidth links where CPU becomes the bottleneck. Selecting the right cipher, key exchange algorithm, and compression settings can yield substantial throughput improvements.

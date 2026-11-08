@@ -3,7 +3,8 @@ title: "Exporting NFSv4 Shares to External Networks"
 date: 2017-12-16 03:22:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/export-nfsv4-server-external-networks/
+categories: [development-best-practices]
+canonical: /export-nfsv4-server-external-networks/
 ---
 
 NFSv4 significantly simplifies network exposure compared to NFSv3. Where NFSv3 requires managing multiple dynamic ports (mountd, statd, lockd), NFSv4 uses only port 111 (rpcbind) and port 2049 (NFS). This makes firewall configuration and port forwarding straightforward.

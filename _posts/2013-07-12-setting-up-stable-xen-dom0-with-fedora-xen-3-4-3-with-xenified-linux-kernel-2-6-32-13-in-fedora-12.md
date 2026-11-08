@@ -3,7 +3,8 @@ title: "Setting up Xen Dom0 on Fedora 12 with Kernel 2.6.32.13"
 date: 2013-07-12 16:32:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-stable-xen-dom0-with-fedora-xen-3-4-3-with-xenified-linux-kernel-2-6-32-13-in-fedora-12/
+categories: [linux-systems-administration]
+canonical: /setting-up-stable-xen-dom0-with-fedora-xen-3-4-3-with-xenified-linux-kernel-2-6-32-13-in-fedora-12/
 ---
 
 Xen remains a production-grade hypervisor used in enterprise environments (AWS EC2, Citrix Hypervisor), though KVM has become the default for most Linux distributions. This guide covers building a stable Xen Dom0 on current Fedora releases using modern kernel sources.

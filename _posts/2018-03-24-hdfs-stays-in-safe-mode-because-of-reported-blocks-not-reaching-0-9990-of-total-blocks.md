@@ -3,7 +3,8 @@ title: "Recovering HDFS from Safe Mode After DataNode Failures"
 date: 2018-03-24 11:46:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hdfs-stays-in-safe-mode-because-of-reported-blocks-not-reaching-0-9990-of-total-blocks/
+categories: [programming-languages]
+canonical: /hdfs-stays-in-safe-mode-because-of-reported-blocks-not-reaching-0-9990-of-total-blocks/
 ---
 
 When a NameNode restarts, it enters safe mode to rebuild its understanding of block-to-DataNode mappings. If DataNodes don’t report their blocks quickly enough or some don’t come back online, the NameNode may stay stuck in safe mode with a message like:

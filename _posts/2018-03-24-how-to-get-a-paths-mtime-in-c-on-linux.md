@@ -3,7 +3,8 @@ title: "Getting File Modification Time in C++ on Linux"
 date: 2018-03-24 11:54:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-paths-mtime-in-c-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-get-a-paths-mtime-in-c-on-linux/
 ---
 
 The `stat()` system call is the standard way to retrieve file metadata on Linux, including modification time (mtime). It’s fast, portable, and gives you access to nanosecond-precision timestamps.

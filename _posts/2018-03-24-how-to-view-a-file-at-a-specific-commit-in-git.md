@@ -3,7 +3,8 @@ title: "View a File at a Specific Git Commit"
 date: 2018-03-24 11:41:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-view-a-file-at-a-specific-commit-in-git/
+categories: [linux-systems-administration]
+canonical: /how-to-view-a-file-at-a-specific-commit-in-git/
 ---
 
 Sometimes you need to view a file as it existed at a specific commit in Git — without checking out that commit or modifying your working directory. Git provides several ways to do this.

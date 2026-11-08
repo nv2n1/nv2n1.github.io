@@ -3,7 +3,8 @@ title: "GNOME Shell Extensions to Enhance GNOME 45"
 date: 2016-10-22 10:22:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/essential-gnome-shell-extensions-gnome-3-users/
+categories: [scripting-utilities]
+canonical: /essential-gnome-shell-extensions-gnome-3-users/
 ---
 
 GNOME Shell’s clean, minimal design works well for many users, but the extension ecosystem lets you adapt it to your actual workflow. Here are extensions worth considering for modern GNOME (45+).

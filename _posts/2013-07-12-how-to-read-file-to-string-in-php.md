@@ -3,7 +3,8 @@ title: "Reading Files into Strings in PHP: Performance and Security"
 date: 2013-07-12 16:46:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-read-file-to-string-in-php/
+categories: [system-administration-cloud]
+canonical: /how-to-read-file-to-string-in-php/
 ---
 
 PHP provides multiple approaches to read file contents into a string, ranging from simple one-liners to streaming methods for large files. Your choice depends on file size, memory constraints, and whether you need line-by-line processing.

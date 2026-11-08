@@ -3,7 +3,8 @@ title: "Reading and Managing .mbox Files in Linux"
 date: 2018-03-24 11:43:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-view-mbox-files-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-view-mbox-files-on-linux/
 ---
 
 The `.mbox` format stores email messages as plain text in a single file, with each message separated by a “From ” line. If you have archived emails or need to work with mailbox exports, here are the practical ways to read and manipulate them on Linux.

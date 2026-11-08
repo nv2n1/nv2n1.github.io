@@ -3,7 +3,8 @@ title: "Setting MATE as Your Default Desktop Environment on Fedora"
 date: 2013-07-12 16:32:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-mate-as-default-desktop-environment-for-startx-on-fedora/
+categories: [linux-systems-administration]
+canonical: /setting-mate-as-default-desktop-environment-for-startx-on-fedora/
 ---
 
 The `startx` command launches an X session without a display manager, reading configuration from `$HOME/.xinitrc`. By default, this file doesn’t exist—startx falls back to system defaults that typically only recognize GNOME or KDE. If you’ve installed MATE and want to use it with `startx`, you need to create a user-level configuration.

@@ -3,7 +3,8 @@ title: "Measuring Task I/O with eBPF: Microsecond Precision"
 date: 2017-08-20 06:26:19 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/io-microscopy-tasks-disk-io-information-high-accuracy/
+categories: [systems-architecture]
+canonical: /io-microscopy-tasks-disk-io-information-high-accuracy/
 ---
 
 Most popular task monitoring tools (top, iotop, procfs) sample disk I/O information at granularity limited by kernel timer frequency—typically once per second. This sampling rate misses short-lived I/O bursts and makes it difficult to accurately measure which tasks are truly I/O bound. eBPF and kernel tracepoints let you capture microsecond-level accuracy without heavy overhead.

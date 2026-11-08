@@ -3,7 +3,8 @@ title: "Generating Mixed C and Assembly Listings with GCC and objdump"
 date: 2013-07-12 16:47:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/generate-a-mixed-source-and-assembly-listing-using-gcc/
+categories: [linux-systems-administration]
+canonical: /generate-a-mixed-source-and-assembly-listing-using-gcc/
 ---
 
 When debugging and optimizing C/C++ programs, you need to see how the compiler translates your source code into assembly. A mixed source and assembly listing lets you trace exactly what machine instructions correspond to each line of your source.

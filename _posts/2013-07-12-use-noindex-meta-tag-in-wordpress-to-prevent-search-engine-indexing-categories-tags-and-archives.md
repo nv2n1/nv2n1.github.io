@@ -3,7 +3,8 @@ title: "How to Add noindex Meta Tags to WordPress Archives"
 date: 2013-07-12 16:46:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/use-noindex-meta-tag-in-wordpress-to-prevent-search-engine-indexing-categories-tags-and-archives/
+categories: [programming-languages]
+canonical: /use-noindex-meta-tag-in-wordpress-to-prevent-search-engine-indexing-categories-tags-and-archives/
 ---
 
 WordPress automatically generates archive pages, category listings, tag pages, and author archives. While these pages serve users browsing your site, they often contain duplicate or thin content that clutters search results. The `noindex` meta tag prevents search engines from indexing these secondary pages while still allowing them to crawl and follow links.

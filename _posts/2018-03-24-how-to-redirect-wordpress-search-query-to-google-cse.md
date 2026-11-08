@@ -3,7 +3,8 @@ title: "Using Google Custom Search for WordPress Queries"
 date: 2018-03-24 11:46:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-redirect-wordpress-search-query-to-google-cse/
+categories: [programming-languages]
+canonical: /how-to-redirect-wordpress-search-query-to-google-cse/
 ---
 
 Google Custom Search Engine (now part of Programmable Search Engine) lets you offload search functionality to Google’s infrastructure. Redirecting WordPress search queries to CSE can improve search quality, especially for large sites with poor built-in search performance.

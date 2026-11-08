@@ -3,7 +3,8 @@ title: "Playing Flash Files on Linux in 2026"
 date: 2018-03-24 11:40:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-play-swf-files-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-play-swf-files-on-linux/
 ---
 
 Flash support ended in December 2020, and Adobe no longer distributes Flash Player. Most browsers dropped Flash entirely. If you’re stuck with legacy .swf files, here’s what actually works.

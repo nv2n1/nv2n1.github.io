@@ -3,7 +3,8 @@ title: "Convert Video Files for iPhone, iPad, and iPod"
 date: 2013-07-12 16:32:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/converting-video-files-for-ipod-iphone-ipad/
+categories: [linux-systems-administration]
+canonical: /converting-video-files-for-ipod-iphone-ipad/
 ---
 
 Modern iOS devices handle a wider range of video formats natively, but if you’re working with legacy formats or need specific encoding for compatibility, conversion is straightforward with ffmpeg. This guide covers converting common video formats (.wmv, .mpg, .mkv, .webm, etc.) to .mp4 format suitable for Apple devices.

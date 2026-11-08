@@ -3,7 +3,8 @@ title: "Building with musl libc on Debian and Ubuntu"
 date: 2018-03-24 11:44:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-musl-libc-on-linux-mint-17/
+categories: [linux-systems-administration]
+canonical: /how-to-install-musl-libc-on-linux-mint-17/
 ---
 
 musl libc is a lightweight C library implementation that’s useful for creating statically-linked binaries, containerized applications, and embedded systems. It’s the standard C library in Alpine Linux and increasingly common in production environments.

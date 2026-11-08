@@ -3,7 +3,8 @@ title: "Recovering from fstab Boot Failures: A Practical Guide"
 date: 2013-08-25 10:43:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/bypassing-bad-fstab-failure-while-booting-linux/
+categories: [linux-systems-administration]
+canonical: /bypassing-bad-fstab-failure-while-booting-linux/
 ---
 
 When `/etc/fstab` contains errors or your hardware configuration changes, the system may fail to boot or hang during the mount phase. You can recover by modifying kernel parameters at boot time to bypass automatic mounting, then repair the configuration.

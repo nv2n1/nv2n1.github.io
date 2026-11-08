@@ -3,7 +3,8 @@ title: "How to Get a Process\u2019s Port Number"
 date: 2018-03-24 11:54:46 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-one-processs-port-number/
+categories: [programming-languages]
+canonical: /how-to-get-one-processs-port-number/
 ---
 
 Identifying which ports a specific process is using comes up regularly in debugging, security audits, and infrastructure management. Here are the practical methods.

@@ -3,7 +3,8 @@ title: "Handling Linux Signals in C"
 date: 2018-03-24 11:40:55 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-catch-the-kill-signals-sent-by-kill-in-c-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-catch-the-kill-signals-sent-by-kill-in-c-on-linux/
 ---
 
 When a process receives a signal from `kill` or `pkill`, it needs a signal handler to intercept and respond to it. Without one, most signals terminate the process immediately. This guide covers setting up robust signal handlers for production daemons.

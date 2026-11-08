@@ -3,7 +3,8 @@ title: "Securing Linux VNC Access with SSH Tunneling"
 date: 2013-07-12 16:31:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-remote-control-linux-server-using-vnc-through-ssh-tunnel/
+categories: [linux-systems-administration]
+canonical: /how-to-remote-control-linux-server-using-vnc-through-ssh-tunnel/
 ---
 
 Accessing a remote desktop environment on a Linux server securely requires proper tunneling. While SSH X11 forwarding works for single applications, VNC provides a full graphical desktop session. By combining VNC with an SSH tunnel, you encrypt all traffic and can work around firewall restrictions that only allow port 22.

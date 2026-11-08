@@ -3,7 +3,8 @@ title: "Essential MPlayer and Mencoder Commands"
 date: 2013-07-12 16:32:08 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/useful-mplayermencoder-commands/
+categories: [linux-systems-administration]
+canonical: /useful-mplayermencoder-commands/
 ---
 
 MPlayer and mencoder are obsolete. FFmpeg and mpv (the actively maintained fork of MPlayer) are the standard tools for video manipulation on Linux systems today. While some MPlayer syntax still works in mpv, FFmpeg is more performant, better documented, and handles modern codecs reliably.

@@ -3,7 +3,8 @@ title: "Parse RSS Feeds and Display as HTML in PHP"
 date: 2015-03-08 08:02:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-php-function-for-fetching-rss-feed-and-outputing-feed-items-as-html/
+categories: [languages-frameworks]
+canonical: /a-php-function-for-fetching-rss-feed-and-outputing-feed-items-as-html/
 ---
 
 Displaying RSS feed items on a webpage is a practical way to aggregate external content. Here’s a production-ready approach using PHP’s SimpleXML to fetch, cache, and render feeds as HTML.

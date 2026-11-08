@@ -3,7 +3,8 @@ title: "Expanding an LVM Volume Group"
 date: 2013-07-12 16:32:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/extending-a-lvm-volume-group/
+categories: [linux-systems-administration]
+canonical: /extending-a-lvm-volume-group/
 ---
 
 Use `fdisk` or `parted` to create a new partition. `parted` is generally preferred for modern systems as it handles larger disks better:

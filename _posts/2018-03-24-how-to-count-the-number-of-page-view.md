@@ -3,7 +3,8 @@ title: "How to Count Page Views in Your Web Application"
 date: 2018-03-24 08:18:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-count-the-number-of-page-view/
+categories: [linux-systems-administration]
+canonical: /how-to-count-the-number-of-page-view/
 ---
 
 Counting page views isn’t as simple as incrementing a counter. You need to handle edge cases: duplicate views from the same user, multiple users behind a single IP (corporate networks), and bots. Here’s how to build a robust system.

@@ -3,7 +3,8 @@ title: "RGBlite WordPress Theme: Setup Guide and Modern Alternatives"
 date: 2013-07-12 16:46:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/rgblite-wordpress-theme/
+categories: [programming-languages]
+canonical: /rgblite-wordpress-theme/
 ---
 
 RGBlite is a lightweight WordPress theme released in 2010 that features a green-red-blue color scheme and minimal design. While functional for its time, the theme is no longer actively maintained and predates modern WordPress standards by over a decade. This guide covers how to install and configure it if you’re working with legacy systems, plus recommendations for contemporary alternatives.

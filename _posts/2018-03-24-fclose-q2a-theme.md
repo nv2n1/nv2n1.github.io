@@ -3,7 +3,8 @@ title: "Installing and Customizing the fclose Question2Answer Theme"
 date: 2018-03-24 11:41:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/fclose-q2a-theme/
+categories: [linux-systems-administration]
+canonical: /fclose-q2a-theme/
 ---
 
 The fclose theme is a lightweight Question2Answer theme distributed as a set of PHP and CSS files. It provides a clean base layout that you can extend with custom styling and icon sets.

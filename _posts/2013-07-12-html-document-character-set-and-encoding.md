@@ -3,7 +3,8 @@ title: "Character Encoding and HTML Entities: A Modern Guide"
 date: 2013-07-12 16:46:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/html-document-character-set-and-encoding/
+categories: [programming-languages]
+canonical: /html-document-character-set-and-encoding/
 ---
 
 HTML character encoding determines how characters are represented in your source code and rendered in browsers. UTF-8 is the standard, but understanding when and how to use character entities remains essential for reserved characters, symbols, and special cases.

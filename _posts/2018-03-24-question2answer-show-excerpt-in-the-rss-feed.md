@@ -3,7 +3,8 @@ title: "Show Question Excerpts in Question2Answer RSS Feeds"
 date: 2018-03-24 08:16:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/question2answer-show-excerpt-in-the-rss-feed/
+categories: [linux-systems-administration]
+canonical: /question2answer-show-excerpt-in-the-rss-feed/
 ---
 
 Question2Answer’s RSS feed configuration includes a toggle for “Include full text in feeds” but offers no built-in option to display excerpts instead of full content. If you need excerpt functionality, you’ll need to modify the feed generation code.

@@ -3,7 +3,8 @@ title: "AMPLab Big Data Benchmark: Key Metrics and Lasting Impact"
 date: 2014-03-18 05:00:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/big-data-benchmark-from-amplab-of-uc-berkeley/
+categories: [linux-systems-administration]
+canonical: /big-data-benchmark-from-amplab-of-uc-berkeley/
 ---
 
 Benchmarks exist to answer one question: how fast can this system process data? The AMPLab Big Data Benchmark, developed by UC Berkeley, became a foundational effort to answer that question systematically across different distributed query engines.

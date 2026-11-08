@@ -3,7 +3,8 @@ title: "Hadoop TeraSort Benchmark Performance Guide"
 date: 2012-12-18 08:51:41 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hadoop-terasort-benchmark/
+categories: [design-patterns-architecture]
+canonical: /hadoop-terasort-benchmark/
 ---
 
 TeraSort is Hadoop’s standard benchmark for measuring distributed sorting performance across clusters. It consists of three components: TeraGen generates random input data, TeraSort performs the distributed sort, and TeraValidate confirms the output is globally sorted.

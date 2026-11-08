@@ -3,7 +3,8 @@ title: "Running Internet Explorer on Wine: Limitations and Alternatives"
 date: 2018-03-24 11:40:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-ie-under-wine-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-install-ie-under-wine-on-linux/
 ---
 
 Running Internet Explorer on Linux through Wine is theoretically possible but practically untenable. If you need to test in IE, understand upfront: Wine support for IE is broken, unmaintained, and will waste your time.

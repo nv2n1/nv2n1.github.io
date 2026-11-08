@@ -3,7 +3,8 @@ title: "Resolving \u201cToo many frags\u201d and \u201cskb rides the rocket\u201
 date: 2018-03-24 11:43:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/kernel-netfront-too-many-frags-in-xen-vm/
+categories: [linux-systems-administration]
+canonical: /kernel-netfront-too-many-frags-in-xen-vm/
 ---
 
 Xen VMs sometimes log cryptic kernel messages about fragmentation that indicate a mismatch between the VM’s network driver and the host’s virtual interface settings:

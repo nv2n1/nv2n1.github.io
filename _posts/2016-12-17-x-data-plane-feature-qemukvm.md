@@ -3,7 +3,8 @@ title: "Reducing QEMU/KVM Lock Contention with IOThreads and Dataplane"
 date: 2016-12-17 21:59:26 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/x-data-plane-feature-qemukvm/
+categories: [linux-systems-administration]
+canonical: /x-data-plane-feature-qemukvm/
 ---
 
 QEMU/KVM uses global locks to synchronize threads, which is necessary for correctness but causes performance problems at scale. When multiple I/O requests and vCPU threads contend for the same lock, you get lock contention that manifests as scheduling jitter, reduced system scalability, and degraded I/O performance.

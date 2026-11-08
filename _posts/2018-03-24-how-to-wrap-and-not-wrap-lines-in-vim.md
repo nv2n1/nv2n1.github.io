@@ -3,7 +3,8 @@ title: "Configure Line Wrapping in Vim and Neovim"
 date: 2018-03-24 11:40:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-wrap-and-not-wrap-lines-in-vim/
+categories: [linux-systems-administration]
+canonical: /how-to-wrap-and-not-wrap-lines-in-vim/
 ---
 
 Line wrapping in Vim controls whether long lines display across multiple visual lines or extend beyond the window edge. This is purely visual—wrapping doesn’t modify your file. Understanding when to enable, disable, and configure wrapping is essential for different workflows.

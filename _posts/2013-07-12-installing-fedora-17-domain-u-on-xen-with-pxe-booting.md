@@ -3,7 +3,8 @@ title: "Installing Fedora 17 PV Guest on Xen with PXE Boot"
 date: 2013-07-12 16:32:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-fedora-17-domain-u-on-xen-with-pxe-booting/
+categories: [linux-systems-administration]
+canonical: /installing-fedora-17-domain-u-on-xen-with-pxe-booting/
 ---
 
 Xen remains in production use across cloud providers (AWS EC2, Citrix Hypervisor) and large infrastructure deployments, though KVM has become the default hypervisor for most Linux distributions. This guide covers installing a Fedora Domain-U on a Xen Dom0 using PXE boot, applicable to current Fedora releases.

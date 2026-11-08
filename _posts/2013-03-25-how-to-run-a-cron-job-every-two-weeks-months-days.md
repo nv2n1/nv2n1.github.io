@@ -3,7 +3,8 @@ title: "How to Schedule Cron Jobs at Custom Intervals"
 date: 2013-03-25 13:06:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-run-a-cron-job-every-two-weeks-months-days/
+categories: [linux-systems-administration]
+canonical: /how-to-run-a-cron-job-every-two-weeks-months-days/
 ---
 
 Crontab controls what runs and when. Each crontab entry has this format:

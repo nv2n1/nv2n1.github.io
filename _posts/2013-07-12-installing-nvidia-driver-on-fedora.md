@@ -3,7 +3,8 @@ title: "Installing NVIDIA Drivers with Akmod on Fedora"
 date: 2013-07-12 16:32:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-nvidia-driver-on-fedora/
+categories: [linux-systems-administration]
+canonical: /installing-nvidia-driver-on-fedora/
 ---
 
 Installing the NVIDIA driver on Fedora via `akmod` (automatic kernel module) is the cleanest approach when using RPM Fusion. The driver rebuilds automatically whenever the kernel updates, saving you manual reinstalls.

@@ -3,7 +3,8 @@ title: "Reading Multiline Strings in Perl with -0777"
 date: 2020-04-10 07:45:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-match-multiple-lines-using-regex-in-perl-one-liners/
+categories: [scripting-utilities]
+canonical: /how-to-match-multiple-lines-using-regex-in-perl-one-liners/
 ---
 
 Perl one-liners are powerful for text processing, but by default the `-p` and `-n` options process input line by line. When you need to match patterns across multiple lines, you’ll hit limitations because `\s` doesn’t match newlines by default, and the record separator is set to `\n`.

@@ -3,7 +3,8 @@ title: "Reading PHP Files Line by Line"
 date: 2018-03-24 11:52:05 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-process-a-file-line-by-line-in-php/
+categories: [languages-frameworks]
+canonical: /how-to-process-a-file-line-by-line-in-php/
 ---
 
 Reading files line by line is a common task when handling large datasets, logs, or any text-based input where loading the entire file into memory isn’t practical. PHP provides several methods, each with different memory footprints and use cases.

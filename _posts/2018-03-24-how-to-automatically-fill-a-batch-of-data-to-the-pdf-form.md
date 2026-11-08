@@ -3,7 +3,8 @@ title: "Automating PDF Form Data Population with Batch Processing"
 date: 2018-03-24 08:18:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-automatically-fill-a-batch-of-data-to-the-pdf-form/
+categories: [linux-systems-administration]
+canonical: /how-to-automatically-fill-a-batch-of-data-to-the-pdf-form/
 ---
 
 When you need to populate PDF forms with large datasets, manual entry becomes impractical. Scripting this process saves time and eliminates human error. Here’s how to automate PDF form filling using Python.

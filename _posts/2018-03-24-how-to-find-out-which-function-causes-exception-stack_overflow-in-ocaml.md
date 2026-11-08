@@ -3,7 +3,8 @@ title: "Debugging Stack Overflow Exceptions in OCaml"
 date: 2018-03-24 08:19:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-out-which-function-causes-exception-stack_overflow-in-ocaml/
+categories: [linux-systems-administration]
+canonical: /how-to-find-out-which-function-causes-exception-stack_overflow-in-ocaml/
 ---
 
 When your OCaml program crashes with `Fatal error: Exception "Stack_overflow"` but doesn’t tell you where the problem originated, you need to enable backtrace reporting. The process is straightforward but requires recompilation.

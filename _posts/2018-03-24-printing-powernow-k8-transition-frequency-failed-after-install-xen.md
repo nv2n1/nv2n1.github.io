@@ -3,7 +3,8 @@ title: "Fix PowerNow-k8 Frequency Scaling Errors on Xen"
 date: 2018-03-24 11:46:57 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/printing-powernow-k8-transition-frequency-failed-after-install-xen/
+categories: [linux-systems-administration]
+canonical: /printing-powernow-k8-transition-frequency-failed-after-install-xen/
 ---
 
 After installing Xen on AMD systems, you may see continuous “powernow-k8 transition frequency failed” messages on the console. This happens because the `powernow_k8` driver (AMD CPU power management) is incompatible with Xen’s CPU handling and tries to manage frequencies that Xen controls.

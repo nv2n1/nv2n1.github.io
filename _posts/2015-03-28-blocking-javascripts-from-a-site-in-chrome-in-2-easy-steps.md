@@ -3,7 +3,8 @@ title: "Block JavaScript on Specific Sites in Chrome"
 date: 2015-03-28 14:32:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/blocking-javascripts-from-a-site-in-chrome-in-2-easy-steps/
+categories: [languages-frameworks]
+canonical: /blocking-javascripts-from-a-site-in-chrome-in-2-easy-steps/
 ---
 
 Blocking JavaScript per-site in Chrome lets you stop intrusive scripts, malicious content, or resource-heavy trackers without disabling JavaScript globally. This gives you surgical control—some sites work fine without JS, while others need it.

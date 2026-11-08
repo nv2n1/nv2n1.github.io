@@ -3,7 +3,8 @@ title: "Checking if a File is a Block Device in Python"
 date: 2018-03-24 11:55:24 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-test-whether-a-file-exists-and-is-a-block-special-file-in-python-on-linux/
+categories: [languages-frameworks]
+canonical: /how-to-test-whether-a-file-exists-and-is-a-block-special-file-in-python-on-linux/
 ---
 
 On Linux, block special files represent hardware devices like hard drives, SSDs, and other block devices. They’re typically found in `/dev` and can be identified using Python’s `stat` module combined with `os.stat()`.

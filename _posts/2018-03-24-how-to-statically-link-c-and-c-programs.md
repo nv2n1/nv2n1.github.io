@@ -3,7 +3,8 @@ title: "Static Linking C and C++ Programs"
 date: 2018-03-24 08:15:09 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-statically-link-c-and-c-programs/
+categories: [languages-frameworks]
+canonical: /how-to-statically-link-c-and-c-programs/
 ---
 
 Static linking embeds all library code directly into your executable, eliminating runtime dependencies on shared libraries. This approach trades disk space for portability and eliminates “library not found” errors at runtime.

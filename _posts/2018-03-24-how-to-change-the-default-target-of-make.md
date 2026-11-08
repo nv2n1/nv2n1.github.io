@@ -3,7 +3,8 @@ title: "How to Change the Default make Target"
 date: 2018-03-24 11:54:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-default-target-of-make/
+categories: [scripting-utilities]
+canonical: /how-to-change-the-default-target-of-make/
 ---
 
 By default, `make` executes the first target it encounters in your Makefile. This works fine for simple projects, but as Makefiles grow and you have multiple build configurations, deployment targets, and test suites, you’ll need explicit control over which target runs by default.

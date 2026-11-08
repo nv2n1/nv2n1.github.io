@@ -3,7 +3,8 @@ title: "TPM 2.0: Understanding Platform Configuration Registers"
 date: 2024-12-14 09:09:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/understanding-tpm-2-0-and-platform-configuration-registers-pcrs/
+categories: [systems-architecture]
+canonical: /understanding-tpm-2-0-and-platform-configuration-registers-pcrs/
 ---
 
 The Trusted Platform Module (TPM) 2.0 is a cryptographic coprocessor—either as discrete hardware or firmware—that provides hardware-rooted security. It’s the foundation for features like Windows Hello, BitLocker, macOS FileVault, and Linux dm-crypt integration with hardware key binding. On modern systems, TPM 2.0 is nearly universal: integrated into recent Intel (PTT), AMD (fTPM), and ARM processors, or available as discrete chips on enterprise hardware.

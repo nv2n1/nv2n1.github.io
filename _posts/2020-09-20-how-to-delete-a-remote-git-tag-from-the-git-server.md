@@ -3,7 +3,8 @@ title: "Removing Remote Tags in Git"
 date: 2020-09-20 13:25:36 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-delete-a-remote-git-tag-from-the-git-server/
+categories: [testing-devops]
+canonical: /how-to-delete-a-remote-git-tag-from-the-git-server/
 ---
 
 Accidentally pushing a tag to a remote repository happens frequently. Whether you tagged the wrong commit, used an incorrect version number, or triggered an unintended CI/CD pipeline, you need a clean way to remove it.

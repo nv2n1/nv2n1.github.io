@@ -3,7 +3,8 @@ title: "Using Readline in the OCaml REPL"
 date: 2018-03-24 08:15:33 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/add-readline-features-in-ocaml-toplevel/
+categories: [development-best-practices]
+canonical: /add-readline-features-in-ocaml-toplevel/
 ---
 
 The default OCaml toplevel lacks basic readline features like history, line editing, and command completion. Here are the practical approaches to fix this.

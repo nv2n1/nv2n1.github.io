@@ -3,7 +3,8 @@ title: "Getting File Size in C"
 date: 2018-03-24 08:08:22 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-size-of-a-file-in-c/
+categories: [development-best-practices]
+canonical: /how-to-get-the-size-of-a-file-in-c/
 ---
 
 There are several ways to determine a file’s size in C, each with different trade-offs. Choose based on whether you have a file descriptor, stream, or just the filename.

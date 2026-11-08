@@ -3,7 +3,8 @@ title: "Disable Auto-Wrap in Thunderbird Email"
 date: 2018-03-24 11:40:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-thunderbird-not-wrap-lines-automatically/
+categories: [linux-systems-administration]
+canonical: /how-to-make-thunderbird-not-wrap-lines-automatically/
 ---
 
 Thunderbird wraps lines at a fixed character width by default during composition, which interferes with code snippets, preformatted text, and any content where line breaks matter. Here’s how to turn it off.

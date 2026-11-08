@@ -3,7 +3,8 @@ title: "Essential MPlayer Keyboard Shortcuts"
 date: 2013-07-12 16:31:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/mostly-used-mplayer-keyboard-control/
+categories: [linux-systems-administration]
+canonical: /mostly-used-mplayer-keyboard-control/
 ---
 
 MPlayer is largely unmaintained; **mpv** is the actively developed fork that handles 95% of these commands with compatible bindings. That said, if you’re still running MPlayer or need legacy support, here’s what you need to know.

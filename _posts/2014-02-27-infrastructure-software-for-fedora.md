@@ -3,7 +3,8 @@ title: "Essential Tools and Infrastructure for Fedora Development"
 date: 2014-02-27 08:37:44 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/infrastructure-software-for-fedora/
+categories: [linux-systems-administration]
+canonical: /infrastructure-software-for-fedora/
 ---
 
 Fedora is a cutting-edge distribution sponsored by Red Hat that serves as a testing ground for technologies eventually stabilized in RHEL. This guide covers essential infrastructure, system administration, and desktop tools for modern Fedora systems, with practical installation and usage examples.

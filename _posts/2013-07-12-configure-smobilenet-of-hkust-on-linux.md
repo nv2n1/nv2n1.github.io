@@ -3,7 +3,8 @@ title: "MobileNet Configuration on Linux: HKUST Setup Guide"
 date: 2013-07-12 16:31:39 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/configure-smobilenet-of-hkust-on-linux/
+categories: [linux-systems-administration]
+canonical: /configure-smobilenet-of-hkust-on-linux/
 ---
 
 To connect to HKUST’s sMobileNet wireless network via NetworkManager, you’ll need to configure WPA2 Enterprise authentication with PEAP. This guide covers the required settings.

@@ -3,7 +3,8 @@ title: "Resizing a KVM Virtual Disk: A Step-by-Step Guide"
 date: 2018-03-24 11:55:28 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-resize-a-virtual-disk-of-kvm/
+categories: [system-administration-cloud]
+canonical: /how-to-resize-a-virtual-disk-of-kvm/
 ---
 
 Expanding a VM’s storage is a routine operation in KVM environments. The process has two distinct phases: expanding the raw disk capacity and then growing the partitions and filesystems to use that space.

@@ -3,7 +3,8 @@ title: "Getting Started with SSH: Connecting to Linux Servers"
 date: 2013-07-12 16:32:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/howto-ssh-to-linux-hosts-for-beginners/
+categories: [linux-systems-administration]
+canonical: /howto-ssh-to-linux-hosts-for-beginners/
 ---
 
 SSH (Secure Shell) is the standard way to remotely access Linux systems. Whether you’re administering servers, deploying code, or managing infrastructure, SSH is essential knowledge.

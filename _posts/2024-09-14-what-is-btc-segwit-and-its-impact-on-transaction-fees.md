@@ -3,7 +3,8 @@ title: "Bitcoin SegWit: How It Reduces Transaction Fees"
 date: 2024-09-14 07:40:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/what-is-btc-segwit-and-its-impact-on-transaction-fees/
+categories: [blockchain-cryptocurrency]
+canonical: /what-is-btc-segwit-and-its-impact-on-transaction-fees/
 ---
 
 Segregated Witness (SegWit) is a Bitcoin protocol upgrade activated in August 2017 that restructured how transaction data is encoded and validated. It’s foundational to modern Bitcoin usage and essential for understanding current fee dynamics and layer 2 scaling.

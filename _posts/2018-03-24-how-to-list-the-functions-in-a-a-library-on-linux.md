@@ -3,7 +3,8 @@ title: "How to List Functions in a Linux Static Library"
 date: 2018-03-24 08:18:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-list-the-functions-in-a-a-library-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-list-the-functions-in-a-a-library-on-linux/
 ---
 
 The `nm` command displays symbolic information from object files, libraries, and executables. It’s the standard tool for inspecting what functions and variables are defined or referenced in a static library (`.a` file).

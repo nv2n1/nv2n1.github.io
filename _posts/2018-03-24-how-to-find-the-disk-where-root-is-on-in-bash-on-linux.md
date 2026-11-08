@@ -3,7 +3,8 @@ title: "Finding the Root Filesystem Disk in Linux Bash"
 date: 2018-03-24 11:52:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-the-disk-where-root-is-on-in-bash-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-the-disk-where-root-is-on-in-bash-on-linux/
 ---
 
 On Linux systems, the root filesystem (/) can be on various device types — a raw disk partition, an LVM logical volume, or other storage configurations. Finding the underlying physical disk requires checking the device hierarchy, which differs depending on the storage setup.

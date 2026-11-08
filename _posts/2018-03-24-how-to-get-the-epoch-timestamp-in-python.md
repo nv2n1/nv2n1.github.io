@@ -3,7 +3,8 @@ title: "Getting Epoch Timestamps in Python"
 date: 2018-03-24 11:52:13 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-epoch-timestamp-in-python/
 ---
 
 Python offers several ways to get the current epoch timestamp, each suited to different use cases. The choice depends on your precision requirements and whether you’re working with timezone-aware operations.

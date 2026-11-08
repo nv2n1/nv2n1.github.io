@@ -3,7 +3,8 @@ title: "Customizing Cinnamon Themes and Fonts on Fedora"
 date: 2018-03-24 11:45:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/good-cinnamon-theme-for-fedora-21-linux/
+categories: [programming-languages]
+canonical: /good-cinnamon-theme-for-fedora-21-linux/
 ---
 
 Cinnamon on Fedora offers solid theming options through the official repositories. Here’s a practical approach to building a cohesive desktop environment with matching window borders, icons, controls, and cursor themes.

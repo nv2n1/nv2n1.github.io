@@ -3,7 +3,8 @@ title: "RAII-Style Error Handling and Resource Management in C"
 date: 2014-03-06 08:10:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/raii-like-error-handling-and-resource-management-in-c/
+categories: [development-best-practices]
+canonical: /raii-like-error-handling-and-resource-management-in-c/
 ---
 
 Resource management and error handling are critical in systems programming. RAII (Resource Acquisition Is Initialization) originated in C++ and ties resource lifecycles to object scope, with destructors automatically cleaning up resources. C lacks destructors and exceptions, but you can achieve similar semantics using established patterns that are battle-tested in production systems.

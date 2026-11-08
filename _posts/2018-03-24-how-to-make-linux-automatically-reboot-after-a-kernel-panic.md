@@ -3,7 +3,8 @@ title: "Enabling Automatic Reboot on Kernel Panic in Linux"
 date: 2018-03-24 11:45:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-linux-automatically-reboot-after-a-kernel-panic/
+categories: [linux-systems-administration]
+canonical: /how-to-make-linux-automatically-reboot-after-a-kernel-panic/
 ---
 
 When a kernel panic occurs on a remote Linux server, manual intervention via SSH becomes impossible. The kernel can be configured to automatically reboot after a panic, allowing the system to recover without human intervention.

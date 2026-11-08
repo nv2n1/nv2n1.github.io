@@ -3,7 +3,8 @@ title: "How to Attach and Mount a Xen DomU Disk in Dom0"
 date: 2018-03-24 08:19:23 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-attach-and-mount-xen-domus-disk-to-dom0/
+categories: [linux-systems-administration]
+canonical: /how-to-attach-and-mount-xen-domus-disk-to-dom0/
 ---
 
 There are times when you need direct access to a DomU’s disk from Dom0—for recovery, backup, or maintenance. This is straightforward with Xen’s block device tools, though the commands have evolved depending on your Xen version.

@@ -3,7 +3,8 @@ title: "Installing Specific Package Versions with Yum"
 date: 2013-07-12 16:32:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-specific-old-versions-of-packages-in-yum/
+categories: [linux-systems-administration]
+canonical: /installing-specific-old-versions-of-packages-in-yum/
 ---
 
 To find all available versions of a package in your repository, use the `--showduplicates` flag:

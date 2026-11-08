@@ -3,7 +3,8 @@ title: "How to Reduce JPEG File Size from XSane on Linux"
 date: 2018-03-24 11:51:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-output-jpeg-file-of-xsane-smaller-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-make-output-jpeg-file-of-xsane-smaller-on-linux/
 ---
 
 XSANE is a graphical scanner interface for Linux that provides straightforward scanning capabilities. When you scan documents or images, the JPEG output files can be surprisingly large depending on your settings. Here are practical methods to reduce the file size.

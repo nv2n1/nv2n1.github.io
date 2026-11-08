@@ -3,7 +3,8 @@ title: "Search and Replace Within a Visual Selection in Vim"
 date: 2018-03-24 11:49:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/in-vim-how-to-search-and-replace-in-visual-selection/
+categories: [programming-languages]
+canonical: /in-vim-how-to-search-and-replace-in-visual-selection/
 ---
 
 When you need to restrict a find-and-replace operation to a specific block of text, Vim gives you several approaches.

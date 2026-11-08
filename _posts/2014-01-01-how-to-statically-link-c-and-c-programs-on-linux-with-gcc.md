@@ -3,7 +3,8 @@ title: "Static Linking C and C++ Programs with GCC on Linux"
 date: 2014-01-01 03:50:47 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-statically-link-c-and-c-programs-on-linux-with-gcc/
+categories: [linux-systems-administration]
+canonical: /how-to-statically-link-c-and-c-programs-on-linux-with-gcc/
 ---
 
 Static linking embeds all library code directly into your binary. On Linux, this sounds straightforward but glibc introduces complications that pure static binaries don’t truly exist — the C library still loads dynamic features at runtime like NSS (Name Service Switch), locale data, and character set converters. Understanding these constraints is essential before committing to static linking.

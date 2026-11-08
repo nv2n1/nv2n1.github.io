@@ -3,7 +3,8 @@ title: "Monitoring All IMAP Folders for New Messages in Thunderbird"
 date: 2018-03-24 11:43:10 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-thunderbird-check-for-new-messages-in-all-imap-folders/
+categories: [linux-systems-administration]
+canonical: /how-to-make-thunderbird-check-for-new-messages-in-all-imap-folders/
 ---
 
 By default, Thunderbird only checks the Inbox folder for new messages when using IMAP accounts. If you receive emails that bypass your Inbox or use multiple folders for organization, you’ll want to enable checking across all IMAP folders.

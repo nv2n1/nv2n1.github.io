@@ -3,7 +3,8 @@ title: "Convert FLV Videos to MP4 Using FFmpeg"
 date: 2018-03-24 11:42:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-flv-to-mp4-with-ffmpeg/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-flv-to-mp4-with-ffmpeg/
 ---
 
 Converting FLV files to MP4 is straightforward with FFmpeg. The basic command takes just seconds:

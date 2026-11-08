@@ -3,7 +3,8 @@ title: "Configuring QEMU Guest Network Access Over Wireless"
 date: 2018-03-24 11:43:30 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-config-network-in-host-wireless-network-for-qemu-guest-os/
+categories: [linux-systems-administration]
+canonical: /how-to-config-network-in-host-wireless-network-for-qemu-guest-os/
 ---
 
 When your host machine connects to the network via WiFi, giving QEMU guests network access requires a different approach than traditional bridged networking. Since wireless interfaces typically don’t support bridge mode, you’ll need to use NAT (Network Address Translation) or a tap device with masquerading.

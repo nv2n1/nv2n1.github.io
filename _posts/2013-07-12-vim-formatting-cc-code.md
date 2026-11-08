@@ -3,7 +3,8 @@ title: "Configuring Indentation in Vim for C and C++"
 date: 2013-07-12 16:47:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/vim-formatting-cc-code/
+categories: [linux-systems-administration]
+canonical: /vim-formatting-cc-code/
 ---
 
 Vim’s indentation system provides multiple approaches for formatting C/C++ code, from built-in operators to external formatters. The native tools work reliably for most tasks, while external formatters enforce stricter style rules when needed.

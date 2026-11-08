@@ -3,7 +3,8 @@ title: "Modern C++ References: Best Practices and Guidelines"
 date: 2013-07-12 19:06:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/c-reference-and-styles/
+categories: [languages-frameworks]
+canonical: /c-reference-and-styles/
 ---
 
 **cppreference.com** is the authoritative resource for C++ language and standard library documentation. It covers all C++ standards from C++98 through C++26 with clear examples and cross-references. Bookmark it as your primary reference.

@@ -3,7 +3,8 @@ title: "Query DNS Records from a Specific Server with dig"
 date: 2018-03-24 11:46:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-resolve-a-domain-name-from-a-specific-dns-server-instead-of-the-configured-one-in-linux/
+categories: [programming-languages]
+canonical: /how-to-resolve-a-domain-name-from-a-specific-dns-server-instead-of-the-configured-one-in-linux/
 ---
 
 When you need to check DNS records from a particular server—especially to verify changes on authoritative nameservers before they propagate through cached resolvers—use `dig` with the `@` syntax to specify the target DNS server.

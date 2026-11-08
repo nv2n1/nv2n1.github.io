@@ -3,7 +3,8 @@ title: "Finding Files Larger Than a Specific Size"
 date: 2018-03-24 08:20:28 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-files-in-a-directory-that-are-larger-than-certain-size/
+categories: [testing-devops]
+canonical: /how-to-find-files-in-a-directory-that-are-larger-than-certain-size/
 ---
 
 Finding large files is something you end up doing a lot — disk fills up, you need to track down what’s eating space, or you’re auditing a directory before archiving. The `find` command handles this cleanly.

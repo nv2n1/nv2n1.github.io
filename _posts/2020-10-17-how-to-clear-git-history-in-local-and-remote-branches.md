@@ -3,7 +3,8 @@ title: "Clearing Git History: Local and Remote Branches"
 date: 2020-10-17 13:06:25 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-clear-git-history-in-local-and-remote-branches/
+categories: [testing-devops]
+canonical: /how-to-clear-git-history-in-local-and-remote-branches/
 ---
 
 Git tracks every commit, allowing you to inspect the full change history of a repository. However, this history accumulates storage overhead—especially problematic when large files were accidentally committed. If you need to discard all history and keep only the current code state, you can rebuild a branch with a single commit.

@@ -3,7 +3,8 @@ title: "Counting reads per chromosome in BAM files"
 date: 2018-03-24 11:53:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-count-the-number-of-reads-in-each-chromosome-in-a-bam-file/
+categories: [scripting-utilities]
+canonical: /how-to-count-the-number-of-reads-in-each-chromosome-in-a-bam-file/
 ---
 
 BAM files store aligned sequence reads in a compressed binary format. Counting reads by chromosome is a common task in genomics workflows—useful for quality control, coverage analysis, and identifying potential sequencing biases.

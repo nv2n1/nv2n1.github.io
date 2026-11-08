@@ -3,7 +3,8 @@ title: "Measuring CFS Scheduler Timeslices in Linux"
 date: 2016-12-05 02:47:34 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/length-timeslice-processes-cfs-process-scheduling-algorithm-linux-kernel/
+categories: [linux-systems-administration]
+canonical: /length-timeslice-processes-cfs-process-scheduling-algorithm-linux-kernel/
 ---
 
 CFS (Completely Fair Scheduling) is the default process scheduler in modern Linux kernels. Understanding actual timeslice allocation—how long a process runs before being context-switched out—is essential for performance debugging, verifying fairness assumptions, and identifying scheduling anomalies. The challenge is that /proc interfaces and ps commands show scheduling policy but not the actual on-CPU duration per scheduling event.

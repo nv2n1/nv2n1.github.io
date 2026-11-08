@@ -3,7 +3,8 @@ title: "Upgrading Vim to Version 8 on CentOS 7"
 date: 2018-03-24 11:53:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-upgrade-vim-to-version-8-on-centos-7/
+categories: [programming-languages]
+canonical: /how-to-upgrade-vim-to-version-8-on-centos-7/
 ---
 
 If you’re running an older CentOS or RHEL system with Vim 7.4, upgrading to Vim 8 or later gives you modern features like async I/O, jobs API, terminal emulator support, and better plugin performance. Here are the practical approaches.

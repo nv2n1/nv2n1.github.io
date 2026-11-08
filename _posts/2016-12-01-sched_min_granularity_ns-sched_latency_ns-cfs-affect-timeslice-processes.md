@@ -3,7 +3,8 @@ title: "How the CFS Scheduler Controls Process Timeslices and Preemption"
 date: 2016-12-01 06:31:04 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/sched_min_granularity_ns-sched_latency_ns-cfs-affect-timeslice-processes/
+categories: [linux-systems-administration]
+canonical: /sched_min_granularity_ns-sched_latency_ns-cfs-affect-timeslice-processes/
 ---
 
 The Completely Fair Scheduler (CFS) is the default process scheduler in Linux kernels since 2.6.23. It allocates CPU time proportionally based on process priority, but the actual timeslices and preemption behavior depend on three key tunable parameters: `sched_latency_ns`, `sched_min_granularity_ns`, and `sched_wakeup_granularity_ns`. Understanding how these work together is essential for tuning scheduler behavior on production systems.

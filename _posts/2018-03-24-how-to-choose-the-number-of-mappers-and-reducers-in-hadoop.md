@@ -3,7 +3,8 @@ title: "Tuning MapReduce: Choosing Mapper and Reducer Counts"
 date: 2018-03-24 08:17:12 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-choose-the-number-of-mappers-and-reducers-in-hadoop/
+categories: [linux-systems-administration]
+canonical: /how-to-choose-the-number-of-mappers-and-reducers-in-hadoop/
 ---
 
 Choosing the right number of mappers and reducers directly impacts Hadoop job performance. This isn’t a set-and-forget configuration—it depends on your cluster characteristics, data size, and task complexity.

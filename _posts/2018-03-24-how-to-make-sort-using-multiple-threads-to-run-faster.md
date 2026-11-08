@@ -3,7 +3,8 @@ title: "How to Parallelize Sorting with Multi-Threading"
 date: 2018-03-24 11:52:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-sort-using-multiple-threads-to-run-faster/
+categories: [algorithms-data-structures]
+canonical: /how-to-make-sort-using-multiple-threads-to-run-faster/
 ---
 
 The standard `sort` command is single-threaded by default, which limits performance on modern multi-core systems. Several approaches exist to speed up sorting operations using parallelism.

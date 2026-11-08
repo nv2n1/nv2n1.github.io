@@ -3,7 +3,8 @@ title: "Restarting GNOME 3 Without Closing Running Programs"
 date: 2018-03-24 08:15:33 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-restart-gnome-3-without-closing-the-programs-running/
+categories: [web-development]
+canonical: /how-to-restart-gnome-3-without-closing-the-programs-running/
 ---
 
 If you need to restart GNOME while keeping your applications open, you have several options depending on your GNOME version and setup.

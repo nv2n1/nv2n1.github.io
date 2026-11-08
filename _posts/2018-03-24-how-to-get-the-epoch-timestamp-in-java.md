@@ -3,7 +3,8 @@ title: "Getting the Current Epoch Timestamp in Java"
 date: 2018-03-24 11:52:19 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-java/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-epoch-timestamp-in-java/
 ---
 
 Java provides multiple ways to get the current time as an epoch value. The right approach depends on whether you need milliseconds, seconds, or nanosecond precision, and whether you’re working with UTC or time zones.

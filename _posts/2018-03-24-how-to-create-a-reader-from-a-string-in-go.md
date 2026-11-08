@@ -3,7 +3,8 @@ title: "Creating a Reader from a String in Go"
 date: 2018-03-24 11:50:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-create-a-reader-from-a-string-in-go/
+categories: [languages-frameworks]
+canonical: /how-to-create-a-reader-from-a-string-in-go/
 ---
 
 Many Go functions accept an `io.Reader` interface. To pass a string to these functions, use `strings.NewReader`, which wraps the string without copying it—the data is read directly from the original string.

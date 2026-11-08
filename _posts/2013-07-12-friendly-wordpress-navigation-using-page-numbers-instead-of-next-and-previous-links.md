@@ -3,7 +3,8 @@ title: "Implementing Numbered Pagination in WordPress"
 date: 2013-07-12 16:46:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/friendly-wordpress-navigation-using-page-numbers-instead-of-next-and-previous-links/
+categories: [programming-languages]
+canonical: /friendly-wordpress-navigation-using-page-numbers-instead-of-next-and-previous-links/
 ---
 
 Numbered page navigation improves user experience and gives you better control over how visitors browse your content. Rather than forcing users through “previous/next” links, numbered pagination lets them jump directly to specific archive or search results pages.

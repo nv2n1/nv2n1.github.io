@@ -3,7 +3,8 @@ title: "How to Get a Dictionary Value with a Default Fallback in Python"
 date: 2018-03-24 11:54:26 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-value-of-a-default-value-if-the-key-does-not-exist-in-dict-in-python/
+categories: [scripting-utilities]
+canonical: /how-to-get-the-value-of-a-default-value-if-the-key-does-not-exist-in-dict-in-python/
 ---
 
 When you access a non-existent key in a Python dictionary, you’ll hit a `KeyError`. There are several approaches to handle this gracefully depending on your use case.

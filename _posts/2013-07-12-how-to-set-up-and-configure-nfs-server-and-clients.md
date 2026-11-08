@@ -3,7 +3,8 @@ title: "Setting Up NFS Server and Client Configuration"
 date: 2013-07-12 16:32:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-and-configure-nfs-server-and-clients/
+categories: [linux-systems-administration]
+canonical: /how-to-set-up-and-configure-nfs-server-and-clients/
 ---
 
 ### Package Installation

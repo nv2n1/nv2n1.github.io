@@ -3,7 +3,8 @@ title: "Git Server Setup with Gitosis"
 date: 2012-02-25 13:17:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-git-server-using-gitosis/
+categories: [linux-systems-administration]
+canonical: /setting-up-git-server-using-gitosis/
 ---
 
 Gitosis is unmaintained and shouldn’t be used for new deployments. Use **Gitolite** or **Forgejo** instead. This guide covers Gitolite, which provides fine-grained access control, is actively maintained, and handles multiple repositories under a single system user.

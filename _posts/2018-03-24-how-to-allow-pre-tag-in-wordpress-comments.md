@@ -3,7 +3,8 @@ title: "Safely Allow Code Blocks in WordPress Comments"
 date: 2018-03-24 11:40:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-allow-pre-tag-in-wordpress-comments/
+categories: [development-best-practices]
+canonical: /how-to-allow-pre-tag-in-wordpress-comments/
 ---
 
 WordPress sanitizes HTML in comments by default for security. The `<pre>` tag is stripped unless you explicitly whitelist it. Here’s how to enable it without compromising security.

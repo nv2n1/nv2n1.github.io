@@ -3,7 +3,8 @@ title: "Xen Hypervisor Boot Parameters Guide"
 date: 2018-03-24 11:46:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/list-of-all-xen-hypervisor-command-line-options/
+categories: [programming-languages]
+canonical: /list-of-all-xen-hypervisor-command-line-options/
 ---
 
 Xen hypervisor command line options are kernel parameters passed during boot that control how the Xen hypervisor initializes and operates. These affect CPU scheduling, memory management, virtualization features, debugging, and more.

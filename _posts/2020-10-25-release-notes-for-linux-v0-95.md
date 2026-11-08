@@ -3,7 +3,8 @@ title: "Linux v0.95 Release Notes"
 date: 2020-10-25 08:00:33 +0000
 author: "Tony"
 layout: post
-canonical: https://www.systutorials.com/release-notes-for-linux-v0-95/
+categories: [testing-devops]
+canonical: /release-notes-for-linux-v0-95/
 ---
 
 This document preserves the historical release notes for Linux v0.95 (March 7, 1992), one of the earliest public kernel versions. These notes provide valuable insight into early Linux development decisions and technical challenges. The original notes are presented here with minor formatting improvements for readability.

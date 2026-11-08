@@ -3,7 +3,8 @@ title: "How glibc Implements strstr with the Two-Way Algorithm"
 date: 2018-03-24 11:46:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/implementation-of-strstr-in-glibc/
+categories: [linux-systems-administration]
+canonical: /implementation-of-strstr-in-glibc/
 ---
 
 The glibc implementation of `strstr()` is a practical case study in algorithm selection. Rather than a naive O(n\*m) search, it uses the Two-Way string matching algorithm for better performance on both short and long needles.

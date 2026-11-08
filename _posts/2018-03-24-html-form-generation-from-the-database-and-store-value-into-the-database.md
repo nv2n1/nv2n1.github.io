@@ -3,7 +3,8 @@ title: "Generate and Store HTML Forms from Database Data"
 date: 2018-03-24 08:18:51 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/html-form-generation-from-the-database-and-store-value-into-the-database/
+categories: [linux-systems-administration]
+canonical: /html-form-generation-from-the-database-and-store-value-into-the-database/
 ---
 
 When you need to store form submissions where different form types have different attributes, you’re essentially implementing an Entity-Attribute-Value (EAV) model. This is a common pattern for flexible schemas, but it requires careful design.

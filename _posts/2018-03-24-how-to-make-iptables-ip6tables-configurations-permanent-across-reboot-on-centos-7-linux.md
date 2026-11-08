@@ -3,7 +3,8 @@ title: "Persisting iptables Rules on CentOS 7"
 date: 2018-03-24 11:53:59 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-iptables-ip6tables-configurations-permanent-across-reboot-on-centos-7-linux/
+categories: [programming-languages]
+canonical: /how-to-make-iptables-ip6tables-configurations-permanent-across-reboot-on-centos-7-linux/
 ---
 
 Rocky Linux 9 and later distributions use FirewallD as the default firewall management tool. However, if you need direct control over iptables and ip6tables rules, you can disable FirewallD and use the `iptables-services` package to restore your rules at boot.

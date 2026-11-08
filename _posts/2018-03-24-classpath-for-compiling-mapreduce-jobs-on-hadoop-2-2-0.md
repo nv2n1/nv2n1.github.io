@@ -3,7 +3,8 @@ title: "Configuring Hadoop Classpath for MapReduce Compilation"
 date: 2018-03-24 08:22:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/classpath-for-compiling-mapreduce-jobs-on-hadoop-2-2-0/
+categories: [design-patterns-architecture]
+canonical: /classpath-for-compiling-mapreduce-jobs-on-hadoop-2-2-0/
 ---
 
 When compiling MapReduce jobs against a Hadoop installation, you need to include the correct classpath to resolve Hadoop dependencies. The `yarn classpath` command handles this automatically.

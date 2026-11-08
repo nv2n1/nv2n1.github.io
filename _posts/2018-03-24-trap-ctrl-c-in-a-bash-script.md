@@ -3,7 +3,8 @@ title: "Handling Ctrl-C Interrupts in Bash Scripts"
 date: 2018-03-24 08:17:12 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/trap-ctrl-c-in-a-bash-script/
+categories: [linux-systems-administration]
+canonical: /trap-ctrl-c-in-a-bash-script/
 ---
 
 Handling `Ctrl-C` gracefully in a Bash script is essential when you need to perform cleanup operations, save state, or notify users before exiting. The `trap` builtin makes this straightforward.

@@ -3,7 +3,8 @@ title: "Copy Command Output to Clipboard in Linux"
 date: 2013-07-18 03:45:02 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/copying-output-of-commands-in-linux-terminals-to-x-selection-clipboard/
+categories: [linux-systems-administration]
+canonical: /copying-output-of-commands-in-linux-terminals-to-x-selection-clipboard/
 ---
 
 xclip is a utility that bridges the command line and X11 selections, letting you pipe command output directly to your clipboard. It’s indispensable for workflows where you’re generating content in the terminal and pasting it elsewhere—whether that’s a browser, text editor, or another application.

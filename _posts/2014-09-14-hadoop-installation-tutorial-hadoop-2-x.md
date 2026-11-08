@@ -3,7 +3,8 @@ title: "Setting Up a Hadoop 2.x Cluster for Development and Legacy Systems"
 date: 2014-09-14 18:13:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/hadoop-installation-tutorial-hadoop-2-x/
+categories: [linux-systems-administration]
+canonical: /hadoop-installation-tutorial-hadoop-2-x/
 ---
 
 Hadoop 2.x reached end-of-life in 2016. This guide covers setup for learning purposes and legacy system maintenance only. For production deployments, use Hadoop 3.x or later, which includes performance improvements, better YARN scheduling, HDFS erasure coding, and improved security. Cloud-managed options like AWS EMR, Google Dataproc, and Azure HDInsight eliminate most operational overhead.

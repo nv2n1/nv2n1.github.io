@@ -3,7 +3,8 @@ title: "Adjusting HDFS Replication Factor Per File"
 date: 2018-03-24 11:43:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-number-of-replications-of-certain-files-in-hdfs/
+categories: [linux-systems-administration]
+canonical: /how-to-change-number-of-replications-of-certain-files-in-hdfs/
 ---
 
 HDFS uses the `dfs.replication` property in `hdfs-site.xml` to set a global default replication factor for all blocks. However, you can override this on a per-file or per-directory basis using the `hdfs dfs -setrep` command — useful for frequently accessed “hot” files that need higher availability.

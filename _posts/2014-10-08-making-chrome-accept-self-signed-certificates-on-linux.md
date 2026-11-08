@@ -3,7 +3,8 @@ title: "Importing Self-Signed Certificates into Chrome on Linux"
 date: 2014-10-08 04:29:13 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-chrome-accept-self-signed-certificates-on-linux/
+categories: [linux-systems-administration]
+canonical: /making-chrome-accept-self-signed-certificates-on-linux/
 ---
 
 Chrome on Linux uses NSS (Network Security Services) for certificate management. Install the `certutil` utility from your distribution:

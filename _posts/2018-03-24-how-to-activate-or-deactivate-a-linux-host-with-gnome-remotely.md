@@ -3,7 +3,8 @@ title: "Remotely Enable or Disable GNOME on Linux Hosts"
 date: 2018-03-24 08:14:55 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-activate-or-deactivate-a-linux-host-with-gnome-remotely/
+categories: [linux-systems-administration]
+canonical: /how-to-activate-or-deactivate-a-linux-host-with-gnome-remotely/
 ---
 
 Controlling a GNOME desktop remotely—locking the display, activating the screensaver, or blanking the screen—requires you to interact with the running GNOME session. The approach depends on your GNOME version and what you’re trying to accomplish.

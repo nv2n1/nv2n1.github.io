@@ -3,7 +3,8 @@ title: "Configuring Zimbra Web Service Hostname and Port"
 date: 2018-03-24 11:52:43 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-zimbra-web-services-hostname-and-port/
+categories: [web-development]
+canonical: /how-to-set-zimbra-web-services-hostname-and-port/
 ---
 
 Zimbra’s web interface needs proper hostname and port configuration to function correctly, especially when you’re deploying behind load balancers, reverse proxies, or in clustered environments.

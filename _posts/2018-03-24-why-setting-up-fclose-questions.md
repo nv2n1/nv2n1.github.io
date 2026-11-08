@@ -3,7 +3,8 @@ title: "Understanding When to Use fclose() in File Operations"
 date: 2018-03-24 08:13:49 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/why-setting-up-fclose-questions/
+categories: [development-best-practices]
+canonical: /why-setting-up-fclose-questions/
 ---
 
 This post addresses a fair question: with Stack Overflow, Reddit, and countless other Q&A platforms already established, why create a dedicated Q&A space?

@@ -3,7 +3,8 @@ title: "How to Reset All Git Submodules"
 date: 2020-10-11 15:03:16 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-reset-all-submodules-in-git/
+categories: [testing-devops]
+canonical: /how-to-reset-all-submodules-in-git/
 ---
 
 Git submodules let you keep a Git repository as a subdirectory of another Git repository. When they get into a bad state—detached HEAD, local changes, merge conflicts—you need a clean reset.

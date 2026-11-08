@@ -3,7 +3,8 @@ title: "How to Exit VirtualBox Scaled Mode"
 date: 2018-03-24 11:46:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-quite-virtualbox-scale-mode/
+categories: [programming-languages]
+canonical: /how-to-quite-virtualbox-scale-mode/
 ---
 
 VirtualBox’s scaled mode stretches the guest display to fill your host window, but it can distort the image or make it harder to work with. If you need to switch back to normal windowed mode, you have a few options.

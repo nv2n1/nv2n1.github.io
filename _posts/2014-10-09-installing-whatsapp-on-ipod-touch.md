@@ -3,7 +3,8 @@ title: "WhatsApp on iPad: Web Client Setup and Alternatives"
 date: 2014-10-09 03:33:59 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/installing-whatsapp-on-ipod-touch/
+categories: [linux-systems-administration]
+canonical: /installing-whatsapp-on-ipod-touch/
 ---
 
 WhatsApp doesn’t have a native iPad or iPod Touch app, but you can access your messages through WhatsApp Web, which works reliably on any tablet with a browser. Here’s how to set it up and what to know about using it.

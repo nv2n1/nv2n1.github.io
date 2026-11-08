@@ -3,7 +3,8 @@ title: "Importing CMake Projects into Eclipse CDT"
 date: 2018-03-24 11:40:56 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-import-a-cmake-project-into-eclipse-cdt/
+categories: [linux-systems-administration]
+canonical: /how-to-import-a-cmake-project-into-eclipse-cdt/
 ---
 
 Eclipse CDT has evolved to handle CMake projects effectively. The key is understanding which approach fits your workflow — native CMake integration (recommended for 2023+ versions) or generating build files.

@@ -3,7 +3,8 @@ title: "Managing Multiple Repositories in Fedora Linux"
 date: 2013-07-12 16:32:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/additional-repositories-for-fedora-linux/
+categories: [linux-systems-administration]
+canonical: /additional-repositories-for-fedora-linux/
 ---
 
 RPM Fusion provides software that the Fedora Project doesn’t ship—primarily due to licensing restrictions, patent concerns, or proprietary redistributability requirements. The repository splits into two branches:

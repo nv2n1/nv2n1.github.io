@@ -3,7 +3,8 @@ title: "Converting PowerPoint Slides to PNG and JPG on Linux"
 date: 2018-03-24 11:45:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-pptx-slides-to-jpg-or-png-images-on-linux-in-command-line/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-pptx-slides-to-jpg-or-png-images-on-linux-in-command-line/
 ---
 
 Converting PPTX presentations to image files on Linux requires a two-step process: first convert to PDF, then rasterize to your target image format. This approach preserves slide layout and fonts better than direct conversion tools.

@@ -3,7 +3,8 @@ title: "Printing to STDERR and STDOUT in C"
 date: 2018-03-24 11:53:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-c/
+categories: [programming-languages]
+canonical: /how-to-print-a-line-to-stderr-and-stdout-in-c/
 ---
 
 The fundamental distinction between standard output and standard error matters for proper program behavior, logging, and stream redirection. Here’s how to handle both correctly.

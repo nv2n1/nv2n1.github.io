@@ -3,7 +3,8 @@ title: "How to Check CPU Core Count on Linux"
 date: 2018-03-24 08:17:38 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/find-out-the-number-of-cpu-cores-on-linux/
+categories: [linux-systems-administration]
+canonical: /find-out-the-number-of-cpu-cores-on-linux/
 ---
 
 Determining the number of CPU cores available on a Linux system is essential for performance tuning, application configuration, and capacity planning. Several approaches exist depending on what information you need.

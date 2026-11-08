@@ -3,7 +3,8 @@ title: "Reading Emails from Maildir Format on Linux"
 date: 2018-03-24 11:43:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-read-email-in-maildir-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-read-email-in-maildir-on-linux/
 ---
 
 Maildir is a common email storage format on Linux servers and is widely supported by mail clients and delivery agents. Here’s how to access and read your mail stored in Maildir format.

@@ -3,7 +3,8 @@ title: "Installing and Configuring BuddyPress Themes in WordPress"
 date: 2018-03-24 11:42:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-wordpress-buddy-press-template/
+categories: [linux-systems-administration]
+canonical: /how-to-install-wordpress-buddy-press-template/
 ---
 
 BuddyPress themes extend WordPress’s community features with member profiles, activity streams, and group functionality. While any modern WordPress theme technically works with BuddyPress, dedicated BuddyPress themes provide optimized templates and styling out of the box.

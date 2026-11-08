@@ -3,7 +3,8 @@ title: "Replacing GDM with LightDM on Fedora"
 date: 2018-03-24 08:19:02 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-replace-gdm-with-lightdm-on-fedora/
+categories: [linux-systems-administration]
+canonical: /how-to-replace-gdm-with-lightdm-on-fedora/
 ---
 
 LightDM is a lighter alternative to GDM (GNOME Display Manager). If GDM is causing issues, you prefer a simpler login screen, or you’re running a lightweight desktop environment, here’s how to switch to LightDM on Fedora.

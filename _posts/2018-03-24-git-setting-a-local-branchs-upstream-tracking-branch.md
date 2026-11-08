@@ -3,7 +3,8 @@ title: "Setting a local branch\u2019s upstream tracking branch"
 date: 2018-03-24 08:14:11 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/git-setting-a-local-branchs-upstream-tracking-branch/
+categories: [development-best-practices]
+canonical: /git-setting-a-local-branchs-upstream-tracking-branch/
 ---
 
 Tracking branches link your local branch to a remote branch, enabling `git pull` and `git push` to work without specifying the remote and branch name each time. Here’s how to configure this.

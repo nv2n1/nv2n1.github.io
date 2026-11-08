@@ -3,7 +3,8 @@ title: "How to Detect If stderr Is Redirected in Bash"
 date: 2018-03-24 11:54:37 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-judge-whether-its-stderr-is-redirected-to-a-file-in-a-bash-script-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-judge-whether-its-stderr-is-redirected-to-a-file-in-a-bash-script-on-linux/
 ---
 
 You need to detect whether STDERR (file descriptor 2) is connected to a terminal or redirected to a file or pipe. This is useful for conditional logging, color output, or error handling that depends on the output destination.

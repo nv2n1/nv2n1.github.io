@@ -3,7 +3,8 @@ title: "Quartz Job Scheduling in Java: Setup, Triggers, and Best Practices"
 date: 2016-08-16 10:39:09 +0000
 author: "Aaronjacobson"
 layout: post
-canonical: https://www.systutorials.com/quartz-implementation-java/
+categories: [languages-frameworks]
+canonical: /quartz-implementation-java/
 ---
 
 Quartz is an open-source Java library for scheduling background jobs and tasks. Whether you need to execute work at specific times, on recurring intervals, or in response to events, Quartz provides a robust scheduling framework that integrates with standalone applications, application servers, and clustered environments.

@@ -3,7 +3,8 @@ title: "Bash Comparison Operators: Complete Guide to String, Integer, and File T
 date: 2018-03-24 08:22:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/bash-comparison-operators/
+categories: [linux-systems-administration]
+canonical: /bash-comparison-operators/
 ---
 
 Bash provides comparison operators for conditionals through the `test` command (aliased as `[`), the `[[ ]]` compound command, and the `(( ))` arithmetic command. Each has specific use cases and behavior differences worth understanding.

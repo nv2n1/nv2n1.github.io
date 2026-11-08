@@ -3,7 +3,8 @@ title: "Mastering Git Log: Essential Commands for Filtering Commits"
 date: 2019-12-28 10:25:13 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-list-all-commits-in-a-git-repository/
+categories: [linux-systems-administration]
+canonical: /how-to-list-all-commits-in-a-git-repository/
 ---
 
 `git log` is your primary tool for viewing repository history. These commands work across all Git hosting platforms (GitHub, GitLab, Gitea, etc.) and are essential for debugging, code review, and maintaining audit trails.

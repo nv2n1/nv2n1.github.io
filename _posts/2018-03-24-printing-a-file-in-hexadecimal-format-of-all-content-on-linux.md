@@ -3,7 +3,8 @@ title: "Comparing Linux Hex Viewers: xxd, od, hexdump, and hd"
 date: 2018-03-24 11:40:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/printing-a-file-in-hexadecimal-format-of-all-content-on-linux/
+categories: [linux-systems-administration]
+canonical: /printing-a-file-in-hexadecimal-format-of-all-content-on-linux/
 ---
 
 Viewing file contents in hexadecimal is essential for debugging binaries, inspecting file headers, analyzing corrupted data, and understanding file formats. Linux provides several tools for this, each with different strengths.

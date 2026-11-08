@@ -3,7 +3,8 @@ title: "Creating EPS Files with Gnuplot"
 date: 2018-03-24 08:19:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-make-eps-files-using-gnuplot/
+categories: [scripting-utilities]
+canonical: /how-to-make-eps-files-using-gnuplot/
 ---
 
 Gnuplot can output directly to EPS (Encapsulated PostScript) format, which is useful for including plots in LaTeX documents and other publishing workflows.

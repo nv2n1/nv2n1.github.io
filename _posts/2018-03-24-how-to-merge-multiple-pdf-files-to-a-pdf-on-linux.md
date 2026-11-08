@@ -3,7 +3,8 @@ title: "Merging Multiple PDFs on Linux"
 date: 2018-03-24 11:45:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-merge-multiple-pdf-files-to-a-pdf-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-merge-multiple-pdf-files-to-a-pdf-on-linux/
 ---
 
 Merging PDFs on Linux is straightforward with several tools available, each suited to different needs. Whether you need a quick command-line merge or want to reorder pages visually, here’s what works best.

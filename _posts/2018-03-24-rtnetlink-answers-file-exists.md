@@ -3,7 +3,8 @@ title: "Fixing \u201crtnetlink answers: File exists\u201d on Network Restart"
 date: 2018-03-24 11:46:52 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/rtnetlink-answers-file-exists/
+categories: [linux-systems-administration]
+canonical: /rtnetlink-answers-file-exists/
 ---
 
 The “rtnetlink answers: File exists” error typically occurs when restarting network interfaces on Linux, particularly after switching from DHCP to static IP configuration. This happens because the kernel’s routing table has stale entries that conflict with the new configuration you’re trying to apply.

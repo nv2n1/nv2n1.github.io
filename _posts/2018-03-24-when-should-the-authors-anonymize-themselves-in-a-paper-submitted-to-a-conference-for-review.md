@@ -3,7 +3,8 @@ title: "When should the authors anonymize themselves in a paper submitted to a c
 date: 2018-03-24 11:45:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/when-should-the-authors-anonymize-themselves-in-a-paper-submitted-to-a-conference-for-review/
+categories: [security-cryptography-2]
+canonical: /when-should-the-authors-anonymize-themselves-in-a-paper-submitted-to-a-conference-for-review/
 ---
 
 <div class="qa-question">

@@ -3,7 +3,8 @@ title: "How to Repair Database Tables Using Backups"
 date: 2018-03-24 08:17:17 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-repair-tables-database-by-backup/
+categories: [linux-systems-administration]
+canonical: /how-to-repair-tables-database-by-backup/
 ---
 
 Database corruption happens. Whether it’s from unexpected shutdown, filesystem errors, or hardware issues, knowing how to recover from backups is essential sysadmin knowledge.

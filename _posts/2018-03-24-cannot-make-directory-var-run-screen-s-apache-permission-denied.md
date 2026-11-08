@@ -3,7 +3,8 @@ title: "How to Fix `/var/run/screen/S-apache` Permission Denied Error"
 date: 2018-03-24 11:54:03 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/cannot-make-directory-var-run-screen-s-apache-permission-denied/
+categories: [system-administration-cloud]
+canonical: /cannot-make-directory-var-run-screen-s-apache-permission-denied/
 ---
 
 The error “Cannot make directory ‘/var/run/screen/S-apache’: Permission denied” typically means the screen session directory can’t be created under `/var/run/screen/`. This happens when screen lacks proper permissions or when security policies block the operation.

@@ -3,7 +3,8 @@ title: "Enabling .htaccess in Apache2"
 date: 2018-03-24 11:47:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-allow-websites-htaccess-files-in-apache2/
+categories: [linux-systems-administration]
+canonical: /how-to-allow-websites-htaccess-files-in-apache2/
 ---
 
 By default, Apache2 ignores `.htaccess` files. The `AllowOverride` directive controls which directives in `.htaccess` Apache will process. To enable `.htaccess`, you need to configure Apache to allow overrides.

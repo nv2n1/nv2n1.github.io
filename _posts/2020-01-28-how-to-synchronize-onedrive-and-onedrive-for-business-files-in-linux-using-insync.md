@@ -3,7 +3,8 @@ title: "Sync OneDrive and OneDrive for Business on Linux with Insync"
 date: 2020-01-28 10:05:37 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-synchronize-onedrive-and-onedrive-for-business-files-in-linux-using-insync/
+categories: [linux-systems-administration]
+canonical: /how-to-synchronize-onedrive-and-onedrive-for-business-files-in-linux-using-insync/
 ---
 
 Insync is a third-party sync client that fills the gap left by Microsoft’s lack of native Linux support for OneDrive. It handles both personal OneDrive and OneDrive for Business accounts reliably and integrates cleanly with your desktop environment.

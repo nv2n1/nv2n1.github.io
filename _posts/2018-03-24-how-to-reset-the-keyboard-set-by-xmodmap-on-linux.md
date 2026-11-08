@@ -3,7 +3,8 @@ title: "Resetting Your Linux Keyboard Layout with xmodmap and setxkbmap"
 date: 2018-03-24 08:22:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-reset-the-keyboard-set-by-xmodmap-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-reset-the-keyboard-set-by-xmodmap-on-linux/
 ---
 
 When you’ve modified your keyboard layout or key bindings using xmodmap and need to revert to the default, setxkbmap is your primary tool. However, the approach depends on whether you’re running X11 or Wayland, and what aspects of the configuration you want to reset.

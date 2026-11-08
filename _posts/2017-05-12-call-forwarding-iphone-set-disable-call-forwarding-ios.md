@@ -3,7 +3,8 @@ title: "How to Enable and Disable Call Forwarding on iPhone"
 date: 2017-05-12 03:40:43 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/call-forwarding-iphone-set-disable-call-forwarding-ios/
+categories: [development-best-practices]
+canonical: /call-forwarding-iphone-set-disable-call-forwarding-ios/
 ---
 
 Call forwarding redirects incoming calls to another number when you’re unavailable or without coverage. It’s a carrier-level feature managed through iOS Settings, but actual support and behavior depend entirely on your carrier’s implementation.

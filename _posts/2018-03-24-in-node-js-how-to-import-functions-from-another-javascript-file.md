@@ -3,7 +3,8 @@ title: "Importing Functions Between Node.js Modules"
 date: 2018-03-24 11:50:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/in-node-js-how-to-import-functions-from-another-javascript-file/
+categories: [languages-frameworks]
+canonical: /in-node-js-how-to-import-functions-from-another-javascript-file/
 ---
 
 The traditional Node.js approach uses `require()`. Create a module that exports functions, then import them where needed.

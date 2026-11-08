@@ -3,7 +3,8 @@ title: "VPN Alternatives for iPhone Users in Mainland China"
 date: 2018-03-24 11:46:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-iphone-to-browse-blocked-websites-in-mainland-china/
+categories: [programming-languages]
+canonical: /how-to-use-iphone-to-browse-blocked-websites-in-mainland-china/
 ---
 
 Accessing blocked websites from mainland China on an iPhone requires a VPN or proxy solution that can bypass the Great Firewall. This guide covers practical approaches and tools that work as of 2026.

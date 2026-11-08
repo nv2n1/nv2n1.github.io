@@ -3,7 +3,8 @@ title: "Qt Cursor Theme Support in GNOME and MATE"
 date: 2013-07-12 16:32:33 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/configuring-mouse-cursor-style-for-qt-applications-in-gnome-mate-desktop/
+categories: [linux-systems-administration]
+canonical: /configuring-mouse-cursor-style-for-qt-applications-in-gnome-mate-desktop/
 ---
 
 Qt and GTK applications often use different cursor themes, which creates visual inconsistency across your desktop. This mismatch is common in mixed-DE environments where Qt applications (like VLC, KeePass, or Telegram) inherit the wrong cursor style from system defaults.

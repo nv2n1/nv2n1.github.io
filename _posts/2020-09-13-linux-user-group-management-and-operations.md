@@ -3,7 +3,8 @@ title: "Managing Linux Users and Groups Effectively"
 date: 2020-09-13 10:29:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/linux-user-group-management-and-operations/
+categories: [linux-systems-administration]
+canonical: /linux-user-group-management-and-operations/
 ---
 
 Linux is a multi-user operating system where multiple users can run processes simultaneously. Groups provide a mechanism to efficiently manage permissions for collections of users without having to set individual permissions for each account.

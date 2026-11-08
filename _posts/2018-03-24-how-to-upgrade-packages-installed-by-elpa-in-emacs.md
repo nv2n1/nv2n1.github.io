@@ -3,7 +3,8 @@ title: "Upgrading ELPA Packages in Emacs"
 date: 2018-03-24 11:44:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-upgrade-packages-installed-by-elpa-in-emacs/
+categories: [linux-system-configuration]
+canonical: /how-to-upgrade-packages-installed-by-elpa-in-emacs/
 ---
 
 ELPA (Emacs Lisp Package Archive) packages receive regular updates. Keeping your packages current ensures you have the latest features and bug fixes. Here’s how to upgrade ELPA packages in Emacs.

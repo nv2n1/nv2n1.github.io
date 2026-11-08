@@ -3,7 +3,8 @@ title: "Installing HP Printer Drivers on Linux Mint and Ubuntu"
 date: 2018-03-24 11:42:06 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-hp-printer-drivers-on-linux-mint/
+categories: [linux-systems-administration]
+canonical: /how-to-set-up-hp-printer-drivers-on-linux-mint/
 ---
 
 HP printers work reasonably well on Linux, though the setup process varies depending on whether you have a network printer or a USB-connected device. Here’s what you need to know.

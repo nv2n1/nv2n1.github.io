@@ -3,7 +3,8 @@ title: "Batch Resize Images on Linux with ImageMagick"
 date: 2018-03-24 11:44:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-resize-a-batch-of-images-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-resize-a-batch-of-images-on-linux/
 ---
 
 Resizing a single image is straightforward, but processing dozens or hundreds requires automation. ImageMagick’s `convert` command (or the modern `magick` command) paired with a bash loop is the standard approach for batch image resizing on Linux.

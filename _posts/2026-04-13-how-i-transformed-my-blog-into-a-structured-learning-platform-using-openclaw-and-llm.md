@@ -3,7 +3,8 @@ title: "How I Transformed My Blog into a Structured Learning Platform Using Open
 date: 2026-04-13 15:28:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-i-transformed-my-blog-into-a-structured-learning-platform-using-openclaw-and-llm/
+categories: [ai-engineering]
+canonical: /how-i-transformed-my-blog-into-a-structured-learning-platform-using-openclaw-and-llm/
 ---
 
 Managing a large technical blog with over 1,300 posts presents real challenges. I want to share my experience using OpenClaw and Large Language Models (LLMs) to transform systutorials.com from a chaotic archive into a well-organized learning platform.

@@ -3,7 +3,8 @@ title: "Map Failed Disks to Physical SATA Ports in Linux"
 date: 2013-11-13 12:28:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-find-out-failed-disks-sata-ports-in-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-find-out-failed-disks-sata-ports-in-linux/
 ---
 
 Linux device names like `/dev/sda` and `/dev/sdb` are unreliable identifiers for physical hardware. They shift when you add, remove, or reseat drives, and there’s no guaranteed mapping between a SATA port and its device name. When a disk fails, you need to know exactly which physical slot to replace—guessing wrong takes down the wrong system.

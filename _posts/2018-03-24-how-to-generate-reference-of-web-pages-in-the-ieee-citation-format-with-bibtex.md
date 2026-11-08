@@ -3,7 +3,8 @@ title: "BibTeX Web References in IEEE Format"
 date: 2018-03-24 08:22:44 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-generate-reference-of-web-pages-in-the-ieee-citation-format-with-bibtex/
+categories: [web-development]
+canonical: /how-to-generate-reference-of-web-pages-in-the-ieee-citation-format-with-bibtex/
 ---
 
 IEEE requires a specific format for web citations, and BibTeX handles this cleanly with the `@online` entry type. Here’s how to get it right.

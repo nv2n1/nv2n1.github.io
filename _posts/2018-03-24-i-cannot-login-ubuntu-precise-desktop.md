@@ -3,7 +3,8 @@ title: "Debugging LightDM Login Failures in Ubuntu"
 date: 2018-03-24 11:46:48 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/i-cannot-login-ubuntu-precise-desktop/
+categories: [linux-systems-administration]
+canonical: /i-cannot-login-ubuntu-precise-desktop/
 ---
 
 If you’re stuck at the Ubuntu login screen with errors like “Could not write bytes: Broken Pipe” or “Check Battery State,” the display manager is likely corrupted or misconfigured. This typically indicates a problem with LightDM, Ubuntu’s default display manager since 12.04.

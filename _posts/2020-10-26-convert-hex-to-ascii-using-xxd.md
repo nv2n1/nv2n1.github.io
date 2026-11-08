@@ -3,7 +3,8 @@ title: "Converting Hex to ASCII With xxd"
 date: 2020-10-26 10:58:39 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/convert-hex-to-ascii-using-xxd/
+categories: [linux-systems-administration]
+canonical: /convert-hex-to-ascii-using-xxd/
 ---
 
 Hex-encoded strings are common in system administration, debugging, and network packet analysis. Whether you’re examining binary data, decoding network protocols, or troubleshooting data encoding issues, you’ll often need to convert between hex and ASCII representations.

@@ -3,7 +3,8 @@ title: "Hide Your Private IP from Thunderbird Email Headers"
 date: 2018-03-24 11:55:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-hide-my-private-ip-in-email-header-in-thunderbird/
+categories: [security-cryptography-2]
+canonical: /how-to-hide-my-private-ip-in-email-header-in-thunderbird/
 ---
 
 Thunderbird can leak your LAN IP address in SMTP email headers, even though the mail server itself only sees your public IP. This happens because Thunderbird sends its local IP during the HELO/EHLO handshake with the SMTP server, and that information gets recorded in the email header.

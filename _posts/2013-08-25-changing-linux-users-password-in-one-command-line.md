@@ -3,7 +3,8 @@ title: "Automating Password Changes on Linux: passwd, chpasswd, and Safer Method
 date: 2013-08-25 10:09:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/changing-linux-users-password-in-one-command-line/
+categories: [linux-systems-administration]
+canonical: /changing-linux-users-password-in-one-command-line/
 ---
 
 The `passwd` command is designed for interactive use—it prompts for input rather than accepting passwords via stdin by default. When you need to set passwords programmatically (bulk user provisioning, CI/CD automation, remote administration), you need methods that bypass the interactive prompt.

@@ -3,7 +3,8 @@ title: "Converting LaTeX to Single-Page HTML"
 date: 2018-03-24 08:19:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-a-latex-file-to-a-single-page-html/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-a-latex-file-to-a-single-page-html/
 ---
 
 Converting LaTeX documents to HTML is useful for web publishing. Two main tools handle this conversion effectively: `htlatex` and `latex2html`. Both produce valid HTML output, though they have different strengths and limitations.

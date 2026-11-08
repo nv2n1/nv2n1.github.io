@@ -3,7 +3,8 @@ title: "How Linux Kernel Migration Threads Work"
 date: 2016-11-19 01:58:42 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/migration-thread-works-inside-linux-kernel/
+categories: [linux-systems-administration]
+canonical: /migration-thread-works-inside-linux-kernel/
 ---
 
 In computer systems, resources must be balanced across available hardware to maximize performance. The Linux kernel runs migration threads as per-CPU daemons to handle this work. These threads manage task migration between CPUs, CPU hotplug operations, and stop-machine synchronization.

@@ -3,7 +3,8 @@ title: "Getting Started with Linux: A Beginner\u2019s Guide"
 date: 2013-07-12 16:32:29 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/tutorials-for-linux-beginners/
+categories: [linux-systems-administration]
+canonical: /tutorials-for-linux-beginners/
 ---
 
 Starting with Linux can feel intimidating. The terminology, the command line, the endless configuration options—it’s a lot. But that initial confusion fades quickly. Once you get comfortable with the fundamentals, Linux becomes intuitive, and you’ll wonder why you didn’t start sooner.

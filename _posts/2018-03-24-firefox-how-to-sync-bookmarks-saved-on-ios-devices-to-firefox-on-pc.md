@@ -3,7 +3,8 @@ title: "Firefox iOS Bookmark Sync: What Actually Works in 2026"
 date: 2018-03-24 11:49:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/firefox-how-to-sync-bookmarks-saved-on-ios-devices-to-firefox-on-pc/
+categories: [linux-systems-administration]
+canonical: /firefox-how-to-sync-bookmarks-saved-on-ios-devices-to-firefox-on-pc/
 ---
 
 Firefox on iOS has improved significantly since the early days, but understanding what syncs and what doesn’t remains important for managing bookmarks across devices.

@@ -3,7 +3,8 @@ title: "AWS S3 Multipart Upload: Handling Large Objects"
 date: 2018-03-24 08:22:40 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/maximum-size-of-s3-objects/
+categories: [design-patterns-architecture]
+canonical: /maximum-size-of-s3-objects/
 ---
 
 Amazon S3 has a maximum object size of 5TB per object. This limit applies uniformly across all storage classes and regions — there are no exceptions or workarounds.

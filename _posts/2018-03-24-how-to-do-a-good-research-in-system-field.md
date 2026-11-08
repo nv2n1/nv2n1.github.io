@@ -3,7 +3,8 @@ title: "Conducting Rigorous Research in Systems Engineering"
 date: 2018-03-24 11:51:42 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-do-a-good-research-in-system-field/
+categories: [languages-frameworks]
+canonical: /how-to-do-a-good-research-in-system-field/
 ---
 
 Linux powers most of the cloud infrastructure, supercomputers, and embedded systems globally. The field itself spans kernel development, system administration, performance tuning, networking, and DevOps. Researching systems effectively requires understanding where to look, what tools matter, and how to validate your findings against real-world constraints.

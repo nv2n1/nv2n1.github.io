@@ -3,7 +3,8 @@ title: "Starting KDE Desktop from the Command Line with startx"
 date: 2013-07-12 16:32:11 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/starting-kde-from-command-line-by-startx/
+categories: [linux-systems-administration]
+canonical: /starting-kde-from-command-line-by-startx/
 ---
 
 If you prefer booting to a minimal environment and starting your desktop manually, you can configure `startx` to launch KDE Plasma instead of your default desktop environment.

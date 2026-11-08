@@ -3,7 +3,8 @@ title: "Setting Up and Troubleshooting Windows 7 Enterprise MAK Activation"
 date: 2013-07-12 16:54:52 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/windows-7-mak-activation/
+categories: [development-best-practices]
+canonical: /windows-7-mak-activation/
 ---
 
 Windows 7 reached end of support in January 2020. If you’re maintaining legacy Windows 7 Enterprise systems with Multiple Activation Keys (MAK), here’s how to handle activation for those remaining machines.

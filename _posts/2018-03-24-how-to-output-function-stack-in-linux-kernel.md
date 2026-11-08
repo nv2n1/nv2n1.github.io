@@ -3,7 +3,8 @@ title: "How to Print the Function Call Stack in Linux Kernel"
 date: 2018-03-24 11:51:30 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-output-function-stack-in-linux-kernel/
+categories: [linux-systems-administration]
+canonical: /how-to-output-function-stack-in-linux-kernel/
 ---
 
 Getting kernel function call stacks is essential for debugging driver issues, understanding kernel behavior, and performance profiling. The approach depends on what you’re trying to trace: live kernel execution, crash analysis, or post-mortem inspection.

@@ -3,7 +3,8 @@ title: "Detecting Window Popup Closure in JavaScript"
 date: 2018-03-24 11:48:48 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-capture-the-close-event-of-an-opened-window-by-window-open-in-javascript/
+categories: [linux-systems-administration]
+canonical: /how-to-capture-the-close-event-of-an-opened-window-by-window-open-in-javascript/
 ---
 
 When you open a popup window with `window.open()`, you’ll often need to detect when the user closes it so you can update your UI, refresh data, or clean up resources. Here are the practical approaches, from polling to event-driven methods.

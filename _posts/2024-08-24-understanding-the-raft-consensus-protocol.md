@@ -3,7 +3,8 @@ title: "Understanding the Raft Consensus Protocol"
 date: 2024-08-24 04:24:24 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/understanding-the-raft-consensus-protocol/
+categories: [linux-systems-administration]
+canonical: /understanding-the-raft-consensus-protocol/
 ---
 
 Raft is a consensus algorithm designed to be more understandable than alternatives like Paxos. It ensures a cluster of servers can agree on system state even when some nodes fail. The core insight is breaking consensus into independent, manageable subproblems rather than treating it as one complex whole.

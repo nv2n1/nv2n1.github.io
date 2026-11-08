@@ -3,7 +3,8 @@ title: "Poster Design Best Practices"
 date: 2018-03-24 08:14:00 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/designing-posters-systutorials-qa/
+categories: [systems-architecture]
+canonical: /designing-posters-systutorials-qa/
 ---
 
 If you’re creating posters—whether for conferences, events, or general communication—you’ll want the right tools and guidance. Here’s a practical breakdown of what works.

@@ -3,7 +3,8 @@ title: "Installing Dia on CentOS 7"
 date: 2018-03-24 11:51:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-dia-on-centos-7-linux/
+categories: [programming-languages]
+canonical: /how-to-install-dia-on-centos-7-linux/
 ---
 
 Dia is a GTK+ based diagram creation program for Linux. It supports flowcharts, network diagrams, circuit diagrams, UML diagrams, and many other types. Here’s how to install and get started with Dia on CentOS 7.

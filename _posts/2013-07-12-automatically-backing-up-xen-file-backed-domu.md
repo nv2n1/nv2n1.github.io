@@ -3,7 +3,8 @@ title: "Automating Backups of Xen File-backed VMs"
 date: 2013-07-12 16:31:55 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/automatically-backing-up-xen-file-backed-domu/
+categories: [system-administration-cloud]
+canonical: /automatically-backing-up-xen-file-backed-domu/
 ---
 
 Xen remains in production use (AWS EC2, Citrix Hypervisor), though KVM has become the standard Linux hypervisor. This guide covers automating backups for file-backed Xen virtual machines. The approach adapts to other hypervisors like KVM with minimal modification.

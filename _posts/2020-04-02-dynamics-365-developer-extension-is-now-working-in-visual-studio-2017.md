@@ -3,7 +3,8 @@ title: "Deploying Dynamics 365 Web Resources with Visual Studio"
 date: 2020-04-02 06:57:52 +0000
 author: "jameswarner"
 layout: post
-canonical: https://www.systutorials.com/dynamics-365-developer-extension-is-now-working-in-visual-studio-2017/
+categories: [algorithms-data-structures]
+canonical: /dynamics-365-developer-extension-is-now-working-in-visual-studio-2017/
 ---
 
 The Dynamics 365 development tooling landscape has shifted significantly since the early VS 2017 days. While Jason Lattimer’s original D365DeveloperExtensions extension is no longer actively maintained, modern alternatives have emerged that handle web resource deployment more reliably. This guide covers current approaches and best practices for streamlining web resource workflows in Visual Studio.

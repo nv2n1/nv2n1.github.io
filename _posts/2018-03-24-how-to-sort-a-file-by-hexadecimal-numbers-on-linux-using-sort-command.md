@@ -3,7 +3,8 @@ title: "Sorting Hexadecimal Values in Linux Text Files"
 date: 2018-03-24 11:40:27 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-sort-a-file-by-hexadecimal-numbers-on-linux-using-sort-command/
+categories: [linux-systems-administration]
+canonical: /how-to-sort-a-file-by-hexadecimal-numbers-on-linux-using-sort-command/
 ---
 
 The `sort` command’s `-n` flag only handles decimal numbers. When you apply it to hexadecimal values, it falls back to lexicographic (alphabetical) sorting, which produces incorrect results since hex digits don’t follow numeric order alphabetically.

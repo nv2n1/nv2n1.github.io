@@ -3,7 +3,8 @@ title: "Exclude a Package from a Specific Repository in Yum"
 date: 2018-03-29 08:47:37 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-exclude-a-package-from-a-specific-repository-only-in-yum/
+categories: [testing-devops]
+canonical: /how-to-exclude-a-package-from-a-specific-repository-only-in-yum/
 ---
 
 When managing packages on RHEL, CentOS, AlmaLinux, or Fedora, you sometimes need to prevent a package from being installed or updated from a particular repository. This is useful when multiple repos provide the same package and you want to control which version gets pulled in.

@@ -3,7 +3,8 @@ title: "Consistency Models in Distributed Systems"
 date: 2018-03-24 08:15:46 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/consistency-models-for-distributed-systems/
+categories: [systems-architecture]
+canonical: /consistency-models-for-distributed-systems/
 ---
 
 Consistency models define the guarantees that a distributed system makes about the order and visibility of data modifications across nodes. Understanding these models is essential when designing systems, choosing databases, or debugging data anomalies in production.

@@ -3,7 +3,8 @@ title: "Installing noip2 on Linux: A Setup Guide"
 date: 2018-03-24 08:04:25 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-noip2-on-linux-2/
+categories: [linux-systems-administration]
+canonical: /how-to-install-noip2-on-linux-2/
 ---
 
 No-IP provides dynamic DNS service for systems that don’t have static IP addresses. The `noip2` client daemon monitors your system’s IP and automatically updates your No-IP domain when changes occur. Here’s how to set it up properly.

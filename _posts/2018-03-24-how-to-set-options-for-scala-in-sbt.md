@@ -3,7 +3,8 @@ title: "Configuring Scala Compiler Options in sbt"
 date: 2018-03-24 08:20:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-options-for-scala-in-sbt/
+categories: [programming-languages]
+canonical: /how-to-set-options-for-scala-in-sbt/
 ---
 
 When the Scala compiler emits warnings like deprecation notices, you need to pass compiler flags to see the details. The solution is to configure `scalacOptions` in your sbt build.

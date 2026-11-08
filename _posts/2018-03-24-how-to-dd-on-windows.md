@@ -3,7 +3,8 @@ title: "dd on Windows: WSL2, Cygwin, and Native Alternatives"
 date: 2018-03-24 08:21:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-dd-on-windows/
+categories: [development-best-practices]
+canonical: /how-to-dd-on-windows/
 ---
 
 dd is a powerful utility for reading and writing raw data to block devices. While it’s a Linux standard, you have several options for using it on Windows systems.

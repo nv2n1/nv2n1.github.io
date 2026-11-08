@@ -3,7 +3,8 @@ title: "Extracting Substrings at Word Boundaries in PHP"
 date: 2018-03-24 11:53:54 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-a-substring-at-words-boundaries-in-php/
+categories: [scripting-utilities]
+canonical: /how-to-get-a-substring-at-words-boundaries-in-php/
 ---
 
 When truncating strings, you often need to avoid cutting off in the middle of a word. The naive `substr()` approach will break words, so you need logic to backtrack to the previous word boundary.

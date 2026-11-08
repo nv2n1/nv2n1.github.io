@@ -3,7 +3,8 @@ title: "Configuring Email Notifications for Git Push Events"
 date: 2014-03-07 10:09:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-git-commit-email-notification/
+categories: [linux-systems-administration]
+canonical: /setting-up-git-commit-email-notification/
 ---
 
 Sending email notifications when commits are pushed to a central Git repository helps teams stay coordinated and maintains audit trails. This is handled through Git hooks—scripts triggered by repository events.

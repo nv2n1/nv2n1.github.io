@@ -3,7 +3,8 @@ title: "Creating a Bootable Fedora Live USB"
 date: 2013-07-12 16:32:16 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/creating-fedora-live-usb-media/
+categories: [linux-systems-administration]
+canonical: /creating-fedora-live-usb-media/
 ---
 
 A Fedora Live USB lets you boot directly into a Fedora environment without modifying your hard drive. You can use it to test Fedora, troubleshoot your system, or perform a fresh installation. This guide covers modern tools and workflows for creating bootable USB media.

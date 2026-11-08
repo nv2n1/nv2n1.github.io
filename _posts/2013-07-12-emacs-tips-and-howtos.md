@@ -3,7 +3,8 @@ title: "Essential Emacs Tips and Workflows"
 date: 2013-07-12 16:32:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/emacs-tips-and-howtos/
+categories: [linux-systems-administration]
+canonical: /emacs-tips-and-howtos/
 ---
 
 Emacs provides a built-in tutorial. Access it with:

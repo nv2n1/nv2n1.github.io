@@ -3,7 +3,8 @@ title: "Managing Multiple Go Versions on Ubuntu"
 date: 2020-04-07 09:21:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-go-1-13-x-on-ubuntu-18-04/
+categories: [linux-systems-administration]
+canonical: /how-to-install-go-1-13-x-on-ubuntu-18-04/
 ---
 
 When you need a specific Go version on Ubuntu, the default package manager often lags behind. Production systems like Kubernetes, Hyperledger Fabric, and other projects frequently require versions newer than what’s available in standard repositories. This guide covers system-level installation that allows multiple versions to coexist.

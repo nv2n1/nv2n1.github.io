@@ -3,7 +3,8 @@ title: "Disabling DHCP in dnsmasq on Linux"
 date: 2018-03-24 11:52:39 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-dhcp-in-dnsmasq-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-dhcp-in-dnsmasq-on-linux/
 ---
 
 If you’re running dnsmasq primarily for DNS resolution and don’t need its DHCP server capabilities, you’ll want to disable DHCP while keeping DNS functional. This is a common configuration for DNS-only setups or when another service handles DHCP.

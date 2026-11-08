@@ -3,7 +3,8 @@ title: "Mapping Linux Disk Names to SATA Ports"
 date: 2018-03-24 08:14:29 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-quickly-find-out-failed-disks-sata-port-in-linux-how-to-map-linux-disk-names-to-sata-ports/
+categories: [linux-systems-administration]
+canonical: /how-to-quickly-find-out-failed-disks-sata-port-in-linux-how-to-map-linux-disk-names-to-sata-ports/
 ---
 
 When a disk fails on a server with multiple drives, you need to identify which physical SATA port it’s connected to. Linux device names (sda, sdb, etc.) don’t necessarily map to SATA port order, especially after disk failures or in systems with mixed storage.

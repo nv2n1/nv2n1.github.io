@@ -3,7 +3,8 @@ title: "Installing and Configuring Insync for Google Drive on Linux"
 date: 2018-11-25 05:54:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-insync-to-synchronize-google-drive-and-google-docs-files-in-ubuntu-18-04-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-set-up-insync-to-synchronize-google-drive-and-google-docs-files-in-ubuntu-18-04-linux/
 ---
 
 Google Drive remains the dominant cloud storage platform, but Linux users still lack an official client. Insync fills this gap—it’s a third-party sync tool that actually works well and maintains local file access rather than relying on virtual filesystems.

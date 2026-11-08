@@ -3,7 +3,8 @@ title: "Switching Linux Systemd Boot Targets"
 date: 2016-09-17 02:15:12 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/change-systemd-boot-target-linux/
+categories: [linux-systems-administration]
+canonical: /change-systemd-boot-target-linux/
 ---
 
 Systemd replaced traditional init on most modern Linux distributions, shifting terminology from “runlevels” to “targets.” If you’re migrating from older systems, here’s the mapping:

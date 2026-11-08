@@ -3,7 +3,8 @@ title: "How to Clear Cookies for a Specific Site in Chrome"
 date: 2018-03-24 08:18:16 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-remove-cookies-for-a-certain-site-in-chrome/
+categories: [linux-systems-administration]
+canonical: /how-to-remove-cookies-for-a-certain-site-in-chrome/
 ---
 
 You can delete cookies from individual sites without clearing your entire browser cache. Here’s how:

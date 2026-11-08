@@ -3,7 +3,8 @@ title: "Building Distributed Systems on Linux"
 date: 2013-07-12 16:32:17 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/linux-cluster-solutions/
+categories: [linux-systems-administration]
+canonical: /linux-cluster-solutions/
 ---
 
 Building and maintaining Linux clusters requires coordinated management of user accounts, storage, networking, and services across multiple machines. This guide covers practical approaches to common clustering challenges, from unified authentication to network isolation.

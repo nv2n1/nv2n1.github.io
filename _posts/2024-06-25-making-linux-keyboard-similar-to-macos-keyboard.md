@@ -3,7 +3,8 @@ title: "Making Your Linux Keyboard Work Like macOS"
 date: 2024-06-25 14:03:20 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/making-linux-keyboard-similar-to-macos-keyboard/
+categories: [linux-system-configuration]
+canonical: /making-linux-keyboard-similar-to-macos-keyboard/
 ---
 
 If you regularly switch between macOS and Linux, having consistent keyboard behavior across platforms cuts down cognitive load and keeps your muscle memory intact. The main difference is that macOS uses Command (⌘) for most shortcuts, while Linux defaults to Ctrl. You can remap your Linux keyboard to behave like macOS by making Alt function like Ctrl, effectively simulating Command key behavior.

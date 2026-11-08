@@ -3,7 +3,8 @@ title: "Installing Node.js on Fedora: DNF and Alternative Methods"
 date: 2018-03-24 11:43:34 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-node-js-on-fedora/
+categories: [linux-systems-administration]
+canonical: /how-to-install-node-js-on-fedora/
 ---
 
 Node.js is available on Fedora through the DNF package manager and several alternative methods. Here’s how to install it using each approach.

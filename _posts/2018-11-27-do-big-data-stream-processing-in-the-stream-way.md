@@ -3,7 +3,8 @@ title: "Choosing Stream Processing Tools Based on Latency Needs"
 date: 2018-11-27 15:05:37 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/do-big-data-stream-processing-in-the-stream-way/
+categories: [linux-systems-administration]
+canonical: /do-big-data-stream-processing-in-the-stream-way/
 ---
 
 The fundamental lesson from years of big data work is straightforward: solve problems with tools designed for those problems. Organizations routinely force large-scale data through mismatched infrastructure — pushing streams through micro-batching systems, analyzing graphs as tables, handling real-time requirements with batch windows. Each mismatch adds latency, complexity, and operational burden.

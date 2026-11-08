@@ -3,7 +3,8 @@ title: "How to Unmount a Busy Filesystem in Linux"
 date: 2016-05-21 02:54:30 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/force-linux-unmount-filesystem-reporting-device-busy/
+categories: [linux-systems-administration]
+canonical: /force-linux-unmount-filesystem-reporting-device-busy/
 ---
 
 When you try to unmount a filesystem with `umount`, Linux may report “device is busy.” This is a safety mechanism — the kernel blocks unmounting when processes or kernel threads are actively accessing the partition or holding open files on it. Forcing an unmount without understanding what’s using the filesystem risks data corruption and data loss.

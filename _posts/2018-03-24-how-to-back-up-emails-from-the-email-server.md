@@ -3,7 +3,8 @@ title: "Backing Up Emails from IMAP and POP3 Servers"
 date: 2018-03-24 11:42:59 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-back-up-emails-from-the-email-server/
+categories: [linux-systems-administration]
+canonical: /how-to-back-up-emails-from-the-email-server/
 ---
 
 If you’re syncing emails with tools like offlineimap, you might notice a problem: when an email is deleted from the server, it’s also deleted locally. That’s by design—offlineimap performs *synchronization*, not backup.

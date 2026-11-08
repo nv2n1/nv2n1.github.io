@@ -3,7 +3,8 @@ title: "Xen DomU Configuration File Format"
 date: 2013-07-12 16:31:55 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/unified-xen-domu-configuration-file/
+categories: [scripting-utilities]
+canonical: /unified-xen-domu-configuration-file/
 ---
 
 Xen remains in production use across several platforms (AWS EC2, Citrix Hypervisor), though KVM has become the default hypervisor for most Linux distributions. This approach is most relevant if you’re managing legacy Xen infrastructure or working with providers that standardize on it.

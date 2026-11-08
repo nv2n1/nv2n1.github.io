@@ -3,7 +3,8 @@ title: "Printing to STDERR and STDOUT in Bash"
 date: 2018-03-24 11:52:57 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-bash/
+categories: [linux-systems-administration]
+canonical: /how-to-print-a-line-to-stderr-and-stdout-in-bash/
 ---
 
 Understanding file descriptors is fundamental to shell scripting. By default, your shell has three standard streams:

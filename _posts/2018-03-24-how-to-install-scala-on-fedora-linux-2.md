@@ -3,7 +3,8 @@ title: "Installing Scala on Fedora Linux"
 date: 2018-03-24 08:16:53 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-scala-on-fedora-linux-2/
+categories: [linux-systems-administration]
+canonical: /how-to-install-scala-on-fedora-linux-2/
 ---
 
 Scala runs on the JVM and combines object-oriented and functional programming. Here’s how to install Scala on Fedora Linux using several methods.

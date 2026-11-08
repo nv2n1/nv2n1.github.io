@@ -3,7 +3,8 @@ title: "Converting Linux from BIOS to UEFI Boot Mode"
 date: 2018-03-24 11:42:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-turn-a-bios-based-linux-mint-17-installation-to-uefi-booting/
+categories: [linux-systems-administration]
+canonical: /how-to-turn-a-bios-based-linux-mint-17-installation-to-uefi-booting/
 ---
 
 If you installed Linux in BIOS (Legacy) mode but need to boot alongside Windows in UEFI mode, converting an existing installation is possible but complex. This guide covers the process for modern systems while preserving your existing Linux installation and Windows setup.

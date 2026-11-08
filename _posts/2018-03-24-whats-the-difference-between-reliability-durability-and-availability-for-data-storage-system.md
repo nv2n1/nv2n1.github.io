@@ -3,7 +3,8 @@ title: "High Availability in Distributed Storage: RDA Fundamentals"
 date: 2018-03-24 11:43:19 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/whats-the-difference-between-reliability-durability-and-availability-for-data-storage-system/
+categories: [linux-systems-administration]
+canonical: /whats-the-difference-between-reliability-durability-and-availability-for-data-storage-system/
 ---
 
 Understanding the difference between reliability, durability, and availability is critical when designing or operating distributed storage systems like HDFS, Ceph, or cloud object storage. These terms are often confused, but they address distinct concerns.

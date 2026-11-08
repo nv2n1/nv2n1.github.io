@@ -3,7 +3,8 @@ title: "Filter Dependent Lookup Fields in Dynamics 365 and Power Apps"
 date: 2016-12-09 07:55:17 +0000
 author: "jameswarner"
 layout: post
-canonical: https://www.systutorials.com/dynamics-crm-consultants-explain-filter-sub-branch-lookup-field-value-crm/
+categories: [algorithms-data-structures]
+canonical: /dynamics-crm-consultants-explain-filter-sub-branch-lookup-field-value-crm/
 ---
 
 Filtering a dependent lookup field based on another lookup field’s value is a core requirement in Dynamics 365 and Power Apps. The classic example: a Lead entity with Branch and Sub Branch fields where Sub Branch options should only display records matching the selected Branch.

@@ -3,7 +3,8 @@ title: "Convert Line Endings Between DOS and Unix in Emacs"
 date: 2018-03-24 11:40:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-convert-between-dos-and-unix-file-coding-in-emacs/
+categories: [linux-systems-administration]
+canonical: /how-to-convert-between-dos-and-unix-file-coding-in-emacs/
 ---
 
 Emacs handles line ending conversions through its buffer coding system. Whether you’re converting CRLF (DOS/Windows) to LF (Unix) or the reverse, the process is straightforward.

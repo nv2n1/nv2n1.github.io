@@ -3,7 +3,8 @@ title: "Backing Up Your Thesis With Git and Remote Storage on Windows"
 date: 2018-03-24 11:49:09 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-keep-master-thesis-safety-and-availability-on-windows/
+categories: [linux-systems-administration]
+canonical: /how-to-keep-master-thesis-safety-and-availability-on-windows/
 ---
 
 Writing a master thesis means protecting years of work. You need to handle three core concerns: preventing data loss from hardware failure or malware, ensuring 24/7 access to your work, and keeping it private until publication.

@@ -3,7 +3,8 @@ title: "Cloud Storage Consistency Models: S3, GCS, and Azure Storage"
 date: 2014-02-04 13:48:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/data-consistency-models-of-public-cloud-storage-services-amazon-s3-google-cloud-storage-and-windows-azure-storage/
+categories: [systems-architecture]
+canonical: /data-consistency-models-of-public-cloud-storage-services-amazon-s3-google-cloud-storage-and-windows-azure-storage/
 ---
 
 Choosing the right cloud storage service requires understanding how each platform handles data consistency. This post covers the current consistency guarantees from the three major providers and how they affect your application design.

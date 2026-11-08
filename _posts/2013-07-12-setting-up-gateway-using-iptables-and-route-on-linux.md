@@ -3,7 +3,8 @@ title: "Configuring a Linux Network Gateway with iptables and route"
 date: 2013-07-12 16:31:58 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/setting-up-gateway-using-iptables-and-route-on-linux/
+categories: [linux-systems-administration]
+canonical: /setting-up-gateway-using-iptables-and-route-on-linux/
 ---
 
 A Linux box serving as a network gateway needs two network interfaces:

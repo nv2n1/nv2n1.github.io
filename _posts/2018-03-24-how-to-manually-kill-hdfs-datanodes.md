@@ -3,7 +3,8 @@ title: "Safely Stopping Stray HDFS DataNode Processes on Multiple Nodes"
 date: 2018-03-24 11:49:22 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-manually-kill-hdfs-datanodes/
+categories: [linux-systems-administration]
+canonical: /how-to-manually-kill-hdfs-datanodes/
 ---
 
 When `stop-dfs.sh` fails to cleanly terminate DataNode processes, you’re left with orphaned Java processes consuming resources and potentially causing cluster issues. This happens most often after ungraceful cluster shutdowns or when the standard stop script encounters communication problems with specific nodes.

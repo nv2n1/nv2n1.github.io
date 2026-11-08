@@ -3,7 +3,8 @@ title: "Installing curlftpfs on CentOS 7"
 date: 2018-03-24 11:51:07 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-curlftpfs-on-centos-7/
+categories: [programming-languages]
+canonical: /how-to-install-curlftpfs-on-centos-7/
 ---
 
 curlftpfs is a FUSE-based filesystem that lets you mount FTP/SFTP servers as local directories. This is useful for treating remote FTP locations like local storage without downloading files individually.

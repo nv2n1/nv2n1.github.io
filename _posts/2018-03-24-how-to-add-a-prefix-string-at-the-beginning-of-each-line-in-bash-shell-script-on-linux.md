@@ -3,7 +3,8 @@ title: "Adding a Prefix to Each Line in Bash"
 date: 2018-03-24 11:53:38 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-a-prefix-string-at-the-beginning-of-each-line-in-bash-shell-script-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-add-a-prefix-string-at-the-beginning-of-each-line-in-bash-shell-script-on-linux/
 ---
 
 Several methods exist to prepend a prefix string to each line of text. The right approach depends on your input source and performance requirements.

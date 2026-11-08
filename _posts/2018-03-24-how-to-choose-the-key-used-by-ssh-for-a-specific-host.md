@@ -3,7 +3,8 @@ title: "How to Specify Which SSH Key to Use for a Host"
 date: 2018-03-24 11:50:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-choose-the-key-used-by-ssh-for-a-specific-host/
+categories: [testing-devops]
+canonical: /how-to-choose-the-key-used-by-ssh-for-a-specific-host/
 ---
 
 SSH key management becomes critical when you’re handling multiple identities across different hosts. By default, `ssh` tries keys in a specific order, but you can explicitly configure which key to use for particular hosts through the SSH config file.

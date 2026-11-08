@@ -3,7 +3,8 @@ title: "Closing File Streams in C with fclose()"
 date: 2013-07-12 16:47:45 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/fclose-close-a-stream/
+categories: [scripting-utilities]
+canonical: /fclose-close-a-stream/
 ---
 
 `fclose()` closes a file stream and disassociates it from its underlying file descriptor. It’s part of the C standard library, defined in `<stdio.h>`.

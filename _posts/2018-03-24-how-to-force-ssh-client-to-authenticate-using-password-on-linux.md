@@ -3,7 +3,8 @@ title: "Disable SSH Key Authentication to Require Passwords"
 date: 2018-03-24 11:48:19 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-ssh-client-to-authenticate-using-password-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-force-ssh-client-to-authenticate-using-password-on-linux/
 ---
 
 When you have SSH key-based authentication set up, the client will prefer it by default. This can make it difficult to test whether password authentication is working—especially after changing a password or troubleshooting login issues.

@@ -3,7 +3,8 @@ title: "How to Revert a Git Merge"
 date: 2018-03-24 08:14:36 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-revert-a-merge-in-git/
+categories: [development-best-practices]
+canonical: /how-to-revert-a-merge-in-git/
 ---
 
 If you’ve merged a branch and want to undo it, Git provides several approaches depending on your situation. The key difference is whether you have uncommitted local changes and whether the merge has already been pushed.

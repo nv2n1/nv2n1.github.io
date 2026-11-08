@@ -3,7 +3,8 @@ title: "CPU and Memory Performance: Xen Dom0 vs DomU Comparison"
 date: 2013-07-12 16:31:50 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-simple-cpu-and-memory-performance-test-of-xen-dom0-and-domu/
+categories: [system-administration-cloud]
+canonical: /a-simple-cpu-and-memory-performance-test-of-xen-dom0-and-domu/
 ---
 
 This article documents performance benchmarks for Xen virtualization, comparing CPU and memory performance between Dom0 (privileged domain), DomU (unprivileged guest), and bare metal. While Xen remains in production use (AWS EC2, Citrix Hypervisor, Oracle Cloud), most Linux distributions default to KVM for new deployments. For contemporary virtualization needs, evaluate both Xen and KVM based on your specific requirements.

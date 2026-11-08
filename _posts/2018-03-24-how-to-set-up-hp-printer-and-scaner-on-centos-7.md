@@ -3,7 +3,8 @@ title: "How to Install and Configure HP Printers on CentOS 7"
 date: 2018-03-24 11:51:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-set-up-hp-printer-and-scaner-on-centos-7/
+categories: [programming-languages]
+canonical: /how-to-set-up-hp-printer-and-scaner-on-centos-7/
 ---
 
 HP printers and scanners on Rocky Linux, CentOS, or RHEL require the HPLIP (HP Linux Imaging and Printing) package. This guide covers the complete setup process.

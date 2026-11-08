@@ -3,7 +3,8 @@ title: "How to Enable File Uploads for WordPress Contributors"
 date: 2018-03-24 08:20:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-allow-contributors-to-upload-files-in-wordpress/
+categories: [scripting-utilities]
+canonical: /how-to-allow-contributors-to-upload-files-in-wordpress/
 ---
 
 By default, WordPress contributors can submit and edit their own posts, but they can’t upload media files. If you want contributors to attach images or documents to their submissions, you’ll need to grant them the upload capability.

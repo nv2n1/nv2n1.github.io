@@ -3,7 +3,8 @@ title: "Disabling systemd Core Dumps on Linux"
 date: 2018-03-24 11:46:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-the-coredump-function-of-systemd-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-the-coredump-function-of-systemd-on-linux/
 ---
 
 \[md\]\

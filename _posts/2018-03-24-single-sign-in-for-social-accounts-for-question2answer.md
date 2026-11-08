@@ -3,7 +3,8 @@ title: "Single Sign-On for Social Accounts in Question2Answer"
 date: 2018-03-24 08:14:55 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/single-sign-in-for-social-accounts-for-question2answer/
+categories: [development-best-practices]
+canonical: /single-sign-in-for-social-accounts-for-question2answer/
 ---
 
 Question2Answer doesn’t include built-in social authentication out of the box, but several community solutions make it straightforward to add OAuth integrations for Google, Facebook, Twitter, and OpenID providers.

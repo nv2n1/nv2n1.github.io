@@ -3,7 +3,8 @@ title: "Getting a Node\u2019s Hostname in Python"
 date: 2018-03-24 11:52:23 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-hostname-of-the-node-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-hostname-of-the-node-in-python/
 ---
 
 There are several ways to retrieve the hostname of the current machine in Python, each with different use cases.

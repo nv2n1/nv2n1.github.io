@@ -3,7 +3,8 @@ title: "Optimizing Virtual Machine Performance: A Tuning Guide"
 date: 2018-03-24 11:54:16 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/how-to-tune-systems-to-achieve-high-performance-in-virtualization-circumstances/
+categories: [system-administration-cloud]
+canonical: /how-to-tune-systems-to-achieve-high-performance-in-virtualization-circumstances/
 ---
 
 Achieving high performance in virtualized environments requires careful tuning of kernel parameters, CPU idle states, and hypervisor settings. The goal is to reduce context switching overhead, minimize latency, and keep vCPUs busy rather than cycling through low-power states.

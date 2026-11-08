@@ -3,7 +3,8 @@ title: "Setting Up HP Scanner on Linux with SANE"
 date: 2018-03-24 11:48:01 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-configure-linux-to-use-the-scanner-in-an-hp-all-in-one-printer/
+categories: [linux-systems-administration]
+canonical: /how-to-configure-linux-to-use-the-scanner-in-an-hp-all-in-one-printer/
 ---
 
 Once your HP printer is working on a Linux system, enabling the scanner requires installing SANE (Scanner Access Now Easy) and HP-specific backends. If wireless connectivity is already established for printing, the scanner should be discoverable on the same network.

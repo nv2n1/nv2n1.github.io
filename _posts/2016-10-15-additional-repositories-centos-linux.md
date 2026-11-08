@@ -3,7 +3,8 @@ title: "Managing Third-Party Repositories on CentOS, Rocky Linux, and AlmaLinux"
 date: 2016-10-15 09:38:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/additional-repositories-centos-linux/
+categories: [linux-system-configuration]
+canonical: /additional-repositories-centos-linux/
 ---
 
 Modern RHEL-based systems (EL9+) ship with dnf as the package manager. Most additional software you’ll need comes from well-maintained third-party repositories rather than compiling from source. This guide covers the essential ones and how to use them safely.

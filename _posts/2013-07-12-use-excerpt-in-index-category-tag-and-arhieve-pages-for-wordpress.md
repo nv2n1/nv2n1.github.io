@@ -3,7 +3,8 @@ title: "Display Post Excerpts Instead of Full Content on WordPress Archives"
 date: 2013-07-12 16:46:09 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/use-excerpt-in-index-category-tag-and-arhieve-pages-for-wordpress/
+categories: [programming-languages]
+canonical: /use-excerpt-in-index-category-tag-and-arhieve-pages-for-wordpress/
 ---
 
 By default, WordPress displays full post content on index, category, tag, archive, and search pages. This duplicates content across multiple URLs, dilutes SEO value, slows page rendering, and forces readers to scroll through complete posts when they’re just scanning headlines.

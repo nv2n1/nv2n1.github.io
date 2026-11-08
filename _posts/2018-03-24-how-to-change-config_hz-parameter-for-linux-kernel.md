@@ -3,7 +3,8 @@ title: "Configuring CONFIG_HZ in the Linux Kernel"
 date: 2018-03-24 11:50:57 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-config_hz-parameter-for-linux-kernel/
+categories: [linux-systems-administration]
+canonical: /how-to-change-config_hz-parameter-for-linux-kernel/
 ---
 
 CONFIG_HZ sets the kernel’s internal timer interrupt frequency (measured in Hz). This determines how often the kernel’s scheduler runs and how fine-grained process preemption can be. The default value is typically 250 Hz on most distributions, though some set it to 1000 Hz for lower latency workloads.

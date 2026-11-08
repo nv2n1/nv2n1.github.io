@@ -3,7 +3,8 @@ title: "Check Your Site for Broken Links"
 date: 2018-03-24 08:19:46 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/find-broken-links-on-my-site/
+categories: [development-best-practices]
+canonical: /find-broken-links-on-my-site/
 ---
 
 Over time, internal and external links on your site inevitably break — pages get deleted, domains expire, content moves. Finding and fixing these broken links improves user experience and helps with SEO, since search engines penalize sites with dead links.

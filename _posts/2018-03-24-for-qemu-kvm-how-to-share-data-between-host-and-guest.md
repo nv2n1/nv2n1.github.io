@@ -3,7 +3,8 @@ title: "Sharing Data Between QEMU/KVM Host and Guest"
 date: 2018-03-24 11:54:03 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/for-qemu-kvm-how-to-share-data-between-host-and-guest/
+categories: [system-administration-cloud]
+canonical: /for-qemu-kvm-how-to-share-data-between-host-and-guest/
 ---
 
 When running virtual machines with QEMU/KVM, you’ll frequently need to transfer files or share directories between the host and guest systems. Several methods work well depending on your use case and performance requirements.

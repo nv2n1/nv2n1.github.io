@@ -3,7 +3,8 @@ title: "Double-Blind Peer Review: How It Works"
 date: 2018-03-24 11:46:40 +0000
 author: "Weiwei Jia"
 layout: post
-canonical: https://www.systutorials.com/what-is-double-blind-review-for-a-paper/
+categories: [development-best-practices]
+canonical: /what-is-double-blind-review-for-a-paper/
 ---
 
 Double-blind peer review is a standard evaluation process used by many academic conferences and journals, particularly in computer science. Understanding how it works is essential before submitting your paper.

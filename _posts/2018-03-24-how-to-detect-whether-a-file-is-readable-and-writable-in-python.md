@@ -3,7 +3,8 @@ title: "Check File Readability and Writability in Python"
 date: 2018-03-24 11:51:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-detect-whether-a-file-is-readable-and-writable-in-python/
+categories: [languages-frameworks]
+canonical: /how-to-detect-whether-a-file-is-readable-and-writable-in-python/
 ---
 
 The most straightforward approach is `os.access()`, which tests whether the process has the requested access to a file:

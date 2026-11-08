@@ -3,7 +3,8 @@ title: "Replace Strings with Newlines in Emacs"
 date: 2018-03-24 11:41:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/replacing-with-a-string-with-newline-in-emacs/
+categories: [linux-systems-administration]
+canonical: /replacing-with-a-string-with-newline-in-emacs/
 ---
 
 To replace text containing newline characters in Emacs, you need to insert actual newline characters in the replacement string rather than literal `\n` sequences.

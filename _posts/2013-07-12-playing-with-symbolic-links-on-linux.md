@@ -3,7 +3,8 @@ title: "Creating and Managing Symbolic Links in Linux"
 date: 2013-07-12 19:16:05 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/playing-with-symbolic-links-on-linux/
+categories: [linux-systems-administration]
+canonical: /playing-with-symbolic-links-on-linux/
 ---
 
 Symbolic links (symlinks) are aliases that point to other files or directories. Most operations treat them transparently—programs reading or writing through a symlink behave as if working with the target directly. Understanding how to create, test, and manage them correctly is essential for system administration.

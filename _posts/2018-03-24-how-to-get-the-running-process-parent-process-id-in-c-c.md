@@ -3,7 +3,8 @@ title: "How to Get a Process\u2019s Parent PID in C/C++"
 date: 2018-03-24 11:52:54 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-running-process-parent-process-id-in-c-c/
+categories: [languages-frameworks]
+canonical: /how-to-get-the-running-process-parent-process-id-in-c-c/
 ---
 
 To retrieve the parent process ID (PPID) of the current running process, use the `getppid()` system call. This is the standard and portable approach on Unix-like systems including Linux.

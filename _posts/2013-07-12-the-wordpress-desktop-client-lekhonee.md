@@ -3,7 +3,8 @@ title: "WordPress Desktop Client: Lekhonee"
 date: 2013-07-12 16:31:49 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/the-wordpress-desktop-client-lekhonee/
+categories: [linux-systems-administration]
+canonical: /the-wordpress-desktop-client-lekhonee/
 ---
 
 Desktop clients for WordPress have largely fallen out of favor in recent years, but they still serve a niche purpose for users who prefer offline writing and batch publishing. Lekhonee was one such tool — a GNOME-based WordPress client that provided a lightweight alternative to the web interface.

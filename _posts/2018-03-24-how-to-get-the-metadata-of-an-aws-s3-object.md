@@ -3,7 +3,8 @@ title: "Retrieving AWS S3 Object Metadata"
 date: 2018-03-24 11:50:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-get-the-metadata-of-an-aws-s3-object/
+categories: [design-patterns-architecture]
+canonical: /how-to-get-the-metadata-of-an-aws-s3-object/
 ---
 
 You can retrieve detailed metadata about an S3 object using the `aws s3api head-object` command. This is useful when you need to check object properties, sizes, modification times, or custom metadata without downloading the entire file.

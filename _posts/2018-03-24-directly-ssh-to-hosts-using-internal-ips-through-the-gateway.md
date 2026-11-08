@@ -3,7 +3,8 @@ title: "SSH to Internal Hosts via Gateway"
 date: 2018-03-24 08:20:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/directly-ssh-to-hosts-using-internal-ips-through-the-gateway/
+categories: [scripting-utilities]
+canonical: /directly-ssh-to-hosts-using-internal-ips-through-the-gateway/
 ---
 
 You have internal hosts on a private network (like 10.0.3.0/24) that aren’t directly accessible from your workstation. They sit behind a gateway (bastion host) like gateway.example.org. You need seamless SSH access to these internal IPs without manually hopping through the gateway each time.

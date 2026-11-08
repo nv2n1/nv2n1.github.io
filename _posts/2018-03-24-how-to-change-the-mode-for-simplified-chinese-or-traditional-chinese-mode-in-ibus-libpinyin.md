@@ -3,7 +3,8 @@ title: "Switching Between Simplified and Traditional Chinese in iBus Libpinyin"
 date: 2018-03-24 08:22:31 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-change-the-mode-for-simplified-chinese-or-traditional-chinese-mode-in-ibus-libpinyin/
+categories: [development-best-practices]
+canonical: /how-to-change-the-mode-for-simplified-chinese-or-traditional-chinese-mode-in-ibus-libpinyin/
 ---
 
 To toggle between Simplified Chinese and Traditional Chinese input modes in ibus-libpinyin, press **Ctrl+Shift+F**. This shortcut has been the standard method since ibus-pinyin 1.3.7 and works across modern versions.

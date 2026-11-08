@@ -3,7 +3,8 @@ title: "Playing 3D Movies on 2D Screens with FFmpeg and mpv"
 date: 2018-03-24 11:44:35 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-play-3d-movies-in-mplayer/
+categories: [programming-languages]
+canonical: /how-to-play-3d-movies-in-mplayer/
 ---
 
 MPlayer is largely unmaintained as of 2026. For playing 3D movies on standard displays, **mpv** is the modern replacement and offers better stereo rendering support.

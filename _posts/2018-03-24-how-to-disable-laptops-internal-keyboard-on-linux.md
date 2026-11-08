@@ -3,7 +3,8 @@ title: "Disabling Your Laptop\u2019s Built-in Keyboard on Linux"
 date: 2018-03-24 11:49:14 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-disable-laptops-internal-keyboard-on-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-disable-laptops-internal-keyboard-on-linux/
 ---
 
 When you connect an external keyboard to your laptop, accidental key presses from the built-in keyboard can be annoying. Disabling it entirely is straightforward on Linux and can save you from errant inputs while keeping the option to re-enable it when needed.

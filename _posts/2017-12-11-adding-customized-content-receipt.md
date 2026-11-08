@@ -3,7 +3,8 @@ title: "How to Add Custom Content to Receipts"
 date: 2017-12-11 07:00:38 +0000
 author: "jameswarner"
 layout: post
-canonical: https://www.systutorials.com/adding-customized-content-receipt/
+categories: [development-best-practices]
+canonical: /adding-customized-content-receipt/
 ---
 
 When you need to display data on point-of-sale receipts that isn’t available in the standard receipt designer, you’ll need to create a custom field. This involves work in both Dynamics 365 (the backend) and the Retail SDK (the POS application layer).

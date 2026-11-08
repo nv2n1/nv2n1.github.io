@@ -3,7 +3,8 @@ title: "How to Force fsck on Next Linux Reboot"
 date: 2018-03-24 11:54:21 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-a-fsck-during-next-rebooting-of-linux/
+categories: [linux-systems-administration]
+canonical: /how-to-force-a-fsck-during-next-rebooting-of-linux/
 ---
 
 Filesystem corruption occasionally happens. When it does, you need fsck to run before the system fully mounts its filesystems. Here’s how to force a filesystem check during the next boot.

@@ -3,7 +3,8 @@ title: "Can Firefox Sync Access Your Passwords Without Your Master Password?"
 date: 2018-03-24 11:48:53 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/is-firefox-sync-safe-that-is-could-someone-else-read-my-password-saved-in-firefox-without-my-password/
+categories: [linux-systems-administration]
+canonical: /is-firefox-sync-safe-that-is-could-someone-else-read-my-password-saved-in-firefox-without-my-password/
 ---
 
 Firefox Sync requires an email address and a password to function. The critical question: if someone gains access to your Firefox account or device, can they read your synced passwords without knowing your master password?

@@ -3,7 +3,8 @@ title: "Configuring Static Ports for NFSv3 RPC Services"
 date: 2013-10-25 12:47:25 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/fixing-ports-used-by-nfs-server/
+categories: [linux-systems-administration]
+canonical: /fixing-ports-used-by-nfs-server/
 ---
 
 NFSv3 uses multiple RPC services, each requiring its own port assignment. Without explicit configuration, rpcbind assigns random high ports to four critical services, making firewall rules unmaintainable. Modern deployments should prioritize NFSv4 with Kerberos, but legacy NFSv3 environments remain common enough to warrant proper port management.

@@ -3,7 +3,8 @@ title: "Understanding Xen\u2019s Codebase Architecture"
 date: 2013-07-12 16:32:18 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/a-introduction-to-xen-source-code-structure-and-disk-in-xen/
+categories: [linux-systems-administration]
+canonical: /a-introduction-to-xen-source-code-structure-and-disk-in-xen/
 ---
 
 Xen remains a production hypervisor used by AWS EC2, Citrix Hypervisor, and other cloud providers, though most general-purpose Linux distributions have shifted toward KVM as their default. If you’re working with Xen in production or developing drivers, understanding its source code layout is essential.

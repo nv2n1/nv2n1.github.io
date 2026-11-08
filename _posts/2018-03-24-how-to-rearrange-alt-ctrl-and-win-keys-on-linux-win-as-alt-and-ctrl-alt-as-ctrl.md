@@ -3,7 +3,8 @@ title: "Remapping Modifier Keys on Linux"
 date: 2018-03-24 08:22:23 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-rearrange-alt-ctrl-and-win-keys-on-linux-win-as-alt-and-ctrl-alt-as-ctrl/
+categories: [linux-systems-administration]
+canonical: /how-to-rearrange-alt-ctrl-and-win-keys-on-linux-win-as-alt-and-ctrl-alt-as-ctrl/
 ---
 
 Remapping modifier keys on Linux makes sense if you’re an Emacs power user, prefer ergonomic hand positioning, or simply don’t use the Win key. The standard approach moves frequently-used modifiers closer to your thumbs by trading the underutilized Super/Win key for additional Ctrl or Alt access.

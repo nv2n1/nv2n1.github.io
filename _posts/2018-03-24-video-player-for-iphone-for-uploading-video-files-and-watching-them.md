@@ -3,7 +3,8 @@ title: "How to Transfer Videos to iPhone on Linux"
 date: 2018-03-24 11:41:32 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/video-player-for-iphone-for-uploading-video-files-and-watching-them/
+categories: [linux-systems-administration]
+canonical: /video-player-for-iphone-for-uploading-video-files-and-watching-them/
 ---
 
 Getting video files from your Linux machine to an iPhone for offline viewing doesn’t require iTunes or complex workarounds. Here are the practical methods that actually work in 2026.

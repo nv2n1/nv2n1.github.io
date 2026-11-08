@@ -3,7 +3,8 @@ title: "Recovering Data Left on Linux VMs in Public Clouds"
 date: 2018-03-24 08:19:28 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/quick-method-to-sniff-the-data-left-on-a-linux-vm-in-the-public-cloud/
+categories: [linux-systems-administration]
+canonical: /quick-method-to-sniff-the-data-left-on-a-linux-vm-in-the-public-cloud/
 ---
 
 When deprovisioning Linux VMs in public cloud environments, disk blocks may be reallocated to other customers if the provider doesn’t properly wipe storage. This is a legitimate concern for security audits, compliance validation, and understanding data exposure risks.

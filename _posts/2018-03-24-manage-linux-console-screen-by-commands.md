@@ -3,7 +3,8 @@ title: "Controlling Linux Console Blanking and Power Settings"
 date: 2018-03-24 11:42:51 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/manage-linux-console-screen-by-commands/
+categories: [linux-systems-administration]
+canonical: /manage-linux-console-screen-by-commands/
 ---
 
 Managing display power and screen blanking on Linux systems is essential for reducing power consumption on servers, headless machines, and workstations. Two primary tools handle this: `setterm` for software-based blanking and `vbetool` for hardware power management via VESA DPMS.

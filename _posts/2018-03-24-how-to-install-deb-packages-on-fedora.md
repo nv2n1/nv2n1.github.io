@@ -3,7 +3,8 @@ title: "Installing .deb Packages on Fedora with Alien"
 date: 2018-03-24 08:15:26 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-install-deb-packages-on-fedora/
+categories: [development-best-practices]
+canonical: /how-to-install-deb-packages-on-fedora/
 ---
 
 Fedora uses RPM packages managed by DNF, but you’ll occasionally encounter software distributed only as .deb files (Debian format). You have several options: convert the .deb to RPM, extract and repackage it, or use containerization. Here’s what works in practice.

@@ -3,7 +3,8 @@ title: "Auto-hiding Panels in RHEL 7: A Setup Guide"
 date: 2018-03-24 11:54:26 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/autohide-top-and-bottom-panel-in-rhel-7/
+categories: [programming-languages]
+canonical: /autohide-top-and-bottom-panel-in-rhel-7/
 ---
 
 GNOME 3 and GNOME Classic don’t provide built-in autohide functionality for the top panel or taskbar. Unlike some lightweight desktop environments, this feature isn’t available through the standard settings or extensions in recent GNOME versions.

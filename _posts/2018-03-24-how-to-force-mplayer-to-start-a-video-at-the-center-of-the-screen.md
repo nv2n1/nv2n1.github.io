@@ -3,7 +3,8 @@ title: "Centering MPlayer and mpv Windows on Linux"
 date: 2018-03-24 08:22:36 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-force-mplayer-to-start-a-video-at-the-center-of-the-screen/
+categories: [linux-systems-administration]
+canonical: /how-to-force-mplayer-to-start-a-video-at-the-center-of-the-screen/
 ---
 
 MPlayer is largely obsolete, but if you’re maintaining legacy systems, you’ll need to know how to position windows. For new work, use **mpv** (MPlayer’s maintained fork) instead.

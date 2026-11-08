@@ -3,7 +3,8 @@ title: "Using EncFS on Windows 10: A Setup Guide"
 date: 2018-03-24 11:53:24 +0000
 author: "Q A"
 layout: post
-canonical: https://www.systutorials.com/how-to-use-encfs-on-windows-10/
+categories: [security-cryptography-2]
+canonical: /how-to-use-encfs-on-windows-10/
 ---
 
 EncFS is a transparent encrypted filesystem that works well on Linux and macOS, but Windows doesn’t support it natively. If you’re migrating from Linux or need EncFS-specific functionality on Windows, you’ll need to either run it in a virtual machine or switch to Windows-native alternatives.

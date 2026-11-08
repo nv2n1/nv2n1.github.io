@@ -3,7 +3,8 @@ title: "Generating RSA Key Pairs in Go"
 date: 2020-10-24 09:27:59 +0000
 author: "David Yang"
 layout: post
-canonical: https://www.systutorials.com/how-to-generate-rsa-private-and-public-key-pair-in-go-lang/
+categories: [languages-frameworks]
+canonical: /how-to-generate-rsa-private-and-public-key-pair-in-go-lang/
 ---
 
 Go’s standard library provides everything needed to generate RSA key pairs and save them in PEM format. Here are the essential packages:

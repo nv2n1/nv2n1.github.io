@@ -3,7 +3,8 @@ title: "Building a REST API with ASP.NET MVC and JavaScript"
 date: 2016-11-25 03:53:04 +0000
 author: "jameswarner"
 layout: post
-canonical: https://www.systutorials.com/push-pull-data-restful-service-asp-net-mvc-application-using-angular-js/
+categories: [languages-frameworks]
+canonical: /push-pull-data-restful-service-asp-net-mvc-application-using-angular-js/
 ---
 
 This guide covers building REST endpoints in ASP.NET MVC and consuming them from a frontend application. While this example uses AngularJS (end-of-life 2022), the backend patterns remain relevant for legacy system maintenance. For new projects, migrate to ASP.NET Core with modern frontend frameworks like React, Vue, or Angular.

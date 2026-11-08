@@ -3,7 +3,8 @@ title: "Adding a Secondary NameNode Metadata Directory to HDFS"
 date: 2018-03-24 11:44:04 +0000
 author: "Eric Ma"
 layout: post
-canonical: https://www.systutorials.com/how-to-add-a-new-hdfs-namenode-metadata-directory-to-an-existing-cluster/
+categories: [languages-frameworks]
+canonical: /how-to-add-a-new-hdfs-namenode-metadata-directory-to-an-existing-cluster/
 ---
 
 Adding a second metadata directory to your HDFS NameNode increases reliability by maintaining synchronized replicas of the namespace and transaction logs across separate disks. This guide walks through the process safely.
