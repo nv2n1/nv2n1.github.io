@@ -20,7 +20,7 @@ This assumes your numeric value is the 5th whitespace-delimited field. For a fil
     Run 1: Time used: 20.784491219 seconds.
     Run 2: Time used: 21.851638876 seconds.
 
-The output would be `21.6237547`.
+The output is `21.6238`: the three values sum to 64.871461806, and awk's default output format prints about 6 significant digits.
 
 Format output to specific decimal places:
 

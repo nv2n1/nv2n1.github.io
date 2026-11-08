@@ -120,7 +120,7 @@ printf '\U0001f600'               # Emoji in bash
 
 ## Special Cases
 
-**Zero-width characters** like `&#8203;` (zero-width space) and `&#8204;` (zero-width joiner) can be useful for controlling text wrapping and emoji sequences, but are easy to accidentally insert—use them deliberately.
+**Zero-width characters** like `&#8203;` (zero-width space) and `&#8205;` (zero-width joiner) can be useful for controlling text wrapping and emoji sequences, but are easy to accidentally insert—use them deliberately.
 
 **Control characters** like tab (`&#9;`) or newline (`&#10;`) should rarely appear in HTML; most white space handling is better done with CSS.
 
