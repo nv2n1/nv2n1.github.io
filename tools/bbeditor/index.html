@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BB Code Editor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.systutorials.com/tools/bbeditor/">
+<script src="./jquery.min.js"></script>
+<script src="./jquery.wysibb.min.js"></script>
+<link rel="stylesheet" href="./theme/st/wbbtheme.css" type="text/css" />
+</head>
+
+<body>
+
+<div style="max-width:1000px; margin: auto; font-family: arial; color: #333;">
+
+<h1><a href="https://www.systutorials.com/tools/bbeditor/">BB Code Editor</a></h1>
+<p>Welcome to the online bb code editor! Edit your text and click the "[BBCODE]" button to get your bb code.</p>
+
+<script>
+$(document).ready(function() {
+  $("#editor").css("height","320px");
+  $("#editor").wysibb();
+});
+</script>
+<textarea id="editor"></textarea>
+
+<p>
+<h2>BB Code Editor shortcuts</h2>
+<ul>
+<li><b>Bold</b>: ctrl + b</li>
+<li><b>Italic</b>: ctrl + i</li>
+<li><b>Underline</b>: ctrl + u</li>
+<li><b>Insert image</b>: ctrl + shift + 1</li>
+<li><b>Link</b>: ctrl + shift + 2</li>
+<li><b>Code</b>: ctrl + shift + 4</li>
+<li><b>Quote</b>: ctrl + shift + 3</li>
+</ul>
+</p>
+
+<hr style="border-bottom: 0; clear: both;" />
+<p><a href="https://www.systutorials.com/tools/bbeditor/">BB Code Editor</a> provided by <a href="https://www.systutorials.com">SysTutorials</a>, powered by WysiBB (MIT license, see LICENSE-MIT). <a href="https://www.systutorials.com/">&larr; Back to SysTutorials</a></p>
+
+</div>
+<!-- Default Statcounter code for SysTutorials
+https://www.systutorials.com/ -->
+<script type="text/javascript">
+var sc_project=8983792;
+var sc_invisible=1;
+var sc_security="a0aea12d";
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/8983792/0/a0aea12d/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
