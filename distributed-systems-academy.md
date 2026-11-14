@@ -1,13 +1,12 @@
 ---
 layout: home
-title: "Systems & Architecture Academy"
+title: "Distributed Systems Academy"
 permalink: /distributed-systems-academy/
 ---
 
 Master distributed systems design, consensus algorithms, and modern architecture patterns. Learn the fundamentals of building scalable, fault-tolerant systems.
 
-Learning Paths
----------------
+## Learning Paths
 
 ### Advanced Systems & Architecture
 
@@ -21,26 +20,23 @@ Cryptographic fundamentals, public key infrastructure, security hardening, key m
 
 [Start Learning →](/security-cryptography-path/)
 
-Featured Posts
----------------
+## Featured Posts
 
 - [Understanding the Raft Consensus Protocol](/understanding-the-raft-consensus-protocol/)
 - [Understanding Paxos: Distributed Consensus Made Clear](/understanding-the-paxos-consensus-algorithm/)
-- [Paxos vs. Raft: Consensus Algorithms Compared](/comparing-paxos-and-raft/)
+- [Paxos vs. Raft: Consensus Algorithms Compared](/comparing-paxos-and-raft/)
 - [Consistency Models in Distributed Systems](/linear-consistency-model-for-computer-systems/)
 - [Cloud Storage Consistency Models Explained](/understanding-cloud-storage-consistency-models/)
-- [Understanding PGP: A Technical Reference Guide](/a-comprehensive-guide-to-pgp-technical-deep-dive/)
-- [QEMU/KVM Networking: TAP, virtio, and vhost Explained](/qemukvm-network-mechanisms/)
-- [Measuring Task I/O with eBPF: Microsecond Precision](/io-microscopy-tasks-disk-io-information-high-accuracy/)
-- [x86-64 Instruction Encoding: From Assembly to Machine Code](/beginners-guide-x86-64-instruction-encoding/)
-- [Debugging Kernel Modules with Runtime Parameters](/debug-linux-kernel-less-efforts/)
+- [Colossus: Google's Next-Generation Distributed File System](/colossus-successor-to-google-file-system-gfs/)
+- [Storage Architecture: Lessons from Google's Infrastructure](/storage-architecture-and-challenges/)
+- [Lessons from Building Large-Scale Distributed Systems](/designs-lessons-and-advice-from-building-large-distributed-systems/)
+- [Latency Numbers Every Systems Engineer Should Know](/software-engineering-advice-from-building-large-scale-distributed-systems-by-jeff-dean/)
+- [Diagnosing and Repairing Corrupt HDFS Blocks](/how-to-handle-missing-blocks-and-blocks-with-corrupt-replicas-in-hdfs/)
 
-Resources
-----------
+## Resources
 
-- [View all distributed systems posts](/category/systems-architecture/)
+- [View all systems & architecture posts](/category/systems-architecture/)
 
-Back to Learning
------------------
+## Back to Learning
 
 [← Back to SysTutorials Home](/)

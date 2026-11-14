@@ -28,7 +28,7 @@ Welcome to SysTutorials! Learn through 5 focused learning academies. Explore sys
     <p class="explore"><a href="/ai-engineering-hub/">Explore Hub &rarr;</a></p>
   </div>
   <div class="academy">
-    <h3>&#128279; Web3, Blockchain &amp; Cryptocurrency Academy</h3>
+    <h3>&#128279; Web3 &amp; Crypto Academy</h3>
     <p>Master blockchain, cryptocurrency, Web3, and decentralized finance.</p>
     <p class="explore"><a href="/web3-crypto-academy/">Explore Academy &rarr;</a></p>
   </div>
