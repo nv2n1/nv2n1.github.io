@@ -28,7 +28,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-      - run: gem install jekyll -v '~> 4.3' jekyll-sitemap jekyll-feed --no-document
+      - run: gem install 'jekyll:~>4.3' jekyll-sitemap jekyll-feed --no-document
       - run: jekyll build --destination _site
         env:
           JEKYLL_ENV: production
