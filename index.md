@@ -50,6 +50,15 @@ Welcome to SysTutorials! Learn through 5 focused learning academies. Explore sys
 
 <p><a href="/archive/">Browse all {{ site.posts | size }} posts &rarr;</a></p>
 
+## Recent Updates
+
+<ul class="posts">
+{% assign updated_posts = site.posts | sort: 'modified' | reverse %}
+{% for post in updated_posts limit:10 %}
+  <li><time>{{ post.modified | date: "%b %-d, %Y" }}</time> <a href="{{ post.url }}">{{ post.title | escape }}</a></li>
+{% endfor %}
+</ul>
+
 ## Browse by Category
 
 <ul class="cat-grid">
