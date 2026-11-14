@@ -1,0 +1,25 @@
+---
+title: "stdmbstate_t(3)"
+name: "stdmbstate_t"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-stdmbstate_t/"
+---
+
+std::mbstate_t - std::mbstate_t
+
+<h2>Synopsis</h2>
+
+<pre><code>Defined in header&lt;cuchar&gt;(since C++ 17)
+
+    Defined in header&lt;cwchar&gt;
+
+    struct mbstate_t;</code></pre> 
+The type mbstate_t is a trivial non-array type that can represent any of the conversion states that can occur in an implementation-defined set of supported multibyte character encoding rules. Zero-initialized value of mbstate_t represents the initial conversion state, although other values of mbstate_t may exist that also represent the initial conversion state. 
+Possible implementation of mbstate_t is a struct type holding an array representing the incomplete multibyte character, an integer counter indicating the number of bytes in the array that have been processed, and a representation of the current shift state. 
+The following functions should not be called from multiple threads without synchronization with the std::mbstate_t* argument of NULL due to possible data races: std::mbrlen, std::mbrtowc, std::mbsrtowcs, std::mbtowc, std::wcrtomb, std::wcsrtombs, std::wctomb. 
+
+<h2>See also</h2>
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;checks if the mbstate_t object represents initial shift state 
+mbsinit <i>(function)</i> 

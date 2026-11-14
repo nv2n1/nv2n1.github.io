@@ -1,0 +1,148 @@
+---
+title: "sc_twobodyderivint(3)"
+name: "sc_twobodyderivint"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-sc_twobodyderivint/"
+description: "sc::TwoBodyDerivInt –"
+---
+
+<p>sc::TwoBodyDerivInt &#8211; </p>
+<p> This is an abstract base type for classes that compute integrals involving two electrons.</p>
+<h2>Synopsis</h2>
+<pre><code>
+
+#include &lt;tbint.h&gt;</code></pre>
+<p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::TwoBodyDerivIntCCA</code>, <code>sc::TwoBodyDerivIntCints</code>, and <code>sc::TwoBodyDerivIntV3</code>.</p>
+<h3>Public Member Functions</h3>
+<pre><code>int nbasis () const
+
+
+Return the number of basis functions on center one.
+
+
+int nbasis1 () const
+
+
+Return the number of basis functions on center one.
+
+
+int nbasis2 () const
+
+
+Return the number of basis functions on center two.
+
+
+int nbasis3 () const
+
+
+Return the number of basis functions on center three.
+
+
+int nbasis4 () const
+
+
+Return the number of basis functions on center four.
+
+
+int nshell () const
+
+
+Return the number of shells on center one.
+
+
+int nshell1 () const
+
+
+Return the number of shells on center one.
+
+
+int nshell2 () const
+
+
+Return the number of shells on center two.
+
+
+int nshell3 () const
+
+
+Return the number of shells on center three.
+
+
+int nshell4 () const
+
+
+Return the number of shells on center four.
+
+
+Ref&lt; GaussianBasisSet &gt; basis ()
+
+
+Return the basis set on center one.
+
+
+Ref&lt; GaussianBasisSet &gt; basis1 ()
+
+
+Return the basis set on center one.
+
+
+Ref&lt; GaussianBasisSet &gt; basis2 ()
+
+
+Return the basis set on center two.
+
+
+Ref&lt; GaussianBasisSet &gt; basis3 ()
+
+
+Return the basis set on center three.
+
+
+Ref&lt; GaussianBasisSet &gt; basis4 ()
+
+
+Return the basis set on center four.
+
+
+const double * buffer () const
+
+
+The computed shell integrals will be put in the buffer returned by this member.
+
+
+virtual void compute_shell (int, int, int, int, DerivCenters &amp;)=0
+
+
+Given for shell indices, this will cause the integral buffer to be filled in.
+
+
+virtual int log2_shell_bound (int=-1, int=-1, int=-1, int=-1)=0
+
+
+Return log base 2 of the maximum magnitude of any integral in a shell block.
+
+
+
+Protected Member Functions</code></pre>
+<p> <code>TwoBodyDerivInt</code> (<code>Integral</code> *integral, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4)</p>
+<h3>Protected Attributes</h3>
+<p><code>Integral</code> * <code>integral_</code> </p>
+<p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs1_</code> </p>
+<p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs2_</code> </p>
+<p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs3_</code> </p>
+<p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs4_</code> </p>
+<p> double * <code>buffer_</code></p>
+<h2>Detailed Description</h2>
+<p>This is an abstract base type for classes that compute integrals involving two electrons.</p>
+<h2>Member Function Documentation</h2>
+<h3>virtual void sc::TwoBodyDerivInt::compute_shell (int, int, int, int, <code>DerivCenters</code> &amp;) [pure virtual]</h3>
+<p>Given for shell indices, this will cause the integral buffer to be filled in. </p>
+<p> Implemented in <code>sc::TwoBodyDerivIntCints</code>, <code>sc::TwoBodyDerivIntCCA</code>, and <code>sc::TwoBodyDerivIntV3</code>. </p>
+<p> Referenced by sc::LocalTBGrad&lt; T &gt;::run().</p>
+<h3>virtual int sc::TwoBodyDerivInt::log2_shell_bound (int = -1, int = -1, int = -1, int = -1) [pure virtual]</h3>
+<p>Return log base 2 of the maximum magnitude of any integral in a shell block. An index of -1 for any argument indicates any shell. </p>
+<p> Implemented in <code>sc::TwoBodyDerivIntCints</code>, <code>sc::TwoBodyDerivIntCCA</code>, and <code>sc::TwoBodyDerivIntV3</code>. </p>
+<p> Referenced by sc::LocalTBGrad&lt; T &gt;::run().</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>

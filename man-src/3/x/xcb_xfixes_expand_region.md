@@ -1,0 +1,44 @@
+---
+title: "xcb_xfixes_expand_region(3)"
+name: "xcb_xfixes_expand_region"
+section: "3"
+letter: "x"
+url: "/docs/linux/man/3-xcb_xfixes_expand_region/"
+description: "xcb_xfixes_expand_region –"
+---
+
+<p>xcb_xfixes_expand_region &#8211;</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;xcb/xfixes.h&gt;
+
+
+Request function
+
+
+
+xcb_void_cookie_t xcb_xfixes_expand_region(xcb_connection_t *conn, xcb_xfixes_region_t source, xcb_xfixes_region_t destination, uint16_t left, uint16_t right, uint16_t top, uint16_t bottom);</code></pre>
+<h2>Request Arguments</h2>
+<dl>
+<dt><i>conn</i></p>
+<dd>The XCB connection to X11.</p>
+<dt><i>source</i></p>
+<dd>TODO: NOT YET DOCUMENTED.</p>
+<dt><i>destination</i></p>
+<dd>TODO: NOT YET DOCUMENTED.</p>
+<dt><i>left</i></p>
+<dd>TODO: NOT YET DOCUMENTED.</p>
+<dt><i>right</i></p>
+<dd>TODO: NOT YET DOCUMENTED.</p>
+<dt><i>top</i></p>
+<dd>TODO: NOT YET DOCUMENTED.</p>
+<dt><i>bottom</i></p>
+<dd>TODO: NOT YET DOCUMENTED.</dl>
+<h2>Description</h2>
+<h2>Return Value</h2>
+<p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>
+<p> If you want to handle errors directly with <i>xcb_request_check</i> instead, use <i>xcb_xfixes_expand_region_checked</i>. See <code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a>(3)</code> for details.</p>
+<h2>Errors</h2>
+<p>This request does never generate any errors.</p>
+<h2>See Also</h2>
+<h2>Author</h2>
+<p>Generated from xfixes.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

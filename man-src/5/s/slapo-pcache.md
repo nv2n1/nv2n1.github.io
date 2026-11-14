@@ -1,0 +1,83 @@
+---
+title: "slapo-pcache(5)"
+name: "slapo-pcache"
+section: "5"
+letter: "s"
+url: "/docs/linux/man/5-slapo-pcache/"
+description: "slapo-pcache – proxy cache overlay to slapd"
+---
+
+<p>slapo-pcache &#8211; proxy cache overlay to slapd</p>
+<h2>Synopsis</h2>
+<p>/etc/openldap/slapd.conf</p>
+<h2>Description</h2>
+<p>The <code>pcache</code> overlay to <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) allows caching of LDAP search requests (queries) in a local database. For an incoming query, the proxy cache determines its corresponding <code>template</code>. If the template was specified as cacheable using the <code>pcacheTemplate</code> directive and the request is contained in a cached request, it is answered from the proxy cache. Otherwise, the search is performed as usual and cacheable search results are saved in the cache for use in future queries. A template is defined by a filter string and an index identifying a set of attributes. The <code>template string</code> for a query can be obtained by removing assertion values from the RFC 4515 representation of its search filter. A query belongs to a template if its template string and set of projected attributes correspond to a cacheable template. Examples of template strings are <code>(mail=)</code>, <code>(|(sn=)(cn=))</code>, <code>(&amp;(sn=)(givenName=))</code>. The config directives that are specific to the <code>pcache</code> overlay can be prefixed by <code>pcache-</code>, to avoid conflicts with directives specific to the underlying database or to other stacked overlays. This may be particularly useful for those directives that refer to the backend used for local storage. The following cache specific directives can be used to configure the proxy cache:</p>
+<dl>
+<dt><code>overlay pcache</code></p>
+<dd>This directive adds the proxy cache overlay to the current backend. The proxy cache overlay may be used with any backend but is intended for use with the <code>ldap</code>, <code>meta</code>, and <code>sql</code> backends. Please note that the underlying backend must have a configured <code>rootdn.</code></p>
+<dt><code>pcache &lt;database&gt; &lt;max_entries&gt; &lt;numattrsets&gt; &lt;entry_limit&gt; &lt;cc_period&gt; </code></p>
+<dd>The directive enables proxy caching in the current backend and sets general cache parameters. A &lt;database&gt; backend will be used internally to maintain the cached entries. The chosen database will need to be configured as well, as shown below. Cache replacement is invoked when the cache size grows to &lt;max_entries&gt; entries and continues till the cache size drops below this size. &lt;numattrsets&gt; should be equal to the number of following <code>pcacheAttrset</code> directives. Queries are cached only if they correspond to a cacheable template (specified by the <code>pcacheTemplate</code> directive) and the number of entries returned is less than &lt;entry_limit&gt;. Consistency check is performed every &lt;cc_period&gt; duration (specified in secs). In each cycle queries with expired &quot;time to live(<code>TTL</code>)&quot; are removed. A sample cache configuration is:</dl>
+<dl>
+<dd>pcache <code>bdb 10000 1 50 100</code></dl>
+<dl>
+<dt><code>pcacheAttrset &lt;index&gt; &lt;attrs&#8230;&gt;</code></p>
+<dd>Used to associate a set of attributes &lt;attrs..&gt; with an &lt;index&gt;. Each attribute set is associated with an integer from 0 to &lt;numattrsets&gt;-1. These indices are used by the <code>pcacheTemplate</code> directive to define cacheable templates. A set of attributes cannot be empty. A set of attributes can contain the special attributes &quot;*&quot; (all user attributes), &quot;+&quot; (all operational attributes) or both; in the latter case, any other attribute is redundant and should be avoided for clarity. A set of attributes can contain &quot;1.1&quot; as the only attribute; in this case, only the presence of the entries is cached. Attributes prefixed by &quot;undef:&quot; need not be present in the schema.</p>
+<dt><code>pcacheMaxQueries &lt;queries&gt;</code></p>
+<dd>Specify the maximum number of queries to cache. The default is 10000.</p>
+<dt><code>pcacheValidate { TRUE | FALSE }</code></p>
+<dd>Check whether the results of a query being cached can actually be returned from the cache by the proxy DSA. When enabled, the entries being returned while caching the results of a query are checked to ensure consistency with the schema known to the proxy DSA. In case of failure, the query is not cached. By default, the check is off.</p>
+<dt><code>pcacheOffline { TRUE | FALSE }</code></p>
+<dd>Set the cache to offline mode. While offline, the consistency checker will be stopped and no expirations will occur. This allows the cache contents to be used indefinitely while the proxy is cut off from network access to the remote DSA. The default is FALSE, i.e. consistency checks and expirations will be performed.</p>
+<dt><code>pcachePersist { TRUE | FALSE }</code></p>
+<dd>Specify whether the cached queries should be saved across restarts of the caching proxy, to provide hot startup of the cache. Only non-expired queries are reloaded. The default is FALSE. <code>CAVEAT</code>: of course, the configuration of the proxy cache must not change across restarts; the pcache overlay does not perform any consistency checks in this sense. In detail, this option should be disabled unless the existing <code>pcacheAttrset</code> and <code>pcacheTemplate</code> directives are not changed neither in order nor in contents. If new sets and templates are added, or if other details of the pcache overlay configuration changed, this feature should not be affected.</p>
+<dt><code>pcacheTemplate &lt;template_string&gt; &lt;attrset_index&gt; &lt;ttl&gt; [&lt;negttl&gt; [&lt;limitttl&gt; [&lt;ttr&gt;]]]</code></p>
+<dd>Specifies a cacheable template and &quot;time to live&quot; &lt;ttl&gt; of queries belonging to the template. An optional &lt;negttl&gt; can be used to specify that negative results (i.e., queries that returned zero entries) should also be cached for the specified amount of time. Negative results are not cached by default (&lt;negttl&gt; set to 0). An optional &lt;limitttl&gt; can be used to specify that results hitting a sizelimit should also be cached for the specified amount of time. Results hitting a sizelimit are not cached by default (&lt;limitttl&gt; set to 0). An optional &lt;ttr&gt; &quot;time to refresh&quot; can be used to specify that cached entries should be automatically refreshed after a certain time. Entries will only be refreshed while they have not expired, so the &lt;ttl&gt; should be larger than the &lt;ttr&gt; for this option to be useful. Entries are not refreshed by default (&lt;ttr&gt; set to 0).</p>
+<dt><code>pcacheBind &lt;filter_template&gt; &lt;attrset_index&gt; &lt;ttr&gt; &lt;scope&gt; &lt;base&gt;</code></p>
+<dd>Specifies a template for caching Simple Bind credentials based on an already defined <code>pcacheTemplate</code>. The &lt;filter_template&gt; is similar to a &lt;template_string&gt; except that it may have some values present. Its purpose is to allow the overlay to generate filters similar to what other applications do when they do a Search immediately before a Bind. E.g., if a client like nss_ldap is configured to search for a user with the filter &quot;(&amp;(objectClass=posixAccount)(uid=&lt;username&gt;))&quot; then the corresponding template &quot;(&amp;(objectClass=posixAccount)(uid=))&quot; should be used here. When converted to a regular template e.g. &quot;(&amp;(objectClass=)(uid=))&quot; this template and the &lt;attrset_index&gt; must match an already defined <code>pcacheTemplate</code> clause. The &quot;time to refresh&quot; &lt;ttr&gt; determines the time interval after which the cached credentials may be refreshed. The first Bind request that occurs after that time will trigger the refresh attempt. Refreshes are not performed when the overlay is Offline. There is no &quot;time to live&quot; parameter for the Bind credentials; the credentials will expire according to the <code>pcacheTemplate</code> ttl. The &lt;scope&gt; and &lt;base&gt; should match the search scope and base used by the authentication clients. The cached credentials are not stored in cleartext, they are hashed using the default password hash. By default Bind caching is not enabled.</p>
+<dt><code>pcachePosition { head | tail }</code></p>
+<dd>Specifies whether the response callback should be placed at the <code>tail</code> (the default) or at the <code>head</code> (actually, wherever the stacking sequence would make it appear) of the callback list. This affects how the overlay interacts with other overlays, since the proxycache overlay should be executed as early as possible (and thus configured as late as possible), to get a chance to return the cached results; however, if executed early at response, it would cache entries that may be later &quot;massaged&quot; by other databases and thus returned <i>after</i> massaging the first time, and <i>before</i> massaging when cached.</p>
+<dt>There are some constraints:</p>
+<dd>all values must be positive; <code>&lt;entry_limit&gt;</code> must be less than or equal to <code>&lt;max_entries&gt;</code>; <code>&lt;numattrsets&gt;</code> attribute sets SHOULD be defined by using the directive <code>pcacheAttrset</code>; all attribute sets SHOULD be referenced by (at least) one <code>pcacheTemplate</code> directive;  The following adds a template with filter string <code>(&amp;(sn=)(givenName=))</code> and attributes mail, postaladdress, telephonenumber and a TTL of 1 hour.</p>
+<dl>
+<dd>
+<pre>pcacheAttrset <code>0 mail postaladdress telephonenumber</code>
+pcacheTemplate <code>(&amp;(sn=)(givenName=)) 0 3600</code></pre>
+</dl>
+<p> Directives for configuring the underlying database must also be given, as shown here:</p>
+<dl>
+<dd>
+<pre>directory /var/tmp/cache
+cachesize 100</pre>
+</dl>
+<p> Any valid directives for the chosen database type may be used. Indexing should be used as appropriate for the queries being handled. In addition, an equality index on the <code>pcacheQueryid</code> attribute should be configured, to assist in the removal of expired query data.</p>
+<h2>Backward Compatibility</h2>
+<p>The configuration keywords have been renamed and the older form is deprecated. These older keywords are still recognized but may disappear in future releases. </p>
+<dl>
+<dt><code>proxycache</code></p>
+<dd>use pcache </p>
+<dt><code>proxyattrset</code></p>
+<dd>use pcacheAttrset </p>
+<dt><code>proxycachequeries</code></p>
+<dd>use pcacheMaxQueries </p>
+<dt><code>proxycheckcacheability</code></p>
+<dd>use pcacheValidate </p>
+<dt><code>proxysavequeries</code></p>
+<dd>use pcachePersist </p>
+<dt><code>proxytemplate</code></p>
+<dd>use pcacheTemplate </p>
+<dt><code>response-callback</code></p>
+<dd>use pcachePosition </p>
+</dl>
+<h2>Caveats</h2>
+<p>Caching data is prone to inconsistencies because updates on the remote server will not be reflected in the response of the cache at least (and at most) for the duration of the <code>pcacheTemplate</code> <code>TTL</code>. These inconsistencies can be minimized by careful use of the TTR. </p>
+<p> The remote server should expose the <code>objectClass </code> attribute because the underlying database that actually caches the entries may need it for optimal local processing of the queries. </p>
+<p> The proxy server should contain all the schema information required for caching. Significantly, it needs the schema of attributes used in the query templates. If the objectClass attribute is used in a query template, it needs the definition of the objectClasses of the entries it is supposed to cache. It is the responsibility of the proxy administrator to keep the proxy schema lined up with that of the proxied server. </p>
+<p> Another potential (and subtle) inconsistency may occur when data is retrieved with different identities and specific per-identity access control is enforced by the remote server. If data was retrieved with an identity that collected only partial results because of access rules enforcement on the remote server, other users with different access privileges on the remote server will get different results from the remote server and from the cache. If those users have higher access privileges on the remote server, they will get from the cache only a subset of the results they would get directly from the remote server; but if they have lower access privileges, they will get from the cache a superset of the results they would get directly from the remote server. Either occurrence may or may not be acceptable, based on the security policy of the cache and of the remote server. It is important to note that in this case the proxy is violating the security of the remote server by disclosing to an identity data that was collected by another identity. For this reason, it is suggested that, when using <code>back-ldap</code>, proxy caching be used in conjunction with the <i>identity assertion</i> feature of <code><a href="/docs/linux/man/5-slapd-ldap/">slapd-ldap</a></code>(5) (see the <code>idassert-bind</code> and the <code>idassert-authz</code> statements), so that remote server interrogation occurs with a vanilla identity that has some relatively high <code>search</code> and <code>read</code> access privileges, and the &quot;real&quot; access control is delegated to the proxy&#8217;s ACLs. Beware that since only the cached fraction of the real datum is available to the cache, it may not be possible to enforce the same access rules that are defined on the remote server. When security is a concern, cached proxy access must be carefully tailored.</p>
+<h2>Files</h2>
+<dl>
+<dt>/etc/openldap/slapd.conf</p>
+<dd>default slapd configuration file</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), <code><a href="/docs/linux/man/5-slapd-ldap/">slapd-ldap</a></code>(5), <code><a href="/docs/linux/man/5-slapd-meta/">slapd-meta</a></code>(5), <code><a href="/docs/linux/man/5-slapd-sql/">slapd-sql</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8).</p>
+<h2>Author</h2>
+<p>Originally implemented by Apurva Kumar as an extension to back-meta; turned into an overlay by Howard Chu.</p>

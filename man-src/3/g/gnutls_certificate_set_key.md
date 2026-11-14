@@ -1,0 +1,48 @@
+---
+title: "gnutls_certificate_set_key(3)"
+name: "gnutls_certificate_set_key"
+section: "3"
+letter: "g"
+url: "/docs/linux/man/3-gnutls_certificate_set_key/"
+description: "gnutls_certificate_set_key – API function"
+---
+
+<h2>NAME</h2>
+<p> gnutls_certificate_set_key &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
+<p> <code>int gnutls_certificate_set_key(gnutls_certificate_credentials_t </code><i>res</i><code>, const char ** </code><i>names</i><code>, int </code><i>names_size</i><code>, gnutls_pcert_st * </code><i>pcert_list</i><code>, int </code><i>pcert_list_size</i><code>, gnutls_privkey_t </code><i>key</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_certificate_credentials_t res</p>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
+<dt>const char ** names</p>
+<dd> is an array of DNS name of the certificate (NULL if none)</p>
+<dt>int names_size</p>
+<dd> holds the size of the names list</p>
+<dt>gnutls_pcert_st * pcert_list</p>
+<dd> contains a certificate list (path) for the specified private key</p>
+<dt>int pcert_list_size</p>
+<dd> holds the size of the certificate list</p>
+<dt>gnutls_privkey_t key</p>
+<dd> is a <code>gnutls_privkey_t</code> key</dl>
+<h2>DESCRIPTION</h2>
+<p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once, in case multiple keys/certificates exist for the server. For clients that wants to send more than its own end entity certificate (e.g., also an intermediate CA cert) then put the certificate chain in <i>pcert_list</i> . </p>
+<p> Note that the <i>key</i> and the elements of <i>pcert_list</i> will become part of the credentials structure and must not be deallocated. They will be automatically deallocated when the <i>res</i> structure is deinitialized. </p>
+<p> If that function fails to load the <i>res</i> structure is at an undefined state, it must not be reused to load other keys or certificates.</p>
+<h2>RETURNS</h2>
+<p> <code>GNUTLS_E_SUCCESS</code> (0) on success, or a negative error code.</p>
+<h2>SINCE</h2>
+<p> 3.0</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
+<dd> </code></dl>
+<h2>Index</h2>

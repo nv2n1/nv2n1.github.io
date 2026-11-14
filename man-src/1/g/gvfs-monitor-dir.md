@@ -1,0 +1,24 @@
+---
+title: "gvfs-monitor-dir(1)"
+name: "gvfs-monitor-dir"
+section: "1"
+letter: "g"
+url: "/docs/linux/man/1-gvfs-monitor-dir/"
+description: "gvfs-monitor-dir"
+---
+
+<h2 class="name">NAME</h2>
+<p> gvfs-monitor-dir </p>
+<h2>DESCRIPTION</h2>
+<p> <code>gvfs-monitor-dir</code> has been deprecated and it is redirected to <code>gio monitor</code>.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gio/">gio</a></code>(1), m[blue]<code>GIO commandline tool</code>m[]<font SIZE="-2">[1]</font></p>
+<h2>NOTES</h2>
+<dl>
+<dt> 1.</p>
+<dd> GIO commandline tool</p>
+<dl>
+<dt>
+<dd> <a rel="nofollow" href="https://developer.gnome.org/gio/stable/gio.html">https://developer.gnome.org/gio/stable/gio.html</a></dl>
+</dl>
+<h2>Index</h2>

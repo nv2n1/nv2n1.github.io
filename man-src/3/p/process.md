@@ -1,0 +1,42 @@
+---
+title: "process(3)"
+name: "process"
+section: "3"
+letter: "p"
+url: "/docs/linux/man/3-process/"
+description: "QuantLib::GJRGARCHModel – GJR-GARCH model for the stochastic volatility of an asset."
+---
+
+<p>QuantLib::GJRGARCHModel &#8211; GJR-GARCH model for the stochastic volatility of an asset. </p>
+<h2>Synopsis</h2>
+<pre><code>void generateArguments ()
+
+
+
+Protected Attributes</code></pre>
+<p> Inherits <code>QuantLib::CalibratedModel</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>GJRGARCHModel</code> (const boost::shared_ptr&lt; <code>GJRGARCHProcess</code> &gt; &amp;process) </p>
+<p> <code>Real</code> <code>omega</code> () const </p>
+<p> <code>Real</code> <code>alpha</code> () const </p>
+<p> <code>Real</code> <code>beta</code> () const </p>
+<p> <code>Real</code> <code>gamma</code> () const </p>
+<p> <code>Real</code> <code>lambda</code> () const </p>
+<p> <code>Real</code> <code>v0</code> () const </p>
+<p> boost::shared_ptr&lt; <code>GJRGARCHProcess</code> &gt; <code>process</code> () const</p>
+<h3>Protected Member Functions</h3>
+<pre><code>void generateArguments ()
+
+
+
+Protected Attributes</code></pre>
+<p> boost::shared_ptr&lt; <code>GJRGARCHProcess</code> &gt; <code>process_</code></p>
+<h2>Detailed Description</h2>
+<p>GJR-GARCH model for the stochastic volatility of an asset. </p>
+<p> References: </p>
+<p> Glosten, L., Jagannathan, R., Runkle, D., 1993. Relationship between the expected value and the volatility of the nominal excess return on stocks. Journal of Finance 48, 1779-1801 </p>
+<p> <code>Tests</code></p>
+<dl>
+<dd>calibration is not implemented for GJR-GARCH</dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>

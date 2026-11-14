@@ -1,0 +1,69 @@
+---
+title: "spptrs-f(3)"
+name: "spptrs-f"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-spptrs-f/"
+description: "spptrs.f –"
+---
+
+<p>spptrs.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>spptrs</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br />
+ <i></i><code>SPPTRS</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine spptrs (characterUPLO, integerN, integerNRHS, real, dimension( * )AP, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
+<p><code>SPPTRS</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> SPPTRS solves a system of linear equations A*X = B with a symmetric
+ positive definite matrix A in packed storage using the Cholesky
+ factorization A = U**T*U or A = L*L**T computed by SPPTRF.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>UPLO</i> </p>
+<pre> UPLO is CHARACTER*1
+ = 'U': Upper triangle of A is stored;
+ = 'L': Lower triangle of A is stored.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The order of the matrix A. N &gt;= 0.</pre>
+<p><i>NRHS</i> </p>
+<pre> NRHS is INTEGER
+ The number of right hand sides, i.e., the number of columns
+ of the matrix B. NRHS &gt;= 0.</pre>
+<p><i>AP</i> </p>
+<pre> AP is REAL array, dimension (N*(N+1)/2)
+ The triangular factor U or L from the Cholesky factorization
+ A = U**T*U or A = L*L**T, packed columnwise in a linear
+ array. The j-th column of U or L is stored in the array AP
+ as follows:
+ if UPLO = 'U', AP(i + (j-1)*j/2) = U(i,j) for 1&lt;=i&lt;=j;
+ if UPLO = 'L', AP(i + (j-1)*(2n-j)/2) = L(i,j) for j&lt;=i&lt;=n.</pre>
+<p><i>B</i> </p>
+<pre> B is REAL array, dimension (LDB,NRHS)
+ On entry, the right hand side matrix B.
+ On exit, the solution matrix X.</pre>
+<p><i>LDB</i> </p>
+<pre> LDB is INTEGER
+ The leading dimension of the array B. LDB &gt;= max(1,N).</pre>
+<p><i>INFO</i> </p>
+<pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -i, the i-th argument had an illegal value</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </p>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>November 2011</dl>
+<p> Definition at line 109 of file spptrs.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>

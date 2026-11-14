@@ -1,0 +1,15 @@
+---
+title: "pcre2_code_copy(3)"
+name: "pcre2_code_copy"
+section: "3"
+letter: "p"
+url: "/docs/linux/man/3-pcre2_code_copy/"
+description: "PCRE2 – Perl-compatible regular expressions (revised API)"
+---
+
+<p>PCRE2 &#8211; Perl-compatible regular expressions (revised API)</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pcre2.h&gt;</code></pre>
+<pre><code>pcre2_code *pcre2_code_copy(const pcre2_code *</code><i>code</i>);</pre>
+<h2>Description</h2>
+<p>This function makes a copy of the memory used for a compiled pattern, excluding any memory used by the JIT compiler. Without a subsequent call to <code>pcre2_jit_compile()</code>, the copy can be used only for non-JIT matching. The pointer to the character tables is copied, not the tables themselves (see <code>pcre2_code_copy_with_tables()</code>). The yield of the function is NULL if <i>code</i> is NULL or if sufficient memory cannot be obtained. There is a complete description of the PCRE2 native API in the <code>pcre2api</code> page and a description of the POSIX API in the <code>pcre2posix</code> page. </p>

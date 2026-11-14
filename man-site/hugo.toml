@@ -1,0 +1,30 @@
+baseURL = "https://www.systutorials.com/"
+title = "Linux Man Pages"
+
+# The blog at the site root is built with Jekyll; Hugo builds only the man
+# pages into docs/linux/man/. Turn off kinds that would collide with it.
+disableKinds = ["home", "taxonomy", "term", "rss", "robotsTXT", "404"]
+disableHugoGeneratorInject = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Man page bodies are raw HTML recovered from WordPress.
+      unsafe = true
+
+[module]
+  # The site's own content (none yet) plus the exported man pages, mounted
+  # as the "man" section.
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "../man-src"
+    target = "content/man"
+
+[mediaTypes."application/searchjson"]
+  suffixes = ["json"]
+
+[outputFormats.SearchJSON]
+  mediaType = "application/searchjson"
+  baseName = "search-index"

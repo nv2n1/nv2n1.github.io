@@ -1,0 +1,28 @@
+---
+title: "down_(3)"
+name: "down_"
+section: "3"
+letter: "d"
+url: "/docs/linux/man/3-down_/"
+description: "QuantLib::ExtendedTian – Tian tree: third moment matching, multiplicative approach"
+---
+
+<h2 class="name">NAME</h2>
+<p> QuantLib::ExtendedTian &#8211; Tian tree: third moment matching, multiplicative approach </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;ql/experimental/lattices/extendedbinomialtree.hpp&gt; </p>
+<p> Inherits <code>ExtendedBinomialTree&lt; ExtendedTian &gt;</code>. </p>
+<h3>Public Member Functions</h3>
+<p> <code>ExtendedTian</code> (const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp;, <code>Time</code> end, Size steps, Real strike) </p>
+<p> Real <code>underlying</code> (Size i, Size index) const </p>
+<p> Real <code>probability</code> (Size, Size, Size branch) const </p>
+<h3>Protected Attributes</h3>
+<p> Real <code>up_</code> </p>
+<p> Real <code>down_</code> </p>
+<p> Real <code>pu_</code> </p>
+<p> Real <code>pd_</code> </p>
+<h2>Detailed Description</h2>
+<p> Tian tree: third moment matching, multiplicative approach </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>

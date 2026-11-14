@@ -1,0 +1,216 @@
+---
+title: "sgeesx(3)"
+name: "sgeesx"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-sgeesx/"
+description: "sgeesx.f –"
+---
+
+<h2 class="name">NAME</h2>
+<p> sgeesx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p> subroutine <code>sgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, WR, WI, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, IWORK, LIWORK, BWORK, INFO)<br />
+ <i></i><code> SGEESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine sgeesx (characterJOBVS, characterSORT, logical, externalSELECT, characterSENSE, integerN, real, dimension( lda, * )A, integerLDA, integerSDIM, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvs, * )VS, integerLDVS, realRCONDE, realRCONDV, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, logical, dimension( * )BWORK, integerINFO)</h3>
+<p> <code> SGEESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dt>
+<dd>
+<pre><code>
+ SGEESX computes for an N-by-N real nonsymmetric matrix A, the
+ eigenvalues, the real Schur form T, and, optionally, the matrix of
+ Schur vectors Z.  This gives the Schur factorization A = Z*T*(Z**T).
+ Optionally, it also orders the eigenvalues on the diagonal of the
+ real Schur form so that selected eigenvalues are at the top left;
+ computes a reciprocal condition number for the average of the
+ selected eigenvalues (RCONDE); and computes a reciprocal condition
+ number for the right invariant subspace corresponding to the
+ selected eigenvalues (RCONDV).  The leading columns of Z form an
+ orthonormal basis for this invariant subspace.
+ For further explanation of the reciprocal condition numbers RCONDE
+ and RCONDV, see Section 4.10 of the LAPACK Users' Guide (where
+ these quantities are called s and sep respectively).
+ A real matrix is in real Schur form if it is upper quasi-triangular
+ with 1-by-1 and 2-by-2 blocks. 2-by-2 blocks will be standardized in
+ the form
+           [  a  b  ]
+           [  c  a  ]
+ where b*c &lt; 0. The eigenvalues of such a block are a +- sqrt(bc).
+</code></pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+<dd> <i>JOBVS</i> </p>
+<pre>
+          JOBVS is CHARACTER*1
+          = 'N': Schur vectors are not computed;
+          = 'V': Schur vectors are computed.
+</pre>
+<p> <i>SORT</i> </p>
+<pre>
+          SORT is CHARACTER*1
+          Specifies whether or not to order the eigenvalues on the
+          diagonal of the Schur form.
+          = 'N': Eigenvalues are not ordered;
+          = 'S': Eigenvalues are ordered (see SELECT).
+</pre>
+<p> <i>SELECT</i> </p>
+<p>          SELECT is procedure) LOGICAL FUNCTION of two REAL arguments<br />
+          SELECT must be declared EXTERNAL in the calling subroutine.<br />
+          If SORT = &#8216;S&#8217;, SELECT is used to select eigenvalues to sort<br />
+          to the top left of the Schur form.<br />
+          If SORT = &#8216;N&#8217;, SELECT is not referenced.<br />
+          An eigenvalue WR(j)+sqrt(-1)*WI(j)<br />
+          is selected if SELECT (WR(j), WI(j)) is true;<br />
+          i.e., if either one of a complex conjugate pair of eigenvalues is selected, then both are.Note that a selected complex eigenvalue may no longer satisfy SELECT(WR(j), WI(j)) =.TRUE.after ordering, since ordering may change the value of complex eigenvalues(especially if the eigenvalue is ill &#8211; conditioned);<br />
+          in this case INFO may be set to N + 3(see INFO below).</p>
+<p> <i>SENSE</i> </p>
+<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br />
+          = &#8216;E&#8217;: Computed for average of selected eigenvalues only;<br />
+          = &#8216;V&#8217;: Computed for selected right invariant subspace only;<br />
+          = &#8216;B&#8217;: Computed for both.<br />
+          If SENSE = &#8216;E&#8217;, &#8216;V&#8217; or &#8216;B&#8217;, SORT must equal &#8216;S&#8217;.</p>
+<p> <i>N</i> </p>
+<pre>
+          N is INTEGER
+          The order of the matrix A. N &gt;= 0.
+</pre>
+<p> <i>A</i> </p>
+<pre>
+          A is REAL array, dimension (LDA, N)
+          On entry, the N-by-N matrix A.
+          On exit, A is overwritten by its real Schur form T.
+</pre>
+<p> <i>LDA</i> </p>
+<pre>
+          LDA is INTEGER
+          The leading dimension of the array A.  LDA &gt;= max(1,N).
+</pre>
+<p> <i>SDIM</i> </p>
+<pre>
+          SDIM is INTEGER
+          If SORT = 'N', SDIM = 0.
+          If SORT = 'S', SDIM = number of eigenvalues (after sorting)
+                         for which SELECT is true. (Complex conjugate
+                         pairs for which SELECT is true for either
+                         eigenvalue count as 2.)
+</pre>
+<p> <i>WR</i> </p>
+<pre>
+          WR is REAL array, dimension (N)
+</pre>
+<p> <i>WI</i> </p>
+<pre>
+          WI is REAL array, dimension (N)
+          WR and WI contain the real and imaginary parts, respectively,
+          of the computed eigenvalues, in the same order that they
+          appear on the diagonal of the output Schur form T.  Complex
+          conjugate pairs of eigenvalues appear consecutively with the
+          eigenvalue having the positive imaginary part first.
+</pre>
+<p> <i>VS</i> </p>
+<pre>
+          VS is REAL array, dimension (LDVS,N)
+          If JOBVS = 'V', VS contains the orthogonal matrix Z of Schur
+          vectors.
+          If JOBVS = 'N', VS is not referenced.
+</pre>
+<p> <i>LDVS</i> </p>
+<pre>
+          LDVS is INTEGER
+          The leading dimension of the array VS.  LDVS &gt;= 1, and if
+          JOBVS = 'V', LDVS &gt;= N.
+</pre>
+<p> <i>RCONDE</i> </p>
+<pre>
+          RCONDE is REAL
+          If SENSE = 'E' or 'B', RCONDE contains the reciprocal
+          condition number for the average of the selected eigenvalues.
+          Not referenced if SENSE = 'N' or 'V'.
+</pre>
+<p> <i>RCONDV</i> </p>
+<pre>
+          RCONDV is REAL
+          If SENSE = 'V' or 'B', RCONDV contains the reciprocal
+          condition number for the selected right invariant subspace.
+          Not referenced if SENSE = 'N' or 'E'.
+</pre>
+<p> <i>WORK</i> </p>
+<pre>
+          WORK is REAL array, dimension (MAX(1,LWORK))
+          On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
+</pre>
+<p> <i>LWORK</i> </p>
+<p>LWORK is INTEGER<br />
+        The dimension of the array WORK.LWORK &gt;= max(1, 3 * N).Also,<br />
+    if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217;,<br />
+       LWORK &gt;= N + 2 * SDIM *(N &#8211; SDIM), where SDIM is the number of selected eigenvalues computed by this routine.Note that N + 2 * SDIM *(N &#8211; SDIM) &lt;= N + N *N / 2. Note also that an error is only returned if LWORK &lt; max(1, 3 * N), but if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.For good performance, LWORK must generally be larger.If LWORK = -1, then a workspace query is assumed;<br />
+the routine<br />
+    only calculates upper bounds on the optimal sizes of the<br />
+        arrays WORK and IWORK,<br />
+    returns these values as the first<br />
+        entries of the WORK and IWORK arrays,<br />
+    and no error messages<br />
+            related to LWORK or<br />
+        LIWORK are issued by XERBLA.</p>
+<p> <i>IWORK</i> </p>
+<pre>
+          IWORK is INTEGER array, dimension (MAX(1,LIWORK))
+          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal LIWORK.
+</pre>
+<p> <i>LIWORK</i> </p>
+<p>LIWORK is INTEGER<br />
+        The dimension of the array IWORK.LIWORK &gt;= 1;<br />
+if SENSE<br />
+    = &#8216;V&#8217; or &#8216;B&#8217;, LIWORK &gt;= SDIM *(N &#8211; SDIM).Note that SDIM *(N &#8211; SDIM) &lt;= N *N / 4. Note also that an error is only returned if LIWORK &lt; 1, but if SENSE = &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.If LIWORK = -1, then a workspace query is assumed;<br />
+the<br />
+    routine only calculates upper bounds on the optimal sizes of<br />
+        the arrays WORK and IWORK,<br />
+    returns these values as the first<br />
+        entries of the WORK and IWORK arrays,<br />
+    and no error messages<br />
+            related to LWORK or<br />
+        LIWORK are issued by XERBLA.</p>
+<p> <i>BWORK</i> </p>
+<pre>
+          BWORK is LOGICAL array, dimension (N)
+          Not referenced if SORT = 'N'.
+</pre>
+<p> <i>INFO</i> </p>
+<pre><code>
+INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i - th argument had an illegal value.&gt; 0 : if INFO = i, and i is &lt;= N : the QR algorithm failed to compute all the eigenvalues;
+elements 1 : ILO - 1 and i + 1 : N of WR and WI
+                                     contain those eigenvalues which have converged;
+if JOBVS
+    = 'V', VS contains the transformation which
+               reduces A to its partially converged Schur form.= N + 1 : the eigenvalues could not be reordered because some
+                                                                             eigenvalues were too close to
+                                                                             separate(the problem
+                                                                                          is very ill -
+                                                                                      conditioned);
+= N + 2 : after reordering, roundoff changed values of some
+                                complex eigenvalues so that leading eigenvalues in
+                                    the Schur form no longer satisfy SELECT =.TRUE.This
+                                                                                 could also be caused by underflow due to scaling.
+</code></pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dt>
+<dd> Univ. of Tennessee </p>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dt>
+<dd> November 2011</dl>
+<p> Definition at line 280 of file sgeesx.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code. </p>
+<h2>Index</h2>

@@ -1,0 +1,166 @@
+---
+title: "git-cherry-pick(1)"
+name: "git-cherry-pick"
+section: "1"
+letter: "g"
+url: "/docs/linux/man/1-git-cherry-pick/"
+description: "git-cherry-pick – Apply the changes introduced by some existing commits"
+---
+
+<h2 class="name">NAME</h2>
+<p> git-cherry-pick &#8211; Apply the changes introduced by some existing commits </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git cherry - pick[--edit][-n][-m parent - number][-s][-x][--ff][-S[&lt;keyid&gt;]]&lt;commit&gt;... git cherry - pick(--continue | --skip | --abort | --quit)
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Given one or more existing commits, apply the change each one introduces, recording a new commit for each. This requires your working tree to be clean (no modifications from the HEAD commit). </p>
+<p> When it is not obvious how to apply a change, the following happens: </p>
+<dl>
+<dt>
+<dd> 1. The current branch and <code>HEAD</code> pointer stay at the last commit successfully made.</dl>
+<dl>
+<dt>
+<dd> 2. The <code>CHERRY_PICK_HEAD</code> ref is set to point at the commit that introduced the change that is difficult to apply.</dl>
+<dl>
+<dt>
+<dd> 3. Paths in which the change applied cleanly are updated both in the index file and in your working tree.</dl>
+<dl>
+<dt>
+<dd> 4. For conflicting paths, the index file records up to three versions, as described in the &quot;TRUE MERGE&quot; section of <code><a href="/docs/linux/man/1-git-merge/">git-merge</a></code>(1). The working tree files will include a description of the conflict bracketed by the usual conflict markers <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</dl>
+<dl>
+<dt>
+<dd> 5. No other modifications are made.</dl>
+<p> See <code><a href="/docs/linux/man/1-git-merge/">git-merge</a></code>(1) for some hints on resolving such conflicts.</p>
+<h2>OPTIONS</h2>
+<p> &lt;commit&gt;&#8230;</p>
+<dl>
+<dt>
+<dd> Commits to cherry-pick. For a more complete list of ways to spell commits, see <code><a href="/docs/linux/man/7-gitrevisions/">gitrevisions</a></code>(7). Sets of commits can be passed but no traversal is done by default, as if the <code>&#8211;no-walk</code> option was specified, see <code><a href="/docs/linux/man/1-git-rev-list/">git-rev-list</a></code>(1). Note that specifying a range will feed all &lt;commit&gt;&#8230; arguments to a single revision walk (see a later example that uses <i>maint master..next</i>).</dl>
+<p> -e, &#8211;edit</p>
+<dl>
+<dt>
+<dd> With this option, <i>git cherry-pick</i> will let you edit the commit message prior to committing.</dl>
+<p> &#8211;cleanup=&lt;mode&gt;</p>
+<dl>
+<dt>
+<dd> This option determines how the commit message will be cleaned up before being passed on to the commit machinery. See <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) for more details. In particular, if the <i>&lt;mode&gt;</i> is given a value of <code>scissors</code>, scissors will be appended to <code>MERGE_MSG</code> before being passed on in the case of a conflict.</dl>
+<p> -x</p>
+<dl>
+<dt>
+<dd> When recording the commit, append a line that says &quot;(cherry picked from commit &#8230;)&quot; to the original commit message in order to indicate which commit this change was cherry-picked from. This is done only for cherry picks without conflicts. Do not use this option if you are cherry-picking from your private branch because the information is useless to the recipient. If on the other hand you are cherry-picking between two publicly visible branches (e.g. backporting a fix to a maintenance branch for an older release from a development branch), adding this information can be useful.</dl>
+<p> -r</p>
+<dl>
+<dt>
+<dd> It used to be that the command defaulted to do <code>-x</code> described above, and <code>-r</code> was to disable it. Now the default is not to do <code>-x</code> so this option is a no-op.</dl>
+<p> -m parent-number, &#8211;mainline parent-number</p>
+<dl>
+<dt>
+<dd> Usually you cannot cherry-pick a merge because you do not know which side of the merge should be considered the mainline. This option specifies the parent number (starting from 1) of the mainline and allows cherry-pick to replay the change relative to the specified parent.</dl>
+<p> -n, &#8211;no-commit</p>
+<dl>
+<dt>
+<dd> Usually the command automatically creates a sequence of commits. This flag applies the changes necessary to cherry-pick each named commit to your working tree and the index, without making any commit. In addition, when this option is used, your index does not have to match the HEAD commit. The cherry-pick is done against the beginning state of your index. </p>
+<p> This is useful when cherry-picking more than one commits&#8217; effect to your index in a row.</dl>
+<p> -s, &#8211;signoff</p>
+<dl>
+<dt>
+<dd> Add a <code>Signed-off-by</code> trailer at the end of the commit message. See the signoff option in <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) for more information.</dl>
+<p> -S[&lt;keyid&gt;], &#8211;gpg-sign[=&lt;keyid&gt;], &#8211;no-gpg-sign</p>
+<dl>
+<dt>
+<dd> GPG-sign commits. The <code>keyid</code> argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. <code>&#8211;no-gpg-sign</code> is useful to countermand both <code>commit.gpgSign</code> configuration variable, and earlier <code>&#8211;gpg-sign</code>.</dl>
+<p> &#8211;ff</p>
+<dl>
+<dt>
+<dd> If the current HEAD is the same as the parent of the cherry-pick&#8217;ed commit, then a fast forward to this commit will be performed.</dl>
+<p> &#8211;allow-empty</p>
+<dl>
+<dt>
+<dd> By default, cherry-picking an empty commit will fail, indicating that an explicit invocation of <code>git commit &#8211;allow-empty</code> is required. This option overrides that behavior, allowing empty commits to be preserved automatically in a cherry-pick. Note that when &quot;&#8211;ff&quot; is in effect, empty commits that meet the &quot;fast-forward&quot; requirement will be kept even without this option. Note also, that use of this option only keeps commits that were initially empty (i.e. the commit recorded the same tree as its parent). Commits which are made empty due to a previous commit are dropped. To force the inclusion of those commits use <code>&#8211;keep-redundant-commits</code>.</dl>
+<p> &#8211;allow-empty-message</p>
+<dl>
+<dt>
+<dd> By default, cherry-picking a commit with an empty message will fail. This option overrides that behavior, allowing commits with empty messages to be cherry picked.</dl>
+<p> &#8211;keep-redundant-commits</p>
+<dl>
+<dt>
+<dd> If a commit being cherry picked duplicates a commit already in the current history, it will become empty. By default these redundant commits cause <code>cherry-pick</code> to stop so the user can examine the commit. This option overrides that behavior and creates an empty commit object. Implies <code>&#8211;allow-empty</code>.</dl>
+<p> &#8211;strategy=&lt;strategy&gt;</p>
+<dl>
+<dt>
+<dd> Use the given merge strategy. Should only be used once. See the MERGE STRATEGIES section in <code><a href="/docs/linux/man/1-git-merge/">git-merge</a></code>(1) for details.</dl>
+<p> -X&lt;option&gt;, &#8211;strategy-option=&lt;option&gt;</p>
+<dl>
+<dt>
+<dd> Pass the merge strategy-specific option through to the merge strategy. See <code><a href="/docs/linux/man/1-git-merge/">git-merge</a></code>(1) for details.</dl>
+<p> &#8211;rerere-autoupdate, &#8211;no-rerere-autoupdate</p>
+<dl>
+<dt>
+<dd> Allow the rerere mechanism to update the index with the result of auto-conflict resolution if possible.</dl>
+<h2>SEQUENCER SUBCOMMANDS</h2>
+<p> &#8211;continue</p>
+<dl>
+<dt>
+<dd> Continue the operation in progress using the information in <code>.git/sequencer</code>. Can be used to continue after resolving conflicts in a failed cherry-pick or revert.</dl>
+<p> &#8211;skip</p>
+<dl>
+<dt>
+<dd> Skip the current commit and continue with the rest of the sequence.</dl>
+<p> &#8211;quit</p>
+<dl>
+<dt>
+<dd> Forget about the current operation in progress. Can be used to clear the sequencer state after a failed cherry-pick or revert.</dl>
+<p> &#8211;abort</p>
+<dl>
+<dt>
+<dd> Cancel the operation and return to the pre-sequence state.</dl>
+<h2>EXAMPLES</h2>
+<p> <code>git cherry-pick master</code></p>
+<dl>
+<dt>
+<dd> Apply the change introduced by the commit at the tip of the master branch and create a new commit with this change.</dl>
+<p> <code>git cherry-pick ..master</code>, <code>git cherry-pick ^HEAD master</code></p>
+<dl>
+<dt>
+<dd> Apply the changes introduced by all commits that are ancestors of master but not of HEAD to produce new commits.</dl>
+<p> <code>git cherry-pick maint next ^master</code>, <code>git cherry-pick maint master..next</code></p>
+<dl>
+<dt>
+<dd> Apply the changes introduced by all commits that are ancestors of maint or next, but not master or any of its ancestors. Note that the latter does not mean <code>maint</code> and everything between <code>master</code> and <code>next</code>; specifically, <code>maint</code> will not be used if it is included in <code>master</code>.</dl>
+<p> <code>git cherry-pick master~4 master~2</code></p>
+<dl>
+<dt>
+<dd> Apply the changes introduced by the fifth and third last commits pointed to by master and create 2 new commits with these changes.</dl>
+<p> <code>git cherry-pick -n master~1 next</code></p>
+<dl>
+<dt>
+<dd> Apply to the working tree and the index the changes introduced by the second last commit pointed to by master and by the last commit pointed to by next, but do not create any commit with these changes.</dl>
+<p> <code>git cherry-pick &#8211;ff ..next</code></p>
+<dl>
+<dt>
+<dd> If history is linear and HEAD is an ancestor of next, update the working tree and advance the HEAD pointer to match next. Otherwise, apply the changes introduced by those commits that are in next but not HEAD to the current branch, creating a new commit for each new change.</dl>
+<p> <code>git rev-list &#8211;reverse master &#8212; README | git cherry-pick -n &#8211;stdin</code></p>
+<dl>
+<dt>
+<dd> Apply the changes introduced by all commits on the master branch that touched README to the working tree and index, so the result can be inspected and made into a single new commit if suitable.</dl>
+<p> The following sequence attempts to backport a patch, bails out because the code the patch applies to has changed too much, and then tries again, this time exercising more care about matching up context lines. </p>
+<dl>
+<dt>
+<dd>
+<pre>
+$ git cherry-pick topic^             <code>(1)</code>
+$ git diff                           <code>(2)</code>
+$ git reset --merge ORIG_HEAD        <code>(3)</code>
+$ git cherry-pick -Xpatience topic^  <code>(4)</code>
+</pre>
+</dl>
+<p> <code>1. </code>apply the change that would be shown by <code>git show topic^</code>. In this example, the patch does not apply cleanly, so information about the conflict is written to the index and working tree and no new commit results.<br />
+ <code>2. </code>summarize changes to be reconciled<br />
+ <code>3. </code>cancel the cherry-pick. In other words, return to the pre-cherry-pick state, preserving any local modifications you had in the working tree.<br />
+ <code>4. </code>try to apply the change introduced by <code>topic^</code> again, spending extra time to avoid mistakes based on incorrectly matching context lines. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-git-revert/">git-revert</a></code>(1)</p>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+<h2>Index</h2>

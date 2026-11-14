@@ -5,3 +5,9 @@ permalink: /:title/
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+exclude:
+  - man-src
+  - man-site
+  - tools
+  - vendor
+  - ericzma_wp2.mysql

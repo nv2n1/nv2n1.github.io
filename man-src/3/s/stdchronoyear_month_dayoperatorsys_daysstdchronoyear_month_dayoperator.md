@@ -1,0 +1,70 @@
+---
+title: "stdchronoyear_month_dayoperatorsys_daysstdchronoyear_month_dayoperator(3)"
+name: "stdchronoyear_month_dayoperatorsys_daysstdchronoyear_month_dayoperator"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-stdchronoyear_month_dayoperatorsys_daysstdchronoyear_month_dayoperator/"
+---
+
+std::chrono::year_month_day::operatorsys_days,std::chrono::year_month_day::operator - std::chrono::year_month_day::operatorsys_days,std::chrono::year_month_day::operator
+
+<h2>Synopsis</h2>
+
+<pre><code>constexpr operator std::chrono::sys_days() const noexcept;
+(1)(since C++ 20)
+
+    explicit constexpr
+    operator std::chrono::local_days() const(2)(since C++ 20)
+
+        noexcept;</code></pre> 
+Converts&nbsp;<wbr>*this to a std::chrono::time_point representing the same date as this 
+year_month_day. 1) If ok() is true, the return value holds a count of days from the
+
+std::chrono::system_clock epoch (1970-01-01) to *this. The result is negative if
+
+*this represent a date prior to it.
+
+Otherwise, if the stored year and month are valid (year().ok() &amp;&amp; month().ok() is
+
+true), then the returned value is sys_days(year()/month()/1d) + (day() - 1d).
+
+Otherwise (if year().ok() &amp;&amp; month().ok() is false), the return value is
+
+unspecified.
+
+A sys_days in the range [std::chrono::days{-12687428}, std::chrono::days{11248737}],
+
+when converted to year_month_day and back, yields the same value.
+
+2) Same as (1) but returns local_days instead. Equivalent to return
+
+local_days(sys_days(*this).time_since_epoch());
+.
+
+
+<h2>Notes</h2>
+
+Converting to sys_days and back can be used to normalize a year_month_day that 
+contains an invalid day but a valid year and month: using namespace std::chrono;
+
+auto ymd = 2017y/January/0;
+
+ymd = sys_days{ymd};
+
+// ymd is now 2016y/December/31 
+Normalizing the year and month can be done by adding&nbsp;<wbr>(or subtracting)&nbsp;<wbr>zero 
+std::chrono::months: <pre><code>using namespace std::chrono;
+
+constexpr year_month_day normalize(year_month_day ymd)
+{
+    ymd += months{0};     // normalizes year and month
+    return sys_days{ymd}; // normalizes day
+}
+
+static_assert(normalize(2017y / 33 / 59) == 2019y / 10 / 29);
+</code></pre>
+
+<h2>Example</h2>
+
+&nbsp;<wbr>This section is incomplete 
+&nbsp;<wbr>Reason: no example 

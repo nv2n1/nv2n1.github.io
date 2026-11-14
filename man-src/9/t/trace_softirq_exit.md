@@ -1,0 +1,27 @@
+---
+title: "trace_softirq_exit(9)"
+name: "trace_softirq_exit"
+section: "9"
+letter: "t"
+url: "/docs/linux/man/9-trace_softirq_exit/"
+description: "trace_softirq_exit – called immediately after the softirq handler returns"
+---
+
+<p>trace_softirq_exit &#8211; called immediately after the softirq handler returns</p>
+<h2>Synopsis</h2>
+<pre><code>void trace_softirq_exit(unsigned int vec_nr);</code></pre>
+<h2>Arguments</h2>
+<p><i>vec_nr</i></p>
+<dl>
+<dd>
+<dd>softirq vector number</dl>
+<h2>Description</h2>
+<p>When used in combination with the softirq_entry tracepoint we can determine the softirq handler routine.</p>
+<h2>Authors</h2>
+<p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
+<dl>
+<dd>Author.</dl>
+<p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
+<dl>
+<dd>Author.</dl>
+<h2>Copyright</h2>

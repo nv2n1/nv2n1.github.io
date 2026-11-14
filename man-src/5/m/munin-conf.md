@@ -1,0 +1,140 @@
+---
+title: "munin-conf(5)"
+name: "munin-conf"
+section: "5"
+letter: "m"
+url: "/docs/linux/man/5-munin-conf/"
+description: "munin.conf – Munin configuration file"
+---
+
+<p>munin.conf &#8211; Munin configuration file</p>
+<h2>Description</h2>
+<p>Munin is a group of programs to gather data from hosts, graph them, create html-pages, and optionally warn contacts about any off-limit values. </p>
+<p> The hosts are divided into three groups: One master (could be more, but Munin is not cluster aware so they&#8217;ll likely be independent). The master contacts a number of machines running munin-node, these are called nodes. Each node has data from one or more hosts that is monitored by Munin. </p>
+<p> <i>munin.conf</i> is the configuration file for the Munin master server. The programs using it are munin-update, munin-graph, munin-limits and munin-html. There is also quite extensive documentation of this file at &lt;<a rel="nofollow" href="http://munin-monitoring.org/wiki/munin.conf">http://munin-monitoring.org/wiki/munin.conf</a>&gt; </p>
+<p> The format of the file is simple. A minimal configuration looks something like: </p>
+<pre> [machine1.your.dom]
+ address localhost</pre>
+<p>The default location of <i>munin.conf</i> is <i>/etc/munin/munin.conf</i>. If your placement deviates from this norm, use the &#8220;&#8211;config &lt;file&gt;&#8221;-option when running the munin-* programs. </p>
+<p> Munin-update will expand all node-entries in this file, and save them to <i>/var/lib/munin/datafile</i>, which is used by all programs in the package together with this file. </p>
+<p> Any directives in this file will override directives of the same name in <i>datafile</i>. E.g., if you want to change the title of the &#8220;load&#8221;-graph in the above minimum configuration, you would modify the two bottom lines to: </p>
+<pre> [machine1.your.dom]
+ address localhost
+ load.graph_title Edited title of the load-graph</pre>
+<p>This will override the <tt>&quot;graph_title&quot;</tt> attribute of the <tt>&quot;load&quot;</tt> field/data series while keeping all the others at their default.</p>
+<h2>Global Directives</h2>
+<p>These directives should appear in <i>munin.conf</i> before any host or group definitions.</p>
+<dl>
+<dt><code>dbdir</code> <i>path</i> (Default: <i>/var/lib/munin</i>)</p>
+<dd>Directory for generated database files. Required.</p>
+<dt><code>logdir</code> <i>path</i> (Default: <i>/var/log/munin</i>)</p>
+<dd>Directory for log files. Required.</p>
+<dt><code>htmldir</code> <i>path</i> (Default: <i>/var/www/html/munin</i>)</p>
+<dd>Directory for <font SIZE="-1">HTML</font> pages and graphs. Required.</p>
+<dt><code>rundir</code> <i>path</i> (Default: <i>/var/run/munin</i>)</p>
+<dd>Directory for files tracking munin&#8217;s current running state. Required.</p>
+<dt><code>tmpldir</code> <i>path</i> (Default: <i>/etc/munin/templates</i>)</p>
+<dd>Directory for templates used to generate <font SIZE="-1">HTML</font> pages. Required.</p>
+<dt><code>fork</code> <i>value</i></p>
+<dd>This directive determines whether munin-update fork when gathering information from nodes. Possible values are <tt>&quot;yes&quot;</tt> and <tt>&quot;no&quot;</tt>. Default is <tt>&quot;yes&quot;</tt>. If you set it to <tt>&quot;no&quot;</tt> munin-update will collect data from the nodes in sequence rather than in parallel and this will take considerably more time. Affects: munin-update.</p>
+<dt><code>palette</code> <i>default|old</i></p>
+<dd>Choose palette between the very nice &quot;<tt>&quot;default&quot;</tt>&#8220;, and the good old &#8221;<tt>&quot;old&quot;</tt>&quot;.</p>
+<dt><code>graph_data_size</code> <i>value</i></p>
+<dd>This directive sets the resolution of the <font SIZE="-1">RRD</font> files that are created. Possible values are <tt>&quot;normal&quot;</tt> and <tt>&quot;huge&quot;</tt>. Default is <tt>&quot;normal&quot;</tt>. <tt>&quot;Huge&quot;</tt> is really huge, it saves the complete data with 5 minute resolution for 400 days. This will probably increase the I/O load on your Munin master, and currently has very little benefit. Affects: munin-update.</p>
+<dt><code>graph_strategy</code> <i>value</i></p>
+<dd>Deprecated. (Graphs are now always drawn via <font SIZE="-1">CGI.</font>)</p>
+<dt><code>local_address</code> <i>value</i></p>
+<dd>The local address to connect any node from in case the master has several <font SIZE="-1">IP</font> interfaces. This can be overridden by a group or global directive. Without this directive Munins traffic will originate from the master server according to the <font SIZE="-1">IP</font> routing table.</p>
+<dt><code>max_processes</code> &lt;value&gt;</p>
+<dd>This directive specifies the maximum number of processes to be used for gathering information from nodes. If left blank, munin will use as many processes as necessary. Affects: munin-update.</p>
+<dt><code>max_graph_jobs</code> &lt;value&gt;</p>
+<dd>This directive specifies the maximum number of concurrent rrdgraph proesses started by munin-graph. The default is 6. A setting of 0 disables concurrent processing. Affects: munin-graph</p>
+<dt><code>max_cgi_graph_jobs</code> &lt;value&gt;</p>
+<dd>This directive specifies the maximum number of concurrent munin-cgi-graph jobs. The web server can start a high number of munin-cgi-graph jobs which we can&#8217;t stop, but munin-cgi-graph will throttle down how many rrdgraph calls will be running at the same time to this number. Affects: munin-cgi-graph and munin-fastcgi-graph.</p>
+<dt><code>ssh_command</code> <i>value</i></p>
+<dd>The name of the secure shell command to use. Can be fully qualified, or looked up in <tt>$PATH</tt>. Default: <tt>&quot;ssh&quot;</tt></p>
+<dt><code>ssh_options</code> <i>value</i></p>
+<dd>The <tt>&quot;ssh&quot;</tt> command line options. Defaults: <tt>&quot;-o ChallengeResponseAuthentication=no -o StrictHostKeyChecking=no&quot;</tt>. </p>
+<p> If you need per-host ssh configuration, add these to <i>~/munin/.ssh/config</i></p>
+<dt><code>tls</code> &lt;value&gt;</p>
+<dd>Can have four values. <tt>&quot;paranoid&quot;</tt>, <tt>&quot;enabled&quot;</tt>, <tt>&quot;auto&quot;</tt>, and <tt>&quot;disabled&quot;</tt>. <tt>&quot;Paranoid&quot;</tt> and <tt>&quot;enabled&quot;</tt> require a <font SIZE="-1">TLS</font> connection, while <tt>&quot;disabled&quot;</tt> will not attempt one at all. </p>
+<p> The current default is <tt>&quot;disabled&quot;</tt> because <tt>&quot;auto&quot;</tt> is broken. <tt>&quot;Auto&quot;</tt> causes bad interaction between munin-update and munin-node if the node is unprepared to go to <font SIZE="-1">TLS.</font> </p>
+<p> If you see data dropouts (gaps in graphs) please try to disable <font SIZE="-1">TLS.</font> Affects: munin-update.</p>
+<dt><code>tls_verify_certificate</code> &lt;value&gt;</p>
+<dd>This directive can be <tt>&quot;yes&quot;</tt> or <tt>&quot;no&quot;</tt>. It determines if the remote certificate needs to be signed by a <font SIZE="-1">CA</font> that is known locally. Default is <tt>&quot;no&quot;</tt>. Affects: munin-update.</p>
+<dt><code>tls_private_key</code> &lt;value&gt;</p>
+<dd>This directive sets the location of the private key to be used for <font SIZE="-1">TLS. </font> Default is /etc/munin/munin.pem. The private key and certificate can be stored in the same file. Affects: munin-update.</p>
+<dt><code>tls_certificate</code> &lt;value&gt;</p>
+<dd>This directive sets the location of the <font SIZE="-1">TLS</font> certificate to be used for <font SIZE="-1">TLS. </font> Default is /etc/munin/munin.pem. The private key and certificate can be stored in the same file. Affects: munin-update.</p>
+<dt><code>tls_ca_certificate</code> &lt;value&gt;</p>
+<dd>This directive sets the <font SIZE="-1">CA</font> certificate to be used to verify the node&#8217;s certificate, if tls_verify_certificate is set to <tt>&quot;yes&quot;</tt>. Default is /etc/munin/cacert.pem. Affects: munin-update.</p>
+<dt><code>tls_verify_depth</code> &lt;value&gt;</p>
+<dd>This directive sets how many signings up a chain of signatures <font SIZE="-1">TLS</font> is willing to go to reach a known, trusted <font SIZE="-1">CA</font> when verifying a certificate. Default is <tt>5</tt>. Affects: munin-update.</p>
+<dt><code>tls_match</code> &lt;value&gt;</p>
+<dd>This directive, if defined, searches a dump of the certificate provided by the remote host for the given regex. The dump of the certificate is two lines of the form: </p>
+<pre> Subject Name: /C=c/ST=st/L=l/O=o/OU=ou/CN=cn/emailAddress=email
+ Issuer Name: /C=c/ST=st/O=o/OU=ou/CN=cn/emailAddress=email</pre>
+<p>So, for example, one could match the subject distinguished name by the directive: </p>
+<pre> tls_match Subject Name: /C=c/ST=st/L=l/O=o/OU=ou/CN=cn/emailAddress=email</pre>
+<p>Note that the fields are dumped in the order they appear in the certificate. It&#8217;s best to view the dump of the certificate by running munin-update in debug mode and reviewing the logs. </p>
+<p> Unfortunately, due to the limited functionality of the <font SIZE="-1">SSL</font> module in use, it is not possible to provide finer-grained filtering. By default this value is not defined. Affects: munin-update.</p>
+<dt><font SIZE="-1">FIXME:</font> This section <font SIZE="-1">MAY</font> be complete, it may be missing a directive or two.</p>
+<dd></dl>
+<h2>Host Definitions</h2>
+<p>Host definitions can have several types. In all forms, the definition is used to generate the host name and group for the host, and the following lines define its directives. All following directives apply to that node until another node definition or <font SIZE="-1">EOF. </font> Note that when defining a nodename it is vital that you use a standard <font SIZE="-1">DNS</font> name, as in, one that uses only a-z, &#8216;-&#8216;, and &#8216;.&#8217;. While other characters can be used in a <font SIZE="-1">DNS</font> name, it is against the <font SIZE="-1">RFC,</font> and Munin uses the other characters as delimiters. If they appear in nodenames, unexpected behavior may occur. </p>
+<p> The simplest node definition defines the section for a new node by simply wrapping the <font SIZE="-1">DNS</font> name of the node in brackets, e.g. <tt>&quot;[machine1.your.dom]&quot;</tt>. This will add the node <tt>&quot;machine1.your.dom&quot;</tt> to the group <tt>&quot;your.dom&quot;</tt>. </p>
+<p> The next form of definition is used to define the node and group independently. It follows the form <tt>&quot;[your.dom;machine1.sub.your.dom]&quot;</tt>. This adds the node <tt>&quot;machine1.sub.your.dom&quot;</tt> to the group <tt>&quot;your.dom&quot;</tt>. This can be useful if you have machines you want to put together as a group that are under different domains (as in the given example). This can also solve a problem if your machine is <tt>&quot;machine1.com&quot;</tt>, where having a group of <tt>&quot;com&quot;</tt> makes little sense. </p>
+<p> Multiple groups can be specified by adding more <tt>&quot;groupname;&quot;</tt>s, e.g. <tt>&quot;[servers;local;mail;mail.foo.net]&quot;</tt>, if you need a more hierarchical structure.</p>
+<h2>Node Directives</h2>
+<p>These are directives that can follow a node definition and will apply only to that node.</p>
+<dl>
+<dt><code>address</code> &lt;value&gt;</p>
+<dd>The <font SIZE="-1">IP</font> address of the node. Required.</p>
+<dt><code>local_address</code> &lt;value&gt;</p>
+<dd>The local address to connect to the node from. This overrides a group or global directive.</p>
+<dt><font SIZE="-1">FIXME:</font> This section is incomplete.</p>
+<dd></dl>
+<h2>Plugin Directives</h2>
+<p>These directives should appear after a node definition and are of the form <tt>&quot;plugin.directive &lt;value&gt;&quot;</tt>. Using these directives you can override various directives for a plugin, such as its contacts, and can also be used to create graphs containing data from other plugins.</p>
+<dl>
+<dt><font SIZE="-1">FIXME:</font> This section is (obviously) incomplete.</p>
+<dd></dl>
+<h2>Field Directives</h2>
+<p>These directives should appear after a node definition and are of the form <tt>&quot;plugin.field &lt;value&gt;&quot;</tt>. Using these directives you can override values originally set by plugins on the nodes, such as warning and critical levels or graph names.</p>
+<dl>
+<dt><code>graph_height</code> &lt;value&gt;</p>
+<dd>The graph height for a specific service. Default is <tt>175</tt>. Affects: munin-graph.</p>
+<dt><code>graph_width</code> &lt;value&gt;</p>
+<dd>The graph width for a specific service. Default is <tt>400</tt>. Affects: munin-graph.</p>
+<dt><code>warning</code> &lt;value&gt;</p>
+<dd>The value at which munin-limits will mark the service as being in a warning state. Value can be a single number to specify a limit that must be passed or they can be a comma separated pair of numbers defining a valid range of values. Affects: munin-limits.</p>
+<dt><code>critical</code> &lt;value&gt;</p>
+<dd>The value at which munin-limits will mark the service as being in a critical state. Value can be a single number to specify a limit that must be passed or they can be a comma separated pair of numbers defining a valid range of values Affects: munin-limits.</p>
+<dt><font SIZE="-1">FIXME:</font> This section is incomplete.</p>
+<dd></dl>
+<h2>Examples</h2>
+<p>On all the examples below, all the &#8216;top-level&#8217; parameters (dbdir, logdir, htmldir, tmpldir) are not present. They are only skipped for brevity &#8211; they are needed.</p>
+<h2>Example 1</h2>
+<p>An example with three servers on two domains: </p>
+<pre> [machine1.one.dom]
+ address machine1.one.dom
+ [machine2.one.dom]
+ address 10.33.32.123
+ [machine3.two.dom]
+ address localhost</pre>
+<p>This will appear as two groups (one.dom and two.dom), having respectively two and one node.</p>
+<h2>Example 2</h2>
+<p>Summarize the &#8216;load&#8217;-graphs of the two servers in one.dom, in a &#8216;total load&#8217;-graph. </p>
+<pre> [one.dom;Totals]
+ update no
+ load.graph_title Total load
+ load.sum_load.label load
+ load.sum_load.special_stack machine1=machine1.one.dom:load.load machine2=machine2.one.dom:load.load</pre>
+<h2>Authors</h2>
+<p>Jimmy Olsen, Audun Ytterdal, Brian de Wolf, Nicolai Langfeldt</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 2002-2008 Audun Ytterdal, Jimmy Olsen, Nicolai Langfeldt, Linpro <font SIZE="-1">AS</font> and others. </p>
+<p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
+<p> This program is released under the <font SIZE="-1">GNU</font> General Public License</p>
+<h2>See Also</h2>
+<p>For more information, see the man pages of the individual munin-* programs or the Munin homepage &lt;<a rel="nofollow" href="http://munin-monitoring.org/">http://munin-monitoring.org/</a>&gt;. </p>

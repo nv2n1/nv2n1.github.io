@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+{{ with .Description }}<meta name="description" content="{{ . }}">
+{{ end }}<link rel="canonical" href="{{ .Permalink }}">
+<link rel="stylesheet" href="/docs/linux/man/man.css">
+</head>
+<body>
+<header class="site-head">
+<a class="brand" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Man Pages</a></nav>
+</header>
+<main>
+{{ block "main" . }}{{ end }}
+</main>
+<footer class="site-foot"><a href="/docs/linux/man/">Linux man pages</a> recovered from the SysTutorials archives.</footer>
+</body>
+</html>

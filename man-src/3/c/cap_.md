@@ -1,0 +1,53 @@
+---
+title: "cap_(3)"
+name: "cap_"
+section: "3"
+letter: "c"
+url: "/docs/linux/man/3-cap_/"
+description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-rate coupon."
+---
+
+<h2 class="name">NAME</h2>
+<p> QuantLib::CappedFlooredCoupon &#8211; Capped and/or floored floating-rate coupon. </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;ql/cashflows/capflooredcoupon.hpp&gt; </p>
+<p> Inherits <code>QuantLib::FloatingRateCoupon</code>. </p>
+<p> Inherited by CappedFlooredCmsCoupon, and CappedFlooredIborCoupon. </p>
+<h3>Public Member Functions</h3>
+<p> <code>CappedFlooredCoupon</code> (const boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; &amp;underlying, <code>Rate</code> cap=<code>Null</code>&lt; <code>Rate</code> &gt;(), <code>Rate</code> floor=<code>Null</code>&lt; <code>Rate</code> &gt;()) </p>
+<p> <code>Rate</code> <code>cap</code> () const<br />
+ <i>cap </i><br />
+ <code>Rate</code> <code>floor</code> () const<br />
+ <i>floor </i><br />
+ <code>Rate</code> <code>effectiveCap</code> () const<br />
+ <i>effective cap of fixing </i><br />
+ <code>Rate</code> <code>effectiveFloor</code> () const<br />
+ <i>effective floor of fixing </i> </p>
+<p> <code>Coupon interface</code> </p>
+<p> <code>Rate</code> <code>rate</code> () const<br />
+ <i>accrued rate </i><br />
+ <code>Rate</code> <code>convexityAdjustment</code> () const<br />
+ <i>convexity adjustment </i> </p>
+<p> <code>Observer interface</code> </p>
+<p> void <code>update</code> () </p>
+<h3>Visitability</h3>
+<p> boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying_</code> </p>
+<p> bool <code>isCapped_</code> </p>
+<p> bool <code>isFloored_</code> </p>
+<p> <code>Rate</code> <code>cap_</code> </p>
+<p> <code>Rate</code> <code>floor_</code> </p>
+<p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
+<p> bool <code>isCapped</code> () const </p>
+<p> bool <code>isFloored</code> () const </p>
+<p> void <code>setPricer</code> (const boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; &amp;pricer) </p>
+<h2>Detailed Description</h2>
+<p> Capped and/or floored floating-rate coupon. </p>
+<p> The payoff $ P $ of a capped floating-rate coupon is: [ P = N imes T imes min(a L + b, C). ] The payoff of a floored floating-rate coupon is: [ P = N imes T imes max(a L + b, F). ] The payoff of a collared floating-rate coupon is: [ P = N imes T imes min(max(a L + b, F), C). ] </p>
+<p> where $ N $ is the notional, $ T $ is the accrual time, $ L $ is the floating rate, $ a $ is its gearing, $ b $ is the spread, and $ C $ and $ F $ the strikes. </p>
+<p> They can be decomposed in the following manner. Decomposition of a capped floating rate coupon: [ R = min(a L + b, C) = (a L + b) + min(C &#8211; b &#8211; on&quot; </p>
+<h3>void update () [virtual]</h3>
+<p> This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
+<p> Reimplemented from <code>FloatingRateCoupon</code>. </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>

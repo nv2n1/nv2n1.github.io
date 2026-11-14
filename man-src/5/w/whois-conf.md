@@ -1,0 +1,26 @@
+---
+title: "whois-conf(5)"
+name: "whois-conf"
+section: "5"
+letter: "w"
+url: "/docs/linux/man/5-whois-conf/"
+description: "whois.conf – alternative WHOIS servers list for whois client"
+---
+
+<p>whois.conf &#8211; alternative WHOIS servers list for whois client</p>
+<h2>Synopsis</h2>
+<p><code>/etc/whois.conf</code> </p>
+<h2>Description</h2>
+<p>This file contains a list of WHOIS servers which can augment or override the built-in list of the client. It&#8217;s a plain text file in ASCII encoding. Each line consists of two fields: a pattern to match WHOIS object identifier and a corresponding WHOIS server domain name. Fields are separated by non-empty sequence of space or a tabular characters. A line starting with a hash character is a free comment and it&#8217;s not considered. The pattern is case-insensitive extended regular expression if whois client has been compiled with POSIX regular expressions support. Otherwise, simple case-insensitive suffix comparison against WHOIS object identifier is used. Internationalized domain names (IDN) must be specified in ascii-compatible encoding (ACE) format. </p>
+<h2>Example</h2>
+<p>\.nz$ nz.whois-servers.net<br />
+ # Hangul Korean TLD<br />
+ \.xn--3e0b707e$ whois.kr<br />
+ # Private ASNs<br />
+ ^as645(1[2-9]|2[0-9]|3[0-4])$ whois.example.net </p>
+<h2>Files</h2>
+<p>/etc/whois.conf</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/1-whois/">whois</a></i>(1) </p>
+<h2>Author</h2>
+<p>This manual page was written by Petr Písař &lt;<i>ppisar [at] redhat.com</i>&gt; and is licensed under the terms of the GNU General Public License, version 2 or higher.</p>

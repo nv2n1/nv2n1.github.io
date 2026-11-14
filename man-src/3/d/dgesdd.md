@@ -1,0 +1,167 @@
+---
+title: "dgesdd(3)"
+name: "dgesdd"
+section: "3"
+letter: "d"
+url: "/docs/linux/man/3-dgesdd/"
+description: "dgesdd.f –"
+---
+
+<h2 class="name">NAME</h2>
+<p> dgesdd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p> subroutine <code>dgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br />
+ <i></i><code>DGESDD</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dgesdd (characterJOBZ, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>
+<p> <code>DGESDD</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dt>
+<dd>
+<pre>
+ DGESDD computes the singular value decomposition (SVD) of a real
+ M-by-N matrix A, optionally computing the left and right singular
+ vectors.  If singular vectors are desired, it uses a
+ divide-and-conquer algorithm.
+ The SVD is written
+      A = U * SIGMA * transpose(V)
+ where SIGMA is an M-by-N matrix which is zero except for its
+ min(m,n) diagonal elements, U is an M-by-M orthogonal matrix, and
+ V is an N-by-N orthogonal matrix.  The diagonal elements of SIGMA
+ are the singular values of A; they are real and non-negative, and
+ are returned in descending order.  The first min(m,n) columns of
+ U and V are the left and right singular vectors of A.
+ Note that the routine returns VT = V**T, not V.
+ The divide and conquer algorithm makes very mild assumptions about
+ floating point arithmetic. It will work on machines with a guard
+ digit in add/subtract, or on those binary machines without guard
+ digits which subtract like the Cray X-MP, Cray Y-MP, Cray C-90, or
+ Cray-2. It could conceivably fail on hexadecimal or decimal machines
+ without guard digits, but we know of none.
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+<dd> <i>JOBZ</i> </p>
+<pre><code>
+          JOBZ is CHARACTER*1
+          Specifies options for computing all or part of the matrix U:
+          = 'A':  all M columns of U and all N rows of V**T are
+                  returned in the arrays U and VT;
+          = 'S' : the first min(M, N)
+          columns of U and the first
+          min(M, N)
+          rows of V **T are returned in the arrays U
+              and VT;
+          = 'O' : If M &gt;= N, the first N columns of U are overwritten
+                                 on the array A and all rows of V **T are returned in
+                                     the array VT;
+          otherwise, all columns of U are returned in the
+                         array U and the first M rows of V **T are overwritten
+                             in the array A;
+          = 'N' : no columns of U or rows of V * *T are computed.
+</code></pre>
+<p> <i>M</i> </p>
+<pre>
+          M is INTEGER
+          The number of rows of the input matrix A.  M &gt;= 0.
+</pre>
+<p> <i>N</i> </p>
+<pre>
+          N is INTEGER
+          The number of columns of the input matrix A.  N &gt;= 0.
+</pre>
+<p> <i>A</i> </p>
+<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br />
+    if JOBZ = &#8216;O&#8217;, A is overwritten with the first N columns of U(the left singular vectors, stored columnwise) if M &gt;= N;<br />
+A is overwritten with the first M rows<br />
+    of V **<br />
+    T(the right singular vectors, stored<br />
+                                      rowwise) otherwise.if JOBZ.ne.&#8217;O&#8217;,<br />
+    the contents of A are destroyed.</p>
+<p> <i>LDA</i> </p>
+<pre>
+          LDA is INTEGER
+          The leading dimension of the array A.  LDA &gt;= max(1,M).
+</pre>
+<p> <i>S</i> </p>
+<pre>
+          S is DOUBLE PRECISION array, dimension (min(M,N))
+          The singular values of A, sorted so that S(i) &gt;= S(i+1).
+</pre>
+<p> <i>U</i> </p>
+<p>U is DOUBLE PRECISION array, dimension(LDU, UCOL)<br />
+                                 UCOL = M if JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N;<br />
+UCOL = min(M, N) if JOBZ = &#8216;S&#8217;.If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br />
+if JOBZ<br />
+    = &#8216;S&#8217;, U contains the first min(M, N) columns of U(the left singular vectors, stored columnwise);<br />
+if JOBZ<br />
+= &#8216;O&#8217; and M &gt;= N, or JOBZ = &#8216;N&#8217;, U is not referenced.</p>
+<p> <i>LDU</i> </p>
+<p>LDU is INTEGER<br />
+        The leading dimension of the array U.LDU &gt;= 1;<br />
+if JOBZ<br />
+= &#8216;S&#8217; or &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, LDU &gt;= M.</p>
+<p> <i>VT</i> </p>
+<p>VT is DOUBLE PRECISION array, dimension(LDVT, N) If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br />
+if JOBZ<br />
+    = &#8216;S&#8217;, VT contains the first min(M, N) rows of<br />
+        V **T(the right singular vectors, stored rowwise);<br />
+if JOBZ<br />
+= &#8216;O&#8217; and M &lt; N, or JOBZ = &#8216;N&#8217;, VT is not referenced.</p>
+<p> <i>LDVT</i> </p>
+<p>LDVT is INTEGER<br />
+        The leading dimension of the array VT.LDVT &gt;= 1;<br />
+if JOBZ<br />
+    = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, LDVT &gt;= N;<br />
+if JOBZ<br />
+= &#8216;S&#8217;, LDVT &gt;= min(M, N).</p>
+<p> <i>WORK</i> </p>
+<pre>
+          WORK is DOUBLE PRECISION array, dimension (MAX(1,LWORK))
+          On exit, if INFO = 0, WORK(1) returns the optimal LWORK;
+</pre>
+<p> <i>LWORK</i> </p>
+<pre><code>
+LWORK is INTEGER
+        The dimension of the array WORK.LWORK &gt;= 1. If JOBZ = 'N',
+                                                       LWORK &gt;= 3 * min(M, N) + max(max(M, N), 7 * min(M, N)).If JOBZ = 'O',
+                                                       LWORK &gt;= 3 * min(M, N) +
+                                                                    max(max(M, N), 5 * min(M, N) * min(M, N) + 4 * min(M, N)).If JOBZ = 'S' or 'A' LWORK &gt;= min(M, N) * (6 + 4 * min(M, N)) + max(M, N)
+                                                                                                                                                                                                  For good performance,
+                                                       LWORK should generally be larger.If LWORK = -1 but other input arguments are legal, WORK(1) returns the optimal LWORK.
+</code></pre>
+<p> <i>IWORK</i> </p>
+<pre>
+          IWORK is INTEGER array, dimension (8*min(M,N))
+</pre>
+<p> <i>INFO</i> </p>
+<pre>
+          INFO is INTEGER
+          = 0:  successful exit.
+          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.
+          &gt; 0:  DBDSDC did not converge, updating process failed.
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dt>
+<dd> Univ. of Tennessee </p>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dt>
+<dd> November 2013</dl>
+<p> <code>Contributors: </code></p>
+<dl>
+<dt>
+<dd> Ming Gu and Huan Ren, Computer Science Division, University of California at Berkeley, USA</dl>
+<p> Definition at line 216 of file dgesdd.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code. </p>
+<h2>Index</h2>

@@ -1,0 +1,23 @@
+---
+title: "set_volume_per_voice(3)"
+name: "set_volume_per_voice"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-set_volume_per_voice/"
+description: "set_volume_per_voice – Sets the volume of a voice. Allegro game programming library."
+---
+
+<p>set_volume_per_voice &#8211; Sets the volume of a voice. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+
+void set_volume_per_voice(int scale);</code></pre>
+<h2>Description</h2>
+<p>By default, Allegro will play a centered sample at half volume on both the left and right channel. A sample panned to the far right or left will be played at maximum volume on that channel only. This is done so you can play a single panned sample without distortion. If you play multiple samples at full volume, the mixing process can result in clipping, a noticeable form of distortion. The more samples, the more likely clipping is to occur, and the more clipping, the worse the output will sound. If clipping is a problem &#8211; or if the output is too quiet &#8211; this function can be used to adjust the volume of each voice. You should first check that your speakers are at a reasonable volume, Allegro&#8217;s global volume is at maximum (see set_volume() below), and any other mixers such as the Windows Volume Control are set reasonably. Once you are sure that Allegro&#8217;s output level is unsuitable for your application, use this function to adjust it. Each time you increase the parameter by one, the volume of each voice will halve. For example, if you pass 4, you can play up to 16 centred samples at maximum volume without distortion. If you pass 0 to this function, each centred sample will play at the maximum volume possible without distortion, as will all samples played through a mono driver. Samples at the extreme left and right will distort if played at full volume. If you wish to play panned samples at full volume without distortion, you should pass 1 to this function. Note: this is different from the function&#8217;s behaviour in WIPs 3.9.34, 3.9.35 and 3.9.36. If you used this function under one of these WIPs, you will have to increase your parameter by one to get the same volume. Note: The default behaviour has changed as of Allegro 4.1.15. If you would like the behaviour of earlier versions of Allegro, pass -1 to this function. Allegro will choose a value dependent on the number of voices, so that if you reserve n voices, you can play up to n/2 normalised samples with centre panning without risking distortion. The exception is when you have fewer than 8 voices, where the volume remains the same as for 8 voices. Here are the values, dependent on the number of voices: </p>
+<pre> 1-8 voices - <a href="//www.systutorials.com/docs/linux/man/2-set_volume_per_voice/">set_volume_per_voice</a>(2)
+ 16 voices - <a href="//www.systutorials.com/docs/linux/man/3-set_volume_per_voice/">set_volume_per_voice</a>(3)
+ 32 voices - <a href="//www.systutorials.com/docs/linux/man/4-set_volume_per_voice/">set_volume_per_voice</a>(4)
+ 64 voices - <a href="//www.systutorials.com/docs/linux/man/5-set_volume_per_voice/">set_volume_per_voice</a>(5)</pre>
+<p>Of course this function does not override the volume you specify with play_sample() or voice_set_volume(). It simply alters the overall output of the program. If you play samples at lower volumes, or if they are not normalised, then you can play more of them without distortion. It is recommended that you hard-code the parameter into your program, rather than offering it to the user. The user can alter the volume with the configuration file instead, or you can provide for this with set_volume(). To restore volume per voice to its default behaviour, pass 1. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-reserve_voices/">reserve_voices</a></code>(3), <code><a href="/docs/linux/man/3-set_volume/">set_volume</a></code>(3), <code><a href="/docs/linux/man/3-install_sound/">install_sound</a></code>(3), <code><a href="/docs/linux/man/3-detect_digi_driver/">detect_digi_driver</a></code>(3), <code><a href="/docs/linux/man/3-detect_midi_driver/">detect_midi_driver</a></code>(3) </p>

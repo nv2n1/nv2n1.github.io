@@ -1,0 +1,162 @@
+---
+title: "dlatbs-f(3)"
+name: "dlatbs-f"
+section: "3"
+letter: "d"
+url: "/docs/linux/man/3-dlatbs-f/"
+description: "dlatbs.f –"
+---
+
+<p>dlatbs.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>dlatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />
+ <i></i><code>DLATBS</code> solves a triangular banded system of equations.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dlatbs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )X, double precisionSCALE, double precision, dimension( * )CNORM, integerINFO)</h3>
+<p><code>DLATBS</code> solves a triangular banded system of equations. </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dd>
+<pre> DLATBS solves one of the triangular systems
+ A *x = s*b or A**T*x = s*b
+ with scaling to prevent overflow, where A is an upper or lower
+ triangular band matrix. Here A**T denotes the transpose of A, x and b
+ are n-element vectors, and s is a scaling factor, usually less than
+ or equal to 1, chosen so that the components of x will be less than
+ the overflow threshold. If the unscaled problem will not cause
+ overflow, the Level 2 BLAS routine DTBSV is called. If the matrix A
+ is singular (A(j,j) = 0 for some j), then s is set to 0 and a
+ non-trivial solution to A*x = 0 is returned.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>UPLO</i> </p>
+<pre> UPLO is CHARACTER*1
+ Specifies whether the matrix A is upper or lower triangular.
+ = 'U': Upper triangular
+ = 'L': Lower triangular</pre>
+<p><i>TRANS</i> </p>
+<pre> TRANS is CHARACTER*1
+ Specifies the operation applied to A.
+ = 'N': Solve A * x = s*b (No transpose)
+ = 'T': Solve A**T* x = s*b (Transpose)
+ = 'C': Solve A**T* x = s*b (Conjugate transpose = Transpose)</pre>
+<p><i>DIAG</i> </p>
+<pre> DIAG is CHARACTER*1
+ Specifies whether or not the matrix A is unit triangular.
+ = 'N': Non-unit triangular
+ = 'U': Unit triangular</pre>
+<p><i>NORMIN</i> </p>
+<pre> NORMIN is CHARACTER*1
+ Specifies whether CNORM has been set or not.
+ = 'Y': CNORM contains the column norms on entry
+ = 'N': CNORM is not set on entry. On exit, the norms will
+ be computed and stored in CNORM.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The order of the matrix A. N &gt;= 0.</pre>
+<p><i>KD</i> </p>
+<pre> KD is INTEGER
+ The number of subdiagonals or superdiagonals in the
+ triangular matrix A. KD &gt;= 0.</pre>
+<p><i>AB</i> </p>
+<pre> AB is DOUBLE PRECISION array, dimension (LDAB,N)
+ The upper or lower triangular band matrix A, stored in the
+ first KD+1 rows of the array. The j-th column of A is stored
+ in the j-th column of the array AB as follows:
+ if UPLO = 'U', AB(kd+1+i-j,j) = A(i,j) for max(1,j-kd)&lt;=i&lt;=j;
+ if UPLO = 'L', AB(1+i-j,j) = A(i,j) for j&lt;=i&lt;=min(n,j+kd).</pre>
+<p><i>LDAB</i> </p>
+<pre> LDAB is INTEGER
+ The leading dimension of the array AB. LDAB &gt;= KD+1.</pre>
+<p><i>X</i> </p>
+<pre> X is DOUBLE PRECISION array, dimension (N)
+ On entry, the right hand side b of the triangular system.
+ On exit, X is overwritten by the solution vector x.</pre>
+<p><i>SCALE</i> </p>
+<pre> SCALE is DOUBLE PRECISION
+ The scaling factor s for the triangular system
+ A * x = s*b or A**T* x = s*b.
+ If SCALE = 0, the matrix A is singular or badly scaled, and
+ the vector x is an exact or approximate solution to A*x = 0.</pre>
+<p><i>CNORM</i> </p>
+<pre> CNORM is DOUBLE PRECISION array, dimension (N)
+ If NORMIN = 'Y', CNORM is an input argument and CNORM(j)
+ contains the norm of the off-diagonal part of the j-th column
+ of A. If TRANS = 'N', CNORM(j) must be greater than or equal
+ to the infinity-norm, and if TRANS = 'T' or 'C', CNORM(j)
+ must be greater than or equal to the 1-norm.
+ If NORMIN = 'N', CNORM is an output argument and CNORM(j)
+ returns the 1-norm of the offdiagonal part of the j-th column
+ of A.</pre>
+<p><i>INFO</i> </p>
+<pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -k, the k-th argument had an illegal value</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Univ. of Tennessee </p>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dd>September 2012</dl>
+<p> <code>Further Details: </code></p>
+<dl COMPACT>
+<dd>
+<pre> A rough bound on x is computed; if that is less than overflow, DTBSV
+ is called, otherwise, specific code is used which checks for possible
+ overflow or divide-by-zero at every operation.
+ A columnwise scheme is used for solving A*x = b. The basic algorithm
+ if A is lower triangular is
+ x[1:n] := b[1:n]
+ for j = 1, ..., n
+ x(j) := x(j) / A(j,j)
+ x[j+1:n] := x[j+1:n] - x(j) * A[j+1:n,j]
+ end
+ Define bounds on the components of x after j iterations of the loop:
+ M(j) = bound on x[1:j]
+ G(j) = bound on x[j+1:n]
+ Initially, let M(0) = 0 and G(0) = max{x(i), i=1,...,n}.
+ Then for iteration j+1 we have
+ M(j+1) &lt;= G(j) / | A(j+1,j+1) |
+ G(j+1) &lt;= G(j) + M(j+1) * | A[j+2:n,j+1] |
+ &lt;= G(j) ( 1 + CNORM(j+1) / | A(j+1,j+1) | )
+ where CNORM(j+1) is greater than or equal to the infinity-norm of
+ column j+1 of A, not counting the diagonal. Hence
+ G(j) &lt;= G(0) product ( 1 + CNORM(i) / | A(i,i) | )
+ 1&lt;=i&lt;=j
+ and
+ |x(j)| &lt;= ( G(0) / |A(j,j)| ) product ( 1 + CNORM(i) / |A(i,i)| )
+ 1&lt;=i&lt; j
+ Since |x(j)| &lt;= M(j), we use the Level 2 BLAS routine DTBSV if the
+ reciprocal of the largest M(j), j=1,..,n, is larger than
+ max(underflow, 1/overflow).
+ The bound on x(j) is also used to determine when a step in the
+ columnwise method can be performed without fear of overflow. If
+ the computed bound is greater than a large constant, x is scaled to
+ prevent overflow, but if the bound overflows, x is set to 0, x(j) to
+ 1, and scale to 0, and a non-trivial solution to A*x = 0 is found.
+ Similarly, a row-wise scheme is used to solve A**T*x = b. The basic
+ algorithm for A upper triangular is
+ for j = 1, ..., n
+ x(j) := ( b(j) - A[1:j-1,j]**T * x[1:j-1] ) / A(j,j)
+ end
+ We simultaneously compute two bounds
+ G(j) = bound on ( b(i) - A[1:i-1,i]**T * x[1:i-1] ), 1&lt;=i&lt;=j
+ M(j) = bound on x(i), 1&lt;=i&lt;=j
+ The initial values are G(0) = 0, M(0) = max{b(i), i=1,..,n}, and we
+ add the constraint G(j) &gt;= G(j-1) and M(j) &gt;= M(j-1) for j &gt;= 1.
+ Then the bound on x(j) is
+ M(j) &lt;= M(j-1) * ( 1 + CNORM(j) ) / | A(j,j) |
+ &lt;= M(0) * product ( ( 1 + CNORM(i) ) / |A(i,i)| )
+ 1&lt;=i&lt;=j
+ and we can safely call DTBSV if 1/<a href="//www.systutorials.com/docs/linux/man/n-M/">M</a>(n) and 1/<a href="//www.systutorials.com/docs/linux/man/n-G/">G</a>(n) are both greater
+ than max(underflow, 1/overflow).</pre>
+<p>&nbsp;<wbr></dl>
+<p> Definition at line 242 of file dlatbs.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>

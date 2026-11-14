@@ -1,0 +1,55 @@
+---
+title: "registerwith(3)"
+name: "registerwith"
+section: "3"
+letter: "r"
+url: "/docs/linux/man/3-registerwith/"
+description: "QuantLib::Observer – Object that gets notified when a given observable changes."
+---
+
+<p>QuantLib::Observer &#8211; Object that gets notified when a given observable changes. </p>
+<h2>Synopsis</h2>
+<pre><code>Observer (const Observer &amp;)
+
+
+
+Observer &amp; operator= (const Observer &amp;)
+
+
+
+void registerWith (const boost::shared_ptr&lt; Observable &gt; &amp;)
+
+
+
+void unregisterWith (const boost::shared_ptr&lt; Observable &gt; &amp;)
+
+
+
+virtual void update ()=0</code></pre>
+<p> Inherited by <code>BootstrapHelper&lt; DefaultProbabilityTermStructure &gt;</code>, <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>, <code>BootstrapHelper&lt; YoYInflationTermStructure &gt;</code>, <code>BootstrapHelper&lt; ZeroInflationTermStructure &gt;</code>, <code>GenericEngine&lt; Arguments, Results &gt;</code>, <code>GenericEngine&lt; ArgumentsType, ResultsType &gt;</code>, <code>GenericEngine&lt; BarrierOption::arguments, BarrierOption::results &gt;</code>, <code>GenericEngine&lt; BasketOption::arguments, BasketOption::results &gt;</code>, <code>GenericEngine&lt; Bond::arguments, Bond::results &gt;</code>, <code>GenericEngine&lt; CallableBond::arguments, CallableBond::results &gt;</code>, <code>GenericEngine&lt; CapFloor::arguments, CapFloor::results &gt;</code>, <code>GenericEngine&lt; CliquetOption::arguments, CliquetOption::results &gt;</code>, <code>GenericEngine&lt; ContinuousAveragingAsianOption::arguments, ContinuousAveragingAsianOption::results &gt;</code>, <code>GenericEngine&lt; ContinuousFixedLookbackOption::arguments, ContinuousFixedLookbackOption::results &gt;</code>, <code>GenericEngine&lt; ContinuousFloatingLookbackOption::arguments, ContinuousFloatingLookbackOption::results &gt;</code>, <code>GenericEngine&lt; ConvertibleBond::option::arguments, ConvertibleBond::option::results &gt;</code>, <code>GenericEngine&lt; CreditDefaultSwap::arguments, CreditDefaultSwap::results &gt;</code>, <code>GenericEngine&lt; DiscreteAveragingAsianOption::arguments, DiscreteAveragingAsianOption::results &gt;</code>, <code>GenericEngine&lt; DividendBarrierOption::arguments, DividendBarrierOption::results &gt;</code>, <code>GenericEngine&lt; DividendVanillaOption::arguments, DividendVanillaOption::results &gt;</code>, <code>GenericEngine&lt; EnergyCommodity::arguments, EnergyCommodity::results &gt;</code>, <code>GenericEngine&lt; EverestOption::arguments, EverestOption::results &gt;</code>, <code>GenericEngine&lt; ForwardOptionArguments&lt; VanillaOption::arguments &gt;, VanillaOption::results &gt;</code>, <code>GenericEngine&lt; HimalayaOption::arguments, HimalayaOption::results &gt;</code>, <code>GenericEngine&lt; Instr::arguments, QuantoOptionResults&lt; Instr::results &gt; &gt;</code>, <code>GenericEngine&lt; MultiAssetOption::arguments, MultiAssetOption::results &gt;</code>, <code>GenericEngine&lt; OneAssetOption::arguments, OneAssetOption::results &gt;</code>, <code>GenericEngine&lt; PagodaOption::arguments, PagodaOption::results &gt;</code>, <code>GenericEngine&lt; PathMultiAssetOption::arguments, PathMultiAssetOption::results &gt;</code>, <code>GenericEngine&lt; Swap::arguments, Swap::results &gt;</code>, <code>GenericEngine&lt; Swaption::arguments, Swaption::results &gt;</code>, <code>GenericEngine&lt; SyntheticCDO::arguments, SyntheticCDO::results &gt;</code>, <code>GenericEngine&lt; VanillaOption::arguments, VanillaOption::results &gt;</code>, <code>GenericEngine&lt; VanillaSwap::arguments, VanillaSwap::results &gt;</code>, <code>GenericEngine&lt; VarianceOption::arguments, VarianceOption::results &gt;</code>, <code>GenericEngine&lt; VarianceSwap::arguments, VarianceSwap::results &gt;</code>, <code>BootstrapHelper&lt; TS &gt;</code>, <code>CalibratedModel</code>, <code>CalibrationHelper</code>, <code>Claim</code>, <code>CommodityIndex</code>, <code>CompositeQuote&lt; BinaryFunction &gt;</code>, CotSwapToFwdAdapterFactory, <code>DerivedQuote&lt; UnaryFunction &gt;</code>, FlatVolFactory, <code>FloatingRateCoupon</code>, <code>FloatingRateCouponPricer</code> [virtual], <code>ForwardValueQuote</code>, <code>FuturesConvAdjustmentQuote</code>, FwdToCotSwapAdapterFactory, <code>GenericEngine&lt; ArgumentsType, ResultsType &gt;</code>, Link, <code>InflationIndex</code>, <code>InterestRateIndex</code>, <code>LastFixingQuote</code>, <code>LazyObject</code> [virtual], <code>SmileSection</code> [virtual], <code>StochasticProcess</code>, and <code>TermStructure</code> [virtual].</p>
+<h3>Public Member Functions</h3>
+<pre><code>Observer (const Observer &amp;)
+
+
+
+Observer &amp; operator= (const Observer &amp;)
+
+
+
+void registerWith (const boost::shared_ptr&lt; Observable &gt; &amp;)
+
+
+
+void unregisterWith (const boost::shared_ptr&lt; Observable &gt; &amp;)
+
+
+
+virtual void update ()=0</code></pre>
+<h2>Detailed Description</h2>
+<p>Object that gets notified when a given observable changes.</p>
+<h2>Member Function Documentation</h2>
+<h3>virtual void update () [pure virtual]</h3>
+<p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
+<p> Implemented in <code>CappedFlooredCoupon</code>, <code>FloatingRateCouponPricer</code>, <code>DigitalCoupon</code>, <code>FloatingRateCoupon</code>, <code>CommodityIndex</code>, <code>AbcdAtmVolCurve</code>, <code>ExtendedBlackVarianceCurve</code>, <code>ExtendedBlackVarianceSurface</code>, <code>SabrVolSurface</code>, <code>InflationIndex</code>, <code>InterestRateIndex</code>, <code>Claim</code>, <code>ExtendedDiscountCurve</code>, <code>CalibrationHelper</code>, <code>CalibratedModel</code>, <code>LazyObject</code>, <code>GenericEngine&lt; ArgumentsType, ResultsType &gt;</code>, <code>LatticeShortRateModelEngine&lt; Arguments, Results &gt;</code>, <code>AnalyticHestonHullWhiteEngine</code>, <code>GeneralizedBlackScholesProcess</code>, <code>HybridHestonHullWhiteProcess</code>, <code>CompositeQuote&lt; BinaryFunction &gt;</code>, <code>DerivedQuote&lt; UnaryFunction &gt;</code>, <code>ForwardSwapQuote</code>, <code>ForwardValueQuote</code>, <code>FuturesConvAdjustmentQuote</code>, <code>LastFixingQuote</code>, <code>StochasticProcess</code>, <code>TermStructure</code>, <code>BootstrapHelper&lt; TS &gt;</code>, <code>PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</code>, <code>PiecewiseYoYInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code>, <code>PiecewiseZeroInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code>, <code>CapFloorTermVolCurve</code>, <code>CapFloorTermVolSurface</code>, <code>StrippedOptionletAdapter</code>, <code>SmileSection</code>, <code>CmsMarket</code>, <code>FittedBondDiscountCurve</code>, <code>FlatForward</code>, <code>PiecewiseYieldCurve&lt; Traits, Interpolator, Bootstrap &gt;</code>, <code>PiecewiseZeroSpreadedTermStructure</code>, <code>RelativeDateRateHelper</code>, <code>GenericEngine&lt; ContinuousFixedLookbackOption::arguments, ContinuousFixedLookbackOption::results &gt;</code>, <code>GenericEngine&lt; DividendBarrierOption::arguments, DividendBarrierOption::results &gt;</code>, <code>GenericEngine&lt; DiscreteAveragingAsianOption::arguments, DiscreteAveragingAsianOption::results &gt;</code>, <code>GenericEngine&lt; VarianceOption::arguments, VarianceOption::results &gt;</code>, <code>GenericEngine&lt; CallableBond::arguments, CallableBond::results &gt;</code>, <code>GenericEngine&lt; Swap::arguments, Swap::results &gt;</code>, <code>GenericEngine&lt; Bond::arguments, Bond::results &gt;</code>, <code>GenericEngine&lt; EnergyCommodity::arguments, EnergyCommodity::results &gt;</code>, <code>GenericEngine&lt; Arguments, Results &gt;</code>, <code>GenericEngine&lt; Swaption::arguments, Swaption::results &gt;</code>, <code>GenericEngine&lt; CreditDefaultSwap::arguments, CreditDefaultSwap::results &gt;</code>, <code>GenericEngine&lt; VanillaSwap::arguments, VanillaSwap::results &gt;</code>, <code>GenericEngine&lt; CapFloor::arguments, CapFloor::results &gt;</code>, <code>GenericEngine&lt; HimalayaOption::arguments, HimalayaOption::results &gt;</code>, <code>GenericEngine&lt; BasketOption::arguments, BasketOption::results &gt;</code>, <code>GenericEngine&lt; SyntheticCDO::arguments, SyntheticCDO::results &gt;</code>, <code>GenericEngine&lt; CliquetOption::arguments, CliquetOption::results &gt;</code>, <code>GenericEngine&lt; ForwardOptionArguments&lt; VanillaOption::arguments &gt;, VanillaOption::results &gt;</code>, <code>GenericEngine&lt; VanillaOption::arguments, VanillaOption::results &gt;</code>, <code>GenericEngine&lt; OneAssetOption::arguments, OneAssetOption::results &gt;</code>, <code>GenericEngine&lt; VarianceSwap::arguments, VarianceSwap::results &gt;</code>, <code>GenericEngine&lt; PagodaOption::arguments, PagodaOption::results &gt;</code>, <code>GenericEngine&lt; ContinuousFloatingLookbackOption::arguments, ContinuousFloatingLookbackOption::results &gt;</code>, <code>GenericEngine&lt; EverestOption::arguments, EverestOption::results &gt;</code>, <code>GenericEngine&lt; MultiAssetOption::arguments, MultiAssetOption::results &gt;</code>, <code>GenericEngine&lt; ArgumentsType, ResultsType &gt;</code>, <code>GenericEngine&lt; Instr::arguments, QuantoOptionResults&lt; Instr::results &gt; &gt;</code>, <code>GenericEngine&lt; BarrierOption::arguments, BarrierOption::results &gt;</code>, <code>GenericEngine&lt; DividendVanillaOption::arguments, DividendVanillaOption::results &gt;</code>, <code>GenericEngine&lt; ContinuousAveragingAsianOption::arguments, ContinuousAveragingAsianOption::results &gt;</code>, <code>GenericEngine&lt; PathMultiAssetOption::arguments, PathMultiAssetOption::results &gt;</code>, <code>GenericEngine&lt; ConvertibleBond::option::arguments, ConvertibleBond::option::results &gt;</code>, <code>LatticeShortRateModelEngine&lt; CapFloor::arguments, CapFloor::results &gt;</code>, <code>LatticeShortRateModelEngine&lt; Swaption::arguments, Swaption::results &gt;</code>, <code>LatticeShortRateModelEngine&lt; VanillaSwap::arguments, VanillaSwap::results &gt;</code>, <code>LatticeShortRateModelEngine&lt; CallableBond::arguments, CallableBond::results &gt;</code>, <code>BootstrapHelper&lt; YoYInflationTermStructure &gt;</code>, <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>, <code>BootstrapHelper&lt; DefaultProbabilityTermStructure &gt;</code>, and <code>BootstrapHelper&lt; ZeroInflationTermStructure &gt;</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>

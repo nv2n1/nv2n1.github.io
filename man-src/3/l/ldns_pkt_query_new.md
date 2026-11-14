@@ -1,0 +1,53 @@
+---
+title: "ldns_pkt_query_new(3)"
+name: "ldns_pkt_query_new"
+section: "3"
+letter: "l"
+url: "/docs/linux/man/3-ldns_pkt_query_new/"
+description: "ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, ldns_pkt_query_new_frm_str, ldns_pkt_reply_type"
+---
+
+<h2>NAME</h2>
+<p> ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, ldns_pkt_query_new_frm_str, ldns_pkt_reply_type </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;stdint.h&gt;<br />
+ #include &lt;stdbool.h&gt; </p>
+<p> #include &lt;ldns/ldns.h&gt; </p>
+<p> ldns_pkt* ldns_pkt_new(); </p>
+<p> void ldns_pkt_free(ldns_pkt *packet); </p>
+<p> void ldns_pkt_print(FILE *output, const ldns_pkt *pkt); </p>
+<p> ldns_pkt* ldns_pkt_query_new(ldns_rdf *rr_name, ldns_rr_type rr_type, ldns_rr_class rr_class, uint16_t flags); </p>
+<p> ldns_status ldns_pkt_query_new_frm_str(ldns_pkt **p, const char *rr_name, ldns_rr_type rr_type, ldns_rr_class rr_class , uint16_t flags); </p>
+<p> ldns_pkt_type ldns_pkt_reply_type(ldns_pkt *p); </p>
+<h2>DESCRIPTION</h2>
+<dl>
+<dt> <i>ldns_pkt_new</i>()</p>
+<dd>allocates and initializes a ldns_pkt structure. .br Returns pointer to the new packet</dl>
+<dl>
+<dt> <i>ldns_pkt_free</i>()</p>
+<dd>frees the packet structure and all data that it contains. .br <code>packet</code>: The packet structure to free .br Returns void</dl>
+<dl>
+<dt> <i>ldns_pkt_print</i>()</p>
+<dd>Prints the data in the DNS packet to the given file stream (in presentation format) </p>
+<p> .br <code>output</code>: the file stream to print to .br <code>pkt</code>: the packet to print .br Returns void</dl>
+<dl>
+<dt> <i>ldns_pkt_query_new</i>()</p>
+<dd>creates a packet with a query in it for the given name, type and class. .br <code>rr_name</code>: the name to query for .br <code>rr_type</code>: the type to query for .br <code>rr_class</code>: the class to query for .br <code>flags</code>: packet flags .br Returns ldns_pkt* a pointer to the new pkt</dl>
+<dl>
+<dt> <i>ldns_pkt_query_new_frm_str</i>()</p>
+<dd>creates a query packet for the given name, type, class. .br <code>p</code>: the packet to be returned .br <code>rr_name</code>: the name to query for (as string) .br <code>rr_type</code>: the type to query for .br <code>rr_class</code>: the class to query for .br <code>flags</code>: packet flags .br Returns LDNS_STATUS_OK or a ldns_status mesg with the error</dl>
+<dl>
+<dt> <i>ldns_pkt_reply_type</i>()</p>
+<dd>looks inside the packet to determine what kind of packet it is, AUTH, NXDOMAIN, REFERRAL, etc. .br <code>p</code>: the packet to examine .br Returns the type of packet</dl>
+<h2>AUTHOR</h2>
+<p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
+<h2>REPORTING BUGS</h2>
+<p> Please report bugs to ldns-team [at] nlnetlabs.nl or in our bugzilla at <a rel="nofollow" href="http://www.nlnetlabs.nl/bugs/index.html">http://www.nlnetlabs.nl/bugs/index.html</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2004 &#8211; 2006 NLnet Labs. </p>
+<p> Licensed under the BSD License. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<h2>SEE ALSO</h2>
+<p> <i>ldns_pkt</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
+<h2>REMARKS</h2>
+<p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
+<h2>Index</h2>

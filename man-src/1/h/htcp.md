@@ -1,0 +1,86 @@
+---
+title: "htcp(1)"
+name: "htcp"
+section: "1"
+letter: "h"
+url: "/docs/linux/man/1-htcp/"
+description: "htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping – file transfers and queries via HTTP/HTTPS/SiteCast"
+---
+
+<h2>NAME</h2>
+<p> <code>htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping</code> &#8211; file transfers and queries via HTTP/HTTPS/SiteCast</p>
+<h2>SYNOPSIS</h2>
+<p> <code>htcp, htmv</code> [options] Source-URL[s] Destination-URL </p>
+<p> <code>htrm, htls, htll, htmkir, htfind</code> [options] Target-URL[s] </p>
+<p> <code>htping</code> [options]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>htcp</code> is a client to fetch files or directory listings from remote servers using HTTP or HTTPS, or to put or delete files or directories onto remote servers using HTTPS. htcp is similar to <a href="/docs/linux/man/1-scp/">scp</a>(1), but uses HTTP/HTTPS rather than ssh as its transfer protocol. htcp can also use the HTCP protocol to query HTTP(S) fileservers via SiteCast. </p>
+<p> When talking to a fileserver with HTTPS, htcp can run &quot;anonymously&quot;, with a standard X.509 user certificate and key, or with a GSI Proxy. This makes htcp very useful in Grid environments where many users have certificates and where jobs and users have access to GSI proxies. </p>
+<h2>URLs</h2>
+<p> htcp supports the file:, http: and https: URL schemes as sources and destinations. If no scheme is given, the URL scheme is assumed to be file: and relative to the current directory if not an absolute path. </p>
+<p> If multiple sources are given during a copy, they will be used in turn and the destination must be a directory (directories are indicated by a trailing /) However, source and destination cannot both refer to remote servers. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-v/&#8211;verbose</p>
+<dd> Turn on debugging information. Used once, this option will enable htcp&#8217;s messages to stderr. Used twice, will also enable the underlying libcurl messages. </p>
+<dt>&#8211;delete</p>
+<dd> Instead of copying files, delete all the URLs given on the command line. Calling the program as htrm has the same effect. </p>
+<dt>&#8211;list</p>
+<dd> Instead of copying files, output lists of files located in the URL-directories given on the command line. Calling the program as htls has the same effect. </p>
+<dt>&#8211;long-list</p>
+<dd> Instead of copying files, output long listings of files located in the URL-directories given on the command line. If available, the size in bytes and modification time of each file is given. Calling the program as htll has the same effect. </p>
+<dt>&#8211;mkdir</p>
+<dd> Instead of copying files, attempt to create a directory on a remote server with HTTP PUT. The server must support the convention that PUT to a URL with a trailing slash means create a directory. No file body is sent. Calling the program as htmkdir has the same effect. </p>
+<dt>&#8211;move</p>
+<dd> Move/rename files on a single remote server, given the two, absolute URLs of the remote file names. Server must support HTTP/WebDAV MOVE. Calling the program as htmv has the same effect. </p>
+<dt>&#8211;ping</p>
+<dd> Query specified multicast groups with the HTCP NOP (&quot;No Operation&quot;) code. SiteCast enabled servers will respond immediately with a NOP reply, and all of the responses will be listed, with the round trip time in milliseconds. Any waiting times specified in the &#8211;groups option will be ignored. Calling the program as htping has the same effect. (&#8211;groups must be used for this option to work.) </p>
+<dt>&#8211;find</p>
+<dd> Query specified multicast groups with the HTCP TST code. SiteCast enabled servers will respond with TST replies if they have the files corresponding to the given SiteCast target URL(s). All of the transfer URLs returned will be listed. Waiting times specified in the &#8211;groups option will be used to space out the multicast queries, but the program listens for responses continuously. Calling the program as htfind has the same effect. (&#8211;groups must be used for this option to work.) </p>
+<dt>&#8211;groups &lt;IP Groups&gt;</p>
+<dd> IP multicast groups to use for SiteCast queries. IP Groups is a comma separated list of groups, in the format: nnn.nnn.nnn.nnn:port[:ttl[:seconds]] The IP number and port must be specified. The IP time-to-live, ttl, controls how many networks the multicast packets may pass through &#8211; the default, 1, limits packets to the local network. Multiple groups may be specified, separated by commas. If multiple groups are specified, then seconds is the time to wait before making the next multicast &#8211; 1 second is the default. </p>
+<dt>&#8211;timeout &lt;seconds&gt;</p>
+<dd> A request timeout used for multicast ping. </p>
+<dt>&#8211;anon</p>
+<dd> Do not attempt to use X.509 user certificates or GSI proxies to authenticate to the remote HTTPS server. This means you are &quot;anonymous&quot;, but the server&#8217;s identity may still be verified and the connection is still encrypted. </p>
+<dt>&#8211;cert &lt;X.509 cert path&gt; and &#8211;key &lt;X.509 key path&gt;</p>
+<dd> Path to the PEM-encoded X.509 or GSI Proxy user certificate and key to use for HTTPS connections, instead of &quot;anonymous mode.&quot; If only one of &#8211;key or &#8211;cert is given, then that will be tried for both. If neither is given, then the following order of precedence is used: the file name held by the variable X509_USER_PROXY; the file /tmp/x509up_uID (with Unix UID equal to ID); the file names held by X509_USER_CERT / X509_USER_KEY; the files ~/.globus/usercert.pem and ~/.globus/userkey.pem (where ~/ is the home directory of the user.) </p>
+<dt>&#8211;capath &lt;X.509 CA root certs directory or file&gt;</p>
+<dd> Path to the PEM-encoded CA root certificates to use when verifying remote servers&#8217; host certificates in HTTPS connections. Ideally this should be a directory of hash.0 files as described in the OpenSSL <a href="/docs/linux/man/1-verify/">verify</a>(1) man page, but a file may be used instead. If &#8211;capath is not given, the value of the environment variable X509_CERT_DIR will be tried. If this is not valid, then /etc/grid-security/certificates will be used. </p>
+<dt>&#8211;no-verify</p>
+<dd> Do not use CA root certificates to verify remote servers&#8217; host certificates. This is useful for testing sites before their certificate is set up properly, but leaves you vulnerable to &quot;man in the middle&quot; attacks by hostile servers masquerading as your target. </p>
+<dt>&#8211;grid-http</p>
+<dd> Try to use GridHTTP redirection for HTTPS URLs. Compatible servers will perform authentication and authorization on the HTTPS connection and then redirect to HTTP for the GET or PUT file transfer. htcp makes the HTTP request using the GRID_AUTH_PASSCODE single-use passcode obtained via HTTPS. The &#8211;grid-http option will be ignored for directory operations or HTTP URLs. If a redirected transfer isn&#8217;t possible, a normal HTTPS data transfer will be attempted. </p>
+<dt>&#8211;sitecast</p>
+<dd> Try to use SiteCast to locate remote files which are to be copied (currently only for the <code>fetching</code> of remote files.) If no location is found via SiteCast, then a direct request for the given URL is tried. (&#8211;groups must be used for this option to work.) </p>
+<dt>&#8211;domain &lt;SiteCast domain&gt;</p>
+<dd> Try to use SiteCast to locate remote files which are to be copied (currently only for the <code>fetching</code> of remote files) <code>if the domain component of the URL matches</code> the SiteCast domain given. If no location is found via SiteCast, then a direct request for the given URL is tried. (&#8211;groups must be used for this option to work.) </p>
+</dl>
+<h2>FILES</h2>
+<dl>
+<dt>/tmp/x509up_uID</p>
+<dd> Default GSI Proxy file for Unix UID equal to ID. </p>
+<dt>/etc/grid-security/certificates</p>
+<dd> Default location for trusted Certification Authority root certificates to use when checking server certificates. </p>
+<dt>/tmp/.ca-roots-XXXXXX</p>
+<dd> Prior to 7.9.8, the underlying curl library did not support the CA root certificates directory. If built with an old version of libcurl, htcp will concatenate the certificates in the CA roots directory into a unique temporary file and use that. </p>
+</dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt>X509_CERT_DIR</p>
+<dd> Holds directory to search for Certification Authority root certificates when verifying server certificates. (Tried if &#8211;capath is not given on the command line.) </p>
+<dt>X509_USER_PROXY</p>
+<dd> Holds file name of a GSI Proxy to use as user certificate. (Tried if &#8211;cert or &#8211;key are not given on the command line.) </p>
+<dt>X509_USER_CERT and X509_USER_KEY</p>
+<dd> Holds file name of X.509 user certificate and key. (Tried if X509_USER_PROXY is not valid.) </p>
+</dl>
+<h2>EXIT CODES</h2>
+<p> 0 is returned on complete success. Curl error codes are returned when reported by the underlying curl library, and CURLE_HTTP_RETURNED_ERROR (22) is returned when the HTTP(S) server returns a code outside the range 200-299. The manpage <a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3) lists all the curl error codes. </p>
+<h2>TO DO</h2>
+<p> Recursive copying. Server-side wildcards. Parallel streams. Better error recovery. </p>
+<h2>AUTHOR</h2>
+<p> Andrew McNab &lt;Andrew.McNab [at] manchester.ac.uk&gt; </p>
+<p> htcp is part of GridSite: <a rel="nofollow" href="http://www.gridsite.org/">http://www.gridsite.org/</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-scp/">scp</a>(1),</code> <code><a href="/docs/linux/man/1-curl/">curl</a>(1),</code> <code><a href="/docs/linux/man/1-wget/">wget</a>(1),</code> <code><a href="/docs/linux/man/1-verify/">verify</a>(1),</code> <code><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</code> </p>
+<h2>Index</h2>

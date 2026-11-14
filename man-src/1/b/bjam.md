@@ -1,0 +1,109 @@
+---
+title: "bjam(1)"
+name: "bjam"
+section: "1"
+letter: "b"
+url: "/docs/linux/man/1-bjam/"
+description: "Boost.Build – software build tool"
+---
+
+<h2 class="name">NAME</h2>
+<p> Boost.Build &#8211; software build tool </p>
+<h2>DESCRIPTION</h2>
+<p> Boost.Build 4.0-git </p>
+<p> Project-specific help:</p>
+<dl>
+<dt>
+<dd> Project has jamfile at Jamroot</dl>
+<p> Usage:</p>
+<dl>
+<dt>
+<dd> b2 [options] [properties] [install|stage]</p>
+<dt>
+<dd> Builds and installs Boost.</dl>
+<p> Targets and Related Options:</p>
+<dl>
+<dt>install</p>
+<dd> Install headers and compiled library files to the</p>
+<dt>=======</p>
+<dd> configured locations (below).</p>
+<dt><code>&#8211;prefix=</code>&lt;PREFIX&gt;</p>
+<dd> Install architecture independent files here. Default: C:\Boost on Windows Default: <i>,/usr/local/</i> on Unix, Linux, etc.</p>
+<dt><code>&#8211;exec-prefix=</code>&lt;EPREFIX&gt; Install architecture dependent files here.</p>
+<dd> Default: &lt;PREFIX&gt;</p>
+<dt><code>&#8211;libdir=</code>&lt;LIBDIR&gt;</p>
+<dd> Install library files here. Default: &lt;EPREFIX&gt;/lib</p>
+<dt><code>&#8211;includedir=</code>&lt;HDRDIR&gt;</p>
+<dd> Install header files here. Default: &lt;PREFIX&gt;/include</p>
+<dt><code>&#8211;cmakedir=</code>&lt;CMAKEDIR&gt;</p>
+<dd> Install CMake configuration files here. Default: &lt;LIBDIR&gt;/cmake</p>
+<dt><code>&#8211;no-cmake-config</code></p>
+<dd> Do not install CMake configuration files.</p>
+<dt>stage</p>
+<dd> Build and install only compiled library files to the</p>
+<dt>=====</p>
+<dd> stage directory.</p>
+<dt><code>&#8211;stagedir=</code>&lt;STAGEDIR&gt;</p>
+<dd> Install library files here Default: ./stage</dl>
+<p> Other Options:</p>
+<dl>
+<dt><code>&#8211;build-type=</code>&lt;type&gt;</p>
+<dd> Build the specified pre-defined set of variations of the libraries. Note, that which variants get built depends on what each library supports.</p>
+<dt><code>&#8212;</code> minimal <code>&#8212;</code> (default) Builds a minimal set of</p>
+<dd> variants. On Windows, these are static multithreaded libraries in debug and release modes, using shared runtime. On Linux, these are static and shared multithreaded libraries in release mode.</p>
+<dt>
+<dd> <code>&#8212;</code> complete <code>&#8212;</code> Build all possible variations.</p>
+<dt><code>&#8211;build-dir</code>=<i>,DIR/</i></p>
+<dd> Build in this location instead of building within the distribution tree. Recommended!</p>
+<dt><code>&#8211;show-libraries</code></p>
+<dd> Display the list of Boost libraries that require build and installation steps, and then exit.</p>
+<dt><code>&#8211;layout=</code>&lt;layout&gt;</p>
+<dd> Determine whether to choose library names and header locations such that multiple versions of Boost or multiple compilers can be used on the same system.</p>
+<dt><code>&#8212;</code> versioned <code>&#8212;</code> Names of boost binaries include</p>
+<dd> the Boost version number, name and version of the compiler and encoded build properties. Boost headers are installed in a subdirectory of &lt;HDRDIR&gt; whose name contains the Boost version number.</p>
+<dt><code>&#8212;</code> tagged <code>&#8212;</code> Names of boost binaries include the</p>
+<dd> encoded build properties such as variant and threading, but do not including compiler name and version, or Boost version. This option is useful if you build several variants of Boost, using the same compiler.</p>
+<dt><code>&#8212;</code> system <code>&#8212;</code> Binaries names do not include the</p>
+<dd> Boost version number or the name and version number of the compiler. Boost headers are installed directly into &lt;HDRDIR&gt;. This option is intended for system integrators building distribution packages.</p>
+<dt>The default value is &#8216;versioned&#8217; on Windows, and</p>
+<dd> &#8216;system&#8217; on Unix.</p>
+<dt><code>&#8211;buildid</code>=<i>,ID/</i></p>
+<dd> Add the specified ID to the name of built libraries. The default is to not add anything.</p>
+<dt><code>&#8211;python-buildid</code>=<i>,ID/</i></p>
+<dd> Add the specified ID to the name of built libraries that depend on Python. The default is to not add anything. This ID is added in addition to <code>&#8211;buildid</code>.</p>
+<dt><code>&#8211;help</code></p>
+<dd> This message.</p>
+<dt><code>&#8211;with-</code>&lt;library&gt;</p>
+<dd> Build and install the specified &lt;library&gt;. If this option is used, only libraries specified using this option will be built.</p>
+<dt><code>&#8211;without-</code>&lt;library&gt;</p>
+<dd> Do not build, stage, or install the specified &lt;library&gt;. By default, all libraries are built.</dl>
+<p> Properties:</p>
+<dl>
+<dt>toolset=toolset</p>
+<dd> Indicate the toolset to build with.</p>
+<dt>variant=debug|release</p>
+<dd> Select the build variant</p>
+<dt>link=static|shared</p>
+<dd> Whether to build static or shared libraries</p>
+<dt>threading=single|multi</p>
+<dd> Whether to build single or multithreaded binaries</p>
+<dt>runtime-link=static|shared</p>
+<dd> Whether to link to static or shared C and C++ runtime.</dl>
+<p> General command line usage:</p>
+<dl>
+<dt>
+<dd> b2 [options] [properties] [targets]</p>
+<dt>
+<dd> Options, properties and targets can be specified in any order.</dl>
+<p> Important Options:</p>
+<dl>
+<dt>
+<dd> * <code>&#8211;clean</code> Remove targets instead of building * <code>-a</code> Rebuild everything * <code>-n</code> Don&#8217;t execute the commands, only print them * <code>-d</code>+2 Show commands as they are executed * <code>-d0</code> Suppress all informational messages * <code>-q</code> Stop at first error * <code>&#8211;reconfigure</code> Rerun all configuration checks * <code>&#8211;debug-configuration</code> Diagnose configuration * <code>&#8211;debug-building</code> Report which targets are built with what properties * <code>&#8211;debug-generator</code> Diagnose generator search/execution</dl>
+<p> Further Help:</p>
+<dl>
+<dt>
+<dd> The following options can be used to obtain additional documentation.</p>
+<dt>
+<dd> * <code>&#8211;help-options</code> Print more obscure command line options. * <code>&#8211;help-internal</code> Boost.Build implementation details. * <code>&#8211;help-doc-options</code> Implementation details doc formatting.</dl>
+<p> &#8230;found 1 target&#8230; </p>
+<h2>Index</h2>
