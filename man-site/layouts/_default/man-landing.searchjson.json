@@ -1,0 +1,2 @@
+{{- $pages := where .Site.RegularPages "Params.section" "!=" nil }}
+[{{ range $i, $p := $pages }}{{ if $i }},{{ end }}{"n":{{ $p.Params.name | jsonify }},"s":{{ $p.Params.section | jsonify }},"u":{{ $p.RelPermalink | jsonify }},"d":{{ $p.Params.description | default "" | jsonify }}}{{ end }}]

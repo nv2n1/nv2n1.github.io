@@ -1,0 +1,65 @@
+{{ define "main" }}
+<h1>Linux man pages</h1>
+<p>Manual pages for Linux user commands, system calls, library functions, file formats, and administration commands. Browse by section, or search by name and description.</p>
+
+<div class="man-search">
+<input id="man-search" type="search" placeholder="Search man pages, e.g. printf or socket" autocomplete="off" disabled aria-label="Search man pages">
+<ul id="man-results"></ul>
+</div>
+
+<table class="man-sections">
+{{ $ids := slice "1" "2" "3" "4" "5" "6" "7" "8" "9" }}
+{{ range $ids }}
+{{ $p := site.GetPage (printf "/man/%s" .) }}
+{{ with $p }}
+<tr>
+<td class="sec"><a href="{{ $p.RelPermalink }}">{{ .Params.sec }}</a></td>
+<td><a href="{{ $p.RelPermalink }}">{{ .Params.section_label }}</a></td>
+<td class="count">{{ len (where $.Site.RegularPages "Params.section" .Params.sec) }} pages</td>
+</tr>
+{{ end }}
+{{ end }}
+</table>
+
+<script>
+(function () {
+  var box = document.getElementById('man-search');
+  var out = document.getElementById('man-results');
+  var idx = null;
+  box.disabled = false;
+
+  function load() {
+    if (idx) return Promise.resolve();
+    return fetch('/docs/linux/man/search-index.json')
+      .then(function (r) { return r.json(); })
+      .then(function (d) { idx = d; render(); });
+  }
+
+  function esc(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  }
+
+  function render() {
+    if (!idx) return;
+    var q = box.value.trim().toLowerCase();
+    out.innerHTML = '';
+    if (q.length < 2) return;
+    var n = 0;
+    for (var i = 0; i < idx.length && n < 40; i++) {
+      var e = idx[i];
+      if ((e.n && e.n.toLowerCase().indexOf(q) !== -1) ||
+          (e.d && e.d.toLowerCase().indexOf(q) !== -1)) {
+        var li = document.createElement('li');
+        li.innerHTML = '<a href="' + e.u + '">' + esc(e.n) + '<span class="sec">(' + e.s + ')</span></a>' +
+          (e.d ? '<span class="d">' + esc(e.d) + '</span>' : '');
+        out.appendChild(li);
+        n++;
+      }
+    }
+  }
+
+  box.addEventListener('focus', load, { once: true });
+  box.addEventListener('input', function () { load().then ? load().then(render) : render(); });
+})();
+</script>
+{{ end }}
