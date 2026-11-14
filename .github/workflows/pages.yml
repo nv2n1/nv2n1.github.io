@@ -37,7 +37,10 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-      - run: hugo --source man-site --destination ../_site/docs/linux/man --minify
+      # Build outside _site, then copy only docs/ in: Hugo's sitemap.xml and
+      # any other root files must not clobber the Jekyll blog's.
+      - run: hugo --source man-site --destination ../_man_out --minify
+      - run: cp -a _man_out/docs _site/
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
