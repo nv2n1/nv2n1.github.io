@@ -19,23 +19,21 @@ LLM basics, model selection, API routing, cost optimization
 
 OpenClaw, chaining CLI tools with LLMs, agentic workflows
 
-Learn to integrate AI with command-line tools for automation and agent workflows.
+- [How I Transformed My Blog into a Structured Learning Platform Using OpenClaw and LLM](/how-i-transformed-my-blog-into-a-structured-learning-platform-using-openclaw-and-llm/)
+- [Multi-Agent Topic/Tag System with OpenClaw](/multi-agent-topic-tag-system-with-openclaw/)
 
 ### Prompt Engineering
 
 Prompt design, chain-of-thought, structured output
 
-Master the art of writing effective prompts that get the best results from LLMs.
-
 ### Advanced AI Operations
 
 Fine-tuning, multimodal models, scaling inference
 
-Deploy and operate AI systems in production environments.
-
 ## Resources
 
-- **[How I Transformed My Blog into a Structured Learning Platform Using a](/?p=290734)**
-- **[Multi-Agent Topic/Tag System with](/?p=290733)**
-- **[Refreshing 1,375 Blog Posts with and Claude for €66](/?p=270384)**
-- **[Switching from to Qwen on OpenRouter](/?p=256836)**
+- [View all AI engineering posts](/category/ai-engineering/)
+
+## Back to Learning
+
+[← Back to SysTutorials Home](/)

@@ -4,59 +4,88 @@ title: "Linux System Administration Path"
 permalink: /linux-sysadmin-path/
 ---
 
-Master Linux administration, command-line tools, system configuration, and single-machine systems. From basics to advanced kernel and networking topics.
+Go beyond the basics: systemd, networking, storage, virtualization, kernel internals, and performance tuning.
 
-## Learning Paths
+## Learning Posts
 
-### Linux Essentials
+### systemd & Services
 
-Command-line fundamentals, file operations, user management, shell scripting
+- [How to Change Systemd Targets on Fedora Linux](/changing-systemd-runlevel-on-fedora-linux/)
+- [Prevent systemd-tmpfiles from Deleting Specific /tmp Files](/how-to-make-fedora-linux-not-clean-some-files-in-tmp/)
+- [Speeding Up journalctl: Performance Tips and Filtering Strategies](/how-to-make-journalctl-faster/)
+- [Viewing the Previous Boot's systemd Journal on CentOS 7](/how-to-check-last-boots-systemd-journal-log-in-centos-7-linux/)
 
-[Start Learning →](/linux-essentials-path/)
+### Networking
 
-### Linux System Administration
+- [Fix "rtnetlink answers: File exists" on Network Restart](/rtnetlink-answers-file-exists/)
+- [Debugging Linux Network Drivers: Essential Tools and Techniques](/how-to-debug-check-network-related-driver-information-on-linux/)
+- [Troubleshooting High TCP Retransmission Rates in VMs](/too-many-tcp-segments-retransmited-in-a-virtual-machine/)
+- [Tuning Linux UDP Buffer Sizes to Prevent Packet Loss](/how-to-enlarge-linux-udp-buffer-size/)
+- [Checking Network Adapter Speed with ethtool in Linux](/how-to-find-a-network-adapters-speed-in-linux/)
+- [Configuring a Linux Network Gateway with iptables and route](/setting-up-gateway-using-iptables-and-route-on-linux/)
+- [Disabling DHCP in dnsmasq on Linux](/how-to-disable-dhcp-in-dnsmasq-on-linux/)
+- [SSH Through a Gateway to Internal Networks Using ProxyCommand](/directly-ssh-to-hosts-with-lan-ips-through-the-gateway/)
+- [Improving SSH Performance with Faster Ciphers](/improving-sshscp-performance-by-choosing-ciphers/)
+- [Testing Network Connectivity Between Linux Servers](/how-to-test-the-connections-between-linux-hosts-servers/)
 
-systemd, kernel debugging, network configuration, performance tuning, troubleshooting
+### Storage & LVM
 
-[Start Learning →](/linux-sysadmin-path/)
+- [How to Deactivate LVM Logical Volumes on Linux](/how-to-deactivate-a-lvm-logical-volume-on-linux/)
+- [Extend an Ext4 Filesystem on LVM Without Downtime](/extending-a-mounted-ext4-file-system-on-lvm-in-linux/)
+- [Extending an LVM Volume Group](/extending-a-lvm-volume-group/)
+- [Mapping LVM Logical Volumes to Physical Disks](/how-to-find-which-hard-drives-a-lvm-volume-uses/)
+- [Mount LVM Volumes from External Hard Drives on Linux](/how-to-mount-lvm-volume-from-an-external-hard-disk-on-centos/)
+- [Recovering from fstab Boot Failures: A Practical Guide](/bypassing-bad-fstab-failure-while-booting-linux/)
 
-## Featured Posts
+### Virtualization & Containers
 
-- [Disable Emoji Hotkey in Linux with GSettings](/disabling-the-emoji-hotkey-in-linux-using-gsettings/)
-- [Installing Zlib on Ubuntu 24.04 and 22.04 LTS](/installing-zlib-in-ubuntu-22-04/)
-- [Generating ECDSA Keys with OpenSSL: K1 and R1 Curves](/generating-ecdsa-keys-using-openssl-in-linux/)
+- [QEMU/KVM Networking: TAP, virtio, and vhost Explained](/qemukvm-network-mechanisms/)
+- [Reducing QEMU/KVM Lock Contention with IOThreads and Dataplane](/x-data-plane-feature-qemukvm/)
+- [Setting Up Linux Xen Dom0 and DomU Virtual Machines](/xen-solutions/)
+- [Running VMware Player and VirtualBox on Fedora](/how-to-install-run-and-uninstall-vmware-player-and-virtualbox-on-fedora-linux/)
+- [Retrieving VM IP Addresses in KVM with virsh](/how-to-get-the-ip-addresses-of-vms-in-kvm-with-virsh/)
 - [Running Ephemeral Docker Containers with Automatic Cleanup](/running-ephemeral-docker-containers-automatically-remove-a-docker-container-after-running-it/)
-- [Configuring Custom Fonts in Thunderbird Snap](/configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/)
-- [GNOME 3 Keyboard Shortcuts for Screenshots](/gnone-3-screenshot-keyboard-shortcuts/)
-- [Linux Kernel 4.19.178 Released](/linux-kernel-4-19-178-release/)
-- [Linux Kernel 4.14.223 Released](/linux-kernel-4-14-223-release/)
-- [Linux Kernel 5.4.102 Released](/linux-kernel-5-4-102-release/)
-- [Linux Kernel 4.9.60: What’s New](/linux-kernel-4-9-60-release/)
+
+### Kernel
+
+- [Booting an Older Kernel Version with GRUB2 on Ubuntu 20.04](/how-to-make-grub2-boot-to-older-kernel-version-in-ubuntu-20-04/)
+- [Debugging Kernel Modules with Runtime Parameters](/debug-linux-kernel-less-efforts/)
+- [Linux Kernel's taskstats: Per-Task Performance Metrics](/linux-kernel-collect-task-stats-data/)
 - [xt_quota: Report Initial Quota Value to Userspace](/linux-kernel-xt_quota-report-initial-quota-value-instead-of-current-value-to-userspace/)
-- [Converting ODT Files to TXT in Linux: 3 Command-Line Methods](/3-ways-of-odt-to-txt-file-conversion-in-command-line-in-linux/)
-- [Converting DOC Files to ODT Format on Linux](/docx-doc-to-odt-file-conversion-in-linux-command-line/)
-- [Converting Hex to ASCII With xxd](/convert-hex-to-ascii-using-xxd/)
-- [Linux 2.0 Release Notes](/release-notes-for-linux-v2-0/)
-- [Linux 1.0 Release Notes](/release-notes-for-linux-v1-0/)
-- [Linux v0.97 Release Notes](/release-notes-for-linux-v0-97/)
-- [Linux v0.95a Release Notes](/release-notes-for-linux-v0-95a/)
-- [Linux v0.12 Release Notes](/release-notes-for-linux-v0-12/)
-- [Linux 0.01 Release Notes](/notes-for-linux-release-0-01/)
-- [Linux 5.4.72 Kernel Release Notes](/linux-kernel-5-4-72-release/)
-- [MAX3421E USB Host Driver for Linux Kernel](/linux-kernel-add-support-for-using-a-max3421e-chip-as-a-host-driver/)
-- [Linux Kernel: Disable GuC/HuC Auto Mode on Pre-Gen11](/linux-kernel-drm-i915-guc-dont-enable-guc-huc-in-auto-mode-on-pre-gen11/)
-- [Fix clock validation in \_\_pm_clk_add()](/linux-kernel-pm-clk-fix-clock-error-check-in-__pm_clk_add/)
 - [Fix netconsole IPv6 configuration in Linux kernel netpoll](/linux-kernel-netpoll-fix-netconsole-ipv6-setup/)
-- [Linux Kernel: Fix CIFS Auth Key Memory Leak on Reconnect](/linux-kernel-cifs-release-auth_key-response-for-reconnect/)
-- [Linux Kernel 4.19.70 Released](/linux-kernel-4-19-70-release/)
 - [Fix Headphone Mic Recording Issue on ALC256](/linux-kernel-alsa-hda-realtek-fix-headphone-mic-doesnt-recording-for-alc256/)
-- [Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers](/fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/)
-- [Managing Linux Users and Groups Effectively](/linux-user-group-management-and-operations/)
+- [Linux Kernel: Fix CIFS Auth Key Memory Leak on Reconnect](/linux-kernel-cifs-release-auth_key-response-for-reconnect/)
+
+### Kernel History: Release Notes
+
+- [Linux 0.01 Release Notes](/notes-for-linux-release-0-01/)
+- [Linux 1.0 Release Notes](/release-notes-for-linux-v1-0/)
+- [Linux 2.0 Release Notes](/release-notes-for-linux-v2-0/)
+- [Linux Kernel 5.4.102 Released](/linux-kernel-5-4-102-release/)
+- [Linux Kernel 4.19.178 Released](/linux-kernel-4-19-178-release/)
+
+### Performance
+
+- [Measuring Task I/O with eBPF: Microsecond Precision](/io-microscopy-tasks-disk-io-information-high-accuracy/)
+- [Measuring SSD Performance: Practical Benchmarking Techniques](/common-ssd-read-write-throughput/)
+- [Optimizing dd Performance on Linux](/how-to-make-dd-faster-on-linux/)
+- [Setting CPU Affinity for a Single Task](/how-to-set-one-tasks-cpu-affinity-quickly/)
+
+## Topics Covered
+
+- systemd & Service Management
+- Network Configuration & Troubleshooting
+- Storage, LVM & Filesystems
+- Virtualization & Containers
+- Kernel Internals & Debugging
+- Performance Tuning
 
 ## Resources
 
 - [View all Linux posts](/category/linux-systems-administration/)
 
-## Back to Learning
+## Next Steps
 
-[← Back to SysTutorials Home](/)
+[Advanced Systems Path →](/advanced-systems-path/)
+
+[← Back to Linux & Systems Administration Academy](/linux-systems-administration-academy/)

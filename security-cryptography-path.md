@@ -8,11 +8,24 @@ Learn cryptographic fundamentals, public key infrastructure, and system security
 
 ## Learning Posts
 
+### Cryptography & Keys
+
 - [Understanding PGP: A Technical Reference Guide](/a-comprehensive-guide-to-pgp-technical-deep-dive/)
-- [TPM 2.0: Understanding Platform Configuration Registers](/understanding-tpm-2-0-and-platform-configuration-registers-pcrs/)
 - [Generating ECDSA Keys with OpenSSL: K1 and R1 Curves](/generating-ecdsa-keys-using-openssl-in-linux/)
-- [Installing Zlib on Ubuntu 24.04 and 22.04 LTS](/installing-zlib-in-ubuntu-22-04/)
-- [Disable Emoji Hotkey in Linux with GSettings](/disabling-the-emoji-hotkey-in-linux-using-gsettings/)
+- [Extracting EC Public Keys with OpenSSL](/extracting-ec-public-keys-with-openssl/)
+- [Generating RSA Private and Public Key Pairs in Linux](/how-to-generate-a-pair-of-rsa-private-and-public-key-in-linux/)
+- [Decrypting a Password-Protected RSA Private Key](/how-to-decrypt-a-password-protected-rsa-private-key/)
+- [TPM 2.0: Understanding Platform Configuration Registers](/understanding-tpm-2-0-and-platform-configuration-registers-pcrs/)
+
+### TLS & Email Security
+
+- [Free SSL/TLS Certificates: Let's Encrypt and Alternatives](/how-to-get-a-free-web-server-ssl-tls-certificates-for-my-websites/)
+- [Email Authentication Fundamentals: SPF, DKIM, and DMARC Explained](/setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/)
+- [Secure Email Best Practices](/sending-emails-securely/)
+
+### Data Protection
+
+- [Setting Up eCryptFS on Linux](/setting-up-ecryptfs-in-linux/)
 
 ## Topics Covered
 
@@ -27,6 +40,8 @@ Learn cryptographic fundamentals, public key infrastructure, and system security
 
 ## Next Steps
 
-[Linux System Administration Path →](/linux-sysadmin-path/)
+You have completed the learning chain: Linux Essentials, Linux System Administration, Advanced Systems, and Security & Cryptography.
 
-Or explore the [Advanced Systems Path →](/advanced-systems-path/) for distributed systems design.
+[← Back to Distributed Systems Academy](/distributed-systems-academy/)
+
+Or explore the [Web3 & Crypto Academy →](/web3-crypto-academy/) for blockchain security and self-custody.
