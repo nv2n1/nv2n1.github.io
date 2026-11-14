@@ -1,0 +1,27 @@
+---
+title: "lintianprocessablebuildinfo(3)"
+name: "lintianprocessablebuildinfo"
+section: "3"
+letter: "l"
+url: "/docs/linux/man/3-lintianprocessablebuildinfo/"
+description: "Lintian::Processable::Buildinfo — A buildinfo file Lintian can process"
+---
+
+<p>Lintian::Processable::Buildinfo &#8212; A buildinfo file Lintian can process </p>
+<h2>Synopsis</h2>
+<pre>
+ use Lintian::Processable::Buildinfo;
+ my $processable = Lintian::Processable::Buildinfo-&gt;new;
+ $processable-&gt;init('path');
+</pre>
+<h2>Description</h2>
+<p> This class represents a &#8216;buildinfo&#8217; file that Lintian can process. Objects of this kind are often part of a Lintian::Group, which represents all the files in a changes or buildinfo file.</p>
+<h2>Instance Methods</h2>
+<dl COMPACT>
+<dt>init (<font SIZE="-1">FILE</font>)</p>
+<dd> Initializes a new object from <font SIZE="-1">FILE.</font></dl>
+<h2>Author</h2>
+<p> Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
+<h2>See Also</h2>
+<p> <code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1) </p>
+<p> Lintian::Processable</p>

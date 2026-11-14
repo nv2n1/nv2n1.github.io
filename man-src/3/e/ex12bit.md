@@ -1,0 +1,26 @@
+---
+title: "ex12bit(3)"
+name: "ex12bit"
+section: "3"
+letter: "e"
+url: "/docs/linux/man/3-ex12bit/"
+description: "ex12bit – How to fake a 12-bit truecolor mode on an 8-bit card. Allegro game programming library."
+---
+
+<h2>NAME</h2>
+<p> ex12bit &#8211; How to fake a 12-bit truecolor mode on an 8-bit card. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>Example ex12bit</code></p>
+<h2>DESCRIPTION</h2>
+<p> This program sets up a 12-bit mode on any 8-bit card, by setting up a 256-colour palette that will fool the eye into grouping two 8-bit pixels into one 12-bit pixel. In order to do this, you make your 256-colour palette with all the combinations of blue and green, assuming green ranges from 0-15 and blue from 0-14. This takes up 16&#215;15=240 colours. This leaves 16 colours to use as red (red ranges from 0-15). Then you put your green/blue in one pixel, and your red in the pixel next to it. The eye gets fooled into thinking it&#8217;s all one pixel. </p>
+<p> The example starts setting a normal 256 color mode, and construct a special palette for it. But then comes the trick: you need to write to a set of two adjacent pixels to form a single 12 bit dot. Two eight bit pixels is the same as one 16 bit pixel, so after setting the video mode you need to hack the screen bitmap about, halving the width and changing it to use the 16 bit drawing code. Then, once you have packed a color into the correct format (using the makecol12() function below), any of the normal Allegro drawing functions can be used with this 12 bit display! </p>
+<p> Things to note: </p>
+<p> The horizontal width is halved, so you get resolutions like 320&#215;480, 400&#215;600, and 512&#215;768. </p>
+<p> Because each dot is spread over two actual pixels, the display will be darker than in a normal video mode. </p>
+<p> Any bitmap data will obviously need converting to the correct 12 bit format: regular 15 or 16 bit images won&#8217;t display correctly&#8230; </p>
+<p> Although this works like a truecolor mode, it is actually using a 256 color palette, so palette fades are still possible! </p>
+<p> This code only works in linear screen modes (don&#8217;t try Mode-X). </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-bitmap/">BITMAP</a></code>(3), <code><a href="/docs/linux/man/3-end_of_main/">END_OF_MAIN</a></code>(3), <code><a href="/docs/linux/man/3-matrix/">MATRIX</a></code>(3), <code><a href="/docs/linux/man/3-palette/">PALETTE</a></code>(3), <code><a href="/docs/linux/man/3-rgb/">RGB</a></code>(3), <code><a href="/docs/linux/man/3-allegro_error/">allegro_error</a></code>(3), <code><a href="/docs/linux/man/3-allegro_init/">allegro_init</a></code>(3), <code><a href="/docs/linux/man/3-allegro_message/">allegro_message</a></code>(3), <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-blit/">blit</a></code>(3), <code><a href="/docs/linux/man/3-circle/">circle</a></code>(3), <code><a href="/docs/linux/man/3-clear_bitmap/">clear_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-clear_keybuf/">clear_keybuf</a></code>(3), <code><a href="/docs/linux/man/3-clear_to_color/">clear_to_color</a></code>(3), <code><a href="/docs/linux/man/3-create_bitmap/">create_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-create_bitmap_ex/">create_bitmap_ex</a></code>(3), <code><a href="/docs/linux/man/3-destroy_bitmap/">destroy_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-ellipsefill/">ellipsefill</a></code>(3), <code><a href="/docs/linux/man/3-fade_out/">fade_out</a></code>(3), <code><a href="/docs/linux/man/3-fixcos/">fixcos</a></code>(3), <code><a href="/docs/linux/man/3-fixed/">fixed</a></code>(3), <code><a href="/docs/linux/man/3-fixsin/">fixsin</a></code>(3), <code><a href="/docs/linux/man/3-fixtoi/">fixtoi</a></code>(3), <code><a href="/docs/linux/man/3-font/">font</a></code>(3), <code><a href="/docs/linux/man/3-get_rotation_matrix/">get_rotation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-getpixel/">getpixel</a></code>(3), <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-itofix/">itofix</a></code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-line/">line</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-masked_blit/">masked_blit</a></code>(3), <code><a href="/docs/linux/man/3-putpixel/">putpixel</a></code>(3), <code><a href="/docs/linux/man/3-screen/">screen</a></code>(3), <code><a href="/docs/linux/man/3-set_clip_rect/">set_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-set_color/">set_color</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code><a href="/docs/linux/man/3-text_height/">text_height</a></code>(3), <code><a href="/docs/linux/man/3-text_length/">text_length</a></code>(3), <code><a href="/docs/linux/man/3-textout_ex/">textout_ex</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_ex/">textprintf_ex</a></code>(3) </p>
+<h2>Index</h2>

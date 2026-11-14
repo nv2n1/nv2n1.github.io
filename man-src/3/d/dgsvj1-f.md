@@ -1,0 +1,198 @@
+---
+title: "dgsvj1-f(3)"
+name: "dgsvj1-f"
+section: "3"
+letter: "d"
+url: "/docs/linux/man/3-dgsvj1-f/"
+description: "dgsvj1.f –"
+---
+
+<p>dgsvj1.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p> subroutine <code>dgsvj1</code> (JOBV, M, N, N1, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br />
+ <i></i><code>DGSVJ1</code> pre-processor for the routine sgesvj, applies Jacobi rotations targeting only particular pivots.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dgsvj1 (character*1JOBV, integerM, integerN, integerN1, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( n )D, double precision, dimension( n )SVA, integerMV, double precision, dimension( ldv, * )V, integerLDV, double precisionEPS, double precisionSFMIN, double precisionTOL, integerNSWEEP, double precision, dimension( lwork )WORK, integerLWORK, integerINFO)</h3>
+<p> <code>DGSVJ1</code> pre-processor for the routine sgesvj, applies Jacobi rotations targeting only particular pivots. </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dt>
+<dd>
+<pre>
+ DGSVJ1 is called from SGESVJ as a pre-processor and that is its main
+ purpose. It applies Jacobi rotations in the same way as SGESVJ does, but
+ it targets only particular pivots and it does not check convergence
+ (stopping criterion). Few tunning parameters (marked by [TP]) are
+ available for the implementer.
+ Further Details
+ ~~~~~~~~~~~~~~~
+ DGSVJ1 applies few sweeps of Jacobi rotations in the column space of
+ the input M-by-N matrix A. The pivot pairs are taken from the (1,2)
+ off-diagonal block in the corresponding N-by-N Gram matrix A^T * A. The
+ block-entries (tiles) of the (1,2) off-diagonal block are marked by the
+ [x]'s in the following scheme:
+    | *  *  * [x] [x] [x]|
+    | *  *  * [x] [x] [x]|    Row-cycling in the nblr-by-nblc [x] blocks.
+    | *  *  * [x] [x] [x]|    Row-cyclic pivoting inside each [x] block.
+    |[x] [x] [x] *  *  * |
+    |[x] [x] [x] *  *  * |
+    |[x] [x] [x] *  *  * |
+ In terms of the columns of A, the first N1 columns are rotated 'against'
+ the remaining N-N1 columns, trying to increase the angle between the
+ corresponding subspaces. The off-diagonal block is N1-by(N-N1) and it is
+ tiled using quadratic tiles of side KBL. Here, KBL is a tunning parmeter.
+ The number of sweeps is given in NSWEEP and the orthogonality threshold
+ is given in TOL.
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dt>
+<dd> <i>JOBV</i> </p>
+<pre>
+          JOBV is CHARACTER*1
+          Specifies whether the output from this procedure is used
+          to compute the matrix V:
+          = 'V': the product of the Jacobi rotations is accumulated
+                 by postmulyiplying the N-by-N array V.
+                (See the description of V.)
+          = 'A': the product of the Jacobi rotations is accumulated
+                 by postmulyiplying the MV-by-N array V.
+                (See the descriptions of MV and V.)
+          = 'N': the Jacobi rotations are not accumulated.
+</pre>
+<p> <i>M</i> </p>
+<pre>
+          M is INTEGER
+          The number of rows of the input matrix A.  M &gt;= 0.
+</pre>
+<p> <i>N</i> </p>
+<pre>
+          N is INTEGER
+          The number of columns of the input matrix A.
+          M &gt;= N &gt;= 0.
+</pre>
+<p> <i>N1</i> </p>
+<pre>
+          N1 is INTEGER
+          N1 specifies the 2 x 2 block partition, the first N1 columns are
+          rotated 'against' the remaining N-N1 columns of A.
+</pre>
+<p> <i>A</i> </p>
+<pre>
+          A is DOUBLE PRECISION array, dimension (LDA,N)
+          On entry, M-by-N matrix A, such that A*diag(D) represents
+          the input matrix.
+          On exit,
+          A_onexit * D_onexit represents the input matrix A*diag(D)
+          post-multiplied by a sequence of Jacobi rotations, where the
+          rotation threshold and the total number of sweeps are given in
+          TOL and NSWEEP, respectively.
+          (See the descriptions of N1, D, TOL and NSWEEP.)
+</pre>
+<p> <i>LDA</i> </p>
+<pre>
+          LDA is INTEGER
+          The leading dimension of the array A.  LDA &gt;= max(1,M).
+</pre>
+<p> <i>D</i> </p>
+<pre>
+          D is DOUBLE PRECISION array, dimension (N)
+          The array D accumulates the scaling factors from the fast scaled
+          Jacobi rotations.
+          On entry, A*diag(D) represents the input matrix.
+          On exit, A_onexit*diag(D_onexit) represents the input matrix
+          post-multiplied by a sequence of Jacobi rotations, where the
+          rotation threshold and the total number of sweeps are given in
+          TOL and NSWEEP, respectively.
+          (See the descriptions of N1, A, TOL and NSWEEP.)
+</pre>
+<p> <i>SVA</i> </p>
+<pre>
+          SVA is DOUBLE PRECISION array, dimension (N)
+          On entry, SVA contains the Euclidean norms of the columns of
+          the matrix A*diag(D).
+          On exit, SVA contains the Euclidean norms of the columns of
+          the matrix onexit*diag(D_onexit).
+</pre>
+<p> <i>MV</i> </p>
+<pre>
+          MV is INTEGER
+          If JOBV .EQ. 'A', then MV rows of V are post-multipled by a
+                           sequence of Jacobi rotations.
+          If JOBV = 'N',   then MV is not referenced.
+</pre>
+<p> <i>V</i> </p>
+<pre>
+          V is DOUBLE PRECISION array, dimension (LDV,N)
+          If JOBV .EQ. 'V' then N rows of V are post-multipled by a
+                           sequence of Jacobi rotations.
+          If JOBV .EQ. 'A' then MV rows of V are post-multipled by a
+                           sequence of Jacobi rotations.
+          If JOBV = 'N',   then V is not referenced.
+</pre>
+<p> <i>LDV</i> </p>
+<pre>
+          LDV is INTEGER
+          The leading dimension of the array V,  LDV &gt;= 1.
+          If JOBV = 'V', LDV .GE. N.
+          If JOBV = 'A', LDV .GE. MV.
+</pre>
+<p> <i>EPS</i> </p>
+<pre>
+          EPS is DOUBLE PRECISION
+          EPS = DLAMCH('Epsilon')
+</pre>
+<p> <i>SFMIN</i> </p>
+<pre>
+          SFMIN is DOUBLE PRECISION
+          SFMIN = DLAMCH('Safe Minimum')
+</pre>
+<p> <i>TOL</i> </p>
+<pre>
+          TOL is DOUBLE PRECISION
+          TOL is the threshold for Jacobi rotations. For a pair
+          A(:,p), A(:,q) of pivot columns, the Jacobi rotation is
+          applied only if DABS(COS(angle(A(:,p),A(:,q)))) .GT. TOL.
+</pre>
+<p> <i>NSWEEP</i> </p>
+<pre>
+          NSWEEP is INTEGER
+          NSWEEP is the number of sweeps of Jacobi rotations to be
+          performed.
+</pre>
+<p> <i>WORK</i> </p>
+<pre>
+          WORK is DOUBLE PRECISION array, dimension (LWORK)
+</pre>
+<p> <i>LWORK</i> </p>
+<pre>
+          LWORK is INTEGER
+          LWORK is the dimension of WORK. LWORK .GE. M.
+</pre>
+<p> <i>INFO</i> </p>
+<pre>
+          INFO is INTEGER
+          = 0 : successful exit.
+          &lt; 0 : if INFO = -i, then the i-th argument had an illegal value
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dt>
+<dd> Univ. of Tennessee </p>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dt>
+<dd> September 2012</dl>
+<p> <code>Contributors: </code></p>
+<dl COMPACT>
+<dt>
+<dd> Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dl>
+<p> Definition at line 236 of file dgsvj1.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code.</p>

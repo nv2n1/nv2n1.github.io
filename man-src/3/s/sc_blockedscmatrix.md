@@ -1,0 +1,249 @@
+---
+title: "sc_blockedscmatrix(3)"
+name: "sc_blockedscmatrix"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-sc_blockedscmatrix/"
+description: "sc::BlockedSCMatrix –"
+---
+
+<p>sc::BlockedSCMatrix &#8211;</p>
+<h2>Synopsis</h2>
+<p> Inherits <code>sc::SCMatrix</code>.</p>
+<h3>Public Member Functions</h3>
+<pre><code>BlockedSCMatrix (const RefSCDimension &amp;, const RefSCDimension &amp;, BlockedSCMatrixKit *)
+
+
+
+void save (StateOut &amp;)
+
+
+Save and restore this in an implementation independent way.
+
+
+void restore (StateIn &amp;)
+
+
+
+void assign_val (double)
+
+
+Overridden to implement to assign members.
+
+
+double get_element (int, int) const
+
+
+Return or modify an element.
+
+
+void set_element (int, int, double)
+
+
+
+void accumulate_element (int, int, double)
+
+
+
+SCMatrix * get_subblock (int, int, int, int)
+
+
+Return a subblock of this.
+
+
+void assign_subblock (SCMatrix *, int, int, int, int, int=0, int=0)
+
+
+
+void accumulate_subblock (SCMatrix *, int, int, int, int, int=0, int=0)
+
+
+
+SCVector * get_row (int i)
+
+
+Return a row or column of this.
+
+
+SCVector * get_column (int i)
+
+
+
+void assign_row (SCVector *v, int i)
+
+
+Assign v to a row or column of this.
+
+
+void assign_column (SCVector *v, int i)
+
+
+
+void accumulate_row (SCVector *v, int i)
+
+
+Sum v to a row or column of this.
+
+
+void accumulate_column (SCVector *v, int i)
+
+
+
+void accumulate_outer_product (SCVector *, SCVector *)
+
+
+Sum into this the products of various vectors or matrices.
+
+
+void accumulate_product_rr (SCMatrix *, SCMatrix *)
+
+
+
+void accumulate_product_rs (SCMatrix *, SymmSCMatrix *)
+
+
+
+void accumulate_product_rd (SCMatrix *, DiagSCMatrix *)
+
+
+
+void accumulate (const SCMatrix *)
+
+
+
+void accumulate (const SymmSCMatrix *)
+
+
+
+void accumulate (const DiagSCMatrix *)
+
+
+
+void accumulate (const SCVector *)
+
+
+
+void transpose_this ()
+
+
+Transpose this.
+
+
+double invert_this ()
+
+
+Invert this.
+
+
+void svd_this (SCMatrix *U, DiagSCMatrix *sigma, SCMatrix *V)
+
+
+
+double solve_this (SCVector *)
+
+
+
+double determ_this ()
+
+
+Return the determinant of this. this is overwritten.
+
+
+double trace ()
+
+
+Return the trace.
+
+
+void gen_invert_this ()
+
+
+
+void schmidt_orthog (SymmSCMatrix *, int)
+
+
+Schmidt orthogonalize this.
+
+
+int schmidt_orthog_tol (SymmSCMatrix *, double tol, double *res=0)
+
+
+Schmidt orthogonalize this.
+
+
+void element_op (const Ref&lt; SCElementOp &gt; &amp;)
+
+
+Perform the element operation op on each element of this.
+
+
+void element_op (const Ref&lt; SCElementOp2 &gt; &amp;, SCMatrix *)
+
+
+
+void element_op (const Ref&lt; SCElementOp3 &gt; &amp;, SCMatrix *, SCMatrix *)
+
+
+
+void vprint (const char *title=0, std::ostream &amp;out=ExEnv::out0(), int=10) const
+
+
+
+RefSCDimension rowdim () const
+
+
+Return the row or column dimension.
+
+
+RefSCDimension coldim () const
+
+
+
+RefSCDimension rowdim (int) const
+
+
+
+RefSCDimension coldim (int) const
+
+
+
+int nblocks () const
+
+
+
+RefSCMatrix block (int)
+
+
+
+Ref&lt; SCMatrixSubblockIter &gt; local_blocks (SCMatrixSubblockIter::Access)
+
+
+Returns iterators for the local (rapidly accessible) blocks used in this matrix.
+
+
+Ref&lt; SCMatrixSubblockIter &gt; all_blocks (SCMatrixSubblockIter::Access)
+
+
+Returns iterators for the all blocks used in this matrix.
+
+
+
+Friends</code></pre>
+<p> class <code>BlockedSymmSCMatrix</code> </p>
+<p> class <code>BlockedDiagSCMatrix</code> </p>
+<p> class <code>BlockedSCVector</code></p>
+<h2>Member Function Documentation</h2>
+<h3><code>SCMatrix</code>* sc::BlockedSCMatrix::get_subblock (int br, int er, int bc, int ec) [virtual]</h3>
+<p>Return a subblock of this. The subblock is defined as the rows starting at br and ending at er, and the columns beginning at bc and ending at ec. </p>
+<p> Implements <code>sc::SCMatrix</code>.</p>
+<h3><code>Ref</code>&lt;<code>SCMatrixSubblockIter</code>&gt; sc::BlockedSCMatrix::local_blocks (SCMatrixSubblockIter::Access) [virtual]</h3>
+<p>Returns iterators for the local (rapidly accessible) blocks used in this matrix. </p>
+<p> Implements <code>sc::SCMatrix</code>.</p>
+<h3>void sc::BlockedSCMatrix::schmidt_orthog (<code>SymmSCMatrix</code> *, int n) [virtual]</h3>
+<p>Schmidt orthogonalize this. S is the overlap matrix. n is the number of columns to orthogonalize. </p>
+<p> Implements <code>sc::SCMatrix</code>.</p>
+<h3>int sc::BlockedSCMatrix::schmidt_orthog_tol (<code>SymmSCMatrix</code> *, double tol, double * res = 0) [virtual]</h3>
+<p>Schmidt orthogonalize this. S is the overlap matrix. tol is the tolerance. The number of linearly independent vectors is returned. </p>
+<p> Implements <code>sc::SCMatrix</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>

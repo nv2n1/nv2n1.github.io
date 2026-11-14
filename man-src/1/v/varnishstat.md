@@ -1,0 +1,133 @@
+---
+title: "varnishstat(1)"
+name: "varnishstat"
+section: "1"
+letter: "v"
+url: "/docs/linux/man/1-varnishstat/"
+description: "varnishstat – Varnish Cache statistics"
+---
+
+<h2>NAME</h2>
+<p> varnishstat &#8211; Varnish Cache statistics</p>
+<h2>SYNOPSIS</h2>
+<p> varnishstat [-1] [-x] [-j] [-f field_list] [-l] [-n varnish_name] [-N filename] [-V] [-w delay]</p>
+<h2>DESCRIPTION</h2>
+<p> The varnishstat utility displays statistics from a running <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) instance.</p>
+<h2>OPTIONS</h2>
+<p> The following options are available:</p>
+<dl>
+<dt><code>-1</code></p>
+<dd> Instead of presenting a continuously updated display, print the statistics to stdout.</p>
+<dt><code>-f</code></p>
+<dd> Field inclusion glob. A field glob consists of three parts, type, ident and name, where ident is optional. Each part can contain a &#8216;*&#8217; character at the end to match a prefix. Use backslash to escape characters. If the argument starts with &#8216;^&#8217; it is used as an exclusion glob. Multiple -f arguments may be given, and they will be applied in order.</p>
+<dt><code>-l</code></p>
+<dd> Lists the available fields to use with the -f option.</p>
+<dt><code>-n</code></p>
+<dd> Specifies the name of the varnishd instance to get logs from. If -n is not specified, the host name is used.</p>
+<dt><code>-N</code></p>
+<dd> Specify a the filename of a stale VSM instance. When using this option the abandonment checking is disabled.</p>
+<dt><code>-V</code></p>
+<dd> Display the version number and exit.</p>
+<dt><code>-w</code><i>&nbsp;<wbr>delay</i></p>
+<dd> Wait delay seconds between updates. The default is 1. Can also be used with -1, -x or -j for repeated output.</p>
+<dt><code>-x</code></p>
+<dd> Displays the result as XML.</p>
+<dt><code>-j</code></p>
+<dd> Displays the result as JSON.</dl>
+<h2>CURSES MODE</h2>
+<p> When neither -1, -j or -x options are given, the application starts up in curses mode. This shows a continuously updated view of the counter values, along with their description. </p>
+<p> The top area shows process uptime information. </p>
+<p> The center area shows a list of counter values. </p>
+<p> The bottom area shows the description of the currently selected counter.</p>
+<h3>Columns</h3>
+<p> The following columns are displayed, from left to right:</p>
+<dl>
+<dt><code>Name</code></p>
+<dd> The name of the counter</p>
+<dt><code>Current</code></p>
+<dd> The current value of the counter.</p>
+<dt><code>Change</code></p>
+<dd> The average per second change over the last update interval.</p>
+<dt><code>Average</code></p>
+<dd> The average value of this counter over the runtime of the Varnish daemon, or a period if the counter can&#8217;t be averaged.</p>
+<dt><code>Avg_10</code></p>
+<dd> The moving average over the last 10 update intervals.</p>
+<dt><code>Avg_100</code></p>
+<dd> The moving average over the last 100 update intervals.</p>
+<dt><code>Avg_1000</code></p>
+<dd> The moving average over the last 1000 update intervals.</dl>
+<h3>Key bindings</h3>
+<p> The following keys control the interactive display:</p>
+<dl>
+<dt><code>&lt;UP&gt;</code></p>
+<dd> Navigate the counter list one line up.</p>
+<dt><code>&lt;DOWN&gt;</code></p>
+<dd> Navigate the counter list one line down.</p>
+<dt><code>&lt;PAGEUP&gt; or &lt;b&gt;</code></p>
+<dd> Navigate the counter list one page up.</p>
+<dt><code>&lt;PAGEDOWN&gt; or &lt;SPACE&gt;</code></p>
+<dd> Navigate the counter list one page down.</p>
+<dt><code>&lt;d&gt;</code></p>
+<dd> Toggle between showing and hiding unseen counters. Unseen counters are those that has been zero for the entire runtime of varnishstat. Defaults to hide unseen counters.</p>
+<dt><code>&lt;g&gt;</code></p>
+<dd> Go to the top of the counter list.</p>
+<dt><code>&lt;G&gt;</code></p>
+<dd> Go to the bottom of the counter list.</p>
+<dt><code>&lt;v&gt;</code></p>
+<dd> Cycle through the verbosity levels. Defaults to only showing informational counters.</p>
+<dt><code>&lt;q&gt;</code></p>
+<dd> Quit.</p>
+<dt><code>&lt;CTRL+T&gt;</code></p>
+<dd> Sample now.</dl>
+<h2>XML OUTPUT</h2>
+<p> When using the -x option, the output is: </p>
+<pre>
+&lt;varnishstat timestamp=&quot;YYYY-MM-DDTHH:mm:SS&quot;&gt;
+  &lt;stat&gt;
+    &lt;type&gt;FIELD TYPE&lt;/type&gt;
+    &lt;ident&gt;FIELD IDENT&lt;/ident&gt;
+    &lt;name&gt;FIELD NAME&lt;/name&gt;
+    &lt;value&gt;FIELD VALUE&lt;/value&gt;
+    &lt;flag&gt;FIELD FORMAT&lt;/flag&gt;
+    &lt;description&gt;FIELD DESCRIPTION&lt;/description&gt;
+  &lt;/stat&gt;
+  [..]
+&lt;/varnishstat&gt;
+</pre>
+<h2>JSON OUTPUT</h2>
+<p> With -j the output format is: </p>
+<pre><code>
+{
+    "timestamp" : "YYYY-MM-DDTHH:mm:SS",
+                  "FIELD NAME" : {"type" : "FIELD TYPE", "ident" : "FIELD IDENT", "value" : FIELD VALUE, "flag" : "FIELD FORMAT", "description" : "FIELD DESCRIPTION"},
+                                 [..]
+}
+</code></pre>
+<p> Type and ident are optional. Timestamp is the time when the report was generated by varnishstat. </p>
+<p> Repeated output with -1, -x or -j will have a single empty line (
+) between each block of output.</p>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-varnishhist/">varnishhist</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-varnishlog/">varnishlog</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-varnishncsa/">varnishncsa</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-varnishtop/">varnishtop</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/3-curses/">curses</a>(3)</dl>
+<h2>HISTORY</h2>
+<p> The varnishstat utility was originally developed by Poul-Henning Kamp &lt;<i>phk [at] phk.freebsd.dk</i>&gt; in cooperation with Verdens Gang AS and Varnish Software AS. Manual page written by Dag-Erling Smørgrav, Per Buer, Lasse Karstensen and Martin Blix Grydeland.</p>
+<h2>COPYRIGHT</h2>
+<p> This document is licensed under the same licence as Varnish itself. See LICENCE for details.</p>
+<dl>
+<dt>&bull;</p>
+<dd> Copyright (c) 2006 Verdens Gang AS</p>
+<dt>&bull;</p>
+<dd> Copyright (c) 2006-2014 Varnish Software AS </p>
+</dl>
+<h2>Index</h2>

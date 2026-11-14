@@ -1,0 +1,43 @@
+---
+title: "ncl_opngks(3)"
+name: "ncl_opngks"
+section: "3"
+letter: "n"
+url: "/docs/linux/man/3-ncl_opngks/"
+---
+
+OPNGKS - Opens GKS, opens and activates an NCAR GCM workstation (workstation of type 1) with workstation ID of 1 and connection ID of 2.
+
+<h2>Status</h2>
+
+OPNGKS is somewhat dated. It was primarily used with NCAR GKS-0A when this package only allowed for a single metacode workstation. Now that the NCAR GKS package provides for multiple workstations to be open, it is recommended that standard GKS calls to GOPKS, GOPWK, and GACWK be used instead.
+
+<h2>Synopsis</h2>
+
+CALL OPNGKS
+
+<h2>C-Binding Synopsis</h2>
+
+#include &lt;ncarg/ncargC.h&gt; 
+
+ void c_opngks()
+
+<h2>Examples</h2>
+
+Use the ncargex command to see the following relevant examples: agex01.
+
+<h2>Access</h2>
+
+To use OPNGKS or c_opngks, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
+
+<h2>See Also</h2>
+
+Online: spps, gopks, gopwk, gacwk, clsgks, setusv, getusv, ncarg_cbind 
+
+ Hardcopy: NCAR Graphics Fundamentals, UNIX Version; User's Guide for NCAR GKS-0A Graphics
+
+<h2>Copyright</h2>
+
+Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.

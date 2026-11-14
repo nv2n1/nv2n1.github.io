@@ -1,0 +1,46 @@
+---
+title: "fsck-gfs2(8)"
+name: "fsck-gfs2"
+section: "8"
+letter: "f"
+url: "/docs/linux/man/8-fsck-gfs2/"
+description: "fsck.gfs2 – Offline GFS and GFS2 file system checker"
+---
+
+<p>fsck.gfs2 &#8211; Offline GFS and GFS2 file system checker</p>
+<h2>Synopsis</h2>
+<p><code>fsck.gfs2</code> [<i>OPTION</i>]&#8230; <i>DEVICE</i> </p>
+<h2>Warning</h2>
+<p>All computers <i>must</i> have the filesystem unmounted before running fsck.gfs2. Failure to unmount from all nodes in a cluster will likely result in filesystem corruption.</p>
+<h2>Description</h2>
+<p>fsck.gfs2 will check that the GFS or GFS2 file system on a device is structurally valid. It should not be run on a mounted file system. If file system corruption is detected, it will attempt to repair the file system. There is a limit to what fsck.gfs2 can do. If important file system structures are destroyed, such that the checker cannot determine what the repairs should be, reparations could fail. </p>
+<p> GFS2 is a journaled file system, and as such should be able to repair damage to the file system on its own. However, faulty hardware has the ability to write incomplete blocks to a file system thereby causing corruption that GFS2 cannot fix. The first step to ensuring a healthy file system is the selection of reliable hardware (i.e. storage systems that will write complete blocks &#8211; even in the event of power failure). </p>
+<p> Note: Most file system checkers will not check the file system if it is &quot;clean&quot; (i.e. unmounted since the last use). The fsck.gfs program behaves differently because the storage may be shared among several nodes in a cluster, and therefore problems may have been introduced on a different computer. Therefore, fsck.gfs2 will always check the file system unless the -p (preen) option is used, in which case it follows special rules (see below). </p>
+<p> fsck.gfs2 will log to the system log on start and exit to aid debugging and administration.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-a</code></p>
+<dd>Same as the -p (preen) option.</p>
+<dt><code>-f</code></p>
+<dd>Force checking even if the file system seems clean.</p>
+<dt><code>-h</code></p>
+<dd>Help. </p>
+<p> This prints out the proper command line usage syntax.</p>
+<dt><code>-q</code></p>
+<dd>Quiet.</p>
+<dt><code>-n</code></p>
+<dd>No to all questions. </p>
+<p> By specifying this option, fsck.gfs2 will only show the changes that would be made, but not make any changes to the filesystem.</p>
+<dt><code>-p</code></p>
+<dd>Preen (same as -a: automatically repair the file system if it is dirty, and safe to do so, otherwise exit.) </p>
+<p> Note: If the file system has locking protocol lock_nolock, the file system is considered a non-shared storage device and the fsck is deemed safe. However, fsck.gfs2 does not know whether it was called automatically from the init process, due to options in the /etc/fstab file. Therefore, if the locking protocol is lock_dlm and -a or -p was specified, fsck.gfs2 cannot determine whether the disk is mounted by other nodes in the cluster. Therefore, the fsck is deemed to be unsafe and a warning is given if any damage or dirty journals are found. In that case, the file system should be unmounted from all nodes in the cluster and fsck.gfs2 should be run manually without the -a or -p options.</p>
+<dt><code>-V</code></p>
+<dd>Version. </p>
+<p> Print out the program version information.</p>
+<dt><code>-v</code></p>
+<dd>Verbose operation. </p>
+<p> Print more information while running.</p>
+<dt><code>-y</code></p>
+<dd>Yes to all questions. </p>
+<p> By specifying this option, fsck.gfs2 will not prompt before making changes. </p>
+</dl>

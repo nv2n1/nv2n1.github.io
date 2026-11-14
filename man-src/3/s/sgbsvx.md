@@ -1,0 +1,274 @@
+---
+title: "sgbsvx(3)"
+name: "sgbsvx"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-sgbsvx/"
+---
+
+sgbsvx.f -
+
+<h2>Synopsis</h2>
+
+
+
+<h3>Functions/Subroutines</h3>
+
+<pre><code>subroutine sgbsvx (FACT, TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)
+
+
+SGBSVX computes the solution to system of linear equations A * X = B for GB matrices</code></pre>
+
+<h2>Function/Subroutine Documentation</h2>
+
+<h3>subroutine sgbsvx (characterFACT, characterTRANS, integerN, integerKL, integerKU, integerNRHS, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, characterEQUED, real, dimension( * )R, real, dimension( * )C, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, realRCOND, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
+
+<b> SGBSVX computes the solution to system of linear equations A * X = B for GB matrices</b> 
+
+ <b>Purpose: </b>
+<dl><dd><pre> SGBSVX uses the LU factorization to compute the solution to a real
+ system of linear equations A * X = B, A**T * X = B, or A**H * X = B,
+ where A is a band matrix of order N with KL subdiagonals and KU
+ superdiagonals, and X and B are N-by-NRHS matrices.
+ Error bounds on the solution and a condition estimate are also
+ provided.</pre>&nbsp;<wbr></dl>
+ 
+
+ <b>Description: </b>
+<dl><dd><pre> The following steps are performed by this subroutine:
+ 1. If FACT = 'E', real scaling factors are computed to equilibrate
+ the system:
+ TRANS = 'N': diag(R)*A*diag(C) *inv(diag(C))*X = diag(R)*B
+ TRANS = 'T': (diag(R)*A*diag(C))**T *inv(diag(R))*X = diag(C)*B
+ TRANS = 'C': (diag(R)*A*diag(C))**H *inv(diag(R))*X = diag(C)*B
+ Whether or not the system will be equilibrated depends on the
+ scaling of the matrix A, but if equilibration is used, A is
+ overwritten by diag(R)*A*diag(C) and B by diag(R)*B (if TRANS='N')
+ or diag(C)*B (if TRANS = 'T' or 'C').
+ 2. If FACT = 'N' or 'E', the LU decomposition is used to factor the
+ matrix A (after equilibration if FACT = 'E') as
+ A = L * U,
+ where L is a product of permutation and unit lower triangular
+ matrices with KL subdiagonals, and U is upper triangular with
+ KL+KU superdiagonals.
+ 3. If some U(i,i)=0, so that U is exactly singular, then the routine
+ returns with INFO = i. Otherwise, the factored form of A is used
+ to estimate the condition number of the matrix A. If the
+ reciprocal of the condition number is less than machine precision,
+ INFO = N+1 is returned as a warning, but the routine still goes on
+ to solve for X and compute error bounds as described below.
+ 4. The system of equations is solved for X using the factored form
+ of A.
+ 5. Iterative refinement is applied to improve the computed solution
+ matrix and calculate error bounds and backward error estimates
+ for it.
+ 6. If equilibration was used, the matrix X is premultiplied by
+ diag(C) (if TRANS = 'N') or diag(R) (if TRANS = 'T' or 'C') so
+ that it solves the original system before equilibration.</pre>&nbsp;<wbr></dl>
+ 
+
+ <b>Parameters:</b>
+<dl><dd><i>FACT</i> 
+
+ <pre> FACT is CHARACTER*1
+ Specifies whether or not the factored form of the matrix A is
+ supplied on entry, and if not, whether the matrix A should be
+ equilibrated before it is factored.
+ = 'F': On entry, AFB and IPIV contain the factored form of
+ A. If EQUED is not 'N', the matrix A has been
+ equilibrated with scaling factors given by R and C.
+ AB, AFB, and IPIV are not modified.
+ = 'N': The matrix A will be copied to AFB and factored.
+ = 'E': The matrix A will be equilibrated if necessary, then
+ copied to AFB and factored.</pre><i>TRANS</i> 
+
+ <pre> TRANS is CHARACTER*1
+ Specifies the form of the system of equations.
+ = 'N': A * X = B (No transpose)
+ = 'T': A**T * X = B (Transpose)
+ = 'C': A**H * X = B (Transpose)</pre><i>N</i> 
+
+ <pre> N is INTEGER
+ The number of linear equations, i.e., the order of the
+ matrix A. N &gt;= 0.</pre><i>KL</i> 
+
+ <pre> KL is INTEGER
+ The number of subdiagonals within the band of A. KL &gt;= 0.</pre><i>KU</i> 
+
+ <pre> KU is INTEGER
+ The number of superdiagonals within the band of A. KU &gt;= 0.</pre><i>NRHS</i> 
+
+ <pre> NRHS is INTEGER
+ The number of right hand sides, i.e., the number of columns
+ of the matrices B and X. NRHS &gt;= 0.</pre><i>AB</i> 
+
+ <pre> AB is REAL array, dimension (LDAB,N)
+ On entry, the matrix A in band storage, in rows 1 to KL+KU+1.
+ The j-th column of A is stored in the j-th column of the
+ array AB as follows:
+ AB(KU+1+i-j,j) = A(i,j) for max(1,j-KU)&lt;=i&lt;=min(N,j+kl)
+ If FACT = 'F' and EQUED is not 'N', then A must have been
+ equilibrated by the scaling factors in R and/or C. AB is not
+ modified if FACT = 'F' or 'N', or if FACT = 'E' and
+ EQUED = 'N' on exit.
+ On exit, if EQUED .ne. 'N', A is scaled as follows:
+ EQUED = 'R': A := diag(R) * A
+ EQUED = 'C': A := A * diag(C)
+ EQUED = 'B': A := diag(R) * A * diag(C).</pre><i>LDAB</i> 
+
+ <pre> LDAB is INTEGER
+ The leading dimension of the array AB. LDAB &gt;= KL+KU+1.</pre><i>AFB</i> 
+
+ <pre> AFB is REAL array, dimension (LDAFB,N)
+ If FACT = 'F', then AFB is an input argument and on entry
+ contains details of the LU factorization of the band matrix
+ A, as computed by SGBTRF. U is stored as an upper triangular
+ band matrix with KL+KU superdiagonals in rows 1 to KL+KU+1,
+ and the multipliers used during the factorization are stored
+ in rows KL+KU+2 to 2*KL+KU+1. If EQUED .ne. 'N', then AFB is
+ the factored form of the equilibrated matrix A.
+ If FACT = 'N', then AFB is an output argument and on exit
+ returns details of the LU factorization of A.
+ If FACT = 'E', then AFB is an output argument and on exit
+ returns details of the LU factorization of the equilibrated
+ matrix A (see the description of AB for the form of the
+ equilibrated matrix).</pre><i>LDAFB</i> 
+
+ <pre> LDAFB is INTEGER
+ The leading dimension of the array AFB. LDAFB &gt;= 2*KL+KU+1.</pre><i>IPIV</i> 
+
+ <pre> IPIV is INTEGER array, dimension (N)
+ If FACT = 'F', then IPIV is an input argument and on entry
+ contains the pivot indices from the factorization A = L*U
+ as computed by SGBTRF; row i of the matrix was interchanged
+ with row IPIV(i).
+ If FACT = 'N', then IPIV is an output argument and on exit
+ contains the pivot indices from the factorization A = L*U
+ of the original matrix A.
+ If FACT = 'E', then IPIV is an output argument and on exit
+ contains the pivot indices from the factorization A = L*U
+ of the equilibrated matrix A.</pre><i>EQUED</i> 
+
+ <pre> EQUED is CHARACTER*1
+ Specifies the form of equilibration that was done.
+ = 'N': No equilibration (always true if FACT = 'N').
+ = 'R': Row equilibration, i.e., A has been premultiplied by
+ diag(R).
+ = 'C': Column equilibration, i.e., A has been postmultiplied
+ by diag(C).
+ = 'B': Both row and column equilibration, i.e., A has been
+ replaced by diag(R) * A * diag(C).
+ EQUED is an input argument if FACT = 'F'; otherwise, it is an
+ output argument.</pre><i>R</i> 
+
+ <pre> R is REAL array, dimension (N)
+ The row scale factors for A. If EQUED = 'R' or 'B', A is
+ multiplied on the left by diag(R); if EQUED = 'N' or 'C', R
+ is not accessed. R is an input argument if FACT = 'F';
+ otherwise, R is an output argument. If FACT = 'F' and
+ EQUED = 'R' or 'B', each element of R must be positive.</pre><i>C</i> 
+
+ <pre> C is REAL array, dimension (N)
+ The column scale factors for A. If EQUED = 'C' or 'B', A is
+ multiplied on the right by diag(C); if EQUED = 'N' or 'R', C
+ is not accessed. C is an input argument if FACT = 'F';
+ otherwise, C is an output argument. If FACT = 'F' and
+ EQUED = 'C' or 'B', each element of C must be positive.</pre><i>B</i> 
+
+ <pre> B is REAL array, dimension (LDB,NRHS)
+ On entry, the right hand side matrix B.
+ On exit,
+ if EQUED = 'N', B is not modified;
+ if TRANS = 'N' and EQUED = 'R' or 'B', B is overwritten by
+ diag(R)*B;
+ if TRANS = 'T' or 'C' and EQUED = 'C' or 'B', B is
+ overwritten by diag(C)*B.</pre><i>LDB</i> 
+
+ <pre> LDB is INTEGER
+ The leading dimension of the array B. LDB &gt;= max(1,N).</pre><i>X</i> 
+
+ <pre> X is REAL array, dimension (LDX,NRHS)
+ If INFO = 0 or INFO = N+1, the N-by-NRHS solution matrix X
+ to the original system of equations. Note that A and B are
+ modified on exit if EQUED .ne. 'N', and the solution to the
+ equilibrated system is inv(diag(C))*X if TRANS = 'N' and
+ EQUED = 'C' or 'B', or inv(diag(R))*X if TRANS = 'T' or 'C'
+ and EQUED = 'R' or 'B'.</pre><i>LDX</i> 
+
+ <pre> LDX is INTEGER
+ The leading dimension of the array X. LDX &gt;= max(1,N).</pre><i>RCOND</i> 
+
+ <pre> RCOND is REAL
+ The estimate of the reciprocal condition number of the matrix
+ A after equilibration (if done). If RCOND is less than the
+ machine precision (in particular, if RCOND = 0), the matrix
+ is singular to working precision. This condition is
+ indicated by a return code of INFO &gt; 0.</pre><i>FERR</i> 
+
+ <pre> FERR is REAL array, dimension (NRHS)
+ The estimated forward error bound for each solution vector
+ X(j) (the j-th column of the solution matrix X).
+ If XTRUE is the true solution corresponding to X(j), FERR(j)
+ is an estimated upper bound for the magnitude of the largest
+ element in (X(j) - XTRUE) divided by the magnitude of the
+ largest element in X(j). The estimate is as reliable as
+ the estimate for RCOND, and is almost always a slight
+ overestimate of the true error.</pre><i>BERR</i> 
+
+ <pre> BERR is REAL array, dimension (NRHS)
+ The componentwise relative backward error of each solution
+ vector X(j) (i.e., the smallest relative change in
+ any element of A or B that makes X(j) an exact solution).</pre><i>WORK</i> 
+
+ <pre> WORK is REAL array, dimension (3*N)
+ On exit, WORK(1) contains the reciprocal pivot growth
+ factor norm(A)/norm(U). The &quot;max absolute element&quot; norm is
+ used. If WORK(1) is much less than 1, then the stability
+ of the LU factorization of the (equilibrated) matrix A
+ could be poor. This also means that the solution X, condition
+ estimator RCOND, and forward error bound FERR could be
+ unreliable. If factorization fails with 0&lt;INFO&lt;=N, then
+ WORK(1) contains the reciprocal pivot growth factor for the
+ leading INFO columns of A.</pre><i>IWORK</i> 
+
+ <pre> IWORK is INTEGER array, dimension (N)</pre><i>INFO</i> 
+
+ <pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -i, the i-th argument had an illegal value
+ &gt; 0: if INFO = i, and i is
+ &lt;= N: U(i,i) is exactly zero. The factorization
+ has been completed, but the factor U is exactly
+ singular, so the solution and error bounds
+ could not be computed. RCOND = 0 is returned.
+ = N+1: U is nonsingular, but RCOND is less than machine
+ precision, meaning that the matrix is singular
+ to working precision. Nevertheless, the
+ solution and error bounds are computed because
+ there are a number of situations where the
+ computed solution can be more accurate than the</pre>&nbsp;<wbr></dl>
+ 
+
+ <b>Author:</b>
+<dl><dd>Univ. of Tennessee 
+
+ Univ. of California Berkeley 
+
+ Univ. of Colorado Denver 
+
+ NAG Ltd.</dl>
+ 
+
+ <b>Date:</b>
+<dl><dd>April 2012</dl>
+ 
+
+ 
+
+ 
+
+ Definition at line 367 of file sgbsvx.f.
+
+<h2>Author</h2>
+
+Generated automatically by Doxygen for LAPACK from the source code.

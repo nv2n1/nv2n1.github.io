@@ -1,0 +1,123 @@
+---
+title: "jps(1)"
+name: "jps"
+section: "1"
+letter: "j"
+url: "/docs/linux/man/1-jps/"
+description: "jps – Lists the instrumented Java Virtual Machines (JVMs) on the target system. This command is experimental and unsupported."
+---
+
+<h2>NAME</h2>
+<p> jps &#8211; Lists the instrumented Java Virtual Machines (JVMs) on the target system. This command is experimental and unsupported.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+jps[options][hostid]
+</code></pre>
+<dl>
+<dt><i>options</i></p>
+<dd> Command-line options. See Options.</p>
+<dt><i>hostid</i></p>
+<dd> The identifier of the host for which the process report should be generated. The <code>hostid</code> can include optional components that indicate the communications protocol, port number, and other implementation specific data. See Host Identifier.</dl>
+<h2>DESCRIPTION</h2>
+<p> The <code>jps</code> command lists the instrumented Java HotSpot VMs on the target system. The command is limited to reporting information on JVMs for which it has the access permissions. </p>
+<p> If the <code>jps</code> command is run without specifying a <code>hostid</code>, then it searches for instrumented JVMs on the local host. If started with a <code>hostid</code>, then it searches for JVMs on the indicated host, using the specified protocol and port. A <code>jstatd</code> process is assumed to be running on the target host. </p>
+<p> The <code>jps</code> command reports the local JVM identifier, or <code>lvmid</code>, for each instrumented JVM found on the target system. The <code>lvmid</code> is typically, but not necessarily, the operating system&#8217;s process identifier for the JVM process. With no options, <code>jps</code> lists each Java application&#8217;s <code>lvmid</code> followed by the short form of the application&#8217;s class name or jar file name. The short form of the class name or JAR file name omits the class&#8217;s package information or the JAR files path information. </p>
+<p> The <code>jps</code> command uses the Java launcher to find the class name and arguments passed to the main method. If the target JVM is started with a custom launcher, then the class or JAR file name and the arguments to the <code>main</code> method are not available. In this case, the <code>jps</code> command outputs the string <code>Unknown</code> for the class name or JAR file name and for the arguments to the <code>main</code> method. </p>
+<p> The list of JVMs produced by the <code>jps</code> command can be limited by the permissions granted to the principal running the command. The command only lists the JVMs for which the principle has access rights as determined by operating system-specific access control mechanisms.</p>
+<h2>OPTIONS</h2>
+<p> The <code>jps</code> command supports a number of options that modify the output of the command. These options are subject to change or removal in the future.</p>
+<dl>
+<dt>-q</p>
+<dd>
+ Suppresses the output of the class name, JAR file name, and arguments passed to the <code>main</code> method, producing only a list of local JVM identifiers.</p>
+<dt>-m</p>
+<dd>
+ Displays the arguments passed to the <code>main</code> method. The output may be <code>null</code> for embedded JVMs.</p>
+<dt>-l</p>
+<dd>
+ Displays the full package name for the application&#8217;s <code>main</code> class or the full path name to the application&#8217;s JAR file.</p>
+<dt>-v</p>
+<dd>
+ Displays the arguments passed to the JVM.</p>
+<dt>-V</p>
+<dd>
+ Suppresses the output of the class name, JAR file name, and arguments passed to the main method, producing only a list of local JVM identifiers.</p>
+<dt>-J<code>option</code></p>
+<dd>
+ Passes <code>option</code> to the JVM, where option is one of the <code>options</code> described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dl>
+<h2>HOST IDENTIFIER</h2>
+<p> The host identifier, or <code>hostid</code> is a string that indicates the target system. The syntax of the <code>hostid</code> string corresponds to the syntax of a URI: </p>
+<p>[protocol:][[//]hostname][:port][/servername]</p>
+<pre>
+</pre>
+<dl>
+<dt><i>protocol</i></p>
+<dd> The communications protocol. If the <code>protocol</code> is omitted and a <code>hostname</code> is not specified, then the default protocol is a platform-specific, optimized, local protocol. If the protocol is omitted and a host name is specified, then the default protocol is <code>rmi</code>.</p>
+<dt>hostname</p>
+<dd> A hostname or IP address that indicates the target host. If you omit the <code>hostname</code> parameter, then the target host is the local host.</p>
+<dt>port</p>
+<dd> The default port for communicating with the remote server. If the <code>hostname</code> parameter is omitted or the <code>protocol</code> parameter specifies an optimized, local protocol, then the <code>port</code> parameter is ignored. Otherwise, treatment of the <code>port</code> parameter is implementation specific. For the default <code>rmi</code> protocol, the <code>port</code> parameter indicates the port number for the rmiregistry on the remote host. If the <code>port</code> parameter is omitted, and the <code>protocol</code> parameter indicates <code>rmi</code>, then the default rmiregistry port (1099) is used.</p>
+<dt>servername</p>
+<dd> The treatment of this parameter depends on the implementation. For the optimized, local protocol, this field is ignored. For the <code>rmi</code> protocol, this parameter is a string that represents the name of the RMI remote object on the remote host. See the <code>jstatd</code> command <code>-n</code>option for more information.</dl>
+<h2>OUTPUT FORMAT</h2>
+<p> The output of the <code>jps</code> command follows the following pattern: </p>
+<pre><code>
+lvmid [[classname | JARfilename | "Unknown"] [arg * ] [jvmarg * ]]
+</code></pre>
+<pre>
+</pre>
+<p> All output tokens are separated by white space. An <code>arg</code> value that includes embedded white space introduces ambiguity when attempting to map arguments to their actual positional parameters. </p>
+<p> <i>Note:</i> It is recommended that you do not write scripts to parse <code>jps</code> output because the format might change in future releases. If you write scripts that parse <code>jps</code> output, then expect to modify them for future releases of this tool.</p>
+<h2>EXAMPLES</h2>
+<p> This section provides examples of the <code>jps</code> command. </p>
+<p> List the instrumented JVMs on the local host: </p>
+<pre>
+<code>jps</code>
+</pre>
+<pre>
+<code>18027 Java2Demo.JAR</code>
+</pre>
+<pre>
+<code>18032 jps</code>
+</pre>
+<pre>
+<code>18005 jstat</code>
+</pre>
+<pre>
+</pre>
+<p> The following example lists the instrumented JVMs on a remote host. This example assumes that the <code>jstat</code> server and either the its internal RMI registry or a separate external rmiregistry process are running on the remote host on the default port (port 1099). It also assumes that the local host has appropriate permissions to access the remote host. This example also includes the <code>-l</code> option to output the long form of the class names or JAR file names. </p>
+<pre>
+<code>jps -l remote.domain</code>
+</pre>
+<pre>
+<code>3002 /opt/jdk1.7.0/demo/jfc/Java2D/Java2Demo.JAR</code>
+</pre>
+<pre>
+<code>2857 sun.tools.jstatd.jstatd</code>
+</pre>
+<pre>
+</pre>
+<p> The following example lists the instrumented JVMs on a remote host with a non-default port for the RMI registry. This example assumes that the <code>jstatd</code> server, with an internal RMI registry bound to port 2002, is running on the remote host. This example also uses the <code>-m</code> option to include the arguments passed to the <code>main</code> method of each of the listed Java applications. </p>
+<pre>
+<code>jps -m remote.domain:2002</code>
+</pre>
+<pre>
+<code>3002 /opt/jdk1.7.0/demo/jfc/Java2D/Java2Demo.JAR</code>
+</pre>
+<pre>
+<code>3102 sun.tools.jstatd.jstatd -p 2002</code>
+</pre>
+<pre>
+</pre>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-java/">java</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-jstat/">jstat</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-jstatd/">jstatd</a>(1)</p>
+<dt>&bull;</p>
+<dd> <a href="/docs/linux/man/1-rmiregistry/">rmiregistry</a>(1) </p>
+</dl>
+<h2>Index</h2>

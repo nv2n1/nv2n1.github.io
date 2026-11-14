@@ -1,0 +1,87 @@
+---
+title: "jpegoptim(1)"
+name: "jpegoptim"
+section: "1"
+letter: "j"
+url: "/docs/linux/man/1-jpegoptim/"
+description: "jpegoptim – utility to optimize/compress JPEG/JFIF files."
+---
+
+<h2>NAME</h2>
+<p> jpegoptim &#8211; utility to optimize/compress JPEG/JFIF files. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>jpegoptim</code> [ <code>options </code> ] [ <code>filenames </code> ] </p>
+<h2>DESCRIPTION</h2>
+<p> <i>jpegoptim</i> is used to optimize/compress jpeg files. Program supports lossless optimization, which is based on optimizing the Huffman tables. And so called &quot;lossy&quot; optimization where in addition to optimizing Huffman tables user can specify upperlimit for image quality. </p>
+<p> NOTE! By default jpegoptim modifies the input files (if they are optimized), to preserve original files use option <code>-d</code> to specify alternate directory for saving the optimized files to. </p>
+<p> Only normal files are optimized (symbolic links and special files are skipped). Also, any other hard links to the file being optimized (as created using <code><a href="/docs/linux/man/2-link/">link</a></code>(2)) are unaffected. </p>
+<h2>OPTIONS</h2>
+<p> Options may be either the traditional POSIX one letter options, or the GNU style long options. POSIX style options start with a single &#8220;-&#8221;, while GNU long options start with &#8220;&#8211;&#8221;. </p>
+<p> Options offered by <i>jpegoptim</i> are the following:</p>
+<dl>
+<dt><code>-d&lt;path&gt;, &#8211;dest=&lt;path&gt;</code></p>
+<dd> Sets alternative destination directory where to save optimized files (default is to overwrite the originals). Please note that unchanged files won&#8217;t be added to the destination directory. This means if the source file can&#8217;t be compressed, no file will be created in the destination path.</p>
+<dt><code>-f, &#8211;force</code></p>
+<dd> Force optimization, even if the result would be larger than the original file.</p>
+<dt><code>-h, &#8211;help</code></p>
+<dd> Displays short usage information and exits.</p>
+<dt><code>-m&lt;quality&gt;, &#8211;max=&lt;quality&gt;</code></p>
+<dd> Sets the maximum image quality factor (disables lossless optimization mode, which is by default enabled). This option will reduce quality of those source files that were saved using higher quality setting. While files that already have lower quality setting will be compressed using the lossless optimization method. </p>
+<p> Valid values for quality parameter are: 0 &#8211; 100</p>
+<dt><code>-n, &#8211;noaction</code></p>
+<dd> Don&#8217;t really optimize files, just print results.</p>
+<dt><code>-S&lt;size&gt;, &#8211;size=&lt;size&gt;</code></p>
+<dd> Try to optimize file to given size (disables lossless optimization mode). Target size is specified either in kilobytes (1 &#8211; n) or as percentage (1% &#8211; 99%) of the original file size.</p>
+<dt><code>-T&lt;threshold&gt;, &#8211;threshold=&lt;threshold&gt;</code></p>
+<dd> Keep the file unchanged if the compression gain is lower than the threshold (%). </p>
+<p> Valid values for threshold are: 0 &#8211; 100</p>
+<dt><code>-b, &#8211;csv</code></p>
+<dd> Print progress info in CSV format.</p>
+<dt><code>-o, &#8211;overwrite</code></p>
+<dd> Overwrite target file even if it exists (when using -d option).</p>
+<dt><code>-p, &#8211;preserve</code></p>
+<dd> Preserve file modification times.</p>
+<dt><code>-P, &#8211;preserve-perms</code></p>
+<dd> Preserve file permissions (owner/group) by overwriting the original file. This is slightly less safe than the default mode of operation (where new file is first saved as temporary file and then renamed over the original file). In this mode a backup of the original file is made with .jpegoptim.bak extension, and this file is removed after the original file has been successfully replaced. NOTE! if running jpegoptim as root there is generally no need to use this option, as jpegoptim is able to preserve file permissions when run by root in default mode.</p>
+<dt><code>-q, &#8211;quiet</code></p>
+<dd> Quiet mode.</p>
+<dt><code>-t, &#8211;totals</code></p>
+<dd> Print totals after processing all files.</p>
+<dt><code>-v, &#8211;verbose</code></p>
+<dd> Enables verbose mode (positively chatty). </p>
+<dt><code>&#8211;all-normal</code></p>
+<dd> Force all output files to be non-progressive. Can be used to convert all input files to progressive JPEGs when used with &#8211;force option.</p>
+<dt><code>&#8211;all-progressive</code></p>
+<dd> Force all output files to be progressive. Can be used to convert all normal (non-progressive) JPEGs input files to progressive when used with &#8211;force option. </p>
+<dt><code>-s, &#8211;strip-all</code></p>
+<dd> Strip all markers from output file. (NOTE! by default only Comment &amp; Exif/IPTC/PhotoShop/ICC/XMP markers are kept, everything else is discarded). Output JPEG still likely will contains one or two markers (JFIF and Adobe APP14) depending on colorspace used in the image, as these markers are generated by the libjpeg encoder automatically.</p>
+<dt><code>&#8211;strip-none</code></p>
+<dd> Preserve &quot;all&quot; markers in the image. This will leave all markers untouched in the image, except JFIF (APP0) and Adobe (APP14) markers as those get regenerated by the libjpeg library.</p>
+<dt><code>&#8211;strip-com</code></p>
+<dd> Strip Comment (COM) markers from output file.</p>
+<dt><code>&#8211;strip-exif</code></p>
+<dd> Strip EXIF markers from output file.</p>
+<dt><code>&#8211;strip-iptc</code></p>
+<dd> Strip IPTC / Adobe Photoshop (APP13) markers from output file.</p>
+<dt><code>&#8211;strip-icc</code></p>
+<dd> Strip ICC profiles from output file.</p>
+<dt><code>&#8211;strip-xmp</code></p>
+<dd> Strip XMP profiles from output file. </p>
+<dt><code>&#8211;stdout</code></p>
+<dd> Send output image to standard output. Note, if optimization didn&#8217;t create smaller file than the input file, then no output (image) is sent to standard output. (Option <code>-f</code> can be used to force output of image always, even if optimized image was not smaller than input). </p>
+<dt><code>&#8211;stdin</code></p>
+<dd> Read input image from standard input. When this option is used then only one image is read from standard output. Any (other) input files specified on command line are ignored. Note, if input file &#8216;-&#8216; is seen on command line then standard input is also assumed. </p>
+<p> Currently this option will explicitly enable <code>-f</code> option, thus output image is always sent to standard output (even if no optimization was possible). </p>
+</dl>
+<h2>BUGS</h2>
+<p> When using &#8211;size option, resulting file is not always exactly the requested size. Workaround is to re-run jpegoptim on the same file again which often will result file closer to target size. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-jpeginfo/">jpeginfo</a>(1) </p>
+<h2>AUTHOR</h2>
+<p> Timo Kokkonen &lt;tjko [at] iki.fi&gt; </p>
+<h2>COPYING</h2>
+<p> Copyright (C) 1996-2016 Timo Kokkonen </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.<br />
+&nbsp;<wbr>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.<br />
+&nbsp;<wbr>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+<h2>Index</h2>

@@ -1,0 +1,254 @@
+---
+title: "dgegv(3)"
+name: "dgegv"
+section: "3"
+letter: "d"
+url: "/docs/linux/man/3-dgegv/"
+description: "dgegv.f –"
+---
+
+<h2 class="name">NAME</h2>
+<p> dgegv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p> subroutine <code>dgegv</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br />
+ <i></i><code> DGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dgegv (characterJOBVL, characterJOBVR, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )ALPHAR, double precision, dimension( * )ALPHAI, double precision, dimension( * )BETA, double precision, dimension( ldvl, * )VL, integerLDVL, double precision, dimension( ldvr, * )VR, integerLDVR, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
+<p> <code> DGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dt>
+<dd>
+<pre>
+ This routine is deprecated and has been replaced by routine DGGEV.
+ DGEGV computes the eigenvalues and, optionally, the left and/or right
+ eigenvectors of a real matrix pair (A,B).
+ Given two square matrices A and B,
+ the generalized nonsymmetric eigenvalue problem (GNEP) is to find the
+ eigenvalues lambda and corresponding (non-zero) eigenvectors x such
+ that
+    A*x = lambda*B*x.
+ An alternate form is to find the eigenvalues mu and corresponding
+ eigenvectors y such that
+    mu*A*y = B*y.
+ These two forms are equivalent with mu = 1/lambda and x = y if
+ neither lambda nor mu is zero.  In order to deal with the case that
+ lambda or mu is zero or small, two values alpha and beta are returned
+ for each eigenvalue, such that lambda = alpha/beta and
+ mu = beta/alpha.
+ The vectors x and y in the above equations are right eigenvectors of
+ the matrix pair (A,B).  Vectors u and v satisfying
+    u**H*A = lambda*u**H*B  or  mu*v**H*A = v**H*B
+ are left eigenvectors of (A,B).
+ Note: this routine performs &quot;full balancing&quot; on A and B
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+<dd> <i>JOBVL</i> </p>
+<pre>
+          JOBVL is CHARACTER*1
+          = 'N':  do not compute the left generalized eigenvectors;
+          = 'V':  compute the left generalized eigenvectors (returned
+                  in VL).
+</pre>
+<p> <i>JOBVR</i> </p>
+<pre>
+          JOBVR is CHARACTER*1
+          = 'N':  do not compute the right generalized eigenvectors;
+          = 'V':  compute the right generalized eigenvectors (returned
+                  in VR).
+</pre>
+<p> <i>N</i> </p>
+<pre>
+          N is INTEGER
+          The order of the matrices A, B, VL, and VR.  N &gt;= 0.
+</pre>
+<p> <i>A</i> </p>
+<pre>
+          A is DOUBLE PRECISION array, dimension (LDA, N)
+          On entry, the matrix A.
+          If JOBVL = 'V' or JOBVR = 'V', then on exit A
+          contains the real Schur form of A from the generalized Schur
+          factorization of the pair (A,B) after balancing.
+          If no eigenvectors were computed, then only the diagonal
+          blocks from the Schur form will be correct.  See DGGHRD and
+          DHGEQZ for details.
+</pre>
+<p> <i>LDA</i> </p>
+<pre>
+          LDA is INTEGER
+          The leading dimension of A.  LDA &gt;= max(1,N).
+</pre>
+<p> <i>B</i> </p>
+<pre>
+          B is DOUBLE PRECISION array, dimension (LDB, N)
+          On entry, the matrix B.
+          If JOBVL = 'V' or JOBVR = 'V', then on exit B contains the
+          upper triangular matrix obtained from B in the generalized
+          Schur factorization of the pair (A,B) after balancing.
+          If no eigenvectors were computed, then only those elements of
+          B corresponding to the diagonal blocks from the Schur form of
+          A will be correct.  See DGGHRD and DHGEQZ for details.
+</pre>
+<p> <i>LDB</i> </p>
+<pre>
+          LDB is INTEGER
+          The leading dimension of B.  LDB &gt;= max(1,N).
+</pre>
+<p> <i>ALPHAR</i> </p>
+<pre>
+          ALPHAR is DOUBLE PRECISION array, dimension (N)
+          The real parts of each scalar alpha defining an eigenvalue of
+          GNEP.
+</pre>
+<p> <i>ALPHAI</i> </p>
+<pre>
+          ALPHAI is DOUBLE PRECISION array, dimension (N)
+          The imaginary parts of each scalar alpha defining an
+          eigenvalue of GNEP.  If ALPHAI(j) is zero, then the j-th
+          eigenvalue is real; if positive, then the j-th and
+          (j+1)-st eigenvalues are a complex conjugate pair, with
+          ALPHAI(j+1) = -ALPHAI(j).
+</pre>
+<p> <i>BETA</i> </p>
+<pre>
+          BETA is DOUBLE PRECISION array, dimension (N)
+          The scalars beta that define the eigenvalues of GNEP.
+          
+          Together, the quantities alpha = (ALPHAR(j),ALPHAI(j)) and
+          beta = BETA(j) represent the j-th eigenvalue of the matrix
+          pair (A,B), in one of the forms lambda = alpha/beta or
+          mu = beta/alpha.  Since either lambda or mu may overflow,
+          they should not, in general, be computed.
+</pre>
+<p> <i>VL</i> </p>
+<pre>
+          VL is DOUBLE PRECISION array, dimension (LDVL,N)
+          If JOBVL = 'V', the left eigenvectors u(j) are stored
+          in the columns of VL, in the same order as their eigenvalues.
+          If the j-th eigenvalue is real, then u(j) = VL(:,j).
+          If the j-th and (j+1)-st eigenvalues form a complex conjugate
+          pair, then
+             u(j) = VL(:,j) + i*VL(:,j+1)
+          and
+            u(j+1) = VL(:,j) - i*VL(:,j+1).
+          Each eigenvector is scaled so that its largest component has
+          abs(real part) + abs(imag. part) = 1, except for eigenvectors
+          corresponding to an eigenvalue with alpha = beta = 0, which
+          are set to zero.
+          Not referenced if JOBVL = 'N'.
+</pre>
+<p> <i>LDVL</i> </p>
+<pre>
+          LDVL is INTEGER
+          The leading dimension of the matrix VL. LDVL &gt;= 1, and
+          if JOBVL = 'V', LDVL &gt;= N.
+</pre>
+<p> <i>VR</i> </p>
+<pre>
+          VR is DOUBLE PRECISION array, dimension (LDVR,N)
+          If JOBVR = 'V', the right eigenvectors x(j) are stored
+          in the columns of VR, in the same order as their eigenvalues.
+          If the j-th eigenvalue is real, then x(j) = VR(:,j).
+          If the j-th and (j+1)-st eigenvalues form a complex conjugate
+          pair, then
+            x(j) = VR(:,j) + i*VR(:,j+1)
+          and
+            x(j+1) = VR(:,j) - i*VR(:,j+1).
+          Each eigenvector is scaled so that its largest component has
+          abs(real part) + abs(imag. part) = 1, except for eigenvalues
+          corresponding to an eigenvalue with alpha = beta = 0, which
+          are set to zero.
+          Not referenced if JOBVR = 'N'.
+</pre>
+<p> <i>LDVR</i> </p>
+<pre>
+          LDVR is INTEGER
+          The leading dimension of the matrix VR. LDVR &gt;= 1, and
+          if JOBVR = 'V', LDVR &gt;= N.
+</pre>
+<p> <i>WORK</i> </p>
+<pre>
+          WORK is DOUBLE PRECISION array, dimension (MAX(1,LWORK))
+          On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
+</pre>
+<p> <i>LWORK</i> </p>
+<pre><code>
+          LWORK is INTEGER
+          The dimension of the array WORK.  LWORK &gt;= max(1,8*N).
+          For good performance, LWORK must generally be larger.
+          To compute the optimal value of LWORK, call ILAENV to get
+          blocksizes (for DGEQRF, DORMQR, and DORGQR.)  Then compute:
+          NB  -- MAX of the blocksizes for DGEQRF, DORMQR, and DORGQR;
+          The optimal LWORK is : 2 * N + MAX(6 * N, N *(NB + 1)).If LWORK = -1, then a workspace query is assumed;
+          the routine
+              only calculates the optimal size of the WORK array,
+              returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.
+</code></pre>
+<p> <i>INFO</i> </p>
+<p>          INFO is INTEGER<br />
+          = 0:  successful exit<br />
+          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.<br />
+          = 1,&#8230;,N:<br />
+                The QZ iteration failed.  No eigenvectors have been<br />
+                calculated, but ALPHAR(j), ALPHAI(j), and BETA(j)<br />
+                should be correct for j=INFO+1,&#8230;,N.<br />
+          &gt; N:  errors that usually indicate LAPACK problems:<br />
+                =N+1: error return from DGGBAL<br />
+                =N+2: error return from DGEQRF<br />
+                =N+3: error return from DORMQR<br />
+                =N+4: error return from DORGQR<br />
+                =N+5: error return from DGGHRD<br />
+                =N+6: error return from DHGEQZ (other than failed<br />
+                                                iteration)<br />
+                =N+7: error return from DTGEVC<br />
+                =N+8: error return from DGGBAK (computing VL)<br />
+                =N+9: error return from DGGBAK (computing VR)<br />
+                =N+10: error return from DLASCL (various calls)</p>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dt>
+<dd> Univ. of Tennessee </p>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dt>
+<dd> November 2011</dl>
+<p> <code>Further Details: </code></p>
+<dl>
+<dt>
+<dd>
+<pre><code>
+  Balancing
+  ---------
+  This driver calls DGGBAL to both permute and scale rows and columns
+  of A and B.  The permutations PL and PR are chosen so that PL*A*PR
+  and PL*B*R will be upper triangular except for the diagonal blocks
+  A(i:j,i:j) and B(i:j,i:j), with i and j as close together as
+  possible.  The diagonal scaling matrices DL and DR are chosen so
+  that the pair  DL*PL*A*PR*DR, DL*PL*B*PR*DR have elements close to
+  one (except for the elements that start out zero.)
+  After the eigenvalues and eigenvectors of the balanced matrices
+  have been computed, DGGBAK transforms the eigenvectors back to what
+  they would have been (in perfect arithmetic) if they had not been
+  balanced.
+  Contents of A and B on Exit
+  -------- -- - --- - -- ----
+  If any eigenvectors are computed (either JOBVL='V' or JOBVR='V' or
+  both), then on exit the arrays A and B will contain the real Schur
+  form[*] of the "balanced" versions of A and B.  If no eigenvectors
+  are computed, then only the diagonal blocks will be correct.
+  [*] See DHGEQZ, DGEGS, or read the book "Matrix Computations",
+      by Golub &amp; van Loan, pub. by Johns Hopkins U. Press.
+</code></pre>
+<p>&nbsp;<wbr></dl>
+<p> Definition at line 306 of file dgegv.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code. </p>
+<h2>Index</h2>

@@ -1,0 +1,103 @@
+---
+title: "checkmk(1)"
+name: "checkmk"
+section: "1"
+letter: "c"
+url: "/docs/linux/man/1-checkmk/"
+description: "checkmk – Awk script for generating C unit tests for use with the Check unit testing framework."
+---
+
+<h2 class="name">NAME</h2>
+<p> checkmk &#8211; Awk script for generating C unit tests for use with the Check unit testing framework. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>checkmk</code> [ <code>clean_mode=1</code> ] [ <i>input-file</i> ] </p>
+<h2>DESCRIPTION</h2>
+<p> Generate C-language source files containing unit tests for use with the Check unit testing framework. The aim of this script is to automate away some of the typical boilerplate one must write when writing a test suite using Check: specifically, the instantiation of an SRunner, Suite(s), and TCase(s), and the building of relationships between these objects and the test functions. </p>
+<p> This tool is intended to be used by those who are familiar with the Check unit testing framework. Familiarity with the framework will be assumed throughout this manual. </p>
+<p> The Check framework, along with information regarding it, is available at <a rel="nofollow" href="http://check.sourceforge.net/">http://check.sourceforge.net/</a> &lt;URL:<a href="http://check.sourceforge.net/">http://check.sourceforge.net/</a>&gt;. </p>
+<p> The <i>input-file</i> argument to <code>checkmk</code> uses a simple, C-preprocessor-like syntax to declare test functions, and to describe their relationships to Suites and TCases in Check. <code>checkmk</code> then uses this information to automatically write a <code>main()</code> function containing all of the necessary declarations, and whatever code is needed to run the test suites. The final C-language output is printed to <code>checkmk</code>&#8216;s standard output. </p>
+<p> Facilities are provided for the insertion of user code into the generated <code>main()</code> function, to provide for the use of logging, test fixtures or specialized exit values. </p>
+<p> While it is possible to omit the <i>input-file</i> argument to <code>checkmk</code> and provide the input file on <code>checkmk</code>&#8216;s standard input instead, it is generally recommended to provide it as an argument. Doing this allows <code>checkmk</code> to be aware of the file&#8217;s name, to place references to it in the initial comments of the C-language output, and to intersperse C #line directives throughout, to facilitate in debugging problems by directing the user to the original input file.</p>
+<h2>OPTIONS</h2>
+<p> The only officially supported option is specifying a true value (using Awk&#8217;s definition for &quot;true&quot;) for the variable <code>clean_mode</code>. This causes <code>checkmk</code> not to place appropriate #line directives in the source code, which some might find to be unnecessary clutter. </p>
+<p> The author recommends against the use of this option, as it will cause C compilers and debugging tools to refer to lines in the automatically generated output, rather than the original input files to <code>checkmk</code>. This would encourage users to edit the output files instead of the original input files, would make it difficult for intelligent editors or IDEs to pull up the right file to edit, and could result in the fixes being overwritten when the output files are regenerated. </p>
+<p> #line directives are automatically supressed when the input file is provided on standard input instead of as a command-line argument.</p>
+<h2>BASIC EXAMPLE</h2>
+<p> In its most basic form, an input file can be simply a prologue and a test function. Anything that appears before the first test function is in the prologue, and will be copied into the output verbatim. The test function is begun by a line in the form: </p>
+<pre>
+#test <i>test_name</i>
+</pre>
+<p> Where <i>test_name</i> is the name of your test function. This will be used to name a C function, so it must be a valid C identifier. </p>
+<p> Here is a small, complete example: </p>
+<pre><code>
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+/* A complete test example */
+#include &lt;stdio.h&gt;
+#test the_test
+                                                                        int nc;
+const char msg[] = "
+
+    Hello, world!
+";
+nc = printf("%s", msg);
+fail_unless(nc == (sizeof msg - 1) /* for terminating NUL. */
+);
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</code></pre>
+<p> If you place the above into a file named <i>basic_complete.ts</i> and process it using the following command: </p>
+<p> <code>$ checkmk basic_complete.ts &gt; basic_complete.c</code> </p>
+<p> <i>basic_complete.c</i> will contain output similar to: </p>
+<p>&#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br />
+/*<br />
+ * DO NOT EDIT THIS FILE. Generated by checkmk.<br />
+ * Edit the original source file &#8220;in&#8221; instead.<br />
+ */<br />
+#include &lt;check.h&gt;<br />
+/* A complete test example */<br />
+#include &lt;stdio.h&gt;<br />
+                                                                        START_TEST(the_test)<br />
+{<br />
+    int nc;<br />
+    const char msg[] = &#8220;
+
+    Hello, world!
+&#8221;;<br />
+    nc = printf(&#8220;%s&#8221;, msg);<br />
+    fail_unless(nc == (sizeof msg &#8211; 1) /* for terminating NUL. */<br />
+    );<br />
+}<br />
+END_TEST<br />
+int main(void)<br />
+{<br />
+    Suite *s1 = suite_create(&#8220;Core&#8221;);<br />
+    TCase *tc1_1 = tcase_create(&#8220;Core&#8221;);<br />
+    SRunner *sr = srunner_create(s1);<br />
+    int nf;<br />
+    suite_add_tcase(s1, tc1_1);<br />
+    tcase_add_test(tc1_1, the_test);<br />
+    srunner_run_all(sr, CK_ENV);<br />
+    nf = srunner_ntests_failed(sr);<br />
+    srunner_free(sr);<br />
+    return nf == 0 ? 0 : 1;<br />
+}<br />
+&#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;</p>
+<p> In real usage, <i>basic_complete.c</i> would also contain #line directives.</p>
+<h2>DIRECTIVE SUMMARY</h2>
+<p> Here is a complete summary of all the C-preprocessor-style directives that are understood by <code>checkmk</code>. See below for more details. </p>
+<pre>
+# test <i>test_name</i>
+# suite <i>TestSuiteName</i>
+# tcase <i>TestCaseName</i>
+# main-pre
+# main-post
+</pre>
+<p> All directives are case-insensitive. Whitespace may appear at the beginning of the line before the #, between the # and the directive, between the directive and any argument, and at the end of the line.</p>
+<h2>TEST-DEFINING DIRECTIVES</h2>
+<p> Here is a more detailed explanation of the directives that may be used to define test functions and their containers.</p>
+<h3>TEST FUNCTIONS</h3>
+<pre>
+# test <i>test_name</i>
+</pre>
+<p> This is the most basic directive for creating a template for input to <code>checkmk</code>. It is the only directive that is required: there must be at least one #test directive appearing in the template, or <code>checkmk</code> will fail with an error message. The #test directive may be specified several times, each one beginning the definition of a new test function. </p>
+<p> The <i>test_name</i> argument will be used as the name of a test function in the C-language output, so it must be a valid C identifier. That is, it must begin with an alphabetic character or the underscore (_), followed by optional alpha-numeric characters and/or underscores. </p>
+<p> Universal Character Names (introduced in C99) are also allowed, of the form 

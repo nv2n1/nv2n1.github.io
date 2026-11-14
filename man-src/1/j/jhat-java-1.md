@@ -1,0 +1,82 @@
+---
+title: "jhat-java-1(1)"
+name: "jhat-java-1"
+section: "1"
+letter: "j"
+url: "/docs/linux/man/1-jhat-java-1/"
+description: "jhat – Java Heap Analysis Tool"
+---
+
+<h2>Name</h2>
+<p> jhat &#8211; Java Heap Analysis Tool </p>
+<h2>SYNOPSIS</h2>
+<pre>
+<code>jhat</code> [ <i>options</i> ] &lt;heap-dump-file&gt;
+</pre>
+<h2>PARAMETERS</h2>
+<dl>
+<dt>
+<dd>
+<dl>
+<dt>options</p>
+<dd> Options, if used, should follow immediately after the command name.</p>
+<dt>heap-dump-file</p>
+<dd> Java binary heap dump file to be browsed. For a dump file that contains multiple heap dumps, you may specify which dump in the file by appending &quot;#&lt;number&gt; to the file name, i.e. &quot;foo.hprof#3&quot;.</dl>
+</dl>
+<h2>DESCRIPTION</h2>
+<p> The <code>jhat</code> command parses a java heap dump file and launches a webserver. jhat enables you to browse heap dumps using your favorite webbrowser. jhat supports pre-designed queries (such as &#8216;show all instances of a known class &quot;Foo&quot;&#8217;) as well as <code>OQL</code> (<code>O</code>bject <code>Q</code>uery <code>L</code>anguage) &#8211; a SQL-like query language to query heap dumps. Help on OQL is available from the OQL help page shown by jhat. With the default port, OQL help is available at <a rel="nofollow" href="http://localhost:7000/oqlhelp/">http://localhost:7000/oqlhelp/</a> </p>
+<p> There are several ways to generate a java heap dump: </p>
+<dl>
+<dt>
+<dd>
+<dl>
+<dt>o</p>
+<dd> Use <a href="/docs/linux/man/1-jmap/">jmap</a>(1) -dump option to obtain a heap dump at runtime;</p>
+<dt>o</p>
+<dd> Use <a href="/docs/linux/man/1-jconsole/">jconsole</a>(1) option to obtain a heap dump via <i>HotSpotDiagnosticMXBean</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/jre/api/management/extension/com/sun/management/HotSpotDiagnosticMXBean.html">http://docs.oracle.com/javase/7/docs/jre/api/management/extension/com/sun/management/HotSpotDiagnosticMXBean.html</a> at runtime;</p>
+<dt>o</p>
+<dd> Heap dump will be generated when OutOfMemoryError is thrown by specifying -XX:+HeapDumpOnOutOfMemoryError VM option;</p>
+<dt>o</p>
+<dd> Use <i>hprof</i> @ <a rel="nofollow" href="http://java.sun.com/developer/technicalArticles/Programming/HPROF.html.">http://java.sun.com/developer/technicalArticles/Programming/HPROF.html.</a></dl>
+</dl>
+<p> <code>NOTE:</code> This tool is <code>experimental</code> and may <code>not</code> be available in future versions of the JDK. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>
+<dd>
+<dl>
+<dt>-stack false/true</p>
+<dd> Turn off tracking object allocation call stack. Note that if allocation site information is not available in the heap dump, you have to set this flag to false. Default is true.</p>
+<dt>-refs false/true</p>
+<dd> Turn off tracking of references to objects. Default is true. By default, back pointers (objects pointing to a given object a.k.a referrers or in-coming references) are calculated for all objects in the heap.</p>
+<dt>-port port-number</p>
+<dd> Set the port for the jhat&#8217;s HTTP server. Default is 7000.</p>
+<dt>-exclude exclude-file</p>
+<dd> Specify a file that lists data members that should be excluded from the &quot;reachable objects&quot; query. For example, if the file lists <i>java.lang.String.value</i>, then, whenever list of objects reachable from a specific object &quot;o&quot; are calculated, reference paths involving <i>java.lang.String.value</i> field will not considered.</p>
+<dt>-baseline baseline-dump-file</p>
+<dd> Specify a baseline heap dump. Objects in both heap dumps with the same object ID will be marked as not being &quot;new&quot;. Other objects will be marked as &quot;new&quot;. This is useful while comparing two different heap dumps.</p>
+<dt>-debug int</p>
+<dd> Set debug level for this tool. 0 means no debug output. Set higher values for more verbose modes.</p>
+<dt>-version</p>
+<dd> Report version number and exit.</p>
+<dt>-h</p>
+<dd> Output help message and exit.</p>
+<dt>-help</p>
+<dd> Output help message and exit.</p>
+<dt>-J&lt;flag&gt;</p>
+<dd> Pass &lt;flag&gt; to the Java virtual machine on which jhat is run. For example, -J-Xmx512m to use a maximum heap size of 512MB.</dl>
+</dl>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>
+<dd>
+<dl>
+<dt>o</p>
+<dd> <a href="/docs/linux/man/1-jmap/">jmap</a>(1)</p>
+<dt>o</p>
+<dd> <a href="/docs/linux/man/1-jconsole/">jconsole</a>(1)</p>
+<dt>o</p>
+<dd> <i>hprof &#8211; Heap and CPU profiling tool</i> @ <a rel="nofollow" href="http://java.sun.com/developer/technicalArticles/Programming/HPROF.html">http://java.sun.com/developer/technicalArticles/Programming/HPROF.html</a></dl>
+</dl>
+<p>&nbsp;<wbr> </p>
+<h2>Index</h2>

@@ -1,0 +1,39 @@
+---
+title: "db5-3_upgrade(1)"
+name: "db5-3_upgrade"
+section: "1"
+letter: "d"
+url: "/docs/linux/man/1-db5-3_upgrade/"
+description: "db5.3_upgrade – Upgrade the Berkeley DB version to the current release version."
+---
+
+<p>db5.3_upgrade &#8211; Upgrade the Berkeley DB version to the current release version. </p>
+<h2>Synopsis</h2>
+<p><code>db5.3_upgrade</code> [-NsVv] [-h home] [-P password] file &#8230;</p>
+<h2>Description</h2>
+<p>The db5.3_upgrade utility upgrades the Berkeley DB version of one or more files and the databases they contain to the current release version.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code></p>
+<dd>Specify a home directory for the database environment; by default, the current working directory is used.</p>
+<dt><code>-N</code></p>
+<dd>Do not acquire shared region mutexes while running. Other problems, such as potentially fatal errors in Berkeley DB, will be ignored as well. This option is intended only for debugging errors, and should not be used under any other circumstances.</p>
+<dt><code>-P</code></p>
+<dd>Specify an environment password. Although Berkeley DB utilities overwrite password strings as soon as possible, be aware there may be a window of vulnerability on systems where unprivileged users can see command-line arguments or where utilities are not able to overwrite the memory containing the command-line arguments.</p>
+<dt><code>-s</code></p>
+<dd>This flag is only meaningful when upgrading databases from releases before the Berkeley DB 3.1 release. </p>
+<p> As part of the upgrade from the Berkeley DB 3.0 release to the 3.1 release, the on-disk format of duplicate data items changed. To correctly upgrade the format requires that applications specify whether duplicate data items in the database are sorted or not. Specifying the <code>-s</code> flag means that the duplicates are sorted; otherwise, they are assumed to be unsorted. Incorrectly specifying the value of this flag may lead to database corruption. </p>
+<p> Because the db5.3_upgrade utility upgrades a physical file (including all the databases it contains), it is not possible to use db5.3_upgrade to upgrade files where some of the databases it includes have sorted duplicate data items, and some of the databases it includes have unsorted duplicate data items. If the file does not have more than a single database, if the databases do not support duplicate data items, or if all the databases that support duplicate data items support the same style of duplicates (either sorted or unsorted), db5.3_upgrade will work correctly as long as the <code>-s</code> flag is correctly specified. Otherwise, the file cannot be upgraded using db5.3_upgrade, and must be upgraded manually using the db5.3_dump and db5.0_load utilities.</p>
+<dt><code>-V</code></p>
+<dd>Write the library version number to the standard output, and exit.</p>
+<dt><code>-v</code></p>
+<dd>Run in verbose mode, displaying a message for each successful upgrade.</dl>
+<p> <code>It is important to realize that Berkeley DB database upgrades are done in place, and so are potentially destructive.</code> This means that if the system crashes during the upgrade procedure, or if the upgrade procedure runs out of disk space, the databases may be left in an inconsistent and unrecoverable state. </p>
+<p> The db5.3_upgrade utility may be used with a Berkeley DB environment (as described for the <code>-h</code> option, the environment variable <code>DB_HOME</code>, or because the utility was run in a directory containing a Berkeley DB environment). In order to avoid environment corruption when using a Berkeley DB environment, db5.3_upgrade should always be given the chance to detach from the environment and exit gracefully. To cause db5.3_upgrade to release all environment resources and exit cleanly, send it an interrupt signal (SIGINT). </p>
+<p> The db5.3_upgrade utility exits 0 on success, and &gt;0 if an error occurs.</p>
+<h2>Environment</h2>
+<dl>
+<dt><code>DB_HOME</code></p>
+<dd>If the <code>-h</code> option is not specified and the environment variable DB_HOME is set, it is used as the path of the database home, as described in DB_ENV-&gt;open.</dl>
+<h2>Authors</h2>
+<p>Sleepycat Software, Inc. This manual page was created based on the HTML documentation for db_upgrade from Sleepycat, by Thijs Kinkhorst &lt;thijs [at] kinkhorst.com&gt;, for the Debian system (but may be used by others).</p>

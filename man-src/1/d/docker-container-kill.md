@@ -1,0 +1,22 @@
+---
+title: "docker-container-kill(1)"
+name: "docker-container-kill"
+section: "1"
+letter: "d"
+url: "/docs/linux/man/1-docker-container-kill/"
+description: "docker-container-kill – Kill one or more running containers"
+---
+
+<h2 class="name">NAME</h2>
+<p> docker-container-kill &#8211; Kill one or more running containers </p>
+<h2>SYNOPSIS</h2>
+<p> <code>docker container kill [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
+<p> The main process inside each container specified will be sent SIGKILL,<br />
+&nbsp;or any signal specified with option &#8211;signal. </p>
+<h2>OPTIONS</h2>
+<p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for kill</p>
+<p> <code>-s</code>, <code>&#8211;signal</code>=&quot;KILL&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Signal to send to the container</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
+<h2>Index</h2>

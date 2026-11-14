@@ -1,0 +1,37 @@
+---
+title: "meshlab(1)"
+name: "meshlab"
+section: "1"
+letter: "m"
+url: "/docs/linux/man/1-meshlab/"
+---
+
+<h2>NAME</h2>
+
+ MeshLab - a tool for mesh inspection, processing, and conversion
+
+<h2>SYNOPSYS</h2>
+
+ meshlab [filename]
+
+<h2>DESCRIPTION</h2>
+
+ MeshLab is an open source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.The system is aimed to help the processing of the typical not-so-small unstructured models arising in 3D scanning, providing a set of tools for editing, cleaning, healing, inspecting, rendering and converting this kind of meshes.The system is based on the VCG library developed at the Visual Computing Lab of ISTI - CNR.
+
+<h2>SEE ALSO</h2>
+
+ meshlabserver (1) 
+
+<h2>COPYRIGHT</h2>
+
+ MeshLab Copyright &#169; 2005-2008 by Visual Computing Lab - ISTI CNR 
+
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. 
+
+<h2>Index</h2>
+
+

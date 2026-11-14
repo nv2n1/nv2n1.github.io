@@ -1,0 +1,21 @@
+---
+title: "aisexec_selinux(8)"
+name: "aisexec_selinux"
+section: "8"
+letter: "a"
+url: "/docs/linux/man/8-aisexec_selinux/"
+description: "aisexec_selinux – Security Enhanced Linux Policy for the aisexec processes"
+---
+
+<p>aisexec_selinux &#8211; Security Enhanced Linux Policy for the aisexec processes</p>
+<h2>Description</h2>
+<p>aisexec_t SELinux domain type is now associated with cluster domain type (cluster_t). Please see <code>cluster_selinux </code> man page for more details. </p>
+<h2>Commands</h2>
+<p><code>semanage fcontext</code> can also be used to manipulate default file context mappings. </p>
+<p> <code>semanage permissive</code> can also be used to manipulate whether or not a process type is permissive. </p>
+<p> <code>semanage module</code> can also be used to enable/disable/install/remove policy modules. </p>
+<p> <code>system-config-selinux</code> is a GUI tool available to customize SELinux policy settings.</p>
+<h2>Author</h2>
+<p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-cluster/">cluster</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) </p>

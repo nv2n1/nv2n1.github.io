@@ -1,0 +1,105 @@
+---
+title: "rmic-java-1-6-0-openjdk(1)"
+name: "rmic-java-1-6-0-openjdk"
+section: "1"
+letter: "r"
+url: "/docs/linux/man/1-rmic-java-1-6-0-openjdk/"
+description: "rmic – The Java RMI Compiler"
+---
+
+<p>rmic &#8211; The Java RMI Compiler </p>
+<p> <code>rmic</code> generates stub, skeleton, and tie classes for remote objects using either the JRMP or IIOP protocols. Also generates OMG IDL.</p>
+<h2>Synopsis</h2>
+<pre><code>rmic [ </code><code>options</code><code> ] </code><tt>package-qualified-class-name(s)</tt></pre>
+<h2>Description</h2>
+<p>The <code>rmic</code> compiler generates stub and skeleton class files (JRMP protocol) and stub and tie class files (IIOP protocol) for remote objects. These classes files are generated from compiled Java programming language classes that are remote object implementation classes. A remote implementation class is a class that implements the interface <i>java.rmi.Remote</i>. The class names in the <code>rmic</code> command must be for classes that have been compiled successfully with the <code>javac</code> command and must be fully package qualified. For example, running <code>rmic</code> on the class file name <i>HelloImpl</i> as shown here: </p>
+<pre><code>rmic hello.HelloImpl</code></pre>
+<p>creates the <i>HelloImpl_Stub.class</i> file in the <i>hello</i> subdirectory (named for the class&#8217;s package). </p>
+<p> A <i>skeleton</i> for a remote object is a JRMP protocol server-side entity that has a method that dispatches calls to the actual remote object implementation. </p>
+<p> A <i>tie</i> for a remote object is a server-side entity similar to a skeleton, but which communicates with the client using the IIOP protocol. </p>
+<p> A <i>stub</i> is a client-side proxy for a remote object which is responsible for communicating method invocations on remote objects to the server where the actual remote object implementation resides. A client&#8217;s reference to a remote object, therefore, is actually a reference to a local stub. </p>
+<p> By default, <code>rmic</code> generates stub classes that use the 1.2 JRMP stub protocol version only, as if the <i>-v1.2</i> option had been specified. (Note that the <i>-vcompat</i> option was the default in releases prior to 5.0.) Use the <i>-iiop</i> option to generate stub and tie classes for the IIOP protocol. </p>
+<p> A stub implements only the remote interfaces, not any local interfaces that the remote object also implements. Because a JRMP stub implements the same set of remote interfaces as the remote object itself, a client can use the Java programming language&#8217;s built-in operators for casting and type checking. For IIOP, the <i>PortableRemoteObject.narrow</i> method must be used. </p>
+<h2>Options</h2>
+<dl COMPACT>
+<dt>-bootclasspath path</p>
+<dd>Overrides location of bootstrap class files</p>
+<dt>-classpath path</p>
+<dd>Specifies the path <code>rmic</code> uses to look up classes. This option overrides the default or the CLASSPATH environment variable if it is set. Directories are separated by colons. Thus the general format for <i>path</i> is:</p>
+<dl COMPACT>
+<dd></dl>
+<p> For example:</p>
+<dl COMPACT>
+<dd></dl>
+<dt>-d directory</p>
+<dd>Specifies the root destination directory for the generated class hierarchy. You can use this option to specify a destination directory for the stub, skeleton, and tie files. For example, the command</p>
+<dl COMPACT>
+<dd>
+<pre><code>% rmic -d /java/classes foo.MyClass</code></pre>
+</dl>
+<p> would place the stub and skeleton classes derived from <i>MyClass</i> into the directory <i>/java/classes/foo</i>. If the <i>-d</i> option is not specified, the default behavior is as if <i>&quot;-d .&quot;</i> were specified: the package hierarchy of the target class is created in the current directory, and stub/tie/skeleton files are placed within it. (Note that in some previous versions of <code>rmic</code>, if <i>-d</i> was not specified, then the package hierarchy was <i>not</i> created, and all of the output files were placed directly in the current directory.)<br />
+ &nbsp;<wbr></p>
+<dt>-extdirs path</p>
+<dd>Overrides location of installed extensions</p>
+<dt>-g</p>
+<dd>Enables generation of all debugging information, including local variables. By default, only line number information is generated.</p>
+<dt>-idl</p>
+<dd>Causes <i>rmic</i> to generate OMG IDL for the classes specified and any classes referenced. IDL provides a purely declarative, programming language-independent way of specifying an object&#8217;s API. The IDL is used as a specification for methods and data that can be written in and invoked from any language that provides CORBA bindings. This includes Java and C++ among others. See the <i>Java Language to IDL Mapping</i> @ <a rel="nofollow" href="http://www.omg.org/technology/documents/formal/java_language_mapping_to_omg_idl.htm">http://www.omg.org/technology/documents/formal/java_language_mapping_to_omg_idl.htm</a> (OMG) document for a complete description.</dl>
+<p> When the <i>-idl</i> option is used, other options also include:</p>
+<dl COMPACT>
+<dt>-always or -alwaysgenerate</p>
+<dd>Forces re-generation even when existing stubs/ties/IDL are newer than the input class.</p>
+<dt>-factory</p>
+<dd>Uses factory keyword in generated IDL.</p>
+<dt>-idlModule&nbsp;<wbr> fromJavaPackage[.class]&nbsp;<wbr></p>
+<dd>toIDLModule Specifies IDLEntity package mapping. For example:&nbsp;<wbr> <i>-idlModule foo.bar my::real::idlmod</i>.</p>
+<dt>-idlFile&nbsp;<wbr> fromJavaPackage[.class]&nbsp;<wbr></p>
+<dd>toIDLFile Specifies IDLEntity file mapping. For example:&nbsp;<wbr> <i>-idlFile test.pkg.X TEST16.idl</i>.&nbsp;<wbr></dl>
+<dl COMPACT>
+<dt>-iiop</p>
+<dd>Causes <i>rmic</i> to generate IIOP stub and tie classes, rather than JRMP stub and skeleton classes. A stub class is a local proxy for a remote object and is used by clients to send calls to a server. Each remote interface requires a stub class, which implements that remote interface. A client&#8217;s reference to a remote object is actually a reference to a stub. Tie classes are used on the server side to process incoming calls, and dispatch the calls to the proper implementation class. Each implementation class requires a tie class.</dl>
+<p> Invoking <i>rmic</i> with the <i>-iiop</i> generates stubs and ties that conform to this naming convention:</p>
+<dl COMPACT>
+<dd>
+<pre><code>_&lt;implementationName&gt;_stub.class
+</code>
+<br>
+<code>
+_&lt;interfaceName&gt;_tie.class</code></pre>
+</dl>
+<p> When the <i>-iiop</i> option is used, other options also include:</p>
+<dl COMPACT>
+<dt>-always or -alwaysgenerate</p>
+<dd>Forces re-generation even when existing stubs/ties/IDL are newer than the input class.</p>
+<dt>-nolocalstubs</p>
+<dd>Do not create stubs optimized for same-process clients and servers.</p>
+<dt>-noValueMethods</p>
+<dd>Must be used with the <i>-idl</i> option. Prevents addition of <i>valuetype</i> methods and initializers to emitted IDL. These methods and initializers are optional for <i>valuetype</i>s, and are generated unless the <i>-noValueMethods</i> option is specified when using the <i>-idl</i> option.</p>
+<dt>-poa</p>
+<dd>Changes the inheritance from <i>org.omg.CORBA_2_3.portable.ObjectImpl</i> to <i>org.omg.PortableServer.Servant</i>.</dl>
+<p> The <i>PortableServer</i> module for the <i>Portable Object Adapter</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/idl/POA.html">http://java.sun.com/javase/6/docs/technotes/guides/idl/POA.html</a> (POA) defines the native <i>Servant</i> type. In the Java programming language, the <i>Servant</i> type is mapped to the Java <i>org.omg.PortableServer.Servant</i> class. It serves as the base class for all POA servant implementations and provides a number of methods that may be invoked by the application programmer, as well as methods which are invoked by the POA itself and may be overridden by the user to control aspects of servant behavior. Based on the OMG IDL to Java Language Mapping Specification, CORBA V 2.3.1 ptc/00-01-08.pdf.</p>
+<dl COMPACT>
+<dt>-J</p>
+<dd>Used in conjunction with any <i>java</i> option, it passes the option following the <i>-J</i> (no spaces between the -J and the option) on to the <i>java</i> interpreter.</p>
+<dt>-keep or -keepgenerated</p>
+<dd>Retains the generated <i>.java</i> source files for the stub, skeleton, and/or tie classes and writes them to the same directory as the <i>.class</i> files.</p>
+<dt>-nowarn</p>
+<dd>Turns off warnings. If used the compiler does not print out any warnings.</p>
+<dt>-vcompat</p>
+<dd>Generates stub and skeleton classes compatible with both the 1.1 and 1.2 JRMP stub protocol versions. (This option was the default in releases prior to 5.0.) The generated stub classes will use the 1.1 stub protocol version when loaded in a JDK 1.1 virtual machine and will use the 1.2 stub protocol version when loaded into a 1.2 (or later) virtual machine. The generated skeleton classes will support both 1.1 and 1.2 stub protocol versions. The generated classes are relatively large in order to support both modes of operation.</p>
+<dt>-verbose</p>
+<dd>Causes the compiler and linker to print out messages about what classes are being compiled and what class files are being loaded.</p>
+<dt>-v1.1</p>
+<dd>Generates stub and skeleton classes for the 1.1 JRMP stub protocol version only. Note that this option is only useful for generating stub classes that are serialization-compatible with pre-existing, statically-deployed stub classes that were generated by the <code>rmic</code> tool from JDK 1.1 and that cannot be upgraded (and dynamic class loading is not being used).</p>
+<dt>-v1.2</p>
+<dd>(default) Generates stub classes for the 1.2 JRMP stub protocol version only. No skeleton classes are generated with this option because skeleton classes are not used with the 1.2 stub protocol version. The generated stub classes will not work if they are loaded into a JDK 1.1 virtual machine.</dl>
+<h2>Environment Variables</h2>
+<dl COMPACT>
+<dt>CLASSPATH</p>
+<dd>Used to provide the system a path to user-defined classes. Directories are separated by colons. For example,</p>
+<dl COMPACT>
+<dd></dl>
+</dl>
+<h2>See Also</h2>
+<p>java, javac, CLASSPATH </p>
+<p>&nbsp;<wbr></p>

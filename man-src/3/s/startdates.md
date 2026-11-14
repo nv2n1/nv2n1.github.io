@@ -1,0 +1,38 @@
+---
+title: "startdates(3)"
+name: "startdates"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-startdates/"
+description: "QuantLib::CapFloor::arguments – Arguments for cap/floor calculation"
+---
+
+<p>QuantLib::CapFloor::arguments &#8211; Arguments for cap/floor calculation </p>
+<h2>Synopsis</h2>
+<pre><code>void validate () const
+
+
+
+Public Attributes</code></pre>
+<p> Inherits QuantLib::PricingEngine::arguments.</p>
+<h3>Public Member Functions</h3>
+<pre><code>void validate () const
+
+
+
+Public Attributes</code></pre>
+<p> CapFloor::Type <code>type</code> </p>
+<p> std::vector&lt; <code>Date</code> &gt; <code>startDates</code> </p>
+<p> std::vector&lt; <code>Date</code> &gt; <code>fixingDates</code> </p>
+<p> std::vector&lt; <code>Date</code> &gt; <code>endDates</code> </p>
+<p> std::vector&lt; <code>Time</code> &gt; <code>accrualTimes</code> </p>
+<p> std::vector&lt; <code>Rate</code> &gt; <code>capRates</code> </p>
+<p> std::vector&lt; <code>Rate</code> &gt; <code>floorRates</code> </p>
+<p> std::vector&lt; <code>Rate</code> &gt; <code>forwards</code> </p>
+<p> std::vector&lt; <code>Real</code> &gt; <code>gearings</code> </p>
+<p> std::vector&lt; <code>Real</code> &gt; <code>spreads</code> </p>
+<p> std::vector&lt; <code>Real</code> &gt; <code>nominals</code></p>
+<h2>Detailed Description</h2>
+<p>Arguments for cap/floor calculation</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>

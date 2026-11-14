@@ -1,0 +1,48 @@
+---
+title: "git-cpan-last-version(1)"
+name: "git-cpan-last-version"
+section: "1"
+letter: "g"
+url: "/docs/linux/man/1-git-cpan-last-version/"
+---
+
+<h2 class="name">NAME</h2>
+ 
+
+ git-cpan-last-version - Report the last imported version 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
+    % git cpan-last-version
+</pre>
+
+<h2>DESCRIPTION</h2>
+
+ This command searches through the history of the <tt>&quot;cpan/master&quot;</tt> reference for the last imported version.
+
+<h2>VERSION</h2>
+
+ This document describes git-cpan-last-version version 0.2.1
+
+<h2>BUGS AND LIMITATIONS</h2>
+
+ Please report any bugs or feature requests to <tt>&quot;bug-git-cpan-patch [at] rt.cpan.org&quot;</tt>, or through the web interface at &lt;<a rel="nofollow" HREF="http://rt.cpan.org">http://rt.cpan.org</a>&gt;.
+
+<h2>AUTHORS</h2>
+
+ Yuval Kogman <tt>&quot;&lt;nothingmuch [at] woobling.org&gt;&quot;</tt> 
+
+ Yanick Champoux <tt>&quot;&lt;yanick [at] cpan.org&gt;&quot;</tt>
+
+<h2>LICENCE</h2>
+
+ This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself. See perlartistic.
+
+<h2>SEE ALSO</h2>
+
+ Git::CPAN::Patch 
+
+<h2>Index</h2>
+
+

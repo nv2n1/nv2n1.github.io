@@ -1,0 +1,27 @@
+---
+title: "globus_xio_tcp_error_no_addrs(3)"
+name: "globus_xio_tcp_error_no_addrs"
+section: "3"
+letter: "g"
+url: "/docs/linux/man/3-globus_xio_tcp_error_no_addrs/"
+description: "Error Types –"
+---
+
+<p>Error Types &#8211; </p>
+<h3>Enumerations</h3>
+<p>enum <code>globus_xio_tcp_error_type_t</code> { <code>GLOBUS_XIO_TCP_ERROR_NO_ADDRS</code> } </p>
+<h2>Detailed Description</h2>
+<p>The TCP driver is very close to the system code, so most errors reported by it are converted from the system errno. A few of the exceptions are GLOBUS_XIO_ERROR_EOF, GLOBUS_XIO_ERROR_COMMAND, GLOBUS_XIO_ERROR_CONTACT_STRING, GLOBUS_XIO_ERROR_CANCELED, and <code>GLOBUS_XIO_TCP_ERROR_NO_ADDRS</code> </p>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd>globus_xio_driver_error_match() </p>
+<p> globus_error_errno_match()</dl>
+<h2>Enumeration Type Documentation</h2>
+<h3>enum <code>globus_xio_tcp_error_type_t</code></h3>
+<p>TCP driver specific error types </p>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>GLOBUS_XIO_TCP_ERROR_NO_ADDRS </i></p>
+<dd>Indicates that no IPv4/6 compatible sockets could be resolved for the specified hostname</dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus_xio from the source code.</p>

@@ -1,0 +1,19 @@
+---
+title: "exalpha(3)"
+name: "exalpha"
+section: "3"
+letter: "e"
+url: "/docs/linux/man/3-exalpha/"
+description: "exalpha – Creating and using 32 bit RGBA sprites. Allegro game programming library."
+---
+
+<h2>NAME</h2>
+<p> exalpha &#8211; Creating and using 32 bit RGBA sprites. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>Example exalpha</code></p>
+<h2>DESCRIPTION</h2>
+<p> This program demonstrates how to use the 32 bit RGBA translucency functions to store an alpha channel along with a bitmap graphic. Two images are loaded from disk. One will be used for the background and the other as a sprite. The example generates an alpha channel for the sprite image, composing the 32 bit RGBA bitmap during runtime, and draws it at the position of the mouse cursor. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-bitmap/">BITMAP</a></code>(3), <code><a href="/docs/linux/man/3-end_of_main/">END_OF_MAIN</a></code>(3), <code><a href="/docs/linux/man/3-screen_h/">SCREEN_H</a></code>(3), <code><a href="/docs/linux/man/3-screen_w/">SCREEN_W</a></code>(3), <code><a href="/docs/linux/man/3-allegro_error/">allegro_error</a></code>(3), <code><a href="/docs/linux/man/3-allegro_init/">allegro_init</a></code>(3), <code><a href="/docs/linux/man/3-allegro_message/">allegro_message</a></code>(3), <code><a href="/docs/linux/man/3-blit/">blit</a></code>(3), <code><a href="/docs/linux/man/3-clear_keybuf/">clear_keybuf</a></code>(3), <code><a href="/docs/linux/man/3-create_bitmap/">create_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-destroy_bitmap/">destroy_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-draw_trans_sprite/">draw_trans_sprite</a></code>(3), <code><a href="/docs/linux/man/3-drawing_mode/">drawing_mode</a></code>(3), <code><a href="/docs/linux/man/3-font/">font</a></code>(3), <code><a href="/docs/linux/man/3-getb/">getb</a></code>(3), <code><a href="/docs/linux/man/3-getg/">getg</a></code>(3), <code><a href="/docs/linux/man/3-getpixel/">getpixel</a></code>(3), <code><a href="/docs/linux/man/3-getr/">getr</a></code>(3), <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-install_mouse/">install_mouse</a></code>(3), <code><a href="/docs/linux/man/3-install_timer/">install_timer</a></code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-load_bitmap/">load_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-mouse_x/">mouse_x</a></code>(3), <code><a href="/docs/linux/man/3-mouse_y/">mouse_y</a></code>(3), <code><a href="/docs/linux/man/3-putpixel/">putpixel</a></code>(3), <code><a href="/docs/linux/man/3-rectfill/">rectfill</a></code>(3), <code><a href="/docs/linux/man/3-replace_filename/">replace_filename</a></code>(3), <code><a href="/docs/linux/man/3-screen/">screen</a></code>(3), <code><a href="/docs/linux/man/3-set_alpha_blender/">set_alpha_blender</a></code>(3), <code><a href="/docs/linux/man/3-set_color_conversion/">set_color_conversion</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_multiply_blender/">set_multiply_blender</a></code>(3), <code><a href="/docs/linux/man/3-set_write_alpha_blender/">set_write_alpha_blender</a></code>(3), <code><a href="/docs/linux/man/3-solid_mode/">solid_mode</a></code>(3), <code><a href="/docs/linux/man/3-stretch_blit/">stretch_blit</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_ex/">textprintf_ex</a></code>(3) </p>
+<h2>Index</h2>

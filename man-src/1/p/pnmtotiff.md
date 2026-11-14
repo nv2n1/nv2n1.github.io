@@ -1,0 +1,45 @@
+---
+title: "pnmtotiff(1)"
+name: "pnmtotiff"
+section: "1"
+letter: "p"
+url: "/docs/linux/man/1-pnmtotiff/"
+description: "pnmtotiff – convert a portable anymap into a TIFF file"
+---
+
+<h2 class="name">NAME</h2>
+<p> pnmtotiff &#8211; convert a portable anymap into a TIFF file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pnmtotiff</code> [<code>-none</code>|<code>-packbits</code>|<code>-lzw</code>|<code>-g3</code>|<code>-g4</code>] [<code>-2d</code>] [<code>-fill</code>] [<code>-predictor</code> <i>n</i>] [<code>-msb2lsb</code>|<code>-lsb2msb</code>] [<code>-rowsperstrip</code> <i>n</i>] [<code>-minisblack</code>|<code>-miniswhite</code>] [<code>-truecolor</code>] [<code>-color</code>] [<code>-indexbits</code> <i>1|2|4|8</i>] [<i>pnmfile</i>] </p>
+<p> Minimum unambiguous abbreviations of options are acceptable. </p>
+<h2>DESCRIPTION</h2>
+<p> Reads a PNM image as input. Produces a TIFF file as output. </p>
+<p> The output goes to Standard Output, which must be a seekable file. That means no pipes, but any regular file should work. </p>
+<h2>OPTIONS</h2>
+<p> By default, <code>pnmtotiff</code> creates a TIFF file with no compression. This is your best bet most of the time. If you want to try another compression scheme or tweak some of the other even more obscure output options, there are a number of flags to play with. </p>
+<p> Actually, the best default would be to use LZW compression, which is what <code>pnmtotiff </code> used to do by default. However, the Tiff library no longer does LZW compression due to concerns with violating Unisys&#8217;s patent on LZW compression. </p>
+<p> The <code>-none</code>, <code>-packbits</code>, <code>-lzw</code>, <code>-g3</code>, <code>-g4</code>, <code>-flate</code>, and <code>-adobeflat</code> options are used to override the default and set the compression scheme used in creating the output file. The CCITT Group 3 and Group 4 compression algorithms can only be used with bilevel data. <code>-lzw</code> doesn&#8217;t really work because the Tiff library doesn&#8217;t do LZW compression. It used to, but its developers removed the function out of concern about violating Unisys&#8217;s patent. This option remains in case you use a Tiff library that cooperates, now or in the future. The <code>-2d</code> and <code>-fill</code> options are meaningful only with Group 3 compression: <code>-2d</code> requests 2-dimensional encoding, while <code>-fill</code> requests that each encoded scanline be zero-filled to a byte boundry. The <code>-predictor</code> option is only meaningful with LZW compression: a predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. </p>
+<p> By default, <code>pnmtotiff</code> creates a TIFF file with msb-to-lsb fill order. The <code>-msb2lsb</code> and <code>-lsb2msb</code> options are used to override the default and set the fill order used in creating the file. </p>
+<p> The fill order is the order in which pixels are packed into a byte in the Tiff raster, in the case that there are multiple pixels per byte. msb-to-lsb means that the leftmost columns go into the most significant bits of the byte in the Tiff image. However, there is considerable confusion about the meaning of fill order. Some believe it means whether 16 bit sample values in the Tiff image are little-endian or big-endian. This is totally erroneous (The endianness of integers in a Tiff image is designated by the image&#8217;s magic number). However, ImageMagick and older Netpbm both have been known to implement that interpretation. 2001.09.06. </p>
+<p> If the image does not have sub-byte pixels, these options have no effect other than to set the value of the FILLORDER tag in the Tiff image (which may be useful for those programs that misinterpret the tag with reference to 16 bit samples). </p>
+<p> The <code>-rowsperstrip</code> option can be used to set the number of rows (scanlines) in each strip of data in the output file. By default, the output file has the number of rows per strip set to a value that will ensure each strip is no more than 8 kilobytes long. </p>
+<p> The <code>-minisblack</code> and <code>-miniswhite</code> option force the output image to have a &quot;minimum is black&quot; or &quot;minimum is white&quot; photometric, respectively. If you don&#8217;t specify either, <code>pnmtotiff uses minimum is black except</code> when using Group 3 or Group 4 compression, in which case <code>pnmtotiff </code> follows CCITT fax standards and uses &quot;minimum is white.&quot; This usually results in better compression and is generally preferred for bilevel coding. </p>
+<p> Before February 2001, <code>pnmtotiff </code> always produced &quot;minimum is black,&quot; due to a bug. In either case, <code>pnmtotiff</code> sets the photometric interpretation tag in the TIFF output according to which photometric is actually used. </p>
+<p> <code>-truecolor</code> tells <code>pnmtotiff</code> to produce the 24-bit RGB form of TIFF output if it is producing a color TIFF image. Without this option, <code>pnmtotiff</code> produces a colormapped (paletted) 8-bit TIFF image unless there are more than 256 colors (and in the latter case, issues a warning). </p>
+<p> The <code>-truecolor</code> option can prevent <code>pnmtotiff</code> from making two passes through the input file, thus improving speed and memory usage. See the section MULTIPLE PASSES. </p>
+<p> If <code>pnmtotiff</code> produces a grayscale TIFF image, this option has no effect. </p>
+<p> <code>-color</code> tells <code>pnmtotiff</code> to produce a color, as opposed to grayscale, TIFF image if the input is PPM, even if it contains only shades of gray. Without this option, <code>pnmtotiff</code> produces a grayscale TIFF image if the input is PPM and contains only shades of gray, and at most 256 shades. Otherwise, it produces a color TIFF output. For PBM and PGM input, <code>pnmtotiff</code> always produces grayscale TIFF output and this option has no effect. </p>
+<p> The <code>-color</code> option can prevent <code>pnmtotiff</code> from making two passes through the input file, thus improving speed and memory usage. See the section MULTIPLE PASSES. </p>
+<p> The <code>-indexbits</code> option is meaningful only for a colormapped (paletted) image. In this kind of image, the raster contains values which are indexes into a table of colors, with the indexes normally taking less space that the color description in the table. pnmtotiff can generate indexes of 1, 2, 4, or 8 bits. By default, it will use 8, because many programs that interpret TIFF images can&#8217;t handle any other width. </p>
+<h2>NOTES</h2>
+<p> There are myriad variations of the TIFF format, and this program generates only a few of them. <code>pnmtotiff</code> creates a grayscale TIFF file if its input is a PBM (monochrome) or PGM (grayscale) file. <code>pnmtotiff</code> also creates a grayscale file if it input is PPM (color), but there is only one color in the image. If the input is a PPM (color) file and there are 256 colors or fewer, but more than 1, <code>pnmtotiff</code> generates a color palette TIFF file. If there are more colors than that, <code>pnmtotiff</code> generates an RGB (not RGBA) single plane TIFF file. Use <code>pnmtotiffcmyk</code> to generate the cyan-magenta-yellow-black ink color separation TIFF format. </p>
+<p> The number of bits per sample in the TIFF output is determined by the maxval of the PNM input. If the maxval is less than 256, the bits per sample in the output is the smallest number that can encode the maxval. If the maxval is greater than or equal to 256, there are 16 bits per sample in the output. </p>
+<h3>Multiple Passes</h3>
+<p> <code>pnmtotiff</code> reads the input image once if it can, and otherwise twice. It needs that second pass to analyze the colors in the image and generate a color map (pallette) and determine if the image is grayscale. So the second pass only happens when the input is PPM. And you can avoid it then by specifying both the <code>-truecolor</code> and <code>-color</code> options. </p>
+<p> If the input image is small enough to fit in your system&#8217;s file cache, the second pass is very fast. If not, it requires reading from disk twice, which can be slow. </p>
+<p> When the input is from a file that cannot be rewound and reread, <code>pnmtotiff</code> reads the entire input image into a temporary file which can, and works from that. Even if it only needs one pass. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-tifftopnm/">tifftopnm</a></code>(1), <code><a href="/docs/linux/man/1-pnmtotiffcmyk/">pnmtotiffcmyk</a></code>(1), <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
+<h2>AUTHOR</h2>
+<p> Derived by Jef Poskanzer from ras2tiff.c, which is Copyright (c) 1990 by Sun Microsystems, Inc. Author: Patrick J. Naughton (naughton [at] wind.sun.com). </p>
+<h2>Index</h2>

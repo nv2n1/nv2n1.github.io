@@ -1,0 +1,36 @@
+---
+title: "ql-rate(3)"
+name: "ql-rate"
+section: "3"
+letter: "q"
+url: "/docs/linux/man/3-ql-rate/"
+description: "ql/utilities/dataformatters.hpp – output manipulators"
+---
+
+<p>ql/utilities/dataformatters.hpp &#8211; output manipulators </p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;ql/utilities/null.hpp&gt;
+
+#include &lt;ostream&gt;</code></pre>
+<h3>Functions</h3>
+<p>template&lt;typename T &gt; std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const null_checker&lt; T &gt; &amp;) </p>
+<p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const ordinal_holder &amp;) </p>
+<p> template&lt;typename T &gt; std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const power_of_two_holder&lt; T &gt; &amp;) </p>
+<p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const percent_holder &amp;) </p>
+<p> template&lt;typename T &gt; detail::null_checker&lt; T &gt; <code>checknull</code> (T)<br />
+ <i>check for nulls before output </i><br />
+ detail::ordinal_holder <code>ordinal</code> (Size)<br />
+ <i>outputs naturals as 1st, 2nd, 3rd&#8230; </i><br />
+ template&lt;typename T &gt; detail::power_of_two_holder&lt; T &gt; <code>power_of_two</code> (T)<br />
+ <i>output integers as powers of two </i><br />
+ detail::percent_holder <code>percent</code> (Real)<br />
+ <i>output reals as percentages </i><br />
+ detail::percent_holder <code>rate</code> (Rate)<br />
+ <i>output rates and spreads as percentages </i><br />
+ detail::percent_holder <code>volatility</code> (Volatility)<br />
+ <i>output volatilities as percentages </i></p>
+<h2>Detailed Description</h2>
+<p>output manipulators</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>

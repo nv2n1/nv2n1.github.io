@@ -1,0 +1,42 @@
+---
+title: "stdchronotime_zoneto_sys(3)"
+name: "stdchronotime_zoneto_sys"
+section: "3"
+letter: "s"
+url: "/docs/linux/man/3-stdchronotime_zoneto_sys/"
+---
+
+std::chrono::time_zone::to_sys - std::chrono::time_zone::to_sys
+
+<h2>Synopsis</h2>
+
+<pre><code>template &lt;class Duration&gt;
+
+auto to_sys(const std::chrono::local_time&lt;Duration&gt; &amp;tp) const(since C++ 20)
+
+    -&gt; std::chrono::sys_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;;
+
+template &lt;class Duration&gt;
+
+auto to_sys(const std::chrono::local_time&lt;Duration&gt; &amp;tp, std::chrono::choose z) const(since C++ 20)
+
+    -&gt; std::chrono::sys_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;;</code></pre> 
+Converts the local_time tp in this time zone to the corresponding sys_time. 
+1) Throws an exception if the conversion is ambiguous or if tp represents a nonexistent time. 
+2) Resolves ambiguity according to the value of z: 
+* If z == std::chrono::choose::earliest, returns the earlier sys_time. 
+* If z == std::chrono::choose::latest, returns the later sys_time 
+If tp represents a nonexistent time between two UTC time_points, those two time_points will be the same, and that time_point will be returned. 
+
+<h2>Return value</h2>
+
+The UTC equivalent of tp according to the rules of this time zone. 
+
+<h2>Exceptions</h2>
+
+1) Throws a std::chrono::ambiguous_local_time if the conversion is ambiguous. Throws a std::chrono::nonexistent_local_time if tp represents a nonexistent time.
+
+<h2>Notes</h2>
+
+The precision of the result is at least std::chrono::seconds, and will be finer if the argument has finer precision. 
+Ambiguous and nonexistent local times can occur as a result of time zone transitions (such as daylight saving time). For example, &quot;2016-03-13 02:30:00&quot; does not exist in the &quot;America/New_York&quot; time zone, while &quot;2016-11-06 01:30:00&quot; in that time zone can correspond to two UTC time points: 2016-11-06 05:30:00 UTC and 2016-11-06 06:30:00 UTC. 

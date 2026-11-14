@@ -1,0 +1,34 @@
+---
+title: "vm86old(2)"
+name: "vm86old"
+section: "2"
+letter: "v"
+url: "/docs/linux/man/2-vm86old/"
+description: "vm86old, vm86 – enter virtual 8086 mode"
+---
+
+<h2 class="name">NAME</h2>
+<p> vm86old, vm86 &#8211; enter virtual 8086 mode </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;sys/vm86.h&gt;</code> </p>
+<p> <code>int vm86old(struct vm86_struct *</code><i>info</i><code>);</code> </p>
+<p> <code>int vm86(unsigned long </code><i>fn</i><code>, struct vm86plus_struct *</code><i>v86</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
+<p> The system call <code>vm86</code>() was introduced in Linux 0.97p2. In Linux 2.1.15 and 2.0.28, it was renamed to <code>vm86old</code>(), and a new <code>vm86</code>() was introduced. The definition of <i>struct vm86_struct</i> was changed in 1.1.8 and 1.1.9. </p>
+<p> These calls cause the process to enter VM86 mode (virtual-8086 in Intel literature), and are used by <code>dosemu</code>. </p>
+<p> VM86 mode is an emulation of real mode within a protected mode task.</p>
+<h2>RETURN VALUE</h2>
+<p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EFAULT</code></p>
+<dd> This return value is specific to i386 and indicates a problem with getting user-space data.</p>
+<dt><code>ENOSYS</code></p>
+<dd> This return value indicates the call is not implemented on the present architecture.</p>
+<dt><code>EPERM</code></p>
+<dd> Saved kernel stack exists. (This is a kernel sanity check; the saved stack should exist only within vm86 mode itself.)</dl>
+<h2>CONFORMING TO</h2>
+<p> This call is specific to Linux on 32-bit Intel processors, and should not be used in programs intended to be portable.</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

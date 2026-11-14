@@ -1,0 +1,241 @@
+---
+title: "ccache-swig(1)"
+name: "ccache-swig"
+section: "1"
+letter: "c"
+url: "/docs/linux/man/1-ccache-swig/"
+description: "ccache-swig – a fast compiler cache"
+---
+
+<h2 class="name">NAME</h2>
+<p> ccache-swig &#8211; a fast compiler cache</p>
+<h2>SYNOPSIS</h2>
+<p> ccache-swig [OPTION] </p>
+<p> ccache-swig &lt;compiler&gt; [COMPILER OPTIONS] </p>
+<p> &lt;compiler&gt; [COMPILER OPTIONS] </p>
+<h2>DESCRIPTION</h2>
+<p> ccache-swig is a compiler cache. It speeds up re-compilation of C/C++/SWIG code by caching previous compiles and detecting when the same compile is being done again. ccache-swig is ccache plus support for SWIG. ccache and ccache-swig are used interchangeably in this document. </p>
+<h2>OPTIONS SUMMARY</h2>
+<p> Here is a summary of the options to ccache-swig. </p>
+<pre>
+-s                      show statistics summary
+-z                      zero statistics
+-c                      run a cache cleanup
+-C                      clear the cache completely
+-F &lt;n&gt;                  set maximum files in cache
+-M &lt;n&gt;                  set maximum size of cache (use G, M or K)
+-h                      this help page
+-V                      print version number
+</pre>
+<h2>OPTIONS</h2>
+<p> These options only apply when you invoke ccache as &quot;ccache-swig&quot;. When invoked as a compiler none of these options apply. In that case your normal compiler options apply and you should refer to your compilers documentation. </p>
+<dl>
+<dt><code>-h</code></p>
+<dd> Print a options summary page</p>
+<dt>
+<dd>
+<dt><code>-s</code></p>
+<dd> Print the current statistics summary for the cache. The statistics are stored spread across the subdirectories of the cache. Using &quot;ccache-swig -s&quot; adds up the statistics across all subdirectories and prints the totals.</p>
+<dt>
+<dd>
+<dt><code>-z</code></p>
+<dd> Zero the cache statistics.</p>
+<dt>
+<dd>
+<dt><code>-V</code></p>
+<dd> Print the ccache version number</p>
+<dt>
+<dd>
+<dt><code>-c</code></p>
+<dd> Clean the cache and re-calculate the cache file count and size totals. Normally the -c option should not be necessary as ccache keeps the cache below the specified limits at runtime and keeps statistics up to date on each compile. This option is mostly useful if you manually modify the cache contents or believe that the cache size statistics may be inaccurate.</p>
+<dt>
+<dd>
+<dt><code>-C</code></p>
+<dd> Clear the entire cache, removing all cached files.</p>
+<dt>
+<dd>
+<dt><code>-F &lt;maxfiles&gt;</code></p>
+<dd> This sets the maximum number of files allowed in the cache. The value is stored inside the cache directory and applies to all future compiles. Due to the way the value is stored the actual value used is always rounded down to the nearest multiple of 16.</p>
+<dt>
+<dd>
+<dt><code>-M &lt;maxsize&gt;</code></p>
+<dd> This sets the maximum cache size. You can specify a value in gigabytes, megabytes or kilobytes by appending a G, M or K to the value. The default is gigabytes. The actual value stored is rounded down to the nearest multiple of 16 kilobytes.</p>
+<dt>
+<dd></dl>
+<h2>INSTALLATION</h2>
+<p> There are two ways to use ccache. You can either prefix your compile commands with &quot;ccache-swig&quot; or you can create a symbolic link between ccache-swig and the names of your compilers. The first method is most convenient if you just want to try out ccache or wish to use it for some specific projects. The second method is most useful for when you wish to use ccache for all your compiles. </p>
+<p> To install for usage by the first method just copy ccache-swig to somewhere in your path. </p>
+<p> To install for the second method do something like this: </p>
+<pre>
+  cp ccache-swig /usr/local/bin/
+  ln -s /usr/local/bin/ccache-swig /usr/local/bin/gcc
+  ln -s /usr/local/bin/ccache-swig /usr/local/bin/g++
+  ln -s /usr/local/bin/ccache-swig /usr/local/bin/cc
+  ln -s /usr/local/bin/ccache-swig /usr/local/bin/swig
+</pre>
+<p> This will work as long as /usr/local/bin comes before the path to gcc (which is usually in /usr/bin). After installing you may wish to run &quot;which gcc&quot; to make sure that the correct link is being used. </p>
+<p> Note! Do not use a hard link, use a symbolic link. A hardlink will cause &quot;interesting&quot; problems. </p>
+<h2>EXTRA OPTIONS</h2>
+<p> When run as a compiler front end ccache usually just takes the same command line options as the compiler you are using. The only exception to this is the option &#8216;&#8211;ccache-skip&#8217;. That option can be used to tell ccache that the next option is definitely not a input filename, and should be passed along to the compiler as-is. </p>
+<p> The reason this can be important is that ccache does need to parse the command line and determine what is an input filename and what is a compiler option, as it needs the input filename to determine the name of the resulting object file (among other things). The heuristic ccache uses in this parse is that any string on the command line that exists as a file is treated as an input file name (usually a C file). By using &#8211;ccache-skip you can force an option to not be treated as an input file name and instead be passed along to the compiler as a command line option. </p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p> ccache uses a number of environment variables to control operation. In most cases you won&#8217;t need any of these as the defaults will be fine. </p>
+<dl>
+<dt><code>CCACHE_DIR</code></p>
+<dd> the CCACHE_DIR environment variable specifies where ccache will keep its cached compiler output. The default is &quot;$HOME/.ccache&quot;.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_TEMPDIR</code></p>
+<dd> the CCACHE_TEMPDIR environment variable specifies where ccache will put temporary files. The default is the same as CCACHE_DIR. Note that the CCACHE_TEMPDIR path must be on the same filesystem as the CCACHE_DIR path, so that renames of files between the two directories can work.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_LOGFILE</code></p>
+<dd> If you set the CCACHE_LOGFILE environment variable then ccache will write some log information on cache hits and misses in that file. This is useful for tracking down problems.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_VERBOSE</code></p>
+<dd> If you set the CCACHE_VERBOSE environment variable then ccache will display on stdout all the compiler invocations that it makes. This can useful for debugging unexpected problems.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_PATH</code></p>
+<dd> You can optionally set CCACHE_PATH to a colon separated path where ccache will look for the real compilers. If you don&#8217;t do this then ccache will look for the first executable matching the compiler name in the normal PATH that isn&#8217;t a symbolic link to ccache itself.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_CC</code></p>
+<dd> You can optionally set CCACHE_CC to force the name of the compiler to use. If you don&#8217;t do this then ccache works it out from the command line.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_PREFIX</code></p>
+<dd> This option adds a prefix to the command line that ccache runs when invoking the compiler. Also see the section below on using ccache with distcc.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_DISABLE</code></p>
+<dd> If you set the environment variable CCACHE_DISABLE then ccache will just call the real compiler, bypassing the cache completely.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_READONLY</code></p>
+<dd> the CCACHE_READONLY environment variable tells ccache to attempt to use existing cached object files, but not to try to add anything new to the cache. If you are using this because your CCACHE_DIR is read-only, then you may find that you also need to set CCACHE_TEMPDIR as otherwise ccache will fail to create the temporary files.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_CPP2</code></p>
+<dd> If you set the environment variable CCACHE_CPP2 then ccache will not use the optimisation of avoiding the 2nd call to the pre-processor by compiling the pre-processed output that was used for finding the hash in the case of a cache miss. This is primarily a debugging option, although it is possible that some unusual compilers will have problems with the intermediate filename extensions used in this optimisation, in which case this option could allow ccache to be used.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_NOCOMPRESS</code></p>
+<dd> If you set the environment variable CCACHE_NOCOMPRESS then there is no compression used on files that go into the cache. However, this setting has no effect on how files are retrieved from the cache, compressed results will still be usable.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_NOSTATS</code></p>
+<dd> If you set the environment variable CCACHE_NOSTATS then ccache will not update the statistics files on each compile.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_NLEVELS</code></p>
+<dd> The environment variable CCACHE_NLEVELS allows you to choose the number of levels of hash in the cache directory. The default is 2. The minimum is 1 and the maximum is 8.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_HARDLINK</code></p>
+<dd> If you set the environment variable CCACHE_HARDLINK then ccache will attempt to use hard links from the cache directory when creating the compiler output rather than using a file copy. Using hard links is faster, but can confuse programs like &#8216;make&#8217; that rely on modification times. Hard links are never made for compressed cache files.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_RECACHE</code></p>
+<dd> This forces ccache to not use any cached results, even if it finds them. New results are still cached, but existing cache entries are ignored.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_UMASK</code></p>
+<dd> This sets the umask for ccache and all child processes (such as the compiler). This is mostly useful when you wish to share your cache with other users. Note that this also affects the file permissions set on the object files created from your compilations.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_HASHDIR</code></p>
+<dd> This tells ccache to hash the current working directory when calculating the hash that is used to distinguish two compiles. This prevents a problem with the storage of the current working directory in the debug info of a object file, which can lead ccache to give a cached object file that has the working directory in the debug info set incorrectly. This option is off by default as the incorrect setting of this debug info rarely causes problems. If you strike problems with gdb not using the correct directory then enable this option.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_UNIFY</code></p>
+<dd> If you set the environment variable CCACHE_UNIFY then ccache will use the C/C++ unifier when hashing the pre-processor output if -g is not used in the compile. The unifier is slower than a normal hash, so setting this environment variable loses a little bit of speed, but it means that ccache can take advantage of not recompiling when the changes to the source code consist of reformatting only. Note that using CCACHE_UNIFY changes the hash, so cached compiles with CCACHE_UNIFY set cannot be used when CCACHE_UNIFY is not set and vice versa. The reason the unifier is off by default is that it can give incorrect line number information in compiler warning messages.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_EXTENSION</code></p>
+<dd> Normally ccache tries to automatically determine the extension to use for intermediate C pre-processor files based on the type of file being compiled. Unfortunately this sometimes doesn&#8217;t work, for example when using the aCC compiler on HP-UX. On systems like this you can use the CCACHE_EXTENSION option to override the default. On HP-UX set this environment variable to &quot;i&quot; if you use the aCC compiler.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_STRIPC</code></p>
+<dd> If you set the environment variable CCACHE_STRIPC then ccache will strip the -c option when invoking the preprocessor. This option is primarily for the Sun Workshop C++ compiler as without this option an unwarranted warning is displayed: CC: Warning: &quot;-E&quot; redefines product from &quot;object&quot; to &quot;source (stdout)&quot; when -E and -c is used together.</p>
+<dt>
+<dd>
+<dt><code>CCACHE_SWIG</code></p>
+<dd> When using SWIG as the compiler and it does not have &#8216;swig&#8217; in the executable name, then the CCACHE_SWIG environment variable needs to be set in order for ccache to work correctly with SWIG. The use of CCACHE_CPP2 is also recommended for SWIG due to some preprocessor quirks, however, use of CCACHE_CPP2 can often be skipped &#8212; check your generated code with and without this option set. Known problems are using preprocessor directives within %inline blocks and the use of &#8216;#pragma SWIG&#8217;.</p>
+<dt>
+<dd></dl>
+<h2>CACHE SIZE MANAGEMENT</h2>
+<p> By default ccache has a one gigabyte limit on the cache size and no maximum number of files. You can set a different limit using the &quot;ccache -M&quot; and &quot;ccache -F&quot; options, which set the size and number of files limits. </p>
+<p> When these limits are reached ccache will reduce the cache to 20% below the numbers you specified in order to avoid doing the cache clean operation too often. </p>
+<h2>CACHE COMPRESSION</h2>
+<p> By default on most platforms ccache will compress all files it puts into the cache using the zlib compression. While this involves a negligible performance slowdown, it significantly increases the number of files that fit in the cache. You can turn off compression setting the CCACHE_NOCOMPRESS environment variable. </p>
+<h2>HOW IT WORKS</h2>
+<p> The basic idea is to detect when you are compiling exactly the same code a 2nd time and use the previously compiled output. You detect that it is the same code by forming a hash of: </p>
+<dl>
+<dt>o</p>
+<dd> the pre-processor output from running the compiler with -E</p>
+<dt>o</p>
+<dd> the command line options</p>
+<dt>o</p>
+<dd> the real compilers size and modification time</p>
+<dt>o</p>
+<dd> any stderr output generated by the compiler </p>
+</dl>
+<p> These are hashed using md4 (a strong hash) and a cache file is formed based on that hash result. When the same compilation is done a second time ccache is able to supply the correct compiler output (including all warnings etc) from the cache. </p>
+<p> ccache has been carefully written to always produce exactly the same compiler output that you would get without the cache. If you ever discover a case where ccache changes the output of your compiler then please let me know. </p>
+<h2>USING CCACHE WITH DISTCC</h2>
+<p> distcc is a very useful program for distributing compilation across a range of compiler servers. It is often useful to combine distcc with ccache, so that compiles that are done are sped up by distcc, but that ccache avoids the compile completely where possible. </p>
+<p> To use distcc with ccache I recommend using the CCACHE_PREFIX option. You just need to set the environment variable CCACHE_PREFIX to &#8216;distcc&#8217; and ccache will prefix the command line used with the compiler with the command &#8216;distcc&#8217;. </p>
+<h2>SHARING A CACHE</h2>
+<p> A group of developers can increase the cache hit rate by sharing a cache directory. The hard links however cause unwanted side effects, as all links to a cached file share the file&#8217;s modification timestamp. This results in false dependencies to be triggered by timestamp-based build systems whenever another user links to an existing file. Typically, users will see that their libraries and binaries are relinked without reason. To share a cache without side effects, the following conditions need to be met: </p>
+<dl>
+<dt>o</p>
+<dd> Use the same <code>CCACHE_DIR</code> environment variable setting</p>
+<dt>o</p>
+<dd> Unset the <code>CCACHE_HARDLINK</code> environment variable</p>
+<dt>o</p>
+<dd> Make sure everyone sets the CCACHE_UMASK environment variable to 002, this ensures that cached files are accessible to everyone in the group.</p>
+<dt>o</p>
+<dd> Make sure that all users have write permission in the entire cache directory (and that you trust all users of the shared cache).</p>
+<dt>o</p>
+<dd> Make sure that the setgid bit is set on all directories in the cache. This tells the filesystem to inherit group ownership for new directories. The command &quot;chmod g+s `find $CCACHE_DIR -type d`&quot; might be useful for this.</p>
+<dt>o</p>
+<dd> Set <code>CCACHE_NOCOMPRESS</code> for all users, if there are users with versions of ccache that do not support compression. </p>
+</dl>
+<h2>HISTORY</h2>
+<p> ccache was inspired by the compilercache shell script script written by Erik Thiele and I would like to thank him for an excellent piece of work. See <a rel="nofollow" href="http://www.erikyyy.de/compilercache/">http://www.erikyyy.de/compilercache/</a> for the Erik&#8217;s scripts. ccache-swig is a port of the original ccache with support added for use with SWIG. </p>
+<p> I wrote ccache because I wanted to get a bit more speed out of a compiler cache and I wanted to remove some of the limitations of the shell-script version. </p>
+<h2>DIFFERENCES FROM COMPILERCACHE</h2>
+<p> The biggest differences between Erik&#8217;s compilercache script and ccache are:</p>
+<dl>
+<dt>o</p>
+<dd> ccache is written in C, which makes it a bit faster (calling out to external programs is mostly what slowed down the scripts).</p>
+<dt>o</p>
+<dd> ccache can automatically find the real compiler</p>
+<dt>o</p>
+<dd> ccache keeps statistics on hits/misses</p>
+<dt>o</p>
+<dd> ccache can do automatic cache management</p>
+<dt>o</p>
+<dd> ccache can cache compiler output that includes warnings. In many cases this gives ccache a much higher cache hit rate.</p>
+<dt>o</p>
+<dd> ccache can handle a much wider ranger of compiler options</p>
+<dt>o</p>
+<dd> ccache avoids a double call to cpp on a cache miss </p>
+</dl>
+<h2>CREDITS</h2>
+<p> Thanks to the following people for their contributions to ccache</p>
+<dl>
+<dt>o</p>
+<dd> Erik Thiele for the original compilercache script</p>
+<dt>o</p>
+<dd> Luciano Rocha for the idea of compiling the pre-processor output to avoid a 2nd cpp pass</p>
+<dt>o</p>
+<dd> Paul Russell for many suggestions and the debian packaging </p>
+</dl>
+<h2>AUTHOR</h2>
+<p> ccache was written by Andrew Tridgell <a rel="nofollow" href="http://samba.org/~tridge/.">http://samba.org/~tridge/.</a> ccache was adapted to create ccache-swig for use with SWIG by William Fulton. </p>
+<p> If you wish to report a problem or make a suggestion then please email the SWIG developers on the swig-devel mailing list, see <a rel="nofollow" href="http://www.swig.org/mail.html">http://www.swig.org/mail.html</a> </p>
+<p> ccache is released under the GNU General Public License version 2 or later. Please see the file COPYING for license details. </p>
+<h2>Index</h2>

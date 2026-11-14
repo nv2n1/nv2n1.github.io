@@ -1,0 +1,39 @@
+---
+title: "gnutls_pem_base64_encode_alloc(3)"
+name: "gnutls_pem_base64_encode_alloc"
+section: "3"
+letter: "g"
+url: "/docs/linux/man/3-gnutls_pem_base64_encode_alloc/"
+description: "gnutls_pem_base64_encode_alloc – API function"
+---
+
+<h2>NAME</h2>
+<p> gnutls_pem_base64_encode_alloc &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
+<p> <code>int gnutls_pem_base64_encode_alloc(const char * </code><i>msg</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_datum_t * </code><i>result</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>const char * msg</p>
+<dd> is a message to be put in the encoded header</p>
+<dt>const gnutls_datum_t * data</p>
+<dd> contains the raw data</p>
+<dt>gnutls_datum_t * result</p>
+<dd> will hold the newly allocated encoded data</dl>
+<h2>DESCRIPTION</h2>
+<p> This function will convert the given data to printable data, using the base64 encoding. This is the encoding used in PEM messages. This function will allocate the required memory to hold the encoded data. </p>
+<p> You should use <code>gnutls_free()</code> to free the returned data.</p>
+<h2>RETURNS</h2>
+<p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
+<dd> </code></dl>
+<h2>Index</h2>

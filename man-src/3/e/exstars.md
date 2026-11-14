@@ -1,0 +1,19 @@
+---
+title: "exstars(3)"
+name: "exstars"
+section: "3"
+letter: "e"
+url: "/docs/linux/man/3-exstars/"
+description: "exstars – 3d starfield and lightsourced spaceship. Allegro game programming library."
+---
+
+<h2>NAME</h2>
+<p> exstars &#8211; 3d starfield and lightsourced spaceship. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>Example exstars</code></p>
+<h2>DESCRIPTION</h2>
+<p> This program draws a 3D star field (depth-cued) and a polygon starship (controllable with the keyboard cursor keys), using the Allegro math functions. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-bitmap/">BITMAP</a></code>(3), <code><a href="/docs/linux/man/3-end_of_main/">END_OF_MAIN</a></code>(3), <code><a href="/docs/linux/man/3-matrix/">MATRIX</a></code>(3), <code><a href="/docs/linux/man/3-palette/">PALETTE</a></code>(3), <code><a href="/docs/linux/man/3-screen_h/">SCREEN_H</a></code>(3), <code><a href="/docs/linux/man/3-screen_w/">SCREEN_W</a></code>(3), <code><a href="/docs/linux/man/3-allegro_error/">allegro_error</a></code>(3), <code><a href="/docs/linux/man/3-allegro_init/">allegro_init</a></code>(3), <code><a href="/docs/linux/man/3-allegro_message/">allegro_message</a></code>(3), <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-blit/">blit</a></code>(3), <code><a href="/docs/linux/man/3-clear_bitmap/">clear_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-create_bitmap/">create_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-cross_product/">cross_product</a></code>(3), <code><a href="/docs/linux/man/3-destroy_bitmap/">destroy_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-dot_product/">dot_product</a></code>(3), <code><a href="/docs/linux/man/3-fixed/">fixed</a></code>(3), <code><a href="/docs/linux/man/3-fixmul/">fixmul</a></code>(3), <code><a href="/docs/linux/man/3-fixtof/">fixtof</a></code>(3), <code><a href="/docs/linux/man/3-fixtoi/">fixtoi</a></code>(3), <code><a href="/docs/linux/man/3-font/">font</a></code>(3), <code><a href="/docs/linux/man/3-get_rotation_matrix/">get_rotation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_transformation_matrix/">get_transformation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_translation_matrix/">get_translation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-install_timer/">install_timer</a></code>(3), <code><a href="/docs/linux/man/3-itofix/">itofix</a></code>(3), <code><a href="/docs/linux/man/3-key/">key</a></code>(3), <code><a href="/docs/linux/man/3-normalize_vector/">normalize_vector</a></code>(3), <code><a href="/docs/linux/man/3-palette_color/">palette_color</a></code>(3), <code><a href="/docs/linux/man/3-persp_project/">persp_project</a></code>(3), <code><a href="/docs/linux/man/3-poll_keyboard/">poll_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-putpixel/">putpixel</a></code>(3), <code><a href="/docs/linux/man/3-rectfill/">rectfill</a></code>(3), <code><a href="/docs/linux/man/3-screen/">screen</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code><a href="/docs/linux/man/3-set_projection_viewport/">set_projection_viewport</a></code>(3), <code><a href="/docs/linux/man/3-textout_centre_ex/">textout_centre_ex</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_centre_ex/">textprintf_centre_ex</a></code>(3), <code><a href="/docs/linux/man/3-triangle/">triangle</a></code>(3), <code><a href="/docs/linux/man/3-vsync/">vsync</a></code>(3) </p>
+<h2>Index</h2>

@@ -1,0 +1,826 @@
+---
+title: "latin3(7)"
+name: "latin3"
+section: "7"
+letter: "l"
+url: "/docs/linux/man/7-latin3/"
+description: "iso_8859-3 – ISO 8859-3 character set encoded in octal, decimal, and hexadecimal"
+---
+
+<p>iso_8859-3 &#8211; ISO 8859-3 character set encoded in octal, decimal, and hexadecimal</p>
+<h2>Description</h2>
+<p>The ISO 8859 standard includes several 8-bit extensions to the ASCII character set (also known as ISO 646-IRV). ISO 8859-3 encodes the characters used in certain Southeast European languages.</p>
+<h3>ISO 8859 alphabets</h3>
+<p>The full set of ISO 8859 alphabets includes: </p>
+<table>
+<tr VALIGN=top>
+<td>ISO 8859-1</td>
+<td>West European languages (Latin-1)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-2</td>
+<td>Central and East European languages (Latin-2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-3</td>
+<td>Southeast European and miscellaneous languages (Latin-3)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-4</td>
+<td>Scandinavian/Baltic languages (Latin-4)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-5</td>
+<td>Latin/Cyrillic
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-6</td>
+<td>Latin/Arabic
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-7</td>
+<td>Latin/Greek
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-8</td>
+<td>Latin/Hebrew
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-9</td>
+<td>Latin-1 modification for Turkish (Latin-5)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-10</td>
+<td>Lappish/Nordic/Eskimo languages (Latin-6)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-11</td>
+<td>Latin/Thai
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-13</td>
+<td>Baltic Rim languages (Latin-7)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-14</td>
+<td>Celtic (Latin-8)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-15</td>
+<td>West European languages (Latin-9)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>ISO 8859-16</td>
+<td>Romanian (Latin-10)
+</td>
+</tr>
+</table>
+<h3>ISO 8859-3 characters</h3>
+<p>The following table displays the characters in ISO 8859-3 that are printable and unlisted in the <code><a href="/docs/linux/man/7-ascii/">ascii</a></code>(7) manual page. </p>
+<table>
+<tr VALIGN=top>
+<td>Oct</td>
+<td>Dec</td>
+<td>Hex</td>
+<td ALIGN=center>Char</td>
+<td><font SIZE="-1">Description</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td COLSPAN=5>
+<hr>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>240</td>
+<td>160</td>
+<td>A0</td>
+<td ALIGN=center> </td>
+<td><font SIZE="-1">NO-BREAK SPACE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>241</td>
+<td>161</td>
+<td>A1</td>
+<td ALIGN=center>Ħ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER H WITH STROKE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>242</td>
+<td>162</td>
+<td>A2</td>
+<td ALIGN=center>˘</td>
+<td><font SIZE="-1">BREVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>243</td>
+<td>163</td>
+<td>A3</td>
+<td ALIGN=center>£</td>
+<td><font SIZE="-1">POUND SIGN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>244</td>
+<td>164</td>
+<td>A4</td>
+<td ALIGN=center>¤</td>
+<td><font SIZE="-1">CURRENCY SIGN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>246</td>
+<td>166</td>
+<td>A6</td>
+<td ALIGN=center>Ĥ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER H WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>247</td>
+<td>167</td>
+<td>A7</td>
+<td ALIGN=center>§</td>
+<td><font SIZE="-1">SECTION SIGN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>250</td>
+<td>168</td>
+<td>A8</td>
+<td ALIGN=center>¨</td>
+<td><font SIZE="-1">DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>251</td>
+<td>169</td>
+<td>A9</td>
+<td ALIGN=center>İ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER I WITH DOT ABOVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>252</td>
+<td>170</td>
+<td>AA</td>
+<td ALIGN=center>Ş</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER S WITH CEDILLA</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>253</td>
+<td>171</td>
+<td>AB</td>
+<td ALIGN=center>Ğ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER G WITH BREVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>254</td>
+<td>172</td>
+<td>AC</td>
+<td ALIGN=center>Ĵ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER J WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>255</td>
+<td>173</td>
+<td>AD</td>
+<td ALIGN=center>­</td>
+<td><font SIZE="-1">SOFT HYPHEN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>257</td>
+<td>175</td>
+<td>AF</td>
+<td ALIGN=center>Ż</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER Z WITH DOT ABOVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>260</td>
+<td>176</td>
+<td>B0</td>
+<td ALIGN=center>°</td>
+<td><font SIZE="-1">DEGREE SIGN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>261</td>
+<td>177</td>
+<td>B1</td>
+<td ALIGN=center>ħ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER H WITH STROKE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>262</td>
+<td>178</td>
+<td>B2</td>
+<td ALIGN=center>²</td>
+<td><font SIZE="-1">SUPERSCRIPT TWO</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>263</td>
+<td>179</td>
+<td>B3</td>
+<td ALIGN=center>³</td>
+<td><font SIZE="-1">SUPERSCRIPT THREE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>264</td>
+<td>180</td>
+<td>B4</td>
+<td ALIGN=center>´</td>
+<td><font SIZE="-1">ACUTE ACCENT</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>265</td>
+<td>181</td>
+<td>B5</td>
+<td ALIGN=center>µ</td>
+<td><font SIZE="-1">MICRO SIGN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>266</td>
+<td>182</td>
+<td>B6</td>
+<td ALIGN=center>ĥ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER H WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>267</td>
+<td>183</td>
+<td>B7</td>
+<td ALIGN=center>·</td>
+<td><font SIZE="-1">MIDDLE DOT</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>270</td>
+<td>184</td>
+<td>B8</td>
+<td ALIGN=center>¸</td>
+<td><font SIZE="-1">CEDILLA</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>271</td>
+<td>185</td>
+<td>B9</td>
+<td ALIGN=center>ı</td>
+<td><font SIZE="-1">LATIN SMALL LETTER DOTLESS I</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>272</td>
+<td>186</td>
+<td>BA</td>
+<td ALIGN=center>ş</td>
+<td><font SIZE="-1">LATIN SMALL LETTER S WITH CEDILLA</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>273</td>
+<td>187</td>
+<td>BB</td>
+<td ALIGN=center>ğ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER G WITH BREVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>274</td>
+<td>188</td>
+<td>BC</td>
+<td ALIGN=center>ĵ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER J WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>275</td>
+<td>189</td>
+<td>BD</td>
+<td ALIGN=center>½</td>
+<td><font SIZE="-1">VULGAR FRACTION ONE HALF</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>277</td>
+<td>191</td>
+<td>BF</td>
+<td ALIGN=center>ż</td>
+<td><font SIZE="-1">LATIN SMALL LETTER Z WITH DOT ABOVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>300</td>
+<td>192</td>
+<td>C0</td>
+<td ALIGN=center>À</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>301</td>
+<td>193</td>
+<td>C1</td>
+<td ALIGN=center>Á</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>302</td>
+<td>194</td>
+<td>C2</td>
+<td ALIGN=center>Â</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>304</td>
+<td>196</td>
+<td>C4</td>
+<td ALIGN=center>Ä</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>305</td>
+<td>197</td>
+<td>C5</td>
+<td ALIGN=center>Ċ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER C WITH DOT ABOVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>306</td>
+<td>198</td>
+<td>C6</td>
+<td ALIGN=center>Ĉ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER C WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>307</td>
+<td>199</td>
+<td>C7</td>
+<td ALIGN=center>Ç</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER C WITH CEDILLA</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>310</td>
+<td>200</td>
+<td>C8</td>
+<td ALIGN=center>È</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>311</td>
+<td>201</td>
+<td>C9</td>
+<td ALIGN=center>É</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>312</td>
+<td>202</td>
+<td>CA</td>
+<td ALIGN=center>Ê</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>313</td>
+<td>203</td>
+<td>CB</td>
+<td ALIGN=center>Ë</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>314</td>
+<td>204</td>
+<td>CC</td>
+<td ALIGN=center>Ì</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER I WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>315</td>
+<td>205</td>
+<td>CD</td>
+<td ALIGN=center>Í</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER I WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>316</td>
+<td>206</td>
+<td>CE</td>
+<td ALIGN=center>Î</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER I WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>317</td>
+<td>207</td>
+<td>CF</td>
+<td ALIGN=center>Ï</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER I WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>321</td>
+<td>209</td>
+<td>D1</td>
+<td ALIGN=center>Ñ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER N WITH TILDE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>322</td>
+<td>210</td>
+<td>D2</td>
+<td ALIGN=center>Ò</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>323</td>
+<td>211</td>
+<td>D3</td>
+<td ALIGN=center>Ó</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>324</td>
+<td>212</td>
+<td>D4</td>
+<td ALIGN=center>Ô</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>325</td>
+<td>213</td>
+<td>D5</td>
+<td ALIGN=center>Ġ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER G WITH DOT ABOVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>326</td>
+<td>214</td>
+<td>D6</td>
+<td ALIGN=center>Ö</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>327</td>
+<td>215</td>
+<td>D7</td>
+<td ALIGN=center>×</td>
+<td><font SIZE="-1">MULTIPLICATION SIGN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>330</td>
+<td>216</td>
+<td>D8</td>
+<td ALIGN=center>Ĝ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER G WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>331</td>
+<td>217</td>
+<td>D9</td>
+<td ALIGN=center>Ù</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>332</td>
+<td>218</td>
+<td>DA</td>
+<td ALIGN=center>Ú</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>333</td>
+<td>219</td>
+<td>DB</td>
+<td ALIGN=center>Û</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>334</td>
+<td>220</td>
+<td>DC</td>
+<td ALIGN=center>Ü</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>335</td>
+<td>221</td>
+<td>DD</td>
+<td ALIGN=center>Ŭ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH BREVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>336</td>
+<td>222</td>
+<td>DE</td>
+<td ALIGN=center>Ŝ</td>
+<td><font SIZE="-1">LATIN CAPITAL LETTER S WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>337</td>
+<td>223</td>
+<td>DF</td>
+<td ALIGN=center>ß</td>
+<td><font SIZE="-1">LATIN SMALL LETTER SHARP S</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>340</td>
+<td>224</td>
+<td>E0</td>
+<td ALIGN=center>à</td>
+<td><font SIZE="-1">LATIN SMALL LETTER A WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>341</td>
+<td>225</td>
+<td>E1</td>
+<td ALIGN=center>á</td>
+<td><font SIZE="-1">LATIN SMALL LETTER A WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>342</td>
+<td>226</td>
+<td>E2</td>
+<td ALIGN=center>â</td>
+<td><font SIZE="-1">LATIN SMALL LETTER A WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>344</td>
+<td>228</td>
+<td>E4</td>
+<td ALIGN=center>ä</td>
+<td><font SIZE="-1">LATIN SMALL LETTER A WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>345</td>
+<td>229</td>
+<td>E5</td>
+<td ALIGN=center>ċ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER C WITH DOT ABOVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>346</td>
+<td>230</td>
+<td>E6</td>
+<td ALIGN=center>ĉ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER C WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>347</td>
+<td>231</td>
+<td>E7</td>
+<td ALIGN=center>ç</td>
+<td><font SIZE="-1">LATIN SMALL LETTER C WITH CEDILLA</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>350</td>
+<td>232</td>
+<td>E8</td>
+<td ALIGN=center>è</td>
+<td><font SIZE="-1">LATIN SMALL LETTER E WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>351</td>
+<td>233</td>
+<td>E9</td>
+<td ALIGN=center>é</td>
+<td><font SIZE="-1">LATIN SMALL LETTER E WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>352</td>
+<td>234</td>
+<td>EA</td>
+<td ALIGN=center>ê</td>
+<td><font SIZE="-1">LATIN SMALL LETTER E WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>353</td>
+<td>235</td>
+<td>EB</td>
+<td ALIGN=center>ë</td>
+<td><font SIZE="-1">LATIN SMALL LETTER E WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>354</td>
+<td>236</td>
+<td>EC</td>
+<td ALIGN=center>ì</td>
+<td><font SIZE="-1">LATIN SMALL LETTER I WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>355</td>
+<td>237</td>
+<td>ED</td>
+<td ALIGN=center>í</td>
+<td><font SIZE="-1">LATIN SMALL LETTER I WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>356</td>
+<td>238</td>
+<td>EE</td>
+<td ALIGN=center>î</td>
+<td><font SIZE="-1">LATIN SMALL LETTER I WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>357</td>
+<td>239</td>
+<td>EF</td>
+<td ALIGN=center>ï</td>
+<td><font SIZE="-1">LATIN SMALL LETTER I WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>361</td>
+<td>241</td>
+<td>F1</td>
+<td ALIGN=center>ñ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER N WITH TILDE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>362</td>
+<td>242</td>
+<td>F2</td>
+<td ALIGN=center>ò</td>
+<td><font SIZE="-1">LATIN SMALL LETTER O WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>363</td>
+<td>243</td>
+<td>F3</td>
+<td ALIGN=center>ó</td>
+<td><font SIZE="-1">LATIN SMALL LETTER O WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>364</td>
+<td>244</td>
+<td>F4</td>
+<td ALIGN=center>ô</td>
+<td><font SIZE="-1">LATIN SMALL LETTER O WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>365</td>
+<td>245</td>
+<td>F5</td>
+<td ALIGN=center>ġ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER G WITH DOT ABOVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>366</td>
+<td>246</td>
+<td>F6</td>
+<td ALIGN=center>ö</td>
+<td><font SIZE="-1">LATIN SMALL LETTER O WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>367</td>
+<td>247</td>
+<td>F7</td>
+<td ALIGN=center>÷</td>
+<td><font SIZE="-1">DIVISION SIGN</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>370</td>
+<td>248</td>
+<td>F8</td>
+<td ALIGN=center>ĝ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER G WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>371</td>
+<td>249</td>
+<td>F9</td>
+<td ALIGN=center>ù</td>
+<td><font SIZE="-1">LATIN SMALL LETTER U WITH GRAVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>372</td>
+<td>250</td>
+<td>FA</td>
+<td ALIGN=center>ú</td>
+<td><font SIZE="-1">LATIN SMALL LETTER U WITH ACUTE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>373</td>
+<td>251</td>
+<td>FB</td>
+<td ALIGN=center>û</td>
+<td><font SIZE="-1">LATIN SMALL LETTER U WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>374</td>
+<td>252</td>
+<td>FC</td>
+<td ALIGN=center>ü</td>
+<td><font SIZE="-1">LATIN SMALL LETTER U WITH DIAERESIS</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>375</td>
+<td>253</td>
+<td>FD</td>
+<td ALIGN=center>ŭ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER U WITH BREVE</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>376</td>
+<td>254</td>
+<td>FE</td>
+<td ALIGN=center>ŝ</td>
+<td><font SIZE="-1">LATIN SMALL LETTER S WITH CIRCUMFLEX</font>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>377</td>
+<td>255</td>
+<td>FF</td>
+<td ALIGN=center>˙</td>
+<td><font SIZE="-1">DOT ABOVE</font>
+</td>
+</tr>
+</table>
+<h2>Notes</h2>
+<p>ISO 8859-3 is also known as Latin-3.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-ascii/">ascii</a></code>(7), <code><a href="/docs/linux/man/7-charsets/">charsets</a></code>(7), <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

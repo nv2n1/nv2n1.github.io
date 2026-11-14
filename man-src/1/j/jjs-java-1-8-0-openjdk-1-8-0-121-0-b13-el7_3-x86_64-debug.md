@@ -1,0 +1,113 @@
+---
+title: "jjs-java-1-8-0-openjdk-1-8-0-121-0-b13-el7_3-x86_64-debug(1)"
+name: "jjs-java-1-8-0-openjdk-1-8-0-121-0-b13-el7_3-x86_64-debug"
+section: "1"
+letter: "j"
+url: "/docs/linux/man/1-jjs-java-1-8-0-openjdk-1-8-0-121-0-b13-el7_3-x86_64-debug/"
+description: "jjs – Invokes the Nashorn engine."
+---
+
+<p>jjs &#8211; Invokes the Nashorn engine. </p>
+<h2>Synopsis</h2>
+<dl>
+<dd>
+<pre><code>jjs</code><code> [</code><i>options</i><code>] [</code><i>script-files</i><code>] [-- </code><i>arguments</i><code>]</code></pre>
+</dl>
+<p> <i>options</i></p>
+<dl>
+<dd>One or more options of the <code>jjs</code> command, separated by spaces. For more information, see Options.</dl>
+<p> <i>script-files</i></p>
+<dl>
+<dd>One or more script files which you want to interpret using Nashorn, separated by spaces. If no files are specified, an interactive shell is started.</dl>
+<p> <i>arguments</i></p>
+<dl>
+<dd>All values after the double hyphen marker (<code>&#8212;</code>) are passed through to the script or the interactive shell as arguments. These values can be accessed by using the <code>arguments</code> property (see Example 3).</dl>
+<h2>Description</h2>
+<p>The <code>jjs</code> command-line tool is used to invoke the Nashorn engine. You can use it to interpret one or several script files, or to run an interactive shell.</p>
+<h2>Options</h2>
+<p>The options of the <code>jjs</code> command control the conditions under which scripts are interpreted by Nashorn. </p>
+<p> -cp <i>path</i><br />
+ -classpath <i>path</i></p>
+<dl>
+<dd>Specifies the path to the supporting class files To set multiple paths, the option can be repeated, or you can separate each path with a colon (:).</dl>
+<p> -D<i>name</i>=<i>value</i></p>
+<dl>
+<dd>Sets a system property to be passed to the script by assigning a value to a property name. The following example shows how to invoke Nashorn in interactive mode and assign <code>myValue</code> to the property named <code>myKey</code>: </p>
+<dl>
+<dd>
+<pre><code>&gt;&gt; </code><code>jjs -DmyKey=myValue</code>
+<code>jjs&gt; </code><code>java.lang.System.getProperty(&quot;myKey&quot;)</code>
+<code>myValue</code>
+<code>jjs&gt;</code></pre>
+</dl>
+<p> This option can be repeated to set multiple properties.</dl>
+<p> -doe<br />
+ &#8211;dump-on-error</p>
+<dl>
+<dd>Provides a full stack trace when an error occurs. By default, only a brief error message is printed.</dl>
+<p> -fv<br />
+ &#8211;fullversion</p>
+<dl>
+<dd>Prints the full Nashorn version string.</dl>
+<p> -fx</p>
+<dl>
+<dd>Launches the script as a JavaFX application.</dl>
+<p> -h<br />
+ -help</p>
+<dl>
+<dd>Prints the list of options and their descriptions.</dl>
+<p> &#8211;language=[es5]</p>
+<dl>
+<dd>Specifies the ECMAScript language version. The default version is ES5.</dl>
+<p> -ot<br />
+ &#8211;optimistic-types=[true|false]</p>
+<dl>
+<dd>Enables or disables optimistic type assumptions with deoptimizing recompilation. Running with optimistic types will yield higher final speed, but may increase warmup time.</dl>
+<p> -scripting</p>
+<dl>
+<dd>Enables shell scripting features.</dl>
+<p> -strict</p>
+<dl>
+<dd>Enables strict mode, which enforces stronger adherence to the standard (ECMAScript Edition 5.1), making it easier to detect common coding errors.</dl>
+<p> -t=<i>zone</i><br />
+ -timezone=<i>zone</i></p>
+<dl>
+<dd>Sets the specified time zone for script execution. It overrides the time zone set in the OS and used by the <code>Date</code> object.</dl>
+<p> -v<br />
+ -version</p>
+<dl>
+<dd>Prints the Nashorn version string.</dl>
+<h2>Examples</h2>
+<p><code>Example 1 </code>Running a Script with Nashorn</p>
+<dl>
+<dd>
+<dl>
+<dd>
+<pre><code>jjs script.js</code></pre>
+</dl>
+</dl>
+<p> <code>Example 2 </code>Running Nashorn in Interactive Mode</p>
+<dl>
+<dd>
+<dl>
+<dd>
+<pre><code>&gt;&gt; </code><code>jjs</code>
+<code>jjs&gt; </code><code>println(&quot;Hello, World!&quot;)</code>
+<code>Hello, World!</code>
+<code>jjs&gt; </code><code>quit()</code>
+<code>&gt;&gt;</code></pre>
+</dl>
+</dl>
+<p> <code>Example 3 </code>Passing Arguments to Nashorn</p>
+<dl>
+<dd>
+<dl>
+<dd>
+<pre><code>&gt;&gt; </code><code>jjs -- a b c</code>
+<code>jjs&gt; </code><code>arguments.join(&quot;, &quot;)</code>
+<code>a, b, c</code>
+<code>jjs&gt;</code></pre>
+</dl>
+</dl>
+<h2>See Also</h2>
+<p><code>jrunscript</code></p>
