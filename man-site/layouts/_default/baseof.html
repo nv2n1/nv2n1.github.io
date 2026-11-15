@@ -6,7 +6,7 @@
 <title>{{ if .Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
 {{ with .Description }}<meta name="description" content="{{ . }}">
 {{ end }}<link rel="canonical" href="{{ .Permalink }}">
-<link rel="stylesheet" href="/docs/linux/man/man.css">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=2">
 </head>
 <body>
 <main>
@@ -15,7 +15,6 @@
 <nav><a href="/docs/linux/man/">Linux Manual Pages</a></nav>
 </header>
 {{ block "main" . }}{{ end }}
-<footer class="site"><a href="/docs/linux/man/">Linux Manual Pages</a> recovered from the SysTutorials archives.</footer>
 </main>
 </body>
 </html>
