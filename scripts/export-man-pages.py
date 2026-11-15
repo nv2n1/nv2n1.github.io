@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export Linux man pages from the systutorials WordPress DB dump to Hugo MD.
 
-Usage: python3 tools/export-man-pages.py <dump.sql> <man-src-dir>
+Usage: python3 scripts/export-man-pages.py <dump.sql> <man-src-dir>
 
 Reads `wp_posts` INSERT statements from a MariaDB dump, filters the man page
 posts (post_name LIKE 'linux-manual-page-<sec>-<name>'), and writes one MD

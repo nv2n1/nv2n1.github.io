@@ -8,6 +8,6 @@ plugins:
 exclude:
   - man-src
   - man-site
-  - tools
+  - scripts
   - vendor
   - ericzma_wp2.mysql
