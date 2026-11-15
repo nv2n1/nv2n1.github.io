@@ -32,6 +32,9 @@ jobs:
       - run: jekyll build --destination _site
         env:
           JEKYLL_ENV: production
+      # Pages serves the Actions artifact without Jekyll processing, so this
+      # is only a guard in case the Pages source ever flips to a branch.
+      - run: touch _site/.nojekyll
 
       - name: Build man pages with Hugo
         uses: peaceiris/actions-hugo@v3
