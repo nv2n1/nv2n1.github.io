@@ -4,7 +4,7 @@ date: 2015-11-29 01:01:40 +0000
 modified: 2026-04-11 17:41:24 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [performance]
 canonical: /uploading-large-files-amazon-s3-aws-cli/
 ---
 

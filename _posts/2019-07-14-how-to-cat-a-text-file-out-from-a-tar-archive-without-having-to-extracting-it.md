@@ -4,7 +4,7 @@ date: 2019-07-14 06:06:45 +0000
 modified: 2026-04-11 17:38:26 +0000
 author: "Q A"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /how-to-cat-a-text-file-out-from-a-tar-archive-without-having-to-extracting-it/
 ---
 

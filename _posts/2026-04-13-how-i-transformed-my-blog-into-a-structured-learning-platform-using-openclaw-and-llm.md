@@ -4,7 +4,7 @@ date: 2026-04-13 15:28:27 +0000
 modified: 2026-04-13 16:34:32 +0000
 author: "Eric Ma"
 layout: post
-categories: [ai-engineering]
+categories: [cli-ai-integration]
 canonical: /how-i-transformed-my-blog-into-a-structured-learning-platform-using-openclaw-and-llm/
 ---
 

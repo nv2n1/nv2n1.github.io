@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:13 +0000
 modified: 2026-04-12 16:45:56 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [virtualization-containers]
 canonical: /setting-up-stable-xen-domu-with-fedora-unmodified-fedora-12-on-top-of-xenified-fedora-12-dom0-with-xen-4-0-0/
 ---
 

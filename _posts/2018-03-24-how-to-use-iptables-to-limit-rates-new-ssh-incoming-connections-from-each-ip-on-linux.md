@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:52 +0000
 modified: 2026-04-11 17:39:57 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [networking]
 canonical: /how-to-use-iptables-to-limit-rates-new-ssh-incoming-connections-from-each-ip-on-linux/
 ---
 

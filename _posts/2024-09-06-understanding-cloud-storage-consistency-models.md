@@ -4,7 +4,7 @@ date: 2024-09-06 14:35:45 +0000
 modified: 2026-04-11 16:11:37 +0000
 author: "Eric Ma"
 layout: post
-categories: [systems-architecture]
+categories: [consistency-models]
 canonical: /understanding-cloud-storage-consistency-models/
 ---
 

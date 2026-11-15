@@ -4,6 +4,8 @@ title: "Linux & Systems Administration Academy"
 permalink: /linux-systems-administration-academy/
 ---
 
+# Linux & Systems Administration Academy
+
 Master Linux administration, command-line tools, system configuration, and single-machine systems. From basics to advanced kernel and networking topics.
 
 ## Learning Paths
@@ -35,7 +37,7 @@ systemd, kernel, networking, storage, virtualization, performance tuning, troubl
 
 ## Resources
 
-- [View all Linux posts](/category/linux-systems-administration/)
+- [View all Linux posts](/linux-sysadmin-path/), or [Linux essentials](/linux-essentials-path/)
 
 ## Back to Learning
 

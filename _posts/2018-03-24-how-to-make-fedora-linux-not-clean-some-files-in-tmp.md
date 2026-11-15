@@ -4,7 +4,7 @@ date: 2018-03-24 11:47:26 +0000
 modified: 2026-04-12 16:53:02 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [systemd-services]
 canonical: /how-to-make-fedora-linux-not-clean-some-files-in-tmp/
 ---
 

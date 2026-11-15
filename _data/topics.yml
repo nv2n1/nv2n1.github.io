@@ -1,0 +1,149 @@
+# Site learning hierarchy: academies > paths > categories (topics).
+# Every category is a learning topic on its parent page; posts carry exactly
+# one category and get their breadcrumb from this map.
+
+academies:
+  linux-systems-administration-academy:
+    title: "Linux & Systems Administration Academy"
+    url: /linux-systems-administration-academy/
+  distributed-systems-academy:
+    title: "Distributed Systems Academy"
+    url: /distributed-systems-academy/
+  programming-academy:
+    title: "Programming Academy"
+    url: /programming-academy/
+  ai-engineering-hub:
+    title: "AI Engineering Hub"
+    url: /ai-engineering-hub/
+  web3-crypto-academy:
+    title: "Web3 & Crypto Academy"
+    url: /web3-crypto-academy/
+
+paths:
+  linux-essentials-path:
+    title: "Linux Essentials Path"
+    url: /linux-essentials-path/
+    academy: linux-systems-administration-academy
+  linux-sysadmin-path:
+    title: "Linux System Administration Path"
+    url: /linux-sysadmin-path/
+    academy: linux-systems-administration-academy
+  advanced-systems-path:
+    title: "Advanced Systems & Architecture Path"
+    url: /advanced-systems-path/
+    academy: distributed-systems-academy
+  security-cryptography-path:
+    title: "Security & Cryptography Path"
+    url: /security-cryptography-path/
+    academy: distributed-systems-academy
+
+# category slug -> topic
+categories:
+  command-line-text-tools:
+    title: "Command Line & Text Tools"
+    path: linux-essentials-path
+  users-permissions:
+    title: "Users & Permissions"
+    path: linux-essentials-path
+  files-storage:
+    title: "Files & Storage"
+    path: linux-essentials-path
+  shell-scripting:
+    title: "Shell & Scripting"
+    path: linux-essentials-path
+  packages-desktop-applications:
+    title: "Packages, Desktop & Applications"
+    path: linux-essentials-path
+  systemd-services:
+    title: "systemd & Services"
+    path: linux-sysadmin-path
+  networking:
+    title: "Networking"
+    path: linux-sysadmin-path
+  storage-lvm:
+    title: "Storage & LVM"
+    path: linux-sysadmin-path
+  virtualization-containers:
+    title: "Virtualization & Containers"
+    path: linux-sysadmin-path
+  kernel:
+    title: "Kernel"
+    path: linux-sysadmin-path
+  kernel-release-notes:
+    title: "Kernel History: Release Notes"
+    path: linux-sysadmin-path
+  performance:
+    title: "Performance"
+    path: linux-sysadmin-path
+  general-system-administration:
+    title: "General System Administration"
+    path: linux-sysadmin-path
+  consensus:
+    title: "Consensus"
+    path: advanced-systems-path
+  consistency-models:
+    title: "Consistency Models"
+    path: advanced-systems-path
+  storage-file-systems:
+    title: "Storage & File Systems"
+    path: advanced-systems-path
+  big-data-systems:
+    title: "Big Data Systems"
+    path: advanced-systems-path
+  engineering-lessons:
+    title: "Engineering Lessons"
+    path: advanced-systems-path
+  low-level-systems:
+    title: "Low-Level Systems"
+    path: advanced-systems-path
+  cryptography-keys:
+    title: "Cryptography & Keys"
+    path: security-cryptography-path
+  tls-email-security:
+    title: "TLS & Email Security"
+    path: security-cryptography-path
+  data-protection:
+    title: "Data Protection"
+    path: security-cryptography-path
+  programming-languages:
+    title: "Programming Languages"
+    academy: programming-academy
+  algorithms-data-structures:
+    title: "Algorithms & Data Structures"
+    academy: programming-academy
+  software-design:
+    title: "Software Design"
+    academy: programming-academy
+  web-development:
+    title: "Web Development"
+    academy: programming-academy
+  databases-storage:
+    title: "Databases & Storage"
+    academy: programming-academy
+  scripting-automation:
+    title: "Scripting & Automation"
+    academy: programming-academy
+  testing-devops:
+    title: "Testing & DevOps"
+    academy: programming-academy
+  model-fundamentals:
+    title: "Model Fundamentals"
+    academy: ai-engineering-hub
+  cli-ai-integration:
+    title: "CLI + AI Integration"
+    academy: ai-engineering-hub
+  prompt-engineering:
+    title: "Prompt Engineering"
+    academy: ai-engineering-hub
+  blockchain-fundamentals:
+    title: "Blockchain Fundamentals"
+    academy: web3-crypto-academy
+  cryptocurrency-trading:
+    title: "Cryptocurrency & Trading"
+    academy: web3-crypto-academy
+  web3-defi:
+    title: "Web3 & DeFi"
+    academy: web3-crypto-academy
+  self-custody-security:
+    title: "Self-Custody & Security"
+    academy: web3-crypto-academy

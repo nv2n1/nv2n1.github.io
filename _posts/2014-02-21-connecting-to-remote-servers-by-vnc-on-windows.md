@@ -4,7 +4,7 @@ date: 2014-02-21 07:36:37 +0000
 modified: 2026-04-11 16:40:32 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /connecting-to-remote-servers-by-vnc-on-windows/
 ---
 

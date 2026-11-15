@@ -4,7 +4,7 @@ date: 2018-03-24 11:49:22 +0000
 modified: 2026-04-12 16:58:47 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-install-windows-from-usb-drive/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:37 +0000
 modified: 2026-04-11 15:45:29 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-judge-whether-its-stderr-is-redirected-to-a-file-in-a-bash-script-on-linux/
 ---
 

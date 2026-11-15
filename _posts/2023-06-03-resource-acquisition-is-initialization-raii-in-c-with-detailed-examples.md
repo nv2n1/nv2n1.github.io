@@ -4,7 +4,7 @@ date: 2023-06-03 10:57:51 +0000
 modified: 2026-04-11 17:11:04 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /resource-acquisition-is-initialization-raii-in-c-with-detailed-examples/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:40:51 +0000
 modified: 2026-04-11 16:01:07 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-force-yum-not-to-update-certain-packages/
 ---
 

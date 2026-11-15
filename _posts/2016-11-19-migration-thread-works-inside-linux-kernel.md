@@ -4,7 +4,7 @@ date: 2016-11-19 01:58:42 +0000
 modified: 2026-04-11 16:21:23 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /migration-thread-works-inside-linux-kernel/
 ---
 

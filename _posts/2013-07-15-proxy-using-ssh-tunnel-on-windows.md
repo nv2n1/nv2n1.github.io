@@ -4,7 +4,7 @@ date: 2013-07-15 13:01:08 +0000
 modified: 2026-04-11 17:41:32 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [networking]
 canonical: /proxy-using-ssh-tunnel-on-windows/
 ---
 

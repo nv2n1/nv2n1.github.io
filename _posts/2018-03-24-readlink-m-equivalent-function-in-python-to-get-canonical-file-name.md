@@ -4,7 +4,7 @@ date: 2018-03-24 11:55:14 +0000
 modified: 2026-04-12 16:46:49 +0000
 author: "Q A"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /readlink-m-equivalent-function-in-python-to-get-canonical-file-name/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:20:38 +0000
 modified: 2026-05-17 17:30:54 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-system-configuration]
+categories: [networking]
 canonical: /how-to-install-drivers-for-tl-wn725n-v2-usb-wireless-adapter-on-fedora-19/
 ---
 

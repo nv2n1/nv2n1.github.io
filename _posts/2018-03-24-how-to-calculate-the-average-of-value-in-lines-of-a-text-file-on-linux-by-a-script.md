@@ -4,7 +4,7 @@ date: 2018-03-24 11:41:06 +0000
 modified: 2026-04-11 16:00:51 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-calculate-the-average-of-value-in-lines-of-a-text-file-on-linux-by-a-script/
 ---
 

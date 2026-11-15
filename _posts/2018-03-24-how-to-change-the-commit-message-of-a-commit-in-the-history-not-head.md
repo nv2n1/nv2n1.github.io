@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:26 +0000
 modified: 2026-04-12 16:47:42 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [scripting-automation]
 canonical: /how-to-change-the-commit-message-of-a-commit-in-the-history-not-head/
 ---
 

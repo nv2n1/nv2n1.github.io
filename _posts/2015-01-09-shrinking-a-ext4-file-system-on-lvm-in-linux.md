@@ -4,7 +4,7 @@ date: 2015-01-09 08:04:32 +0000
 modified: 2026-04-11 16:22:06 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /shrinking-a-ext4-file-system-on-lvm-in-linux/
 ---
 

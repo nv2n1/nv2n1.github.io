@@ -4,7 +4,7 @@ date: 2013-07-12 16:46:09 +0000
 modified: 2026-04-11 17:41:49 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [web-development]
 canonical: /how-to-redirect-old-domain-to-new-domain-using-htaccess-redirect/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:14:29 +0000
 modified: 2026-04-13 00:02:15 +0000
 author: "Q A"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /make-changes-to-sysctl-conf-take-effect-without-rebooting-linux/
 ---
 

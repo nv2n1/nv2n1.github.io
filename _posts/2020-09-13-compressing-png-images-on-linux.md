@@ -4,7 +4,7 @@ date: 2020-09-13 06:57:49 +0000
 modified: 2026-04-12 16:48:08 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /compressing-png-images-on-linux/
 ---
 

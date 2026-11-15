@@ -4,7 +4,7 @@ date: 2018-03-24 11:42:06 +0000
 modified: 2026-04-11 16:00:03 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /how-to-set-up-hp-printer-drivers-on-linux-mint/
 ---
 

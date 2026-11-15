@@ -4,7 +4,7 @@ date: 2015-04-14 01:48:02 +0000
 modified: 2026-04-11 16:21:47 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /how-to-get-available-filesystem-space-on-linux-a-c-function-and-a-cpp-example/
 ---
 

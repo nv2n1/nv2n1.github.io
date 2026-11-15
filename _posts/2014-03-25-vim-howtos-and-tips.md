@@ -4,7 +4,7 @@ date: 2014-03-25 11:42:12 +0000
 modified: 2026-04-11 16:40:25 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /vim-howtos-and-tips/
 ---
 

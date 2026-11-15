@@ -4,7 +4,7 @@ date: 2018-03-24 11:50:05 +0000
 modified: 2026-04-12 16:39:18 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-test-a-file-or-directory-exists-in-python/
 ---
 

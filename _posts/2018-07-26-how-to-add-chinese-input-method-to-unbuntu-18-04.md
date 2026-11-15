@@ -4,7 +4,7 @@ date: 2018-07-26 04:53:40 +0000
 modified: 2026-04-11 15:43:26 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-add-chinese-input-method-to-unbuntu-18-04/
 ---
 

@@ -4,7 +4,7 @@ date: 2013-07-15 12:53:02 +0000
 modified: 2026-04-11 16:41:05 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /automatic-keyboard-presser-on-linux/
 ---
 

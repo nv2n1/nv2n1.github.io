@@ -4,7 +4,7 @@ date: 2018-03-24 11:41:06 +0000
 modified: 2026-04-11 16:00:50 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /setting-sbt-log-level-at-the-command-line/
 ---
 

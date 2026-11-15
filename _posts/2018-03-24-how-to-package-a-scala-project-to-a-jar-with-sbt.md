@@ -4,7 +4,7 @@ date: 2018-03-24 11:41:00 +0000
 modified: 2026-04-11 16:00:54 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-package-a-scala-project-to-a-jar-with-sbt/
 ---
 

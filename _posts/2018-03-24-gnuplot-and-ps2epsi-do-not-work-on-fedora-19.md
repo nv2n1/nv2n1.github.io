@@ -4,7 +4,7 @@ date: 2018-03-24 08:17:17 +0000
 modified: 2026-04-12 16:46:18 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /gnuplot-and-ps2epsi-do-not-work-on-fedora-19/
 ---
 

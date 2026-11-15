@@ -4,7 +4,7 @@ date: 2015-03-19 06:00:13 +0000
 modified: 2026-04-11 16:21:52 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /changing-iphone-holiday-calendar-local-one/
 ---
 

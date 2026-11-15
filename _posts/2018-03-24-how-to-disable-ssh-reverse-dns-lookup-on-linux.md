@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:57 +0000
 modified: 2026-04-12 16:05:19 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-to-disable-ssh-reverse-dns-lookup-on-linux/
 ---
 

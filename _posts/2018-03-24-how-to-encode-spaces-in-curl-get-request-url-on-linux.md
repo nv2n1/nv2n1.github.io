@@ -4,7 +4,7 @@ date: 2018-03-24 11:47:11 +0000
 modified: 2026-04-12 16:10:40 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /how-to-encode-spaces-in-curl-get-request-url-on-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2020-01-28 10:05:37 +0000
 modified: 2026-04-11 15:42:21 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-synchronize-onedrive-and-onedrive-for-business-files-in-linux-using-insync/
 ---
 

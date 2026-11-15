@@ -1,17 +1,6 @@
 ---
-layout: home
+layout: redirect
 title: "Blockchain & Cryptocurrency"
-category: blockchain-cryptocurrency
 permalink: /category/blockchain-cryptocurrency/
+redirect_to: /web3-crypto-academy/
 ---
-
-## "Blockchain & Cryptocurrency"
-
-{% assign posts = site.categories[page.category] | sort: date | reverse %}
-{{ posts | size }} posts.
-
-<ul class="posts">
-{% for post in posts %}
-  <li><time>{{ post.date | date: "%b %-d, %Y" }}</time> <a href="{{ post.url }}">{{ post.title | escape }}</a></li>
-{% endfor %}
-</ul>

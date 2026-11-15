@@ -4,7 +4,7 @@ date: 2014-03-07 00:13:51 +0000
 modified: 2026-04-11 16:40:29 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-to-set-up-gitolite-git-server-a-ten-minute-tutorial/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:49:22 +0000
 modified: 2026-04-12 16:41:06 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-extract-images-from-pdf-on-linux/
 ---
 

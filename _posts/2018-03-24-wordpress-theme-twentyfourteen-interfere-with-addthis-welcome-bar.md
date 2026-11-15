@@ -4,7 +4,7 @@ date: 2018-03-24 08:20:38 +0000
 modified: 2026-04-12 16:11:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /wordpress-theme-twentyfourteen-interfere-with-addthis-welcome-bar/
 ---
 

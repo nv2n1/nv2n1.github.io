@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:39 +0000
 modified: 2026-04-12 16:10:20 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /how-to-exclude-directories-with-certain-names-from-rsync-on-linux/
 ---
 

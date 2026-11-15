@@ -4,7 +4,7 @@ date: 2014-05-29 12:04:56 +0000
 modified: 2026-04-11 16:22:32 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /git-submodule-cheat-sheet/
 ---
 

@@ -4,7 +4,7 @@ date: 2020-10-18 10:07:02 +0000
 modified: 2026-04-12 16:47:11 +0000
 author: "David Wong"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-print-google-doc-with-comments-in-page-margins/
 ---
 

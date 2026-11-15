@@ -4,7 +4,7 @@ date: 2020-02-29 12:47:30 +0000
 modified: 2026-04-11 17:38:18 +0000
 author: "David Yang"
 layout: post
-categories: [system-administration-cloud]
+categories: [virtualization-containers]
 canonical: /how-to-list-and-start-virtualbox-vms-in-command-line-in-linux/
 ---
 

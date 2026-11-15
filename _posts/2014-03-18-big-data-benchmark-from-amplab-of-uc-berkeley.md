@@ -4,7 +4,7 @@ date: 2014-03-18 05:00:26 +0000
 modified: 2026-04-11 16:40:27 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [big-data-systems]
 canonical: /big-data-benchmark-from-amplab-of-uc-berkeley/
 ---
 

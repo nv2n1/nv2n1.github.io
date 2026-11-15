@@ -4,7 +4,7 @@ date: 2018-09-14 12:24:43 +0000
 modified: 2026-04-11 15:43:08 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [users-permissions]
 canonical: /how-to-enable-user-themes-in-ubuntu-18-04/
 ---
 

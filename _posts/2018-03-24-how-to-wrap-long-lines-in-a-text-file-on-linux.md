@@ -4,7 +4,7 @@ date: 2018-03-24 11:47:40 +0000
 modified: 2026-04-12 10:58:28 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-wrap-long-lines-in-a-text-file-on-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2020-09-20 14:38:33 +0000
 modified: 2026-04-11 16:14:00 +0000
 author: "Tony"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/
 ---
 

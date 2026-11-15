@@ -4,7 +4,7 @@ date: 2018-03-24 08:16:32 +0000
 modified: 2026-04-12 16:46:54 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-save-a-word-as-a-pdf-in-office-2007/
 ---
 

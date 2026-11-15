@@ -4,7 +4,7 @@ date: 2013-07-12 16:47:41 +0000
 modified: 2026-04-11 17:51:47 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 permalink: /mfc%e7%a8%8b%e5%ba%8f%e4%bd%bf%e7%94%a8%e7%b3%bb%e7%bb%9f%e9%a3%8e%e6%a0%bc%e7%95%8c%e9%9d%a2/
 canonical: /mfc%e7%a8%8b%e5%ba%8f%e4%bd%bf%e7%94%a8%e7%b3%bb%e7%bb%9f%e9%a3%8e%e6%a0%bc%e7%95%8c%e9%9d%a2/
 ---

@@ -4,7 +4,7 @@ date: 2018-03-24 08:14:48 +0000
 modified: 2026-05-17 17:30:56 +0000
 author: "Q A"
 layout: post
-categories: [scripting-utilities]
+categories: [networking]
 canonical: /how-to-set-up-proxy-over-ssh-on-windows/
 ---
 

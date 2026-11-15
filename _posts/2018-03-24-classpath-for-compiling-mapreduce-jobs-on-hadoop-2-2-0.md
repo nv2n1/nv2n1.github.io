@@ -4,7 +4,7 @@ date: 2018-03-24 08:22:17 +0000
 modified: 2026-04-12 16:47:26 +0000
 author: "Eric Ma"
 layout: post
-categories: [design-patterns-architecture]
+categories: [software-design]
 canonical: /classpath-for-compiling-mapreduce-jobs-on-hadoop-2-2-0/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-07-01 07:43:51 +0000
 modified: 2026-04-11 17:12:01 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-test-a-file-or-directory-exists-in-go/
 ---
 

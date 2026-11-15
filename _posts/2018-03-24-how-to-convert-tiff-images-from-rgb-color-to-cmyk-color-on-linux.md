@@ -4,7 +4,7 @@ date: 2018-03-24 11:49:04 +0000
 modified: 2026-04-12 16:10:57 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /how-to-convert-tiff-images-from-rgb-color-to-cmyk-color-on-linux/
 ---
 

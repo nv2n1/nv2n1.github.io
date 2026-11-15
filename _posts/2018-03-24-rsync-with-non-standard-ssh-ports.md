@@ -4,7 +4,7 @@ date: 2018-03-24 08:19:58 +0000
 modified: 2026-04-12 16:38:50 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [networking]
 canonical: /rsync-with-non-standard-ssh-ports/
 ---
 

@@ -4,7 +4,7 @@ date: 2013-07-12 16:31:44 +0000
 modified: 2026-04-13 01:03:51 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 permalink: /fedora-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
 canonical: /fedora-%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e8%ae%be%e7%bd%ae/
 ---

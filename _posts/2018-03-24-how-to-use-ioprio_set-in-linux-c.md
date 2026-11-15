@@ -4,7 +4,7 @@ date: 2018-03-24 11:51:39 +0000
 modified: 2026-04-12 16:51:57 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-use-ioprio_set-in-linux-c/
 ---
 

@@ -4,7 +4,7 @@ date: 2024-09-06 14:45:10 +0000
 modified: 2026-04-19 03:46:31 +0000
 author: "Eric Ma"
 layout: post
-categories: [systems-architecture]
+categories: [consistency-models]
 canonical: /linear-consistency-model-for-computer-systems/
 ---
 

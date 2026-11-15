@@ -4,7 +4,7 @@ date: 2016-12-01 06:31:04 +0000
 modified: 2026-04-11 16:21:22 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [performance]
 canonical: /sched_min_granularity_ns-sched_latency_ns-cfs-affect-timeslice-processes/
 ---
 

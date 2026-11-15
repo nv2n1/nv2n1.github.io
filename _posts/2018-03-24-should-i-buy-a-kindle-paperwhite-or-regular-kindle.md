@@ -4,7 +4,7 @@ date: 2018-03-24 08:20:04 +0000
 modified: 2026-04-12 16:52:28 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /should-i-buy-a-kindle-paperwhite-or-regular-kindle/
 ---
 

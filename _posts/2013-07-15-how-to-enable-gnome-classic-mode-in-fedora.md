@@ -4,7 +4,7 @@ date: 2013-07-15 03:16:26 +0000
 modified: 2026-04-11 16:41:09 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-enable-gnome-classic-mode-in-fedora/
 ---
 

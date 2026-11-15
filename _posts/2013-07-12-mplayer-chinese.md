@@ -4,7 +4,7 @@ date: 2013-07-12 16:31:49 +0000
 modified: 2026-04-12 16:11:09 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /mplayer-chinese/
 ---
 

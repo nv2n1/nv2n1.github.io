@@ -4,7 +4,7 @@ date: 2018-03-24 11:53:16 +0000
 modified: 2026-04-12 16:45:44 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-get-the-mtime-of-a-file-on-linux/
 ---
 

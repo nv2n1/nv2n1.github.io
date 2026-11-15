@@ -4,7 +4,7 @@ date: 2018-03-24 08:17:12 +0000
 modified: 2026-04-11 16:07:42 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-choose-the-number-of-mappers-and-reducers-in-hadoop/
 ---
 

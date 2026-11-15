@@ -4,7 +4,7 @@ date: 2018-03-24 08:19:16 +0000
 modified: 2026-04-12 17:00:26 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [programming-languages]
 canonical: /how-to-get-the-output-of-a-system-command-in-c/
 ---
 

@@ -4,7 +4,7 @@ date: 2024-05-15 13:31:41 +0000
 modified: 2026-04-11 17:44:41 +0000
 author: "Eric Ma"
 layout: post
-categories: [functional-programming]
+categories: [programming-languages]
 canonical: /mapping-left-alt-to-ctrl-for-windows-keyboard-to-be-similar-to-macos/
 ---
 

@@ -4,7 +4,7 @@ date: 2014-07-23 05:15:53 +0000
 modified: 2026-04-11 16:22:30 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /improving-fedora-font-rendering-with-open-software-and-fonts-only/
 ---
 

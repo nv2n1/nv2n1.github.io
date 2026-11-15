@@ -4,7 +4,7 @@ date: 2013-07-12 16:46:15 +0000
 modified: 2026-04-11 16:41:33 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /a-free-personal-wordpress-blog-solution/
 ---
 

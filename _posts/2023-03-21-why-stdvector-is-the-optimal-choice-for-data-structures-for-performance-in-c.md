@@ -4,7 +4,7 @@ date: 2023-03-21 06:52:21 +0000
 modified: 2026-04-11 17:11:09 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /why-stdvector-is-the-optimal-choice-for-data-structures-for-performance-in-c/
 ---
 

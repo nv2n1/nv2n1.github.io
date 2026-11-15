@@ -4,7 +4,7 @@ date: 2018-03-24 11:47:03 +0000
 modified: 2026-04-12 16:05:00 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /how-to-make-adsense-responsive-ads-show-rectangle-ads-instead-of-horizontal-ones/
 ---
 

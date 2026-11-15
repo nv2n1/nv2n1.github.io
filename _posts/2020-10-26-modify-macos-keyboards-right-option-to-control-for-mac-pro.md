@@ -4,7 +4,7 @@ date: 2020-10-26 12:01:13 +0000
 modified: 2026-05-17 16:50:26 +0000
 author: "Daniel"
 layout: post
-categories: [security-cryptography-2]
+categories: [cryptography-keys]
 canonical: /modify-macos-keyboards-right-option-to-control-for-mac-pro/
 ---
 

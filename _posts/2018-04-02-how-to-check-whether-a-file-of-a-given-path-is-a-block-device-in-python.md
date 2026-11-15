@@ -4,7 +4,7 @@ date: 2018-04-02 09:09:41 +0000
 modified: 2026-04-11 17:12:13 +0000
 author: "Q A"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-check-whether-a-file-of-a-given-path-is-a-block-device-in-python/
 ---
 

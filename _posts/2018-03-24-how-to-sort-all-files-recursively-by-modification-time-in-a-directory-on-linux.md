@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:44 +0000
 modified: 2026-04-12 16:49:28 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-sort-all-files-recursively-by-modification-time-in-a-directory-on-linux/
 ---
 

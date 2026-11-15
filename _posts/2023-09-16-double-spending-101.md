@@ -4,7 +4,7 @@ date: 2023-09-16 06:48:43 +0000
 modified: 2026-04-11 16:11:55 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /double-spending-101/
 ---
 

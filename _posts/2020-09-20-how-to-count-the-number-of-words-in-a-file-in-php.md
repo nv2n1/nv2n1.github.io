@@ -4,7 +4,7 @@ date: 2020-09-20 10:08:58 +0000
 modified: 2026-04-12 16:56:09 +0000
 author: "David Yang"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-count-the-number-of-words-in-a-file-in-php/
 ---
 

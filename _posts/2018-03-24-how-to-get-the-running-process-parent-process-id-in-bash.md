@@ -4,7 +4,7 @@ date: 2018-03-24 11:52:50 +0000
 modified: 2026-04-12 16:40:38 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [shell-scripting]
 canonical: /how-to-get-the-running-process-parent-process-id-in-bash/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:43:23 +0000
 modified: 2026-04-12 16:39:40 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-increase-the-number-of-files-allowed-to-be-opened-on-linux/
 ---
 

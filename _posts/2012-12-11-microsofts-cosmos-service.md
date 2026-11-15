@@ -4,7 +4,7 @@ date: 2012-12-11 07:04:20 +0000
 modified: 2026-04-12 16:38:59 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [engineering-lessons]
 canonical: /microsofts-cosmos-service/
 ---
 

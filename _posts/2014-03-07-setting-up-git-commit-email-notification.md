@@ -4,7 +4,7 @@ date: 2014-03-07 10:09:09 +0000
 modified: 2026-04-11 16:40:27 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /setting-up-git-commit-email-notification/
 ---
 

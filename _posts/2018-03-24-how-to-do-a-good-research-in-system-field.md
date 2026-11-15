@@ -4,7 +4,7 @@ date: 2018-03-24 11:51:42 +0000
 modified: 2026-04-11 17:13:41 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-do-a-good-research-in-system-field/
 ---
 

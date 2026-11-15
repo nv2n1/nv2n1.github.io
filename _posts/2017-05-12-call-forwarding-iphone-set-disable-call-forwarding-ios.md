@@ -4,7 +4,7 @@ date: 2017-05-12 03:40:43 +0000
 modified: 2026-04-11 17:51:21 +0000
 author: "David Yang"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /call-forwarding-iphone-set-disable-call-forwarding-ios/
 ---
 

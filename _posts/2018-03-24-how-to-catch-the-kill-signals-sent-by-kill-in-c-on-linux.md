@@ -4,7 +4,7 @@ date: 2018-03-24 11:40:55 +0000
 modified: 2026-04-11 16:01:02 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [programming-languages]
 canonical: /how-to-catch-the-kill-signals-sent-by-kill-in-c-on-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2015-02-27 15:47:30 +0000
 modified: 2026-04-11 16:22:00 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /iphone-connecting-internet-using-windows-pc-network-through-usb-cable/
 ---
 

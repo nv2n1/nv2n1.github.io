@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:56 +0000
 modified: 2026-04-11 17:38:40 +0000
 author: "David Yang"
 layout: post
-categories: [scripting-utilities]
+categories: [programming-languages]
 canonical: /how-to-iterate-all-dirs-and-files-in-a-dir-in-c/
 ---
 

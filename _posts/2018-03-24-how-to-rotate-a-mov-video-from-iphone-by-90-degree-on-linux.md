@@ -4,7 +4,7 @@ date: 2018-03-24 11:42:35 +0000
 modified: 2026-04-12 16:45:17 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration, linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-rotate-a-mov-video-from-iphone-by-90-degree-on-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:19:02 +0000
 modified: 2026-04-12 10:58:25 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-replace-gdm-with-lightdm-on-fedora/
 ---
 

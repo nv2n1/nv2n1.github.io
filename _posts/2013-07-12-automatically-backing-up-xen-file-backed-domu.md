@@ -4,7 +4,7 @@ date: 2013-07-12 16:31:55 +0000
 modified: 2026-04-12 04:41:27 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [virtualization-containers]
 canonical: /automatically-backing-up-xen-file-backed-domu/
 ---
 

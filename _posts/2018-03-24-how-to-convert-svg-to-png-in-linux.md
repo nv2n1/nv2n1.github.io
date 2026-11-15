@@ -4,7 +4,7 @@ date: 2018-03-24 11:51:58 +0000
 modified: 2026-04-12 16:06:15 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-convert-svg-to-png-in-linux/
 ---
 

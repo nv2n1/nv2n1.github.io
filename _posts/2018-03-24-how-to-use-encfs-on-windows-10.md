@@ -4,7 +4,7 @@ date: 2018-03-24 11:53:24 +0000
 modified: 2026-05-17 16:50:35 +0000
 author: "Q A"
 layout: post
-categories: [security-cryptography-2]
+categories: [cryptography-keys]
 canonical: /how-to-use-encfs-on-windows-10/
 ---
 

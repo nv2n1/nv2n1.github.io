@@ -4,7 +4,7 @@ date: 2018-03-24 11:52:30 +0000
 modified: 2026-04-11 17:13:07 +0000
 author: "Q A"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /most-important-aspects-or-features-of-the-c-programming-language/
 ---
 

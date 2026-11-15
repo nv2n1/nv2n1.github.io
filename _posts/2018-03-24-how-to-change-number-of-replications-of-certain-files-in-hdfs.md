@@ -4,7 +4,7 @@ date: 2018-03-24 11:43:19 +0000
 modified: 2026-04-13 00:02:03 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-change-number-of-replications-of-certain-files-in-hdfs/
 ---
 

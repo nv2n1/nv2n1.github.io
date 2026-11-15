@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:33 +0000
 modified: 2026-04-11 16:41:41 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /diff-and-patch-generating-and-applying-patches/
 ---
 

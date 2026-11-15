@@ -4,7 +4,7 @@ date: 2018-03-24 08:22:36 +0000
 modified: 2026-04-12 16:04:30 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-force-mplayer-to-start-a-video-at-the-center-of-the-screen/
 ---
 

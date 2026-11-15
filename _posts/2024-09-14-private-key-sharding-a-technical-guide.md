@@ -4,7 +4,7 @@ date: 2024-09-14 08:33:08 +0000
 modified: 2026-05-17 15:39:17 +0000
 author: "Eric Ma"
 layout: post
-categories: [blockchain-cryptocurrency]
+categories: [self-custody-security]
 canonical: /private-key-sharding-a-technical-guide/
 ---
 

@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:29 +0000
 modified: 2026-04-12 16:39:54 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /setting-touchpad-in-kde/
 ---
 

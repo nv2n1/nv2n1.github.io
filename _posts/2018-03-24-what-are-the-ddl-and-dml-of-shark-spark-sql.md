@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:30 +0000
 modified: 2026-04-11 17:49:23 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /what-are-the-ddl-and-dml-of-shark-spark-sql/
 ---
 

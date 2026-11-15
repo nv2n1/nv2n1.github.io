@@ -4,7 +4,7 @@ date: 2018-03-24 11:53:59 +0000
 modified: 2026-04-12 16:32:25 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [packages-desktop-applications]
 canonical: /how-to-add-php-domdocument-extension-to-httpd-in-centos-7/
 ---
 

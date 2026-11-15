@@ -4,7 +4,7 @@ date: 2021-06-13 12:26:31 +0000
 modified: 2026-04-12 16:06:46 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /gnone-3-screenshot-keyboard-shortcuts/
 ---
 

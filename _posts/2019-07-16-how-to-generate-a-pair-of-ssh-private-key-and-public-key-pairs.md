@@ -4,7 +4,7 @@ date: 2019-07-16 04:07:38 +0000
 modified: 2026-04-11 15:42:36 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-to-generate-a-pair-of-ssh-private-key-and-public-key-pairs/
 ---
 

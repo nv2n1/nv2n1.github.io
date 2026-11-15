@@ -4,7 +4,7 @@ date: 2018-03-24 19:40:45 +0000
 modified: 2026-04-13 00:52:19 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /add-my-own-window-onload-safely-without-overwriting-old-ones/
 ---
 

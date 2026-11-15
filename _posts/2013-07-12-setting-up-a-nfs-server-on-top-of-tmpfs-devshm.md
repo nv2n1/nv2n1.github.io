@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:04 +0000
 modified: 2026-04-12 05:27:42 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /setting-up-a-nfs-server-on-top-of-tmpfs-devshm/
 ---
 

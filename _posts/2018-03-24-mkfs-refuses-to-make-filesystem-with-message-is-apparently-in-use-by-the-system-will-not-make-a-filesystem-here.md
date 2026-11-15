@@ -4,7 +4,7 @@ date: 2018-03-24 11:47:16 +0000
 modified: 2026-04-12 16:34:54 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /mkfs-refuses-to-make-filesystem-with-message-is-apparently-in-use-by-the-system-will-not-make-a-filesystem-here/
 ---
 

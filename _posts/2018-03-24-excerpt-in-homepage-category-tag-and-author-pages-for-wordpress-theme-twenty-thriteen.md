@@ -4,7 +4,7 @@ date: 2018-03-24 08:17:50 +0000
 modified: 2026-04-12 14:18:44 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /excerpt-in-homepage-category-tag-and-author-pages-for-wordpress-theme-twenty-thriteen/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:14:29 +0000
 modified: 2026-04-11 16:20:52 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /how-to-quickly-find-out-failed-disks-sata-port-in-linux-how-to-map-linux-disk-names-to-sata-ports/
 ---
 

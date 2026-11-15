@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:58 +0000
 modified: 2026-04-12 16:53:00 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [performance]
 canonical: /how-to-fix-your-profile-could-not-be-opened-correctly-on-linux/
 ---
 

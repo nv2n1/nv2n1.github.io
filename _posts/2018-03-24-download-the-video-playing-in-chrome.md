@@ -4,7 +4,7 @@ date: 2018-03-24 08:04:50 +0000
 modified: 2026-04-12 16:46:24 +0000
 author: "Q A"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /download-the-video-playing-in-chrome/
 ---
 

@@ -4,7 +4,7 @@ date: 2020-03-27 16:28:26 +0000
 modified: 2026-04-11 15:42:12 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-install-wine-32-bit-on-centos-8/
 ---
 

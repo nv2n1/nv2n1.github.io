@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:26 +0000
 modified: 2026-04-12 16:09:09 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-system-configuration]
+categories: [command-line-text-tools]
 canonical: /how-to-install-alien-on-centos-7-to-convert-deb-to-rpm/
 ---
 

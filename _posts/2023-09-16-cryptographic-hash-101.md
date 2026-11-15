@@ -4,7 +4,7 @@ date: 2023-09-16 06:28:42 +0000
 modified: 2026-04-11 16:12:08 +0000
 author: "Tony"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /cryptographic-hash-101/
 ---
 

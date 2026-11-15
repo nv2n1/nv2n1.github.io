@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:21 +0000
 modified: 2026-04-12 08:43:16 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-enable-rpm-fusion-for-centos-6-6/
 ---
 

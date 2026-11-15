@@ -4,7 +4,7 @@ date: 2020-09-21 00:25:27 +0000
 modified: 2026-04-12 16:36:21 +0000
 author: "Tony"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /linux-kernel-alsa-hda-realtek-fix-headphone-mic-doesnt-recording-for-alc256/
 ---
 

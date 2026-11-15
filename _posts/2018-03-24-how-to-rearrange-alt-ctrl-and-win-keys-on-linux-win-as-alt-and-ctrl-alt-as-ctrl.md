@@ -4,7 +4,7 @@ date: 2018-03-24 08:22:23 +0000
 modified: 2026-04-11 16:02:40 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-rearrange-alt-ctrl-and-win-keys-on-linux-win-as-alt-and-ctrl-alt-as-ctrl/
 ---
 

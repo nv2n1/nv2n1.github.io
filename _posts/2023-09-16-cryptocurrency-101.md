@@ -4,7 +4,7 @@ date: 2023-09-16 06:26:52 +0000
 modified: 2026-04-11 16:12:10 +0000
 author: "David Yang"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /cryptocurrency-101/
 ---
 

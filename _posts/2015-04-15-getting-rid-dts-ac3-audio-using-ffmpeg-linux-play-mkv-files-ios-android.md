@@ -4,7 +4,7 @@ date: 2015-04-15 06:38:26 +0000
 modified: 2026-04-11 16:21:46 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /getting-rid-dts-ac3-audio-using-ffmpeg-linux-play-mkv-files-ios-android/
 ---
 

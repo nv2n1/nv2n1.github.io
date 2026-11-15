@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:42 +0000
 modified: 2026-04-12 16:34:10 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /how-to-convert-all-text-from-upper-case-to-lower-case-on-linux/
 ---
 

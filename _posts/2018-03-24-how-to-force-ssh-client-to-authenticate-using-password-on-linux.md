@@ -4,7 +4,7 @@ date: 2018-03-24 11:48:19 +0000
 modified: 2026-04-12 16:48:28 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-to-force-ssh-client-to-authenticate-using-password-on-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:22:17 +0000
 modified: 2026-04-11 16:02:49 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-split-a-text-file-by-lines-on-linux/
 ---
 

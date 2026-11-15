@@ -4,7 +4,7 @@ date: 2018-03-24 11:41:40 +0000
 modified: 2026-04-11 16:00:18 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /fix-the-grub-issue-with-windows-8-uefi-after-installing-fedora-20/
 ---
 

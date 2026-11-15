@@ -4,7 +4,7 @@ date: 2015-04-29 01:20:16 +0000
 modified: 2026-04-11 16:21:45 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /how-to-regenerate-grub2-config-file-on-linux/
 ---
 

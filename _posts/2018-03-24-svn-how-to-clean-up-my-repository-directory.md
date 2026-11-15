@@ -4,7 +4,7 @@ date: 2018-03-24 08:14:29 +0000
 modified: 2026-04-12 16:33:38 +0000
 author: "Q A"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /svn-how-to-clean-up-my-repository-directory/
 ---
 

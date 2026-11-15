@@ -4,7 +4,7 @@ date: 2017-04-09 06:36:31 +0000
 modified: 2026-04-11 16:21:13 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /usb-standards-supports-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:30 +0000
 modified: 2026-04-12 16:11:07 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-pipe-the-stderr-to-less/
 ---
 

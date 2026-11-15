@@ -4,7 +4,7 @@ date: 2018-09-19 04:48:56 +0000
 modified: 2026-04-11 17:11:57 +0000
 author: "Q A"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-get-date-and-time-from-another-timezone-in-python/
 ---
 

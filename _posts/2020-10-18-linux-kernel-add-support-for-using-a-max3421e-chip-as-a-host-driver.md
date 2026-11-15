@@ -4,7 +4,7 @@ date: 2020-10-18 04:49:29 +0000
 modified: 2026-04-11 16:13:33 +0000
 author: "Tony"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /linux-kernel-add-support-for-using-a-max3421e-chip-as-a-host-driver/
 ---
 

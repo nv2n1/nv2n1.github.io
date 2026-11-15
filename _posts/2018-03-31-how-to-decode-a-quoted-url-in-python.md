@@ -4,7 +4,7 @@ date: 2018-03-31 16:22:35 +0000
 modified: 2026-04-12 16:05:05 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-decode-a-quoted-url-in-python/
 ---
 

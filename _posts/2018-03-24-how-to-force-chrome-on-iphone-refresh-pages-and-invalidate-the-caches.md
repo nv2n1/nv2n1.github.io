@@ -4,7 +4,7 @@ date: 2018-03-24 08:16:59 +0000
 modified: 2026-04-12 16:34:15 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /how-to-force-chrome-on-iphone-refresh-pages-and-invalidate-the-caches/
 ---
 

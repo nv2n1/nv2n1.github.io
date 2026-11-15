@@ -4,6 +4,8 @@ title: "Distributed Systems Academy"
 permalink: /distributed-systems-academy/
 ---
 
+# Distributed Systems Academy
+
 Master distributed systems design, consensus algorithms, and modern architecture patterns. Learn the fundamentals of building scalable, fault-tolerant systems.
 
 ## Learning Paths
@@ -35,7 +37,7 @@ Cryptographic fundamentals, public key infrastructure, security hardening, key m
 
 ## Resources
 
-- [View all systems & architecture posts](/category/systems-architecture/)
+- [View all systems & architecture posts](/advanced-systems-path/)
 
 ## Back to Learning
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:14:36 +0000
 modified: 2026-04-12 16:52:31 +0000
 author: "Q A"
 layout: post
-categories: [object-oriented-programming]
+categories: [programming-languages]
 canonical: /how-to-make-case-insensitive-search-in-vim-vi/
 ---
 

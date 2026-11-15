@@ -4,7 +4,7 @@ date: 2013-07-12 16:46:15 +0000
 modified: 2026-04-11 17:41:44 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /an-online-jpg-to-eps-converter/
 ---
 

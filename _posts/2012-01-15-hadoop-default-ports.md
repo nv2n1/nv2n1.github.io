@@ -4,7 +4,7 @@ date: 2012-01-15 23:18:22 +0000
 modified: 2026-04-12 16:40:28 +0000
 author: "Eric Ma"
 layout: post
-categories: [design-patterns-architecture]
+categories: [software-design]
 canonical: /hadoop-default-ports/
 ---
 

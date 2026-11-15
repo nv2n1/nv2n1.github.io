@@ -4,7 +4,7 @@ date: 2019-11-16 03:53:09 +0000
 modified: 2026-04-11 17:38:22 +0000
 author: "Q A"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /how-to-encrypt-a-file-using-openssl-on-linux-non-interactively/
 ---
 

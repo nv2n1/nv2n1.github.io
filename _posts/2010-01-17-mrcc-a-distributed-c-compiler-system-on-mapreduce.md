@@ -4,7 +4,7 @@ date: 2010-01-17 07:18:29 +0000
 modified: 2026-04-12 04:37:39 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /mrcc-a-distributed-c-compiler-system-on-mapreduce/
 ---
 

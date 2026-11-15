@@ -4,7 +4,7 @@ date: 2018-03-24 08:20:58 +0000
 modified: 2026-04-11 17:45:18 +0000
 author: "Eric Ma"
 layout: post
-categories: [code-optimization]
+categories: [algorithms-data-structures]
 canonical: /how-to-make-emacs-start-up-faster/
 ---
 

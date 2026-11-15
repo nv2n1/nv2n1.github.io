@@ -4,7 +4,7 @@ date: 2016-05-14 02:45:52 +0000
 modified: 2026-04-11 16:21:32 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-disable-and-enable-laptop-keyboard-in-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2014-09-24 16:58:06 +0000
 modified: 2026-04-11 16:22:16 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /configuration-of-linux-kernel-video-mode/
 ---
 

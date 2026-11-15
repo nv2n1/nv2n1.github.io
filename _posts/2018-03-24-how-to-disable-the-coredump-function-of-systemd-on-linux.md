@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:14 +0000
 modified: 2026-04-12 06:45:10 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [systemd-services]
 canonical: /how-to-disable-the-coredump-function-of-systemd-on-linux/
 ---
 

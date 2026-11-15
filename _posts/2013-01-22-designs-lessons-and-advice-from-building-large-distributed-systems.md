@@ -4,7 +4,7 @@ date: 2013-01-22 14:28:24 +0000
 modified: 2026-04-12 04:40:07 +0000
 author: "Eric Ma"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /designs-lessons-and-advice-from-building-large-distributed-systems/
 ---
 

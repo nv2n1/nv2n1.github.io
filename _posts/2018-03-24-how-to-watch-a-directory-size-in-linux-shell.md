@@ -4,7 +4,7 @@ date: 2018-03-24 11:49:14 +0000
 modified: 2026-04-12 16:39:24 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [performance]
 canonical: /how-to-watch-a-directory-size-in-linux-shell/
 ---
 

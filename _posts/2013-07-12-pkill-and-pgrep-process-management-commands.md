@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:20 +0000
 modified: 2026-04-12 04:41:31 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /pkill-and-pgrep-process-management-commands/
 ---
 

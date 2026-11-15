@@ -4,7 +4,7 @@ date: 2018-03-24 11:52:34 +0000
 modified: 2026-04-12 16:53:09 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [shell-scripting]
 canonical: /how-to-delete-or-get-the-number-in-the-tail-from-a-string-in-shell-script/
 ---
 

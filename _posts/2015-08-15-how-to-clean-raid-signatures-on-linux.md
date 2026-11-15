@@ -4,7 +4,7 @@ date: 2015-08-15 13:00:49 +0000
 modified: 2026-04-11 16:21:43 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /how-to-clean-raid-signatures-on-linux/
 ---
 

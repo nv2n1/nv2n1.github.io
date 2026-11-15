@@ -4,7 +4,7 @@ date: 2018-03-24 08:19:28 +0000
 modified: 2026-04-12 16:47:45 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /how-to-delete-a-disk-from-a-lvm-group-while-keeping-the-data/
 ---
 

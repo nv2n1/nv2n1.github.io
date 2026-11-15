@@ -4,7 +4,7 @@ date: 2018-03-24 08:21:05 +0000
 modified: 2026-04-11 17:49:45 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /how-to-export-and-import-message-filters-of-thunderbird/
 ---
 

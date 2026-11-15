@@ -4,7 +4,7 @@ date: 2017-12-31 06:57:03 +0000
 modified: 2026-04-11 16:21:08 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /evolution-save-data-configure-files-linux/
 ---
 

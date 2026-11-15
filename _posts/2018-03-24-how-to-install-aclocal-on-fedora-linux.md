@@ -4,7 +4,7 @@ date: 2018-03-24 11:50:52 +0000
 modified: 2026-04-12 14:21:00 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-install-aclocal-on-fedora-linux/
 ---
 

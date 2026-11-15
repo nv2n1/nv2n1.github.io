@@ -4,7 +4,7 @@ date: 2018-03-24 11:52:54 +0000
 modified: 2026-04-11 17:12:51 +0000
 author: "Q A"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-get-the-running-process-parent-process-id-in-c-c/
 ---
 

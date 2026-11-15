@@ -4,7 +4,7 @@ date: 2018-07-31 02:27:48 +0000
 modified: 2026-04-11 15:43:22 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [systemd-services]
 canonical: /how-to-install-gnome-3-in-ubuntu-mate-18-04/
 ---
 

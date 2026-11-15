@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:35 +0000
 modified: 2026-04-12 16:06:11 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-find-which-program-or-process-is-listening-on-a-certain-port-in-linux/
 ---
 

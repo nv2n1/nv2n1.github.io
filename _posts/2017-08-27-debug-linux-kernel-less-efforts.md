@@ -4,7 +4,7 @@ date: 2017-08-27 16:05:37 +0000
 modified: 2026-04-11 16:21:11 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /debug-linux-kernel-less-efforts/
 ---
 

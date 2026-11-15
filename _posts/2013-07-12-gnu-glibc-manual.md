@@ -4,7 +4,7 @@ date: 2013-07-12 16:47:45 +0000
 modified: 2026-04-11 16:41:26 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /gnu-glibc-manual/
 ---
 

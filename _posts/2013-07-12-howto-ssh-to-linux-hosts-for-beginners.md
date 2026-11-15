@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:28 +0000
 modified: 2026-04-12 16:55:38 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /howto-ssh-to-linux-hosts-for-beginners/
 ---
 

@@ -4,7 +4,7 @@ date: 2023-03-24 12:49:20 +0000
 modified: 2026-04-12 16:40:00 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /installing-zlib-in-ubuntu-22-04/
 ---
 

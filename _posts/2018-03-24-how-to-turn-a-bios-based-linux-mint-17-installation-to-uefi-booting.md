@@ -4,7 +4,7 @@ date: 2018-03-24 11:42:25 +0000
 modified: 2026-04-11 15:59:46 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [systemd-services]
 canonical: /how-to-turn-a-bios-based-linux-mint-17-installation-to-uefi-booting/
 ---
 

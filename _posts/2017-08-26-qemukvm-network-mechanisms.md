@@ -4,7 +4,7 @@ date: 2017-08-26 15:32:37 +0000
 modified: 2026-04-11 16:24:44 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [systems-architecture]
+categories: [virtualization-containers]
 canonical: /qemukvm-network-mechanisms/
 ---
 

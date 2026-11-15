@@ -4,7 +4,7 @@ date: 2018-03-24 11:51:10 +0000
 modified: 2026-04-11 15:50:13 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-make-a-unique-temporary-file-in-bash-on-linux/
 ---
 

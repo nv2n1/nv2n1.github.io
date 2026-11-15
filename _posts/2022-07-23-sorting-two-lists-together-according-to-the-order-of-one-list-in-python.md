@@ -4,7 +4,7 @@ date: 2022-07-23 09:17:23 +0000
 modified: 2026-04-12 16:38:13 +0000
 author: "David Yang"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /sorting-two-lists-together-according-to-the-order-of-one-list-in-python/
 ---
 

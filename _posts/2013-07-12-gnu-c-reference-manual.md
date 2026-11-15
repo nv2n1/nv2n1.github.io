@@ -4,7 +4,7 @@ date: 2013-07-12 16:47:46 +0000
 modified: 2026-04-11 16:41:21 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /gnu-c-reference-manual/
 ---
 

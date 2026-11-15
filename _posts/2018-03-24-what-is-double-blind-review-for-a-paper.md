@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:40 +0000
 modified: 2026-04-12 16:48:35 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /what-is-double-blind-review-for-a-paper/
 ---
 

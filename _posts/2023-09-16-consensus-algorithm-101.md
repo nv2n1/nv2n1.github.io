@@ -4,7 +4,7 @@ date: 2023-09-16 06:49:12 +0000
 modified: 2026-05-17 15:40:01 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [blockchain-cryptocurrency]
+categories: [blockchain-fundamentals]
 canonical: /consensus-algorithm-101/
 ---
 

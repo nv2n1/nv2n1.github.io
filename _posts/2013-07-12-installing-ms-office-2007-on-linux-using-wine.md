@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:30 +0000
 modified: 2026-04-12 16:48:54 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /installing-ms-office-2007-on-linux-using-wine/
 ---
 

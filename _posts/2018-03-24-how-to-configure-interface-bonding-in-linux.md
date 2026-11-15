@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:25 +0000
 modified: 2026-04-12 16:34:06 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-to-configure-interface-bonding-in-linux/
 ---
 

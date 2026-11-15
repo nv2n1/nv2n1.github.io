@@ -4,7 +4,7 @@ date: 2018-03-24 08:20:44 +0000
 modified: 2026-04-12 16:10:24 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /how-to-efficiently-take-screenshot-on-windows-7/
 ---
 

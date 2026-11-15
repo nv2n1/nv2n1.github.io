@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:20 +0000
 modified: 2026-04-12 05:28:28 +0000
 author: "Eric Ma"
 layout: post
-categories: [object-oriented-programming]
+categories: [programming-languages]
 canonical: /simple-introduction-to-paravirt_ops-for-xen/
 ---
 

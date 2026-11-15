@@ -4,7 +4,7 @@ date: 2013-07-12 16:54:53 +0000
 modified: 2026-04-12 16:53:43 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /outlook-style-email-reply-header-thunderbird/
 ---
 

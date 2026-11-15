@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:29 +0000
 modified: 2026-04-12 16:40:53 +0000
 author: "Eric Ma"
 layout: post
-categories: [code-optimization]
+categories: [algorithms-data-structures]
 canonical: /wireless-3g-and-2g-network-speed/
 ---
 

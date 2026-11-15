@@ -4,7 +4,7 @@ date: 2018-03-24 11:42:44 +0000
 modified: 2026-04-12 16:07:05 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /git-diff-with-long-lines/
 ---
 

@@ -4,7 +4,7 @@ date: 2011-04-06 08:56:02 +0000
 modified: 2026-04-12 16:55:52 +0000
 author: "Eric Ma"
 layout: post
-categories: [design-patterns-architecture]
+categories: [software-design]
 canonical: /setting-up-standalone-local-hadoop/
 ---
 

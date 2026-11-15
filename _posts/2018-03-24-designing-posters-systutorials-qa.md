@@ -4,7 +4,7 @@ date: 2018-03-24 08:14:00 +0000
 modified: 2026-05-17 16:51:04 +0000
 author: "Q A"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /designing-posters-systutorials-qa/
 ---
 

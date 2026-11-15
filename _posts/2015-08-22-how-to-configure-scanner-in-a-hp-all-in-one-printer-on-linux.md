@@ -4,7 +4,7 @@ date: 2015-08-22 13:27:34 +0000
 modified: 2026-04-11 16:21:41 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-configure-scanner-in-a-hp-all-in-one-printer-on-linux/
 ---
 

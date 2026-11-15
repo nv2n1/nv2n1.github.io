@@ -4,7 +4,7 @@ date: 2018-09-14 09:29:53 +0000
 modified: 2026-04-11 15:43:10 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-get-date-and-time-using-date-command-from-another-timezone-in-linux-2/
 ---
 

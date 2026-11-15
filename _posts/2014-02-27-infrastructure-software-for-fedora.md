@@ -4,7 +4,7 @@ date: 2014-02-27 08:37:44 +0000
 modified: 2026-04-11 16:40:30 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /infrastructure-software-for-fedora/
 ---
 

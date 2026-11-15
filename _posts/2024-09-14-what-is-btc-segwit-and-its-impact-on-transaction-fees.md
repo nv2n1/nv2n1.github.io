@@ -4,7 +4,7 @@ date: 2024-09-14 07:40:21 +0000
 modified: 2026-05-17 15:38:34 +0000
 author: "Eric Ma"
 layout: post
-categories: [blockchain-cryptocurrency]
+categories: [cryptocurrency-trading]
 canonical: /what-is-btc-segwit-and-its-impact-on-transaction-fees/
 ---
 

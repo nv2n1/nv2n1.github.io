@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:46 +0000
 modified: 2026-04-12 16:52:36 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-list-and-delete-shared-memory-in-linux/
 ---
 

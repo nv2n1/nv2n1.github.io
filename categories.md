@@ -4,26 +4,72 @@ title: Categories
 permalink: /categories/
 ---
 
-## Categories
+# Categories
 
-<ul class="posts">
-  <li><a href="/category/linux-systems-administration/">linux systems administration</a> (722)</li>
-  <li><a href="/category/programming-languages/">programming languages</a> (129)</li>
-  <li><a href="/category/development-best-practices/">development best practices</a> (99)</li>
-  <li><a href="/category/languages-frameworks/">languages frameworks</a> (89)</li>
-  <li><a href="/category/scripting-utilities/">scripting utilities</a> (68)</li>
-  <li><a href="/category/systems-architecture/">systems architecture</a> (36)</li>
-  <li><a href="/category/testing-devops/">testing devops</a> (32)</li>
-  <li><a href="/category/system-administration-cloud/">system administration cloud</a> (31)</li>
-  <li><a href="/category/linux-system-configuration/">linux system configuration</a> (28)</li>
-  <li><a href="/category/web-development/">web development</a> (25)</li>
-  <li><a href="/category/design-patterns-architecture/">design patterns architecture</a> (17)</li>
-  <li><a href="/category/security-cryptography-2/">security cryptography 2</a> (17)</li>
-  <li><a href="/category/blockchain-cryptocurrency/">blockchain cryptocurrency</a> (15)</li>
-  <li><a href="/category/databases-storage/">databases storage</a> (11)</li>
-  <li><a href="/category/algorithms-data-structures/">algorithms data structures</a> (10)</li>
-  <li><a href="/category/code-optimization/">code optimization</a> (8)</li>
-  <li><a href="/category/object-oriented-programming/">object oriented programming</a> (4)</li>
-  <li><a href="/category/functional-programming/">functional programming</a> (4)</li>
-  <li><a href="/category/ai-engineering/">ai engineering</a> (4)</li>
-</ul>
+Every category is a learning topic inside an academy and learning path.
+
+## [Linux & Systems Administration Academy](/linux-systems-administration-academy/)
+
+### [Linux Essentials Path](/linux-essentials-path/)
+
+- [Files & Storage](/category/files-storage/) (116)
+- [Packages, Desktop & Applications](/category/packages-desktop-applications/) (107)
+- [Shell & Scripting](/category/shell-scripting/) (47)
+- [Command Line & Text Tools](/category/command-line-text-tools/) (38)
+- [Users & Permissions](/category/users-permissions/) (27)
+
+### [Linux System Administration Path](/linux-sysadmin-path/)
+
+- [General System Administration](/category/general-system-administration/) (136)
+- [Networking](/category/networking/) (74)
+- [Storage & LVM](/category/storage-lvm/) (45)
+- [Virtualization & Containers](/category/virtualization-containers/) (42)
+- [Kernel](/category/kernel/) (34)
+- [Performance](/category/performance/) (30)
+- [systemd & Services](/category/systemd-services/) (22)
+- [Kernel History: Release Notes](/category/kernel-release-notes/) (14)
+
+## [Distributed Systems Academy](/distributed-systems-academy/)
+
+### [Advanced Systems & Architecture Path](/advanced-systems-path/)
+
+- [Engineering Lessons](/category/engineering-lessons/) (24)
+- [Big Data Systems](/category/big-data-systems/) (8)
+- [Consistency Models](/category/consistency-models/) (5)
+- [Consensus](/category/consensus/) (4)
+- [Storage & File Systems](/category/storage-file-systems/) (4)
+- [Low-Level Systems](/category/low-level-systems/) (1)
+
+### [Security & Cryptography Path](/security-cryptography-path/)
+
+- [Cryptography & Keys](/category/cryptography-keys/) (17)
+- [TLS & Email Security](/category/tls-email-security/) (5)
+- [Data Protection](/category/data-protection/) (1)
+
+## [Programming Academy](/programming-academy/)
+
+### Topics
+
+- [Programming Languages](/category/programming-languages/) (244)
+- [Software Design](/category/software-design/) (116)
+- [Web Development](/category/web-development/) (60)
+- [Scripting & Automation](/category/scripting-automation/) (51)
+- [Testing & DevOps](/category/testing-devops/) (32)
+- [Algorithms & Data Structures](/category/algorithms-data-structures/) (16)
+- [Databases & Storage](/category/databases-storage/) (11)
+
+## [AI Engineering Hub](/ai-engineering-hub/)
+
+### Topics
+
+- [Model Fundamentals](/category/model-fundamentals/) (2)
+- [CLI + AI Integration](/category/cli-ai-integration/) (2)
+
+## [Web3 & Crypto Academy](/web3-crypto-academy/)
+
+### Topics
+
+- [Cryptocurrency & Trading](/category/cryptocurrency-trading/) (6)
+- [Blockchain Fundamentals](/category/blockchain-fundamentals/) (4)
+- [Self-Custody & Security](/category/self-custody-security/) (3)
+- [Web3 & DeFi](/category/web3-defi/) (1)
