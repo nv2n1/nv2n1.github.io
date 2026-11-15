@@ -60,6 +60,24 @@
 
   box.addEventListener('focus', load, { once: true });
   box.addEventListener('input', function () { load().then ? load().then(render) : render(); });
+
+  // ?q= rescue links (from the 404 page or the search form): fill the box,
+  // and jump straight to the page on an exact or unambiguous name match.
+  var q = new URLSearchParams(location.search).get('q');
+  if (q && q.trim().length >= 2) {
+    box.value = q.trim();
+    load().then(function () {
+      var nq = box.value.toLowerCase();
+      var best = null;
+      for (var i = 0; i < idx.length; i++) {
+        var n = (idx[i].n || '').toLowerCase();
+        if (n === nq) { location.replace(idx[i].u); return; }
+        if (n.indexOf(nq) === 0 && (!best || n.length < best.n.length)) best = idx[i];
+      }
+      if (best) { location.replace(best.u); return; }
+      render();
+    });
+  }
 })();
 </script>
 {{ end }}
