@@ -1,5 +1,5 @@
 baseURL = "https://www.systutorials.com/"
-title = "Linux Man Pages"
+title = "Linux Manual Pages"
 
 # The blog at the site root is built with Jekyll; Hugo builds only the man
 # pages into docs/linux/man/. Turn off kinds that would collide with it.
