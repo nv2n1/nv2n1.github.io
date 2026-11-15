@@ -20,4 +20,4 @@ The smbldap-userdel command modifies the system account files, deleting all entr
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/1-userdel/">userdel</a></i>(1) 
+<i>userdel</i>(1) 

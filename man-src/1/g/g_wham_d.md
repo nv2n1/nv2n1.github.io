@@ -50,6 +50,6 @@ description: "g_wham – weighted histogram analysis after umbrella sampling"
 <p> <code>-tol</code><i> real</i><code> 0.01 </code><br />
 &nbsp;<wbr>Tolerance </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

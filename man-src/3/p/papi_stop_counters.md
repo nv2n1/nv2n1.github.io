@@ -30,10 +30,10 @@ int PAPI_stop_counters( long long *values, int array_len );</pre>
 <pre>int Events[2] = { PAPI_TOT_CYC, PAPI_TOT_INS };
 long long values[2];
 if ( PAPI_start_counters( Events, 2 ) != PAPI_OK )
- <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+ handle_error(1);
 your_slow_code();
 if ( PAPI_stop_counters( values, 2 ) != PAPI_OK )
- <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+ handle_error(1);
  * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>

@@ -35,13 +35,13 @@ GESC (Escape) - provides a standard way of implementing nonstandard GKS features
  Here is an example of a code that will create an X window, draw a line, and then pause waiting for a mouse click or a key click. <pre> CHARACTER*80 IREC,ODUM
  CALL GOPKS(6,0)
  CALL GOPWK(3,0,8)
- CALL <a HREF="//www.systutorials.com/docs/linux/man/3-GACWK/">GACWK</a>(3)
+ CALL GACWK(3)
  CALL LINE(0.,0.,1.,1.)
  CALL SFLUSH
  IREC = ' 3'
  CALL GESC(-1396,1,IREC,1,1,ODUM)
- CALL <a HREF="//www.systutorials.com/docs/linux/man/3-GDAWK/">GDAWK</a>(3)
- CALL <a HREF="//www.systutorials.com/docs/linux/man/3-GCLWK/">GCLWK</a>(3)
+ CALL GDAWK(3)
+ CALL GCLWK(3)
  CALL GCLKS
  STOP
  END</pre>The functions FRAME and NGPICT are in general much easier to use and more flexible than the direct ESCAPE call for pausing in an X window. It is suggested that those functions be used.

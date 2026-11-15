@@ -44,6 +44,6 @@ description: "XtMakeGeometryRequest, XtMakeResizeRequest – make geometry manag
 <p> Children of primitive widgets are always unmanaged; thus, <code>XtMakeGeometryRequest</code> always returns <code>XtGeometryYes</code> when called by a child of a primitive widget. </p>
 <p> The <code>XtMakeResizeRequest</code> function, a simple interface to <code>XtMakeGeometryRequest</code>, creates a <code>XtWidgetGeometry</code> structure and specifies that width and height should change. The geometry manager is free to modify any of the other window attributes (position or stacking order) to satisfy the resize request. If the return value is <code>XtGeometryAlmost</code>, width_return and height_return contain a compromise width and height. If these are acceptable, the widget should immediately make an <code>XtMakeResizeRequest</code> and request that the compromise width and height be applied. If the widget is not interested in <code>XtGeometryAlmost</code> replies, it can pass NULL for width_return and height_return.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtconfigurewidget/">XtConfigureWidget</a>(3), <a href="/docs/linux/man/3-xtquerygeometery/">XtQueryGeometery</a>(3)<br />
+<p><a href="/docs/linux/man/3-xtconfigurewidget/">XtConfigureWidget</a>(3), XtQueryGeometery(3)<br />
  <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
  <i>Xlib &#8211; C Language X Interface</i></p>

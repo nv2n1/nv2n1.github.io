@@ -20,7 +20,7 @@ description: "zmq_msg_gets – get message metadata property"
 Identity
 Resource</pre>
 </dl>
-<p> Additionally, when available for the underlying transport, the <code>Peer-Address</code> property will return the IP address of the remote endpoint as returned by <a href="/docs/linux/man/2-getnameinfo/">getnameinfo</a>(2). </p>
+<p> Additionally, when available for the underlying transport, the <code>Peer-Address</code> property will return the IP address of the remote endpoint as returned by getnameinfo(2). </p>
 <p> Other properties may be defined based on the underlying security mechanism, see ZAP authenticated connection sample below.</p>
 <h2>Return Value</h2>
 <p>The <i>zmq_msg_gets()</i> function shall return the string value for the property if successful. Otherwise it shall return NULL and set <i>errno</i> to one of the values defined below. The caller shall not modify or free the returned value, which shall be owned by the message. The encoding of the property and value shall be UTF8.</p>

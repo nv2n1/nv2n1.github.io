@@ -1532,7 +1532,7 @@ iface vrf_external
 <p>Don&#8217;t use <code>&#8211;ipchange</code> in <code>&#8211;mode server</code> mode. Use a <code>&#8211;client-connect</code> script instead. </p>
 <p> See the <i>Environmental Variables</i> section below for additional parameters passed as environmental variables. </p>
 <p> If you are running in a dynamic IP address environment where the IP addresses of either peer could change without notice, you can use this script, for example, to edit the <code>/etc/hosts</code> file with the current address of the peer. The script will be run every time the remote peer changes its IP address. </p>
-<p> Similarly if <i>our</i> IP address changes due to DHCP, we should configure our IP address change script (see man page for <code><a href="/docs/linux/man/8-dhcpcd/">dhcpcd</a></code>(8)) to deliver a <code>SIGHUP</code> or <code>SIGUSR1</code> signal to OpenVPN. OpenVPN will then re-establish a connection with its most recently authenticated peer on its new IP address.</p>
+<p> Similarly if <i>our</i> IP address changes due to DHCP, we should configure our IP address change script (see man page for <code>dhcpcd</code>(8)) to deliver a <code>SIGHUP</code> or <code>SIGUSR1</code> signal to OpenVPN. OpenVPN will then re-establish a connection with its most recently authenticated peer on its new IP address.</p>
 <dt><code>&#8211;learn-address</code><i>&nbsp;cmd</i></p>
 <dd>Run command <code>cmd</code> to validate client virtual addresses or routes. </p>
 <p> <code>cmd</code> consists of a path to a script (or executable program), optionally followed by arguments. The path and arguments may be single- or double-quoted and/or escaped using a backslash, and should be separated by one or more spaces. </p>
@@ -2032,7 +2032,7 @@ verb 3</pre>
 <h2>Bugs</h2>
 <p>Report all bugs to the OpenVPN team <i>info [at] openvpn.net</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-openvpn-examples/">openvpn-examples</a></code>(5), <code><a href="/docs/linux/man/8-dhcpcd/">dhcpcd</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1), <code><a href="/docs/linux/man/8-route/">route</a></code>(8), <code><a href="/docs/linux/man/1-scp/">scp</a></code>(1) <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/5-openvpn-examples/">openvpn-examples</a></code>(5), <code>dhcpcd</code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code>openssl</code>(1), <code><a href="/docs/linux/man/8-route/">route</a></code>(8), <code><a href="/docs/linux/man/1-scp/">scp</a></code>(1) <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)</p>
 <h2>Notes</h2>
 <p>This product includes software developed by the OpenSSL Project (<i><a rel="nofollow" href="https://www.openssl.org/">https://www.openssl.org/</a></i>) </p>
 <p> For more information on the TLS protocol, see <i><a rel="nofollow" href="http://www.ietf.org/rfc/rfc2246.txt">http://www.ietf.org/rfc/rfc2246.txt</a></i> </p>

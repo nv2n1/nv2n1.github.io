@@ -21,4 +21,4 @@ if (ureadkey(&amp;scancode) == 0x00DF)
 &quot;);
 </code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-simulate_keypress/">simulate_keypress</a></code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3) </p>
+<p><code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-simulate_keypress/">simulate_keypress</a></code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3) </p>

@@ -23,7 +23,7 @@ description: "xscreensaver-text – prints some text to stdout, for use by scree
 <p> Command line options may be used to override the settings in the ~/.xscreensaver file:</p>
 <dl>
 <dt><code>&#8211;string </code><i>STRING</i></p>
-<dd> Print the given string. It may contain % escape sequences as per <code><a href="/docs/linux/man/2-strftime/">strftime</a></code>(2).</p>
+<dd> Print the given string. It may contain % escape sequences as per <code>strftime</code>(2).</p>
 <dt><code>&#8211;file </code><i>PATH</i></p>
 <dd> Print the contents of the given file. If &#8211;cols is specified, re-wrap the lines; otherwise, print them as-is.</p>
 <dt><code>&#8211;program </code><i>CMD</i></p>
@@ -39,7 +39,7 @@ description: "xscreensaver-text – prints some text to stdout, for use by scree
 <p> The RSS and Atom output is always ISO-8859-1, regardless of locale. </p>
 <p> URLs should be cached, use &quot;If-Modified-Since&quot;, and obey &quot;Expires&quot;.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-fortune/">fortune</a></code>(1), <code><a href="/docs/linux/man/1-phosphor/">phosphor</a></code>(1), <code><a href="/docs/linux/man/1-apple2/">apple2</a></code>(1), <code><a href="/docs/linux/man/1-starwars/">starwars</a></code>(1), <code><a href="/docs/linux/man/1-fontglide/">fontglide</a></code>(1), <code><a href="/docs/linux/man/1-dadadodo/">dadadodo</a></code>(1), <code><a href="/docs/linux/man/1-webcollage/">webcollage</a></code>(1),</p>
+<p> <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code>fortune</code>(1), <code>phosphor</code>(1), <code>apple2</code>(1), <code>starwars</code>(1), <code>fontglide</code>(1), <code>dadadodo</code>(1), <code>webcollage</code>(1),</p>
 <dl>
 <dt>
 <dd> <i><a rel="nofollow" href="http://www.livejournal.com/stats/latest-rss.bml,">http://www.livejournal.com/stats/latest-rss.bml,</a></i></p>
@@ -48,7 +48,7 @@ description: "xscreensaver-text – prints some text to stdout, for use by scree
 <dd> <i><a rel="nofollow" href="https://en.wikipedia.org/w/index.php?title=Special:NewPages">https://en.wikipedia.org/w/index.php?title=Special:NewPages</a>&amp;feed=rss,</i></p>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-driftnet/">driftnet</a></code>(1), <code>EtherPEG</code>, <code>EtherPeek</code></dl>
+<dd> <code>driftnet</code>(1), <code>EtherPEG</code>, <code>EtherPeek</code></dl>
 </dl>
 </dl>
 <h2>COPYRIGHT</h2>

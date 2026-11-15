@@ -250,10 +250,10 @@ else<br />
 <p> If the function is inlined in several places, the block structure in each location might not be the same. For instance, a condition might now be calculable at compile time in some instances. Because the coverage of all the uses of the inline function will be shown for the same source lines, the line counts themselves might seem inconsistent. </p>
 <p> Long-running applications can use the <tt>&quot;_gcov_reset&quot;</tt> and <tt>&quot;_gcov_dump&quot;</tt> facilities to restrict profile collection to the program region of interest. Calling <tt>&quot;_gcov_reset(void)&quot;</tt> will clear all profile counters to zero, and calling <tt>&quot;_gcov_dump(void)&quot;</tt> will cause the profile information collected at that point to be dumped to <i>.gcda</i> output files.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-gpl/">gpl</a></i>(7), <i><a href="/docs/linux/man/7-gfdl/">gfdl</a></i>(7), <i><a href="/docs/linux/man/7-fsf-funding/">fsf-funding</a></i>(7), <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1) and the Info entry for <i>gcc</i>.</p>
+<p> <i>gpl</i>(7), <i>gfdl</i>(7), <i>fsf-funding</i>(7), <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1) and the Info entry for <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1996-2015 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; and &#8220;Funding Free Software&#8221;, the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <i><a href="/docs/linux/man/7-gfdl/">gfdl</a></i>(7) man page. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; and &#8220;Funding Free Software&#8221;, the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <i>gfdl</i>(7) man page. </p>
 <p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual

@@ -31,9 +31,9 @@ description: "vbox.conf – config file for vbox"
 <dd>
 <dl>
 <dt><code>TIME</code></p>
-<dd>time when the call should be taken. Read the <a href="/docs/linux/man/5-isdntime/">isdntime</a>(5) man page for details.</p>
+<dd>time when the call should be taken. Read the isdntime(5) man page for details.</p>
 <dt><code>DAYS</code></p>
-<dd>days when the call should be takes. Read the <a href="/docs/linux/man/5-isdntime/">isdntime</a>(5) man page for details.</p>
+<dd>days when the call should be takes. Read the isdntime(5) man page for details.</p>
 <dt><code>RINGS</code></p>
 <dd>Number of rings to wait before taking the call. With version 2.0 of the hisax isdn device driver the interval between two rings is longer (now it&#8217;s nearly like a telephone; 4 &#8211; 5 seconds between rings).</dl>
 </dl>
@@ -43,9 +43,9 @@ description: "vbox.conf – config file for vbox"
 <dd>
 <dl>
 <dt><code>TIME</code></p>
-<dd>time when the call should be taken. Read the <a href="/docs/linux/man/5-isdntime/">isdntime</a>(5) man page for details.</p>
+<dd>time when the call should be taken. Read the isdntime(5) man page for details.</p>
 <dt><code>DAYS</code></p>
-<dd>days when the call should be taken. Read the <a href="/docs/linux/man/5-isdntime/">isdntime</a>(5) man page for details.</p>
+<dd>days when the call should be taken. Read the isdntime(5) man page for details.</p>
 <dt><code>MESSAGE</code></p>
 <dd>Standard message to play for this call. You must either give the filename with full path, or a filename relative to /var/spool/vbox/&lt;user&gt;/messages. Default is &quot;standard.msg&quot;. You may not use spaces or tabs.</p>
 <dt><code>RECTIME</code></p>
@@ -84,6 +84,6 @@ description: "vbox.conf – config file for vbox"
 <dd>an example. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-isdntime/">isdntime</a>(5)</code> </p>
+<p><code>isdntime(5)</code> </p>
 <h2>Author</h2>
 <p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.</p>

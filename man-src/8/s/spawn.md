@@ -25,7 +25,7 @@ description: "spawn – Postfix external command spawner"
 <h2>Bugs</h2>
 <p>In order to enforce standard Postfix process resource controls, the <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon runs only one external command at a time. As such, it presents a noticeable overhead by wasting precious process resources. The <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon is expected to be replaced by a more structural solution.</p>
 <h2>Diagnostics</h2>
-<p>The <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon reports abnormal child exits. Problems are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>The <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon reports abnormal child exits. Problems are logged to <code>syslogd</code>(8).</p>
 <h2>Security</h2>
 <p>This program needs root privilege in order to execute external commands as the specified user. It is therefore security sensitive. However the <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon does not talk to the external command and thus is not vulnerable to data-driven attacks.</p>
 <h2>Configuration Parameters</h2>
@@ -66,7 +66,7 @@ description: "spawn – Postfix external command spawner"
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>License</h2>
 <p>The Secure Mailer license must be distributed with this software.</p>
 <h2>Author(S)</h2>

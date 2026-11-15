@@ -27,7 +27,7 @@ struct wl_list * next</code></pre>
 
 doubly-linked list 
 
- The list head is of 'struct wl_list' type, and must be initialized using wl_list_init(). All entries in the list must be of the same type. The item type must have a 'struct wl_list' member. This member will be initialized by wl_list_insert(). There is no need to call wl_list_init() on the individual item. To query if the list is empty in <a HREF="/docs/linux/man/1-o/">O</a>(1), use wl_list_empty(). 
+ The list head is of 'struct wl_list' type, and must be initialized using wl_list_init(). All entries in the list must be of the same type. The item type must have a 'struct wl_list' member. This member will be initialized by wl_list_insert(). There is no need to call wl_list_init() on the individual item. To query if the list is empty in O(1), use wl_list_empty(). 
 
  Let's call the list reference 'struct wl_list foo_list', the item type as 'item_t', and the item member as 'struct wl_list link'. 
 

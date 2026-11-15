@@ -63,5 +63,5 @@ description: "pbs_sched_cc – pbs C scheduler"
 <h2>Exit Status</h2>
 <p>Upon normal termination, an exit status of zero is returned.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/8B-pbs_sched_tcl/">pbs_sched_tcl</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), and <a href="//www.systutorials.com/docs/linux/man/8B-pbs_mom/">pbs_mom</a>(8B).<br />
+<p>pbs_sched_tcl(8B), pbs_server(8B), and pbs_mom(8B).<br />
  PBS Internal Design Specification </p>

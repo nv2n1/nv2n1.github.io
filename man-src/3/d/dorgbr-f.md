@@ -30,9 +30,9 @@ description: "dorgbr.f –"
  M-by-M matrix.
  If VECT = 'P', A is assumed to have been a K-by-N matrix, and P**T
  is of order N:
- if k &lt; n, P**T = G(k) . . . <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) and DORGBR returns the first m
+ if k &lt; n, P**T = G(k) . . . G(2) G(1) and DORGBR returns the first m
  rows of P**T, where n &gt;= m &gt;= k;
- if k &gt;= n, P**T = G(n-1) . . . <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) and DORGBR returns P**T as
+ if k &gt;= n, P**T = G(n-1) . . . G(2) G(1) and DORGBR returns P**T as
  an N-by-N matrix.</pre>
 <p>&nbsp;<wbr></dl>
 <p> <code>Parameters:</code></p>

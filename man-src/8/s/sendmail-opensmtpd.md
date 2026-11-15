@@ -11,7 +11,7 @@ description: "sendmail – a mail enqueuer for smtpd(8)"
 <h2>Synopsis</h2>
 <p><code>sendmail</code> [<code>-tv</code>] [<code>-F</code> <i>name</i>] [<code>-f</code> <i>from</i>] <i>to</i> &#8230;</p>
 <h2>Description</h2>
-<p>The <code>sendmail</code> utility is a local enqueuer for the <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) daemon, compatible with <code><a href="/docs/linux/man/8-mailwrapper/">mailwrapper</a></code>(8). The message is read on standard input (stdin) until <code>sendmail</code> encounters an end-of-file. The <code>sendmail</code> enqueuer is not intended to be used directly to send mail, but rather via a frontend known as a mail user agent. </p>
+<p>The <code>sendmail</code> utility is a local enqueuer for the <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) daemon, compatible with <code>mailwrapper</code>(8). The message is read on standard input (stdin) until <code>sendmail</code> encounters an end-of-file. The <code>sendmail</code> enqueuer is not intended to be used directly to send mail, but rather via a frontend known as a mail user agent. </p>
 <p> Unless the optional <code>-t</code> flag is specified, one or more recipients must be specified on the command line. </p>
 <p> The options are as follows:</p>
 <dl>

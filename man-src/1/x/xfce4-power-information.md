@@ -46,6 +46,6 @@ description: "xfce4-power-information â€“ Find information about your computerâ€
 <p> Part of the Xfce Goodies Project <a rel="nofollow" href="http://goodies.xfce.org">http://goodies.xfce.org</a> </p>
 <p> Licensed under the GNU GPL.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-xfce4-power-manager/">xfce4-power-manager</a></i>(7) </p>
+<p> <i>xfce4-power-manager</i>(7) </p>
 <p> This program is a part of xfce4-power-manager. </p>
 <h2>Index</h2>

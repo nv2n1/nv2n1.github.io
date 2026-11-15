@@ -42,7 +42,7 @@ cc prog.c -o prog `pkg-config raptor2 --cflags` `pkg-config raptor2 --libs`
 <h2>API REFERENCE</h2>
 <p> See the HTML API docs that may be installed system wide at /usr/share/gtk-doc/html/raptor2/ or on the web at <a rel="nofollow" href="http://librdf.org/raptor/api/">http://librdf.org/raptor/api/</a></p>
 <h2>API CHANGES</h2>
-<p> See the Raptor API docs changes section at <a rel="nofollow" href="http://librdf.org/raptor/api/raptor-changes.html">http://librdf.org/raptor/api/raptor-changes.html</a> and the upgrading information when converting from <a href="/docs/linux/man/1-libraptor/">libraptor</a>(1) code at <a rel="nofollow" href="http://librdf.org/raptor/UPGRADING.html">http://librdf.org/raptor/UPGRADING.html</a> </p>
+<p> See the Raptor API docs changes section at <a rel="nofollow" href="http://librdf.org/raptor/api/raptor-changes.html">http://librdf.org/raptor/api/raptor-changes.html</a> and the upgrading information when converting from libraptor(1) code at <a rel="nofollow" href="http://librdf.org/raptor/UPGRADING.html">http://librdf.org/raptor/UPGRADING.html</a> </p>
 <h2>CONFORMING TO</h2>
 <p> <i>RDF/XML Syntax (Revised)</i>, Dave Beckett (ed.) W3C Recommendation, <a rel="nofollow" href="http://www.w3.org/TR/rdf-syntax-grammar/">http://www.w3.org/TR/rdf-syntax-grammar/</a> </p>
 <p> <i>N-Triples</i>, in <i>RDF Test Cases</i>, Jan Grant and Dave Beckett (eds.) W3C Recommendation, <a rel="nofollow" href="http://www.w3.org/TR/rdf-testcases/#ntriples">http://www.w3.org/TR/rdf-testcases/#ntriples</a> </p>

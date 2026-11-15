@@ -43,7 +43,7 @@ description: "showfont – font dumper for X font server"
 <dt><code>-noprops</code></p>
 <dd> Do not show the font properties.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-xfs/">xfs</a>(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/1-fstobdf/">fstobdf</a>(1), <a href="/docs/linux/man/1-xlsfonts/">xlsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
+<p> xfs(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/1-fstobdf/">fstobdf</a>(1), <a href="/docs/linux/man/1-xlsfonts/">xlsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>ENVIRONMENT</h2>
 <dl>
 <dt><code>FONTSERVER</code></p>

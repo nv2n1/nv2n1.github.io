@@ -21,7 +21,7 @@ url: "/docs/linux/man/1-yapp/"
 
 <h2>DESCRIPTION</h2>
 
- yapp is a frontend to the Parse::Yapp module, which lets you compile Parse::Yapp grammar input files into Perl <font SIZE="-1"><i><a HREF="/docs/linux/man/1-lalr/">LALR</a></i></font><i></i>(1) <font SIZE="-1">OO</font> parser modules.
+ yapp is a frontend to the Parse::Yapp module, which lets you compile Parse::Yapp grammar input files into Perl <font SIZE="-1"><i>LALR</i></font><i></i>(1) <font SIZE="-1">OO</font> parser modules.
 
 <h2>OPTIONS</h2>
 
@@ -70,11 +70,11 @@ url: "/docs/linux/man/1-yapp/"
 
 <h2>COPYRIGHT</h2>
 
- (c) Copyright 1998-1999 Francois Desarmenien, all rights reserved. See <i><a HREF="/docs/linux/man/3-parse--yapp/">Parse::Yapp</a></i>(3) for legal use and distribution rights
+ (c) Copyright 1998-1999 Francois Desarmenien, all rights reserved. See <i>Parse::Yapp</i>(3) for legal use and distribution rights
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/3-parse--yapp/">Parse::Yapp</a></i>(3) <i><a HREF="/docs/linux/man/1-perl/">Perl</a></i>(1) <i><a HREF="/docs/linux/man/1-yacc/">yacc</a></i>(1) <i><a HREF="/docs/linux/man/1-bison/">bison</a></i>(1) 
+ <i>Parse::Yapp</i>(3) <i><a HREF="/docs/linux/man/1-perl/">Perl</a></i>(1) <i><a HREF="/docs/linux/man/1-yacc/">yacc</a></i>(1) <i><a HREF="/docs/linux/man/1-bison/">bison</a></i>(1) 
 
 <h2>Index</h2>
 

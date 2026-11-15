@@ -59,6 +59,6 @@ description: "corosync-objctl – Configure objects in the Object Database"
 <dt>Prove that is gone.</p>
 <dd>$ corosync-objctl objOne</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-confdb_initialize/">confdb_initialize</a></code>(3),</p>
+<p><code>confdb_initialize</code>(3),</p>
 <h2>Author</h2>
 <p>Angus Salkeld</p>

@@ -19,6 +19,6 @@ description: "dvd+rw-mediainfo – display information about dvd drive and disk"
 <dd></dl>
 <h2>See Also</h2>
 <p>Most up-to-date information on dvd+rw-tools is available at <a rel="nofollow" href="http://fy.chalmers.se/~appro/linux/DVD+RW/.">http://fy.chalmers.se/~appro/linux/DVD+RW/.</a> </p>
-<p> The manpage for <code><a href="/docs/linux/man/8-genisofs/">genisofs</a></code>(8), <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1), <code>dvd+<a href="/docs/linux/man/1-rw-format/">rw-format</a></code>(1), <code>dvd+<a href="/docs/linux/man/1-rw-booktype/">rw-booktype</a></code>(1). </p>
+<p> The manpage for <code>genisofs</code>(8), <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1), <code>dvd+rw-format</code>(1), <code>dvd+rw-booktype</code>(1). </p>
 <h2>Author</h2>
 <p><code>dvd+rw-mediainfo</code> was written by Andy Polyakov &lt;appro [at] fy.chalmers.se&gt;. This manual page was written by Thomas Viehmann &lt;tv [at] beamnet.de&gt; for the Debian project.</p>

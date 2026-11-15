@@ -60,7 +60,7 @@ description: "agetty – alternative Linux getty"
 <dd>Do not reset terminal cflags (control modes). See <code><a href="/docs/linux/man/3-termios/">termios</a></code>(3) for more details.</dl>
 <p> <code>-E</code>, <code>&#8211;remote</code></p>
 <dl>
-<dd>Typically the <code><a href="/docs/linux/man/1-login/">login</a></code>(1) command is given a remote hostname when called by something such as <code><a href="/docs/linux/man/8-telnetd/">telnetd</a></code>(8). This option allows <code>agetty</code> to pass what it is using for a hostname to <code><a href="/docs/linux/man/1-login/">login</a></code>(1) for use in <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5). See <code>&#8211;host</code>, <code><a href="/docs/linux/man/1-login/">login</a></code>(1), and <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5). </p>
+<dd>Typically the <code><a href="/docs/linux/man/1-login/">login</a></code>(1) command is given a remote hostname when called by something such as <code>telnetd</code>(8). This option allows <code>agetty</code> to pass what it is using for a hostname to <code><a href="/docs/linux/man/1-login/">login</a></code>(1) for use in <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5). See <code>&#8211;host</code>, <code><a href="/docs/linux/man/1-login/">login</a></code>(1), and <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5). </p>
 <p> If the <code>&#8211;host</code> <i>fakehost</i> option is given, then an <code>-h</code> <i>fakehost</i> option and argument are added to the <i>/bin/login</i> command line. </p>
 <p> If the <code>&#8211;nohostname</code> option is given, then an <code>-H</code> option is added to the <code>/bin/login</code> command line. </p>
 <p> See <code>&#8211;login-options</code>.</dl>

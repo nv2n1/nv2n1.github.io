@@ -117,7 +117,7 @@ description: "groff_filenames – filename extensions for roff and groff"
 <dt><i>&lt;name&gt;</i><code>.grap</code></p>
 <dd>files written for the graphical <code>grap</code> processor.</p>
 <dt><i>&lt;name&gt;</i><code>.grn</code></p>
-<dd>for including <code><a href="/docs/linux/man/1-gremlin/">gremlin</a></code>(1), pictures, see <code><a href="/docs/linux/man/1-grn/">grn</a></code>(1).</p>
+<dd>for including <code>gremlin</code>(1), pictures, see <code><a href="/docs/linux/man/1-grn/">grn</a></code>(1).</p>
 <dt><i>&lt;name&gt;</i><code>.pdfroff</code></p>
 <dd>transform this file with <code>pdfroff</code> of the <i>groff</i> system</dl>
 <h2>Authors</h2>
@@ -127,7 +127,7 @@ description: "groff_filenames – filename extensions for roff and groff"
 <dt>History and future</p>
 <dd><code><a href="/docs/linux/man/7-roff/">roff</a></code>(7), <code><a href="/docs/linux/man/7-man-pages/">man-pages</a></code>(7), <code><a href="/docs/linux/man/7-groff_diff/">groff_diff</a></code>(7), <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7)</p>
 <dt><i>Compression</i></p>
-<dd><code>uncompress</code>(1posix), <code><a href="/docs/linux/man/1-gzip2/">gzip2</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1)</dl>
+<dd><code>uncompress</code>(1posix), <code>gzip2</code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1)</dl>
 <p> A man page of the naming form <i>name</i><code>(</code><i>n</i><code>)</code> can be read in text mode by</p>
 <dl>
 <dd><code>man</code><i> n name</i></dl>

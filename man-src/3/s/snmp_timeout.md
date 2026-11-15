@@ -30,7 +30,7 @@ int snmp_synch_response(netsnmp_session *session,</p>
 int snmp_close(netsnmp_session *session);</p>
 <p>int snmp_close_sessions(void);</p>
 <h3>Error Reporting</h3>
-<p><i>(Move to <a href="/docs/linux/man/3-output_api/">output_api</a>(3))</i><br />
+<p><i>(Move to output_api(3))</i><br />
  <code>void snmp_error ( netsnmp_session *session,</code></p>
 <dl>
 <dd><code>int *</code><i>pcliberr,</i><code>int *</code><i>psnmperr,</i><code>char **</code><i>pperrstring</i><code>);</code></dl>

@@ -28,7 +28,7 @@ description: "tv_grab_uk_bleb – Grab TV listings for the United Kingdom, from 
 <p> <code>&#8211;version</code> Show the version of the grabber. </p>
 <p> <code>&#8211;help</code> Print a help message and exit.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5), &lt;<a rel="nofollow" href="http://www.bleb.org/">http://www.bleb.org/</a>&gt;</p>
+<p> <i>xmltv</i>(5), &lt;<a rel="nofollow" href="http://www.bleb.org/">http://www.bleb.org/</a>&gt;</p>
 <h2>AUTHOR</h2>
 <p> Andy Balaam, axis3x3 [at] users.sourceforge.net </p>
 <p> Icon URLs collated by Lawrence, MagicLGH [at] aol.com </p>

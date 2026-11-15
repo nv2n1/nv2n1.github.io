@@ -130,7 +130,7 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <h3>const <code>Disposable</code>&lt; <code>Matrix</code> &gt; pseudoSqrt (const <code>Matrix</code> &amp;, SalvagingAlgorithm::Type = SalvagingAlgorithm::None) [related]</h3>
 <p> Returns the pseudo square root of a real symmetric matrix. </p>
 <p> Given a matrix $ M $, the result $ S $ is defined as the matrix such that $ S S^T = M. $ If the matrix is not positive semi definite, it can return an approximation of the pseudo square root using a (user selected) salvaging algorithm. </p>
-<p> For more information see: &#8216;The most general methodology to create a valid correlation matrix for risk management and option pricing purposes&#8217;, by R. Rebonato and P. J�ckel. The Journal of Risk, <a href="/docs/linux/man/2-2/">2</a>(2), Winter 1999/2000 <a rel="nofollow" href="http://www.rebonato.com/correlationmatrix.pdf">http://www.rebonato.com/correlationmatrix.pdf</a> </p>
+<p> For more information see: &#8216;The most general methodology to create a valid correlation matrix for risk management and option pricing purposes&#8217;, by R. Rebonato and P. J�ckel. The Journal of Risk, 2(2), Winter 1999/2000 <a rel="nofollow" href="http://www.rebonato.com/correlationmatrix.pdf">http://www.rebonato.com/correlationmatrix.pdf</a> </p>
 <p> Revised and extended in &#8216;Monte Carlo Methods in Finance&#8217;, by Peter J�ckel, Chapter 6. </p>
 <p> <code>Precondition:</code></p>
 <dl>

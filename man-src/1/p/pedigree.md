@@ -35,7 +35,7 @@ description: "pedigree – create a TeX file for pedigree from a csv file"
 <dd> User configuration file</dl>
 <h2>SEE ALSO</h2>
 <p> The manual distributed with this program describes the format of the configuration file and the input file. </p>
-<p> The library functions are described in <code><a href="/docs/linux/man/3-pedigree--language/">Pedigree::Language</a></code>(3), <code><a href="/docs/linux/man/3-pedigree--parser/">Pedigree::Parser</a></code>(3), <code><a href="/docs/linux/man/3-pedigree--node/">Pedigree::Node</a></code>(3), <code><a href="/docs/linux/man/3-pedigree--personnode/">Pedigree::PersonNode</a></code>(3), <code><a href="/docs/linux/man/3-pedigree--marriagenode/">Pedigree::MarriageNode</a></code>(3), <code><a href="/docs/linux/man/3-pedigree--area/">Pedigree::Area</a></code>(3).</p>
+<p> The library functions are described in <code>Pedigree::Language</code>(3), <code>Pedigree::Parser</code>(3), <code>Pedigree::Node</code>(3), <code>Pedigree::PersonNode</code>(3), <code>Pedigree::MarriageNode</code>(3), <code>Pedigree::Area</code>(3).</p>
 <h2>AUTHOR</h2>
 <p> Boris Veytsman, Leila Akhmadeeva, 2006-2021 </p>
 <h2>Index</h2>

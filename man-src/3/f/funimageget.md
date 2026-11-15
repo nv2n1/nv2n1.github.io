@@ -107,5 +107,5 @@ bincols = ([xname[:tlmin[:tlmax:[binsiz]]]], [yname[:tlmin[:tlmax[:binsiz]]]])
 <p> If <code>bincols</code> is not specified on the command line, Funtools tries to use appropriate defaults: it looks for the environment variable <font SIZE="-1">FITS_BINCOLS</font> (or <font SIZE="-1">FITS_BINKEY</font>). Then it looks for the Chandra parameters <font SIZE="-1">CPREF</font> (or <font SIZE="-1">PREFX</font>) in the <font SIZE="-1">FITS</font> binary table header. Failing this, it looks for columns named &#8220;X&#8221; and &#8220;Y&#8221; and if these are not found, it looks for columns containing the characters &#8220;X&#8221; and &#8220;Y&#8221;. </p>
 <p> See Binning <font SIZE="-1">FITS</font> Binary Tables and Non-FITS Event Files for more information.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

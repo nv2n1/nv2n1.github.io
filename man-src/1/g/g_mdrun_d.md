@@ -150,6 +150,6 @@ description: "mdrun – performs a simulation, do a normal mode analysis or an e
 <p> <code>-[no]ionize</code><i>no </i><br />
 &nbsp;<wbr>Do a simulation including the effect of an X-Ray bombardment on your system </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

@@ -164,7 +164,7 @@ description: "htdig – retrieve HTML documents for ht://Dig search engine"
 <dt><code>/etc/htdig/htdig.conf</code></p>
 <dd> The default configuration file. <code>/var/lib/htdig/db.docdb</code> Stores data about each document (title, url, etc.). <code>/var/lib/htdig/db.words.db, /var/lib/htdig/db.words.db_weakcmpr</code> Record which documents each word occurs in. <code>/var/lib/htdig/db.excerpts</code> Stores start of each document to show context of matches.</dl>
 <h2>SEE ALSO</h2>
-<p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i><a href="/docs/linux/man/8-htdigconfig/">htdigconfig</a>(8)</i> , <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> , <i><a href="/docs/linux/man/1-htnotify/">htnotify</a>(1)</i> , <i><a href="/docs/linux/man/1-htsearch/">htsearch</a>(1)</i> and <i><a href="/docs/linux/man/1-rundig/">rundig</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
+<p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i>htdigconfig(8)</i> , <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> , <i><a href="/docs/linux/man/1-htnotify/">htnotify</a>(1)</i> , <i><a href="/docs/linux/man/1-htsearch/">htsearch</a>(1)</i> and <i><a href="/docs/linux/man/1-rundig/">rundig</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Schwarz, modified by Stijn de Bekker. It is updated and maintained by Robert Ribnitz and based on the HTML documentation of ht://Dig. </p>
 <h2>Index</h2>

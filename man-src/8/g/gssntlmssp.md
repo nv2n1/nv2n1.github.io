@@ -14,6 +14,6 @@ description: "gssntlmssp – GSSAPI NTLM Security Service Provider mechanism"
 <h2>Description</h2>
 <dd>A GSSAPI NTLM mechanism that allows to perform NTLM authentication in GSSAPI programs.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-gssapi/">gssapi</a></code>(8).</p>
+<p><code>gssapi</code>(8).</p>
 <h2>Authors</h2>
 <p><code>GSS-NTLMSSP &#8211; <a rel="nofollow" href="http://ssimo.org/gss-ntlmssp">http://ssimo.org/gss-ntlmssp</a></code></p>

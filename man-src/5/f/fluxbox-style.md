@@ -54,7 +54,7 @@ $ tar -tjvf YourStyle.tar.bz2
 <dd>
 <pre>menu*color: rgb:3/4/5</pre>
 </dl>
-<p> This sets the color resource of the menu and all of its <i>children</i> to &#8216;rgb:3/4/5&#8217;. (For a description of color names, see <a href="/docs/linux/man/1-x/">X</a>(1).) So this one also applies to <i>menu.title.color</i> and <i>menu.frame.color</i>. And with </p>
+<p> This sets the color resource of the menu and all of its <i>children</i> to &#8216;rgb:3/4/5&#8217;. (For a description of color names, see X(1).) So this one also applies to <i>menu.title.color</i> and <i>menu.frame.color</i>. And with </p>
 <dl>
 <dd>
 <pre>*font: -b&amp;h-lucida-medium-r-normal-*-*-140-*</pre>

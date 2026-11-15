@@ -89,7 +89,7 @@ int nodeInduce(Agraph_t *);</code></pre>
 <h3> pack_mode getPackInfo(Agraph_t * g, pack_mode dflt, int dfltMargin, pack_info* pinfo)</h3>
 <p>This function calls both <i>getPackModeInfo</i> and <i>getPack</i>, storing the information in <i>pinfo</i>. <i>dfltMargin</i> is used for both integer arguments of <i>getPack</i>, with the result saved as <i>pinfo-&gt;margin</i>. It returns <i>pinfo-&gt;mode</i>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code><a href="/docs/linux/man/1-twopi/">twopi</a></code>(1), <code><a href="/docs/linux/man/3-libgraph/">libgraph</a></code>(3)<br />
+<p><code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code><a href="/docs/linux/man/1-twopi/">twopi</a></code>(1), <code>libgraph</code>(3)<br />
  K. Freivalds et al., &quot;Disconnected Graph Layout and the Polyomino Packing Approach&quot;, GD0&#8217;01, LNCS 2265, pp. 378-391. </p>
 <h2>Bugs</h2>
 <p>The packing does not take into account edge or graph labels.</p>

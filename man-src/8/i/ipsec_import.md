@@ -16,7 +16,7 @@ description: "ipsec_import – Import PKCS#12 (*.p12) files into the IPsec NSS d
 <p><i>ipsec import</i></p>
 <dd>Import PKCS#12 files into the IPsec NSS database located at the ipsec NSS data directory (default: /etc/ipsec.d)</p>
 <h2>See Also</h2>
-<p>ipsec.<code><a href="/docs/linux/man/5-conf/">conf</a></code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8)</p>
+<p>ipsec.<code>conf</code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8)</p>
 <h2>Bugs</h2>
 <p>none</p>
 <h2>Author</h2>

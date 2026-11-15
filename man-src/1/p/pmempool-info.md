@@ -54,7 +54,7 @@ description: "pmempool-info – Print basic information about Persistent Memory 
 <p> <code>-w, &#8211;walk</code> &lt;size&gt;</p>
 <dl>
 <dt>
-<dd> Use this option to walk through used data with fixed data chunk size. See <code>pmemlog_walk</code>() in <code><a href="/docs/linux/man/3-libpmemlog/">libpmemlog</a>(3)</code> for details.</dl>
+<dd> Use this option to walk through used data with fixed data chunk size. See <code>pmemlog_walk</code>() in <code>libpmemlog(3)</code> for details.</dl>
 <h3>Options for PMEMBLK:</h3>
 <p> By default the <code>info</code> command displays the pmem blk header and BTT (Block Translation Table) Info header in case of pmem blk pool type. </p>
 <p> To display BTT Map and/or BTT FLOG (Free List and Log) use <code>-m</code> and <code>-g</code> options respectively or increase verbosity level. </p>
@@ -257,7 +257,7 @@ description: "pmempool-info – Print basic information about Persistent Memory 
 <dt>pmempool info -d -r10-100 -eu ./pmemblk</p>
 <dd> # Print information from pmemblk file. Dump data blocks from 10 to 100, skip blocks marked with error flag and not marked with any flag.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-libpmemblk/">libpmemblk</a>(3) <a href="/docs/linux/man/3-libpmemlog/">libpmemlog</a>(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
+<p> <code>libpmemblk(3) libpmemlog(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
 <h2>PMEMPOOL</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code> suite. </p>
 <h2>Index</h2>

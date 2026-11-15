@@ -121,6 +121,6 @@ regardless of their age. </p>
 regardless of their age. </p>
 <p> By the way, I personally run dbcheck only where I have messed up my database due to a bug in developing Bacula code, so normally you should never need to run dbcheck inspite of the recommendations given above, which are given so that users don&#8217;t waste their time running dbcheck too often.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-bls/">bls</a></code>(1), <code><a href="/docs/linux/man/1-bextract/">bextract</a></code>(1).</p>
+<p><code>bls</code>(1), <code>bextract</code>(1).</p>
 <h2>Author</h2>
 <p>This manual page was written by Jose Luis Tallon &lt;jltallon [at] adv-solutions.net&gt;.</p>

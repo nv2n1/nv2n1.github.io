@@ -54,10 +54,10 @@ description: "xmms2-et – transmits an anonymous informative packet to the XMMS
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
 <dt><i>XMMS_PATH</i></p>
-<dd> The URL path to <i>xmms2d.</i> See <code>IPC SOCKET</code> in <i><a href="/docs/linux/man/8-xmms2d/">xmms2d</a>(8)</i> for details of possible values for this variable </p>
+<dd> The URL path to <i>xmms2d.</i> See <code>IPC SOCKET</code> in <i>xmms2d(8)</i> for details of possible values for this variable </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-xmms2/">xmms2</a>(1), <a href="/docs/linux/man/8-xmms2d/">xmms2d</a>(8), <a rel="nofollow" href="http://xmms2.xmms.org">http://xmms2.xmms.org</a></p>
+<p> <a href="/docs/linux/man/1-xmms2/">xmms2</a>(1), xmms2d(8), <a rel="nofollow" href="http://xmms2.xmms.org">http://xmms2.xmms.org</a></p>
 <h2>HISTORY</h2>
 <p> The <code>XMMS2</code> Project was started by Tobias Rundström and Anders Gustafsson. It is developed with their lead by a small group of contributers from all over the world.</p>
 <h2>AUTHOR</h2>

@@ -269,7 +269,7 @@ description: "exiv2 – Image metadata manipulation tool"
 <dt><code>-g </code><i>key</i></p>
 <dd> Only output info for this Exiv2 key (grep). Multiple <code>-g</code> options can be used to grep info for several keys.</p>
 <dt><code>-n </code><i>enc</i></p>
-<dd> Charset to use to decode Exif Unicode user comments. <i>enc</i> is a name understood by <code><a href="/docs/linux/man/3-iconv_open/">iconv_open</a></code>(3), e.g., &#8216;UTF-8&#8217;.</p>
+<dd> Charset to use to decode Exif Unicode user comments. <i>enc</i> is a name understood by <code>iconv_open</code>(3), e.g., &#8216;UTF-8&#8217;.</p>
 <dt><code>-k</code></p>
 <dd> Preserve file timestamps when updating files (keep). Can be used with all options which update files. The flag is ignored by read-only options.</p>
 <dt><code>-t</code></p>

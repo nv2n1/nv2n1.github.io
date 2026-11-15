@@ -25,15 +25,15 @@ description: "NILFS – the new implementation of a log-structured file system"
 <dt>rmcp</p>
 <dd>invalidates specified checkpoint(s)</dl>
 <p> These tools give the versioning capability to NILFS2; a user can select significant versions among continuously created checkpoints and can change them to snapshots to be preserved for long periods. </p>
-<p> Every checkpoint except for the snapshot will become unprotected from the cleaner after a given period of time. This period is controlled by the protection_period</code> parameter defined in the <code>/etc/<a href="/docs/linux/man/5-nilfs_cleanerd-conf/">nilfs_cleanerd.conf</a></code>(5) file.</p>
+<p> Every checkpoint except for the snapshot will become unprotected from the cleaner after a given period of time. This period is controlled by the protection_period</code> parameter defined in the <code>/etc/nilfs_cleanerd.conf</code>(5) file.</p>
 <h2>Mount Options</h2>
-<p>Refer to the <code><a href="/docs/linux/man/8-mount-nilfs2/">mount.nilfs2</a></code>(8).</p>
+<p>Refer to the <code>mount.nilfs2</code>(8).</p>
 <h2>Examples</h2>
 <dl>
 <dt><code>mkfs -t nilfs2 </code>/dev/sdb1</p>
 <dd>creates a NILFS2 file system on a block device `/dev/sdb1&#8242;.</p>
 <dt><code>mount -t nilfs2 </code>/dev/sdb1 /nilfs</p>
-<dd>mounts the NILFS2 file system on a mount point `/nilfs&#8217; like an ordinary POSIX file system. This will invoke a cleaner process <code><a href="/docs/linux/man/8-nilfs_cleanerd/">nilfs_cleanerd</a></code>(8) through an external mount program (i.e. <code><a href="/docs/linux/man/8-mount-nilfs2/">mount.nilfs2</a></code>(8)).</p>
+<dd>mounts the NILFS2 file system on a mount point `/nilfs&#8217; like an ordinary POSIX file system. This will invoke a cleaner process <code><a href="/docs/linux/man/8-nilfs_cleanerd/">nilfs_cleanerd</a></code>(8) through an external mount program (i.e. <code>mount.nilfs2</code>(8)).</p>
 <dt><code>lscp</code></p>
 <dd>lists checkpoints created in the file system as follows:</dl>
 <p>&nbsp;<wbr>&nbsp;<wbr>CNO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DATE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TIME&nbsp;<wbr>&nbsp;<wbr>MODE&nbsp;<wbr>&nbsp;<wbr>FLG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NBLKINC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ICNT<br />
@@ -61,8 +61,8 @@ description: "NILFS – the new implementation of a log-structured file system"
 &nbsp;<wbr>&nbsp;<wbr>/dev/sdb1 on&nbsp;<wbr>/snapshot type nilfs2&nbsp;<wbr>(ro,cp=2)</p>
 <dl>
 <dt><code>umount </code>/nilfs</p>
-<dd>unmounts the NILFS2 file system mounted on `/nilfs&#8217; and will shutdown the <code><a href="/docs/linux/man/8-nilfs_cleanerd/">nilfs_cleanerd</a></code>(8) through an external umount program (<code><a href="/docs/linux/man/8-umount-nilfs2/">umount.nilfs2</a></code>(8)) for the read/write mount.</dl>
+<dd>unmounts the NILFS2 file system mounted on `/nilfs&#8217; and will shutdown the <code><a href="/docs/linux/man/8-nilfs_cleanerd/">nilfs_cleanerd</a></code>(8) through an external umount program (<code>umount.nilfs2</code>(8)) for the read/write mount.</dl>
 <h2>Authors</h2>
 <p><code>NILFS2</code> was developed by NILFS development team &lt;nilfs [at] osrg.net&gt;.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-mkfs-nilfs2/">mkfs.nilfs2</a></code>(8), <code><a href="/docs/linux/man/8-mount-nilfs2/">mount.nilfs2</a></code>(8), <code><a href="/docs/linux/man/8-umount-nilfs2/">umount.nilfs2</a></code>(8), <code><a href="/docs/linux/man/8-nilfs_cleanerd/">nilfs_cleanerd</a></code>(8), <code><a href="/docs/linux/man/5-nilfs_cleanerd-conf/">nilfs_cleanerd.conf</a></code>(5), <code><a href="/docs/linux/man/1-lscp/">lscp</a></code>(1), <code><a href="/docs/linux/man/8-mkcp/">mkcp</a></code>(8), <code><a href="/docs/linux/man/8-chcp/">chcp</a></code>(8), <code><a href="/docs/linux/man/8-rmcp/">rmcp</a></code>(8), <code><a href="/docs/linux/man/1-lssu/">lssu</a></code>(1), <code><a href="/docs/linux/man/8-dumpseg/">dumpseg</a></code>(8) <a rel="nofollow" href="http://www.nilfs.org/">http://www.nilfs.org/</a> </p>
+<p><code>mkfs.nilfs2</code>(8), <code>mount.nilfs2</code>(8), <code>umount.nilfs2</code>(8), <code><a href="/docs/linux/man/8-nilfs_cleanerd/">nilfs_cleanerd</a></code>(8), <code>nilfs_cleanerd.conf</code>(5), <code><a href="/docs/linux/man/1-lscp/">lscp</a></code>(1), <code><a href="/docs/linux/man/8-mkcp/">mkcp</a></code>(8), <code><a href="/docs/linux/man/8-chcp/">chcp</a></code>(8), <code><a href="/docs/linux/man/8-rmcp/">rmcp</a></code>(8), <code><a href="/docs/linux/man/1-lssu/">lssu</a></code>(1), <code><a href="/docs/linux/man/8-dumpseg/">dumpseg</a></code>(8) <a rel="nofollow" href="http://www.nilfs.org/">http://www.nilfs.org/</a> </p>

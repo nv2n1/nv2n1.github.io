@@ -49,4 +49,4 @@ description: "fence_bullpap – I/O Fencing agent for Bull FAME architecture con
 <dd>Full path to an executable to generate the password for login. </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-fence/">fence</a>(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8) </p>
+<p>fence(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8) </p>

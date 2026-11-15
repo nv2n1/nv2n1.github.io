@@ -34,7 +34,7 @@ description: "pkcs11-list – list PKCS#11 objects"
 <dl>
 <dd>Specify the PIN for the device. If no PIN is provided on the command line, <code>pkcs11-list</code> will prompt for it.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pkcs11-keygen/">pkcs11-keygen</a></code>(3), <code><a href="/docs/linux/man/3-pkcs11-destroy/">pkcs11-destroy</a></code>(3)</p>
+<p><code>pkcs11-keygen</code>(3), <code>pkcs11-destroy</code>(3)</p>
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>

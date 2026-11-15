@@ -8,14 +8,14 @@ description: "tp-magic-config — Helps creating ‘Magic’ tool plugins for Tu
 ---
 
 <h2>NAME</h2>
-<p> tp-magic-config &#8212; Helps creating &#8216;Magic&#8217; tool plugins for Tux <a href="/docs/linux/man/1-paint/">Paint</a>(1) </p>
+<p> tp-magic-config &#8212; Helps creating &#8216;Magic&#8217; tool plugins for Tux Paint(1) </p>
 <h2>SYNOPSYS</h2>
 <dl>
 <dt><code>tp-magic-config [&#8211;apiversion | &#8211;version | &#8211;cflags | &#8211;pluginprefix | &#8211;plugindocprefix | &#8211;dataprefix | &#8211;localpluginprefix | &#8211;localdataprefix]</code></p>
 <dd>
 </dl>
 <h2>DESCRIPTION</h2>
-<p> <i>tp-magic-config</i> is a simple shell script that responds with various pieces of information about the currently-installed version of <i>Tux <a href="/docs/linux/man/1-paint/">Paint</a></i>(1) that are useful when building &#8216;Magic&#8217; tool plugins. </p>
+<p> <i>tp-magic-config</i> is a simple shell script that responds with various pieces of information about the currently-installed version of <i>Tux Paint</i>(1) that are useful when building &#8216;Magic&#8217; tool plugins. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;apiversion</code></p>

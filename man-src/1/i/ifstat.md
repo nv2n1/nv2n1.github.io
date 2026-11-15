@@ -66,7 +66,7 @@ description: "ifstat – Report InterFace STATistics"
 <dt><code>route</code></p>
 <dd> This driver gets statistics using routing sysctl on <font SIZE="-1">BSD</font> based systems. It doesn&#8217;t accept any options.</p>
 <dt><code>kvm</code></p>
-<dd> This driver gets statistics by reading the kernel live structures. It accepts an option specifying which files/devices to use in the following format : [execfile][,[corefile][,swapfile]] (see <i><a href="/docs/linux/man/3-kvm_open/">kvm_open</a></i>(3) for details on those fields). If a null string is passed for a parameter, the system default will be used for it. </p>
+<dd> This driver gets statistics by reading the kernel live structures. It accepts an option specifying which files/devices to use in the following format : [execfile][,[corefile][,swapfile]] (see <i>kvm_open</i>(3) for details on those fields). If a null string is passed for a parameter, the system default will be used for it. </p>
 <p> Note that for this driver to work, ifstat needs to have read access to the system memory device. This is usually done by running it as root, or by installing setgid mem or kmem. ifstat will <font SIZE="-1">NOT</font> install setgid by default; It is up to you to decide if you trust it.</p>
 <dt><code>dlpi</code></p>
 <dd> This driver gets statistics using the <font SIZE="-1">DLPI</font> streams interface available on <font SIZE="-1">HP-UX</font>. An alternate device to query statistics from can be passed as the option (default is /dev/dlpi).</p>
@@ -85,7 +85,7 @@ description: "ifstat – Report InterFace STATistics"
 <dt><code>count</code></p>
 <dd> <code>count</code> is the number of updates before stopping. If not specified, it is unlimited.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-vmstat/">vmstat</a></i>(1), <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1)</p>
+<p> <i>vmstat</i>(1), <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Gaël Roualland, &lt;gael.roualland [at] dial.oleane.com&gt; </p>
 <h2>Index</h2>

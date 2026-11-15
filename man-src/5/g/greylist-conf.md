@@ -378,7 +378,7 @@ racl whitelist default</pre>
 <dt><i>noauth</i></p>
 <dd>Greylist clients regardless if they succeeded SMTP AUTH or STARTTLS. Equivalent to the <code>-A</code> flag.</p>
 <dt><i>noaccessdb</i></p>
-<dd>Normally <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will whitelist a message if <code><a href="/docs/linux/man/8-sendmail/">sendmail</a>(8)</code> defines a ${greylist} macro set to WHITE. This enables complex whitelisting rules based on the Sendmail access DB. This option inhibits this behavior.</p>
+<dd>Normally <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> will whitelist a message if <code>sendmail(8)</code> defines a ${greylist} macro set to WHITE. This enables complex whitelisting rules based on the Sendmail access DB. This option inhibits this behavior.</p>
 <dt><i>nospf</i></p>
 <dd>Greylist clients regardless if they are SPF-compliant. Equivalent to the <code>-S</code> flag.</p>
 <dt><i>testmode</i></p>
@@ -402,7 +402,7 @@ racl whitelist default</pre>
 <dd>This is equivalent to the <code>-M</code> command line option. It takes a slash followed by a prefixlen as argument, and it commands the subnet matching feature. Example, for a subnet wide matching:</p>
 <dd>&nbsp;<wbr>&nbsp;<wbr>subnetmatch6&nbsp;<wbr>/64</p>
 <dt><i>socket</i></p>
-<dd>Like the <code>-p</code> command line option, this keyword is used to specify the socket used to communicate with <code><a href="/docs/linux/man/8-sendmail/">sendmail</a>(8)</code>. It must be enclosed in quotes and can optionally be followed by an octal permission mode (valid values are 666, 660 or 600, other values cause an error):</p>
+<dd>Like the <code>-p</code> command line option, this keyword is used to specify the socket used to communicate with <code>sendmail(8)</code>. It must be enclosed in quotes and can optionally be followed by an octal permission mode (valid values are 666, 660 or 600, other values cause an error):</p>
 <dd>&nbsp;<wbr>&nbsp;<wbr>socket&nbsp;<wbr>&quot;/run/milter-greylist/milter-greylist.sock&quot;&nbsp;<wbr>660</p>
 <dt><i>user</i></p>
 <dd>This keyword should be followed by a quoted user login and optionally a colon followed by a groupname. Like the <code>-u</code> option, this is used to run <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> as a non root user. Here is an example:</p>
@@ -546,7 +546,7 @@ racl whitelist default</pre>
 <p> <code>milter-greylist</code> received many contributions from (in alphabetical order): Adrian Dabrowski, Aida Shinra, Adam Katz, Alexander Lobodzinski, Alexandre Cherif, Alexey Popov, Andrew McGill, Attila Bruncsak, Benoit Branciard, Bernhard Schneider, Bob Smith, Constantine A. Murenin, Chris Bennett, Christian Pelissier, Cyril Guibourg, Dan Hollis, David Binderman, Denis Solovyov, Elrond, Enrico Scholz, Eugene Crosser, Fabien Tassin, Fredrik Pettai, Gary Aitken, Georg Horn, Gert Doering, Greg Troxel, Guido Kerkewitz, Hajimu Umemoto, Hideki ONO, Ivan F. Martinez, Jacques Beigbeder, Jean Benoit, Jean-Jacques Puig, Jeff Rife, Jim Klimov, Jobst Schmalenbach, Joe Pruett, Joel Bertrand, Johann E. Klasek, Johann Klasek, John Thiltges, John Wood, Jorgen Lundman, Klas Heggemann, Kouhei Sutou, Laurence Moindrot, Lev Walkin, Manuel Badzong, Mart Pirita, Martin Paul, Matt Kettler, Mattheu Herrb, Matthias Scheler, Matthieu Herrb, Michael Fromme, Moritz Both, Nerijus Baliunas, Ole Hansen, Pavel Cahyna, Pascal Lalonde, Per Holm, Petar Bogdanovic, Petr Kristof, Piotr Wadas, R P Herrold, Ralf S. Engelschall, Ranko Zivojnovic, Remy Card, Rick Adams, Rogier Maas, Romain Kang, Rudy Eschauzier, Stephane Lentz, Steven Hiscocks, Thomas Scheunemann, Tim Mooney, Vincent Dufresne, Wolfgang Solfrank, and Yaroslav Boychuk. </p>
 <p> Thanks to Helmut Messerer and Thomas Pfau for their feedback on the first releases of this software.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8), <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8), <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8).</p>
+<p><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8), sendmail(8), syslogd(8).</p>
 <dl>
 <dt>Evan Harris&#8217;s paper:</p>
 <dd><i><a rel="nofollow" href="http://projects.puremagic.com/greylisting/">http://projects.puremagic.com/greylisting/</a></i></p>

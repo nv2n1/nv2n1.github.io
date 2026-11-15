@@ -23,7 +23,7 @@ description: "resolved.conf – Network Name Resolution configuration file"
 <dl>
 <dd>Takes a boolean argument or &quot;resolve&quot;. Controls Link-Local Multicast Name Resolution support (m[blue]<code>RFC 4794</code>m[]<font SIZE="-2">[1]</font>) on the local host. If true enables full LLMNR responder and resolver support. If false disable both. If set to &quot;resolve&quot; only resolving support is enabled, but responding is disabled. Note that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) also maintains per-interface LLMNR settings. LLMNR will be enabled on an interface only if the per-interface and the global setting is on.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/4-resolv-conf/">resolv.conf</a></code>(4)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code>resolv.conf</code>(4)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

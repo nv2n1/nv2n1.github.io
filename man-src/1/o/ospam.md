@@ -129,7 +129,7 @@ description: "ospam – An SGML/XML markup stream editor"
 <p> Incorrect results may be produced if a variant concrete syntax is used which is such that there are delimiters in markup to be added that have a prefix that is a proper suffix of some other delimiter. </p>
 <p> If an entity reference in a default value uses the default entity and an entity with that name is subsequently defined and that default value is added to the document instance, then the resulting document may not be equivalent to the original document. <code>ospam</code> will give a warning when the first two conditions are met.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospent/">ospent</a>(1)</code>, <code><a href="/docs/linux/man/1-onsgmlnorm/">onsgmlnorm</a>(1)</code>, <code><a href="/docs/linux/man/1-osx/">osx</a>(1)</code></p>
+<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospent/">ospent</a>(1)</code>, <code>onsgmlnorm(1)</code>, <code><a href="/docs/linux/man/1-osx/">osx</a>(1)</code></p>
 <h2>AUTHORS</h2>
 <p> <code>James Clark</code></p>
 <dl>

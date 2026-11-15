@@ -39,7 +39,7 @@ description: "pamseq – generate PAM image of all possible tuple values, in seq
 <p> You can use such a color map with <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1)<br />
 &nbsp;<wbr>to quantize the colors in an image. With the maxval of 5 given in the example, you get a color map of the set of &quot;web safe&quot; colors as defined by Netscape. Most web browsers guarantee that they can produce at least these 216 colors (215 plus black). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamseq</code> was added to Netpbm in June 2002. </p>
 <h2>Index</h2>

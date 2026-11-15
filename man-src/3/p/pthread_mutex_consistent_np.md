@@ -34,6 +34,6 @@ int pthread_mutex_consistent(pthread_mutex_t *mutex);</code></pre>
 <h2>Examples</h2>
 <p>See <code><a href="/docs/linux/man/3-pthread_mutexattr_setrobust/">pthread_mutexattr_setrobust</a></code>(3).</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pthread_mutex_lock/">pthread_mutex_lock</a></code>(3), <code><a href="/docs/linux/man/3-pthread_mutexattr_init/">pthread_mutexattr_init</a></code>(3), <code><a href="/docs/linux/man/3-pthread_mutexattr_getrobust/">pthread_mutexattr_getrobust</a></code>(3), <code><a href="/docs/linux/man/3-pthread_mutexattr_setrobust/">pthread_mutexattr_setrobust</a></code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
+<p><code>pthread_mutex_lock</code>(3), <code>pthread_mutexattr_init</code>(3), <code><a href="/docs/linux/man/3-pthread_mutexattr_getrobust/">pthread_mutexattr_getrobust</a></code>(3), <code><a href="/docs/linux/man/3-pthread_mutexattr_setrobust/">pthread_mutexattr_setrobust</a></code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

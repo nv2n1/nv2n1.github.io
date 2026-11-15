@@ -30,7 +30,7 @@ description: "clean-crl – remove orphaned CRL like files from a certificate di
 <h2>Notes</h2>
 <p>This tool does not check the contents of the files removed, and will blindly unlink any file which even remotely looks like an OpenSSL CRL file. Use with extreme caution. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-fetch-crl/">fetch-crl</a>(8), <a href="/docs/linux/man/1-openssl/">openssl</a>(1), <a rel="nofollow" href="http://wiki.nikhef.nl/grid/FetchCRL3">http://wiki.nikhef.nl/grid/FetchCRL3</a> </p>
+<p><a href="/docs/linux/man/8-fetch-crl/">fetch-crl</a>(8), openssl(1), <a rel="nofollow" href="http://wiki.nikhef.nl/grid/FetchCRL3">http://wiki.nikhef.nl/grid/FetchCRL3</a> </p>
 <h2>Diagnostics</h2>
 <p>Exit status is normally 0; if an error occurs, exit status is 1 and diagnostics will be written to standard error.</p>
 <h2>License</h2>

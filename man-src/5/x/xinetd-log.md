@@ -88,4 +88,4 @@ description: "xinetd.log – xinetd service log format"
 <dl>
 <dd>NOID: <i>service-id</i> <i>IP-address</i> <i>reason</i></dl>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/1L-xinetd/">xinetd</a></code>(1L), <code><a href="/docs/linux/man/5-xinetd-conf/">xinetd.conf</a></code>(5) </p>
+<p><code>xinetd</code>(1L), <code><a href="/docs/linux/man/5-xinetd-conf/">xinetd.conf</a></code>(5) </p>

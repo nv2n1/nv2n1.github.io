@@ -25,6 +25,6 @@ description: "kismet_drone.conf – Wireless sniffing and monitoring drone confi
 <dd>enablesources=prism </p>
 <p> enablesources=prism,cisco</dl>
 <h2>Card Types And Multiple Capture Sources</h2>
-<p>kismet_drone supports the same sources and options as the core Kismet server. For details on supported capture types and how to define multiple capture sources, see <a href="/docs/linux/man/5-kismet-conf/">kismet.conf</a>(5).</p>
+<p>kismet_drone supports the same sources and options as the core Kismet server. For details on supported capture types and how to define multiple capture sources, see kismet.conf(5).</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a></code>(1), <code><a href="/docs/linux/man/5-kismet-conf/">kismet.conf</a></code>(5), <code><a href="/docs/linux/man/5-kismet_ui-conf/">kismet_ui.conf</a></code>(5), <code><a href="/docs/linux/man/1-gpsmap/">gpsmap</a></code>(1), <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a></code>(1), <code>kismet.conf</code>(5), <code>kismet_ui.conf</code>(5), <code>gpsmap</code>(1), <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1) </p>

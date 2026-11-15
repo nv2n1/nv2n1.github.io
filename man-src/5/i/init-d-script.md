@@ -89,6 +89,6 @@ DAEMON=/usr/sbin/atd</pre>
 <p> As can be seen, by default, the script does not support the <code>reload</code> action; it should be implemented by the script writer by defining a Fn do_reload function. </p>
 <p> If Fn do_reload is not defined but Fn do_reload_cmd is, the latter will be called on <code>reload</code> after Fn do_reload_prepare and before Fn do_reload_cleanup .</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-inittab/">inittab</a>(8), <a href="/docs/linux/man/8-service/">service</a>(8), update-rc.d8.</p>
+<p>inittab(8), <a href="/docs/linux/man/8-service/">service</a>(8), update-rc.d8.</p>
 <h2>Authors</h2>
 <p>An -nosplit An Petter Reinholdtsen Aq pere [at] debian.org</p>

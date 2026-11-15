@@ -123,6 +123,6 @@ description: "g_chi – calculates everything you want to know about chi and oth
 <p> &#8211; -r0 option does not work properly </p>
 <p> &#8211; Rotamers with multiplicity 2 are printed in chi.log as if they had multiplicity 3, with the 3rd (g(+)) always having probability 0 </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

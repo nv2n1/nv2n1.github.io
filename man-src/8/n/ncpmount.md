@@ -143,7 +143,7 @@ description: "ncpmount, mount.ncp, mount.ncpfs – mount volume(s) from a specif
 <dl>
 <dd>You must specify both <code>-S</code> <i>logical_name</i> and <code>-A</code> <i>dns_name</i>. <i>logical_name</i> is used for searching <i>.nwclient</i>, other configuration files and is logged into <i>/etc/mtab</i>, <i>dns_name</i> is used for connecting to server. In future, logical_name will be read from server.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-syslogd/">syslogd</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8), <a href="/docs/linux/man/8-nfsd/">nfsd</a>(8), <a href="/docs/linux/man/8-mountd/">mountd</a>(8), <a href="/docs/linux/man/8-mount/">mount</a>(8)</code> </p>
+<p><code>syslogd(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8), <a href="/docs/linux/man/8-nfsd/">nfsd</a>(8), <a href="/docs/linux/man/8-mountd/">mountd</a>(8), <a href="/docs/linux/man/8-mount/">mount</a>(8)</code> </p>
 <h2>Credits</h2>
 <p>ncpfs would not have been possible without lwared, written by Ales Dryak (A.Dryak [at] sh.cvut.cz). </p>
 <p> The encryption code was taken from Dr. Dobbs&#8217;s Journal 11/93. There Pawel Szczerbina described it in an article on NCP. </p>

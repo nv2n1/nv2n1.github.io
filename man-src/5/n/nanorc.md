@@ -126,7 +126,7 @@ description: "nanorc – GNU nano’s configuration file"
 <dt><code>set softwrap</code></p>
 <dd>Display lines that exceed the screen&#8217;s width over multiple screen lines. (You can make this soft-wrapping occur at whitespace instead of rudely at the screen&#8217;s edge, by using also <code>set atblanks</code>.)</p>
 <dt><code>set speller </code><i>program</i> [<i>argument </i>&#8230;]</p>
-<dd>Use the given <i>program</i> to do spell checking and correcting, instead of using the built-in corrector that calls <code><a href="/docs/linux/man/1-hunspell/">hunspell</a></code>(1) or <code><a href="/docs/linux/man/1-spell/">spell</a></code>(1).</p>
+<dd>Use the given <i>program</i> to do spell checking and correcting, instead of using the built-in corrector that calls <code><a href="/docs/linux/man/1-hunspell/">hunspell</a></code>(1) or <code>spell</code>(1).</p>
 <dt><code>set spotlightcolor </code>[<code>bold,</code>][<code>italic,</code>]<i>fgcolor</i><code>,</code><i>bgcolor</i></p>
 <dd>Use this color combination for highlighting a search match. The default value is <code>black,lightyellow</code>. See <code>set titlecolor</code> for valid color names.</p>
 <dt><code>set stateflags</code></p>
@@ -275,7 +275,7 @@ description: "nanorc – GNU nano’s configuration file"
 <dt><code>execute</code></p>
 <dd>Prompts for a program to execute. The program&#8217;s output will be inserted into the current buffer (or into a new buffer when <code>M-F</code> is toggled).</p>
 <dt><code>speller</code></p>
-<dd>Invokes a spell-checking program, either the default <code><a href="/docs/linux/man/1-hunspell/">hunspell</a></code>(1) or GNU <code><a href="/docs/linux/man/1-spell/">spell</a></code>(1), or the one defined by <code>&#8211;speller</code> or <code>set speller</code>.</p>
+<dd>Invokes a spell-checking program, either the default <code><a href="/docs/linux/man/1-hunspell/">hunspell</a></code>(1) or GNU <code>spell</code>(1), or the one defined by <code>&#8211;speller</code> or <code>set speller</code>.</p>
 <dt><code>formatter</code></p>
 <dd>Invokes a full-buffer-processing program (if the active syntax defines one).</p>
 <dt><code>linter</code></p>

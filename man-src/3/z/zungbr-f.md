@@ -30,9 +30,9 @@ description: "zungbr.f –"
  M-by-M matrix.
  If VECT = 'P', A is assumed to have been a K-by-N matrix, and P**H
  is of order N:
- if k &lt; n, P**H = G(k) . . . <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) and ZUNGBR returns the first m
+ if k &lt; n, P**H = G(k) . . . G(2) G(1) and ZUNGBR returns the first m
  rows of P**H, where n &gt;= m &gt;= k;
- if k &gt;= n, P**H = G(n-1) . . . <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) and ZUNGBR returns P**H as
+ if k &gt;= n, P**H = G(n-1) . . . G(2) G(1) and ZUNGBR returns P**H as
  an N-by-N matrix.</pre>
 <p>&nbsp;<wbr></dl>
 <p> <code>Parameters:</code></p>

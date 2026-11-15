@@ -178,5 +178,5 @@ description: "makebootfat – Makebootfat Bootable FAT Disk Creation"
 <h2>COPYRIGHT</h2>
 <p> This file is Copyright (C) 2004, 2005 Andrea Mazzoleni</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-syslinux/">syslinux</a>(1), <a href="/docs/linux/man/1-mkdosfs/">mkdosfs</a>(1), <a href="/docs/linux/man/1-dosfsck/">dosfsck</a>(1) </p>
+<p> <a href="/docs/linux/man/1-syslinux/">syslinux</a>(1), mkdosfs(1), dosfsck(1) </p>
 <h2>Index</h2>

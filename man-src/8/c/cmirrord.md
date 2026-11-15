@@ -20,4 +20,4 @@ description: "cmirrord — cluster mirror log daemon"
 <dd>Print usage. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a></code>(5), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7), <code><a href="/docs/linux/man/8-clvmd/">clvmd</a></code>(8), <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code>cluster.conf</code>(5), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7), <code><a href="/docs/linux/man/8-clvmd/">clvmd</a></code>(8), <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) </p>

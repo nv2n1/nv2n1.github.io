@@ -20,7 +20,7 @@ description: "pcp-numastat – report on NUMA memory allocation"
 <p> When invoked via the <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1) command, the <code>-h</code>/<code>&#8211;host</code>, <code>-a</code>/<code>&#8211;archive</code>, <code>-O</code>/<code>&#8211;origin</code>, <code>-Z</code>/<code>&#8211;timezone</code> and several other <i>pcp options</i> become indirectly available. </p>
 <p> The current version of <code>pcp-numastat</code> can be queried using the <code>-V</code>/<code>&#8211;version</code> option.</p>
 <h2>NOTES</h2>
-<p> <code>pcp-numastat</code> is inspired by the <code><a href="/docs/linux/man/1-numastat/">numastat</a></code>(1) command and produces exactly the same output.</p>
+<p> <code>pcp-numastat</code> is inspired by the <code>numastat</code>(1) command and produces exactly the same output.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-numastat/">numastat</a></code>(1) and <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code>numastat</code>(1) and <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
 <h2>Index</h2>

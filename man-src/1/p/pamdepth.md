@@ -18,7 +18,7 @@ description: "pamdepth – change the maxval in a Netpbm image"
 <p> Be careful of off-by-one errors when choosing the new maxval. For instance, if you want the color values to be five bits wide, use a maxval of 31, not 32. </p>
 <p> One important use of <code>pamdepth</code> is to convert a new format 2-byte-per-sample PNM file to the older 1-byte-per-sample format. Before April 2000, essentially all raw (binary) format PNM files had a maxval less than 256 and one byte per sample, and many programs may rely on that. If you specify a <i>newmaxval</i> less than 256, the resulting file should be readable by any program that worked with PNM files before April 2000. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1) </p>
+<p> <code>pnm</code>(1) , <code>pam</code>(1) , <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pamfunc/">pamfunc</a></code>(1) </p>
 <h2>HISTORY</h2>

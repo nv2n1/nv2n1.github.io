@@ -32,7 +32,7 @@ description: "ocf_heartbeat_Evmsd – Controls clustered EVMS volume management 
 <dl>
 <dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a Evmsd resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a Evmsd resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_Evmsd ocf:heartbeat:Evmsd \
 
 op monitor timeout=&quot;20&quot; interval=&quot;10&quot; depth=&quot;0&quot;</code></pre>

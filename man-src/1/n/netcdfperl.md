@@ -13,7 +13,7 @@ description: "netCDFPerl – perl extension for netCDF dataset access"
 NetCDF::create(&quot;foo.nc&quot;, NetCDF::CLOBBER);
 ...</pre>
 <h2>Description</h2>
-<p><code>netCDFPerl</code> is a Perl 5 extension-module interface to the services provided by the netCDF version 2 API, <a href="/docs/linux/man/3-netcdf2/">netcdf2</a>(3). </p>
+<p><code>netCDFPerl</code> is a Perl 5 extension-module interface to the services provided by the netCDF version 2 API, netcdf2(3). </p>
 <p> The functions in the netCDF version 2 library can be accessed by a Perl 5 script by replacing the `<code>nc</code>&#8216; prefix of the regular netCDF version 2 C function names with <code>NetCDF::</code>. For example, the C function <code>nccreate()</code> is available to a perl script as <code>NetCDF::create</code>. </p>
 <p> Each perl function matches, as closely as possible and necessary, its C counterpart:</p>
 <dl COMPACT>
@@ -106,4 +106,4 @@ NetCDF::attget($ncid, NetCDF::GLOBAL, &quot;history&quot;, \$attval);</pre>
 <p> Two additional functions are provided for error handling. <code>NetCDF::opts(i)</code> determines the handling of errors by setting the <code>ncopts</code> variable to <code>i</code>. It returns the previous value. <code>NetCDF::err()</code> returns the value of the error code variable, <code>ncerr</code>. </p>
 <p> In addition to the above functions, most C macro constants that are defined in the netCDF header file <code>netcdf.h</code> are also available to a perl script by dropping any `<code>NC_</code>&#8216; substring and using the <code>NetCDF::</code> prefix, e.g. <code>NetCDF::LONG</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/3-netcdf2/">netcdf2</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code>netcdf2</code>(3)</p>

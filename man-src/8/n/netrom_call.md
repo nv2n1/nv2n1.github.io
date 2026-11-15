@@ -31,7 +31,7 @@ description: "ax25_call, netrom_call, rose_call, tcp_call – make an AX.25, NET
  /etc/ax25/nrports<br />
  /etc/ax25/rsports</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-ax25/">ax25</a>(4),</code><a href="/docs/linux/man/4-netrom/">netrom</a>(4),<code><a href="/docs/linux/man/4-rose/">rose</a>(4),</code><a href="/docs/linux/man/4-tcp/">tcp</a>(4).</p>
+<p><code><a href="/docs/linux/man/4-ax25/">ax25</a>(4),</code><a href="/docs/linux/man/4-netrom/">netrom</a>(4),<code><a href="/docs/linux/man/4-rose/">rose</a>(4),</code>tcp(4).</p>
 <h2>Author</h2>
 <p>Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;<br />
  Tomi Manninen OH2BNS &lt;oh2bns [at] sral.fi&gt;</p>

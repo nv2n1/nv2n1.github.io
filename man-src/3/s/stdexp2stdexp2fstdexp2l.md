@@ -74,7 +74,7 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/4-exp2/">exp2</a><code>(4)</code> = 16<br />
+<p>&nbsp;<wbr>&nbsp;exp2<code>(4)</code> = 16<br />
 &nbsp;<wbr>&nbsp;exp2(0.5) = 1.41421<br />
 &nbsp;<wbr>&nbsp;exp2(-4) = 0.0625<br />
 &nbsp;<wbr>&nbsp;exp2(-0) = 1<br />

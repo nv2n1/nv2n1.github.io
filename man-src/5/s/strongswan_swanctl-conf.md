@@ -9,7 +9,7 @@ description: "swanctl.conf – swanctl configuration file"
 
 <p>swanctl.conf &#8211; swanctl configuration file</p>
 <h2>Description</h2>
-<p>swanctl.conf is the configuration file used by the <code><a href="/docs/linux/man/8-swanctl/">swanctl</a></code>(8) tool to load configurations and credentials into the strongSwan IKE daemon. For a description of the basic file syntax, including how to split the configuration in multiple files by including other files, refer to <code><a href="/docs/linux/man/5-strongswan-conf/">strongswan.conf</a></code>(5). </p>
+<p>swanctl.conf is the configuration file used by the <code>swanctl</code>(8) tool to load configurations and credentials into the strongSwan IKE daemon. For a description of the basic file syntax, including how to split the configuration in multiple files by including other files, refer to <code><a href="/docs/linux/man/5-strongswan-conf/">strongswan.conf</a></code>(5). </p>
 <h2>Time Formats</h2>
 <p>For all options that define a time, the time is specified in seconds. The <i>s</i>, <i>m</i>, <i>h</i> and <i>d</i> suffixes explicitly define the units for seconds, minutes, hours and days, respectively.</p>
 <h2>Settings</h2>
@@ -372,4 +372,4 @@ description: "swanctl.conf – swanctl configuration file"
 <h2>Files</h2>
 <pre>/etc/swanctl/swanctl.conf configuration file</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-swanctl/">swanctl</a></code>(8) </p>
+<p><code>swanctl</code>(8) </p>

@@ -15,7 +15,7 @@ description: "repro – repro SIP proxy server"
 <h2>Options</h2>
 <dl>
 <dt><code>-l</code>, <code>&#8211;log-type</code>=<code>cout</code>|<code>syslog</code>|<code>cerr</code></p>
-<dd>Set where to send logging messages. The default <code>cout</code> sends the messages to standard output, <code>cerr</code> uses the standard error pipe. With <code>syslog</code> the messages are send to the system log using the logging facility <code>local6</code>. See <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) or <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5) for more information.</p>
+<dd>Set where to send logging messages. The default <code>cout</code> sends the messages to standard output, <code>cerr</code> uses the standard error pipe. With <code>syslog</code> the messages are send to the system log using the logging facility <code>local6</code>. See <code>syslogd</code>(8) or <code>syslog.conf</code>(5) for more information.</p>
 <dt><code>-v</code>, <code>&#8211;log-level</code>=<code>STACK</code>|<code>DEBUG</code>|<code>INFO</code>|<code>WARNING</code>|<code>ALERT</code></p>
 <dd>Set the minimum level a logging message needs to have in order to by written. The severity rises from left to right in the above order. The default is to log messages with level <code>INFO</code> or above.</p>
 <dt><code>-r</code>, <code>&#8211;record-route</code>=<i>sip:example.com</i></p>

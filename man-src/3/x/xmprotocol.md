@@ -45,7 +45,7 @@ description: "XmProtocolClass – internal Lesstif class"
 <p> <code>XmNextensionType</code> </p>
 <p> <code>XmNprotocolCallback</code> </p>
 <h2>Class Hierarchy</h2>
-<p><code><a href="/docs/linux/man/3-object/">Object</a></code>(3) <code><a href="/docs/linux/man/3-xmextobject/">XmExtObject</a></code>(3) <code><a href="/docs/linux/man/3-xmprotocolclass/">XmProtocolClass</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-object/">Object</a></code>(3) <code>XmExtObject</code>(3) <code>XmProtocolClass</code>(3)</p>
 <h2>Callbacks</h2>
 <h2>Convenience Functions</h2>
 <h2>See Also</h2>

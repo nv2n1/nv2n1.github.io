@@ -57,4 +57,4 @@ url: "/docs/linux/man/8-basic_db_auth/"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org</i>&gt; </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list &lt;squid-dev [at] squid-cache.org</i>&gt;</p>
 <h2>See Also</h2>
-<p>squid (8), <font SIZE="-1">GPL \<a href="/docs/linux/man/7-fis0/">fIs0</a>(7), The Squid </font><font SIZE="-2">FAQ</font> wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>
+<p>squid (8), <font SIZE="-1">GPL \fIs0(7), The Squid </font><font SIZE="-2">FAQ</font> wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

@@ -372,7 +372,7 @@ description: "suffixes – list of file suffixes"
 </tr>
 <tr VALIGN=top>
 <td><i></i></td>
-<td><code><a href="/docs/linux/man/1-munpack/">munpack</a></code>(1)
+<td><code>munpack</code>(1)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -640,7 +640,7 @@ description: "suffixes – list of file suffixes"
 <tr VALIGN=top>
 <td><i><br />
 &nbsp;.lex</i></td>
-<td><code><a href="/docs/linux/man/1-lex/">lex</a></code>(1) or <code><a href="/docs/linux/man/1-flex/">flex</a></code>(1) files
+<td><code>lex</code>(1) or <code><a href="/docs/linux/man/1-flex/">flex</a></code>(1) files
 </td>
 </tr>
 <tr VALIGN=top>
@@ -664,7 +664,7 @@ description: "suffixes – list of file suffixes"
 <tr VALIGN=top>
 <td><i><br />
 &nbsp;.ln</i></td>
-<td>files for use with <code><a href="/docs/linux/man/1-lint/">lint</a></code>(1)
+<td>files for use with <code>lint</code>(1)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1047,7 +1047,7 @@ description: "suffixes – list of file suffixes"
 <tr VALIGN=top>
 <td><i><br />
 &nbsp;.shar</i></td>
-<td>archive created by the <code><a href="/docs/linux/man/1-shar/">shar</a></code>(1) utility
+<td>archive created by the <code>shar</code>(1) utility
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1197,7 +1197,7 @@ description: "suffixes – list of file suffixes"
 <tr VALIGN=top>
 <td><i><br />
 &nbsp;.uue</i></td>
-<td>binary file encoded with <code><a href="/docs/linux/man/1-uuencode/">uuencode</a></code>(1)
+<td>binary file encoded with <code>uuencode</code>(1)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1281,7 +1281,7 @@ description: "suffixes – list of file suffixes"
 <tr VALIGN=top>
 <td><i><br />
 &nbsp;.z</i></td>
-<td>File compressed using <code><a href="/docs/linux/man/1-pack/">pack</a></code>(1) (or an old <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1))
+<td>File compressed using <code>pack</code>(1) (or an old <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1))
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1293,7 +1293,7 @@ description: "suffixes – list of file suffixes"
 <tr VALIGN=top>
 <td><i><br />
 &nbsp;.zoo</i></td>
-<td><code><a href="/docs/linux/man/1-zoo/">zoo</a></code>(1) archive
+<td><code>zoo</code>(1) archive
 </td>
 </tr>
 <tr VALIGN=top>

@@ -19,7 +19,7 @@ description: "in.hosts – newsx incoming host state"
 <dt>/var/spool/news/inhosts/<i>spoolname</i>.old</p>
 <dd>Previous generation of the external host state file.</p>
 <dt>/var/spool/news/in.hosts/<i>spoolname</i>.conf</p>
-<dd>Standard profile for specific newsspool. See <i><a href="/docs/linux/man/5-newsx-conf/">newsx.conf</a></i>(5) for file format. </p>
+<dd>Standard profile for specific newsspool. See <i>newsx.conf</i>(5) for file format. </p>
 </dl>
 <h2>Author</h2>
 <p>Egil Kvaleberg &lt;egil [at] kvaleberg.no&gt;</p>

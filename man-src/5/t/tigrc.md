@@ -399,7 +399,7 @@ bind generic &oslash; @sh -c &quot;printf '%s' %(commit) | pbcopy&quot;</pre>
  generic = C !git cherry-pick %(commit)</pre>
 </dl>
 <p> Keys are mapped by first searching the keybindings for the current view, then the keybindings for the <code>generic</code> keymap, and last the default keybindings. Thus, the view keybindings override the generic keybindings which override the built-in keybindings. </p>
-<p> Keybindings at the line-entry prompt are typically governed by the readline library, and are configured separately in ~/.inputrc. See <i><a href="/docs/linux/man/1-readline/">readline</a>(1)</i>. Tig respects but does not require an $if tig section in ~/.inputrc. </p>
+<p> Keybindings at the line-entry prompt are typically governed by the readline library, and are configured separately in ~/.inputrc. See <i>readline(1)</i>. Tig respects but does not require an $if tig section in ~/.inputrc. </p>
 <p> Keymaps</p>
 <dl>
 <dd>Valid keymaps are: <code>main</code>, <code>diff</code>, <code>log</code>, <code>reflog</code>, <code>help</code>, <code>pager</code>, <code>status</code>, <code>stage</code>, <code>tree</code>, <code>blob</code>, <code>blame</code>, <code>refs</code>, <code>stash</code>, <code>grep</code> and <code>generic</code>. Use <code>generic</code> to set key mapping in all keymaps. Use <code>search</code> to define keys for navigating search results during search.</dl>
@@ -419,7 +419,7 @@ bind main &lt;ShiftTab&gt; parent</pre>
 </dl>
 <p> Notes </p>
 <dl>
-<dd>&bull; Tig reads keystrokes via ncurses and is subject to various limitations. See <i><a href="//www.systutorials.com/docs/linux/man/3x-ncurses/">ncurses</a>(3x)</i> and <i><a href="/docs/linux/man/5-terminfo/">terminfo</a>(5)</i> (or termcap).</dl>
+<dd>&bull; Tig reads keystrokes via ncurses and is subject to various limitations. See <i>ncurses(3x)</i> and <i><a href="/docs/linux/man/5-terminfo/">terminfo</a>(5)</i> (or termcap).</dl>
 <dl>
 <dd>&bull; Ctrl-m and Ctrl-i cannot be bound as they conflict with <i>Enter</i> and <i>Tab</i> respectively.</dl>
 <dl>
@@ -1537,7 +1537,7 @@ source ~/.tig/keybindings.tigrc</pre>
 <p>Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[]<font SIZE="-2">[1]</font>&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-tig/">tig</a></code>(1), <code><a href="/docs/linux/man/7-tigmanual/">tigmanual</a></code>(7), <a href="/docs/linux/man/7-git/">git</a>(7), <a href="/docs/linux/man/1-git-config/">git-config</a>(1)</p>
+<p><code><a href="/docs/linux/man/1-tig/">tig</a></code>(1), <code><a href="/docs/linux/man/7-tigmanual/">tigmanual</a></code>(7), git(7), <a href="/docs/linux/man/1-git-config/">git-config</a>(1)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

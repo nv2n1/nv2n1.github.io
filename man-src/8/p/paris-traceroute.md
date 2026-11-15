@@ -90,7 +90,7 @@ description: "paris-traceroute – print the IP-level routes between two Interne
 <dt><code>Other ICMP error messages</code></p>
 <dd>Paris traceroutes uses the same convensions as <i><a href="/docs/linux/man/8-traceroute/">traceroute</a></i>(8) to display unexpected ICMP messages (i.e. different than TIME_EXCEEDED, PORT_UNREACHABLE and ECHO_REPLY).</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-traceroute/">traceroute</a>(8), <a href="/docs/linux/man/8-pathchar/">pathchar</a>(8), <a href="/docs/linux/man/1-netstat/">netstat</a>(1), <a href="/docs/linux/man/8-ping/">ping</a>(8)</p>
+<p><a href="/docs/linux/man/8-traceroute/">traceroute</a>(8), pathchar(8), netstat(1), <a href="/docs/linux/man/8-ping/">ping</a>(8)</p>
 <h2>Author</h2>
 <p>The initial version of <i><a href="/docs/linux/man/8-traceroute/">traceroute</a></i>(8) was implemented by Van Jacobson from a suggestion by Steve Deering. Paris traceroute was implemented by Xavier Cuvellier. Debugged and enhanced by Brice Augustin. </p>
 <p> The current version is available at: </p>

@@ -185,7 +185,7 @@ and if JOB = 'V' or 'B', LDWORK &gt;= N.
           SEP( lambda, T22 ) = sigma-min( T22 - lambda*I )
   where sigma-min denotes the smallest singular value. We approximate
   the smallest singular value by the reciprocal of an estimate of the
-  one-norm of the inverse of T22 - lambda*I. If n = 1, <a href="//www.systutorials.com/docs/linux/man/1-SEP/">SEP</a>(1) is
+  one-norm of the inverse of T22 - lambda*I. If n = 1, SEP(1) is
   defined to be abs(T(1,1)).
   An approximate error bound for a computed right eigenvector VR(i)
   is given by

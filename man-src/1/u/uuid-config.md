@@ -67,5 +67,5 @@ description: "uuid-config – OSSP uuid API build utility"
      $(CC) $(CFLAGS) -c foo.c
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3), <i><a href="/docs/linux/man/1-uuid/">uuid</a></i>(1), <i><a href="/docs/linux/man/3-ossp--uuid/">OSSP::uuid</a></i>(3). </p>
+<p> <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3), <i><a href="/docs/linux/man/1-uuid/">uuid</a></i>(1), <i>OSSP::uuid</i>(3). </p>
 <h2>Index</h2>

@@ -17,7 +17,7 @@ url: "/docs/linux/man/1-pmcheck/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-pmdirs/">pmdirs</a></i>(1), <i><a HREF="/docs/linux/man/1-pmpath/">pmpath</a></i>(1)
+ <i>pmdirs</i>(1), <i><a HREF="/docs/linux/man/1-pmpath/">pmpath</a></i>(1)
 
 <h2>AUTHOR and COPYRIGHTS</h2>
 

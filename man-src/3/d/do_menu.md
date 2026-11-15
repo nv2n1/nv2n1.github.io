@@ -15,5 +15,5 @@ description: "do_menu – Displays an animates a popup menu. Allegro game progra
 <h2>DESCRIPTION</h2>
 <p> Displays and animates a popup menu at the specified screen coordinates (these will be adjusted if the menu does not entirely fit on the screen). Returns the index of the menu item that was selected, or -1 if the menu was cancelled. Note that the return value cannot indicate selection from child menus, so you will have to use the callback functions if you want multi-level menus. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-d_menu_proc/">d_menu_proc</a></code>(3), <code><a href="/docs/linux/man/3-active_menu/">active_menu</a></code>(3), <code><a href="/docs/linux/man/3-gui_menu_draw_menu/">gui_menu_draw_menu</a></code>(3), <code><a href="/docs/linux/man/3-update_menu/">update_menu</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-d_menu_proc/">d_menu_proc</a></code>(3), <code>active_menu</code>(3), <code><a href="/docs/linux/man/3-gui_menu_draw_menu/">gui_menu_draw_menu</a></code>(3), <code><a href="/docs/linux/man/3-update_menu/">update_menu</a></code>(3) </p>
 <h2>Index</h2>

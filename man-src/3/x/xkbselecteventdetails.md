@@ -42,4 +42,4 @@ description: "XkbSelectEventDetails – Selects or deselects for a specific Xkb 
 <dt><font SIZE="-1">BadValue</font></p>
 <dd>An argument is out of range</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3), <code><a href="/docs/linux/man/3-xkbusecorekbd/">XkbUseCoreKbd</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3), <code>XkbUseCoreKbd</code>(3)</p>

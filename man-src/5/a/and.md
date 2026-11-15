@@ -62,7 +62,7 @@ description: "/etc/and/and.priorities – priority database for the auto nice da
 <dd>The priority database (in plain text). Contains the (user, group, command, nicelevels) tuples. This is what this manual page is about. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-and/">and</a></code>(8), <code><a href="/docs/linux/man/5-and-conf/">and.conf</a></code>(5), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="/docs/linux/man/8-renice/">renice</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-and/">and</a></code>(8), <code>and.conf</code>(5), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code>renice</code>(8) </p>
 <h2>Internet</h2>
 <p><code><a rel="nofollow" href="http://and.sourceforge.net/">http://and.sourceforge.net/</a></code></p>
 <h2>Author</h2>

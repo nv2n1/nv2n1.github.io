@@ -121,7 +121,7 @@ if (ibv_get_cq_event(channel, &amp;ev_cq, &amp;ev_ctx)) {
 ibv_ack_cq_events(ev_cq, 1);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_comp_channel/">ibv_create_comp_channel</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_cq/">ibv_create_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_req_notify_cq/">ibv_req_notify_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_poll_cq/">ibv_poll_cq</a></code>(3) </p>
+<p> <code>ibv_create_comp_channel</code>(3), <code>ibv_create_cq</code>(3), <code>ibv_req_notify_cq</code>(3), <code>ibv_poll_cq</code>(3) </p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak</p>

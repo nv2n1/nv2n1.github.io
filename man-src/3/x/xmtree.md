@@ -82,6 +82,6 @@ XmTree - The Tree widget class
 
  The preferred size of the entire tree will be just large enough to contain all nodes in the hierarchy. As the state of nodes change the tree will attempt to resize itself to con- tain its current configuration. If the tree is forced larger than the desired size the nodes will be centered vertically and flush to the left edge of the tree widget. If the tree is forced smaller, some nodes may be moved or drawn outside the end of the tree. For this reason it is usually desirable to put the tree into a Scrolled Window widget. 
 
-<h2>See Also</h2><a HREF="//www.systutorials.com/docs/linux/man/3X-XmColumn/">XmColumn</a>(3X) 
+<h2>See Also</h2>XmColumn(3X) 
 
 <h2>Copyright</h2>Copyright (c) 1992 by Integrated Computer Solutions, Inc.

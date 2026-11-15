@@ -32,7 +32,7 @@ salt-unity salt '*' test.ping
 
  
 
- <i><a HREF="/docs/linux/man/1-salt-api/">salt-api</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-call/">salt-call</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-cloud/">salt-cloud</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-cp/">salt-cp</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-key/">salt-key</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-main/">salt-main</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-run/">salt-run</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-ssh/">salt-ssh</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-syndic/">salt-syndic</a>(1)</i>
+ <i><a HREF="/docs/linux/man/1-salt-api/">salt-api</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-call/">salt-call</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-cloud/">salt-cloud</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-cp/">salt-cp</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-key/">salt-key</a>(1)</i> <i>salt-main(1)</i> <i><a HREF="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-run/">salt-run</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-ssh/">salt-ssh</a>(1)</i> <i><a HREF="/docs/linux/man/1-salt-syndic/">salt-syndic</a>(1)</i>
 
 <h2>AUTHOR</h2>
 

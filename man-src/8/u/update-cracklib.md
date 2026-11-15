@@ -21,6 +21,6 @@ description: "update-cracklib – Regenerate cracklib dictionary"
 <dd>shell script that sets <code>cracklib_dictpath_src</code> which must be a space separated list of source dictionary files. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-cracklib/">cracklib</a></code>(3), <code><a href="/docs/linux/man/8-crack_mkdict/">crack_mkdict</a></code>(8) </p>
+<p><code>cracklib</code>(3), <code>crack_mkdict</code>(8) </p>
 <h2>Author</h2>
 <p>This program and manual page was written by Martin Pitt &lt;martin [at] piware.de&gt; for the Debian GNU/Linux System (but may be used by others).</p>

@@ -17,4 +17,4 @@ int ustrcmp(const char *s1, const char *s2);</code></pre>
 <h2>Return Value</h2>
 <p>Returns zero if the strings are equal, a positive number if `s1&#8242; comes after `s2&#8242; in the ASCII collating sequence, else a negative number. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-uconvert/">uconvert</a></code>(3), <code><a href="/docs/linux/man/3-ustrsize/">ustrsize</a></code>(3), <code><a href="/docs/linux/man/3-ustrsizez/">ustrsizez</a></code>(3), <code><a href="/docs/linux/man/3-ustrncmp/">ustrncmp</a></code>(3), <code><a href="/docs/linux/man/3-ustricmp/">ustricmp</a></code>(3), <code><a href="/docs/linux/man/3-ustrnicmp/">ustrnicmp</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-uconvert/">uconvert</a></code>(3), <code>ustrsize</code>(3), <code>ustrsizez</code>(3), <code><a href="/docs/linux/man/3-ustrncmp/">ustrncmp</a></code>(3), <code><a href="/docs/linux/man/3-ustricmp/">ustricmp</a></code>(3), <code><a href="/docs/linux/man/3-ustrnicmp/">ustrnicmp</a></code>(3) </p>

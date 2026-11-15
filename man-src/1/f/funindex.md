@@ -39,5 +39,5 @@ NB : these options are not compatible with Funtools processing.Please
 </pre>
 <p> This will generate an index named foo_y.idx, which will be used by funtools for filters involving the Y column.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

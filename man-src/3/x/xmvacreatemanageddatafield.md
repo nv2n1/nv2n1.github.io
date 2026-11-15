@@ -33,4 +33,4 @@ description: "XmVaCreateDataField, XmVaCreateManagedDataField — A DataField wi
 <h2>Return</h2>
 <p>Returns the DataField widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatedatafield/">XmCreateDataField</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3), <code>XmCreateDataField</code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>

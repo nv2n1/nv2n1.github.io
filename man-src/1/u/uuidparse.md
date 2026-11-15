@@ -124,7 +124,7 @@ description: "uuidparse – a utility to parse unique identifiers"
 <dd> Display help text and exit.</dl>
 <h2>AUTHORS</h2>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-uuidgen/">uuidgen</a></code>(1), <code><a href="/docs/linux/man/3-libuuid/">libuuid</a></code>(3), <i>RFC 4122</i> &lt;<a rel="nofollow" href="https://tools.ietf.org/html/rfc4122">https://tools.ietf.org/html/rfc4122</a>&gt;</p>
+<p> <code><a href="/docs/linux/man/1-uuidgen/">uuidgen</a></code>(1), <code>libuuid</code>(3), <i>RFC 4122</i> &lt;<a rel="nofollow" href="https://tools.ietf.org/html/rfc4122">https://tools.ietf.org/html/rfc4122</a>&gt;</p>
 <h2>REPORTING BUGS</h2>
 <p> For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.</p>
 <h2>AVAILABILITY</h2>

@@ -23,7 +23,7 @@ description: "nfstest.rexec – Remote procedure module"
  Usage:
  from nfstest.rexec import Rexec
  # Function to be defined at remote host
- def <a href="//www.systutorials.com/docs/linux/man/n-add_one/">add_one</a>(n):
+ def add_one(n):
  return n + 1
  # Function to be defined at remote host
  def get_time(delay=0):

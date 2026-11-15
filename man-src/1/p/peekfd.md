@@ -44,5 +44,5 @@ description: "peekfd – peek at file descriptors of running processes"
 <h2>AUTHOR</h2>
 <p> Trent Waddington</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-ttysnoop/">ttysnoop</a></code>(8) </p>
+<p> <code>ttysnoop</code>(8) </p>
 <h2>Index</h2>

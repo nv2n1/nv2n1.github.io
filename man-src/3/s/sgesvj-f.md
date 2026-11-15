@@ -88,7 +88,7 @@ description: "sgesvj.f –"
  above the underflow threshold SLAMCH('S'). The singular
  vectors corresponding to underflowed or zero singular
  values are not computed. The value of RANKA is returned
- in the array WORK as RANKA=NINT(<a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2)). Also see the
+ in the array WORK as RANKA=NINT(WORK(2)). Also see the
  descriptions of SVA and WORK. The computed columns of U
  are mutually numerically orthogonal up to approximately
  TOL=SQRT(M)*EPS (default); or TOL=CTOL*EPS (JOBU.EQ.'C'),
@@ -164,17 +164,17 @@ description: "sgesvj.f –"
  WORK(1) = SCALE is the scaling factor such that SCALE*SVA(1:N)
  are the computed singular vcalues of A.
  (See description of SVA().)
- <a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2) = NINT(<a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2)) is the number of the computed nonzero
+ WORK(2) = NINT(WORK(2)) is the number of the computed nonzero
  singular values.
- <a href="//www.systutorials.com/docs/linux/man/3-WORK/">WORK</a>(3) = NINT(<a href="//www.systutorials.com/docs/linux/man/3-WORK/">WORK</a>(3)) is the number of the computed singular
+ WORK(3) = NINT(WORK(3)) is the number of the computed singular
  values that are larger than the underflow threshold.
- <a href="//www.systutorials.com/docs/linux/man/4-WORK/">WORK</a>(4) = NINT(<a href="//www.systutorials.com/docs/linux/man/4-WORK/">WORK</a>(4)) is the number of sweeps of Jacobi
+ WORK(4) = NINT(WORK(4)) is the number of sweeps of Jacobi
  rotations needed for numerical convergence.
- <a href="//www.systutorials.com/docs/linux/man/5-WORK/">WORK</a>(5) = max_{i.NE.j} |COS(A(:,i),A(:,j))| in the last sweep.
+ WORK(5) = max_{i.NE.j} |COS(A(:,i),A(:,j))| in the last sweep.
  This is useful information in cases when SGESVJ did
  not converge, as it can be used to estimate whether
  the output is stil useful and for post festum analysis.
- <a href="//www.systutorials.com/docs/linux/man/6-WORK/">WORK</a>(6) = the largest absolute value over all sines of the
+ WORK(6) = the largest absolute value over all sines of the
  Jacobi rotation angles in the last sweep. It can be
  useful for a post festum analysis.</pre>
 <p><i>LWORK</i> </p>

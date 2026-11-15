@@ -36,7 +36,7 @@ calc -c read many_errors.cal
 <dt><code>-d</code></p>
 <dd> Disable the printing of the opening title. The printing of resource file debug and informational messages is also disabled as if <code>config(&quot;resource_debug&quot;, 0)</code> had been executed. </p>
 <p> For example: </p>
-<p> calc &quot;read qtime; <a href="/docs/linux/man/2-qtime/">qtime</a>(2)&quot; </p>
+<p> calc &quot;read qtime; qtime(2)&quot; </p>
 <p> will output something like: </p>
 <pre>
 qtime(utc_hr_offset) defined
@@ -44,7 +44,7 @@ It's nearly ten past six.
 </pre>
 <p> whereas: </p>
 <pre>
-calc -d &quot;read qtime; <a href="//www.systutorials.com/docs/linux/man/2-qtime/">qtime</a>(2)&quot;
+calc -d &quot;read qtime; qtime(2)&quot;
 </pre>
 <p> will just say: </p>
 <pre>
@@ -104,7 +104,7 @@ calc -i 2+5
 7  allow everything (default mode)
 </code></pre>
 <p> If one wished to run <code>calc</code> from a privileged user, one might want to use <code>-m</code> 0 in an effort to make <code>calc</code> somewhat more secure. </p>
-<p> Mode bits for reading and writing apply only on an open. Files already open are not effected. Thus if one wanted to use the <code>-m</code> 0 in an effort to make <code>calc</code> somewhat more secure, but still wanted to read and write a specific file, one might want to do in <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-ksh/">ksh</a></code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1)-like shells: </p>
+<p> Mode bits for reading and writing apply only on an open. Files already open are not effected. Thus if one wanted to use the <code>-m</code> 0 in an effort to make <code>calc</code> somewhat more secure, but still wanted to read and write a specific file, one might want to do in <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code>ksh</code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1)-like shells: </p>
 <pre>
 calc -m 0 3&lt;a.file
 </pre>
@@ -148,7 +148,7 @@ calc -23 + 47
 <p> The first example above fails because the shell interprets the &#8216;*&#8217; as a file glob. The second example fails because &#8216;-23&#8217; is viewed as a calc option (which it is not) and do calc objects to that it thinks of as an unknown option. These cases can usually be made to work as expected by enclosing the command between quotes: </p>
 <pre>
 calc '23 * 47'
-calc &quot;print <a href="//www.systutorials.com/docs/linux/man/2-sqrt/">sqrt</a>(2), <a href="//www.systutorials.com/docs/linux/man/1-exp/">exp</a>(1)&quot;
+calc &quot;print sqrt(2), exp(1)&quot;
 </pre>
 <p> or in parentheses and quotes to avoid leading -&#8216;s as in: </p>
 <pre>
@@ -183,7 +183,7 @@ calc read myfile
 /usr/share/calc/custom/myfile.cal
 </pre>
 <p> If the file is found, the search stops and the commands in the file are executed. It is an error if no readable file with the specified name is found. An alternative search path can be specified by defining <code>$CALCPATH</code> in the same way as PATH is defined, as a &#8216;:&#8217; separated list of directories, and then invoking <code>calc</code> without the <code>-e</code> flag. </p>
-<p> <code>Calc</code> treats all open files, other than stdin, stdout and stderr as files available for reading and writing. One may present <code>calc</code> with an already open file using <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-ksh/">ksh</a></code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1)-like shells is to: </p>
+<p> <code>Calc</code> treats all open files, other than stdin, stdout and stderr as files available for reading and writing. One may present <code>calc</code> with an already open file using <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code>ksh</code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1)-like shells is to: </p>
 <p> calc 3&lt;open_file 4&lt;open_file2 </p>
 <p> For more information use the following <code>calc</code> commands: </p>
 <pre>

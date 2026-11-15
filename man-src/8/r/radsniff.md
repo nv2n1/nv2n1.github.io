@@ -44,6 +44,6 @@ description: "radsniff – dump radius protocol"
 <dd>Print out debugging information. </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-radiusd/">radiusd</a>(8),<a href="/docs/linux/man/3-pcap/">pcap</a>(3)</p>
+<p><a href="/docs/linux/man/8-radiusd/">radiusd</a>(8),pcap(3)</p>
 <h2>Authors</h2>
 <p>Nicolas Baradakis &lt;nicolas.baradakis [at] cegetel.net&gt;</p>

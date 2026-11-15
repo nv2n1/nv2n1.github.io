@@ -513,7 +513,7 @@ Attribute TKTDS500_ATTR_VERTICAL_RANGE on channel ch1 was coerced from
 <dd> Build a tree of PropertyCollection objects with the proper index associations</p>
 <dt><code>_del_property(name)</code></p>
 <dd> Delete property</p>
-<dt><code><a href="/docs/linux/man/l-_set_list/">_set_list</a>(l)</code></p>
+<dt><code>_set_list(l)</code></p>
 <dd> Set a list of allowable indicies as an associative array</dl>
 <h2>IVI.SCOPE &#8212; OSCILLOSCOPE CLASS</h2>
 <p> This module provides the base functionality for Oscilloscopes.</p>

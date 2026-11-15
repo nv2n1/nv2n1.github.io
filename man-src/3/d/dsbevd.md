@@ -121,7 +121,7 @@ description: "dsbevd.f –"
 <p> <i>IWORK</i> </p>
 <pre>
           IWORK is INTEGER array, dimension (MAX(1,LIWORK))
-          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal LIWORK.
+          On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
 <pre>

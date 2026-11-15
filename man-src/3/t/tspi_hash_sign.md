@@ -51,4 +51,4 @@ description: "Tspi_Hash_Sign – sign the hash data of an object with a signing 
 <h2>Conforming To</h2>
 <p><code>Tspi_Hash_Sign</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_hash_updatehash/">Tspi_Hash_UpdateHash</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sethashvalue/">Tspi_Hash_SetHashValue</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_verifysignature/">Tspi_Hash_VerifySignature</a></code>(3).</p>
+<p><code>Tspi_Hash_UpdateHash</code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sethashvalue/">Tspi_Hash_SetHashValue</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_verifysignature/">Tspi_Hash_VerifySignature</a></code>(3).</p>

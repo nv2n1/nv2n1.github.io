@@ -72,7 +72,7 @@ sh -c 'env --default-signal=PIPE seq inf | head -n1'
 </pre>
 </dl>
 <h2>NOTES</h2>
-<p> POSIX&#8217;s <a href="/docs/linux/man/2-exec/">exec</a>(2) pages says:</p>
+<p> POSIX&#8217;s exec(2) pages says:</p>
 <dl>
 <dt>
 <dd> &quot;many existing applications wrongly assume that they start with certain signals set to the default action and/or unblocked&#8230;. Therefore, it is best not to block or ignore signals across execs without explicit reason to do so, and especially not to block signals across execs of arbitrary (not closely cooperating) programs.&quot;</dl>

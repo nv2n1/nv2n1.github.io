@@ -15,7 +15,7 @@ description: "iswcntrl – test for control wide character"
 int iswcntrl(wint_t wc);
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The <code>iswcntrl</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-iscntrl/">iscntrl</a></code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;cntrl&quot;. </p>
+<p> The <code>iswcntrl</code>() function is the wide-character equivalent of the <code>iscntrl</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;cntrl&quot;. </p>
 <p> The wide-character class &quot;cntrl&quot; is disjoint from the wide-character class &quot;print&quot; and therefore also disjoint from its subclasses &quot;graph&quot;, &quot;alpha&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;digit&quot;, &quot;xdigit&quot;, &quot;punct&quot;. </p>
 <p> For an unsigned char <i>c</i>, <i>iscntrl(c)</i> implies <i>iswcntrl(btowc(c))</i>, but not vice versa.</p>
 <h2>RETURN VALUE</h2>
@@ -41,7 +41,7 @@ int iswcntrl(wint_t wc);
 <h2>NOTES</h2>
 <p> The behavior of <code>iswcntrl</code>() depends on the <code>LC_CTYPE</code> category of the current locale.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-iscntrl/">iscntrl</a></code>(3), <code><a href="/docs/linux/man/3-iswctype/">iswctype</a></code>(3)</p>
+<p> <code>iscntrl</code>(3), <code>iswctype</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

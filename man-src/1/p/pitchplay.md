@@ -17,7 +17,7 @@ description: "pitchplay – wrapper script to play audio tracks with cdda2wav wi
 <p> <code>pitchplay</code> 1 90 3 140 5 50<br />
  will play track 1 with a pitch of 90%, track 3 with a pitch of 140%, and track 5 with a pitch of 50%. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cdda2wav/">cdda2wav</a>(1) </p>
+<p> cdda2wav(1) </p>
 <h2>AUTHOR</h2>
 <p> <code>cdda2was</code> was written by Joerg Schilling &lt;js [at] cs.tu-berlin.de&gt; and others. </p>
 <p> This manpage describes the program implementation of <code>pitchplay</code> as shipped by the cdrkit distribution. See <code><a rel="nofollow" href="http://alioth.debian.org/projects/debburn/">http://alioth.debian.org/projects/debburn/</a></code> for details. It is a spinoff from the original program distributed by the cdrtools project. However, the cdrtools developers are not involved in the development of this spinoff and therefore shall not be made responsible for any problem caused by it. Do not try to get support for this program by contacting the original authors. </p>

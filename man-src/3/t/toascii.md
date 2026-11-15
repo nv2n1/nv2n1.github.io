@@ -40,6 +40,6 @@ int toascii(int c);</code></pre>
 <h2>Bugs</h2>
 <p>Many people will be unhappy if you use this function. This function will convert accented letters into random characters.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-isascii/">isascii</a></code>(3), <code><a href="/docs/linux/man/3-tolower/">tolower</a></code>(3), <code><a href="/docs/linux/man/3-toupper/">toupper</a></code>(3)</p>
+<p><code>isascii</code>(3), <code><a href="/docs/linux/man/3-tolower/">tolower</a></code>(3), <code><a href="/docs/linux/man/3-toupper/">toupper</a></code>(3)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

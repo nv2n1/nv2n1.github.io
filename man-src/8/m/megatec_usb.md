@@ -16,7 +16,7 @@ description: "megatec_usb – Driver for Megatec protocol based USB UPS equipmen
 <p> This driver supports the USB versions of UPSs, if you have only serial interface then use the straight <code><a href="/docs/linux/man/8-megatec/">megatec</a></code>(8) driver. </p>
 <p> If you find that this driver does not work, and you are sure that your hardware speaks megatec protocol, then you can easily extend this driver. However, you will need to do some analysis of the commands that are sent to the UPS. Please see the forums for discussions on this and how to extend this driver.</p>
 <h2>Extensions To Megatec</h2>
-<p>This driver extends the standard <code><a href="/docs/linux/man/8-megatec/">megatec</a></code>(8) driver to work with certain UPSes that have a USB interface. These devices do not obey the normal rules for HID USB devices and therefore the <code><a href="/docs/linux/man/8-newhidups/">newhidups</a></code>(8) driver will not work for them. </p>
+<p>This driver extends the standard <code><a href="/docs/linux/man/8-megatec/">megatec</a></code>(8) driver to work with certain UPSes that have a USB interface. These devices do not obey the normal rules for HID USB devices and therefore the <code>newhidups</code>(8) driver will not work for them. </p>
 <p> This driver takes the standard serial interface and passes this over USB to the UPS. This means that most, but not all, commands available for the serial driver will work. For Krauler, Agiler, and Upsonic (with Ablerex interface) UPSes it appears to give very similar results to the serial interface. The driver supports monitoring most of the usual UPS variables, and also supports automatic shutdown.</p>
 <h2>Extra Arguments</h2>
 <dl>

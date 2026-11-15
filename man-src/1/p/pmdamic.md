@@ -10,7 +10,7 @@ description: "pmdamic – MIC card PMDA"
 <h2>NAME</h2>
 <p> <code>pmdamic</code> &#8211; MIC card PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdamic</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about Intel MIC cards using the <code><a href="/docs/linux/man/7-libmicmgmt/">libmicmgmt</a></code>(7) python bindings. </p>
+<p> <code>pmdamic</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about Intel MIC cards using the <code>libmicmgmt</code>(7) python bindings. </p>
 <p> This provides information on core, memory and power utilization </p>
 <h2>INSTALLATION</h2>
 <p> Install the MIC PMDA by using the Install script as root: </p>
@@ -31,5 +31,5 @@ description: "pmdamic – MIC card PMDA"
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), and <code><a href="/docs/linux/man/7-libmicmgmt/">libmicmgmt</a></code>(7) </p>
+<p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), and <code>libmicmgmt</code>(7) </p>
 <h2>Index</h2>

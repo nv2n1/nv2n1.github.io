@@ -127,6 +127,6 @@ description: "rpmrebuild_plugins – is an engine to expand rpmrebuild functiona
 <dt>See &lt;URL:<a rel="nofollow" href="http://rpmrebuild.sourceforge.net/">http://rpmrebuild.sourceforge.net/</a>&gt;.</p>
 <dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild/">rpmrebuild</a>(1), <a href="/docs/linux/man/1-demofiles-plug/">demofiles.plug</a>(1), <a href="/docs/linux/man/1-demo-plug/">demo.plug</a>(1), <a href="/docs/linux/man/1-nodoc-plug/">nodoc.plug</a>(1), <a href="/docs/linux/man/1-uniq-plug/">uniq.plug</a>(1), <a href="/docs/linux/man/1-file2pacdep-plug/">file2pacDep.plug</a>(1), <a href="/docs/linux/man/1-set_tag-plug/">set_tag.plug</a>(1), <a href="/docs/linux/man/1-unset_tag-plug/">unset_tag.plug</a>(1)<br />
+<p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild/">rpmrebuild</a>(1), demofiles.plug(1), demo.plug(1), nodoc.plug(1), uniq.plug(1), file2pacDep.plug(1), set_tag.plug(1), unset_tag.plug(1)<br />
 &nbsp;<wbr>&#8216;man -k rrp&#8217;&nbsp;<wbr>for plugins specific manpages </p>
 <h2>Index</h2>

@@ -51,7 +51,7 @@ description: "CREATE_FOREIGN_TABLE – define a new foreign table"
 <dl>
 <dd>
 <pre>CREATE FOREIGN TABLE films (
- code <a href="//www.systutorials.com/docs/linux/man/5-char/">char</a>(5) NOT NULL,
+ code char(5) NOT NULL,
  title varchar(40) NOT NULL,
  did integer NOT NULL,
  date_prod date,

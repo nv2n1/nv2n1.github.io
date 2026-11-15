@@ -121,7 +121,7 @@ description: "rtmpgw – RTMP streaming media gateway"
 <h2>Examples</h2>
 <p>The HTTP request </p>
 <pre> GET /?r=rtmp:%2f%2fserver%2fmyapp&amp;y=somefile HTTP/1.0</pre>
-<p>is equivalent to the <code><a href="/docs/linux/man/1-rtrmpdump/">rtrmpdump</a></code>(1) invocation </p>
+<p>is equivalent to the <code>rtrmpdump</code>(1) invocation </p>
 <pre> rtmpdump -r <a href="rtmp://server/myapp">rtmp://server/myapp</a> -y somefile</pre>
 <p>Note that only the shortform (single letter) options are supported.</p>
 <h2>Environment</h2>

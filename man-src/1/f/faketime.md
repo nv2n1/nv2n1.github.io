@@ -57,5 +57,5 @@ In this single case all spawned processes will use the same global clock without
 <p> There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. You may redistribute copies of faketime under the terms of the GNU General Public License.<br />
  For more information about these matters, see the file named COPYING.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-ld-so/">ld.so</a>(1), <a href="/docs/linux/man/2-time/">time</a>(2), <a href="/docs/linux/man/2-fstat/">fstat</a>(2) </p>
+<p> ld.so(1), <a href="/docs/linux/man/2-time/">time</a>(2), <a href="/docs/linux/man/2-fstat/">fstat</a>(2) </p>
 <h2>Index</h2>

@@ -142,7 +142,7 @@ description: "slahr2.f –"
 <dl>
 <dt>
 <dd> Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br />
-&nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr><a href="/docs/linux/man/2-32/">32</a>(2):180-194, June 2006.&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr>32(2):180-194, June 2006.&nbsp;<wbr></dl>
 <p> Definition at line 182 of file slahr2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

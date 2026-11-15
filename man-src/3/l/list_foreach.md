@@ -15,16 +15,16 @@ description: "SLIST_EMPTY SLIST_ENTRY SLIST_FIRST SLIST_FOREACH SLIST_HEAD SLIST
 <ol>
 <li> Insertion of a new entry at the head of the list.
 <li> Insertion of a new entry after any element in the list.
-<li> <a href="/docs/linux/man/1-o/">O</a>(1) removal of an entry from the head of the list.
+<li> O(1) removal of an entry from the head of the list.
 <li> Forward traversal through the list.
 <li> Swapping the contents of two lists. </ol>
 <p> Singly-linked lists are the simplest of the four data structures and support only the above functionality. Singly-linked lists are ideal for applications with large datasets and few or no removals, or for implementing a LIFO queue. Singly-linked lists add the following functionality: </p>
 <ol>
-<li> <a href="/docs/linux/man/n-o/">O</a>(n) removal of any entry in the list. </ol>
+<li> O(n) removal of any entry in the list. </ol>
 <p> Singly-linked tail queues add the following functionality: </p>
 <ol>
 <li> Entries can be added at the end of a list.
-<li> <a href="/docs/linux/man/n-o/">O</a>(n) removal of any entry in the list.
+<li> O(n) removal of any entry in the list.
 <li> They may be concatenated. </ol>
 <p> However: </p>
 <ol>
@@ -35,7 +35,7 @@ description: "SLIST_EMPTY SLIST_ENTRY SLIST_FIRST SLIST_FOREACH SLIST_HEAD SLIST
 <p> All doubly linked types of data structures (lists and tail queues) additionally allow: </p>
 <ol>
 <li> Insertion of a new entry before any element in the list.
-<li> <a href="/docs/linux/man/1-o/">O</a>(1) removal of any entry in the list. </ol>
+<li> O(1) removal of any entry in the list. </ol>
 <p> However: </p>
 <ol>
 <li> Each element requires two pointers rather than one.
@@ -58,7 +58,7 @@ description: "SLIST_EMPTY SLIST_ENTRY SLIST_FIRST SLIST_FOREACH SLIST_HEAD SLIST
 <li> Code size is about 15% greater and operations run about 20% slower than singly-linked lists. </ol>
 <p> In the macro definitions, Fa TYPE is the name of a user defined structure, that must contain a field of type <code>SLIST_ENTRY</code> <code>STAILQ_ENTRY</code> <code>LIST_ENTRY</code> or <code>TAILQ_ENTRY</code> named Fa NAME . The argument Fa HEADNAME is the name of a user defined structure that must be declared using the macros <code>SLIST_HEAD</code> <code>STAILQ_HEAD</code> <code>LIST_HEAD</code> or <code>TAILQ_HEAD</code> See the examples below for further explanation of how these macros are used.</p>
 <h3>Singly-linked lists</h3>
-<p>A singly-linked list is headed by a structure defined by the <code>SLIST_HEAD</code> macro. This structure contains a single pointer to the first element on the list. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of <a href="/docs/linux/man/n-o/">O</a>(n) removal for arbitrary elements. New elements can be added to the list after an existing element or at the head of the list. An Fa SLIST_HEAD structure is declared as follows: </p>
+<p>A singly-linked list is headed by a structure defined by the <code>SLIST_HEAD</code> macro. This structure contains a single pointer to the first element on the list. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of O(n) removal for arbitrary elements. New elements can be added to the list after an existing element or at the head of the list. An Fa SLIST_HEAD structure is declared as follows: </p>
 <blockquote>
 <pre>SLIST_HEAD(HEADNAME, TYPE) head;</pre>
 </blockquote>
@@ -107,7 +107,7 @@ while (!SLIST_EMPTY(&amp;head)) { /* List Deletion. */
  free(n1);
 }</pre>
 <h3>Singly-linked tail queues</h3>
-<p>A singly-linked tail queue is headed by a structure defined by the <code>STAILQ_HEAD</code> macro. This structure contains a pair of pointers, one to the first element in the tail queue and the other to the last element in the tail queue. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of <a href="/docs/linux/man/n-o/">O</a>(n) removal for arbitrary elements. New elements can be added to the tail queue after an existing element, at the head of the tail queue, or at the end of the tail queue. A Fa STAILQ_HEAD structure is declared as follows: </p>
+<p>A singly-linked tail queue is headed by a structure defined by the <code>STAILQ_HEAD</code> macro. This structure contains a pair of pointers, one to the first element in the tail queue and the other to the last element in the tail queue. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of O(n) removal for arbitrary elements. New elements can be added to the tail queue after an existing element, at the head of the tail queue, or at the end of the tail queue. A Fa STAILQ_HEAD structure is declared as follows: </p>
 <blockquote>
 <pre>STAILQ_HEAD(HEADNAME, TYPE) head;</pre>
 </blockquote>
@@ -305,6 +305,6 @@ while (head.cqh_first != (void *)&amp;head)
 <h2>Conforming To</h2>
 <p>Not in POSIX.1, POSIX.1-2001 or POSIX.1-2008. Present on the BSDs. <code>queue</code> functions first appeared in BSD 4.4</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-insque/">insque</a>(3)</p>
+<p>insque(3)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.05 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a></p>

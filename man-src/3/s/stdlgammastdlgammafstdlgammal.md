@@ -87,7 +87,7 @@ int main()
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;lgamma<code>(10)</code> = 12.8018, log(9!) = 12.8018<br />
 &nbsp;<wbr>&nbsp;lgamma(0.5) = 0.572365 , log(sqrt(pi)) = 0.572365<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-lgamma/">lgamma</a><code>(1)</code> = 0<br />
+&nbsp;<wbr>&nbsp;lgamma<code>(1)</code> = 0<br />
 &nbsp;<wbr>&nbsp;lgamma(+Inf) = inf<br />
 &nbsp;<wbr>&nbsp;lgamma<code>(0)</code> = inf<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errno == ERANGE: Numerical result out of range<br />

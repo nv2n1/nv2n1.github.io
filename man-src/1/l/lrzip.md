@@ -195,7 +195,7 @@ If no filenames or "-" is specified, stdin/out will be used.
 <h2>BUGS</h2>
 <p> Nil known. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/5-lrzip-conf/">lrzip.conf</a>(5), <a href="/docs/linux/man/1-lrunzip/">lrunzip</a>(1), <a href="/docs/linux/man/1-lrzcat/">lrzcat</a>(1), <a href="/docs/linux/man/1-lrztar/">lrztar</a>(1), <a href="/docs/linux/man/1-lrzuntar/">lrzuntar</a>(1), <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-lzop/">lzop</a>(1), <a href="/docs/linux/man/1-rzip/">rzip</a>(1), <a href="/docs/linux/man/1-zip/">zip</a>(1) </p>
+<p> <a href="/docs/linux/man/5-lrzip-conf/">lrzip.conf</a>(5), <a href="/docs/linux/man/1-lrunzip/">lrunzip</a>(1), <a href="/docs/linux/man/1-lrzcat/">lrzcat</a>(1), <a href="/docs/linux/man/1-lrztar/">lrztar</a>(1), <a href="/docs/linux/man/1-lrzuntar/">lrzuntar</a>(1), <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-lzop/">lzop</a>(1), rzip(1), <a href="/docs/linux/man/1-zip/">zip</a>(1) </p>
 <h2>AUTHOR and CREDITS</h2>
 <p> lrzip is being extensively bastardised from rzip by Con Kolivas.<br />
  rzip was written by Andrew Tridgell.<br />

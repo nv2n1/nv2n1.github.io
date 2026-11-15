@@ -63,7 +63,7 @@ description: "logb, logbf, logbl – get exponent of a floating-point value"
 <h2>CONFORMING TO</h2>
 <p> C99, POSIX.1-2001, POSIX.1-2008.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ilogb/">ilogb</a></code>(3), <code><a href="/docs/linux/man/3-log/">log</a></code>(3)</p>
+<p> <code>ilogb</code>(3), <code><a href="/docs/linux/man/3-log/">log</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

@@ -129,7 +129,7 @@ description: "spamassassin – simple front-end filtering script for SpamAssassi
 <dt><code>&#8211;mbx</code></p>
 <dd> Specify that the input message(s) are in <font SIZE="-1">UW </font>.mbx format. mbx is the mailbox format used within the University of Washington&#8217;s <font SIZE="-1">IMAP</font> implementation; see <tt>&quot;<a rel="nofollow" href="http://www.washington.edu/imap/">http://www.washington.edu/imap/</a>&quot;</tt>.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-sa-learn/">sa-learn</a></i>(1) <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1) <i><a href="/docs/linux/man/1-spamc/">spamc</a></i>(1) <i><a href="/docs/linux/man/3-mail--spamassassin--conf/">Mail::SpamAssassin::Conf</a></i>(3) <i><a href="/docs/linux/man/3-mail--spamassassin/">Mail::SpamAssassin</a></i>(3)</p>
+<p> <i><a href="/docs/linux/man/1-sa-learn/">sa-learn</a></i>(1) <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1) <i><a href="/docs/linux/man/1-spamc/">spamc</a></i>(1) <i>Mail::SpamAssassin::Conf</i>(3) <i>Mail::SpamAssassin</i>(3)</p>
 <h2>PREREQUISITES</h2>
 <p> <tt>&quot;Mail::SpamAssassin&quot;</tt></p>
 <h2>BUGS</h2>

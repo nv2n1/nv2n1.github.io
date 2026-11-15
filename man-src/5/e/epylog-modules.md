@@ -47,4 +47,4 @@ description: "epylog-modules – epylog module cofiguration."
 <h2>Authors</h2>
 <p>Konstantin Ryabitsev &lt;icon [at] linux.duke.edu&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-epylog/">epylog</a>(8), <a href="/docs/linux/man/3-epylog/">Epylog</a>(3), <a href="/docs/linux/man/5-epylog-conf/">epylog.conf</a>(5) </p>
+<p><a href="/docs/linux/man/8-epylog/">epylog</a>(8), Epylog(3), <a href="/docs/linux/man/5-epylog-conf/">epylog.conf</a>(5) </p>

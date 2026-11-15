@@ -18,5 +18,5 @@ description: "dijkstra – single-source distance filter for Graphviz"
 <p> Any number of <i>sourcenode file</i> pairs may be given. If the last <i>file </i> is missing, <code>stdin</code> is used. All output is written to <code>stdout</code>. </p>
 <p> In a typical application, <i>dist</i> and <i>maxdist</i> can drive a downstream calculation of color or some other attribute.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), <a href="/docs/linux/man/3-libgraph/">libgraph</a>(3) </p>
+<p> <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), libgraph(3) </p>
 <h2>Index</h2>

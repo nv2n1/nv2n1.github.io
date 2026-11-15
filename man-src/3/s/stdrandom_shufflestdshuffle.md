@@ -41,7 +41,7 @@ Reorders the elements in the given range [first, last) such that each possible p
 <h2>Parameters</h2>
 
 first, last - the range of elements to shuffle randomly 
-r - function object returning a randomly chosen value of type convertible to std::iterator_traits&lt;RandomIt&gt;::difference_type in the interval [0,n) if invoked as <a HREF="/docs/linux/man/n-r/">r</a>(n) 
+r - function object returning a randomly chosen value of type convertible to std::iterator_traits&lt;RandomIt&gt;::difference_type in the interval [0,n) if invoked as r(n) 
 g - a UniformRandomBitGenerator whose result type is convertible to std::iterator_traits&lt;RandomIt&gt;::difference_type
 
 <h2>Type requirements</h2>

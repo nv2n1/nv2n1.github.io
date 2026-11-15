@@ -40,7 +40,7 @@ description: "scrot – capture a screenshot using imlib2"
 <dt><code>-z, &#8211;silent</code></p>
 <dd> prevent beeping.</dl>
 <h2>SPECIAL STRINGS</h2>
-<p> Both the <code>&#8211;exec</code> and <code>filename</code> parameters can take format specifiers that are expanded by scrot when encountered. There are two types of format specifier. Characters preceded by a &#8216;%&#8217; are interpretted by <a href="/docs/linux/man/2-strftime/">strftime</a>(2). See man strftime for examples. These options may be used to refer to the current date and time. The second kind are internal to scrot and are prefixed by &#8216;$&#8217; The following specifiers are recognised: </p>
+<p> Both the <code>&#8211;exec</code> and <code>filename</code> parameters can take format specifiers that are expanded by scrot when encountered. There are two types of format specifier. Characters preceded by a &#8216;%&#8217; are interpretted by strftime(2). See man strftime for examples. These options may be used to refer to the current date and time. The second kind are internal to scrot and are prefixed by &#8216;$&#8217; The following specifiers are recognised: </p>
 <p> <code>$f</code> image path/filename (ignored when used in the filename)<br />
  <code>$n</code> image name (ignored when used in the filename)<br />
  <code>$s</code> image size (bytes) (ignored when used in the filename)<br />

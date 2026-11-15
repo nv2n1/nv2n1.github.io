@@ -48,7 +48,7 @@ constexpr std::chrono::months operator-(const std::chrono::year_month &amp;ym1, 
 5) ym + -dm<br />
 7) ym1.year() &#8211; ym2.year() + std::chrono::months(int(unsigned(ym1.month())) &#8211; int(unsigned(ym2.month()))) </p>
 <h2>Notes</h2>
-<p>The result of subtracting two year_month values is a duration of type std::chrono::months. This duration unit represents the length of the average Gregorian month (30.436875 days), and the resulting duration bears no relationship to the actual number of days in the time period at issue. For example, the result of 2017y/3 &#8211; 2017y/2 is <a href="/docs/linux/man/1-std--chrono--months/">std::chrono::months</a><code>(1)</code>, even though February 2017 only contains 28 days.<br />
+<p>The result of subtracting two year_month values is a duration of type std::chrono::months. This duration unit represents the length of the average Gregorian month (30.436875 days), and the resulting duration bears no relationship to the actual number of days in the time period at issue. For example, the result of 2017y/3 &#8211; 2017y/2 is std::chrono::months<code>(1)</code>, even though February 2017 only contains 28 days.<br />
 Durations that are convertible to std::chrono::months, but not std::chrono::years, can be directly added to or subtracted from a year_month. Durations convertible to std::chrono::years cannot because such durations are also convertible to std::chrono::months, resulting in an ambiguity: using namespace std::chrono;<br />
 using decades = duration&lt;int, std::ratio_multiply&lt;std::ratio&lt;10&gt;, years::period&gt;&gt;;</p>
 <p>using kilomonths = duration&lt;int, std::ratio_multiply&lt;std::kilo, months::period&gt;&gt;;<br />

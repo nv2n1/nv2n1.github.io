@@ -214,7 +214,7 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <dd> The calling program should treat messages sent to stderr as error messages. In addition, virt-sparsify exits with a non-zero status code if there was a fatal error.</dl>
 <p> All versions of virt-sparsify have supported the <i>&#8211;machine-readable</i> option.</p>
 <h2>WINDOWS 8</h2>
-<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-sparsify from working. See &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-sparsify from working. See &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i>guestfs</i>(3).</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
 <dt><font SIZE="-1">TMPDIR</font></p>
@@ -227,13 +227,13 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
  mount -o remount,size=10G /tmp
 </pre>
 <p> If you are using the <i>&#8211;in-place</i> option, then large amounts of temporary space are <code>not</code> required.</dl>
-<p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3).</p>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if the operation completed without errors. (This doesn&#8217;t necessarily mean that space could be freed up.) </p>
 <p> A non-zero exit code indicates an error. </p>
 <p> If the exit code is <tt>3</tt> and the <i>&#8211;in-place</i> option was used, that indicates that discard support is not available in libguestfs, so copying mode must be used instead.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-truncate/">truncate</a></i>(1), <i><a href="/docs/linux/man/1-fallocate/">fallocate</a></i>(1), <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-truncate/">truncate</a></i>(1), <i><a href="/docs/linux/man/1-fallocate/">fallocate</a></i>(1), <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
 <h2>COPYRIGHT</h2>

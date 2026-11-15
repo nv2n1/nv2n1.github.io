@@ -150,7 +150,7 @@ description: "rndc – name server control utility"
 <p>There is currently no way to provide the shared secret for a <code>key_id</code> without using the configuration file. </p>
 <p> Several error messages could be clearer.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-rndc-conf/">rndc.conf</a></code>(5), <code><a href="/docs/linux/man/8-rndc-confgen/">rndc-confgen</a></code>(8), <code><a href="/docs/linux/man/8-named/">named</a></code>(8), <code><a href="/docs/linux/man/5-named-conf/">named.conf</a></code>(5), <code><a href="/docs/linux/man/8-ndc/">ndc</a></code>(8), BIND 9 Administrator Reference Manual.</p>
+<p><code><a href="/docs/linux/man/5-rndc-conf/">rndc.conf</a></code>(5), <code><a href="/docs/linux/man/8-rndc-confgen/">rndc-confgen</a></code>(8), <code><a href="/docs/linux/man/8-named/">named</a></code>(8), <code><a href="/docs/linux/man/5-named-conf/">named.conf</a></code>(5), <code>ndc</code>(8), BIND 9 Administrator Reference Manual.</p>
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>

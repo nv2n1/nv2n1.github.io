@@ -142,7 +142,7 @@ description: "loginctl, systemd-loginctl – Control the systemd login manager"
 <dt>
 <dd> Pager to use when <code>&#8211;no-pager</code> is not given; overrides <i>$PAGER</i>. Setting this to an empty string or the value cat is equivalent to passing <code>&#8211;no-pager</code>.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/8-systemd-logind-service/">systemd-logind.service</a></code>(8), <code><a href="/docs/linux/man/5-systemd-logind-conf/">systemd-logind.conf</a></code>(5)</p>
+<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/8-systemd-logind-service/">systemd-logind.service</a></code>(8), <code>systemd-logind.conf</code>(5)</p>
 <h2>AUTHOR</h2>
 <p> <code>Lennart Poettering</code> &lt;lennart [at] poettering.net&gt;</p>
 <dl>

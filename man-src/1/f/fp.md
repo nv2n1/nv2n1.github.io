@@ -47,5 +47,5 @@ description: "fp – Free Pascal Compiler (FPC) integrated development enviromen
 <h2>AUTHORS</h2>
 <p> Free Pascal development team (see <a rel="nofollow" href="http://www.freepascal.org)">http://www.freepascal.org)</a> </p>
 <h2>SEE ALSO</h2>
-<p> <code>grab_vcsa</code> <code>fpc</code> <code><a href="/docs/linux/man/5-fpc-cfg/">fpc.cfg</a></code>(5) <code><a href="/docs/linux/man/1-ppdep/">ppdep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-ptop/">ptop</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) <code><a href="/docs/linux/man/1-as/">as</a></code>(1) </p>
+<p> <code>grab_vcsa</code> <code>fpc</code> <code>fpc.cfg</code>(5) <code><a href="/docs/linux/man/1-ppdep/">ppdep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-ptop/">ptop</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) <code><a href="/docs/linux/man/1-as/">as</a></code>(1) </p>
 <h2>Index</h2>

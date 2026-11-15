@@ -7,4 +7,4 @@ url: "/docs/linux/man/3-pcpintro/"
 description: "Please check the manual page PCPIntro(3)."
 ---
 
-<p>Please check the manual page <code><a href="//www.systutorials.com/docs/linux/man/3-PCPIntro/">PCPIntro(3)</a></code>.</p>
+<p>Please check the manual page <code>PCPIntro(3)</code>.</p>

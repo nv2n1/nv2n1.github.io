@@ -56,7 +56,7 @@ user3 otheruser [at] example.com
 </dl>
 In a virtual domain context, the key is either a user part, a full email
 address or a catch all, following selection rules described in
-<code><a href="//www.systutorials.com/docs/linux/man/5-smtpd.conf/">smtpd.conf</a></code>(5),
+<code>smtpd.conf</code>(5),
 and the value is one or many recipients as described in
 <code><a href="//www.systutorials.com/docs/linux/man/5-aliases/">aliases</a></code>(5):
 <dl><dt><dd>user1 otheruser

@@ -42,4 +42,4 @@ error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  This error may occur if an XChangePointerDevice request
  was made specifying a device that has less than two
  valuators, or specifying a valuator index beyond the
- range supported by the device.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XChangeKeyboardDevice/">XChangeKeyboardDevice</a>(3)</pre></dl>
+ range supported by the device.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeKeyboardDevice(3)</pre></dl>

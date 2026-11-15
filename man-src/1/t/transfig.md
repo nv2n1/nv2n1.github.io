@@ -29,7 +29,7 @@ description: "transfig – creates a makefile for portable LaTeX figures"
 <dd> pass the specified option string through to fig2dev.</dl>
 <p> If there is no scaling, the default font is an eleven point roman font. Language and control specifiers may occur more than once; they affect the translation of files which appear to their right in the argument list. If no files are specified, then &quot;*.fig&quot; is assumed.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/l-fig/">fig</a>(l), <a href="/docs/linux/man/l-fig2dev/">fig2dev</a>(l), <a href="/docs/linux/man/l-pic/">pic</a>(l), <a href="/docs/linux/man/l-pic2fig/">pic2fig</a>(l), <a href="/docs/linux/man/l-xfig/">xfig</a>(l)</p>
+<p> fig(l), fig2dev(l), pic(l), pic2fig(l), xfig(l)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1985 Supoj Sutantavibul<br />
  Copyright (C) 1991 Micah Beck<br />

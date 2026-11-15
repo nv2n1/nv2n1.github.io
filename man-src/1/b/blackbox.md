@@ -508,6 +508,6 @@ for more details.
 <h2>SEE ALSO</h2>
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/1-bsetbg/">bsetbg</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-bsetroot/">bsetroot</a>(1), 
-<a href="//www.systutorials.com/docs/linux/man/1-bbkeys/">bbkeys</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-bbconf/">bbconf</a>(1)
+<a href="//www.systutorials.com/docs/linux/man/1-bbkeys/">bbkeys</a>(1), bbconf(1)
 </pre>
 <h2>Index</h2>

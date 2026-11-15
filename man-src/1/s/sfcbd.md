@@ -158,7 +158,7 @@ description: "sfcbd – Small-Footprint CIM Broker (sfcb)"
 <dt><code>sslClientTrustStore</code></p>
 <dd> Specify the name of the file or directory containing either the CA certificate issuing client certificates or self-signed certificates of the clients. This setting is only required if sslClientCertificate is set to <i>accept</i> or <i>require</i>. </p>
 <p> If a file, it must be in PEM format. </p>
-<p> If a directory, it must be in &quot;hash format&quot;: each file in the directory should be named <i>hash.0</i>, where <i>hash</i> is the output of <i>openssl x509 -hash</i>. See the <i>-CApath</i> option in <i><a href="/docs/linux/man/1-verify/">verify</a>(1)</i> from the <i>openssl</i> package for more information about the hash format. </p>
+<p> If a directory, it must be in &quot;hash format&quot;: each file in the directory should be named <i>hash.0</i>, where <i>hash</i> is the output of <i>openssl x509 -hash</i>. See the <i>-CApath</i> option in <i>verify(1)</i> from the <i>openssl</i> package for more information about the hash format. </p>
 <p> Default=<i>/etc/sfcb/client.pem</i></p>
 <dt><code>sslClientCertificate</code></p>
 <dd> Specify the way sfcb handles client certificate based authentication. If set to <i>ignore</i> it will not request a certificate from the client. If set to <i>accept</i> it will request a certificate from the client but not fail if the client doesn&#8217;t present one. If set to <i>require</i> it will refuse the client connection if the client doesn&#8217;t present a certificate. Default=<i>ignore</i></p>
@@ -242,5 +242,5 @@ description: "sfcbd – Small-Footprint CIM Broker (sfcb)"
 <dt>
 <dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-sfcbmof/">sfcbmof</a></code>(1), <code><a href="/docs/linux/man/1-sfcbstage/">sfcbstage</a></code>(1), <code><a href="/docs/linux/man/1-sfcbunstage/">sfcbunstage</a></code>(1), <code><a href="/docs/linux/man/1-sfcbrebos/">sfcbrebos</a></code>(1), <code><a href="/docs/linux/man/1-gensslcert-sh/">genSslCert.sh</a></code>(1), <code><a href="/docs/linux/man/1-getschema-sh/">getSchema.sh</a></code>(1), <code><a href="/docs/linux/man/1-wbemcli/">wbemcli</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-sfcbmof/">sfcbmof</a></code>(1), <code><a href="/docs/linux/man/1-sfcbstage/">sfcbstage</a></code>(1), <code><a href="/docs/linux/man/1-sfcbunstage/">sfcbunstage</a></code>(1), <code>sfcbrebos</code>(1), <code>genSslCert.sh</code>(1), <code>getSchema.sh</code>(1), <code><a href="/docs/linux/man/1-wbemcli/">wbemcli</a></code>(1) </p>
 <h2>Index</h2>

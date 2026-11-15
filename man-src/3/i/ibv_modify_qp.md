@@ -105,7 +105,7 @@ For QP Transport Service Type IBV_QPT_RAW_PACKET : Next state Required attribute
 </code></pre>
 <p> If port flag IBV_QPF_GRH_REQUIRED is set then ah_attr and alt_ah_attr must be passed with definition of &#8216;struct ibv_ah_attr { .is_global = 1; .grh = {&#8230;}; }&#8217;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_qp/">ibv_destroy_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_qp/">ibv_query_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah/">ibv_create_ah</a></code>(3)</p>
+<p> <code>ibv_create_qp</code>(3), <code>ibv_destroy_qp</code>(3), <code>ibv_query_qp</code>(3), <code>ibv_create_ah</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

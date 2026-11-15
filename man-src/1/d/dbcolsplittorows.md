@@ -68,7 +68,7 @@ description: "dbcolsplittorows – split an existing column into multiple new ro
     #  | dbcolsplittorows name
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-fsdb/">Fsdb</a></i>(1). <i><a href="/docs/linux/man/1-dbcolmerge/">dbcolmerge</a></i>(1). <i><a href="/docs/linux/man/1-dbcolsplittocols/">dbcolsplittocols</a></i>(1). <i><a href="/docs/linux/man/1-dbcolrename/">dbcolrename</a></i>(1).</p>
+<p> <i>Fsdb</i>(1). <i><a href="/docs/linux/man/1-dbcolmerge/">dbcolmerge</a></i>(1). <i><a href="/docs/linux/man/1-dbcolsplittocols/">dbcolsplittocols</a></i>(1). <i><a href="/docs/linux/man/1-dbcolrename/">dbcolrename</a></i>(1).</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2008 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
 <p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>

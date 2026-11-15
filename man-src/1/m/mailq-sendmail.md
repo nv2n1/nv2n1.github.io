@@ -35,6 +35,6 @@ description: "mailq – print the mail queue"
 <p> Several sendmail.cf options influence the behavior of the <code>mailq</code> utility: The number of items printed per queue group is restricted by <code>MaxQueueRunSize</code> if that value is set. The status character <code>*</code> is not printed for some values of <code>QueueSortOrder,</code> e.g., filename, random, modification, and none, unless a <code>-q</code> option is used to limit the processed jobs. </p>
 <p> The <code>mailq</code> utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-sendmail/">sendmail</a>(8)</p>
+<p>sendmail(8)</p>
 <h2>History</h2>
 <p>The <code>mailq</code> command appeared in 4.0BSD.</p>

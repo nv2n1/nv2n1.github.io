@@ -97,9 +97,9 @@ description: "irb – Interactive Ruby Shell"
 <blockquote><p><tt>irb(main):003:1&gt; </tt><code>x + 1</code> </p></blockquote>
 <blockquote><p><tt>irb(main):004:1&gt; </tt><code>end</code> </p></blockquote>
 <blockquote><p><tt>=&gt; :t</tt></p></blockquote>
-<blockquote><p><tt>irb(main):005:0&gt; </tt><code><a href="/docs/linux/man/3-t/">t</a>(3)</code> </p></blockquote>
+<blockquote><p><tt>irb(main):005:0&gt; </tt><code>t(3)</code> </p></blockquote>
 <blockquote><p><tt>=&gt; 4</tt></p></blockquote>
-<blockquote><p><tt>irb(main):006:0&gt; </tt><code>if <a href="/docs/linux/man/3-t/">t</a>(3) == 4</code> </p></blockquote>
+<blockquote><p><tt>irb(main):006:0&gt; </tt><code>if t(3) == 4</code> </p></blockquote>
 <blockquote><p><tt>irb(main):007:1&gt; </tt><code>p :ok</code> </p></blockquote>
 <blockquote><p><tt>irb(main):008:1&gt; </tt><code>end</code> </p></blockquote>
 <blockquote><p><tt>:ok</tt></p></blockquote>

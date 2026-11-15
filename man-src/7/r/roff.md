@@ -111,7 +111,7 @@ description: "roff – concepts and history of roff typesetting"
 </tr>
 <tr VALIGN=top>
 <td><code>grn</code></td>
-<td>for including <code><a href="/docs/linux/man/1-gremlin/">gremlin</a></code>(1) pictures.
+<td>for including <code>gremlin</code>(1) pictures.
 </td>
 </tr>
 </table>

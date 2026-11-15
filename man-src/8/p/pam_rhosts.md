@@ -46,6 +46,6 @@ auth required pam_env.so
 auth required pam_unix.so</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-rootok/">rootok</a></code>(3), <code><a href="/docs/linux/man/5-hosts-equiv/">hosts.equiv</a></code>(5), <code><a href="/docs/linux/man/5-rhosts/">rhosts</a></code>(5), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
+<p><code>rootok</code>(3), <code><a href="/docs/linux/man/5-hosts-equiv/">hosts.equiv</a></code>(5), <code>rhosts</code>(5), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
 <h2>Author</h2>
 <p>pam_rhosts was written by Thorsten Kukuk &lt;kukuk [at] thkukuk.de&gt;</p>

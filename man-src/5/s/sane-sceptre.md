@@ -19,7 +19,7 @@ Sceptre VividScan S1200 SCSI</pre>
 </dl>
 <p> The make of this scanner is KINPO, so other scanners from that manufacturer may also work (eg. the S600).</p>
 <h2>Options</h2>
-<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). </p>
+<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). </p>
 <p> Valid command line options and their syntax can be listed by using </p>
 <dl>
 <dd>scanimage &#8211;help -d sceptre</dl>
@@ -73,7 +73,7 @@ Sceptre VividScan S1200 SCSI</pre>
 <h2>Bugs</h2>
 <p>None known. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
+<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
 <h2>Author</h2>
 <dl>
 <dt>The package is actively maintained by Frank Zago.</p>

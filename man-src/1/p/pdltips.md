@@ -16,14 +16,14 @@ PDL::Tips - Small tidbits of useful arcana. Programming tidbits and such.
 
  <pre> $a /= $a-&gt;sumover-&gt;dummy(0);</pre><h3>What is actually happening?</h3>If you want to see what the code is actually doing, try the command 
 
- <pre> <a HREF="//www.systutorials.com/docs/linux/man/1-PDL::Core::set_debugging/">PDL::Core::set_debugging</a>(1);</pre>somewhere. This spews out a huge amount of debug info for <font SIZE="-1">PDL</font> into <font SIZE="-1">STDOUT.</font> Plans for the future include making it possible to redirect the output, and also making it possible to select mesages with more precision. 
+ <pre> PDL::Core::set_debugging(1);</pre>somewhere. This spews out a huge amount of debug info for <font SIZE="-1">PDL</font> into <font SIZE="-1">STDOUT.</font> Plans for the future include making it possible to redirect the output, and also making it possible to select mesages with more precision. 
 
  Many of the messages come from <tt>&quot;Basic/Core/pdlapi.c&quot;</tt> and you can look at the source to see what is going on. 
 
  If you have any extra time to work on these mechanisms, inform the pdl-porters mailing list.
 <h3>Memory savings</h3>If you are running recursively something that selects certain indices of a large piddle, like 
 
- <pre> <a HREF="//www.systutorials.com/docs/linux/man/1-while/">while</a>(1) {
+ <pre> while(1) {
  $inds = where($a&gt;0);
  $a = $a-&gt;index($inds);
  $b = $b-&gt;index($inds);
@@ -35,7 +35,7 @@ PDL::Tips - Small tidbits of useful arcana. Programming tidbits and such.
  Of course, the probably best way to do the above is 
 
  <pre> $inds = xvals ($a-&gt;long);
- <a HREF="//www.systutorials.com/docs/linux/man/1-while/">while</a>(1) {
+ while(1) {
  $inds0 = where($a&gt;0);
  $inds1 = $inds-&gt;index($inds)-&gt;sever;
  $a = $a0-&gt;index($inds1);

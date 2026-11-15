@@ -133,7 +133,7 @@ description: "autotrace – converts bitmap image data into vector graphics"
 <dt>/depot/bin/autotrace</p>
 <dd> binary</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gimp/">gimp</a>(1), <a href="/docs/linux/man/1-imagemagick/">ImageMagick</a>(1), <a href="/docs/linux/man/1-pbm/">pbm</a>(1), <a href="/docs/linux/man/1-pgm/">pgm</a>(1), <a href="/docs/linux/man/1-pnm/">pnm</a>(1), <a href="/docs/linux/man/1-ps2pdf/">ps2pdf</a>(1), <a href="/docs/linux/man/1-pstoedit/">pstoedit</a>(1), <a href="/docs/linux/man/1-pstoepd/">pstoepd</a>(1), <a href="/docs/linux/man/1-sketch/">sketch</a>(1), <a href="/docs/linux/man/1-xfig/">xfig</a>(1), <a href="/docs/linux/man/1-xv/">xv</a>(1)</p>
+<p> <a href="/docs/linux/man/1-gimp/">gimp</a>(1), <a href="/docs/linux/man/1-imagemagick/">ImageMagick</a>(1), pbm(1), pgm(1), pnm(1), <a href="/docs/linux/man/1-ps2pdf/">ps2pdf</a>(1), <a href="/docs/linux/man/1-pstoedit/">pstoedit</a>(1), pstoepd(1), sketch(1), <a href="/docs/linux/man/1-xfig/">xfig</a>(1), <a href="/docs/linux/man/1-xv/">xv</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> Martin Weber (martweb [at] gmx.net) </p>
 <p> Manual page by R. P. C. Rodgers, Lister Hill National Center for Biomedical Communications, U.S. National Library of Medicine (rodgers [at] nlm.nih.gov). </p>

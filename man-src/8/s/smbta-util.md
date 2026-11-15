@@ -12,7 +12,7 @@ description: "smbta-util – control encryption in VFS smb_traffic_analyzer"
 <dl>
 <dd>smbta-util [<i>COMMANDS</i>&#8230;]</dl>
 <h2>Description</h2>
-<p>This tool is part of the <code><a href="/docs/linux/man/1-samba/">samba</a></code>(1) suite. </p>
+<p>This tool is part of the <code>samba</code>(1) suite. </p>
 <p> smbta-util is a tool to ease the configuration of the vfs_smb_traffic_analyzer module regarding data encryption. </p>
 <p> The user can generate a key, install a key (activating encryption), or uninstall a key (deactivating encryption). Any operation that installs a key will create a File containing the key. This file can be used by smbta-tool on other machines to install the same key from the file.</p>
 <h2>Commands</h2>

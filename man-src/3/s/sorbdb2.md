@@ -104,7 +104,7 @@ description: "sorbdb2.f –"
 <dl>
 <dd>
 <pre> The upper-bidiagonal blocks B11, B21 are represented implicitly by
- angles <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1), ..., THETA(Q) and <a href="//www.systutorials.com/docs/linux/man/1-PHI/">PHI</a>(1), ..., PHI(Q-1). Every entry
+ angles THETA(1), ..., THETA(Q) and PHI(1), ..., PHI(Q-1). Every entry
  in each bidiagonal band is a product of a sine or cosine of a THETA
  with a sine or cosine of a PHI. See [1] or SORCSD for details.
  P1, P2, and Q1 are represented as products of elementary reflectors.
@@ -113,7 +113,7 @@ description: "sorbdb2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, <a href="/docs/linux/man/1-50/">50</a>(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
 <p> Definition at line 201 of file sorbdb2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

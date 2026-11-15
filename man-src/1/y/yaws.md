@@ -112,5 +112,5 @@ description: "yaws – yet another webserver"
 <h2>AUTHOR</h2>
 <p> Written by Claes Wikstrom</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-yaws-conf/">yaws.conf</a></code>(5) <code><a href="/docs/linux/man/1-erl/">erl</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/5-yaws-conf/">yaws.conf</a></code>(5) <code>erl</code>(1) </p>
 <h2>Index</h2>

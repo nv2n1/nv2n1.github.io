@@ -27,7 +27,7 @@ description: "gst-feedback – generate debug info for GStreamer bug reports"
 <h2>WARNING</h2>
 <p> The <i>gst-feedback</i> dumps a lot of information about a system, some of which may be considered sensitive. If this is a concern, review the information before posting to a public forum, such as the GStreamer bug tracking system.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gst-inspect/">gst-inspect</a></code>(1), <code><a href="/docs/linux/man/1-gst-launch/">gst-launch</a></code>(1), <code><a href="/docs/linux/man/1-gst-typefind/">gst-typefind</a></code>(1)</p>
+<p> <code>gst-inspect</code>(1), <code>gst-launch</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.freedesktop.org/">http://gstreamer.freedesktop.org/</a> </p>
 <h2>Index</h2>

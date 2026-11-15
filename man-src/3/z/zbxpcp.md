@@ -40,4 +40,4 @@ $ zabbix_get -s 127.0.0.1 -p 10050 -k pcp.kernel.all.sysfork</pre>
 <dt><code>$(PCP_LIB_DIR)/zabbix/agent/zbxpcp.so</code></p>
 <dd>Zabbix agent loadable PCP module.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmrep/">pmrep</a></code>(1), <code><a href="/docs/linux/man/1-zabbix_get/">zabbix_get</a></code>(1), <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3) and <code><a href="/docs/linux/man/8-zabbix_agentd/">zabbix_agentd</a></code>(8). </p>
+<p><code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmrep/">pmrep</a></code>(1), <code>zabbix_get</code>(1), <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3) and <code>zabbix_agentd</code>(8). </p>

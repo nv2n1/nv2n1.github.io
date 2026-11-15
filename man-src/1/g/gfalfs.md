@@ -60,7 +60,7 @@ description: "gfalFS – Filesystem client for the GFAL 2.0 toolkit"
 <p> <code> Unmount an existing gfalFS mount point </code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>gfalFS_umount&nbsp;<wbr>~/my_mnt/ </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code><a href="/docs/linux/man/3-gfal2/">gfal2</a></code>(3), </p>
+<p><code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code>gfal2</code>(3), </p>
 <h2>Links</h2>
 <p><code><a rel="nofollow" href="https://svnweb.cern.ch/trac/lcgutil/wiki/gfalFS">https://svnweb.cern.ch/trac/lcgutil/wiki/gfalFS</a></code> </p>
 <h2>Authors</h2>

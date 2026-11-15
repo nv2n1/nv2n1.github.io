@@ -80,7 +80,7 @@ description: "lslocks – list local system locks"
 <dl>
 <dd>The PID of the process which blocks the lock.</dl>
 <h2>Notes</h2>
-<p>The <code>lslocks</code> command is meant to replace the <code><a href="/docs/linux/man/8-lslk/">lslk</a></code>(8) command, originally written by and unmaintained since 2001.</p>
+<p>The <code>lslocks</code> command is meant to replace the <code>lslk</code>(8) command, originally written by and unmaintained since 2001.</p>
 <h2>Authors</h2>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-flock/">flock</a></code>(1), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code><a href="/docs/linux/man/3-lockf/">lockf</a></code>(3)</p>

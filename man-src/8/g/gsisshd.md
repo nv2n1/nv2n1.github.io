@@ -38,7 +38,7 @@ description: "sshd – OpenSSH SSH daemon"
 <dt><code>-h </code><i>host_key_file</i></p>
 <dd>Specifies a file from which a host key is read. This option must be given if <code>sshd</code> is not run as root (as the normal host key files are normally not readable by anyone but root). The default is /etc/gsissh/ssh_host_key for protocol version 1, and /etc/gsissh/ssh_host_dsa_key /etc/gsissh/ssh_host_ecdsa_key /etc/gsissh/ssh_host_ed25519_key and /etc/gsissh/ssh_host_rsa_key for protocol version 2. It is possible to have multiple host key files for the different protocol versions and host key algorithms.</p>
 <dt><code>-i</code></p>
-<dd>Specifies that <code>sshd</code> is being run from <a href="/docs/linux/man/8-inetd/">inetd</a>(8). <code>sshd</code> is normally not run from inetd because it needs to generate the server key before it can respond to the client, and this may take tens of seconds. Clients would have to wait too long if the key was regenerated every time. However, with small key sizes (e.g. 512) using <code>sshd</code> from inetd may be feasible.</p>
+<dd>Specifies that <code>sshd</code> is being run from inetd(8). <code>sshd</code> is normally not run from inetd because it needs to generate the server key before it can respond to the client, and this may take tens of seconds. Clients would have to wait too long if the key was regenerated every time. However, with small key sizes (e.g. 512) using <code>sshd</code> from inetd may be feasible.</p>
 <dt><code>-k </code><i>key_gen_time</i></p>
 <dd>Specifies how often the ephemeral protocol version 1 server key is regenerated (default 3600 seconds, or one hour). The motivation for regenerating the key fairly often is that the key is not stored anywhere, and after about an hour it becomes impossible to recover the key for decrypting intercepted communications even if the machine is cracked into or physically seized. A value of zero indicates that the key will never be regenerated.</p>
 <dt><code>-o </code><i>option</i></p>
@@ -121,7 +121,7 @@ fi</pre>
 <dt><code>principals=principals</code></p>
 <dd>On a <code>cert-authority</code> line, specifies allowed principals for certificate authentication as a comma-separated list. At least one name from the list must appear in the certificate&#8217;s list of principals for the certificate to be accepted. This option is ignored for keys that are not marked as trusted certificate signers using the <code>cert-authority</code> option.</p>
 <dt><code>tunnel=n</code></p>
-<dd>Force a <a href="/docs/linux/man/4-tun/">tun</a>(4) device on the server. Without this option, the next available device will be used if the client requests a tunnel.</dl>
+<dd>Force a tun(4) device on the server. Without this option, the next available device will be used if the client requests a tunnel.</dl>
 <p> An example authorized_keys file: </p>
 <pre># Comments allowed at start of line
 ssh-rsa AAAAB3Nza...LiPk== user [at] example.net
@@ -247,7 +247,7 @@ AAAA1234.....=
 <h2>Ipv6</h2>
 <p>IPv6 address can be used everywhere where IPv4 address. In all entries must be the IPv6 address enclosed in square brackets. Note: The square brackets are metacharacters for the shell and must be escaped in shell.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-scp/">scp</a>(1), <a href="/docs/linux/man/1-sftp/">sftp</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1, ssh-keygen1, ssh-keyscan1, <a href="/docs/linux/man/2-chroot/">chroot</a>(2), hosts_access5, login.conf5, <a href="/docs/linux/man/5-moduli/">moduli</a>(5), sshd_config5, <a href="/docs/linux/man/8-inetd/">inetd</a>(8), sftp-server8</p>
+<p><a href="/docs/linux/man/1-scp/">scp</a>(1), <a href="/docs/linux/man/1-sftp/">sftp</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1, ssh-keygen1, ssh-keyscan1, <a href="/docs/linux/man/2-chroot/">chroot</a>(2), hosts_access5, login.conf5, <a href="/docs/linux/man/5-moduli/">moduli</a>(5), sshd_config5, inetd(8), sftp-server8</p>
 <h2>Authors</h2>
 <p>OpenSSH is a derivative of the original and free ssh 1.2.12 release by Tatu Ylonen. Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt and Dug Song removed many bugs, re-added newer features and created OpenSSH. Markus Friedl contributed the support for SSH protocol versions 1.5 and 2.0. Niels Provos and Markus Friedl contributed support for privilege separation.</p>
 <h2>Caveats</h2>

@@ -38,5 +38,5 @@ description: "ppdep – The FPC Pascal unit mover."
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppudep/">ppudep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1)</dl>
+<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code>ppudep</code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1)</dl>
 <h2>Index</h2>

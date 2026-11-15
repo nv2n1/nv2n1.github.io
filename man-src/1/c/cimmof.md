@@ -115,5 +115,5 @@ description: "cimmof – compile MOF files into the CIM Repository"
 <dt>
 <dd> <code>cimmof -h</code></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cimserver/">cimserver</a>(1). </p>
+<p> cimserver(1). </p>
 <h2>Index</h2>

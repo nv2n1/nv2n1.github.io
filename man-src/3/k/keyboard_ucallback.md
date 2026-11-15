@@ -34,5 +34,5 @@ keyboard_ucallback = silence_g_key;
 </code></pre>
 <p> Note that this keyboard callback has priority over the non unicode callback. If you set both, only the unicode one will work. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-readkey/">readkey</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3), <code><a href="/docs/linux/man/3-keyboard_callback/">keyboard_callback</a></code>(3), <code><a href="/docs/linux/man/3-keyboard_lowlevel_callback/">keyboard_lowlevel_callback</a></code>(3) </p>
+<p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-readkey/">readkey</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3), <code><a href="/docs/linux/man/3-keyboard_callback/">keyboard_callback</a></code>(3), <code><a href="/docs/linux/man/3-keyboard_lowlevel_callback/">keyboard_lowlevel_callback</a></code>(3) </p>
 <h2>Index</h2>

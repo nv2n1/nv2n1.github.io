@@ -156,7 +156,7 @@ description: "ztgsen.f –"
  message related to LWORK is issued by XERBLA.</pre>
 <p><i>IWORK</i> </p>
 <pre> IWORK is INTEGER array, dimension (MAX(1,LIWORK))
- On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal LIWORK.</pre>
+ On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.</pre>
 <p><i>LIWORK</i> </p>
 <pre> LIWORK is INTEGER
  The dimension of the array IWORK. LIWORK &gt;= 1.
@@ -220,10 +220,10 @@ description: "ztgsen.f –"
  Here, Inx is the identity matrix of size nx and A22**H is the
  conjugate transpose of A22. kron(X, Y) is the Kronecker product between
  the matrices X and Y.
- When <a href="//www.systutorials.com/docs/linux/man/2-DIF/">DIF</a>(2) is small, small changes in (A, B) can cause large changes
+ When DIF(2) is small, small changes in (A, B) can cause large changes
  in the deflating subspace. An approximate (asymptotic) bound on the
  maximum angular error in the computed deflating subspaces is
- EPS * norm((A, B)) / <a href="//www.systutorials.com/docs/linux/man/2-DIF/">DIF</a>(2),
+ EPS * norm((A, B)) / DIF(2),
  where EPS is the machine precision.
  The reciprocal norm of the projectors on the left and right
  eigenspaces associated with (A11, B11) may be returned in PL and PR.

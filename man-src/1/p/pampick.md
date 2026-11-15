@@ -22,7 +22,7 @@ description: "pampick – pick images out of a multi-image Netpbm image stream"
 <p> To see how many images, and what kind, are in a stream, use <code>pamfile</code>. </p>
 <p> To extract all the images in a stream into separate named files, use <code>pamsplit</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , <code><a href="/docs/linux/man/1-pamsplit/">pamsplit</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code>cat</code> man page </p>
+<p> <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , <code><a href="/docs/linux/man/1-pamsplit/">pamsplit</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , <code>cat</code> man page </p>
 <h2>HISTORY</h2>
 <p> <code>pampick</code> was new in Netpbm 10.31 (December 2005); </p>
 <h2>Index</h2>

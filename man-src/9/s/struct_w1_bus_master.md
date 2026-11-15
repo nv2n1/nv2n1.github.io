@@ -35,10 +35,10 @@ description: "struct_w1_bus_master – operations available on a bus master"
 <dd>Sets the line level</dl>
 <p> touch_bit</p>
 <dl>
-<dd>the lowest-level function for devices that really support the 1-wire protocol. touch_bit(0) = write-0 cycle <a href="/docs/linux/man/1-touch_bit/">touch_bit</a>(1) = write-1 / read cycle <i>return</i> the bit read (0 or 1)</dl>
+<dd>the lowest-level function for devices that really support the 1-wire protocol. touch_bit(0) = write-0 cycle touch_bit(1) = write-1 / read cycle <i>return</i> the bit read (0 or 1)</dl>
 <p> read_byte</p>
 <dl>
-<dd>Reads a bytes. Same as 8 <a href="/docs/linux/man/1-touch_bit/">touch_bit</a>(1) calls. <i>return</i> the byte read</dl>
+<dd>Reads a bytes. Same as 8 touch_bit(1) calls. <i>return</i> the byte read</dl>
 <p> write_byte</p>
 <dl>
 <dd>Writes a byte. Same as 8 touch_bit(x) calls.</dl>

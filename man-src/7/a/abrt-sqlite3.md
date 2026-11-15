@@ -7,7 +7,7 @@ url: "/docs/linux/man/7-abrt-sqlite3/"
 description: "SQLite3 database plugin for abrt(8)"
 ---
 
-<p>SQLite3 database plugin for <a href="/docs/linux/man/8-abrt/">abrt</a>(8)</p>
+<p>SQLite3 database plugin for abrt(8)</p>
 <h2>Description</h2>
 <p><i>abrt</i> is a daemon that watches for application crashes. When a crash occurs, it collects the crash data and takes action according to its configuration. This manual page describes the <i>SQLite3</i> database plugin for <i>abrt</i>. This is a database plugin: <i>abrt</i> needs a database in which to store its metadata. You can choose one by specifying &quot;Database&quot; in the <i>abrt.conf</i> configuration file. Currently SQLite3 is the only choice supported.</p>
 <h2>Invocation</h2>
@@ -21,6 +21,6 @@ description: "SQLite3 database plugin for abrt(8)"
 <h2>Examples</h2>
 <p>see <code>INVOCATION</code></p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-abrt/">abrt</a></i>(8), <i><a href="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a href="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7)</p>
+<p><i>abrt</i>(8), <i><a href="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a href="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7)</p>
 <h2>Author</h2>
 <p>Written by Zdenek Prikryl &lt;zprikryl [at] redhat.com&gt; and Jiri Moskovcak &lt;jmoskovc [at] redhat.com&gt;. Manual page by Daniel Novotny &lt;dnovotny [at] redhat.com&gt;.</p>

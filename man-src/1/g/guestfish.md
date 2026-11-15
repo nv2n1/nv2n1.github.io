@@ -21,7 +21,7 @@ guestfish[--options][commands] guestfish
 <p> Using <tt>&quot;guestfish&quot;</tt> in write mode on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently. </p>
 <p> Use the <i>&#8211;ro</i> (read-only) option to use <tt>&quot;guestfish&quot;</tt> safely if the disk image or virtual machine might be live. You may see strange or inconsistent results if running concurrently with other changes, but with this option you won&#8217;t risk disk corruption.</p>
 <h2>DESCRIPTION</h2>
-<p> Guestfish is a shell and command-line tool for examining and modifying virtual machine filesystems. It uses libguestfs and exposes all of the functionality of the guestfs <font SIZE="-1">API,</font> see <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3). </p>
+<p> Guestfish is a shell and command-line tool for examining and modifying virtual machine filesystems. It uses libguestfs and exposes all of the functionality of the guestfs <font SIZE="-1">API,</font> see <i>guestfs</i>(3). </p>
 <p> Guestfish gives you structured access to the libguestfs <font SIZE="-1">API,</font> from shell scripts or the command line or interactively. If you want to rescue a broken virtual machine image, you should look at the <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1) command.</p>
 <h2>EXAMPLES</h2>
 <h3>As an interactive shell</h3>
@@ -194,7 +194,7 @@ guestfish[--options][commands] guestfish
 <dt><code>&#8211;listen</code></p>
 <dd> Fork into the background and listen for remote commands. See section &#8220;<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8221;</font> below.</p>
 <dt><code>&#8211;live</code></p>
-<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)).</p>
+<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i>guestfs</i>(3)).</p>
 <dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></p>
 <dd>
 <dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></p>
@@ -220,7 +220,7 @@ guestfish[--options][commands] guestfish
 <dt><code>-n</code></p>
 <dd>
 <dt><code>&#8211;no-sync</code></p>
-<dd> Disable autosync. This is enabled by default. See the discussion of autosync in the <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) manpage.</p>
+<dd> Disable autosync. This is enabled by default. See the discussion of autosync in the <i>guestfs</i>(3) manpage.</p>
 <dt><code>&#8211;no-dest-paths</code></p>
 <dd> Don&#8217;t tab-complete paths on the guest filesystem. It is useful to be able to hit the tab key to complete paths on the guest filesystem, but this causes extra &#8220;hidden&#8221; guestfs calls to be made, so this option is here to allow this feature to be disabled.</p>
 <dt><code>&#8211;pipe-error</code></p>
@@ -268,7 +268,7 @@ guestfish[--options][commands] guestfish
 <p> If there are no additional arguments, then we enter a shell, either an interactive shell with a prompt (if the input is a terminal) or a non-interactive shell. </p>
 <p> In either command line mode or non-interactive shell, the first command that gives an error causes the whole shell to exit. In interactive mode (with a prompt) if a command fails, you can continue to enter commands.</p>
 <h2>USING launch (OR run)</h2>
-<p> As with <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), you must first configure your guest by adding disks, then launch it, then mount any disks you need, and finally issue actions/commands. So the general order of the day is:</p>
+<p> As with <i>guestfs</i>(3), you must first configure your guest by adding disks, then launch it, then mount any disks you need, and finally issue actions/commands. So the general order of the day is:</p>
 <dl>
 <dt>&bull;</p>
 <dd> add or -a/&#8211;add</p>
@@ -312,7 +312,8 @@ guestfish[--options][commands] guestfish
 <dt>&quot;
 &quot;</p>
 <dd> Newline character.</p>
-<dt>&quot;&quot;</p>
+<dt>&quot;
+&quot;</p>
 <dd> Carriage return character.</p>
 <dt>&quot;	&quot;</p>
 <dd> Horizontal tab character.</p>

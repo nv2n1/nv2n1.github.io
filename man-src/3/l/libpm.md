@@ -10,7 +10,7 @@ description: "Table Of Contents"
 <p>Table Of Contents </p>
 <p> These library functions are part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> This page documents functions in the Netpbm subroutine library that are not directly related to image data. </p>
-<p> For introductory and general information using <code>libnetpbm</code>, see <code>Libnetpbm</code>User&#8217;s<code><a href="/docs/linux/man/1-guide/">Guide</a></code>(1) </p>
+<p> For introductory and general information using <code>libnetpbm</code>, see <code>Libnetpbm</code>User&#8217;s<code>Guide</code>(1) </p>
 <p> The most commonly used <code>libnetpbm</code> functions are those that read and write and process Netpbm images. Those are documented in <code>Libnetpbm</code>Netpbm<code>Image</code>Processing Manual (1) </p>
 <p> To use these services, #include <code>pam.h</code>. </p>
 <h2>Functions</h2>
@@ -139,10 +139,10 @@ pm_message('Message for the message log');
 <dl>
 <dt>&bull;</p>
 <dd>
-<p> <code><a href="/docs/linux/man/1-pm_system/">pm_system</a></code>(1) </p>
+<p> <code>pm_system</code>(1) </p>
 <dt>&bull;</p>
 <dd>
-<p> <code><a href="/docs/linux/man/1-pm_tmpfile/">pm_tmpfile</a></code>(1) </p>
+<p> <code>pm_tmpfile</code>(1) </p>
 </dl>
 <h3>Keyword Matching</h3>
 <p> <code>Entry Points</code> </p>

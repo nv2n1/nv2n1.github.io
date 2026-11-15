@@ -76,6 +76,6 @@ description: "g_rdf – calculates radial distribution functions"
 <p> <code>-energy</code><i> real</i><code> 12 </code><br />
 &nbsp;<wbr>Energy of the incoming X-ray&nbsp;<wbr>(keV)&nbsp;<wbr> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

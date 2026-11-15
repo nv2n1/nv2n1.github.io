@@ -79,7 +79,7 @@ gmt x2sys_cross A13232.mgd77 A99938.mgd77 -Qe -TMGD77 &gt; crossovers.d
 </pre>
 <h2>REFERENCES</h2>
 <p> Wessel, P. (2010), Tools for analyzing intersecting tracks: the x2sys package. <i>Computers and Geosciences</i>, <code>36</code>, 348-354. </p>
-<p> Wessel, P. (1989), XOVER: A cross-over error detector for track data, <i>Computers and Geosciences</i>, <code><a href="/docs/linux/man/3-15/">15</a></code>(3), 333-346.</p>
+<p> Wessel, P. (1989), XOVER: A cross-over error detector for track data, <i>Computers and Geosciences</i>, <code>15</code>(3), 333-346.</p>
 <h2>SEE ALSO</h2>
 <p> <code>gmt</code>, <code>x2sys_binlist</code>, <code>x2sys_init</code>, <code>x2sys_datalist</code>, <code>x2sys_get</code>, <code>x2sys_list</code>, <code>x2sys_put</code>, <code>x2sys_report</code>, <code>x2sys_solve</code>, <i>x_over</i></p>
 <h2>COPYRIGHT</h2>

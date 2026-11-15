@@ -317,7 +317,7 @@ description: "mount.cifs – mount using the Common Internet File System (CIFS)"
 <p> The variable <i>PASSWD_FILE</i> may contain the pathname of a file to read the password from. A single line of input is read and used as the password.</p>
 <h2>Notes</h2>
 <p>This command may be used only by root, unless installed setuid, in which case the noeexec and nosuid mount flags are enabled. When installed as a setuid program, the program follows the conventions set forth by the mount program for user mounts, with the added restriction that users must be able to chdir() into the mountpoint prior to the mount in order to be able to mount onto it. </p>
-<p> Some samba client tools like <a href="/docs/linux/man/8-smbclient/">smbclient</a>(8) honour client-side configuration parameters present in smb.conf. Unlike those client tools, <i>mount.cifs</i> ignores smb.conf completely.</p>
+<p> Some samba client tools like smbclient(8) honour client-side configuration parameters present in smb.conf. Unlike those client tools, <i>mount.cifs</i> ignores smb.conf completely.</p>
 <h2>Configuration</h2>
 <p>The primary mechanism for making configuration changes and for reading debug information for the cifs vfs is via the Linux /proc filesystem. In the directory /proc/fs/cifs are various configuration files and pseudo files which can display debug information. There are additional startup options such as maximum buffer size and number of buffers which only may be set when the kernel cifs vfs (cifs.ko module) is loaded. These can be seen by running the modinfo utility against the file cifs.ko which will list the options that may be passed to cifs during module installation (device driver load). For more information see the kernel file fs/cifs/README.</p>
 <h2>Bugs</h2>

@@ -38,7 +38,7 @@ description: "jfs_tune – adjust tunable file system parameters on JFS"
 <dd>generate a new time-based UUID</dl>
 </dl>
 <dd>The UUID may be used by <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), and <code>/etc/<a href="/docs/linux/man/5-fstab/">fstab</a></code>(5) (and possibly others) by specifying <code>UUID=</code><i>uuid</i> instead of a block special device name like <code>/dev/hda1</code>.</p>
-<dd>See <code><a href="/docs/linux/man/8-uuidgen/">uuidgen</a></code>(8) for more information. </p>
+<dd>See <code>uuidgen</code>(8) for more information. </p>
 <dt><code>-V</code></p>
 <dd>Print version information and exit (regardless of any other chosen options). </p>
 </dl>

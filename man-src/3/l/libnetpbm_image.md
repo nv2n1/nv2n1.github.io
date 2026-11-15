@@ -12,10 +12,10 @@ description: "libnetpbm_image – overview of netpbm image-processing functions"
 <p> libnetpbm_image &#8211; overview of netpbm image-processing functions </p>
 <h2>DESCRIPTION</h2>
 <p> This reference manual covers functions in the <code>libnetpbm</code> library for processing images, using the Netpbm image formats and the <code>libnetpbm</code> in-memory image formats. </p>
-<p> For historical reasons as well as to avoid clutter, it does not cover the largely obsolete PBM, PGM, PPM, and PNM classes of <code>libnetpbm</code> functions. For those, see <code>PBM</code> Function Manual (1) , <code>PGM</code>Function<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) , <code>PPM</code>Function<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) , and <code>PNM</code>Function<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) <code>te that you do </code><i>not</i> need those functions to process PBM, PGM, PPM, and PNM images. The functions in this manual are sufficient for that. </p>
-<p> The PPM drawing functions are covered separately in <code>PPM</code>Drawing<code>Function</code><a href="/docs/linux/man/1-manual/">Manual</a><code>(1)</code> </p>
-<p> For introductory and general information using <code>libnetpbm</code>, see <code>Libnetpbm</code>User&#8217;s<code><a href="/docs/linux/man/1-guide/">Guide</a></code>(1) </p>
-<p> <code>libnetpbm</code> also contains functions that are not specifically oriented toward processing image data. Read about those in the <code>Libnetpbm</code>Utility<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) </p>
+<p> For historical reasons as well as to avoid clutter, it does not cover the largely obsolete PBM, PGM, PPM, and PNM classes of <code>libnetpbm</code> functions. For those, see <code>PBM</code> Function Manual (1) , <code>PGM</code>Function<code>Manual</code>(1) , <code>PPM</code>Function<code>Manual</code>(1) , and <code>PNM</code>Function<code>Manual</code>(1) <code>te that you do </code><i>not</i> need those functions to process PBM, PGM, PPM, and PNM images. The functions in this manual are sufficient for that. </p>
+<p> The PPM drawing functions are covered separately in <code>PPM</code>Drawing<code>Function</code>Manual<code>(1)</code> </p>
+<p> For introductory and general information using <code>libnetpbm</code>, see <code>Libnetpbm</code>User&#8217;s<code>Guide</code>(1) </p>
+<p> <code>libnetpbm</code> also contains functions that are not specifically oriented toward processing image data. Read about those in the <code>Libnetpbm</code>Utility<code>Manual</code>(1) </p>
 <p> To use these services, #include <code>pam.h</code>. </p>
 <h2>Types</h2>
 <p> Here are some important types that you use with <code>libnetpbm</code>: </p>

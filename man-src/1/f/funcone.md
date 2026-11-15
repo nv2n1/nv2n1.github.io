@@ -49,5 +49,5 @@ description: "funcone – cone search of a binary table containing RA, Dec colum
   funcone -r myRa:d -d myDec in.fits out.fits 12:30:15.5 30:12 15'
 </pre>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

@@ -149,7 +149,7 @@ description: "prlimit – get and set process resource limits"
 <h2>AUTHORS</h2>
 <p> &#8211; In memory of Dennis M. Ritchie.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/1p-ulimit/">ulimit</a></code>(1p), <code><a href="/docs/linux/man/2-prlimit/">prlimit</a></code>(2)</p>
+<p> <code>ulimit</code>(1p), <code><a href="/docs/linux/man/2-prlimit/">prlimit</a></code>(2)</p>
 <h2>REPORTING BUGS</h2>
 <p> For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.</p>
 <h2>AVAILABILITY</h2>

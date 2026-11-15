@@ -42,7 +42,7 @@ int main()
 </code></pre>
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;Bitset is 00101010<br />
-&nbsp;<wbr>&nbsp;After <a href="/docs/linux/man/1-b-reset/">b.reset</a><code>(1)</code>: 00101000<br />
+&nbsp;<wbr>&nbsp;After b.reset<code>(1)</code>: 00101000<br />
 &nbsp;<wbr>&nbsp;After b.reset(): 00000000</p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets bits to true or given value<br />

@@ -53,7 +53,7 @@ down&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr
 &nbsp;<wbr>&nbsp;<wbr>esac<br />
 &nbsp;<wbr>done It may be useful to shorten the DHCP client daemon timeout if it does not receive an address by adding the following setting to /etc/sysconfig/network: DHCPCDARGS=&quot;-t 3&quot; </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ether-wake/">ether-wake</a></code>(8),<code><a href="/docs/linux/man/8-net-diag/">net-diag</a></code>(8),<code><a href="/docs/linux/man/8-mii-tool/">mii-tool</a></code>(8).<br />
+<p><code><a href="/docs/linux/man/8-ether-wake/">ether-wake</a></code>(8),<code>net-diag</code>(8),<code><a href="/docs/linux/man/8-mii-tool/">mii-tool</a></code>(8).<br />
  Addition documentation is available from <a rel="nofollow" href="http://scyld.com/diag/index.html.">http://scyld.com/diag/index.html.</a> </p>
 <h2>Known Bugs</h2>
 <p>The &#8211;all-interfaces option is quirky. There are very few settings that are usefully applied to all interfaces.</p>

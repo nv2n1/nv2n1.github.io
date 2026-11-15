@@ -11,7 +11,7 @@ description: "genuca – create the UCA data table"
 <h2>Synopsis</h2>
 <p><code>genuca</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <i>file</i> ]</p>
 <h2>Description</h2>
-<p><code>genuca</code> compiles the Unicode Collation Algorithm (UCA) data from <i>file</i> (or from <code>FractionalUCA.txt</code> if <i>file</i> is omitted) into its binary form, the files <code>ucadata.dat</code> and <code>invuca.dat</code>. These binary files can then be read directly by ICU, or used by <code><a href="/docs/linux/man/8-pkgdata/">pkgdata</a></code>(8) for incorporation into a larger archive or library.</p>
+<p><code>genuca</code> compiles the Unicode Collation Algorithm (UCA) data from <i>file</i> (or from <code>FractionalUCA.txt</code> if <i>file</i> is omitted) into its binary form, the files <code>ucadata.dat</code> and <code>invuca.dat</code>. These binary files can then be read directly by ICU, or used by <code>pkgdata</code>(8) for incorporation into a larger archive or library.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
@@ -39,4 +39,4 @@ description: "genuca – create the UCA data table"
 <h2>Copyright</h2>
 <p>Copyright (C) 2001 IBM, Inc. and others.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-pkgdata/">pkgdata</a></code>(8) </p>
+<p><code>pkgdata</code>(8) </p>

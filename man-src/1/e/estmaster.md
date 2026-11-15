@@ -37,6 +37,6 @@ description: "estmaster – master process of node servers"
 <p> All sub commands return 0 if the operation is success, else return 1. A running node master finishes with closing the database when it catches the signal 1 (SIGHUP), 2 (SIGINT), 3 (SIGQUIT), or 15 (SIGTERM). Moreover, when a node master running as a daemon catches the signal 1 (SIGHUP), the process is re-start and re-read the configuration files. </p>
 <p> A running node server should be finished by valid means by command line or via network. Otherwise, the index may be broken. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code><a href="/docs/linux/man/3-estraier/">estraier</a></code>(3), <code><a href="/docs/linux/man/3-estnode/">estnode</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code>estraier</code>(3), <code>estnode</code>(3) </p>
 <p> Please see <code><a rel="nofollow" href="http://hyperestraier.sourceforge.net/nguide-en.html">http://hyperestraier.sourceforge.net/nguide-en.html</a></code> for detail. </p>
 <h2>Index</h2>

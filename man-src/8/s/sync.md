@@ -30,6 +30,6 @@ description: "sync – synchronize data on disk with memory"
 <p>On Linux, <code>sync</code> is guaranteed only to schedule the dirty blocks for writing; it can actually take a short time before all the blocks are finally written. The <code><a href="/docs/linux/man/8-reboot/">reboot</a></code>(8) and <code><a href="/docs/linux/man/8-halt/">halt</a></code>(8) commands take this into account by sleeping for a few seconds after calling <code><a href="/docs/linux/man/2-sync/">sync</a></code>(2). </p>
 <p> This page describes <code>sync</code> as found in the fileutils-4.0 package; other versions may differ slightly.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/2-sync/">sync</a></code>(2), <code><a href="/docs/linux/man/8-halt/">halt</a></code>(8), <code><a href="/docs/linux/man/8-reboot/">reboot</a></code>(8), <code><a href="/docs/linux/man/8-update/">update</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/2-sync/">sync</a></code>(2), <code><a href="/docs/linux/man/8-halt/">halt</a></code>(8), <code><a href="/docs/linux/man/8-reboot/">reboot</a></code>(8), <code>update</code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 3.53 of the Linux <i>man-pages</i> project. A description of the project, and information about reporting bugs, can be found at <a rel="nofollow" href="http://www.kernel.org/doc/man-pages/.">http://www.kernel.org/doc/man-pages/.</a> </p>

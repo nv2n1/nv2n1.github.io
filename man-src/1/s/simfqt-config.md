@@ -41,7 +41,7 @@ description: "simfqt-config –"
 <p> <code>&#8211;refmanpath</code> </p>
 <p>&nbsp;<wbr>Show where the PDF documentation is located.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-simfqt/">simfqt</a>(1)</code>, <code><a href="/docs/linux/man/1-simfqt-parsefarerules/">simfqt-parseFareRules</a></code>(1), <code><a href="/docs/linux/man/3-simfqt-library/">simfqt-library</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/1-simfqt/">simfqt</a>(1)</code>, <code>simfqt-parseFareRules</code>(1), <code><a href="/docs/linux/man/3-simfqt-library/">simfqt-library</a></code>(3)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright © 2009-2011 Denis Arnaud </p>
 <p> See the COPYING file for more information on the (LGPLv2+) license, or directly on Internet: </p>

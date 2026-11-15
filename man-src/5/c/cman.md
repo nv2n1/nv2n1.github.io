@@ -56,4 +56,4 @@ description: "cman – cluster.conf cman configuration section"
 
 </code></pre>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a>(5), <a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a>(5), <a href="/docs/linux/man/8-cman_tool/">cman_tool</a>(8) </p>
+<p>cluster.conf(5), <a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a>(5), <a href="/docs/linux/man/8-cman_tool/">cman_tool</a>(8) </p>

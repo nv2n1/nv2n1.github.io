@@ -24,6 +24,6 @@ description: "make-ssl-cert – Debconf wrapper for openssl"
 <dt><code>&#8211;expiration-days </code><i>N</i></p>
 <dd>Make the new certificate expire in <i>N</i> days. Default is 3650.</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-openssl/">openssl</a></i>(1)</p>
+<p><i>openssl</i>(1)</p>
 <h2>Author</h2>
 <p>The program author is Thom May &lt;thom [at] debian.org&gt;, manual page was written for completeness by Fabio M. Di Nitto &lt;fabbione [at] fabbione.net&gt;, for the Debian GNU/Linux system (but may be used by others).</p>

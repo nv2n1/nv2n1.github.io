@@ -18,7 +18,7 @@ description: "initng – a full replacement of the old and in many ways depricat
 <h2>Options</h2>
 <p>Initng is the first process the kernel starts. It has no parameters. It will start the services defined in /etc/initng.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ngc/">ngc</a>(8),</code> <code><a href="/docs/linux/man/8-ngdc/">ngdc</a>(8),</code> <code><a href="/docs/linux/man/8-ng-update/">ng-update</a>(8),</code> <code><a href="/docs/linux/man/8-gen_system_runlevel/">gen_system_runlevel</a>(8),</code> <code><a href="/docs/linux/man/8-install_service/">install_service</a>(8),</code> <code><a href="/docs/linux/man/8-system_off/">system_off</a>(8).</code></p>
+<p><code><a href="/docs/linux/man/8-ngc/">ngc</a>(8),</code> <code><a href="/docs/linux/man/8-ngdc/">ngdc</a>(8),</code> <code><a href="/docs/linux/man/8-ng-update/">ng-update</a>(8),</code> <code>gen_system_runlevel(8),</code> <code><a href="/docs/linux/man/8-install_service/">install_service</a>(8),</code> <code>system_off(8).</code></p>
 <h2>Author</h2>
 <p>initng was written by Jimmy Wennlund &lt;jimmy.wennlund [at] gmail.com&gt; and can be found at <a rel="nofollow" href="http://www.initng.org/.">http://www.initng.org/.</a> </p>
 <p> This manual page was written by Armin Berres &lt;a.berres [at] web.de&gt; based on the readme file written by Patrick Boehnke.</p>

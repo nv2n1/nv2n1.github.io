@@ -126,4 +126,4 @@ description: "fence_virt – Fencing agent for virtual machines using VM Channel
 <dd>Print XML metadata to standard output. </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-fence_virtd/">fence_virtd</a>(8), <a href="/docs/linux/man/8-fence/">fence</a>(8), <a href="/docs/linux/man/5-fence_virtd-conf/">fence_virtd.conf</a>(5) </p>
+<p><a href="/docs/linux/man/8-fence_virtd/">fence_virtd</a>(8), fence(8), fence_virtd.conf(5) </p>

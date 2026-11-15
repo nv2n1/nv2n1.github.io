@@ -85,10 +85,10 @@ description: "snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_va
 <p> <code>fprint_variable</code> does the same, but prints to the FILE pointer specified by the initial parameter. </p>
 <p> <code>snprint_variable</code> prints the same information into the buffer pointed to by <i>buf</i> which is of length <i>len</i>. It returns the number of characters printed, or -1 if the buffer was not large enough. In the latter case, <i>buf</i> will typically contained a truncated version of the information (but this behaviour is not guaranteed). This function replaces the obsolete function <code>sprint_variable</code>. </p>
 <p> <code>print_value</code>, <code>fprint_value</code>, and <code>snprint_value</code> do the same as the equivalent <code>print_variable</code> routines, but only displaying the value of the variable, without the corresponding object identifier. </p>
-<p> For displaying the OID of a varbind, see <code><a href="/docs/linux/man/3-min_api/">min_api</a></code>(3). </p>
+<p> For displaying the OID of a varbind, see <code>min_api</code>(3). </p>
 <h3>Deletion</h3>
 <p> <code>snmp_free_var</code> releases all memory used by the given varbind structure.<br />
  <code>snmp_free_varbind</code> releases all memory used by each varbind structure in the varbind list provided. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-pdu_api/">pdu_api</a></code>(3) <code><a href="/docs/linux/man/3-mib_api/">mib_api</a></code>(3) </p>
+<p> <code>pdu_api</code>(3) <code><a href="/docs/linux/man/3-mib_api/">mib_api</a></code>(3) </p>
 <h2>Index</h2>

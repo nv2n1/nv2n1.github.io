@@ -100,4 +100,4 @@ description: "DeviceKit-disks – Disk Management"
 <h2>Bugs</h2>
 <p>Please send bug reports to either the distribution or the hal mailing list, see m[blue]<code><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/hal">http://lists.freedesktop.org/mailman/listinfo/hal</a></code>m[]. to subscribe.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-devicekit/">DeviceKit</a></code>(7), <code><a href="/docs/linux/man/8-policykit/">PolicyKit</a></code>(8), <code><a href="/docs/linux/man/8-devkit-disks-daemon/">devkit-disks-daemon</a></code>(8), <code><a href="/docs/linux/man/1-devkit-disks/">devkit-disks</a></code>(1) </p>
+<p><code>DeviceKit</code>(7), <code>PolicyKit</code>(8), <code><a href="/docs/linux/man/8-devkit-disks-daemon/">devkit-disks-daemon</a></code>(8), <code>devkit-disks</code>(1) </p>

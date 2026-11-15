@@ -59,7 +59,7 @@ description: "cciss – HP Smart Array block driver"
  Smart Array P712m
  Smart Array P711m</pre>
 <h3>Configuration details</h3>
-<p>To configure HP Smart Array controllers, use the HP Array Configuration Utility (either <code><a href="/docs/linux/man/8-hpacuxe/">hpacuxe</a></code>(8) or <code><a href="/docs/linux/man/8-hpacucli/">hpacucli</a></code>(8)) or the Offline ROM-based Configuration Utility (ORCA) run from the Smart Array&#8217;s option ROM at boot time.</p>
+<p>To configure HP Smart Array controllers, use the HP Array Configuration Utility (either <code>hpacuxe</code>(8) or <code>hpacucli</code>(8)) or the Offline ROM-based Configuration Utility (ORCA) run from the Smart Array&#8217;s option ROM at boot time.</p>
 <h2>Files</h2>
 <h3>Device nodes</h3>
 <p>The device naming scheme is as follows: </p>
@@ -189,7 +189,7 @@ description: "cciss – HP Smart Array block driver"
 <p> The <code>cciss</code> driver is a block driver as well as a SCSI driver and only the tape drives and medium changers are presented to the SCSI midlayer. Furthermore, unlike more straightforward SCSI drivers, disk I/O continues through the block side during the SCSI error-recovery process. Therefore, the <code>cciss</code> driver implements only the first two of these actions, aborting the command, and resetting the device. Note also that most tape drives will not oblige in aborting commands, and sometimes it appears they will not even obey a reset command, though in most circumstances they will. If the command cannot be aborted and the device cannot be reset, the device will be set offline. </p>
 <p> In the event that the error-handling code is triggered and a tape drive is successfully reset or the tardy command is successfully aborted, the tape drive may still not allow I/O to continue until some command is issued that positions the tape to a known position. Typically you must rewind the tape (by issuing <i>mt -f /dev/st0 rewind</i> for example) before I/O can proceed again to a tape drive that was reset.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-hpsa/">hpsa</a></code>(4), <code><a href="/docs/linux/man/8-cciss_vol_status/">cciss_vol_status</a></code>(8), <code><a href="/docs/linux/man/8-hpacucli/">hpacucli</a></code>(8), <code><a href="/docs/linux/man/8-hpacuxe/">hpacuxe</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/4-hpsa/">hpsa</a></code>(4), <code><a href="/docs/linux/man/8-cciss_vol_status/">cciss_vol_status</a></code>(8), <code>hpacucli</code>(8), <code>hpacuxe</code>(8) </p>
 <p> and <i>Documentation/blockdev/cciss.txt</i> and <i>Documentation/ABI/testing/sysfs-bus-pci-devices-cciss</i> in the Linux kernel source tree</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

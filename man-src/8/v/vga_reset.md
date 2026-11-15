@@ -15,6 +15,6 @@ description: "vga_reset – reset video graphic board"
 <h2>Bugs</h2>
 <p>Using this program is unsafe, and might (depending on the bios) result in a video card in a state that requires a hard reset to restore to normal, or even a hung computer.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-mode3/">mode3</a></code>(8).</p>
+<p><code>mode3</code>(8).</p>
 <h2>Author</h2>
 <p>This manual page was written by Guillem Jover &lt;guillem [at] debian.org&gt;.</p>

@@ -38,11 +38,11 @@ description: "dlasr.f –"
  
  When DIRECT = 'F' (Forward sequence), then
  
-    P = P(z-1) * ... * <a href="//www.systutorials.com/docs/linux/man/2-P/">P</a>(2) * <a href="//www.systutorials.com/docs/linux/man/1-P/">P</a>(1)
+    P = P(z-1) * ... * P(2) * P(1)
  
  and when DIRECT = 'B' (Backward sequence), then
  
-    P = <a href="//www.systutorials.com/docs/linux/man/1-P/">P</a>(1) * <a href="//www.systutorials.com/docs/linux/man/2-P/">P</a>(2) * ... * P(z-1)
+    P = P(1) * P(2) * ... * P(z-1)
  
  where P(k) is a plane rotation matrix defined by the 2-by-2 rotation
  
@@ -119,8 +119,8 @@ description: "dlasr.f –"
           DIRECT is CHARACTER*1
           Specifies whether P is a forward or backward sequence of
           plane rotations.
-          = 'F':  Forward, P = P(z-1)*...*<a href="//www.systutorials.com/docs/linux/man/2-P/">P</a>(2)*<a href="//www.systutorials.com/docs/linux/man/1-P/">P</a>(1)
-          = 'B':  Backward, P = <a href="//www.systutorials.com/docs/linux/man/1-P/">P</a>(1)*<a href="//www.systutorials.com/docs/linux/man/2-P/">P</a>(2)*...*P(z-1)
+          = 'F':  Forward, P = P(z-1)*...*P(2)*P(1)
+          = 'B':  Backward, P = P(1)*P(2)*...*P(z-1)
 </pre>
 <p> <i>M</i> </p>
 <pre>

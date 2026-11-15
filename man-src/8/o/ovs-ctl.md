@@ -203,4 +203,4 @@ description: "ovs-ctl – OVS startup helper script"
 <h2>Example</h2>
 <p>The files <code>debian/openvswitch-switch.init</code> and <code>xenserver/etc_init.d_openvswitch</code> in the Open vSwitch source distribution are good examples of how to use <code>ovs-ctl</code>.</p>
 <h2>See Also</h2>
-<p><code>README.md</code>, <code>INSTALL.Linux.md</code>, <code><a href="/docs/linux/man/8-ovsdb-server/">ovsdb-server</a></code>(8), <code><a href="/docs/linux/man/8-ovs-vswitchd/">ovs-vswitchd</a></code>(8). </p>
+<p><code>README.md</code>, <code>INSTALL.Linux.md</code>, <code>ovsdb-server</code>(8), <code><a href="/docs/linux/man/8-ovs-vswitchd/">ovs-vswitchd</a></code>(8). </p>

@@ -857,7 +857,7 @@ Failed Test Status Wstat Total Fail Failed List of failed-- -- -- -- -- -- -- --
 <dt>8.
 <dd> Make sure that the installed modules are actually installed in the location of the new Perl, and are not inherited from entries of <tt>@INC</tt> given for inheritance from the older versions of Perl: set <tt>&quot;PERLLIB_582_PREFIX&quot;</tt> to redirect the new version of Perl to a new location, and copy the installed files to this new location. Redo the tests to make sure that the versions of modules inherited from older versions of Perl are not needed. 
 
- Actually, the log output of <b><a HREF="/docs/linux/man/1-pod2ipf/">pod2ipf</a></b>(1) during the step 6 gives a very detailed info about which modules are loaded from which place; so you may use it as an additional verification tool. 
+ Actually, the log output of <b>pod2ipf</b>(1) during the step 6 gives a very detailed info about which modules are loaded from which place; so you may use it as an additional verification tool. 
 
  Check that some temporary files did not make into the perl install tree. Run something like this 
 
@@ -1211,7 +1211,7 @@ int main(int argc, char **argv, char **env)
 
  Dies with ``QUITing...'' if <font SIZE="-1">WM_QUIT</font> message is obtained.
 <dt>&quot;OS2::_control87(new,mask)&quot;
-<dd> the same as <b><a HREF="/docs/linux/man/3-_control87/">_control87</a></b>(3) of <font SIZE="-1">EMX.</font> Takes integers as arguments, returns the previous coprocessor control word as an integer. Only bits in <tt>&quot;new&quot;</tt> which are present in <tt>&quot;mask&quot;</tt> are changed in the control word.
+<dd> the same as <b>_control87</b>(3) of <font SIZE="-1">EMX.</font> Takes integers as arguments, returns the previous coprocessor control word as an integer. Only bits in <tt>&quot;new&quot;</tt> which are present in <tt>&quot;mask&quot;</tt> are changed in the control word.
 <dt><b>OS2::get_control87()</b>
 <dd> gets the coprocessor control word as an integer.
 <dt>&quot;OS2::set_control87_em(new=MCW_EM,mask=MCW_EM)&quot;
@@ -1252,15 +1252,15 @@ int main(int argc, char **argv, char **env)
 <dd>
 <dl>
 <dt>&bull;
-<dd> The functions <b><a HREF="/docs/linux/man/3-recvmsg/">recvmsg</a></b>(3), <b><a HREF="/docs/linux/man/3-sendmsg/">sendmsg</a></b>(3), and <b><a HREF="/docs/linux/man/3-socketpair/">socketpair</a></b>(3) are not implemented.
+<dd> The functions <b>recvmsg</b>(3), <b>sendmsg</b>(3), and <b>socketpair</b>(3) are not implemented.
 <dt>&bull;
-<dd> <b><a HREF="/docs/linux/man/3-sock_init/">sock_init</a></b>(3) is not required and not implemented.
+<dd> <b>sock_init</b>(3) is not required and not implemented.
 <dt>&bull;
 <dd> <b><a HREF="/docs/linux/man/3-flock/">flock</a></b>(3) is not yet implemented (dummy function). (Perl has a workaround.)
 <dt>&bull;
-<dd> <b><a HREF="/docs/linux/man/3-kill/">kill</a></b>(3): Special treatment of PID=0, PID=1 and PID=-1 is not implemented.
+<dd> <b>kill</b>(3): Special treatment of PID=0, PID=1 and PID=-1 is not implemented.
 <dt>&bull;
-<dd> <b><a HREF="/docs/linux/man/3-waitpid/">waitpid</a></b>(3): 
+<dd> <b>waitpid</b>(3): 
 
  <pre>
       WUNTRACED
@@ -1355,7 +1355,7 @@ extern int Perl_hab_GET(void);
 
  To signal to Perl that <font SIZE="-1">HMQ</font> is not needed any more, call <tt>&quot;perl_hmq_UNSET(serve)&quot;</tt>. Perl process will automatically morph/unmorph itself into/from a <font SIZE="-1">PM</font> process if <font SIZE="-1">HMQ</font> is needed/not-needed. Perl will automatically enable/disable <tt>&quot;WM_QUIT&quot;</tt> message during shutdown if the message queue is served/not-served. 
 
- <font SIZE="-1"><b>NOTE</b></font>. If during a shutdown there is a message queue which did not disable <font SIZE="-1">WM_QUIT,</font> and which did not process the received <font SIZE="-1">WM_QUIT</font> message, the shutdown will be automatically cancelled. Do not call <tt><a HREF="/docs/linux/man/1-perl_hmq_get/">perl_hmq_GET</a>(1)</tt> unless you are going to process messages on an orderly basis.</dl>
+ <font SIZE="-1"><b>NOTE</b></font>. If during a shutdown there is a message queue which did not disable <font SIZE="-1">WM_QUIT,</font> and which did not process the received <font SIZE="-1">WM_QUIT</font> message, the shutdown will be automatically cancelled. Do not call <tt>perl_hmq_GET(1)</tt> unless you are going to process messages on an orderly basis.</dl>
 
 <dt>Treating errors reported by <font SIZE="-1">OS/2 API</font>
 <dd> There are two principal conventions (it is useful to call them <tt>&quot;Dos*&quot;</tt> and <tt>&quot;Win*&quot;</tt> - though this part of the function signature is not always determined by the name of the <font SIZE="-1">API</font>) of reporting the error conditions of <font SIZE="-1">OS/2 API.</font> Most of <tt>&quot;Dos*&quot;</tt> APIs report the error code as the result of the call (so 0 means success, and there are many types of errors). Most of <tt>&quot;Win*&quot;</tt> <font SIZE="-1">API</font> report success/fail via the result being <tt>&quot;TRUE&quot;</tt>/<tt>&quot;FALSE&quot;</tt>; to find the reason for the failure one should call <b>WinGetLastError()</b> <font SIZE="-1">API.</font> 
@@ -1516,7 +1516,7 @@ extern int Perl_hab_GET(void);
 
  If the beginning of some prebuilt path matches <i>path1</i>, it is substituted with <i>path2</i>. 
 
- Should be used if the perl library is moved from the default location in preference to <tt>&quot;<a HREF="/docs/linux/man/5-perl/">PERL</a>(5)LIB&quot;</tt>, since this would not leave wrong entries in <tt>@INC</tt>. For example, if the compiled version of perl looks for <tt>@INC</tt> in <i>f:/perllib/lib</i>, and you want to install the library in <i>h:/opt/gnu</i>, do 
+ Should be used if the perl library is moved from the default location in preference to <tt>&quot;PERL(5)LIB&quot;</tt>, since this would not leave wrong entries in <tt>@INC</tt>. For example, if the compiled version of perl looks for <tt>@INC</tt> in <i>f:/perllib/lib</i>, and you want to install the library in <i>h:/opt/gnu</i>, do 
 
  <pre>
   set PERLLIB_PREFIX=f:/perllib/lib;h:/opt/gnu

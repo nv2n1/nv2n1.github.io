@@ -45,4 +45,4 @@ description: "Tspi_TPM_CMKSetRestrictions – set restrictions on use of delegat
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_CMKSetRestrictions</code> conforms to the Trusted Computing Group Software Specification version 1.2 Errata A </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_tpm_cmkapprovema/">Tspi_TPM_CMKApproveMA</a></code>(3), <code><a href="/docs/linux/man/3-tspi_tpm_cmkcreateticket/">Tspi_TPM_CMKCreateTicket</a></code>(3), <code><a href="/docs/linux/man/3-tspi_key_cmkcreateblob/">Tspi_Key_CMKCreateBlob</a></code>(3)</p>
+<p><code>Tspi_TPM_CMKApproveMA</code>(3), <code>Tspi_TPM_CMKCreateTicket</code>(3), <code>Tspi_Key_CMKCreateBlob</code>(3)</p>

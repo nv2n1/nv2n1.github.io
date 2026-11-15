@@ -16,7 +16,7 @@ description: "pbmtolps – convert PBM image to PostScript"
 <p> <code>pbmtolps</code> reads a PBM image as input and outputs PostScript. The output Postscript uses lines instead of the image operator to generate a (device dependent) picture which will be imaged much faster. </p>
 <p> The Postscript path length is constrained to be less that 1000 points so that no limits are overrun on the Apple Laserwriter and (presumably) no other printers. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1) , <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1) , <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1) , <code>gs</code>, <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1) , <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1) , <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1) , <code>gs</code>, <code>pbm</code>(1) , </p>
 <h2>AUTHOR</h2>
 <p> George Phillips &lt;<i>phillips [at] cs.ubc.ca</i>&gt; </p>
 <h2>Index</h2>

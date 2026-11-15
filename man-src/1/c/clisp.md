@@ -370,7 +370,7 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dt>
 <dd> CLISP impnotes</p>
 <dt>
-<dd> <i></i><code>CMU CL</code>[47] &#8211; <code><a href="/docs/linux/man/1-cmucl/">cmucl</a></code>(1)</p>
+<dd> <i></i><code>CMU CL</code>[47] &#8211; <code>cmucl</code>(1)</p>
 <dt>
 <dd> <i>Emacs</i>[23] &#8211; <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1)</p>
 <dt>

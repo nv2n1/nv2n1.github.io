@@ -207,7 +207,7 @@ description: "groff – front-end for the groff document formatting system"
 <dt><code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1)</p>
 <dd> for mathematical formulae,</p>
 <dt><code><a href="/docs/linux/man/1-grn/">grn</a></code>(1)</p>
-<dd> for including <code><a href="/docs/linux/man/1-gremlin/">gremlin</a></code>(1) pictures,</p>
+<dd> for including <code>gremlin</code>(1) pictures,</p>
 <dt><code><a href="/docs/linux/man/1-pic/">pic</a></code>(1)</p>
 <dd> for drawing diagrams,</p>
 <dt><code><a href="/docs/linux/man/1-chem/">chem</a></code>(1)</p>
@@ -247,7 +247,7 @@ description: "groff – front-end for the groff document formatting system"
 <h3>Formatters</h3>
 <p> The central <i>roff</i> formatter within the <i>groff</i> system is <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1). It provides the features of both the classical <i>troff</i> and <i>nroff</i>, as well as the <i>groff</i> extensions. The command-line option <code>-C</code> switches <code>troff</code> into <i>compatibility mode</i> which tries to emulate classical <i>roff</i> as much as possible. </p>
 <p> There is a shell script <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1) that emulates the behavior of classical <code>nroff</code>. It tries to automatically select the proper output encoding, according to the current locale. </p>
-<p> The formatter program generates <i>intermediate output</i>; see <code><a href="/docs/linux/man/7-groff_out/">groff_out</a></code>(7).</p>
+<p> The formatter program generates <i>intermediate output</i>; see <code>groff_out</code>(7).</p>
 <h3>Devices</h3>
 <p> In <i>roff</i>, the output targets are called <i>devices</i>. A device can be a piece of hardware, e.g., a printer, or a software file format. A device is specified by the option <code>-T</code>. The <i>groff</i> devices are as follows.</p>
 <dl>
@@ -274,9 +274,9 @@ description: "groff – front-end for the groff document formatting system"
 <dt><code>xhtml</code></p>
 <dd> XHTML output.</p>
 <dt><code>X75</code></p>
-<dd> 75dpi X Window System output suitable for the previewers <code><a href="//www.systutorials.com/docs/linux/man/1x-xditview/">xditview</a></code>(1x) and <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1). A variant for a 12pt document base font is <code>X75-12</code>.</p>
+<dd> 75dpi X Window System output suitable for the previewers <code>xditview</code>(1x) and <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1). A variant for a 12pt document base font is <code>X75-12</code>.</p>
 <dt><code>X100</code></p>
-<dd> 100dpi X Window System output suitable for the previewers <code><a href="//www.systutorials.com/docs/linux/man/1x-xditview/">xditview</a></code>(1x) and <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1). A variant for a 12pt document base font is <code>X100-12</code>.</dl>
+<dd> 100dpi X Window System output suitable for the previewers <code>xditview</code>(1x) and <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1). A variant for a 12pt document base font is <code>X100-12</code>.</dl>
 <p> The postprocessor to be used for a device is specified by the <code>postpro</code> command in the device description file; see <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5). This can be overridden with the <code>-X</code> option. </p>
 <p> The default device is <code>ps</code>.</p>
 <h3>Postprocessors</h3>
@@ -333,7 +333,7 @@ description: "groff – front-end for the groff document formatting system"
 <dd> Convert a <code>pic</code> diagram into a cropped image.</p>
 <dt><code><a href="/docs/linux/man/1-tfmtodit/">tfmtodit</a></code>(1)</p>
 <dd> Create font description files for TeX DVI device.</p>
-<dt><code><a href="//www.systutorials.com/docs/linux/man/1x-xditview/">xditview</a></code>(1x)</p>
+<dt><code>xditview</code>(1x)</p>
 <dd> <i>roff</i> viewer historically distributed with the X Window System.</p>
 <dt><code><a href="/docs/linux/man/1-xtotroff/">xtotroff</a></code>(1)</p>
 <dd> Convert X font metrics into GNU <i>troff</i> font metrics.</dl>
@@ -455,21 +455,21 @@ description: "groff – front-end for the groff document formatting system"
 <dt>Introduction, history and further readings:</p>
 <dd> <code><a href="/docs/linux/man/7-roff/">roff</a></code>(7).</p>
 <dt>Viewer for groff files:</p>
-<dd> <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1), <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/1x-xditview/">xditview</a></code>(1x).</p>
+<dd> <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1), <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1), <code>xditview</code>(1x).</p>
 <dt>Wrapper programs for formatters:</p>
 <dd> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-grog/">grog</a></code>(1).</p>
 <dt>Roff preprocessors:</p>
-<dd> <code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1), <code><a href="/docs/linux/man/1-grn/">grn</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-chem/">chem</a></code>(1), <code><a href="/docs/linux/man/1-preconv/">preconv</a></code>(1), <code><a href="/docs/linux/man/1-refer/">refer</a></code>(1), <code><a href="/docs/linux/man/1-soelim/">soelim</a></code>(1), <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1), <code><a href="/docs/linux/man/1-grap/">grap</a></code>(1).</p>
+<dd> <code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1), <code><a href="/docs/linux/man/1-grn/">grn</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-chem/">chem</a></code>(1), <code><a href="/docs/linux/man/1-preconv/">preconv</a></code>(1), <code><a href="/docs/linux/man/1-refer/">refer</a></code>(1), <code><a href="/docs/linux/man/1-soelim/">soelim</a></code>(1), <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1), <code>grap</code>(1).</p>
 <dt>Roff language with the groff extensions:</p>
 <dd> <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7), <code><a href="/docs/linux/man/7-groff_char/">groff_char</a></code>(7), <code><a href="/docs/linux/man/7-groff_diff/">groff_diff</a></code>(7), <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5).</p>
 <dt>Roff formatter programs:</p>
 <dd> <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/7-ditroff/">ditroff</a></code>(7).</p>
 <dt>The intermediate output language:</p>
-<dd> <code><a href="/docs/linux/man/7-groff_out/">groff_out</a></code>(7).</p>
+<dd> <code>groff_out</code>(7).</p>
 <dt>Postprocessors for the output devices:</p>
 <dd> <code><a href="/docs/linux/man/1-grodvi/">grodvi</a></code>(1), <code><a href="/docs/linux/man/1-grohtml/">grohtml</a></code>(1), <code><a href="/docs/linux/man/1-grolbp/">grolbp</a></code>(1), <code><a href="/docs/linux/man/1-grolj4/">grolj4</a></code>(1), <code><a href="/docs/linux/man/5-lj4_font/">lj4_font</a></code>(5), <code><a href="/docs/linux/man/1-grops/">grops</a></code>(1), <code><a href="/docs/linux/man/1-gropdf/">gropdf</a></code>(1), <code><a href="/docs/linux/man/1-grotty/">grotty</a></code>(1).</p>
 <dt>Groff macro packages and macro-specific utilities:</p>
-<dd> <code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5), <code><a href="/docs/linux/man/7-groff_man/">groff_man</a></code>(7), <code><a href="/docs/linux/man/7-groff_mdoc/">groff_mdoc</a></code>(7), <code><a href="/docs/linux/man/7-groff_me/">groff_me</a></code>(7), <code><a href="/docs/linux/man/7-groff_mm/">groff_mm</a></code>(7), <code><a href="/docs/linux/man/7-groff_mmse/">groff_mmse</a></code>(7) (only in Swedish locales), <code><a href="/docs/linux/man/7-groff_mom/">groff_mom</a></code>(7), <code><a href="/docs/linux/man/7-groff_ms/">groff_ms</a></code>(7), <code><a href="/docs/linux/man/7-groff_www/">groff_www</a></code>(7), <code><a href="/docs/linux/man/7-groff_trace/">groff_trace</a></code>(7), <code><a href="/docs/linux/man/7-mmroff/">mmroff</a></code>(7).</p>
+<dd> <code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5), <code><a href="/docs/linux/man/7-groff_man/">groff_man</a></code>(7), <code><a href="/docs/linux/man/7-groff_mdoc/">groff_mdoc</a></code>(7), <code><a href="/docs/linux/man/7-groff_me/">groff_me</a></code>(7), <code><a href="/docs/linux/man/7-groff_mm/">groff_mm</a></code>(7), <code><a href="/docs/linux/man/7-groff_mmse/">groff_mmse</a></code>(7) (only in Swedish locales), <code><a href="/docs/linux/man/7-groff_mom/">groff_mom</a></code>(7), <code><a href="/docs/linux/man/7-groff_ms/">groff_ms</a></code>(7), <code><a href="/docs/linux/man/7-groff_www/">groff_www</a></code>(7), <code><a href="/docs/linux/man/7-groff_trace/">groff_trace</a></code>(7), <code>mmroff</code>(7).</p>
 <dt>The following utilities are available:</p>
 <dd> <code><a href="/docs/linux/man/1-addftinfo/">addftinfo</a></code>(1), <code><a href="/docs/linux/man/1-afmtodit/">afmtodit</a></code>(1), <code><a href="/docs/linux/man/1-eqn2graph/">eqn2graph</a></code>(1), <code><a href="/docs/linux/man/1-gdiffmk/">gdiffmk</a></code>(1), <code><a href="/docs/linux/man/1-grap2graph/">grap2graph</a></code>(1), <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1), <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1), <code><a href="/docs/linux/man/1-hpftodit/">hpftodit</a></code>(1), <code><a href="/docs/linux/man/1-indxbib/">indxbib</a></code>(1), <code><a href="/docs/linux/man/1-lkbib/">lkbib</a></code>(1), <code><a href="/docs/linux/man/1-lookbib/">lookbib</a></code>(1), <code><a href="/docs/linux/man/1-pdfroff/">pdfroff</a></code>(1), <code><a href="/docs/linux/man/1-pfbtops/">pfbtops</a></code>(1), <code><a href="/docs/linux/man/1-pic2graph/">pic2graph</a></code>(1), <code><a href="/docs/linux/man/1-tfmtodit/">tfmtodit</a></code>(1), <code><a href="/docs/linux/man/1-xtotroff/">xtotroff</a></code>(1). </p>
 </dl>

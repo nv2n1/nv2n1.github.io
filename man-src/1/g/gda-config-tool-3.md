@@ -48,7 +48,7 @@ description: "gda-config-tool-3.0 – Tool for managing libgda configuration fil
 <dt>
 <dd> User settings. Override global settings.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mergeant/">mergeant</a>(1),</code> <code><a href="/docs/linux/man/5-gda-config-3-0/">gda-config-3.0</a>(5)</code> </p>
+<p> <code>mergeant(1),</code> <code>gda-config-3.0(5)</code> </p>
 <h2 class="name">NAME</h2>
 <p> gda-config-tool-3.0 &#8211; Tool for managing libgda configuration file. </p>
 <h2>SYNOPSIS</h2>
@@ -90,5 +90,5 @@ description: "gda-config-tool-3.0 – Tool for managing libgda configuration fil
 <dt>
 <dd> User settings. Override global settings.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mergeant/">mergeant</a>(1),</code> <code><a href="/docs/linux/man/5-gda-config-3-0/">gda-config-3.0</a>(5)</code> </p>
+<p> <code>mergeant(1),</code> <code>gda-config-3.0(5)</code> </p>
 <h2>Index</h2>

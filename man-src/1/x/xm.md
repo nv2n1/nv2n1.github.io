@@ -733,7 +733,7 @@ VCPUs State Time(s)
 <dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-xmdomain-cfg/">xmdomain.cfg</a></code>(5), <code><a href="/docs/linux/man/1-xentop/">xentop</a></code>(1)</p>
+<p> <code>xmdomain.cfg</code>(5), <code><a href="/docs/linux/man/1-xentop/">xentop</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <pre>
   Sean Dague &lt;sean at dague dot net&gt;

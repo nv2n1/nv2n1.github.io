@@ -56,4 +56,4 @@ description: "xtables-monitor — show changes to rule set and trace-events"
 <h2>Bugs</h2>
 <p>Should be reported or by sending email to netfilter-devel [at] vger.kernel.org or by filing a report on <a rel="nofollow" href="https://bugzilla.netfilter.org/.">https://bugzilla.netfilter.org/.</a></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/8-xtables/">xtables</a></code>(8), <code><a href="/docs/linux/man/8-nft/">nft</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code>xtables</code>(8), <code><a href="/docs/linux/man/8-nft/">nft</a></code>(8) </p>

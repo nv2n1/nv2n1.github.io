@@ -46,7 +46,7 @@ description: "rpcdebug – set and clear NFS and RPC kernel debug flags"
 <dt><code>/proc/sys/sunrpc/{rpc,nfs,nfsd,nlm}_debug</code></p>
 <dd>procfs-based interface to kernel debug flags.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rpc-nfsd/">rpc.nfsd</a></code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p><code>rpc.nfsd</code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>Bugs can be found or reported at <code><a rel="nofollow" href="http://nfs.sf.net/">http://nfs.sf.net/</a></code>.</p>
 <h2>Author</h2>

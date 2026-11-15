@@ -1481,13 +1481,13 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </table>
 <p> Care must be taken when specifying these values in a resource file as an incorrect format can produce undesirable results.</p>
 <dt><code>XmNcellHighlightThickness</code></p>
-<dd>Specifies the <code>XmNhighlightThickness</code> resource of the <code>XmText</code> cell edit widget. This resource is also used to compute the size of each cell. See the description of <code>XmNhighlightThickness</code> in <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</code>.</p>
+<dd>Specifies the <code>XmNhighlightThickness</code> resource of the <code>XmText</code> cell edit widget. This resource is also used to compute the size of each cell. See the description of <code>XmNhighlightThickness</code> in <code>XmText(3X)</code>.</p>
 <dt><code>XmNcellMarginHeight</code></p>
-<dd>Specifies the <code>XmNmarginHeight </code> resource of the <code>XmText</code> widget. This resource is also used to compute the size of each cell. See the description of <code>XmNmarginHeight</code> in <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</code>.</p>
+<dd>Specifies the <code>XmNmarginHeight </code> resource of the <code>XmText</code> widget. This resource is also used to compute the size of each cell. See the description of <code>XmNmarginHeight</code> in <code>XmText(3X)</code>.</p>
 <dt><code>XmNcellMarginWidth</code></p>
-<dd>Specifies the <code>XmNmarginWidth</code> resource of the <code>XmText</code> cell edit widget. This resource is also used to compute the size of each cell. See the description of <code>XmNmarginWidth</code> in <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</code>.</p>
+<dd>Specifies the <code>XmNmarginWidth</code> resource of the <code>XmText</code> cell edit widget. This resource is also used to compute the size of each cell. See the description of <code>XmNmarginWidth</code> in <code>XmText(3X)</code>.</p>
 <dt><code>XmNcellShadowThickness</code></p>
-<dd>Specifies the <code>XmNshadowThickness</code> resource of the <code>XmText</code> cell edit widget. This resource is also used to compute the size of each cell. See the description of <code>XmNshadowThickness</code> in <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</code>.</p>
+<dd>Specifies the <code>XmNshadowThickness</code> resource of the <code>XmText</code> cell edit widget. This resource is also used to compute the size of each cell. See the description of <code>XmNshadowThickness</code> in <code>XmText(3X)</code>.</p>
 <dt><code>XmNcellShadowType</code></p>
 <dd>Specifies the type of shadow drawn around each cell. Possible values for this resource are <code>XmSHADOW_OUT</code>, <code>XmSHADOW_IN</code>, <code>XmSHADOW_ETCHED_OUT</code>, and <code>XmSHADOW_ETCHED_IN</code>. The default shadow type is <code>XmSHADOW_OUT</code>.</p>
 <dt><code>XmNcellShadowTypes</code></p>
@@ -1556,17 +1556,17 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNcolors</code></p>
 <dd>Points to an array of pointers to rows. Each row is an array of Pixel values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is a Pixel instead of a String. The text in a cell will be drawn in the color specified for that cell. If <code>XmNcolors</code> is <font SIZE="-1">NULL,</font> text will be drawn using the color specified by <code>XmNforeground</code>. This resource is copied. See the discussion in <code>XmNcellBackgrounds</code> for how to specify <code>XmNcolors</code> in a resource file.</p>
 <dt><code>XmNcolumnAlignments</code></p>
-<dd>Points to an array of alignments (unsigned char), one for each column. Each element can be one of <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text or pixmap in each cell of that column. See the description of <code>XmNalignment</code> for <code><a href="//www.systutorials.com/docs/linux/man/3X-XmLabel/">XmLabel</a>(3X)</code>. If <code>XmNcolumnAlignments</code> is <font SIZE="-1">NULL, </font> each column will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</p>
+<dd>Points to an array of alignments (unsigned char), one for each column. Each element can be one of <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text or pixmap in each cell of that column. See the description of <code>XmNalignment</code> for <code>XmLabel(3X)</code>. If <code>XmNcolumnAlignments</code> is <font SIZE="-1">NULL, </font> each column will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</p>
 <dt><code>XmNcolumnButtonLabels</code></p>
 <dd>An array of Booleans that tells the <code>XbaeMatrix</code> which column labels should be drawn as a button. Each Boolean can be specified as a Boolean string or integer. In order to use this resource, <code>XmNbuttonLabels</code> should be set to False.</p>
 <dt><code>XmNcolumnLabelAlignments</code></p>
-<dd>Points to an array of alignments (unsigned char), one for each column label. Each element can be one of <code>XmALIGNMENT_BEGINNING,</code> <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text of each column label. See the description of <code>XmNalignment</code> for <code><a href="//www.systutorials.com/docs/linux/man/3X-XmLabel/">XmLabel</a>(3X)</code>. If <code>XmNcolumnLabelAlignments</code> is <font SIZE="-1">NULL,</font> each column label will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</p>
+<dd>Points to an array of alignments (unsigned char), one for each column label. Each element can be one of <code>XmALIGNMENT_BEGINNING,</code> <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text of each column label. See the description of <code>XmNalignment</code> for <code>XmLabel(3X)</code>. If <code>XmNcolumnLabelAlignments</code> is <font SIZE="-1">NULL,</font> each column label will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</p>
 <dt><code>XmNcolumnLabelColor</code></p>
 <dd>Specifies a Pixel value in which to draw the <code>XmNcolumnLabels</code>.</p>
 <dt><code>XmNcolumnLabels</code></p>
 <dd>Points to an array of Strings to be drawn above each column. Each String may have embedded newline characters, in which case the label will be drawn on multiple lines. If there is a <code>XmNxmColumnLabels </code> defined for this coluumn it will be displayed in place of the <code>XmNcolumnLabels. </code> If <code>XmNcolumnLabels </code> and <code>XmNxmColumnLabels </code> are <font SIZE="-1">NULL, </font> no labels will be drawn. This resource is copied.</p>
 <dt><code>XmNcolumnMaxLengths</code></p>
-<dd>Points to an array of int, one for each column. These specify the maximum length of a String which can be entered in the cells in that column. See the description of the <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X) XmNmaxLength</code> resource. If <code>XmNcolumnMaxLengths</code> is <font SIZE="-1">NULL</font> or an element of the array is equal to 0, then the corresponding width from <code>XmNcolumnWidths</code> is used. This resource is copied.</p>
+<dd>Points to an array of int, one for each column. These specify the maximum length of a String which can be entered in the cells in that column. See the description of the <code>XmText(3X) XmNmaxLength</code> resource. If <code>XmNcolumnMaxLengths</code> is <font SIZE="-1">NULL</font> or an element of the array is equal to 0, then the corresponding width from <code>XmNcolumnWidths</code> is used. This resource is copied.</p>
 <dt><code>XmNcolumnShadowTypes</code></p>
 <dd>Specifies on a per column basis, the <code>XmNcellShadowType</code>. Values for the resource are the same as for <code>XmNcellShadowType</code>. This resource is copied.</p>
 <dt><code>XmNcolumnUserData</code></p>
@@ -1574,7 +1574,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNcolumnWidthInPixels</code></p>
 <dd>Specifies wether the elements of <code>XmNcolumnWidths </code> are measured in pixels or characters.</p>
 <dt><code>XmNcolumnWidths</code></p>
-<dd>Points to an array of short, one for each column. These specify the visible width of the cells in each column. See the description of the <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X) XmNcolumns</code> resource. This resource is copied.</p>
+<dd>Points to an array of short, one for each column. These specify the visible width of the cells in each column. See the description of the <code>XmText(3X) XmNcolumns</code> resource. This resource is copied.</p>
 <dt><code>XmNcolumns</code></p>
 <dd>Specifies the total number of columns of cells. <code>XmNcolumns</code> must be at least one. If the number of columns is changed via XtSetValues, then <code>XmNcolumnMaxLengths</code> must change or be <font SIZE="-1">NULL,</font> <code>XmNcolumnLabels</code> must change or be <font SIZE="-1">NULL,</font> <code>XmNcolumnAlignments</code> must change or be <font SIZE="-1">NULL </font> and <code>XmNcolumnLabelAlignments</code> must change or be <font SIZE="-1">NULL.</font> The preferred way to dynamically change the number of columns is to use <code>XbaeMatrixAddColumns()</code> or <code>XbaeMatrixDeleteColumns()</code>.</p>
 <dt><code>XmNdefaultActionCallback</code></p>
@@ -1598,7 +1598,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNfixedRows</code></p>
 <dd>Specifies the number of leading rows (starting from the top row) which should not be vertically scrollable. <code>XmNfixedRows</code> must be less than <code>XmNrows</code>&#8211;<code>XmNtrailingFixedRows</code>. Cells in fixed rows are not editable unless <code>XmNtraverseFixedCells</code> is set to True.</p>
 <dt><code>XmNfontList</code></p>
-<dd>If the value of <code>XmNrenderTable </code> is NULL this resource specifies the font list to be used for the text displayed in the cells and the <code>XmText</code> cell edit widget. See <code><a href="//www.systutorials.com/docs/linux/man/3X-XmFontListCreate/">XmFontListCreate</a>(3X)</code> to create a font list. This resource is copied. The preferred way of specifying a font for the table is in a resource file. </p>
+<dd>If the value of <code>XmNrenderTable </code> is NULL this resource specifies the font list to be used for the text displayed in the cells and the <code>XmText</code> cell edit widget. See <code>XmFontListCreate(3X)</code> to create a font list. This resource is copied. The preferred way of specifying a font for the table is in a resource file. </p>
 <p> When drawing a cell, the matrix uses the first entry with the tag <code>XmFONTLIST_DEFAULT_TAG </code> if no tag has been set on the cell using <code>XbaeMatrixSetCellTag.</code> If a tag has been set on the cell the first entry with a matching tag is used.</p>
 <dt><code>XmNgridLineColor</code></p>
 <dd>Specifies the color in which the grid line should be drawn if <code>XmNgridType</code> is set to <code>XmGRID_CELL_LINE</code>, <code>XmGRID_ROW_LINE</code> or <code>XmGRID_COLUMN_LINE</code>. The default is that of <code>XmNforeground</code>.</p>
@@ -1611,7 +1611,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNhorizontalScrollBarDisplayPolicy</code></p>
 <dd>Determines when to display a horizontal scrollbar in the matrix. Possible values are <code>XmDISPLAY_NONE</code>, which makes the matrix never display the scrollbar, <code>XmDISPLAY_AS_NEEDED</code>, which makes the matrix display the scrollbar when the list is too large, and <code>XmDISPLAY_STATIC</code>, which makes the matrix always display the scrollbar.</p>
 <dt><code>XmNlabelFont</code></p>
-<dd>If the value of <code>XmNrenderTable </code> is NULL this resource specifies the font list to be used for the text displayed in row and column labels. If <code>XmNlabelFont</code> is not specified, the value of <code>XmNfontList </code> is used for the label fonts. See <code><a href="//www.systutorials.com/docs/linux/man/3X-XmFontListCreate/">XmFontListCreate</a>(3X)</code> to create a font list. This resource is copied. The preferred way of specifying a font for the labels is in a resource file. </p>
+<dd>If the value of <code>XmNrenderTable </code> is NULL this resource specifies the font list to be used for the text displayed in row and column labels. If <code>XmNlabelFont</code> is not specified, the value of <code>XmNfontList </code> is used for the label fonts. See <code>XmFontListCreate(3X)</code> to create a font list. This resource is copied. The preferred way of specifying a font for the labels is in a resource file. </p>
 <p> When drawing a label, the matrix uses the first entry with the tag <code>XmFONTLIST_DEFAULT_TAG.</code> </p>
 <dt><code>XmNlabelActivateCallback</code></p>
 <dd>Specifies a list of callbacks to be called after a button label has been pressed. A pointer to an <code>XbaeMatrixLabelActivateCallbackStruct</code> is passed to the callbacks on this list.</p>
@@ -1620,7 +1620,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNleftColumn</code></p>
 <dd>Allows the programmer to specify the first non fixed column to appear on the leftmost side of the matrix. This resource compliments the <code>XmNtopRow</code> resource. See the discussion of <code>XmNtopRow</code> for more details.</p>
 <dt><code>XmNmodifyVerifyCallback</code></p>
-<dd>Specifies a list of callbacks to be called before text is deleted from or inserted into the <code>XmText</code> cell edit widget. A pointer to an <code>XbaeMatrixModifyVerifyCallbackStruct</code> is passed to the callbacks. See the description of the <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X) XmNmodifyVerifyCallback</code> resource.</p>
+<dd>Specifies a list of callbacks to be called before text is deleted from or inserted into the <code>XmText</code> cell edit widget. A pointer to an <code>XbaeMatrixModifyVerifyCallbackStruct</code> is passed to the callbacks. See the description of the <code>XmText(3X) XmNmodifyVerifyCallback</code> resource.</p>
 <dt><code>XmNmultiLineCell</code></p>
 <dd>is a boolean (default False) which specifies whether the matrix displays more than one line of text in a cell, when appropriate.</p>
 <dt><code>XmNnonFixedDetachedLeft</code></p>
@@ -1644,7 +1644,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNrowButtonLabels</code></p>
 <dd>An array of Booleans that tells the <code>XbaeMatrix</code> which row labels should be drawn as a button. Each Boolean can be specified as a Boolean string or integer. In order to use this resource, <code>XmNbuttonLabels</code> should be set to False.</p>
 <dt><code>XmNrowLabelAlignment</code></p>
-<dd>Specifies the alignment of the row labels. It can be one of <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. See the description of <code>XmNalignment</code> for <code><a href="//www.systutorials.com/docs/linux/man/3X-XmLabel/">XmLabel</a>(3X)</code>. <code>XmNrowLabelAlignment</code> defaults to <code>XmALIGNMENT_END</code>.</p>
+<dd>Specifies the alignment of the row labels. It can be one of <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. See the description of <code>XmNalignment</code> for <code>XmLabel(3X)</code>. <code>XmNrowLabelAlignment</code> defaults to <code>XmALIGNMENT_END</code>.</p>
 <dt><code>XmNrowLabelColor</code></p>
 <dd>Specifies a Pixel value in which to draw the <code>XmNrowLabels</code>.</p>
 <dt><code>XmNrowLabelWidth</code></p>
@@ -1688,7 +1688,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNtextShadowThickness</code></p>
 <dd>Specifies the <code>XmNshadowThickness</code> of the <code>XmText</code>. Interesting effects can be achieved by setting the <code>XmNcellHighlightThickness</code> to 0 and replacing the highlight with an indented shadow.</p>
 <dt><code>XmNtextTranslations</code></p>
-<dd>Specifies the <code>XmNtranslations</code> resource of the <code>XmText</code> cell edit widget. See the description of <code>XmNtranslations</code> in <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</code>.</p>
+<dd>Specifies the <code>XmNtranslations</code> resource of the <code>XmText</code> cell edit widget. See the description of <code>XmNtranslations</code> in <code>XmText(3X)</code>.</p>
 <dt><code>XmNtopRow</code></p>
 <dd>Specifies the row which should be displayed at the top of the non-fixed rows. <code>XmNtopRow</code> is specified relative to the first non-fixed row, so (XmNfixedRows + XmNtopRow) is the actual row number which will be moved to the top. If (XmNtopRow &gt; (XmNrows &#8211; (&lt;number of rows visible&gt; + XmNfixedRows), then the actual row which will be moved to the top is (XmNrows &#8211; (&lt;number of rows visible&gt; + XmNfixedRows).</p>
 <dt><code>XmNtrackCellCallback</code></p>
@@ -1708,7 +1708,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNuseXbaeInput</code></p>
 <dd>This boolean value determines whether to use XbaeInput or XmTextField as the widget used for editing cells. Default is not to use XbaeInput.</p>
 <dt><code>XmNvalueChangedCallback</code></p>
-<dd>Specifies a list of callbacks to be called after text is deleted from or inserted into the <code>XmText</code> cell edit widget. A pointer to an <code>XbaeMatrixValueChangedCallbackStruct</code> is passed to the callbacks. See the description of the <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X) XmNvalueChangedCallback</code> resource.</p>
+<dd>Specifies a list of callbacks to be called after text is deleted from or inserted into the <code>XmText</code> cell edit widget. A pointer to an <code>XbaeMatrixValueChangedCallbackStruct</code> is passed to the callbacks. See the description of the <code>XmText(3X) XmNvalueChangedCallback</code> resource.</p>
 <dt><code>XmNverticalScrollBar</code></p>
 <dd>The widget ID of the vertical <code>XmScrollBar</code>. This resource exists only for those applications that need to tie another scrollbar to the matrix&#8217;s for synchronized scrolling. This resource can not be set to a new value.</p>
 <dt><code>XmNverticalScrollBarDisplayPolicy</code></p>
@@ -2845,7 +2845,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>column</i></p>
 <dd>The column number of the cell being edited.</p>
 <dt><i>verify</i></p>
-<dd>The contents of this structure and its use are documented in the <code><a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</code> man page.</p>
+<dd>The contents of this structure and its use are documented in the <code>XmText(3X)</code> man page.</p>
 <dt><i>prev_text</i></p>
 <dd>The contents of the cell as seen by this user before the new text. If other text has already been entered, this value will not match the official <code>XbaeMatrix</code> value of the cell. This pointer and the string should not be modified.</dl>
 </dl>
@@ -6860,7 +6860,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <p> An XtSetValues on any other resource will not result in a request for a new size. Setting other resources in conjunction with setting <code>XmNwidth</code> and/or <code>XmNheight</code> to 0 allows for more control of the Matrix&#8217;s geometry. </p>
 <p> An XtSetValues setting <code>XmNrowLabelWidth</code> to 0 will cause <code>XmNrowLabelWidth</code> to be set to the width of the longest row label. </p>
 <h2>Virtual Bindings</h2>
-<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="//www.systutorials.com/docs/linux/man/3X-VirtualBindings/">VirtualBindings</a>(3X)</code>.</p>
+<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code>VirtualBindings(3X)</code>.</p>
 <h2>Author</h2>
 <p><code>Andrew Wason</code> (aw [at] bae.bellcore.com) of Bellcore, Piscataway NJ, wrote the original version of the Xbae widgets. His final release of the widgets was version 3.8. </p>
 <p> <code>Kevin Brannen</code> (kbrannen [at] metronet.com) took over maintainership following Andrew Wason&#8217;s departure and released version 4.0. </p>
@@ -6876,7 +6876,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <h2>Release</h2>
 <p>This document describes XbaeMatrix, version 4.60.4.</p>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/3X-Core/">Core</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-Composite/">Composite</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-XmManager/">XmManager</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-XmScrollBar/">XmScrollBar</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-XbaeInput/">XbaeInput</a>(3X),</code> <a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</p>
+<p><code>Core(3X), Composite(3X), XmManager(3X), XmScrollBar(3X), XbaeInput(3X),</code> XmText(3X)</p>
 <h2>Notice of Limitation</h2>
 <p>Bellcore, previous and current maintainers of the Xbae widgets (collectively &#8216;authors&#8217;) provide this information solely to professionals who have the appropriate degree of experience to understand and interpret its contents in accordance with generally accepted engineering or other professional standards and applicable regulations. No recommendations as to products or vendors is made or should be implied. </p>
 <p> While the information contained herein has been prepared from sources deemed to be reliable, the authors reserve the right to revise the information without notice, but has no obligation to do so. Unless the recipient has been expressly granted a license by Bellcore under separate applicable written agreement with Bellcore, no license, expressed or implied, is granted under any patents, copyrights or other intellectual property rights. Use of the information is at your discretion and shall not be deemed an inducement by Bellcore to infringe any existing or later-issued patent, copyrights or other intellectual property right. </p>

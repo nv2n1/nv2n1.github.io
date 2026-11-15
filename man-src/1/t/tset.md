@@ -73,7 +73,7 @@ description: "tset, reset – terminal initialization"
 <dt><code>-V</code></p>
 <dd> reports the version of ncurses which was used in this program, and exits.</p>
 <dt><code>-w</code></p>
-<dd> Resize the window to match the size deduced via <code><a href="//www.systutorials.com/docs/linux/man/3X-setupterm/">setupterm</a></code>(3X). Normally this has no effect, unless <code>setupterm</code> is not able to detect the window size.</dl>
+<dd> Resize the window to match the size deduced via <code>setupterm</code>(3X). Normally this has no effect, unless <code>setupterm</code> is not able to detect the window size.</dl>
 <p> The arguments for the <code>-e</code>, <code>-i</code>, and <code>-k</code> options may either be entered as actual characters or by using the &#8220;hat&#8221; notation, i.e., control-h may be specified as &#8220;^H&#8221; or &#8220;^h&#8221;. </p>
 <p> If neither <code>-c</code> or <code>-w</code> is given, both options are assumed.</p>
 <h2>SETTING THE ENVIRONMENT</h2>
@@ -126,6 +126,6 @@ description: "tset, reset – terminal initialization"
 <dt>/etc/terminfo</p>
 <dd> terminal capability database</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/3X-curs_terminfo/">curs_terminfo</a></code>(3X), <code><a href="/docs/linux/man/4-tty/">tty</a></code>(4), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5), <code><a href="/docs/linux/man/5-ttys/">ttys</a></code>(5), <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) </p>
+<p> <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code>curs_terminfo</code>(3X), <code><a href="/docs/linux/man/4-tty/">tty</a></code>(4), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5), <code>ttys</code>(5), <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>
 <h2>Index</h2>

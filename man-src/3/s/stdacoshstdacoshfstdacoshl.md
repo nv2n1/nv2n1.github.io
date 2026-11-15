@@ -75,7 +75,7 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-acosh/">acosh</a><code>(1)</code> = 0<br />
+<p>&nbsp;<wbr>&nbsp;acosh<code>(1)</code> = 0<br />
 &nbsp;<wbr>&nbsp;acosh<code>(10)</code> = 2.99322<br />
 &nbsp;<wbr>&nbsp;acosh(DBL_MAX) = 710.476<br />
 &nbsp;<wbr>&nbsp;acosh(Inf) = inf<br />

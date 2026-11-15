@@ -39,4 +39,4 @@ description: "glutStrokeCharacter – Draw a stroked character."
 &nbsp;<wbr>character Ef<br />
 &nbsp;<wbr>is out of the font&#8217;s range. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-glbegin/">glBegin</a>(3) <a href="/docs/linux/man/3-gltranslatef/">glTranslatef</a>(3) <a href="/docs/linux/man/3-glutstrokewidth/">glutStrokeWidth</a>(3) <a href="/docs/linux/man/3-glutstrokestring/">glutStrokeString</a>(3) <a href="/docs/linux/man/3-glutstrokeheight/">glutStrokeHeight</a>(3) <a href="/docs/linux/man/3-glutbitmapcharacter/">glutBitmapCharacter</a>(3)</p>
+<p>glBegin(3) glTranslatef(3) <a href="/docs/linux/man/3-glutstrokewidth/">glutStrokeWidth</a>(3) <a href="/docs/linux/man/3-glutstrokestring/">glutStrokeString</a>(3) <a href="/docs/linux/man/3-glutstrokeheight/">glutStrokeHeight</a>(3) <a href="/docs/linux/man/3-glutbitmapcharacter/">glutBitmapCharacter</a>(3)</p>

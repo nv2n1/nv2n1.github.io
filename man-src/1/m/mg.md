@@ -424,7 +424,7 @@ description: "mg – emacs-like text editor"
 <dt><code>kill-buffer</code></p>
 <dd> Dispose of a buffer, by name. If the buffer name does not start and end with an asterisk, prompt the user if the buffer has been changed.</p>
 <dt><code>kill-line</code></p>
-<dd> Kill line. If called without an argument, it kills from dot to the end of the line, unless it is at the end of the line, when it kills the newline. If called with an argument of 0, it kills from the start of the line to dot. If called with a positive argument, it kills from dot forward over that number of newlines. If called with a negative argument it kills any text before dot on the current line, then it kills back <a href="/docs/linux/man/n-abs/">abs</a>(n) lines.</p>
+<dd> Kill line. If called without an argument, it kills from dot to the end of the line, unless it is at the end of the line, when it kills the newline. If called with an argument of 0, it kills from the start of the line to dot. If called with a positive argument, it kills from dot forward over that number of newlines. If called with a negative argument it kills any text before dot on the current line, then it kills back abs(n) lines.</p>
 <dt><code>kill-paragraph</code></p>
 <dd> Delete <i>n</i> paragraphs starting with the current one.</p>
 <dt><code>kill-region</code></p>

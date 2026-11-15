@@ -66,9 +66,9 @@ description: "grub-mkrescue — Generate a GRUB rescue image using GNU Xorriso."
 <dt><code>&#8211;xorriso</code>=<i>FILE</i></p>
 <dd> Use <i>FILE</i> as <code>xorriso</code><i>. </p>
 <dt></i><code>&#8211;grub-glue-efi</code>=<i>FILE</i></p>
-<dd> Use <i>FILE</i> as <code><a href="/docs/linux/man/3-grub-glue-efi/">grub-glue-efi</a></code>(3). </p>
+<dd> Use <i>FILE</i> as <code>grub-glue-efi</code>(3). </p>
 <dt><code>&#8211;grub-render-label</code>=<i>FILE</i></p>
-<dd> Use <i>FILE</i> as <code><a href="/docs/linux/man/3-grub-render-label/">grub-render-label</a></code>(3). </p>
+<dd> Use <i>FILE</i> as <code>grub-render-label</code>(3). </p>
 <dt><code>&#8211;label-font</code>=<i>FILE</i></p>
 <dd> Use <i>FILE</i> as the font file for generated labels. </p>
 <dt><code>&#8211;label-color</code>=<i>COLOR</i></p>

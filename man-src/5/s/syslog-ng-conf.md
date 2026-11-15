@@ -59,7 +59,7 @@ description: "syslog-ng.conf – syslog-ng configuration file"
 <dl>
 <dd>
 <pre>source s_tail { file(&quot;/var/log/apache/access.log&quot;
- <a href="//www.systutorials.com/docs/linux/man/1-follow_freq/">follow_freq</a>(1) flags(no-parse, validate-utf8)); };</pre>
+ follow_freq(1) flags(no-parse, validate-utf8)); };</pre>
 </dl>
 <p> Objects may have required and optional parameters. Required parameters are positional, meaning that they must be specified in a defined order. Optional parameters can be specified in any order using the option(value) format. If a parameter (optional or required) is not specified, its default value is used. The parameters and their default values are listed in the reference section of the particular object. </p>
 <p> <code>Example 1. Using required and optional parameters</code> The <i>unix-stream()</i> source driver has a single required argument: the name of the socket to listen on. Optional parameters follow the socket name in any order, so the following source definitions have the same effect: </p>

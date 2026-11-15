@@ -31,9 +31,9 @@ description: "service – run a System V init script"
 <dd>The only environment variables passed to the init scripts.</dl>
 <h2>See Also</h2>
 <pre><i>/etc/init.d/skeleton</i>
-<code><a href="//www.systutorials.com/docs/linux/man/8-update-rc.d/">update-rc.d</a></code>(8)
+<code>update-rc.d</code>(8)
 <code><a href="//www.systutorials.com/docs/linux/man/8-init/">init</a></code>(8)
-<code><a href="//www.systutorials.com/docs/linux/man/8-invoke-rc.d/">invoke-rc.d</a></code>(8)
+<code>invoke-rc.d</code>(8)
 <code><a href="//www.systutorials.com/docs/linux/man/1-systemctl/">systemctl</a></code>(1)</pre>
 <h2>Author</h2>
 <p>Miloslav Trmac &lt;mitr [at] redhat.com&gt;, Petter Reinholdtsen &lt;pere [at] hungry.com&gt; </p>

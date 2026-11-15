@@ -34,7 +34,7 @@ description: "gnuplot – an interactive plotting program"
 <p> <code>-h, &#8211;help</code> print summary of usage </p>
 <p> <code>-V</code> show current version</p>
 <h2>X11 OPTIONS</h2>
-<p> For terminal type x11, <i>gnuplot</i> accepts the standard X Toolkit options and resources such as geometry, font, and background. See the <a href="/docs/linux/man/1-x/">X</a>(1) man page for a description of common options. For additional X options specific to gnuplot, type <i>help x11</i> on the gnuplot command line. These options have no effect on other terminal types.</p>
+<p> For terminal type x11, <i>gnuplot</i> accepts the standard X Toolkit options and resources such as geometry, font, and background. See the X(1) man page for a description of common options. For additional X options specific to gnuplot, type <i>help x11</i> on the gnuplot command line. These options have no effect on other terminal types.</p>
 <h2>ENVIRONMENT</h2>
 <p> A number of shell environment variables are understood by gnuplot. None of these are required.</p>
 <dl>

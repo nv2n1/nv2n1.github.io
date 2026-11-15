@@ -98,4 +98,4 @@ Group=saslauth</pre>
 <dt><code>/etc/saslauthd.conf </code></p>
 <dd>The default configuration file for ldap support.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-passwd/">passwd</a>(1), <a href="/docs/linux/man/3-getpwent/">getpwent</a>(3), <a href="/docs/linux/man/3-getspnam/">getspnam</a>(3), <a href="/docs/linux/man/3-getuserpw/">getuserpw</a>(3), sasl_checkpass3 sia_authenticate_user3, </p>
+<p><a href="/docs/linux/man/1-passwd/">passwd</a>(1), <a href="/docs/linux/man/3-getpwent/">getpwent</a>(3), <a href="/docs/linux/man/3-getspnam/">getspnam</a>(3), getuserpw(3), sasl_checkpass3 sia_authenticate_user3, </p>

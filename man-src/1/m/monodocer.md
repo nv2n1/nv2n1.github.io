@@ -290,7 +290,7 @@ class FooType
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-mdassembler/">mdassembler</a>(1), <a href="/docs/linux/man/1-mdcs2ecma/">mdcs2ecma</a>(1), <a href="/docs/linux/man/1-mdnormalizer/">mdnormalizer</a>(1), <a href="/docs/linux/man/1-mdvalidator/">mdvalidator</a>(1), <a href="/docs/linux/man/1-monodocs2html/">monodocs2html</a>(1)</p>
+<p> <a href="/docs/linux/man/1-mdassembler/">mdassembler</a>(1), mdcs2ecma(1), mdnormalizer(1), mdvalidator(1), <a href="/docs/linux/man/1-monodocs2html/">monodocs2html</a>(1)</p>
 <h2>MAILING LISTS</h2>
 <dl>
 <dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>

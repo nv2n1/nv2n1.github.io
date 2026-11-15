@@ -180,4 +180,4 @@ description: "morphy – discussion of WordNet’s morphological processing"
 <dt><i>pos</i>.exc</p>
 <dd>morphology exception lists</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-wn/">wn</a></code>(1), <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1), <code><a href="/docs/linux/man/3-binsrch/">binsrch</a></code>(3), <code><a href="/docs/linux/man/3-morph/">morph</a></code>(3), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/7-wninput/">wninput</a></code>(7). </p>
+<p><code><a href="/docs/linux/man/1-wn/">wn</a></code>(1), <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1), <code><a href="/docs/linux/man/3-binsrch/">binsrch</a></code>(3), <code><a href="/docs/linux/man/3-morph/">morph</a></code>(3), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code>wninput</code>(7). </p>

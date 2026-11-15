@@ -40,7 +40,7 @@ Parameter descriptions, in alphabetical order, of all Scrolled_title internal pa
 <dt>'FGR','FGG', and 'FGB' - Device default.
 <dd>Real values, in the range 0. to 1., to be used for the red, green, and blue components of a specified foreground color. 
 
- The index of the color being defined may be specified in parentheses following the 'FGR', 'FGG', or 'FGB'; for example, the statement &quot;CALL SLSETR ('<a HREF="/docs/linux/man/2-fgr/">FGR</a>(2)',.5)&quot; defines the red component of the color associated with color index 2 to be .5. If no subscript appears, the color index defined by the current value of 'FGC' is the one whose definition is affected. 
+ The index of the color being defined may be specified in parentheses following the 'FGR', 'FGG', or 'FGB'; for example, the statement &quot;CALL SLSETR ('FGR(2)',.5)&quot; defines the red component of the color associated with color index 2 to be .5. If no subscript appears, the color index defined by the current value of 'FGC' is the one whose definition is affected. 
 
  A color can also be defined by calling the GKS subroutine GSCR and specifying the color index on one of the card images in the CRDS array. Note, however, that any color which is to be used solely in a user-supplied version of the routine SLUBKG and which is desired to be subject to fade-in/fade-out should be defined by means of SLSETR calls. 
 

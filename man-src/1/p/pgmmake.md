@@ -30,7 +30,7 @@ description: "pgmmake – create a PGM image of a specified gray level and dimen
 &nbsp;<wbr>&nbsp;<wbr>The maxval for the generated image.&nbsp;<wbr>&nbsp;<wbr>Default is 255. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbmmake/">pbmmake</a></code>(1) , <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pbmmake/">pbmmake</a></code>(1) , <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code>pgm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> This program was new in Netpbm 10.32 (February 2006). </p>
 <p> With older Netpbm, use <code>ppmmake</code> and <code>ppmtopgm</code>. </p>

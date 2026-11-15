@@ -38,7 +38,7 @@ description: "snmpd – daemon to respond to SNMP request packets."
 <dd>Specifies which modules should (or should not) be initialized when the agent starts up. If the comma-separated <i>INITLIST</i> is preceded with a &#8216;-&#8216;, it is the list of modules that should <i>not</i> be started. Otherwise this is the list of the <i>only</i> modules that should be started. </p>
 <p> To get a list of compiled modules, run the agent with the arguments <i>-Dmib_init -H</i> (assuming debugging support has been compiled in).</p>
 <dt><code>-L[efos]</code></p>
-<dd>Specify where logging output should be directed (standard error or output, to a file or via syslog). See LOGGING OPTIONS in <a href="/docs/linux/man/5-snmpcmd/">snmpcmd</a>(5) for details.</p>
+<dd>Specify where logging output should be directed (standard error or output, to a file or via syslog). See LOGGING OPTIONS in snmpcmd(5) for details.</p>
 <dt><code>-m</code> <i>MIBLIST</i></p>
 <dd>Specifies a colon separated list of MIB modules to load for this application. This overrides the environment variable MIBS. See <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for details.</p>
 <dt><code>-M</code> <i>DIRLIST</i></p>

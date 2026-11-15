@@ -24,6 +24,6 @@ Tcl_Obj *
 <p> When the <code>TCL_SUBST_VARIABLES</code> bit is set in <i>flags</i>, sequences that look like variable substitutions for Tcl commands are replaced by the contents of the named variable. </p>
 <p> When the <code>TCL_SUBST_COMMANDS</code> bit is set in <i>flags</i>, sequences that look like command substitutions for Tcl commands are replaced by the result of evaluating that script. Where an uncaught &#8220;continue exception&#8221; occurs during the evaluation of a command substitution, an empty string is substituted for the command. Where an uncaught &#8220;break exception&#8221; occurs during the evaluation of a command substitution, the result of the whole substitution on <i>objPtr</i> will be truncated at the point immediately before the start of the command substitution, and no characters will be added to the result or substitutions performed after that point.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-subst/">subst</a>(n)</p>
+<p>subst(n)</p>
 <h2>Keywords</h2>
 <p>backslash substitution, command substitution, variable substitution</p>

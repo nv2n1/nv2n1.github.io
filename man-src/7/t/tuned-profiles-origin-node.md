@@ -21,6 +21,6 @@ description: "tuned-profiles-origin-node – description of profiles provided fo
 <h2>Files</h2>
 <p><i>/etc/tuned/*</i> <i>/usr/lib/tuned/*</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tuned/">tuned</a></code>(8) <code><a href="/docs/linux/man/8-tuned-adm/">tuned-adm</a></code>(8) <code><a href="/docs/linux/man/7-tuned-profiles/">tuned-profiles</a></code>(7) <code><a href="/docs/linux/man/7-tuned-profiles-sap/">tuned-profiles-sap</a></code>(7) <code><a href="/docs/linux/man/7-tuned-profiles-sap-hana/">tuned-profiles-sap-hana</a></code>(7) <code><a href="/docs/linux/man/7-tuned-profiles-compat/">tuned-profiles-compat</a></code>(7)</p>
+<p><code><a href="/docs/linux/man/8-tuned/">tuned</a></code>(8) <code><a href="/docs/linux/man/8-tuned-adm/">tuned-adm</a></code>(8) <code><a href="/docs/linux/man/7-tuned-profiles/">tuned-profiles</a></code>(7) <code>tuned-profiles-sap</code>(7) <code>tuned-profiles-sap-hana</code>(7) <code><a href="/docs/linux/man/7-tuned-profiles-compat/">tuned-profiles-compat</a></code>(7)</p>
 <h2>Author</h2>
 <p>Scott Dodson &lt;sdodson [at] redhat.com&gt;</p>

@@ -68,7 +68,7 @@ description: "exiftran – transform digital camera jpeg images # #"
 <p> Autorotate all jpeg files in the current directory: </p>
 <p><i>exiftran -ai&nbsp;<wbr>*.jpeg</i> # #</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-exif/">exif</a></code>(1), <code><a href="/docs/linux/man/1-exiftags/">exiftags</a></code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1) # #</p>
+<p> <code>exif</code>(1), <code>exiftags</code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1) # #</p>
 <h2>AUTHOR</h2>
 <p> Gerd Hoffmann <code>&lt;gerd [at] kraxel.org&gt;</code> # #</p>
 <h2>COPYRIGHT</h2>

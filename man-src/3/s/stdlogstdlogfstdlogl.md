@@ -75,9 +75,9 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-log/">log</a><code>(1)</code> = 0<br />
+<p>&nbsp;<wbr>&nbsp;log<code>(1)</code> = 0<br />
 &nbsp;<wbr>&nbsp;base-5 logarithm of 125 = 3<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-log/">log</a><code>(1)</code> = 0<br />
+&nbsp;<wbr>&nbsp;log<code>(1)</code> = 0<br />
 &nbsp;<wbr>&nbsp;log(+Inf) = inf<br />
 &nbsp;<wbr>&nbsp;log<code>(0)</code> = -inf<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errno == ERANGE: Numerical result out of range<br />

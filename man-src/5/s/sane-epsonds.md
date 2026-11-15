@@ -35,6 +35,6 @@ description: "sane-epsonds – SANE backend for EPSON ESC/I-2 scanners"
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. Values around 11-16 will usually be enough for a bug report. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
 <h2>Author</h2>
 <p>The backend is written by Alessandro Zummo.</p>

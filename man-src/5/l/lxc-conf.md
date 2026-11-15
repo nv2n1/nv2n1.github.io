@@ -20,6 +20,6 @@ description: "lxc.conf – Configuration files for LXC."
 <p> This configuration file is used to set values such as default lookup paths and storage backend settings for LXC. </p>
 <p> Details about the syntax of this file can be found in: <code><a href="/docs/linux/man/5-lxc-system-conf/">lxc.system.conf</a></code>(5)</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-lxc/">lxc</a></code>(1), <code><a href="/docs/linux/man/5-lxc-container-conf/">lxc.container.conf</a></code>(5), <code><a href="/docs/linux/man/5-lxc-system-conf/">lxc.system.conf</a></code>(5), <code><a href="/docs/linux/man/5-lxc-usernet/">lxc-usernet</a></code>(5)</p>
+<p><code>lxc</code>(1), <code><a href="/docs/linux/man/5-lxc-container-conf/">lxc.container.conf</a></code>(5), <code><a href="/docs/linux/man/5-lxc-system-conf/">lxc.system.conf</a></code>(5), <code><a href="/docs/linux/man/5-lxc-usernet/">lxc-usernet</a></code>(5)</p>
 <h2>Author</h2>
 <p>St&eacute;phane Graber &lt;stgraber [at] ubuntu.com&gt;</p>

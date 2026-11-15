@@ -54,6 +54,6 @@ description: "ncurses6-config – helper script for ncurses libraries"
 <dt><code>&#8211;help</code></p>
 <dd> prints this message</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/3X-curses/">curses</a></code>(3X) </p>
+<p> <code>curses</code>(3X) </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>
 <h2>Index</h2>

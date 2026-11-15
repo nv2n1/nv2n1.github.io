@@ -1162,4 +1162,4 @@ description: "XmSeparator — The Separator widget class"
 <h3>Translations</h3>
 <p>There are no translations for <code>XmSeparator</code>.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmcreateseparator/">XmCreateSeparator</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreateseparator/">XmVaCreateSeparator</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanagedseparator/">XmVaCreateManagedSeparator</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmcreateseparator/">XmCreateSeparator</a></code>(3), <code>XmVaCreateSeparator</code>(3), and <code>XmVaCreateManagedSeparator</code>(3).</p>

@@ -155,30 +155,30 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
 <dd>The four methods above accept and return a 64-bit flags value. In most cases passing 0 is sufficient and recommended. However, the following flags are defined to alter the look-up: </p>
 <dl>
 <dd></font></p>
-<pre>#define SD_RESOLVED_DNS (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 0)
-#define SD_RESOLVED_LLMNR_IPV4 (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 1)
-#define SD_RESOLVED_LLMNR_IPV6 (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 2)
-#define SD_RESOLVED_MDNS_IPV4 (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 3)
-#define SD_RESOLVED_MDNS_IPV6 (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 4)
-#define SD_RESOLVED_NO_CNAME (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 5)
-#define SD_RESOLVED_NO_TXT (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 6)
-#define SD_RESOLVED_NO_ADDRESS (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 7)
-#define SD_RESOLVED_NO_SEARCH (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 8)
-#define SD_RESOLVED_AUTHENTICATED (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 9)
-#define SD_RESOLVED_NO_VALIDATE (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 10)
-#define SD_RESOLVED_NO_SYNTHESIZE (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 11)
-#define SD_RESOLVED_NO_CACHE (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 12)
-#define SD_RESOLVED_NO_ZONE (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 13)
-#define SD_RESOLVED_NO_TRUST_ANCHOR (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 14)
-#define SD_RESOLVED_NO_NETWORK (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 15)
-#define SD_RESOLVED_REQUIRE_PRIMARY (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 16)
-#define SD_RESOLVED_CLAMP_TTL (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 17)
-#define SD_RESOLVED_CONFIDENTIAL (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 18)
-#define SD_RESOLVED_SYNTHETIC (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 19)
-#define SD_RESOLVED_FROM_CACHE (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 20)
-#define SD_RESOLVED_FROM_ZONE (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 21)
-#define SD_RESOLVED_FROM_TRUST_ANCHOR (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 22)
-#define SD_RESOLVED_FROM_NETWORK (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 23)</pre>
+<pre>#define SD_RESOLVED_DNS (UINT64_C(1) &lt;&lt; 0)
+#define SD_RESOLVED_LLMNR_IPV4 (UINT64_C(1) &lt;&lt; 1)
+#define SD_RESOLVED_LLMNR_IPV6 (UINT64_C(1) &lt;&lt; 2)
+#define SD_RESOLVED_MDNS_IPV4 (UINT64_C(1) &lt;&lt; 3)
+#define SD_RESOLVED_MDNS_IPV6 (UINT64_C(1) &lt;&lt; 4)
+#define SD_RESOLVED_NO_CNAME (UINT64_C(1) &lt;&lt; 5)
+#define SD_RESOLVED_NO_TXT (UINT64_C(1) &lt;&lt; 6)
+#define SD_RESOLVED_NO_ADDRESS (UINT64_C(1) &lt;&lt; 7)
+#define SD_RESOLVED_NO_SEARCH (UINT64_C(1) &lt;&lt; 8)
+#define SD_RESOLVED_AUTHENTICATED (UINT64_C(1) &lt;&lt; 9)
+#define SD_RESOLVED_NO_VALIDATE (UINT64_C(1) &lt;&lt; 10)
+#define SD_RESOLVED_NO_SYNTHESIZE (UINT64_C(1) &lt;&lt; 11)
+#define SD_RESOLVED_NO_CACHE (UINT64_C(1) &lt;&lt; 12)
+#define SD_RESOLVED_NO_ZONE (UINT64_C(1) &lt;&lt; 13)
+#define SD_RESOLVED_NO_TRUST_ANCHOR (UINT64_C(1) &lt;&lt; 14)
+#define SD_RESOLVED_NO_NETWORK (UINT64_C(1) &lt;&lt; 15)
+#define SD_RESOLVED_REQUIRE_PRIMARY (UINT64_C(1) &lt;&lt; 16)
+#define SD_RESOLVED_CLAMP_TTL (UINT64_C(1) &lt;&lt; 17)
+#define SD_RESOLVED_CONFIDENTIAL (UINT64_C(1) &lt;&lt; 18)
+#define SD_RESOLVED_SYNTHETIC (UINT64_C(1) &lt;&lt; 19)
+#define SD_RESOLVED_FROM_CACHE (UINT64_C(1) &lt;&lt; 20)
+#define SD_RESOLVED_FROM_ZONE (UINT64_C(1) &lt;&lt; 21)
+#define SD_RESOLVED_FROM_TRUST_ANCHOR (UINT64_C(1) &lt;&lt; 22)
+#define SD_RESOLVED_FROM_NETWORK (UINT64_C(1) &lt;&lt; 23)</pre>
 </dl>
 <p> On input, the first five flags control the protocols to use for the look-up. They refer to classic unicast DNS, LLMNR via IPv4/UDP and IPv6/UDP respectively, as well as MulticastDNS via IPv4/UDP and IPv6/UDP. If all of these five bits are off on input (which is strongly recommended) the look-up will be done via all suitable protocols for the specific look-up. Note that these flags operate as filter only, but cannot force a look-up to be done via a protocol. Specifically, systemd-resolved will only route look-ups within the .local TLD to MulticastDNS (plus some reverse look-up address domains), and single-label names to LLMNR (plus some reverse address lookup domains). It will route neither of these to Unicast DNS servers. Also, it will do LLMNR and Multicast DNS only on interfaces suitable for multicast. </p>
 <p> On output, these five flags indicate which protocol was used to execute the operation, and hence where the data was found. </p>
@@ -194,7 +194,7 @@ description: "org.freedesktop.resolve1 – The D-Bus interface of systemd-resolv
 <p> The next six bits flags are used in output and provide information about the source of the answer. CONFIDENTIAL means the query was resolved via encrypted channels or never left this system. FROM_SYNTHETIC means the query was (at least partially) synthesized. FROM_CACHE means the query was answered (at least partially) using the cache. FROM_ZONE means the query was answered (at least partially) using LLMNR/mDNS. FROM_TRUST_ANCHOR means the query was answered (at least partially) using local trust anchors. FROM_NETWORK means the query was answered (at least partially) using the network.</dl>
 <h3>Properties</h3>
 <p>The <i>LLMNR</i> and <i>MulticastDNS</i> properties report whether LLMNR and MulticastDNS are (globally) enabled. Each may be one of &quot;yes&quot;, &quot;no&quot;, and &quot;resolve&quot;. See <code>SetLinkLLMNR()</code> and <code>SetLinkMulticastDNS()</code> above. </p>
-<p> <i>LLMNRHostname</i> contains the hostname currently exposed on the network via LLMNR. It usually follows the system hostname as may be queried via <code><a href="/docs/linux/man/3-gethostname/">gethostname</a></code>(3), but may differ if a conflict is detected on the network. </p>
+<p> <i>LLMNRHostname</i> contains the hostname currently exposed on the network via LLMNR. It usually follows the system hostname as may be queried via <code>gethostname</code>(3), but may differ if a conflict is detected on the network. </p>
 <p> <i>DNS</i> and <i>DNSEx</i> contain arrays of all DNS servers currently used by systemd-resolved. <i>DNS</i> contains information similar to the DNS server data in /run/systemd/resolve/resolv.conf. Each structure in the array consists of a numeric network interface index, an address family, and a byte array containing the DNS server address (either 4 bytes in length for IPv4 or 16 bytes in lengths for IPv6). <i>DNSEx</i> is similar, but additionally contains the IP port and server name (used for Server Name Indication, SNI). Both arrays contain DNS servers configured system-wide, including those possibly read from a foreign /etc/resolv.conf or the <i>DNS=</i> setting in /etc/systemd/resolved.conf, as well as per-interface DNS server information either retrieved from <code><a href="/docs/linux/man/8-systemd-networkd/">systemd-networkd</a></code>(8), or configured by external software via <code>SetLinkDNS()</code> or <code>SetLinkDNSEx()</code> (see above). The network interface index will be 0 for the system-wide configured services and non-zero for the per-link servers. </p>
 <p> <i>FallbackDNS</i> and <i>FallbackDNSEx</i> contain arrays of all DNS servers configured as fallback servers, if any, using the same format as <i>DNS</i> and <i>DNSEx</i> described above. See the description of <i>FallbackDNS=</i> in <code><a href="/docs/linux/man/5-resolved-conf/">resolved.conf</a></code>(5) for the description of when those servers are used. </p>
 <p> <i>CurrentDNSServer</i> and <i>CurrentDNSServerEx</i> specify the server that is currently used for query resolution, in the same format as a single entry in the <i>DNS</i> and <i>DNSEx</i> arrays described above. </p>

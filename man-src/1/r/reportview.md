@@ -18,7 +18,7 @@ description: "reportview – ask KWeatherService to display a weather report"
 <p> <code>reportview</code> is a small program that asks KWeatherService to display a weather report. Information shown includes the temperature, wind speed and air pressure. </p>
 <p> KWeatherService is a DCOP service used by both reportview and the kweather panel applet to provide weather data. There is no need to start KWeatherService separately; reportview will start the service itself if needed.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-kweather/">kweather</a>(1) </p>
+<p> kweather(1) </p>
 <p> More detailed user documentation is available from m[blue]<code>help:/kweather</code>m[] (either enter this URL into Konqueror, or run <code>khelpcenter</code><i>help:/kweather</i>).</p>
 <h2>AUTHORS</h2>
 <p> kweather was written by Ian Reinhart Geiser&lt;geiseri [at] kde.org&gt; and Nadeem Hasan&lt;nhasan [at] kde.org&gt; </p>

@@ -36,7 +36,7 @@ description: "dptest – test cases for QDBM Depot"
  <code>-c</code> : perform comparison test with map of Cabin.</dl>
 <p> This command returns 0 on success, another on failure. The environment variable `QDBMDBGFD&#8217; specifies the file descriptor to output the history of updating the variable `dpecode&#8217;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/3-depot/">depot</a></code>(3) </p>
+<p> <code>qdbm</code>(3), <code>depot</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <h2>Index</h2>

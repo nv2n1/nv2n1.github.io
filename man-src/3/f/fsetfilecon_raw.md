@@ -29,5 +29,5 @@ description: "setfilecon, fsetfilecon, lsetfilecon – set SELinux security cont
 <p> If extended attributes are not supported by the filesystem, or are disabled, <i>errno</i> is set to <code>ENOTSUP</code>. </p>
 <p> The errors documented for the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) system call are also applicable here.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-selinux/">selinux</a></code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-getfilecon/">getfilecon</a></code>(3), <code><a href="/docs/linux/man/3-setfscreatecon/">setfscreatecon</a></code>(3) </p>
+<p> <code>selinux</code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-getfilecon/">getfilecon</a></code>(3), <code><a href="/docs/linux/man/3-setfscreatecon/">setfscreatecon</a></code>(3) </p>
 <h2>Index</h2>

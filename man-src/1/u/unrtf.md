@@ -15,7 +15,7 @@ description: "UnRTF – converts document in RTF format to other formats"
 <h2>DESCRIPTION</h2>
 <p> The program <code>unrtf</code> is a converter from Rich Text Format (RTF) to a growing number of document formats. At present it supports Hypertext Markup Language (HTML), plain text, text with VT100 codes, LaTeX, and RTF itself. It is possible to produce troff files with macro calls; an example configuration for troff and the mm macro package is provided. All output formats except HTML are &quot;alpha&quot; i.e. limited and development has just begun. However with HTML, the program supports tables, fonts, hyperlinks, and paragraph alignment. Font support includes face and size changes, as well as typical attributes such as italic, bold, underlining, strikethrough, smallcaps, allcaps, expand, compress and both foreground and background colors. Images are always stored to separate files in the current directory, or they can be ignored. </p>
 <p> Starting with version 0.21.0, all control of unrtf output is through runtime configuration files. This makes it easy for users to fine-tune the output, and/or define new output formats. The configuration files can be read from the distributed ones, or from user files, searched for in the <i>config_search_path .</i> Note that the order of the -P and output arguments is important. The search path must be set before any argument that will load a configuration file if that file is not in the standard place. </p>
-<p> Code page conversion is performed with the <a href="/docs/linux/man/3-iconv/">iconv</a>(3) package.</p>
+<p> Code page conversion is performed with the iconv(3) package.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>&#8211;nopict</p>

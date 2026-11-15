@@ -133,4 +133,4 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <p>Alberto Ornaghi (ALoR) &lt;alor [at] users.sf.net&gt;<br />
  Marco Valleri (NaGA) &lt;naga [at] antifork.org&gt;</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-ettercap/">ettercap</a>(8)</i> <i><a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8)</i> <i><a href="/docs/linux/man/5-etter-conf/">etter.conf</a>(5)</i> <i><a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8)</i> <i><a href="/docs/linux/man/8-ettercap_plugins/">ettercap_plugins</a>(8)</i> </p>
+<p><i><a href="/docs/linux/man/8-ettercap/">ettercap</a>(8)</i> <i><a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8)</i> <i>etter.conf(5)</i> <i><a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8)</i> <i><a href="/docs/linux/man/8-ettercap_plugins/">ettercap_plugins</a>(8)</i> </p>

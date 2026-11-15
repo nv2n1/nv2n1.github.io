@@ -25,4 +25,4 @@ description: "CURLOPT_BUFFERSIZE – set preferred receive buffer size"
 <h2>Return Value</h2>
 <p>Returns CURLE_OK if the option is supported, and CURLE_UNKNOWN_OPTION if not.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-curlopt_max_recv_speed/">CURLOPT_MAX_RECV_SPEED</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_writefunction/">CURLOPT_WRITEFUNCTION</a></code>(3),</p>
+<p><code>CURLOPT_MAX_RECV_SPEED</code>(3), <code><a href="/docs/linux/man/3-curlopt_writefunction/">CURLOPT_WRITEFUNCTION</a></code>(3),</p>

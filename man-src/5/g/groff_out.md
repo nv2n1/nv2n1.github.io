@@ -289,7 +289,7 @@ V1100
 x stop</pre>
 </dl>
 </dl>
-<p> This output can be fed into the postprocessor <code><a href="//www.systutorials.com/docs/linux/man/1x-xditview/">xditview</a></code>(1x) or <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1) for displaying in~X. </p>
+<p> This output can be fed into the postprocessor <code>xditview</code>(1x) or <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1) for displaying in~X. </p>
 <p> Due to the obsolete jump-and-write command, the text clusters in the classical output are almost unreadable.</p>
 <h2>Compatibility</h2>
 <p>The <i>intermediate output</i> language of the <i>classical troff</i> was first documented in [CSTR~#97] . The <i>groff intermediate output</i> format is compatible with this specification except for the following features.</p>

@@ -30,7 +30,7 @@ description: "crtsv – mutual converter between TSV and QDBM Curia database"
 <p> Thus, to retrieve the information of a user `mikio&#8217;, perform the following command.<br />
  <code> crmgr get casket mikio</code> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/1-crmgr/">crmgr</a></code>(1), <code><a href="/docs/linux/man/3-curia/">curia</a></code>(3), <code><a href="/docs/linux/man/3-cropen/">cropen</a></code>(3).</p>
+<p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-crmgr/">crmgr</a></code>(1), <code>curia</code>(3), <code>cropen</code>(3).</p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian project (but may be used by others). </p>

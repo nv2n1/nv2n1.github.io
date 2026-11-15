@@ -20,4 +20,4 @@ description: "drmAvailable – determine whether a DRM kernel driver has been lo
 <h2>Reporting Bugs</h2>
 <p>Bugs in this function should be reported to <a rel="nofollow" href="http://bugs.freedesktop.org">http://bugs.freedesktop.org</a> under the &quot;Mesa&quot; product, with &quot;Other&quot; or &quot;libdrm&quot; as the component.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-drm/">drm</a></code>(7), <code><a href="/docs/linux/man/3-drmopen/">drmOpen</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/7-drm/">drm</a></code>(7), <code>drmOpen</code>(3)</p>

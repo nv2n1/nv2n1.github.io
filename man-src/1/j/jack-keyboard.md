@@ -73,7 +73,7 @@ description: "jack-keyboard – A virtual keyboard for JACK MIDI"
 <p> In addition to the MIDI output port, <code>jack-keyboard</code> also opens MIDI input (listening) port. MIDI events going into this port will be passed to the output port unmodified, except for channel number, which will be set to the one <code>jack-keyboard</code> is configured to use. Note On and Note Off MIDI events will cause visible effect (pressing and releasing) on keys, just like if they were being pressed using keyboard or mouse. </p>
 <p> <code>jack-keyboard</code> will never connect to it&#8217;s own MIDI input port. It will also refuse to connect to any other client whose name begins in &quot;jack-keyboard&quot;, unless the &quot;-k&quot; option is given. It is, however, possible to connect these ports manually, using <code>jack_connect</code> or <code>qjackctl</code>; this may create feedback loop.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-jackd/">jackd</a></code>(1), <code><a href="/docs/linux/man/1-ghostess/">ghostess</a></code>(1), <code><a href="/docs/linux/man/1-qjackctl/">qjackctl</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-jackd/">jackd</a></code>(1), <code>ghostess</code>(1), <code><a href="/docs/linux/man/1-qjackctl/">qjackctl</a></code>(1)</p>
 <h2>BUGS</h2>
 <p> Key grabbing is unreliable. </p>
 <p> Many PC keyboards have problems with polyphony. For example, with the one I&#8217;m using right now, it&#8217;s impossible to press &quot;c&quot;, &quot;v&quot; and &quot;b&quot; at the same time. It&#8217;s a hardware problem, not the software one. </p>

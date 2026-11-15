@@ -77,9 +77,9 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-sinh/">sinh</a><code>(1)</code> = 1.1752<br />
+<p>&nbsp;<wbr>&nbsp;sinh<code>(1)</code> = 1.1752<br />
 &nbsp;<wbr>&nbsp;sinh(-1) = -1.1752<br />
-&nbsp;<wbr>&nbsp;log(<a href="/docs/linux/man/1-sinh/">sinh</a><code>(1)</code>+<a href="/docs/linux/man/1-cosh/">cosh</a>(1)) = 1<br />
+&nbsp;<wbr>&nbsp;log(sinh<code>(1)</code>+cosh(1)) = 1<br />
 &nbsp;<wbr>&nbsp;sinh(+0) = 0<br />
 &nbsp;<wbr>&nbsp;sinh(-0) = -0<br />
 &nbsp;<wbr>&nbsp;sinh(710.5) = inf<br />

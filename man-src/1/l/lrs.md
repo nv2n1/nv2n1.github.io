@@ -111,7 +111,7 @@ url: "/docs/linux/man/1-lrs/"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i>R. Blazek, 2004, Introducing the Linear Reference System in GRASS, Bangkok, GRASS User Conf. Proc.</i><br />
- <i>R. Blazek, 2005, Introducing the Linear Reference System in GRASS, International Journal of Geoinformatics, Vol. <a href="/docs/linux/man/3-1/">1</a>(3), pp. 95-100</i> </p>
+ <i>R. Blazek, 2005, Introducing the Linear Reference System in GRASS, International Journal of Geoinformatics, Vol. 1(3), pp. 95-100</i> </p>
 <p> <i>v.build.polylines</i>, <i>v.lrs.create</i>, <i>v.lrs.segment</i>, <i>v.lrs.where</i>, <i>v.lrs.label</i></p>
 <h2>AUTHOR</h2>
 <p> Radim Blazek, ITC-irst/MPA Solutions Trento<br />

@@ -266,7 +266,7 @@ $ tig --word-diff=plain
 <p> Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[]<font SIZE="-2">[3]</font>&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-tigrc/">tigrc</a></code>(5), <code><a href="/docs/linux/man/7-tigmanual/">tigmanual</a></code>(7), <a href="/docs/linux/man/7-git/">git</a>(7)</p>
+<p> <code><a href="/docs/linux/man/5-tigrc/">tigrc</a></code>(5), <code><a href="/docs/linux/man/7-tigmanual/">tigmanual</a></code>(7), git(7)</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</p>

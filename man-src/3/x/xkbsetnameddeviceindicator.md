@@ -59,4 +59,4 @@ description: "XkbSetNamedIndicator – Names an indicator if it is not already n
 <dt><code>BadValue</code></p>
 <dd><i>led_class</i> does not specify <code>DfltXIClass</code>, <code>LedFeedbackClass</code>, or <code>KbdFeedbackClass</code>.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbindicatormapnotify/">XkbIndicatorMapNotify</a></code>(3), <code><a href="/docs/linux/man/3-xkbindicatorstatenotify/">XkbIndicatorStateNotify</a></code>(3), <code><a href="/docs/linux/man/3-xkbnamesnotify/">XkbNamesNotify</a></code>(3)</p>
+<p><code>XkbIndicatorMapNotify</code>(3), <code>XkbIndicatorStateNotify</code>(3), <code>XkbNamesNotify</code>(3)</p>

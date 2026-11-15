@@ -35,5 +35,5 @@ description: "funmerge – merge one or more Funtools table files"
 </pre>
 <p> This program only works on raw event files and binary tables. We have not yet implemented image and array merging.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

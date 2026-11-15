@@ -18,4 +18,4 @@ int pack_fputs(const char *p, PACKFILE *f);</code></pre>
 <h2>Return Value</h2>
 <p>Returns zero on success or a negative number on error. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pack_fopen/">pack_fopen</a></code>(3), <code><a href="/docs/linux/man/3-pack_fopen_chunk/">pack_fopen_chunk</a></code>(3), <code><a href="/docs/linux/man/3-pack_fwrite/">pack_fwrite</a></code>(3), <code><a href="/docs/linux/man/3-pack_putc/">pack_putc</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-pack_fopen/">pack_fopen</a></code>(3), <code><a href="/docs/linux/man/3-pack_fopen_chunk/">pack_fopen_chunk</a></code>(3), <code><a href="/docs/linux/man/3-pack_fwrite/">pack_fwrite</a></code>(3), <code>pack_putc</code>(3) </p>

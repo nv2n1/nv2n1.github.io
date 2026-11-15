@@ -37,7 +37,7 @@ description: "lsb_release – print distribution-specific information"
 <p> This is a reimplementation of the <code>lsb_release</code> command provided by the Free Standards Group. Any bugs are solely the responsibility of the author below. </p>
 <p> Detection of systems using a mix of packages from various distributions or releases is something of a black art; the current heuristic tends to assume that the installation is of the earliest distribution which is still being used by <code>apt</code> but that heuristic is subject to error.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-lsb/">lsb</a>(8)</p>
+<p> lsb(8)</p>
 <h2>AUTHOR</h2>
 <p> Chris Lawrence &lt;lawrencc [at] debian.org&gt;. </p>
 <h2>Index</h2>

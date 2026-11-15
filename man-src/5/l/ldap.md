@@ -167,7 +167,7 @@ description: "ldap.conf, .ldaprc – LDAP configuration file/environment variabl
 </dl>
 <p> To check what ciphers a given spec selects in OpenSSL, use: </p>
 <pre> openssl ciphers -v &lt;cipher-suite-spec&gt;</pre>
-<p>With GnuTLS the available specs can be found in the manual page of <code><a href="/docs/linux/man/1-gnutls-cli/">gnutls-cli</a></code>(1) (see the description of the option <code>&#8211;priority</code>). </p>
+<p>With GnuTLS the available specs can be found in the manual page of <code>gnutls-cli</code>(1) (see the description of the option <code>&#8211;priority</code>). </p>
 <p> In older versions of GnuTLS, where gnutls-cli does not support the option &#8211;priority, you can obtain the &#8212; more limited &#8212; list of ciphers by calling: </p>
 <pre> gnutls-cli -l</pre>
 <p>When using Mozilla NSS, the OpenSSL cipher suite specifications are used and translated into the format used internally by Mozilla NSS. There isn&#8217;t an easy way to list the cipher suites from the command line. The authoritative list is in the source code for Mozilla NSS in the file sslinfo.c in the structure </p>
@@ -226,7 +226,7 @@ description: "ldap.conf, .ldaprc – LDAP configuration file/environment variabl
 <dt><i>$CWD/ldaprc</i></p>
 <dd>local ldap configuration file</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3), <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3), <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1), <code><a href="/docs/linux/man/3-sasl/">sasl</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3), <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3), <code>openssl</code>(1), <code><a href="/docs/linux/man/3-sasl/">sasl</a></code>(3)</p>
 <h2>Author</h2>
 <p>Kurt Zeilenga, The OpenLDAP Project</p>
 <h2>Acknowledgements</h2>

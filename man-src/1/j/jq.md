@@ -596,7 +596,7 @@ jq &#8216;1, empty, 2&#8217; null = &gt; 1, 2 jq &#8216;[1,2,empty,3]&#8217; nul
 <p> Stops the jq program with no further outputs. The input will be printed on <code>stderr</code> as raw output (i.e., strings will not have double quotes) with no decoration, not even a newline. </p>
 <p> The given <code>exit_code</code> (defaulting to <code>5</code>) will be jq&#8217;s exit status. </p>
 <p> For example, <code>&quot;Error: somthing went wrong
-&quot;|<a href="/docs/linux/man/1-halt_error/">halt_error</a>(1)</code>.</p>
+&quot;|halt_error(1)</code>.</p>
 <h3>$__loc__</h3>
 <p> Produces an object with a &quot;file&quot; key and a &quot;line&quot; key, with the filename and line number where <code>$__loc__</code> occurs, as values.</p>
 <dl>
@@ -663,7 +663,7 @@ jq &#8216;all&#8217;<br />
 <dd></dl>
 <h3>flatten, flatten(depth)</h3>
 <p> The filter <code>flatten</code> takes as input an array of nested arrays, and produces a flat array in which all arrays inside the original array have been recursively replaced by their values. You can pass an argument to it to specify how many levels of nesting to flatten. </p>
-<p> <code><a href="/docs/linux/man/2-flatten/">flatten</a>(2)</code> is like <code>flatten</code>, but going only up to two levels deep.</p>
+<p> <code>flatten(2)</code> is like <code>flatten</code>, but going only up to two levels deep.</p>
 <dl>
 <dt>
 <dd>
@@ -888,7 +888,7 @@ jq &#8216;[.[]|endswith(&#8220;foo&#8221;)]&#8217;<br />
     [&#8220;foobar&#8221;, &#8220;barfoo&#8221;] = &gt; [ false, true ]</p>
 <dt>
 <dd></dl>
-<h3>combinations, <a href="/docs/linux/man/n-combinations/">combinations</a>(n)</h3>
+<h3>combinations, combinations(n)</h3>
 <p> Outputs all combinations of the elements of the arrays in the input array. If given an argument <code>n</code>, it outputs all combinations of <code>n</code> repetitions of the input array.</p>
 <dl>
 <dt>
@@ -1679,9 +1679,9 @@ jq &#8216;[limit(3;.[])]&#8217;<br />
 jq &#8216;[first(range(.)), last(range(.)), nth(./2; range(.))]&#8217; 10 = &gt; [ 0, 9, 5 ]</p>
 <dt>
 <dd></dl>
-<h3>first, last, <a href="/docs/linux/man/n-nth/">nth</a>(n)</h3>
+<h3>first, last, nth(n)</h3>
 <p> The <code>first</code> and <code>last</code> functions extract the first and last values from any array at <code>.</code>. </p>
-<p> The <code><a href="/docs/linux/man/n-nth/">nth</a>(n)</code> function extracts the nth value of any array at <code>.</code>.</p>
+<p> The <code>nth(n)</code> function extracts the nth value of any array at <code>.</code>.</p>
 <dl>
 <dt>
 <dd>

@@ -89,7 +89,7 @@ description: "fdesign – Forms Library User Interface Designer"
 <dd> specifies the font size used for the text inside a browser. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/5-xforms/">xforms</a>(5), <a href="//www.systutorials.com/docs/linux/man/1L-fd2ps/">fd2ps</a>(1L)</p>
+<p> <a href="/docs/linux/man/5-xforms/">xforms</a>(5), fd2ps(1L)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (c) 1996-2002 T.C. Zhao &lt;tc_zhao [at] yahoo.com&gt; and Mark Overmars &lt;markov [at] cs.ruu.nl&gt;<br />
  Since 2002: GNU Lesser General Public License<br />

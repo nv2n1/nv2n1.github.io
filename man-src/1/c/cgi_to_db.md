@@ -83,7 +83,7 @@ cgi_to_db[-duU][-e EmptyValue][cgi - files...]
     #  | cgi_to_db TEST/cgi_to_db_ex.in TEST/cgi_to_db_ex.in-2
 </pre>
 <h2>SEE ALSO</h2>
-<p> Fsdb. <font SIZE="-1"><i><a href="//www.systutorials.com/docs/linux/man/3pm-CGI/">CGI</a></i></font><i></i>(3pm). &lt;<a rel="nofollow" href="http://stein.cshl.org/boulder/">http://stein.cshl.org/boulder/</a>&gt;. &lt;<a rel="nofollow" href="http://stein.cshl.org/WWW/software/CGI/">http://stein.cshl.org/WWW/software/CGI/</a>&gt;</p>
+<p> Fsdb. <font SIZE="-1"><i>CGI</i></font><i></i>(3pm). &lt;<a rel="nofollow" href="http://stein.cshl.org/boulder/">http://stein.cshl.org/boulder/</a>&gt;. &lt;<a rel="nofollow" href="http://stein.cshl.org/WWW/software/CGI/">http://stein.cshl.org/WWW/software/CGI/</a>&gt;</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2008 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
 <p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>

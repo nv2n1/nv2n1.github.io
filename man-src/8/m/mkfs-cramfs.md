@@ -12,7 +12,7 @@ description: "mkfs.cramfs – make compressed ROM file system"
 <p><code>mkfs.cramfs</code> [options] <i>directory file</i></p>
 <h2>Description</h2>
 <p>Files on cramfs file systems are zlib-compressed one page at a time to allow random read access. The metadata is not compressed, but is expressed in a terse representation that is more space-efficient than conventional file systems. </p>
-<p> The file system is intentionally read-only to simplify its design; random write access for compressed files is difficult to implement. cramfs ships with a utility (<code><a href="/docs/linux/man/8-mkcramfs/">mkcramfs</a></code>(8)) to pack files into new cramfs images. </p>
+<p> The file system is intentionally read-only to simplify its design; random write access for compressed files is difficult to implement. cramfs ships with a utility (<code>mkcramfs</code>(8)) to pack files into new cramfs images. </p>
 <p> File sizes are limited to less than 16 MB. </p>
 <p> Maximum file system size is a little under 272 MB. (The last file on the file system must begin before the 256 MB block, but can extend past it.)</p>
 <h2>Arguments</h2>

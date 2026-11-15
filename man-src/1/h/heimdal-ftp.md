@@ -243,7 +243,7 @@ nmap $1.$2.$3[$1, $2].[$2, file]
 <dt><code>SHELL</code></p>
 <dd> For default shell.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-ftpd/">ftpd</a>(8)</p>
+<p> ftpd(8)</p>
 <dl>
 <dt>
 <dd> <i>RFC2228</i></dl>

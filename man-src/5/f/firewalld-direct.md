@@ -11,7 +11,7 @@ description: "firewalld.direct – firewalld direct configuration file"
 <h2>Synopsis</h2>
 <pre><i>/etc/firewalld/direct.xml</i></pre>
 <h2>Description</h2>
-<p>Direct configuration gives a more direct access to the firewall. It requires user to know basic <a href="/docs/linux/man/6-ip/">ip</a>(6)tables/ebtables concepts, i.e. <i>table</i> (filter/mangle/nat/&#8230;), <i>chain</i> (INPUT/OUTPUT/FORWARD/&#8230;), <i>commands</i> (-A/-D/-I/&#8230;), <i>parameters</i> (-p/-s/-d/-j/&#8230;) and <i>targets</i> (ACCEPT/DROP/REJECT/&#8230;). Direct configuration should be used only as a last resort when it&#8217;s not possible to use <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5). See also <i>Direct Options</i> in <code><a href="/docs/linux/man/1-firewall-cmd/">firewall-cmd</a></code>(1). </p>
+<p>Direct configuration gives a more direct access to the firewall. It requires user to know basic ip(6)tables/ebtables concepts, i.e. <i>table</i> (filter/mangle/nat/&#8230;), <i>chain</i> (INPUT/OUTPUT/FORWARD/&#8230;), <i>commands</i> (-A/-D/-I/&#8230;), <i>parameters</i> (-p/-s/-d/-j/&#8230;) and <i>targets</i> (ACCEPT/DROP/REJECT/&#8230;). Direct configuration should be used only as a last resort when it&#8217;s not possible to use <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5). See also <i>Direct Options</i> in <code><a href="/docs/linux/man/1-firewall-cmd/">firewall-cmd</a></code>(1). </p>
 <p> A firewalld direct configuration file contains informations about permanent direct chains, rules and passthrough &#8230; </p>
 <p> This is the structure of a direct configuration file: </p>
 <dl>

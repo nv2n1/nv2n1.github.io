@@ -37,7 +37,7 @@ url: "/docs/linux/man/1-pmexp/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-pmeth/">pmeth</a></i>(1), <i><a HREF="/docs/linux/man/1-perlmod/">perlmod</a></i>(1), <i><a HREF="/docs/linux/man/3-exporter/">Exporter</a></i>(3).
+ <i><a HREF="/docs/linux/man/1-pmeth/">pmeth</a></i>(1), <i><a HREF="/docs/linux/man/1-perlmod/">perlmod</a></i>(1), <i>Exporter</i>(3).
 
 <h2>AUTHORS and COPYRIGHTS</h2>
 

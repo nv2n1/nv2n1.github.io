@@ -148,4 +148,4 @@ modifier combinations were established successfully.</pre></dl><h2>Diagnostics</
  A value for a Window argument does not name a defined
  Window.</pre></dl><h2>Bugs</h2><dl COMPACT><dd><pre>The protocol headers for XI 2.0 did not provide
 XIGrabModeAsync or XIGrabModeSync. Use GrabModeSync and
-GrabModeAsync instead, respectively.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XIAllowEvents/">XIAllowEvents</a>(3)</pre></dl>
+GrabModeAsync instead, respectively.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XIAllowEvents(3)</pre></dl>

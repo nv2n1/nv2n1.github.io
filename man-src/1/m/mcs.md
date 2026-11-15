@@ -227,7 +227,7 @@ class X
 <h2>LICENSE</h2>
 <p> The Mono Compiler Suite is released under the terms of the GNU GPL or the MIT X11. Please read the accompanying `COPYING&#8217; file for details. Alternative licensing for the compiler is available from Xamarin. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-csharp/">csharp</a>(1), <a href="/docs/linux/man/1-mdb/">mdb</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mopen/">mopen</a>(1), <a href="/docs/linux/man/1-pkg-config/">pkg-config</a>(1), <a href="/docs/linux/man/1-sn/">sn</a>(1) </p>
+<p> <a href="/docs/linux/man/1-csharp/">csharp</a>(1), mdb(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), mopen(1), <a href="/docs/linux/man/1-pkg-config/">pkg-config</a>(1), <a href="/docs/linux/man/1-sn/">sn</a>(1) </p>
 <h2>BUGS</h2>
 <p> To report bugs in the compiler, you must file them on our bug tracking system, at: <a rel="nofollow" href="http://www.mono-project.com/community/bugs/">http://www.mono-project.com/community/bugs/</a></p>
 <h2>MAILING LIST</h2>

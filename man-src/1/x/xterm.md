@@ -155,7 +155,7 @@ xterm -z
 <dt><code>-cr</code><i> color</i></p>
 <dd> This option specifies the color to use for text cursor. The default is to use the same foreground color that is used for text. It sets the <code>cursorColor</code> resource according to the parameter.</p>
 <dt><code>-cu</code></p>
-<dd> This option indicates that <i>xterm</i> should work around a bug in the <i><a href="/docs/linux/man/1-more/">more</a></i>(1) program that causes it to incorrectly display lines that are exactly the width of the window and are followed by a line beginning with a tab (the leading tabs are not displayed). This option is so named because it was originally thought to be a bug in the <i><a href="//www.systutorials.com/docs/linux/man/3x-curses/">curses</a></i>(3x) cursor motion package.</p>
+<dd> This option indicates that <i>xterm</i> should work around a bug in the <i><a href="/docs/linux/man/1-more/">more</a></i>(1) program that causes it to incorrectly display lines that are exactly the width of the window and are followed by a line beginning with a tab (the leading tabs are not displayed). This option is so named because it was originally thought to be a bug in the <i>curses</i>(3x) cursor motion package.</p>
 <dt><code>+cu</code></p>
 <dd> This option indicates that <i>xterm</i> should not work around the <i><a href="/docs/linux/man/1-more/">more</a></i>(1) bug mentioned above.</p>
 <dt><code>-dc</code></p>
@@ -771,7 +771,7 @@ xterm -e /bin/bash -l -c &quot;my command here&quot;
 <dt><code>bufferedFPS</code> (class<code> BufferedFPS</code>)</p>
 <dd> When <i>xterm</i> is built with double-buffer support, this gives the maximum number of frames/second. The default is &#8220;40&#8221; and is limited to the range 1 through 100.</p>
 <dt><code>cursorTheme</code> (class<code> CursorTheme</code>)</p>
-<dd> The <a href="/docs/linux/man/7-xcursor/">Xcursor</a>(7) library provides a way to change the pointer shape and size. The X11 library uses this library to extend the font- and glyph-cursor calls used by applications such as <i>xterm</i> to substitute external files for the built-in &#8220;core&#8221; cursors provided by X.</p>
+<dd> The Xcursor(7) library provides a way to change the pointer shape and size. The X11 library uses this library to extend the font- and glyph-cursor calls used by applications such as <i>xterm</i> to substitute external files for the built-in &#8220;core&#8221; cursors provided by X.</p>
 <dt>
 <dd> <i>Xterm</i> uses the <code>pointerShape</code> resource to select the X cursor shape. Most of the available sets of cursor themes provide an incomplete set of &#8220;core&#8221; cursors (while possibly adding other cursors). Because of this limitation, <i>xterm</i> disables the feature by default.</p>
 <dt>
@@ -1749,7 +1749,7 @@ SetTcap,GetTcap
 <dt><code>eightBitInput</code> (class<code> EightBitInput</code>)</p>
 <dd> If &#8220;true&#8221;, Meta characters (a single-byte character combined with the <i>Meta</i> modifier key) input from the keyboard are presented as a single character, modified according to the <code>eightBitMeta</code> resource. If &#8220;false&#8221;, Meta characters are converted into a two-character sequence with the character itself preceded by ESC. The default is &#8220;true&#8221;.</p>
 <dt>
-<dd> The <code>metaSendsEscape</code> and <code>altSendsEscape</code> resources may override this feature. Generally keyboards do not have a key labeled &#8220;Meta&#8221;, but &#8220;Alt&#8221; keys are common, and they are conventionally used for &#8220;Meta&#8221;. If they were synonymous, it would have been reasonable to name this resource &#8220;<code>altSendsEscape</code>&#8221;, reversing its sense. For more background on this, see the <code><a href="//www.systutorials.com/docs/linux/man/3x-meta/">meta</a></code>(3x) function in curses.</p>
+<dd> The <code>metaSendsEscape</code> and <code>altSendsEscape</code> resources may override this feature. Generally keyboards do not have a key labeled &#8220;Meta&#8221;, but &#8220;Alt&#8221; keys are common, and they are conventionally used for &#8220;Meta&#8221;. If they were synonymous, it would have been reasonable to name this resource &#8220;<code>altSendsEscape</code>&#8221;, reversing its sense. For more background on this, see the <code>meta</code>(3x) function in curses.</p>
 <dt>
 <dd> Note that the <i>Alt</i> key is not necessarily the same as the <i>Meta</i> modifier. The <i>xmodmap</i> utility lists your key modifiers. X defines modifiers for shift, (caps) lock and control, as well as 5 additional modifiers which are generally used to configure key modifiers. <i>Xterm</i> inspects the same information to find the modifier associated with either <i>Meta</i> key (left or right), and uses that key as the <i>Meta</i> modifier. It also looks for the NumLock key, to recognize the modifier which is associated with that.</p>
 <dt>

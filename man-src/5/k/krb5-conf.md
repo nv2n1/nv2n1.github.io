@@ -144,7 +144,7 @@ includedir DIRNAME</pre>
 <dt><code>ignore_acceptor_hostname</code></p>
 <dd>When accepting GSSAPI or krb5 security contexts for host-based service principals, ignore any hostname passed by the calling application, and allow clients to authenticate to any service principal in the keytab matching the service name and realm name (if given). This option can improve the administrative flexibility of server applications on multihomed hosts, but could compromise the security of virtual hosting environments. The default value is false. New in release 1.10.</p>
 <dt><code>k5login_authoritative</code></p>
-<dd>If this flag is true, principals must be listed in a local user&#8217;s k5login file to be granted login access, if a <i><a href="/docs/linux/man/5--k5login/">.k5login</a>(5)</i> file exists. If this flag is false, a principal may still be granted login access through other mechanisms even if a k5login file exists but does not list the principal. The default value is true.</p>
+<dd>If this flag is true, principals must be listed in a local user&#8217;s k5login file to be granted login access, if a <i>.k5login(5)</i> file exists. If this flag is false, a principal may still be granted login access through other mechanisms even if a k5login file exists but does not list the principal. The default value is true.</p>
 <dt><code>k5login_directory</code></p>
 <dd>If set, the library will look for a local user&#8217;s k5login file within the named directory, with a filename corresponding to the local username. If not set, the library will look for k5login files in the user&#8217;s home directory, with the filename .k5login. For security reasons, .k5login files must be owned by the local user or by root.</p>
 <dt><code>kcm_mach_service</code></p>
@@ -468,7 +468,7 @@ includedir DIRNAME</pre>
 <dt><code>auth_to_local</code></p>
 <dd>This module processes <code>auth_to_local</code> values in the default realm&#8217;s section, and applies the default method if no <code>auth_to_local</code> values exist.</p>
 <dt><code>k5login</code></p>
-<dd>This module authorizes a principal to a local account according to the account&#8217;s <i><a href="/docs/linux/man/5--k5login/">.k5login</a>(5)</i> file.</p>
+<dd>This module authorizes a principal to a local account according to the account&#8217;s <i>.k5login(5)</i> file.</p>
 <dt><code>an2ln</code></p>
 <dd>This module authorizes a principal to a local account if the principal name maps to the local account name.</dl>
 <h3>certauth interface</h3>

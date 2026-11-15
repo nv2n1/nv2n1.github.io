@@ -27,7 +27,7 @@ gmk_msh[options][mfile][gfile]
     $ gmk_msh brol.msh brol.grf
 </pre>
 <h2>SEE ALSO</h2>
-<p> dgmap (1), <code><a href="/docs/linux/man/1-dgord/">dgord</a></code>(1), <code><a href="/docs/linux/man/1-gmap/">gmap</a></code>(1), <code><a href="/docs/linux/man/1-gord/">gord</a></code>(1), <code><a href="/docs/linux/man/1-gtst/">gtst</a></code>(1), <code><a href="/docs/linux/man/1-mmk_m2/">mmk_m2</a></code>(1), <code><a href="/docs/linux/man/1-mord/">mord</a></code>(1), <code><a href="/docs/linux/man/1-mcv/">mcv</a></code>(1), <code><a href="/docs/linux/man/1-mtst/">mtst</a></code>(1). </p>
+<p> dgmap (1), <code>dgord</code>(1), <code>gmap</code>(1), <code>gord</code>(1), <code>gtst</code>(1), <code>mmk_m2</code>(1), <code>mord</code>(1), <code>mcv</code>(1), <code>mtst</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

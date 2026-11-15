@@ -17,7 +17,7 @@ description: "quvi-modules – Overview of the loadable quvi modules"
 <h2>Modules</h2>
 <p>quvi/http/cookie</p>
 <dl>
-<dd>A set of functions that wrap most of the quvi.http.cookie function features. See <code><a href="/docs/linux/man/7-quvi-object/">quvi-object</a></code>(7).</dl>
+<dd>A set of functions that wrap most of the quvi.http.cookie function features. See <code>quvi-object</code>(7).</dl>
 <p> quvi/const</p>
 <dl>
 <dd>Constants. Technically, (due to Lua language specification) these are not immutable values. The <i>constants</i> are used to interact with libquvi, e.g. specifying function operation modes and checking for returned libquvi return codes.</dl>
@@ -29,10 +29,10 @@ description: "quvi-modules – Overview of the loadable quvi modules"
 <dd>HTML entity conversion module. Converts the <i>standard HTML entities</i> (to ASCII), and any numeric HTML entities to UTF-8 (using the <i>quvi/html</i> module).</dl>
 <p> quvi/hash</p>
 <dl>
-<dd>Wrapper functions for some of the common hash (message digest) functions provided by the <code><a href="/docs/linux/man/7-quvi-object/">quvi-object</a></code>(7). Note that these functions convert the given data into hexadecimal form before passing it to the hash functions.</dl>
+<dd>Wrapper functions for some of the common hash (message digest) functions provided by the <code>quvi-object</code>(7). Note that these functions convert the given data into hexadecimal form before passing it to the hash functions.</dl>
 <p> quvi/hex</p>
 <dl>
-<dd>Functions for converting values from and to hexadecimal form. These are typically used together with the <code><a href="/docs/linux/man/7-quvi-object/">quvi-object</a></code>(7) crypto functions.</dl>
+<dd>Functions for converting values from and to hexadecimal form. These are typically used together with the <code>quvi-object</code>(7) crypto functions.</dl>
 <p> quvi/html</p>
 <dl>
 <dd>Converts numeric HTML entities to UTF-8. See also <i>quvi/entity</i>, which uses this module.</dl>
@@ -52,7 +52,7 @@ description: "quvi-modules – Overview of the loadable quvi modules"
 <dl>
 <dd>Functions common to YouTube.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-libquvi-scripts/">libquvi-scripts</a></code>(7), <code><a href="/docs/linux/man/3-libquvi/">libquvi</a></code>(3), <code><a href="/docs/linux/man/7-quvi-object/">quvi-object</a></code>(7), <code><a href="/docs/linux/man/7-quvi-modules-3rdparty/">quvi-modules-3rdparty</a></code>(7)</p>
+<p><code><a href="/docs/linux/man/7-libquvi-scripts/">libquvi-scripts</a></code>(7), <code><a href="/docs/linux/man/3-libquvi/">libquvi</a></code>(3), <code>quvi-object</code>(7), <code><a href="/docs/linux/man/7-quvi-modules-3rdparty/">quvi-modules-3rdparty</a></code>(7)</p>
 <h2>Further Resources</h2>
 <p>Home</p>
 <dl>

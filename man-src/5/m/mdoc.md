@@ -16,7 +16,7 @@ description: "mdoc – Mono Documentation XML Format"
 <dt><i>mdoc validate</i></p>
 <dd>Validates the mono documentation XML against the mono documentation XML schema.</p>
 <dt><i>mdoc assemble</i></p>
-<dd>Converts the mono documentation XML within a directory structure into a set of files for use with <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1).</p>
+<dd>Converts the mono documentation XML within a directory structure into a set of files for use with <code>monodoc</code>(1).</p>
 <dt><i>mdoc export-html</i></p>
 <dd>Converts the mono documentation XML within a directory structure into a set of HTML files that can be viewed with a web browser.</dl>
 <p> All of these tools (and more) use the common XML schema described in this man page.</p>
@@ -27,7 +27,7 @@ description: "mdoc – Mono Documentation XML Format"
 <dd><code>index.xml:</code> contains a list of all assemblies within the containing directory, and all types and namespaces within those assemblies.</p>
 <dt><code>*</code></p>
 <dd><code>ns-*.xml:</code> There is one ns-*.xml file for each namespace within the assembly; these files are siblings to <i>index.xml</i> . </p>
-<p> Examples of <i>ns-*.xml</i> files include: <i>ns-System.xml</i>, <i>ns-System.Collections.xml</i>, and <i>ns-.xml</i> (for the root namespace, though it is recommended to NOT place types into the root namespace, as <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1) doesn&#8217;t display them). </p>
+<p> Examples of <i>ns-*.xml</i> files include: <i>ns-System.xml</i>, <i>ns-System.Collections.xml</i>, and <i>ns-.xml</i> (for the root namespace, though it is recommended to NOT place types into the root namespace, as <code>monodoc</code>(1) doesn&#8217;t display them). </p>
 <p> The <i>ns-*.xml</i> files contain per-namespace documentation.</p>
 <dt><code>*</code></p>
 <dd><code>NamespaceName/TypeName.xml:</code> These files are within a dotted <i>NamespaceName</i> directory, and <i>TypeName</i> is the name of the type. </p>

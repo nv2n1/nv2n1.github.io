@@ -50,7 +50,7 @@ description: "kpartx – Create device maps from partition tables."
 <dl>
 <dd>kpartx -d disk.img</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-multipath/">multipath</a></code>(8) <code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8) <code><a href="/docs/linux/man/8-hotplug/">hotplug</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-multipath/">multipath</a></code>(8) <code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8) <code>hotplug</code>(8)</p>
 <h2>Authors</h2>
 <p>This man page was assembled By Patrick Caulfield for the Debian project. </p>
 <p> <i>multipath-tools</i> was developed by Christophe Varoqui &lt;christophe.varoqui [at] opensvc.com&gt; and others.</p>

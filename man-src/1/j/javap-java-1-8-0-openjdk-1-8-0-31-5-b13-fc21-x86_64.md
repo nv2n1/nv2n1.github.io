@@ -221,7 +221,7 @@ description: "javap – Disassembles one or more class files."
 <dd> &bull; <a href="/docs/linux/man/1-javadoc/">javadoc</a>(1)</dl>
 <dl>
 <dt>
-<dd> &bull; <a href="/docs/linux/man/1-javah/">javah</a>(1)</dl>
+<dd> &bull; javah(1)</dl>
 <dl>
 <dt>
 <dd> &bull; <a href="/docs/linux/man/1-jdb/">jdb</a>(1)</dl>

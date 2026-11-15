@@ -99,4 +99,4 @@ description: "afpd – AppleTalk Filing Protocol daemon"
 <dd>contains messages to be sent to users.</dl>
 <h2>Bugs</h2>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/5-afpd-conf/">afpd.conf</a></code>(5), <code><a href="/docs/linux/man/5-applevolumes-default/">AppleVolumes.default</a></code>(5), <code><a href="/docs/linux/man/5-applevolumes-system/">AppleVolumes.system</a></code>(5). </p>
+<p><code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code>afpd.conf</code>(5), <code>AppleVolumes.default</code>(5), <code>AppleVolumes.system</code>(5). </p>

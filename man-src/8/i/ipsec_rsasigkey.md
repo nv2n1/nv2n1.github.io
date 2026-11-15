@@ -41,7 +41,7 @@ description: "ipsec_rsasigkey – generate RSA signature key"
 <h2>Examples</h2>
 <p><code>ipsec rsasigkey &#8211;verbose 4096 &gt;mykey.txt</code></p>
 <dl>
-<dd>generates a 4096-bit signature key and puts it in the file mykey.txt, with running commentary on standard error. The file contents can be inserted verbatim into a suitable entry in the ipsec.secrets file (see <code><a href="/docs/linux/man/5-ipsec_secrets/">ipsec_secrets</a></code>(5)), and the public key can then be extracted and edited into the ipsec.conf (see <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8)).</dl>
+<dd>generates a 4096-bit signature key and puts it in the file mykey.txt, with running commentary on standard error. The file contents can be inserted verbatim into a suitable entry in the ipsec.secrets file (see <code>ipsec_secrets</code>(5)), and the public key can then be extracted and edited into the ipsec.conf (see <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8)).</dl>
 <h2>Files</h2>
 <p>/dev/random, /dev/urandom</p>
 <h2>See Also</h2>

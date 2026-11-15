@@ -131,7 +131,7 @@ description: "vdr – the Video Disk Recorder"
 <dt><i>.update</i></p>
 <dd> If this file is present in the video directory, its last modification time will be used to trigger an update of the list of recordings in the &quot;Recordings&quot; menu.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-vdr/">vdr</a></code>(5),<code><a href="/docs/linux/man/1-svdrp/">svdrp</a>(1)</code></p>
+<p> <code><a href="/docs/linux/man/5-vdr/">vdr</a></code>(5),<code>svdrp(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Written by Klaus Schmidinger, with contributions from many others. See the file <i>CONTRIBUTORS</i> in the <code>vdr</code> source distribution.</p>
 <h2>REPORTING BUGS</h2>

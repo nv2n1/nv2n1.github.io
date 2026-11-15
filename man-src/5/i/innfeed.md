@@ -302,7 +302,7 @@ peer bb.home.vix.com {
 # Format is:
 # key : value
 #
-# See <a href="//www.systutorials.com/docs/linux/man/5-innfeed.conf/">innfeed.conf</a>(5) for a description of
+# See innfeed.conf(5) for a description of
 # necessary &amp; useful keys. Unknown keys and their
 # values are ignored.
 #
@@ -315,7 +315,8 @@ peer bb.home.vix.com {
 # with double quotes. Inside the quotes, you may
 # use the standard c-escape sequence
 # (	,
-,,,,\&quot;,\').
+,
+,,,\&quot;,\').
 #
 # Examples:
 # eg-string: &quot;New	Config	file

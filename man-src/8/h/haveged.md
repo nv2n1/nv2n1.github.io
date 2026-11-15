@@ -156,7 +156,7 @@ description: "haveged – Generate random numbers and feed linux random device."
 <h2>See Also</h2>
 <dl>
 <dt><code><a href="/docs/linux/man/3-libhavege/">libhavege</a>(3),</code></p>
-<dd><code><a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a>(8),</code> <code><a href="/docs/linux/man/1-aespipe/">aespipe</a>(1),</code> <code><a href="/docs/linux/man/1-pv/">pv</a>(1),</code> <code><a href="/docs/linux/man/1-openssl/">openssl</a>(1),</code> <code><a href="/docs/linux/man/1-uuencode/">uuencode</a>(1)</code> </p>
+<dd><code><a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a>(8),</code> <code><a href="/docs/linux/man/1-aespipe/">aespipe</a>(1),</code> <code><a href="/docs/linux/man/1-pv/">pv</a>(1),</code> <code>openssl(1),</code> <code>uuencode(1)</code> </p>
 <h2>References</h2>
 <p><i>HArdware Volatile Entropy Gathering and Expansion: generating unpredictable random numbers at user level</i> by A. Seznec, N. Sendrier, INRIA Research Report, RR-4592, October 2002 </p>
 <p> <i>A proposal for: Functionality classes for random number generators</i> by W. Killmann and W. Schindler, version 2.0, Bundesamt fur Sicherheit in der Informationstechnik (BSI), September, 2011 </p>

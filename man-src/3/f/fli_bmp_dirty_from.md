@@ -22,5 +22,5 @@ if (fli_bmp_dirty_from &lt;= fli_bmp_dirty_to)
          fli_bmp_dirty_to - fli_bmp_dirty_from + 1);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-fli_bitmap/">fli_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-reset_fli_variables/">reset_fli_variables</a></code>(3) </p>
+<p> <code>fli_bitmap</code>(3), <code>reset_fli_variables</code>(3) </p>
 <h2>Index</h2>

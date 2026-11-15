@@ -50,4 +50,4 @@ device explicitly.</pre></dl><dl COMPACT><dd><pre>XIQueryPointer can generate a 
  An invalid device was specified. The device does not
  exist or is not a pointer device.</pre></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XQueryPointer/">XQueryPointer</a>(3)</pre></dl>
+ window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XQueryPointer(3)</pre></dl>

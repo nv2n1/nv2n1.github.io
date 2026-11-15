@@ -43,7 +43,7 @@ struct ibv_global_route {
 <p> If port flag IBV_QPF_GRH_REQUIRED is set then <code>ibv_create_ah()</code> must be created with definition of &#8216;struct ibv_ah_attr { .is_global = 1; .grh = {&#8230;}; }&#8217;. </p>
 <p> <code>ibv_destroy_ah()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_init_ah_from_wc/">ibv_init_ah_from_wc</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah_from_wc/">ibv_create_ah_from_wc</a></code>(3)</p>
+<p> <code>ibv_alloc_pd</code>(3), <code>ibv_init_ah_from_wc</code>(3), <code>ibv_create_ah_from_wc</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

@@ -88,7 +88,7 @@ The most common usage of NGREOP would be in conjunction with usage of NGSRAT and
 
 <h2>Examples</h2>
 
-The following sequence: <pre> CALL <a HREF="//www.systutorials.com/docs/linux/man/1-NGMFTC/">NGMFTC</a>(1)
+The following sequence: <pre> CALL NGMFTC(1)
  CALL NGSRAT(2, IAT, RAT)
  ... do stuff
  CALL NGREOP(CALL NGREOP(1, 2, 1, 'gmeta1', 2, IAT, RAT, 

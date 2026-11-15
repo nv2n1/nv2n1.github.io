@@ -139,7 +139,7 @@ url: "/docs/linux/man/1-fcrondyn/"
 
 <dl>
 <dt><i>/usr/local/etc/fcron.conf</i>
-<dd> Configuration file for <b>fcron</b>, <b>fcrontab</b> and <b>fcrondyn</b>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <b><a HREF="/docs/linux/man/5-fcron-conf/">fcron.conf</a></b>(5) for more details.
+<dd> Configuration file for <b>fcron</b>, <b>fcrontab</b> and <b>fcrondyn</b>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <b>fcron.conf</b>(5) for more details.
 <dt><i>/usr/local/etc/fcron.allow</i>
 <dd> Users allowed to use <b>fcrontab</b> and <b>fcrondyn</b> (one name per line, special name &quot;all&quot; acts for everyone)
 <dt><i>/usr/local/etc/fcron.deny</i>
@@ -157,7 +157,7 @@ url: "/docs/linux/man/1-fcrondyn/"
 
  <b><a HREF="/docs/linux/man/5-fcrontab/">fcrontab</a></b>(5), 
 
- <b><a HREF="/docs/linux/man/5-fcron-conf/">fcron.conf</a></b>(5), 
+ <b>fcron.conf</b>(5), 
 
  <b><a HREF="/docs/linux/man/8-fcron/">fcron</a></b>(8). 
 

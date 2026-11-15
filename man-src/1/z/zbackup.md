@@ -334,7 +334,7 @@ info
 
 <dl>
 <dt>&bull;
-<dd> We use a 64-bit rolling hash, which allows to have an <a HREF="/docs/linux/man/1-o/">O</a>(1) lookup cost at each byte we process. Due to birthday paradox (<a rel="nofollow" HREF="https://en.wikipedia.org/wiki/Birthday_paradox">https://en.wikipedia.org/wiki/Birthday_paradox</a>), we would start having collisions when we approach 2^32 hashes. If each chunk we have is 32k on average, we would get there when our repo grows to 128TB. We would still be able to continue, but as the number of collisions would grow, we would have to resort to calculating the full hash of a block at each byte more and more often, which would result in a considerable slowdown.</dl>
+<dd> We use a 64-bit rolling hash, which allows to have an O(1) lookup cost at each byte we process. Due to birthday paradox (<a rel="nofollow" HREF="https://en.wikipedia.org/wiki/Birthday_paradox">https://en.wikipedia.org/wiki/Birthday_paradox</a>), we would start having collisions when we approach 2^32 hashes. If each chunk we have is 32k on average, we would get there when our repo grows to 128TB. We would still be able to continue, but as the number of collisions would grow, we would have to resort to calculating the full hash of a block at each byte more and more often, which would result in a considerable slowdown.</dl>
  
 
  All in all, as long as the amount of RAM permits, one can go up to several terabytes in deduplicated data, and start having some slowdown after having hundreds of terabytes, RAM-permitting.

@@ -27,12 +27,12 @@ mongoc_socket_recv (mongoc_socket_t *sock,
 <dd>A size_t with the number of bytes to receive.</dl>
 <dl COMPACT>
 <dt><code>flags</code></p>
-<dd>flags for <code><a href="/docs/linux/man/3-recv/">recv</a>(3)</code> \&amp;.</dl>
+<dd>flags for <code>recv(3)</code> \&amp;.</dl>
 <dl COMPACT>
 <dt><code>expire_at</code></p>
-<dd>A int64_t with the time to expire in monotonic time using <code><a href="/docs/linux/man/3-bson_get_monotonic_time/">bson_get_monotonic_time</a>(3)</code> , which is in microseconds.</dl>
+<dd>A int64_t with the time to expire in monotonic time using <code>bson_get_monotonic_time(3)</code> , which is in microseconds.</dl>
 <h2>Description</h2>
-<p>This function performs a <code><a href="/docs/linux/man/3-recv/">recv</a>(3)</code> on the underlying socket. </p>
+<p>This function performs a <code>recv(3)</code> on the underlying socket. </p>
 <h2>Returns</h2>
 <p>The number of bytes received on success, 0 on stream closed, and -1 if there was a failure and errno is set. </p>
 <h2>Colophon</h2>

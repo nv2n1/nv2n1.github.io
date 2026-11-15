@@ -27,7 +27,7 @@ description: "pamtopnm – convert PAM image to PBM, PGM, or PPM"
 <dd> When you specify <code>-assume</code>, you tell <code>pamtopnm</code> that you personally vouch for the fact that the tuples contain the same data as belongs in the channels of a PBM, PGM, or PPM file. The depth must still conform, though, so to truly force a conversion, you may have to run the input through <code>pamchannel</code> first. But be careful with <code>-assume</code>. When you -assume, you make an -ass of u and me. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pamditherbw/">pamditherbw</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtoppm/">pgmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pamditherbw/">pamditherbw</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtoppm/">pgmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code>pbm</code>(1) , <code>pgm</code>(1) , <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamtopnm</code> was new, along with the PAM format, in Netpbm 9.7 (August 2000). </p>
 <h2>Index</h2>

@@ -190,7 +190,7 @@ BrightScan OpticPro OpticPro P12</pre>
 <p> Example: export SANE_DEBUG_PLUSTEK_PP=10 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code>xscanimage</code>(1),<br />
  <i>/usr/share/doc/libsane/plustek/Plustek-PARPORT.changes</i> </p>
 <h2>Contact And Bug-Reports</h2>
 <p>Please send any information and bug-reports to:<br />
@@ -198,7 +198,7 @@ BrightScan OpticPro OpticPro P12</pre>
 <p> Additional info and hints can be obtained from our<br />
  Mailing-List archive at:<br />
  <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> </p>
-<p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_PLUSTEK_PP</code> before calling your favorite scan-frontend (i.e. <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1)),<code>i.e.:</code><br />
+<p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_PLUSTEK_PP</code> before calling your favorite scan-frontend (i.e. <code>xscanimage</code>(1)),<code>i.e.:</code><br />
  <i>export SANE_DEBUG_PLUSTEK_PP=20 ; xscanimage</i> </p>
 <p> The value controls the verbosity of the backend.</p>
 <h2>KNOWN BUGS &amp; RESTRICTIONS</h2>

@@ -59,7 +59,7 @@ description: "ocf_heartbeat_Xen – Manages Xen unprivileged domains (DomUs)"
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a Xen resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a Xen resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_Xen ocf:heartbeat:Xen \
 params \
 xmfile=string \

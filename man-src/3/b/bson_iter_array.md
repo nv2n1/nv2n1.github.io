@@ -27,7 +27,7 @@ void bson_iter_array(const bson_iter_t *iter,
 <dd> A location for the immutable buffer.</dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_array/">bson_iter_array</a>(3)</code> function shall retrieve the raw buffer of a sub-array from <code>iter</code> \&amp;. <code>iter</code> </p>
-<p> <code>MUST</code> be on an element that is of type BSON_TYPE_ARRAY. This can be verified with <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> or the <code><a href="/docs/linux/man/3-bson_iter_holds_array/">BSON_ITER_HOLDS_ARRAY</a>(3)</code> macro. </p>
+<p> <code>MUST</code> be on an element that is of type BSON_TYPE_ARRAY. This can be verified with <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> or the <code>BSON_ITER_HOLDS_ARRAY(3)</code> macro. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
 <h2>Index</h2>

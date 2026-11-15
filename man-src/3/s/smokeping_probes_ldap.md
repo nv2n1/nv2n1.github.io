@@ -52,7 +52,7 @@ Smokeping::probes::LDAP - a LDAP probe for SmokePing
 
  The probe can issue the starttls command to convert the connection into encrypted mode, if so instructed by the `start_tls' variable. This requires the 'IO::Socket::SSL' perl module to be installed. 
 
- The probe can also optionally do an authenticated <font SIZE="-1">LDAP</font> bind, if the `binddn' variable is present. The password to be used can be specified by the target-specific variable `password' or in an external file. The location of this file is given in the probe-specific variable `passwordfile'. See <i><a HREF="//www.systutorials.com/docs/linux/man/3pm-Smokeping::probes::passwordchecker/">Smokeping::probes::passwordchecker</a></i>(3pm) for the format of this file (summary: colon-separated triplets of the form `&lt;host&gt;:&lt;bind-dn&gt;:&lt;password&gt;') 
+ The probe can also optionally do an authenticated <font SIZE="-1">LDAP</font> bind, if the `binddn' variable is present. The password to be used can be specified by the target-specific variable `password' or in an external file. The location of this file is given in the probe-specific variable `passwordfile'. See <i>Smokeping::probes::passwordchecker</i>(3pm) for the format of this file (summary: colon-separated triplets of the form `&lt;host&gt;:&lt;bind-dn&gt;:&lt;password&gt;') 
 
  The probe tries to be nice to the server and does not send authentication requests more frequently than once every X seconds, where X is the value of the target-specific ``min_interval'' variable (1 by default).
 <h2>Variables</h2>Supported probe-specific variables:

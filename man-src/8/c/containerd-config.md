@@ -22,4 +22,4 @@ description: "containerd-config – information on the containerd config"
 <h2>Author</h2>
 <p>Phil Estes estesp [at] gmail.com &lt;mailto:estesp [at] gmail.com&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-ctr/">ctr</a>(8), <a href="/docs/linux/man/8-containerd/">containerd</a>(8), <a href="/docs/linux/man/5-containerd-config-toml/">containerd-config.toml</a>(5) </p>
+<p>ctr(8), containerd(8), <a href="/docs/linux/man/5-containerd-config-toml/">containerd-config.toml</a>(5) </p>

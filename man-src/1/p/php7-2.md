@@ -108,7 +108,7 @@ description: "php – PHP Command Line Interface ‘CLI’"
 <dt><i>php -r &#8216;print_r(gd_info());&#8217;</i></p>
 <dd>This shows the configuration of your gd extension. You can use this to easily check which image formats you can use. If you have any dynamic modules you may want to use the same ini file that php uses when executed from your webserver. There are more extensions which have such a function. For dba use:</p>
 <dl COMPACT>
-<dd><i>php -r &#8216;print_r(<a href="/docs/linux/man/1-dba_handlers/">dba_handlers</a>(1));&#8217;</i></dl>
+<dd><i>php -r &#8216;print_r(dba_handlers(1));&#8217;</i></dl>
 <dt><i>php -R &#8216;echo strip_tags($argn).&quot;
 &quot;;&#8217;</i></p>
 <dd>This PHP command strips off the HTML tags line by line and outputs the result. To see how it works you can first look at the following PHP command &#8216;<i>php -d html_errors=1 -i</i>&#8216; which uses PHP to output HTML formatted configuration information. If you then combine those two &#8216;<i>php &#8230;|php &#8230;</i>&#8216; you&#8217;ll see what happens.</p>

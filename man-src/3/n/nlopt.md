@@ -201,4 +201,4 @@ with the linker flags -lnlopt -lm on Unix.</code></pre>
 <p>Written by Steven G. Johnson. </p>
 <p> Copyright (c) 2007-2014 Massachusetts Institute of Technology.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-nlopt_minimize/">nlopt_minimize</a>(3) </p>
+<p>nlopt_minimize(3) </p>

@@ -21,7 +21,7 @@ description: "install_service – install initng‘s .ii files"
 <dt><code>&#8211;dist, -d</code></p>
 <dd>Set the distribution you want to install the file for (e.g. debian, gentoo, fedora). If this option is not set <i>install_service</i> will try to guess the distribution.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-initng/">initng</a>(8)</code> <code><a href="/docs/linux/man/8-ngc/">ngc</a>(8),</code> <code><a href="/docs/linux/man/8-ngdc/">ngdc</a>(8),</code> <code><a href="/docs/linux/man/8-ng-update/">ng-update</a>(8),</code> <code><a href="/docs/linux/man/8-gen_system_runlevel/">gen_system_runlevel</a>(8),</code> <code><a href="/docs/linux/man/8-system_off/">system_off</a>(8).</code></p>
+<p><code><a href="/docs/linux/man/8-initng/">initng</a>(8)</code> <code><a href="/docs/linux/man/8-ngc/">ngc</a>(8),</code> <code><a href="/docs/linux/man/8-ngdc/">ngdc</a>(8),</code> <code><a href="/docs/linux/man/8-ng-update/">ng-update</a>(8),</code> <code>gen_system_runlevel(8),</code> <code>system_off(8).</code></p>
 <h2>Author</h2>
 <p>initng was written by Jimmy Wennlund &lt;jimmy.wennlund [at] gmail.com&gt; and can be found at <a rel="nofollow" href="http://www.initng.org/.">http://www.initng.org/.</a> </p>
 <p> This manual page was written by Armin Berres &lt;a.berres [at] onlinehome.de&gt;.</p>

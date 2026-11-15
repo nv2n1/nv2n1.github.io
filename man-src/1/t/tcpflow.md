@@ -100,7 +100,7 @@ description: "tcpflow – TCP flow recorder"
 <dt><code>-q</code></p>
 <dd> Quiet mode &#8212; don&#8217;t print warnings. Currently the only warning that <code>tcpflow</code> prints is a warning when more than 10,000 files are created that the user should have provided the <code>-Fk</code>, <code>-Fm</code>, or <code>-Fg</code> options. We might have other warnings in the future.</p>
 <dt><code>-r</code></p>
-<dd> Read from file. Read packets from <i>file</i>, which was created using the <code>-w</code> option of <i><a href="/docs/linux/man/1-tcpdump/">tcpdump</a></i>(1). This option may be repeated any number of times. Standard input is used if <i>file</i> is &quot;-&quot;. Note that for this option to be useful, tcpdump&#8217;s <code>-s</code> option should be used to set the snaplen to the MTU of the interface (e.g., 1500) while capturing packets.</p>
+<dd> Read from file. Read packets from <i>file</i>, which was created using the <code>-w</code> option of <i>tcpdump</i>(1). This option may be repeated any number of times. Standard input is used if <i>file</i> is &quot;-&quot;. Note that for this option to be useful, tcpdump&#8217;s <code>-s</code> option should be used to set the snaplen to the MTU of the interface (e.g., 1500) while capturing packets.</p>
 <dt><code>-R</code></p>
 <dd> Read from a file, but only to complete TCP flows. This option is used when <i>tcpflow</i> is used to process a series of files that are captured over time. For each time period <i>n,</i> file <i>filen.pcap</i> should be processed with <code>R -r </code><i>filen.pcap</i>, while <i>file(n-1).pcap</i> should be processed with <i>R -R file(n-1).pcap.</i></p>
 <dt><code>-S</code><i>name</i><code>=</code><i>value</i></p>
@@ -149,5 +149,5 @@ description: "tcpflow – TCP flow recorder"
 <dt>
 <dd> <i><a rel="nofollow" href="http://groups.google.com/group/tcpflow-users">http://groups.google.com/group/tcpflow-users</a></i></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1), <a href="//www.systutorials.com/docs/linux/man/4P-nit/">nit</a>(4P), <a href="/docs/linux/man/4-bpf/">bpf</a>(4), <a href="/docs/linux/man/3-pcap/">pcap</a>(3), <a href="/docs/linux/man/5-pcap-savefile/">pcap-savefile</a>(5), <a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a>(7) </p>
+<p> tcpdump(1), nit(4P), bpf(4), pcap(3), <a href="/docs/linux/man/5-pcap-savefile/">pcap-savefile</a>(5), <a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a>(7) </p>
 <h2>Index</h2>

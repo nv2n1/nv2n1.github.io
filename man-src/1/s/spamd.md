@@ -244,7 +244,7 @@ description: "spamd – daemonized version of spamassassin"
 <dt><code>&#8211;socketmode</code> <i>mode</i></p>
 <dd> Set <font SIZE="-1">UNIX</font> domain socket to use the octal mode <i>mode</i>. Note that if <tt>&quot;-u&quot;</tt> is used, that user should have write permissions to unlink the file later, for when the <tt>&quot;spamd&quot;</tt> server is killed.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-spamc/">spamc</a></i>(1) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/3-mail--spamassassin--conf/">Mail::SpamAssassin::Conf</a></i>(3) <i><a href="/docs/linux/man/3-mail--spamassassin/">Mail::SpamAssassin</a></i>(3)</p>
+<p> <i><a href="/docs/linux/man/1-spamc/">spamc</a></i>(1) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i>Mail::SpamAssassin::Conf</i>(3) <i>Mail::SpamAssassin</i>(3)</p>
 <h2>PREREQUISITES</h2>
 <p> <tt>&quot;Mail::SpamAssassin&quot;</tt></p>
 <h2>AUTHORS</h2>

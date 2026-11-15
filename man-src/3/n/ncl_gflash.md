@@ -22,7 +22,7 @@ Gflash - Allows for storing segments of a picture for insertion into any subsequ
  c_gflas3 
  c_gflas4
 <h2>Access</h2>To use Gflash C or Fortran routines, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
-<h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by <a HREF="/docs/linux/man/4-i1mach/">I1MACH</a>(4)) and then terminates execution. The possible error messages are as follows:
+<h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. The possible error messages are as follows:
 <dl COMPACT><dt>GFLAS1 CALLED CONSECUTIVELY WITHOUT AN INTERVENING GFLAS2 CALL
 <dd>You must terminate the usage of one FLASH buffer before reusing it.
 <dt>THE NON-NCAR GKS PACKAGE IS NOT LEVEL 2

@@ -149,5 +149,5 @@ description: "gimp – an image manipulation and paint program."
 <p> Spencer Kimball, Peter Mattis and the GIMP Development Team. </p>
 <p> With patches, fixes, plug-ins, extensions, scripts, translations, documentation and more from lots and lots of people all over the world. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-gimprc/">gimprc</a></code>(5), <code><a href="/docs/linux/man/1-gimptool/">gimptool</a></code>(1), </p>
+<p> <code><a href="/docs/linux/man/5-gimprc/">gimprc</a></code>(5), <code>gimptool</code>(1), </p>
 <h2>Index</h2>

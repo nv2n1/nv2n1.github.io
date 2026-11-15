@@ -62,7 +62,7 @@ void *arg)
 <p> The callback argument <i>timeouts</i> reports how many times a query timed out during the execution of the given request. </p>
 <p> On successful completion of the query, the callback argument <i>node</i> contains a string representing the hostname (assuming <code>ARES_NI_LOOKUPHOST</code> was specified). Additionally, <i>service</i> contains a string representing the service name (assuming <code>ARES_NI_LOOKUPSERVICE</code> was specified). If the query did not complete successfully, or one of the values was not requested, <i>node</i> or <i>service</i> will be <code>NULL</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3), <code><a href="/docs/linux/man/3-ares_getaddrinfo/">ares_getaddrinfo</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3), <code>ares_getaddrinfo</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> Dominick Meglio<br />
  Copyright 2005 by Dominick Meglio. </p>

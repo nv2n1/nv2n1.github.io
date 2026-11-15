@@ -122,7 +122,7 @@ key_serial_t request_key(const char *type, const char *description,
 <dd>
 <dl>
 <dt>*</p>
-<dd> Assumes the authority to instantiate the key U using the <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2) <code>KEYCTL_ASSUME_AUTHORITY</code> operation (typically via the <code><a href="/docs/linux/man/3-keyctl_assume_authority/">keyctl_assume_authority</a></code>(3) function).</p>
+<dd> Assumes the authority to instantiate the key U using the <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2) <code>KEYCTL_ASSUME_AUTHORITY</code> operation (typically via the <code>keyctl_assume_authority</code>(3) function).</p>
 <dt>*</p>
 <dd> Obtains the callout data from the payload of the authorization key V (using the <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2) <code>KEYCTL_READ</code> operation (or, more commonly, the <code><a href="/docs/linux/man/3-keyctl_read/">keyctl_read</a></code>(3) function) with a key ID value of <code>KEY_SPEC_REQKEY_AUTH_KEY</code>).</p>
 <dt>*</p>

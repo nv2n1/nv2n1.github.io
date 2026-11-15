@@ -28,7 +28,7 @@ ISOSRF - Draws an isosurface.
 <dt>MW
 <dd>(an input expression of type INTEGER) defines the range to be used for the third subscript of the array F.
 <dt>EYE
-<dd>(an input array of type REAL, dimensioned 3) is the position of the eye in the UVW coordinate system. The eye position, at (<a HREF="/docs/linux/man/1-eye/">EYE</a>(1),<a HREF="/docs/linux/man/2-eye/">EYE</a>(2),<a HREF="/docs/linux/man/3-eye/">EYE</a>(3)), must be outside the box containing the data. The point being looked at is at the center of the data box and the projection plane is perpendicular to the line of sight. While gaining experience with the routine, a good choice for EYE is (5.*REAL(MU),3.5*REAL(MV),2.*REAL(MW)).
+<dd>(an input array of type REAL, dimensioned 3) is the position of the eye in the UVW coordinate system. The eye position, at (EYE(1),EYE(2),EYE(3)), must be outside the box containing the data. The point being looked at is at the center of the data box and the projection plane is perpendicular to the line of sight. While gaining experience with the routine, a good choice for EYE is (5.*REAL(MU),3.5*REAL(MV),2.*REAL(MW)).
 <dt>MUVWP2
 <dd>(an input expression of type INTEGER) has the value MAX(MU,MV,MW)+2.
 <dt>SLAB

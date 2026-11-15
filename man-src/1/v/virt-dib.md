@@ -113,7 +113,7 @@ description: "virt-dib – Run diskimage-builder elements"
 <dd></dl>
 <dt><code>&#8211;fs-type</code> <font SIZE="-1">FILESYSTEM</font></p>
 <dd> Set the filesystem type to use for the root filesystem. The default is <tt>&quot;ext4&quot;</tt>. </p>
-<p> See also &#8220;guestfs_filesystem_available&#8221; in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> See also &#8220;guestfs_filesystem_available&#8221; in <i>guestfs</i>(3).</p>
 <dt><code>&#8211;image-cache</code> <font SIZE="-1">DIRECTORY</font></p>
 <dd> Set the path in the host where cache the resources used by the elements of the <tt>&quot;extra-data.d&quot;</tt> phase. The default is <i>~/.cache/image-create</i>. </p>
 <p> Please note that most of the resources fetched after <tt>&quot;extra-data&quot;</tt> will be cached in the helper drive specified with <i>&#8211;drive</i>; see also &#8220;<font SIZE="-1">HELPER DRIVE&#8221;</font>.</p>
@@ -247,7 +247,7 @@ description: "virt-dib – Run diskimage-builder elements"
 <dt>&bull;</p>
 <dd> <i></i>$NAME<i>.d</i> (see <i>&#8211;name</i>) will contain initrd, kernel, etc</dl>
 <h2>TEMPORARY DIRECTORY</h2>
-<p> Virt-dib uses the standard temporary directory used by libguestfs, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3). </p>
+<p> Virt-dib uses the standard temporary directory used by libguestfs, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3). </p>
 <p> By default this location is <i>/tmp</i> (default value for <tt>&quot;TMPDIR&quot;</tt>), which on some systems may be on a tmpfs filesystem, and thus defaulting to a maximum size of <i>half</i> of physical <font SIZE="-1">RAM.</font> If virt-dib exceeds this, it may hang or exit early with an error. The solution is to point <tt>&quot;TMPDIR&quot;</tt> to a permanent location used as temporary location, for example: </p>
 <pre>
  mkdir local-tmp
@@ -277,7 +277,7 @@ disk - image - create virt - dib-- -- -- -- -- -- -- -- - -- -- -- -- -a ARCH-- 
 <dd> the need to specify a target size for the output disk, as opposed to <tt>&quot;diskimage-builder&quot;</tt> calculating an optimal one</p>
 <dt>&bull;</p>
 <dd> the handling of environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font>. </p>
-<p> Furthermore, other than the libguestfs own environment variables (see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)), virt-dib does not read any other environment variable: this means that all the options and behaviour changes are specified solely using command line arguments</p>
+<p> Furthermore, other than the libguestfs own environment variables (see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3)), virt-dib does not read any other environment variable: this means that all the options and behaviour changes are specified solely using command line arguments</p>
 <dt>&bull;</p>
 <dd> extra tools needed on some out-of-chroot phases need to be available in the appliance, see &#8220;<font SIZE="-1">EXTRA DEPENDENCIES&#8221;</font>.</dl>
 <p> Elements themselves should notice no difference in they way they are run; behaviour differences may due to wrong assumptions in elements, or not correct virt-dib emulation. </p>
@@ -303,7 +303,7 @@ disk - image - create virt - dib-- -- -- -- -- -- -- -- - -- -- -- -- -a ARCH-- 
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> Pino Toscano (<tt>&quot;ptoscano at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

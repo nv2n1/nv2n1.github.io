@@ -11,8 +11,8 @@ description: "bundle-exec – Execute a command in the context of the bundle"
 <h2>Synopsis</h2>
 <p><code>bundle exec</code> [&#8211;keep-file-descriptors] <i>command</i></p>
 <h2>Description</h2>
-<p>This command executes the command, making all gems specified in the [<code><a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5)</code>][<a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5)] available to <code>require</code> in Ruby programs. </p>
-<p> Essentially, if you would normally have run something like <code>rspec spec/my_spec.rb</code>, and you want to use the gems specified in the [<code><a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5)</code>][<a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5)] and installed via bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i>, you should run <code>bundle exec rspec spec/my_spec.rb</code>. </p>
+<p>This command executes the command, making all gems specified in the [<code>Gemfile(5)</code>][Gemfile(5)] available to <code>require</code> in Ruby programs. </p>
+<p> Essentially, if you would normally have run something like <code>rspec spec/my_spec.rb</code>, and you want to use the gems specified in the [<code>Gemfile(5)</code>][Gemfile(5)] and installed via bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i>, you should run <code>bundle exec rspec spec/my_spec.rb</code>. </p>
 <p> Note that <code>bundle exec</code> does not require that an executable is available on your shell&#8217;s <code>$PATH</code>.</p>
 <h2>Options</h2>
 <dl>
@@ -76,7 +76,7 @@ Bundler.clean_exec('brew install wget')</pre>
 <p>At present, the Rubygems plugin system requires all files named <code>rubygems_plugin.rb</code> on the load path of <i>any</i> installed gem when any Ruby code requires <code>rubygems.rb</code>. This includes executables installed into the system, like <code>rails</code>, <code>rackup</code>, and <code>rspec</code>. </p>
 <p> Since Rubygems plugins can contain arbitrary Ruby code, they commonly end up activating themselves or their dependencies. </p>
 <p> For instance, the <code>gemcutter 0.5</code> gem depended on <code>json_pure</code>. If you had that version of gemcutter installed (even if you <i>also</i> had a newer version without this problem), Rubygems would activate <code>gemcutter 0.5</code> and <code>json_pure &lt;latest&gt;</code>. </p>
-<p> If your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) also contained <code>json_pure</code> (or a gem with a dependency on <code>json_pure</code>), the latest version on your system might conflict with the version in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5), or the snapshot version in your <code>Gemfile.lock</code>. </p>
+<p> If your Gemfile(5) also contained <code>json_pure</code> (or a gem with a dependency on <code>json_pure</code>), the latest version on your system might conflict with the version in your Gemfile(5), or the snapshot version in your <code>Gemfile.lock</code>. </p>
 <p> If this happens, bundler will say:</p>
 <dl>
 <dd>

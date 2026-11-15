@@ -435,7 +435,7 @@ RLELosslessTransferSyntax                            1.2.840.10008.1.2.5
 <h3>Access Control</h3>
 <p> When compiled on Unix platforms with TCP wrapper support, host-based access control can be enabled with the <i>&#8211;access-control</i> command line option. In this case the access control rules defined in the system&#8217;s host access control tables for <code>storescp</code> are enforced. The default locations of the host access control tables are <i>/etc/hosts.allow</i> and <i>/etc/hosts.deny</i>. Further details are described in <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5).</p>
 <h3>Running storescp from inetd</h3>
-<p> On Posix platforms, <code>storescp</code> can be initiated through the <a href="/docs/linux/man/8-inetd/">inetd</a>(8) super server. This requires that <code>storescp</code> be configured in the <i>/etc/inetd.conf</i> configuration file. A typical configuration line could look like this: </p>
+<p> On Posix platforms, <code>storescp</code> can be initiated through the inetd(8) super server. This requires that <code>storescp</code> be configured in the <i>/etc/inetd.conf</i> configuration file. A typical configuration line could look like this: </p>
 <pre>
 acr-nema stream tcp nowait root /usr/sbin/storescp -id +ac -od /tmp/storescp
 </pre>

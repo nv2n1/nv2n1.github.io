@@ -58,7 +58,7 @@ URI intercepted from the application. </p>
 <dt><code>-p &lt;pidfile&gt;</code></p>
 <dd> Ask the process to write down each of its children&#8217;s pids to this file in daemon mode. </p>
 <dt><code>-dk</code></p>
-<dd> Disable use of <code><a href="/docs/linux/man/2-kqueue/">kqueue</a></code>(2). <code><a href="/docs/linux/man/2-kqueue/">kqueue</a></code>(2) is available only on BSD systems. </p>
+<dd> Disable use of <code>kqueue</code>(2). <code>kqueue</code>(2) is available only on BSD systems. </p>
 <dt><code>-ds</code></p>
 <dd> Disable use of speculative <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7). <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) is available only on Linux 2.6 and some custom Linux 2.4 systems. </p>
 <dt><code>-de</code></p>

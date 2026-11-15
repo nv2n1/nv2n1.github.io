@@ -1962,7 +1962,7 @@ description: "XmDataField — The DataField widget class"
  Boolean accept; /* Accept return value, for validation */
 } XmDataFieldCallbackStruct;</pre>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatedatafield/">XmCreateDataField</a></code>(3), <code><a href="/docs/linux/man/3-xmprimitive/">XmPrimitive</a></code>(3), <code><a href="/docs/linux/man/3-xmtextfieldsetstring/">XmTextFieldSetString</a></code>(3), <code><a href="/docs/linux/man/3-xmtextfieldsetstringwcs/">XmTextFieldSetStringWcs</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreatedatafield/">XmVaCreateDataField</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanageddatafield/">XmVaCreateManagedDataField</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code>XmCreateDataField</code>(3), <code><a href="/docs/linux/man/3-xmprimitive/">XmPrimitive</a></code>(3), <code><a href="/docs/linux/man/3-xmtextfieldsetstring/">XmTextFieldSetString</a></code>(3), <code><a href="/docs/linux/man/3-xmtextfieldsetstringwcs/">XmTextFieldSetStringWcs</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreatedatafield/">XmVaCreateDataField</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanageddatafield/">XmVaCreateManagedDataField</a></code>(3).</p>
 <h2>Version</h2>
 <p>This manual page documents the XmDataField widget shipped in Motif version 2.2</p>
 <h2>Author</h2>

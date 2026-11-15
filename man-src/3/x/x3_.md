@@ -61,7 +61,7 @@ static const Real x3_</code></pre>
 <p>Integral of a one-dimensional function. </p>
 <p> Given a target accuracy $ \psilon $, the integral of a function $ f $ between $ a $ and $ b $ is calculated by means of the Gauss-Lobatto formula </p>
 <p> References: This algorithm is a C++ implementation of the algorithm outlined in </p>
-<p> W. Gander and W. Gautschi, Adaptive Quadrature &#8211; Revisited. BIT, <a href="/docs/linux/man/1-40/">40</a>(1):84-101, March 2000. CS technical report: <a href="ftp://ftp.inf.ethz.ch">ftp.inf.ethz.ch</a>/pub/publications/tech-reports/3xx/306.ps.gz </p>
+<p> W. Gander and W. Gautschi, Adaptive Quadrature &#8211; Revisited. BIT, 40(1):84-101, March 2000. CS technical report: <a href="ftp://ftp.inf.ethz.ch">ftp.inf.ethz.ch</a>/pub/publications/tech-reports/3xx/306.ps.gz </p>
 <p> The original MATLAB version can be downloaded here <a rel="nofollow" href="http://www.inf.ethz.ch/personal/gander/adaptlob.m">http://www.inf.ethz.ch/personal/gander/adaptlob.m</a></p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

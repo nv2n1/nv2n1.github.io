@@ -47,9 +47,9 @@ description: "ncks – netCDF Kitchen Sink"
 <dl>
 <dt>
 <dd> % ncks -F -H -C -v three_dmn_var in.nc<br />
- <a href="/docs/linux/man/1-lon/">lon</a>(1)=0 <a href="/docs/linux/man/1-lev/">lev</a>(1)=100 <a href="/docs/linux/man/1-lat/">lat</a>(1)=-90 <a href="/docs/linux/man/1-three_dmn_var/">three_dmn_var</a>(1)=0<br />
- <a href="/docs/linux/man/2-lon/">lon</a>(2)=90 <a href="/docs/linux/man/1-lev/">lev</a>(1)=100 <a href="/docs/linux/man/1-lat/">lat</a>(1)=-90 <a href="/docs/linux/man/2-three_dmn_var/">three_dmn_var</a>(2)=1<br />
- <a href="/docs/linux/man/3-lon/">lon</a>(3)=180 <a href="/docs/linux/man/1-lev/">lev</a>(1)=100 <a href="/docs/linux/man/1-lat/">lat</a>(1)=-90 <a href="/docs/linux/man/3-three_dmn_var/">three_dmn_var</a>(3)=2<br />
+ lon(1)=0 lev(1)=100 lat(1)=-90 three_dmn_var(1)=0<br />
+ lon(2)=90 lev(1)=100 lat(1)=-90 three_dmn_var(2)=1<br />
+ lon(3)=180 lev(1)=100 lat(1)=-90 three_dmn_var(3)=2<br />
  &nbsp;<wbr>&#8230;&nbsp;<wbr></dl>
 <p> Printing a hyperslab does not affect the variable or dimension indices since these indices are relative to the full variable (as stored in the input file), and the input file has not changed. However, if the hypserslab is saved to an output file and those values are printed, the indices will change:</p>
 <dl>

@@ -16,7 +16,7 @@ febootstrap-install - Install a file in an febootstrap root filesystem
 
 This can be used to safely install a new file in an febootstrap root filesystem. 
 
- Just copying a file in isn't usually safe, for reasons which are to do with the <i><a HREF="/docs/linux/man/8-fakeroot/">fakeroot</a></i>(8) command.
+ Just copying a file in isn't usually safe, for reasons which are to do with the <i>fakeroot</i>(8) command.
 
 <h2>Example</h2>
 

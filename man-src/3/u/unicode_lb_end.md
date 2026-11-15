@@ -76,7 +76,7 @@ int unicode_lbc_end(unicode_lb_info_t lb);</code></pre>
 <dl>
 <dd>This flag reclassifies U+2013 and U+2014 as class WJ, prohibiting breaks before and after the m-dash and the n-dash unicode characters.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code><a href="/docs/linux/man/3-unicode--linebreak/">unicode::linebreak</a></code>(3), m[blue]<code>TR-14</code>m[]<font SIZE="-2">[1]</font></p>
+<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode::linebreak</code>(3), m[blue]<code>TR-14</code>m[]<font SIZE="-2">[1]</font></p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>

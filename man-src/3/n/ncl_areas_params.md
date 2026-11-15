@@ -61,9 +61,9 @@ Areas_params - This document briefly describes all Areas parameters.
 <dt>'RC' - Integer
 <dd>Reconciling Conflicts in area-identifier information. 
 
- This is an array of 16 values, indexed by group identifier. To set all values in the array to the same value &quot;n&quot;, use &quot;CALL ARSETI('RC',n)&quot;; to set just the first value in the array, use &quot;CALL ARSETI('<a HREF="/docs/linux/man/1-rc/">RC</a>(1)',n)&quot;; to set just the second value, use &quot;CALL ARSETI('<a HREF="/docs/linux/man/2-rc/">RC</a>(2)',n)&quot;; and so on. You can call ARGETI to get the value of <a HREF="/docs/linux/man/1-rc/">RC</a>(1) or <a HREF="/docs/linux/man/2-rc/">RC</a>(2) or <a HREF="/docs/linux/man/3-rc/">RC</a>(3), etc.; if you ask for the value of just RC, you will get the value of <a HREF="/docs/linux/man/1-rc/">RC</a>(1). 
+ This is an array of 16 values, indexed by group identifier. To set all values in the array to the same value &quot;n&quot;, use &quot;CALL ARSETI('RC',n)&quot;; to set just the first value in the array, use &quot;CALL ARSETI('<a HREF="/docs/linux/man/1-rc/">RC</a>(1)',n)&quot;; to set just the second value, use &quot;CALL ARSETI('RC(2)',n)&quot;; and so on. You can call ARGETI to get the value of <a HREF="/docs/linux/man/1-rc/">RC</a>(1) or RC(2) or RC(3), etc.; if you ask for the value of just RC, you will get the value of <a HREF="/docs/linux/man/1-rc/">RC</a>(1). 
 
- <a HREF="/docs/linux/man/1-rc/">RC</a>(1) is associated with edge group 1, <a HREF="/docs/linux/man/2-rc/">RC</a>(2) with edge group 2, and so on. An edge group with a group identifier greater than 16 is associated with RC(16). 
+ <a HREF="/docs/linux/man/1-rc/">RC</a>(1) is associated with edge group 1, RC(2) with edge group 2, and so on. An edge group with a group identifier greater than 16 is associated with RC(16). 
 
  When the set of possible area identifiers for a given area in a given group is contradictory, some algorithm must be used to choose an identifier for the area. The value of that element of RC that is associated with the group determines what algorithm will be used, as follows:
 <dl COMPACT><dd><dl COMPACT><dt>0

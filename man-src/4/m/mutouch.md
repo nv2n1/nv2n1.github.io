@@ -24,7 +24,7 @@ description: "mutouch – Microtouch input driver"
 <p>Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details and for options that can be used with all input drivers. This section only covers configuration details specific to this driver. </p>
 <p> Config details&#8230;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xorgconfig/">xorgconfig</a>(1), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
+<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), xorgconfig(1), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>Authors</h2>
 <p>Authors include&#8230;<br />
 &nbsp;<wbr>Patrick Lecoanet</p>

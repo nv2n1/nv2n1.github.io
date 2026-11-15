@@ -15,5 +15,5 @@ description: "clear_keybuf – Clears the keyboard buffer. Allegro game programm
 <h2>DESCRIPTION</h2>
 <p> Empties the keyboard buffer. Usually you want to use this in your program before reading keys to avoid previously buffered keys to be returned by calls to readkey() or ureadkey(). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-readkey/">readkey</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3) </p>
+<p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-readkey/">readkey</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3) </p>
 <h2>Index</h2>

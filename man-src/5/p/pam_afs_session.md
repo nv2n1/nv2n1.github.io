@@ -87,4 +87,4 @@ description: "pam_afs_session – AFS PAG and token PAM module"
 }</code></pre>
 <p> to the [appdefaults] section of their <i>krb5.conf</i> files to disable use of the krb524 service. See the Heimdal <i><a href="/docs/linux/man/3-kafs/">kafs</a></i>(3) man page for more information.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-aklog/">aklog</a></i>(1), <i><a href="/docs/linux/man/3-kafs/">kafs</a></i>(3), <i><a href="/docs/linux/man/7-pam/">pam</a></i>(7), <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3), <i><a href="/docs/linux/man/1-unlog/">unlog</a></i>(1) </p>
+<p><i>aklog</i>(1), <i><a href="/docs/linux/man/3-kafs/">kafs</a></i>(3), <i><a href="/docs/linux/man/7-pam/">pam</a></i>(7), <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3), <i>unlog</i>(1) </p>

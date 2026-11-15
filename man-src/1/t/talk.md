@@ -31,7 +31,7 @@ Message from TalkDaemon[at] his_machine... talk : connection requested by your_n
 <blockquote><p><tt>talk &nbsp;<wbr>your_name [at] your_machine</tt></p></blockquote>
 <p> It doesn&#8217;t matter from which machine the recipient replies, as long as his login name is the same. Once communication is established, the two parties may type simultaneously; their output will appear in separate windows. Typing control-L (^L) will cause the screen to be reprinted. The erase, kill line, and word erase characters (normally ^H, ^U, and ^W respectively) will behave normally. To exit, just type the interrupt character (normally ^C); <code>talk</code> then moves the cursor to the bottom of the screen and restores the terminal to its previous state. </p>
 <p> As of netkit-ntalk 0.15 <code>talk</code> supports scrollback; use esc-p and esc-n to scroll your window, and ctrl-p and ctrl-n to scroll the other window. These keys are now opposite from the way they were in 0.16; while this will probably be confusing at first, the rationale is that the key combinations with escape are harder to type and should therefore be used to scroll one&#8217;s own screen, since one needs to do that much less often. </p>
-<p> If you do not want to receive talk requests, you may block them using the <a href="/docs/linux/man/1-mesg/">mesg</a>(1) command. By default, talk requests are normally not blocked. Certain commands, in particular <a href="/docs/linux/man/1-nroff/">nroff</a>(1), <a href="/docs/linux/man/1-pine/">pine</a>(1), and <a href="/docs/linux/man/1-pr/">pr</a>(1), may block messages temporarily in order to prevent messy output. </p>
+<p> If you do not want to receive talk requests, you may block them using the <a href="/docs/linux/man/1-mesg/">mesg</a>(1) command. By default, talk requests are normally not blocked. Certain commands, in particular <a href="/docs/linux/man/1-nroff/">nroff</a>(1), pine(1), and <a href="/docs/linux/man/1-pr/">pr</a>(1), may block messages temporarily in order to prevent messy output. </p>
 <h2>FILES</h2>
 <dl>
 <dt><code>/etc/hosts </code></p>
@@ -39,7 +39,7 @@ Message from TalkDaemon[at] his_machine... talk : connection requested by your_n
 <dt><code>/var/run/utmp </code></p>
 <dd> to find the recipient&#8217;s tty</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-mail/">mail</a>(1), <a href="/docs/linux/man/1-mesg/">mesg</a>(1), <a href="/docs/linux/man/1-who/">who</a>(1), <a href="/docs/linux/man/1-write/">write</a>(1), <a href="/docs/linux/man/8-talkd/">talkd</a>(8)</p>
+<p> <a href="/docs/linux/man/1-mail/">mail</a>(1), <a href="/docs/linux/man/1-mesg/">mesg</a>(1), <a href="/docs/linux/man/1-who/">who</a>(1), <a href="/docs/linux/man/1-write/">write</a>(1), talkd(8)</p>
 <h2>BUGS</h2>
 <p> The protocol used to communicate with the talk daemon is braindead. </p>
 <p> Also, the version of <a href="/docs/linux/man/1-talk/">talk</a>(1) released with BSD 4.2 uses a different and even more braindead protocol that is completely incompatible. Some vendor Unixes (particularly those from Sun) have been found to use this old protocol. </p>

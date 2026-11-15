@@ -15,7 +15,7 @@ int zzip_dir_free((ZZIP_DIR * dir));
 
 int zzip_dir_close((ZZIP_DIR * dir));</code></pre>
 <h2>Description</h2>
-<dd>It will also <code><a href="/docs/linux/man/2-free/">free</a>(2)</code> the <code>ZZIP_DIR-handle</code> given. the counterpart for <code>zzip_dir_open</code> see also <code>zzip_dir_free</code></p>
+<dd>It will also <code>free(2)</code> the <code>ZZIP_DIR-handle</code> given. the counterpart for <code>zzip_dir_open</code> see also <code>zzip_dir_free</code></p>
 <h2>Author</h2>
 <dl>
 <dd>&bull; Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;too [at] iki.fi&gt;</dl>

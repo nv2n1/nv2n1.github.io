@@ -25,11 +25,11 @@ description: "euare-accountcreate – [Eucalyptus cloud admin only] Create a new
 <dt><code>-k</code>, <code>&#8211;create-accesskey</code></p>
 <dd> also create an access key for the new account&#8217;s administrator and show it</p>
 <dt><code>-w</code>, <code>&#8211;write-config</code></p>
-<dd> output access keys and region information in the form of a <a href="/docs/linux/man/5-euca2ools-ini/">euca2ools.ini</a>(5) configuration file instead of by themselves (implies <code>-k</code>)</p>
+<dd> output access keys and region information in the form of a euca2ools.ini(5) configuration file instead of by themselves (implies <code>-k</code>)</p>
 <dt><code>-d</code> DOMAIN, <code>&#8211;domain</code> DOMAIN</p>
 <dd> the DNS domain to use for region information in configuration file output (default: based on IAM URL)</p>
 <dt><code>-l</code>, <code>&#8211;set-default-user</code></p>
-<dd> set this user as the default user for the region in <a href="/docs/linux/man/5-euca2ools-ini/">euca2ools.ini</a>(5) configuration file output. This option is only useful when used with <code>-w</code>.</p>
+<dd> set this user as the default user for the region in euca2ools.ini(5) configuration file output. This option is only useful when used with <code>-w</code>.</p>
 <dt><code>&#8211;show-empty-fields</code></p>
 <dd> show empty values as &quot;(nil)&quot;</p>
 <dt><code>-U</code> URL, <code>&#8211;url</code> URL</p>

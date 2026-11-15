@@ -17,7 +17,7 @@ description: "log4cpp::SyslogAppender –"
  <i>Instantiate a </i><code>SyslogAppender</code> with given name and name and facility for syslog.<br />
  virtual <code>~SyslogAppender</code> () </p>
 <p> virtual bool <code>reopen</code> ()<br />
- <i>Calls <a href="/docs/linux/man/3-closelog/">closelog</a>(3) and <a href="/docs/linux/man/3-openlog/">openlog</a>(3). </i><br />
+ <i>Calls <a href="/docs/linux/man/3-closelog/">closelog</a>(3) and openlog(3). </i><br />
  virtual void <code>close</code> ()<br />
  <i>Calls <a href="/docs/linux/man/3-closelog/">closelog</a>(3) to close the syslog file descriptor. </i></p>
 <h3>Static Public Member Functions</h3>
@@ -25,7 +25,7 @@ description: "log4cpp::SyslogAppender –"
  <i>Translates a </i><code>log4cpp</code> priority to a syslog priority.</p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>open</code> ()<br />
- <i>Calls <a href="/docs/linux/man/3-openlog/">openlog</a>(3). </i><br />
+ <i>Calls openlog(3). </i><br />
  virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
  <i>Sends a </i><code>LoggingEvent</code> to syslog.</p>
 <h3>Protected Attributes</h3>
@@ -40,7 +40,7 @@ description: "log4cpp::SyslogAppender –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> The name of the <code>Appender</code><br />
- <i>syslogName</i> The ident parameter in the <a href="/docs/linux/man/3-openlog/">openlog</a>(3) call.<br />
+ <i>syslogName</i> The ident parameter in the openlog(3) call.<br />
  <i>facility</i> The syslog facility to log to. Defaults to LOG_USER.</dl>
 <h3>virtual log4cpp::SyslogAppender::~SyslogAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>
@@ -54,9 +54,9 @@ description: "log4cpp::SyslogAppender –"
 <p>Calls <a href="/docs/linux/man/3-closelog/">closelog</a>(3) to close the syslog file descriptor. </p>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>virtual void log4cpp::SyslogAppender::open () [protected], [virtual]</h3>
-<p>Calls <a href="/docs/linux/man/3-openlog/">openlog</a>(3).</p>
+<p>Calls openlog(3).</p>
 <h3>virtual bool log4cpp::SyslogAppender::reopen () [virtual]</h3>
-<p>Calls <a href="/docs/linux/man/3-closelog/">closelog</a>(3) and <a href="/docs/linux/man/3-openlog/">openlog</a>(3). </p>
+<p>Calls <a href="/docs/linux/man/3-closelog/">closelog</a>(3) and openlog(3). </p>
 <p> Reimplemented from <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>static int log4cpp::SyslogAppender::toSyslogPriority (<code>Priority::Value</code>priority) [static]</h3>
 <p>Translates a <code>log4cpp</code> priority to a syslog priority. </p>

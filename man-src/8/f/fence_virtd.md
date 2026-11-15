@@ -27,4 +27,4 @@ description: "fence_virtd – Fencing host for virtual machines"
 <dd>Wait for backend to be available (overrides any setting in fence_virt.conf) </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-fence_virt/">fence_virt</a>(8), <a href="/docs/linux/man/8-fence_xvm/">fence_xvm</a>(8), <a href="/docs/linux/man/8-fence/">fence</a>(8), <a href="/docs/linux/man/5-fence_virt-conf/">fence_virt.conf</a>(5) </p>
+<p><a href="/docs/linux/man/8-fence_virt/">fence_virt</a>(8), <a href="/docs/linux/man/8-fence_xvm/">fence_xvm</a>(8), fence(8), <a href="/docs/linux/man/5-fence_virt-conf/">fence_virt.conf</a>(5) </p>

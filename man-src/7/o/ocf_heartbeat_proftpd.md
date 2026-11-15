@@ -56,7 +56,7 @@ description: "ocf_heartbeat_proftpd – OCF Resource Agent compliant FTP script.
 <dl>
 <dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5s.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a proftpd resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a proftpd resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_proftpd ocf:heartbeat:proftpd \
 
 op monitor depth=&quot;0&quot; timeout=&quot;20s&quot; interval=&quot;60s&quot;

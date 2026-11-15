@@ -17,7 +17,7 @@ url: "/docs/linux/man/1-pods/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-faqpods/">faqpods</a></i>(1), <i><a HREF="/docs/linux/man/1-modpods/">modpods</a></i>(1), <i><a HREF="/docs/linux/man/1-sitepods/">sitepods</a></i>(1), <i><a HREF="/docs/linux/man/1-podpath/">podpath</a></i>(1), <i><a HREF="/docs/linux/man/1-pminst/">pminst</a></i>(1), and <i><a HREF="/docs/linux/man/1-stdpod/">stdpod</a></i>(1).
+ <i><a HREF="/docs/linux/man/1-faqpods/">faqpods</a></i>(1), <i><a HREF="/docs/linux/man/1-modpods/">modpods</a></i>(1), <i><a HREF="/docs/linux/man/1-sitepods/">sitepods</a></i>(1), <i><a HREF="/docs/linux/man/1-podpath/">podpath</a></i>(1), <i><a HREF="/docs/linux/man/1-pminst/">pminst</a></i>(1), and <i>stdpod</i>(1).
 
 <h2>AUTHORS and COPYRIGHTS</h2>
 

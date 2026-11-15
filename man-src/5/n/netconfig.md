@@ -27,7 +27,7 @@ description: "netconfig – network configuration data base"
 <dt><code>tpi_raw</code></p>
 <dd>A raw connection.</dl>
 <dt><i>flags</i></p>
-<dd>This field is either blank (specified by &#8220;<code>&#8211;</code> &#8221; or contains a &#8220;<code>v</code> &#8221; meaning visible to the <a href="/docs/linux/man/3-getnetconfig/">getnetconfig</a>(3) function.</p>
+<dd>This field is either blank (specified by &#8220;<code>&#8211;</code> &#8221; or contains a &#8220;<code>v</code> &#8221; meaning visible to the getnetconfig(3) function.</p>
 <dt><i>family</i></p>
 <dd>The protocol family of the transport. This is currently one of:</p>
 <dl>
@@ -74,4 +74,4 @@ local tpi_cots_ord - loopback - - -</pre>
 <dt><code>/etc/netconfig </code></p>
 <dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-getnetconfig/">getnetconfig</a>(3), <a href="/docs/linux/man/3-getnetpath/">getnetpath</a>(3) </p>
+<p>getnetconfig(3), getnetpath(3) </p>

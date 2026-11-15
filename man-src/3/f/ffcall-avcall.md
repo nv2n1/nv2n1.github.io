@@ -79,7 +79,7 @@ struct {
 <p> (3) The macros <code>av_start_longlong()</code>, <code>av_start_ulonglong()</code>, <code>av_longlong()</code> and <code>av_ulonglong()</code> work only if the C compiler has a working <code>long long</code> 64-bit integer type. </p>
 <p> (4) The struct types used in <code>av_start_struct()</code> and <code>av_struct()</code> must only contain (signed or unsigned) int, long, long long or pointer fields. Struct types containing (signed or unsigned) char, short, float, double or other structs are not supported. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-stdarg/">stdarg</a></code>(3), <code><a href="/docs/linux/man/3-varargs/">varargs</a></code>(3). </p>
+<p> <code><a href="/docs/linux/man/3-stdarg/">stdarg</a></code>(3), <code>varargs</code>(3). </p>
 <h2>BUGS</h2>
 <p> The current implementations have been tested on a selection of common cases but there are probably still many bugs. </p>
 <p> There are typically built-in limits on the size of the argument-list, which may also include the size of any structure arguments. </p>

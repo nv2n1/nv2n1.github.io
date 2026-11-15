@@ -83,6 +83,6 @@ description: "multipath – Device mapper target autoconfig"
 <dt><code>device</code></p>
 <dd>update only the devmap the path pointed by <i>device</i> is in. <i>device</i> is in the /dev/sdb (as shown by udev in the $DEVNAME variable) or major:minor format. <i>device</i> may alternatively be a multipath mapname</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8), <code><a href="/docs/linux/man/5-multipath-conf/">multipath.conf</a></code>(5), <code><a href="/docs/linux/man/8-kpartx/">kpartx</a></code>(8), <code><a href="/docs/linux/man/8-udev/">udev</a></code>(8), <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) <code><a href="/docs/linux/man/8-hotplug/">hotplug</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8), <code><a href="/docs/linux/man/5-multipath-conf/">multipath.conf</a></code>(5), <code><a href="/docs/linux/man/8-kpartx/">kpartx</a></code>(8), <code>udev</code>(8), <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) <code>hotplug</code>(8)</p>
 <h2>Authors</h2>
 <p><code>multipath</code> was developed by Christophe Varoqui, &lt;christophe.varoqui [at] opensvc.com&gt; and others.</p>

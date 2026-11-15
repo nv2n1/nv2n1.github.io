@@ -17,6 +17,6 @@ description: "cacertdir_rehash – simple script to create or update hash links 
 <h2>Return Codes</h2>
 <p><code>cacertdir_rehash</code> returns 0 on success, non-zero on error.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-authconfig/">authconfig</a>(8), <a href="/docs/linux/man/8-authconfig-gtk/">authconfig-gtk</a>(8), <a href="/docs/linux/man/1-openssl/">openssl</a>(1) </p>
+<p><a href="/docs/linux/man/8-authconfig/">authconfig</a>(8), <a href="/docs/linux/man/8-authconfig-gtk/">authconfig-gtk</a>(8), openssl(1) </p>
 <h2>Authors</h2>
 <pre>Tomas Mraz &lt;tmraz [at] redhat.com&gt;</pre>

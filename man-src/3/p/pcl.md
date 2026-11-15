@@ -49,7 +49,7 @@ void *co_set_data(coroutine_t co, void *data);</code></pre>
 <dt><code>Signals</code></p>
 <dd>First, a signal handler is not defined to run in any specific coroutine. The only way to leave the signal handler is by a return statement. Second, the signal handler may run with the stack of any coroutine, even with the stack of library internal coroutines which have an undefined stack size (just enough to perform a kernel call). Using and alternate stack for signal processing (see <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)) is recommended! Conclusion: avoid signals like a plague. The only thing you may do reliable is setting some global variables and return. Simple kernel calls may work too, but nowadays it&#8217;s pretty hairy to tell, which function really is a kernel call. (Btw, all this applies to normal C programs, too. The coroutines just add one more problem)</p>
 <dt><code>setjmp</code>/<code>longjmp</code></p>
-<dd>The use of <code><a href="/docs/linux/man/2-setjmp/">setjmp</a></code>(2)/<code><a href="/docs/linux/man/2-longjmp/">longjmp</a></code>(2) is limited to jumping inside one coroutine. Never try to jump from one coroutine to another with <code><a href="/docs/linux/man/2-longjmp/">longjmp</a></code>(2). </p>
+<dd>The use of <code>setjmp</code>(2)/<code>longjmp</code>(2) is limited to jumping inside one coroutine. Never try to jump from one coroutine to another with <code>longjmp</code>(2). </p>
 <h2>Diagnostics</h2>
 <p>Some fatal errors are caught by the library. If one occurs, a short message is written to file descriptor 2 (stderr) and a segmentation violation is generated.</p>
 <dl>

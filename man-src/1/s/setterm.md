@@ -108,7 +108,7 @@ description: "setterm – set terminal attributes"
 <p> <code>&#8211;msglevel</code> 0-8</p>
 <dl>
 <dt>
-<dd> Sets the console logging level for kernel <code>printk()</code> messages. All messages strictly more important than this will be printed, so a logging level of <code>0</code> has the same effect as <code>&#8211;msg on</code> and a logging level of <code>8</code> will print all kernel messages. <code><a href="/docs/linux/man/8-klogd/">klogd</a></code>(8) may be a more convenient interface to the logging of kernel messages. </p>
+<dd> Sets the console logging level for kernel <code>printk()</code> messages. All messages strictly more important than this will be printed, so a logging level of <code>0</code> has the same effect as <code>&#8211;msg on</code> and a logging level of <code>8</code> will print all kernel messages. <code>klogd</code>(8) may be a more convenient interface to the logging of kernel messages. </p>
 <p> Virtual consoles only.</dl>
 <p> <code>&#8211;powerdown</code>[=0-60]</p>
 <dl>
@@ -150,7 +150,7 @@ description: "setterm – set terminal attributes"
 <p> <code>&#8211;resize</code></p>
 <dl>
 <dt>
-<dd> Reset terminal size by assessing maximum row and column. This is useful when actual geometry and kernel terminal driver are not in sync. Most notable use case is with serial consoles, that do not use <code><a href="//www.systutorials.com/docs/linux/man/3p-ioctl/">ioctl</a></code>(3p) but just byte streams and breaks.</dl>
+<dd> Reset terminal size by assessing maximum row and column. This is useful when actual geometry and kernel terminal driver are not in sync. Most notable use case is with serial consoles, that do not use <code>ioctl</code>(3p) but just byte streams and breaks.</dl>
 <p> <code>&#8211;reverse</code> on|off</p>
 <dl>
 <dt>

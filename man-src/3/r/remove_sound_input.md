@@ -15,4 +15,4 @@ void remove_sound_input();</code></pre>
 <h2>Description</h2>
 <p>Cleans up after you are finished with the sound input routines. You don&#8217;t normally need to call this, because remove_sound() and/or allegro_exit() will do it for you. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_sound_input/">install_sound_input</a></code>(3), <code><a href="/docs/linux/man/3-remove_sound/">remove_sound</a></code>(3), <code><a href="/docs/linux/man/3-allegro_exit/">allegro_exit</a></code>(3) </p>
+<p><code>install_sound_input</code>(3), <code>remove_sound</code>(3), <code><a href="/docs/linux/man/3-allegro_exit/">allegro_exit</a></code>(3) </p>

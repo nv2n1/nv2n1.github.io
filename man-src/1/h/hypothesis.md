@@ -2978,7 +2978,7 @@ if __name__ == '__main__':
 
  There have also been a number of performance optimizations:
 <dt>&bull;
-<dd> The <b>permutations()</b> strategy is now significantly faster to use for large lists (the underlying algorithm has gone from O(n^2) to <a HREF="/docs/linux/man/n-o/">O</a>(n)).
+<dd> The <b>permutations()</b> strategy is now significantly faster to use for large lists (the underlying algorithm has gone from O(n^2) to O(n)).
 <dt>&bull;
 <dd> Shrinking of failing test cases should have got significantly faster in some circumstances where it was previously struggling for a long time.
 <dt>&bull;

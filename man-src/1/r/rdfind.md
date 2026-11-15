@@ -90,5 +90,5 @@ description: "rdfind – finds duplicate files"
 <h2>COPYRIGHT</h2>
 <p> This program is distributed under GPLv2 or later, at your option.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-md5sum/">md5sum</a></code>(1), <code><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></code>(1), <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/2-symlinks/">symlinks</a>(2)</code> </p>
+<p> <code><a href="/docs/linux/man/1-md5sum/">md5sum</a></code>(1), <code><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></code>(1), <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code>symlinks(2)</code> </p>
 <h2>Index</h2>

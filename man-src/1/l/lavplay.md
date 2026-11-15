@@ -13,7 +13,7 @@ description: "lavplay – Playback and edit MJPEG video"
 <p> <code>lavplay</code> [<i>options</i>] <i>lavfile1 [lavfile2 &#8230; lavfileN]</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>lavplay</code> can be used to playback video in MJPEG format (either quicktime or AVI) on a zoran video-capture device, such as the Miro/Pinnacle DC10(+), the Iomega Buz or Linux Media Labs&#8217; LML33, or in software mode (using SDL). </p>
-<p> It also provides mechanisms for non-destructive editting video using an interactive front-end such as <code><a href="/docs/linux/man/1-glav/">glav</a></code>(1). See <code>SEARCHING AND EDITING</code> below for details. </p>
+<p> It also provides mechanisms for non-destructive editting video using an interactive front-end such as <code>glav</code>(1). See <code>SEARCHING AND EDITING</code> below for details. </p>
 <h2>OPTIONS</h2>
 <p> <code>lavplay</code> accepts the following options:</p>
 <dl>
@@ -70,7 +70,7 @@ description: "lavplay – Playback and edit MJPEG video"
 <dt><code>LAV_AUDIO_DEV</code></p>
 <dd> The audio device. Default is /dev/dsp</dl>
 <h2>SEARCHING AND EDITING</h2>
-<p> <code>lavplay</code> can do more than simple plain playback. It is also intended to be controlled using commands sent via stdin from a front-end like <code><a href="/docs/linux/man/1-glav/">glav</a>(1)</code> or similar, more sophisticated tools. The most significant aspect of this functionality is the ability to create <i>edit list</i> files giving the playback sequence of an editted version of the input video. The edit list file can be read by any of the <a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a>(1) (including lavplay!) wherever an actual video file would be acceptable. Such edit lists record only the original source file and start and stop frames of the components of the editted video editting rather than the video itself. As such editting leaves the original files unchanged and requires only tiny amounts of data-movement. The drawback is that for the edit list to work the original files must remain unchanged, and that interactive play may be jumpy due to the playback sequence &quot;skipping about&quot; between different parts of the original video sequence. </p>
+<p> <code>lavplay</code> can do more than simple plain playback. It is also intended to be controlled using commands sent via stdin from a front-end like <code>glav(1)</code> or similar, more sophisticated tools. The most significant aspect of this functionality is the ability to create <i>edit list</i> files giving the playback sequence of an editted version of the input video. The edit list file can be read by any of the <a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a>(1) (including lavplay!) wherever an actual video file would be acceptable. Such edit lists record only the original source file and start and stop frames of the components of the editted video editting rather than the video itself. As such editting leaves the original files unchanged and requires only tiny amounts of data-movement. The drawback is that for the edit list to work the original files must remain unchanged, and that interactive play may be jumpy due to the playback sequence &quot;skipping about&quot; between different parts of the original video sequence. </p>
 <p> If a stand-alone consolidated versions of editted video is required it can be produced by running the <a href="/docs/linux/man/1-lavtrans/">lavtrans</a>(1) utility on the edit list. </p>
 <p> Edit list files are plain text with a very simple syntax to allow easy manual editting using a text-editor or writing of scripted editting tools. </p>
 <h2>STDIN COMMANDS</h2>
@@ -113,5 +113,5 @@ description: "lavplay – Playback and edit MJPEG video"
 <p> For more info, see our website at </p>
 <p>&nbsp;<wbr><i><a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a></i> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-lavrec/">lavrec</a></code>(1), <code><a href="/docs/linux/man/1-glav/">glav</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-lavrec/">lavrec</a></code>(1), <code>glav</code>(1) </p>
 <h2>Index</h2>

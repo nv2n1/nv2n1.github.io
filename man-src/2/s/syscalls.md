@@ -48,19 +48,19 @@ description: "syscalls – Linux system calls"
 <td></td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-_llseek/">_llseek</a></code>(2)</td>
+<td><code>_llseek</code>(2)</td>
 <td>1.2</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-_newselect/">_newselect</a></code>(2)</td>
+<td><code>_newselect</code>(2)</td>
 <td>2.0</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-_sysctl/">_sysctl</a></code>(2)</td>
+<td><code>_sysctl</code>(2)</td>
 <td>2.0</td>
 <td>Removed in 5.5
 </td>
@@ -114,19 +114,19 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-arc_gettls/">arc_gettls</a></code>(2)</td>
+<td><code>arc_gettls</code>(2)</td>
 <td>3.9</td>
 <td>ARC only
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-arc_settls/">arc_settls</a></code>(2)</td>
+<td><code>arc_settls</code>(2)</td>
 <td>3.9</td>
 <td>ARC only
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-arc_usr_cmpxchg/">arc_usr_cmpxchg</a></code>(2)</td>
+<td><code>arc_usr_cmpxchg</code>(2)</td>
 <td>4.9</td>
 <td>ARC only
 </td>
@@ -138,13 +138,13 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-atomic_barrier/">atomic_barrier</a></code>(2)</td>
+<td><code>atomic_barrier</code>(2)</td>
 <td>2.6.34</td>
 <td>m68k only
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-atomic_cmpxchg_32/">atomic_cmpxchg_32</a></code>(2)</td>
+<td><code>atomic_cmpxchg_32</code>(2)</td>
 <td>2.6.34</td>
 <td>m68k only
 </td>
@@ -175,7 +175,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-breakpoint/">breakpoint</a></code>(2)</td>
+<td><code>breakpoint</code>(2)</td>
 <td>2.2</td>
 <td> ARM OABI only, defined with<br />
  <code>__ARM_NR</code> prefix
@@ -285,7 +285,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-close_range/">close_range</a></code>(2)</td>
+<td><code>close_range</code>(2)</td>
 <td>5.9</td>
 <td>
 </td>
@@ -381,7 +381,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-execv/">execv</a></code>(2)</td>
+<td><code>execv</code>(2)</td>
 <td>2.0</td>
 <td> SPARC/SPARC64 only, for<br />
  compatibility with SunOS
@@ -550,7 +550,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-fsconfig/">fsconfig</a></code>(2)</td>
+<td><code>fsconfig</code>(2)</td>
 <td>5.2</td>
 <td>
 </td>
@@ -562,19 +562,19 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-fsmount/">fsmount</a></code>(2)</td>
+<td><code>fsmount</code>(2)</td>
 <td>5.2</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-fsopen/">fsopen</a></code>(2)</td>
+<td><code>fsopen</code>(2)</td>
 <td>5.2</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-fspick/">fspick</a></code>(2)</td>
+<td><code>fspick</code>(2)</td>
 <td>5.2</td>
 <td>
 </td>
@@ -664,7 +664,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-get_tls/">get_tls</a></code>(2)</td>
+<td><code>get_tls</code>(2)</td>
 <td>4.15</td>
 <td> ARM OABI only, has<br />
  <code>__ARM_NR</code> prefix
@@ -698,7 +698,7 @@ description: "syscalls – Linux system calls"
 <td><code><a href="/docs/linux/man/2-getdomainname/">getdomainname</a></code>(2)</td>
 <td>2.2</td>
 <td> SPARC, SPARC64; available<br />
- as <code><a href="/docs/linux/man/2-osf_getdomainname/">osf_getdomainname</a></code>(2)<br />
+ as <code>osf_getdomainname</code>(2)<br />
  on Alpha since Linux 2.0
 </td>
 </tr>
@@ -707,7 +707,7 @@ description: "syscalls – Linux system calls"
 <td>2.0</td>
 <td> SPARC (removed in 2.6.26),<br />
  available on Alpha as<br />
- <code><a href="/docs/linux/man/2-osf_getdtablesize/">osf_getdtablesize</a></code>(2)
+ <code>osf_getdtablesize</code>(2)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -910,19 +910,19 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-getxgid/">getxgid</a></code>(2)</td>
+<td><code>getxgid</code>(2)</td>
 <td>2.0</td>
 <td>Alpha only; see NOTES
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-getxpid/">getxpid</a></code>(2)</td>
+<td><code>getxpid</code>(2)</td>
 <td>2.0</td>
 <td>Alpha only; see NOTES
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-getxuid/">getxuid</a></code>(2)</td>
+<td><code>getxuid</code>(2)</td>
 <td>2.0</td>
 <td>Alpha only; see NOTES
 </td>
@@ -976,7 +976,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-io_pgetevents/">io_pgetevents</a></code>(2)</td>
+<td><code>io_pgetevents</code>(2)</td>
 <td>4.18</td>
 <td>
 </td>
@@ -994,19 +994,19 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-io_uring_enter/">io_uring_enter</a></code>(2)</td>
+<td><code>io_uring_enter</code>(2)</td>
 <td>5.1</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-io_uring_register/">io_uring_register</a></code>(2)</td>
+<td><code>io_uring_register</code>(2)</td>
 <td>5.1</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-io_uring_setup/">io_uring_setup</a></code>(2)</td>
+<td><code>io_uring_setup</code>(2)</td>
 <td>5.1</td>
 <td>
 </td>
@@ -1054,7 +1054,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-kern_features/">kern_features</a></code>(2)</td>
+<td><code>kern_features</code>(2)</td>
 <td>3.7</td>
 <td>SPARC64 only
 </td>
@@ -1181,7 +1181,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-memory_ordering/">memory_ordering</a></code>(2)</td>
+<td><code>memory_ordering</code>(2)</td>
 <td>2.2</td>
 <td>SPARC64 only
 </td>
@@ -1277,7 +1277,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-move_mount/">move_mount</a></code>(2)</td>
+<td><code>move_mount</code>(2)</td>
 <td>5.2</td>
 <td>
 </td>
@@ -1415,13 +1415,13 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-old_adjtimex/">old_adjtimex</a></code>(2)</td>
+<td><code>old_adjtimex</code>(2)</td>
 <td>2.0</td>
 <td>Alpha only; see NOTES
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-old_getrlimit/">old_getrlimit</a></code>(2)</td>
+<td><code>old_getrlimit</code>(2)</td>
 <td>2.4</td>
 <td> Old variant of <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)<br />
  that used a different value<br />
@@ -1453,7 +1453,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-oldumount/">oldumount</a></code>(2)</td>
+<td><code>oldumount</code>(2)</td>
 <td>2.4.116</td>
 <td> Name of the old <code><a href="/docs/linux/man/2-umount/">umount</a></code>(2)<br />
  syscall on Alpha
@@ -1478,7 +1478,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-open_tree/">open_tree</a></code>(2)</td>
+<td><code>open_tree</code>(2)</td>
 <td>5.2</td>
 <td>
 </td>
@@ -1496,7 +1496,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-or1k_atomic/">or1k_atomic</a></code>(2)</td>
+<td><code>or1k_atomic</code>(2)</td>
 <td>3.1</td>
 <td>OpenRISC 1000 only
 </td>
@@ -1539,7 +1539,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-perfctr/">perfctr</a></code>(2)</td>
+<td><code>perfctr</code>(2)</td>
 <td>2.2</td>
 <td>SPARC only; removed in 2.6.34
 </td>
@@ -1648,7 +1648,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-process_madvise/">process_madvise</a></code>(2)</td>
+<td><code>process_madvise</code>(2)</td>
 <td>5.10</td>
 <td>
 </td>
@@ -1817,7 +1817,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-riscv_flush_icache/">riscv_flush_icache</a></code>(2)</td>
+<td><code>riscv_flush_icache</code>(2)</td>
 <td>4.15</td>
 <td>RISC-V only
 </td>
@@ -1829,7 +1829,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-rseq/">rseq</a></code>(2)</td>
+<td><code>rseq</code>(2)</td>
 <td>4.18</td>
 <td>
 </td>
@@ -1919,7 +1919,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-sched_get_affinity/">sched_get_affinity</a></code>(2)</td>
+<td><code>sched_get_affinity</code>(2)</td>
 <td>2.6</td>
 <td> Name of <code><a href="/docs/linux/man/2-sched_getaffinity/">sched_getaffinity</a></code>(2)<br />
  on SPARC and SPARC64
@@ -1968,7 +1968,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-sched_set_affinity/">sched_set_affinity</a></code>(2)</td>
+<td><code>sched_set_affinity</code>(2)</td>
 <td>2.6</td>
 <td> Name of <code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2)<br />
  on SPARC and SPARC64
@@ -2101,7 +2101,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-set_tls/">set_tls</a></code>(2)</td>
+<td><code>set_tls</code>(2)</td>
 <td>2.6.11</td>
 <td> ARM OABI/EABI only (constant<br />
  has <code>__ARM_NR</code> prefix)
@@ -2162,7 +2162,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-sethae/">sethae</a></code>(2)</td>
+<td><code>sethae</code>(2)</td>
 <td>2.0</td>
 <td>Alpha only; see NOTES
 </td>
@@ -2409,7 +2409,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-spill/">spill</a></code>(2)</td>
+<td><code>spill</code>(2)</td>
 <td>2.6.13</td>
 <td>Xtensa only
 </td>
@@ -2487,7 +2487,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-switch_endian/">switch_endian</a></code>(2)</td>
+<td><code>switch_endian</code>(2)</td>
 <td>4.1</td>
 <td>PowerPC64 only
 </td>
@@ -2541,7 +2541,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-sys_debug_setcontext/">sys_debug_setcontext</a></code>(2)</td>
+<td><code>sys_debug_setcontext</code>(2)</td>
 <td>2.6.11</td>
 <td>PowerPC only
 </td>
@@ -2572,7 +2572,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-sysmips/">sysmips</a></code>(2)</td>
+<td><code>sysmips</code>(2)</td>
 <td>2.6.0</td>
 <td>MIPS only
 </td>
@@ -2734,13 +2734,13 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-usr26/">usr26</a></code>(2)</td>
+<td><code>usr26</code>(2)</td>
 <td>2.4.8.1</td>
 <td>ARM OABI only
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-usr32/">usr32</a></code>(2)</td>
+<td><code>usr32</code>(2)</td>
 <td>2.4.8.1</td>
 <td>ARM OABI only
 </td>
@@ -2764,7 +2764,7 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-utrap_install/">utrap_install</a></code>(2)</td>
+<td><code>utrap_install</code>(2)</td>
 <td>2.2</td>
 <td>SPARC64 only
 </td>
@@ -2831,15 +2831,15 @@ description: "syscalls – Linux system calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-xtensa/">xtensa</a></code>(2)</td>
+<td><code>xtensa</code>(2)</td>
 <td>2.6.13</td>
 <td>Xtensa only
 </td>
 </tr>
 </table>
 <p> On many platforms, including x86-32, socket calls are all multiplexed (via glibc wrapper functions) through <code><a href="/docs/linux/man/2-socketcall/">socketcall</a></code>(2) and similarly System V IPC calls are multiplexed through <code><a href="/docs/linux/man/2-ipc/">ipc</a></code>(2). </p>
-<p> Although slots are reserved for them in the system call table, the following system calls are not implemented in the standard kernel: <code><a href="/docs/linux/man/2-afs_syscall/">afs_syscall</a></code>(2), <code><a href="/docs/linux/man/2-break/">break</a></code>(2), <code><a href="/docs/linux/man/2-ftime/">ftime</a></code>(2), <code><a href="/docs/linux/man/2-getpmsg/">getpmsg</a></code>(2), <code><a href="/docs/linux/man/2-gtty/">gtty</a></code>(2), <code><a href="/docs/linux/man/2-idle/">idle</a></code>(2), <code><a href="/docs/linux/man/2-lock/">lock</a></code>(2), <code><a href="/docs/linux/man/2-madvise1/">madvise1</a></code>(2), <code><a href="/docs/linux/man/2-mpx/">mpx</a></code>(2), <code><a href="/docs/linux/man/2-phys/">phys</a></code>(2), <code><a href="/docs/linux/man/2-prof/">prof</a></code>(2), <code><a href="/docs/linux/man/2-profil/">profil</a></code>(2), <code><a href="/docs/linux/man/2-putpmsg/">putpmsg</a></code>(2), <code><a href="/docs/linux/man/2-security/">security</a></code>(2), <code><a href="/docs/linux/man/2-stty/">stty</a></code>(2), <code><a href="/docs/linux/man/2-tuxcall/">tuxcall</a></code>(2), <code><a href="/docs/linux/man/2-ulimit/">ulimit</a></code>(2), and <code><a href="/docs/linux/man/2-vserver/">vserver</a></code>(2) (see also <code><a href="/docs/linux/man/2-unimplemented/">unimplemented</a></code>(2)). However, <code><a href="/docs/linux/man/3-ftime/">ftime</a></code>(3), <code><a href="/docs/linux/man/3-profil/">profil</a></code>(3), and <code><a href="/docs/linux/man/3-ulimit/">ulimit</a></code>(3) exist as library routines. The slot for <code><a href="/docs/linux/man/2-phys/">phys</a></code>(2) is in use since kernel 2.1.116 for <code><a href="/docs/linux/man/2-umount/">umount</a></code>(2); <code><a href="/docs/linux/man/2-phys/">phys</a></code>(2) will never be implemented. The <code><a href="/docs/linux/man/2-getpmsg/">getpmsg</a></code>(2) and <code><a href="/docs/linux/man/2-putpmsg/">putpmsg</a></code>(2) calls are for kernels patched to support STREAMS, and may never be in the standard kernel. </p>
-<p> There was briefly <code><a href="/docs/linux/man/2-set_zone_reclaim/">set_zone_reclaim</a></code>(2), added in Linux 2.6.13, and removed in 2.6.16; this system call was never available to user space.</p>
+<p> Although slots are reserved for them in the system call table, the following system calls are not implemented in the standard kernel: <code><a href="/docs/linux/man/2-afs_syscall/">afs_syscall</a></code>(2), <code><a href="/docs/linux/man/2-break/">break</a></code>(2), <code>ftime</code>(2), <code><a href="/docs/linux/man/2-getpmsg/">getpmsg</a></code>(2), <code><a href="/docs/linux/man/2-gtty/">gtty</a></code>(2), <code><a href="/docs/linux/man/2-idle/">idle</a></code>(2), <code><a href="/docs/linux/man/2-lock/">lock</a></code>(2), <code><a href="/docs/linux/man/2-madvise1/">madvise1</a></code>(2), <code><a href="/docs/linux/man/2-mpx/">mpx</a></code>(2), <code><a href="/docs/linux/man/2-phys/">phys</a></code>(2), <code><a href="/docs/linux/man/2-prof/">prof</a></code>(2), <code>profil</code>(2), <code><a href="/docs/linux/man/2-putpmsg/">putpmsg</a></code>(2), <code><a href="/docs/linux/man/2-security/">security</a></code>(2), <code><a href="/docs/linux/man/2-stty/">stty</a></code>(2), <code><a href="/docs/linux/man/2-tuxcall/">tuxcall</a></code>(2), <code>ulimit</code>(2), and <code><a href="/docs/linux/man/2-vserver/">vserver</a></code>(2) (see also <code><a href="/docs/linux/man/2-unimplemented/">unimplemented</a></code>(2)). However, <code><a href="/docs/linux/man/3-ftime/">ftime</a></code>(3), <code><a href="/docs/linux/man/3-profil/">profil</a></code>(3), and <code><a href="/docs/linux/man/3-ulimit/">ulimit</a></code>(3) exist as library routines. The slot for <code><a href="/docs/linux/man/2-phys/">phys</a></code>(2) is in use since kernel 2.1.116 for <code><a href="/docs/linux/man/2-umount/">umount</a></code>(2); <code><a href="/docs/linux/man/2-phys/">phys</a></code>(2) will never be implemented. The <code><a href="/docs/linux/man/2-getpmsg/">getpmsg</a></code>(2) and <code><a href="/docs/linux/man/2-putpmsg/">putpmsg</a></code>(2) calls are for kernels patched to support STREAMS, and may never be in the standard kernel. </p>
+<p> There was briefly <code>set_zone_reclaim</code>(2), added in Linux 2.6.13, and removed in 2.6.16; this system call was never available to user space.</p>
 <h3>System calls on removed ports</h3>
 <p> Some system calls only ever existed on Linux architectures that have since been removed from the kernel:</p>
 <dl>
@@ -2861,17 +2861,17 @@ description: "syscalls – Linux system calls"
 <dd>
 <dl>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-bfin_spinlock/">bfin_spinlock</a></code>(2) (added in Linux 2.6.22)</p>
+<dd> <code>bfin_spinlock</code>(2) (added in Linux 2.6.22)</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-dma_memcpy/">dma_memcpy</a></code>(2) (added in Linux 2.6.22)</p>
+<dd> <code>dma_memcpy</code>(2) (added in Linux 2.6.22)</p>
 <dt>*</p>
 <dd> <code><a href="/docs/linux/man/2-pread/">pread</a></code>(2) (added in Linux 2.6.22)</p>
 <dt>*</p>
 <dd> <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2) (added in Linux 2.6.22)</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-sram_alloc/">sram_alloc</a></code>(2) (added in Linux 2.6.22)</p>
+<dd> <code>sram_alloc</code>(2) (added in Linux 2.6.22)</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-sram_free/">sram_free</a></code>(2) (added in Linux 2.6.22)</dl>
+<dd> <code>sram_free</code>(2) (added in Linux 2.6.22)</dl>
 </dl>
 <dt>Metag (port removed in Linux 4.17)</p>
 <dd>
@@ -2880,13 +2880,13 @@ description: "syscalls – Linux system calls"
 <dd>
 <dl>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-metag_get_tls/">metag_get_tls</a></code>(2) (add in Linux 3.9)</p>
+<dd> <code>metag_get_tls</code>(2) (add in Linux 3.9)</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-metag_set_fpu_flags/">metag_set_fpu_flags</a></code>(2) (add in Linux 3.9)</p>
+<dd> <code>metag_set_fpu_flags</code>(2) (add in Linux 3.9)</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-metag_set_tls/">metag_set_tls</a></code>(2) (add in Linux 3.9)</p>
+<dd> <code>metag_set_tls</code>(2) (add in Linux 3.9)</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-metag_setglobalbit/">metag_setglobalbit</a></code>(2) (add in Linux 3.9)</dl>
+<dd> <code>metag_setglobalbit</code>(2) (add in Linux 3.9)</dl>
 </dl>
 <dt>Tile (port removed in Linux 4.17)</p>
 <dd>
@@ -2895,7 +2895,7 @@ description: "syscalls – Linux system calls"
 <dd>
 <dl>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-cmpxchg_badaddr/">cmpxchg_badaddr</a></code>(2) (added in Linux 2.6.36)</dl>
+<dd> <code>cmpxchg_badaddr</code>(2) (added in Linux 2.6.36)</dl>
 </dl>
 </dl>
 <h2>NOTES</h2>
@@ -2923,15 +2923,15 @@ description: "syscalls – Linux system calls"
 <h3>Architecture-specific details: Alpha</h3>
 <dl>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-getxgid/">getxgid</a></code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2) and <code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2).</p>
+<dd> <code>getxgid</code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2) and <code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2).</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-getxpid/">getxpid</a></code>(2) returns a pair of PID and parent PID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2) and <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2).</p>
+<dd> <code>getxpid</code>(2) returns a pair of PID and parent PID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2) and <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2).</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-old_adjtimex/">old_adjtimex</a></code>(2) is a variant of <code><a href="/docs/linux/man/2-adjtimex/">adjtimex</a></code>(2) that uses <i>struct timeval32</i>, for compatibility with OSF/1.</p>
+<dd> <code>old_adjtimex</code>(2) is a variant of <code><a href="/docs/linux/man/2-adjtimex/">adjtimex</a></code>(2) that uses <i>struct timeval32</i>, for compatibility with OSF/1.</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-getxuid/">getxuid</a></code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2) and <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2).</p>
+<dd> <code>getxuid</code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2) and <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2).</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-sethae/">sethae</a></code>(2) is used for configuring the Host Address Extension register on low-cost Alphas in order to access address space beyond first 27 bits.</dl>
+<dd> <code>sethae</code>(2) is used for configuring the Host Address Extension register on low-cost Alphas in order to access address space beyond first 27 bits.</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-intro/">intro</a></code>(2), <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2), <code><a href="/docs/linux/man/2-unimplemented/">unimplemented</a></code>(2), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3), <code><a href="/docs/linux/man/7-libc/">libc</a></code>(7), <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7)</p>
 <h2>COLOPHON</h2>

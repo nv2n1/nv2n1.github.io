@@ -29,7 +29,7 @@ ENAM = PCPNWI (PNAM,IPAI)</pre>
 
  Given the above two arguments, the value of PCPNWI(PNAM,IPAI) is that character string which serves as the name of element IPAI of the internal parameter array identified by PNAM. 
 
- For example, if IPAI has the value 3, then the value of &quot;PCPNWI('CC',IPAI)&quot; is the character string '<a HREF="/docs/linux/man/3-cc/">CC</a>(3)' (padded with blanks to the right) and the call &quot;CALL PCSETI (PCPNWI('CC',IPAI),62)&quot; would give the value 62 to the third element of the parameter array 'CC'.
+ For example, if IPAI has the value 3, then the value of &quot;PCPNWI('CC',IPAI)&quot; is the character string 'CC(3)' (padded with blanks to the right) and the call &quot;CALL PCSETI (PCPNWI('CC',IPAI),62)&quot; would give the value 62 to the third element of the parameter array 'CC'.
 
 <h2>C-Binding Description</h2>
 

@@ -35,14 +35,14 @@ description: "hashkit_fnv1_64 – libhashkit Documentation"
 <dd>
 <p> Compile and link with -lhashkit</dl>
 <h2>DESCRIPTION</h2>
-<p> These functions generate hash values from a key using a variety of algorithms. These functions can be used standalone, or as arguments to <a href="/docs/linux/man/3-hashkit_set_hash_fn/">hashkit_set_hash_fn</a>(3) or <a href="/docs/linux/man/3-hashkit_set_continuum_hash_fn/">hashkit_set_continuum_hash_fn</a>(3). </p>
+<p> These functions generate hash values from a key using a variety of algorithms. These functions can be used standalone, or as arguments to hashkit_set_hash_fn(3) or hashkit_set_continuum_hash_fn(3). </p>
 <p> The hashkit_hsieh is only available if the library is built with the appropriate flag enabled.</p>
 <h2>RETURN VALUE</h2>
 <p> A 32-bit hash value.</p>
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://libmemcached.org/">http://libmemcached.org/</a></i></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-hashkit_create/">hashkit_create</a>(3)</i> <i><a href="/docs/linux/man/3-hashkit_value/">hashkit_value</a>(3)</i> <i><a href="/docs/linux/man/3-hashkit_set_hash_fn/">hashkit_set_hash_fn</a>(3)</i> <i><a href="/docs/linux/man/3-hashkit_set_continuum_hash_fn/">hashkit_set_continuum_hash_fn</a>(3)</i></p>
+<p> <i><a href="/docs/linux/man/3-hashkit_create/">hashkit_create</a>(3)</i> <i><a href="/docs/linux/man/3-hashkit_value/">hashkit_value</a>(3)</i> <i>hashkit_set_hash_fn(3)</i> <i>hashkit_set_continuum_hash_fn(3)</i></p>
 <h2>AUTHOR</h2>
 <p> Brian Aker</p>
 <h2>COPYRIGHT</h2>

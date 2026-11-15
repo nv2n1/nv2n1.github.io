@@ -314,4 +314,4 @@ X86:
 <dt>Jay Fenlason &lt;fenlason [at] redhat.com&gt; and Dave Anderson &lt;anderson [at] redhat.com&gt; wrote this man page.</p>
 <dd></dl>
 <h2>See Also</h2>
-<p>The <i>help</i> command within <code>crash</code> provides more complete and accurate documentation than this man page. <i><a rel="nofollow" href="http://people.redhat.com/anderson">http://people.redhat.com/anderson</a></i> &#8211; the home page of the <code>crash</code> utility. <code><a href="/docs/linux/man/8-netdump/">netdump</a></code>(8), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/8-makedumpfile/">makedumpfile</a>(8)</code> </p>
+<p>The <i>help</i> command within <code>crash</code> provides more complete and accurate documentation than this man page. <i><a rel="nofollow" href="http://people.redhat.com/anderson">http://people.redhat.com/anderson</a></i> &#8211; the home page of the <code>crash</code> utility. <code>netdump</code>(8), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/8-makedumpfile/">makedumpfile</a>(8)</code> </p>

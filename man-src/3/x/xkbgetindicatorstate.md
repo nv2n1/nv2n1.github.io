@@ -29,4 +29,4 @@ description: "XkbGetIndicatorState – Obtains the current state of the keyboard
 <dt><code>BadMatch</code></p>
 <dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbgetnamedindicators/">XkbGetNamedIndicators</a></code>(3)</p>
+<p><code>XkbGetNamedIndicators</code>(3)</p>

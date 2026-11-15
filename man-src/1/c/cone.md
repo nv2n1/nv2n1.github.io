@@ -86,7 +86,7 @@ TYPE.SUBTYPE.filter filter <i>type/subtype</i> <i>filename</i>
 <dt>
 <dd> Default helper scripts distributed with Cone.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mailtool/">mailtool</a></code>(1), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8).</p>
+<p> <code><a href="/docs/linux/man/1-mailtool/">mailtool</a></code>(1), <code>sendmail</code>(8).</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

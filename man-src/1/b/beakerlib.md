@@ -940,11 +940,11 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>&#8211;close</p>
 <dd> Wait for the socket to stop listening.</dl>
 <p> <i>rlWait</i> </p>
-<p> Wrapper around bash builtin `wait&#8217; command. See <i><a href="/docs/linux/man/1-bash_builtins/">bash_builtins</a></i>(1) man page. Kills the process and all its children if the timeout elapses. </p>
+<p> Wrapper around bash builtin `wait&#8217; command. See <i>bash_builtins</i>(1) man page. Kills the process and all its children if the timeout elapses. </p>
 <p>rlWaitFor[n&#8230;][-s SIGNAL][-t time]</p>
 <dl>
 <dt>n</p>
-<dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i><a href="/docs/linux/man/1-bash_builtins/">bash_builtins</a></i>(1) section for `wait&#8217; command/</p>
+<dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i>bash_builtins</i>(1) section for `wait&#8217; command/</p>
 <dt>-t time</p>
 <dd> Timeout in seconds (optional, default=30). If the wait isn&#8217;t successful before the time elapses then all specified tasks are killed.</p>
 <dt>-s <font SIZE="-1">SIGNAL</font></p>

@@ -21,7 +21,7 @@ description: "printcbm – list a Commodore BASIC file"
 <dd> Show version of program. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-file65/">file65</a></code>(1), <code><a href="/docs/linux/man/1-ldo65/">ldo65</a></code>(1), <code><a href="/docs/linux/man/1-reloc65/">reloc65</a></code>(1), <code><a href="/docs/linux/man/1-uncpk/">uncpk</a></code>(1), <code><a href="/docs/linux/man/1-dxa/">dxa</a></code>(1), <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-file65/">file65</a></code>(1), <code><a href="/docs/linux/man/1-ldo65/">ldo65</a></code>(1), <code><a href="/docs/linux/man/1-reloc65/">reloc65</a></code>(1), <code><a href="/docs/linux/man/1-uncpk/">uncpk</a></code>(1), <code>dxa</code>(1), <code><a href="/docs/linux/man/1-xa/">xa</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by David Weinehall &lt;tao [at] acc.umu.se&gt;. Original xa package (C)1989-1997 Andre Fachat. Additional changes (C)1989-2006 Andre Fachat, Jolse Maginnis, David Weinehall and Cameron Kaiser. The current maintainer is Cameron Kaiser. </p>
 <h2>WEBSITE</h2>

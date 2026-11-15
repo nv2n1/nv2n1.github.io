@@ -27,7 +27,7 @@ description: "gsl-config – script to get version number and compiler flags of 
 <dt><code>&#8211;prefix</code></p>
 <dd> Show the GSL installation prefix.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gtk-config/">gtk-config</a></code>(1), <code><a href="/docs/linux/man/1-gnome-config/">gnome-config</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-gtk-config/">gtk-config</a></code>(1), <code>gnome-config</code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001 Christopher R. Gabriel </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>

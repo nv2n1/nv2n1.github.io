@@ -25,5 +25,5 @@ typedef struct ADIME_EDIT_NUMBER {
 </code></pre>
 <p> The `result_object&#8217; will be used to display the result of the expression. There is an `adime_d_calc_edit_result_proc&#8217; object type which is designed to be used as `result_object&#8217;, but you may of course write your own object to take care of this. Whenever the user changes the text in the `adime_d_double_calc_edit_proc&#8217;, the result is printed to the `dp&#8217; field of `result_object&#8217;; hence you must have set the dp field of `result_object&#8217; to a text buffer with enough space (256 bytes is safe). The `result_object&#8217; will then be sent a `MSG_DRAW&#8217; message with the `c&#8217; parameter set to 2 if there is an error in the expression or 1 if it is ok. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-adime_d_calc_edit_result_proc/">adime_d_calc_edit_result_proc</a></code>(3), <code><a href="/docs/linux/man/3-adime_d_int_calc_edit_proc/">adime_d_int_calc_edit_proc</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-adime_d_calc_edit_result_proc/">adime_d_calc_edit_result_proc</a></code>(3), <code>adime_d_int_calc_edit_proc</code>(3) </p>
 <h2>Index</h2>

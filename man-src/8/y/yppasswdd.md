@@ -65,9 +65,9 @@ description: "rpc.yppasswdd – NIS password update daemon"
 &quot; to stdout if the operation succeeded. On any other result, rpc.yppasswdd will report failure to the client. </p>
 <p> Note that the program specified by the -x option is responsible for doing any NIS make and build, and for doing any necessary validation on the shell and gcos field information supplied. The password passed to the client will be in UNIX crypt() format.</p>
 <h3>Logging</h3>
-<p><code>rpc.yppasswdd</code> logs all password update requests to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a>(8)</code>&#8216;s auth facility. The logging information includes the originating host&#8217;s IP address and the user name and UID contained in the request. The user-supplied password itself is not logged.</p>
+<p><code>rpc.yppasswdd</code> logs all password update requests to <code>syslogd(8)</code>&#8216;s auth facility. The logging information includes the originating host&#8217;s IP address and the user name and UID contained in the request. The user-supplied password itself is not logged.</p>
 <h3>Security</h3>
-<p><code>rpc.yppasswdd</code> should be as secure or insecure as any program relying on simple password authentication. If you feel that this is not enough, you may want to protect <code>rpc.yppasswdd</code> from outside access by using the `securenets&#8217; feature of the new <code><a href="/docs/linux/man/8-portmap/">portmap</a></code>(8) version 3. Better still, look at <code><a href="/docs/linux/man/8-rpasswdd/">rpasswdd</a></code>(8).</p>
+<p><code>rpc.yppasswdd</code> should be as secure or insecure as any program relying on simple password authentication. If you feel that this is not enough, you may want to protect <code>rpc.yppasswdd</code> from outside access by using the `securenets&#8217; feature of the new <code>portmap</code>(8) version 3. Better still, look at <code>rpasswdd</code>(8).</p>
 <h2>Files</h2>
 <p><i>/usr/sbin/rpc.yppasswdd</i> </p>
 <p> <i>/usr/lib/yp/pwupdate</i> </p>
@@ -75,6 +75,6 @@ description: "rpc.yppasswdd – NIS password update daemon"
 <p> <i>/etc/shadow</i> </p>
 <p> <i>/etc/sysconfig/yppasswdd</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5), <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1), <code><a href="/docs/linux/man/8-rpasswdd/">rpasswdd</a></code>(8), <code><a href="/docs/linux/man/1-yppasswd/">yppasswd</a></code>(1), <code><a href="/docs/linux/man/1-ypchsh/">ypchsh</a></code>(1), <code><a href="/docs/linux/man/1-ypchfn/">ypchfn</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/1-ypcat/">ypcat</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5), <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1), <code>rpasswdd</code>(8), <code><a href="/docs/linux/man/1-yppasswd/">yppasswd</a></code>(1), <code><a href="/docs/linux/man/1-ypchsh/">ypchsh</a></code>(1), <code><a href="/docs/linux/man/1-ypchfn/">ypchfn</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/1-ypcat/">ypcat</a></code>(1)</p>
 <h2>Author</h2>
 <p>Olaf Kirch &lt;okir [at] monad.swb.de&gt; and Thorsten Kukuk &lt;kukuk [at] linux-nis.org&gt;</p>

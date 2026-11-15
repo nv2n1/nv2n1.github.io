@@ -40,7 +40,7 @@ description: "bashbug – report a bug in bash"
 <dt>
 <dd> Editor to use for editing the bug report (overridden by <code>DEFEDITOR</code>).</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1), <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1), <code><a href="/docs/linux/man/8-update-alternatives/">update-alternatives</a></code>(8) for preferred editor.</p>
+<p> <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1), <code>reportbug</code>(1), <code>update-alternatives</code>(8) for preferred editor.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christer Andersson &lt;klamm [at] comhem.se&gt; for the Debian project (but may be used by others). </p>
 <h2>Index</h2>

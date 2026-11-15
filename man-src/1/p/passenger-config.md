@@ -20,7 +20,7 @@ description: "passenger-config – Show configuration settings for Phusion Passe
 <dt><code>&#8211;version</code></p>
 <dd> Shows the current Phusion Passenger version number</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-passenger-memory-stats/">passenger-memory-stats</a>(1), <a href="/docs/linux/man/1-passenger-stress-test/">passenger-stress-test</a>(1), <a href="/docs/linux/man/8-passenger-status/">passenger-status</a>(8) </p>
+<p> passenger-memory-stats(1), passenger-stress-test(1), <a href="/docs/linux/man/8-passenger-status/">passenger-status</a>(8) </p>
 <p> User guide at <a rel="nofollow" href="https://www.phusionpassenger.com/documentation_and_support">https://www.phusionpassenger.com/documentation_and_support</a></p>
 <h2>AUTHOR</h2>
 <p> Phusion Passenger is written by Phusion (<a rel="nofollow" href="http://www.phusion.nl)">http://www.phusion.nl)</a> </p>

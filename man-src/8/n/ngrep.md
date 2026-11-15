@@ -11,7 +11,7 @@ description: "ngrep – network grep"
 <h2>Synopsis</h2>
 <p><code>ngrep &lt;-hNXViwqpevxlDtTRM&gt; &lt;-IO</code> <i>pcap_dump</i> <code>&gt; &lt; -n</code> <i>num</i> <code>&gt; &lt; -d</code> <i>dev</i> <code>&gt; &lt; -A</code> <i>num</i> <code>&gt; &lt; -s</code> <i>snaplen</i> <code>&gt; &lt; -S</code> <i>limitlen</i> <code>&gt; &lt; -W</code> <i>normal|byline|single|none</i> <code>&gt; &lt; -c</code> <i>cols</i> <code>&gt; &lt; -P</code> <i>char</i> <code>&gt; &lt; -F</code> <i>file</i> <code>&gt; &lt;</code> <i>match expression</i> <code>&gt; &lt;</code> <i>bpf filter</i> <code>&gt;</code> </p>
 <h2>Description</h2>
-<p>ngrep strives to provide most of GNU grep&#8217;s common features, applying them to the network layer. ngrep is a pcap-aware tool that will allow you to specify extended regular expressions to match against data payloads of packets. It currently recognizes TCP, UDP and ICMP across Ethernet, PPP, SLIP, FDDI and null interfaces, and understands bpf filter logic in the same fashion as more common packet sniffing tools, such as <code><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></code>(8) and <code><a href="/docs/linux/man/1-snoop/">snoop</a></code>(1). </p>
+<p>ngrep strives to provide most of GNU grep&#8217;s common features, applying them to the network layer. ngrep is a pcap-aware tool that will allow you to specify extended regular expressions to match against data payloads of packets. It currently recognizes TCP, UDP and ICMP across Ethernet, PPP, SLIP, FDDI and null interfaces, and understands bpf filter logic in the same fashion as more common packet sniffing tools, such as <code><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></code>(8) and <code>snoop</code>(1). </p>
 <h2>Options</h2>
 <dl>
 <dt>-h</p>
@@ -97,7 +97,7 @@ description: "ngrep – network grep"
 <pre><code>ip host </code><i>host</i></pre>
 <p>which is equivalent to: </p>
 <dt><code>ether dst </code><i>ehost</i></p>
-<dd>True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i><a href="//www.systutorials.com/docs/linux/man/3N-ethers/">ethers</a></i>(3N) for numeric format).</p>
+<dd>True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i>ethers</i>(3N) for numeric format).</p>
 <dt><code>ether src </code><i>ehost</i></p>
 <dd>True if the ethernet source address is <i>ehost</i>.</p>
 <dt><code>ether host </code><i>ehost</i></p>
@@ -107,7 +107,7 @@ description: "ngrep – network grep"
 <pre><code>ether host </code><i>ehost </i><code>and not host </code><i>host</i></pre>
 <p>which can be used with either names or numbers for <i>host / ehost</i>.) </p>
 <dt><code>dst net </code><i>net</i></p>
-<dd>True if the IP destination address of the packet has a network number of <i>net</i>. <i>Net</i> may be either a name from /etc/networks or a network number (see <i><a href="/docs/linux/man/4-networks/">networks</a>(4)</i> for details). </p>
+<dd>True if the IP destination address of the packet has a network number of <i>net</i>. <i>Net</i> may be either a name from /etc/networks or a network number (see <i>networks(4)</i> for details). </p>
 <dt><code>src net </code><i>net</i></p>
 <dd>True if the IP source address of the packet has a network number of <i>net</i>. </p>
 <dt><code>net </code><i>net</i></p>
@@ -117,7 +117,7 @@ description: "ngrep – network grep"
 <dt><code>net </code><i>net</i>/<i>len</i></p>
 <dd>True if the IP address matches <i>net</i> a netmask <i>len</i> bits wide. May be qualified with <code>src</code> or <code>dst</code>. </p>
 <dt><code>dst port </code><i>port</i></p>
-<dd>True if the packet is ip/tcp or ip/udp and has a destination port value of <i>port</i>. The <i>port</i> can be a number or a name used in /etc/services (see <i><a href="//www.systutorials.com/docs/linux/man/4P-tcp/">tcp</a></i>(4P) and <i><a href="//www.systutorials.com/docs/linux/man/4P-udp/">udp</a></i>(4P)). If a name is used, both the port number and protocol are checked. If a number or ambiguous name is used, only the port number is checked (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will print both tcp/domain and udp/domain traffic). </p>
+<dd>True if the packet is ip/tcp or ip/udp and has a destination port value of <i>port</i>. The <i>port</i> can be a number or a name used in /etc/services (see <i>tcp</i>(4P) and <i>udp</i>(4P)). If a name is used, both the port number and protocol are checked. If a number or ambiguous name is used, only the port number is checked (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will print both tcp/domain and udp/domain traffic). </p>
 <dt><code>src port </code><i>port</i></p>
 <dd>True if the packet has a source port value of <i>port</i>. </p>
 <dt><code>port </code><i>port</i></p>
@@ -131,7 +131,7 @@ description: "ngrep – network grep"
 <dd>True if the packet has a length greater than or equal to <i>length</i>. This is equivalent to: </p>
 <pre><code>len &gt;= </code><i>length</i>.</pre>
 <dt><code>ip proto </code><i>protocol</i></p>
-<dd>True if the packet is an ip packet (see <i><a href="//www.systutorials.com/docs/linux/man/4P-ip/">ip</a></i>(4P)) of protocol type <i>protocol</i>. <i>Protocol</i> can be a number or one of the names <i>tcp</i>, <i>udp</i> or <i>icmp</i>. Note that the identifiers <i>tcp</i> and <i>udp</i> are also keywords and must be escaped via backslash (\), which is \ in the C-shell. </p>
+<dd>True if the packet is an ip packet (see <i>ip</i>(4P)) of protocol type <i>protocol</i>. <i>Protocol</i> can be a number or one of the names <i>tcp</i>, <i>udp</i> or <i>icmp</i>. Note that the identifiers <i>tcp</i> and <i>udp</i> are also keywords and must be escaped via backslash (\), which is \ in the C-shell. </p>
 <dt><code>ip broadcast</code></p>
 <dd>True if the packet is an IP broadcast packet. It checks for both the all-zeroes and all-ones broadcast conventions, and looks up the local subnet mask. </p>
 <dt><code>ip multicast</code></p>

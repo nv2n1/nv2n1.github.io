@@ -327,5 +327,5 @@ description: "msmtp – An SMTP client"
 <p> msmtp was written by Martin Lambers &lt;marlam [at] marlam.de&gt;.<br />
  Other authors are listed in the AUTHORS file in the source distribution.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), <code><a href="/docs/linux/man/5-netrc/">netrc</a></code>(5) or <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/5-netrc/">netrc</a></code>(5) or <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) </p>
 <h2>Index</h2>

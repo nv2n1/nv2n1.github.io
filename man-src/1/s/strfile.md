@@ -52,7 +52,7 @@ description: "strfile – create a random access file for storing strings unstr 
 <p> There <code>are</code> some other possibilities. Source code for a sample program, <code>randstr</code>, is included with this distribution: randstr splits the difference between <code>unstr</code> and <code>fortune</code>. It reads a single, specified file, and randomly selects a single text string.</p>
 <dl>
 <dt>1</p>
-<dd> Include <i>strfile.h</i> into a news reading/posting program, to generate random signatures. <code><a href="/docs/linux/man/1-tin/">Tin</a></code>(1) does something similar, in a much more complex manner.</p>
+<dd> Include <i>strfile.h</i> into a news reading/posting program, to generate random signatures. <code>Tin</code>(1) does something similar, in a much more complex manner.</p>
 <dt>2</p>
 <dd> Include it in a game. While strfile doesn&#8217;t support &#8216;fields&#8217; or &#8216;records&#8217;, there&#8217;s no reason that the text strings can&#8217;t be consistent: first line, a die roll; second line, a score; third and subsequent lines, a text message.</p>
 <dt>3</p>
@@ -60,7 +60,7 @@ description: "strfile – create a random access file for storing strings unstr 
 <dt>4</p>
 <dd> Use it in &#8216;lottery&#8217; situations. If you&#8217;re an ISP, write a script to store login names and GECOS from <i>/etc/passwd</i> in strfile format, write another to send &#8216;congratulations, you&#8217;ve won&#8217; to the lucky login selected. The prize might be a month&#8217;s free service, or if you&#8217;re AOL, a month free on a real service provider.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-byteorder/">byteorder</a></code>(3), <code><a href="/docs/linux/man/6-fortune/">fortune</a></code>(6)</p>
+<p> <code><a href="/docs/linux/man/3-byteorder/">byteorder</a></code>(3), <code>fortune</code>(6)</p>
 <h2>HISTORY</h2>
 <p> The <code>strfile</code> utility first appeared in 4.4BSD. This version was heavily modified, much of it in ways peculiar to Linux. Work has since been done to make the code more generic, and has so far been tested to work with SunOS 4.x. More platforms are expected to be supported as work continues. </p>
 <h2>Index</h2>

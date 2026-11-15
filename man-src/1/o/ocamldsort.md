@@ -67,7 +67,7 @@ clean:
         $(OCAMLYACC) -v $&lt;
 </pre>
 <h2>OPTIONS</h2>
-<p> The following command-line options are recognized by <code><a href="/docs/linux/man/1-ocamlsort/">ocamlsort</a></code>(1): </p>
+<p> The following command-line options are recognized by <code>ocamlsort</code>(1): </p>
 <dl>
 <dt><code>-I</code><i>&nbsp;<wbr>directory</i></p>
 <dd> Add the given directory to the list of directories searched for source files. </p>

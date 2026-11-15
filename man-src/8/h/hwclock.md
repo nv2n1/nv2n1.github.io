@@ -258,7 +258,7 @@ description: "hwclock – time clocks utility"
 <dd>The system timezone database directory.</dl>
 <p> Device files <code>hwclock</code> may try for Hardware Clock access: <i>/dev/rtc0</i> <i>/dev/rtc</i> <i>/dev/misc/rtc</i> <i>/dev/efirtc</i> <i>/dev/misc/efirtc</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/8-adjtimex/">adjtimex</a></code>(8), <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2), <code><a href="/docs/linux/man/2-settimeofday/">settimeofday</a></code>(2), <code><a href="//www.systutorials.com/docs/linux/man/1p-crontab/">crontab</a></code>(1p), <code><a href="/docs/linux/man/3-tzset/">tzset</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/8-adjtimex/">adjtimex</a></code>(8), <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2), <code><a href="/docs/linux/man/2-settimeofday/">settimeofday</a></code>(2), <code>crontab</code>(1p), <code><a href="/docs/linux/man/3-tzset/">tzset</a></code>(3)</p>
 <h2>Authors</h2>
 <p>Written by September 1996, based on work done on the <code><a href="/docs/linux/man/8-clock/">clock</a></code>(8) program by Charles Hedrick, Rob Hooft, and Harald Koenig. See the source code for complete history and credits.</p>
 <h2>Reporting Bugs</h2>

@@ -119,7 +119,7 @@ description: "varnishstat – Varnish Cache statistics"
 <dt>&bull;</p>
 <dd> <a href="/docs/linux/man/1-varnishtop/">varnishtop</a>(1)</p>
 <dt>&bull;</p>
-<dd> <a href="/docs/linux/man/3-curses/">curses</a>(3)</dl>
+<dd> curses(3)</dl>
 <h2>HISTORY</h2>
 <p> The varnishstat utility was originally developed by Poul-Henning Kamp &lt;<i>phk [at] phk.freebsd.dk</i>&gt; in cooperation with Verdens Gang AS and Varnish Software AS. Manual page written by Dag-Erling Smørgrav, Per Buer, Lasse Karstensen and Martin Blix Grydeland.</p>
 <h2>COPYRIGHT</h2>

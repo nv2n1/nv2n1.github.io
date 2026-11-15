@@ -34,4 +34,4 @@ description: "ktutil – manage Kerberos keytabs"
 <dt><code>purge </code>[-<code>-age= </code><i>age</i> ]</p>
 <dd>Removes all old versions of a key for which there is a newer version that is at least <i>age</i> (default one week) old.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-kadmin/">kadmin</a>(8) </p>
+<p>kadmin(8) </p>

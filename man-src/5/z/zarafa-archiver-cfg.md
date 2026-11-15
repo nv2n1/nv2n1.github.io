@@ -105,7 +105,7 @@ description: "zarafa-archiver.cfg – The Zarafa archiver configuration file"
 <dd>The method which should be used for logging. Valid values are: </p>
 <p> <i>syslog</i></p>
 <dl>
-<dd>Use the Linux system log. All messages will be written to the mail facility. See also <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5).</dl>
+<dd>Use the Linux system log. All messages will be written to the mail facility. See also <code>syslog.conf</code>(5).</dl>
 <p> <i>file</i></p>
 <dl>
 <dd>Log to a file. The filename will be specified in <code>log_file</code>.</dl>

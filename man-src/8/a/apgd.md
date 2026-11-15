@@ -17,7 +17,7 @@ description: "apgd – server that generates several random passwords"
 <dd><i>priority</i> = <i>info</i> for user password generation activity logging<br />
  <i>priority</i> = <i>debug</i> for internal debug information
 </dl>
-<p> See the <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) and <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5) man pages for information on how to configure your syslog daemon. </p>
+<p> See the <code>syslogd</code>(8) and <code>syslog.conf</code>(5) man pages for information on how to configure your syslog daemon. </p>
 <h2>Options</h2>
 <h3>Password generation modes options</h3>
 <dl>
@@ -99,7 +99,7 @@ description: "apgd – server that generates several random passwords"
 <h2>Exit Code</h2>
 <p>On successful completion of its task, <code>apgd</code> will complete with exit code 0. An exit code of -1 indicates an error occurred. Textual errors are written to the <code>syslogd</code> (8).</p>
 <h2>Diagnostics</h2>
-<p>All textual info is written to the <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>All textual info is written to the <code>syslogd</code>(8).</p>
 <h2>Files</h2>
 <p><code>None.</code></p>
 <h2>Bugs</h2>

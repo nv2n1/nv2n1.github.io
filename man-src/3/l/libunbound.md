@@ -56,7 +56,7 @@ description: "libunbound, unbound.h, ub_ctx, ub_result, ub_callback_t, ub_ctx_cr
 <dt><code>ub_ctx_set_option</code></p>
 <dd> A power-user interface that lets you specify one of the options from the config file format, see <i><a href="/docs/linux/man/5-unbound-conf/">unbound.conf</a></i>(5). Not all options are relevant. For some specific options, such as adding trust anchors, special routines exist. Pass the option name with the trailing &#8216;:&#8217;.</p>
 <dt><code>ub_ctx_get_option</code></p>
-<dd> A power-user interface that gets an option value. Some options cannot be gotten, and others return a newline separated list. Pass the option name without trailing &#8216;:&#8217;. The returned value must be <a href="/docs/linux/man/2-free/">free</a>(2)d by the caller.</p>
+<dd> A power-user interface that gets an option value. Some options cannot be gotten, and others return a newline separated list. Pass the option name without trailing &#8216;:&#8217;. The returned value must be free(2)d by the caller.</p>
 <dt><code>ub_ctx_config</code></p>
 <dd> A power-user interface that lets you specify an unbound config file, see <i><a href="/docs/linux/man/5-unbound-conf/">unbound.conf</a></i>(5), which is read for configuration. Not all options are relevant. For some specific options, such as adding trust anchors, special routines exist.</p>
 <dt><code>ub_ctx_set_fwd</code></p>

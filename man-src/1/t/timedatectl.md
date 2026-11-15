@@ -216,7 +216,7 @@ $ systemctl status systemd-timesyncd.service
 ● systemd-timesyncd.service - Network Time Synchronization
    Loaded: loaded (/lib/systemd/system/systemd-timesyncd.service; enabled)
    Active: active (running) since Mo 2015-03-30 14:20:38 CEST; 5s ago
-     Docs: <a href="//www.systutorials.com/docs/linux/man/8-man:systemd-timesyncd.service/">man:systemd-timesyncd.service</a>(8)
+     Docs: man:systemd-timesyncd.service(8)
  Main PID: 595 (systemd-timesyn)
    Status: &quot;Using Time Server 216.239.38.15:123 (time4.google.com).&quot;
    CGroup: /system.slice/systemd-timesyncd.service

@@ -487,7 +487,7 @@ description: "strongswan.conf – strongSwan configuration file"
 <dt><code>charon.plugins.openssl.engine_id</code> [pkcs11]</p>
 <dd>ENGINE ID to use in the OpenSSL plugin. </p>
 <dt><code>charon.plugins.openssl.fips_mode</code> [0]</p>
-<dd>Set OpenSSL FIPS mode: disabled(0), <a href="/docs/linux/man/1-enabled/">enabled</a>(1), Suite B <a href="/docs/linux/man/2-enabled/">enabled</a>(2). </p>
+<dd>Set OpenSSL FIPS mode: disabled(0), enabled(1), Suite B enabled(2). </p>
 <dt><code>charon.plugins.pkcs11.load_certs</code> [yes]</p>
 <dd>Whether to load certificates from tokens. </p>
 <dt><code>charon.plugins.pkcs11.modules</code></p>
@@ -673,7 +673,7 @@ description: "strongswan.conf – strongSwan configuration file"
 <dt><code>charon.syslog.&lt;facility&gt;.ike_name</code> [no]</p>
 <dd>Prefix each log entry with the connection name and a unique numerical identifier for each IKE_SA. </p>
 <dt><code>charon.syslog.identifier</code> []</p>
-<dd>Global identifier used for an <code><a href="/docs/linux/man/3-openlog/">openlog</a></code>(3) call, prepended to each log message by syslog. If not configured, <code><a href="/docs/linux/man/3-openlog/">openlog</a></code>(3) is not called, so the value will depend on system defaults (often the program name). </p>
+<dd>Global identifier used for an <code>openlog</code>(3) call, prepended to each log message by syslog. If not configured, <code>openlog</code>(3) is not called, so the value will depend on system defaults (often the program name). </p>
 <dt><code>charon.threads</code> [16]</p>
 <dd>Number of worker threads in charon. Several of these are reserved for long running tasks in internal modules and plugins. Therefore, make sure you don&#8217;t set this value too low. The number of idle worker threads listed in <i>ipsec statusall</i> might be used as indicator on the number of reserved threads. </p>
 <dt><code>charon.tls.cipher</code> []</p>
@@ -1102,6 +1102,6 @@ ${urandom_device} /dev/urandom</pre>
 /etc/strongswan.d/ directory containing included config snippets
 /etc/strongswan.d/charon/ plugin specific config snippets</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-ipsec-conf/">ipsec.conf</a></code>(5), <code><a href="/docs/linux/man/5-ipsec-secrets/">ipsec.secrets</a></code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/8-charon-cmd/">charon-cmd</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/5-ipsec-conf/">ipsec.conf</a></code>(5), <code><a href="/docs/linux/man/5-ipsec-secrets/">ipsec.secrets</a></code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code>charon-cmd</code>(8) </p>
 <h2>History</h2>
 <p>Written for the strongSwan project by Tobias Brunner, Andreas Steffen and Martin Willi.</p>

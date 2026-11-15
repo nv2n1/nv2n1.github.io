@@ -37,10 +37,10 @@ description: "ext2spice – convert hierarchical"
 </dl>
 <p> The way the extraction of node area and perimeter works in magic the total area and perimeter of the source/drain junction is summed up on a single node. That is why all the junction areas and perimeters are summed up on a single node (this should not affect simulation results however). </p>
 <p> <i>Special care must be taken when the substrate of a fet is tied to a node other than the default substrate</i> (eg in a bootstraping charge pump). To get the correct substrate info in these cases the fet(s) with separate wells should be in their own separate subcell with ext:aph attributes attached to their sensitive terminals (also all the transistors which share sensistive terminals with these should be in another subcell with the same attributes). </p>
-<p> In addition, all of the options of <i><a href="/docs/linux/man/1-extcheck/">extcheck</a></i>(1) are accepted. </p>
+<p> In addition, all of the options of <i>extcheck</i>(1) are accepted. </p>
 <p> The awk filter spice2sim is provided with the current distribution for debugging purposes. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-extcheck/">extcheck</a>(1), <a href="/docs/linux/man/1-ext2spice/">ext2spice</a>(1), <a href="/docs/linux/man/1-magic/">magic</a>(1), <a href="/docs/linux/man/1-rsim/">rsim</a>(1), <a href="/docs/linux/man/5-ext/">ext</a>(5), <a href="/docs/linux/man/5-sim/">sim</a>(5) </p>
+<p> extcheck(1), <a href="/docs/linux/man/1-ext2spice/">ext2spice</a>(1), <a href="/docs/linux/man/1-magic/">magic</a>(1), rsim(1), <a href="/docs/linux/man/5-ext/">ext</a>(5), <a href="/docs/linux/man/5-sim/">sim</a>(5) </p>
 <h2>AUTHOR</h2>
 <p> Stefanos Sidiropoulos. </p>
 <h2>BUGS</h2>

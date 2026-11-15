@@ -86,7 +86,7 @@ description: "busctl – Introspect the bus"
 <p> <code>&#8211;match=</code><i>MATCH</i></p>
 <dl>
 <dt>
-<dd> When showing messages being exchanged, show only the subset matching <i>MATCH</i>. See <code><a href="/docs/linux/man/3-sd_bus_add_match/">sd_bus_add_match</a></code>(3).</dl>
+<dd> When showing messages being exchanged, show only the subset matching <i>MATCH</i>. See <code>sd_bus_add_match</code>(3).</dl>
 <p> <code>&#8211;size=</code></p>
 <dl>
 <dt>
@@ -245,7 +245,7 @@ o &quot;/org/freedesktop/systemd1/job/42684&quot;
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), m[blue]<code>D-Bus</code>m[]<font SIZE="-2">[3]</font>, <code><a href="/docs/linux/man/3-sd-bus/">sd-bus</a></code>(3), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-machinectl/">machinectl</a></code>(1), <code><a href="/docs/linux/man/1-wireshark/">wireshark</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), m[blue]<code>D-Bus</code>m[]<font SIZE="-2">[3]</font>, <code>sd-bus</code>(3), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-machinectl/">machinectl</a></code>(1), <code><a href="/docs/linux/man/1-wireshark/">wireshark</a></code>(1)</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</p>

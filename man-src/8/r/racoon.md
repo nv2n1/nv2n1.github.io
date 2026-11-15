@@ -11,7 +11,7 @@ description: "racoon – IKE (ISAKMP/Oakley) key management daemon"
 <h2>Synopsis</h2>
 <p><code>racoon</code> -words [-<code>46BdFLVv </code>-words ] [-<code>f </code><i>configfile</i> ] -words [-<code>l </code><i>logfile</i> ] -words [-<code>P </code><i>isakmp-natt-port</i> ] -words [-<code>p </code><i>isakmp-port</i> ]</p>
 <h2>Description</h2>
-<p><code>racoon</code> speaks the IKE (ISAKMP/Oakley) key management protocol, to establish security associations with other hosts. The SPD (Security Policy Database) in the kernel usually triggers <code>.</code> <code>racoon</code> usually sends all informational messages, warnings and error messages to <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8) with the facility <code>LOG_DAEMON</code> and the priority <code>LOG_INFO</code> Debugging messages are sent with the priority <code>LOG_DEBUG</code> You should configure syslog.conf5 appropriately to see these messages.</p>
+<p><code>racoon</code> speaks the IKE (ISAKMP/Oakley) key management protocol, to establish security associations with other hosts. The SPD (Security Policy Database) in the kernel usually triggers <code>.</code> <code>racoon</code> usually sends all informational messages, warnings and error messages to syslogd(8) with the facility <code>LOG_DAEMON</code> and the priority <code>LOG_INFO</code> Debugging messages are sent with the priority <code>LOG_DEBUG</code> You should configure syslog.conf5 appropriately to see these messages.</p>
 <dl>
 <dt><code>-4</code></p>
 <dd>
@@ -28,7 +28,7 @@ description: "racoon – IKE (ISAKMP/Oakley) key management daemon"
 <dt><code>-L</code></p>
 <dd>Include <i>file_name:line_number:function_name</i> in all messages.</p>
 <dt><code>-l </code><i>logfile</i></p>
-<dd>Use <i>logfile</i> as the logging file instead of <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8).</p>
+<dd>Use <i>logfile</i> as the logging file instead of syslogd(8).</p>
 <dt><code>-P </code><i>isakmp-natt-port</i></p>
 <dd>Use <i>isakmp-natt-port</i> for NAT-Traversal port-floating. The default is 4500.</p>
 <dt><code>-p </code><i>isakmp-port</i></p>
@@ -37,7 +37,7 @@ description: "racoon – IKE (ISAKMP/Oakley) key management daemon"
 <dd>Print racoon version and compilation options and exit.</p>
 <dt><code>-v</code></p>
 <dd>This flag causes the packet dump be more verbose, with higher debugging level.</dl>
-<p> <code>racoon</code> assumes the presence of the kernel random number device <a href="/docs/linux/man/4-rnd/">rnd</a>(4) at /dev/urandom</p>
+<p> <code>racoon</code> assumes the presence of the kernel random number device rnd(4) at /dev/urandom</p>
 <h2>Return Values</h2>
 <p>The command exits with 0 on success, and non-zero on errors.</p>
 <h2>Files</h2>
@@ -45,7 +45,7 @@ description: "racoon – IKE (ISAKMP/Oakley) key management daemon"
 <dt><code>/etc/racoon.conf </code></p>
 <dd>default configuration file.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/4-ipsec/">ipsec</a>(4), racoon.conf5, syslog.conf5, <a href="/docs/linux/man/8-setkey/">setkey</a>(8), <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8)</p>
+<p>ipsec(4), racoon.conf5, syslog.conf5, <a href="/docs/linux/man/8-setkey/">setkey</a>(8), syslogd(8)</p>
 <h2>History</h2>
 <p>The <code>racoon</code> command first appeared in the &#8220;YIPS&#8221; Yokogawa IPsec implementation.</p>
 <h2>Security Considerations</h2>

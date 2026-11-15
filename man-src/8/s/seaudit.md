@@ -39,4 +39,4 @@ description: "seaudit – SELinux graphical audit log analysis tool"
 <h2>Bugs</h2>
 <p>Please report bugs via an email to setools-bugs [at] tresys.com.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-seaudit-report/">seaudit-report</a>(8) </p>
+<p>seaudit-report(8) </p>

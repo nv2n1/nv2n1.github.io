@@ -106,7 +106,7 @@ description: "stzrzf.f –"
 <dd>
 <pre>
   The N-by-N matrix Z can be computed by
-     Z =  <a href="//www.systutorials.com/docs/linux/man/1-Z/">Z</a>(1)*<a href="//www.systutorials.com/docs/linux/man/2-Z/">Z</a>(2)* ... *Z(M)
+     Z =  Z(1)*Z(2)* ... *Z(M)
   where each N-by-N Z(k) is given by
      Z(k) = I - tau(k)*v(k)*v(k)**T
   with v(k) is the kth row vector of the M-by-N matrix

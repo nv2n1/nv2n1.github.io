@@ -100,7 +100,7 @@ description: "rpc.gssd – RPCSEC_GSS daemon"
 <dd>Equivalent to <code>-R</code>. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rpc-svcgssd/">rpc.svcgssd</a></code>(8), <code><a href="/docs/linux/man/1-kerberos/">kerberos</a></code>(1), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5)</p>
+<p><code>rpc.svcgssd</code>(8), <code><a href="/docs/linux/man/1-kerberos/">kerberos</a></code>(1), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5)</p>
 <h2>Authors</h2>
 <p>Dug Song &lt;dugsong [at] umich.edu&gt;<br />
  Andy Adamson &lt;andros [at] umich.edu&gt;<br />

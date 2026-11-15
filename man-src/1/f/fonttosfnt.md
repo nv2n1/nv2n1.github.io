@@ -32,7 +32,7 @@ description: "fonttosfnt – Wrap a bitmap font in a sfnt (TrueType) wrapper"
 <h2>BUGS</h2>
 <p> Some of the font-level values, notably sub- and superscript positions, are dummy values.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="//www.systutorials.com/docs/linux/man/3x-Xft/">Xft</a>(3x). <i>Fonts in X11.</i></p>
+<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), Xft(3x). <i>Fonts in X11.</i></p>
 <h2>AUTHOR</h2>
 <p> The version of <code>Fonttosfnt</code> included in this X.Org Foundation release was originally written by Juliusz Chroboczek &lt;jch [at] freedesktop.org&gt; for the XFree86 project. </p>
 <h2>Index</h2>

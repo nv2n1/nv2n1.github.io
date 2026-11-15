@@ -79,7 +79,7 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
 <p>(and other Perl operators/functions) </p>
 <p> When using piddles in conditional expressions (i.e. <tt>&quot;if&quot;</tt>, <tt>&quot;unless&quot;</tt> and <tt>&quot;while&quot;</tt> constructs) only piddles with exactly one element are allowed, e.g. </p>
 <pre> $a = pdl (1,0,0,1);
- print &quot;is set&quot; if $a-&gt;<a href="//www.systutorials.com/docs/linux/man/2-index/">index</a>(2);</pre>
+ print &quot;is set&quot; if $a-&gt;index(2);</pre>
 <p>Note that the boolean operators return in general multi-element piddles. Therefore, the following will raise an error </p>
 <pre> print &quot;is ok&quot; if $a &gt; 3;</pre>
 <p>since <tt>&quot;$a &gt; 3&quot;</tt> is a piddle with 4 elements. Rather use all or any to test if all or any of the elements fulfill the condition: </p>
@@ -129,7 +129,7 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
 <pre> print $a;
  $b = &quot;Answer is = $a &quot;;</pre>
 <h3>Sections</h3>
-<p><font SIZE="-1">PDL</font> has very powerful multidimensional slicing and sectioning operators; see the <i><a href="/docs/linux/man/3-pdl--slices/">PDL::Slices</a></i>(3) man page for details; we&#8217;ll describe the most important one here. </p>
+<p><font SIZE="-1">PDL</font> has very powerful multidimensional slicing and sectioning operators; see the <i>PDL::Slices</i>(3) man page for details; we&#8217;ll describe the most important one here. </p>
 <p> <font SIZE="-1">PDL</font> shows its Perl/C heritage in that arrays are zero-offset. Thus a 100&#215;100 image has indices <tt>&quot;0..99,0..99&quot;</tt>. (The convention is that the <i>center</i> of pixel (0,0) is at coordinate (0.0,0.0). All <font SIZE="-1">PDL</font> graphics functions conform to this definition and hide away the unit offsets of, for example, the <font SIZE="-1">PGPLOT FORTRAN</font> library. </p>
 <p> Following the usual convention coordinate (0,0) is displayed at the bottom left when displaying an image. It appears at the top left when using &quot;<tt>&quot;print $a&quot;</tt>&quot; etc. </p>
 <p> Simple sectioning uses a syntax extension to Perl, PDL::NiceSlice, that allows you to specify subranges via a null-method modifier to a <font SIZE="-1">PDL:</font> </p>

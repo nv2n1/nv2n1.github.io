@@ -56,11 +56,11 @@ int inet_pton(int af, const char *src, void *dst);
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>NOTES</h2>
-<p> Unlike <code><a href="/docs/linux/man/3-inet_aton/">inet_aton</a></code>(3) and <code><a href="/docs/linux/man/3-inet_addr/">inet_addr</a></code>(3), <code>inet_pton</code>() supports IPv6 addresses. On the other hand, <code>inet_pton</code>() accepts only IPv4 addresses in dotted-decimal notation, whereas <code><a href="/docs/linux/man/3-inet_aton/">inet_aton</a></code>(3) and <code><a href="/docs/linux/man/3-inet_addr/">inet_addr</a></code>(3) allow the more general numbers-and-dots notation (hexadecimal and octal number formats, and formats that don&#8217;t require all four bytes to be explicitly written). For an interface that handles both IPv6 addresses, and IPv4 addresses in numbers-and-dots notation, see <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3).</p>
+<p> Unlike <code>inet_aton</code>(3) and <code>inet_addr</code>(3), <code>inet_pton</code>() supports IPv6 addresses. On the other hand, <code>inet_pton</code>() accepts only IPv4 addresses in dotted-decimal notation, whereas <code>inet_aton</code>(3) and <code>inet_addr</code>(3) allow the more general numbers-and-dots notation (hexadecimal and octal number formats, and formats that don&#8217;t require all four bytes to be explicitly written). For an interface that handles both IPv6 addresses, and IPv4 addresses in numbers-and-dots notation, see <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3).</p>
 <h2>BUGS</h2>
 <p> <code>AF_INET6</code> does not recognize IPv4 addresses. An explicit IPv4-mapped IPv6 address must be supplied in <i>src</i> instead.</p>
 <h2>EXAMPLES</h2>
-<p> The program below demonstrates the use of <code>inet_pton</code>() and <code><a href="/docs/linux/man/3-inet_ntop/">inet_ntop</a></code>(3). Here are some example runs: </p>
+<p> The program below demonstrates the use of <code>inet_pton</code>() and <code>inet_ntop</code>(3). Here are some example runs: </p>
 <p> $<code> ./a.out i6 0:0:0:0:0:0:0:0</code> :: $<code> ./a.out i6 1:0:0:0:0:0:0:8</code> 1::8 $<code> ./a.out i6 0:0:0:0:0:FFFF:204.152.189.116</code> ::ffff:204.152.189.116</p>
 <h3>Program source</h3>
 <p> #include &lt;arpa/inet.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt; </p>
@@ -91,7 +91,7 @@ int inet_pton(int af, const char *src, void *dst);
 &quot;, str); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-inet/">inet</a></code>(3), <code><a href="/docs/linux/man/3-inet_ntop/">inet_ntop</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code>inet</code>(3), <code>inet_ntop</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

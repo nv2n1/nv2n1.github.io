@@ -165,6 +165,6 @@ description: "boom.cfg, glboom.cfg – Configuration file for PrBoom v2.1.0 onwa
 <h2>Weapon Preferences</h2>
 <p>Here are the settings from the Weapons menu in the game (OPTIONS-&gt;SETUP-&gt;WEAPONS).</p>
 <h2>Also See</h2>
-<p><code><a href="/docs/linux/man/6-prboom/">prboom</a>(6),</code> PrBoom&#8217;s documentation (including the Boom and MBF documentation) and your Doom documentation.</p>
+<p><code>prboom(6),</code> PrBoom&#8217;s documentation (including the Boom and MBF documentation) and your Doom documentation.</p>
 <h2>Author</h2>
 <p>See the file <code>AUTHORS</code> included with PrBoom for a list of contributors to PrBoom. This config file reference written by Colin Phipps (cph [at] moria.org.uk).</p>

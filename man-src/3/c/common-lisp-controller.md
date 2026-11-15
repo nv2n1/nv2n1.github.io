@@ -28,5 +28,5 @@ description: "common-lisp-controller – Common Lisp system management tool"
 <p> Ren&eacute; van Bevern 2005-2006 </p>
 <p> Desmond O. Chang (dochang [at] gmail.com) 2010 </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-clc-register-user-package/">clc-register-user-package</a></code>(1), <code><a href="/docs/linux/man/1-clc-unregister-user-package/">clc-unregister-user-package</a></code>(1) <code><a href="/docs/linux/man/8-register-common-lisp-implementation/">register-common-lisp-implementation</a></code>(8) <code><a href="/docs/linux/man/8-register-common-lisp-source/">register-common-lisp-source</a></code>(8) <code>unregister-common-lisp-implementation|<a href="/docs/linux/man/8-source/">source</a></code>(8) <code><a href="/docs/linux/man/8-unregister-common-lisp-source/">unregister-common-lisp-source</a></code>(8) </p>
+<p> <code><a href="/docs/linux/man/1-clc-register-user-package/">clc-register-user-package</a></code>(1), <code>clc-unregister-user-package</code>(1) <code><a href="/docs/linux/man/8-register-common-lisp-implementation/">register-common-lisp-implementation</a></code>(8) <code>register-common-lisp-source</code>(8) <code>unregister-common-lisp-implementation|source</code>(8) <code>unregister-common-lisp-source</code>(8) </p>
 <h2>Index</h2>

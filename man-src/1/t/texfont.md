@@ -41,7 +41,7 @@ description: "texfont – font installation tool for ConTeXt"
 <h2>SEE ALSO</h2>
 <dl>
 <dt>&bull;</p>
-<dd> <code><a href="/docs/linux/man/1-texexec/">texexec</a></code>(1), <code><a href="/docs/linux/man/1-fontinst/">fontinst</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/1-texshow/">texshow</a></code>(1).</p>
+<dd> <code><a href="/docs/linux/man/1-texexec/">texexec</a></code>(1), <code><a href="/docs/linux/man/1-fontinst/">fontinst</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code>texshow</code>(1).</p>
 <dt>&bull;</p>
 <dd>
 <dd>The ConTeXt Font manual, <i>mfonts.pdf</i> available from PRAGMA ADE &lt;URL: <a rel="nofollow" href="http://www.pragma-ade.com/dir/general/manuals/">http://www.pragma-ade.com/dir/general/manuals/</a> &gt;.</p>

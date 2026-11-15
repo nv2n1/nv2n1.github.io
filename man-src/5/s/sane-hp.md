@@ -90,9 +90,9 @@ option connect-device</pre>
 <dt><code>HP PhotoSmart PhotoScanner</code></p>
 <dd>In media mode &#8216;slide&#8217; and &#8216;negative&#8217;, scan resolutions are rounded to multiple of 300 dpi. The scanner does not scale the data correctly on other resolutions. Some newer models (firmware code R030 and later) do not support adjustment of contrast/intensity level and tone map. The backend will simulate this by software, but only for gray and 24 bit color.</p>
 <dt><code>Automatic Document Feeder (ADF)</code></p>
-<dd>For use of the ADF with <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), first place paper in the ADF and then change option scan source to &#8216;ADF&#8217;. Press &#8216;change document&#8217; to load a sheet. Then press &#8216;scan&#8217; to start a scan. Maybe it is sufficient to press &#8216;scan&#8217; without &#8216;change document&#8217; for repeated scans. The use of the preview window is not recommended when working with the ADF. Setting a window to scan from ADF is not supported with <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1). Try <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).</p>
+<dd>For use of the ADF with <code>xscanimage</code>(1), first place paper in the ADF and then change option scan source to &#8216;ADF&#8217;. Press &#8216;change document&#8217; to load a sheet. Then press &#8216;scan&#8217; to start a scan. Maybe it is sufficient to press &#8216;scan&#8217; without &#8216;change document&#8217; for repeated scans. The use of the preview window is not recommended when working with the ADF. Setting a window to scan from ADF is not supported with <code>xscanimage</code>(1). Try <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).</p>
 <dt><code>Immediate actions</code></p>
-<dd>Some actions in <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) (i.e. unload, select media, calibrate) have an immediate effect on the scanner without starting a scan. These options can not be used with <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1). </p>
+<dd>Some actions in <code>xscanimage</code>(1) (i.e. unload, select media, calibrate) have an immediate effect on the scanner without starting a scan. These options can not be used with <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1). </p>
 <h2>Todo</h2>
 <dl>
 <dt><code>HP PhotoSmart PhotoScanner</code></p>
@@ -103,7 +103,7 @@ option connect-device</pre>
 <dd>Beside the ScanJet Plus which came with its own parallel interface card, currently only the HP ScanJet 5100C/5200C are supported. These scanners are using an internal parallel-to-SCSI converter which is supported by the ppSCSI-driver (see above). </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) </p>
 <h2>Author</h2>
 <p>The sane-hp backend was written by Geoffrey T. Dairiki.<br />
  HP PhotoSmart PhotoScanner support by Peter Kirchgessner.</p>

@@ -20,8 +20,8 @@ description: "sunicontopnm – convert a Sun icon into a Netpbm image"
 <p> It seems that this icon format was used in Sunview and was usable in its successor Openlook/Openwindows in Sun 4.1.1, which offered backward compatibility for Sunview, including the icons. Sunview&#8217;s desktop was monochrome. OpenWindows had color icons. Sun 4 came with OpenWindows. OpenWindows appears to have been an X-based gui so presumably the icons were mostly XPM files. </p>
 <p> So in addition to <code>sunicontopnm</code>, you should try <code>xpmtoppm</code> and <code>xbmtopbm</code> on icons from a Sun Workstation. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbmtosunicon/">pbmtosunicon</a></code>(1) , <code><a href="/docs/linux/man/1-winicontoppm/">winicontoppm</a></code>(1) , <code><a href="/docs/linux/man/1-xpmtoppm/">xpmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-xbmtoppm/">xbmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-infotopam/">infotopam</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pbmtosunicon/">pbmtosunicon</a></code>(1) , <code><a href="/docs/linux/man/1-winicontoppm/">winicontoppm</a></code>(1) , <code><a href="/docs/linux/man/1-xpmtoppm/">xpmtoppm</a></code>(1) , <code>xbmtoppm</code>(1) , <code><a href="/docs/linux/man/1-infotopam/">infotopam</a></code>(1) , <code>pbm</code>(1) </p>
+<p> <code>pgm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> Jef Poskanzer wrote the program under the name <code>icontopbm</code> in 1988. </p>
 <p> In October 2010, Prophet Of The Way (afu [at] wta.att.ne.jp) converted it to use the more recent &#8216;packed PBM&#8217; library functions, thus speeding it up </p>

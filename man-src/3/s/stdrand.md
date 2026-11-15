@@ -13,7 +13,7 @@ description: "std::rand – std::rand"
 
     int rand();</code></pre>
 <p>Returns a pseudo-random integral value between 0 and RAND_MAX (0 and RAND_MAX included).<br />
-std::srand() seeds the pseudo-random number generator used by rand(). If rand() is used before any calls to srand(), rand() behaves as if it was seeded with <a href="/docs/linux/man/1-srand/">srand</a><code>(1)</code>.<br />
+std::srand() seeds the pseudo-random number generator used by rand(). If rand() is used before any calls to srand(), rand() behaves as if it was seeded with srand<code>(1)</code>.<br />
 Each time rand() is seeded with srand(), it must produce the same sequence of values on successive calls. Other functions in the standard library may call rand, it is implementation-defined which functions do so.<br />
 It is implementation-defined whether rand() is thread-safe. </p>
 <h2>Parameters</h2>

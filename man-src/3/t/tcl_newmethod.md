@@ -111,6 +111,6 @@ int
 </dl>
 <p> The <i>interp</i> argument gives a place to write an error message when the attempt to clone the object is to fail, in which case the clone procedure must also return TCL_ERROR; it should return TCL_OK otherwise. The <i>oldClientData</i> field to a Tcl_CloneProc gives the value from the method being copied from, and the <i>newClientDataPtr</i> field will point to a variable in which to write the value for the method being copied to.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-class/">Class</a>(3), <a href="/docs/linux/man/n-oo--class/">oo::class</a>(n), <a href="/docs/linux/man/n-oo--define/">oo::define</a>(n), <a href="/docs/linux/man/n-oo--object/">oo::object</a>(n)</p>
+<p>Class(3), oo::class(n), oo::define(n), oo::object(n)</p>
 <h2>Keywords</h2>
 <p>constructor, method, object</p>

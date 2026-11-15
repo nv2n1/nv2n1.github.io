@@ -73,7 +73,7 @@ description: "ipsec_showhostkey – show host’s authentication key"
 <h2>Files</h2>
 <p>/etc/ipsec.d, /etc/ipsec.d/nsspassword</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-ipsec-conf/">ipsec.conf</a></code>(5), <code>ipsec <a href="/docs/linux/man/8-rsasigkey/">rsasigkey</a></code>(8)<code>ipsec <a href="/docs/linux/man/8-newhostkey/">newhostkey</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/5-ipsec-conf/">ipsec.conf</a></code>(5), <code>ipsec rsasigkey</code>(8)<code>ipsec newhostkey</code>(8)</p>
 <h2>History</h2>
 <p>Written for the Linux FreeS/WAN project &lt;m[blue]<code><a rel="nofollow" href="http://www.freeswan.org">http://www.freeswan.org</a></code>m[]&gt; by Henry Spencer. Updated by Paul Wouters for the IPSECKEY format.</p>
 <h2>Bugs</h2>

@@ -40,7 +40,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
  sox infile -t alsa default
  sox infile -t alsa plughw:0,0
  sox -2 -t alsa hw:1 outfile</pre>
-<p>See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1), <code><a href="/docs/linux/man/1-rec/">rec</a></code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p>See also <code>play</code>(1), <code>rec</code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.amb</code></p>
 <dd>Ambisonic B-Format: a specialisation of <code>.wav</code> with between 3 and 16 channels of audio for use with an Ambisonic decoder. See <a rel="nofollow" href="http://www.ambisonia.com/Members/mleese/file-format-for-b-format">http://www.ambisonia.com/Members/mleese/file-format-for-b-format</a> for details. It is up to the user to get the channels together in the right order and at the correct amplitude.</p>
 <dt><code>.amr-nb</code> (optional)</p>
@@ -55,7 +55,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <pre> sox infile -t ao
  sox infile -t ao default
  sox infile -t ao pulse</pre>
-<p>See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1) and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p>See also <code>play</code>(1) and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.au</code>, <code>.snd</code> (also with <code>-t sndfile</code>)</p>
 <dd>Sun Microsystems AU files. There are many types of AU file; DEC has invented its own with a different magic number and byte order. To write a DEC file, use the <code>-L</code> option with the output file options. </p>
 <p> Some .au files are known to have invalid AU headers; these are probably original Sun &mu;-law 8000 Hz files and can be dealt with using the <code>.ul</code> format (see below). </p>
@@ -72,7 +72,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <pre> sox infile -t coreaudio
  sox infile -t coreaudio default
  sox infile -t coreaudio &quot;Internal Speakers&quot;</pre>
-<p>See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1), <code><a href="/docs/linux/man/1-rec/">rec</a></code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p>See also <code>play</code>(1), <code>rec</code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.cvsd</code>, <code>.cvs</code></p>
 <dd>Continuously Variable Slope Delta modulation. A headerless format used to compress speech audio for applications such as voice mail. This format is sometimes used with bit-reversed samples &#8211; the <code>-X</code> format option can be used to set the bit-order.</p>
 <dt><code>.cvu</code></p>
@@ -145,7 +145,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <pre> sox infile -t oss
  sox infile -t oss /dev/dsp
  sox -2 -t oss /dev/dsp outfile</pre>
-<p>See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1), <code><a href="/docs/linux/man/1-rec/">rec</a></code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p>See also <code>play</code>(1), <code>rec</code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.paf</code>, <code>.fap</code> (optional)</p>
 <dd>Ensoniq PARIS file format (big and little-endian respectively).</p>
 <dt><code>.pls</code></p>
@@ -159,7 +159,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <dd>PulseAudio driver; supports both playing and recording of audio. PulseAudio is a cross platform networked sound server. If a file name is specified with this driver, it is ignored. Examples: </p>
 <pre> sox infile -t pulseaudio
  sox infile -t pulseaudio default</pre>
-<p>See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1), <code><a href="/docs/linux/man/1-rec/">rec</a></code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p>See also <code>play</code>(1), <code>rec</code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.pvf</code> (optional)</p>
 <dd>Portable Voice Format.</p>
 <dt><code>.sd2</code> (optional)</p>
@@ -181,7 +181,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <dt><code>sndio</code> (optional)</p>
 <dd>OpenBSD audio device driver; supports both playing and recording audio. </p>
 <pre> sox infile -t sndio</pre>
-<p>See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1), <code><a href="/docs/linux/man/1-rec/">rec</a></code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p>See also <code>play</code>(1), <code>rec</code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.sndr</code></p>
 <dd>Sounder files. An MS-DOS/Windows format from the early &#8217;90s. Sounder files usually have the extension `.SND&#8217;.</p>
 <dt><code>.sndt</code></p>
@@ -197,7 +197,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <p>or </p>
 <pre> sox infile -t sunau -U -c 1 /dev/audio</pre>
 <p>for older sun equipment. </p>
-<p> See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1), <code><a href="/docs/linux/man/1-rec/">rec</a></code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p> See also <code>play</code>(1), <code>rec</code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.txw</code></p>
 <dd>Yamaha TX-16W sampler. A file format from a Yamaha sampling keyboard which wrote IBM-PC format 3.5&quot; floppies. Handles reading of files which do not have the sample rate field set to one of the expected by looking at some other bytes in the attack/loop length fields, and defaulting to 33 kHz if the sample rate is still unknown.</p>
 <dt><code>.vms</code></p>
@@ -227,7 +227,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <p>If the device name is omitted, <code>-1</code>, or <code>default</code>, then you get the `Microsoft Wave Mapper&#8217; device. Wave Mapper means `use the system default audio devices&#8217;. You can control what `default&#8217; means via the OS Control Panel. </p>
 <p> If the device name given is some other number, you get that audio device by index; so recording with device name <code>0</code> would get the first input device (perhaps the microphone), <code>1</code> would get the second (perhaps line in), etc. Playback using <code>0</code> will get the first output device (usually the only audio device). </p>
 <p> If the device name given is something other than a number, SoX tries to match it (maximum 31 characters) against the names of the available devices. </p>
-<p> See also <code><a href="/docs/linux/man/1-play/">play</a></code>(1), <code><a href="/docs/linux/man/1-rec/">rec</a></code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
+<p> See also <code>play</code>(1), <code>rec</code>(1), and <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) <code>-d</code>.</p>
 <dt><code>.wavpcm</code></p>
 <dd>A non-standard, but widely used, variant of <code>.wav</code>. Some applications cannot read a standard WAV file header for PCM-encoded data with sample-size greater than 16-bits or with more than two channels, but can read a non-standard WAV header. It is likely that such applications will eventually be updated to support the standard header, but in the mean time, this SoX format can be used to create files with the non-standard header that should work with these applications. (Note that SoX will automatically detect and read WAV files with the non-standard header.) </p>
 <p> The most common use of this file-type is likely to be along the following lines: </p>

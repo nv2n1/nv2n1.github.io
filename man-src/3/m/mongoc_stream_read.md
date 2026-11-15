@@ -31,7 +31,7 @@ mongoc_stream_read (mongoc_stream_t *stream,
 <dl COMPACT>
 <dt><code>timeout_msec</code></p>
 <dd>The number of milliseconds to wait before failure, a timeout of 0 will not block. If negative, use the default timeout.</dl>
-<p> The <code><a href="/docs/linux/man/3-mongoc_stream_read/">mongoc_stream_read</a>(3)</code> function shall perform a read from a <code>mongoc_stream_t</code> \&amp;. It&#8217;s modeled on the API and semantics of <code><a href="/docs/linux/man/3-read/">read</a>(3)</code> , though the parameters map only loosely. </p>
+<p> The <code><a href="/docs/linux/man/3-mongoc_stream_read/">mongoc_stream_read</a>(3)</code> function shall perform a read from a <code>mongoc_stream_t</code> \&amp;. It&#8217;s modeled on the API and semantics of <code>read(3)</code> , though the parameters map only loosely. </p>
 <h2>Returns</h2>
 <p>The <code>mongoc_stream_read</code> function returns the number of bytes read on success. It returns <code>&gt;= 0</code> and <code>&lt; min_bytes</code> when end-of-file is encountered and <code>-1</code> on failure. <code>errno</code> is set upon failure. </p>
 <h2>See Also</h2>

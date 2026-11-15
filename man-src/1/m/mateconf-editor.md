@@ -25,6 +25,6 @@ description: "mateconf-editor – an editor for the MateConf configuration syste
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://bugzilla.mate.org/.">http://bugzilla.mate.org/.</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mateconfd-2/">mateconfd-2</a></code>(1), <code><a href="/docs/linux/man/1-mateconftool-2/">mateconftool-2</a></code>(1). </p>
+<p> <code>mateconfd-2</code>(1), <code><a href="/docs/linux/man/1-mateconftool-2/">mateconftool-2</a></code>(1). </p>
 <p> <i><a rel="nofollow" href="http://www.mate.org/projects/mateconf/">http://www.mate.org/projects/mateconf/</a></i> </p>
 <h2>Index</h2>

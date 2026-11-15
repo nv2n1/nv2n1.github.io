@@ -14,7 +14,7 @@ description: "pam_filter – PAM filter module"
 <h2>Description</h2>
 <dd>This module is intended to be a platform for providing access to all of the input/output that passes between the user and the application. It is only suitable for tty-based and (stdin/stdout) applications. </p>
 <p> To function this module requires <i>filters</i> to be installed on the system. The single filter provided with the module simply transposes upper and lower case letters in the input and output streams. (This can be very annoying and is not kind to termcap based editors). </p>
-<p> Each component of the module has the potential to invoke the desired filter. The filter is always <code><a href="/docs/linux/man/2-execv/">execv</a></code>(2) with the privilege of the calling application and <i>not</i> that of the user. For this reason it cannot usually be killed by the user without closing their session.</p>
+<p> Each component of the module has the potential to invoke the desired filter. The filter is always <code>execv</code>(2) with the privilege of the calling application and <i>not</i> that of the user. For this reason it cannot usually be killed by the user without closing their session.</p>
 <h2>Options</h2>
 <p><code>debug</code></p>
 <dl>

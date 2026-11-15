@@ -53,4 +53,4 @@ smbldap-groupmod -g 253 development This will change the <font SIZE="-1">GID</fo
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/1-groupmod/">groupmod</a></i>(1) 
+<i>groupmod</i>(1) 

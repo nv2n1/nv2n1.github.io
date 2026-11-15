@@ -11,7 +11,7 @@ url: "/docs/linux/man/1-tidy/"
 
  <b>tidy</b> - check, correct, and pretty-print 
 
-<a HREF="/docs/linux/man/5-html/">HTML</a>(5) files
+HTML(5) files
 
 <h2>SYNOPSIS</h2>
 

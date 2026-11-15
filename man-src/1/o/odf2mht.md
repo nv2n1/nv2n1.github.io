@@ -43,7 +43,7 @@ odf2mht example.odt &gt;example.mht
 <h2>Bugs</h2>
 <p> IE6 seems to have problems with large MHT files.</p>
 <h2>See Also</h2>
-<p> <code><a href="/docs/linux/man/1-odftools/">odftools</a></code>(1), <code><a href="/docs/linux/man/1-odf2war/">odf2war</a></code>(1), <code><a href="/docs/linux/man/1-mailodf/">mailodf</a></code>(1)</p>
+<p> <code>odftools</code>(1), <code>odf2war</code>(1), <code><a href="/docs/linux/man/1-mailodf/">mailodf</a></code>(1)</p>
 <h2>Author</h2>
 <p> <code>S&oslash;ren Roug</code></p>
 <dl>

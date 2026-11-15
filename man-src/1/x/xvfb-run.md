@@ -12,8 +12,8 @@ description: "xvfb-run – run specified X client or command in a virtual X serv
 <h2>SYNOPSIS</h2>
 <p> <code>xvfb-run</code> [ <i>options</i> ] <i>command</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>xvfb-run</code> is a wrapper for the <code><a href="//www.systutorials.com/docs/linux/man/1x-Xvfb/">Xvfb</a></code>(1x) command which simplifies the task of running commands (typically an X client, or a script containing a list of clients to be run) within a virtual X server environment. </p>
-<p> <code>xvfb-run</code> sets up an X authority file (or uses an existing user-specified one), writes a cookie to it (see <code><a href="//www.systutorials.com/docs/linux/man/1x-xauth/">xauth</a></code>(1x)) and then starts the <code>Xvfb</code> X server as a background process. The process ID of <code>Xvfb</code> is stored for later use. The specified <i>command</i> is then run using the X display corresponding to the <code>Xvfb</code> server just started and the X authority file created earlier. </p>
+<p> <code>xvfb-run</code> is a wrapper for the <code>Xvfb</code>(1x) command which simplifies the task of running commands (typically an X client, or a script containing a list of clients to be run) within a virtual X server environment. </p>
+<p> <code>xvfb-run</code> sets up an X authority file (or uses an existing user-specified one), writes a cookie to it (see <code>xauth</code>(1x)) and then starts the <code>Xvfb</code> X server as a background process. The process ID of <code>Xvfb</code> is stored for later use. The specified <i>command</i> is then run using the X display corresponding to the <code>Xvfb</code> server just started and the X authority file created earlier. </p>
 <p> When the <i>command</i> exits, its status is saved, the <code>Xvfb</code> server is killed (using the process ID stored earlier), the X authority cookie removed, and the authority file deleted (if the user did not specify one to use). <code>xvfb-run</code> then exits with the exit status of <i>command</i>, except in error conditions (see <font SIZE="-1"><code>EXIT STATUS</code> </font> below). </p>
 <p> <code>xvfb-run</code> requires the <code>xauth</code> command to function.</p>
 <h2>OPTIONS</h2>
@@ -65,14 +65,14 @@ description: "xvfb-run – run specified X client or command in a virtual X serv
 <h2>EXAMPLES</h2>
 <dl>
 <dt><code>xvfb-run &#8211;auto-servernum &#8211;server-num=1 xlogo</code></p>
-<dd> runs the <code><a href="//www.systutorials.com/docs/linux/man/1x-xlogo/">xlogo</a></code>(1x) demonstration client inside the <code>Xvfb</code> X server on the first available server number greater than or equal to 1.</p>
+<dd> runs the <code>xlogo</code>(1x) demonstration client inside the <code>Xvfb</code> X server on the first available server number greater than or equal to 1.</p>
 <dt><code>xvfb-run &#8211;server-args=-screen 0 1024x768x24 ico -faces</code></p>
-<dd> runs the <code><a href="//www.systutorials.com/docs/linux/man/1x-ico/">ico</a></code>(1x) demonstration client (and passes it the <code>-faces</code> argument) inside the <code>Xvfb</code> X server, configured with a root window of 1024 by 768 pixels and a color depth of 24 bits.</dl>
+<dd> runs the <code>ico</code>(1x) demonstration client (and passes it the <code>-faces</code> argument) inside the <code>Xvfb</code> X server, configured with a root window of 1024 by 768 pixels and a color depth of 24 bits.</dl>
 <p> Note that the demo X clients used in the above examples will not exit on their own, so they will have to be killed before <code>xvfb-run</code> will exit.</p>
 <h2>BUGS</h2>
-<p> See the Debian Bug Tracking System &lt;URL: <a rel="nofollow" href="http://bugs.debian.org/xvfb">http://bugs.debian.org/xvfb</a> &gt;. If you wish to report a bug in <code>xvfb-run</code>, please use the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1) command.</p>
+<p> See the Debian Bug Tracking System &lt;URL: <a rel="nofollow" href="http://bugs.debian.org/xvfb">http://bugs.debian.org/xvfb</a> &gt;. If you wish to report a bug in <code>xvfb-run</code>, please use the <code>reportbug</code>(1) command.</p>
 <h2>AUTHOR</h2>
 <p> <code>xvfb-run</code> was written by Branden Robinson and Jeff Licquia with sponsorship from Progeny Linux Systems.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/1x-Xvfb/">Xvfb</a></code>(1x), <code><a href="//www.systutorials.com/docs/linux/man/1x-xauth/">xauth</a></code>(1x) </p>
+<p> <code>Xvfb</code>(1x), <code>xauth</code>(1x) </p>
 <h2>Index</h2>

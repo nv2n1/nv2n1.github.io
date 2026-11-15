@@ -48,7 +48,7 @@ description: "networkd.conf, networkd.conf.d – Global Network configuration fi
 <dd>If &quot;DUIDType=vendor&quot;, then the DUID value will be generated using &quot;43793&quot; as the vendor identifier (systemd) and hashed contents of <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5). This is the default if <i>DUIDType=</i> is not specified.</dl>
 <p> <code>uuid</code></p>
 <dl>
-<dd>If &quot;DUIDType=uuid&quot;, and <i>DUIDRawData=</i> is not set, then the product UUID is used as a DUID value. If a system does not have valid product UUID, then an application-specific <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5) is used as a DUID value. About the application-specific machine ID, see <code><a href="/docs/linux/man/3-sd_id128_get_machine_app_specific/">sd_id128_get_machine_app_specific</a></code>(3).</dl>
+<dd>If &quot;DUIDType=uuid&quot;, and <i>DUIDRawData=</i> is not set, then the product UUID is used as a DUID value. If a system does not have valid product UUID, then an application-specific <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5) is used as a DUID value. About the application-specific machine ID, see <code>sd_id128_get_machine_app_specific</code>(3).</dl>
 <p> <code>link-layer-time[:</code><i>TIME</i><code>]</code>, <code>link-layer</code></p>
 <dl>
 <dd>If &quot;link-layer-time&quot; or &quot;link-layer&quot; is specified, then the MAC address of the interface is used as a DUID value. The value &quot;link-layer-time&quot; can take additional time value after a colon, e.g. &quot;link-layer-time:2018-01-23 12:34:56 UTC&quot;. The default time value is &quot;2000-01-01 00:00:00 UTC&quot;.</dl>
@@ -71,7 +71,7 @@ DUIDRawData=00:00:ab:11:f9:2a:c2:77:29:f9:5c:00</pre>
 <dl>
 <dd>As in the [DHCPv4] section.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code><a href="/docs/linux/man/3-sd_id128_get_machine_app_specific/">sd_id128_get_machine_app_specific</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code>sd_id128_get_machine_app_specific</code>(3)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

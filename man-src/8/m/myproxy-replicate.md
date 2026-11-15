@@ -35,5 +35,5 @@ description: "myproxy-replicate – Stores data from the MyProxy master reposito
 <dd>Specifies the location of the myproxy-server configuration file. Default: /etc/myproxy-server.config or<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><tt>$GLOBUS_LOCA</tt>-TION/etc/myproxy-server.config</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-myproxy-init/">myproxy-init</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-store/">myproxy-store</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-retrieve/">myproxy-retrieve</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-delegate/">myproxy-delegate</a></i>(1) <i><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></i>(8) <i><a href="/docs/linux/man/5-myproxy-server-config/">myproxy-server.config</a></i>(5)</p>
+<p><i><a href="/docs/linux/man/1-myproxy-init/">myproxy-init</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-store/">myproxy-store</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-retrieve/">myproxy-retrieve</a></i>(1) <i>myproxy-delegate</i>(1) <i><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></i>(8) <i><a href="/docs/linux/man/5-myproxy-server-config/">myproxy-server.config</a></i>(5)</p>
 <h2>Author</h2>

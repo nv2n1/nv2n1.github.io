@@ -21,5 +21,5 @@ description: "iv_init, iv_deinit, iv_inited – initialise and deinitialise ivyk
 <p> <code>iv_deinit</code> frees all resources allocated by ivykis in this thread, and should be called before this thread exits. </p>
 <p> <code>iv_inited</code> returns true if <code>iv_init</code> has been called in this thread. After <code>iv_deinit</code> is called, it will return false.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ivykis/">ivykis</a></code>(3), <code><a href="/docs/linux/man/3-iv_examples/">iv_examples</a></code>(3) </p>
+<p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
 <h2>Index</h2>

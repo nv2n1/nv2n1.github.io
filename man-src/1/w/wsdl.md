@@ -51,5 +51,5 @@ description: "wsdl – Mono’s Web Service Proxy Generator"
 <h2>LICENSE</h2>
 <p> wsdl is released under the terms of the GNU GPL. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-disco/">disco</a>(1), <a href="/docs/linux/man/1-soapsuds/">soapsuds</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mcs/">mcs</a>(1), <a href="/docs/linux/man/1-wsdl2/">wsdl2</a>(1) </p>
+<p> <a href="/docs/linux/man/1-disco/">disco</a>(1), <a href="/docs/linux/man/1-soapsuds/">soapsuds</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mcs/">mcs</a>(1), wsdl2(1) </p>
 <h2>Index</h2>

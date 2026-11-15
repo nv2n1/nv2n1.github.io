@@ -78,7 +78,7 @@ description: "Heimdal Kerberos 5 address functions –"
 <dt>
 <dd> Return an TRUE is the address are the same FALSE if not</dl>
 <h3>KRB5_LIB_FUNCTION int KRB5_LIB_CALL krb5_address_order (krb5_contextcontext, const krb5_address *addr1, const krb5_address *addr2)</h3>
-<p> krb5_address_order compares the addresses addr1 and addr2 so that it can be used for sorting addresses. If the addresses are the same address krb5_address_order will return 0. Behavies like <a href="/docs/linux/man/2-memcmp/">memcmp</a>(2). </p>
+<p> krb5_address_order compares the addresses addr1 and addr2 so that it can be used for sorting addresses. If the addresses are the same address krb5_address_order will return 0. Behavies like memcmp(2). </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>

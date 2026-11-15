@@ -93,7 +93,7 @@ It defines the flow table type to which the packet reformat action
 
  
 
- <a HREF="/docs/linux/man/3-ibv_create_flow/">ibv_create_flow</a>(3), <a HREF="/docs/linux/man/3-ibv_create_flow_action/">ibv_create_flow_action</a>(3) 
+ ibv_create_flow(3), ibv_create_flow_action(3) 
 
 <h2>Index</h2>
 

@@ -78,7 +78,7 @@ description: "inadyn – a client for open DNS servers."
 <p>Any of the SIG_HUP, SIG_INT, SIG_QUIT will cause inadyn to terminate gracefully.</p>
 <h2>See Also</h2>
 <h3>Other manual pages</h3>
-<p>The syntax of the optional configuration file is given by <code><a href="/docs/linux/man/5-inadyn-conf/">inadyn.conf</a>(5).</code></p>
+<p>The syntax of the optional configuration file is given by <code>inadyn.conf(5).</code></p>
 <h3>Internet resources</h3>
 <p><code>Inadyn</code> &#8216;s home page is <a rel="nofollow" href="http://inadyn.ina-tech.net.">http://inadyn.ina-tech.net.</a></p>
 <h2>Author</h2>

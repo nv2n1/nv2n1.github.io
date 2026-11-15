@@ -28,4 +28,4 @@ Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; for InterNetNews. This 
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/8-innxmit/">innxmit</a>(8), <a HREF="/docs/linux/man/5-newsfeeds/">newsfeeds</a>(5), <a HREF="/docs/linux/man/8-nntpsend/">nntpsend</a>(8), <a HREF="/docs/linux/man/1-trunc/">trunc</a>(1). 
+<a HREF="/docs/linux/man/8-innxmit/">innxmit</a>(8), <a HREF="/docs/linux/man/5-newsfeeds/">newsfeeds</a>(5), <a HREF="/docs/linux/man/8-nntpsend/">nntpsend</a>(8), trunc(1). 

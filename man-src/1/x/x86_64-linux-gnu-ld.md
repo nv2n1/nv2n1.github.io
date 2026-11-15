@@ -976,7 +976,7 @@ __wrap_malloc(size_t c)<br />
 <p> Note that this option overrides any compression in input debug sections, so if a binary is linked with <code>&#8211;compress-debug-sections=none</code> for example, then any compressed debug sections in input files will be uncompressed before they are copied into the output binary. </p>
 <p> The default compression behaviour varies depending upon the target involved and the configure options used to build the toolchain. The default can be determined by examining the output from the linker&#8217;s <code>&#8211;help</code> option.</p>
 <dt><code>&#8211;reduce-memory-overheads</code></p>
-<dd> This option reduces memory requirements at ld runtime, at the expense of linking speed. This was introduced to select the old O(n^2) algorithm for link map file generation, rather than the new <a href="/docs/linux/man/n-o/">O</a>(n) algorithm which uses about 40% more memory for symbol storage. </p>
+<dd> This option reduces memory requirements at ld runtime, at the expense of linking speed. This was introduced to select the old O(n^2) algorithm for link map file generation, rather than the new O(n) algorithm which uses about 40% more memory for symbol storage. </p>
 <p> Another effect of the switch is to set the default hash table size to 1021, which again saves memory at the cost of lengthening the linker&#8217;s run time. This is not done however if the <code>&#8211;hash-size</code> switch has been used. </p>
 <p> The <code>&#8211;reduce-memory-overheads</code> switch may be also be used to enable other tradeoffs in future versions of the linker.</p>
 <dt><code>&#8211;max-cache-size=</code><i>size</i></p>

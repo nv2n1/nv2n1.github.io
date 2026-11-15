@@ -75,6 +75,6 @@ defaults write /Library/Preferences/org.cups.PrintingPrefs.plist TrustOnFirstUse
 defaults read /Library/Preferences/org.cups.PrintingPrefs.plist Encryption</pre>
 <p>On Linux and other systems using GNU TLS, the <i>/etc/cups/ssl/site.crl</i> file, if present, provides a list of revoked X.509 certificates and is used when validating certificates.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-cups/">cups</a></code>(1), <code><a href="/docs/linux/man/1-default/">default</a></code>(1), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
+<p><code><a href="/docs/linux/man/1-cups/">cups</a></code>(1), <code>default</code>(1), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2021-2022 by OpenPrinting.</p>

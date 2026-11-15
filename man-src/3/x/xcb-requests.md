@@ -117,6 +117,6 @@ void my_example(xcb_connection *conn, xcb_window_t window) {
  }
 }</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb_map_window/">xcb_map_window</a></code>(3), <code><a href="/docs/linux/man/3-xcb_intern_atom/">xcb_intern_atom</a></code>(3), <code><a href="/docs/linux/man/3-xcb_list_fonts/">xcb_list_fonts</a></code>(3), <code><a href="/docs/linux/man/3-xcb_poll_for_event/">xcb_poll_for_event</a></code>(3), <code><a href="/docs/linux/man/3-xcb_request_check/">xcb_request_check</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-xcb_map_window/">xcb_map_window</a></code>(3), <code><a href="/docs/linux/man/3-xcb_intern_atom/">xcb_intern_atom</a></code>(3), <code><a href="/docs/linux/man/3-xcb_list_fonts/">xcb_list_fonts</a></code>(3), <code>xcb_poll_for_event</code>(3), <code>xcb_request_check</code>(3)</p>
 <h2>Author</h2>
 <p>Michael Stapelberg &lt;michael+xcb at stapelberg dot de&gt;</p>

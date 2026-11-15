@@ -20,7 +20,7 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <dl>
 <dt> <code>character*80 nf_inq_libvers(void)</code> </p>
 <dd>Returns a string identifying the version of the netCDF library, and when it was built, like: &quot;3.1a of Aug 22 1996 12:57:47 $&quot;.</dl>
-<p> The RCS <code><a href="/docs/linux/man/1-ident/">ident</a>(1)</code> command will find a string like &quot;$Id: @(#) netcdf library version 3.1a of Sep 6 1996 15:56:26 $&quot; in the library. The SCCS <code><a href="/docs/linux/man/1-what/">what</a>(1)</code> command will find a string like &quot;netcdf library version 3.1a of Aug 23 1996 16:07:40 $&quot;.</p>
+<p> The RCS <code><a href="/docs/linux/man/1-ident/">ident</a>(1)</code> command will find a string like &quot;$Id: @(#) netcdf library version 3.1a of Sep 6 1996 15:56:26 $&quot; in the library. The SCCS <code>what(1)</code> command will find a string like &quot;netcdf library version 3.1a of Aug 23 1996 16:07:40 $&quot;.</p>
 <h2>Return Values</h2>
 <p>All netCDF functions (except <code>nf_inq_libvers()</code> and <code>nf_strerror()</code>) return an integer status. </p>
 <p> If this returned status value is not equal to <code>NF_NOERR</code> (zero), it indicates that an error occurred. The possible status values are defined in netcdf.inc.</p>
@@ -94,18 +94,18 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <dd>Renames an existing dimension in an open netCDF dataset. If the new name is longer than the old name, the netCDF dataset must be in define mode. You cannot rename a dimension to have the same name as another dimension.</dl>
 <h2>Variables</h2>
 <dl>
-<dt> <code>integer function nf_def_var(integer </code><i>ncid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>ndims</i>, integer <i><a href="/docs/linux/man/1-dimids/">dimids</a></i>(1), integer <i>varid</i>) </p>
+<dt> <code>integer function nf_def_var(integer </code><i>ncid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>ndims</i>, integer <i>dimids</i>(1), integer <i>varid</i>) </p>
 <p> (Corresponds to <code>ncvdef()</code> in version 2) </p>
 <dd>Adds a new variable to a netCDF dataset. The netCDF must be in define mode. <i>varid</i> will be set to the netCDF variable ID.</p>
 <dt> <code>integer function nf_inq_varid(integer </code><i>ncid</i>, character*(*) <i>name</i>, integer <i>varid</i>) </p>
 <p> (Corresponds to <code>ncvid()</code> in version 2) </p>
 <dd>Returns the ID of a netCDF variable in <i>varid</i> given its name.</p>
-<dt> <code>integer function nf_inq_var(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>ndims</i>, integer <i><a href="/docs/linux/man/1-dimids/">dimids</a></i>(1),</p>
+<dt> <code>integer function nf_inq_var(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>ndims</i>, integer <i>dimids</i>(1),</p>
 <dd>integer <i>natts</i>)</p>
 <dt> <code>integer function nf_inq_varname(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>)</p>
 <dt> <code>integer function nf_inq_vartype(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>xtype</i>)</p>
 <dt> <code>integer function nf_inq_varndims(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>ndims</i>)</p>
-<dt> <code>integer function nf_inq_vardimid(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-dimids/">dimids</a></i>(1))</p>
+<dt> <code>integer function nf_inq_vardimid(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>dimids</i>(1))</p>
 <dt> <code>integer function nf_inq_varnatts(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>natts</i>) </p>
 <dd>Returns information about a netCDF variable, given its ID. </p>
 <dt> <code>integer function nf_rename_var(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>) </p>
@@ -115,91 +115,91 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <h2>Writing And Reading Whole Variables</h2>
 <dl>
 <dt> <code>integer function nf_put_var_text(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>out</i>) </p>
-<dt> <code>integer function nf_put_var_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer*1 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_var_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer*2 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_var_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
-<dt> <code>integer function nf_put_var_real(integer </code><i>ncid</i>, integer <i>varid</i>, real <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_var_double(integer </code><i>ncid</i>, integer <i>varid</i>, doubleprecision <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
+<dt> <code>integer function nf_put_var_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer*1 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_var_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer*2 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_var_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>out</i>(1)) </p>
+<dt> <code>integer function nf_put_var_real(integer </code><i>ncid</i>, integer <i>varid</i>, real <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_var_double(integer </code><i>ncid</i>, integer <i>varid</i>, doubleprecision <i>out</i>(1)) </p>
 <dd>Writes an entire netCDF variable (i.e. all the values). The netCDF dataset must be open and in data mode. The type of the data is specified in the function name, and it is converted to the external type of the specified variable, if possible, otherwise an <code>NF_ERANGE</code> error is returned. Note that rounding is not performed during the conversion. Floating point numbers are truncated when converted to integers.</p>
 <dt> <code>integer function nf_get_var_text(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>in</i>) </p>
-<dt> <code>integer function nf_get_var_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer*1 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_var_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer*2 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_var_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
-<dt> <code>integer function nf_get_var_real(integer </code><i>ncid</i>, integer <i>varid</i>, real <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_var_double(integer </code><i>ncid</i>, integer <i>varid</i>, doubleprecision <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
+<dt> <code>integer function nf_get_var_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer*1 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_var_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer*2 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_var_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>in</i>(1)) </p>
+<dt> <code>integer function nf_get_var_real(integer </code><i>ncid</i>, integer <i>varid</i>, real <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_var_double(integer </code><i>ncid</i>, integer <i>varid</i>, doubleprecision <i>in</i>(1)) </p>
 <dd>Reads an entire netCDF variable (i.e. all the values). The netCDF dataset must be open and in data mode. The data is converted from the external type of the specified variable, if necessary, to the type specified in the function name. If conversion is not possible, an <code>NF_ERANGE</code> error is returned.</dl>
 <h2>Writing And Reading One Datum</h2>
 <dl>
-<dt> <code>integer function nf_put_var1_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), character*1 <i>*out</i>) </p>
-<dt> <code>integer function nf_put_var1_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), integer*1 <i>*out</i>)</p>
-<dt> <code>integer function nf_put_var1_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), integer*2 <i>*out</i>)</p>
-<dt> <code>integer function nf_put_var1_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), integer <i>*out</i>) </p>
-<dt> <code>integer function nf_put_var1_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), real <i>*out</i>)</p>
-<dt> <code>integer function nf_put_var1_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), doubleprecision <i>*out</i>) </p>
+<dt> <code>integer function nf_put_var1_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), character*1 <i>*out</i>) </p>
+<dt> <code>integer function nf_put_var1_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), integer*1 <i>*out</i>)</p>
+<dt> <code>integer function nf_put_var1_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), integer*2 <i>*out</i>)</p>
+<dt> <code>integer function nf_put_var1_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), integer <i>*out</i>) </p>
+<dt> <code>integer function nf_put_var1_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), real <i>*out</i>)</p>
+<dt> <code>integer function nf_put_var1_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), doubleprecision <i>*out</i>) </p>
 <dd>Puts a single data value into a variable at the position <i>index</i> of an open netCDF dataset that is in data mode. The type of the data is specified in the function name, and it is converted to the external type of the specified variable, if possible, otherwise an <code>NF_ERANGE</code> error is returned.</p>
-<dt> <code>integer function nf_get_var1_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), character*1 <i>in</i>) </p>
-<dt> <code>integer function nf_get_var1_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), integer*1 <i>in</i>)</p>
-<dt> <code>integer function nf_get_var1_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), integer*2 <i>in</i>)</p>
-<dt> <code>integer function nf_get_var1_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), integer <i>in</i>) </p>
-<dt> <code>integer function nf_get_var1_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), real <i>in</i>)</p>
-<dt> <code>integer function nf_get_var1_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1), doubleprecision <i>in</i>) </p>
+<dt> <code>integer function nf_get_var1_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), character*1 <i>in</i>) </p>
+<dt> <code>integer function nf_get_var1_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), integer*1 <i>in</i>)</p>
+<dt> <code>integer function nf_get_var1_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), integer*2 <i>in</i>)</p>
+<dt> <code>integer function nf_get_var1_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), integer <i>in</i>) </p>
+<dt> <code>integer function nf_get_var1_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), real <i>in</i>)</p>
+<dt> <code>integer function nf_get_var1_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>index</i>(1), doubleprecision <i>in</i>) </p>
 <dd>Gets a single data value from a variable at the position <i>index</i> of an open netCDF dataset that is in data mode. The data is converted from the external type of the specified variable, if necessary, to the type specified in the function name. If conversion is not possible, an <code>NF_ERANGE</code> error is returned.</dl>
 <h2>Writing And Reading An Array</h2>
 <dl>
-<dt> <code>integer function nf_put_vara_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), character*(*) <i>out</i>) </p>
-<dt> <code>integer function nf_put_vara_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer*1 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_vara_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer*2 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_vara_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
-<dt> <code>integer function nf_put_vara_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), real <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_vara_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), doubleprecision <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
+<dt> <code>integer function nf_put_vara_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), character*(*) <i>out</i>) </p>
+<dt> <code>integer function nf_put_vara_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer*1 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_vara_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer*2 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_vara_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>out</i>(1)) </p>
+<dt> <code>integer function nf_put_vara_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), real <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_vara_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), doubleprecision <i>out</i>(1)) </p>
 <dd>Writes an array section of values into a netCDF variable of an open netCDF dataset, which must be in data mode. The array section is specified by the <i>start</i> and <i>count</i> vectors, which give the starting index and count of values along each dimension of the specified variable. The type of the data is specified in the function name and is converted to the external type of the specified variable, if possible, otherwise an <code>NF_ERANGE</code> error is returned.</p>
-<dt> <code>integer function nf_get_vara_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), character*(*) <i>in</i>) </p>
-<dt> <code>integer function nf_get_vara_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer*1 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_vara_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer*2 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_vara_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
-<dt> <code>integer function nf_get_vara_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), real <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_vara_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), doubleprecision <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
+<dt> <code>integer function nf_get_vara_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), character*(*) <i>in</i>) </p>
+<dt> <code>integer function nf_get_vara_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer*1 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_vara_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer*2 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_vara_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>in</i>(1)) </p>
+<dt> <code>integer function nf_get_vara_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), real <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_vara_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), doubleprecision <i>in</i>(1)) </p>
 <dd>Reads an array section of values from a netCDF variable of an open netCDF dataset, which must be in data mode. The array section is specified by the <i>start</i> and <i>count</i> vectors, which give the starting index and count of values along each dimension of the specified variable. The data is converted from the external type of the specified variable, if necessary, to the type specified in the function name. If conversion is not possible, an <code>NF_ERANGE</code> error is returned.</dl>
 <h2>Writing And Reading A Sliced Array</h2>
 <dl>
-<dt> <code>integer function nf_put_vars_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), character*(*) <i>out</i>) </p>
-<dt> <code>integer function nf_put_vars_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), integer*1 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_vars_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), integer*2 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_vars_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), integer <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
-<dt> <code>integer function nf_put_vars_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), real <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_vars_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), doubleprecision <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
+<dt> <code>integer function nf_put_vars_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), character*(*) <i>out</i>) </p>
+<dt> <code>integer function nf_put_vars_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), integer*1 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_vars_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), integer*2 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_vars_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), integer <i>out</i>(1)) </p>
+<dt> <code>integer function nf_put_vars_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), real <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_vars_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), doubleprecision <i>out</i>(1)) </p>
 <dd>These functions are used for <i>strided output</i>, which is like the array section output described above, except that the sampling stride (the interval between accessed values) is specified for each dimension. For an explanation of the sampling stride vector, see COMMON ARGUMENTS DESCRIPTIONS below.</p>
-<dt> <code>integer function nf_get_vars_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), character*(*) <i>in</i>) </p>
-<dt> <code>integer function nf_get_vars_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), integer*1 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_vars_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), integer*2 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_vars_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), integer <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
-<dt> <code>integer function nf_get_vars_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), real <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_vars_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), doubleprecision <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
+<dt> <code>integer function nf_get_vars_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), character*(*) <i>in</i>) </p>
+<dt> <code>integer function nf_get_vars_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), integer*1 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_vars_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), integer*2 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_vars_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), integer <i>in</i>(1)) </p>
+<dt> <code>integer function nf_get_vars_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), real <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_vars_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), doubleprecision <i>in</i>(1)) </p>
 <dd>These functions are used for <i>strided input</i>, which is like the array section input described above, except that the sampling stride (the interval between accessed values) is specified for each dimension. For an explanation of the sampling stride vector, see COMMON ARGUMENTS DESCRIPTIONS below.</dl>
 <h2>Writing And Reading A Mapped Array</h2>
 <dl>
-<dt> <code>integer function nf_put_varm_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, character*(*) <i>out</i>) </p>
-<dt> <code>integer function nf_put_varm_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, integer*1 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_varm_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, integer*2 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_varm_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, integer <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
-<dt> <code>integer function nf_put_varm_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, real <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_varm_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, doubleprecision <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
+<dt> <code>integer function nf_put_varm_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, character*(*) <i>out</i>) </p>
+<dt> <code>integer function nf_put_varm_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, integer*1 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_varm_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, integer*2 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_varm_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, integer <i>out</i>(1)) </p>
+<dt> <code>integer function nf_put_varm_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, real <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_varm_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, doubleprecision <i>out</i>(1)) </p>
 <dd>These functions are used for <i>mapped output</i>, which is like strided output described above, except that an additional index mapping vector is provided to specify the in-memory arrangement of the data values. For an explanation of the index mapping vector, see COMMON ARGUMENTS DESCRIPTIONS below.</p>
-<dt> <code>integer function nf_get_varm_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, character*(*) <i>in</i>) </p>
-<dt> <code>integer function nf_get_varm_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, integer*1 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_varm_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, integer*2 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_varm_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, integer <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
-<dt> <code>integer function nf_get_varm_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, real <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_varm_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1), integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1), integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1), <i>imap</i>, doubleprecision <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
+<dt> <code>integer function nf_get_varm_text(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, character*(*) <i>in</i>) </p>
+<dt> <code>integer function nf_get_varm_int1(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, integer*1 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_varm_int2(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, integer*2 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_varm_int(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, integer <i>in</i>(1)) </p>
+<dt> <code>integer function nf_get_varm_real(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, real <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_varm_double(integer </code><i>ncid</i>, integer <i>varid</i>, integer <i>start</i>(1), integer <i>count</i>(1), integer <i>stride</i>(1), <i>imap</i>, doubleprecision <i>in</i>(1)) </p>
 <dd>These functions are used for <i>mapped input</i>, which is like strided input described above, except that an additional index mapping vector is provided to specify the in-memory arrangement of the data values. For an explanation of the index mapping vector, see COMMON ARGUMENTS DESCRIPTIONS below.</dl>
 <h2>Attributes</h2>
 <dl>
 <dt> <code>integer function nf_put_att_text(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, character*(*) <i>out</i>) </p>
-<dt> <code>integer function nf_put_att_int1(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, integer*1 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_att_int2(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, integer*2 <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_att_int(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, integer <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
-<dt> <code>integer function nf_put_att_real(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, real <i><a href="/docs/linux/man/1-out/">out</a></i>(1))</p>
-<dt> <code>integer function nf_put_att_double(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, doubleprecision <i><a href="/docs/linux/man/1-out/">out</a></i>(1)) </p>
+<dt> <code>integer function nf_put_att_int1(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, integer*1 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_att_int2(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, integer*2 <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_att_int(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, integer <i>out</i>(1)) </p>
+<dt> <code>integer function nf_put_att_real(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, real <i>out</i>(1))</p>
+<dt> <code>integer function nf_put_att_double(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, doubleprecision <i>out</i>(1)) </p>
 <dt> <code>integer function nf_put_att(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>xtype</i>, integer <i>len</i>, void * <i>ip</i>)</p>
 <dt> <code>integer function nf_get_att(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, void * <i>ip</i>) </p>
 <dd>Unlike variables, attributes do not have separate functions for defining and writing values. This family of functions defines a new attribute with a value or changes the value of an existing attribute. If the attribute is new, or if the space required to store the attribute value is greater than before, the netCDF dataset must be in define mode. The parameter <i>len</i> is the number of values from <i>out</i> to transfer. It is often one, except that for <code>nf_put_att_text()</code> it will usually be <code>len_trim(</code><i>out</i>). </p>
@@ -218,11 +218,11 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <dt> <code>integer function nf_del_att(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>) </p>
 <dd>Deletes an attribute from a netCDF dataset. The dataset must be in define mode.</p>
 <dt> <code>integer function nf_get_att_text(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, character*(*) <i>in</i>) </p>
-<dt> <code>integer function nf_get_att_int1(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer*1 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_att_int2(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer*2 <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_att_int(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
-<dt> <code>integer function nf_get_att_real(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, real <i><a href="/docs/linux/man/1-in/">in</a></i>(1))</p>
-<dt> <code>integer function nf_get_att_double(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, doubleprecision <i><a href="/docs/linux/man/1-in/">in</a></i>(1)) </p>
+<dt> <code>integer function nf_get_att_int1(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer*1 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_att_int2(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer*2 <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_att_int(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, integer <i>in</i>(1)) </p>
+<dt> <code>integer function nf_get_att_real(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, real <i>in</i>(1))</p>
+<dt> <code>integer function nf_get_att_double(integer </code><i>ncid</i>, integer <i>varid</i>, character*(*) <i>name</i>, doubleprecision <i>in</i>(1)) </p>
 <dd>Gets the value(s) of a netCDF attribute, given its variable ID and name. Converts from the external type to the type specified in the function name, if possible, otherwise returns an <code>NF_ERANGE</code> error. All elements of the vector of attribute values are returned, so you must allocate enough space to hold them. If you don&#8217;t know how much space to reserve, call <code>nf_inq_attlen()</code> first to find out the length of the attribute.</dl>
 <h2>Common Argument Descriptions</h2>
 <p>In this section we define some common arguments which are used in the &quot;FUNCTION DESCRIPTIONS&quot; section.</p>
@@ -235,8 +235,8 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 &nbsp;<wbr>is&nbsp;<wbr><code>NF_MAX_NAME</code>.</p>
 <dt>integer <i>xtype</i></p>
 <dd>specifies the external data type of a netCDF variable or attribute and is one of the following: <code>NF_BYTE</code>, <code>NF_CHAR</code>, <code>NF_SHORT</code>, <code>NF_INT</code>, <code>NF_FLOAT</code>, or <code>NF_DOUBLE</code>. These are used to specify 8-bit integers, characters, 16-bit integers, 32-bit integers, 32-bit IEEE floating point numbers, and 64-bit IEEE floating-point numbers, respectively. </p>
-<dt>integer <i><a href="/docs/linux/man/1-dimids/">dimids</a></i>(1)</p>
-<dd>is a vector of dimension ID&#8217;s and defines the shape of a netCDF variable. The size of the vector shall be greater than or equal to the rank (i.e. the number of dimensions) of the variable (<i>ndims</i>). The vector shall be ordered by the speed with which a dimension varies: <i><a href="/docs/linux/man/1-dimids/">dimids</a></i>(1) shall be the dimension ID of the most rapidly varying dimension and <i>dimids</i>(<i>ndims</i>) shall be the dimension ID of the most slowly varying dimension. The maximum possible number of dimensions for a variable is given by the symbolic constant <code>NF_MAX_VAR_DIMS</code>.</p>
+<dt>integer <i>dimids</i>(1)</p>
+<dd>is a vector of dimension ID&#8217;s and defines the shape of a netCDF variable. The size of the vector shall be greater than or equal to the rank (i.e. the number of dimensions) of the variable (<i>ndims</i>). The vector shall be ordered by the speed with which a dimension varies: <i>dimids</i>(1) shall be the dimension ID of the most rapidly varying dimension and <i>dimids</i>(<i>ndims</i>) shall be the dimension ID of the most slowly varying dimension. The maximum possible number of dimensions for a variable is given by the symbolic constant <code>NF_MAX_VAR_DIMS</code>.</p>
 <dt>integer <i>dimid</i></p>
 <dd>is the ID of a netCDF dimension. netCDF dimension ID&#8217;s are allocated sequentially from the positive integers beginning with 1.</p>
 <dt>integer <i>ndims</i></p>
@@ -245,16 +245,16 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <dd>is the ID of a netCDF variable or (for the attribute-access functions) the symbolic constant <code>NF_GLOBAL</code>, which is used to reference global attributes. netCDF variable ID&#8217;s are allocated sequentially from the positive integers beginning with 1.</p>
 <dt>integer <i>natts</i></p>
 <dd>is the number of global attributes in a netCDF dataset for the <code>nf_inquire()</code> function or the number of attributes associated with a netCDF variable for the <code>nf_varinq()</code> function.</p>
-<dt>integer <i><a href="/docs/linux/man/1-index/">index</a></i>(1)</p>
+<dt>integer <i>index</i>(1)</p>
 <dd>specifies the indicial coordinates of the netCDF data value to be accessed. The indices start at 1; thus, for example, the first data value of a two-dimensional variable is (1,1). The size of the vector shall be at least the rank of the associated netCDF variable and its elements shall correspond, in order, to the variable&#8217;s dimensions.</p>
-<dt>integer <i><a href="/docs/linux/man/1-start/">start</a></i>(1)</p>
+<dt>integer <i>start</i>(1)</p>
 <dd>specifies the starting point for accessing a netCDF variable&#8217;s data values in terms of the indicial coordinates of the corner of the array section. The indices start at 1; thus, the first data value of a variable is (1, 1, &#8230;, 1). The size of the vector shall be at least the rank of the associated netCDF variable and its elements shall correspond, in order, to the variable&#8217;s dimensions.</p>
-<dt>integer <i><a href="/docs/linux/man/1-count/">count</a></i>(1)</p>
+<dt>integer <i>count</i>(1)</p>
 <dd>specifies the number of indices selected along each dimension of the array section. Thus, to access a single value, for example, specify <i>count</i> as (1, 1, &#8230;, 1). Note that, for strided I/O, this argument must be adjusted to be compatible with the <i>stride</i> and <i>start</i> arguments so that the interaction of the three does not attempt to access an invalid data co-ordinate. The elements of the <i>count</i> vector correspond, in order, to the variable&#8217;s dimensions.</p>
-<dt>integer <i><a href="/docs/linux/man/1-stride/">stride</a></i>(1)</p>
-<dd>specifies the sampling interval along each dimension of the netCDF variable. The elements of the stride vector correspond, in order, to the netCDF variable&#8217;s dimensions (<i><a href="/docs/linux/man/1-stride/">stride</a></i>(1)) gives the sampling interval along the most rapidly varying dimension of the netCDF variable). Sampling intervals are specified in type-independent units of elements (a value of 1 selects consecutive elements of the netCDF variable along the corresponding dimension, a value of 2 selects every other element, etc.). </p>
+<dt>integer <i>stride</i>(1)</p>
+<dd>specifies the sampling interval along each dimension of the netCDF variable. The elements of the stride vector correspond, in order, to the netCDF variable&#8217;s dimensions (<i>stride</i>(1)) gives the sampling interval along the most rapidly varying dimension of the netCDF variable). Sampling intervals are specified in type-independent units of elements (a value of 1 selects consecutive elements of the netCDF variable along the corresponding dimension, a value of 2 selects every other element, etc.). </p>
 <dt><i>imap</i></p>
-<dd>specifies the mapping between the dimensions of a netCDF variable and the in-memory structure of the internal data array. The elements of the index mapping vector correspond, in order, to the netCDF variable&#8217;s dimensions (<i><a href="/docs/linux/man/1-imap/">imap</a></i>(1) gives the distance between elements of the internal array corresponding to the most rapidly varying dimension of the netCDF variable). Distances between elements are specified in type-independent units of elements (the distance between internal elements that occupy adjacent memory locations is 1 and not the element&#8217;s byte-length as in netCDF 2). </p>
+<dd>specifies the mapping between the dimensions of a netCDF variable and the in-memory structure of the internal data array. The elements of the index mapping vector correspond, in order, to the netCDF variable&#8217;s dimensions (<i>imap</i>(1) gives the distance between elements of the internal array corresponding to the most rapidly varying dimension of the netCDF variable). Distances between elements are specified in type-independent units of elements (the distance between internal elements that occupy adjacent memory locations is 1 and not the element&#8217;s byte-length as in netCDF 2). </p>
 </dl>
 <h2>Variable Prefilling</h2>
 <p>By default, the netCDF interface sets the values of all newly-defined variables of finite length (i.e. those that do not have an unlimited, dimension) to the type-dependent fill-value associated with each variable. This is done when <code>nf_enddef()</code> is called. The fill-value for a variable may be changed from the default value by defining the attribute `<code>_FillValue</code>&#8216; for the variable. This attribute must have the same type as the variable and be of length one. </p>
@@ -303,4 +303,4 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <dl>
 <dd><code>help</code></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-ncdump/">ncdump</a></code>(1), <code><a href="/docs/linux/man/1-ncgen/">ncgen</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/3f-netcdf/">netcdf</a></code>(3f). <i>netCDF User&#8217;s Guide</i>, published by the Unidata Program Center, University Corporation for Atmospheric Research, located in Boulder, Colorado. NetCDF home page at http:/<a rel="nofollow" href="http://www.unidata.ucar.edu">www.unidata.ucar.edu</a>/netcdf. </p>
+<p><code><a href="/docs/linux/man/1-ncdump/">ncdump</a></code>(1), <code><a href="/docs/linux/man/1-ncgen/">ncgen</a></code>(1), <code>netcdf</code>(3f). <i>netCDF User&#8217;s Guide</i>, published by the Unidata Program Center, University Corporation for Atmospheric Research, located in Boulder, Colorado. NetCDF home page at http:/<a rel="nofollow" href="http://www.unidata.ucar.edu">www.unidata.ucar.edu</a>/netcdf. </p>

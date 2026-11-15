@@ -150,4 +150,4 @@ openssl pkcs12 -in example.pfx -out user.pem -clcerts
 openssl pkcs12 -in example.pfx -out ca.pem -cacerts -nokeys</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8) <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8) <code>openssl</code>(1) </p>

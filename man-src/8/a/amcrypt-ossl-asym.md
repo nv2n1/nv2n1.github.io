@@ -26,7 +26,7 @@ Verifying - Enter pass phrase for backup-key.pem: <i>ENTER YOUR PASS PHRASE</i>
 $ openssl rsa -in backup-privkey.pem -pubout -out backup-pubkey.pem
 Enter pass phrase for backup-privkey.pem: <i>ENTER YOUR PASS PHRASE</i>
 Writing RSA key</pre>
-<p>To generate a private key without a passphrase, omit the <code>-aes128</code> option. See <code><a href="/docs/linux/man/1-openssl_genrsa/">openssl_genrsa</a></code>(1) for more key generation options. </p>
+<p>To generate a private key without a passphrase, omit the <code>-aes128</code> option. See <code>openssl_genrsa</code>(1) for more key generation options. </p>
 <p> Note that it is always possible to generate the public key from the private key.</p>
 <h2>Key And Passphrase Management</h2>
 <p><code>amcrypt-ossl-asym</code> uses the <i>public key</i> to encrypt data. The security of the data does not depend on the confidentiality of the public key. The <i>private key</i> is used to decrypt data, and must be protected. Encrypted backup data cannot be recovered without the private key. The private key may optionally be encrypted with a passphrase. </p>
@@ -43,7 +43,7 @@ Writing RSA key</pre>
 <dl>
 <dd>File containing the passphrase. It should not be readable by any user other than the Amanda user.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5), <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1), <code><a href="/docs/linux/man/8-amcrypt-ossl/">amcrypt-ossl</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5), <code>openssl</code>(1), <code><a href="/docs/linux/man/8-amcrypt-ossl/">amcrypt-ossl</a></code>(8) </p>
 <p> The Amanda Wiki: : <a rel="nofollow" href="http://wiki.zmanda.com/">http://wiki.zmanda.com/</a></p>
 <h2>Author</h2>
 <p><code>Kevin Till</code> &lt;kevin.till [at] zmanda.com&gt;</p>

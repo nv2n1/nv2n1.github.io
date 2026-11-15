@@ -30,7 +30,7 @@ description: "pm-powersave – Put your computer into low power mode"
 <dd>When you run <code>pm-powersave</code> it combines the scripts in these two directories and executes them in sorted order. If both directories contain a script with the same name, the one in /etc/pm/power.d/ has a higher precedence and only this one will be executed. </p>
 <p> Therefore to disable a script from /usr/lib/pm-utils/power.d/ simply create an empty file in /etc/pm/power.d/ with the same name and without the executable bit set.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-pm-suspend/">pm-suspend</a></code>(8), <code><a href="/docs/linux/man/8-pm-hibernate/">pm-hibernate</a></code>(8)</p>
+<p><code>pm-suspend</code>(8), <code>pm-hibernate</code>(8)</p>
 <h2>Author</h2>
 <p><code>Michael Biebl</code> &lt;biebl [at] debian.org&gt;</p>
 <dl>

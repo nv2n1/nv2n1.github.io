@@ -106,8 +106,8 @@ description: "dstebz.f –"
 <p><i>ISPLIT</i> </p>
 <pre> ISPLIT is INTEGER array, dimension (N)
  The splitting points, at which T breaks up into submatrices.
- The first submatrix consists of rows/columns 1 to <a href="//www.systutorials.com/docs/linux/man/1-ISPLIT/">ISPLIT</a>(1),
- the second of rows/columns <a href="//www.systutorials.com/docs/linux/man/1-ISPLIT/">ISPLIT</a>(1)+1 through <a href="//www.systutorials.com/docs/linux/man/2-ISPLIT/">ISPLIT</a>(2),
+ The first submatrix consists of rows/columns 1 to ISPLIT(1),
+ the second of rows/columns ISPLIT(1)+1 through ISPLIT(2),
  etc., and the NSPLIT-th consists of rows/columns
  ISPLIT(NSPLIT-1)+1 through ISPLIT(NSPLIT)=N.
  (Only the first NSPLIT elements will actually be used, but

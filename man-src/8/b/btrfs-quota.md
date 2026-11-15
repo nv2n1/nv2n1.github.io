@@ -11,7 +11,7 @@ description: "btrfs-quota – control the global quota status of a btrfs filesys
 <h2>Synopsis</h2>
 <p><code>btrfs quota</code> <i>&lt;subcommand&gt;</i> <i>&lt;args&gt;</i></p>
 <h2>Description</h2>
-<p>The commands under <code>btrfs quota</code> are used to affect the global status of quotas of a btrfs filesystem. The quota groups (qgroups) are managed by the subcommand <code>btrfs <a href="/docs/linux/man/8-qgroup/">qgroup</a></code>(8). </p>
+<p>The commands under <code>btrfs quota</code> are used to affect the global status of quotas of a btrfs filesystem. The quota groups (qgroups) are managed by the subcommand <code>btrfs qgroup</code>(8). </p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font> </p>
 <p> Qgroups are different than the traditional user quotas and designed to track shared and exclusive data per-subvolume. Please refer to the section <i>HIERARCHICAL QUOTA GROUP CONCEPTS</i> for a detailed description. </p>

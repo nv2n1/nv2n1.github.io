@@ -37,7 +37,7 @@ description: "sftp-server – OpenSSH SFTP server subsystem"
 <dd>Places this instance of <code>sftp-server</code> into a read-only mode. Attempts to open files for writing, as well as other operations that change the state of the filesystem, will be denied.</p>
 <dt><code>-u </code><i>umask</i></p>
 <dd>Sets an explicit <a href="/docs/linux/man/2-umask/">umask</a>(2) to be applied to newly-created files and directories, instead of the user&#8217;s default mask.</dl>
-<p> On some systems, <code>sftp-server</code> must be able to access /dev/log for logging to work, and use of <code>sftp-server</code> in a chroot configuration therefore requires that <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8) establish a logging socket inside the chroot directory.</p>
+<p> On some systems, <code>sftp-server</code> must be able to access /dev/log for logging to work, and use of <code>sftp-server</code> in a chroot configuration therefore requires that syslogd(8) establish a logging socket inside the chroot directory.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-sftp/">sftp</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), sshd_config5, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
 <dl>

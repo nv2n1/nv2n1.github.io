@@ -218,7 +218,7 @@ strict graph H
 }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-libcdt/">Libcdt</a>(3) </p>
+<p> Libcdt(3) </p>
 <h2>BUGS</h2>
 <p> The root graph <code>name</code> is treated as a comment. </p>
 <p> There is no way to delete string attributes or modify edge keys. </p>

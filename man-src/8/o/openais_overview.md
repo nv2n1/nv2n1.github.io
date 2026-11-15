@@ -20,7 +20,7 @@ url: "/docs/linux/man/8-openais_overview/"
 <p> The openais project also provides a group messaging toolkit called EVS. The EVS service implements a messaging model known as Extended Virtual Synchrony. This model allows one sender to transmit to many receivers. Certain guarantees are provided for message and membership delivery which make virtual synchrony ideal for developing distributed applications.</p>
 <h2>Quickstart</h2>
 <p>The openais executive must be configured. In the directory conf in the source distribution are several files that must be copied to the /etc/ais directory. If openais is packaged by a distro, this may be complete. </p>
-<p> The directory contains the file openais.conf. Please read the <a href="/docs/linux/man/5-openais-conf/">openais.conf</a>(5) man page for details on the configuration options. The openais project will work out of the box with the default configuration options, although the administrator may desire different options. </p>
+<p> The directory contains the file openais.conf. Please read the openais.conf(5) man page for details on the configuration options. The openais project will work out of the box with the default configuration options, although the administrator may desire different options. </p>
 <p> An user and group of the name &quot;ais&quot; must be added to the system. If openais is packaged from a distro, this step should already be completed. This can be achieved by executing: </p>
 <p> [root [at] slickdeal root]# adduser ais -g ais </p>
 <p> The openais executive uses cryptographic techniques to ensure authenticity and privacy of the messages. In order for openais to be secure and operate, a private key must be generated and shared to all processors. </p>
@@ -81,4 +81,4 @@ url: "/docs/linux/man/8-openais_overview/"
 <h2>Bugs</h2>
 <p>The messaging service is partially implemented and not suitable for deployment. The distributed locking service is buggy and not suitable for deployment. The Availability Management Framework is under development and not suitable for deployment.. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-openais-conf/">openais.conf</a></code>(5) </p>
+<p><code>openais.conf</code>(5) </p>

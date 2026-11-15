@@ -66,9 +66,9 @@ description: "echoping – tests a remote host with TCP or UDP"
 <dt>-p n</p>
 <dd> Send packets with the socket priority to the integer <i>n</i>. The mapping of the socket priority into a network layer or a link layer priority depends upon the network protocol and link protocol in use. For more details see <code>SO_PRIORITY</code> in <code><a href="/docs/linux/man/7-socket/">socket</a>(7).</code></p>
 <dt>-P n</p>
-<dd> Set the IP type of service octet in the transmitted packets to the least significant eight bits of the integer <i>n</i>. See <code><a href="/docs/linux/man/7-ip/">ip</a>(7)</code> or <code><a href="/docs/linux/man/4-ip/">ip</a>(4)</code> (depending on your Unix). /usr/include/netinet/ip.h may contain interesting constants for setting Type Of Service.</p>
+<dd> Set the IP type of service octet in the transmitted packets to the least significant eight bits of the integer <i>n</i>. See <code><a href="/docs/linux/man/7-ip/">ip</a>(7)</code> or <code>ip(4)</code> (depending on your Unix). /usr/include/netinet/ip.h may contain interesting constants for setting Type Of Service.</p>
 <dt>-m plugin</p>
-<dd> Load the given plugin. The plugin is first searched in the normal library directories (see <code><a href="/docs/linux/man/8-ld-so/">ld.so</a>(8)</code> ) then in /usr/lib64/echoping. You can type <code>ls</code> in /usr/lib64/echoping to get an idea of the available plugins. The documentation for a given plugin is in <code><a href="/docs/linux/man/1-echoping_pluginname/">echoping_PLUGINNAME</a>(1)</code> The plugin-specific options appear <code>after</code> the hostname.</dl>
+<dd> Load the given plugin. The plugin is first searched in the normal library directories (see <code><a href="/docs/linux/man/8-ld-so/">ld.so</a>(8)</code> ) then in /usr/lib64/echoping. You can type <code>ls</code> in /usr/lib64/echoping to get an idea of the available plugins. The documentation for a given plugin is in <code>echoping_PLUGINNAME(1)</code> The plugin-specific options appear <code>after</code> the hostname.</dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>echoping -v foobar.example.com</p>

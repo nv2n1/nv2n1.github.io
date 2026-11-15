@@ -70,7 +70,7 @@ description: "casper – a hook for initramfs-tools to boot live systems."
 <h2>Homepage</h2>
 <p>Debian Live project &lt;<a rel="nofollow" href="http://live.debian.net/">http://live.debian.net/</a>&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-casper-snapshot/">casper-snapshot</a>(1),</code><a href="/docs/linux/man/8-initramfs-tools/">initramfs-tools</a>(8),<code><a href="/docs/linux/man/8-make-live/">make-live</a>(8),</code><a href="/docs/linux/man/5-make-live-conf/">make-live.conf</a>(5) </p>
+<p><code><a href="/docs/linux/man/1-casper-snapshot/">casper-snapshot</a>(1),</code><a href="/docs/linux/man/8-initramfs-tools/">initramfs-tools</a>(8),<code>make-live(8),</code>make-live.conf(5) </p>
 <h2>Author</h2>
 <p>casper was written by Tollef Fog Heen &lt;tfheen [at] canonical.com&gt;, Matt Zimmerman &lt;mdz [at] canonical.com&gt;, and Marco Amadori &lt;marco.amadori [at] gmail.com&gt;.</p>
 <dl>

@@ -43,6 +43,6 @@ description: "xcb_expose_event_t – NOT YET DOCUMENTED"
 <dd>The amount of <i>Expose</i> events following this one. Simple applications that do not want to optimize redisplay by distinguishing between subareas of its window can just ignore all Expose events with nonzero counts and perform full redisplays on events with zero counts.</dl>
 <h2>Description</h2>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb_generic_event_t/">xcb_generic_event_t</a></code>(3)</p>
+<p><code>xcb_generic_event_t</code>(3)</p>
 <h2>Author</h2>
 <p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

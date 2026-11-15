@@ -16,7 +16,7 @@ gmap[options][gfile][tfile][mfile][lfile] gpart[options][nparts][gfile][mfile][l
 <h2>DESCRIPTION</h2>
 <p> The <code>gmap</code> program computes, in a sequential way, a static mapping of a source graph onto a target graph. </p>
 <p> The <code>gpart</code> program is a shortcut of <code>gmap</code> for computing unweighted partitions of a source graph. </p>
-<p> Source graph file <i>gfile</i> can only be a centralized graph file. For <code>gmap</code>, the target architecture file <i>tfile</i> describes either algorithmically-coded topologies such as meshes and hypercubes, or decomposition-defined architectures created by means of the <code><a href="/docs/linux/man/1-amk_grf/">amk_grf</a></code>(1) program. The resulting mapping is stored in file <i>mfile</i>. Eventual logging information (such as the one produced by option <code>-v</code>) is sent to file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitely represented by a dash &#8216;-&#8216;. </p>
+<p> Source graph file <i>gfile</i> can only be a centralized graph file. For <code>gmap</code>, the target architecture file <i>tfile</i> describes either algorithmically-coded topologies such as meshes and hypercubes, or decomposition-defined architectures created by means of the <code>amk_grf</code>(1) program. The resulting mapping is stored in file <i>mfile</i>. Eventual logging information (such as the one produced by option <code>-v</code>) is sent to file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitely represented by a dash &#8216;-&#8216;. </p>
 <p> When the proper libraries have been included at compile time, <code>gmap</code> and <code>gpart</code> can directly handle compressed graphs, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.grf.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -74,7 +74,7 @@ gmap[options][gfile][tfile][mfile][lfile] gpart[options][nparts][gfile][mfile][l
 <dd> 2D torus of <i>dimX</i> times <i>dimY</i> nodes.</p>
 <dt><code>torus3D </code><i>dimX</i> <i>dimY</i> <i>dimZ</i></p>
 <dd> 3D torus of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> nodes.</dl>
-<p> Other target topologies can be created from their source graph description by using the <code><a href="/docs/linux/man/1-amk_grf/">amk_grf</a></code>(1) command. In this case, the target description will begin with the code name <code>deco</code>.</p>
+<p> Other target topologies can be created from their source graph description by using the <code>amk_grf</code>(1) command. In this case, the target description will begin with the code name <code>deco</code>.</p>
 <h2>MAPPINGS</h2>
 <p> Mappings are represented by as many lines as there are vertices in the source graph. Each of these lines is made of two figures: the number of the vertex (or its label if source graph vertices are labeled) and the index of the target vertex to which it has been assigned. Target vertex indices range from 0 to the number of vertices in the target architecture (that is, the number of parts) minus one. </p>
 <p> This block of lines is always preceded by the number of such lines. In most cases, since full mappings are requested, the number of lines is equal to the number of vertices in the source graph.</p>
@@ -88,7 +88,7 @@ gmap[options][gfile][tfile][mfile][lfile] gpart[options][nparts][gfile][mfile][l
     $ echo &quot;cmpltw 3 1 2 4&quot; | gmap brol.grf - brol.map
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-amk_grf/">amk_grf</a></code>(1), <code><a href="/docs/linux/man/1-acpl/">acpl</a></code>(1), <code><a href="/docs/linux/man/1-gmtst/">gmtst</a></code>(1), <code><a href="/docs/linux/man/1-dgmap/">dgmap</a></code>(1). </p>
+<p> <code>amk_grf</code>(1), <code>acpl</code>(1), <code>gmtst</code>(1), <code>dgmap</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

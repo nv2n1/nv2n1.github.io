@@ -22,12 +22,12 @@ description: "pamgradient – create a four-corner gradient PAM image"
 <dl>
 <dt><code>-maxval=</code><i>maxval</i></p>
 <dd>
-<p>&nbsp;<wbr>&nbsp;<wbr> maxval of the generated image. (See <code><a href="/docs/linux/man/1-pam/">PAM</a></code>(1)<br />
-&nbsp;<wbr>and <code><a href="/docs/linux/man/1-pnm/">PNM</a></code>(1)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr> maxval of the generated image. (See <code>PAM</code>(1)<br />
+&nbsp;<wbr>and <code>PNM</code>(1)<br />
 &nbsp;<wbr>specifications). </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamgradient/">pamgradient</a></code>(1) , <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-ppmrainbow/">ppmrainbow</a></code>(1) , <code><a href="/docs/linux/man/1-pgmramp/">pgmramp</a></code>(1) , <code><a href="/docs/linux/man/1-ppmpat/">ppmpat</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamgradient/">pamgradient</a></code>(1) , <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-ppmrainbow/">ppmrainbow</a></code>(1) , <code><a href="/docs/linux/man/1-pgmramp/">pgmramp</a></code>(1) , <code><a href="/docs/linux/man/1-ppmpat/">ppmpat</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) </p>
 <h2>NOTE</h2>
 <p> Only the top left corner of the generated image has exactly the specified color. The color of the top right corner is a bit shifted to the left, the bottom left corner a bit up, and the bottom right corner left and up. This ensures nice transitions when combining adjacent (very narrow) gradients, and doesn&#8217;t play a role when the gradient butts against a solid surface. </p>
 <p> This effect is created by the integer arithmetic used for the interpolation of the color values, and since it doesn&#8217;t make a difference for all practical purposes I might as well sell it as a feature. </p>

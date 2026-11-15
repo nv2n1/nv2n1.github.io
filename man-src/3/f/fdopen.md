@@ -138,7 +138,7 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
 <h2>BUGS</h2>
 <p> When parsing for individual flag characters in <i>mode</i> (i.e., the characters preceding the &quot;ccs&quot; specification), the glibc implementation of <code>fopen</code>() and <code>freopen</code>() limits the number of characters examined in <i>mode</i> to 7 (or, in glibc versions before 2.14, to 6, which was not enough to include possible specifications such as &quot;rb+cmxe&quot;). The current implementation of <code>fdopen</code>() parses at most 5 characters in <i>mode</i>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/3-fclose/">fclose</a></code>(3), <code><a href="/docs/linux/man/3-fileno/">fileno</a></code>(3), <code><a href="/docs/linux/man/3-fmemopen/">fmemopen</a></code>(3), <code><a href="/docs/linux/man/3-fopencookie/">fopencookie</a></code>(3), <code><a href="/docs/linux/man/3-open_memstream/">open_memstream</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/3-fclose/">fclose</a></code>(3), <code><a href="/docs/linux/man/3-fileno/">fileno</a></code>(3), <code><a href="/docs/linux/man/3-fmemopen/">fmemopen</a></code>(3), <code><a href="/docs/linux/man/3-fopencookie/">fopencookie</a></code>(3), <code>open_memstream</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

@@ -32,7 +32,7 @@ description: "pgmmorphconv – perform morphological convolutions: dilation, ero
 <p> <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) </p>
 <dt>&bull;</p>
 <dd>
-<p> <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) </p>
+<p> <code>pgm</code>(1) </p>
 </dl>
 <p> For more information about morphological convolutions, see e.g. </p>
 <dl>

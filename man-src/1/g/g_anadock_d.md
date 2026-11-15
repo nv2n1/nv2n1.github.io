@@ -40,6 +40,6 @@ description: "anadock – cluster structures from Autodock runs"
 <p> <code>-cutoff</code><i> real</i><code> 0.2 </code><br />
 &nbsp;<wbr>Maximum RMSD/distance for belonging to the same cluster </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

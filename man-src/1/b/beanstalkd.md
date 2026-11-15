@@ -39,7 +39,7 @@ description: "beanstalkd – simple, fast work queue"
 <dt><code>-l</code> <i>addr</i></p>
 <dd> Listen on address <i>addr</i> (default is 0.0.0.0).</p>
 <dt>
-<dd> (Option <code>-l</code> has no effect if <a href="/docs/linux/man/5-sd-daemon/">sd-daemon</a>(5) socket activation is being used. See also <i>ENVIRONMENT</i>.)</p>
+<dd> (Option <code>-l</code> has no effect if sd-daemon(5) socket activation is being used. See also <i>ENVIRONMENT</i>.)</p>
 <dt><code>-n</code></p>
 <dd> Turn off binlog compaction, negating <code>-c</code>.</p>
 <dt>
@@ -47,7 +47,7 @@ description: "beanstalkd – simple, fast work queue"
 <dt><code>-p</code> <i>port</i></p>
 <dd> Listen on TCP port <i>port</i> (default is 11300).</p>
 <dt>
-<dd> (Option <code>-p</code> has no effect if <a href="/docs/linux/man/5-sd-daemon/">sd-daemon</a>(5) socket activation is being used. See also <i>ENVIRONMENT</i>.)</p>
+<dd> (Option <code>-p</code> has no effect if sd-daemon(5) socket activation is being used. See also <i>ENVIRONMENT</i>.)</p>
 <dt><code>-s</code> <i>bytes</i></p>
 <dd> The size in bytes of each binlog file.</p>
 <dt>
@@ -65,7 +65,7 @@ description: "beanstalkd – simple, fast work queue"
 <dt><code>LISTEN_PID</code>, <code>LISTEN_FDS</code></p>
 <dd> These variables can be set by <a href="/docs/linux/man/1-init/">init</a>(1). See <a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a>(3) for details.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/5-sd-daemon/">sd-daemon</a>(5), <a href="/docs/linux/man/5-sd_listen_fds/">sd_listen_fds</a>(5) </p>
+<p> sd-daemon(5), sd_listen_fds(5) </p>
 <p> Files <code>README</code> and <code>doc/protocol.txt</code> in the <code>beanstalkd</code> distribution. </p>
 <p> <i><a rel="nofollow" href="http://kr.github.com/beanstalkd/">http://kr.github.com/beanstalkd/</a></i></p>
 <h2>AUTHOR</h2>

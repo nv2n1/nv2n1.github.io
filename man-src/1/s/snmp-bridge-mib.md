@@ -84,10 +84,10 @@ description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
     BRIDGE-MIB::dot1dStpPort.3 = INTEGER: 3
     BRIDGE-MIB::dot1dStpPortPriority.1 = INTEGER: 32
     BRIDGE-MIB::dot1dStpPortPriority.3 = INTEGER: 32
-    BRIDGE-MIB::dot1dStpPortState.1 = INTEGER: <a href="//www.systutorials.com/docs/linux/man/1-disabled/">disabled</a>(1)
-    BRIDGE-MIB::dot1dStpPortState.3 = INTEGER: <a href="//www.systutorials.com/docs/linux/man/1-disabled/">disabled</a>(1)
-    BRIDGE-MIB::dot1dStpPortEnable.1 = INTEGER: <a href="//www.systutorials.com/docs/linux/man/2-disabled/">disabled</a>(2)
-    BRIDGE-MIB::dot1dStpPortEnable.3 = INTEGER: <a href="//www.systutorials.com/docs/linux/man/2-disabled/">disabled</a>(2)
+    BRIDGE-MIB::dot1dStpPortState.1 = INTEGER: disabled(1)
+    BRIDGE-MIB::dot1dStpPortState.3 = INTEGER: disabled(1)
+    BRIDGE-MIB::dot1dStpPortEnable.1 = INTEGER: disabled(2)
+    BRIDGE-MIB::dot1dStpPortEnable.3 = INTEGER: disabled(2)
     BRIDGE-MIB::dot1dStpPortPathCost.1 = INTEGER: 2
     BRIDGE-MIB::dot1dStpPortPathCost.3 = INTEGER: 4
     BRIDGE-MIB::dot1dStpPortDesignatedRoot.1 = STRING: &quot;8000.001018382c78&quot;
@@ -106,8 +106,8 @@ description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
     BRIDGE-MIB::dot1dTpFdbAddress.'.!^/B|' = STRING: 0:21:5e:2f:42:7c
     BRIDGE-MIB::dot1dTpFdbPort.'...8,x' = INTEGER: 1
     BRIDGE-MIB::dot1dTpFdbPort.'.!^/B|' = INTEGER: 3
-    BRIDGE-MIB::dot1dTpFdbStatus.'...8,x' = INTEGER: <a href="//www.systutorials.com/docs/linux/man/3-learned/">learned</a>(3)
-    BRIDGE-MIB::dot1dTpFdbStatus.'.!^/B|' = INTEGER: <a href="//www.systutorials.com/docs/linux/man/3-learned/">learned</a>(3)
+    BRIDGE-MIB::dot1dTpFdbStatus.'...8,x' = INTEGER: learned(3)
+    BRIDGE-MIB::dot1dTpFdbStatus.'.!^/B|' = INTEGER: learned(3)
     BRIDGE-MIB::dot1dTpPort.1 = INTEGER: 1
     BRIDGE-MIB::dot1dTpPort.3 = INTEGER: 3
     BRIDGE-MIB::dot1dTpPortMaxInfo.1 = INTEGER: 1500 bytes
@@ -129,7 +129,7 @@ description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
 <dt>
 <dd> 2. Not all elements of RFC 4188 because they are either not available in sysfs or difficult to extract from the existing data.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a></code>(5), <code><a href="/docs/linux/man/3-net--snmp/">Net::SNMP</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a></code>(5), <code>Net::SNMP</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Jens Osterkamp</code> &lt;jens [at] linux.vnet.ibm.com&gt;</p>
 <dl>

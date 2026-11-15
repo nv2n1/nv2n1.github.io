@@ -11,7 +11,7 @@ description: "swanctl – strongSwan configuration, control and monitoring comma
 <h2>Synopsis</h2>
 <p><i>command</i> [<i>option~</i>&#8230;] <code>-h</code> | <code>&#8211;help</code></p>
 <h2>Description</h2>
-<p>swanctl is a cross-platform command line utility to configure, control and monitor the strongSwan IKE daemon. It is a replacement for the aging <code>starter</code>, <code>ipsec</code> and <code>stroke</code> tools. swanctl uses a configuration file called <code><a href="/docs/linux/man/5-swanctl-conf/">swanctl.conf</a></code>(5) to parse configurations and credentials. Private keys, certificates and other PKI related credentials are read from specific directories. To communicate with the IKE daemon, swanctl uses the VICI protocol, the Versatile IKE Configuration Interface. This stable interface is usable by other tools and is often preferable than scripting swanctl and parsing its output. </p>
+<p>swanctl is a cross-platform command line utility to configure, control and monitor the strongSwan IKE daemon. It is a replacement for the aging <code>starter</code>, <code>ipsec</code> and <code>stroke</code> tools. swanctl uses a configuration file called <code>swanctl.conf</code>(5) to parse configurations and credentials. Private keys, certificates and other PKI related credentials are read from specific directories. To communicate with the IKE daemon, swanctl uses the VICI protocol, the Versatile IKE Configuration Interface. This stable interface is usable by other tools and is often preferable than scripting swanctl and parsing its output. </p>
 <h2>Commands</h2>
 <dl>
 <dt><code>-i, &#8211;initiate</code></p>
@@ -63,4 +63,4 @@ description: "swanctl – strongSwan configuration, control and monitoring comma
 <dt><code>-h, &#8211;help</code></p>
 <dd>show usage information</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-swanctl-conf/">swanctl.conf</a></code>(5) </p>
+<p><code>swanctl.conf</code>(5) </p>

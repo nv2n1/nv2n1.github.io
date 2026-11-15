@@ -63,7 +63,7 @@ Destroy firmware resource iterator <i>iter</i>.
 <code>int </code>fwup_set_up_update<code>(fwup_resource *</code><i>re</i><code>, uint64_t </code><i>hw_inst</i><code>, int </code><i>infd</i><code>);</code><br>
 Set up an update for resource <i>re</i>, hardware instance number <i>hw_inst</i>,
 with the file referenced by the file descriptor <i>infd</i>. <i>infd</i> must
-support <a href="//www.systutorials.com/docs/linux/man/3-read/">read</a><code>(3)</code>.
+support read<code>(3)</code>.
 <code>int </code>fwup_clear_status<code>(fwup_resource *</code><i>re</i><code>);</code><br>
 Clear the status of the firmware resource <i>re</i>. This removes any pending
 attempt to update it, as well as clearing any pending error report.

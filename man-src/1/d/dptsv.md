@@ -29,7 +29,7 @@ description: "dptsv – mutual converter between TSV and QDBM Depot database"
 <p> Thus, to retrieve the information of a user `mikio&#8217;, perform the following command.<br />
  <code> dpmgr get casket mikio</code> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/1-dpmgr/">dpmgr</a></code>(1), <code><a href="/docs/linux/man/3-dpopen/">dpopen</a></code>(3).</p>
+<p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-dpmgr/">dpmgr</a></code>(1), <code>dpopen</code>(3).</p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian project (but may be used by others). </p>

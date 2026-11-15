@@ -10,13 +10,13 @@ description: "krb5plugin_an2ln_ftable_desc –"
 <h2 class="name">NAME</h2>
 <p> krb5plugin_an2ln_ftable_desc &#8211; </p>
 <p> Description of the </p>
-<p><a href="/docs/linux/man/3-krb5_aname_to_lname/">krb5_aname_to_lname</a>(3) plugin facility. </p>
+<p>krb5_aname_to_lname(3) plugin facility. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;an2ln_plugin.h&gt;</p>
 <h2>Detailed Description</h2>
-<p> Description of the <a href="/docs/linux/man/3-krb5_aname_to_lname/">krb5_aname_to_lname</a>(3) plugin facility. </p>
-<p> The <a href="/docs/linux/man/3-krb5_aname_to_lname/">krb5_aname_to_lname</a>(3) function is pluggable. The plugin is named KRB5_PLUGIN_AN2LN (&#8216;an2ln&#8217;), with a single minor version, KRB5_PLUGIN_AN2LN_VERSION_0 (0). </p>
-<p> The plugin for <a href="/docs/linux/man/3-krb5_aname_to_lname/">krb5_aname_to_lname</a>(3) consists of a data symbol referencing a structure of type krb5plugin_an2ln_ftable, with four fields: </p>
+<p> Description of the krb5_aname_to_lname(3) plugin facility. </p>
+<p> The krb5_aname_to_lname(3) function is pluggable. The plugin is named KRB5_PLUGIN_AN2LN (&#8216;an2ln&#8217;), with a single minor version, KRB5_PLUGIN_AN2LN_VERSION_0 (0). </p>
+<p> The plugin for krb5_aname_to_lname(3) consists of a data symbol referencing a structure of type krb5plugin_an2ln_ftable, with four fields: </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>

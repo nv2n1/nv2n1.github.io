@@ -33,7 +33,7 @@ description: "Ukwm – Clutter based compositing GTK2 Window Manager"
 <h2>CONFIGURATION</h2>
 <p> <code>ukwm</code> configuration can be found under <i>Preferences</i>-&gt;<i>Windows</i> and <i>Preferences</i>-&gt;<i>Keyboard Shortcuts</i> on the menu-panel. Advanced configuration can be achieved directly through gsettings.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ukwm-message/">ukwm-message</a></code>(1)</p>
+<p> <code>ukwm-message</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The original manual page was written by Thom May &lt;thom [at] debian.org&gt;. It was updated by Akira TAGOH &lt;tagoh [at] debian.org&gt; for the Debian GNU/Linux system (with permission to use by others), and then updated by Luke Morton and Philip O&#8217;Brien for inclusion in ukwm. </p>
 <h2>Index</h2>

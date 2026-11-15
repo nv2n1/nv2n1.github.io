@@ -28,7 +28,7 @@ description: "queue – implementations of linked lists and queues"
 <dt>*</p>
 <dd>Insertion of a new entry after any element in the list.</p>
 <dt>*</p>
-<dd><a href="/docs/linux/man/1-o/">O</a>(1) removal of an entry from the head of the list.</p>
+<dd>O(1) removal of an entry from the head of the list.</p>
 <dt>*</p>
 <dd>Forward traversal through the list.</dl>
 <p> Code size and execution time depend on the complexity of the data structure being used, so programmers should take care to choose the appropriate one.</p>
@@ -36,14 +36,14 @@ description: "queue – implementations of linked lists and queues"
 <p>Singly linked lists are the simplest and support only the above functionality. Singly linked lists are ideal for applications with large datasets and few or no removals, or for implementing a LIFO queue. Singly linked lists add the following functionality:</p>
 <dl>
 <dt>*</p>
-<dd><a href="/docs/linux/man/n-o/">O</a>(n) removal of any entry in the list.</dl>
+<dd>O(n) removal of any entry in the list.</dl>
 <h3>Singly linked tail queues (STAILQ)</h3>
 <p>Singly linked tail queues add the following functionality:</p>
 <dl>
 <dt>*</p>
 <dd>Entries can be added at the end of a list.</p>
 <dt>*</p>
-<dd><a href="/docs/linux/man/n-o/">O</a>(n) removal of any entry in the list.</p>
+<dd>O(n) removal of any entry in the list.</p>
 <dt>*</p>
 <dd>They may be concatenated.</dl>
 <p> However:</p>
@@ -59,7 +59,7 @@ description: "queue – implementations of linked lists and queues"
 <dt>*</p>
 <dd>Insertion of a new entry before any element in the list.</p>
 <dt>*</p>
-<dd><a href="/docs/linux/man/1-o/">O</a>(1) removal of any entry in the list.</dl>
+<dd>O(1) removal of any entry in the list.</dl>
 <p> However:</p>
 <dl>
 <dt>*</p>
@@ -100,6 +100,6 @@ description: "queue – implementations of linked lists and queues"
 <h2>Conforming To</h2>
 <p>Not in POSIX.1, POSIX.1-2001 or POSIX.1-2008. Present on the BSDs. <i>&lt;sys/queue.h&gt;</i> macros first appeared in 4.4BSD.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-circleq/">circleq</a></code>(3), <code><a href="/docs/linux/man/3-insque/">insque</a></code>(3), <code><a href="/docs/linux/man/3-list/">list</a></code>(3), <code><a href="/docs/linux/man/3-slist/">slist</a></code>(3), <code><a href="/docs/linux/man/3-stailq/">stailq</a></code>(3), <code><a href="/docs/linux/man/3-tailq/">tailq</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-circleq/">circleq</a></code>(3), <code>insque</code>(3), <code><a href="/docs/linux/man/3-list/">list</a></code>(3), <code><a href="/docs/linux/man/3-slist/">slist</a></code>(3), <code><a href="/docs/linux/man/3-stailq/">stailq</a></code>(3), <code><a href="/docs/linux/man/3-tailq/">tailq</a></code>(3)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

@@ -108,7 +108,7 @@ description: "osinfo – gather information regarding the running operating syst
 <dd></dl>
 <p> The same rushmore.cup.hp.com system is displayed, but in this output the LastBootTime and LocalDateTime values are in the CIM format. The SystemUpTime value is in total seconds (as specified by CIM). Other fields do not change, as their CIM specification is the strings themselves.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cimserver/">cimserver</a>(1).</p>
+<p> cimserver(1).</p>
 <h2>STANDARDS CONFORMANCE</h2>
 <p> <code>osinfo</code> : DMTF WBEM (Web-Based Enterprise Management) and CIM (Common Information Model) </p>
 <h2>Index</h2>

@@ -60,7 +60,7 @@ description: "tv_imdb – Augment XMLTV listings files with imdb.com data."
 <p> Nice to haves include: verification/addition of programe <font SIZE="-1">MPAA/VCHIP</font> ratings, addition of imdb.com user ratings (by votes) to programes. Potenially we could expand to include &#8220;country of origin&#8221;, &#8220;description&#8221;, &#8220;writer&#8221; and &#8220;producer&#8221; credits, maybe even &#8220;commentator&#8221;. </p>
 <p> Heh, if the <font SIZE="-1">XMLTV</font>.dtd supported it, we could even include urls to head shots of the actors :)</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5)</p>
+<p> <i>xmltv</i>(5)</p>
 <h2>AUTHOR</h2>
 <p> Jerry Veldhuis, jerry [at] matilda.com </p>
 <h2>Index</h2>

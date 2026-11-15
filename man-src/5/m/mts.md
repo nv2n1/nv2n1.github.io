@@ -90,6 +90,6 @@ description: "mh-tailor, mts.conf – mail transport customization for nmh messa
 <h2>Profile Components</h2>
 <p>None</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-mh-mts/">mh-mts</a>(8), <a href="/docs/linux/man/8-post/">post</a>(8) </p>
+<p>mh-mts(8), <a href="/docs/linux/man/8-post/">post</a>(8) </p>
 <h2>Defaults</h2>
 <p>As listed above</p>

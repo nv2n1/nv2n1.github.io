@@ -98,7 +98,7 @@ virt - customize[-a disk.img[-a disk.img...] | -d domname][--attach ISOFILE][--a
 <dd>
 <dl>
 <dt>1.</p>
-<dd> Because the libguestfs backend that you are using doesn&#8217;t support the network. (See: &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)).</p>
+<dd> Because the libguestfs backend that you are using doesn&#8217;t support the network. (See: &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <i>guestfs</i>(3)).</p>
 <dt>2.</p>
 <dd> Any software you need to install comes from an attached <font SIZE="-1">ISO,</font> so you don&#8217;t need the network.</p>
 <dt>3.</p>
@@ -298,9 +298,9 @@ virt - customize[-a disk.img[-a disk.img...] | -d domname][--attach ISOFILE][--a
 <dt>
 <dd></dl>
 </dl>
-<p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3).</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1), <i><a href="/docs/linux/man/1-virt-clone/">virt-clone</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1), <i><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></i>(1), <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></i>(8), <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1), <i><a href="/docs/linux/man/1-scrub/">scrub</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://libvirt.org/.">http://libvirt.org/.</a></p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1), <i><a href="/docs/linux/man/1-virt-clone/">virt-clone</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1), <i><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></i>(1), <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></i>(8), <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1), <i><a href="/docs/linux/man/1-scrub/">scrub</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://libvirt.org/.">http://libvirt.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
 <h2>COPYRIGHT</h2>

@@ -26,7 +26,7 @@ description: "verify – Postfix address verification server"
 <p> The address verification server can be coerced to store unlimited amounts of garbage. Limiting the cache expiry time trades one problem (disk space exhaustion) for another one (poor response time to client requests). </p>
 <p> With Postfix version 2.5 and later, the <code><a href="/docs/linux/man/8-verify/">verify</a></code>(8) server no longer uses root privileges when opening the <code>address_verify_map</code> cache file. The file should now be stored under the Postfix-owned <code>data_directory</code>. As a migration aid, an attempt to open a cache file under a non-Postfix directory is redirected to the Postfix-owned <code>data_directory</code>, and a warning is logged.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>Address verification probe messages add additional traffic to the mail queue. Recipient verification may cause an increased load on down-stream servers in the case of a dictionary attack or a flood of backscatter bounces. Sender address verification may cause your site to be blacklisted by some providers. </p>
 <p> If the persistent database ever gets corrupted then the world comes to an end and human intervention is needed. This violates a basic Postfix principle.</p>
@@ -104,7 +104,7 @@ description: "verify – Postfix address verification server"
 <pre><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a>(8), Postfix SMTP server
 <a href="//www.systutorials.com/docs/linux/man/8-cleanup/">cleanup</a>(8), enqueue Postfix message
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
-<a href="//www.systutorials.com/docs/linux/man/5-syslogd/">syslogd</a>(5), system logging</pre>
+syslogd(5), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>ADDRESS_VERIFICATION_README, address verification howto</pre>

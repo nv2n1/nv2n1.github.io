@@ -39,4 +39,4 @@ description: "qterm – terminate processing by a PBS batch server"
 <p>Upon successful processing of all the operands presented to the qterm command, the exit status will be a value of zero. </p>
 <p> If the qterm command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_aix4/">pbs_resources_aix4</a>(7B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_irix5/">pbs_resources_irix5</a>(7B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_sp2/">pbs_resources_sp2</a>(7B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_sunos4/">pbs_resources_sunos4</a>(7B), and <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_unicos8/">pbs_resources_unicos8</a>(7B) </p>
+<p>pbs_server(8B), qmgr(1B), pbs_resources_aix4(7B), pbs_resources_irix5(7B), pbs_resources_sp2(7B), pbs_resources_sunos4(7B), and pbs_resources_unicos8(7B) </p>

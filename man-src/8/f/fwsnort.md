@@ -133,7 +133,7 @@ description: "fwsnort – Firewall Snort"
 <h2>Diagnostics</h2>
 <p>The &#8211;debug option can be used to display on STDOUT any errors that are generated as fwsnort parses each snort rule. Normally these errors are written to the fwsnort logfile /var/log/fwsnort.log</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-psad/">psad</a></code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/8-snort/">snort</a></code>(8), <code><a href="/docs/linux/man/1-nmap/">nmap</a></code>(1)</p>
+<p><code>psad</code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code>snort</code>(8), <code><a href="/docs/linux/man/1-nmap/">nmap</a></code>(1)</p>
 <h2>Author</h2>
 <p>Michael Rash &lt;mbr [at] cipherdyne.org&gt;</p>
 <h2>Contributors</h2>

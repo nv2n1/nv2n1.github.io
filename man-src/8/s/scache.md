@@ -31,7 +31,7 @@ description: "scache – Postfix shared connection cache server"
 <p>The <code><a href="/docs/linux/man/8-scache/">scache</a></code>(8) server is not security-sensitive. It does not talk to the network, and it does not talk to local users. The <code><a href="/docs/linux/man/8-scache/">scache</a></code>(8) server can run chrooted at fixed low privilege. </p>
 <p> The <code><a href="/docs/linux/man/8-scache/">scache</a></code>(8) server is not a trusted process. It must not be used to store information that is security sensitive.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>The session cache cannot be shared among multiple machines. </p>
 <p> When a connection expires from the cache, it is closed without the appropriate protocol specific handshake.</p>
@@ -66,7 +66,7 @@ description: "scache – Postfix shared connection cache server"
 <pre><a href="//www.systutorials.com/docs/linux/man/8-smtp/">smtp</a>(8), SMTP client
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>CONNECTION_CACHE_README, Postfix connection cache</pre>

@@ -26,8 +26,8 @@ description: "XmCreateCombinationBox2 — The CombinationBox2 widget creation fu
 <dd>Specifies the argument list</p>
 <dt><i>argcount</i></p>
 <dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dl>
-<p> For a complete definition of ArrowButton and its associated resources, see <code><a href="/docs/linux/man/3-xmcombinationbox2/">XmCombinationBox2</a></code>(3).</p>
+<p> For a complete definition of ArrowButton and its associated resources, see <code>XmCombinationBox2</code>(3).</p>
 <h2>Return</h2>
 <p>Returns the CombinationBox2 widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmcombinationbox2/">XmCombinationBox2</a></code>(3).</p>
+<p><code>XmCombinationBox2</code>(3).</p>

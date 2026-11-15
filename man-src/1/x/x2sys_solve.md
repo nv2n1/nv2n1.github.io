@@ -27,7 +27,7 @@ description: "x2sys_solve – Determine least-squares systematic correction from
 <p> <code>c</code> will fit f(<i>p</i>) = <i>a</i> (a constant offset); records must contain cruise ID1, ID2, COE. </p>
 <p> <code>d</code> will fit f(<i>p</i>) = <i>a</i> + <i>b</i> * <i>d</i> (linear drift; <i>d</i> is distance; records must contain cruise ID1, ID2, d1, d2, COE. </p>
 <p> <code>g</code> will fit f(<i>p</i>) = <i>a</i> + <i>b</i> sin(y)^2 (1980-1930 gravity correction); records must contain cruise ID1, ID2, latitude y, COE. </p>
-<p> <code>h</code> will fit f(<i>p</i>) = <i>a</i> + <i>b</i> cos(H) + <i>c</i> <a href="//www.systutorials.com/docs/linux/man/2H-cos/">cos</a>(2H) + <i>d</i> sin(H) + <i>e</i> <a href="//www.systutorials.com/docs/linux/man/2H-sin/">sin</a>(2H) (magnetic heading correction); records must contain cruise ID1, ID2, heading H, COE. </p>
+<p> <code>h</code> will fit f(<i>p</i>) = <i>a</i> + <i>b</i> cos(H) + <i>c</i> cos(2H) + <i>d</i> sin(H) + <i>e</i> sin(2H) (magnetic heading correction); records must contain cruise ID1, ID2, heading H, COE. </p>
 <p> <code>s</code> will fit f(<i>p</i>) = <i>a</i> * z (a unit scale correction); records must contain cruise ID1, ID2, z1, z2. </p>
 <p> <code>t</code> will fit f(<i>p</i>) = <i>a</i> + <i>b</i> * (<i>t &#8211; t0</i>) (linear drift; <i>t0</i> is the start time of the track); records must contain cruise ID1, ID2, t1-t0, t2-t0, COE.</dl>
 <h2>OPTIONAL ARGUMENTS</h2>

@@ -82,5 +82,5 @@ scanimage -B -d stv680:libusb:001:002 --batch=out%d.ppm --batch-count 5 --mode &
 <dt>Thanks to developers of the other stv680 programs:</p>
 <dd>STV680 kernel module<br />
  pencam2 program<br />
- <code><a href="/docs/linux/man/3-libghoto2/">libghoto2</a></code>(3) program (camlib stv0680) </p>
+ <code>libghoto2</code>(3) program (camlib stv0680) </p>
 </dl>

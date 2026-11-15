@@ -20,7 +20,7 @@ description: "xinetd – the extended Internet services daemon"
 <dt><code>-d</code></p>
 <dd>Enables debug mode. This produces a lot of debugging output, and it makes it possible to use a debugger on <code>xinetd</code>.</p>
 <dt><code>-syslog</code><i> syslog_facility</i></p>
-<dd>This option enables syslog logging of <code>xinetd</code>-produced messages using the specified syslog facility. The following facility names are supported: <i>daemon,</i> <i>auth,</i> <i>user,</i> <i>local[0-7]</i> (check <i><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a>(5)</i> for their meanings). This option is ineffective in debug mode since all relevant messages are sent to the terminal.</p>
+<dd>This option enables syslog logging of <code>xinetd</code>-produced messages using the specified syslog facility. The following facility names are supported: <i>daemon,</i> <i>auth,</i> <i>user,</i> <i>local[0-7]</i> (check <i>syslog.conf(5)</i> for their meanings). This option is ineffective in debug mode since all relevant messages are sent to the terminal.</p>
 <dt><code>-filelog</code><i> logfile</i></p>
 <dd><code>xinetd</code>-produced messages will be placed in the specified file. Messages are always appended to the file. If the file does not exist, it will be created. This option is ineffective in debug mode since all relevant messages are sent to the terminal.</p>
 <dt><code>-f</code><i> config_file</i></p>
@@ -63,7 +63,7 @@ description: "xinetd – the extended Internet services daemon"
 <dt><code>/var/run/xinetd.dump</code></p>
 <dd>default dump file</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-inetd/">inetd</a>(8),</i> </p>
+<p><i>inetd(8),</i> </p>
 <p> <i><a href="/docs/linux/man/5-xinetd-conf/">xinetd.conf</a>(5),</i> </p>
 <p> <i><a href="/docs/linux/man/5-xinetd-log/">xinetd.log</a>(5)</i> </p>
 <p> <i><a rel="nofollow" href="http://cr.yp.to/daemontools.html">http://cr.yp.to/daemontools.html</a></i></p>

@@ -26,7 +26,7 @@ description: "cgroups – Linux control groups"
 <p> The cgroups v1 ability to split threads across different cgroups caused problems in some cases. For example, it made no sense for the <i>memory</i> controller, since all of the threads of a process share a single address space. Because of these problems, the ability to independently manipulate the cgroup memberships of the threads in a process was removed in the initial cgroups v2 implementation, and subsequently restored in a more limited form (see the discussion of &quot;thread mode&quot; below).</p>
 <h3>Mounting v1 controllers</h3>
 <p>The use of cgroups requires a kernel built with the <code>CONFIG_CGROUP</code> option. In addition, each of the v1 controllers has an associated configuration option that must be set in order to employ that controller. </p>
-<p> In order to use a v1 controller, it must be mounted against a cgroup filesystem. The usual place for such mounts is under a <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5) filesystem mounted at <i>/sys/fs/cgroup</i>. Thus, one might mount the <i>cpu</i> controller as follows: </p>
+<p> In order to use a v1 controller, it must be mounted against a cgroup filesystem. The usual place for such mounts is under a <code>tmpfs</code>(5) filesystem mounted at <i>/sys/fs/cgroup</i>. Thus, one might mount the <i>cpu</i> controller as follows: </p>
 <p> mount -t cgroup -o cpu none /sys/fs/cgroup/cpu </p>
 <p> It is possible to comount multiple controllers against the same hierarchy. For example, here the <i>cpu</i> and <i>cpuacct</i> controllers are comounted against a single hierarchy: </p>
 <p> mount -t cgroup -o cpu,cpuacct none /sys/fs/cgroup/cpu,cpuacct </p>

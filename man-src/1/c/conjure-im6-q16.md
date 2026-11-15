@@ -13,7 +13,7 @@ description: "conjure – interprets and executes scripts written in the Magick 
 <dt><code>conjure-im6.q16</code> [<i>options</i>] <i>script.msl</i></p>
 <dd></dl>
 <h2>Overview</h2>
-<p>The <code>conjure-im6.q16</code> program is a member of the <a href="/docs/linux/man/1-imagemagick-ims6-q16/">ImageMagick-ims6.q16</a>(1) suite of tools. Use it to process a Magick Scripting Language (MSL) script. The Magick scripting language (MSL) will primarily benefit those that want to accomplish custom image processing tasks but do not wish to program, or those that do not have access to a Perl interpreter or a compiler. </p>
+<p>The <code>conjure-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to process a Magick Scripting Language (MSL) script. The Magick scripting language (MSL) will primarily benefit those that want to accomplish custom image processing tasks but do not wish to program, or those that do not have access to a Perl interpreter or a compiler. </p>
 <p> For more information about the conjure command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/conjure.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/conjure.php.">https://www.imagemagick.org/script/conjure.php.</a></p>
 <h2>Description</h2>
 <p>Image Settings:<br />

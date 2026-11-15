@@ -414,7 +414,8 @@ spuaa=20
 <dd> user configuration file</dl>
 </dl>
 <dt><code>-quiet&nbsp;</code></p>
-<dd> Make console output less verbose; in particular, prevents the status line (i.e. A: 0.7 V: 0.6 A-V: 0.068 &#8230;) from being displayed. Particularly useful on slow terminals or broken ones which do not properly handle carriage return (i.e. ).</p>
+<dd> Make console output less verbose; in particular, prevents the status line (i.e. A: 0.7 V: 0.6 A-V: 0.068 &#8230;) from being displayed. Particularly useful on slow terminals or broken ones which do not properly handle carriage return (i.e. 
+).</p>
 <dt><code>-priority &lt;prio&gt; (Windows and OS/2 only)</code></p>
 <dd> Set process priority for MPlayer according to the predefined priorities available under Windows and OS/2. Possible values of &lt;prio&gt;:</p>
 <dl>
@@ -1381,7 +1382,7 @@ spuaa=20
 <dt><code>-subcc &lt;1-8&gt;&nbsp;</code></p>
 <dd> Display DVD Closed Caption (CC) subtitles from the specified channel. Values 5 to 8 select a mode that can extract EIA-608 compatibility streams from EIA-708 data. These are <code>not</code> the VOB subtitles, these are special ASCII subtitles for the hearing impaired encoded in the VOB userdata stream on most region 1 DVDs. CC subtitles have not been spotted on DVDs from other regions so far.</p>
 <dt><code>-subcp &lt;codepage&gt; (iconv only)</code></p>
-<dd> If your system supports <a href="/docs/linux/man/3-iconv/">iconv</a>(3), you can use this option to specify the subtitle codepage. It takes priority over both -utf8 and -unicode. </p>
+<dd> If your system supports iconv(3), you can use this option to specify the subtitle codepage. It takes priority over both -utf8 and -unicode. </p>
 <p> <i>EXAMPLE:</i></p>
 <dl>
 <dt>
@@ -1437,7 +1438,7 @@ spuaa=20
 <dt><code>-subfont-blur &lt;0-8&gt; (FreeType only)</code></p>
 <dd> Sets the font blur radius (default: 2).</p>
 <dt><code>-subfont-encoding &lt;value&gt;</code></p>
-<dd> Sets the font encoding. When set to &#8216;unicode&#8217;, all the glyphs from the font file will be rendered and unicode will be used (default: unicode). (Without FreeType, setting any other value than &#8216;unicode&#8217; will disable unicode glyphs rendering for font.desc files. With FreeType and for other values than &#8216;unicode&#8217; your system has to support <a href="/docs/linux/man/3-iconv/">iconv</a>(3) in order for this to work.)</p>
+<dd> Sets the font encoding. When set to &#8216;unicode&#8217;, all the glyphs from the font file will be rendered and unicode will be used (default: unicode). (Without FreeType, setting any other value than &#8216;unicode&#8217; will disable unicode glyphs rendering for font.desc files. With FreeType and for other values than &#8216;unicode&#8217; your system has to support iconv(3) in order for this to work.)</p>
 <dt><code>-subfont-osd-scale &lt;0-100&gt; (FreeType only)</code></p>
 <dd> Sets the autoscale coefficient of the OSD elements (default: 6).</p>
 <dt><code>-subfont-outline &lt;0-8&gt; (FreeType only)</code></p>
@@ -1454,7 +1455,8 @@ spuaa=20
 <dt><code>-noterm-osd</code></p>
 <dd> Disable the display of OSD messages on the console when no video output is available.</p>
 <dt><code>-term-osd-esc &lt;escape sequence&gt;</code></p>
-<dd> Specify the escape sequence to use before writing an OSD message on the console. The escape sequence should move the pointer to the beginning of the line used for the OSD and clear it (default: ^[[A^[[K).</p>
+<dd> Specify the escape sequence to use before writing an OSD message on the console. The escape sequence should move the pointer to the beginning of the line used for the OSD and clear it (default: ^[[A
+^[[K).</p>
 <dt><code>-unicode</code></p>
 <dd> Tells MPlayer to handle the subtitle file as unicode. (It will only take effect if neither -subcp nor -utf8 is given.)</p>
 <dt><code>-unrarexec &lt;path to unrar executable&gt; (not supported on MingW)</code></p>

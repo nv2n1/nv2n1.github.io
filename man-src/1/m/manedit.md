@@ -78,5 +78,5 @@ description: "manedit – UNIX Manual Page IDE"
 <dt>Dan Stimits</p>
 <dd> Programmer</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1) <code><a href="/docs/linux/man/1-manview/">manview</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1) <code>manview</code>(1) </p>
 <h2>Index</h2>

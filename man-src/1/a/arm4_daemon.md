@@ -18,7 +18,7 @@ description: "arm4_daemon – ARM 4 collection agent"
 <h2>DESCRIPTION</h2>
 <p> The <code>arm4_daemon</code> program collects <i>ARM 4</i> measurement data from the <i>ARM 4</i> libraries and saves the measurements in a local database. While there will normally be many instances of the instrumented applications, there will typically be only one instance of the <code>arm4_daemon</code> running at a time.</p>
 <h2>CONFIGURATION</h2>
-<p> Configuration options are set in the configuration file. The default configuration is <i>/etc/arm4.conf</i>, although this can be overridden using the <i>&#8211;config</i> command line option. See <code><a href="/docs/linux/man/5-arm4-conf/">arm4.conf</a></code>(5) for more information.</p>
+<p> Configuration options are set in the configuration file. The default configuration is <i>/etc/arm4.conf</i>, although this can be overridden using the <i>&#8211;config</i> command line option. See <code>arm4.conf</code>(5) for more information.</p>
 <h2>DATAFILES</h2>
 <p> The <code>arm4_daemon</code> program uses the Berkeley database to store transaction information. Rather than a single file, this database uses separate files fore each database table. For simplicity, all database files are stored in a single directory. Therefore specifying a database or database archive location is really specifying the directory in which the files are stored. The default location for the database files is <i>/var/lib/arm4/data</i>. For backup files, a time stamped directory is created under <i>/var/lib/arm4/data/backup</i>. Each of these directories can be changed using the <i>arm4.conf</i> configuration file.</p>
 <h2>OPTIONS</h2>
@@ -42,5 +42,5 @@ description: "arm4_daemon – ARM 4 collection agent"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2005-2008 David Carter &lt;dcarter [at] arm4.org&gt; and others. All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at <a rel="nofollow" href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-arm4_control/">arm4_control</a></code>(1), <code><a href="/docs/linux/man/1-arm4_dump/">arm4_dump</a></code>(1), <code><a href="/docs/linux/man/1-arm4_export/">arm4_export</a></code>(1), <code><a href="/docs/linux/man/1-arm4_report/">arm4_report</a></code>(1), <code><a href="/docs/linux/man/5-arm4_conf/">arm4_conf</a></code>(5) </p>
+<p> <code><a href="/docs/linux/man/1-arm4_control/">arm4_control</a></code>(1), <code><a href="/docs/linux/man/1-arm4_dump/">arm4_dump</a></code>(1), <code><a href="/docs/linux/man/1-arm4_export/">arm4_export</a></code>(1), <code><a href="/docs/linux/man/1-arm4_report/">arm4_report</a></code>(1), <code>arm4_conf</code>(5) </p>
 <h2>Index</h2>

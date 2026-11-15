@@ -14,7 +14,7 @@ description: "readmult – a multitrack wrapper for cdda2wav"
 <h2>DESCRIPTION</h2>
 <p> <code>readmult</code> allows simultaneous extraction and naming of multiple tracks with cdda2wav </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cdda2wav/">cdda2wav</a>(1) </p>
+<p> cdda2wav(1) </p>
 <h2>AUTHOR</h2>
 <p> <code>cdda2was</code> was written by Joerg Schilling &lt;js [at] cs.tu-berlin.de&gt; and others. </p>
 <p> This describes the program as shipped with cdrkit, see This manpage describes the program implementation of <code>readmult</code> as shipped by the cdrkit distribution. See <code><a rel="nofollow" href="http://alioth.debian.org/projects/debburn/">http://alioth.debian.org/projects/debburn/</a></code> for details. It is a spinoff from the original program distributed by the cdrtools project. However, the cdrtools developers are not involved in the development of this spinoff and therefore shall not be made responsible for any problem caused by it. Do not try to get support for this program by contacting the original authors. </p>

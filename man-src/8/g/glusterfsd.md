@@ -74,6 +74,6 @@ description: "GlusterFS – Clustered Filesystem."
 <h2>Examples</h2>
 <p>Start a GlusterFS server on localhost with volume name foo glusterfsd -s localhost &#8211;volfile-id foo.server.media-disk-1 -p /var/lib/glusterd/vols/foo/run/server-media-disk-1.pid -S /tmp/&lt;uniqueid&gt;.socket &#8211;brick-name /media/disk-1 -l /var/log/glusterfs/bricks/media-disk-1.log &#8211;brick-port 24009 &#8211;xlator-option foo-server.listen-port=24009 </p>
 <h2>See Also</h2>
-<pre><code><a href="//www.systutorials.com/docs/linux/man/1-fusermount/">fusermount</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/8-mount.glusterfs/">mount.glusterfs</a></code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-gluster/">gluster</a></code>(8)</pre>
+<pre><code><a href="//www.systutorials.com/docs/linux/man/1-fusermount/">fusermount</a></code>(1), <code>mount.glusterfs</code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-gluster/">gluster</a></code>(8)</pre>
 <h2>Copyright</h2>
 <pre>Copyright(c) 2006-2011 Gluster, Inc. &lt;<a rel="nofollow" href="http://www.gluster.com">http://www.gluster.com</a>&gt;</pre>

@@ -22,6 +22,6 @@ nai# aoe-revalidate e1.9
 nai# aoe-stat | grep e1.9
  e1.9 164.696GB eth0 up </pre>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-aoe-stat/">aoe-stat</a></i>(8), <i><a href="/docs/linux/man/8-aoetools/">aoetools</a></i>(8).</p>
+<p><i><a href="/docs/linux/man/8-aoe-stat/">aoe-stat</a></i>(8), <i>aoetools</i>(8).</p>
 <h2>Author</h2>
 <p>Sam Hopkins (sah [at] coraid.com)</p>

@@ -15,4 +15,4 @@ description: "urfkill – RFKill Switches Management"
 <h2>Bugs</h2>
 <p>Please send bug reports to either the distribution or the DeviceKit mailing list, see m[blue]<code><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/devkit-devel">http://lists.freedesktop.org/mailman/listinfo/devkit-devel</a></code>m[] on how to subscribe.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-policykit/">PolicyKit</a></code>(8), <code><a href="/docs/linux/man/8-urfkilld/">urfkilld</a></code>(8), </p>
+<p><code>PolicyKit</code>(8), <code><a href="/docs/linux/man/8-urfkilld/">urfkilld</a></code>(8), </p>

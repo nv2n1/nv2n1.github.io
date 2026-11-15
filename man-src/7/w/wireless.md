@@ -16,7 +16,7 @@ description: "wireless – Wireless Tools and Wireless Extensions"
  The <code>Wireless Tools</code> are used to change the configuration of wireless LAN networking interfaces on the fly, to get their current configuration, to get statistics and diagnose them. They are described in their own man page, see below for references.<br />
  <code>Wireless configuration</code> is specific to each Linux distribution. This man page will contain in the future the configuration procedure for a few common distributions. For the time being, check the file DISTRIBUTIONS.txt included with the Wireless Tools package.</p>
 <h2>Debian 3.0</h2>
-<p>In Debian 3.0 (and later) you can configure wireless LAN networking devices using the network configuration tool <code><a href="/docs/linux/man/8-ifupdown/">ifupdown</a></code>(8).</p>
+<p>In Debian 3.0 (and later) you can configure wireless LAN networking devices using the network configuration tool <code>ifupdown</code>(8).</p>
 <dl>
 <dt><code>File :</code></p>
 <dd><i>/etc/network/interfaces</i></p>

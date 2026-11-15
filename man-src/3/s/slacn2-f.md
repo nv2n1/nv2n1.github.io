@@ -41,7 +41,7 @@ description: "slacn2.f –"
 <pre> ISGN is INTEGER array, dimension (N)</pre>
 <p><i>EST</i> </p>
 <pre> EST is REAL
- On entry with KASE = 1 or 2 and <a href="//www.systutorials.com/docs/linux/man/1-ISAVE/">ISAVE</a>(1) = 3, EST should be
+ On entry with KASE = 1 or 2 and ISAVE(1) = 3, EST should be
  unchanged from the previous call to SLACN2.
  On exit, EST is an estimate (a lower bound) for norm(A). </pre>
 <p><i>KASE</i> </p>
@@ -70,9 +70,9 @@ description: "slacn2.f –"
  This is a thread safe version of SLACON, which uses the array ISAVE
  in place of a SAVE statement, as follows:
  SLACON SLACN2
- JUMP <a href="//www.systutorials.com/docs/linux/man/1-ISAVE/">ISAVE</a>(1)
- J <a href="//www.systutorials.com/docs/linux/man/2-ISAVE/">ISAVE</a>(2)
- ITER <a href="//www.systutorials.com/docs/linux/man/3-ISAVE/">ISAVE</a>(3)</pre>
+ JUMP ISAVE(1)
+ J ISAVE(2)
+ ITER ISAVE(3)</pre>
 <p>&nbsp;<wbr></dl>
 <p> <code>Contributors: </code></p>
 <dl>

@@ -18,7 +18,7 @@ description: "ps2ascii – Ghostscript translator from PostScript or PDF to ASCI
 <h2>FILES</h2>
 <p> Run &quot;<code>gs -h</code>&quot; to find the location of Ghostscript documentation on your system, from which you can get more details.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-pstotext/">pstotext</a>(1), <a rel="nofollow" href="http://www.research.digital.com/SRC/virtualpaper/pstotext.html">http://www.research.digital.com/SRC/virtualpaper/pstotext.html</a></p>
+<p> pstotext(1), <a rel="nofollow" href="http://www.research.digital.com/SRC/virtualpaper/pstotext.html">http://www.research.digital.com/SRC/virtualpaper/pstotext.html</a></p>
 <h2>VERSION</h2>
 <p> This document was last revised for Ghostscript version 9.55.0.</p>
 <h2>AUTHOR</h2>

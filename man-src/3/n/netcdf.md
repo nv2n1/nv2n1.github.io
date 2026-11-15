@@ -17,7 +17,7 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <dl>
 <dt> <code>const char* nc_inq_libvers()</code> </p>
 <dd>Returns a string identifying the version of the netCDF library, and when it was built, like: &quot;3.1a of Aug 22 1996 12:57:47 $&quot;.</dl>
-<p> The RCS <code><a href="/docs/linux/man/1-ident/">ident</a>(1)</code> command will find a string like &quot;$Id: @(#) netcdf library version 3.1a of Sep 6 1996 15:56:26 $&quot; in the library. The SCCS <code><a href="/docs/linux/man/1-what/">what</a>(1)</code> command will find a string like &quot;netcdf library version 3.1a of Aug 23 1996 16:07:40 $&quot;.</p>
+<p> The RCS <code><a href="/docs/linux/man/1-ident/">ident</a>(1)</code> command will find a string like &quot;$Id: @(#) netcdf library version 3.1a of Sep 6 1996 15:56:26 $&quot; in the library. The SCCS <code>what(1)</code> command will find a string like &quot;netcdf library version 3.1a of Aug 23 1996 16:07:40 $&quot;.</p>
 <h2>Return Values</h2>
 <p>All netCDF functions (except <code>nc_inq_libvers()</code> and <code>nc_strerror()</code>) return an integer status. </p>
 <p> If this returned status value is not equal to <code>NC_NOERR</code> (zero), it indicates that an error occurred. The possible status values are defined in system include file &lt;errno.h&gt; and in &quot;netcdf.h&quot;.</p>

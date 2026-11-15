@@ -18,7 +18,7 @@ description: "networks – network name information"
 <dt><i>name</i></p>
 <dd>The symbolic name for the network. Network names can contain any printable characters except white-space characters or the comment character.</p>
 <dt><i>number</i></p>
-<dd>The official number for this network in numbers-and-dots notation (see <code><a href="/docs/linux/man/3-inet/">inet</a></code>(3)). The trailing &quot;.0&quot; (for the host component of the network address) may be omitted.</p>
+<dd>The official number for this network in numbers-and-dots notation (see <code>inet</code>(3)). The trailing &quot;.0&quot; (for the host component of the network address) may be omitted.</p>
 <dt><i>aliases</i></p>
 <dd>Optional aliases for the network.</dl>
 <p> This file is read by the <code><a href="/docs/linux/man/8-route/">route</a></code>(8) and <code><a href="/docs/linux/man/8-netstat/">netstat</a></code>(8) utilities. Only Class A, B or C networks are supported, partitioned networks (i.e., network/26 or network/28) are not supported by this file.</p>

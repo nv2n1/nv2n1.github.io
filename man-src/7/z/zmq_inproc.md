@@ -12,7 +12,7 @@ description: "zmq_inproc – 0MQ local in-process (inter-thread) communication t
 <p>The in-process transport passes messages via memory directly between threads sharing a single 0MQ <i>context</i>.</p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- No I/O threads are involved in passing messages using the <i>inproc</i> transport. Therefore, if you are using a 0MQ <i>context</i> for in-process messaging only you can initialise the <i>context</i> with zero I/O threads. See <code><a href="/docs/linux/man/3-zmq_init/">zmq_init</a></code>(3) for details. </p>
+ No I/O threads are involved in passing messages using the <i>inproc</i> transport. Therefore, if you are using a 0MQ <i>context</i> for in-process messaging only you can initialise the <i>context</i> with zero I/O threads. See <code>zmq_init</code>(3) for details. </p>
 <h2>Addressing</h2>
 <p>A 0MQ endpoint is a string consisting of a <i>transport</i>:// followed by an <i>address</i>. The <i>transport</i> specifies the underlying protocol to use. The <i>address</i> specifies the transport-specific address to connect to. </p>
 <p> For the in-process transport, the transport is inproc, and the meaning of the <i>address</i> part is defined below.</p>

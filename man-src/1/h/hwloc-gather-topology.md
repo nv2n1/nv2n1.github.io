@@ -44,5 +44,5 @@ description: "hwloc-gather-topology – Saves the relevant Linux topology files 
 <p> Upon successful execution, <code>hwloc-gather-topology</code> will exit with the code 0. </p>
 <p> <code>hwloc-gather-topology</code> will return nonzero exit status if any kind of error occurs, such as (but not limited to) failure to create the archive or output file.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-lstopo/">lstopo</a>(1), <a href="/docs/linux/man/1-hwloc-calc/">hwloc-calc</a>(1), <a href="/docs/linux/man/1-hwloc-distrib/">hwloc-distrib</a>(1) </p>
+<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-calc/">hwloc-calc</a>(1), <a href="/docs/linux/man/1-hwloc-distrib/">hwloc-distrib</a>(1) </p>
 <h2>Index</h2>

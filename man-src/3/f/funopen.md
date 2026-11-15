@@ -59,5 +59,5 @@ csh &gt; funtable "test.ev[EVENTS,circle(512,512,10)]" foo.ev
 <p> Use of a Funtools reference handle implies that the input file is opened before the output file. However, it is important to note that if copy mode (&#8220;c&#8221; or &#8220;C&#8221;) is specified for the input file, the actual input file open is delayed until just after the output file is opened, since the copy of prior extensions to the output file takes place while Funtools is seeking to the specified input extension. This implies that the output file should be opened before any I/O is done on the input file or else the copy will fail. Note also that the copy of subsequent extension will be handled automatically by <i>FunClose()</i> if the output file is closed before the input file. Alternatively, it can be done explicitly by <i>FunFlush()</i>, but again, this assumes that the input file still is open. </p>
 <p> Upon success <i>FunOpen()</i> returns a Fun handle that is used in subsequent Funtools calls. On error, <font SIZE="-1">NULL</font> is returned.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

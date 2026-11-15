@@ -35,8 +35,8 @@ A similar (but somewhat more informative) format uses the same dotted list repre
  This format can be obtained by giving the command-line option -Of to most Net-SNMP commands. 
 
  A variant of this (typically used when writing OIDs in descriptive text, rather than running programs), is to combine the name and numeric subidentifier:
-<dl><dd>&nbsp;<a HREF="/docs/linux/man/1--iso/">.iso</a>(1)<a HREF="/docs/linux/man/3--org/">.org</a>(3)<a HREF="/docs/linux/man/6--dod/">.dod</a>(6)<a HREF="/docs/linux/man/1--internet/">.internet</a>(1)<a HREF="/docs/linux/man/2--mgmt/">.mgmt</a>(2)<a HREF="/docs/linux/man/1--mib-2/">.mib-2</a>(1)<a HREF="/docs/linux/man/1--system/">.system</a>(1) 
-&nbsp;<a HREF="/docs/linux/man/1--sysdescr/">.sysDescr</a>(1)</dl>
+<dl><dd>&nbsp;.iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1).system(1) 
+&nbsp;.sysDescr(1)</dl>
 
 <h3>Module-qualified OIDs</h3>
 

@@ -34,7 +34,7 @@ struct ibv_qp_rate_limit_attr {
 <h3>EOPNOTSUPP</h3>
 <p> Function is not implemented for this device. (ENOSYS may sometimes be returned by old versions of libibverbs). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_qp/">ibv_destroy_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_modify_qp/">ibv_modify_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_qp/">ibv_query_qp</a></code>(3)</p>
+<p> <code>ibv_create_qp</code>(3), <code>ibv_destroy_qp</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_query_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Alex Rosenbaum &lt;alexr [at] mellanox.com&gt;</p>

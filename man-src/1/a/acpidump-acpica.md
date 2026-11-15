@@ -70,7 +70,7 @@ description: "acpidump – ACPI table dump utility"
 <dd> Do not use or dump XSDT. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-acpixtract/">acpixtract</a>(1)</code> </p>
+<p> <code>acpixtract(1)</code> </p>
 <h2>AUTHOR</h2>
 <p> acpidump was written by Robert Moore &lt;robert.moore [at] intel.com&gt; and Chao Guan &lt;chao.guan [at] intel.com&gt;. </p>
 <p> This manual page was written by Al Stone &lt;ahs3 [at] redhat.com&gt; for the Fedora project (but may be used by others). </p>

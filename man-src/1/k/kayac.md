@@ -48,7 +48,7 @@ description: "Kayac – Compiler for the kaya language"
 <dt><code>-pic</code></p>
 <dd> Use the -fPIC option of the C compiler to make position-independent code suitable for shared libraries. This option has no effect on Windows, where all code is position-independent. </p>
 <dt><code>-xmldocs</code></p>
-<dd> Generate XML documentation. This can then be converted into HTML or Manpage format using the KayaDoc module and the <code><a href="/docs/linux/man/1-xml2man/">xml2man</a>(1)</code> tool. </p>
+<dd> Generate XML documentation. This can then be converted into HTML or Manpage format using the KayaDoc module and the <code>xml2man(1)</code> tool. </p>
 <dt><code>-static</code></p>
 <dd> Statically link executables so that they can be run on a wider range of systems at the cost of signficantly increased file size. This is generally only useful if you are making a pre-compiled binary distribution. You may get some warnings from the linker about potential problems and limitations when linking some libraries, or compilation may fail entirely if the static libraries are unavailable. </p>
 <dt><code>-profile</code></p>
@@ -95,5 +95,5 @@ description: "Kayac – Compiler for the kaya language"
 <h2>LICENSE</h2>
 <p> <code>kayac</code> is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License (version 2 or any later version) as published by the Free Software Foundation. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-darcs/">darcs</a>(1)</code> <code><a href="/docs/linux/man/1-gcc/">gcc</a>(1)</code> <code><a href="/docs/linux/man/1-gprof/">gprof</a>(1)</code> <code><a href="/docs/linux/man/1-rekey/">rekey</a>(1)</code> <code><a href="/docs/linux/man/1-xml2man/">xml2man</a>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-darcs/">darcs</a>(1)</code> <code><a href="/docs/linux/man/1-gcc/">gcc</a>(1)</code> <code><a href="/docs/linux/man/1-gprof/">gprof</a>(1)</code> <code>rekey(1)</code> <code>xml2man(1)</code> </p>
 <h2>Index</h2>

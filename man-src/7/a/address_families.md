@@ -55,7 +55,7 @@ int socket(int domain, int type, int protocol);</code></pre>
 <dt><code>AF_ATMSVC</code></p>
 <dd>Access to ATM Switched Virtual Circuits (SVCs) See the <i>ATM on Linux HOWTO</i> for details.</p>
 <dt><code>AF_RDS</code></p>
-<dd>Reliable Datagram Sockets (RDS) protocol (since Linux 2.6.30). RDS over RDMA has no relation to <code>AF_SMC</code> or <code>AF_XDP</code>. For further information see <code><a href="/docs/linux/man/7-rds/">rds</a></code>(7), <code><a href="/docs/linux/man/7-rds-rdma/">rds-rdma</a></code>(7), and <i>Documentation/networking/rds.txt</i> in the Linux kernel source tree.</p>
+<dd>Reliable Datagram Sockets (RDS) protocol (since Linux 2.6.30). RDS over RDMA has no relation to <code>AF_SMC</code> or <code>AF_XDP</code>. For further information see <code>rds</code>(7), <code>rds-rdma</code>(7), and <i>Documentation/networking/rds.txt</i> in the Linux kernel source tree.</p>
 <dt><code>AF_IRDA</code></p>
 <dd>Socket interface over IrDA (moved to staging in Linux 4.14, removed in Linux 4.17). For further information see <code><a href="/docs/linux/man/7-irda/">irda</a></code>(7).</p>
 <dt><code>AF_PPPOX</code></p>

@@ -14,7 +14,7 @@ description: "euare-releaserole – Release IAM role credentials"
 <h2>DESCRIPTION</h2>
 <p> Release IAM role credentials</p>
 <h2>DESCRIPTION</h2>
-<p> The euare-releaserole utility removes the credentials created by <a href="/docs/linux/man/1-euareassumerole/">euareassumerole</a>(1) by outputting shellcode that deletes the environment variables it creates. Use it inside an eval command to make this process seamless:</p>
+<p> The euare-releaserole utility removes the credentials created by euareassumerole(1) by outputting shellcode that deletes the environment variables it creates. Use it inside an eval command to make this process seamless:</p>
 <h2>DESCRIPTION</h2>
 <p> $ eval `euare-releaserole`</p>
 <h2>DESCRIPTION</h2>

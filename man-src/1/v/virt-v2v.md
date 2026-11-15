@@ -355,7 +355,7 @@ RHEL 3 No virtio drivers are available
  to use virt-v2v.
 </pre>
 <p> As the message says, you need to boot the guest and disable the &#8220;Fast Startup&#8221; feature (Control Panel → Power Options → Choose what the power buttons do → Change settings that are currently unavailable → Turn on fast startup), and shut down the guest, and then you will be able to convert it. </p>
-<p> For more information, see: &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> For more information, see: &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i>guestfs</i>(3).</p>
 <h3>Boot failure: 0x0000007B</h3>
 <p> This boot failure is caused by Windows being unable to find or load the right disk driver (eg. <i>viostor.sys</i>). If you experience this error, here are some things to check:</p>
 <dl>

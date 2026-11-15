@@ -1859,7 +1859,7 @@ SRCDIR = '/java/jdk/1.7.0/src/share/classes'</code>
 <dt>o</p>
 <dd> <a href="/docs/linux/man/1-jdb/">jdb</a>(1)</p>
 <dt>o</p>
-<dd> <a href="/docs/linux/man/1-javah/">javah</a>(1)</p>
+<dd> javah(1)</p>
 <dt>o</p>
 <dd> <a href="/docs/linux/man/1-javap/">javap</a>(1)</p>
 <dt>o</p>

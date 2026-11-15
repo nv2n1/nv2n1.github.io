@@ -234,5 +234,5 @@ run('myscriptname');
 <h2>AUTHOR</h2>
 <p> Brandon S. Allbery, allbery [at] ece.cmu.edu</p>
 <h2>SEE ALSO</h2>
-<p> Cyrus::IMAP::Admin Term::ReadLine <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i><a href="/docs/linux/man/8-imapd/">imapd</a></i>(8). </p>
+<p> Cyrus::IMAP::Admin Term::ReadLine <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>imapd</i>(8). </p>
 <h2>Index</h2>

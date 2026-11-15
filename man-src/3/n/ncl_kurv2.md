@@ -11,7 +11,7 @@ KURV2 - does interpolation for parametric curves
 
  The interpolated curve is parameterized by mapping points in the interval [0.,1.] onto the interpolated curve. The resulting curve has a parametric representation both of whose components are splines under tension and functions of the polygonal arc length. The value 0. is mapped onto (X[1],Y[1]) and the value 1. is mapped onto (X[N],Y[N]). KURV1 must be called before calling KURV2.
 <h2>Description</h2><dl COMPACT><dt>T
-<dd>(real, input) A value to be mapped to a point on the curve. The interval [0.,1.] is mapped onto the curve such that 0. is mapped to (<a HREF="/docs/linux/man/1-x/">X</a>(1),<a HREF="/docs/linux/man/1-y/">Y</a>(1)) and 1. is mapped to (X(N),Y(N)). Values outside of [0.,1.] result in extrapolation.
+<dd>(real, input) A value to be mapped to a point on the curve. The interval [0.,1.] is mapped onto the curve such that 0. is mapped to (X(1),Y(1)) and 1. is mapped to (X(N),Y(N)). Values outside of [0.,1.] result in extrapolation.
 <dt>XS
 <dd>(real, oputput) Contains the X coordinate of the interpolated point that T maps to.
 <dt>YS

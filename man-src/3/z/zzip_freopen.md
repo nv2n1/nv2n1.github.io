@@ -62,4 +62,4 @@ ZZIP_FILE * zzip_freopen((zzip_char_t * filename, zzip_char_t * mode, ZZIP_FILE 
 <h2>Copyright</h2>
 <p>Copyright (c) 1999,2000,2001,2002,2003 Guido Draheim All rights reserved, use under the restrictions of the Lesser GNU General Public License or alternatively the restrictions of the Mozilla Public License 1.1</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/2-fopen/">fopen</a>(2) </p>
+<p>fopen(2) </p>

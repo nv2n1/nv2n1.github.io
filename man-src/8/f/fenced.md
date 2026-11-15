@@ -26,7 +26,7 @@ description: "fenced – the I/O Fencing daemon"
  See also <code>fence_tool dump</code> in <code><a href="/docs/linux/man/8-fence_tool/">fence_tool</a></code>(8).</p>
 <dt><code>-L</code></p>
 <dd>Enable debugging to log file.<br />
- See also <code>logging</code> in <code><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a></code>(5).</p>
+ See also <code>logging</code> in <code>cluster.conf</code>(5).</p>
 <dt><code>-g</code><i> num</i></p>
 <dd>groupd compatibility mode, 0 off, 1 on. Default 0.</p>
 <dt><code>-r</code><i> path</i></p>
@@ -49,7 +49,7 @@ description: "fenced – the I/O Fencing daemon"
 <dd>Print program version information, then exit. </p>
 </dl>
 <h2>Files</h2>
-<p><code><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a></code>(5) is usually located at /etc/cluster/cluster.conf. It is not read directly. Other cluster components load the contents into memory, and the values are accessed through the libccs library. </p>
+<p><code>cluster.conf</code>(5) is usually located at /etc/cluster/cluster.conf. It is not read directly. Other cluster components load the contents into memory, and the values are accessed through the libccs library. </p>
 <p> Configuration options for fenced are added to the &lt;fence_daemon /&gt; section of cluster.conf, within the top level &lt;cluster&gt; section. </p>
 <dl>
 <dt><code>post_join_delay</code></p>
@@ -143,4 +143,4 @@ description: "fenced – the I/O Fencing daemon"
 <h3>Hardware-specific settings</h3>
 <p>Find documentation for configuring specific devices from the device agent&#8217;s man page.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-fence_tool/">fence_tool</a></code>(8), <code><a href="/docs/linux/man/8-fence_ack_manual/">fence_ack_manual</a></code>(8), <code><a href="/docs/linux/man/8-fence_node/">fence_node</a></code>(8), <code><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/8-fence_tool/">fence_tool</a></code>(8), <code><a href="/docs/linux/man/8-fence_ack_manual/">fence_ack_manual</a></code>(8), <code><a href="/docs/linux/man/8-fence_node/">fence_node</a></code>(8), <code>cluster.conf</code>(5) </p>

@@ -11,7 +11,7 @@ description: "pure-mrtginfo – provide an MRTG-graphable user count for ftpd"
 <h2>Synopsis</h2>
 <p><code>pure-mrtginfo [server port]</code> </p>
 <h2>Description</h2>
-<p><code>Pure-Mrtginfo</code> counts the number of clients currently connected to <code><a href="/docs/linux/man/8-ftpd/">ftpd</a></code>(8) and output the format in a format graphable by MRTG. </p>
+<p><code>Pure-Mrtginfo</code> counts the number of clients currently connected to <code>ftpd</code>(8) and output the format in a format graphable by MRTG. </p>
 <h2>Options</h2>
 <p><code>server port</code> : defaults to 21.</p>
 <h2>Files</h2>

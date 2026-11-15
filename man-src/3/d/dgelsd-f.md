@@ -76,16 +76,16 @@ description: "dgelsd.f –"
 <p><i>S</i> </p>
 <pre> S is DOUBLE PRECISION array, dimension (min(M,N))
  The singular values of A in decreasing order.
- The condition number of A in the 2-norm = <a href="//www.systutorials.com/docs/linux/man/1-S/">S</a>(1)/S(min(m,n)).</pre>
+ The condition number of A in the 2-norm = S(1)/S(min(m,n)).</pre>
 <p><i>RCOND</i> </p>
 <pre> RCOND is DOUBLE PRECISION
  RCOND is used to determine the effective rank of A.
- Singular values S(i) &lt;= RCOND*<a href="//www.systutorials.com/docs/linux/man/1-S/">S</a>(1) are treated as zero.
+ Singular values S(i) &lt;= RCOND*S(1) are treated as zero.
  If RCOND &lt; 0, machine precision is used instead.</pre>
 <p><i>RANK</i> </p>
 <pre> RANK is INTEGER
  The effective rank of A, i.e., the number of singular values
- which are greater than RCOND*<a href="//www.systutorials.com/docs/linux/man/1-S/">S</a>(1).</pre>
+ which are greater than RCOND*S(1).</pre>
 <p><i>WORK</i> </p>
 <pre> WORK is DOUBLE PRECISION array, dimension (MAX(1,LWORK))
  On exit, if INFO = 0, WORK(1) returns the optimal LWORK.</pre>
@@ -111,7 +111,7 @@ description: "dgelsd.f –"
 <pre> IWORK is INTEGER array, dimension (MAX(1,LIWORK))
  LIWORK &gt;= max(1, 3 * MINMN * NLVL + 11 * MINMN),
  where MINMN = MIN( M,N ).
- On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the minimum LIWORK.</pre>
+ On exit, if INFO = 0, IWORK(1) returns the minimum LIWORK.</pre>
 <p><i>INFO</i> </p>
 <pre> INFO is INTEGER
  = 0: successful exit

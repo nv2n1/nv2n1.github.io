@@ -74,7 +74,7 @@ description: "o2cb – Default cluster stack for the OCFS2 file system."
 &nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>node10<br />
 &nbsp;<wbr>cluster&nbsp;<wbr>=&nbsp;<wbr>webcluster </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-mkfs-ocfs2/">mkfs.ocfs2</a>(8)</code> <code><a href="/docs/linux/man/8-fsck-ocfs2/">fsck.ocfs2</a>(8)</code> <code><a href="/docs/linux/man/8-tunefs-ocfs2/">tunefs.ocfs2</a>(8)</code> <code><a href="/docs/linux/man/8-debugfs-ocfs2/">debugfs.ocfs2</a>(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> </p>
+<p><code>mkfs.ocfs2(8)</code> <code>fsck.ocfs2(8)</code> <code>tunefs.ocfs2(8)</code> <code>debugfs.ocfs2(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> </p>
 <h2>Authors</h2>
 <p>Oracle Corporation</p>
 <h2>Copyright</h2>

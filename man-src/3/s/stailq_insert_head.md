@@ -31,7 +31,7 @@ description: "STAILQ_CONCAT, STAILQ_EMPTY, STAILQ_ENTRY, STAILQ_FIRST, STAILQ_FO
 <h2>Description</h2>
 <p>These macros define and operate on singly linked tail queues. </p>
 <p> In the macro definitions, <i>TYPE</i> is the name of a user-defined structure, that must contain a field of type <i>STAILQ_ENTRY</i>, named <i>NAME</i>. The argument <i>HEADNAME</i> is the name of a user-defined structure that must be declared using the macro <code>STAILQ_HEAD</code>(). </p>
-<p> A singly linked tail queue is headed by a structure defined by the <code>STAILQ_HEAD</code>() macro. This structure contains a pair of pointers, one to the first element in the tail queue and the other to the last element in the tail queue. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of <a href="/docs/linux/man/n-o/">O</a>(n) removal for arbitrary elements. New elements can be added to the tail queue after an existing element, at the head of the tail queue, or at the end of the tail queue. A <i>STAILQ_HEAD</i> structure is declared as follows: </p>
+<p> A singly linked tail queue is headed by a structure defined by the <code>STAILQ_HEAD</code>() macro. This structure contains a pair of pointers, one to the first element in the tail queue and the other to the last element in the tail queue. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of O(n) removal for arbitrary elements. New elements can be added to the tail queue after an existing element, at the head of the tail queue, or at the end of the tail queue. A <i>STAILQ_HEAD</i> structure is declared as follows: </p>
 <p> STAILQ_HEAD(HEADNAME, TYPE) head; </p>
 <p> where <i>struct HEADNAME</i> is the structure to be defined, and <i>struct TYPE</i> is the type of the elements to be linked into the tail queue. A pointer to the head of the tail queue can later be declared as: </p>
 <p> struct HEADNAME *headp; </p>
@@ -100,6 +100,6 @@ description: "STAILQ_CONCAT, STAILQ_EMPTY, STAILQ_ENTRY, STAILQ_FIRST, STAILQ_FO
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;STAILQ_INIT(&amp;head); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-insque/">insque</a></code>(3), <code><a href="/docs/linux/man/7-queue/">queue</a></code>(7)</p>
+<p><code>insque</code>(3), <code><a href="/docs/linux/man/7-queue/">queue</a></code>(7)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a></p>

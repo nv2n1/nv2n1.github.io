@@ -24,7 +24,7 @@ description: "ax25d – General purpose AX.25, NET/ROM and Rose daemon"
 <h2>Files</h2>
 <p>/etc/ax25/ax25d.conf</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/5-ax25d-conf/">ax25d.conf</a></code>(5).</p>
+<p><code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code>ax25d.conf</code>(5).</p>
 <h2>Author</h2>
 <p>Darryl Miles G7LED &lt;dlm [at] frink.demon.co.uk&gt;<br />
  Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;</p>

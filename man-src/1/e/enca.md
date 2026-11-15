@@ -79,7 +79,7 @@ description: "enca — detect and convert encoding of text files"
 <dd> Prints verbal description of the detected charset and surfaces&#8211;something a human understands best. This is the default behaviour. </p>
 <p> The precise format is following: the first line contains charset name alone, and it&#8217;s followed by zero or more indented lines containing names of detected surfaces. This format is not, however, suitable or intended for further machine-processing, and the verbal charset descriptions are like to change in the future.</p>
 <dt><code>-i</code>, <code>&#8211;iconv-name</code></p>
-<dd> Prints how <i><a href="/docs/linux/man/3-iconv/">iconv</a></i>(3) (and/or <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1)) calls the detected charset. More precisely, it prints one, more or less arbitrarily chosen, alias accepted by iconv. A charset unknown to iconv counts as unknown. </p>
+<dd> Prints how <i>iconv</i>(3) (and/or <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1)) calls the detected charset. More precisely, it prints one, more or less arbitrarily chosen, alias accepted by iconv. A charset unknown to iconv counts as unknown. </p>
 <p> This output type makes sense only when Enca is compiled with iconv support (feature +iconv-interface).</p>
 <dt><code>-r</code>, <code>&#8211;rfc1345-name</code></p>
 <dd> Prints RFC~1345 charset name. When such a name doesn&#8217;t exist because RFC~1345 doesn&#8217;t define a given encoding, some other name defined in some other RFC or just the name which author considers `the most canonical&#8217;, is printed. </p>
@@ -88,7 +88,7 @@ description: "enca — detect and convert encoding of text files"
 <dd> Prints preferred MIME name of detected charset. This is the name you should normally use when fixing e-mails or web pages. </p>
 <p> A charset not present in <a rel="nofollow" href="http://www.iana.org/assignments/character-sets">http://www.iana.org/assignments/character-sets</a> counts as unknown.</p>
 <dt><code>-s</code>, <code>&#8211;cstocs-name</code></p>
-<dd> Prints how <i><a href="/docs/linux/man/1-cstocs/">cstocs</a></i>(1) calls the detected charset. A charset unknown to cstocs counts as unknown.</p>
+<dd> Prints how <i>cstocs</i>(1) calls the detected charset. A charset unknown to cstocs counts as unknown.</p>
 <dt><code>-n</code>, <code>&#8211;name=</code><i>WORD</i></p>
 <dd> Prints charset (encoding) name selected by <i>WORD</i> (can be abbreviated as long as is unambiguous). For names listed above, <code>&#8211;name=</code><i>WORD</i> is equivalent to <code>&#8212;</code><i>WORD</i>. </p>
 <p> Using <code>aliases</code> as the output type causes Enca to print list of all accepted aliases of detected charset.</p>
@@ -173,7 +173,7 @@ description: "enca — detect and convert encoding of text files"
 <p> You should be familiar with <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1) before using it, since recode is a quite sophisticated and powerful charset conversion tool. You may run into problems using it together with Enca particularly because Enca&#8217;s support for surfaces not 100% compatible, because recode tries too hard to make the transformation reversible, because it sometimes silently ignores I/O errors, and because it&#8217;s incredibly buggy. Please see GNU recode info pages for details about recode library. </p>
 <p> This converter can be specified as <code>librecode</code> with <code>-C</code>. </p>
 <h3>Iconv converter</h3>
-<p> is an interface to the UNIX98 <i><a href="/docs/linux/man/3-iconv/">iconv</a></i>(3) conversion functions, that do the actual recoding job. It may or may not be compiled in; run</p>
+<p> is an interface to the UNIX98 <i>iconv</i>(3) conversion functions, that do the actual recoding job. It may or may not be compiled in; run</p>
 <dl>
 <dt>
 <dd>
@@ -182,7 +182,7 @@ description: "enca — detect and convert encoding of text files"
 <p> While iconv is present on most today systems it only rarely offer some useful set of available conversions, the only notable exception being iconv from GNU libc. It is usually quite picky about surfaces, too (while, at the same time, not implementing surface conversion). It however probably represents the only standard(ized) tool able to perform conversion from/to Unicode. Please see iconv documentation about for details about its capabilities on your particular system. </p>
 <p> This converter can be specified as <code>iconv</code> with <code>-C</code>. </p>
 <h3>External converter</h3>
-<p> is an arbitrary external conversion tool that can be specified with <code>-E</code> option (at most one can be defined simultaneously). There are some standard, provided together with enca: <code>cstocs</code>, <code>recode</code>, <code>map</code>, <code>umap</code>, and <code>piconv</code>. All are wrapper scripts: for <i><a href="/docs/linux/man/1-cstocs/">cstocs</a></i>(1), <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1), <i><a href="/docs/linux/man/1-map/">map</a></i>(1), <i><a href="/docs/linux/man/1-umap/">umap</a></i>(1), and <i><a href="/docs/linux/man/1-piconv/">piconv</a></i>(1). </p>
+<p> is an arbitrary external conversion tool that can be specified with <code>-E</code> option (at most one can be defined simultaneously). There are some standard, provided together with enca: <code>cstocs</code>, <code>recode</code>, <code>map</code>, <code>umap</code>, and <code>piconv</code>. All are wrapper scripts: for <i>cstocs</i>(1), <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1), <i><a href="/docs/linux/man/1-map/">map</a></i>(1), <i><a href="/docs/linux/man/1-umap/">umap</a></i>(1), and <i><a href="/docs/linux/man/1-piconv/">piconv</a></i>(1). </p>
 <p> Please note enca has little control what the external converter really does. If you set it to <code>/bin/rm</code> you are fully responsible for the consequences. </p>
 <p> If you want to make your own converter to use with enca, you should know it is always called</p>
 <dl>
@@ -204,7 +204,7 @@ description: "enca — detect and convert encoding of text files"
 <p> drop them out&#8211;this is what both recode and cstocs can do (cstocs can also replace these characters by some fixed character instead of mere ignoring); useful when the to-be-omitted characters contain only noise. </p>
 <p> Please consult your favourite converter manual for details of this issue. Generally, if you are not lucky enough to have all convertible characters in you file, manual intervention is needed anyway. </p>
 <h3>Performance notes</h3>
-<p> Poor performance of available converters has been one of main reasons for including built-in converter in enca. Try to use it whenever possible, i.e. when files in consideration are charset-clean enough or charset-messy enough so that its zero built-in intelligence doesn&#8217;t matter. It requires no extra disk space nor extra memory and can outperform <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1) more than 10 times on large files and Perl version (i.e. the faster one) of <i><a href="/docs/linux/man/1-cstocs/">cstocs</a></i>(1) more than 400 times on small files (in fact it&#8217;s almost as fast as mere <i><a href="/docs/linux/man/1-cp/">cp</a></i>(1)). </p>
+<p> Poor performance of available converters has been one of main reasons for including built-in converter in enca. Try to use it whenever possible, i.e. when files in consideration are charset-clean enough or charset-messy enough so that its zero built-in intelligence doesn&#8217;t matter. It requires no extra disk space nor extra memory and can outperform <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1) more than 10 times on large files and Perl version (i.e. the faster one) of <i>cstocs</i>(1) more than 400 times on small files (in fact it&#8217;s almost as fast as mere <i><a href="/docs/linux/man/1-cp/">cp</a></i>(1)). </p>
 <p> Try to avoid external converters when it&#8217;s not absolutely necessary since all the forking and moving stuff around is incredibly slow.</p>
 <h2>ENCODINGS</h2>
 <p> You can get list of recognised character sets with</p>
@@ -626,7 +626,7 @@ description: "enca — detect and convert encoding of text files"
 <p> Don&#8217;t use external converters. Ideally, disable them compile-time. </p>
 <p> Be aware of <code>ENCAOPT</code> and all the built-in automagic guessing various things from environment, namely locales. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-autoconvert/">autoconvert</a></i>(1), <i><a href="/docs/linux/man/1-cstocs/">cstocs</a></i>(1), <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), <i><a href="/docs/linux/man/3-iconv/">iconv</a></i>(3), <i><a href="/docs/linux/man/3-nl_langinfo/">nl_langinfo</a></i>(3), <i><a href="/docs/linux/man/1-map/">map</a></i>(1), <i><a href="/docs/linux/man/1-piconv/">piconv</a></i>(1), <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1), <i><a href="/docs/linux/man/5-locale/">locale</a></i>(5), <i><a href="/docs/linux/man/7-locale/">locale</a></i>(7), <i><a href="/docs/linux/man/1-ltt/">ltt</a></i>(1), <i><a href="/docs/linux/man/1-umap/">umap</a></i>(1), <i><a href="/docs/linux/man/7-unicode/">unicode</a></i>(7), <i><a href="/docs/linux/man/7-utf-8/">utf-8</a></i>(7), <i><a href="/docs/linux/man/1-xcode/">xcode</a></i>(1) </p>
+<p> <i>autoconvert</i>(1), <i>cstocs</i>(1), <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), <i>iconv</i>(3), <i><a href="/docs/linux/man/3-nl_langinfo/">nl_langinfo</a></i>(3), <i><a href="/docs/linux/man/1-map/">map</a></i>(1), <i><a href="/docs/linux/man/1-piconv/">piconv</a></i>(1), <i><a href="/docs/linux/man/1-recode/">recode</a></i>(1), <i><a href="/docs/linux/man/5-locale/">locale</a></i>(5), <i><a href="/docs/linux/man/7-locale/">locale</a></i>(7), <i>ltt</i>(1), <i><a href="/docs/linux/man/1-umap/">umap</a></i>(1), <i><a href="/docs/linux/man/7-unicode/">unicode</a></i>(7), <i><a href="/docs/linux/man/7-utf-8/">utf-8</a></i>(7), <i>xcode</i>(1) </p>
 <h2>KNOWN BUGS</h2>
 <p> It has too many <i>unknown</i> bugs. </p>
 <p> The idea of using <code>LC_*</code> value for language is certainly braindead. However I like it. </p>

@@ -56,4 +56,4 @@ description: "atmarp – administer classical IP over ATM connections"
 <h2>Author</h2>
 <p>Werner Almesberger, EPFL ICA &lt;Werner.Almesberger [at] epfl.ch&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-atmarpd/">atmarpd</a>(8), <a href="/docs/linux/man/8-clip/">clip</a>(8), <a href="/docs/linux/man/7-qos/">qos</a>(7) </p>
+<p><a href="/docs/linux/man/8-atmarpd/">atmarpd</a>(8), clip(8), <a href="/docs/linux/man/7-qos/">qos</a>(7) </p>

@@ -41,4 +41,4 @@ if (selinux_set_mapping(map) &lt; 0)
 <h2>Author</h2>
 <p>Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-avc_open/">avc_open</a></code>(8), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
+<p><code>avc_open</code>(8), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>

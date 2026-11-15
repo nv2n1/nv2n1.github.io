@@ -12,7 +12,7 @@ description: "ntdbtool – manipulate the contents NTDB files"
 <dl>
 <dt> <code>ntdbtool</code> <i>NTDBFILE</i> [<i>COMMANDS</i>&#8230;]</dl>
 <h2>Description</h2>
-<dd>This tool is part of the <code><a href="/docs/linux/man/1-samba/">samba</a></code>(1) suite. </p>
+<dd>This tool is part of the <code>samba</code>(1) suite. </p>
 <p> <code>ntdbtool</code> a tool for displaying and altering the contents of Samba NTDB (New Trivial DataBase) files. Each of the commands listed below can be entered interactively or provided on the command line.</p>
 <h2>Commands</h2>
 <p><code>create</code> <i>NTDBFILE</i></p>

@@ -31,4 +31,4 @@ description: "XkbLibraryVersion – Determines the compatibility of a library at
 <dt>False</p>
 <dd>The <i>XkbLibraryVersion </i> returns False if the versions of the compile time and run time libraries are not compatible.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbmajorversion/">XkbMajorVersion</a></code>(3), <code><a href="/docs/linux/man/3-xkbminorversion/">XkbMinorVersion</a></code>(3), <code><a href="/docs/linux/man/3-xkbqueryextension/">XkbQueryExtension</a></code>(3)</p>
+<p><code>XkbMajorVersion</code>(3), <code>XkbMinorVersion</code>(3), <code><a href="/docs/linux/man/3-xkbqueryextension/">XkbQueryExtension</a></code>(3)</p>

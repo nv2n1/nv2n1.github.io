@@ -51,4 +51,4 @@ The default group type is 2.
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/1-groupadd/">groupadd</a></i>(1) 
+<i>groupadd</i>(1) 

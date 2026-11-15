@@ -62,7 +62,7 @@ flag.
 <h2>NOTES</h2>
 <p> <code>ibv_alloc_dm()</code> may fail if device has no more free device memory left, where the maximum amount of allocated memory is provided by the <i>max_dm_size</i> attribute in <i>ibv_device_attr_ex</i> struct. <code>ibv_free_dm()</code> may fail if any other resources (such as an MR) is still associated with the DM being freed.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_query_device_ex/">ibv_query_device_ex</a></code>(3),</p>
+<p> <code>ibv_query_device_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Ariel Levkovich &lt;lariel [at] mellanox.com&gt;</p>

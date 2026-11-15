@@ -39,7 +39,7 @@ description: "targetd"
 <h2>See Also</h2>
 <p>The remote API is defined at<br />
  &lt;<a rel="nofollow" href="https://github.com/agrover/targetd/blob/master/API.md">https://github.com/agrover/targetd/blob/master/API.md</a>&gt;. </p>
-<p> <a href="/docs/linux/man/8-targetcli/">targetcli</a>(8), <a href="/docs/linux/man/8-lvm/">lvm</a>(8), <a href="/docs/linux/man/8-lsmcli/">lsmcli</a>(8)</p>
+<p> <a href="/docs/linux/man/8-targetcli/">targetcli</a>(8), <a href="/docs/linux/man/8-lvm/">lvm</a>(8), lsmcli(8)</p>
 <h2>Author</h2>
 <p>Written by Andy Grover &lt;agrover [at] redhat.com&gt;.</p>
 <h2>Reporting Bugs</h2>

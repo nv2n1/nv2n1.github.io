@@ -11,7 +11,7 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> Heimdal Kerberos 5 support functions &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>krb5plugin_an2ln_ftable_desc</code><br />
- <i>Description of the <a href="/docs/linux/man/3-krb5_aname_to_lname/">krb5_aname_to_lname</a>(3) plugin facility. </i><br />
+ <i>Description of the krb5_aname_to_lname(3) plugin facility. </i><br />
  struct <code>krb5plugin_db_ftable_desc</code><br />
  <i>Description of the krb5 DB plugin facility. </i><br />
  struct <code>krb5plugin_kuserok_ftable_desc</code><br />

@@ -141,7 +141,8 @@ Syntax<br />
 <h3>Reliable stack pointers</h3>
 <p> The internals now reallocate the perl stack only at predictable times. In particular, magic calls never trigger reallocations of the stack, because all reentrancy of the runtime is handled using a &#8220;stack of stacks&#8221;. This should improve reliability of cached stack pointers in the internals and in XSUBs.</p>
 <h3>More generous treatment of carriage returns</h3>
-<p> Perl used to complain if it encountered literal carriage returns in scripts. Now they are mostly treated like whitespace within program text. Inside string literals and here documents, literal carriage returns are ignored if they occur paired with linefeeds, or get interpreted as whitespace if they stand alone. This behavior means that literal carriage returns in files should be avoided. You can get the older, more compatible (but less generous) behavior by defining the preprocessor symbol <tt>&quot;PERL_STRICT_CR&quot;</tt> when building perl. Of course, all this has nothing whatever to do with how escapes like <tt>&quot;&quot;</tt> are handled within strings. </p>
+<p> Perl used to complain if it encountered literal carriage returns in scripts. Now they are mostly treated like whitespace within program text. Inside string literals and here documents, literal carriage returns are ignored if they occur paired with linefeeds, or get interpreted as whitespace if they stand alone. This behavior means that literal carriage returns in files should be avoided. You can get the older, more compatible (but less generous) behavior by defining the preprocessor symbol <tt>&quot;PERL_STRICT_CR&quot;</tt> when building perl. Of course, all this has nothing whatever to do with how escapes like <tt>&quot;
+&quot;</tt> are handled within strings. </p>
 <p> Note that this doesn&#8217;t somehow magically allow you to keep all text files in <font SIZE="-1">DOS</font> format. The generous treatment only applies to files that perl itself parses. If your C compiler doesn&#8217;t allow carriage returns in files, you may still be unable to build modules that need a C compiler.</p>
 <h3>Memory leaks</h3>
 <p> <tt>&quot;substr&quot;</tt>, <tt>&quot;pos&quot;</tt> and <tt>&quot;vec&quot;</tt> don&#8217;t leak memory anymore when used in lvalue context. Many small leaks that impacted applications that embed multiple interpreters have been fixed.</p>
@@ -267,7 +268,7 @@ printit(substr($x, 0, 5));</p>
 <dt>Fcntl</p>
 <dd> More Fcntl constants added: F_SETLK64, F_SETLKW64, O_LARGEFILE for large (more than 4G) file access (the 64-bit support is not yet working, though, so no need to get overly excited), Free/Net/OpenBSD locking behaviour flags F_FLOCK, F_POSIX, Linux F_SHLCK, and O_ACCMODE: the mask of O_RDONLY, O_WRONLY, and O_RDWR.</p>
 <dt>Math::Complex</p>
-<dd> The accessors methods Re, Im, arg, abs, rho, theta, methods can ($z-&gt;<code>Re()</code>) now also act as mutators ($z-&gt;<code><a href="/docs/linux/man/3-re/">Re</a></code>(3)).</p>
+<dd> The accessors methods Re, Im, arg, abs, rho, theta, methods can ($z-&gt;<code>Re()</code>) now also act as mutators ($z-&gt;<code>Re</code>(3)).</p>
 <dt>Math::Trig</p>
 <dd> A little bit of radial trigonometry (cylindrical and spherical) added, for example the great circle distance.</p>
 <dt><font SIZE="-1">POSIX</font></p>

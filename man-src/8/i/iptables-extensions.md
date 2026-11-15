@@ -97,7 +97,7 @@ description: "iptables-extensions — list of extensions in the standard iptable
  ip link set tun0 up<br />
  tcpdump -ddd -i tun0 ip proto 6</dl>
 <p> See tcpdump -L -i $dev for a list of known data link types for a given device. </p>
-<p> You may want to learn more about BPF from FreeBSD&#8217;s <a href="/docs/linux/man/4-bpf/">bpf</a>(4) manpage.</p>
+<p> You may want to learn more about BPF from FreeBSD&#8217;s bpf(4) manpage.</p>
 <h3>cgroup</h3>
 <dl>
 <dt>[<code>!</code>] <code>&#8211;path</code> <i>path</i></p>
@@ -508,7 +508,7 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dt>[<code>!</code>] <code>&#8211;ports</code> <i>port</i>[<code>,</code><i>port</i>|<code>,</code><i>port</i><code>:</code><i>port</i>]&#8230;</p>
 <dd>Match if either the source or destination ports are equal to one of the given ports.</dl>
 <h3>nfacct</h3>
-<p>The nfacct match provides the extended accounting infrastructure for iptables. You have to use this match together with the standalone user-space utility <code><a href="/docs/linux/man/8-nfacct/">nfacct</a>(8)</code> </p>
+<p>The nfacct match provides the extended accounting infrastructure for iptables. You have to use this match together with the standalone user-space utility <code>nfacct(8)</code> </p>
 <p> The only option available for this match is the following:</p>
 <dl>
 <dt><code>&#8211;nfacct-name</code> <i>name</i></p>
@@ -524,7 +524,7 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dl>
 <dd>nfacct get http-traffic</p>
 <dd>{ pkts = 00000000000000000156, bytes = 00000000000000151786 } = http-traffic;</dl>
-<p> You can obtain <code><a href="/docs/linux/man/8-nfacct/">nfacct</a>(8)</code> from <a rel="nofollow" href="http://www.netfilter.org">http://www.netfilter.org</a> or, alternatively, from the git.netfilter.org repository.</p>
+<p> You can obtain <code>nfacct(8)</code> from <a rel="nofollow" href="http://www.netfilter.org">http://www.netfilter.org</a> or, alternatively, from the git.netfilter.org repository.</p>
 <h3>osf</h3>
 <p>The osf module does passive operating system fingerprinting. This module compares some data (Window Size, MSS, options and their order, TTL, DF, and others) from packets with the SYN bit set.</p>
 <dl>
@@ -1484,7 +1484,7 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dd>Marks packets with the given value/mask. The fwmark value set here can be used by advanced routing. (Required for transparent proxying to work: otherwise these packets will get forwarded, which is probably not what you want.)</dl>
 <h3>Trace</h3>
 <p>This target marks packets so that the kernel will log every rule which match the packets as those traverse the tables, chains, rules. It can only be used in the <code>raw</code> table. </p>
-<p> With iptables-legacy, a logging backend, such as <a href="/docs/linux/man/6-ip/">ip</a>(6)t_LOG or nfnetlink_log, must be loaded for this to be visible. The packets are logged with the string prefix: &quot;TRACE: tablename:chainname:type:rulenum &quot; where type can be &quot;rule&quot; for plain rule, &quot;return&quot; for implicit rule at the end of a user defined chain and &quot;policy&quot; for the policy of the built in chains. </p>
+<p> With iptables-legacy, a logging backend, such as ip(6)t_LOG or nfnetlink_log, must be loaded for this to be visible. The packets are logged with the string prefix: &quot;TRACE: tablename:chainname:type:rulenum &quot; where type can be &quot;rule&quot; for plain rule, &quot;return&quot; for implicit rule at the end of a user defined chain and &quot;policy&quot; for the policy of the built in chains. </p>
 <p> With iptables-nft, the target is translated into nftables&#8217; <code>meta nftrace</code> expression. Hence the kernel sends trace events via netlink to userspace where they may be displayed using <code>xtables-monitor &#8211;trace</code> command. For details, refer to <code><a href="/docs/linux/man/8-xtables-monitor/">xtables-monitor</a></code>(8).</p>
 <h3>TTL (IPv4-specific)</h3>
 <p>This is used to modify the IPv4 TTL header field. The TTL field determines how many hops (routers) a packet can traverse until it&#8217;s time to live is exceeded. </p>

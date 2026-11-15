@@ -34,7 +34,7 @@ description: "pdsh – issue commands to groups of hosts in parallel"
 <dt>ssh</p>
 <dd> Uses a variant of <a href="/docs/linux/man/3-popen/">popen</a>(3) to run multiple copies of the <a href="/docs/linux/man/1-ssh/">ssh</a>(1) command.</p>
 <dt>mrsh</p>
-<dd> This module uses the <a href="/docs/linux/man/1-mrsh/">mrsh</a>(1) protocol to execute jobs on remote hosts. The mrsh protocol uses a credential based authentication, forgoing the need to allocate reserved ports. In other aspects, it acts just like rsh. Remote nodes must be running <a href="/docs/linux/man/8-mrshd/">mrshd</a>(8) in order for the mrsh module to work.</p>
+<dd> This module uses the mrsh(1) protocol to execute jobs on remote hosts. The mrsh protocol uses a credential based authentication, forgoing the need to allocate reserved ports. In other aspects, it acts just like rsh. Remote nodes must be running mrshd(8) in order for the mrsh module to work.</p>
 <dt>qsh</p>
 <dd> Allows <code>pdsh</code> to execute MPI jobs over QsNet. Qshell propagates the current working directory, pdsh environment, and Elan capabilities to the remote process. The following environment variable are also appended to the environment: RMS_RANK, RMS_NODEID, RMS_PROCID, RMS_NNODES, and RMS_NPROCS. Since <code>pdsh</code> needs to run setuid root for qshell support, qshell does not directly support propagation of LD_LIBRARY_PATH and LD_PREOPEN. Instead the QSHELL_REMOTE_LD_LIBRARY_PATH and QSHELL_REMOTE_LD_PREOPEN environment variables will may be used and will be remapped to LD_LIBRARY_PATH and LD_PREOPEN by the qshell daemon if set.</p>
 <dt>mqsh</p>
@@ -203,7 +203,7 @@ Run command on foo0-eth0,foo1-eth0,foo2-eth0,foo3-eth0
 <p> As a reminder to the reader, some shells will interpret brackets (&#8216;[&#8216; and &#8216;]&#8217;) for pattern matching. Depending on your shell, it may be necessary to enclose ranged lists within quotes. For example, in tcsh, the first example above should be executed as: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pdsh -w &quot;foo[01-05]&quot; command</p>
 <h2>ORIGIN</h2>
-<p> Originally a rewrite of IBM <a href="/docs/linux/man/1-dsh/">dsh</a>(1) by Jim Garlick &lt;garlick [at] llnl.gov&gt; on LLNL&#8217;s ASCI Blue-Pacific IBM SP system. It is now used on Linux clusters at LLNL. </p>
+<p> Originally a rewrite of IBM dsh(1) by Jim Garlick &lt;garlick [at] llnl.gov&gt; on LLNL&#8217;s ASCI Blue-Pacific IBM SP system. It is now used on Linux clusters at LLNL. </p>
 <h2>LIMITATIONS</h2>
 <p> When using <code>ssh</code> for remote execution, expect the stderr of ssh to be folded in with that of the remote command. When invoked by <code>pdsh</code>, it is not possible for <code>ssh</code> to prompt for passwords if RSA/DSA keys are configured properly, etc.. For <code>ssh</code> implementations that suppport a connect timeout option, <code>pdsh</code> attempts to use that option to enforce the timeout (e.g. -oConnectTimeout=T for OpenSSH), otherwise connect timeouts are not supported when using <code>ssh</code>. Finally, there is no reliable way for <code>pdsh</code> to ensure that remote commands are actually terminated when using a command timeout. Thus if <i>-u</i> is used with <code>ssh</code> commands may be left running on remote hosts even after timeout has killed local <code>ssh</code> processes. </p>
 <p> Output from multiple processes per node may be interspersed when using qshell or mqshell rcmd modules. </p>

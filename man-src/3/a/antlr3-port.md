@@ -214,7 +214,7 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <p> Here is a sample event trace for grammar: </p>
 <p> b : C ({;}A|B) // {;} is there to prevent A|B becoming a set | D ; </p>
 <p> The sequence for this rule (with no viable alt in the subrule) for input &#8216;c c&#8217; (there are 3 tokens) is: </p>
-<p> commence <a href="/docs/linux/man/1-lt/">LT</a>(1) enterRule b location 7 1 enter decision 3 <a href="/docs/linux/man/1-lt/">LT</a>(1) exit decision 3 enterAlt1 location 7 5 <a href="/docs/linux/man/1-lt/">LT</a>(1) consumeToken [c/&lt;4&gt;,1:0] location 7 7 enterSubRule 2 enter decision 2 <a href="/docs/linux/man/1-lt/">LT</a>(1) <a href="/docs/linux/man/1-lt/">LT</a>(1) recognitionException NoViableAltException 2 1 2 exit decision 2 exitSubRule 2 beginResync <a href="/docs/linux/man/1-lt/">LT</a>(1) consumeToken [c/&lt;4&gt;,1:1] <a href="/docs/linux/man/1-lt/">LT</a>(1) endResync LT(-1) exitRule b terminate </p>
+<p> commence LT(1) enterRule b location 7 1 enter decision 3 LT(1) exit decision 3 enterAlt1 location 7 5 LT(1) consumeToken [c/&lt;4&gt;,1:0] location 7 7 enterSubRule 2 enter decision 2 LT(1) LT(1) recognitionException NoViableAltException 2 1 2 exit decision 2 exitSubRule 2 beginResync LT(1) consumeToken [c/&lt;4&gt;,1:1] LT(1) endResync LT(-1) exitRule b terminate </p>
 <p> Referenced by antlr3DebugListenerNew(), and recoverFromMismatchedToken().</p>
 <h3>void(* <code>ANTLR3_DEBUG_EVENT_LISTENER_struct::rewind</code>)(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>ANTLR3_MARKER</code> marker)</h3>
 <p> After an arbitrarily long lookahead as with a cyclic DFA (or with any backtrack), this informs the debugger that stream should be rewound to the position associated with marker. </p>

@@ -20,13 +20,13 @@ description: "gnotime – GnoTime – a time tracker"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;display</code></p>
-<dd> specifies the X server that gnotime should connect to. Refer to the <a href="//www.systutorials.com/docs/linux/man/1x-X/">X</a>(1x) manual page for more info.</p>
+<dd> specifies the X server that gnotime should connect to. Refer to the X(1x) manual page for more info.</p>
 <dt><code>&#8211;geometry</code></p>
-<dd> specifies the <i>geometry</i> of the main window. The syntax <code>[WIDTHxHEIGHT][(+|-)X(+|-)Y]</code> is just like the X toolkit option <i>geometry.</i> See <a href="//www.systutorials.com/docs/linux/man/1x-X/">X</a>(1x) for more info.</dl>
+<dd> specifies the <i>geometry</i> of the main window. The syntax <code>[WIDTHxHEIGHT][(+|-)X(+|-)Y]</code> is just like the X toolkit option <i>geometry.</i> See X(1x) for more info.</dl>
 <h2>OTHER TYPES OF DOCUMENTATION</h2>
 <p> You can find more information about <i>GnoTime</i> and its functions in the <i>Gnome help system.</i> Just select <code>Contents</code> from the <code>Help</code> menu to get there.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/1x-X/">X</a>(1x), the <i>GnoTime</i> Online Help, the <i>GNOME</i> Online Help.</p>
+<p> X(1x), the <i>GnoTime</i> Online Help, the <i>GNOME</i> Online Help.</p>
 <h2>AUTHOR</h2>
 <p>&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1997,1998 Eckehard Berns<br />
 &nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>2001 Linas Vepstas&nbsp;<wbr>&lt;linas [at] linas.org&gt; </p>

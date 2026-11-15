@@ -42,6 +42,6 @@ description: "Tcl_Main, Tcl_SetMainLoop – main program and event loop definiti
 </dl>
 <p> <code>Tcl_Main</code> does not return. Normally a program based on <code>Tcl_Main</code> will terminate when the <code>exit</code> command is evaluated. In interactive mode, if an EOF or channel error is encountered on the standard input channel, then <code>Tcl_Main</code> itself will evaluate the <code>exit</code> command after the main loop procedure (if any) returns. In non-interactive mode, after <code>Tcl_Main</code> evaluates the startup script, and the main loop procedure (if any) returns, <code>Tcl_Main</code> will also evaluate the <code>exit</code> command. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), <a href="/docs/linux/man/3-tcl_getstdchannel/">Tcl_GetStdChannel</a>(3), <a href="/docs/linux/man/3-tcl_standardchannels/">Tcl_StandardChannels</a>(3), <a href="/docs/linux/man/3-tcl_appinit/">Tcl_AppInit</a>(3), <a href="/docs/linux/man/n-exit/">exit</a>(n) </p>
+<p><a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), <a href="/docs/linux/man/3-tcl_getstdchannel/">Tcl_GetStdChannel</a>(3), <a href="/docs/linux/man/3-tcl_standardchannels/">Tcl_StandardChannels</a>(3), <a href="/docs/linux/man/3-tcl_appinit/">Tcl_AppInit</a>(3), exit(n) </p>
 <h2>Keywords</h2>
 <p>application-specific initialization, command-line arguments, main program</p>

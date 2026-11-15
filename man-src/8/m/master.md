@@ -38,7 +38,7 @@ description: "master – Postfix master process"
 <dt><code>SIGTERM</code></p>
 <dd>Upon receipt of a <code>TERM</code> signal (e.g., after &quot;<code>postfix abort</code>&quot;), the master process passes the signal on to its child processes and terminates. This is useful for an emergency shutdown. Normally one would terminate only the master (&quot;<code>postfix stop</code>&quot;) and allow running processes to finish what they are doing.</dl>
 <h2>Diagnostics</h2>
-<p>Problems are reported to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). The exit status is non-zero in case of problems, including problems while initializing as a master daemon process in the background.</p>
+<p>Problems are reported to <code>syslogd</code>(8). The exit status is non-zero in case of problems, including problems while initializing as a master daemon process in the background.</p>
 <h2>Environment</h2>
 <dl>
 <dt><code>MAIL_DEBUG</code></p>
@@ -98,7 +98,7 @@ $data_directory/master.lock, master lock file.</pre>
 <a href="//www.systutorials.com/docs/linux/man/8-verify/">verify</a>(8), address verification
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), master.cf configuration file syntax
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), main.cf configuration file syntax
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>License</h2>
 <p>The Secure Mailer license must be distributed with this software.</p>
 <h2>Author(S)</h2>

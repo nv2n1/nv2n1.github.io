@@ -74,7 +74,7 @@ Limit the CPU CFS&nbsp;<wbr>(Completely Fair Scheduler)&nbsp;<wbr>quota </p>
 <p> <code>-d</code>, <code>&#8211;detach</code>=<i>true</i>|<i>false</i><br />
 Detached mode: run the container in the background and print the new container ID. The default is&nbsp;<wbr><i>false</i>. </p>
 <p> At any time you can run <code>docker ps</code> in the other shell to view a list of the running containers. You can reattach to a detached container with <code>docker attach</code>. If you choose to run a container in the detached mode, then you cannot use the <code>-rm</code> option. </p>
-<p> When attached in the tty mode, you can detach from the container (and leave it running) using a configurable key sequence. The default sequence is CTRL-p CTRL-q. You configure the key sequence using the <code>&#8211;detach-keys</code> option or a configuration file. See <code><a href="/docs/linux/man/5-config-json/">config-json</a>(5)</code> for documentation on using a configuration file. </p>
+<p> When attached in the tty mode, you can detach from the container (and leave it running) using a configurable key sequence. The default sequence is CTRL-p CTRL-q. You configure the key sequence using the <code>&#8211;detach-keys</code> option or a configuration file. See <code>config-json(5)</code> for documentation on using a configuration file. </p>
 <p> <code>&#8211;detach-keys</code>=&quot;&quot;<br />
 Override the key sequence for detaching a container. Format is a single character&nbsp;<wbr>[a-Z]&nbsp;<wbr>or ctrl-&lt;value&gt;&nbsp;<wbr>where&nbsp;<wbr>&lt;value&gt;&nbsp;<wbr>is one of: a-z,&nbsp;<wbr>@,&nbsp;<wbr>^,&nbsp;<wbr>[, , or&nbsp;<wbr>_. </p>
 <p> <code>&#8211;device</code>=[]<br />

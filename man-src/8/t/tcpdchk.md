@@ -43,7 +43,7 @@ The default locations of the <i>tcpd</i> access control tables are:
 <pre><a HREF="//www.systutorials.com/docs/linux/man/8-tcpdmatch/">tcpdmatch</a>(8), explain what tcpd would do in specific cases.
 <a HREF="//www.systutorials.com/docs/linux/man/5-hosts_access/">hosts_access</a>(5), format of the tcpd access control tables.
 <a HREF="//www.systutorials.com/docs/linux/man/5-hosts_options/">hosts_options</a>(5), format of the language extensions.
-<a HREF="//www.systutorials.com/docs/linux/man/5-inetd.conf/">inetd.conf</a>(5), format of the inetd control file.</pre>
+inetd.conf(5), format of the inetd control file.</pre>
 
 <h2>Authors</h2>
 

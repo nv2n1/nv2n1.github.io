@@ -11,7 +11,7 @@ description: "makemap – create database maps for sendmail"
 <h2>Synopsis</h2>
 <p><code>makemap</code> [<code>-C</code> <i>file</i>] [<code>-N</code>] [<code>-c</code> <i>cachesize</i>] [<code>-d</code>] [<code>-D</code> <i>commentchar</i>] [<code>-e</code>] [<code>-f</code>] [<code>-l</code>] [<code>-o</code>] [<code>-r</code>] [<code>-s</code>] [<code>-t</code> <i>delim</i>] [<code>-u</code>] [<code>-v</code>] <i>maptype mapnam</i></p>
 <h2>Description</h2>
-<p><code>Makemap</code> creates the database maps used by the keyed map lookups in <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8). It reads input from the standard input and outputs them to the indicated <i>mapname.</i> </p>
+<p><code>Makemap</code> creates the database maps used by the keyed map lookups in sendmail(8). It reads input from the standard input and outputs them to the indicated <i>mapname.</i> </p>
 <p> Depending on how it is compiled, <code>makemap</code> handles up to three different database formats, selected using the <i>maptype</i> parameter. They may be</p>
 <dl>
 <dt>btree</p>
@@ -52,6 +52,6 @@ description: "makemap – create database maps for sendmail"
 <dt><code>-v</code></p>
 <dd>Verbosely print what it is doing.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-sendmail/">sendmail</a>(8), <a href="/docs/linux/man/1-newaliases/">newaliases</a>(1)</p>
+<p>sendmail(8), <a href="/docs/linux/man/1-newaliases/">newaliases</a>(1)</p>
 <h2>History</h2>
 <p>The <code>makemap</code> command appeared in 4.4BSD.</p>

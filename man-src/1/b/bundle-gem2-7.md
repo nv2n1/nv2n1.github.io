@@ -47,5 +47,5 @@ description: "bundle-gem – Generate a project skeleton for creating a rubygem"
 <h2>See Also</h2>
 <dl>
 <dt>&bull;</p>
-<dd>bundle <a href="/docs/linux/man/1-config/">config</a>(1) <i>bundle-config.1.html</i></p>
+<dd>bundle config(1) <i>bundle-config.1.html</i></p>
 <dd></dl>

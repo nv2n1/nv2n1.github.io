@@ -73,7 +73,8 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dd> Write the <i>text</i> (which must start on the line following the command) to standard output.</p>
 <dt>[2addr]<code>l</code></p>
 <dd> Print the contents of the pattern space: non-printable characters are shown in C-style escaped form; long lines are split and have a trailing ^&#8217;<tt>&quot;\&quot;</tt>&#8216; at the point of the split; the true end of a line is marked with a &#8216;<tt>&quot;$&quot;</tt>&#8216;. Escapes are: &#8216;&#8217;, &#8216;	&#8217;, &#8216;
-&#8217;, &#8216;&#8217;, &#8216;&#8217;, &#8216;&#8217; for <font SIZE="-1">BEL</font>, <font SIZE="-1">HT</font>, <font SIZE="-1">LF</font>, <font SIZE="-1">FF</font>, <font SIZE="-1">CR</font>, <font SIZE="-1">ESC</font>, respectively, and &#8216;\&#8217; followed by a three-digit octal number for all other non-printable characters.</p>
+&#8217;, &#8216;&#8217;, &#8216;
+&#8217;, &#8216;&#8217; for <font SIZE="-1">BEL</font>, <font SIZE="-1">HT</font>, <font SIZE="-1">LF</font>, <font SIZE="-1">FF</font>, <font SIZE="-1">CR</font>, <font SIZE="-1">ESC</font>, respectively, and &#8216;\&#8217; followed by a three-digit octal number for all other non-printable characters.</p>
 <dt>[2addr]<code>n</code></p>
 <dd> If automatic printing is enabled, write the pattern space to the standard output. Replace the pattern space with the next line of input. If there is no more input, processing is terminated.</p>
 <dt>[2addr]<code>N</code></p>
@@ -144,7 +145,7 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
    blank     lower     upper
    cntrl     print     xdigit
 </pre>
-<p> enclosed in <code>[:</code> and <code>:]</code> and represents the set of characters as defined in <i><a href="/docs/linux/man/3-ctype/">ctype</a></i>(3). </p>
+<p> enclosed in <code>[:</code> and <code>:]</code> and represents the set of characters as defined in <i>ctype</i>(3). </p>
 <p> If the first character after <code>[</code> is <code>^</code>, the sense of matching is inverted. </p>
 <p> To include a literal &#8216;<tt>&quot;^&quot;</tt>&#8216;, place it anywhere else but first. To include a literal &#8216;<tt>&quot;]&quot;</tt>&#8216; place it first or immediately after an initial <code>^</code>. To include a literal &#8216;<tt>&quot;-&quot;</tt>&#8216; make it the first (or second after <code>^</code>) or last character, or the second endpoint of a range. </p>
 <p> The special bracket expression constructs <tt>&quot;[[:&lt;:]]&quot;</tt> and <tt>&quot;[[:&gt;:]]&quot;</tt> match the null string at the beginning and end of a word respectively. (Note that neither is identical to Perl&#8217;s &#8216;&#8217; atom.)</p>

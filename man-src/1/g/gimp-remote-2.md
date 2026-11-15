@@ -48,5 +48,5 @@ description: "gimp-remote – tells a running GIMP to open a (local or remote) i
 <h2>AUTHORS</h2>
 <p> Sven Neumann and Simon Budig. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code><a href="/docs/linux/man/5-gimprc/">gimprc</a></code>(5), <code><a href="/docs/linux/man/1-gimptool/">gimptool</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code><a href="/docs/linux/man/5-gimprc/">gimprc</a></code>(5), <code>gimptool</code>(1) </p>
 <h2>Index</h2>

@@ -222,7 +222,7 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <p>This is caused by the fact that currently the assignment operator <tt>&quot;=&quot;</tt> allows only restricted overloading. For some purposes of <font SIZE="-1">PDL</font> it turned out to be necessary to have more control over the overloading of an assignment operator. Therefore, <font SIZE="-1">PDL</font> peruses the operator <tt>&quot;.=&quot;</tt> for certain types of assignments.</p>
 <h3>Q: 6.9 How do I set a set of values in a piddle?</h3>
 <p>In Perl 5.6.7 and higher this assignment can be made using lvalue subroutines: </p>
-<pre> pdl&gt; $a = <a href="//www.systutorials.com/docs/linux/man/5-sequence/">sequence</a>(5); p $a
+<pre> pdl&gt; $a = sequence(5); p $a
  [0 1 2 3 4]
  pdl&gt; $a-&gt;slice('1:2') .= pdl([5,6])
  pdl&gt; p $a
@@ -232,7 +232,7 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
  pdl&gt; p $a
  [0 5 6 3 4]</pre>
 <p>With versions of Perl prior to 5.6.7 <code>or when running under the perl debugger</code> this has to be done using a temporary variable: </p>
-<pre> pdl&gt; $a = <a href="//www.systutorials.com/docs/linux/man/5-sequence/">sequence</a>(5); p $a
+<pre> pdl&gt; $a = sequence(5); p $a
  [0 1 2 3 4]
  pdl&gt; $tmp = $a-&gt;slice('1:2'); p $tmp;
  [1 2]
@@ -266,7 +266,7 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <p>If this seems still a bit murky check PDL::Indexing and <font SIZE="-1">PDL::PP</font> for details about calling conventions, the <i>signature</i> and <i>threading</i> (see also below).</p>
 <h3>Q: 6.13 What is the signature of a <font SIZE="-1">PDL</font> function ?</h3>
 <p>The <i>signature</i> of a function is an important concept in <font SIZE="-1">PDL.</font> Many (but not all) <font SIZE="-1">PDL</font> function have a <i>signature</i> which specifies the arguments and their (minimal) dimensionality. As an example, look at the signature of the <tt>&quot;maximum&quot;</tt> function: </p>
-<pre> '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o] b;'</pre>
+<pre> 'a(n); [o] b;'</pre>
 <p>this says that <tt>&quot;maximum&quot;</tt> takes two arguments, the first of which is (at least) one-dimensional while the second one is zero-dimensional and an <i>output</i> argument (flagged by the <tt>&quot;[o]&quot;</tt> qualifier). If the function is called with piddles of higher dimension the function will be repeatedly called with slices of these piddles of appropriate dimension(this is called <i>threading</i> in <font SIZE="-1">PDL</font>). </p>
 <p> For details and further explanations consult PDL::Indexing and <font SIZE="-1">PDL::PP</font> .</p>
 <h3>Q: 6.14 How can I subclass (inherit from) piddles?</h3>
@@ -460,15 +460,15 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
 <p> Let&#8217;s jump straight in. Here is the code (from a file called <tt>&quot;quickstats.pd&quot;</tt> ) </p>
 <pre> #
  pp_def('quickstats',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o]avg(); [o]max(); [o]min()',
+ Pars =&gt; 'a(n); [o]avg(); [o]max(); [o]min()',
  Code =&gt; '$GENERIC(a) curmax, curmin;
  $GENERIC(a) tmp=0;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ loop(n) %{
  tmp += $a();
  if (!n || $a() &gt; curmax) { curmax = $a();}
  if (!n || $a() &lt; curmin) { curmin = $a();}
  %}
- $avg() = tmp/$<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n);
+ $avg() = tmp/$SIZE(n);
  $max() = curmax;
  $min() = curmin;
  '
@@ -477,9 +477,9 @@ description: "PDL::FAQ – Frequently asked questions about PDL"
  pp_done();</pre>
 <p>The above might look like a confusing mixture of C and Perl, but behind the peculiar syntax lies a very powerful language. Let us take it line by line. </p>
 <p> The first line declares that we are starting the definition of a <font SIZE="-1">PDL:PP</font> function called <tt>&quot;quickstats&quot;</tt> . </p>
-<p> The second line is very important as it specifies the input and output parameters of the function. <tt><a href="/docs/linux/man/n-a/">a</a>(n)</tt> tells us that there is one input parameter that we will refer to as <tt>&quot;a&quot;</tt> which is expected to be a vector of length n (likewise matrices, both square and rectangular would be written as <tt>&quot;a(n,n)&quot;</tt> and <tt>&quot;a(n,m)&quot;</tt> respectively). To indicate that something is an output parameter we put <tt>&quot;[o]&quot;</tt> in front of their names, so referring back to the code we see that avg, max and min are three output parameters, all of which are scalar (since they have no dimensional size indicated. </p>
+<p> The second line is very important as it specifies the input and output parameters of the function. <tt>a(n)</tt> tells us that there is one input parameter that we will refer to as <tt>&quot;a&quot;</tt> which is expected to be a vector of length n (likewise matrices, both square and rectangular would be written as <tt>&quot;a(n,n)&quot;</tt> and <tt>&quot;a(n,m)&quot;</tt> respectively). To indicate that something is an output parameter we put <tt>&quot;[o]&quot;</tt> in front of their names, so referring back to the code we see that avg, max and min are three output parameters, all of which are scalar (since they have no dimensional size indicated. </p>
 <p> The third line starts the code definition which is essentially pure C but with a couple of convenient functions. <tt>$GENERIC</tt> is a function that returns the C type of its argument &#8211; here the input parameter a. Thus the first two lines of the code section are variable declarations. </p>
-<p> The <tt><a href="/docs/linux/man/n-loop/">loop</a>(n)</tt> construct is a convenience function that loops over the dimension called n in the parameter section. Inside this loop we calculate the cumulative sum of the input vector and keep track of the maximum and minimum values. Finally we assign the resulting values to the output parameters. </p>
+<p> The <tt>loop(n)</tt> construct is a convenience function that loops over the dimension called n in the parameter section. Inside this loop we calculate the cumulative sum of the input vector and keep track of the maximum and minimum values. Finally we assign the resulting values to the output parameters. </p>
 <p> Finally we finish our function declaration with <tt>&quot;pp_done()&quot;</tt> . </p>
 <p> To compile our new function we need to create a Makefile, which we will just list since its creation is discussed in an earlier question. </p>
 <pre> use PDL::Core::Dev;

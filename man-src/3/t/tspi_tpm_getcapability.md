@@ -70,4 +70,4 @@ description: "Tspi_TPM_GetCapability – get information on the capabilities of 
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_GetCapability</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_tpm_getcapabilitysigned/">Tspi_TPM_GetCapabilitySigned</a></code>(3), <code><a href="/docs/linux/man/3-tspi_tpm_getevent/">Tspi_TPM_GetEvent</a></code>(3).</p>
+<p><code>Tspi_TPM_GetCapabilitySigned</code>(3), <code><a href="/docs/linux/man/3-tspi_tpm_getevent/">Tspi_TPM_GetEvent</a></code>(3).</p>

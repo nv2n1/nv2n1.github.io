@@ -16,7 +16,7 @@ description: "sim2trad, trad2sim – clipboard data conversion for traditional C
 <p> <code>sim2trad</code> converts clipboard&#8217;s data from simplified Chinese to traditional Chinese. </p>
 <p> <code>trad2sim</code> converts clipboard&#8217;s data from traditional Chinese to simplified Chinese.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1), <code><a href="/docs/linux/man/1-gcin-gb-toggle/">gcin-gb-toggle</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1), <code>gcin-gb-toggle</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> sim2trad and trad2sim were written by Edward Der-Hua Liu &lt;cp76 [at] csie.nctu.edu.tw&gt;. </p>
 <h2>Index</h2>

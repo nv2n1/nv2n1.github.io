@@ -27,8 +27,8 @@ description: "pamtohtmltbl – convert pnm/pam visual image to an HTML table"
 <dd> This option causes <code>pamtohtmltbl</code> to display messages about the conversion process.<br />
 &nbsp;<wbr>&nbsp;<wbr></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pnm</code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamtohtmltbl</code> was new in Netpbm 10.15 (April 2003). </p>
 <h2>AUTHORS</h2>

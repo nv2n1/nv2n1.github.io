@@ -13,7 +13,7 @@ description: "Xwayland – an X server for running X clients under Wayland."
 <h2>Description</h2>
 <p><i>Xwayland</i> is an X server and a Wayland client. It plays the role of a proxy between legacy X clients which do not support the Wayland protocols and the Wayland server. </p>
 <p> Usually, <i>Xwayland</i> is spawned automatically by the Wayland server and runs rootless so that X clients integrate seamlessly with the rest of the Wayland desktop. It is however possible for a user to launch Xwayland non-rootless, mainly for testing purposes. </p>
-<p> Like all of the X servers, <i>Xwayland</i> accepts the command line options described in the <i><a href="/docs/linux/man/7-xserver/">Xserver</a></i>(7) manual page. The following additional arguments are supported as well.</p>
+<p> Like all of the X servers, <i>Xwayland</i> accepts the command line options described in the <i>Xserver</i>(7) manual page. The following additional arguments are supported as well.</p>
 <dl>
 <dt><code>-eglstream</code></p>
 <dd>Use EGLStream backend for NVidia GPUs. If <i>Xwayland</i> was compiled with EGLStream support, this option will instruct <i>Xwayland</i> to try that backend first, then fallback to the GBM backend if EGLStream is not supported by the Wayland server. Without this option, <i>Xwayland</i> tries the GBM backend first, and fallback to EGLStream if GBM is not usable.</p>

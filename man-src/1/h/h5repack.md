@@ -60,5 +60,5 @@ description: "h5repack – Copy an HDF5 file to a new file with or without compr
 <p> Apply a chunked layout to objects <i>&#8216;dset1&#8217;</i> and <i>&#8216;dset2&#8217;</i>: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>h5repack -i file1 -o file2 -l dset1,dset2:CHUNK=20&#215;10 -v</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5ls/">h5ls</a></i>(1), <i><a href="/docs/linux/man/1-h5diff/">h5diff</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i><a href="/docs/linux/man/1-h5perf/">h5perf</a></i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1). </p>
+<p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5ls/">h5ls</a></i>(1), <i><a href="/docs/linux/man/1-h5diff/">h5diff</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i>h5perf</i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1). </p>
 <h2>Index</h2>

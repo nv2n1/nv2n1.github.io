@@ -29,6 +29,6 @@ description: "stap-authorize-signing-cert – systemtap signing authorization ut
 <dd>Signing certificate for servers started by the <i>stap-server</i> service. </p>
 </dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-stap/">stap</a></i>(1), <i><a href="/docs/linux/man/7-stappathss/">stappathss</a></i>(7), <i><a href="/docs/linux/man/8-staprun/">staprun</a></i>(8), <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8), <i><a href="/docs/linux/man/8-stap-client/">stap-client</a></i>(8), <i>NSS</i>, <i>certutil</i> </p>
+<p><i><a href="/docs/linux/man/1-stap/">stap</a></i>(1), <i>stappathss</i>(7), <i><a href="/docs/linux/man/8-staprun/">staprun</a></i>(8), <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8), <i>stap-client</i>(8), <i>NSS</i>, <i>certutil</i> </p>
 <h2>Bugs</h2>
 <p>Use the Bugzilla link of the project web page or our mailing list. <code><a rel="nofollow" href="http://sources.redhat.com/systemtap/">http://sources.redhat.com/systemtap/</a></code>, <code>&lt;systemtap [at] sources.redhat.com&gt;</code>. </p>

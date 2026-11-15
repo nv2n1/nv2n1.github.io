@@ -13,7 +13,7 @@ description: "drotm.f –"
 <p>subroutine <code>drotm</code> (N, DX, INCX, DY, INCY, DPARAM)<br />
  <i></i><code>DROTM</code></p>
 <h2>Function/Subroutine Documentation</h2>
-<h3>subroutine drotm (integerN, double precision, dimension(*)DX, integerINCX, double precision, dimension(*)DY, integerINCY, double precision, <a href="/docs/linux/man/5-dimension/">dimension</a>(5)DPARAM)</h3>
+<h3>subroutine drotm (integerN, double precision, dimension(*)DX, integerINCX, double precision, dimension(*)DY, integerINCY, double precision, dimension(5)DPARAM)</h3>
 <p><code>DROTM</code> <code>Purpose: </code></p>
 <dl COMPACT>
 <dd>
@@ -22,7 +22,7 @@ description: "drotm.f –"
  (DY**T)
  DX(LX+I*INCX), I = 0 TO N-1, WHERE LX = 1 IF INCX .GE. 0, ELSE
  LX = (-INCX)*N, AND SIMILARLY FOR SY USING LY AND INCY.
- WITH <a href="//www.systutorials.com/docs/linux/man/1-DPARAM/">DPARAM</a>(1)=DFLAG, H HAS ONE OF THE FOLLOWING FORMS..
+ WITH DPARAM(1)=DFLAG, H HAS ONE OF THE FOLLOWING FORMS..
  DFLAG=-1.D0 DFLAG=0.D0 DFLAG=1.D0 DFLAG=-2.D0
  (DH11 DH12) (1.D0 DH12) (DH11 1.D0) (1.D0 0.D0)
  H=( ) ( ) ( ) ( )
@@ -48,11 +48,11 @@ description: "drotm.f –"
  storage spacing between elements of DY</pre>
 <p><i>DPARAM</i> </p>
 <pre> DPARAM is DOUBLE PRECISION array, dimension 5
- <a href="//www.systutorials.com/docs/linux/man/1-DPARAM/">DPARAM</a>(1)=DFLAG
- <a href="//www.systutorials.com/docs/linux/man/2-DPARAM/">DPARAM</a>(2)=DH11
- <a href="//www.systutorials.com/docs/linux/man/3-DPARAM/">DPARAM</a>(3)=DH21
- <a href="//www.systutorials.com/docs/linux/man/4-DPARAM/">DPARAM</a>(4)=DH12
- <a href="//www.systutorials.com/docs/linux/man/5-DPARAM/">DPARAM</a>(5)=DH22</pre>
+ DPARAM(1)=DFLAG
+ DPARAM(2)=DH11
+ DPARAM(3)=DH21
+ DPARAM(4)=DH12
+ DPARAM(5)=DH22</pre>
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>

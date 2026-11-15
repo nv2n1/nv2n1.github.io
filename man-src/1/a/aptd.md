@@ -32,7 +32,7 @@ description: "aptd – package managing daemon proving a D-Bus interface"
 <dt><i>/etc/apt/apt.conf.d/20dbus</i></p>
 <dd> Adds a small post update hook which will emit the org.debian.apt.CacheChanged signal on the system D-Bus to indicate that the cache has been changed and a possible running aptd instance should reloade its internal cache.</p>
 <dt><i>/usr/share/polkit-1/actions/org.debian.apt.policy</i></p>
-<dd> The PolicyKit definitions of the privileges used by aptdaemon, e.g. to install packages. To change the privileges please have a look at <code><a href="/docs/linux/man/1-policykit-conf/">PolicyKit.conf</a></code>(1).</p>
+<dd> The PolicyKit definitions of the privileges used by aptdaemon, e.g. to install packages. To change the privileges please have a look at <code>PolicyKit.conf</code>(1).</p>
 <dt><i>/etc/dbus-1/system.d/org.debian.apt.conf</i></p>
 <dd> The D-Bus configuration of the org.debian.apt name space.</dl>
 <h2>DIAGNOSTICS</h2>
@@ -44,5 +44,5 @@ description: "aptd – package managing daemon proving a D-Bus interface"
 <h2>AUTHOR</h2>
 <p> Sebastian Heinlein &lt;devel at glatzor dot de&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-aptdcon/">aptdcon</a></code>(1), <code><a href="/docs/linux/man/7-org-debian-apt/">org.debian.apt</a></code>(7), <code><a href="/docs/linux/man/7-org-debian-apt-transaction/">org.debian.apt.transaction</a></code>(7), <code><a href="/docs/linux/man/7-policykit-conf/">PolicyKit.conf</a></code>(7) </p>
+<p> <code><a href="/docs/linux/man/1-aptdcon/">aptdcon</a></code>(1), <code><a href="/docs/linux/man/7-org-debian-apt/">org.debian.apt</a></code>(7), <code><a href="/docs/linux/man/7-org-debian-apt-transaction/">org.debian.apt.transaction</a></code>(7), <code>PolicyKit.conf</code>(7) </p>
 <h2>Index</h2>

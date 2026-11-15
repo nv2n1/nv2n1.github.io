@@ -261,7 +261,7 @@ description: "imapd.conf – IMAP configuration file"
 <dt><code>ldap_tls_check_peer:</code> 0</p>
 <dd>Require and verify server certificate. If this option is yes, you must specify ldap_tls_cacert_file or ldap_tls_cacert_dir.</p>
 <dt><code>ldap_tls_ciphers:</code> &lt;none&gt;</p>
-<dd>List of SSL/TLS ciphers to allow. The format of the string is described in <a href="/docs/linux/man/1-ciphers/">ciphers</a>(1).</p>
+<dd>List of SSL/TLS ciphers to allow. The format of the string is described in ciphers(1).</p>
 <dt><code>ldap_tls_key:</code> &lt;none&gt;</p>
 <dd>File containing the private client key.</p>
 <dt><code>ldap_uri:</code> &lt;none&gt;</p>
@@ -555,7 +555,7 @@ description: "imapd.conf – IMAP configuration file"
 <dt><code>sync_host:</code> &lt;none&gt;</p>
 <dd>Name of the host (replica running <a href="/docs/linux/man/8-sync_server/">sync_server</a>(8)) to which replication actions will be sent by <a href="/docs/linux/man/8-sync_client/">sync_client</a>(8). Prefix with a channel name to only apply for that channel</p>
 <dt><code>sync_log:</code> 0</p>
-<dd>Enable replication action logging by <a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8), <a href="/docs/linux/man/8-imapd/">imapd</a>(8), <a href="/docs/linux/man/8-pop3d/">pop3d</a>(8), and <a href="/docs/linux/man/8-nntpd/">nntpd</a>(8). The log {configdirectory}/sync/log is used by <a href="/docs/linux/man/8-sync_client/">sync_client</a>(8) for &quot;rolling&quot; replication.</p>
+<dd>Enable replication action logging by <a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8), imapd(8), pop3d(8), and <a href="/docs/linux/man/8-nntpd/">nntpd</a>(8). The log {configdirectory}/sync/log is used by <a href="/docs/linux/man/8-sync_client/">sync_client</a>(8) for &quot;rolling&quot; replication.</p>
 <dt><code>sync_log_chain:</code> 0</p>
 <dd>Enable replication action logging by sync_server as well, allowing chaining of replicas. Use this on &#8216;B&#8217; for A =&gt; B =&gt; C replication layout</p>
 <dt><code>sync_log_channels:</code> &lt;none&gt;</p>
@@ -596,7 +596,7 @@ description: "imapd.conf – IMAP configuration file"
 <dt><code>tls_cert_file:</code> &lt;none&gt;</p>
 <dd>File containing the certificate presented for server authentication during STARTTLS. A value of &quot;disabled&quot; will disable SSL/TLS.</p>
 <dt><code>tls_cipher_list:</code> DEFAULT</p>
-<dd>The list of SSL/TLS ciphers to allow. The format of the string is described in <a href="/docs/linux/man/1-ciphers/">ciphers</a>(1).</p>
+<dd>The list of SSL/TLS ciphers to allow. The format of the string is described in ciphers(1).</p>
 <dt><code>tls_key_file:</code> &lt;none&gt;</p>
 <dd>File containing the private key belonging to the server certificate. A value of &quot;disabled&quot; will disable SSL/TLS.</p>
 <dt><code>tls_require_cert:</code> 0</p>
@@ -633,4 +633,4 @@ description: "imapd.conf – IMAP configuration file"
 <dd>A list of SSL/TLS versions to not disable. Cyrus IMAP SSL/TLS starts with all protocols, and substracts protocols not in this list. Newer versions of SSL/TLS will need to be added here to allow them to get disabled. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-imapd/">imapd</a>(8)</code>, <code><a href="/docs/linux/man/8-pop3d/">pop3d</a>(8)</code>, <code><a href="/docs/linux/man/8-nntpd/">nntpd</a>(8)</code>, <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8)</code>, <code><a href="/docs/linux/man/8-timsieved/">timsieved</a>(8)</code>, <code><a href="/docs/linux/man/8-idled/">idled</a>(8)</code>, <code><a href="/docs/linux/man/8-notifyd/">notifyd</a>(8)</code>, <code><a href="/docs/linux/man/8-deliver/">deliver</a>(8)</code>, <code><a href="/docs/linux/man/8-cyrus-master/">cyrus-master</a>(8)</code>, <code><a href="/docs/linux/man/1-ciphers/">ciphers</a>(1)</code> </p>
+<p><code>imapd(8)</code>, <code>pop3d(8)</code>, <code><a href="/docs/linux/man/8-nntpd/">nntpd</a>(8)</code>, <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8)</code>, <code><a href="/docs/linux/man/8-timsieved/">timsieved</a>(8)</code>, <code><a href="/docs/linux/man/8-idled/">idled</a>(8)</code>, <code><a href="/docs/linux/man/8-notifyd/">notifyd</a>(8)</code>, <code><a href="/docs/linux/man/8-deliver/">deliver</a>(8)</code>, <code><a href="/docs/linux/man/8-cyrus-master/">cyrus-master</a>(8)</code>, <code>ciphers(1)</code> </p>

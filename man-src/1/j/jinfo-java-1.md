@@ -51,7 +51,7 @@ jinfo[option] pid
 <dd>
 <dl>
 <dt>remote-hostname-or-IP</p>
-<dd> remote debug server&#8217;s (see <a href="/docs/linux/man/1-jsadebugd/">jsadebugd</a>(1)) hostname or IP address.</dl>
+<dd> remote debug server&#8217;s (see jsadebugd(1)) hostname or IP address.</dl>
 </dl>
 <dl>
 <dt>

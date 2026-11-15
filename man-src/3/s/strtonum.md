@@ -14,7 +14,7 @@ description: "strtonum – reliably convert string value to an integer"
 <p>In limits.h In bsd/stdlib.h Ft long long Fo strtonum Fa const char *nptr Fa long long minval Fa long long maxval Fa const char **errstr Fc</p>
 <h2>Description</h2>
 <p>The Fn strtonum function converts the string in Fa nptr to a Vt long long value. The Fn strtonum function was designed to facilitate safe, robust programming and overcome the shortcomings of the <a href="/docs/linux/man/3-atoi/">atoi</a>(3) and <a href="/docs/linux/man/3-strtol/">strtol</a>(3) family of interfaces. </p>
-<p> The string may begin with an arbitrary amount of whitespace (as determined by <a href="/docs/linux/man/3-isspace/">isspace</a>(3)) followed by a single optional `+&#8217; or `-&#8216; sign. </p>
+<p> The string may begin with an arbitrary amount of whitespace (as determined by isspace(3)) followed by a single optional `+&#8217; or `-&#8216; sign. </p>
 <p> The remainder of the string is converted to a Vt long long value according to base 10. </p>
 <p> The value obtained is then checked against the provided Fa minval and Fa maxval bounds. If Fa errstr is non-null, Fn strtonum stores an error string in Fa *errstr indicating the failure.</p>
 <h2>Return Values</h2>

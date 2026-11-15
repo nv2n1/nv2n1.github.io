@@ -9,7 +9,7 @@ description: "containerd-config.toml – configuration file for containerd"
 
 <p>containerd-config.toml &#8211; configuration file for containerd</p>
 <h2>Synopsis</h2>
-<p>The <code>config.toml</code> file is a configuration file for the containerd daemon. The file must be placed at <code>/etc/containerd/config.toml</code> or specified with the <code>&#8211;config</code> option of <code>containerd</code> to be used by the daemon. If the file does not exist at the appropriate location or is not provided via the <code>&#8211;config</code> option containerd uses its default configuration settings, which can be displayed with the <code>containerd <a href="/docs/linux/man/1-config/">config</a>(1)</code> command. </p>
+<p>The <code>config.toml</code> file is a configuration file for the containerd daemon. The file must be placed at <code>/etc/containerd/config.toml</code> or specified with the <code>&#8211;config</code> option of <code>containerd</code> to be used by the daemon. If the file does not exist at the appropriate location or is not provided via the <code>&#8211;config</code> option containerd uses its default configuration settings, which can be displayed with the <code>containerd config(1)</code> command. </p>
 <h2>Description</h2>
 <p>The TOML file used to configure the containerd daemon settings has a short list of global settings followed by a series of sections for specific areas of daemon configuration. There is also a section for <code>plugins</code> that allows each containerd plugin to have an area for plugin-specific configuration and settings. </p>
 <h2>Format</h2>
@@ -248,4 +248,4 @@ rdt_config_file = &quot;/etc/rdt-config.yaml&quot;
 <h2>Author</h2>
 <p>Phil Estes estesp [at] gmail.com &lt;mailto:estesp [at] gmail.com&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-ctr/">ctr</a>(8), <a href="/docs/linux/man/8-containerd-config/">containerd-config</a>(8), <a href="/docs/linux/man/8-containerd/">containerd</a>(8) </p>
+<p>ctr(8), <a href="/docs/linux/man/8-containerd-config/">containerd-config</a>(8), containerd(8) </p>

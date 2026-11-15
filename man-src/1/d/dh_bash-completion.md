@@ -21,7 +21,7 @@ description: "dh_bash-completion – install bash completions for package"
   my/path/to/bar-completion  baz  # this would be installed as &quot;baz&quot;
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-debhelper/">debhelper</a></code>(1) </p>
+<p> <code>debhelper</code>(1) </p>
 <p> This program is a part of bash-completion. </p>
 <p> <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1)</p>
 <h2>AUTHOR</h2>

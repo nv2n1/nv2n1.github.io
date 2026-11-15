@@ -9,7 +9,7 @@ description: "cjdroute.conf – Cjdns configuration file"
 
 <p>cjdroute.conf &#8211; Cjdns configuration file</p>
 <h2>Description</h2>
-<p>The <i>cjdroute.conf</i> file configures the cjdns routing engine, <code><a href="/docs/linux/man/8-cjdns/">cjdns</a></code>(8), generally through <code><a href="/docs/linux/man/1-cjdroute/">cjdroute</a></code>(1). The configuration is written in a variation of the JSON format that also accepts traditional C-like comments such as single line comments (//) and multiline comments (/* and */). Additionally, unused JSON values found in <i>cjdroute.conf</i> are ignored by cjdns and can be used as a form of JSON-compliant comments. </p>
+<p>The <i>cjdroute.conf</i> file configures the cjdns routing engine, <code>cjdns</code>(8), generally through <code><a href="/docs/linux/man/1-cjdroute/">cjdroute</a></code>(1). The configuration is written in a variation of the JSON format that also accepts traditional C-like comments such as single line comments (//) and multiline comments (/* and */). Additionally, unused JSON values found in <i>cjdroute.conf</i> are ignored by cjdns and can be used as a form of JSON-compliant comments. </p>
 <h2>Configuration</h2>
 <p><code>&quot;privateKey&quot;:</code> &quot;&#8230;&quot;</p>
 <dl>
@@ -151,4 +151,4 @@ description: "cjdroute.conf – Cjdns configuration file"
 <dl>
 <dd>A common location for the configuration file.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-cjdroute/">cjdroute</a></code>(1), <code><a href="/docs/linux/man/8-cjdns/">cjdns</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/1-cjdroute/">cjdroute</a></code>(1), <code>cjdns</code>(8) </p>

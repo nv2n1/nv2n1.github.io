@@ -68,4 +68,4 @@ description: "fence_xvmd – Libvirt-based, general purpose fencing host for vir
 <dd>Same as the -u option.</p>
 <dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-fence/">fence</a>(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8), <a href="/docs/linux/man/8-fence_xvm/">fence_xvm</a>(8) </p>
+<p>fence(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8), <a href="/docs/linux/man/8-fence_xvm/">fence_xvm</a>(8) </p>

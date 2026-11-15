@@ -81,6 +81,6 @@ description: "pamundice – combine grid of images (tiles) into one"
 <h2>HISTORY</h2>
 <p> <code>pamundice</code> was new in Netpbm 10.39 (June 2007). Before that, <code>pnmcat</code> is the best substitute. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamundice/">pamundice</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-pnmindex/">pnmindex</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtile/">pnmtile</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamundice/">pamundice</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-pnmindex/">pnmindex</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtile/">pnmtile</a></code>(1) , <code>pnm</code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <h2>Index</h2>

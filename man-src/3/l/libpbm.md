@@ -70,7 +70,7 @@ description: "libpbm – libnetpbm functions to read and write PBM image files"
 </dl>
 <p> <i>check_type</i> must have the value <code>PM_CHECK_BASIC </code> (an enumerated value of the <code>pm_check_type</code> enumerated type). Otherwise, the effect of <code>pbm_check()</code> is unpredictable. This argument exists for future backward compatible expansion of the function of <code>pbm_check()</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-libpgm/">libpgm</a></code>(1) , <code><a href="/docs/linux/man/1-libppm/">libppm</a></code>(1) , <code><a href="/docs/linux/man/1-libpnm/">libpnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
+<p> <code>libpgm</code>(1) , <code>libppm</code>(1) , <code>libpnm</code>(1) , <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Tony Hansen and Jef Poskanzer. </p>
 <h2>Index</h2>

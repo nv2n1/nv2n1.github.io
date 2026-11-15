@@ -33,7 +33,7 @@ constexpr std::chrono::years operator-(const std::chrono::year &amp;y1, (4)(sinc
 4) std::chrono::years(int(y1) &#8211; int(y2)) </p>
 <h2>Notes</h2>
 <p>If the resulting year value for (1-3) is outside the range [-32767,32767], the actual value stored is unspecified.<br />
-The result of subtracting two year values is a duration of type std::chrono::years. This duration unit represents the length of the average Gregorian year, and the resulting duration bears no relationship to the number of days in the particular years represented by the operands. For example, the result of 2018y &#8211; 2017y is <a href="/docs/linux/man/1-std--chrono--years/">std::chrono::years</a><code>(1)</code>, which represents 365.2425 days, not 365 days. </p>
+The result of subtracting two year values is a duration of type std::chrono::years. This duration unit represents the length of the average Gregorian year, and the resulting duration bears no relationship to the number of days in the particular years represented by the operands. For example, the result of 2018y &#8211; 2017y is std::chrono::years<code>(1)</code>, which represents 365.2425 days, not 365 days. </p>
 <h2>Example</h2>
 <p>&nbsp;This section is incomplete<br />
 &nbsp;Reason: no example </p>

@@ -35,15 +35,15 @@ description: "dotlockfile – Utility to manage lockfiles"
 <dd> The lockfile to be created/removed, unless the <code>-m</code> option is in effect. </p>
 </dl>
 <h2>RETURN VALUE</h2>
-<p> Zero on success, and non-zero on failure. For the <code>-c</code> option, sucess means that a valid lockfile is already present. When locking (the default, or the <code>-l</code> option) <code>dotlockfile</code> returns the same values as the library function <i><a href="/docs/linux/man/3-lockfile_create/">lockfile_create</a></i>(3). Unlocking a non-existant lockfile is not an error. </p>
+<p> Zero on success, and non-zero on failure. For the <code>-c</code> option, sucess means that a valid lockfile is already present. When locking (the default, or the <code>-l</code> option) <code>dotlockfile</code> returns the same values as the library function <i>lockfile_create</i>(3). Unlocking a non-existant lockfile is not an error. </p>
 <h2>NOTES</h2>
 <p> The lockfile is created exactly as named on the command line. The extension <i>.lock</i> is <i>not</i> automatically added. </p>
 <p> This utility is a lot like the <i><a href="/docs/linux/man/1-lockfile/">lockfile</a></i>(1) utility included with <i>procmail</i>, and the <i><a href="/docs/linux/man/1-mutt_dotlock/">mutt_dotlock</a></i>(1) utility included with <i>mutt</i>. However the command-line arguments differ, and so does the return status. It is believed that <i>dotlockfile</i> is the most flexible implementation, since it automatically detects when it needs to use priviliges to lock a mailbox, and does it safely. </p>
-<p> The above mentioned <i><a href="/docs/linux/man/3-lockfile_create/">lockfile_create</a></i>(3) manpage is present in the <i>liblockfile-dev</i> package. </p>
+<p> The above mentioned <i>lockfile_create</i>(3) manpage is present in the <i>liblockfile-dev</i> package. </p>
 <h2>BUGS</h2>
 <p> None known. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-lockfile_create/">lockfile_create</a>(3), <a href="/docs/linux/man/3-maillock/">maillock</a>(3) </p>
+<p> lockfile_create(3), maillock(3) </p>
 <h2>AUTHOR</h2>
 <p> Miquel van Smoorenburg, miquels [at] cistron.nl </p>
 <h2>Index</h2>

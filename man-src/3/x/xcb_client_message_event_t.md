@@ -36,6 +36,6 @@ description: "xcb_client_message_event_t – NOT YET DOCUMENTED"
 <h2>Description</h2>
 <p>This event represents a ClientMessage, sent by another X11 client. An example is a client sending the <i>_NET_WM_STATE</i> ClientMessage to the root window to indicate the fullscreen window state, effectively requesting that the window manager puts it into fullscreen mode.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb_generic_event_t/">xcb_generic_event_t</a></code>(3), <code><a href="/docs/linux/man/3-xcb_send_event/">xcb_send_event</a></code>(3)</p>
+<p><code>xcb_generic_event_t</code>(3), <code><a href="/docs/linux/man/3-xcb_send_event/">xcb_send_event</a></code>(3)</p>
 <h2>Author</h2>
 <p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

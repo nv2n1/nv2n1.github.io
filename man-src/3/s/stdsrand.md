@@ -13,7 +13,7 @@ description: "std::srand – std::srand"
 
     void srand(unsigned seed);</code></pre>
 <p>Seeds the pseudo-random number generator used by std::rand() with the value seed.<br />
-If rand() is used before any calls to srand(), rand() behaves as if it was seeded with <a href="/docs/linux/man/1-srand/">srand</a><code>(1)</code>.<br />
+If rand() is used before any calls to srand(), rand() behaves as if it was seeded with srand<code>(1)</code>.<br />
 Each time rand() is seeded with the same seed, it must produce the same sequence of values.<br />
 srand() is not guaranteed to be thread-safe. </p>
 <h2>Parameters</h2>

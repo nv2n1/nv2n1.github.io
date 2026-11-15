@@ -103,7 +103,7 @@ description: "script – make typescript of terminal session"
 <dt>
 <dd> If the variable <code>SHELL</code> exists, the shell forked by <code>script</code> will be that shell. If <code>SHELL</code> is not set, the Bourne shell is assumed. (Most shells set this variable automatically).</dl>
 <h2>NOTES</h2>
-<p> The script ends when the forked shell exits (a <i>control-D</i> for the Bourne shell (<code><a href="//www.systutorials.com/docs/linux/man/1p-sh/">sh</a></code>(1p)), and <i>exit</i>, <i>logout</i> or <i>control-d</i> (if <i>ignoreeof</i> is not set) for the C-shell, <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1)). </p>
+<p> The script ends when the forked shell exits (a <i>control-D</i> for the Bourne shell (<code>sh</code>(1p)), and <i>exit</i>, <i>logout</i> or <i>control-d</i> (if <i>ignoreeof</i> is not set) for the C-shell, <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1)). </p>
 <p> Certain interactive commands, such as <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1), create garbage in the typescript file. <code>script</code> works best with commands that do not manipulate the screen, the results are meant to emulate a hardcopy terminal. </p>
 <p> It is not recommended to run <code>script</code> in non-interactive shells. The inner shell of <code>script</code> is always interactive, and this could lead to unexpected results. If you use <code>script</code> in the shell initialization file, you have to avoid entering an infinite loop. You can use for example the <code>.profile</code> file, which is read by login shells only: </p>
 <dl>

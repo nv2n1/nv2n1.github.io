@@ -19,7 +19,7 @@ description: "tlsproxy – Postfix TLS proxy"
 <h2>Security</h2>
 <p>The <code><a href="/docs/linux/man/8-tlsproxy/">tlsproxy</a></code>(8) server is moderately security-sensitive. It talks to untrusted clients on the network. The process can be run chrooted at fixed low privilege.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Configuration Parameters</h2>
 <p>Changes to <code>main.cf</code> are not picked up automatically, as <code><a href="/docs/linux/man/8-tlsproxy/">tlsproxy</a></code>(8) processes may run for a long time depending on mail server load. Use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
@@ -102,7 +102,7 @@ description: "tlsproxy – Postfix TLS proxy"
 <pre><a href="//www.systutorials.com/docs/linux/man/8-postscreen/">postscreen</a>(8), Postfix zombie blocker
 <a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a>(8), Postfix SMTP server
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
-<a href="//www.systutorials.com/docs/linux/man/5-syslogd/">syslogd</a>(5), system logging</pre>
+syslogd(5), system logging</pre>
 <h2>License</h2>
 <p>The Secure Mailer license must be distributed with this software.</p>
 <h2>History</h2>

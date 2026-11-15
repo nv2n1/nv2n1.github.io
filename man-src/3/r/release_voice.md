@@ -15,4 +15,4 @@ void release_voice(int voice);</code></pre>
 <h2>Description</h2>
 <p>Releases a sound card voice, indicating that you are no longer interested in manipulating it. The sound will continue to play, and any resources that it is using will automatically be freed when it finishes. This is essentially the same as deallocate_voice(), but it waits for the sound to stop playing before taking effect. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-allocate_voice/">allocate_voice</a></code>(3), <code><a href="/docs/linux/man/3-deallocate_voice/">deallocate_voice</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-allocate_voice/">allocate_voice</a></code>(3), <code>deallocate_voice</code>(3) </p>

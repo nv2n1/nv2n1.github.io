@@ -179,6 +179,6 @@ description: "gluster – Gluster Console Manager (command line utility)"
 <h2>Files</h2>
 <p>/var/lib/glusterd/*</p>
 <h2>See Also</h2>
-<pre><code><a href="//www.systutorials.com/docs/linux/man/1-fusermount/">fusermount</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/8-mount.glusterfs/">mount.glusterfs</a></code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-glusterfs/">glusterfs</a></code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-glusterd/">glusterd</a></code>(8)</pre>
+<pre><code><a href="//www.systutorials.com/docs/linux/man/1-fusermount/">fusermount</a></code>(1), <code>mount.glusterfs</code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-glusterfs/">glusterfs</a></code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-glusterd/">glusterd</a></code>(8)</pre>
 <h2>Copyright</h2>
 <pre>Copyright(c) 2006-2011 Gluster, Inc. &lt;<a rel="nofollow" href="http://www.gluster.com">http://www.gluster.com</a>&gt;</pre>

@@ -22,7 +22,7 @@ description: "kmouth – A type-and-say front end for speech synthesizers"
 <dd> The history file to open. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-kttsd/">kttsd</a>(1), <a href="/docs/linux/man/1-festival/">festival</a>(1), <a href="/docs/linux/man/1-mbrola/">mbrola</a>(1), <a href="/docs/linux/man/1-freetts/">freetts</a>(1) </p>
+<p> kttsd(1), <a href="/docs/linux/man/1-festival/">festival</a>(1), mbrola(1), freetts(1) </p>
 <p> More detailed user documentation is available from <i>help:/kmouth</i> (either enter this URL into Konqueror, or run <code>khelpcenter</code> <i>help:/kmouth</i>). </p>
 <p> There is also further information available at the KDE Accessibility project web site: <i><a rel="nofollow" href="http://accessibility.kde.org/">http://accessibility.kde.org/</a></i>. </p>
 <h2>AUTHORS</h2>

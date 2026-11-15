@@ -67,7 +67,7 @@ description: "rndc.conf – rndc configuration file"
 <h2>Name Server Configuration</h2>
 <p>The name server must be configured to accept rndc connections and to recognize the key specified in the <i>rndc.conf</i> file, using the controls statement in <i>named.conf</i>. See the sections on the <code>controls</code> statement in the BIND 9 Administrator Reference Manual for details.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rndc/">rndc</a></code>(8), <code><a href="/docs/linux/man/8-rndc-confgen/">rndc-confgen</a></code>(8), <code><a href="/docs/linux/man/1-mmencode/">mmencode</a></code>(1), BIND 9 Administrator Reference Manual.</p>
+<p><code><a href="/docs/linux/man/8-rndc/">rndc</a></code>(8), <code><a href="/docs/linux/man/8-rndc-confgen/">rndc-confgen</a></code>(8), <code>mmencode</code>(1), BIND 9 Administrator Reference Manual.</p>
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>

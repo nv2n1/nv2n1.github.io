@@ -35,7 +35,7 @@ description: "bximage – Interactive Disk Image Creator for Bochs"
 <p> The latest version of this program can be found at:<br />
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://bochs.sourceforge.net/getcurrent.html">http://bochs.sourceforge.net/getcurrent.html</a></p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-bochs/">bochs</a>(1), <a href="/docs/linux/man/5-bochsrc/">bochsrc</a>(5), <a href="/docs/linux/man/1-bochs-dlx/">bochs-dlx</a>(1), <a href="/docs/linux/man/1-bxcommit/">bxcommit</a>(1) </p>
+<p> <a href="/docs/linux/man/1-bochs/">bochs</a>(1), <a href="/docs/linux/man/5-bochsrc/">bochsrc</a>(5), bochs-dlx(1), <a href="/docs/linux/man/1-bxcommit/">bxcommit</a>(1) </p>
 <pre>
 The Bochs IA-32 Emulator site on the World Wide Web:
   <a rel="nofollow" href="http://bochs.sourceforge.net">http://bochs.sourceforge.net</a>

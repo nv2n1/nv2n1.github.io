@@ -34,7 +34,7 @@ struct ibv_dm *mlx5dv_alloc_dm(struct ibv_context *context,
 
  
 
- Please see <a HREF="/docs/linux/man/3-ibv_alloc_dm/">ibv_alloc_dm</a>(3) man page for context and dm_attr.
+ Please see ibv_alloc_dm(3) man page for context and dm_attr.
 
 <h3>mlx5_dm_attr</h3>
 
@@ -71,7 +71,7 @@ struct mlx5dv_alloc_dm_attr {
 
  
 
- <a HREF="/docs/linux/man/3-ibv_alloc_dm/">ibv_alloc_dm</a>(3),
+ ibv_alloc_dm(3),
 
 <h2>AUTHOR</h2>
 

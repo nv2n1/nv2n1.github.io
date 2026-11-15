@@ -34,4 +34,4 @@ description: "CMCIClientFT.setInstance() – Replace class instance"
 <h2>Conforming To</h2>
 <h2>See Also</h2>
 <p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup,<br />
- <a href="/docs/linux/man/3-cmciclient/">CMCIClient</a>(3), <a href="/docs/linux/man/3-cmpistatus/">CMPIStatus</a>(3), <a href="/docs/linux/man/3-cmpiobjectpath/">CMPIObjectPath</a>(3), <a href="/docs/linux/man/3-cmpiflags/">CMPIFlags</a>(3)</p>
+ <a href="/docs/linux/man/3-cmciclient/">CMCIClient</a>(3), <a href="/docs/linux/man/3-cmpistatus/">CMPIStatus</a>(3), <a href="/docs/linux/man/3-cmpiobjectpath/">CMPIObjectPath</a>(3), CMPIFlags(3)</p>

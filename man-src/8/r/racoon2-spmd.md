@@ -34,4 +34,4 @@ description: "spmd – Manages IPsec Security Policy for racoon2"
 <h2>Authors</h2>
 <p>WIDE Project, racoon2 project &lt;<a rel="nofollow" href="http://www.racoon2.wide.ad.jp/">http://www.racoon2.wide.ad.jp/</a>&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-spmdctl/">spmdctl</a>(8) <a href="/docs/linux/man/8-iked/">iked</a>(8) <a href="/docs/linux/man/8-kinkd/">kinkd</a>(8) <a href="/docs/linux/man/5-racoon2-conf/">racoon2.conf</a>(5) <a href="/docs/linux/man/7-racoon2/">racoon2</a>(7) </p>
+<p>spmdctl(8) iked(8) kinkd(8) racoon2.conf(5) racoon2(7) </p>

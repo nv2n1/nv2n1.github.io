@@ -23,6 +23,6 @@ description: "amstex – structured text formatting and typesetting"
 <dt><i>amfndoc.tex</i></p>
 <dd> Documentation for AMS fonts, typesettable by TeX.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-slitex/">slitex</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code>slitex</code>(1).<br />
  Michael Spivak, <i>The Joy of TeX </i>, 2nd edition, American Mathematical Society, 1990, ISBN 0-8218-2997-1. </p>
 <h2>Index</h2>

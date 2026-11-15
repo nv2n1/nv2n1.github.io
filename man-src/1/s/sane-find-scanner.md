@@ -40,7 +40,7 @@ description: "sane-find-scanner – find SCSI and USB scanners and their device 
 <p> <i>sane-find-scanner -p</i><br />
  Probe for parallel port scanners.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code><a href="/docs/linux/man/5-sane-backendname/">sane-backendname</a></code>(5) </p>
+<p> <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code>sane-backendname</code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Oliver Rauch, Henning Meier-Geinitz and others</p>
 <h2>SUPPORTED PLATFORMS</h2>

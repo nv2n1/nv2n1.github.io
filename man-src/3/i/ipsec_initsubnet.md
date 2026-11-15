@@ -38,7 +38,7 @@ description: "ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_ma
 <p> <i>Networkof</i> fills in <i>*dst</i> with the base address of subnet <i>src</i>. </p>
 <p> <i>Maskof</i> fills in <i>*dst</i> with the subnet mask of subnet <i>src</i>, expressed as an address.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3), <a href="/docs/linux/man/3-ipsec_ttosubnet/">ipsec_ttosubnet</a>(3), <a href="/docs/linux/man/3-ipsec_rangetosubnet/">ipsec_rangetosubnet</a>(3)</p>
+<p> inet(3), ipsec_ttosubnet(3), ipsec_rangetosubnet(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Fatal errors in <i>initsubnet</i> are: unknown address family; unknown <i>clash</i> value; impossible mask bit count; non-zero host-number bits and <i>clash</i> is <code>&#8216;x&#8217;</code>. Fatal errors in <i>addrtosubnet</i> are: unknown address family. Fatal errors in <i>masktocount</i> are: unknown address family; mask bits not contiguous.</p>
 <h2>HISTORY</h2>

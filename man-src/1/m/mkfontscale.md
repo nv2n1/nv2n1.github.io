@@ -45,7 +45,7 @@ description: "mkfontscale – create an index of scalable font files for X"
 <dt><code>&#8212;</code></p>
 <dd> end of options.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/1-mkfontdir/">mkfontdir</a>(1), <a href="/docs/linux/man/1-ttmkfdir/">ttmkfdir</a>(1), <a href="/docs/linux/man/1-xfs/">xfs</a>(1), <a href="/docs/linux/man/1-xset/">xset</a>(1)</p>
+<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/1-mkfontdir/">mkfontdir</a>(1), <a href="/docs/linux/man/1-ttmkfdir/">ttmkfdir</a>(1), xfs(1), <a href="/docs/linux/man/1-xset/">xset</a>(1)</p>
 <h2>NOTES</h2>
 <p> The format of the <code>fonts.scale</code>, <code>fonts.dir</code> and <code>encodings.dir</code> files is documented in the <a href="/docs/linux/man/1-mkfontdir/">mkfontdir</a>(1) manual page. </p>
 <p> <code>Mkfontscale</code> will overwrite any <code>fonts.scale</code> file even if it has been hand-edited. </p>

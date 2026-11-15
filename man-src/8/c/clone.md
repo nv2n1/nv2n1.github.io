@@ -62,6 +62,6 @@ description: "clone – UPS driver clone"
 <h2>Author</h2>
 <p>Arjen de Korte &lt;adkorte-guest [at] alioth.debian.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-upscmd/">upscmd</a></code>(1), <code><a href="/docs/linux/man/1-upsrw/">upsrw</a></code>(1), <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5), <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
+<p><code>upscmd</code>(1), <code>upsrw</code>(1), <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5), <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet Resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> </p>

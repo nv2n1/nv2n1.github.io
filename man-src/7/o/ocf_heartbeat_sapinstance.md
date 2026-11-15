@@ -83,7 +83,7 @@ description: "ocf_heartbeat_SAPInstance – Manages a SAP instance"
 <dl>
 <dd>Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a SAPInstance resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a SAPInstance resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_SAPInstance ocf:heartbeat:SAPInstance \
 params \
 InstanceName=string \

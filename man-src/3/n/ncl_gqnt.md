@@ -15,9 +15,9 @@ GQNT (Inquire normalization transformation) - retrieves the window and viewport 
 <dd>(Integer, Input) - Gives the number of the normalization transformation.
 <dt>ERRIND
 <dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt><a HREF="/docs/linux/man/4-window/">WINDOW</a>(4)
+<dt>WINDOW(4)
 <dd>(Real Array, Output) - The world coordinate window limits in the order WXMIN, WXMAX, WYMIN, WYMAX.
-<dt><a HREF="/docs/linux/man/4-viewpt/">VIEWPT</a>(4)
+<dt>VIEWPT(4)
 <dd>(Real Array, Output) - The normalized device coordinate viewport limits in the order VXMIN, VXMAX, VYMIN, VYMAX.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg-gks.
 <h2>See Also</h2>Online: gswn, gsvp, gselnt, gqcntn, gqmntn, getset, gsclip, gqclip, ginq_norm_tran 
 

@@ -61,7 +61,7 @@ Dashline - A set of line-drawing routines that can be used to generate various d
 <dt>SUPER
 <dd>Command: &quot;ncargf77 -super mycode.f&quot; 
 
- The lines will be drawn as dashed or solid lines, smoothed using splines under tension. DASHDC may be called to define a dash pattern with labels. Crowded lines will be thinned; in order for this to work properly, you must remember to call RESET at the beginning of each picture.</dl><h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by <a HREF="/docs/linux/man/4-i1mach/">I1MACH</a>(4)) and then terminates execution. The possible error messages are as follows:
+ The lines will be drawn as dashed or solid lines, smoothed using splines under tension. DASHDC may be called to define a dash pattern with labels. Crowded lines will be thinned; in order for this to work properly, you must remember to call RESET at the beginning of each picture.</dl><h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. The possible error messages are as follows:
 <dl COMPACT><dt>CFVLD -- VECTD CALL OCCURS BEFORE A CALL TO FRSTD
 <dd>You must call FRSTD before the first call to VECTD.
 <dt>DASHDB -- BLOCKDATA DASHBD APPARENTLY NOT LOADED CORRECTLY

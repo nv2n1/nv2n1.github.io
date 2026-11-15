@@ -52,7 +52,7 @@ description: "Linked List Traverse Functions – Functions that you can use to t
 <pre> extern Evas_List *list;
  Evas_List *l;
  printf('The list:);
- for (l = list; l; l = <a href="//www.systutorials.com/docs/linux/man/l-evas_list_next/">evas_list_next</a>(l))
+ for (l = list; l; l = evas_list_next(l))
  {
  printf('%p, l-&gt;data);
  }</pre>
@@ -73,7 +73,7 @@ description: "Linked List Traverse Functions – Functions that you can use to t
  Evas_List *last, *l;
  last = evas_list_last(list);
  printf('The list in reverse:);
- for (l = last; l; l = <a href="//www.systutorials.com/docs/linux/man/l-evas_list_prev/">evas_list_prev</a>(l))
+ for (l = last; l; l = evas_list_prev(l))
  {
  printf('%p, l-&gt;data);
  }</pre>

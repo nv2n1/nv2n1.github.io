@@ -15,6 +15,6 @@ description: "ftpusers – list of users that may not log in via the FTP daemon"
 <h2>Files</h2>
 <p><i>/etc/ftpusers</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/8-proftpd/">proftpd</a></code>(8), <code><a href="/docs/linux/man/8-wuftpd/">wuftpd</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/8-proftpd/">proftpd</a></code>(8), <code>wuftpd</code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 3.53 of the Linux <i>man-pages</i> project. A description of the project, and information about reporting bugs, can be found at <a rel="nofollow" href="http://www.kernel.org/doc/man-pages/.">http://www.kernel.org/doc/man-pages/.</a> </p>

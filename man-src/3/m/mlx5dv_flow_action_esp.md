@@ -15,7 +15,7 @@ mlx5dv_create_flow_action_esp(struct ibv_context *ctx,
  struct mlx5dv_flow_action_esp *mlx5_attr);</pre></dl><h2>Description</h2>Create an IPSEC ESP flow steering action. 
 
  This verb is identical to ibv_create_flow_action_esp verb, but allows mlx5 specific flags.
-<h2>Arguments</h2>Please see <a HREF="/docs/linux/man/3-ibv_flow_action_esp/">ibv_flow_action_esp</a>(3) man page for ctx and esp.
+<h2>Arguments</h2>Please see ibv_flow_action_esp(3) man page for ctx and esp.
 <h3>mlx5_attr argument</h3><dl COMPACT><dd><pre>struct mlx5dv_flow_action_esp {
  uint64_t comp_mask; /* Use enum mlx5dv_flow_action_esp_mask */
  uint32_t action_flags; /* Use enum mlx5dv_flow_action_flags */
@@ -32,4 +32,4 @@ mlx5dv_create_flow_action_esp(struct ibv_context *ctx,
  The 64 bit sequence number is written in big-endian over the 64 bit IV field. 
 
  There is no need to call modify to update the ESN window on egress when this DV is used.
-<h2>See Also</h2><a HREF="/docs/linux/man/3-ibv_flow_action_esp/">ibv_flow_action_esp</a>(3), RFC 4106
+<h2>See Also</h2>ibv_flow_action_esp(3), RFC 4106

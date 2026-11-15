@@ -37,7 +37,7 @@ description: "kismet – Wireless sniffing and monitoring"
 <dt><code>-f</code></p>
 <dd> Use an alternate config file</p>
 <dt><code>-c</code></p>
-<dd> Override capture source lines (type,interface,name). Refer to <a href="/docs/linux/man/5-kismet-conf/">kismet.conf</a>(5) for more information. Multiple capture source options can be specified for multiple sources. All sources provided here are automatically enabled unless an enable list is also supplied.</p>
+<dd> Override capture source lines (type,interface,name). Refer to kismet.conf(5) for more information. Multiple capture source options can be specified for multiple sources. All sources provided here are automatically enabled unless an enable list is also supplied.</p>
 <dt><code>-C</code></p>
 <dd> Comma-separated list to override what capture sources are enabled.</p>
 <dt><code>-l</code></p>
@@ -84,5 +84,5 @@ description: "kismet – Wireless sniffing and monitoring"
 <h2>GPSMAP</h2>
 <p> <code>gpsmap</code> reads GPS and Network XML datafiles and plots networks on downloaded maps or user-supplied images (such as satellite photos).</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a>(1), <a href="/docs/linux/man/1-gpsmap/">gpsmap</a>(1), <a href="/docs/linux/man/5-kismet-conf/">kismet.conf</a>(5), <a href="/docs/linux/man/5-kismet_ui-conf/">kismet_ui.conf</a>(5), <a href="/docs/linux/man/5-kismet_drone-conf/">kismet_drone.conf</a>(5) </p>
+<p> <a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a>(1), gpsmap(1), kismet.conf(5), kismet_ui.conf(5), kismet_drone.conf(5) </p>
 <h2>Index</h2>

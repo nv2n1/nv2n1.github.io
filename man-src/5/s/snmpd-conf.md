@@ -76,7 +76,7 @@ description: "snmpd.conf – configuration file for the Net-SNMP SNMP agent"
 <dd>This token defines the default X.509 public key to use as the server&#8217;s identity. It should either be a fingerprint or a filename. To create a public key for use, please run the &quot;net-snmp-cert&quot; utility which will help you create the required certificate.</p>
 <dd>The default value for this is the certificate in the &quot;snmpd&quot; named certificate file.</p>
 <dt>[snmp] tlsAlgorithms &lt;algorithms&gt;</p>
-<dd>This string will select the algorithms to use when negotiating security during (D)TLS session establishment. See the openssl manual page <a href="/docs/linux/man/1-ciphers/">ciphers</a>(1) for details on the format. Examples strings include:</p>
+<dd>This string will select the algorithms to use when negotiating security during (D)TLS session establishment. See the openssl manual page ciphers(1) for details on the format. Examples strings include:</p>
 <dl>
 <dd>
 <pre>DEFAULT
@@ -171,7 +171,7 @@ createUser myuser SHA -m 0x0001020304050607080900010203040506070809 AES -m 0x000
  view iso2 included .iso<br />
  view iso3 included .iso.org.dod.mgmt 0xf0</dl>
 </dl>
-<dd>would all define the same view, covering the whole of the &#8216;<a href="/docs/linux/man/1-iso/">iso</a>(1)&#8217; subtree (with the third example ignoring the subidentifiers not covered by the mask).</p>
+<dd>would all define the same view, covering the whole of the &#8216;iso(1)&#8217; subtree (with the third example ignoring the subidentifiers not covered by the mask).</p>
 <dd>More usefully, the mask can be used to define a view covering a particular row (or rows) in a table, by matching against the appropriate table index value, but skipping the column subidentifier:</p>
 <dl>
 <dd>
@@ -401,7 +401,7 @@ createUser myuser SHA -m 0x0001020304050607080900010203040506070809 AES -m 0x000
 <dd>provides a more generic mechanism for defining notification destinations. <i>SNMPCMD_ARGS</i> should be the command-line options required for an equivalent <i>snmptrap</i> (or <i>snmpinform</i>) command to send the desired notification. The option <i>-Ci</i> can be used (with <i>-v2c</i> or <i>-v3</i>) to generate an INFORM notification rather than an unacknowledged TRAP.</p>
 <dd>This is the appropriate directive for defining SNMPv3 trap receivers. See <a rel="nofollow" href="http://www.net-snmp.org/tutorial/tutorial-5/commands/snmptrap-v3.html">http://www.net-snmp.org/tutorial/tutorial-5/commands/snmptrap-v3.html</a> for more information about SNMPv3 notification behaviour.</p>
 <dt>authtrapenable {1|2}</p>
-<dd>determines whether to generate authentication failure traps (<i><a href="/docs/linux/man/1-enabled/">enabled</a>(1)</i>) or not (<i><a href="/docs/linux/man/2-disabled/">disabled</a>(2)</i> &#8211; the default). Ordinarily the corresponding MIB object (snmpEnableAuthenTraps.0) is read-write, but specifying this directive makes this object read-only, and attempts to set the value via SET requests will result in a <i>notWritable</i> error response.</p>
+<dd>determines whether to generate authentication failure traps (<i>enabled(1)</i>) or not (<i>disabled(2)</i> &#8211; the default). Ordinarily the corresponding MIB object (snmpEnableAuthenTraps.0) is read-write, but specifying this directive makes this object read-only, and attempts to set the value via SET requests will result in a <i>notWritable</i> error response.</p>
 <dt>v1trapaddress HOST</p>
 <dd>defines the agent address, which is inserted into SNMPv1 TRAPs. Arbitrary local IPv4 address is chosen if this option is ommited. This option is useful mainly when the agent is visible from outside world by specific address only (e.g. because of network address translation or firewall).</dl>
 <h3>DisMan Event MIB</h3>
@@ -427,11 +427,11 @@ createUser myuser SHA -m 0x0001020304050607080900010203040506070809 AES -m 0x000
 <dd>
 <dl>
 <dt>OID | ! OID | != OID</p>
-<dd>defines an <i>existence(0)</i> monitor test. A bare OID specifies a <i>present(0)</i> test, which will fire when (an instance of) the monitored OID is created. An expression of the form <i>! OID</i> specifies an <i><a href="/docs/linux/man/1-absent/">absent</a>(1)</i> test, which will fire when the monitored OID is delected. An expression of the form <i>!= OID</i> specifies a <i><a href="/docs/linux/man/2-changed/">changed</a>(2)</i> test, which will fire whenever the monitored value(s) change. Note that there <code>must</code> be whitespace before the OID token.</p>
+<dd>defines an <i>existence(0)</i> monitor test. A bare OID specifies a <i>present(0)</i> test, which will fire when (an instance of) the monitored OID is created. An expression of the form <i>! OID</i> specifies an <i>absent(1)</i> test, which will fire when the monitored OID is delected. An expression of the form <i>!= OID</i> specifies a <i>changed(2)</i> test, which will fire whenever the monitored value(s) change. Note that there <code>must</code> be whitespace before the OID token.</p>
 <dt>OID OP VALUE</p>
-<dd>defines a <i><a href="/docs/linux/man/1-boolean/">boolean</a>(1)</i> monitor test. OP should be one of the defined comparison operators (!=, ==, &lt;, &lt;=, &gt;, &gt;=) and VALUE should be an integer value to compare against. Note that there <code>must</code> be whitespace around the OP token. A comparison such as OID !=0 will not be handled correctly.</p>
+<dd>defines a <i>boolean(1)</i> monitor test. OP should be one of the defined comparison operators (!=, ==, &lt;, &lt;=, &gt;, &gt;=) and VALUE should be an integer value to compare against. Note that there <code>must</code> be whitespace around the OP token. A comparison such as OID !=0 will not be handled correctly.</p>
 <dt>OID MIN MAX [DMIN DMAX]</p>
-<dd>defines a <i><a href="/docs/linux/man/2-threshold/">threshold</a>(2)</i> monitor test. MIN and MAX are integer values, specifying lower and upper thresholds. If the value of the monitored OID falls below the lower threshold (MIN) or rises above the upper threshold (MAX), then the monitor entry will trigger the corresponding event.</p>
+<dd>defines a <i>threshold(2)</i> monitor test. MIN and MAX are integer values, specifying lower and upper thresholds. If the value of the monitored OID falls below the lower threshold (MIN) or rises above the upper threshold (MAX), then the monitor entry will trigger the corresponding event.</p>
 <dd>Note that the rising threshold event will only be re-armed when the monitored value falls below the <code>lower</code> threshold (MIN). Similarly, the falling threshold event will be re-armed by the upper threshold (MAX).</p>
 <dd>The optional parameters DMIN and DMAX configure a pair of similar threshold tests, but working with the delta differences between successive sample values.</dl>
 </dl>
@@ -606,7 +606,7 @@ deliverByNotify 7200 system</pre>
 <dd>If MIBOID is specified, then the configuration and result tables will be rooted at this point in the OID tree, but are otherwise structured in exactly the same way. This means that several separate <i>extend</i> directives can specify the same MIBOID root, without conflicting.</p>
 <dd>The exit status and output is cached for each entry individually, and can be cleared (and the caching behaviour configured) using the nsCacheTable.</p>
 <dt>extendfix NAME PROG ARGS</p>
-<dd>registers a command that can be invoked on demand, by setting the appropriate <i>nsExtendRunType</i> instance to the value <i><a href="/docs/linux/man/3-run-command/">run-command</a>(3)</i>. Unlike the equivalent <i>execfix</i>, this directive does not need to be paired with a corresponding <i>extend</i> entry, and can appear on its own.</dl>
+<dd>registers a command that can be invoked on demand, by setting the appropriate <i>nsExtendRunType</i> instance to the value <i>run-command(3)</i>. Unlike the equivalent <i>execfix</i>, this directive does not need to be paired with a corresponding <i>extend</i> entry, and can appear on its own.</dl>
 <p> Both <i>extend</i> and <i>extendfix</i> directives can be configured dynamically, using SNMP SET requests to the NET-SNMP-EXTEND-MIB.</p>
 <h3>MIB-Specific Extension Commands</h3>
 <p>The first group of extension directives invoke arbitrary commands, and rely on the MIB structure (and management applications) having the flexibility to accommodate and interpret the output. This is a convenient way to make information available quickly and simply, but is of no use when implementing specific MIB objects, where the extension must conform to the structure of the MIB (rather than vice versa). The remaining extension mechanisms are all concerned with such MIB-specific situations &#8211; starting with &quot;pass-through&quot; scripts. Use of this mechanism requires that the agent was built with support for the <i>ucd-snmp/pass</i> and <i>ucd-snmp/pass_persist</i> modules (which are both included as part of the default build configuration).</p>
@@ -814,7 +814,7 @@ perl $agent-&gt;register('mylink', '.1.3.6.1.8765', \&amp;myroutine);</pre>
 <h2>Notes</h2>
 <dl>
 <dt>o</p>
-<dd>The Net-SNMP agent can be instructed to re-read the various configuration files, either via an <code>snmpset</code> assignment of <a href="/docs/linux/man/1-integer/">integer</a>(1) to UCD-SNMP-MIB::versionUpdateConfig.0 (.1.3.6.1.4.1.2021.100.11.0), or by sending a <code>kill -HUP</code> signal to the agent process.</p>
+<dd>The Net-SNMP agent can be instructed to re-read the various configuration files, either via an <code>snmpset</code> assignment of integer(1) to UCD-SNMP-MIB::versionUpdateConfig.0 (.1.3.6.1.4.1.2021.100.11.0), or by sending a <code>kill -HUP</code> signal to the agent process.</p>
 <dt>o</p>
 <dd>All directives listed with a value of &quot;yes&quot; actually accept a range of boolean values. These will accept any of <i>1</i>, <i>yes</i> or <i>true</i> to enable the corresponding behaviour, or any of <i>0</i>, <i>no</i> or <i>false</i> to disable it. The default in each case is for the feature to be turned off, so these directives are typically only used to enable the appropriate behaviour.</dl>
 <h2>Example Configuration File</h2>

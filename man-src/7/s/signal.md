@@ -902,7 +902,7 @@ description: "signal – overview of signals"
 <dt>*</p>
 <dd><code><a href="/docs/linux/man/2-getrandom/">getrandom</a></code>(2).</p>
 <dt>*</p>
-<dd><code><a href="/docs/linux/man/3-pthread_mutex_lock/">pthread_mutex_lock</a></code>(3), <code><a href="/docs/linux/man/3-pthread_cond_wait/">pthread_cond_wait</a></code>(3), and related APIs.</p>
+<dd><code>pthread_mutex_lock</code>(3), <code>pthread_cond_wait</code>(3), and related APIs.</p>
 <dt>*</p>
 <dd><code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAIT_BITSET</code>.</p>
 <dt>*</p>

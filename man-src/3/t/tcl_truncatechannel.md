@@ -191,6 +191,6 @@ int
 <h2>Platform Issues</h2>
 <p>The handles returned from <code>Tcl_GetChannelHandle</code> depend on the platform and the channel type. On Unix platforms, the handle is always a Unix file descriptor as returned from the <code>open</code> system call. On Windows platforms, the handle is a file <code>HANDLE</code> when the channel was created with <code>Tcl_OpenFileChannel</code>, <code>Tcl_OpenCommandChannel</code>, or <code>Tcl_MakeFileChannel</code>. Other channel types may return a different type of handle on Windows platforms. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-dstring/">DString</a>(3), <a href="/docs/linux/man/n-fconfigure/">fconfigure</a>(n), <a href="/docs/linux/man/n-filename/">filename</a>(n), <a href="/docs/linux/man/3-fopen/">fopen</a>(3), <a href="/docs/linux/man/3-tcl_createchannel/">Tcl_CreateChannel</a>(3) </p>
+<p>DString(3), fconfigure(n), filename(n), <a href="/docs/linux/man/3-fopen/">fopen</a>(3), <a href="/docs/linux/man/3-tcl_createchannel/">Tcl_CreateChannel</a>(3) </p>
 <h2>Keywords</h2>
 <p>access point, blocking, buffered I/O, channel, channel driver, end of file, flush, input, nonblocking, output, read, seek, write</p>

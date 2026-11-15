@@ -53,7 +53,7 @@ description: "abc2abc – a simple abc checker/re-formatter/transposer"
 <dd> This will force abc2abc to output the notes in the key signature keys[sf] where sf specifies the number of flats (-negative) or sharps (+positive) in the key signature. It is a number between -5 and +5 inclusive.</dl>
 <p> * Normally abc2abc will convert the deprecated notation for decorations (eg. !ppp!) to the abc version 2.0 draft standard (eg. +ppp+). If you do not wish to change to this standard include the -OCC flag.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-abcmtex/">abcmtex</a></i>(1), <i><a href="/docs/linux/man/1-abc2midi/">abc2midi</a></i>(1), <i><a href="/docs/linux/man/1-midi2abc/">midi2abc</a></i>(1), <i><a href="/docs/linux/man/1-mftext/">mftext</a></i>(1)</p>
+<p> <i>abcmtex</i>(1), <i><a href="/docs/linux/man/1-abc2midi/">abc2midi</a></i>(1), <i><a href="/docs/linux/man/1-midi2abc/">midi2abc</a></i>(1), <i><a href="/docs/linux/man/1-mftext/">mftext</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Anselm Lingnau &lt;lingnau [at] tm.informatik.uni-frankfurt.de&gt; and is now supported by Seymour Shlien &lt;seymour.shlien [at] crc.ca&gt; for the GNU/Linux system.</p>
 <h2>VERSION</h2>

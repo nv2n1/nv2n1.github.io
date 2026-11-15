@@ -15,5 +15,5 @@ description: "restore_input_approver"
 <h2>DESCRIPTION</h2>
 <p> Restores the previously saved backup. You can call this function as many times as you want, i.e. the backup will remain the same until you save another approver. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-save_input_approver/">gstream-save_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-set_input_approver/">gstream-set_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-get_input_approver/">gstream-get_input_approver</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-gstream-save_input_approver/">gstream-save_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-set_input_approver/">gstream-set_input_approver</a></code>(3), <code>gstream-get_input_approver</code>(3) </p>
 <h2>Index</h2>

@@ -24,11 +24,11 @@ description: "ypset – bind ypbind to a particular NIS server"
 <h2>Options</h2>
 <dl>
 <dt><code>-d</code><i> domain</i></p>
-<dd>Specify a domain other than the default domain as returned by <code><a href="/docs/linux/man/8-domainname/">domainname</a></code>(8).</p>
+<dd>Specify a domain other than the default domain as returned by <code>domainname</code>(8).</p>
 <dt><code>-h</code><i> hostname</i></p>
 <dd>Set the NIS binding on host <i>hostname</i><br />
 &nbsp;<wbr>instead of the local machine.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-domainname/">domainname</a></code>(8), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code><a href="/docs/linux/man/8-ypcat/">ypcat</a></code>(8), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
+<p><code>domainname</code>(8), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code>ypcat</code>(8), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
 <h2>Author</h2>
 <p><code>ypset</code> is part of the <code>yp-tools</code> package, which was written by Thorsten Kukuk &lt;kukuk [at] linux-nis.org&gt;.</p>

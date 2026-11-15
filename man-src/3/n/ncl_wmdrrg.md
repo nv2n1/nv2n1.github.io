@@ -53,7 +53,7 @@ the spline fit to ((X(I),Y(I)),I=1,N), if NC is greater than 2.</code></pre>
 
 <h2>Usage</h2>
 
-Set the values for the appropriate internal parameters before calling WMDRRG to produce the desired region. The internal parameters that control the appearance of regions are: COL and RHT. As mentioned above, the points specified in the X and Y arrays serve as control points for a spline curve that is fitted to the input polygon. X(N) should equal <a HREF="/docs/linux/man/1-x/">X</a>(1) and Y(N) should equal <a HREF="/docs/linux/man/1-y/">Y</a>(1).
+Set the values for the appropriate internal parameters before calling WMDRRG to produce the desired region. The internal parameters that control the appearance of regions are: COL and RHT. As mentioned above, the points specified in the X and Y arrays serve as control points for a spline curve that is fitted to the input polygon. X(N) should equal X(1) and Y(N) should equal Y(1).
 
 <h2>Access</h2>
 

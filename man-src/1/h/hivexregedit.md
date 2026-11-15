@@ -27,7 +27,7 @@ hivexregedit-- merge[--prefix prefix][--encoding enc] hivefile[regfile] hivexreg
 <pre>
  unix2dos &lt; linux.reg | iconv -f utf-8 -t utf-16le &gt; win.reg
 </pre>
-<p> For more information about encoding, see <i><a href="/docs/linux/man/3-win--hivex--regedit/">Win::Hivex::Regedit</a></i>(3). </p>
+<p> For more information about encoding, see <i>Win::Hivex::Regedit</i>(3). </p>
 <p> If you are unsure about the current encoding, use the <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command. Recent versions of Windows regedit.exe produce a <font SIZE="-1">UTF-16LE</font> file with Windows-style (<font SIZE="-1">CRLF</font>) line endings, like this: </p>
 <pre>
  $ file software.reg
@@ -78,7 +78,7 @@ hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 <p> The hive format itself does not store this prefix, so you have to supply it based on outside knowledge. (<i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), amongst other things, already knows about this). </p>
 <p> Usually it is sufficient to pass the parameter <tt>&quot;--prefix 'HKEY_LOCAL_MACHINE\SOFTWARE'&quot;</tt> or similar when doing merges and exports.</p>
 <dt><code>&#8211;encoding</code> UTF-16LE|ASCII</p>
-<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i><a href="/docs/linux/man/3-win--hivex--regedit/">Win::Hivex::Regedit</a></i>(3). </p>
+<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3). </p>
 <p> The default is to use <font SIZE="-1">UTF-16LE,</font> which should work with recent versions of Windows.</p>
 <dt><code>&#8211;unsafe-printable-strings</code></p>
 <dd> When exporting (only), assume strings are <font SIZE="-1">UTF-16LE</font> and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </p>
@@ -97,11 +97,11 @@ hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 <dl>
 <dt>
 <dd>
-<p> This all happens because the hive itself contains no information about how strings are encoded (see &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i><a href="/docs/linux/man/3-win--hivex--regedit/">Win::Hivex::Regedit</a></i>(3)). </p>
+<p> This all happens because the hive itself contains no information about how strings are encoded (see &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3)). </p>
 <p> You should only use this option for quick hacking and debugging of the hive contents, and <i>never</i> use it if the output is going to be passed into another program or stored in another hive.</dl>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i><a href="/docs/linux/man/3-win--hivex--regedit/">Win::Hivex::Regedit</a></i>(3), <i><a href="/docs/linux/man/3-win--hivex/">Win::Hivex</a></i>(3), <i><a href="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a href="/docs/linux/man/1-dos2unix/">dos2unix</a></i>(1), <i><a href="/docs/linux/man/1-unix2dos/">unix2dos</a></i>(1), <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
+<p> <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i>Win::Hivex::Regedit</i>(3), <i>Win::Hivex</i>(3), <i><a href="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a href="/docs/linux/man/1-dos2unix/">dos2unix</a></i>(1), <i><a href="/docs/linux/man/1-unix2dos/">unix2dos</a></i>(1), <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
 <h2>COPYRIGHT</h2>

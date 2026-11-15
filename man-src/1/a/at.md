@@ -72,7 +72,7 @@ description: "at, batch, atq, atrm – queue, examine or delete jobs for later e
  <i>/etc/at.allow</i><br />
  <i>/etc/at.deny</i></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5), <code><a href="/docs/linux/man/5-at-deny/">at.deny</a></code>(5), <code><a href="/docs/linux/man/8-atd/">atd</a></code>(8), <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1), <code><a href="/docs/linux/man/1-nice/">nice</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2).</p>
+<p> <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5), <code>at.deny</code>(5), <code><a href="/docs/linux/man/8-atd/">atd</a></code>(8), <code>cron</code>(1), <code><a href="/docs/linux/man/1-nice/">nice</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2).</p>
 <h2>BUGS</h2>
 <p> The correct operation of <code>batch</code> for Linux depends on the presence of a <i>proc</i>&#8211; type directory mounted on <i>/proc</i>. </p>
 <p> If the file <i>/var/run/utmp</i> is not available or corrupted, or if the user is not logged on at the time <code>at</code> is invoked, the mail is sent to the userid found in the environment variable <code>LOGNAME</code>. If that is undefined or empty, the current userid is assumed. </p>

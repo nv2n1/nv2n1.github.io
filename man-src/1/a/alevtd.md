@@ -47,7 +47,7 @@ description: "alevtd – webserver for videotext pages"
 <dt><code>-r</code></p>
 <dd> poll tv frequency, clear vtx page cache if a frequency change was detected.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-alevt/">alevt</a>(1), <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-v4lctl/">v4lctl</a>(1)</p>
+<p> alevt(1), <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-v4lctl/">v4lctl</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Gerd Knorr &lt;kraxel [at] goldbach.in-berlin.de&gt;</p>
 <h2>COPYRIGHT</h2>

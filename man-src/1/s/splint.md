@@ -12,7 +12,7 @@ description: "splint – A tool for statically checking C programs"
 <h2>SYNOPSIS</h2>
 <p> <code>splint</code> [options] </p>
 <h2>DESCRIPTION</h2>
-<p> <code>Splint</code> is a tool for statically checking C programs for security vulnerabilities and common programming mistakes. With minimal effort, Splint can be used as a better <a href="/docs/linux/man/1-lint/">lint</a>(1).If additional effort is invested adding annotations to programs, Splint can perform stronger checks than can be done by any standard lint. For full documentation, please see <a rel="nofollow" href="http://www.splint.org.">http://www.splint.org.</a> This man page only covers a few of the available options. </p>
+<p> <code>Splint</code> is a tool for statically checking C programs for security vulnerabilities and common programming mistakes. With minimal effort, Splint can be used as a better lint(1).If additional effort is invested adding annotations to programs, Splint can perform stronger checks than can be done by any standard lint. For full documentation, please see <a rel="nofollow" href="http://www.splint.org.">http://www.splint.org.</a> This man page only covers a few of the available options. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-help</code></p>
@@ -125,5 +125,5 @@ description: "splint – A tool for statically checking C programs"
 <p> If you need to get in contact with the authors send email to </p>
 <p> or visit </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-lint/">lint</a>(1) </p>
+<p> lint(1) </p>
 <h2>Index</h2>

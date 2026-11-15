@@ -25,7 +25,7 @@ description: "pamtodjvurle – convert a Netpbm image to DjVu Color RLE format"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmtodjvurle/">pbmtodjvurle</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamtodjvurle</code> was new in Netpbm 10.22 (April 2004) but a program that did almost the same thing, called <code>ppmtodjvurle</code>, was in Netpbm 10.21 (March 2004). The latter was written and contributed to Netpbm by Scott Pakin &lt;scott+pbm [at] pakin.org&gt;. <code>pamtodjvurle</code> uses techniques taken from <code>ppmtodjvurle</code>, but no code is copied between them. </p>
 <h2>Index</h2>

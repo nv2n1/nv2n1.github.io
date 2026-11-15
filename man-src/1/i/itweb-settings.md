@@ -214,7 +214,7 @@ description: "itweb-settings – view and modify settings for javaws and the bro
 <h2>AUTHOR</h2>
 <p> Please run in debug (-verbose switch or itw-settings setting or ICEDTEAPLUGIN_DEBUG variable set to true) mode and include that output (best is from java console) with URL to jnlp or html file (or the jnlp/html file or application itself) when filing out the bug report. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-icedtea-web/">icedtea-web</a></code>(1) <code><a href="/docs/linux/man/1-javaws/">javaws</a></code>(1) <code><a href="/docs/linux/man/1-icedtea-web-plugin/">icedtea-web-plugin</a></code>(1) <code><a href="/docs/linux/man/1-itweb-settings/">itweb-settings</a></code>(1) <code><a href="/docs/linux/man/1-policyeditor/">policyeditor</a></code>(1) <code><a href="/docs/linux/man/1-policytool/">policytool</a></code>(1) <code><a href="/docs/linux/man/1-java/">java</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-icedtea-web/">icedtea-web</a></code>(1) <code>javaws</code>(1) <code><a href="/docs/linux/man/1-icedtea-web-plugin/">icedtea-web-plugin</a></code>(1) <code><a href="/docs/linux/man/1-itweb-settings/">itweb-settings</a></code>(1) <code><a href="/docs/linux/man/1-policyeditor/">policyeditor</a></code>(1) <code>policytool</code>(1) <code><a href="/docs/linux/man/1-java/">java</a></code>(1) </p>
 <p> <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web">http://icedtea.classpath.org/wiki/IcedTea-Web</a><br />
  <a rel="nofollow" href="http://icedtea.classpath.org/hg/icedtea-web">http://icedtea.classpath.org/hg/icedtea-web</a> </p>
 <h2>Index</h2>

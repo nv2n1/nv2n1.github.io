@@ -224,5 +224,5 @@ description: "gcdmaster – Graphical front end to cdrdao for composing audio CD
 <h2>AUTHOR</h2>
 <p> Andreas Mueller mueller [at] daneb.ping.de</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cdrdao/">cdrdao</a></code>(1), <a href="/docs/linux/man/1-cdda2wav/">cdda2wav</a><code>(1), <a href="/docs/linux/man/1-cdparanoia/">cdparanoia</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-cdrdao/">cdrdao</a></code>(1), cdda2wav<code>(1), <a href="/docs/linux/man/1-cdparanoia/">cdparanoia</a></code>(1) </p>
 <h2>Index</h2>

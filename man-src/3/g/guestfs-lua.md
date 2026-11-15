@@ -19,7 +19,7 @@ description: "guestfs-lua – How to use libguestfs from Lua"
  g:close ()
 </pre>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents how to call libguestfs from the Lua programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> This manual page documents how to call libguestfs from the Lua programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
 <h3><font SIZE="-1">REQUIRING THE MODULE</font></h3>
 <p> <tt>&quot;require &quot;guestfs&quot;&quot;</tt> returns the module, so you have to assign it to a local variable. Typical usage is: </p>
 <pre>
@@ -60,9 +60,9 @@ description: "guestfs-lua – How to use libguestfs from Lua"
 <p> Most (but not all) errors are converted into objects (ie. tables) containing the following fields:</p>
 <dl>
 <dt>msg</p>
-<dd> The error message (corresponding to &#8220;guestfs_last_error&#8221; in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)).</p>
+<dd> The error message (corresponding to &#8220;guestfs_last_error&#8221; in <i>guestfs</i>(3)).</p>
 <dt>code</p>
-<dd> The <tt>&quot;errno&quot;</tt> (corresponding to &#8220;guestfs_last_errno&#8221; in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)).</dl>
+<dd> The <tt>&quot;errno&quot;</tt> (corresponding to &#8220;guestfs_last_errno&#8221; in <i>guestfs</i>(3)).</dl>
 <p> These objects also have <tt>&quot;__tostring&quot;</tt> functions attached to them so you can use <tt>&quot;tostring&quot;</tt> (or implicit conversion) to convert them into printable strings. </p>
 <p> Note that the library also throws some errors as plain strings. You may need to check the type.</p>
 <h3><font SIZE="-1">EVENTS</font></h3>
@@ -189,7 +189,7 @@ function cb(g, event, eh, flags, buf, array)-- g is the guestfs handle
  end
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-erlang/">guestfs-erlang</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-golang/">guestfs-golang</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-java/">guestfs-java</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-ocaml/">guestfs-ocaml</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-perl/">guestfs-perl</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-python/">guestfs-python</a></i>(3), <i><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></i>(1), <i><a href="/docs/linux/man/3-guestfs-ruby/">guestfs-ruby</a></i>(3), <a rel="nofollow" href="http://www.lua.org/,">http://www.lua.org/,</a> <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i>guestfs</i>(3), <i>guestfs-examples</i>(3), <i>guestfs-erlang</i>(3), <i>guestfs-golang</i>(3), <i>guestfs-java</i>(3), <i><a href="/docs/linux/man/3-guestfs-ocaml/">guestfs-ocaml</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-perl/">guestfs-perl</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-python/">guestfs-python</a></i>(3), <i><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></i>(1), <i>guestfs-ruby</i>(3), <a rel="nofollow" href="http://www.lua.org/,">http://www.lua.org/,</a> <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

@@ -53,7 +53,7 @@ description: "ocf_heartbeat_AoEtarget – Manages ATA-over-Ethernet (AoE) target
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 15.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a AoEtarget resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a AoEtarget resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_AoEtarget ocf:heartbeat:AoEtarget \
 params \
 device=string \

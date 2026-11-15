@@ -13,7 +13,7 @@ description: "cowsay/cowthink – configurable speaking/thinking cow (and a bit 
 <p> cowsay [<code>-e</code> <i>eye_string</i>] [<code>-f</code> <i>cowfile</i>] [<code>-h</code>] [<code>-l</code>] [<code>-n</code>] [<code>-T</code> <i>tongue_string</i>] [<code>-W</code> <i>column</i>] [<code>-bdgpstwy</code>]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Cowsay</i> generates an ASCII picture of a cow saying something provided by the user. If run with no arguments, it accepts standard input, word-wraps the message given at about 40 columns, and prints the cow saying the given message on standard output. </p>
-<p> To aid in the use of arbitrary messages with arbitrary whitespace, use the <code>-n</code> option. If it is specified, the given message will not be word-wrapped. This is possibly useful if you want to make the cow think or speak in <a href="/docs/linux/man/6-figlet/">figlet</a>(6). If <code>-n</code> is specified, there must not be any command-line arguments left after all the switches have been processed. </p>
+<p> To aid in the use of arbitrary messages with arbitrary whitespace, use the <code>-n</code> option. If it is specified, the given message will not be word-wrapped. This is possibly useful if you want to make the cow think or speak in figlet(6). If <code>-n</code> is specified, there must not be any command-line arguments left after all the switches have been processed. </p>
 <p> The <code>-W</code> specifies roughly (where the message should be wrapped. The default is equivalent to <code>-W 40</code> i.e. wrap words at or before the 40th column. </p>
 <p> If any command-line arguments are left over after all switches have been processed, they become the cow&#8217;s message. The program will not accept standard input for a message in this case. </p>
 <p> There are several provided modes which change the appearance of the cow depending on its particular emotional/physical state. The <code>-b</code> option initiates Borg mode; <code>-d</code> causes the cow to appear dead; <code>-g</code> invokes greedy mode; <code>-p</code> causes a state of paranoia to come over the cow; <code>-s</code> makes the cow appear thoroughly stoned; <code>-t</code> yields a tired cow; <code>-w</code> is somewhat the opposite of <code>-t</code>, and initiates wired mode; <code>-y</code> brings on the cow&#8217;s youthful appearance. </p>
@@ -35,5 +35,5 @@ description: "cowsay/cowthink – configurable speaking/thinking cow (and a bit 
 <h2>AUTHOR</h2>
 <p> Tony Monroe (tony [at] nog.net), with suggestions from Shannon Appel (appel [at] CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito [at] CSUA.Berkeley.EDU).</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-perl/">perl</a>(1), <a href="/docs/linux/man/1-wall/">wall</a>(1), <a href="/docs/linux/man/1-nwrite/">nwrite</a>(1), <a href="/docs/linux/man/6-figlet/">figlet</a>(6) </p>
+<p> <a href="/docs/linux/man/1-perl/">perl</a>(1), <a href="/docs/linux/man/1-wall/">wall</a>(1), nwrite(1), figlet(6) </p>
 <h2>Index</h2>

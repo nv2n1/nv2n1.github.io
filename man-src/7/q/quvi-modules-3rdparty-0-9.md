@@ -28,7 +28,7 @@ description: "quvi-modules-3rdparty – Overview of the loadable 3rd party modul
 <dd>LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet. </p>
 <p> <a rel="nofollow" href="http://w3.impa.br/~diego/software/luasocket/">http://w3.impa.br/~diego/software/luasocket/</a></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-libquvi-scripts/">libquvi-scripts</a></code>(7), <code><a href="/docs/linux/man/3-libquvi/">libquvi</a></code>(3), <code><a href="/docs/linux/man/7-quvi-object/">quvi-object</a></code>(7), <code><a href="/docs/linux/man/7-quvi-modules/">quvi-modules</a></code>(7)</p>
+<p><code><a href="/docs/linux/man/7-libquvi-scripts/">libquvi-scripts</a></code>(7), <code><a href="/docs/linux/man/3-libquvi/">libquvi</a></code>(3), <code>quvi-object</code>(7), <code><a href="/docs/linux/man/7-quvi-modules/">quvi-modules</a></code>(7)</p>
 <h2>Further Resources</h2>
 <p>Home</p>
 <dl>

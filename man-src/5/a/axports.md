@@ -33,4 +33,4 @@ description: "axports – AX.25 port configuration file."
 <h2>Files</h2>
 <p>/etc/ax25/axports</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-call/">call</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/8-axparms/">axparms</a></code>(8), <code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8). </p>
+<p><code>call</code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/8-axparms/">axparms</a></code>(8), <code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8). </p>

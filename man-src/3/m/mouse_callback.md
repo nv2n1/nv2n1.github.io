@@ -14,4 +14,4 @@ description: "mouse_callback – User specified mouse callback. Allegro game pro
 <h2>Description</h2>
 <p>Called by the interrupt handler whenever the mouse moves or one of the buttons changes state. This function must be in locked memory, and must execute _very_ quickly! It is passed the event flags that triggered the call, which is a bitmask containing any of the values MOUSE_FLAG_MOVE, MOUSE_FLAG_LEFT_DOWN, MOUSE_FLAG_LEFT_UP, MOUSE_FLAG_RIGHT_DOWN, MOUSE_FLAG_RIGHT_UP, MOUSE_FLAG_MIDDLE_DOWN, MOUSE_FLAG_MIDDLE_UP, and MOUSE_FLAG_MOVE_Z. Note that even if the mouse has more than three buttons, only the first three can be trapped using a callback. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_mouse/">install_mouse</a></code>(3)</p>
+<p><code>install_mouse</code>(3)</p>

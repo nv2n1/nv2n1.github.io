@@ -16,21 +16,21 @@ Conceptually, a fabric provider may be viewed as a local hardware NIC driver, th
 
 <h3>Core providers</h3>
 
-GNI : A provider for the Aries interconnect in Cray XC(TM) systems utilizing the user-space Generic Networking Interface. See <a HREF="/docs/linux/man/7-fi_gni/">fi_gni</a>(7) for more information. 
+GNI : A provider for the Aries interconnect in Cray XC(TM) systems utilizing the user-space Generic Networking Interface. See fi_gni(7) for more information. 
 
  PSM : High-speed InfiniBand networking from Intel. See <a HREF="/docs/linux/man/7-fi_psm/">fi_psm</a>(7) for more information. 
 
  Sockets : A general purpose provider that can be used on any network that supports TCP/UDP sockets. This provider is not intended to provide performance improvements over regular TCP/UDP sockets, but rather to allow developers to write, test, and debug application code even on platforms that do not have high-speed networking. See <a HREF="/docs/linux/man/7-fi_sockets/">fi_sockets</a>(7) for more information. 
 
- usNIC : Ultra low latency Ethernet networking over Cisco userspace VIC adapters. See <a HREF="/docs/linux/man/7-fi_usnic/">fi_usnic</a>(7) for more information. 
+ usNIC : Ultra low latency Ethernet networking over Cisco userspace VIC adapters. See fi_usnic(7) for more information. 
 
  Verbs : This provider uses the Linux Verbs API for network transport. Application performance is, obviously expected to be similar to that of the native Linux Verbs API. Analogous to the Sockets provider, the Verbs provider is intended to enable developers to write, test, and debug application code on platforms that only have Linux Verbs-based networking. See <a HREF="/docs/linux/man/7-fi_verbs/">fi_verbs</a>(7) for more information. 
 
- Blue Gene/Q : See <a HREF="/docs/linux/man/7-fi_bgq/">fi_bgq</a>(7) for more information.
+ Blue Gene/Q : See fi_bgq(7) for more information.
 
 <h3>Utility providers</h3>
 
-RxM : The RxM provider (ofi_rxm) is an utility provider that supports RDM endpoints emulated over MSG endpoints of a core provider. See <a HREF="/docs/linux/man/7-fi_rxm/">fi_rxm</a>(7) for more information.
+RxM : The RxM provider (ofi_rxm) is an utility provider that supports RDM endpoints emulated over MSG endpoints of a core provider. See fi_rxm(7) for more information.
 
 <h2>Core Versus Utility Providers</h2>
 
@@ -38,7 +38,7 @@ Core providers implement the libfabric interfaces directly over low-level hardwa
 
  Utility providers are distinct from core providers in that they are not associated with specific classes of devices. They instead work with core providers to expand their features, and interact with core providers through libfabric interfaces internally. Utility providers are often used to support a specific endpoint type over a simpler endpoint type. For example, the RXD provider implements reliability over unreliable datagram endpoints. The utility providers will not layer over the sockets provider unless it is explicitly requested. 
 
- Utility providers show up as a component in the core provider's component list. See <a HREF="/docs/linux/man/3-fi_fabric/">fi_fabric</a>(3). Utility providers are enabled automatically for core providers that do not support the feature set requested by an application.
+ Utility providers show up as a component in the core provider's component list. See fi_fabric(3). Utility providers are enabled automatically for core providers that do not support the feature set requested by an application.
 
 <h2>Provider Requirements</h2>
 
@@ -126,7 +126,7 @@ FI_ERR : Always logged.
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/7-fi_gni/">fi_gni</a>(7), <a HREF="/docs/linux/man/7-fi_psm/">fi_psm</a>(7), <a HREF="/docs/linux/man/7-fi_sockets/">fi_sockets</a>(7), <a HREF="/docs/linux/man/7-fi_usnic/">fi_usnic</a>(7), <a HREF="/docs/linux/man/7-fi_verbs/">fi_verbs</a>(7), <a HREF="/docs/linux/man/7-fi_bgq/">fi_bgq</a>(7),
+fi_gni(7), <a HREF="/docs/linux/man/7-fi_psm/">fi_psm</a>(7), <a HREF="/docs/linux/man/7-fi_sockets/">fi_sockets</a>(7), fi_usnic(7), <a HREF="/docs/linux/man/7-fi_verbs/">fi_verbs</a>(7), fi_bgq(7),
 
 <h2>Authors</h2>
 

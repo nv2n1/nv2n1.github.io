@@ -11,7 +11,7 @@ description: "pptpctrl – PPTP control connection manager"
 <h2>Synopsis</h2>
 <p><code>pptpctrl</code> <i>pptp-debug-flag</i> <i>no-ipparam-flag</i> <i>ppp-options-value</i> <i>ppp-speed-value</i> <i>ppp-local-ip-value</i> <i>ppp-remote-ip-value</i> [ <i>pptp-call-id</i> ] [ <i>ppp-binary</i> ] [ <i>pptp-logwtmp</i> ]</p>
 <h2>Description</h2>
-<p><code>pptpctrl</code> is usually run by <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8), but can also be run from <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) if some of the features of <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8), such as IP pool management, and inbuilt TCP wrappers, are not required.</p>
+<p><code>pptpctrl</code> is usually run by <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8), but can also be run from <code>inetd</code>(8) if some of the features of <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8), such as IP pool management, and inbuilt TCP wrappers, are not required.</p>
 <h2>Options</h2>
 <p><code>pptpctrl </code> options are unconventional, as they are designed for use by <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8) rather than users. The option order is critical. Flag options consist of a 0 or 1, and must be present. Value options consist of a 0, or a 1 followed by the value. Either the 0 or both the 1 and the value must be present. The remaining options are optional, but must be present in the defined order. The options are as follows:</p>
 <dl>
@@ -45,4 +45,4 @@ description: "pptpctrl – PPTP control connection manager"
 <h2>Availability</h2>
 <p>The most recent version of Poptop is available for download from SourceForge at <i><a rel="nofollow" href="http://sourceforge.net/projects/poptop">http://sourceforge.net/projects/poptop</a></i>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/5-inetd-conf/">inetd.conf</a></code>(5), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8), <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8), <code><a href="/docs/linux/man/5-pptpd-conf/">pptpd.conf</a></code>(5), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8). </p>
+<p><code>inetd</code>(8), <code>inetd.conf</code>(5), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8), <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8), <code><a href="/docs/linux/man/5-pptpd-conf/">pptpd.conf</a></code>(5), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8). </p>

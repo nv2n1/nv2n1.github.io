@@ -8,14 +8,14 @@ description: "euca-generate-environment-config – Read environment variables an
 ---
 
 <h2>NAME</h2>
-<p> euca-generate-environment-config &#8211; Read environment variables and <a href="/docs/linux/man/5-euca2ools-ini/">euca2ools.ini</a>(5) files to discover the service URLs and credentials for a region, then output shellcode with the corresponding environment variables for that information. This output will contain secret access keys and should be treated with care.</p>
+<p> euca-generate-environment-config &#8211; Read environment variables and euca2ools.ini(5) files to discover the service URLs and credentials for a region, then output shellcode with the corresponding environment variables for that information. This output will contain secret access keys and should be treated with care.</p>
 <h2>SYNOPSIS</h2>
 <p> euca-generate-environment-config [&#8211;simple] [-I KEY_ID] [-S KEY]</p>
 <dl>
 <dt>[&#8211;security-token TOKEN]</p>
 <dd> [&#8211;region USER [at] REGION] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dl>
 <h2>DESCRIPTION</h2>
-<p> Read environment variables and <a href="/docs/linux/man/5-euca2ools-ini/">euca2ools.ini</a>(5) files to discover the service URLs and credentials for a region, then output shellcode with the corresponding environment variables for that information. This output will contain secret access keys and should be treated with care.</p>
+<p> Read environment variables and euca2ools.ini(5) files to discover the service URLs and credentials for a region, then output shellcode with the corresponding environment variables for that information. This output will contain secret access keys and should be treated with care.</p>
 <h3>optional arguments:</h3>
 <dl>
 <dt><code>&#8211;simple</code></p>

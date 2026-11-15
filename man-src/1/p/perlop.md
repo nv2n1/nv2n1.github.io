@@ -2533,7 +2533,7 @@ $foo = 150 | 105;
     no integer;
 </pre> 
 
- which lasts until the end of that <font SIZE="-1">BLOCK.</font> Note that this doesn't mean everything is an integer, merely that Perl will use integer operations for arithmetic, comparison, and bitwise operators. For example, even under <tt>&quot;use integer&quot;</tt>, if you take the <tt><a HREF="/docs/linux/man/2-sqrt/">sqrt</a>(2)</tt>, you'll still get <tt>1.4142135623731</tt> or so. 
+ which lasts until the end of that <font SIZE="-1">BLOCK.</font> Note that this doesn't mean everything is an integer, merely that Perl will use integer operations for arithmetic, comparison, and bitwise operators. For example, even under <tt>&quot;use integer&quot;</tt>, if you take the <tt>sqrt(2)</tt>, you'll still get <tt>1.4142135623731</tt> or so. 
 
  Used on numbers, the bitwise operators (<tt>&quot;&amp;&quot;</tt> <tt>&quot;|&quot;</tt> <tt>&quot;^&quot;</tt> <tt>&quot;~&quot;</tt> <tt>&quot;&lt;&lt;&quot;</tt> <tt>&quot;&gt;&gt;&quot;</tt>) always produce integral results. (But see also ``Bitwise String Operators''.) However, <tt>&quot;use integer&quot;</tt> still has meaning for them. By default, their results are interpreted as unsigned integers, but if <tt>&quot;use integer&quot;</tt> is in effect, their results are interpreted as signed integers. For example, <tt>&quot;~0&quot;</tt> usually evaluates to a large integral value. However, <tt>&quot;use integer; ~0&quot;</tt> is <tt>&quot;-1&quot;</tt> on two's-complement machines.
 

@@ -191,4 +191,4 @@ Lintian::Path - Lintian representation of a path entry in a package
  $dol_entry-&gt;resolve_path('some/../where') =&gt; $nonsymlink_entry OR undef
  # Note the trailing slash
  $dol_entry-&gt;resolve_path('some/../where/') =&gt; $dir_entry OR undef</pre></dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.
-<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i><a HREF="/docs/linux/man/3-lintian--collect/">Lintian::Collect</a></i>(3), <i><a HREF="/docs/linux/man/3-lintian--collect--binary/">Lintian::Collect::Binary</a></i>(3), <i><a HREF="/docs/linux/man/3-lintian--collect--source/">Lintian::Collect::Source</a></i>(3)
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i>Lintian::Collect</i>(3), <i>Lintian::Collect::Binary</i>(3), <i>Lintian::Collect::Source</i>(3)

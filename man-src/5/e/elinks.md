@@ -635,10 +635,10 @@ set protocol.user.mailto.unix = &quot;mutt %h -s \&quot;%s\&quot;&quot;</code></
 <p> infofiles.secure_save <code>[0|1]</code> (default: 1)</p>
 <dl>
 <dd>First write data to unique temporary file, then rename this file upon successfully finishing this. Note that this relates only to config files, not downloaded files. You may want to disable it if you are using some exotic permissions for concerned files. Secure file saving is automagically disabled if file is symlink. </p>
-<p> Warning: some systems (ie. OS/2, Win32) require that destination file doesn&#8217;t exist when <code><a href="/docs/linux/man/3-rename/">rename</a></code>(3) is called, breaking atomicity, and reducing reliability of this feature.</dl>
+<p> Warning: some systems (ie. OS/2, Win32) require that destination file doesn&#8217;t exist when <code>rename</code>(3) is called, breaking atomicity, and reducing reliability of this feature.</dl>
 <p> infofiles.secure_save_fsync <code>[0|1]</code> (default: 1)</p>
 <dl>
-<dd>When using secure file saving, call <code><a href="/docs/linux/man/3-fsync/">fsync</a></code>(3), if the OS supports it, to force the OS immediately to write the data to permanent storage. This is optional for those who wish to avoid excessive disk I/O.</dl>
+<dd>When using secure file saving, call <code>fsync</code>(3), if the OS supports it, to force the OS immediately to write the data to permanent storage. This is optional for those who wish to avoid excessive disk I/O.</dl>
 <h3>mime (MIME)</h3>
 <p>MIME-related options (handlers of various MIME types). </p>
 <p> mime.default_type <code>&lt;str&gt;</code> (default: &quot;application/octet-stream&quot;)</p>

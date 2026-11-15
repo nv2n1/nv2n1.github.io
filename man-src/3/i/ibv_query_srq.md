@@ -28,7 +28,7 @@ struct ibv_srq_attr {
 <h2>NOTES</h2>
 <p> If the value returned for srq_limit is 0, then the SRQ limit reached (&quot;low watermark&quot;) event is not (or no longer) armed, and no asynchronous events will be generated until the event is rearmed.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_srq/">ibv_create_srq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_srq/">ibv_destroy_srq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_modify_srq/">ibv_modify_srq</a></code>(3)</p>
+<p> <code>ibv_create_srq</code>(3), <code>ibv_destroy_srq</code>(3), <code>ibv_modify_srq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

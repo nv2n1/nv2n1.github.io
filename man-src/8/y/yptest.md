@@ -17,7 +17,7 @@ description: "yptest – test NIS configuration"
 <dt><code>-q</code></p>
 <dd>Be quiet, don&#8217;t print messages</p>
 <dt><code>-d</code><i> domainname</i></p>
-<dd>Specify a domain other than the default domain as returned by <code><a href="/docs/linux/man/8-domainname/">domainname</a></code>(8). This option is not supported by all tests.</p>
+<dd>Specify a domain other than the default domain as returned by <code>domainname</code>(8). This option is not supported by all tests.</p>
 <dt><code>-h</code><i> hostname</i></p>
 <dd>Query ypserv on <i>hostname</i> instead of the currently used one. This option is not supported by all tests.</p>
 <dt><code>-m</code><i> map</i></p>
@@ -25,6 +25,6 @@ description: "yptest – test NIS configuration"
 <dt><code>-u</code><i> user</i></p>
 <dd>Use the account <i>user</i> instead of <i>nobody.</i> This option should be used if the <i>nobody</i> account does not exist in the map used for testing (<i>passwd.byname</i> or the one given with the <code>-m</code> option).</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-domainname/">domainname</a></code>(8), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code><a href="/docs/linux/man/8-ypcat/">ypcat</a></code>(8), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
+<p><code>domainname</code>(8), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code>ypcat</code>(8), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
 <h2>Author</h2>
 <p><code>yptest</code> is part of the <code>yp-tools</code> package, which was written by Thorsten Kukuk &lt;kukuk [at] linux-nis.org&gt;.</p>

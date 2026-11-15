@@ -47,6 +47,6 @@ description: "gcjh – – generate header files from Java class files"
 <dd> Pass argument to the Java runtime.</dl>
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-javac/">javac</a></i>(1), <i><a href="/docs/linux/man/1-javah/">javah</a></i>(1), &#8230;</p>
+<p> <i><a href="/docs/linux/man/1-javac/">javac</a></i>(1), <i>javah</i>(1), &#8230;</p>
 <h2>AUTHOR</h2>
 <h2>Index</h2>

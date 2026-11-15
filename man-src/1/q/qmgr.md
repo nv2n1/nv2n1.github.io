@@ -95,5 +95,5 @@ description: "qmgr – pbs batch system manager"
 <p> Upon successful processing of all the operands presented to the qmgr command, the exit status will be a value of zero. </p>
 <p> If the qmgr command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_queue_attributes/">pbs_queue_attributes</a>(7B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_server_attributes/">pbs_server_attributes</a>(7B), <a href="//www.systutorials.com/docs/linux/man/8B-qstart/">qstart</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-qstop/">qstop</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-qenable/">qenable</a>(8B), <a href="/docs/linux/man/8-qdisable/">qdisable</a>(8), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources/">pbs_resources</a>(7B) and the PBS External Reference Specification </p>
+<p> pbs_server(8B), pbs_queue_attributes(7B), pbs_server_attributes(7B), qstart(8B), qstop(8B), qenable(8B), <a href="/docs/linux/man/8-qdisable/">qdisable</a>(8), pbs_resources(7B) and the PBS External Reference Specification </p>
 <h2>Index</h2>

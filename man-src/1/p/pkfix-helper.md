@@ -133,7 +133,7 @@ $ pkfix - helper - q oldfile.ps pkfix - oldfile.ps-- ps = oldfonts.ps-- tex = ne
 <p> <code>dvips</code>-produced PostScript files can be structured in sections, demarcated by <tt>%DVIPSBeginSection</tt> and <tt>%DVIPSEndSection</tt>. Font names are local to a section. Hence, a font named <tt>&quot;Fa&quot;</tt> may map to <tt>&quot;cmex10&quot;</tt> in one section and to <tt>&quot;cmmi7&quot;</tt> in another. <code>pkfix-helper</code> assigns every font in a multi-section document a unique name by appending a section-number suffix: <tt>&quot;Fa_S01&quot;</tt>, <tt>&quot;Fa_S02&quot;</tt>, etc. </p>
 <p> Font names are processed in decreasing order of the number of characters they have represented in the document. That is, if the document includes 10 characters from <tt>&quot;Fa&quot;</tt> and 23 characters from <tt>&quot;Fb&quot;</tt>, <code>pkfix-helper</code> will process <tt>&quot;Fb&quot;</tt> before <tt>&quot;Fa&quot;</tt>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pkfix/">pkfix</a></code>(1), <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) </p>
+<p> <code>pkfix</code>(1), <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) </p>
 <p> PostScript Language Reference, Third Edition. Published by Addison-Wesley, <font SIZE="-1">ISBN 0-201-37922-8,</font> &lt;<a rel="nofollow" href="http://www.adobe.com/products/postscript/pdfs/PLRM.pdf">http://www.adobe.com/products/postscript/pdfs/PLRM.pdf</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Scott Pakin, <i>scott+pkfh [at] pakin.org</i></p>

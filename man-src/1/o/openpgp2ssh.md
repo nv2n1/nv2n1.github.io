@@ -32,7 +32,7 @@ description: "openpgp2ssh – translate OpenPGP keys to SSH keys"
 <p> <code>openpgp2ssh < mykey.gpg </code> and this man page were written by Daniel Kahn Gillmor &lt;dkg [at] fifthhorseman.net&gt;.</p>
 <h2>BUGS</h2>
 <p> <code>openpgp2ssh < mykey.gpg </code> only works with RSA keys. DSA keys are the only other key type available in both OpenPGP and SSH, but they are currently unsupported by this utility. </p>
-<p> <code>openpgp2ssh < mykey.gpg </code> only accepts raw OpenPGP packets on standard input. It does not accept ASCII-armored input. <code>openpgp2ssh < mykey.gpg </code> Currently only exports into formats used by the OpenSSH. It should support other key output formats, such as those used by <a href="/docs/linux/man/1-lsh/">lsh</a>(1) and <a href="/docs/linux/man/1-putty/">putty</a>(1). </p>
+<p> <code>openpgp2ssh < mykey.gpg </code> only accepts raw OpenPGP packets on standard input. It does not accept ASCII-armored input. <code>openpgp2ssh < mykey.gpg </code> Currently only exports into formats used by the OpenSSH. It should support other key output formats, such as those used by lsh(1) and <a href="/docs/linux/man/1-putty/">putty</a>(1). </p>
 <p> Secret key output is currently not passphrase-protected. </p>
 <p> <code>openpgp2ssh < mykey.gpg </code> currently cannot handle passphrase-protected secret keys on input.</p>
 <h2>SEE ALSO</h2>

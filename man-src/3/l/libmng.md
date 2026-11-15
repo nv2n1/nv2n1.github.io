@@ -285,7 +285,7 @@ switch&nbsp;<wbr>(iChunkid)&nbsp;<wbr>{<br />
 <p> The canvas style describes how your drawing canvas is made up. You must set this before the library actually starts drawing, so the mng_processheader() callback is a pretty good place for it. </p>
 <p> Currently only 8-bit RGB canvas styles are supported, either with or without an alpha channel. </p>
 <p> If you like to do alpha composition yourself you can select one of the canvas styles that include an alpha channel. You can even have a separate alpha canvas by selecting the MNG_CANVAS_RGB8_A8 style. </p>
-<p> All styles require a compact model. Eg. MNG_CANVAS_BGR8 requires your canvas lines in bgrbgrbgr&#8230; storage, where each letter represents an 8-bit value of the corresponding color, and each threesome makes up the values of <a href="/docs/linux/man/1-one/">one</a>(1) pixel. </p>
+<p> All styles require a compact model. Eg. MNG_CANVAS_BGR8 requires your canvas lines in bgrbgrbgr&#8230; storage, where each letter represents an 8-bit value of the corresponding color, and each threesome makes up the values of one(1) pixel. </p>
 <p> The library processes a line at a time, so the canvas lines do not actually need to be consecutive in memory. </p>
 <h3>Alpha composition and application backgrounds</h3>
 <p> All Network Graphics can be partially transparent. This requires special processing if you need to display an image against some background. Note that the MNG header (MHDR chunk) contains a simplicity field indicating whether transparency information in the file is critical or not. This only applies to embedded images, which means the full image-frame of the MNG may still contain fully transparent pixels! </p>

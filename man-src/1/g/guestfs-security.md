@@ -24,9 +24,9 @@ description: "guestfs-security – security of libguestfs"
 untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appliance kernel-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --qemu process running as non - root-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --sVirt[if using libvirt + SELinux]-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --host kernel
 </code></pre>
 <p> We run a Linux kernel inside a qemu virtual machine, usually running as a non-root user. The attacker would need to write a filesystem which first exploited the kernel, and then exploited either qemu virtualization (eg. a faulty qemu driver) or the libguestfs protocol, and finally to be as serious as the host kernel exploit it would need to escalate its privileges to root. Additionally if you use the libvirt back end and SELinux, sVirt is used to confine the qemu process. This multi-step escalation, performed by a static piece of data, is thought to be extremely hard to do, although we never say ‘never’ about security issues. </p>
-<p> Callers can also reduce the attack surface by forcing the filesystem type when mounting (use &#8220;guestfs_mount_vfs&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)).</p>
+<p> Callers can also reduce the attack surface by forcing the filesystem type when mounting (use &#8220;guestfs_mount_vfs&#8221; in <code>guestfs</code>(3)).</p>
 <h3>General security considerations</h3>
-<p> Be careful with any files or data that you download from a guest (by &#8220;download&#8221; we mean not just the &#8220;guestfs_download&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) command but any command that reads files, filenames, directories or anything else from a disk image). An attacker could manipulate the data to fool your program into doing the wrong thing. Consider cases such as:</p>
+<p> Be careful with any files or data that you download from a guest (by &#8220;download&#8221; we mean not just the &#8220;guestfs_download&#8221; in <code>guestfs</code>(3) command but any command that reads files, filenames, directories or anything else from a disk image). An attacker could manipulate the data to fool your program into doing the wrong thing. Consider cases such as:</p>
 <dl>
 <dt>&bull;</p>
 <dd> the data (file etc) not being present</p>
@@ -43,11 +43,11 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <h3>Protocol security</h3>
 <p> The protocol is designed to be secure, being based on <font SIZE="-1">RFC 4506</font> (<font SIZE="-1">XDR</font>) with a defined upper message size. However a program that uses libguestfs must also take care &#8211; for example you can write a program that downloads a binary from a disk image and executes it locally, and no amount of protocol security will save you from the consequences.</p>
 <h3>Inspection security</h3>
-<p> Parts of the inspection <font SIZE="-1">API</font> (see &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)) return untrusted strings directly from the guest, and these could contain any 8 bit data. Callers should be careful to escape these before printing them to a structured file (for example, use <font SIZE="-1">HTML</font> escaping if creating a web page). </p>
+<p> Parts of the inspection <font SIZE="-1">API</font> (see &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <code>guestfs</code>(3)) return untrusted strings directly from the guest, and these could contain any 8 bit data. Callers should be careful to escape these before printing them to a structured file (for example, use <font SIZE="-1">HTML</font> escaping if creating a web page). </p>
 <p> Guest configuration may be altered in unusual ways by the administrator of the virtual machine, and may not reflect reality (particularly for untrusted or actively malicious guests). For example we parse the hostname from configuration files like <i>/etc/sysconfig/network</i> that we find in the guest, but the guest administrator can easily manipulate these files to provide the wrong hostname. </p>
 <p> The inspection <font SIZE="-1">API</font> parses guest configuration using two external libraries: Augeas (Linux configuration) and hivex (Windows Registry). Both are designed to be robust in the face of malicious data, although denial of service attacks are still possible, for example with oversized configuration files.</p>
 <h3>Running untrusted guest commands</h3>
-<p> Be very cautious about running commands from the guest. By running a command in the guest, you are giving <font SIZE="-1">CPU</font> time to a binary that you do not control, under the same user account as the library, albeit wrapped in qemu virtualization. More information and alternatives can be found in &#8220;<font SIZE="-1">RUNNING COMMANDS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3).</p>
+<p> Be very cautious about running commands from the guest. By running a command in the guest, you are giving <font SIZE="-1">CPU</font> time to a binary that you do not control, under the same user account as the library, albeit wrapped in qemu virtualization. More information and alternatives can be found in &#8220;<font SIZE="-1">RUNNING COMMANDS&#8221;</font> in <code>guestfs</code>(3).</p>
 <h2>HISTORICAL SECURITY ISSUES IN LIBGUESTFS</h2>
 <h3><font SIZE="-1">CVE-2010-3851</font></h3>
 <p> <a rel="nofollow" href="https://bugzilla.redhat.com/642934">https://bugzilla.redhat.com/642934</a> </p>
@@ -60,9 +60,9 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <dt>1.</p>
 <dd> You have enabled the network or have opened the disk in write mode.</p>
 <dt>2.</p>
-<dd> You are also running untrusted code from the guest (see &#8220;<font SIZE="-1">RUNNING COMMANDS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)).</dl>
-<p> The way to avoid this is to specify the expected disk format when adding disks (the optional <tt>&quot;format&quot;</tt> option to &#8220;guestfs_add_drive_opts&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)). You should always do this if the disk is raw format, and it’s a good idea for other cases too. (See also &#8220;<font SIZE="-1">DISK IMAGE FORMATS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)). </p>
-<p> For disks added from libvirt using calls like &#8220;guestfs_add_domain&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), the format is fetched from libvirt and passed through. </p>
+<dd> You are also running untrusted code from the guest (see &#8220;<font SIZE="-1">RUNNING COMMANDS&#8221;</font> in <code>guestfs</code>(3)).</dl>
+<p> The way to avoid this is to specify the expected disk format when adding disks (the optional <tt>&quot;format&quot;</tt> option to &#8220;guestfs_add_drive_opts&#8221; in <code>guestfs</code>(3)). You should always do this if the disk is raw format, and it’s a good idea for other cases too. (See also &#8220;<font SIZE="-1">DISK IMAGE FORMATS&#8221;</font> in <code>guestfs</code>(3)). </p>
+<p> For disks added from libvirt using calls like &#8220;guestfs_add_domain&#8221; in <code>guestfs</code>(3), the format is fetched from libvirt and passed through. </p>
 <p> For libguestfs tools, use the <i>&#8211;format</i> command line parameter as appropriate.</p>
 <h3><font SIZE="-1">CVE-2011-4127</font></h3>
 <p> <a rel="nofollow" href="https://bugzilla.redhat.com/752375">https://bugzilla.redhat.com/752375</a> </p>
@@ -93,14 +93,14 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <p> This bash bug indirectly affects libguestfs. For more information see: <a rel="nofollow" href="https://www.redhat.com/archives/libguestfs/2014-September/msg00252.html">https://www.redhat.com/archives/libguestfs/2014-September/msg00252.html</a></p>
 <h3><font SIZE="-1">CVE-2014-8484</font></h3>
 <h3><font SIZE="-1">CVE-2014-8485</font></h3>
-<p> These two bugs in binutils affect the <font SIZE="-1">GNU</font> <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1) program, and thus the &#8220;guestfs_strings&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) and &#8220;guestfs_strings_e&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) APIs in libguestfs. Running strings on an untrusted file could cause arbitrary code execution (confined to the libguestfs appliance). </p>
+<p> These two bugs in binutils affect the <font SIZE="-1">GNU</font> <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1) program, and thus the &#8220;guestfs_strings&#8221; in <code>guestfs</code>(3) and &#8220;guestfs_strings_e&#8221; in <code>guestfs</code>(3) APIs in libguestfs. Running strings on an untrusted file could cause arbitrary code execution (confined to the libguestfs appliance). </p>
 <p> In libguestfs ≥ 1.29.5 and ≥ 1.28.3, libguestfs uses the <tt>&quot;strings&quot;</tt> <i>-a</i> option to avoid <font SIZE="-1">BFD</font> parsing on the file.</p>
 <h3><font SIZE="-1">CVE-2015-5745</font></h3>
 <p> <a rel="nofollow" href="https://bugzilla.redhat.com/show_bug.cgi?id=1251157">https://bugzilla.redhat.com/show_bug.cgi?id=1251157</a> </p>
 <p> This is not a vulnerability in libguestfs, but because we always give a virtio-serial port to each guest (since that is how guest-host communication happens), an escalation from the appliance to the host qemu process is possible. This could affect you if:</p>
 <dl>
 <dt>&bull;</p>
-<dd> your libguestfs program runs untrusted programs out of the guest (using &#8220;guestfs_sh&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) etc), or</p>
+<dd> your libguestfs program runs untrusted programs out of the guest (using &#8220;guestfs_sh&#8221; in <code>guestfs</code>(3) etc), or</p>
 <dt>&bull;</p>
 <dd> another exploit was found in (for example) kernel filesystem code that allowed a malformed filesystem to take over the appliance.</dl>
 <p> If you use sVirt to confine qemu, that would thwart some attacks.</p>
@@ -127,7 +127,7 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <p> The libvirt backend is not affected. </p>
 <p> The solution is to update qemu to a version containing the fix (see <a rel="nofollow" href="https://lists.gnu.org/archive/html/qemu-devel/2018-06/msg01012.html">https://lists.gnu.org/archive/html/qemu-devel/2018-06/msg01012.html</a>).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-release-notes/">guestfs-release-notes</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-testing/">guestfs-testing</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <code>guestfs</code>(3), <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-release-notes/">guestfs-release-notes</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-testing/">guestfs-testing</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

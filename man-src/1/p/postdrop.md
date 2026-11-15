@@ -26,7 +26,7 @@ postdrop[-rv][-c config_dir]
 <h2>SECURITY</h2>
 <p> The command is designed to run with set-group ID privileges, so that it can write to the <code>maildrop</code> queue directory and so that it can connect to Postfix daemon processes.</p>
 <h2>DIAGNOSTICS</h2>
-<p> Fatal errors: malformed input, I/O error, out of memory. Problems are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) or <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8) and to the standard error stream. When the input is incomplete, or when the process receives a HUP, INT, QUIT or TERM signal, the queue file is deleted.</p>
+<p> Fatal errors: malformed input, I/O error, out of memory. Problems are logged to <code>syslogd</code>(8) or <code>postlogd</code>(8) and to the standard error stream. When the input is incomplete, or when the process receives a HUP, INT, QUIT or TERM signal, the queue file is deleted.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
 <dt>MAIL_CONFIG</p>
@@ -70,8 +70,8 @@ postdrop[-rv][-c config_dir]
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/1-sendmail/">sendmail</a>(1), compatibility interface
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
-<a href="//www.systutorials.com/docs/linux/man/8-postlogd/">postlogd</a>(8), Postfix logging
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging
+postlogd(8), Postfix logging
+syslogd(8), system logging
 </pre>
 <h2>LICENSE</h2>
 <p> The Secure Mailer license must be distributed with this software.</p>

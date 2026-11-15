@@ -43,4 +43,4 @@ description: "pbsnodes – pbs node manipulation"
 <dt>-s</p>
 <dd>Specify the PBS server&#8217;s hostname or IP address.</dl>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B) and the PBS External Reference Specification </p>
+<p>pbs_server(8B) and the PBS External Reference Specification </p>

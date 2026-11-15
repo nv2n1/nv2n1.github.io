@@ -91,7 +91,7 @@ mhshow - show - text / html : charset = % {charset};
 w3m ${charset : +-I $charset} - T text / html % F
 </code></pre>
 </dl>
-<p> That example also shows the use of indentation to signify continuation: the two text lines combine to form a single entry. Note that when dealing with text that has been converted internally by <i><a href="/docs/linux/man/3-iconv/">iconv</a></i>(3), the &#8220;charset&#8221; parameter will reflect the target character set of the text, rather than the original character set in the message. </p>
+<p> That example also shows the use of indentation to signify continuation: the two text lines combine to form a single entry. Note that when dealing with text that has been converted internally by <i>iconv</i>(3), the &#8220;charset&#8221; parameter will reflect the target character set of the text, rather than the original character set in the message. </p>
 <p> Note that if the content being displayed is multipart, but not one of the subtypes listed above, then the f- and F-escapes expand to multiple filenames, one for each subordinate content. Further, stdin is not redirected from the terminal to the content. </p>
 <p> If a display string is not found, <code>mhshow</code> behaves as if these profile entries were supplied and supported: </p>
 <dl>
@@ -119,7 +119,7 @@ mhshow-show-application/PostScript: lpr -Pps
 <p> If an f- or F-escape is not quoted with single quotes, its expansion will be wrapped with single quotes. </p>
 <p> Finally, <code>mhshow</code> will process each message serially &#8212; it won&#8217;t start showing the next message until all the commands executed to display the current message have terminated.</p>
 <h3>Showing Alternate Character Sets</h3>
-<p> If <code>mhshow</code> was built with <i><a href="/docs/linux/man/3-iconv/">iconv</a></i>(3), then all text/plain parts of the message(s) will be displayed using the character set of the current locale. See the <code><a href="/docs/linux/man/1-mhparam/">mhparam</a></code>(1) man page for how determine whether your <code>nmh</code> installation includes <i><a href="/docs/linux/man/3-iconv/">iconv</a></i>(3) support. To convert text parts other than text/plain, or if <code>mhshow</code> was not built with <i>iconv</i>, an external program can be used, as described next. </p>
+<p> If <code>mhshow</code> was built with <i>iconv</i>(3), then all text/plain parts of the message(s) will be displayed using the character set of the current locale. See the <code><a href="/docs/linux/man/1-mhparam/">mhparam</a></code>(1) man page for how determine whether your <code>nmh</code> installation includes <i>iconv</i>(3) support. To convert text parts other than text/plain, or if <code>mhshow</code> was not built with <i>iconv</i>, an external program can be used, as described next. </p>
 <p> Because a content of type text might be in a non-ASCII character set, when <code>mhshow</code> encounters a &#8220;charset&#8221; parameter for this content, it checks if your terminal can display this character set natively. <code>mhshow</code> checks this by examining the current character set defined by the <i><a href="/docs/linux/man/1-locale/">locale</a></i>(1) environment variables. If the value of the locale character set is equal to the value of the charset parameter, then <code>mhshow</code> assumes it can display this content without any additional setup. If the locale is not set properly, <code>mhshow</code> will assume a value of &#8220;US-ASCII&#8221;. If the character set cannot be displayed natively, then <code>mhshow</code> will look for an entry of the form: </p>
 <dl>
 <dt>
@@ -252,7 +252,7 @@ cdispo-&lt;PARAM&gt;  string    Value of &lt;PARAM&gt; from
 ^moreproc:~^Default program to display text/plain content
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-iconv/">iconv</a></i>(3), <i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1), <i><a href="/docs/linux/man/1-mhl/">mhl</a></i>(1), <i><a href="/docs/linux/man/1-mhlist/">mhlist</a></i>(1), <i><a href="/docs/linux/man/1-mhparam/">mhparam</a></i>(1), <i><a href="/docs/linux/man/1-mhstore/">mhstore</a></i>(1), <i><a href="/docs/linux/man/1-sendfiles/">sendfiles</a></i>(1)</p>
+<p> <i>iconv</i>(3), <i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1), <i><a href="/docs/linux/man/1-mhl/">mhl</a></i>(1), <i><a href="/docs/linux/man/1-mhlist/">mhlist</a></i>(1), <i><a href="/docs/linux/man/1-mhparam/">mhparam</a></i>(1), <i><a href="/docs/linux/man/1-mhstore/">mhstore</a></i>(1), <i><a href="/docs/linux/man/1-sendfiles/">sendfiles</a></i>(1)</p>
 <h2>DEFAULTS</h2>
 <pre>
 `<code>+folder</code>' defaults to the current folder

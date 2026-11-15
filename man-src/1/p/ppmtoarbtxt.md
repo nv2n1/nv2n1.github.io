@@ -93,7 +93,7 @@ sphere
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmtoplainpnm/">pnmtoplainpnm</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>ppmtoarbtxt</code> was added to Netpbm in Release 10.14 (March 2003). It existed under the name <code>ppmtotxt</code> since 1995. </p>
 <h2>AUTHOR</h2>

@@ -409,7 +409,7 @@ $ xboxdrv --buttonmap B=A,X=A,Y=A
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <a href="/docs/linux/man/1-a/">a</a>(1), <a href="/docs/linux/man/2-b/">b</a>(2), <a href="/docs/linux/man/3-x/">x</a>(3), <a href="/docs/linux/man/4-y/">y</a>(4) </td>
+<td> a(1), b(2), x(3), y(4) </td>
 <td> face buttons
 </td>
 </tr>
@@ -419,12 +419,12 @@ $ xboxdrv --buttonmap B=A,X=A,Y=A
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <a href="/docs/linux/man/5-lb/">lb</a>(5), <a href="/docs/linux/man/6-rb/">rb</a>(6) </td>
+<td> lb(5), rb(6) </td>
 <td> shoulder buttons (Xbox360 only, mapped to black, white on Xbox1)
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <a href="/docs/linux/man/7-lt/">lt</a>(7), <a href="/docs/linux/man/8-rt/">rt</a>(8) </td>
+<td> lt(7), rt(8) </td>
 <td> analog trigger (needs &#8211;trigger-as-button option)
 </td>
 </tr>
@@ -1139,5 +1139,5 @@ EndSection
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2010-2011 Ingo Ruhnke &lt;grumbel [at] gmail.com&gt; License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; . This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xboxdrvctl/">xboxdrvctl</a></code>(1), <code><a href="/docs/linux/man/1-evtest/">evtest</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1), <code><a href="/docs/linux/man/1-jstest-gtk/">jstest-gtk</a></code>(1), <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1), <code><a href="/docs/linux/man/1-fftest/">fftest</a></code>(1), <code><a href="/docs/linux/man/1-lsusb/">lsusb</a></code>(1) </p>
+<p> <code>xboxdrvctl</code>(1), <code><a href="/docs/linux/man/1-evtest/">evtest</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1), <code>jstest-gtk</code>(1), <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1), <code><a href="/docs/linux/man/1-fftest/">fftest</a></code>(1), <code>lsusb</code>(1) </p>
 <h2>Index</h2>

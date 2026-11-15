@@ -18,7 +18,7 @@ description: "toe – table of (terminfo) entries"
 <dt><code>-a</code></p>
 <dd> report on all of the terminal databases which ncurses would search, rather than only the first one that it finds.</p>
 <dt>
-<dd> If the <code>-s</code> is also given, <code>toe</code> adds a column to the report, showing (like <code><a href="/docs/linux/man/1-conflict/">conflict</a></code>(1)) which entries which belong to a given terminal database. An &quot;*&quot; marks entries which differ, and &quot;+&quot; marks equivalent entries.</p>
+<dd> If the <code>-s</code> is also given, <code>toe</code> adds a column to the report, showing (like <code>conflict</code>(1)) which entries which belong to a given terminal database. An &quot;*&quot; marks entries which differ, and &quot;+&quot; marks equivalent entries.</p>
 <dt>
 <dd> Without the <code>-s</code> option, <code>toe</code> does not attempt to merge duplicates in its report</p>
 <dt><code>-s</code></p>

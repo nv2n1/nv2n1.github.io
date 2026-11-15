@@ -23,5 +23,5 @@ description: "libssh2_session_init_ex – initializes an SSH session object"
 <h2>RETURN VALUE</h2>
 <p> Pointer to a newly allocated LIBSSH2_SESSION instance, or NULL on errors.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-libssh2_session_free/">libssh2_session_free</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_session_handshake/">libssh2_session_handshake</a>(3)</code> </p>
+<p> <code><a href="/docs/linux/man/3-libssh2_session_free/">libssh2_session_free</a>(3)</code> <code>libssh2_session_handshake(3)</code> </p>
 <h2>Index</h2>

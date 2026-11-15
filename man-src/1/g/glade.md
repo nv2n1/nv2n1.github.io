@@ -46,5 +46,5 @@ description: "glade – Create GTK+ user interfaces"
 <dt>
 <dd> X display to use.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-devhelp/">devhelp</a></code>(1) </p>
+<p> <code>devhelp</code>(1) </p>
 <h2>Index</h2>

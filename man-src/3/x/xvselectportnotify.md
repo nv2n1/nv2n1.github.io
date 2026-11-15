@@ -34,4 +34,4 @@ description: "XvSelectPortNotify – enable or disable XvPortNotify events"
 <dt>[XvBadPort]</p>
 <dd>Generated if the requested port does not exist.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xvsetportnotify/">XvSetPortNotify</a></code>(3), <code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3), <code><a href="/docs/linux/man/3-xvportnotify/">XvPortNotify</a></code>(3)</p>
+<p><code>XvSetPortNotify</code>(3), <code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3), <code><a href="/docs/linux/man/3-xvportnotify/">XvPortNotify</a></code>(3)</p>

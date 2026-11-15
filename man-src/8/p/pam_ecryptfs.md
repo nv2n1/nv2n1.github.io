@@ -32,7 +32,7 @@ description: "pam_ecryptfs – PAM module for eCryptfs"
 <pre> session optional pam_ecryptfs.so unwrap</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-ecryptfs/">ecryptfs</a></code>(7), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/8-pam-d/">pam.d</a></code>(8), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/7-ecryptfs/">ecryptfs</a></code>(7), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code>pam.d</code>(8), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8)</p>
 <dl>
 <dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></p>
 <dd>

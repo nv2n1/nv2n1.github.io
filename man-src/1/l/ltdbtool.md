@@ -144,7 +144,7 @@ description: "ltdbtool – manipulate CTDB’s local TDB files"
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ctdb/">ctdb</a></code>(1), <code><a href="/docs/linux/man/1-tdbdump/">tdbdump</a></code>(1), <code><a href="/docs/linux/man/1-tdbrestore/">tdbrestore</a></code>(1), <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7), m[blue]<code><a rel="nofollow" href="http://ctdb.samba.org/">http://ctdb.samba.org/</a></code>m[]</p>
+<p> <code><a href="/docs/linux/man/1-ctdb/">ctdb</a></code>(1), <code>tdbdump</code>(1), <code>tdbrestore</code>(1), <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7), m[blue]<code><a rel="nofollow" href="http://ctdb.samba.org/">http://ctdb.samba.org/</a></code>m[]</p>
 <h2>AUTHOR</h2>
 <p> This documentation was written by Gregor Beck</p>
 <h2>COPYRIGHT</h2>

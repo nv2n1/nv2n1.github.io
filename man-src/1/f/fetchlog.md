@@ -92,7 +92,7 @@ description: "fetchlog – fetch and convert new messages of a logfile"
 <h2>AUTHOR</h2>
 <p> Alexander Haderer, LoeScap Technology GmbH, Berlin &#8211; Germany </p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-tail/">tail</a></i>(1), <i><a href="/docs/linux/man/1-cat/">cat</a></i>(1), <i><a href="/docs/linux/man/1-head/">head</a></i>(1), <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1), <i><a href="/docs/linux/man/7-re_format/">re_format</a></i>(7), <i><a href="/docs/linux/man/8-syslogd/">syslogd</a></i>(8), <i><a href="/docs/linux/man/8-newsyslog/">newsyslog</a></i>(8) </p>
+<p> <i><a href="/docs/linux/man/1-tail/">tail</a></i>(1), <i><a href="/docs/linux/man/1-cat/">cat</a></i>(1), <i><a href="/docs/linux/man/1-head/">head</a></i>(1), <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1), <i><a href="/docs/linux/man/7-re_format/">re_format</a></i>(7), <i>syslogd</i>(8), <i>newsyslog</i>(8) </p>
 <p> NET-SNMP &#8211; Various tools relating to the Simple Network Management Protocol SNMP (NET-SNMP: formerly known as UCD-SNMP)<br />
  <a rel="nofollow" href="http://www.net-snmp.org">http://www.net-snmp.org</a> </p>
 <p> Nagios &#8211; A Network monitoring system<br />

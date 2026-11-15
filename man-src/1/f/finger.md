@@ -31,11 +31,11 @@ description: "finger – user information lookup program"
 <p> If no options are specified, <code>finger</code> defaults to the &#8211;<code>l</code> style output if operands are provided, otherwise to the &#8211;<code>s</code> style. Note that some fields may be missing, in either format, if information is not available for them. </p>
 <p> If no arguments are specified, <code>finger</code> will print an entry for each user currently logged into the system. </p>
 <p> <code>Finger</code> may be used to look up users on a remote machine. The format is to specify a <i>user</i> as &#8220;<code>user [at] host</code> &#8221; or &#8220;<code>@host</code> &#8221; where the default output format for the former is the &#8211;<code>l</code> style, and the default output format for the latter is the &#8211;<code>s</code> style. The &#8211;<code>l</code> option is the only option that may be passed to a remote machine. </p>
-<p> If standard output is a socket, <code>finger</code> will emit a carriage return (^M) before every linefeed (^J). This is for processing remote finger requests when invoked by <a href="/docs/linux/man/8-fingerd/">fingerd</a>(8).</p>
+<p> If standard output is a socket, <code>finger</code> will emit a carriage return (^M) before every linefeed (^J). This is for processing remote finger requests when invoked by fingerd(8).</p>
 <h2>FILES</h2>
 <dl>
 <dt><code>~/.nofinger </code></p>
-<dd> If finger finds this file in a user&#8217;s home directory, it will, for finger requests originating outside the local host, firmly deny the existence of that user. For this to work, the finger program, as started by <a href="/docs/linux/man/8-fingerd/">fingerd</a>(8), must be able to see the .nofinger file. This generally means that the home directory containing the file must have the other-users-execute bit set (o+x). See <a href="/docs/linux/man/1-chmod/">chmod</a>(1). If you use this feature for privacy, please test it with &#8220;finger @localhost&#8221; before relying on it, just in case.</p>
+<dd> If finger finds this file in a user&#8217;s home directory, it will, for finger requests originating outside the local host, firmly deny the existence of that user. For this to work, the finger program, as started by fingerd(8), must be able to see the .nofinger file. This generally means that the home directory containing the file must have the other-users-execute bit set (o+x). See <a href="/docs/linux/man/1-chmod/">chmod</a>(1). If you use this feature for privacy, please test it with &#8220;finger @localhost&#8221; before relying on it, just in case.</p>
 <dt><code>~/.plan</code></p>
 <dd>
 <dt><code>~/.project</code></p>

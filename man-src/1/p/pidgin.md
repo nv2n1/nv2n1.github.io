@@ -244,7 +244,7 @@ description: "pidgin – Instant Messaging client"
 <h2>SEE ALSO</h2>
 <p> <i><a rel="nofollow" href="http://pidgin.im/">http://pidgin.im/</a></i><br />
  <i><a rel="nofollow" href="http://developer.pidgin.im/">http://developer.pidgin.im/</a></i><br />
- <code><a href="/docs/linux/man/1-purple-remote/">purple-remote</a></code>(1)<br />
+ <code>purple-remote</code>(1)<br />
  <code><a href="/docs/linux/man/1-finch/">finch</a></code>(1) </p>
 <h2>LICENSE</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

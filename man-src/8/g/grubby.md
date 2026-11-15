@@ -250,7 +250,7 @@ grubby --update-kernel=current_kernel --args=&quot;kernel_args&quot;</code></pre
 <pre><code>grubby --remove-args=menu_index --args=&quot;kernel_args&quot;
 </code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-grub/">grub</a></code>(8), <code><a href="/docs/linux/man/8-lilo/">lilo</a></code>(8), <code><a href="/docs/linux/man/8-yaboot/">yaboot</a></code>(8), <code><a href="/docs/linux/man/8-zipl/">zipl</a></code>(8), <code><a href="/docs/linux/man/8-dracut/">dracut</a></code>(8), <code><a href="/docs/linux/man/8-mkinitrd/">mkinitrd</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-grub/">grub</a></code>(8), <code>lilo</code>(8), <code>yaboot</code>(8), <code>zipl</code>(8), <code><a href="/docs/linux/man/8-dracut/">dracut</a></code>(8), <code><a href="/docs/linux/man/8-mkinitrd/">mkinitrd</a></code>(8) </p>
 <h2>Authors</h2>
 <pre>Erik Troan
 Jeremy Katz

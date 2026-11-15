@@ -40,7 +40,7 @@ description: "gfs_tool – interface to gfs ioctl calls"
 <dt><code>lockdump</code> <i>MountPoint</i> <i>[buffersize]</i></p>
 <dd>Print out information about the locks this machine holds for a given filesystem. Buffersize is the size of the buffer (in bytes) that gfs_tool allocates to store the lock data during processing. It defaults to 4194304 bytes.</p>
 <dt><code>margs</code> <i>arguments</i></p>
-<dd>This loads arguments into the module what will override the mount options passed with the -o field on the next mount. See <a href="/docs/linux/man/8-mount-gfs/">mount.gfs</a>(8).</p>
+<dd>This loads arguments into the module what will override the mount options passed with the -o field on the next mount. See mount.gfs(8).</p>
 <dt><code>reclaim</code> <i>File</i></p>
 <dd>Returns unused on-disk metadata blocks to free blocks.</p>
 <dt><code>rindex</code> <i>MountPoint</i></p>

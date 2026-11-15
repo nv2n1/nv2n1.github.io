@@ -37,8 +37,8 @@ description: "QwtAnalogClock –"
 <dd>
 <pre>#include &lt;qwt_analog_clock.h&gt;
 QwtAnalogClock *clock = new QwtAnalogClock(...);
-clock-&gt;scaleDraw()-&gt;<a href="//www.systutorials.com/docs/linux/man/3-setPenWidth/">setPenWidth</a>(3);
-clock-&gt;<a href="//www.systutorials.com/docs/linux/man/6-setLineWidth/">setLineWidth</a>(6);
+clock-&gt;scaleDraw()-&gt;setPenWidth(3);
+clock-&gt;setLineWidth(6);
 clock-&gt;setFrameShadow(QwtDial::Sunken);
 clock-&gt;setTime();
 // update the clock every second

@@ -90,6 +90,6 @@ OPTIONS := {
 <dl>
 <dd>Turn off auto recovery on the specified device and reporter. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-dev/">devlink-dev</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code><a href="/docs/linux/man/8-devlink-param/">devlink-param</a></code>(8), <code><a href="/docs/linux/man/8-devlink-region/">devlink-region</a></code>(8), </p>
+<p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-dev/">devlink-dev</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code>devlink-param</code>(8), <code><a href="/docs/linux/man/8-devlink-region/">devlink-region</a></code>(8), </p>
 <h2>Author</h2>
 <p>Aya Levin &lt;ayal [at] mellanox.com&gt;</p>

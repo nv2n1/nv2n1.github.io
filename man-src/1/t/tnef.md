@@ -76,7 +76,7 @@ tnef - decode Microsoft's Transport Neutral Encapsulation Format
 <dt>
 <dd> tnef -t</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-metamail/">metamail</a></code>(1), <code><a href="/docs/linux/man/4-mailcap/">mailcap</a></code>(4), <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), other email clients.</p>
+<p> <code>metamail</code>(1), <code><a href="/docs/linux/man/4-mailcap/">mailcap</a></code>(4), <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), other email clients.</p>
 <h2>AUTHOR</h2>
 <p> Mark Simpson.</p>
 <h2>REPORTING BUGS</h2>

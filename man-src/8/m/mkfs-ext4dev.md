@@ -98,7 +98,7 @@ description: "mke2fs – create an ext2/ext3/ext4 filesystem"
 <dt><code>-L</code><i> new-volume-label</i></p>
 <dd>Set the volume label for the filesystem to <i>new-volume-label</i>. The maximum length of the volume label is 16 bytes.</p>
 <dt><code>-m</code><i> reserved-blocks-percentage</i></p>
-<dd>Specify the percentage of the filesystem blocks reserved for the super-user. This avoids fragmentation, and allows root-owned daemons, such as <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8), to continue to function correctly after non-privileged processes are prevented from writing to the filesystem. The default percentage is 5%.</p>
+<dd>Specify the percentage of the filesystem blocks reserved for the super-user. This avoids fragmentation, and allows root-owned daemons, such as <code>syslogd</code>(8), to continue to function correctly after non-privileged processes are prevented from writing to the filesystem. The default percentage is 5%.</p>
 <dt><code>-M</code><i> last-mounted-directory</i></p>
 <dd>Set the last mounted directory for the filesystem. This might be useful for the sake of utilities that key off of the last mounted directory to determine where the filesystem should be mounted.</p>
 <dt><code>-n</code></p>

@@ -158,7 +158,7 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
 <h2>Known issues</h2>
 <p> none!</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>Author</h2>
 <p> Author/Maintainer: Robert Eden, rmeden [at] yahoo.com</p>
 <h3>Contributors:</h3>

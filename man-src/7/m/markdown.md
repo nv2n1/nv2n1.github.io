@@ -581,7 +581,7 @@ description: "Markdown – The Markdown text formatting syntax"
 <h2>Author</h2>
 <p>John Gruber <i><a rel="nofollow" href="http://daringfireball.net/">http://daringfireball.net/</a></i></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-markdown/">markdown</a>(1), <a href="/docs/linux/man/3-markdown/">markdown</a>(3), mkd-callbacks3, mkd-functions3, mkd-extensions7. <i><a rel="nofollow" href="http://daringfireball.net/projects/markdown">http://daringfireball.net/projects/markdown</a></i><br />
+<p><a href="/docs/linux/man/1-markdown/">markdown</a>(1), markdown(3), mkd-callbacks3, mkd-functions3, mkd-extensions7. <i><a rel="nofollow" href="http://daringfireball.net/projects/markdown">http://daringfireball.net/projects/markdown</a></i><br />
  <i><a rel="nofollow" href="http://docutils.sourceforge.net/mirror/setext.html">http://docutils.sourceforge.net/mirror/setext.html</a></i><br />
  <i><a rel="nofollow" href="http://www.aaronsw.com/2002/atx/">http://www.aaronsw.com/2002/atx/</a></i><br />
  <i><a rel="nofollow" href="http://textism.com/tools/textile/">http://textism.com/tools/textile/</a></i><br />

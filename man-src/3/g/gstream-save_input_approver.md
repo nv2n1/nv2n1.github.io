@@ -24,5 +24,5 @@ gs.restore_input_approver();
 gs &gt;&gt; my_string; // uses default approver again
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-restore_input_approver/">gstream-restore_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-set_input_approver/">gstream-set_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-get_input_approver/">gstream-get_input_approver</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-gstream-restore_input_approver/">gstream-restore_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-set_input_approver/">gstream-set_input_approver</a></code>(3), <code>gstream-get_input_approver</code>(3) </p>
 <h2>Index</h2>

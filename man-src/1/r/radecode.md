@@ -8,7 +8,7 @@ description: "radecode – tshark-like decode of argus(1) user data"
 ---
 
 <h2>NAME</h2>
-<p> radecode &#8211; tshark-like decode of <a href="/docs/linux/man/1-argus/">argus</a>(1) user data</p>
+<p> radecode &#8211; tshark-like decode of argus(1) user data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>radecode </code> <code>-r</code> <i>argusFlowFile</i></p>
 <h2>DESCRIPTION</h2>

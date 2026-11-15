@@ -22,7 +22,7 @@ description: "ctie – merge or apply CWEB change files"
 <h2>ENVIRONMENT</h2>
 <p> The environment variable CWEBINPUTS is used to search for the input files, or the system default if CWEBINPUTS is not set. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching. To avoid conflicts with other programs that also use the CWEBINPUTS environment, you can be more specific and use CWEBINPUTS_ctie for special requirements in CTIE.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cweb/">cweb</a></code>(1), <i>ctiedoc.tex</i>, <code><a href="/docs/linux/man/1-tie/">tie</a></code>(1), <code><a href="/docs/linux/man/1-web/">web</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/1-cweb/">cweb</a></code>(1), <i>ctiedoc.tex</i>, <code><a href="/docs/linux/man/1-tie/">tie</a></code>(1), <code>web</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Julian Gilbey, jdg [at] debian.org. The original TIE program was by Klaus Guntermann, TH Darmstadt, Institut f. Theoretische Informatik. The TIE man page was by Joachim Schnitter, TH Darmstadt, Phys. Chemie I, and was modified for CTIE by Julian Gilbey. </p>
 <h2>Index</h2>

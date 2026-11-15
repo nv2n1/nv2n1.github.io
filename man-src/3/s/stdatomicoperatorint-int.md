@@ -26,10 +26,10 @@ T operator&#8211;( int ) volatile noexcept; <i>(since C++11)</i><br />
 T* operator&#8211;( int ) noexcept; <code>(4)</code> (member only of atomic&lt;T*&gt; template specialization)<br />
 T* operator&#8211;( int ) volatile noexcept; <i>(since C++11)</i><br />
 Atomically increments or decrements the current value. The operation is read-modify-write operation.<br />
-1) Performs atomic pre-increment. Equivalent to <a href="/docs/linux/man/1-fetch_add/">fetch_add</a><code>(1)</code>+1.<br />
-2) Performs atomic post-increment. Equivalent to <a href="/docs/linux/man/1-fetch_add/">fetch_add</a><code>(1)</code>.<br />
-3) Performs atomic pre-decrement. Equivalent to <a href="/docs/linux/man/1-fetch_sub/">fetch_sub</a><code>(1)</code>-1<br />
-4) Performs atomic post-decrement. Equivalent to <a href="/docs/linux/man/1-fetch_sub/">fetch_sub</a><code>(1)</code>.<br />
+1) Performs atomic pre-increment. Equivalent to fetch_add<code>(1)</code>+1.<br />
+2) Performs atomic post-increment. Equivalent to fetch_add<code>(1)</code>.<br />
+3) Performs atomic pre-decrement. Equivalent to fetch_sub<code>(1)</code>-1<br />
+4) Performs atomic post-decrement. Equivalent to fetch_sub<code>(1)</code>.<br />
 For signed Integral types, arithmetic is defined to use two’s complement representation. There are no undefined results.<br />
 For T* types, the result may be an undefined address, but the operations otherwise have no undefined behavior. The program is ill-formed if T is not an object type. </p>
 <h2>Parameters</h2>

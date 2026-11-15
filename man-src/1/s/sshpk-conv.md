@@ -102,7 +102,7 @@ $ ssh - keygen - o - f foobar... $ sshpk - conv - p - t pkcs1 foobar-- -- -BEGIN
 &nbsp;<wbr>&nbsp;The internal binary format of keys when sent over the wire in the SSH<br />
 &nbsp;<wbr>&nbsp;protocol. This is also the format that the&nbsp;<code>ssh-agent</code>&nbsp;uses in its protocol.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a>(1), <a href="/docs/linux/man/1-openssl/">openssl</a>(1)</p>
+<p> <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a>(1), openssl(1)</p>
 <h2>BUGS</h2>
 <p> Encrypted (password-protected) keys are not supported. </p>
 <p> Report bugs at Github <i><a rel="nofollow" href="https://github.com/arekinath/node-sshpk/issues">https://github.com/arekinath/node-sshpk/issues</a></i> </p>

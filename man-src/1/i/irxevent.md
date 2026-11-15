@@ -101,23 +101,23 @@ LINE = "config =" &lt; KEY | BUTTON | XYKEY &gt; &lt;TARGET&gt; |
 <p> <i>KeySym:</i></p>
 <dl>
 <dt>
-<dd> number as returned by <a href="//www.systutorials.com/docs/linux/man/3x-XStringToKeysym/">XStringToKeysym</a>(3x).</dl>
+<dd> number as returned by XStringToKeysym(3x).</dl>
 <p> <i>KeyCode:</i></p>
 <dl>
 <dt>
-<dd> number as returned by <a href="//www.systutorials.com/docs/linux/man/3x-XKeysymToKeycode/">XKeysymToKeycode</a>(3x).</dl>
+<dd> number as returned by XKeysymToKeycode(3x).</dl>
 <p> <i>Windowname:</i></p>
 <dl>
 <dt>
-<dd> can be the first characters of the window name displayed by the window manager or the name that is displayed below the icon. Some programs use the name displayed by the window manager to show a lot of status information but don&#8217;t change the icon name (like xawtv). Others append information to the window name (&quot;GQmpeg &#8211; kill_windooz.mp3&quot;). If neither window name nor icon name match the given Windowname information from <a href="//www.systutorials.com/docs/linux/man/3x-XClassHint/">XClassHint</a>(3x) will be checked.</dl>
+<dd> can be the first characters of the window name displayed by the window manager or the name that is displayed below the icon. Some programs use the name displayed by the window manager to show a lot of status information but don&#8217;t change the icon name (like xawtv). Others append information to the window name (&quot;GQmpeg &#8211; kill_windooz.mp3&quot;). If neither window name nor icon name match the given Windowname information from XClassHint(3x) will be checked.</dl>
 <p> <i>CurrentWindow:</i></p>
 <dl>
 <dt>
-<dd> refers to the active window as returned by <a href="//www.systutorials.com/docs/linux/man/3x-XGetInputFocus/">XGetInputFocus</a>(3x). Most times this is the window with your mouse pointer in it.</dl>
+<dd> refers to the active window as returned by XGetInputFocus(3x). Most times this is the window with your mouse pointer in it.</dl>
 <p> <i>RootWindow:</i></p>
 <dl>
 <dt>
-<dd> refers to the <i>root</i> window as returned by <a href="//www.systutorials.com/docs/linux/man/3x-RootWindow/">RootWindow</a>(3x). You may need this to send events to the window manager.</dl>
+<dd> refers to the <i>root</i> window as returned by RootWindow(3x). You may need this to send events to the window manager.</dl>
 <p> <i>WindowID id:</i></p>
 <dl>
 <dt>

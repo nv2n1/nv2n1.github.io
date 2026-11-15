@@ -34,7 +34,7 @@ description: "tv_grab_fi_sv – Grab TV listings for Finland in Swedish."
 <p> <code>&#8211;days N</code> When grabbing, grab N days of data instead of all available. Supported values are 1-14. </p>
 <p> <code>&#8211;offset N</code> Start grabbing at today + N days. Supported values are 0-13.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Per Lundberg, (perlun at gmail dot com). Inspired/based on other grabbers, like tv_grab_uk_rt, tv_grab_se_swedb and tv_grab_fi. </p>
 <h2>Index</h2>

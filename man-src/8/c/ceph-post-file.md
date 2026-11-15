@@ -29,6 +29,6 @@ description: "ceph-post-file – post files for ceph developers"
 <h2>Availability</h2>
 <p><code>ceph-post-file</code> is part of Ceph, a massively scalable, open-source, distributed storage system. Please refer to the Ceph documentation at <i><a rel="nofollow" href="http://ceph.com/docs">http://ceph.com/docs</a></i> for more information.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ceph/">ceph</a></code>(8), <code><a href="/docs/linux/man/8-ceph-debugpack/">ceph-debugpack</a></code>(8),</p>
+<p><code><a href="/docs/linux/man/8-ceph/">ceph</a></code>(8), <code>ceph-debugpack</code>(8),</p>
 <h2>Copyright</h2>
 <p>2010-2014, Inktank Storage, Inc. and contributors. Licensed under Creative Commons BY-SA</p>

@@ -13,7 +13,7 @@ description: "animate – animates an image or image sequence on any X server."
 <dt><code>animate-im6.q16</code> [<i>options</i>] <i>input-file</i></p>
 <dd></dl>
 <h2>Overview</h2>
-<p>The <code>animate-im6.q16</code> program is a member of the <a href="/docs/linux/man/1-imagemagick-ims6-q16/">ImageMagick-ims6.q16</a>(1) suite of tools. Use it to animate an image or image sequence on any X server. </p>
+<p>The <code>animate-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to animate an image or image sequence on any X server. </p>
 <p> For more information about the animate command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/animate.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="http://imagemagick.org/script/animate.php.">http://imagemagick.org/script/animate.php.</a></p>
 <h2>Description</h2>
 <p>Image Settings:<br />

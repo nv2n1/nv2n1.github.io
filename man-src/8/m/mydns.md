@@ -17,7 +17,7 @@ description: "mydns – SQL-based Internet name daemon."
 <dt><code>-b</code>, <code>&#8211;background</code></p>
 <dd>Run in the background, as a daemon.</p>
 <dt><code>-c</code>, <code>&#8211;conf</code>=<i>filename</i></p>
-<dd>Read configuration from <i>filename</i> instead of the default (<code>/etc/mydns.conf</code>). Consult <code><a href="/docs/linux/man/5-mydns-conf/">mydns.conf</a></code>(5) for information about configuring <code>mydns</code>.</p>
+<dd>Read configuration from <i>filename</i> instead of the default (<code>/etc/mydns.conf</code>). Consult <code>mydns.conf</code>(5) for information about configuring <code>mydns</code>.</p>
 <dt><code>-d</code>, <code>&#8211;debug</code></p>
 <dd>Output huge amounts of diagnostic text while running. This option is only available if MyDNS was configured with the <code>&#8211;enable-debug</code> option.</p>
 <dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></p>
@@ -43,10 +43,10 @@ description: "mydns – SQL-based Internet name daemon."
 <h2>Files</h2>
 <p><i>/etc/mydns.conf</i></p>
 <dl>
-<dd>The default location of the configuration file. (See <code><a href="/docs/linux/man/5-mydns-conf/">mydns.conf</a></code>(5))</dl>
+<dd>The default location of the configuration file. (See <code>mydns.conf</code>(5))</dl>
 <h2>Author</h2>
 <p>Don Moore &lt;bboy [at] bboy.net&gt; Howard Wilkinson &lt;howard [at] cohtech.com&gt;</p>
 <h2>Homepage</h2>
 <p><a rel="nofollow" href="http://mydns.bboy.net">http://mydns.bboy.net</a></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-mydns-conf/">mydns.conf</a></code>(5), <code><a href="/docs/linux/man/8-mydnscheck/">mydnscheck</a></code>(8), <code><a href="/docs/linux/man/8-mydnsexport/">mydnsexport</a></code>(8), <code><a href="/docs/linux/man/8-mydnsimport/">mydnsimport</a></code>(8) This man page is a quick reference. For detailed documentation, see the MyDNS user&#8217;s manual, available from <a rel="nofollow" href="http://mydns.bboy.net.">http://mydns.bboy.net.</a> </p>
+<p><code>mydns.conf</code>(5), <code><a href="/docs/linux/man/8-mydnscheck/">mydnscheck</a></code>(8), <code><a href="/docs/linux/man/8-mydnsexport/">mydnsexport</a></code>(8), <code><a href="/docs/linux/man/8-mydnsimport/">mydnsimport</a></code>(8) This man page is a quick reference. For detailed documentation, see the MyDNS user&#8217;s manual, available from <a rel="nofollow" href="http://mydns.bboy.net.">http://mydns.bboy.net.</a> </p>

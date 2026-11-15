@@ -142,4 +142,4 @@ description: "ovs-appctl – utility for configuring running Open vSwitch daemon
 <dt><code>&#8211;version</code></p>
 <dd>Prints version information to the console.</dl>
 <h2>See Also</h2>
-<p><code>ovs-appctl</code> can control all Open vSwitch daemons, including: <code><a href="/docs/linux/man/8-ovs-vswitchd/">ovs-vswitchd</a></code>(8), and <code><a href="/docs/linux/man/8-ovsdb-server/">ovsdb-server</a></code>(8). </p>
+<p><code>ovs-appctl</code> can control all Open vSwitch daemons, including: <code><a href="/docs/linux/man/8-ovs-vswitchd/">ovs-vswitchd</a></code>(8), and <code>ovsdb-server</code>(8). </p>

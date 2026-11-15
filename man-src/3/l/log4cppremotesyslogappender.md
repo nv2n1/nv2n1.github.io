@@ -45,7 +45,7 @@ description: "log4cpp::RemoteSyslogAppender –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>name</i> The name of the <code>Appender</code><br />
- <i>syslogName</i> The ident parameter in the <a href="/docs/linux/man/3-openlog/">openlog</a>(3) call.<br />
+ <i>syslogName</i> The ident parameter in the openlog(3) call.<br />
  <i>relayer</i> The IP address or hostname of a standard syslog host.<br />
  <i>facility</i> The syslog facility to log to. Defaults to LOG_USER. Value &#8216;-1&#8217; implies to use the default.<br />
  <i>portNumber</i> An alternative port number. Defaults to the standard syslog port number (514). Value &#8216;-1&#8217; implies to use the default.</dl>

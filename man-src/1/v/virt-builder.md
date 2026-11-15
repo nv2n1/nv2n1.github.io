@@ -216,7 +216,7 @@ virt - builder os - version[-o | --output DISKIMAGE][--size SIZE][--format raw |
 <dd>
 <dl>
 <dt>1.</p>
-<dd> Because the libguestfs backend that you are using doesn&#8217;t support the network. (See: &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)).</p>
+<dd> Because the libguestfs backend that you are using doesn&#8217;t support the network. (See: &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <i>guestfs</i>(3)).</p>
 <dt>2.</p>
 <dd> Any software you need to install comes from an attached <font SIZE="-1">ISO,</font> so you don&#8217;t need the network.</p>
 <dt>3.</p>
@@ -771,7 +771,7 @@ virt - builder os - version[-o | --output DISKIMAGE][--size SIZE][--format raw |
 </pre>
 <p> <i>Create the templates</i> </p>
 <p> There are many ways to create the templates. For example you could clone existing guests (see <i><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></i>(1)), or you could install a guest by hand (<i><a href="/docs/linux/man/1-virt-install/">virt-install</a></i>(1)). To see how the templates were created for virt-builder, look at the scripts in <tt>&quot;builder/website&quot;</tt> </p>
-<p> For best results when compressing the templates, use the following xz options (see <i><a href="/docs/linux/man/1-nbdkit-xz-plugin/">nbdkit-xz-plugin</a></i>(1) for further explanation): </p>
+<p> For best results when compressing the templates, use the following xz options (see <i>nbdkit-xz-plugin</i>(1) for further explanation): </p>
 <pre>
  xz --best --block-size=16777216 disk
 </pre>
@@ -971,7 +971,7 @@ virt - builder fedora - 20 --edit '/etc/yum.repos.d/fedora.repo: s{.*baseurl =.*
 <p> Virt-builder uses an internal implementation of pxzcat (parallel xzcat) if liblzma was found at build time. If liblzma was not found at build time, regular <tt>&quot;xzcat&quot;</tt> is used which is single-threaded. </p>
 <p> <i>User-Mode Linux</i> </p>
 <p> You can use virt-builder with the User-Mode Linux (<font SIZE="-1">UML</font>) backend. This may be faster when running virt-builder inside a virtual machine (eg. in the cloud). </p>
-<p> To enable the <font SIZE="-1">UML</font> backend, read the instructions in &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3). </p>
+<p> To enable the <font SIZE="-1">UML</font> backend, read the instructions in &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <i>guestfs</i>(3). </p>
 <p> Currently you have to use the <i>&#8211;no-network</i> option. This should be fixed in a future version. </p>
 <p> The qcow2 output format is not supported by <font SIZE="-1">UML. </font> You can only create raw-format guests.</p>
 <h3><font SIZE="-1">SELINUX</font></h3>
@@ -999,7 +999,7 @@ virt - builder fedora - 20 --edit '/etc/yum.repos.d/fedora.repo: s{.*baseurl =.*
 </pre>
 <p> A list of features is printed, one per line, and the program exits with status 0.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
-<p> For other environment variables which affect all libguestfs programs, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> For other environment variables which affect all libguestfs programs, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3).</p>
 <dl>
 <dt>&quot;http_proxy&quot;</p>
 <dd>
@@ -1033,7 +1033,7 @@ virt - builder fedora - 20 --edit '/etc/yum.repos.d/fedora.repo: s{.*baseurl =.*
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1), <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1), <i><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></i>(1), <i><a href="/docs/linux/man/1-virt-install/">virt-install</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></i>(1), <i><a href="/docs/linux/man/1-oz-install/">oz-install</a></i>(1), <i><a href="/docs/linux/man/1-gpg/">gpg</a></i>(1), <i><a href="/docs/linux/man/1-curl/">curl</a></i>(1), <i><a href="/docs/linux/man/1-virt-make-fs/">virt-make-fs</a></i>(1), <i><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1), <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1), <i><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></i>(1), <i><a href="/docs/linux/man/1-virt-install/">virt-install</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></i>(1), <i><a href="/docs/linux/man/1-oz-install/">oz-install</a></i>(1), <i><a href="/docs/linux/man/1-gpg/">gpg</a></i>(1), <i><a href="/docs/linux/man/1-curl/">curl</a></i>(1), <i><a href="/docs/linux/man/1-virt-make-fs/">virt-make-fs</a></i>(1), <i><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
 <h2>COPYRIGHT</h2>

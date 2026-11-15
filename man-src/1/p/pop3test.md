@@ -50,5 +50,5 @@ description: "pop3test – interactive POP3 test program"
 <dt><code>-v</code></p>
 <dd> Verbose. Print out more information than usual.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-pop3d/">pop3d</a>(8)</code> </p>
+<p> <code>pop3d(8)</code> </p>
 <h2>Index</h2>

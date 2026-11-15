@@ -75,7 +75,7 @@ void ibv_free_device_list(struct ibv_device **list);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_fork_init/">ibv_fork_init</a>(3), <a HREF="/docs/linux/man/3-ibv_get_device_guid/">ibv_get_device_guid</a>(3), <a HREF="/docs/linux/man/3-ibv_get_device_name/">ibv_get_device_name</a>(3), <a HREF="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a>(3)
+ ibv_fork_init(3), ibv_get_device_guid(3), ibv_get_device_name(3), ibv_open_device(3)
 
 <h2>AUTHOR</h2>
 

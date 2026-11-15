@@ -121,11 +121,11 @@ description: "lbzip2 – parallel bzip2 utility"
 <dd> <a rel="nofollow" href="http://www.bzip.org/">http://www.bzip.org/</a> </p>
 <dt><code><a href="/docs/linux/man/1-pbzip2/">pbzip2</a></code>(1)</p>
 <dd> <a rel="nofollow" href="http://compression.ca/pbzip2/">http://compression.ca/pbzip2/</a> </p>
-<dt><code><a href="/docs/linux/man/1-bzip2smp/">bzip2smp</a></code>(1)</p>
+<dt><code>bzip2smp</code>(1)</p>
 <dd> <a rel="nofollow" href="http://bzip2smp.sourceforge.net/">http://bzip2smp.sourceforge.net/</a> </p>
-<dt><code><a href="/docs/linux/man/1-smpbzip2/">smpbzip2</a></code>(1)</p>
+<dt><code>smpbzip2</code>(1)</p>
 <dd> <a rel="nofollow" href="http://home.student.utwente.nl/n.werensteijn/smpbzip2/">http://home.student.utwente.nl/n.werensteijn/smpbzip2/</a> </p>
-<dt><code><a href="/docs/linux/man/1-dbzip2/">dbzip2</a></code>(1)</p>
+<dt><code>dbzip2</code>(1)</p>
 <dd> <a rel="nofollow" href="http://www.mediawiki.org/wiki/Dbzip2">http://www.mediawiki.org/wiki/Dbzip2</a> </p>
 <dt><code><a href="/docs/linux/man/1-p7zip/">p7zip</a></code>(1)</p>
 <dd> <a rel="nofollow" href="http://p7zip.sourceforge.net/">http://p7zip.sourceforge.net/</a> </p>

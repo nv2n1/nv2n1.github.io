@@ -72,5 +72,5 @@ description: "oggz-chop — Extract the part of an Ogg file between given start 
 <p> Copyright &#169; 2008 Annodex Association<br />
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-oggz-validate/">oggz-validate</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-merge/">oggz-merge</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-dump/">oggz-dump</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-hogg/">hogg</a></code><code>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-oggz-validate/">oggz-validate</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-merge/">oggz-merge</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-dump/">oggz-dump</a></code><code>(1)</code>, <code>hogg</code><code>(1)</code> </p>
 <h2>Index</h2>

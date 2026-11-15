@@ -25,7 +25,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <pre>
  guestfish --ro -a disk.img run : checksum-device md5 /dev/sda1
 </pre>
-<p> Replace <tt>&quot;md5&quot;</tt> with the type of checksum you want. See &#8220;guestfs_checksum_device&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) for a list of supported types. </p>
+<p> Replace <tt>&quot;md5&quot;</tt> with the type of checksum you want. See &#8220;guestfs_checksum_device&#8221; in <code>guestfs</code>(3) for a list of supported types. </p>
 <p> <i>/dev/sda1</i> means &#8220;the first partition&#8221;. You could use <i>/dev/sda</i> to checksum the whole disk image, or the name of a logical volume or <font SIZE="-1">RAID</font> device. </p>
 <p> To checksum a single file: </p>
 <pre>

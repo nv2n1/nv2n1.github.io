@@ -50,7 +50,7 @@ IBV_QPF_GRH_REQUIRED - When this flag is set, the applications must create all A
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_query_port()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_qp/">ibv_destroy_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_qp/">ibv_query_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah/">ibv_create_ah</a></code>(3)</p>
+<p> <code>ibv_create_qp</code>(3), <code>ibv_destroy_qp</code>(3), <code>ibv_query_qp</code>(3), <code>ibv_create_ah</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

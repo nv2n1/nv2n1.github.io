@@ -408,7 +408,7 @@ u_char *libnet_build_asn1_bitstring(u_char *data, int *datalen,
 <p>&nbsp;<wbr>gcc&nbsp;<wbr>`libnet-config &#8211;defines &#8211;cflags`&nbsp;<wbr>foo.c -o foo&nbsp;<wbr>`libnet-config &#8211;libs` </p>
 <p> The script handles all libnet dependencies and concessions for the architecture it was compiled on. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-pcap/">pcap</a>(3), <a href="/docs/linux/man/4-bpf/">bpf</a>(4), <a href="//www.systutorials.com/docs/linux/man/7P-dlpi/">dlpi</a>(7P)</p>
+<p> pcap(3), bpf(4), dlpi(7P)</p>
 <h2>AUTHOR</h2>
 <p> Mike D. Schiffman &lt;mike [at] infonexus.com&gt; See the online web reference manual for additional contributers. </p>
 <p> The current version is always available: </p>

@@ -88,12 +88,12 @@ description: "krazy2all – Sanity checks KDE source code."
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA</font> 02110-1301, <font SIZE="-1">USA</font>.</p>
 <h2>FILES</h2>
-<p> <i>.krazy</i> (see <i><a href="/docs/linux/man/5-krazyrc/">krazyrc</a></i>(5)) </p>
+<p> <i>.krazy</i> (see <i>krazyrc</i>(5)) </p>
 <p> krazy2all looks up the current working directory tree for a <i>.krazy</i> file in the project subdirectory. Only <i>.krazy</i> files found at the project subdirectory level are read. </p>
 <p> For example, if the current working dir is <i>/my/kde/trunk/KDE/kdepimlibs/kcal/versit</i>, then krazy2all will look for <i>/my/kde/trunk/KDE/kdepimlibs/kcal/.krazy</i>, since kcal is the project within the kdepimlibs module. </p>
 <p> If the current working dir is not within a <font SIZE="-1">KDE</font> module, or if the current working dir is above a project subdir, then a <i>.krazy</i> file will not be read.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-krazyrc/">krazyrc</a></i>(5), <i><a href="/docs/linux/man/1-krazy2/">krazy2</a></i>(1), <i><a href="/docs/linux/man/1-krazy2xml/">krazy2xml</a></i>(1)</p>
+<p> <i>krazyrc</i>(5), <i><a href="/docs/linux/man/1-krazy2/">krazy2</a></i>(1), <i><a href="/docs/linux/man/1-krazy2xml/">krazy2xml</a></i>(1)</p>
 <h2>AUTHORS</h2>
 <p> Allen Winter, &lt;winter [at] kde.org&gt; </p>
 <h2>Index</h2>

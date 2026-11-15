@@ -42,7 +42,7 @@ description: "fslsfonts – list fonts served by X font server"
 <dt><code>FONTSERVER</code></p>
 <dd> To get the default fontserver. The server name must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7).</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-xfs/">xfs</a>(1), <a href="/docs/linux/man/1-showfont/">showfont</a>(1), <a href="/docs/linux/man/1-xlsfonts/">xlsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
+<p> xfs(1), <a href="/docs/linux/man/1-showfont/">showfont</a>(1), <a href="/docs/linux/man/1-xlsfonts/">xlsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>BUGS</h2>
 <p> Doing &#8220;fslsfonts -l&#8221; can tie up your server for a very long time. This is really a bug with single-threaded non-preemptable servers, not with this program.</p>
 <h2>AUTHOR</h2>

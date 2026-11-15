@@ -178,7 +178,7 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <p> Well, you definitely still can use the &#8216;=&#8217; operator but it wouldn&#8217;t do what you want. This is due to the fact that the &#8216;=&#8217; operator cannot be overloaded in the same way as other assignment operators. If we tried to use &#8216;=&#8217; to try to assign data to a portion of a physical pdl through a virtual pdl we wouldn&#8217;t achieve the desired effect (instead the variable representing the virtual pdl (a reference to a blessed thingy) would after the assignment just contain the reference to another blessed thingy which would behave to future assignments as a &#8220;physical&#8221; copy of the original rvalue [this is actually not yet clear and subject of discussions in the <font SIZE="-1">PDL</font> developers mailing list]. In that sense it would break the connection of the pdl to the parent [ isn&#8217;t this behaviour in a sense the opposite of what happens in dataflow, where <tt>&quot;.=&quot;</tt> breaks the connection to the parent? ]. </p>
 <p> E.g. </p>
 <pre> pdl&gt; $line = $im-&gt;slice(':,(2)')
- pdl&gt; $line = <a href="//www.systutorials.com/docs/linux/man/5-zeroes/">zeroes</a>(5);
+ pdl&gt; $line = zeroes(5);
  pdl&gt; $line++;
  pdl&gt; p $im
  [
@@ -192,7 +192,7 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
  [1 1 1 1 1]</pre>
 <p>But using <tt>&quot;.=&quot;</tt> </p>
 <pre> pdl&gt; $line = $im-&gt;slice(':,(2)')
- pdl&gt; $line .= <a href="//www.systutorials.com/docs/linux/man/5-zeroes/">zeroes</a>(5)
+ pdl&gt; $line .= zeroes(5)
  pdl&gt; $line++
  pdl&gt; p $im
  [
@@ -208,9 +208,9 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <pre> pdl&gt; $line .= 0;</pre>
 <p>for the assignment above (the zero is converted to a scalar piddle, with no dimensions so it can be assigned to any piddle). </p>
 <p> A nice feature in recent perl versions is lvalue subroutines (i.e., versions 5.6.x and higher including all perls currently supported by <font SIZE="-1">PDL</font>). That allows one to use the slicing syntax on both sides of the assignment: </p>
-<pre> pdl&gt; $im-&gt;slice(':,(2)') .= <a href="//www.systutorials.com/docs/linux/man/5-zeroes/">zeroes</a>(5)-&gt;xvals-&gt;float</pre>
+<pre> pdl&gt; $im-&gt;slice(':,(2)') .= zeroes(5)-&gt;xvals-&gt;float</pre>
 <p>Related to the lvalue sub assignment feature is a little trap for the unwary: recent perls introduced a &#8220;feature&#8221; which breaks <font SIZE="-1">PDL</font>&#8216;s use of lvalue subs for slice assignments when running under the perl debugger, <tt>&quot;perl -d&quot;</tt>. Under the debugger, the above usage gives an error like: <tt>&quot; Can't return a temporary from lvalue subroutine... &quot;</tt> So you must use syntax like this: </p>
-<pre> pdl&gt; ($pdl = $im-&gt;slice(':,(2)')) .= <a href="//www.systutorials.com/docs/linux/man/5-zeroes/">zeroes</a>(5)-&gt;xvals-&gt;float</pre>
+<pre> pdl&gt; ($pdl = $im-&gt;slice(':,(2)')) .= zeroes(5)-&gt;xvals-&gt;float</pre>
 <p>which works both with and without the debugger but is arguably clumsy and awkward to read. </p>
 <p> Note that there can be a problem with assignments like this when lvalue and rvalue pdls refer to overlapping portions of data in the parent pdl: </p>
 <pre> # revert the elements of the first line of $a
@@ -267,7 +267,7 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <p>The difference between <tt>&quot;xchg&quot;</tt> and <tt>&quot;mv&quot;</tt> is that <tt>&quot;xchg&quot;</tt> only changes the position of two dimensions with each other, whereas <tt>&quot;mv&quot;</tt> inserts the first dimension to the place of second, moving the other dimensions around accordingly.</p>
 <dt>&quot;clump&quot;</p>
 <dd>collapses several dimensions into one. Its only argument specifies how many dimensions of the source pdl should be collapsed (starting from the first). An (admittedly unrealistic) example is a 3D pdl which holds data from a stack of image files that you have just read in. However, the data from each image really represents a 1D time series and has only been arranged that way because it was digitized with a frame grabber. So to have it again as an array of time sequences you say </p>
-<pre> pdl&gt; $seqs = $stack-&gt;<a href="//www.systutorials.com/docs/linux/man/2-clump/">clump</a>(2)
+<pre> pdl&gt; $seqs = $stack-&gt;clump(2)
  pdl&gt; help vars
  PDL variables in package main::
  Name Type Dimension Flow State Mem
@@ -372,16 +372,16 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <p>then the number of loop dimensions is 3 (by <tt>&quot;R0+R1&quot;</tt> from <tt>$b</tt> and <tt>$c</tt>) with sizes <tt>&quot;(10,11,12)&quot;</tt> (by R2); the two output core dimensions are <tt>&quot;(5,2)&quot;</tt> (from the signature of func) resulting in a 5-dimensional output pdl <tt>$c</tt> of size <tt>&quot;(5,2,10,11,12)&quot;</tt> (see R5) and (the automatically created) <tt>$d</tt> is derived from <tt>&quot;($a,$b,$c)&quot;</tt> in a way that can be expressed in pdl pseudo-code as </p>
 <pre> $d(:,:,i,j,k) .= func($a(:,:,i,j),$b(:,:,:,i,0,k),$c(:,0,j,k))
  with 0&lt;=i&lt;10, 0&lt;=j&lt;=11, 0&lt;=k&lt;12</pre>
-<p>If we analyze the color to grey-scale conversion again with these rules in mind we note another great advantage of implicit threading. We can call the conversion with a pdl representing a pixel (<tt><a href="/docs/linux/man/3-im/">im</a>(3)</tt>), a line of rgb pixels (<tt>&quot;im(3,x)&quot;</tt>), a proper color image (<tt>&quot;im(3,x,y)&quot;</tt>) or a whole stack of <font SIZE="-1">RGB</font> images (<tt>&quot;im(3,x,y,z)&quot;</tt>). As long as <tt>$im</tt> is of the form <tt>&quot;(3,...)&quot;</tt> the automatically created output pdl will contain the right number of dimensions and contain the intensity data as we expect it since the loops have been implicitly performed thanks to <i>implicit threading</i>. You can easily convince yourself that calling with a color pixel <tt>$grey</tt> is 0D, with a line it turns out 1D <tt>grey(x)</tt>, with an image we get <tt>&quot;grey(x,y)&quot;</tt> and finally we get a converted image stack <tt>&quot;grey(x,y,z)&quot;</tt>. </p>
+<p>If we analyze the color to grey-scale conversion again with these rules in mind we note another great advantage of implicit threading. We can call the conversion with a pdl representing a pixel (<tt>im(3)</tt>), a line of rgb pixels (<tt>&quot;im(3,x)&quot;</tt>), a proper color image (<tt>&quot;im(3,x,y)&quot;</tt>) or a whole stack of <font SIZE="-1">RGB</font> images (<tt>&quot;im(3,x,y,z)&quot;</tt>). As long as <tt>$im</tt> is of the form <tt>&quot;(3,...)&quot;</tt> the automatically created output pdl will contain the right number of dimensions and contain the intensity data as we expect it since the loops have been implicitly performed thanks to <i>implicit threading</i>. You can easily convince yourself that calling with a color pixel <tt>$grey</tt> is 0D, with a line it turns out 1D <tt>grey(x)</tt>, with an image we get <tt>&quot;grey(x,y)&quot;</tt> and finally we get a converted image stack <tt>&quot;grey(x,y,z)&quot;</tt>. </p>
 <p> Let&#8217;s fill these general rules with some more life by going through a couple of further examples. The reader may try to figure out equivalent formulations with explicit for-looping and compare the flexibility of those routines using implicit threading to the explicit formulation. Furthermore, especially when using several thread dimensions it is a useful exercise to check the relative speed by doing some benchmark tests (which we still have to do). </p>
 <p> First in the row is a slightly reworked centroid example, now coded with threading in mind. </p>
 <pre> # threaded mult to calculate centroid coords, works for stacks as well
- $xc = sumover(($im*xvals(($im-&gt;dims)[0]))-&gt;<a href="//www.systutorials.com/docs/linux/man/2-clump/">clump</a>(2)) /
- sumover($im-&gt;<a href="//www.systutorials.com/docs/linux/man/2-clump/">clump</a>(2));</pre>
+ $xc = sumover(($im*xvals(($im-&gt;dims)[0]))-&gt;clump(2)) /
+ sumover($im-&gt;clump(2));</pre>
 <p>Let&#8217;s analyze what&#8217;s going on step by step. First the product: </p>
 <pre> $prod = $im*xvals(zeroes(($im-&gt;dims)[0]))</pre>
 <p>This will actually work for <tt>$im</tt> being one, two, three, and higher dimensional. If <tt>$im</tt> is one-dimensional it&#8217;s just an ordinary product (in the sense that every element of <tt>$im</tt> is multiplied with the respective element of <tt>&quot;xvals(...)&quot;</tt>), if <tt>$im</tt> has more dimensions further threading is done by adding appropriate dummy dimensions to <tt>&quot;xvals(...)&quot;</tt> according to R4. More importantly, the two sumover operations show a first example of how to make use of the dimension manipulating commands. A quick look at sumover&#8217;s signature will remind you that it will only &#8220;gobble up&#8221; the first dimension of a given input pdl. But what if we want to really compute the sum over all elements of the first two dimensions? Well, nothing keeps us from passing a virtual pdl into sumover which in this case is formed by clumping the first two dimensions of the &#8220;parent pdl&#8221; into one. From the point of view of the parent pdl the sum is now computed over the first two dimensions, just as we wanted, though sumover has just done the job as specified by its signature. Got it ? </p>
-<p> Another little finesse of writing the code like that: we intentionally used <tt>&quot;sumover($pdl-&gt;<a href="/docs/linux/man/2-clump/">clump</a>(2))&quot;</tt> instead of <tt>&quot;sum($pdl)&quot;</tt> so that we can either pass just an image <tt>&quot;(x,y)&quot;</tt> or a stack of images <tt>&quot;(x,y,t)&quot;</tt> into this routine and get either just one x-coordiante or a vector of x-coordinates (of size t) in return. </p>
+<p> Another little finesse of writing the code like that: we intentionally used <tt>&quot;sumover($pdl-&gt;clump(2))&quot;</tt> instead of <tt>&quot;sum($pdl)&quot;</tt> so that we can either pass just an image <tt>&quot;(x,y)&quot;</tt> or a stack of images <tt>&quot;(x,y,t)&quot;</tt> into this routine and get either just one x-coordiante or a vector of x-coordinates (of size t) in return. </p>
 <p> Another set of common operations are what one could call &#8220;projection operations&#8221;. These operations take a N-D pdl as input and return a (N-1)-D &#8220;projected&#8221; pdl. These operations are often performed with functions like sumover, prodover, minimum and maximum. Using again images as examples we might want to calculate the maximum pixel value for each line of an image or image stack. We know how to do that </p>
 <pre> # maxima of lines (as function of line number and time)
  maximum($stack,($ret=null));</pre>
@@ -484,7 +484,7 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <p>and you call it with 3 pdls <tt>&quot;a(5,3,10,11)&quot;</tt>, <tt>&quot;b(3,5,10,1,12)&quot;</tt>, <tt>&quot;c(10)&quot;</tt> and an output pdl <tt>&quot;d(3,11,5,10,12)&quot;</tt> (which can here <i>not</i> be automatically created) as </p>
 <pre> func($a-&gt;thread(1,3),$b-&gt;thread(0,3),$c,$d-&gt;thread(0,1))</pre>
 <p>From the signature of func and the above call the pdls split into the following groups of core, extra and thread dimensions (written in the form <tt>&quot;pdl(core dims){thread dims}[extra dims]&quot;</tt>): </p>
-<pre> a(5,10){3,11}[] <a href="//www.systutorials.com/docs/linux/man/5-b/">b</a>(5){3,1}[10,12] c(){}[10] <a href="//www.systutorials.com/docs/linux/man/5-d/">d</a>(5){3,11}[10,12]</pre>
+<pre> a(5,10){3,11}[] b(5){3,1}[10,12] c(){}[10] d(5){3,11}[10,12]</pre>
 <p>With this to help us along (it is in general helpful to write the arguments down like this when you start playing with threading and want to keep track of what is going on) we further deduce that the number of explicit loop dimensions is 2 (by T1b from <tt>$a</tt> and <tt>$b</tt>) with sizes <tt>&quot;(3,11)&quot;</tt> (by T2); 2 implicit loop dimensions (by T1a from <tt>$b</tt> and <tt>$d</tt>) of size <tt>&quot;(10,12)&quot;</tt> (by T2) and the elements of are computed from the input pdls in a way that can be expressed in pdl pseudo-code as </p>
 <pre> for (l=0;l&lt;12;l++)
  for (k=0;k&lt;10;k++)
@@ -509,8 +509,8 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
  $inv-&gt;thread(0,1));
  # alternative for matrix mult using implicit threading,
  # first xchg only for transpose
- PDL::Primitive::inner($evecs-&gt;xchg(0,1)-&gt;<a href="//www.systutorials.com/docs/linux/man/1-dummy/">dummy</a>(1),
- $tmp-&gt;xchg(0,1)-&gt;<a href="//www.systutorials.com/docs/linux/man/2-dummy/">dummy</a>(2),
+ PDL::Primitive::inner($evecs-&gt;xchg(0,1)-&gt;dummy(1),
+ $tmp-&gt;xchg(0,1)-&gt;dummy(2),
  ($inv=null));</pre>
 <p>Example 2: </p>
 <pre> # outer product by threaded multiplication
@@ -519,7 +519,7 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
  $res=zeroes(($a-&gt;dims)[0],($b-&gt;dims)[0]);
  my_biop1($a-&gt;thread(0,-1),$b-&gt;thread(-1,0),$res-&gt;(0,1),&quot;*&quot;);
  # similar thing by implicit threading with auto-created pdl
- $res = $a-&gt;<a href="//www.systutorials.com/docs/linux/man/1-dummy/">dummy</a>(1) * $b-&gt;dummy(0);</pre>
+ $res = $a-&gt;dummy(1) * $b-&gt;dummy(0);</pre>
 <p>Example 3: </p>
 <pre> # different use of thread and unthread to shuffle a number of
  # dimensions in one go without lots of calls to -&gt;xchg and -&gt;mv
@@ -531,8 +531,8 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
  # $bb will hold BB as [xmin,xmax],[ymin,ymax],[zmin,zmax]
  # we use again thread and unthread to shuffle dimensions around
  pdl&gt; $bb = zeroes(double, 2,3 );
- pdl&gt; minimum($vertices-&gt;thread(0)-&gt;clump-&gt;<a href="//www.systutorials.com/docs/linux/man/1-unthread/">unthread</a>(1), $bb-&gt;slice('(0),:'));
- pdl&gt; maximum($vertices-&gt;thread(0)-&gt;clump-&gt;<a href="//www.systutorials.com/docs/linux/man/1-unthread/">unthread</a>(1), $bb-&gt;slice('(1),:'));</pre>
+ pdl&gt; minimum($vertices-&gt;thread(0)-&gt;clump-&gt;unthread(1), $bb-&gt;slice('(0),:'));
+ pdl&gt; maximum($vertices-&gt;thread(0)-&gt;clump-&gt;unthread(1), $bb-&gt;slice('(1),:'));</pre>
 <p>Example 5: </p>
 <pre> # calculate a self-rationed (i.e. self normalized) sequence of images
  # uses explicit threading and an implicitly threaded division

@@ -35,7 +35,7 @@ c_ftcurvps - compute a smoothing spline for periodic functions.
  = 3 if eps is negative or greater than 1. 
  = 4 if x values are not strictly increasing. 
  = 5 if d is negative. 
- = 6 if p is less than or equal to X(N)<a HREF="/docs/linux/man/1--x/">-X</a>(1). 
+ = 6 if p is less than or equal to X(N)-X(1). 
 
 <h2>Usage</h2>This function computes an interpolatory smoothing spline under tension through a sequence of functional values of a periodic function. 
 

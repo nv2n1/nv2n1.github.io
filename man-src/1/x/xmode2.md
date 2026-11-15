@@ -28,6 +28,6 @@ description: "mode2, smode2, xmode2 – shows the pulse/space length of infrared
 <dt><code>-m</code> <code>&#8211;mode</code></p>
 <dd> enable alternative display mode</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-mode2/">mode2</a>(1), <a href="/docs/linux/man/1-smode2/">smode2</a>(1), <a href="/docs/linux/man/1-xmode2/">xmode2</a>(1) </p>
+<p> <a href="/docs/linux/man/1-mode2/">mode2</a>(1), smode2(1), <a href="/docs/linux/man/1-xmode2/">xmode2</a>(1) </p>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
 <h2>Index</h2>

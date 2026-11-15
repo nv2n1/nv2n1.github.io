@@ -26,5 +26,5 @@ if (init_my_data() != 0) {
 }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-allegro_init/">allegro_init</a></code>(3), <code><a href="/docs/linux/man/3-install_allegro/">install_allegro</a></code>(3), <code><a href="/docs/linux/man/3-set_uformat/">set_uformat</a></code>(3) </p>
+<p> <code>allegro_init</code>(3), <code>install_allegro</code>(3), <code><a href="/docs/linux/man/3-set_uformat/">set_uformat</a></code>(3) </p>
 <h2>Index</h2>

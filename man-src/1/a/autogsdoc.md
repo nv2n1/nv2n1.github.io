@@ -22,7 +22,7 @@ description: "autogsdoc – GNUstep API documentation generator and XML->HTML co
 <dd> Construct indices based on GSDoc XML file sets, and convert those to HTML as well. </p>
 </dl>
 <p> The most common usage this is to run the command with one or more header file names as arguments &#8230; the tool will automatically parse corresponding source files in the same directory as the headers (or the current directory, or the directory specified using the DocumentationDirectory default), and produce GSDoc and HTML files as output. For best results this mode should be run from the directory containing the source files. (Note that since C is a subset of Objective C, this tool can operate to document functions and other C structures in plain C source.) </p>
-<p> GSDoc files may also be given directly in addition or by themselves, and will be converted to HTML. See the GSDoc HTML documentation or the <a href="/docs/linux/man/7-gsdoc/">gsdoc</a>(7) man page for information on the GSDoc format. </p>
+<p> GSDoc files may also be given directly in addition or by themselves, and will be converted to HTML. See the GSDoc HTML documentation or the gsdoc(7) man page for information on the GSDoc format. </p>
 <p> Finally, HTML files may be given on the command line. Cross-references to other parts of code documentation found within them will be rewritten based on what is found in the project currently. </p>
 <h2>SOURCE CODE MARKUP</h2>
 <p> The source code parser will automatically produce GSDoc documents listing the methods in the classes found in the source files, and it will include text from specially formatted comments from the source files. </p>
@@ -249,7 +249,7 @@ description: "autogsdoc – GNUstep API documentation generator and XML->HTML co
 <h2>DIAGNOSTICS</h2>
 <p> Error messages and warnings can come from each of the stages of the pipeline: top-level control, source parsing, GSDoc parsing, and indexing. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-gsdoc/">gsdoc</a>(7), <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7) </p>
+<p> gsdoc(7), <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7) </p>
 <h2>HISTORY</h2>
 <p> Autogsdoc combined the capabilities of two earlier tools, &#8216;autodoc&#8217; and &#8216;gsdoc&#8217;, which performed the source-&gt;GSDoc and GSDoc-&gt;HTML translations respectively. These earlier tools and the GSDoc format were developed for GNUstep based on the earlier GDML SGML language. </p>
 <p> This manual page first appeared in gnustep-base 1.9.2 (March 2004). </p>

@@ -45,7 +45,7 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
 <h2>TRYING OUT A DIFFERENT VERSION OF QEMU</h2>
 <p> If you have compiled another version of qemu from source and would like to try that, then you can use the <i>&#8211;qemudir</i> option to point to the qemu source directory. </p>
 <p> If you have downloaded a qemu binary from somewhere, use the <i>&#8211;qemu</i> option to point to the binary. </p>
-<p> Note when using these options, you can ignore the business of qemu wrapper scripts (&#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)), since libguestfs-test-tool writes a wrapper script for you if one is needed.</p>
+<p> Note when using these options, you can ignore the business of qemu wrapper scripts (&#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <i>guestfs</i>(3)), since libguestfs-test-tool writes a wrapper script for you if one is needed.</p>
 <h2>TRYING OUT A DIFFERENT KERNEL</h2>
 <p> You can tell supermin to try a different kernel. You do this by setting the environment variables <tt>&quot;SUPERMIN_KERNEL&quot;</tt>, <tt>&quot;SUPERMIN_KERNEL_VERSION&quot;</tt> and/or <tt>&quot;SUPERMIN_MODULES&quot;</tt>. </p>
 <p> Refer to &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/1-supermin/">supermin</a></i>(1) for further information.</p>
@@ -103,13 +103,13 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
  setenforce Enforcing
 </pre>
 <h2>SELF-DIAGNOSIS</h2>
-<p> Refer to &#8220;<font SIZE="-1">APPLIANCE BOOT PROCESS&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) to understand the messages produced by libguestfs-test-tool and/or possible errors.</p>
+<p> Refer to &#8220;<font SIZE="-1">APPLIANCE BOOT PROCESS&#8221;</font> in <i>guestfs</i>(3) to understand the messages produced by libguestfs-test-tool and/or possible errors.</p>
 <h2>EXIT STATUS</h2>
 <p> libguestfs-test-tool returns <i>0</i> if the tests completed without error, or <i>1</i> if there was an error.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
-<p> For the full list of environment variables which may affect libguestfs, please see the <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) manual page.</p>
+<p> For the full list of environment variables which may affect libguestfs, please see the <i>guestfs</i>(3) manual page.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://qemu.org/.">http://qemu.org/.</a></p>
+<p> <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://qemu.org/.">http://qemu.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

@@ -127,7 +127,7 @@ salt-cloud -m /path/to/cloud.map -H
 salt-cloud -m /path/to/cloud.map -Q
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-salt-cloud/">salt-cloud</a>(7)</i> <i><a href="/docs/linux/man/7-salt/">salt</a>(7)</i> <i><a href="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a href="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i></p>
+<p> <i>salt-cloud(7)</i> <i><a href="/docs/linux/man/7-salt/">salt</a>(7)</i> <i><a href="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a href="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i></p>
 <h2>AUTHOR</h2>
 <p> Thomas S. Hatch &lt;thatch45 [at] gmail.com&gt; and many others, please see the Authors file</p>
 <h2>COPYRIGHT</h2>

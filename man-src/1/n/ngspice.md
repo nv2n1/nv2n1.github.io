@@ -85,7 +85,7 @@ description: "ngspice – circuit simulator derived from spice]3f5"
 <dt><i>.spiceinit</i> or <i>$HOME/.spiceinit</i></p>
 <dd> The User&#8217;s Initialisation File.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-sconvert/">sconvert</a>(1), <a href="/docs/linux/man/1-ngnutmeg/">ngnutmeg</a>(1), <a href="/docs/linux/man/3-mfb/">mfb</a>(3), <a href="/docs/linux/man/3-writedata/">writedata</a>(3), and<br />
+<p> sconvert(1), <a href="/docs/linux/man/1-ngnutmeg/">ngnutmeg</a>(1), mfb(3), writedata(3), and<br />
  ngspice] User&#8217;s Manual at <code><a rel="nofollow" href="http://ngspice.sourceforge.net/docs.html">http://ngspice.sourceforge.net/docs.html</a></code></p>
 <h2>BUGS</h2>
 <p> Please report bugs to the ngspice project via<br />

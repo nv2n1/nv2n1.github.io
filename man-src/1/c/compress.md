@@ -36,5 +36,5 @@ description: "compress, uncompress, zcat – compress and expand data"
 <p> &quot;&lt;filename&gt;.Z already has .Z suffix &#8211; ignored&quot; </p>
 <p> These warnings can be ignored. See the comments in compress42.c:compdir() in the source distribution for an explanation.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pack/">pack</a></code>(1), <code><a href="/docs/linux/man/1-compact/">compact</a></code>(1) </p>
+<p> <code>pack</code>(1), <code>compact</code>(1) </p>
 <h2>Index</h2>

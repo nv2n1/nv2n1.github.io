@@ -58,7 +58,7 @@ description: "powerman – power on/off nodes"
 <dt><i>-x, &#8211;exprange</i></p>
 <dd> Expand host ranges in query responses.</p>
 <dt><i>-g, &#8211;genders</i></p>
-<dd> If configured with the <a href="/docs/linux/man/3-genders/">genders</a>(3) package, this option tells powerman that targets are genders attributes that map to node names rather than the node names themselves.</dl>
+<dd> If configured with the genders(3) package, this option tells powerman that targets are genders attributes that map to node names rather than the node names themselves.</dl>
 <h2>TARGET SPECIFICATION</h2>
 <p> <code>powerman</code> target hostnames may be specified as comma separated or space separated hostnames or host ranges. Host ranges are of the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc., This form should not be confused with regular expression character classes (also denoted by &#8220;[]&#8221;). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>

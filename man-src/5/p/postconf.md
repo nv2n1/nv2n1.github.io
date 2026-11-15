@@ -176,7 +176,7 @@ alias_maps = hash:/etc/aliases</pre>
 <pre>allow_mail_to_files = alias,forward,include</pre>
 <h2>allow_min_user (default: no)</h2>
 <p>Allow a sender or recipient address to have `-&#8216; as the first character. By default, this is not allowed, to avoid accidents with software that passes email addresses via the command line. Such software would not be able to distinguish a malicious address from a bona fide command-line option. Although this can be prevented by inserting a &quot;&#8211;&quot; option terminator into the command line, this is difficult to enforce consistently and globally. </p>
-<p> As of Postfix version 2.5, this feature is implemented by trivial-<code><a href="/docs/linux/man/8-rewrite/">rewrite</a></code>(8). With earlier versions this feature was implemented by <code><a href="/docs/linux/man/8-qmgr/">qmgr</a></code>(8) and was limited to recipient addresses only.</p>
+<p> As of Postfix version 2.5, this feature is implemented by trivial-<code>rewrite</code>(8). With earlier versions this feature was implemented by <code><a href="/docs/linux/man/8-qmgr/">qmgr</a></code>(8) and was limited to recipient addresses only.</p>
 <h2>allow_percent_hack (default: yes)</h2>
 <p>Enable the rewriting of the form &quot;user%domain&quot; to &quot;user [at] domain&quot;. This is enabled by default. </p>
 <p> Note: as of Postfix version 2.2, message header address rewriting happens only when one of the following conditions is true:</p>
@@ -1570,9 +1570,9 @@ mailbox_command = /some/where/maildrop -d &quot;$USER&quot;
 <p> For safety reasons, this feature does not allow $number substitutions in regular expression maps. </p>
 <p> This feature is available in Postfix 2.3 and later.</p>
 <h2>maillog_file (default: empty)</h2>
-<p>The name of an optional logfile that is written by the Postfix <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8) service. An empty value selects logging to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). Specify &quot;/dev/stdout&quot; to select logging to standard output. Stdout logging requires that Postfix is started with &quot;postfix start-fg&quot;. </p>
+<p>The name of an optional logfile that is written by the Postfix <code>postlogd</code>(8) service. An empty value selects logging to <code>syslogd</code>(8). Specify &quot;/dev/stdout&quot; to select logging to standard output. Stdout logging requires that Postfix is started with &quot;postfix start-fg&quot;. </p>
 <p> Note 1: The maillog_file parameter value must contain a prefix that is specified with the maillog_file_prefixes parameter. </p>
-<p> Note 2: Some Postfix non-daemon programs may still log information to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8), before they have processed their configuration parameters and command-line options. </p>
+<p> Note 2: Some Postfix non-daemon programs may still log information to <code>syslogd</code>(8), before they have processed their configuration parameters and command-line options. </p>
 <p> This feature is available in Postfix 3.4 and later.</p>
 <h2>maillog_file_compressor (default: gzip)</h2>
 <p>The program to run after rotating $maillog_file with &quot;postfix logrotate&quot;. The command is run with the rotated logfile name as its first argument. </p>
@@ -1656,7 +1656,8 @@ master_service_disable = !foo/inet, inet</pre>
 <p> This feature is available in Postfix 3.0 and later.</p>
 <h2>message_reject_characters (default: empty)</h2>
 <p>The set of characters that Postfix will reject in message content. The usual C-like escape sequences are recognized:    
-  	  \<i>ddd</i> (up to three octal digits) and \. </p>
+ 
+ 	  \<i>ddd</i> (up to three octal digits) and \. </p>
 <p> Note 1: this feature does not recognize text that requires MIME decoding. It inspects raw message content, just like header_checks and body_checks. </p>
 <p> Note 2: this feature is disabled with &quot;receive_override_options = no_header_body_checks&quot;. </p>
 <p> Example: </p>

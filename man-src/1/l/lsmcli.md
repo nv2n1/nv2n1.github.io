@@ -100,7 +100,7 @@ description: "lsmcli – libStorageMgmt command line interface"
 <dt><code>-w</code> <i>&lt;WAIT&gt;</i>, <code>&#8211;wait</code>=<i>&lt;WAIT&gt;</i></p>
 <dd> Command timeout value in ms (default = 30s)</p>
 <dt><code>-b</code></p>
-<dd> Run the command asynchronously instead of waiting for completion. The lsmcli command will exit with exit <a href="/docs/linux/man/7-code/">code</a>(7) and job id will be written to STDOUT when a command is still executing on the storage array. Use &#8216;job-status &#8211;id <i>&lt;job id&gt;</i>&#8216; to inquire on the progress of the command. Some arrays or plugins might not support asynchronous operations, in those circumstances, -b will be ineffective. Command will wait until finished.</p>
+<dd> Run the command asynchronously instead of waiting for completion. The lsmcli command will exit with exit code(7) and job id will be written to STDOUT when a command is still executing on the storage array. Use &#8216;job-status &#8211;id <i>&lt;job id&gt;</i>&#8216; to inquire on the progress of the command. Some arrays or plugins might not support asynchronous operations, in those circumstances, -b will be ineffective. Command will wait until finished.</p>
 <dt><code>-s</code>, <code>&#8211;script</code></p>
 <dd> Displaying data in script friendly way.<br />
  Without this option, data is displayed in this manner (default): </p>

@@ -74,7 +74,7 @@ description: "gozilla – force mozilla to display specified source file."
 <h2>DIAGNOSTICS</h2>
 <p> <code>Gozilla</code> exits with a non 0 value if an error occurred, 0 otherwise.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-global/">global</a></code>(1), <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1), <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1), <code><a href="/docs/linux/man/1-firefox/">firefox</a></code>(1), <code><a href="/docs/linux/man/1-epiphany/">epiphany</a></code>(1), <code><a href="/docs/linux/man/1-mozilla/">mozilla</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-global/">global</a></code>(1), <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1), <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1), <code><a href="/docs/linux/man/1-firefox/">firefox</a></code>(1), <code><a href="/docs/linux/man/1-epiphany/">epiphany</a></code>(1), <code>mozilla</code>(1). </p>
 <p> GNU GLOBAL source code tag system<br />
  (<a rel="nofollow" href="http://www.gnu.org/software/global/">http://www.gnu.org/software/global/</a>).</p>
 <h2>NOTES</h2>

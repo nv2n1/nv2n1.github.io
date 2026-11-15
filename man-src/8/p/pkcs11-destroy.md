@@ -35,7 +35,7 @@ description: "pkcs11-destroy – destroy PKCS#11 objects"
 <dl>
 <dd>Specify how long to pause before carrying out key destruction. The default is five seconds. If set to 0, destruction will be immediate.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pkcs11-list/">pkcs11-list</a></code>(3), <code><a href="/docs/linux/man/3-pkcs11-keygen/">pkcs11-keygen</a></code>(3)</p>
+<p><code>pkcs11-list</code>(3), <code>pkcs11-keygen</code>(3)</p>
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>

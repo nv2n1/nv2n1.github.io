@@ -44,5 +44,5 @@ description: "qgpumode – change GPU mode"
 <p> Upon successful processing of all the operands presented to the qgpumode command, the exit status will be a value of zero. </p>
 <p> If the qgpumode command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/8B-pbs_mom/">pbs_mom</a>(8B) and <a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B) </p>
+<p> pbs_mom(8B) and pbs_server(8B) </p>
 <h2>Index</h2>

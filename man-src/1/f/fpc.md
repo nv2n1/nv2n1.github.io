@@ -20,7 +20,7 @@ description: "fpc – Free Pascal Compiler (FPC) binary"
 <p> Starting with release 1.0, a new versioning system has been implemented. If the last number is even (1.0, 1.0.2), it is stable, and if the last number is odd it is a daily changing development version.(1.0.5, 1.1) just like the linux kernel. </p>
 <p> Version 0.99.5 however is a stable release. It was made before the even/odd version naming system was introduced. </p>
 <h2>Usage</h2>
-<p> The compilation proces is started by typing <i>fpc</i> followed by a sourcefile name (normally with .pas or .pp extension). Before processing the actual processing of the source file, <code><a href="/docs/linux/man/5-fpc-cfg/">fpc.cfg</a></code>(5) the configuration file of the compiler is read which contains the location of the RTL, other packages (FCL, FreeVision), and optionally default values for some switches. See the separate manpage of <code><a href="/docs/linux/man/5-fpc-cfg/">fpc.cfg</a></code>(5) for more information. </p>
+<p> The compilation proces is started by typing <i>fpc</i> followed by a sourcefile name (normally with .pas or .pp extension). Before processing the actual processing of the source file, <code>fpc.cfg</code>(5) the configuration file of the compiler is read which contains the location of the RTL, other packages (FCL, FreeVision), and optionally default values for some switches. See the separate manpage of <code>fpc.cfg</code>(5) for more information. </p>
 <h2>Options</h2>
 <p> General options </p>
 <dl>
@@ -51,7 +51,7 @@ description: "fpc – Free Pascal Compiler (FPC) binary"
 <dt><i>-l</i></p>
 <dd> This option tells the compiler to print the <i>FPC</i> logo on standard output. It also gives you the <i>FPC</i> version number.</p>
 <dt><i>-n</i></p>
-<dd> Tells the compiler not to read the configuration file <code><a href="/docs/linux/man/5-fpc-cfg/">fpc.cfg</a></code>(5) </p>
+<dd> Tells the compiler not to read the configuration file <code>fpc.cfg</code>(5) </p>
 </dl>
 <p> Options for getting feedback</p>
 <dl>
@@ -402,5 +402,5 @@ description: "fpc – Free Pascal Compiler (FPC) binary"
 <dd> Compile a system unit. This option causes the compiler to define only some very basic types. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-fpc-cfg/">fpc.cfg</a></code>(5) <code><a href="/docs/linux/man/1-ppdep/">ppdep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-ptop/">ptop</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) <code><a href="/docs/linux/man/1-as/">as</a></code>(1) </p>
+<p> <code>fpc.cfg</code>(5) <code><a href="/docs/linux/man/1-ppdep/">ppdep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-ptop/">ptop</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) <code><a href="/docs/linux/man/1-as/">as</a></code>(1) </p>
 <h2>Index</h2>

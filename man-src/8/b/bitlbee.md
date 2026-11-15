@@ -13,11 +13,11 @@ description: "BitlBee – IRC gateway to IM chat networks"
 <p> <code>bitlbee</code> -D [-i <i>address</i>] [-p <i>port number</i>] [-n] [-v] [-c <i>configuration file</i>] [-d <i>configuration directory</i>] </p>
 <p> <code>bitlbee</code> -h</p>
 <h2>Description</h2>
-<p>BitlBee is an IRC daemon that can talk to instant messaging networks and acts as a gateway. Users can connect to the server with any normal IRC client and see their &#8216;buddy list&#8217; in &amp;bitlbee. <code>bitlbee</code> should be called by <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), or you can run it as a stand-alone daemon. </p>
+<p>BitlBee is an IRC daemon that can talk to instant messaging networks and acts as a gateway. Users can connect to the server with any normal IRC client and see their &#8216;buddy list&#8217; in &amp;bitlbee. <code>bitlbee</code> should be called by <code>inetd</code>(8), or you can run it as a stand-alone daemon. </p>
 <h2>Options</h2>
 <dl>
 <dt>-I</p>
-<dd>Run in <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) mode. This is the default setting, you usually don&#8217;t have to specify this option.</p>
+<dd>Run in <code>inetd</code>(8) mode. This is the default setting, you usually don&#8217;t have to specify this option.</p>
 <dt>-D</p>
 <dd>Run in daemon mode. In this mode, BitlBee forks to the background and waits for new connections. All clients will be served from one process.</p>
 <dt>-F</p>
@@ -39,7 +39,7 @@ description: "BitlBee – IRC gateway to IM chat networks"
 <h2>Commands</h2>
 <p>To get a complete list of commands, please use the <code>help commands</code> command in the &amp;bitlbee channel.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ircd/">ircd</a></code>(8), <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/5-inetd-conf/">inetd.conf</a></code>(5), <code><a href="/docs/linux/man/1-gaim/">gaim</a></code>(1). </p>
+<p><code><a href="/docs/linux/man/8-ircd/">ircd</a></code>(8), <code>inetd</code>(8), <code>inetd.conf</code>(5), <code>gaim</code>(1). </p>
 <p> <code><a rel="nofollow" href="http://www.bitlbee.org/">http://www.bitlbee.org/</a></code> </p>
 <p> For more information on using BitlBee, once connected, you should use the on-line help system.</p>
 <h2>Bugs</h2>

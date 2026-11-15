@@ -69,7 +69,7 @@ description: "netkey-tool – administrative utility for Netkey E4 cards"
 <dt>
 <dd> This command will read the first PEM-encoded certificate from file <code>filename</code> and store this into your smart cards certificate file <code>number</code>. Some of your smart cards certificate files might be readonly, so this will not work with all values of <code>number</code>. If a certificate file is writable you must specify a pin in order to change it. If you try to use this command without specifying a pin, <code>netkey-tool</code> will tell you which one is needed.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-opensc/">opensc</a>(7), <a href="/docs/linux/man/1-opensc-explorer/">opensc-explorer</a>(1)</p>
+<p> opensc(7), <a href="/docs/linux/man/1-opensc-explorer/">opensc-explorer</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> <code>netkey-tool</code> was written by Peter Koch &lt;pk_opensc [at] web.de&gt;. </p>
 <h2>Index</h2>

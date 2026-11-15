@@ -23,4 +23,4 @@ description: "glutExtensionSupported – Determine if an OpenGL extension is ava
 <p> Consider an ogWarning() if there is no current rendering context. </p>
 <p> This is an ugly bit of code with 3 return statements, one of which is never reached. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-glgetstring/">glGetString</a>(3)</p>
+<p>glGetString(3)</p>

@@ -23,7 +23,7 @@ description: "ovs-dpctl-top – Top like behavior for ovs-dpctl dump-flows"
 <dd>&#8211; Tunnel source and destination addresses</dl>
 <h3>Output shows four values:</h3>
 <dl>
-<dd>&#8211; FIELDS: the flow fields for example <a href="/docs/linux/man/1-in_port/">in_port</a>(1).</p>
+<dd>&#8211; FIELDS: the flow fields for example in_port(1).</p>
 <dd>&#8211; COUNT: the number of lines in the dump-flow output contain the flow field.</p>
 <dd>&#8211; PACKETS: the total number of packets containing the flow field.</p>
 <dd>&#8211; BYTES: the total number of bytes containing the flow field. If units are not present then values are in bytes.</p>

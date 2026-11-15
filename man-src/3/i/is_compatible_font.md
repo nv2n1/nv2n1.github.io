@@ -17,5 +17,5 @@ description: "is_compatible_font – Check if two fonts are of the same type. Al
 <h2>RETURN VALUE</h2>
 <p> Returns TRUE if the two fonts are of the same general type (both are color fonts or both are monochrome fonts, for instance). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-merge_fonts/">merge_fonts</a></code>(3), <code><a href="/docs/linux/man/3-is_trans_font/">is_trans_font</a></code>(3), <code><a href="/docs/linux/man/3-is_color_font/">is_color_font</a></code>(3), <code><a href="/docs/linux/man/3-is_mono_font/">is_mono_font</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-merge_fonts/">merge_fonts</a></code>(3), <code>is_trans_font</code>(3), <code>is_color_font</code>(3), <code>is_mono_font</code>(3) </p>
 <h2>Index</h2>

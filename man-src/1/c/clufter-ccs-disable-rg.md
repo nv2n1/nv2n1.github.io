@@ -57,6 +57,6 @@ description: "clufter – ccs-disable-rg"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2016 Red Hat, Inc. Licensed under GPLv2+.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a></i>(5), <i><a href="/docs/linux/man/7-ccs/">ccs</a></i>(7), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
+<p> <i>cluster.conf</i>(5), <i>ccs</i>(7), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> <i><a href="/docs/linux/man/1-clufter-ccs-artefacts/">clufter-ccs-artefacts</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs-obfuscate/">clufter-ccs-obfuscate</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs-revitalize/">clufter-ccs-revitalize</a></i>(1), and perhaps more </p>
 <h2>Index</h2>

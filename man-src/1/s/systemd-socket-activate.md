@@ -45,7 +45,7 @@ description: "systemd-socket-activate – Test socket activation of daemons"
 <p> <code>&#8211;fdname=</code><i>NAME</i>[:<i>NAME</i>&#8230;]</p>
 <dl>
 <dt>
-<dd> Specify names for the file descriptors passed. This is equivalent to setting <i>FileDescriptorName=</i> in socket unit files, and enables use of <code><a href="/docs/linux/man/3-sd_listen_fds_with_names/">sd_listen_fds_with_names</a></code>(3). Multiple entries may be specifies using separate options or by separating names with colons (&quot;:&quot;) in one option. In case more names are given than descriptors, superfluous ones will be ignored. In case less names are given than descriptors, the remaining file descriptors will be unnamed.</dl>
+<dd> Specify names for the file descriptors passed. This is equivalent to setting <i>FileDescriptorName=</i> in socket unit files, and enables use of <code>sd_listen_fds_with_names</code>(3). Multiple entries may be specifies using separate options or by separating names with colons (&quot;:&quot;) in one option. In case more names are given than descriptors, superfluous ones will be ignored. In case less names are given than descriptors, the remaining file descriptors will be unnamed.</dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
@@ -81,5 +81,5 @@ $ systemd-socket-activate -l 19531 /lib/systemd/systemd-journal-gatewayd
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/1-systemd-run/">systemd-run</a></code>(1), <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3), <code><a href="/docs/linux/man/3-sd_listen_fds_with_names/">sd_listen_fds_with_names</a></code>(3), <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/1-systemd-run/">systemd-run</a></code>(1), <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3), <code>sd_listen_fds_with_names</code>(3), <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1) </p>
 <h2>Index</h2>

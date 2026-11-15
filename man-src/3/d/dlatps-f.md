@@ -147,7 +147,7 @@ description: "dlatps.f –"
  M(j) &lt;= M(j-1) * ( 1 + CNORM(j) ) / | A(j,j) |
  &lt;= M(0) * product ( ( 1 + CNORM(i) ) / |A(i,i)| )
  1&lt;=i&lt;=j
- and we can safely call DTPSV if 1/<a href="//www.systutorials.com/docs/linux/man/n-M/">M</a>(n) and 1/<a href="//www.systutorials.com/docs/linux/man/n-G/">G</a>(n) are both greater
+ and we can safely call DTPSV if 1/M(n) and 1/G(n) are both greater
  than max(underflow, 1/overflow).</pre>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 229 of file dlatps.f.</p>

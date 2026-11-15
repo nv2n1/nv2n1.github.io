@@ -44,7 +44,7 @@ description: "openipmi_cmdparms – Connection parameters for OpenIPMI"
 <dt><code>rakp3_wrong_rolem</code></p>
 <dd>Some systems use the incorrect Role(m) field in a specific authentication message (the RAKP3 message). This is a common problem. </p>
 <dt><code>rmcpp_integ_sik</code></p>
-<dd>The original IPMI 2.0 spec specified the incorrect key to use for the integrity key. This forces use of the Session Initiation Key. The default is to use <a href="/docs/linux/man/1-k/">K</a>(1)</dl>
+<dd>The original IPMI 2.0 spec specified the incorrect key to use for the integrity key. This forces use of the Session Initiation Key. The default is to use K(1)</dl>
 </dl>
 <dt><code>-s</code></p>
 <dd>Make two connections to the BMC. This means the BMC has two different IP addresses/ports that are equivalent. If this is specified, a second host must be supplied. This is not the same as two connections to two different BMCs. This must be a connection to the same BMC. </p>
@@ -53,7 +53,7 @@ description: "openipmi_cmdparms – Connection parameters for OpenIPMI"
 </dl>
 <p> The <code>-Ra</code>, <code>-Ri</code>, <code>-Rc</code>, <code>-Rk</code> and <code>-Rl</code> options only apply to RMCP+ connections and will be ignored if the connection does not support RMCP+ or if a non-RMCP+ authentication type is specified.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ipmish/">ipmish</a></code>(8), <code><a href="/docs/linux/man/8-openipmicmd/">openipmicmd</a></code>(8), <code><a href="/docs/linux/man/1-solterm/">solterm</a></code>(1) </p>
+<p><code>ipmish</code>(8), <code>openipmicmd</code>(8), <code><a href="/docs/linux/man/1-solterm/">solterm</a></code>(1) </p>
 <h2>Known Problems</h2>
 <p>This is excessively complicated, but the defaults should be good.</p>
 <h2>Author</h2>

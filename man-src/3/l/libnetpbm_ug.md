@@ -43,7 +43,7 @@ pnm_freepamrow(tuplerow);
 </code></pre>
 <h2>Guide To Using Libnetpbm</h2>
 <h3><code>libnetpbm classes</code></h3>
-<p> In this section, Guide To Using Libnetpbm, we cover only the PAM functions in <code>libnetpbm</code>. As described in <code>the</code> introduction to <code>libnetpbm</code> (1) , there are four other classes of image processing functions (PBM, PGM, PPM, PNM). They are less important, since you can do everything more easily with the PAM functions, but if you&#8217;re working on old programs or need the extra efficiency those older functions can sometimes provide, you can find them documented as here: <code>PBM</code>Function<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) , <code>PGM</code>Function<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) , <code>PPM</code>Function<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) , and <code>PNM</code>Function<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) </p>
+<p> In this section, Guide To Using Libnetpbm, we cover only the PAM functions in <code>libnetpbm</code>. As described in <code>the</code> introduction to <code>libnetpbm</code> (1) , there are four other classes of image processing functions (PBM, PGM, PPM, PNM). They are less important, since you can do everything more easily with the PAM functions, but if you&#8217;re working on old programs or need the extra efficiency those older functions can sometimes provide, you can find them documented as here: <code>PBM</code>Function<code>Manual</code>(1) , <code>PGM</code>Function<code>Manual</code>(1) , <code>PPM</code>Function<code>Manual</code>(1) , and <code>PNM</code>Function<code>Manual</code>(1) </p>
 <p> In case you&#8217;re wondering, what makes the PAM functions easier to use is: </p>
 <dl>
 <dt>&bull;</p>
@@ -80,11 +80,11 @@ pnm_freepamrow(tuplerow);
 <dt><code>depth</code></p>
 <dd> The depth of the image (degree of or number of samples in each tuple). </p>
 <dt><code>maxval</code></p>
-<dd> The maxval of the image. See definitions in <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<dd> The maxval of the image. See definitions in <code>pam</code>(1) </p>
 <dt><code>bytes_per_sample</code></p>
-<dd> The number of bytes used to represent each sample in the image file. See the format definition in <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) is entirely redundant with <code>maxval</code>. It exists as a separate member for computational speed. </p>
+<dd> The number of bytes used to represent each sample in the image file. See the format definition in <code>pam</code>(1) is entirely redundant with <code>maxval</code>. It exists as a separate member for computational speed. </p>
 <dt><code>tuple_type</code></p>
-<dd> The tuple type of the image. See definitions in <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) except the following, which are used for a PAM image which is really a view of a PBM, PGM, or PPM image: <code>PAM_PBM_TUPLETYPE</code>, <code>PAM_PGM_TUPLETYPE</code>, <code>PAM_PPM_TUPLETYPE</code>. </p>
+<dd> The tuple type of the image. See definitions in <code>pam</code>(1) except the following, which are used for a PAM image which is really a view of a PBM, PGM, or PPM image: <code>PAM_PBM_TUPLETYPE</code>, <code>PAM_PGM_TUPLETYPE</code>, <code>PAM_PPM_TUPLETYPE</code>. </p>
 <dt><code>allocation_depth</code></p>
 <dd> The number of samples for which memory is allocated for any tuple associated with this PAM structure. This must be at least as great as &#8216;depth&#8217;. Only the first &#8216;depth&#8217; of the samples of a tuple are meaningful. </p>
 <p> The purpose of this is to make it possible for a program to change the type of a tuple to one with more or fewer planes. </p>
@@ -122,7 +122,7 @@ free(comments);
 <h3>Reference</h3>
 <p> The <code>Libnetpbm</code>Netpbm<code>Image</code> Processing Manual (1)<br />
 &nbsp;<wbr>describes the the&nbsp;<wbr><code>libnetpbm</code>&nbsp;<wbr>functions for processing image data. </p>
-<p> The <code>Libnetpbm</code>Utility<code><a href="/docs/linux/man/1-manual/">Manual</a></code>(1) </p>
+<p> The <code>Libnetpbm</code>Utility<code>Manual</code>(1) </p>
 <p> describes the functions that are not specifically related to the Netpbm image formats. </p>
 <h2>Index</h2>
 </dl>

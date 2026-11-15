@@ -57,13 +57,13 @@ rscryutil[OPTIONS][FILE]...
 <p> <code>rscryutil &#8211;generate-random-key 16 &#8211;keyfile /some/secured/path/keyfile</code> </p>
 <p> Generates random key and stores it in the specified keyfile.</p>
 <h2>LOG SIGNATURES</h2>
-<p> Encrypted log files can be used together with signing. To verify such a file, it must be decrypted first, and the verification tool <code><a href="/docs/linux/man/1-rsgtutil/">rsgtutil</a>(1)</code> must be run on the decrypted file.</p>
+<p> Encrypted log files can be used together with signing. To verify such a file, it must be decrypted first, and the verification tool <code>rsgtutil(1)</code> must be run on the decrypted file.</p>
 <h2>SECURITY CONSIDERATIONS</h2>
 <p> Specifying keys directly on the command line (<i>&#8211;key</i> option) is very insecure and should not be done, except for testing purposes with test keys. Even then it is recommended to use keyfiles, which are also easy to handle during testing. Keep in mind that command history is usally be kept by bash and can also easily be monitored. </p>
 <p> Local keyfiles are also a security risk. At a minimum, they should be used with very restrictive file permissions. For this reason, the <i>rscryutil</i> tool creates them with read permissions for the user, only, no matter what umask is set to. </p>
 <p> When selecting cipher algorithms and modes, care needs to be taken. The defaults should be reasonable safe to use, but this tends to change over time. Keep up with the most current crypto recommendations.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-rsgtutil/">rsgtutil</a>(1)</code>, <code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a>(8)</code></p>
+<p> <code>rsgtutil(1)</code>, <code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a>(8)</code></p>
 <h2>COPYRIGHT</h2>
 <p> This page is part of the <i>rsyslog</i> project, and is available under LGPLv2.</p>
 <h2>AUTHOR</h2>

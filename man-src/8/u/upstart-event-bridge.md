@@ -11,7 +11,7 @@ description: "upstart-event-bridge – Bridge between system Upstart and session
 <h2>Synopsis</h2>
 <p><code>upstart-event-bridge</code> [<i>OPTIONS</i>]&#8230;</p>
 <h2>Description</h2>
-<p><code>upstart-event-bridge</code> receives information about Upstart system <code><a href="/docs/linux/man/8-events/">events</a></code>(8) have completed and creates Upstart session events for them. It emits events which match the pattern &quot;:sys:*&quot;. Forwarding any event that&#8217;s triggered on the system upstart as well as a virtual &quot;restarted&quot; event when upstart itself is restarted (during upgrades). See <code><a href="/docs/linux/man/7-upstart-events/">upstart-events</a></code>(7) and for further details. This bridge should be run as a user, after the session bus has been setup and only once per session init. </p>
+<p><code>upstart-event-bridge</code> receives information about Upstart system <code>events</code>(8) have completed and creates Upstart session events for them. It emits events which match the pattern &quot;:sys:*&quot;. Forwarding any event that&#8217;s triggered on the system upstart as well as a virtual &quot;restarted&quot; event when upstart itself is restarted (during upgrades). See <code><a href="/docs/linux/man/7-upstart-events/">upstart-events</a></code>(7) and for further details. This bridge should be run as a user, after the session bus has been setup and only once per session init. </p>
 <h2>Options</h2>
 <dl>
 <dt><code>&#8211;daemon</code></p>
@@ -39,4 +39,4 @@ description: "upstart-event-bridge – Bridge between system Upstart and session
 <p>Copyright &#169; 2012 Canonical Ltd. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-init/">init</a></code>(5) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) <code><a href="/docs/linux/man/7-events/">events</a></code>(7) </p>
+<p><code><a href="/docs/linux/man/5-init/">init</a></code>(5) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) <code>events</code>(7) </p>

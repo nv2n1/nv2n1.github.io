@@ -154,12 +154,12 @@ description: "signal-safety – async-signal-safe functions"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2)</td>
+<td><code>_exit</code>(2)</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/2-_exit/">_Exit</a></code>(2)</td>
+<td><code>_Exit</code>(2)</td>
 <td>
 </td>
 </tr>
@@ -439,7 +439,7 @@ description: "signal-safety – async-signal-safe functions"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><a href="/docs/linux/man/3-posix_trace_event/">posix_trace_event</a></code>(3)</td>
+<td><code>posix_trace_event</code>(3)</td>
 <td>
 </td>
 </tr>
@@ -991,7 +991,7 @@ description: "signal-safety – async-signal-safe functions"
 <dt>*</p>
 <dd>If a signal handler interrupts the execution of an unsafe function, and the handler terminates via a call to <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) or <code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3) and the program subsequently calls an unsafe function, then the behavior of the program is undefined.</p>
 <dt>*</p>
-<dd>POSIX.1-2001 TC1 clarified that if an application calls <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from a signal handler and any of the fork handlers registered by <code><a href="/docs/linux/man/3-pthread_atfork/">pthread_atfork</a></code>(3) calls a function that is not async-signal-safe, the behavior is undefined. A future revision of the standard is likely to remove <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from the list of async-signal-safe functions.</p>
+<dd>POSIX.1-2001 TC1 clarified that if an application calls <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from a signal handler and any of the fork handlers registered by <code>pthread_atfork</code>(3) calls a function that is not async-signal-safe, the behavior is undefined. A future revision of the standard is likely to remove <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from the list of async-signal-safe functions.</p>
 <dt>*</p>
 <dd>Asynchronous signal handlers that call functions which are cancellation points and nest over regions of deferred cancellation may trigger cancellation whose behavior is as if asynchronous cancellation had occurred and may cause application state to become inconsistent.</dl>
 <h3>errno</h3>
@@ -1002,7 +1002,7 @@ description: "signal-safety – async-signal-safe functions"
 <dt>*</p>
 <dd>Before glibc 2.24, <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) and <code><a href="/docs/linux/man/3-execle/">execle</a></code>(3) employed <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3) internally and were consequently not async-signal-safe. This was fixed in glibc 2.24.</p>
 <dt>*</p>
-<dd>The glibc implementation of <code><a href="/docs/linux/man/3-aio_suspend/">aio_suspend</a></code>(3) is not async-signal-safe because it uses <code><a href="/docs/linux/man/3-pthread_mutex_lock/">pthread_mutex_lock</a></code>(3) internally.</dl>
+<dd>The glibc implementation of <code><a href="/docs/linux/man/3-aio_suspend/">aio_suspend</a></code>(3) is not async-signal-safe because it uses <code>pthread_mutex_lock</code>(3) internally.</dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7), <code><a href="/docs/linux/man/7-standards/">standards</a></code>(7)</p>
 <h2>Colophon</h2>

@@ -25,7 +25,7 @@ description: "secondtst.f –"
 <dl>
 <dd>November 2011</dl>
 <p> Definition at line 33 of file secondtst.f.</p>
-<h3>subroutine mysub (integerN, real, <a href="/docs/linux/man/n-dimension/">dimension</a>(n)X, real, <a href="/docs/linux/man/n-dimension/">dimension</a>(n)Y)</h3>
+<h3>subroutine mysub (integerN, real, dimension(n)X, real, dimension(n)Y)</h3>
 <p>Definition at line 116 of file secondtst.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

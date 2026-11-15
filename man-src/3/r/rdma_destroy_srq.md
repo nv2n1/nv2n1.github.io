@@ -34,4 +34,4 @@ Users should destroy any SRQ associated with an rdma_cm_id before destroying the
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/3-rdma_create_srq/">rdma_create_srq</a>(3), <a HREF="/docs/linux/man/3-rdma_destroy_id/">rdma_destroy_id</a>(3), <a HREF="/docs/linux/man/3-ibv_destroy_srq/">ibv_destroy_srq</a>(3) 
+<a HREF="/docs/linux/man/3-rdma_create_srq/">rdma_create_srq</a>(3), <a HREF="/docs/linux/man/3-rdma_destroy_id/">rdma_destroy_id</a>(3), ibv_destroy_srq(3) 

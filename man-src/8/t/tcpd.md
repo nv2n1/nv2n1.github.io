@@ -66,7 +66,7 @@ becomes:
 <br>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>finger stream tcp nowait nobody /some/where/tcpd in.fingerd</pre>The example assumes that the network daemons live in /usr/etc. On some systems, network daemons live in /usr/sbin or in /usr/libexec, the daemons have no `in.' prefix to their name, or there is no userid field in the inetd configuration file. 
 
- Similar changes will be needed for the other services that are to be covered by <i>tcpd</i>. Send a `kill -HUP' to the <i><a HREF="/docs/linux/man/8-inetd/">inetd</a></i>(8) process to make the changes effective. AIX users may also have to execute the `inetimp' command.
+ Similar changes will be needed for the other services that are to be covered by <i>tcpd</i>. Send a `kill -HUP' to the <i>inetd</i>(8) process to make the changes effective. AIX users may also have to execute the `inetimp' command.
 
 <h2>Example 3</h2>
 
@@ -76,7 +76,7 @@ In the case of daemons that do not live in a common directory (&quot;secret&quot
 
 Some UDP (and RPC) daemons linger around for a while after they have finished their work, in case another request comes in. In the inetd configuration file these services are registered with the <i>wait</i> option. Only the request that started such a daemon will be logged. 
 
- The program does not work with RPC services over TCP. These services are registered as <i>rpc/tcp</i> in the inetd configuration file. The only non-trivial service that is affected by this limitation is <i>rexd</i>, which is used by the <i><a HREF="/docs/linux/man/1-on/">on</a>(1)</i> command. This is no great loss. On most systems, <i>rexd</i> is less secure than a wildcard in /etc/hosts.equiv. 
+ The program does not work with RPC services over TCP. These services are registered as <i>rpc/tcp</i> in the inetd configuration file. The only non-trivial service that is affected by this limitation is <i>rexd</i>, which is used by the <i>on(1)</i> command. This is no great loss. On most systems, <i>rexd</i> is less secure than a wildcard in /etc/hosts.equiv. 
 
  RPC broadcast requests (for example: <i>rwall, rup, rusers</i>) always appear to come from the responding host. What happens is that the client broadcasts the request to all <i>portmap</i> daemons on its network; each <i>portmap</i> daemon forwards the request to a local daemon. As far as the <i>rwall</i> etc. daemons know, the request comes from the local host.
 
@@ -90,8 +90,8 @@ The default locations of the host access control tables are:
 <h2>See Also</h2>
 
 <pre><a HREF="//www.systutorials.com/docs/linux/man/5-hosts_access/">hosts_access</a>(5), format of the tcpd access control tables.
-<a HREF="//www.systutorials.com/docs/linux/man/5-syslog.conf/">syslog.conf</a>(5), format of the syslogd control file.
-<a HREF="//www.systutorials.com/docs/linux/man/5-inetd.conf/">inetd.conf</a>(5), format of the inetd control file.</pre>
+syslog.conf(5), format of the syslogd control file.
+inetd.conf(5), format of the inetd control file.</pre>
 
 <h2>Authors</h2>
 

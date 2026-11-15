@@ -155,7 +155,7 @@ struct ibv_flow_action_esp_attr {
 
  Finally, the IV used to encrypt the packet replaces the IV field provided, the payload is encrypted and authenticated, a trailer with padding is added and the ICV is added as well. 
 
- For decrypt the packet is authenticated and decrypted in-place, resulting in a decrypted IPSEC packet with no trailer. The result of decryption and authentication can be retrieved from an extended CQ via the <a HREF="/docs/linux/man/3-ibv_wc_read_xxx/">ibv_wc_read_XXX</a>(3) function. 
+ For decrypt the packet is authenticated and decrypted in-place, resulting in a decrypted IPSEC packet with no trailer. The result of decryption and authentication can be retrieved from an extended CQ via the ibv_wc_read_XXX(3) function. 
 
  This mode must be combined with the flow steering including IBV_FLOW_SPEC_IPV4 and IBV_FLOW_SPEC_ESP to match the outer packet headers to ensure that the action is only applied to IPSEC packets with the correct identifiers. 
 
@@ -286,7 +286,7 @@ struct ibv_flow_action_esp_encap {
 
  
 
- <a HREF="/docs/linux/man/3-ibv_create_flow/">ibv_create_flow</a>(3), <a HREF="/docs/linux/man/3-ibv_destroy_action/">ibv_destroy_action</a>(3), RFC 4106 
+ ibv_create_flow(3), ibv_destroy_action(3), RFC 4106 
 
 <h2>Index</h2>
 

@@ -50,7 +50,7 @@ CURVPS - calculate values for a smoothing spline for a periodic function.
  = 3 if EPS is negative or greater than 1. 
  = 4 if X values are not strictly increasing. 
  = 5 if D is negative. 
- = 6 if P is less than or equal to X(N)<a HREF="/docs/linux/man/1--x/">-X</a>(1).</dl><h2>Access</h2>To use CURVPS, load the NCAR Graphics library ngmath.
+ = 6 if P is less than or equal to X(N)-X(1).</dl><h2>Access</h2>To use CURVPS, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>curvp2, fitgrid_params. 
 
  Complete documentation for Fitgrid is available at URL 

@@ -25,7 +25,7 @@ description: "pmpost – append messages to the Performance Co-Pilot notice boar
 <h2>UNIX SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1).</p>
 <h2>WINDOWS SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcp-eventlog/">pcp-eventlog</a></code>(1).</p>
+<p> <code>pcp-eventlog</code>(1).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
 <h2>Index</h2>

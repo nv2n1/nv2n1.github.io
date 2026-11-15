@@ -24,7 +24,7 @@ description: "simfqt-library –"
 <dt>&bull;</p>
 <dd>Fare rule sets: storage, engine, management</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-simfqt/">simfqt</a>(1)</code>, <code><a href="/docs/linux/man/1-simfqt-parsefarerules/">simfqt-parseFareRules</a></code>(1), <code><a href="/docs/linux/man/1-simfqt-config/">simfqt-config</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/1-simfqt/">simfqt</a>(1)</code>, <code>simfqt-parseFareRules</code>(1), <code><a href="/docs/linux/man/1-simfqt-config/">simfqt-config</a></code>(1)</p>
 <h2>Support</h2>
 <p>Please report any bugs to <a rel="nofollow" href="https://sourceforge.net/apps/trac/simfqt/report">https://sourceforge.net/apps/trac/simfqt/report</a></p>
 <h2>Copyright</h2>

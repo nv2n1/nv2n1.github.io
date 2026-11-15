@@ -43,5 +43,5 @@ description: "estwaver – command line interface of web crawler"
 <p> All sub commands return 0 if the operation is success, else return 1. A running crawler finishes with closing the database when it catches the signal 1 (SIGHUP), 2 (SIGINT), 3 (SIGQUIT), or 15 (SIGTERM). </p>
 <p> When crawling finishes, there is a directory <code>_index</code> in the crawler root directory. It is an index available by <code>estcmd</code> and so on. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/3-estraier/">estraier</a></code>(3), <code><a href="/docs/linux/man/3-estnode/">estnode</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code>estraier</code>(3), <code>estnode</code>(3) </p>
 <h2>Index</h2>

@@ -34,7 +34,7 @@ description: "xkibitz – allow multiple people to interact in an xterm"
 <p> To drop a display, enter &quot;- tag&quot; where tag is the display&#8217;s tag according to the &quot;=&quot; command. </p>
 <p> To return to the shared shell, enter &quot;return&quot;. Then the keystrokes of all users become the input of the shell. Similarly, all users receive the output from the shell. </p>
 <p> To terminate <code>xkibitz</code> it suffices to terminate the shell itself. For example, if any user types ^D (and the shell accepts this to be EOF), the shell terminates followed by <code>xkibitz</code>. </p>
-<p> Normally, all characters are passed uninterpreted. However, in the escape dialogue the user talks directly to the <code>xkibitz</code> interpreter. Any <code><a href="/docs/linux/man/1-expect/">Expect</a></code>(1) or <code><a href="/docs/linux/man/3-tcl/">Tcl</a></code>(3) commands may also be given. Also, job control may be used while in the interpreter, to, for example, suspend or restart <code>xkibitz</code>. </p>
+<p> Normally, all characters are passed uninterpreted. However, in the escape dialogue the user talks directly to the <code>xkibitz</code> interpreter. Any <code><a href="/docs/linux/man/1-expect/">Expect</a></code>(1) or <code>Tcl</code>(3) commands may also be given. Also, job control may be used while in the interpreter, to, for example, suspend or restart <code>xkibitz</code>. </p>
 <p> Various processes can produce various effects. For example, you can emulate a multi-way <a href="/docs/linux/man/1-write/">write</a>(1) session with the command: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>xkibitz sleep 1000000</p>
 <h2>ARGUMENTS</h2>
@@ -57,7 +57,7 @@ description: "xkibitz – allow multiple people to interact in an xterm"
 </pre>
 <p> (this is for the Bourne shell &#8211; use whatever syntax is appropriate for your favorite shell). Any option can be given that is valid for the <code>xterm</code> command, with the exception of <code>-display</code>, <code>-geometry</code> and <code>-S</code> as those are set by <code>xkibitz</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-tcl/">Tcl</a></code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3) <code><a href="/docs/linux/man/1-kibitz/">kibitz</a></code>(1)<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3) <code><a href="/docs/linux/man/1-kibitz/">kibitz</a></code>(1)<br />
  <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.<br />
  <i>&quot;kibitz &#8211; Connecting Multiple Interactive Programs Together&quot;, </i>by Don Libes, Software &#8211; Practice &amp; Experience, John Wiley &amp; Sons, West Sussex, England, Vol. 23, No. 5, May, 1993.</p>
 <h2>AUTHOR</h2>

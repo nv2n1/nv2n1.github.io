@@ -75,7 +75,7 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 </code></pre>
 <h2>Possible output:</h2>
 <p>&nbsp;<wbr>&nbsp;sqrt(100) = 10<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/2-sqrt/">sqrt</a><code>(2)</code> = 1.41421<br />
+&nbsp;<wbr>&nbsp;sqrt<code>(2)</code> = 1.41421<br />
 &nbsp;<wbr>&nbsp;golden ratio = 1.61803<br />
 &nbsp;<wbr>&nbsp;sqrt(-0) = -0<br />
 &nbsp;<wbr>&nbsp;sqrt(-1.0) = -nan<br />

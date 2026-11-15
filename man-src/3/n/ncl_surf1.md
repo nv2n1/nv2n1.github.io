@@ -29,19 +29,19 @@ CALL SURF1 (M, N, X, Y, Z, IZ, ZX1, ZXM, ZY1, ZYN, ZXY11, ZXYM1, ZXY1N, ZXYMN, I
 <dt>IZ
 <dd>(integer, input) The row dimension of the matrix Z (IZ is greater than or equal to M).
 <dt>ZX1
-<dd>(real, input) An array containing N X-partial derivatives of the function along the line <a HREF="/docs/linux/man/1-x/">X</a>(1), that is ZX1(J) is the X-partial derivative at point (<a HREF="/docs/linux/man/1-x/">X</a>(1),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
+<dd>(real, input) An array containing N X-partial derivatives of the function along the line X(1), that is ZX1(J) is the X-partial derivative at point (X(1),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ZXM
 <dd>(real, input) An array containing N X-partial derivatives of the function along the line X(M), that is ZXM(J) is the X-partial derivative at point (X(M),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ZY1
-<dd>(real, input) An array containing M Y-partial derivatives of the function along the line <a HREF="/docs/linux/man/1-y/">Y</a>(1), that is ZY1(I) is the Y-partial derivative at point (X(I),<a HREF="/docs/linux/man/1-y/">Y</a>(1)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
+<dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(1), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(1)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ZYN
 <dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(N), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(N)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ZXY11
-<dd>(real, input) The X-Y-partial derivative at (<a HREF="/docs/linux/man/1-x/">X</a>(1),<a HREF="/docs/linux/man/1-y/">Y</a>(1). This parameter may be defaulted by setting ISLPSW appropriately.
+<dd>(real, input) The X-Y-partial derivative at (X(1),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ZXYM1
-<dd>(real, input) The X-Y-partial derivative at (X(M),<a HREF="/docs/linux/man/1-y/">Y</a>(1). This parameter may be defaulted by setting ISLPSW appropriately.
+<dd>(real, input) The X-Y-partial derivative at (X(M),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ZXY1N
-<dd>(real, input) The X-Y-partial derivative at (<a HREF="/docs/linux/man/1-x/">X</a>(1),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
+<dd>(real, input) The X-Y-partial derivative at (X(1),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ZXYMN
 <dd>(real, input) The X-Y-partial derivative at (X(M),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
 <dt>ISLPSW

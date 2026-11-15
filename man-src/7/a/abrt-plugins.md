@@ -22,7 +22,7 @@ Almost every plugin has its configuration file, stored in the <i>/etc/abrt/plugi
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/8-abrt/">abrt</a></i>(8), <i><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a HREF="/docs/linux/man/7-abrt-bugzilla/">abrt-Bugzilla</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-filetransfer/">abrt-FileTransfer</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-kerneloopsreporter/">abrt-KerneloopsReporter</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-kerneloopsscanner/">abrt-KerneloopsScanner</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-logger/">abrt-Logger</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-mailx/">abrt-Mailx</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-runapp/">abrt-RunApp</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-sqlite3/">abrt-SQLite3</a></i>(7)
+<i>abrt</i>(8), <i><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a HREF="/docs/linux/man/7-abrt-bugzilla/">abrt-Bugzilla</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-filetransfer/">abrt-FileTransfer</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-kerneloopsreporter/">abrt-KerneloopsReporter</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-kerneloopsscanner/">abrt-KerneloopsScanner</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-logger/">abrt-Logger</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-mailx/">abrt-Mailx</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-runapp/">abrt-RunApp</a></i>(7), <i><a HREF="/docs/linux/man/7-abrt-sqlite3/">abrt-SQLite3</a></i>(7)
 
 <h2>Author</h2>
 

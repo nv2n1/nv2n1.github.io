@@ -37,7 +37,7 @@ description: "smilint – syntax and semantic checks of SMIv1/v2 and SPPI module
 <dt><code>-i </code><i>prefix</i><code>, &#8211;ignore=</code><i>prefix</i></p>
 <dd> Ignore all errors that have a tag which matches <i>prefix</i>. A list of error tags can be retrieved by calling smilint with the -e option.</p>
 <dt><i>module(s)</i></p>
-<dd> These are the modules to be checked. If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code><a href="/docs/linux/man/3-smi_config/">smi_config</a>(3)</code> for more details.</dl>
+<dd> These are the modules to be checked. If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code>smi_config(3)</code> for more details.</dl>
 <h2>ERROR AND WARNING LEVELS</h2>
 <p> All generated error and warning messages have an associated severity level. The actual severity levels are:</p>
 <dl>
@@ -69,7 +69,7 @@ description: "smilint – syntax and semantic checks of SMIv1/v2 and SPPI module
   ./RMON2-MIB:4164: scalar object must not have a `read-create' access value
 </pre>
 <h2>SEE ALSO</h2>
-<p> The <code><a href="/docs/linux/man/3-libsmi/">libsmi</a></code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>. Other commonly used MIB checkers are <code><a href="/docs/linux/man/1-mosy/">mosy</a></code>(1) and <code><a href="/docs/linux/man/1-smicng/">smicng</a></code>(1).</p>
+<p> The <code>libsmi</code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>. Other commonly used MIB checkers are <code>mosy</code>(1) and <code>smicng</code>(1).</p>
 <h2>AUTHORS</h2>
 <p> (C) 1999-2004 F. Strauss, TU Braunschweig, Germany &lt;strauss [at] ibr.cs.tu-bs.de&gt;<br />
  (C) 1999-2002 J. Schoenwaelder, TU Braunschweig, Germany &lt;schoenw [at] ibr.cs.tu-bs.de&gt;<br />

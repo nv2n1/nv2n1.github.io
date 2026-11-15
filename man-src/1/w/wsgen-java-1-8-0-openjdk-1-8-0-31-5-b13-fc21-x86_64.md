@@ -60,7 +60,7 @@ description: "wsgen – Reads a web service endpoint implementation (SEI) class 
 <h2>See Also</h2>
 <dl COMPACT>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-wsimport/">wsimport</a>(1)</p>
+<dd>wsimport(1)</p>
 <dt>&bull;</p>
 <dd><i>The Tools</i> tab of the JAX-WS (wsgen) page <a rel="nofollow" href="http://jax-ws.java.net/nonav/2.1.1/docs/wsgenant.html">http://jax-ws.java.net/nonav/2.1.1/docs/wsgenant.html</a> </p>
 </dl>

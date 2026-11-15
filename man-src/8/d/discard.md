@@ -19,7 +19,7 @@ description: "discard – Postfix discard mail delivery agent"
 <h2>Standards</h2>
 <pre>None.</pre>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). </p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8). </p>
 <p> Depending on the setting of the <code>notify_classes</code> parameter, the postmaster is notified of bounces and of other trouble.</p>
 <h2>Configuration Parameters</h2>
 <p>Changes to <code>main.cf</code> are picked up automatically as <code><a href="/docs/linux/man/8-discard/">discard</a></code>(8) processes run for only a limited amount of time. Use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
@@ -56,7 +56,7 @@ description: "discard – Postfix discard mail delivery agent"
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>License</h2>
 <p>The Secure Mailer license must be distributed with this software.</p>
 <h2>History</h2>

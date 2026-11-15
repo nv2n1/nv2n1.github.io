@@ -22,7 +22,7 @@ description: "ppmtopjxl – convert a PPM image to an HP PaintJet XL PCL file"
 <p> You can alternatively use the <code>-xscale</code> and <code>-yscale</code> options to scale the image by a simple factor. </p>
 <p> You can shift the image on the page with the <code>-xshift</code> and <code>-yshift</code> options. These move the image the specified dimensions right and down. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code>ppm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Angus Duggan </p>
 <h2>Index</h2>

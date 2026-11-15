@@ -13,7 +13,7 @@ description: "mcrypt, mdecrypt – encrypt or decrypt files"
 <p> <code>mcrypt</code> [<code> -dLFubhvrzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 &#8230;</code>] [<code>-f keyfile</code>] [ <i>filename &#8230;</i> ] </p>
 <p> <code>mdecrypt</code> [<code> -LFusbhvzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 &#8230;</code>] [<code>-f keyfile</code>] [ <i>filename &#8230;</i> ] </p>
 <h2>DESCRIPTION</h2>
-<p> <i>Mcrypt</i> is a simple crypting program, a replacement for the old unix <i><a href="/docs/linux/man/1-crypt/">crypt</a></i>(1). When encrypting or decrypting a file, a new file is created with the extension <code>.nc</code> and mode 0600. The new file keeps the modification date of the original. The original file may be deleted by specifying the -u parameter. If no files are specified, the standard input is encrypted to the standard output. </p>
+<p> <i>Mcrypt</i> is a simple crypting program, a replacement for the old unix <i>crypt</i>(1). When encrypting or decrypting a file, a new file is created with the extension <code>.nc</code> and mode 0600. The new file keeps the modification date of the original. The original file may be deleted by specifying the -u parameter. If no files are specified, the standard input is encrypted to the standard output. </p>
 <p> <i>Mcrypt</i> uses all the symmetric algorithms included in libmcrypt. </p>
 <h2>HINTS</h2>
 <p> By default, <i>mcrypt</i> , when one of these algorithms is specified, prompts something like:<br />

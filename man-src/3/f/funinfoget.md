@@ -114,5 +114,5 @@ name type comment-- -- -- -- - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 <p> Row applications would not normally need any of this information. An example of how these values can be used in more complex programs is the evnext example code. In this program, the time value for each row is changed to be the value of the succeeding row. The program thus reads the time values for a batch of rows, changes the time values to be the value for the succeeding row, and then merges these changed time values back with the other columns to the output file. It then reads the next batch, etc. </p>
 <p> This does not work for the last row read in each batch, since there is no succeeding row until the next batch is read. Therefore, the program saves that last row until it has read the next batch, then processes the former before starting on the new batch. In order to merge the last row successfully, the code uses <font SIZE="-1">FUN_RAWBUF</font> to save and restore the raw input data associated with each batch of rows. Clearly, this requires some information about how funtools works internally. We are happy to help you write such programs as the need arises.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

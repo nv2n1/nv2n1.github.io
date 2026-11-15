@@ -33,4 +33,4 @@ description: "XmVaCreateMultiList, XmVaCreateManagedMultiList — A MultiList wi
 <h2>Return</h2>
 <p>Returns the MultiList widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatemultilist/">XmCreateMultiList</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3), <code>XmCreateMultiList</code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>

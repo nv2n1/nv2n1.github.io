@@ -34,7 +34,7 @@ description: "memcached_prepend – Appending to or Prepending to data on the se
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://libmemcached.org/">http://libmemcached.org/</a></i></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-memcached/">memcached</a>(1)</i> <i><a href="/docs/linux/man/3-libmemached/">libmemached</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_strerror/">memcached_strerror</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_set/">memcached_set</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_add/">memcached_add</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_cas/">memcached_cas</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_replace/">memcached_replace</a>(3)</i></p>
+<p> <i><a href="/docs/linux/man/1-memcached/">memcached</a>(1)</i> <i>libmemached(3)</i> <i><a href="/docs/linux/man/3-memcached_strerror/">memcached_strerror</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_set/">memcached_set</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_add/">memcached_add</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_cas/">memcached_cas</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_replace/">memcached_replace</a>(3)</i></p>
 <h2>AUTHOR</h2>
 <p> Brian Aker</p>
 <h2>COPYRIGHT</h2>

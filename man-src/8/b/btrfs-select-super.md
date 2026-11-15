@@ -27,4 +27,4 @@ description: "btrfs-select-super – overwrite primary superblock with a backup 
 <dl>
 <dd>use &#8216;superblock&#8217;th superblock copy, valid values are 0 1 or 2 if the respective superblock offset is within the device size</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-btrfs-inspect-internal/">btrfs-inspect-internal</a></code>(8), <code>btrfsck <a href="/docs/linux/man/8-check/">check</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-btrfs-inspect-internal/">btrfs-inspect-internal</a></code>(8), <code>btrfsck check</code>(8) </p>

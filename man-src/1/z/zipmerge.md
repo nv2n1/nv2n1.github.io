@@ -36,7 +36,7 @@ description: "zipmerge – merge zip archives"
 <h2>EXIT STATUS</h2>
 <p> <code>zipmerge</code> exits 0 on success and &gt;1 if an error occurred.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-zipcmp/">zipcmp</a>(1), <a href="/docs/linux/man/1-ziptorrent/">ziptorrent</a>(1), <a href="/docs/linux/man/3-libzip/">libzip</a>(3)</p>
+<p> <a href="/docs/linux/man/1-zipcmp/">zipcmp</a>(1), <a href="/docs/linux/man/1-ziptorrent/">ziptorrent</a>(1), libzip(3)</p>
 <h2>AUTHORS</h2>
 <p> Dieter Baron &lt;dillo [at] giga.or.at&gt; and Thomas Klausner &lt;tk [at] giga.or.at&gt; </p>
 <h2>Index</h2>

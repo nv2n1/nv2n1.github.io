@@ -40,7 +40,7 @@ description: "smidump – dump SMI or SPPI modules in various formats"
 <dt><code>-k, &#8211;keep-going</code></p>
 <dd> Continue as much as possible after serious parse errors. Note that the output generated after serious parse errors may be incomplete and should be used with care.</p>
 <dt><i>module(s)</i></p>
-<dd> These are the module(s) to be dumped. If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code><a href="/docs/linux/man/3-smi_config/">smi_config</a>(3)</code> for more details.</dl>
+<dd> These are the module(s) to be dumped. If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code>smi_config(3)</code> for more details.</dl>
 <h2>OUTPUT FORMATS</h2>
 <p> The <code>smidump</code> program supports the following output formats:</p>
 <dl>
@@ -95,7 +95,7 @@ description: "smidump – dump SMI or SPPI modules in various formats"
   $ smidump -f sming ./IF-MIB &gt; IF-MIB.sming
 </pre>
 <h2>SEE ALSO</h2>
-<p> The <code><a href="/docs/linux/man/3-libsmi/">libsmi</a></code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>. </p>
+<p> The <code>libsmi</code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>. </p>
 <p> <code><a href="/docs/linux/man/1-smilint/">smilint</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> (C) 1999-2004 F. Strauss, TU Braunschweig, Germany &lt;strauss [at] ibr.cs.tu-bs.de&gt;<br />

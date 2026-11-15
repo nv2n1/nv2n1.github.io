@@ -65,5 +65,5 @@ description: "sfddiff – compare two font files"
 <dt>
 <dd> <a rel="nofollow" href="http://fontforge.sourceforge.net/">http://fontforge.sourceforge.net/</a></dl>
 <h2>AUTHOR</h2>
-<p> Copyright (C) 2000-2006 by George Williams (gww [at] silcom.com). Manual page heavily rewritten and modified to use standard <i><a href="/docs/linux/man/5--man/">-man</a></i>(5) macros by R.P.C. Rodgers (rodgers [at] nlm.nih.gov), 23 October 2002. </p>
+<p> Copyright (C) 2000-2006 by George Williams (gww [at] silcom.com). Manual page heavily rewritten and modified to use standard <i>-man</i>(5) macros by R.P.C. Rodgers (rodgers [at] nlm.nih.gov), 23 October 2002. </p>
 <h2>Index</h2>

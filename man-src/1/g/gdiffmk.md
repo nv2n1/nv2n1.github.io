@@ -44,5 +44,5 @@ description: "gdiffmk – mark differences between groff/nroff/troff files"
 <h2>AUTHORS</h2>
 <p> <code>gdiffmk</code> was written and is maintained by Mike Bianchi</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1), <code><a href="/docs/linux/man/1-gtroff/">gtroff</a></code>(1), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1), <code>gtroff</code>(1), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) </p>
 <h2>Index</h2>

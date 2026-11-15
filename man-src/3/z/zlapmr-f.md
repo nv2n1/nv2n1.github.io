@@ -19,7 +19,7 @@ description: "zlapmr.f –"
 <dl>
 <dd>
 <pre> ZLAPMR rearranges the rows of the M by N matrix X as specified
- by the permutation <a href="//www.systutorials.com/docs/linux/man/1-K/">K</a>(1),<a href="//www.systutorials.com/docs/linux/man/2-K/">K</a>(2),...,K(M) of the integers 1,...,M.
+ by the permutation K(1),K(2),...,K(M) of the integers 1,...,M.
  If FORWRD = .TRUE., forward permutation:
  X(K(I),*) is moved X(I,*) for I = 1,2,...,M.
  If FORWRD = .FALSE., backward permutation:

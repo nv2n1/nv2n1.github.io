@@ -22,7 +22,7 @@ description: "pbmtocis – convert a PBM image to a CompuServe RLE image"
 <dd> If the input image is smaller than the fixed size of the output image, pad with white pixels rather than black. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cistopbm/">cistopbm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) CompuServe RLE file format </p>
+<p> <code><a href="/docs/linux/man/1-cistopbm/">cistopbm</a></code>(1) , <code>pbm</code>(1) CompuServe RLE file format </p>
 <h2>HISTORY</h2>
 <p> <code>pbmtocis</code> was new in Netpbm 10.48 (September 2009). </p>
 <h2>AUTHOR</h2>

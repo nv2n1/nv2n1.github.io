@@ -47,5 +47,5 @@ description: "faked – daemon that remembers fake ownership/permissions of file
 <h2>MANUAL PAGE</h2>
 <p> mostly by J.H.M. Dassen &lt;jdassen [at] debian.org&gt; mods/additions by joost and Clint.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></code>(1), <code><a href="/docs/linux/man/1-debuild/">debuild</a></code>(1) <code>/usr/share/doc/fakeroot/DEBUG</code> </p>
+<p> <code><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></code>(1), <code>debuild</code>(1) <code>/usr/share/doc/fakeroot/DEBUG</code> </p>
 <h2>Index</h2>

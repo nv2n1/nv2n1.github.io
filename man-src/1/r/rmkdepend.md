@@ -79,7 +79,7 @@ $(SRCS)
 <p>&nbsp;<wbr>file1.o: header.h def1.h def2.h </p>
 <p> But when the program parses <i>file2.c</i> and discovers that it, too, includes <i>header.h,</i> it does not parse the file, but simply adds <i>header.h,</i> <i>def1.h</i> and <i>def2.h</i> to the list of dependencies for <i>file2.o.</i></p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cc/">cc</a>(1), <a href="/docs/linux/man/1-make/">make</a>(1), <a href="/docs/linux/man/1-root/">root</a>(1), <a href="/docs/linux/man/1-root-cint/">root-cint</a>(1) </p>
+<p> <a href="/docs/linux/man/1-cc/">cc</a>(1), <a href="/docs/linux/man/1-make/">make</a>(1), <a href="/docs/linux/man/1-root/">root</a>(1), root-cint(1) </p>
 <p> See also the <code>ROOT</code> webpages: <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i></p>
 <h2>BUGS</h2>
 <p> <code>rmkdepend</code> parses, but does not currently evaluate, the SVR4 #predicate(token-list) preprocessor expression; such expressions are simply assumed to be true. This may cause the wrong <i>#include</i> directives to be evaluated. </p>

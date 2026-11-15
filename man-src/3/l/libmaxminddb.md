@@ -1969,7 +1969,7 @@ end:
 
  
 
- <a HREF="/docs/linux/man/1-mmdblookup/">mmdblookup</a>(1) 
+ mmdblookup(1) 
 
 <h2>Index</h2>
 

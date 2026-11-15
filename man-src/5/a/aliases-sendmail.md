@@ -37,10 +37,10 @@ description: "aliases – aliases file for sendmail"
 <p> After aliasing has been done, local and valid recipients who have a &#8220;.forward&#8221; file in their home directory have messages forwarded to the list of users defined in that file. </p>
 <p> This is only the raw data file; the actual aliasing information is placed into a binary format in the file /etc/aliases.db using the program <a href="/docs/linux/man/1-newaliases/">newaliases</a>(1). A newaliases command should be executed each time the aliases file is changed for the change to take effect.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-newaliases/">newaliases</a>(1), <a href="/docs/linux/man/3-dbm/">dbm</a>(3), <a href="/docs/linux/man/3-dbopen/">dbopen</a>(3), <a href="/docs/linux/man/3-db_open/">db_open</a>(3), <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) </p>
+<p><a href="/docs/linux/man/1-newaliases/">newaliases</a>(1), dbm(3), <a href="/docs/linux/man/3-dbopen/">dbopen</a>(3), db_open(3), sendmail(8) </p>
 <p> <i>SENDMAIL Installation and Operation Guide.</i> </p>
 <p> <i>SENDMAIL An Internetwork Mail Router.</i></p>
 <h2>Bugs</h2>
-<p>If you have compiled sendmail with DBM support instead of NEWDB, you may have encountered problems in <a href="/docs/linux/man/3-dbm/">dbm</a>(3) restricting a single alias to about 1000 bytes of information. You can get longer aliases by &#8220;chaining&#8221;; that is, make the last name in the alias be a dummy name which is a continuation alias.</p>
+<p>If you have compiled sendmail with DBM support instead of NEWDB, you may have encountered problems in dbm(3) restricting a single alias to about 1000 bytes of information. You can get longer aliases by &#8220;chaining&#8221;; that is, make the last name in the alias be a dummy name which is a continuation alias.</p>
 <h2>History</h2>
 <p>The <code>aliases</code> file format appeared in 4.0BSD.</p>

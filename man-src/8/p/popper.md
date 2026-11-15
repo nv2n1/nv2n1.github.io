@@ -30,7 +30,7 @@ description: "popper – POP3 server"
 <dt><code>-T </code><i>seconds</i></p>
 <dd>Set timeout to something other than the default of 120 seconds.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-push/">push</a>(8), <a href="/docs/linux/man/8-movemail/">movemail</a>(8)</p>
+<p><a href="/docs/linux/man/8-push/">push</a>(8), movemail(8)</p>
 <h2>Standards</h2>
 <p>RFC1939 (Post Office Protocol &#8211; Version 3)</p>
 <h2>Authors</h2>

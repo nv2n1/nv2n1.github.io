@@ -63,7 +63,7 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <p> <code>man &#8211; Man page documentation</code> </p>
 <p> man:<i>command-name</i><br />
  man:<i>command-name</i>(<i>section</i>) </p>
-<p> This refers to local online manual (man) reference pages. The command name can optionally be followed by a parenthesis and section number; see <code><a href="/docs/linux/man/7-man/">man</a></code>(7) for more information on the meaning of the section numbers. This URI scheme is unique to UNIX-like systems (such as Linux) and is not currently registered by the IETF. An example is &lt;<a href="/docs/linux/man/1-man-ls/">man:ls</a>(1)&gt;. </p>
+<p> This refers to local online manual (man) reference pages. The command name can optionally be followed by a parenthesis and section number; see <code><a href="/docs/linux/man/7-man/">man</a></code>(7) for more information on the meaning of the section numbers. This URI scheme is unique to UNIX-like systems (such as Linux) and is not currently registered by the IETF. An example is &lt;man:ls(1)&gt;. </p>
 <p> <code>info &#8211; Info page documentation</code> </p>
 <p> info:<i>virtual-filename</i><br />
  info:<i>virtual-filename</i>#<i>nodename</i><br />

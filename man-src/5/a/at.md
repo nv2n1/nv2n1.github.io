@@ -9,7 +9,7 @@ description: "at.allow, at.deny – determine who can submit jobs via at or batc
 
 <p>at.allow, at.deny &#8211; determine who can submit jobs via at or batch</p>
 <h2>Description</h2>
-<p>The <i>/etc/at.allow</i> and <i>/etc/at.deny</i> files determine which user can submit commands for later execution via <code><a href="/docs/linux/man/1-at/">at</a></code>(1) or <code><a href="/docs/linux/man/1-batch/">batch</a></code>(1)<code>.</code> </p>
+<p>The <i>/etc/at.allow</i> and <i>/etc/at.deny</i> files determine which user can submit commands for later execution via <code><a href="/docs/linux/man/1-at/">at</a></code>(1) or <code>batch</code>(1)<code>.</code> </p>
 <p> The format of the files is a list of usernames, one on each line. Whitespace is not permitted. </p>
 <p> If the file <i>/etc/at.allow</i> exists, only usernames mentioned in it are allowed to use <code>at</code>. </p>
 <p> If <i>/etc/at.allow</i> does not exist, <i>/etc/at.deny</i> is checked, every username not mentioned in it is then allowed to use <code>at</code>. </p>

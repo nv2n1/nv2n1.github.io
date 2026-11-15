@@ -41,7 +41,7 @@ Native event codes and names differ from platform to platform.
 * handle_error( 1 );
 * number = 1;
 * if ( PAPI_list_events( EventSet, &amp;Event, &amp;number ) != PAPI_OK )
-* <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+* handle_error(1);
 * // Convert integer code to name string
 * if ( PAPI_event_code_to_name( Event, EventCodeStr ) != PAPI_OK )
 * handle_error( 1 );

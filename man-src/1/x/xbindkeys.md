@@ -127,9 +127,9 @@ $HOME/.xbindkeysrc.scm
 <pre>
 <code>xbindkeys_show</code>
     Utility for showing the actual keybinding with xbindkeys
-<code><a href="//www.systutorials.com/docs/linux/man/1x-xmodmap/">xmodmap</a>(1x)</code>
+<code>xmodmap(1x)</code>
     Utility for modifying keymap &amp; button mappings in X.
-<code><a href="//www.systutorials.com/docs/linux/man/1x-xev/">xev</a>(1x)</code>
+<code>xev(1x)</code>
     Print contents of X events.
 <code>/usr/include/X11/keysymdef.h</code>
     X11 KeySym definitions.

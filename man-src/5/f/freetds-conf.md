@@ -164,7 +164,7 @@ description: "freetds.conf – configuration file for FreeTDS"
 <li> $SYBASE/interfaces (where <code>$SYBASE is an environment variable)</code> </ol>
 <p> If the requested servername is not found in any configuration file, the fallback mechanism is: </p>
 <ol>
-<li> attempt to convert the name to an IP address with <a href="/docs/linux/man/3-inet_addr/">inet_addr</a>(3), else
+<li> attempt to convert the name to an IP address with inet_addr(3), else
 <li> attempt to convert the name to an IP address with <a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a>(3), else
 <li> attempt to look up the literal name &#8220;SYBASE&#8221; </ol>
 <h2>Environment</h2>

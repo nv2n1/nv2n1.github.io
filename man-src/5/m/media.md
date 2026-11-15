@@ -33,7 +33,7 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <dt><code>SELABEL_OPT_PATH</code></p>
 <dd>A non-null value for this option specifies a path to a file that will be opened in lieu of the standard <i>media</i> contexts file.</dl>
 <h2>Files</h2>
-<p>The media context file used to retrieve a default context depends on the <code>SELABEL_OPT_PATH</code> parameter passed to <code><a href="/docs/linux/man/3-selabel_openfr/">selabel_openFR</a>(3). If </code><i>NULL</i>, then the <code>SELABEL_OPT_PATH</code> value will default to the active policy media contexts location (as returned by <code><a href="/docs/linux/man/3-selinux_media_context_path/">selinux_media_context_path</a></code>(3)), otherwise the actual <code>SELABEL_OPT_PATH</code> value specified is used. </p>
+<p>The media context file used to retrieve a default context depends on the <code>SELABEL_OPT_PATH</code> parameter passed to <code>selabel_openFR(3). If </code><i>NULL</i>, then the <code>SELABEL_OPT_PATH</code> value will default to the active policy media contexts location (as returned by <code><a href="/docs/linux/man/3-selinux_media_context_path/">selinux_media_context_path</a></code>(3)), otherwise the actual <code>SELABEL_OPT_PATH</code> value specified is used. </p>
 <p> The default media contexts file is:</p>
 <dl>
 <dd><i>/etc/selinux/{SELINUXTYPE}/contexts/files/media</i></dl>

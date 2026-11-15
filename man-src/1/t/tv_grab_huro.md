@@ -37,7 +37,7 @@ description: "tv_grab_huro – Grab TV listings for Hungary or Romania."
 <p> <code>&#8211;max-desc-length </code><font SIZE="-1"><code>LENGTH</code></font> can be used to maximize the lenght of the grabbed program long description. This can be usefull if you have a viewer program (using this xmltv output), which can not be display userfriendly the description if it is more then <font SIZE="-1">LENGTH</font> character. </p>
 <p> <code>&#8211;help</code> Print a help message and exit.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Attila Szekeres and Zsolt Varga. Based on tv_grab_fi by Matti Airas. Heavily patched and earlier maintained by Stefan siegl &lt;stesie [at] brokenpipe.de&gt;, reworked and now maintained by Balazs Molnar &lt;mbdev [at] freemail.hu&gt;.</p>
 <h2>BUGS</h2>

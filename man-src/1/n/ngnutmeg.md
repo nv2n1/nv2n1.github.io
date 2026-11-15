@@ -29,13 +29,13 @@ description: "ngnutmeg – ngspice post-processor"
 <dd> Display a verbose help on the arguments available to the program.</p>
 <dt><code>-v</code> or <code>&#8211;version</code></p>
 <dd> Display a version number and copyright information of the program.</dl>
-<p> Further arguments are taken to be data files in binary or ascii format (see <code><a href="/docs/linux/man/1-sconvert/">sconvert</a></code>(1)) which are loaded into ngnutmeg. If the file is in binary format, it may be only partially completed (useful for examining ngspice] ouput before the simulation is finished). One file may contain any number of data sets from different analyses.</p>
+<p> Further arguments are taken to be data files in binary or ascii format (see <code>sconvert</code>(1)) which are loaded into ngnutmeg. If the file is in binary format, it may be only partially completed (useful for examining ngspice] ouput before the simulation is finished). One file may contain any number of data sets from different analyses.</p>
 <h2>ENVIRONMENT</h2>
 <p> See <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1)</p>
 <h2>FILES</h2>
 <p> See <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1)</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-sconvert/">sconvert</a>(1), <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1), <a href="/docs/linux/man/3-mfb/">mfb</a>(3), <a href="/docs/linux/man/3-writedata/">writedata</a>(3), and<br />
+<p> sconvert(1), <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1), mfb(3), writedata(3), and<br />
  ngspice] User&#8217;s Manual at <code><a rel="nofollow" href="http://ngspice.sourceforge.net/docs.html">http://ngspice.sourceforge.net/docs.html</a></code></p>
 <h2>BUGS</h2>
 <p> Please report bugs to the ngspice project via<br />

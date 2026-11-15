@@ -1146,7 +1146,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <h2>Performance Enhancements</h2>
 <dl>
 <dt>&bull;</p>
-<dd> Weak reference creation is now <i><a href="/docs/linux/man/1-o/">O</a>(1)</i> rather than <i><a href="/docs/linux/man/n-o/">O</a>(n)</i>, courtesy of Nicholas Clark. Weak reference deletion remains <i><a href="/docs/linux/man/n-o/">O</a>(n)</i>, but if deletion only happens at program exit, it may be skipped completely.</p>
+<dd> Weak reference creation is now <i>O(1)</i> rather than <i>O(n)</i>, courtesy of Nicholas Clark. Weak reference deletion remains <i>O(n)</i>, but if deletion only happens at program exit, it may be skipped completely.</p>
 <dt>&bull;</p>
 <dd> Salvador Fandiño provided improvements to reduce the memory usage of <tt>&quot;sort&quot;</tt> and to speed up some cases.</p>
 <dt>&bull;</p>

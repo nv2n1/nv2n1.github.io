@@ -882,7 +882,7 @@ POSIX::close($fd);</p>
 my $rc = syscall(SYS_close(), $fd + 0);<br />
 #must force numeric<br />
         die &#8220;can&#8217;t sysclose $fd: $!&#8221; unless $rc == -1;</p>
-<p> Or, just use the <a href="//www.systutorials.com/docs/linux/man/3S-fdopen/">fdopen</a>(3S) feature of <tt>&quot;open()&quot;</tt>: </p>
+<p> Or, just use the fdopen(3S) feature of <tt>&quot;open()&quot;</tt>: </p>
 <p>{<br />
     open my $fh, &#8220;&lt;&amp;=$fd&#8221; or die &#8220;Cannot reopen fd=$fd: $!&#8221;;<br />
     close $fh;<br />

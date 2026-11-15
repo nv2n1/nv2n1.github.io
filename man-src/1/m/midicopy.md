@@ -39,7 +39,7 @@ description: "midicopy – Copy selected track, channel, time interval of a MIDI
 <h2>EXAMPLE</h2>
 <p> <code>midicopy.exe -trks 1,5 -from 2669 -to 8634 uzicko.mid fragment.mid</code> Midicopy will copy tracks 1 and 5 starting from midi pulse position 2669 and ending at MIDI pulse position 8634. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-abcmtex/">abcmtex</a></i>(1), <i><a href="/docs/linux/man/1-abc2abc/">abc2abc</a></i>(1), <i><a href="/docs/linux/man/1-abc2midi/">abc2midi</a></i>(1), <i><a href="/docs/linux/man/1-midi2abc/">midi2abc</a></i>(1) ,<i><a href="/docs/linux/man/1-yaps/">yaps</a></i>(1)</p>
+<p> <i>abcmtex</i>(1), <i><a href="/docs/linux/man/1-abc2abc/">abc2abc</a></i>(1), <i><a href="/docs/linux/man/1-abc2midi/">abc2midi</a></i>(1), <i><a href="/docs/linux/man/1-midi2abc/">midi2abc</a></i>(1) ,<i><a href="/docs/linux/man/1-yaps/">yaps</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Seymour Shlien.</p>
 <h2>VERSION</h2>

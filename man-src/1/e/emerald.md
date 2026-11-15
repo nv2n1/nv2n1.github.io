@@ -32,5 +32,5 @@ description: "emerald – The Emerald Windows Decorator"
 <h2>AUTHORS</h2>
 <p> &#8211; Quinn Storm (livinglatexkali [at] gmail.com)</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-beryl/">beryl</a></code>(1) <code><a href="/docs/linux/man/1-beryl-manager/">beryl-manager</a></code>(1) <code><a href="/docs/linux/man/1-emerald-theme-manager/">emerald-theme-manager</a></code>(1) </p>
+<p> <code>beryl</code>(1) <code>beryl-manager</code>(1) <code><a href="/docs/linux/man/1-emerald-theme-manager/">emerald-theme-manager</a></code>(1) </p>
 <h2>Index</h2>

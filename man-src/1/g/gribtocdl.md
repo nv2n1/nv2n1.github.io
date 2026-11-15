@@ -83,7 +83,7 @@ K;
 </code></pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gribdump/">gribdump</a>(1), <a href="/docs/linux/man/1-gribtonc/">gribtonc</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), <a href="/docs/linux/man/3-udunits/">udunits</a>(3)</p>
+<p> <a href="/docs/linux/man/1-gribdump/">gribdump</a>(1), <a href="/docs/linux/man/1-gribtonc/">gribtonc</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), udunits(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Error messages and log messages are written to stderr. </p>
 <h2>Index</h2>

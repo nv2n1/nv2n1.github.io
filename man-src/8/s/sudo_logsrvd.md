@@ -52,7 +52,7 @@ description: "sudo_logsrvd – sudo event and I/O log server"
 <dd>Process ID file for <code>sudo_logsrvd</code></dl>
 <h2>Examples</h2>
 <h3>Creating self-signed certificates</h3>
-<p>Unless you are using certificates signed by a well-known Certificate Authority (or a local enterprise CA), you will need to create your own CA that can sign the certificates used by <code>sudo_logsrvd,</code> <code>sudo_sendlog</code> and the <code>sudoers</code> plugin. The following steps use the <a href="/docs/linux/man/1-openssl/">openssl</a>(1) command to create keys and certificates.</p>
+<p>Unless you are using certificates signed by a well-known Certificate Authority (or a local enterprise CA), you will need to create your own CA that can sign the certificates used by <code>sudo_logsrvd,</code> <code>sudo_sendlog</code> and the <code>sudoers</code> plugin. The following steps use the openssl(1) command to create keys and certificates.</p>
 <h3>Initial setup</h3>
 <p>First, we need to create a directory structure to store the files for the CA. We&#8217;ll create a new directory hierarchy in /etc/ssl/sudo for this purpose. </p>
 <blockquote>

@@ -43,7 +43,7 @@ int ioctl(int fd, int cmd, ...);
 <dt><code>UFFD_FEATURE_MISSING_HUGETLBFS</code> (since Linux 4.11)</p>
 <dd> If this feature bit is set, the kernel supports registering userfaultfd ranges on hugetlbfs virtual memory areas</p>
 <dt><code>UFFD_FEATURE_MISSING_SHMEM</code> (since Linux 4.11)</p>
-<dd> If this feature bit is set, the kernel supports registering userfaultfd ranges on shared memory areas. This includes all kernel shared memory APIs: System V shared memory, <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5), shared mappings of <i>/dev/zero</i>, <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with the <code>MAP_SHARED</code> flag set, <code><a href="/docs/linux/man/2-memfd_create/">memfd_create</a></code>(2), and so on.</p>
+<dd> If this feature bit is set, the kernel supports registering userfaultfd ranges on shared memory areas. This includes all kernel shared memory APIs: System V shared memory, <code>tmpfs</code>(5), shared mappings of <i>/dev/zero</i>, <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with the <code>MAP_SHARED</code> flag set, <code><a href="/docs/linux/man/2-memfd_create/">memfd_create</a></code>(2), and so on.</p>
 <dt><code>UFFD_FEATURE_SIGBUS</code> (since Linux 4.14)</p>
 <dd> If this feature bit is set, no page-fault events (<code>UFFD_EVENT_PAGEFAULT</code>) will be delivered. Instead, a <code>SIGBUS</code> signal will be sent to the faulting process. Applications using this feature will not require the use of a userfaultfd monitor for processing memory accesses to the regions registered with userfaultfd.</dl>
 <p> The returned <i>ioctls</i> field can contain the following bits:</p>

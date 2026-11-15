@@ -281,10 +281,10 @@ description: "cpp – The C Preprocessor"
 <p> The value of <font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font> must be a <font SIZE="-1">UNIX</font> timestamp, defined as the number of seconds (excluding leap seconds) since 01 Jan 1970 00:00:00 represented in <font SIZE="-1">ASCII</font>; identical to the output of @command<code>{date +%s</code>} on GNU/Linux and other systems that support the <tt>%s</tt> extension in the <tt>&quot;date&quot;</tt> command. </p>
 <p> The value should be a known timestamp such as the last modification time of the source or package and it should be set by the build process.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gpl/">gpl</a></code>(7), <code><a href="/docs/linux/man/7-gfdl/">gfdl</a></code>(7), <code><a href="/docs/linux/man/7-fsf-funding/">fsf-funding</a></code>(7), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), and the Info entries for <i>cpp</i> and <i>gcc</i>.</p>
+<p> <code>gpl</code>(7), <code>gfdl</code>(7), <code>fsf-funding</code>(7), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), and the Info entries for <i>cpp</i> and <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1987-2019 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation. A copy of the license is included in the man page <code><a href="/docs/linux/man/7-gfdl/">gfdl</a></code>(7). This manual contains no Invariant Sections. The Front-Cover Texts are (a) (see below), and the Back-Cover Texts are (b) (see below). </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation. A copy of the license is included in the man page <code>gfdl</code>(7). This manual contains no Invariant Sections. The Front-Cover Texts are (a) (see below), and the Back-Cover Texts are (b) (see below). </p>
 <p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual

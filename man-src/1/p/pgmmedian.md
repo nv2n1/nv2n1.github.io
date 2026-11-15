@@ -49,7 +49,7 @@ description: "pgmmedian – apply a median filter to a PGM file"
 <dd> &#8216;Digital Image Processing Algorithms&#8217; by Ioannis Pitas, Prentice Hall, 1993 ISBN 0-13-145814-0 </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pgmnoise/">pgmnoise</a></code>(1) , <code><a href="/docs/linux/man/1-pamaddnoise/">pamaddnoise</a></code>(1) , <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) , <code><a href="/docs/linux/man/1-pgmmorphconv/">pgmmorphconv</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pgmnoise/">pgmnoise</a></code>(1) , <code><a href="/docs/linux/man/1-pamaddnoise/">pamaddnoise</a></code>(1) , <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) , <code><a href="/docs/linux/man/1-pgmmorphconv/">pgmmorphconv</a></code>(1) , <code>pgm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pgmmedian</code> was added to Netpbm in Version 10.29 (August 2005). It had been distributed by Mike Burns via his own web site before that (and continued to be so). </p>
 <h2>AUTHOR</h2>

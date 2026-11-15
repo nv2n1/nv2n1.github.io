@@ -19,5 +19,5 @@ description: "pbmtomatrixorbital – convert a PBM image to a Matrix Orbital LCD
 <h2>HISTORY</h2>
 <p> <code>pbmtomatrixorbital</code> was added to Netpbm in Release 10.18 (September 2003). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbmtox10bm/">pbmtox10bm</a></code>(1) , <code><a href="/docs/linux/man/1-xbmtopbm/">xbmtopbm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pbmtox10bm/">pbmtox10bm</a></code>(1) , <code><a href="/docs/linux/man/1-xbmtopbm/">xbmtopbm</a></code>(1) , <code>pbm</code>(1) </p>
 <h2>Index</h2>

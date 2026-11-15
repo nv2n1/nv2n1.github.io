@@ -65,7 +65,7 @@ description: "ttx – tool for manipulating TrueType and OpenType fonts"
 <p> On MS-Windows and MacOS, is available as a graphical application to which files can be dropped.</p>
 <h2>SEE ALSO</h2>
 <p> documentation.html </p>
-<p> <a href="/docs/linux/man/1-fontforge/">fontforge</a>(1), <a href="/docs/linux/man/1-ftinfo/">ftinfo</a>(1), <a href="/docs/linux/man/1-gfontview/">gfontview</a>(1), <a href="/docs/linux/man/1-xmbdfed/">xmbdfed</a>(1), Font::TTF3pm</p>
+<p> <a href="/docs/linux/man/1-fontforge/">fontforge</a>(1), ftinfo(1), gfontview(1), xmbdfed(1), Font::TTF3pm</p>
 <h2>AUTHORS</h2>
 <p> was written by An -nosplit An Just van Rossum Aq just [at] letterror.com . </p>
 <p> This manual page was written by An Florent Rougon Aq f.rougon [at] free.fr for the Debian GNU/Linux system based on the existing FontTools documentation. It may be freely used, modified and distributed without restrictions. </p>

@@ -39,7 +39,7 @@ construction vtable for KMainWindow-in-Kolf
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-kminspector/">kminspector</a>(1) <a href="/docs/linux/man/1-kmtrace/">kmtrace</a>(1) <a href="/docs/linux/man/1-match/">match</a>(1)</p>
+<p> kminspector(1) kmtrace(1) match(1)</p>
 <h2>AUTHOR</h2>
 <p> <code>Ben Burton</code> &lt;bab [at] debian.org&gt;</p>
 <dl>

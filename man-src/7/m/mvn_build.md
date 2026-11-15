@@ -13,7 +13,7 @@ description: "mvn_build – build Maven project with XMvn"
 <h2>Description</h2>
 <p><code>mvn_build</code> macro builds Maven project by calling XMvn and generates reactor structure information to be used by <code>mvn_install</code>. </p>
 <p> By default Maven phase <code>verify</code> and goal <code>javadoc:aggregate</code> are executed, as well as some additional XMvn-specific goals or phases. If <code>-f</code> is specified then phase <code>package</code> is executed instead of <code>verify</code>. If <code>-j</code> is given then goal <code>javadoc:aggregate</code> is skipped. </p>
-<p> Any arguments after <code>&#8212;</code> are passed directly to XMvn. See <code><a href="/docs/linux/man/1-xmvn/">xmvn</a>(1)</code> for more information on availability of XMvn options.</p>
+<p> Any arguments after <code>&#8212;</code> are passed directly to XMvn. See <code>xmvn(1)</code> for more information on availability of XMvn options.</p>
 <h2>Options</h2>
 <p><code>-d, &#8211;xmvn-debug</code></p>
 <dl>
@@ -42,4 +42,4 @@ description: "mvn_build – build Maven project with XMvn"
 <h2>Reporting Bugs</h2>
 <p>Bugs should be reported through Red Hat Bugzilla at m[blue]<code><a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></code>m[].</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-mvn_alias/">mvn_alias</a></code>(7), <code><a href="/docs/linux/man/7-mvn_compat_version/">mvn_compat_version</a></code>(7), <code><a href="/docs/linux/man/7-mvn_config/">mvn_config</a></code>(7), <code><a href="/docs/linux/man/7-mvn_file/">mvn_file</a></code>(7), <code><a href="/docs/linux/man/7-mvn_package/">mvn_package</a></code>(7), <code><a href="/docs/linux/man/1-xmvn/">xmvn</a></code>(1). </p>
+<p><code><a href="/docs/linux/man/7-mvn_alias/">mvn_alias</a></code>(7), <code><a href="/docs/linux/man/7-mvn_compat_version/">mvn_compat_version</a></code>(7), <code><a href="/docs/linux/man/7-mvn_config/">mvn_config</a></code>(7), <code><a href="/docs/linux/man/7-mvn_file/">mvn_file</a></code>(7), <code><a href="/docs/linux/man/7-mvn_package/">mvn_package</a></code>(7), <code>xmvn</code>(1). </p>

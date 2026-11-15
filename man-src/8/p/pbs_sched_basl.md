@@ -53,7 +53,7 @@ description: "pbs_sched_basl – pbs BASL scheduler"
  
 }</pre>
 </dl>
-<p> For a more complete discussion of the Batch Scheduler Language, see <code><a href="//www.systutorials.com/docs/linux/man/1B-basl2c/">basl2c</a>(1B).</code></p>
+<p> For a more complete discussion of the Batch Scheduler Language, see <code>basl2c(1B).</code></p>
 <h2>Configuration File</h2>
 <p>A configuration file may be specified with the -c option. This file is used to specify the (1) hosts which are allowed to connect to pbs_sched, (2) the list of server hosts for which the scheduler writer wishes the system to periodically check for status, queues, and jobs info, (3) list of execution hosts for which the scheduler writer wants the system to periodically check for information like state, property, and so on, and (4) various queries to send to each execution host.</p>
 <dl>
@@ -198,5 +198,5 @@ $node * CNodeIdletimeGet idletime</pre>
 <h2>Exit Status</h2>
 <p>Upon normal termination, an exit status of zero is returned.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/1B-basl2c/">basl2c</a>(1B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_sched_tcl/">pbs_sched_tcl</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), and <a href="//www.systutorials.com/docs/linux/man/8B-pbs_mom/">pbs_mom</a>(8B).<br />
+<p>basl2c(1B), pbs_sched_tcl(8B), pbs_server(8B), and pbs_mom(8B).<br />
  PBS Internal Design Specification </p>

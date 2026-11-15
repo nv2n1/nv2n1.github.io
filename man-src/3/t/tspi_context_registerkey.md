@@ -103,4 +103,4 @@ main(void)
 <h2>Conforming To</h2>
 <p><code>Tspi_Context_RegisterKey</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_context_unregisterkey/">Tspi_Context_UnregisterKey</a></code>(3), <code><a href="/docs/linux/man/3-tspi_context_loadkeybyuuid/">Tspi_Context_LoadKeyByUUID</a></code>(3), <code><a href="/docs/linux/man/3-tspi_context_getregisteredkeybyuuid/">Tspi_Context_GetRegisteredKeyByUUID</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-tspi_context_unregisterkey/">Tspi_Context_UnregisterKey</a></code>(3), <code><a href="/docs/linux/man/3-tspi_context_loadkeybyuuid/">Tspi_Context_LoadKeyByUUID</a></code>(3), <code>Tspi_Context_GetRegisteredKeyByUUID</code>(3).</p>

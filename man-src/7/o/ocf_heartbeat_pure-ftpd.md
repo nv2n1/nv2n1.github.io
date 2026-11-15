@@ -44,7 +44,7 @@ description: "ocf_heartbeat_Pure-FTPd – Manages a Pure-FTPd FTP server instanc
 <dl>
 <dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5s.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a Pure-FTPd resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a Pure-FTPd resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_Pure-FTPd ocf:heartbeat:Pure-FTPd \
 
 op monitor depth=&quot;0&quot; timeout=&quot;20s&quot; interval=&quot;60s&quot;</code></pre>

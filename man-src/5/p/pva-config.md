@@ -80,7 +80,7 @@ description: "pva-config – general PHP VOMS-Admin interface configuration"
 <p> Permissions numerical decimal values shown in parentheses. Adding numerical values for each allowed action results total ACL numeric permissions.</p>
 <dl>
 <dt><i>Example:</i></p>
-<dd>517 = <a href="/docs/linux/man/1-container-read/">Container:Read</a>(1) + <a href="/docs/linux/man/4-membership-read/">Membership:Read</a>(4) + Attributes:List(512)</dl>
+<dd>517 = Container:Read(1) + Membership:Read(4) + Attributes:List(512)</dl>
 <p> For more information read PHP VOMS-Admin operation manual: <i><a rel="nofollow" href="http://grid.org.ua/development/pva/?act=manual">http://grid.org.ua/development/pva/?act=manual</a></i></p>
 <h2>Author</h2>
 <p>Andrii Salnikov &lt;manf [at] grid.org.ua&gt;</p>

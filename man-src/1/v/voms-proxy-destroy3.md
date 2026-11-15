@@ -29,7 +29,7 @@ description: "voms-proxy-destroy – destroys a VOMS proxy"
 <p> Daniele Andreotti &lt;daniele.andreotti [at] cnaf.infn.it&gt; </p>
 <p> Valerio Venturi &lt;valerio.venturi [at] cnaf.infn.it&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-voms-proxy-init/">voms-proxy-init</a>(1), <a href="/docs/linux/man/1-voms-proxy-info/">voms-proxy-info</a>(1)</p>
+<p> voms-proxy-init(1), voms-proxy-info(1)</p>
 <h2>COPYING</h2>
 <p> Copyright (c) Members of the EGEE Collaboration. 2004. See the beneficiaries list for details on the copyright holders. </p>
 <p> Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at </p>

@@ -30,5 +30,5 @@ XColor *<i>colors_in_out</i>, int <i>ncolors</i>);
 <p> A <i>Value</i> error is generated if a pixel is not a valid index into the colormap. A <i>BadMatch</i> error is generated if the colormap does not belong to a GrayScale, PseudoColor, or DirectColor visual. </p>
 <p> Applications which allocate many colors in a screen&#8217;s default colormap, e.g. a color-cube or a gray-ramp, should allocate them with <i>XCupStoreColors</i>. By using XCupStoreColors the colors will be allocated sharable (read-only) and any other application which allocates the same color will share that color cell.</p>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/3Xext-XcupQueryVersion/">XcupQueryVersion</a></code>(3Xext), <code><a href="//www.systutorials.com/docs/linux/man/3Xext-XcupGetReservedColormapEntries/">XcupGetReservedColormapEntries</a></code>(3Xext),<br />
+<p><code>XcupQueryVersion</code>(3Xext), <code>XcupGetReservedColormapEntries</code>(3Xext),<br />
  <i>Colormap Utilization Policy and Extension</i></p>

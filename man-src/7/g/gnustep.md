@@ -36,7 +36,7 @@ description: "GNUstep – A free implementation of the OpenStep standard"
 <dt>Project Center</p>
 <dd><code>Project Center</code> is the program where you can develop your program. It offers you automatic generation of <i>GNUmakefiles</i> , project maintenance and of course a code editor. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-gcc/">gcc</a>(1), <a href="/docs/linux/man/1-gdnc/">gdnc</a>(1), <a href="/docs/linux/man/8-gdomap/">gdomap</a>(8), <a href="/docs/linux/man/1-gopen/">gopen</a>(1), <a href="/docs/linux/man/1-gpbs/">gpbs</a>(1), <a href="/docs/linux/man/1-make/">make</a>(1), <a href="/docs/linux/man/1-openapp/">openapp</a>(1) </p>
+<p><a href="/docs/linux/man/1-gcc/">gcc</a>(1), <a href="/docs/linux/man/1-gdnc/">gdnc</a>(1), <a href="/docs/linux/man/8-gdomap/">gdomap</a>(8), <a href="/docs/linux/man/1-gopen/">gopen</a>(1), gpbs(1), <a href="/docs/linux/man/1-make/">make</a>(1), <a href="/docs/linux/man/1-openapp/">openapp</a>(1) </p>
 <p> <code>GNUstep Websites:</code></p>
 <dl>
 <dt><a rel="nofollow" href="http://www.gnustep.org/">http://www.gnustep.org/</a></p>

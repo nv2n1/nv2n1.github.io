@@ -65,7 +65,7 @@ description: "pamtilt – print the tilt angle of a PGM file"
 <p> <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) </p>
 <dt>&bull;</p>
 <dd>
-<p> <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) </p>
+<p> <code>pgm</code>(1) </p>
 </dl>
 <h2>HISTORY</h2>
 <p> <code>pamtilt</code> was new in Netpbm 10.30 (October 2005). </p>

@@ -248,14 +248,14 @@ IPv6Token=prefixstable:2002:da8:1::</pre>
 <p> This forces <i>ActivationPolicy=</i> to be set to &quot;bound&quot;.</dl>
 <p> <i>Address=</i></p>
 <dl>
-<dd>A static IPv4 or IPv6 address and its prefix length, separated by a &quot;/&quot; character. Specify this key more than once to configure several addresses. The format of the address must be as described in <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3). This is a short-hand for an [Address] section only containing an Address key (see below). This option may be specified more than once. </p>
+<dd>A static IPv4 or IPv6 address and its prefix length, separated by a &quot;/&quot; character. Specify this key more than once to configure several addresses. The format of the address must be as described in <code>inet_pton</code>(3). This is a short-hand for an [Address] section only containing an Address key (see below). This option may be specified more than once. </p>
 <p> If the specified address is &quot;0.0.0.0&quot; (for IPv4) or &quot;::&quot; (for IPv6), a new address range of the requested size is automatically allocated from a system-wide pool of unused ranges. Note that the prefix length must be equal or larger than 8 for IPv4, and 64 for IPv6. The allocated range is checked against all current network interfaces and all known network configuration files to avoid address range conflicts. The default system-wide pool consists of 192.168.0.0/16, 172.16.0.0/12 and 10.0.0.0/8 for IPv4, and fd00::/8 for IPv6. This functionality is useful to manage a large number of dynamically created network interfaces with the same network configuration and automatic address range assignment.</dl>
 <p> <i>Gateway=</i></p>
 <dl>
-<dd>The gateway address, which must be in the format described in <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3). This is a short-hand for a [Route] section only containing a Gateway key. This option may be specified more than once.</dl>
+<dd>The gateway address, which must be in the format described in <code>inet_pton</code>(3). This is a short-hand for a [Route] section only containing a Gateway key. This option may be specified more than once.</dl>
 <p> <i>DNS=</i></p>
 <dl>
-<dd>A DNS server address, which must be in the format described in <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3). This option may be specified more than once. Each address can optionally take a port number separated with &quot;:&quot;, a network interface name or index separated with &quot;%&quot;, and a Server Name Indication (SNI) separated with &quot;#&quot;. When IPv6 address is specified with a port number, then the address must be in the square brackets. That is, the acceptable full formats are &quot;111.222.333.444:9953%ifname#example.com&quot; for IPv4 and &quot;[1111:2222::3333]:9953%ifname#example.com&quot; for IPv6. If an empty string is assigned, then the all previous assignments are cleared. This setting is read by <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8).</dl>
+<dd>A DNS server address, which must be in the format described in <code>inet_pton</code>(3). This option may be specified more than once. Each address can optionally take a port number separated with &quot;:&quot;, a network interface name or index separated with &quot;%&quot;, and a Server Name Indication (SNI) separated with &quot;#&quot;. When IPv6 address is specified with a port number, then the address must be in the square brackets. That is, the acceptable full formats are &quot;111.222.333.444:9953%ifname#example.com&quot; for IPv4 and &quot;[1111:2222::3333]:9953%ifname#example.com&quot; for IPv6. If an empty string is assigned, then the all previous assignments are cleared. This setting is read by <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8).</dl>
 <p> <i>Domains=</i></p>
 <dl>
 <dd>A whitespace-separated list of domains which should be resolved using the DNS servers on this link. Each item in the list should be a domain name, optionally prefixed with a tilde (&quot;~&quot;). The domains with the prefix are called &quot;routing-only domains&quot;. The domains without the prefix are called &quot;search domains&quot; and are first used as search suffixes for extending single-label hostnames (hostnames containing no dots) to become fully qualified domain names (FQDNs). If a single-label hostname is resolved on this interface, each of the specified search domains are appended to it in turn, converting it into a fully qualified domain name, until one of them may be successfully resolved. </p>
@@ -348,7 +348,7 @@ IPv6Token=prefixstable:2002:da8:1::</pre>
 <dd>The peer address in a point-to-point connection. Accepts the same format as the <i>Address=</i> key.</dl>
 <p> <i>Broadcast=</i></p>
 <dl>
-<dd>Takes an IPv4 address or boolean value. The address must be in the format described in <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3). If set to true, then the IPv4 broadcast address will be derived from the <i>Address=</i> setting. If set to false, then the broadcast address will not be set. Defaults to true, except for wireguard interfaces, where it default to false.</dl>
+<dd>Takes an IPv4 address or boolean value. The address must be in the format described in <code>inet_pton</code>(3). If set to true, then the IPv4 broadcast address will be derived from the <i>Address=</i> setting. If set to false, then the broadcast address will not be set. Defaults to true, except for wireguard interfaces, where it default to false.</dl>
 <p> <i>Label=</i></p>
 <dl>
 <dd>An address label.</dl>
@@ -498,7 +498,7 @@ IPv6Token=prefixstable:2002:da8:1::</pre>
 <p> For IPv4 route, defaults to &quot;host&quot; if <i>Type=</i> is &quot;local&quot; or &quot;nat&quot;, and &quot;link&quot; if <i>Type=</i> is &quot;broadcast&quot;, &quot;multicast&quot;, or &quot;anycast&quot;. In other cases, defaults to &quot;global&quot;. The value is not used for IPv6.</dl>
 <p> <i>PreferredSource=</i></p>
 <dl>
-<dd>The preferred source address of the route. The address must be in the format described in <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3).</dl>
+<dd>The preferred source address of the route. The address must be in the format described in <code>inet_pton</code>(3).</dl>
 <p> <i>Table=</i></p>
 <dl>
 <dd>The table identifier for the route. Takes one of predefined names &quot;default&quot;, &quot;main&quot;, and &quot;local&quot;, and names defined in <i>RouteTable=</i> in <code><a href="/docs/linux/man/5-networkd-conf/">networkd.conf</a></code>(5), or a number between 1 and 4294967295. The table can be retrieved using <code>ip route show table </code><i>num</i>. If unset and <i>Type=</i> is &quot;local&quot;, &quot;broadcast&quot;, &quot;anycast&quot;, or &quot;nat&quot;, then &quot;local&quot; is used. In other cases, defaults to &quot;main&quot;.</dl>
@@ -790,7 +790,7 @@ IPv6Token=prefixstable:2002:da8:1::</pre>
 <dd>Takes a boolean value. When &quot;yes&quot;, DHCP server socket will be bound to its network interface and all socket communication will be restricted to this interface. Defaults to &quot;yes&quot;, except if <i>RelayTarget=</i> is used (see below), in which case it defaults defaults to &quot;no&quot;.</dl>
 <p> <i>RelayTarget=</i></p>
 <dl>
-<dd>Takes an IPv4 address, which must be in the format described in <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3). Turns this DHCP server into a DHCP relay agent. See m[blue]<code>RFC 1542</code>m[]<font SIZE="-2">[22]</font>. The address is the address of DHCP server or another relay agent to forward DHCP messages to and from.</dl>
+<dd>Takes an IPv4 address, which must be in the format described in <code>inet_pton</code>(3). Turns this DHCP server into a DHCP relay agent. See m[blue]<code>RFC 1542</code>m[]<font SIZE="-2">[22]</font>. The address is the address of DHCP server or another relay agent to forward DHCP messages to and from.</dl>
 <p> <i>RelayAgentCircuitId=</i></p>
 <dl>
 <dd>Specifies value for Agent Circuit ID suboption of Relay Agent Information option. Takes a string, which must be in the format &quot;string:<i>value</i>&quot;, where &quot;<i>value</i>&quot; should be replaced with the value of the suboption. Defaults to unset (means no Agent Circuit ID suboption is generated). Ignored if <i>RelayTarget=</i> is not specified.</dl>

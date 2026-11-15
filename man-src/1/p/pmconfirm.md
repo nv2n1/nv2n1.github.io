@@ -82,5 +82,5 @@ description: "pmconfirm, pmmessage, pmquery – general purpose dialog box"
 <h2>EXIT STATUS</h2>
 <p> If it detects an error, <code>pmquery</code> always returns 1, so this value should not be associated with a button. Unless <i>-button</i> option has not been used, the return code will be zero on success.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-xconfirm/">xconfirm</a></code>(1), <code><a href="/docs/linux/man/1-xmessage/">xmessage</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5). </p>
+<p> <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code>xconfirm</code>(1), <code><a href="/docs/linux/man/1-xmessage/">xmessage</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5). </p>
 <h2>Index</h2>

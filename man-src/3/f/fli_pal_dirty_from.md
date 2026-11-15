@@ -21,5 +21,5 @@ if (fli_pal_dirty_from &lt;= fli_pal_dirty_to)
                       fli_pal_dirty_to, 1);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-fli_palette/">fli_palette</a></code>(3), <code><a href="/docs/linux/man/3-reset_fli_variables/">reset_fli_variables</a></code>(3) </p>
+<p> <code>fli_palette</code>(3), <code>reset_fli_variables</code>(3) </p>
 <h2>Index</h2>

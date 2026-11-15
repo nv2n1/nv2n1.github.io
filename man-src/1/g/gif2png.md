@@ -64,7 +64,7 @@ gif2png[-bdfghinprsvwO][file.[gif]...]
 <p> Copies of the GIF89 specification are widely available on the Web; search for &quot;GRAPHICS INTERCHANGE FORMAT&quot;. The Graphics Interchange Format(c) is the Copyright property of CompuServe Incorporated. GIF(sm) is a Service Mark property of CompuServe Incorporated. </p>
 <p> The PNG home site at &lt;<a rel="nofollow" href="http://www.libpng.org/pub/png/">http://www.libpng.org/pub/png/</a>&gt; has very complete information on the PNG standard, PNG libraries, and PNG tools. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-web2png/">web2png</a>(1) </p>
+<p> web2png(1) </p>
 <h2>AUTHORS</h2>
 <p> Code by Alexander Lehmann &lt;alex [at] hal.rhein-main.de&gt;, 1995. Auto-interlace conversion and tRNS optimization by Greg Roelofs &lt;newt [at] pobox.com&gt;, 1999. Man page, -O, -w, and production packaging by Eric S. Raymond &lt;esr [at] thyrsus.com&gt;, 1999. </p>
 <h2>Index</h2>

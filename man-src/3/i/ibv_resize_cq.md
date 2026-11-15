@@ -44,7 +44,7 @@ int ibv_resize_cq(struct ibv_cq *cq, int cqe);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_create_cq/">ibv_create_cq</a>(3), <a HREF="/docs/linux/man/3-ibv_destroy_cq/">ibv_destroy_cq</a>(3)
+ ibv_create_cq(3), ibv_destroy_cq(3)
 
 <h2>AUTHOR</h2>
 

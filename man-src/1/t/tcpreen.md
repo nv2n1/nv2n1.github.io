@@ -78,7 +78,7 @@ description: "tcpreen – TCP stream monitoring tool"
 <p> <code>tcpreen</code> will automatically drop privileges as soon as it has allocated its listening socket(s) to limit exposure. Log files are always created with the default permission of the current user. </p>
 <p> Care should be taken when using <code>tcpreen</code> as it could be used to access your network or system from the outside (that is why it will normally refuse to run as root). </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-nc/">nc</a>(1), <a href="/docs/linux/man/1-nc6/">nc6</a>(1), <a href="/docs/linux/man/1-tcpflow/">tcpflow</a>(1), <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8), <a href="/docs/linux/man/1-tethereal/">tethereal</a>(1) </p>
+<p> <a href="/docs/linux/man/1-nc/">nc</a>(1), <a href="/docs/linux/man/1-nc6/">nc6</a>(1), <a href="/docs/linux/man/1-tcpflow/">tcpflow</a>(1), <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8), tethereal(1) </p>
 <h2>AUTHOR</h2>
 <p> Remi Denis-Courmont &lt;rdenis at simphalempin.com&gt; </p>
 <p> $Id: tcpreen.1 178 2006-03-18 18:10:23Z remi $ </p>

@@ -16,7 +16,7 @@ Softfill has six internal parameters. For details, see the descriptions of the r
 <dl><dt>'AN' - Integer or Real
 <dd>Angle of fill lines, in degrees counterclockwise from horizontal. The default value is zero.
 <dt>'CH' - Character or Integer
-<dd>Character selector (-n =&gt; GKS polymarker n; 0 =&gt; dots; +n =&gt; <a HREF="/docs/linux/man/n-char/">CHAR</a>(n)). The default value is 0.
+<dd>Character selector (-n =&gt; GKS polymarker n; 0 =&gt; dots; +n =&gt; CHAR(n)). The default value is 0.
 <dt>'DO' - Integer
 <dd>Dot fill selector (0 =&gt; line fill; 1 =&gt; dot fill). The default value is 0, which implies line fill.
 <dt>'SP' - Real

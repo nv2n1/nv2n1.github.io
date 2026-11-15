@@ -52,7 +52,7 @@ description: "cpupower – Shows and sets processor power related values"
 <dd> Print the package name and version number. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cpupower-set/">cpupower-set</a>(1), <a href="/docs/linux/man/1-cpupower-info/">cpupower-info</a>(1), <a href="/docs/linux/man/1-cpupower-idle/">cpupower-idle</a>(1), <a href="/docs/linux/man/1-cpupower-frequency-set/">cpupower-frequency-set</a>(1), <a href="/docs/linux/man/1-cpupower-frequency-info/">cpupower-frequency-info</a>(1), <a href="/docs/linux/man/1-cpupower-monitor/">cpupower-monitor</a>(1), <a href="/docs/linux/man/1-powertop/">powertop</a>(1) </p>
+<p> <a href="/docs/linux/man/1-cpupower-set/">cpupower-set</a>(1), <a href="/docs/linux/man/1-cpupower-info/">cpupower-info</a>(1), cpupower-idle(1), <a href="/docs/linux/man/1-cpupower-frequency-set/">cpupower-frequency-set</a>(1), <a href="/docs/linux/man/1-cpupower-frequency-info/">cpupower-frequency-info</a>(1), <a href="/docs/linux/man/1-cpupower-monitor/">cpupower-monitor</a>(1), powertop(1) </p>
 <h2>AUTHORS</h2>
 <pre><code>
 --perf - bias parts written by Len Brown&lt;len.brown[at] intel.com&gt;

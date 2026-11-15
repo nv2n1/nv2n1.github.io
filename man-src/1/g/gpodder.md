@@ -14,7 +14,7 @@ description: "gpodder – A Media aggregator and Podcast catcher"
 <h2>DESCRIPTION</h2>
 <p> gPodder enables you to subscribe to RSS feeds and download podcast episodes from these feeds. </p>
 <p> Downloaded podcasts can either be synchronized to portable MP3 players (including iPods) or played back on the user&#8217;s desktop. </p>
-<p> See <a href="/docs/linux/man/1-gpo/">gpo</a>(1) for the command-line interface.</p>
+<p> See gpo(1) for the command-line interface.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;version</code></p>

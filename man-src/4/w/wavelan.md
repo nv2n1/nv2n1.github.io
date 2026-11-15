@@ -42,6 +42,6 @@ description: "wavelan – AT&T GIS WaveLAN ISA device driver"
 <p>This driver fails to detect some <code>non-NCR/AT&amp;T/Lucent</code> Wavelan cards. If this happens for you, you must look in the source code on how to add your card to the detection routine. </p>
 <p> Some of the mentioned features are optional. You may enable to disable them by changing flags in the driver header and recompile.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-wavelan_cs/">wavelan_cs</a></code>(4), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/8-insmod/">insmod</a></code>(8), <code><a href="/docs/linux/man/8-iwconfig/">iwconfig</a></code>(8), <code><a href="/docs/linux/man/8-iwpriv/">iwpriv</a></code>(8), <code><a href="/docs/linux/man/8-iwspy/">iwspy</a></code>(8)</p>
+<p><code>wavelan_cs</code>(4), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/8-insmod/">insmod</a></code>(8), <code><a href="/docs/linux/man/8-iwconfig/">iwconfig</a></code>(8), <code><a href="/docs/linux/man/8-iwpriv/">iwpriv</a></code>(8), <code><a href="/docs/linux/man/8-iwspy/">iwspy</a></code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

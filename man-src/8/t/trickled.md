@@ -45,6 +45,6 @@ description: "trickled – userspace bandwidth manager daemon"
 <p><code>trickled -u 10 -d 20</code> </p>
 <p> Limit aggregate <a href="/docs/linux/man/1-trickle/">trickle</a>(1) upload bandwidth consumption to 10 KB/s and download consumption to 20 KB/s.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-trickle/">trickle</a>(1), trickled.conf5, <a href="/docs/linux/man/3-syslog/">syslog</a>(3), <a href="/docs/linux/man/4-netintro/">netintro</a>(4)</p>
+<p><a href="/docs/linux/man/1-trickle/">trickle</a>(1), trickled.conf5, <a href="/docs/linux/man/3-syslog/">syslog</a>(3), netintro(4)</p>
 <h2>Authors</h2>
 <p><code>trickled</code> has been developed by Marius Aamodt Eriksen Aq marius [at] monkey.org .</p>

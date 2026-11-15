@@ -121,7 +121,7 @@ description: "openconnect – Connect to Cisco AnyConnect VPN"
 <dd>Do not trust the system default certificate authorities. If this option is given, only certificate authorities given with the <code>&#8211;cafile</code> option, if any, will be trusted automatically. </p>
 <dt><code>&#8211;pfs</code></p>
 <dd>Enforces Perfect Forward Secrecy (PFS). That ensures that if the server&#8217;s long-term key is compromised, any session keys established before the compromise will be unaffected. If this option is provided and the server does not support PFS in the TLS channel the connection will fail. </p>
-<p> PFS is available in Cisco ASA releases <a href="/docs/linux/man/2-9-1/">9.1</a>(2) and higher; a suitable cipher suite may need to be manually enabled by the administrator using the <code>ssl encryption</code> setting. </p>
+<p> PFS is available in Cisco ASA releases 9.1(2) and higher; a suitable cipher suite may need to be manually enabled by the administrator using the <code>ssl encryption</code> setting. </p>
 <dt><code>&#8211;no-dtls</code></p>
 <dd>Disable DTLS</p>
 <dt><code>&#8211;no-http-keepalive</code></p>

@@ -64,7 +64,7 @@ static pmdaMetric metrictab[] = {
 <dt><code>PMDA interface version </code><i>interface</i><code> not supported</code></p>
 <dd>The <i>interface</i> version is not supported by <code>pmdaInit</code>.</p>
 <dt><code>Using pmdaFetch() but fetch call back not set</code></p>
-<dd>The fetch callback, <code><a href="/docs/linux/man/3-pmdafetch/">pmdaFetch</a></code>(3), requires an additional callback to be provided using <code><a href="/docs/linux/man/3-pmdasetfetchcallback/">pmdaSetFetchCallBack</a></code>(3).</p>
+<dd>The fetch callback, <code><a href="/docs/linux/man/3-pmdafetch/">pmdaFetch</a></code>(3), requires an additional callback to be provided using <code>pmdaSetFetchCallBack</code>(3).</p>
 <dt><code>Illegal instance domain </code><i>inst</i><code> for metric </code><i>pmid</i></p>
 <dd>The instance domain <i>inst</i> that was specified for metric <i>pmid</i> is not within the range of the instance domain table.</p>
 <dt><code>No help text path specified</code></p>

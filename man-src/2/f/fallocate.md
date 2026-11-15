@@ -37,7 +37,7 @@ int fallocate(int fd, int mode, off_t offset, off_t len);
 <dt>*</p>
 <dd> Btrfs (since Linux 3.7)</p>
 <dt>*</p>
-<dd> <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5) (since Linux 3.5)</p>
+<dd> <code>tmpfs</code>(5) (since Linux 3.5)</p>
 <dt>*</p>
 <dd> <code><a href="/docs/linux/man/5-gfs2/">gfs2</a></code>(5) (since Linux 4.16)</dl>
 <h3>Collapsing file space</h3>
@@ -114,7 +114,7 @@ int fallocate(int fd, int mode, off_t offset, off_t len);
 <h2>CONFORMING TO</h2>
 <p> <code>fallocate</code>() is Linux-specific.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-fallocate/">fallocate</a></code>(1), <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2), <code><a href="/docs/linux/man/3-posix_fadvise/">posix_fadvise</a></code>(3), <code><a href="/docs/linux/man/3-posix_fallocate/">posix_fallocate</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/1-fallocate/">fallocate</a></code>(1), <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2), <code>posix_fadvise</code>(3), <code><a href="/docs/linux/man/3-posix_fallocate/">posix_fallocate</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

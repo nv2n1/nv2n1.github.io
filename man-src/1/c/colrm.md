@@ -27,7 +27,7 @@ description: "colrm – remove columns from a file"
 <h2>HISTORY</h2>
 <p> The <code>colrm</code> command appeared in 3.0BSD.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/1p-awk/">awk</a></code>(1p), <code><a href="/docs/linux/man/1-column/">column</a></code>(1), <code><a href="/docs/linux/man/1-expand/">expand</a></code>(1), <code><a href="/docs/linux/man/1-paste/">paste</a></code>(1)</p>
+<p> <code>awk</code>(1p), <code><a href="/docs/linux/man/1-column/">column</a></code>(1), <code><a href="/docs/linux/man/1-expand/">expand</a></code>(1), <code><a href="/docs/linux/man/1-paste/">paste</a></code>(1)</p>
 <h2>REPORTING BUGS</h2>
 <p> For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.</p>
 <h2>AVAILABILITY</h2>

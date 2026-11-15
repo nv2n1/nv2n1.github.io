@@ -37,7 +37,7 @@ description: "invoke-rc.d – executes System-V style init script actions"
 <dt><i>&#8211;no-fallback</i></p>
 <dd>Ignores any fallback action requests by the policy layer. <code>Warning:</code> this is usually a very bad idea for any actions other than start.</p>
 <dt><i>&#8211;skip-systemd-native</i></p>
-<dd>Exits before doing anything if a systemd environment is detected and the requested service is a native systemd unit. This is useful for maintainer scripts that want to defer systemd actions to <code><a href="//www.systutorials.com/docs/linux/man/1p-deb-systemd-invoke/">deb-systemd-invoke</a></code>(1p)</dl>
+<dd>Exits before doing anything if a systemd environment is detected and the requested service is a native systemd unit. This is useful for maintainer scripts that want to defer systemd actions to <code>deb-systemd-invoke</code>(1p)</dl>
 <h2>Status Codes</h2>
 <p>Should an init script be executed, <code>invoke-rc.d</code> always returns the status code returned by the init script. Init scripts should not return status codes in the 100+ range (which is reserved in Debian and by the LSB). The status codes returned by invoke-rc.d proper are:</p>
 <dl>
@@ -78,7 +78,7 @@ description: "invoke-rc.d – executes System-V style init script actions"
 <h2>See Also</h2>
 <pre><i>Debian Policy manual</i>,
 <code>/etc/init.d/skeleton</code>,
-<code><a href="//www.systutorials.com/docs/linux/man/8-update-rc.d/">update-rc.d</a></code>(8),
+<code>update-rc.d</code>(8),
 <code><a href="//www.systutorials.com/docs/linux/man/8-init/">init</a></code>(8),
 <code>/usr/share/doc/init-system-helpers/README.policy-rc.d.gz</code></pre>
 <h2>Author</h2>

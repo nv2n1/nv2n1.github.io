@@ -45,6 +45,6 @@ description: "nan, nanf, nanl – return ‘Not a Number’"
 <h2>Conforming To</h2>
 <p>C99, POSIX.1-2001, POSIX.1-2008. See also IEC 559 and the appendix with recommended functions in IEEE 754/IEEE 854.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-isnan/">isnan</a></code>(3), <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3), <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7)</p>
+<p><code>isnan</code>(3), <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3), <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a></p>

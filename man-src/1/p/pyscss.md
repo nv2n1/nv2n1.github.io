@@ -565,7 +565,7 @@ py.test scss/tests/files/general/000-smoketest.scss
 <dt>&bull;</p>
 <dd> Fix the auto behavior of <code>join()</code> to match Ruby.</p>
 <dt>&bull;</p>
-<dd> Fully allow arbitrary expressions as map keys; previously, this only worked for the first key. <a href="/docs/linux/man/1-ll/">LL</a>(1) is hard.</p>
+<dd> Fully allow arbitrary expressions as map keys; previously, this only worked for the first key. LL(1) is hard.</p>
 <dt>&bull;</p>
 <dd> Restore Python 3.2 compatibility.</p>
 <dt>&bull;</p>
@@ -808,7 +808,7 @@ py.test scss/tests/files/general/000-smoketest.scss
 <dt>&bull;</p>
 <dd> Added support for <i>Firebug</i> with <i>FireSass</i>.</p>
 <dt>&bull;</p>
-<dd> <code><a href="/docs/linux/man/n-nth/">nth</a>(n)</code> is round (returns the <code>nth mod len</code> item of the list).</p>
+<dd> <code>nth(n)</code> is round (returns the <code>nth mod len</code> item of the list).</p>
 <dt>&bull;</p>
 <dd> <code>&#8211;watch</code> added to the command line.</p>
 <dt>&bull;</p>

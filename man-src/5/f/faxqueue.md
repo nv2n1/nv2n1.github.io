@@ -44,7 +44,7 @@ description: "faxqueue – sendfax fax spool queue control files"
 <dd>This is also a pure comment field, used only for informational purposes. <i>faxrunq</i> will return it in the sucess/failure mail. If you use <i>faxspool -s &lt;subj&gt;,</i> it will put this string on the cover page and in the JOB file. </p>
 </dl>
 <h2>Permissions</h2>
-<p>Starting with mgetty 1.1.29, the fax spool directory /var/spool/fax/outgoing is no longer world-writeable. It should be owned by the user &#8216;fax&#8217; and be mode 755. The <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) and <a href="/docs/linux/man/1-faxrunqd/">faxrunqd</a>(1) programs should also be run under that user ID if possible. </p>
+<p>Starting with mgetty 1.1.29, the fax spool directory /var/spool/fax/outgoing is no longer world-writeable. It should be owned by the user &#8216;fax&#8217; and be mode 755. The <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) and faxrunqd(1) programs should also be run under that user ID if possible. </p>
 <p> If the fax spool directory is world- or group-writeable, there are a number of denial of service or file overwrite / file access attacks possible that it&#8217;s very hard to guard against. So don&#8217;t do this! </p>
 <p> If the fax spool directory has the proper permissions, there are currently no known attacks against faxrunq/faxrunqd, even if they run as &quot;root&quot;, but it&#8217;s always more safe to run as untrusted user.</p>
 <h2>Processing</h2>

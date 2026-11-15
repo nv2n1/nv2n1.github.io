@@ -191,7 +191,7 @@ auth required /lib/security/pam_unix.so \
 <h2>Version</h2>
 <p>This man page is correct for version 3 of the Samba suite.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a>(5), <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7), <code><a href="/docs/linux/man/1-wbinfo/">wbinfo</a></code>(1), <code><a href="/docs/linux/man/8-ntlm_auth/">ntlm_auth</a></code>(8), <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5), <code><a href="/docs/linux/man/8-pam_winbind/">pam_winbind</a></code>(8)</p>
+<p><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a>(5), <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7), <code><a href="/docs/linux/man/1-wbinfo/">wbinfo</a></code>(1), <code>ntlm_auth</code>(8), <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5), <code><a href="/docs/linux/man/8-pam_winbind/">pam_winbind</a></code>(8)</p>
 <h2>Author</h2>
 <p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
 <p> wbinfo and winbindd were written by Tim Potter. </p>

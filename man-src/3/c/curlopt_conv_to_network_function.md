@@ -36,4 +36,4 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_CONV_TO_NETWORK_FUNCTION,
 <h2>Return Value</h2>
 <p>Returns CURLE_OK if the option is supported, and CURLE_UNKNOWN_OPTION if not.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-curlopt_conv_from_network_function/">CURLOPT_CONV_FROM_NETWORK_FUNCTION</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_conv_to_utf8_function/">CURLOPT_CONV_TO_UTF8_FUNCTION</a></code>(3),</p>
+<p><code><a href="/docs/linux/man/3-curlopt_conv_from_network_function/">CURLOPT_CONV_FROM_NETWORK_FUNCTION</a></code>(3), <code>CURLOPT_CONV_TO_UTF8_FUNCTION</code>(3),</p>

@@ -51,7 +51,7 @@ int ibv_detach_mcast(struct ibv_qp *qp, const union ibv_gid *gid, uint16_t lid);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a>(3)
+ ibv_create_qp(3)
 
 <h2>AUTHOR</h2>
 

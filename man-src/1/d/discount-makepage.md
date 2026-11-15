@@ -18,7 +18,7 @@ description: "makepage – convert markdown input to a fully-formed xhtml page"
 <h2>RETURN VALUES</h2>
 <p> The utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-markdown/">markdown</a>(1), <a href="/docs/linux/man/3-markdown/">markdown</a>(3), <a href="/docs/linux/man/7-markdown/">markdown</a>(7), mkd-extensions7.</p>
+<p> <a href="/docs/linux/man/1-markdown/">markdown</a>(1), markdown(3), <a href="/docs/linux/man/7-markdown/">markdown</a>(7), mkd-extensions7.</p>
 <h2>AUTHOR</h2>
 <p> An David Parsons (<code>orc [at] pell.portland.or.us</code> ) </p>
 <h2>Index</h2>

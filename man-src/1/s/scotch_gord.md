@@ -62,7 +62,7 @@ gord[options][gfile][ofile][lfile]
     $ gord brol.grf brol.ord
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dgord/">dgord</a></code>(1), <code><a href="/docs/linux/man/1-gmk_hy/">gmk_hy</a></code>(1), <code><a href="/docs/linux/man/1-gtst/">gtst</a></code>(1). </p>
+<p> <code>dgord</code>(1), <code>gmk_hy</code>(1), <code>gtst</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

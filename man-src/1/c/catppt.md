@@ -27,7 +27,7 @@ description: "catppt – reads MS-PowerPoint file and puts its content on standa
 <dd> outputs version number </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1), <code><a href="/docs/linux/man/1-xls2csv/">xls2csv</a></code>(1), <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1), <code><a href="/docs/linux/man/4-utf/">utf</a></code>(4), <code><a href="/docs/linux/man/4-unicode/">unicode</a></code>(4) </p>
+<p> <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1), <code><a href="/docs/linux/man/1-xls2csv/">xls2csv</a></code>(1), <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1), <code>utf</code>(4), <code>unicode</code>(4) </p>
 <h2>AUTHOR</h2>
 <p> Alex Ott &lt;alexott [at] gmail.com&gt; </p>
 <h2>Index</h2>

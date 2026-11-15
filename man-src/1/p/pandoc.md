@@ -3101,7 +3101,7 @@ fruit | price-- -- - | -- -- - : apple | 2.05 pear | 1.37 orange | 3.09
 <dl>
 <dt>
 <dd> <pre>
-% <a HREF="//www.systutorials.com/docs/linux/man/1-PANDOC/">PANDOC</a>(1)
+% PANDOC(1)
 </pre></dl>
  
 
@@ -3109,7 +3109,7 @@ fruit | price-- -- - | -- -- - : apple | 2.05 pear | 1.37 orange | 3.09
 <dl>
 <dt>
 <dd> <pre>
-% <a HREF="//www.systutorials.com/docs/linux/man/1-PANDOC/">PANDOC</a>(1) Pandoc User Manuals
+% PANDOC(1) Pandoc User Manuals
 </pre></dl>
  
 
@@ -3117,7 +3117,7 @@ fruit | price-- -- - | -- -- - : apple | 2.05 pear | 1.37 orange | 3.09
 <dl>
 <dt>
 <dd> <pre>
-% <a HREF="//www.systutorials.com/docs/linux/man/1-PANDOC/">PANDOC</a>(1) Pandoc User Manuals | Version 4.0
+% PANDOC(1) Pandoc User Manuals | Version 4.0
 </pre></dl>
  
 

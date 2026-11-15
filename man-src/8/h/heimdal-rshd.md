@@ -30,7 +30,7 @@ description: "rshd – remote shell server"
 <dd>When using the AFS filesystem, users&#8217; authentication tokens are put in something called a PAG (Process Authentication Group). Multiple processes can share a PAG, but normally each login session has its own PAG. This option disables the Fn setpag call, so all tokens will be put in the default (uid-based) PAG, making it possible to share tokens between sessions. This is only useful in peculiar environments, such as some batch systems.</p>
 <dt> &#8211;<code>i</code> &#8211;<code>-no-inetd</code></p>
 <dd>
-<dd>The &#8211;<code>i</code> option will cause to create a socket, instead of assuming that its stdin came from <a href="/docs/linux/man/8-inetd/">inetd</a>(8). This is mostly useful for debugging.</p>
+<dd>The &#8211;<code>i</code> option will cause to create a socket, instead of assuming that its stdin came from inetd(8). This is mostly useful for debugging.</p>
 <dt> &#8211;<code>p </code><i>port</i> &#8211;<code>-port= </code><i>port</i></p>
 <dd>
 <dd>Port to use with &#8211;<code>i</code></p>
@@ -39,7 +39,7 @@ description: "rshd – remote shell server"
 <dd>This flag is for backwards compatibility only.</p>
 <dt> &#8211;<code>L</code></p>
 <dd>
-<dd>This flag enables logging of connections to <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8). This option is always on in this implementation.</dl>
+<dd>This flag enables logging of connections to syslogd(8). This option is always on in this implementation.</dl>
 <h2>Files</h2>
 <dl>
 <dt><code>/etc/hosts.equiv </code></p>
@@ -52,7 +52,7 @@ description: "rshd – remote shell server"
 kshell stream tcp nowait root /usr/libexec/rshd rshd -k
 ekshell stream tcp nowait root /usr/libexec/rshd rshd -kx</pre>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-rsh/">rsh</a>(1), <a href="/docs/linux/man/3-iruserok/">iruserok</a>(3)</p>
+<p><a href="/docs/linux/man/1-rsh/">rsh</a>(1), iruserok(3)</p>
 <h2>History</h2>
 <p>The command appeared in BSD 4.2</p>
 <h2>Authors</h2>

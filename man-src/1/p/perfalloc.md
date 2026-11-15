@@ -32,5 +32,5 @@ description: "perfalloc – notify pmdaperfevent(1) to disable hardware counter 
 <p> There may be a delay of up to 100 miliseconds between perfalloc requesting the hardware counter disabling and the perfevent pmda processing the request. </p>
 <p> The perfalloc process does not check the status of the request and therefore is not able to provide a positive confirmation that the request succeeded and the hardware counters are disabled.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pmdaperfevent/">pmdaperfevent</a></code>(1), <code><a href="/docs/linux/man/3-perfevent-conf/">perfevent.conf</a></code>(3) and <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8). </p>
+<p> <code><a href="/docs/linux/man/1-pmdaperfevent/">pmdaperfevent</a></code>(1), <code>perfevent.conf</code>(3) and <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8). </p>
 <h2>Index</h2>

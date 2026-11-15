@@ -47,7 +47,7 @@ struct ibv_qp_cap {
 <p> <code>ibv_destroy_qp()</code> fails if the QP is attached to a multicast group. </p>
 <p> <code>IBV_QPT_DRIVER</code> does not represent a specific service and is used for vendor specific QP logic.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_modify_qp/">ibv_modify_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_qp/">ibv_query_qp</a></code>(3)</p>
+<p> <code>ibv_alloc_pd</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_query_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

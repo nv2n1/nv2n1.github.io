@@ -56,7 +56,7 @@ description: "iotop – simple top-like I/O monitor"
 </dl>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ionice/">ionice</a></code>(1), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code><a href="/docs/linux/man/1-vmstat/">vmstat</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-ionice/">ionice</a></code>(1), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code>vmstat</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> iotop was written by Guillaume Chazarain. </p>
 <p> This manual page was started by Paul Wise for the Debian project and is placed in the public domain. </p>

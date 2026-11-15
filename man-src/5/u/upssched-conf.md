@@ -23,7 +23,7 @@ description: "upssched.conf – Configuration for upssched timer program"
 </dl>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font> </p>
-<p> by default, <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8) will run upssched as whatever user you have defined with RUN_AS_USER in <code><a href="/docs/linux/man/8-upsmon-conf/">upsmon.conf</a></code>(8). Make sure that user can create files and write to files in the path you use for PIPEFN and LOCKFN. </p>
+<p> by default, <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8) will run upssched as whatever user you have defined with RUN_AS_USER in <code>upsmon.conf</code>(8). Make sure that user can create files and write to files in the path you use for PIPEFN and LOCKFN. </p>
 </dl>
 <p> My recommendation: create a special directory for upssched, make it owned by your upsmon user, then use it for both. </p>
 <p> The stock version of the upssched.conf ships with PIPEFN disabled to make you visit this portion of the documentation and think about how your system works before potentially opening a security hole. </p>

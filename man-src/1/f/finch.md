@@ -152,7 +152,8 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
  #abc = bcd </p>
 <p> # Hitting &#8216;space&#8217; will activate a button<br />
  [GntButton::remap]<br />
- \ =  </p>
+ \ = 
+ </p>
 </dl>
 <h2>Widget Actions</h2>
 <p> You can specifiy key-bindings for specific widgets. The following entries in <i>~/.gntrc</i> correspond to the default keybindings for the actions: </p>
@@ -297,7 +298,7 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
 <h2>SEE ALSO</h2>
 <p> <i><a rel="nofollow" href="http://pidgin.im/">http://pidgin.im/</a></i><br />
  <i><a rel="nofollow" href="http://developer.pidgin.im/">http://developer.pidgin.im/</a></i><br />
- <code><a href="/docs/linux/man/1-purple-remote/">purple-remote</a></code>(1)<br />
+ <code>purple-remote</code>(1)<br />
  <code><a href="/docs/linux/man/1-pidgin/">pidgin</a></code>(1) </p>
 <h2>LICENSE</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

@@ -51,7 +51,7 @@ description: "rpmextra – display extra packages : not from distribution reposi
 <h2>NOTES</h2>
 <p> this program can be used as &#8220;normal&#8221; user</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-rpm/">rpm</a></i>(1) for rpm call </p>
+<p> <i>rpm</i>(1) for rpm call </p>
 <p> <i><a href="/docs/linux/man/1-rpmorphan/">rpmorphan</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmusage/">rpmusage</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmduplicates/">rpmduplicates</a></i>(1) </p>

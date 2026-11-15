@@ -67,7 +67,7 @@ description: "pmieconf – display and set configurable pmie rule variables"
 <pre>
   pmieconf&gt; undo memory enabled
 </pre>
-<p> Specify that notification of rules which evaluate to true should be sent to <code><a href="/docs/linux/man/1-syslogd/">syslogd</a></code>(1): </p>
+<p> Specify that notification of rules which evaluate to true should be sent to <code>syslogd</code>(1): </p>
 <pre>
   pmieconf&gt; modify global syslog_action yes
 </pre>

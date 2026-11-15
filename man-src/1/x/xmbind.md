@@ -16,7 +16,7 @@ description: "xmbind — Configures virtual key bindings"
 <h3>Options</h3>
 <dl>
 <dt><code>-display</code></p>
-<dd> This option specifies the display to use; see <a href="/docs/linux/man/1-x/">X</a>(1).</dl>
+<dd> This option specifies the display to use; see X(1).</dl>
 <h2>RELATED</h2>
-<p> <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3) and <code><a href="/docs/linux/man/1-x/">X</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3) and <code>X</code>(1). </p>
 <h2>Index</h2>

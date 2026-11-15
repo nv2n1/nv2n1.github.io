@@ -44,7 +44,7 @@ description: "xsane – scanner frontend for SANE"
 <p> If the <code>&#8211;Resizable</code> or <code>-R</code> flag is given then xsane uses a scrolled and resizable main window. The flag overwrites the preferences value. </p>
 <p> If <code>&#8211;print-filenames</code> or <code>-p</code> flag is given then xsane prints the names of created files to the standard output. </p>
 <p> When the flag <code>&#8211;force-filename</code> or <code>-N</code> is given then xsane reads the next option as default image filename. The name should be of the format &quot;name-001.ext&quot;. (or any other number instead of 001) that 001 part will be used as a filename counter if xsane is so configured. Beware that the number of digits must correspond to the configuration of xsane. The selection box for filenames is disabled. This option normally should be used with the option <code>&#8211;no-mode-selection</code> and <code>&#8211;save.</code> </p>
-<p> The <code>&#8211;display</code> flag selects the X11 display used to present the graphical user-interface (see <code><a href="/docs/linux/man/1-x/">X</a></code>(1) for details). </p>
+<p> The <code>&#8211;display</code> flag selects the X11 display used to present the graphical user-interface (see <code>X</code>(1) for details). </p>
 <p> The <code>&#8211;sync</code> flag requests a synchronous connection with the X11 server. This is for debugging purposes only.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
@@ -62,7 +62,7 @@ description: "xsane – scanner frontend for SANE"
 <dt><i>$HOME/.sane/xsane/xsane-style.rc</i></p>
 <dd> This file serves the same purpose as the system-wide style file. If present, it takes precedence over the system wide style file.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gimp/">gimp</a>(1), <a href="/docs/linux/man/1-xscanimage/">xscanimage</a>(1), <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5), <a href="/docs/linux/man/5-sane-net/">sane-net</a>(5), <a href="/docs/linux/man/1-saned/">saned</a>(1), <a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a>(5), <a href="/docs/linux/man/5-sane-usb/">sane-usb</a>(5), sane-&quot;backendname&quot;(5)</p>
+<p> <a href="/docs/linux/man/1-gimp/">gimp</a>(1), xscanimage(1), <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5), <a href="/docs/linux/man/5-sane-net/">sane-net</a>(5), saned(1), <a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a>(5), <a href="/docs/linux/man/5-sane-usb/">sane-usb</a>(5), sane-&quot;backendname&quot;(5)</p>
 <h2>AUTHOR</h2>
 <p> Oliver Rauch &lt;Oliver.Rauch [at] rauch-domain.de&gt; </p>
 <h2>Index</h2>

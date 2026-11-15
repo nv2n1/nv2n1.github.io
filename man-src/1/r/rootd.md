@@ -14,9 +14,9 @@ description: "rootd – The ROOT file server daemon"
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>rootd</code> program. </p>
 <p> <code>rootd</code> is a <code>ROOT</code> remote file server daemon. </p>
-<p> This small server is started either by <i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8) (or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8)) when a client requests a connection to a <i>rootd</i> server or by hand (i.e. from the command line). The <i>rootd</i> server works with the <code>ROOT</code> <i>TNetFile</i>, <i>TFTP</i> and <i>TNetSystem</i> classes. It allows access to remote directories and <code>ROOT</code> files in either read or write mode from any <code>ROOT</code> interactive session. By default rootd listens on port 1094, assigned to it by IANA.</p>
+<p> This small server is started either by <i>inetd</i>(8) (or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8)) when a client requests a connection to a <i>rootd</i> server or by hand (i.e. from the command line). The <i>rootd</i> server works with the <code>ROOT</code> <i>TNetFile</i>, <i>TFTP</i> and <i>TNetSystem</i> classes. It allows access to remote directories and <code>ROOT</code> files in either read or write mode from any <code>ROOT</code> interactive session. By default rootd listens on port 1094, assigned to it by IANA.</p>
 <h2>STARTING VIA (X)INETD</h2>
-<p> To run <i>rootd</i> via <i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8) or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8) the port 1094 must be assigned to <i>rootd</i> in <i>/etc/services</i>; the following line should be added, if not present: </p>
+<p> To run <i>rootd</i> via <i>inetd</i>(8) or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8) the port 1094 must be assigned to <i>rootd</i> in <i>/etc/services</i>; the following line should be added, if not present: </p>
 <dl>
 <dt>
 <dd>
@@ -33,7 +33,7 @@ rootd stream tcp nowait root &lt;<i>bindir</i>&gt;/rootd rootd -i
 </pre>
 </dl>
 <p> where &lt;<i>bindir</i>&gt; is the directory you have installed <i>rootd</i> in. </p>
-<p> The <i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8) daemon must re-read its configuration file to become aware of the new service. This can be done either by killing and restarting it manually </p>
+<p> The <i>inetd</i>(8) daemon must re-read its configuration file to become aware of the new service. This can be done either by killing and restarting it manually </p>
 <dl>
 <dt>
 <dd>
@@ -79,7 +79,7 @@ service rootd
 </pre>
 </dl>
 <p> If you installed <code>ROOT</code> using some pre-compiled package (for example a <code>Redhat Linux</code> or a <code>Debian GNU/Linux</code> package), this may already be done for you. </p>
-<p> The above configuration examples start the daemon with superuser privileges. Please refer to the <i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8) or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8) documentation for ways of limiting the privileges.</p>
+<p> The above configuration examples start the daemon with superuser privileges. Please refer to the <i>inetd</i>(8) or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8) documentation for ways of limiting the privileges.</p>
 <h2>STARTING BY HAND</h2>
 <p> You can also start <i>rootd</i> by hand running directly under your private account (no root system privileges needed). For example to start <i>rootd</i> listening on port 5151 just type: </p>
 <dl>
@@ -151,9 +151,9 @@ chown rootd:rootd /var/spool/rootd/pub
 <dt><code>*</code></p>
 <dd> In anonymous mode the top of the file tree is set to the <code>rootd</code> home directory, therefore only files below the home directory can be accessed.</p>
 <dt><code>*</code></p>
-<dd> Anonymous mode only works when the server is started via <a href="/docs/linux/man/8-inetd/">inetd</a>(8) or <a href="/docs/linux/man/8-xinetd/">xinetd</a>(8).</dl>
+<dd> Anonymous mode only works when the server is started via inetd(8) or <a href="/docs/linux/man/8-xinetd/">xinetd</a>(8).</dl>
 <h2>ABOUT PASSWORD AUTHENTICATION</h2>
-<p> In system using shadow passwords, full access to the password field of the user information structure requires special privileges; this is typically granted if rootd is started by <i><a href="/docs/linux/man/8-inetd/">inetd</a>(8)</i> or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a>(8)</i>, as the in above examples. If the daemon is started in unprivileged mode, either from a regular account or by (x)inetd with reduced privileges, password-based authentication require users to create a file $HOME/.rootdpass containing an encrypted password (using <i><a href="/docs/linux/man/3-crypt/">crypt</a></i>(3)). The system tests the existence of this file before checking the system password files. An encrypted password can be created in the following way: </p>
+<p> In system using shadow passwords, full access to the password field of the user information structure requires special privileges; this is typically granted if rootd is started by <i>inetd(8)</i> or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a>(8)</i>, as the in above examples. If the daemon is started in unprivileged mode, either from a regular account or by (x)inetd with reduced privileges, password-based authentication require users to create a file $HOME/.rootdpass containing an encrypted password (using <i><a href="/docs/linux/man/3-crypt/">crypt</a></i>(3)). The system tests the existence of this file before checking the system password files. An encrypted password can be created in the following way: </p>
 <dl>
 <dt>
 <dd>
@@ -174,7 +174,7 @@ perl -e '$pw = crypt(&quot;&lt;secretpasswd&gt;&quot;,&quot;salt&quot;); print &
 <dt><code>-f</code></p>
 <dd> run in the foreground (output on the window); useful for debugging purposes.</p>
 <dt><code>-i</code></p>
-<dd> indicates that <i>rootd</i> was started by <i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8) or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8).</p>
+<dd> indicates that <i>rootd</i> was started by <i>inetd</i>(8) or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8).</p>
 <dt><code>-noauth</code></p>
 <dd> do not require client authentication</p>
 <dt><code>-p</code> &lt;<i>port#</i>&gt;[-&lt;<i>port2#</i>&gt;]</p>

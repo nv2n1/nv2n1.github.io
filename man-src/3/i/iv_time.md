@@ -19,5 +19,5 @@ description: "iv_now, iv_validate_now, iv_invalidate_now – ivykis time handlin
 <p> The contents of <code>iv_now</code> might be stale. Calling the function <code>iv_validate_now</code> ensures that the current contents of <code>iv_now</code> are up-to-date. </p>
 <p> The function <code>iv_invalidate_now</code> is called to invalidate the currently cached time-of-day. This function should be called after any operation that takes a significant amount of wall clock time.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ivykis/">ivykis</a></code>(3), <code><a href="/docs/linux/man/3-iv_examples/">iv_examples</a></code>(3) </p>
+<p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
 <h2>Index</h2>

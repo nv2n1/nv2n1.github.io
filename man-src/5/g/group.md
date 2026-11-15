@@ -24,7 +24,7 @@ description: "group – user group file"
 <h2>Files</h2>
 <p><i>/etc/group</i></p>
 <h2>Bugs</h2>
-<p>As the 4.2BSD <code><a href="/docs/linux/man/3-initgroups/">initgroups</a></code>(3) man page says: no one seems to keep <i>/etc/group</i> up-to-date.</p>
+<p>As the 4.2BSD <code>initgroups</code>(3) man page says: no one seems to keep <i>/etc/group</i> up-to-date.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-chgrp/">chgrp</a></code>(1), <code><a href="/docs/linux/man/1-gpasswd/">gpasswd</a></code>(1), <code><a href="/docs/linux/man/1-groups/">groups</a></code>(1), <code><a href="/docs/linux/man/1-login/">login</a></code>(1), <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1), <code><a href="/docs/linux/man/1-sg/">sg</a></code>(1), <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3), <code><a href="/docs/linux/man/3-getgrnam/">getgrnam</a></code>(3), <code><a href="/docs/linux/man/5-gshadow/">gshadow</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/8-vigr/">vigr</a></code>(8)</p>
 <h2>Colophon</h2>

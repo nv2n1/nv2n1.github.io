@@ -21,7 +21,7 @@ function = alloc_trampoline(address, variable, data);</code></pre>
 <dl>
 <dd><code>trampoline_address(</code><i>function</i><code>)</code> returns <i>address</i>, <code>trampoline_variable(</code><i>function</i><code>)</code> returns <i>variable</i>, <code>trampoline_data(</code><i>function</i><code>)</code> returns <i>data</i>.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/3-varargs/">varargs</a></code>(3), <code><a href="/docs/linux/man/3-callback/">callback</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code>varargs</code>(3), <code><a href="/docs/linux/man/3-callback/">callback</a></code>(3) </p>
 <h2>Bugs</h2>
 <p>Passing the data through a global variable is not reentrant. Don&#8217;t call trampoline functions from within signal handlers. This is fixed in the <code><a href="/docs/linux/man/3-callback/">callback</a></code>(3) package. </p>
 <h2>Porting</h2>

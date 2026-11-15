@@ -20,7 +20,7 @@ The libibverbs API is an abstract one. It is agnostic to any underlying provider
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/7-verbs/">verbs</a>(7)
+verbs(7)
 
 <h2>Authors</h2>
 

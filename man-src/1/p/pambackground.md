@@ -32,7 +32,7 @@ description: "pambackground – create a mask of the background area of an image
 <dd> Tell interesting facts about the process. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1) , <code><a href="/docs/linux/man/1-pamcomp/">pamcomp</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1) , <code><a href="/docs/linux/man/1-pamcomp/">pamcomp</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pambackground</code> was new in Netpbm 10.37 (December 2006). </p>
 <h2>Index</h2>

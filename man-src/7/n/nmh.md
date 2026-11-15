@@ -182,7 +182,7 @@ description: "nmh – new MH message system"
 <dd>parse dates RFC 822-style</p>
 <dt><i><a href="/docs/linux/man/8-fmtdump/">fmtdump</a></i>(8)</p>
 <dd>decode <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) files</p>
-<dt><i><a href="/docs/linux/man/8-install-mh/">install-mh</a></i>(8)</p>
+<dt><i>install-mh</i>(8)</p>
 <dd>initialize the nmh environment</p>
 <dt><i><a href="/docs/linux/man/8-post/">post</a></i>(8)</p>
 <dd>deliver a message</dl>

@@ -19,4 +19,4 @@ void set_color(int index, const RGB *p);</code></pre>
  vsync();
  set_color(192, &amp;rgb);</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code><a href="/docs/linux/man/3-get_color/">get_color</a></code>(3), <code><a href="/docs/linux/man/3-_set_color/">_set_color</a></code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3), <code><a href="/docs/linux/man/3-exscroll/">exscroll</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code>get_color</code>(3), <code>_set_color</code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3), <code><a href="/docs/linux/man/3-exscroll/">exscroll</a></code>(3) </p>

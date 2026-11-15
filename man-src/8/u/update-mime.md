@@ -62,7 +62,7 @@ description: "update-mime – create or update MIME information"
 <h2>Desktop Entries</h2>
 <p>In addition to the abovementioned mechanism <code>update-mime</code> also parses desktop entries in /usr/share/applications/ to generate mailcap entries. These entries are given a lower priority than those in /usr/lib/mime/packages.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-mailcap-order/">mailcap.order</a></code>(5), <a href="/docs/linux/man/1-deb-triggers/">deb-triggers</a><code>(1), RFC-2046, RFC-1524</code></p>
+<p><code><a href="/docs/linux/man/5-mailcap-order/">mailcap.order</a></code>(5), deb-triggers<code>(1), RFC-2046, RFC-1524</code></p>
 <h2>Author</h2>
 <p><code>update-mime</code> was written by Brian White &lt;bcwhite [at] pobox.com&gt;</p>
 <h2>Copyright</h2>

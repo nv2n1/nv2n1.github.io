@@ -303,7 +303,7 @@ description: "darcs – an advanced revision control system"
 <dl>
 <dt>
 <dd> The `darcs show repo&#8217; command displays statistics about the current repository, allowing third-party scripts to access this information without inspecting _darcs directly (and without breaking when the _darcs format changes). </p>
-<p> By default, the number of patches is shown. If this data isn&#8217;t needed, use &#8211;no-files to accelerate this command from <a href="/docs/linux/man/n-o/">O</a>(n) to <a href="/docs/linux/man/1-o/">O</a>(1). </p>
+<p> By default, the number of patches is shown. If this data isn&#8217;t needed, use &#8211;no-files to accelerate this command from O(n) to O(1). </p>
 <p> By default, output is in a human-readable format. The &#8211;xml-output option can be used to generate output for machine postprocessing. </p>
 </dl>
 <p> <code>darcs show authors</code></p>
@@ -452,7 +452,7 @@ description: "darcs – an advanced revision control system"
 <h3>DARCS_EMAIL and EMAIL</h3>
 <p> Each patch is attributed to its author, usually by email address (for example, `Fred Bloggs &lt;fred [at] example.net&gt;&#8217;). Darcs looks in several places for this author string: the &#8211;author option, the files _darcs/prefs/author (in the repository) and ~/.darcs/author (in your home directory), and the environment variables $DARCS_EMAIL and $EMAIL. If none of those exist, Darcs will prompt you for an author string and write it to _darcs/prefs/author. Note that if if you have more than one email address, note that you can put them all in ~/.darcs/author, one author per line. Darcs will still prompt you for an author, but it allows you to select from the list, or to type in an alternative.</p>
 <h3>SENDMAIL</h3>
-<p> On Unix, the `darcs send&#8217; command relies on <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8). The `&#8211;sendmail-command&#8217; or $SENDMAIL environment variable can be used to provide an explicit path to this program; otherwise the standard locations /usr/sbin/sendmail and /usr/lib/sendmail will be tried.</p>
+<p> On Unix, the `darcs send&#8217; command relies on sendmail(8). The `&#8211;sendmail-command&#8217; or $SENDMAIL environment variable can be used to provide an explicit path to this program; otherwise the standard locations /usr/sbin/sendmail and /usr/lib/sendmail will be tried.</p>
 <h3>DARCS_SSH</h3>
 <p> Repositories of the form [user@]host:[dir] are taken to be remote repositories, which Darcs accesses with the external program <a href="/docs/linux/man/1-ssh/">ssh</a>(1). </p>
 <p> The environment variable $DARCS_SSH can be used to specify an alternative SSH client. Arguments may be included, separated by whitespace. The value is not interpreted by a shell, so shell constructs cannot be used; in particular, it is not possible for the program name to contain whitespace by using quoting or escaping.</p>

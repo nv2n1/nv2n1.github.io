@@ -25,6 +25,6 @@ description: "rgb2ycbcr – convert non-YCbCr TIFF images to a YCbCr TIFF image"
 <dt><code>-v</code></p>
 <dd> Set the vertical sampling dimension to one of: 1, 2 (default), or 4.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code><a href="/docs/linux/man/3-libtiff/">libtiff</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code>libtiff</code>(3) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff">http://www.remotesensing.org/libtiff</a></code> </p>
 <h2>Index</h2>

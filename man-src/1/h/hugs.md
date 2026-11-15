@@ -178,7 +178,7 @@ description: "hugs, runhugs, ffihugs – Hugs 98, functional programming system"
 <h2>SEE ALSO</h2>
 <p> Mark P. Jones et al. <i>Hugs 98 User Manual</i>, June 1999. </p>
 <p> <i>Hugs 98 User&#8217;s Guide</i> (distributed with Hugs). </p>
-<p> Paul Hudak &amp; Joseph H. Fasel. A gentle introduction to Haskell. <i>ACM SIGPLAN Notices</i>, <a href="/docs/linux/man/5-27/">27</a>(5), May 1992. </p>
+<p> Paul Hudak &amp; Joseph H. Fasel. A gentle introduction to Haskell. <i>ACM SIGPLAN Notices</i>, 27(5), May 1992. </p>
 <p> S. Peyton Jones (editor). <i>Haskell 98 Language and Libraries: The Revised Report</i>. December 2002. </p>
 <p> Manuel Chakravarty et al. <i>Haskell 98 Foreign Function Interface 1.0,</i> <i>Addendum to the Haskell Report</i>, September 2003.</p>
 <h2>AUTHOR</h2>

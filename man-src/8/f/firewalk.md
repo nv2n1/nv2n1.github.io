@@ -46,7 +46,7 @@ description: "firewalk – Active Reconnaissance Network Security Tool with Extr
 <h2>Command-Line Examples</h2>
 <h2>Caveats</h2>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-traceroute/">traceroute</a>(8), <a href="/docs/linux/man/8-tracerx/">tracerx</a>(8), <a href="/docs/linux/man/3-pcap/">pcap</a>(3), <a href="/docs/linux/man/3-libnet/">libnet</a>(3), <a href="/docs/linux/man/3-dnet/">dnet</a>(3)</p>
+<p><a href="/docs/linux/man/8-traceroute/">traceroute</a>(8), tracerx(8), pcap(3), libnet(3), dnet(3)</p>
 <h2>Author</h2>
 <p>Mike D. Schiffman &lt;mike [at] infonexus.com&gt;</p>
 <h2>Bugs</h2>

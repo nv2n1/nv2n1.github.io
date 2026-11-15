@@ -50,7 +50,7 @@ description: "pbmtopk – convert a PBM image into a packed (PK) format font"
 <dd> Sets the vertical offset of the next character to yoff (in pixels, from the top row). </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pktopbm/">pktopbm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pktopbm/">pktopbm</a></code>(1) , <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Adapted from Tom Rokicki&#8217;s pxtopk by Angus Duggan &lt;<i>ajcd [at] dcs.ed.ac.uk</i>&gt;. </p>
 <h2>Index</h2>

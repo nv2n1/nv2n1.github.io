@@ -27,7 +27,7 @@ description: "xml-rpc-api2cpp – Make a C++ wrapper class for an XML-RPC API"
 <p> xml-rpc-api2cpp assumes that method descriptions are ASCII text, not HTML as specified in the standard. (In practice, both conventions are often seen.) It may also get unhappy if method descriptions contain &quot;*/&quot;. </p>
 <p> In general, error messages and diagnostics are still fairly poor.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-xmlrpc-c/">xmlrpc-c</a></code>(7), <code><a href="/docs/linux/man/1-xml-rpc-api2txt/">xml-rpc-api2txt</a></code>(1). </p>
+<p> <code>xmlrpc-c</code>(7), <code><a href="/docs/linux/man/1-xml-rpc-api2txt/">xml-rpc-api2txt</a></code>(1). </p>
 <p> This program is part of xmlrpc-c.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Eric Kidd &lt;eric.kidd [at] pobox.com&gt;. It may be distributed under the same terms as the rest of xmlrpc-c. </p>

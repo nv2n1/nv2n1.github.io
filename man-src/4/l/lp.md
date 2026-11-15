@@ -66,6 +66,6 @@ description: "lp – line printer devices"
 <h2>Files</h2>
 <p><i>/dev/lp*</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code><a href="/docs/linux/man/1-chown/">chown</a></code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code><a href="/docs/linux/man/8-lpcntl/">lpcntl</a></code>(8), <code><a href="/docs/linux/man/8-tunelp/">tunelp</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code><a href="/docs/linux/man/1-chown/">chown</a></code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code>lpcntl</code>(8), <code><a href="/docs/linux/man/8-tunelp/">tunelp</a></code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

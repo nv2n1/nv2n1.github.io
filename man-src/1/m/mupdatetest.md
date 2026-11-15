@@ -48,5 +48,5 @@ description: "mupdatetest – interactive MUPDATE test program"
 <dt><code>-v</code></p>
 <dd> Verbose. Print out more information than usual.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-mupdate/">mupdate</a>(8)</code> </p>
+<p> <code>mupdate(8)</code> </p>
 <h2>Index</h2>

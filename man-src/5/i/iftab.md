@@ -31,11 +31,11 @@ description: "iftab – static information about the network interfaces"
 <dd>Matches the ARP Type (also called Link Type) of the interface with the specified ARP type as a number. The ARP Type of the interface can be shown using <i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></i>(8) or <i><a href="/docs/linux/man/8-ip/">ip</a></i>(8), the <code>link/ether</code> type correspond to <code>1</code> and the <code>link/ieee802.11</code> type correspond to <code>801</code>.<br />
  This selector is useful when a driver create multiple network interfaces for a single network card.</p>
 <dt><code>driver</code><i> driver name</i></p>
-<dd>Matches the Driver Name of the interface with the specified driver name. The Driver Name of the interface can be shown using <i>ethtool <a href="/docs/linux/man/8--i/">-i</a></i>(8).</p>
+<dd>Matches the Driver Name of the interface with the specified driver name. The Driver Name of the interface can be shown using <i>ethtool -i</i>(8).</p>
 <dt><code>businfo</code><i> bus information</i></p>
-<dd>Matches the Bus Information of the interface with the specified bus information. The Bus Information of the interface can be shown using <i>ethtool <a href="/docs/linux/man/8--i/">-i</a></i>(8).</p>
+<dd>Matches the Bus Information of the interface with the specified bus information. The Bus Information of the interface can be shown using <i>ethtool -i</i>(8).</p>
 <dt><code>firmware</code><i> firmware revision</i></p>
-<dd>Matches the Firmware Revision of the interface with the firmware revision information. The Firmware Revision of the interface can be shown using <i>ethtool <a href="/docs/linux/man/8--i/">-i</a></i>(8).</p>
+<dd>Matches the Firmware Revision of the interface with the firmware revision information. The Firmware Revision of the interface can be shown using <i>ethtool -i</i>(8).</p>
 <dt><code>baseaddress</code><i> base address</i></p>
 <dd>Matches the Base Address of the interface with the specified base address. The Base Address of the interface can be shown using <i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></i>(8).<br />
  Because most cards use dynamic allocation of the Base Address, this selector is only useful for ISA and EISA cards.</p>

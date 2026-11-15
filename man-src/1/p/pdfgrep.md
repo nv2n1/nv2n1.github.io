@@ -87,7 +87,7 @@ description: "pdfgrep – search pdf files for a regular expression"
 <p> <code>&#8211;unac</code></p>
 <dl>
 <dt>
-<dd> Remove accents and ligatures from both the search pattern and the PDF documents. This is useful if you want to search for a word containing &quot;ae&quot;, but the PDF uses the single character &quot;æ&quot; instead. See <code><a href="/docs/linux/man/3-unac/">unac</a>(3)</code> and <code><a href="/docs/linux/man/1-unaccent/">unaccent</a>(1)</code> for details. </p>
+<dd> Remove accents and ligatures from both the search pattern and the PDF documents. This is useful if you want to search for a word containing &quot;ae&quot;, but the PDF uses the single character &quot;æ&quot; instead. See <code>unac(3)</code> and <code>unaccent(1)</code> for details. </p>
 <p> <code>This option is experimental and only available if pdfgrep is compiled with unac support.</code></dl>
 <p> <code>-q</code>, <code>&#8211;quiet</code></p>
 <dl>

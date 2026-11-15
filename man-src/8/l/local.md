@@ -96,7 +96,7 @@ description: "local – Postfix local mail delivery"
 <pre>RFC 822 (ARPA Internet Text Messages)
 RFC 3463 (Enhanced status codes)</pre>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue afterwards. </p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue afterwards. </p>
 <p> Depending on the setting of the <code>notify_classes</code> parameter, the postmaster is notified of bounces and of other trouble.</p>
 <h2>Security</h2>
 <p>The <code><a href="/docs/linux/man/8-local/">local</a></code>(8) delivery agent needs a dual personality 1) to access the private Postfix queue and IPC mechanisms, 2) to impersonate the recipient and deliver to recipient-specified files or commands. It is therefore security sensitive. </p>
@@ -248,7 +248,7 @@ $HOME/.forward, per-user aliasing
 <a href="//www.systutorials.com/docs/linux/man/5-aliases/">aliases</a>(5), format of alias database
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>License</h2>
 <p>The Secure Mailer license must be distributed with this software.</p>
 <h2>History</h2>

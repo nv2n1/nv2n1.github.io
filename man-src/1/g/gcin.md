@@ -53,7 +53,7 @@ description: "gcin – an input method server"
 <dt>GCIN_TABLE_DIR</p>
 <dd> Assign directory for IM tables other then /usr/share/gcin/table.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gcin-setup/">gcin-setup</a></code>(1), <code><a href="/docs/linux/man/1-gcin2tab/">gcin2tab</a></code>(1), <code><a href="/docs/linux/man/1-phoa2d/">phoa2d</a></code>(1), <code><a href="/docs/linux/man/1-juyin-learn/">juyin-learn</a></code>(1), <code><a href="/docs/linux/man/1-gcin-message/">gcin-message</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-gcin-setup/">gcin-setup</a></code>(1), <code>gcin2tab</code>(1), <code><a href="/docs/linux/man/1-phoa2d/">phoa2d</a></code>(1), <code>juyin-learn</code>(1), <code><a href="/docs/linux/man/1-gcin-message/">gcin-message</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Edward Der-Hua Liu</p>

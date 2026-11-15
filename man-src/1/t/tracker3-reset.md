@@ -23,11 +23,11 @@ description: "tracker3-reset – Reset the index and configuration"
 <p> <code>-r, &#8211;rss</code></p>
 <dl>
 <dt>
-<dd> Removes data stored by <a href="/docs/linux/man/1-tracker-miner-rss/">tracker-miner-rss</a>(1).</dl>
+<dd> Removes data stored by tracker-miner-rss(1).</dl>
 <p> <code>-f, &#8211;file </code><i>FILE</i></p>
 <dl>
 <dt>
 <dd> Resets all indexed information about <i>FILE</i>, works recursively for directories. Nothing will be done if <i>FILE</i> is not currently indexed. After deletion, a request to reindex this data will be immediately issued.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tracker3-daemon/">tracker3-daemon</a></code>(1). <code><a href="/docs/linux/man/1-tracker-miner-fs-3/">tracker-miner-fs-3</a></code>(1), <code><a href="/docs/linux/man/1-tracker-miner-rss-3/">tracker-miner-rss-3</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-tracker3-daemon/">tracker3-daemon</a></code>(1). <code><a href="/docs/linux/man/1-tracker-miner-fs-3/">tracker-miner-fs-3</a></code>(1), <code>tracker-miner-rss-3</code>(1). </p>
 <h2>Index</h2>

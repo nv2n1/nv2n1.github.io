@@ -24,7 +24,7 @@ description: "pgmdeshadow – Deshadow a PGM image"
 <dd> Luc Vincent, &#8216;Morphological Grayscale Reruction in Image Analysis: Applications and Efficient Algorithms,&#8217; IEEE Transactions on Image Processing, vol. 2, no. 2, April 1993, pp. 176-201. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmshadow/">ppmshadow</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-ppmshadow/">ppmshadow</a></code>(1) , <code>pgm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pgmdeshadow</code> was added to Netpbm in Version 10.35 (August 2006). </p>
 <h2>Index</h2>

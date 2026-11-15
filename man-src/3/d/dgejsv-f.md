@@ -114,7 +114,7 @@ description: "dgejsv.f –"
  If the matrix is not square, JOBT is ignored. This is subject to
  changes in the future.
  The decision is based on two values of entropy over the adjoint
- orbit of A^t * A. See the descriptions of <a href="//www.systutorials.com/docs/linux/man/6-WORK/">WORK</a>(6) and <a href="//www.systutorials.com/docs/linux/man/7-WORK/">WORK</a>(7).
+ orbit of A^t * A. See the descriptions of WORK(6) and WORK(7).
  = 'T': transpose if entropy test indicates possibly faster
  convergence of Jacobi process if A^t is taken as input. If A is
  replaced with A^t, then the row pivoting is included automatically.
@@ -152,11 +152,11 @@ description: "dgejsv.f –"
 <p><i>SVA</i> </p>
 <pre> SVA is DOUBLE PRECISION array, dimension (N)
  On exit,
- - For WORK(1)/<a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2) = ONE: The singular values of A. During the
+ - For WORK(1)/WORK(2) = ONE: The singular values of A. During the
  computation SVA contains Euclidean column norms of the
  iterated matrices in the array A.
- - For WORK(1) .NE. <a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2): The singular values of A are
- (WORK(1)/<a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2)) * SVA(1:N). This factored form is used if
+ - For WORK(1) .NE. WORK(2): The singular values of A are
+ (WORK(1)/WORK(2)) * SVA(1:N). This factored form is used if
  sigma_max(A) overflows or if small singular values have been
  saved from underflow by scaling the input matrix A.
  - If JOBR='R' then some of the singular values may be returned
@@ -200,11 +200,11 @@ description: "dgejsv.f –"
 <p><i>WORK</i> </p>
 <pre> WORK is DOUBLE PRECISION array, dimension at least LWORK.
  On exit, if N.GT.0 .AND. M.GT.0 (else not referenced), 
- WORK(1) = SCALE = <a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2) / WORK(1) is the scaling factor such
+ WORK(1) = SCALE = WORK(2) / WORK(1) is the scaling factor such
  that SCALE*SVA(1:N) are the computed singular values
  of A. (See the description of SVA().)
- <a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2) = See the description of WORK(1).
- <a href="//www.systutorials.com/docs/linux/man/3-WORK/">WORK</a>(3) = SCONDA is an estimate for the condition number of
+ WORK(2) = See the description of WORK(1).
+ WORK(3) = SCONDA is an estimate for the condition number of
  column equilibrated A. (If JOBA .EQ. 'E' or 'G')
  SCONDA is an estimate of DSQRT(||(R^t * R)^(-1)||_1).
  It is computed using DPOCON. It holds
@@ -218,17 +218,17 @@ description: "dgejsv.f –"
  useful for the analysis of the algorithm. They are provied for
  a developer/implementer who is familiar with the details of
  the method.
- <a href="//www.systutorials.com/docs/linux/man/4-WORK/">WORK</a>(4) = an estimate of the scaled condition number of the
+ WORK(4) = an estimate of the scaled condition number of the
  triangular factor in the first QR factorization.
- <a href="//www.systutorials.com/docs/linux/man/5-WORK/">WORK</a>(5) = an estimate of the scaled condition number of the
+ WORK(5) = an estimate of the scaled condition number of the
  triangular factor in the second QR factorization.
  The following two parameters are computed if JOBT .EQ. 'T'.
  They are provided for a developer/implementer who is familiar
  with the details of the method.
- <a href="//www.systutorials.com/docs/linux/man/6-WORK/">WORK</a>(6) = the entropy of A^t*A :: this is the Shannon entropy
+ WORK(6) = the entropy of A^t*A :: this is the Shannon entropy
  of diag(A^t*A) / Trace(A^t*A) taken as point in the
  probability simplex.
- <a href="//www.systutorials.com/docs/linux/man/7-WORK/">WORK</a>(7) = the entropy of A*A^t.</pre>
+ WORK(7) = the entropy of A*A^t.</pre>
 <p><i>LWORK</i> </p>
 <pre> LWORK is INTEGER
  Length of WORK to confirm proper allocation of work space.
@@ -279,12 +279,12 @@ description: "dgejsv.f –"
 <p><i>IWORK</i> </p>
 <pre> IWORK is INTEGER array, dimension M+3*N.
  On exit,
- <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) = the numerical rank determined after the initial
+ IWORK(1) = the numerical rank determined after the initial
  QR factorization with pivoting. See the descriptions
  of JOBA and JOBR.
- <a href="//www.systutorials.com/docs/linux/man/2-IWORK/">IWORK</a>(2) = the number of the computed nonzero singular values
- <a href="//www.systutorials.com/docs/linux/man/3-IWORK/">IWORK</a>(3) = if nonzero, a warning message:
- If <a href="//www.systutorials.com/docs/linux/man/3-IWORK/">IWORK</a>(3).EQ.1 then some of the column norms of A
+ IWORK(2) = the number of the computed nonzero singular values
+ IWORK(3) = if nonzero, a warning message:
+ If IWORK(3).EQ.1 then some of the column norms of A
  were denormalized floats. The requested high accuracy
  is not warranted by the data.</pre>
 <p><i>INFO</i> </p>

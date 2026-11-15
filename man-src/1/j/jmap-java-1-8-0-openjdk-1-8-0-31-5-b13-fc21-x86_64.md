@@ -22,7 +22,7 @@ description: "jmap – Prints shared object memory maps or heap memory details f
 <dt><i>core</i></p>
 <dd>The core file for which the memory map is to be printed.</p>
 <dt><i>remote-hostname-or-IP</i></p>
-<dd>The remote debug server <code>hostname</code> or <code>IP</code> address. See <a href="/docs/linux/man/1-jsadebugd/">jsadebugd</a>(1).</p>
+<dd>The remote debug server <code>hostname</code> or <code>IP</code> address. See jsadebugd(1).</p>
 <dt><i>server-id</i></p>
 <dd>An optional unique ID to use when multiple debug servers are running on the same remote host.</dl>
 <h2>Description</h2>

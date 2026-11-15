@@ -18,7 +18,7 @@ description: "dbcolneaten – pretty-print columns of Fsdb data (assuming a mono
     field op value
 </pre>
 <p> <font SIZE="-1">OP</font> is &gt;=, =, or &lt;= specifying that the width of that <font SIZE="-1">FIELD</font> must be more, equal, or less than that <font SIZE="-1">VALUE</font> </p>
-<p> dbcolneaten runs in <a href="/docs/linux/man/1-o/">O</a>(1) memory but disk space proportional to the size of data.</p>
+<p> dbcolneaten runs in O(1) memory but disk space proportional to the size of data.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-E</code> or <code>&#8211;noeoln</code></p>

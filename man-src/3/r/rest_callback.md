@@ -15,4 +15,4 @@ description: "rest_callback – Like rest(), but calls the callback during the w
 <h2>Description</h2>
 <p>Like rest(), but for non-zero values continually calls the specified function while it is waiting for the required time to elapse. If the provided `callback&#8217; parameter is NULL, this function does exactly the same thing as calling rest(). </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_timer/">install_timer</a></code>(3), <code><a href="/docs/linux/man/3-rest/">rest</a></code>(3) </p>
+<p><code>install_timer</code>(3), <code><a href="/docs/linux/man/3-rest/">rest</a></code>(3) </p>

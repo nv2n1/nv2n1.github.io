@@ -24,7 +24,7 @@ mongoc_socket_bind (mongoc_socket_t *sock,
 <dt><code>addrlen</code></p>
 <dd>A socklen_t.</dl>
 <h2>Description</h2>
-<p>This function is a wrapper around the BSD socket <code><a href="/docs/linux/man/3-bind/">bind</a>(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
+<p>This function is a wrapper around the BSD socket <code>bind(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
 <h2>Returns</h2>
 <p>0 on success, -1 on failure and errno is set. </p>
 <h2>Colophon</h2>

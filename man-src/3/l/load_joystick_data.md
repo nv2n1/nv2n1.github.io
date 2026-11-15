@@ -17,5 +17,5 @@ description: "load_joystick_data – Loads joystick calibration data. Allegro ga
 <h2>RETURN VALUE</h2>
 <p> Returns zero on success: if it fails the joystick state is undefined and you must reinitialise it from scratch. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_joystick/">install_joystick</a></code>(3), <code><a href="/docs/linux/man/3-save_joystick_data/">save_joystick_data</a></code>(3), <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3) </p>
+<p> <code>install_joystick</code>(3), <code><a href="/docs/linux/man/3-save_joystick_data/">save_joystick_data</a></code>(3), <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3) </p>
 <h2>Index</h2>

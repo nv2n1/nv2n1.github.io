@@ -14,10 +14,10 @@ description: "cloud-run-instances – wrapper for euca-run-instances that suppor
 <h2>DESCRIPTION</h2>
 <p> This program is a wrapper script for <code><a href="/docs/linux/man/1-euca-run-instances/">euca-run-instances</a></code>(1) that takes one additional option, <code>-l|&#8211;launchpad-id</code>. </p>
 <p> With this option, a user can specify a comma-separated list of <i>Launchpad.net</i> usernames. </p>
-<p> Once the instance is booted, the cloud-init boot script will retrieve the public ssh keys of the specified users from Launchpad.net using <code><a href="/docs/linux/man/1-ssh-import-lp-id/">ssh-import-lp-id</a></code>(1). </p>
+<p> Once the instance is booted, the cloud-init boot script will retrieve the public ssh keys of the specified users from Launchpad.net using <code>ssh-import-lp-id</code>(1). </p>
 <p> All other options besides <code>-l|&#8211;launchpad-id</code> are simply passed on to <code><a href="/docs/linux/man/1-euca-run-instances/">euca-run-instances</a></code>(1). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-euca-run-instances/">euca-run-instances</a></code>(1), <code><a href="/docs/linux/man/1-ssh-import-lp-id/">ssh-import-lp-id</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-euca-run-instances/">euca-run-instances</a></code>(1), <code>ssh-import-lp-id</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manpage and the utility was written by Dustin Kirkland &lt;kirkland [at] canonical.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>

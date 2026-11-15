@@ -60,7 +60,7 @@ all - default - clientExit with status 0(success) if all SMTP client TLS setting
 <dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
 <dd> The default location of the Postfix main.cf and master.cf configuration files.</p>
 <dt><code>openssl_path (openssl)</code></p>
-<dd> The location of the OpenSSL command line program <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1).</p>
+<dd> The location of the OpenSSL command line program <code>openssl</code>(1).</p>
 <dt><code>smtp_tls_loglevel (0)</code></p>
 <dd> Enable additional Postfix SMTP client logging of TLS activity.</p>
 <dt><code>smtp_tls_security_level (empty)</code></p>

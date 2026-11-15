@@ -49,7 +49,7 @@ VELVCT is obsolete, and is supported only to provide compatibility with old NCAR
 <dt>LENGTH
 <dd>(INTEGER, input): The length in plotter address units (PAUs) used to render the vector with the greatest magnitude that is eligible for plotting. A vector is eligible for plotting if it is less than or equal to the value of HI, unless HI is 0.0 in which case all vectors are eligible. If LENGTH is set to 0.0, the length selected is one half the diagonal length of a grid cell assuming a linear mapping of the grid coordinate space into the viewport.
 <dt>ISPV
-<dd>(INTEGER, input): Flag to control the special value feature. 0 means that the feature is not in use. 1 means that if the value of U(I,J)=<a HREF="/docs/linux/man/1-spv/">SPV</a>(1) the vector will not be plotted. 2 means that if the value of V(I,J)=<a HREF="/docs/linux/man/2-spv/">SPV</a>(2) the vector will not be plotted. 3 means that if either U(I,J)=<a HREF="/docs/linux/man/1-spv/">SPV</a>(1) or V(I,J)=<a HREF="/docs/linux/man/2-spv/">SPV</a>(2) then the vector will not be plotted. 4 means that if U(I,J)=<a HREF="/docs/linux/man/1-spv/">SPV</a>(1) and V(I,J)=<a HREF="/docs/linux/man/2-spv/">SPV</a>(2), the vector will not be plotted.
+<dd>(INTEGER, input): Flag to control the special value feature. 0 means that the feature is not in use. 1 means that if the value of U(I,J)=SPV(1) the vector will not be plotted. 2 means that if the value of V(I,J)=SPV(2) the vector will not be plotted. 3 means that if either U(I,J)=SPV(1) or V(I,J)=SPV(2) then the vector will not be plotted. 4 means that if U(I,J)=SPV(1) and V(I,J)=SPV(2), the vector will not be plotted.
 <dt>SPV
 <dd>(REAL array, dimensioned 2, input): An array of length 2 which gives the value in the U array and the value in the V array which denote special values. This argument is ignored if ISPV=0. The default values are 1.0E12.</dl>
 
@@ -94,9 +94,9 @@ Beginning with version 3.2 of NCAR Graphics, the VELVCT entry point has been rec
 <dd>VRL (LENGTH in Plotter Address Units is converted to VRL as a fraction of the viewport width)
 <dt>ISPV
 <dd>SVF
-<dt><a HREF="/docs/linux/man/1-spv/">SPV</a>(1)
+<dt>SPV(1)
 <dd>USV
-<dt><a HREF="/docs/linux/man/2-spv/">SPV</a>(2)
+<dt>SPV(2)
 <dd>VSV</dl></dl><dl><dd><dl><dt>Common Block Member
 <dd>Internal Parameter
 <dt>EXT

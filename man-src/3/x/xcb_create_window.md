@@ -122,6 +122,6 @@ Request function
 <dt><i>xcb_window_error_t</i></p>
 <dd>TODO: reasons?</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a></code>(3), <code><a href="/docs/linux/man/3-xcb_create_notify_event_t/">xcb_create_notify_event_t</a></code>(3), <code><a href="/docs/linux/man/3-xcb_map_window/">xcb_map_window</a></code>(3), <code><a href="/docs/linux/man/3-xcb_generate_id/">xcb_generate_id</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a></code>(3), <code><a href="/docs/linux/man/3-xcb_create_notify_event_t/">xcb_create_notify_event_t</a></code>(3), <code><a href="/docs/linux/man/3-xcb_map_window/">xcb_map_window</a></code>(3), <code>xcb_generate_id</code>(3)</p>
 <h2>Author</h2>
 <p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

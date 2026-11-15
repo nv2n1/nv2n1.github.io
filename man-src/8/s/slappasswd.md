@@ -37,8 +37,8 @@ description: "slappasswd – OpenLDAP password utility"
 <dd>Omit the trailing newline; useful to pipe the credentials into a command.</p>
 <dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</p>
 <dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dl>
-<pre> module-path=&lt;pathspec&gt; (see `<code>modulepath</code>' in <a href="//www.systutorials.com/docs/linux/man/5-slapd.conf/">slapd.conf</a>(5))
- module-load=&lt;filename&gt; (see `<code>moduleload</code>' in <a href="//www.systutorials.com/docs/linux/man/5-slapd.conf/">slapd.conf</a>(5))
+<pre> module-path=&lt;pathspec&gt; (see `<code>modulepath</code>' in slapd.conf(5))
+ module-load=&lt;filename&gt; (see `<code>moduleload</code>' in slapd.conf(5))
 You can load a dynamically loadable password hash module by
 using this option.</pre>
 <h2>Limitations</h2>

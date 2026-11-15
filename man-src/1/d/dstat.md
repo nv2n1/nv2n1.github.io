@@ -283,15 +283,15 @@ dstat -tcyif
 <h2>SEE ALSO</h2>
 <h3>Performance tools</h3>
 <pre>
-<a href="//www.systutorials.com/docs/linux/man/1-ifstat/">ifstat</a>(1), <a href="//www.systutorials.com/docs/linux/man/8-iftop/">iftop</a>(8), <a href="//www.systutorials.com/docs/linux/man/1-iostat/">iostat</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-mpstat/">mpstat</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-netstat/">netstat</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-nfsstat/">nfsstat</a>(1), nstat, <a href="//www.systutorials.com/docs/linux/man/1-vmstat/">vmstat</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-xosview/">xosview</a>(1)
+<a href="//www.systutorials.com/docs/linux/man/1-ifstat/">ifstat</a>(1), <a href="//www.systutorials.com/docs/linux/man/8-iftop/">iftop</a>(8), <a href="//www.systutorials.com/docs/linux/man/1-iostat/">iostat</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-mpstat/">mpstat</a>(1), netstat(1), nfsstat(1), nstat, vmstat(1), xosview(1)
 </pre>
 <h3>Debugging tools</h3>
 <pre>
-<a href="//www.systutorials.com/docs/linux/man/1-htop/">htop</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-lslk/">lslk</a>(1), <a href="//www.systutorials.com/docs/linux/man/8-lsof/">lsof</a>(8), <a href="//www.systutorials.com/docs/linux/man/1-top/">top</a>(1)
+<a href="//www.systutorials.com/docs/linux/man/1-htop/">htop</a>(1), lslk(1), <a href="//www.systutorials.com/docs/linux/man/8-lsof/">lsof</a>(8), <a href="//www.systutorials.com/docs/linux/man/1-top/">top</a>(1)
 </pre>
 <h3>Process tracing</h3>
 <pre>
-<a href="//www.systutorials.com/docs/linux/man/1-ltrace/">ltrace</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-pmap/">pmap</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-ps/">ps</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-pstack/">pstack</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-strace/">strace</a>(1)
+<a href="//www.systutorials.com/docs/linux/man/1-ltrace/">ltrace</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-pmap/">pmap</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-ps/">ps</a>(1), pstack(1), <a href="//www.systutorials.com/docs/linux/man/1-strace/">strace</a>(1)
 </pre>
 <h3>Binary debugging</h3>
 <pre>
@@ -307,7 +307,7 @@ dump-acct, dump-utmp, <a href="//www.systutorials.com/docs/linux/man/8-sa/">sa</
 </pre>
 <h3>Hardware debugging tools</h3>
 <pre>
-dmidecode, <a href="//www.systutorials.com/docs/linux/man/1-ifinfo/">ifinfo</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-lsdev/">lsdev</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-lshal/">lshal</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-lshw/">lshw</a>(1), <a href="//www.systutorials.com/docs/linux/man/8-lsmod/">lsmod</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-lspci/">lspci</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-lsusb/">lsusb</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-smartctl/">smartctl</a>(8), <a href="//www.systutorials.com/docs/linux/man/1-x86info/">x86info</a>(1)
+dmidecode, ifinfo(1), lsdev(1), <a href="//www.systutorials.com/docs/linux/man/1-lshal/">lshal</a>(1), <a href="//www.systutorials.com/docs/linux/man/1-lshw/">lshw</a>(1), <a href="//www.systutorials.com/docs/linux/man/8-lsmod/">lsmod</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-lspci/">lspci</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-lsusb/">lsusb</a>(8), <a href="//www.systutorials.com/docs/linux/man/8-smartctl/">smartctl</a>(8), x86info(1)
 </pre>
 <h3>Application debugging</h3>
 <pre>
@@ -319,7 +319,7 @@ dmidecode, <a href="//www.systutorials.com/docs/linux/man/1-ifinfo/">ifinfo</a>(
 </pre>
 <h3>Other useful info</h3>
 <pre>
-<a href="//www.systutorials.com/docs/linux/man/1-collectl/">collectl</a>(1), <a href="//www.systutorials.com/docs/linux/man/5-proc/">proc</a>(5), <a href="//www.systutorials.com/docs/linux/man/8-procinfo/">procinfo</a>(8)
+<a href="//www.systutorials.com/docs/linux/man/1-collectl/">collectl</a>(1), <a href="//www.systutorials.com/docs/linux/man/5-proc/">proc</a>(5), procinfo(8)
 </pre>
 <h2>AUTHOR</h2>
 <p> Written by Dag Wieers [1]<i>dag [at] wieers.com</i> </p>

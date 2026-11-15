@@ -26,7 +26,7 @@ In any routine that references SEMESS, it must be declared to be of type CHARACT
 
  When ITRIM = 0 or less, no trimming is done; the whole error message is returned. When ITRIM = 1, prepended routine names and the associated slashes are trimmed off. When ITRIM = 2 or greater, all leading routine names are trimmed off; just the error description is returned. 
 
- Example: Assume that the current error message is the string &quot;CPCLAM/AREDAM - AREA-MAP ARRAY OVERFLOW&quot;; then, SEMESS(0) is that entire string, while <a HREF="/docs/linux/man/1-semess/">SEMESS</a>(1) = &quot;AREDAM - AREA-MAP ARRAY OVERFLOW&quot;, and <a HREF="/docs/linux/man/2-semess/">SEMESS</a>(2) = &quot;AREA-MAP ARRAY OVERFLOW&quot;. 
+ Example: Assume that the current error message is the string &quot;CPCLAM/AREDAM - AREA-MAP ARRAY OVERFLOW&quot;; then, SEMESS(0) is that entire string, while SEMESS(1) = &quot;AREDAM - AREA-MAP ARRAY OVERFLOW&quot;, and SEMESS(2) = &quot;AREA-MAP ARRAY OVERFLOW&quot;. 
 
  The argument of SEMESS is as follows: 
 

@@ -21,7 +21,7 @@ AGSTUP - Performs &quot;set-up&quot; tasks required before AGBACK and AGCURV may
 <dt>NVIX
 <dd>(an input expression of type INTEGER) is the number of &quot;vectors&quot; of data from XDRA to be considered in computing the minimum and/or maximum X values.
 <dt>IIVX
-<dd>(an input expression of type INTEGER) is the index increment between two &quot;vectors&quot; in XDRA. The 1st element of the first vector is <a HREF="/docs/linux/man/1-xdra/">XDRA</a>(1), the 1st element of the second vector is XDRA(1+IIVX), the 1st element of the third vector is XDRA(1+IIVX*2), etc.
+<dd>(an input expression of type INTEGER) is the index increment between two &quot;vectors&quot; in XDRA. The 1st element of the first vector is XDRA(1), the 1st element of the second vector is XDRA(1+IIVX), the 1st element of the third vector is XDRA(1+IIVX*2), etc.
 <dt>NEVX
 <dd>(an input expression of type INTEGER) is the number of elements of each vector in XDRA to be considered in computing the minimum and/or maximum X values.
 <dt>IIEX
@@ -31,9 +31,9 @@ AGSTUP - Performs &quot;set-up&quot; tasks required before AGBACK and AGCURV may
 
  Some examples:</dl><h2></h2><table> <tr VALIGN=top><td>X array</td><td>Data to use</td><td>XDRA</td><td>NVIX</td><td>IIVX</td><td>NEVX</td><td>HEX</td><td>
 </td></tr><tr VALIGN=top><td>-------</td><td>-----------</td><td>----</td><td>----</td><td>----</td><td>----</td><td>---</td><td>
-</td></tr><tr VALIGN=top><td>X(100)</td><td>all data</td><td><a HREF="/docs/linux/man/1-x/">X</a>(1)</td><td>1</td><td>-</td><td>100</td><td>1</td><td>
+</td></tr><tr VALIGN=top><td>X(100)</td><td>all data</td><td>X(1)</td><td>1</td><td>-</td><td>100</td><td>1</td><td>
 </td></tr><tr VALIGN=top><td>
-&nbsp;<wbr></td><td>(X(I),I=1,99,2)</td><td><a HREF="/docs/linux/man/1-x/">X</a>(1)</td><td>1</td><td>-</td><td>50</td><td>2</td><td>
+&nbsp;<wbr></td><td>(X(I),I=1,99,2)</td><td>X(1)</td><td>1</td><td>-</td><td>50</td><td>2</td><td>
 </td></tr><tr VALIGN=top><td>
 &nbsp;<wbr></td><td>(X(I),I=51,99,2)</td><td>X(51)</td><td>1</td><td>-</td><td>25</td><td>2</td><td>
 </td></tr><tr VALIGN=top><td>X(10,10)</td><td>all data</td><td>X(1,1)</td><td>10</td><td>10</td><td>10</td><td>1</td><td>

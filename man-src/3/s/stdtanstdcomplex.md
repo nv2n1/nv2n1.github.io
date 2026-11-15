@@ -50,8 +50,8 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;tan(1.000000,0.000000) = (1.557408,0.000000) ( <a href="/docs/linux/man/1-tan/">tan</a><code>(1)</code> = 1.557408)<br />
-&nbsp;<wbr>&nbsp;tan(0.000000,1.000000) = (0.000000,0.761594) (<a href="/docs/linux/man/1-tanh/">tanh</a><code>(1)</code> = 0.761594)</p>
+<p>&nbsp;<wbr>&nbsp;tan(1.000000,0.000000) = (1.557408,0.000000) ( tan<code>(1)</code> = 1.557408)<br />
+&nbsp;<wbr>&nbsp;tan(0.000000,1.000000) = (0.000000,0.761594) (tanh<code>(1)</code> = 0.761594)</p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes sine of a complex number (sin(z))<br />
 sin(std::complex) <i>(function template)</i><br />

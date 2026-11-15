@@ -126,4 +126,4 @@ The smbldap-usermod command modifies the system account files to reflect the cha
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/1-usermod/">usermod</a></i>(1) 
+<i>usermod</i>(1) 

@@ -2347,7 +2347,7 @@ Environment variables understood by the systemd manager and other programs and e
  
 
  <i>$SYSTEMD_COLORS</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_DEBUGGER</i>
@@ -2371,47 +2371,47 @@ Environment variables understood by the systemd manager and other programs and e
  
 
  <i>$SYSTEMD_LESS</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_LESSCHARSET</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_LOG_COLOR</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_LOG_LEVEL</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_LOG_LOCATION</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_LOG_TARGET</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_LOG_TID</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_LOG_TIME</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_NSS_RESOLVE_VALIDATE</i>
-<dl><dd><b><a HREF="/docs/linux/man/8-nss-resolve/">nss-resolve</a></b>(8)</dl>
+<dl><dd><b>nss-resolve</b>(8)</dl>
  
 
  <i>$SYSTEMD_PAGER</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_PAGERSECURE</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$SYSTEMD_RANDOM_SEED_CREDIT</i>
@@ -2423,7 +2423,7 @@ Environment variables understood by the systemd manager and other programs and e
  
 
  <i>$SYSTEMD_URLIFY</i>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <i>$TERM</i>
@@ -2674,7 +2674,7 @@ EFI variables understood by <b><a HREF="/docs/linux/man/7-systemd-boot/">systemd
 
 <h2>Home Area/User Account Directives</h2>
 
-Directives for configuring home areas and user accounts via <b><a HREF="/docs/linux/man/8-systemd-homed-service/">systemd-homed.service</a></b>(8).
+Directives for configuring home areas and user accounts via <b>systemd-homed.service</b>(8).
 
 <h2>Udev Directives</h2>
 
@@ -5567,244 +5567,244 @@ Options which influence mounted filesystems and encrypted volumes.
  <b>x-systemd.wanted-by=</b>
 <dl><dd><b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5)</dl>
 
-<h2><a HREF="/docs/linux/man/5-systemd-nspawn/">SYSTEMD.NSPAWN</a>(5) DIRECTIVES</h2>
+<h2>SYSTEMD.NSPAWN(5) DIRECTIVES</h2>
 
 Directives for configuring systemd-nspawn containers. 
 
  <i>AmbientCapability=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Bind=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>BindReadOnly=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>BindUser=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Boot=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Bridge=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>CPUAffinity=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Capability=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>DropCapability=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Environment=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Ephemeral=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Hostname=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>IPVLAN=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Inaccessible=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Interface=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>KillSignal=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitAS=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitCORE=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitCPU=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitDATA=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitFSIZE=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitLOCKS=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitMEMLOCK=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitMSGQUEUE=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitNICE=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitNOFILE=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitNPROC=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitRSS=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitRTPRIO=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitRTTIME=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitSIGPENDING=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LimitSTACK=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>LinkJournal=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>MACVLAN=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>MachineID=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>NoNewPrivileges=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>NotifyReady=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>OOMScoreAdjust=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Overlay=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>OverlayReadOnly=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Parameters=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Personality=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>PivotRoot=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Port=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Private=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>PrivateUsers=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>PrivateUsersOwnership=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>ProcessTwo=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>ReadOnly=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>ResolvConf=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>SystemCallFilter=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>TemporaryFileSystem=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Timezone=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>User=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>VirtualEthernet=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>VirtualEthernetExtra=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Volatile=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>WorkingDirectory=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  <i>Zone=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
 
 <h2>Program Configuration Options</h2>
 
@@ -5947,11 +5947,11 @@ Directives for configuring the behaviour of the systemd process and other tools 
  
 
  <i>DefaultMemoryPressureDurationSec=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5)</dl>
+<dl><dd><b>oomd.conf</b>(5)</dl>
  
 
  <i>DefaultMemoryPressureLimit=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5)</dl>
+<dl><dd><b>oomd.conf</b>(5)</dl>
  
 
  <i>DefaultOOMPolicy=</i>
@@ -6199,7 +6199,7 @@ Directives for configuring the behaviour of the systemd process and other tools 
  
 
  <i>NetworkTimeoutSec=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b>journal-upload.conf</b>(5)</dl>
  
 
  <i>NoNewPrivileges=</i>
@@ -6275,11 +6275,11 @@ Directives for configuring the behaviour of the systemd process and other tools 
  
 
  <i>ServerCertificateFile=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5)</dl>
  
 
  <i>ServerKeyFile=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5)</dl>
  
 
  <i>SessionsMax=</i>
@@ -6315,7 +6315,7 @@ Directives for configuring the behaviour of the systemd process and other tools 
  
 
  <i>SwapUsedLimit=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5)</dl>
+<dl><dd><b>oomd.conf</b>(5)</dl>
  
 
  <i>SyncIntervalSec=</i>
@@ -6351,11 +6351,11 @@ Directives for configuring the behaviour of the systemd process and other tools 
  
 
  <i>TrustedCertificateFile=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5)</dl>
  
 
  <i>URL=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b>journal-upload.conf</b>(5)</dl>
  
 
  <i>Unlink=</i>
@@ -6430,7 +6430,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--after-cursor</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--all</b>
@@ -6542,7 +6542,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--can-factory-reset</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>--capability</b>
@@ -6554,7 +6554,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--cat</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  <b>--cat-config</b>
@@ -6566,7 +6566,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--cert</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--chdir</b>
@@ -6610,7 +6610,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--compress</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--confirm-spawn</b>
@@ -6630,15 +6630,15 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--copy</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  <b>--copy-from</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1)</dl>
  
 
  <b>--copy-to</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1)</dl>
  
 
  <b>--cpu</b>
@@ -6670,7 +6670,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--cursor</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--cursor-file</b>
@@ -6706,7 +6706,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--definitions</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>--delay</b>
@@ -6734,7 +6734,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--directory</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
  
 
  <b>--disable-updates</b>
@@ -6742,7 +6742,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--discard</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-dissect</b>(1), <b>systemd-repart</b>(8)</dl>
  
 
  <b>--discover</b>
@@ -6762,7 +6762,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--dry-run</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>--dump-bus-properties</b>
@@ -6790,11 +6790,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--empty</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>--enable</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  <b>--enable-updates</b>
@@ -6850,7 +6850,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--extension</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  <b>--facility</b>
@@ -6858,7 +6858,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--factory-reset</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>--fail</b>
@@ -6898,7 +6898,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--file</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--firmware-setup</b>
@@ -6910,7 +6910,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--follow</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--force</b>
@@ -6926,7 +6926,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--fsck</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1)</dl>
  
 
  <b>--full</b>
@@ -6942,7 +6942,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--getter</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--gid</b>
@@ -6954,7 +6954,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--gnutls-log</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--graceful</b>
@@ -6966,7 +6966,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--growfs</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1)</dl>
  
 
  <b>--halt</b>
@@ -6978,11 +6978,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--help</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/8-halt/">halt</a></b>(8), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-oomctl/">oomctl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/8-runlevel/">runlevel</a></b>(8), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-ask-password/">systemd-ask-password</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-bless-boot-service/">systemd-bless-boot.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fsckd-service/">systemd-fsckd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-path/">systemd-path</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-socket-proxyd/">systemd-socket-proxyd</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-suspend-service/">systemd-suspend.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-telinit/">telinit</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/8-halt/">halt</a></b>(8), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b>oomctl</b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/8-runlevel/">runlevel</a></b>(8), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-ask-password/">systemd-ask-password</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-bless-boot-service/">systemd-bless-boot.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fsckd-service/">systemd-fsckd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-path/">systemd-path</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-socket-proxyd/">systemd-socket-proxyd</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-suspend-service/">systemd-suspend.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-telinit/">telinit</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>--host</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>--hostname</b>
@@ -7006,7 +7006,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--image</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8)</dl>
  
 
  <b>--inaccessible</b>
@@ -7050,7 +7050,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--json</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b>systemd-dissect</b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8)</dl>
  
 
  <b>--keep-unit</b>
@@ -7062,11 +7062,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--key</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--key-file</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>--keyname</b>
@@ -7114,15 +7114,15 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--listen-http</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--listen-https</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--listen-raw</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--load-credential</b>
@@ -7150,7 +7150,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--machine</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>--machine-id</b>
@@ -7182,7 +7182,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--merge</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--message</b>
@@ -7190,7 +7190,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--mkdir</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b>systemd-dissect</b>(1)</dl>
  
 
  <b>--mode</b>
@@ -7202,7 +7202,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--mount</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1)</dl>
  
 
  <b>--multiple</b>
@@ -7262,11 +7262,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--no-ask-password</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>--no-block</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1)</dl>
  
 
  <b>--no-convert</b>
@@ -7282,7 +7282,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--no-legend</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b>portablectl</b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8)</dl>
  
 
  <b>--no-new-privileges</b>
@@ -7294,11 +7294,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--no-pager</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-oomctl/">oomctl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b>oomctl</b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>--no-reload</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1)</dl>
  
 
  <b>--no-sync</b>
@@ -7330,7 +7330,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--now</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1)</dl>
  
 
  <b>--oci-bundle</b>
@@ -7386,7 +7386,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--output</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--output-fields</b>
@@ -7474,7 +7474,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--pretty</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b>systemd-repart</b>(8)</dl>
  
 
  <b>--print</b>
@@ -7506,7 +7506,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--profile</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  <b>--property</b>
@@ -7530,7 +7530,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--quiet</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>--raw</b>
@@ -7538,7 +7538,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--read-only</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
  
 
  <b>--ready</b>
@@ -7606,15 +7606,15 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--root</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>--root-hash</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
  
 
  <b>--root-hash-sig</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
  
 
  <b>--rotate</b>
@@ -7622,7 +7622,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--runtime</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1)</dl>
  
 
  <b>--same-dir</b>
@@ -7630,7 +7630,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--save-state</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--scope</b>
@@ -7638,7 +7638,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--seal</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--search</b>
@@ -7646,7 +7646,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--seed</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>--selinux-apifs-context</b>
@@ -7734,7 +7734,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--size</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b>systemd-repart</b>(8)</dl>
  
 
  <b>--slice</b>
@@ -7754,7 +7754,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--split-mode</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>--start-exec-queue</b>
@@ -7814,7 +7814,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--system</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1)</dl>
  
 
  <b>--system-call-filter</b>
@@ -7866,11 +7866,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--tpm2-device</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b>systemd-repart</b>(8)</dl>
  
 
  <b>--tpm2-pcrs</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b>systemd-repart</b>(8)</dl>
  
 
  <b>--transient</b>
@@ -7878,7 +7878,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--trust</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--trust-anchor</b>
@@ -7926,11 +7926,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--url</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>--user</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8)</dl>
  
 
  <b>--user-unit</b>
@@ -7982,11 +7982,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>--verity-data</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1)</dl>
  
 
  <b>--version</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-oomctl/">oomctl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-bless-boot-service/">systemd-bless-boot.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fsckd-service/">systemd-fsckd.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-path/">systemd-path</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-socket-proxyd/">systemd-socket-proxyd</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-suspend-service/">systemd-suspend.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b>oomctl</b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-bless-boot-service/">systemd-bless-boot.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fsckd-service/">systemd-fsckd.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-path/">systemd-path</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-socket-proxyd/">systemd-socket-proxyd</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-suspend-service/">systemd-suspend.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>--vm</b>
@@ -8074,7 +8074,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-D</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8)</dl>
  
 
  <b>-E</b>
@@ -8090,7 +8090,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-H</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>-I</b>
@@ -8102,7 +8102,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-M</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>-N</b>
@@ -8138,7 +8138,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-a</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-b</b>
@@ -8166,7 +8166,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-h</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b><a HREF="/docs/linux/man/1-oomctl/">oomctl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-ask-password/">systemd-ask-password</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-bless-boot-service/">systemd-bless-boot.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fsckd-service/">systemd-fsckd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-path/">systemd-path</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-socket-proxyd/">systemd-socket-proxyd</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-suspend-service/">systemd-suspend.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-hostnamectl/">hostnamectl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-networkctl/">networkctl</a></b>(1), <b>oomctl</b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-ask-password/">systemd-ask-password</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-bless-boot-service/">systemd-bless-boot.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fsckd-service/">systemd-fsckd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-notify/">systemd-notify</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-path/">systemd-path</a></b>(1), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-socket-activate/">systemd-socket-activate</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-socket-proxyd/">systemd-socket-proxyd</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-suspend-service/">systemd-suspend.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysctl-service/">systemd-sysctl.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-i</b>
@@ -8186,7 +8186,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-m</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-n</b>
@@ -8198,15 +8198,15 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-p</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/8-halt/">halt</a></b>(8), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/8-halt/">halt</a></b>(8), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cat/">systemd-cat</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-q</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-networkd-wait-online-service/">systemd-networkd-wait-online.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-r</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-coredumpctl/">coredumpctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/8-shutdown/">shutdown</a></b>(8), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/8-systemd-hwdb/">systemd-hwdb</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-s</b>
@@ -8218,7 +8218,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-u</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-escape/">systemd-escape</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-id128/">systemd-id128</a></b>(1), <b>systemd-journal-upload.service</b>(8), <b><a HREF="/docs/linux/man/1-systemd-mount/">systemd-mount</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-run/">systemd-run</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-v</b>
@@ -8230,7 +8230,7 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>-x</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  <b>-y</b>
@@ -8238,11 +8238,11 @@ Command-line options accepted by programs in the systemd suite.
  
 
  <b>K</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>X</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>arp</b>
@@ -8561,15 +8561,15 @@ Various constants used and/or defined by systemd.
  
 
  <b>'h'</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>'s'</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>'y'</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>-</b>
@@ -8581,7 +8581,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>-1</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/3-sd_event_run/">sd_event_run</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b>sd_event_run</b>(3), <b>sd_event_wait</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3)</dl>
  
 
  <b>-E2BIG</b>
@@ -8589,7 +8589,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>-EADDRINUSE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3)</dl>
+<dl><dd><b>sd_bus_request_name</b>(3)</dl>
  
 
  <b>-EADDRNOTAVAIL</b>
@@ -8597,107 +8597,107 @@ Various constants used and/or defined by systemd.
  
 
  <b>-EAGAIN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_hwdb_get/">sd_hwdb_get</a></b>(3)</dl>
+<dl><dd><b>sd_hwdb_get</b>(3)</dl>
  
 
  <b>-EALREADY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3)</dl>
+<dl><dd><b>sd_bus_request_name</b>(3)</dl>
  
 
  <b>-EBADF</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_set_fd/">sd_bus_set_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_set_fd</b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3)</dl>
  
 
  <b>-EBADMSG</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_array/">sd_bus_message_read_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_strv/">sd_bus_message_read_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_seal/">sd_bus_message_seal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_array</b>(3), <b>sd_bus_message_read_basic</b>(3), <b>sd_bus_message_read_strv</b>(3), <b>sd_bus_message_seal</b>(3), <b>sd_bus_message_skip</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
  
 
  <b>-EBUSY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_new/">sd_bus_track_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_run/">sd_event_run</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_open_container</b>(3), <b>sd_bus_process</b>(3), <b>sd_bus_track_new</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_run</b>(3), <b>sd_event_wait</b>(3)</dl>
  
 
  <b>-ECHILD</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_attach_event/">sd_bus_attach_event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_can_send/">sd_bus_can_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_close/">sd_bus_close</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_enqueue_for_read/">sd_bus_enqueue_for_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_n_queued_read/">sd_bus_get_n_queued_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_creds/">sd_bus_get_name_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_is_open/">sd_bus_is_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_query_sender_creds/">sd_bus_query_sender_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_close_on_exit/">sd_bus_set_close_on_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_connected_signal/">sd_bus_set_connected_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_exit_on_disconnect/">sd_bus_set_exit_on_disconnect</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_fd/">sd_bus_set_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_sender/">sd_bus_set_sender</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_watch_bind/">sd_bus_set_watch_bind</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_floating/">sd_bus_slot_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_start/">sd_bus_start</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_wait/">sd_bus_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_get_fd/">sd_event_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_run/">sd_event_run</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_set_watchdog/">sd_event_set_watchdog</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_pending/">sd_event_source_get_pending</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_floating/">sd_event_source_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_ratelimit/">sd_event_source_set_ratelimit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_node_enumerator</b>(3), <b>sd_bus_add_object</b>(3), <b>sd_bus_add_object_manager</b>(3), <b>sd_bus_attach_event</b>(3), <b>sd_bus_call</b>(3), <b>sd_bus_can_send</b>(3), <b>sd_bus_close</b>(3), <b>sd_bus_emit_signal</b>(3), <b>sd_bus_enqueue_for_read</b>(3), <b>sd_bus_get_fd</b>(3), <b>sd_bus_get_n_queued_read</b>(3), <b>sd_bus_get_name_creds</b>(3), <b>sd_bus_get_name_machine_id</b>(3), <b>sd_bus_is_open</b>(3), <b>sd_bus_list_names</b>(3), <b>sd_bus_negotiate_fds</b>(3), <b>sd_bus_process</b>(3), <b>sd_bus_query_sender_creds</b>(3), <b>sd_bus_request_name</b>(3), <b>sd_bus_send</b>(3), <b>sd_bus_set_address</b>(3), <b>sd_bus_set_close_on_exit</b>(3), <b>sd_bus_set_connected_signal</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_set_exit_on_disconnect</b>(3), <b>sd_bus_set_fd</b>(3), <b>sd_bus_set_sender</b>(3), <b>sd_bus_set_server</b>(3), <b>sd_bus_set_watch_bind</b>(3), <b>sd_bus_slot_set_floating</b>(3), <b>sd_bus_start</b>(3), <b>sd_bus_wait</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_exit</b>(3), <b>sd_event_get_fd</b>(3), <b>sd_event_now</b>(3), <b>sd_event_run</b>(3), <b>sd_event_set_watchdog</b>(3), <b>sd_event_source_get_pending</b>(3), <b>sd_event_source_set_description</b>(3), <b>sd_event_source_set_enabled</b>(3), <b>sd_event_source_set_floating</b>(3), <b>sd_event_source_set_prepare</b>(3), <b>sd_event_source_set_priority</b>(3), <b>sd_event_source_set_ratelimit</b>(3), <b>sd_event_wait</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
  
 
  <b>-ECONNRESET</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3)</dl>
+<dl><dd><b>sd_bus_call</b>(3), <b>sd_bus_process</b>(3), <b>sd_bus_send</b>(3)</dl>
  
 
  <b>-EDOM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_pending/">sd_event_source_get_pending</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_exit_on_failure/">sd_event_source_set_exit_on_failure</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_ratelimit/">sd_event_source_set_ratelimit</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_source_get_pending</b>(3), <b>sd_event_source_set_exit_on_failure</b>(3), <b>sd_event_source_set_prepare</b>(3), <b>sd_event_source_set_ratelimit</b>(3)</dl>
  
 
  <b>-EEXIST</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_destination/">sd_bus_message_set_destination</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3), <b>sd_bus_message_set_destination</b>(3), <b>sd_bus_request_name</b>(3)</dl>
  
 
  <b>-EINVAL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_default/">sd_bus_default</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error_add_map/">sd_bus_error_add_map</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_creds/">sd_bus_get_name_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_interface_name_is_valid/">sd_bus_interface_name_is_valid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_at_end/">sd_bus_message_at_end</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_cookie/">sd_bus_message_get_cookie</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_monotonic_usec/">sd_bus_message_get_monotonic_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_signature/">sd_bus_message_get_signature</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_signal/">sd_bus_message_new_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_array/">sd_bus_message_read_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_strv/">sd_bus_message_read_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_rewind/">sd_bus_message_rewind</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_seal/">sd_bus_message_seal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_sensitive/">sd_bus_message_sensitive</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_destination/">sd_bus_message_set_destination</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_verify_type/">sd_bus_message_verify_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_query_sender_creds/">sd_bus_query_sender_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_error/">sd_bus_reply_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_return/">sd_bus_reply_method_return</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_exit_on_disconnect/">sd_bus_set_exit_on_disconnect</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_fd/">sd_bus_set_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_method_call_timeout/">sd_bus_set_method_call_timeout</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_description/">sd_bus_slot_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_destroy_callback/">sd_bus_slot_set_destroy_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_floating/">sd_bus_slot_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_start/">sd_bus_start</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_add_name/">sd_bus_track_add_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_new/">sd_bus_track_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_wait/">sd_bus_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_get_fd/">sd_event_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_run/">sd_event_run</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_set_watchdog/">sd_event_set_watchdog</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_pending/">sd_event_source_get_pending</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_destroy_callback/">sd_event_source_set_destroy_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_exit_on_failure/">sd_event_source_set_exit_on_failure</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_floating/">sd_event_source_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_ratelimit/">sd_event_source_set_ratelimit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_get/">sd_hwdb_get</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_new/">sd_hwdb_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_node_enumerator</b>(3), <b>sd_bus_add_object</b>(3), <b>sd_bus_add_object_manager</b>(3), <b>sd_bus_call</b>(3), <b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_default</b>(3), <b>sd_bus_emit_signal</b>(3), <b>sd_bus_error</b>(3), <b>sd_bus_error_add_map</b>(3), <b>sd_bus_get_fd</b>(3), <b>sd_bus_get_name_creds</b>(3), <b>sd_bus_get_name_machine_id</b>(3), <b>sd_bus_interface_name_is_valid</b>(3), <b>sd_bus_list_names</b>(3), <b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_array</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_string_memfd</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_at_end</b>(3), <b>sd_bus_message_copy</b>(3), <b>sd_bus_message_get_cookie</b>(3), <b>sd_bus_message_get_monotonic_usec</b>(3), <b>sd_bus_message_get_signature</b>(3), <b>sd_bus_message_get_type</b>(3), <b>sd_bus_message_new</b>(3), <b>sd_bus_message_new_method_call</b>(3), <b>sd_bus_message_new_method_error</b>(3), <b>sd_bus_message_new_signal</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_array</b>(3), <b>sd_bus_message_read_basic</b>(3), <b>sd_bus_message_read_strv</b>(3), <b>sd_bus_message_rewind</b>(3), <b>sd_bus_message_seal</b>(3), <b>sd_bus_message_sensitive</b>(3), <b>sd_bus_message_set_destination</b>(3), <b>sd_bus_message_set_expect_reply</b>(3), <b>sd_bus_message_skip</b>(3), <b>sd_bus_message_verify_type</b>(3), <b>sd_bus_negotiate_fds</b>(3), <b>sd_bus_process</b>(3), <b>sd_bus_query_sender_creds</b>(3), <b>sd_bus_reply_method_error</b>(3), <b>sd_bus_reply_method_return</b>(3), <b>sd_bus_request_name</b>(3), <b>sd_bus_send</b>(3), <b>sd_bus_set_address</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_set_exit_on_disconnect</b>(3), <b>sd_bus_set_fd</b>(3), <b>sd_bus_set_method_call_timeout</b>(3), <b>sd_bus_set_server</b>(3), <b>sd_bus_slot_set_description</b>(3), <b>sd_bus_slot_set_destroy_callback</b>(3), <b>sd_bus_slot_set_floating</b>(3), <b>sd_bus_start</b>(3), <b>sd_bus_track_add_name</b>(3), <b>sd_bus_track_new</b>(3), <b>sd_bus_wait</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_exit</b>(3), <b>sd_event_get_fd</b>(3), <b>sd_event_now</b>(3), <b>sd_event_run</b>(3), <b>sd_event_set_watchdog</b>(3), <b>sd_event_source_get_pending</b>(3), <b>sd_event_source_set_description</b>(3), <b>sd_event_source_set_destroy_callback</b>(3), <b>sd_event_source_set_enabled</b>(3), <b>sd_event_source_set_exit_on_failure</b>(3), <b>sd_event_source_set_floating</b>(3), <b>sd_event_source_set_prepare</b>(3), <b>sd_event_source_set_priority</b>(3), <b>sd_event_source_set_ratelimit</b>(3), <b>sd_event_wait</b>(3), <b>sd_hwdb_get</b>(3), <b>sd_hwdb_new</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b>sd_path_lookup</b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
  
 
  <b>-EIO</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
+<dl><dd><b>sd_bus_error</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
  
 
  <b>-ELOOP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3)</dl>
+<dl><dd><b>sd_bus_call</b>(3)</dl>
  
 
  <b>-EMFILE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_new/">sd_event_new</a></b>(3)</dl>
+<dl><dd><b>sd_event_new</b>(3)</dl>
  
 
  <b>-ENOBUFS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
+<dl><dd><b>sd_bus_send</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
  
 
  <b>-ENODATA</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_cookie/">sd_bus_message_get_cookie</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_monotonic_usec/">sd_bus_message_get_monotonic_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_message_get_cookie</b>(3), <b>sd_bus_message_get_monotonic_usec</b>(3), <b>sd_bus_negotiate_fds</b>(3), <b>sd_bus_set_address</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_event_exit</b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
  
 
  <b>-ENOENT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_hwdb_get/">sd_hwdb_get</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_new/">sd_hwdb_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
+<dl><dd><b>sd_hwdb_get</b>(3), <b>sd_hwdb_new</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3)</dl>
  
 
  <b>-ENOEXEC</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_source_set_ratelimit/">sd_event_source_set_ratelimit</a></b>(3)</dl>
+<dl><dd><b>sd_event_source_set_ratelimit</b>(3)</dl>
  
 
  <b>-ENOMEDIUM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_default/">sd_bus_default</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3)</dl>
+<dl><dd><b>sd_bus_default</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3)</dl>
  
 
  <b>-ENOMEM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_default/">sd_bus_default</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error_add_map/">sd_bus_error_add_map</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_creds/">sd_bus_get_name_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_signal/">sd_bus_message_new_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_new/">sd_bus_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_error/">sd_bus_reply_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_return/">sd_bus_reply_method_return</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_description/">sd_bus_slot_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_add_name/">sd_bus_track_add_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_new/">sd_bus_track_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_new/">sd_event_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_pending/">sd_event_source_get_pending</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_get_seats/">sd_get_seats</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_new/">sd_hwdb_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_node_enumerator</b>(3), <b>sd_bus_add_object</b>(3), <b>sd_bus_add_object_manager</b>(3), <b>sd_bus_call</b>(3), <b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_default</b>(3), <b>sd_bus_emit_signal</b>(3), <b>sd_bus_error</b>(3), <b>sd_bus_error_add_map</b>(3), <b>sd_bus_get_name_creds</b>(3), <b>sd_bus_get_name_machine_id</b>(3), <b>sd_bus_list_names</b>(3), <b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_array</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_string_memfd</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_copy</b>(3), <b>sd_bus_message_new</b>(3), <b>sd_bus_message_new_method_call</b>(3), <b>sd_bus_message_new_method_error</b>(3), <b>sd_bus_message_new_signal</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_message_skip</b>(3), <b>sd_bus_new</b>(3), <b>sd_bus_reply_method_error</b>(3), <b>sd_bus_reply_method_return</b>(3), <b>sd_bus_send</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_slot_set_description</b>(3), <b>sd_bus_track_add_name</b>(3), <b>sd_bus_track_new</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_new</b>(3), <b>sd_event_source_get_pending</b>(3), <b>sd_event_source_set_description</b>(3), <b>sd_event_source_set_enabled</b>(3), <b>sd_event_source_set_prepare</b>(3), <b>sd_event_source_set_priority</b>(3), <b><a HREF="/docs/linux/man/3-sd_get_seats/">sd_get_seats</a></b>(3), <b>sd_hwdb_new</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b>sd_path_lookup</b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
  
 
  <b>-ENOMSG</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_seal/">sd_bus_message_seal</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_seal</b>(3)</dl>
  
 
  <b>-ENOPKG</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_can_send/">sd_bus_can_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_creds/">sd_bus_get_name_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_exit_on_disconnect/">sd_bus_set_exit_on_disconnect</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_fd/">sd_bus_set_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_method_call_timeout/">sd_bus_set_method_call_timeout</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_start/">sd_bus_start</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_node_enumerator</b>(3), <b>sd_bus_add_object</b>(3), <b>sd_bus_add_object_manager</b>(3), <b>sd_bus_can_send</b>(3), <b>sd_bus_emit_signal</b>(3), <b>sd_bus_get_fd</b>(3), <b>sd_bus_get_name_creds</b>(3), <b>sd_bus_get_name_machine_id</b>(3), <b>sd_bus_list_names</b>(3), <b>sd_bus_negotiate_fds</b>(3), <b>sd_bus_set_address</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_set_exit_on_disconnect</b>(3), <b>sd_bus_set_fd</b>(3), <b>sd_bus_set_method_call_timeout</b>(3), <b>sd_bus_set_server</b>(3), <b>sd_bus_start</b>(3)</dl>
  
 
  <b>-ENOTCONN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_can_send/">sd_bus_can_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_signal/">sd_bus_message_new_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_query_sender_creds/">sd_bus_query_sender_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_error/">sd_bus_reply_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_return/">sd_bus_reply_method_return</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_wait/">sd_bus_wait</a></b>(3)</dl>
+<dl><dd><b>sd_bus_call</b>(3), <b>sd_bus_can_send</b>(3), <b>sd_bus_get_fd</b>(3), <b>sd_bus_list_names</b>(3), <b>sd_bus_message_new</b>(3), <b>sd_bus_message_new_method_call</b>(3), <b>sd_bus_message_new_method_error</b>(3), <b>sd_bus_message_new_signal</b>(3), <b>sd_bus_process</b>(3), <b>sd_bus_query_sender_creds</b>(3), <b>sd_bus_reply_method_error</b>(3), <b>sd_bus_reply_method_return</b>(3), <b>sd_bus_request_name</b>(3), <b>sd_bus_send</b>(3), <b>sd_bus_set_server</b>(3), <b>sd_bus_wait</b>(3)</dl>
  
 
  <b>-ENXIO</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_strv/">sd_bus_message_read_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_description/">sd_bus_slot_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_new/">sd_event_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_array</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_string_memfd</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_copy</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3), <b>sd_bus_message_read_strv</b>(3), <b>sd_bus_message_skip</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_slot_set_description</b>(3), <b>sd_event_new</b>(3), <b>sd_event_source_set_description</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b>sd_path_lookup</b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3)</dl>
  
 
  <b>-EOPNOTSUPP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_array/">sd_bus_message_read_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_message_new_method_call</b>(3), <b>sd_bus_message_read_array</b>(3), <b>sd_bus_send</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_now</b>(3), <b>sd_path_lookup</b>(3)</dl>
  
 
  <b>-EOVERFLOW</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_time</b>(3)</dl>
  
 
  <b>-EPERM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_creds/">sd_bus_get_name_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_at_end/">sd_bus_message_at_end</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_array/">sd_bus_message_read_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_strv/">sd_bus_message_read_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_rewind/">sd_bus_message_rewind</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_destination/">sd_bus_message_set_destination</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_verify_type/">sd_bus_message_verify_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_query_sender_creds/">sd_bus_query_sender_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_error/">sd_bus_reply_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_return/">sd_bus_reply_method_return</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_fd/">sd_bus_set_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_sender/">sd_bus_set_sender</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_start/">sd_bus_start</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3)</dl>
+<dl><dd><b>sd_bus_get_fd</b>(3), <b>sd_bus_get_name_creds</b>(3), <b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_array</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_string_memfd</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_at_end</b>(3), <b>sd_bus_message_copy</b>(3), <b>sd_bus_message_new_method_call</b>(3), <b>sd_bus_message_new_method_error</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_message_read_array</b>(3), <b>sd_bus_message_read_strv</b>(3), <b>sd_bus_message_rewind</b>(3), <b>sd_bus_message_set_destination</b>(3), <b>sd_bus_message_set_expect_reply</b>(3), <b>sd_bus_message_skip</b>(3), <b>sd_bus_message_verify_type</b>(3), <b>sd_bus_negotiate_fds</b>(3), <b>sd_bus_query_sender_creds</b>(3), <b>sd_bus_reply_method_error</b>(3), <b>sd_bus_reply_method_return</b>(3), <b>sd_bus_set_address</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_set_fd</b>(3), <b>sd_bus_set_sender</b>(3), <b>sd_bus_set_server</b>(3), <b>sd_bus_start</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3)</dl>
  
 
  <b>-EPROTONOSUPPORT</b>
@@ -8705,27 +8705,27 @@ Various constants used and/or defined by systemd.
  
 
  <b>-EPROTOTYPE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>-ESOCKTNOSUPPORT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_default/">sd_bus_default</a></b>(3)</dl>
+<dl><dd><b>sd_bus_default</b>(3)</dl>
  
 
  <b>-ESRCH</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_emit_signal</b>(3), <b>sd_bus_request_name</b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3)</dl>
  
 
  <b>-ESTALE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_floating/">sd_bus_slot_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_run/">sd_event_run</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_pending/">sd_event_source_get_pending</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_array</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_string_memfd</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_copy</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_slot_set_floating</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_exit</b>(3), <b>sd_event_run</b>(3), <b>sd_event_source_get_pending</b>(3), <b>sd_event_source_set_prepare</b>(3), <b>sd_event_source_set_priority</b>(3), <b>sd_event_wait</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3)</dl>
  
 
  <b>-ETIMEDOUT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3)</dl>
+<dl><dd><b>sd_bus_call</b>(3)</dl>
  
 
  <b>-EUNATCH</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_track_add_name/">sd_bus_track_add_name</a></b>(3)</dl>
+<dl><dd><b>sd_bus_track_add_name</b>(3)</dl>
  
 
  <b>/org/freedesktop/systemd1</b>
@@ -8733,7 +8733,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>0</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-org-freedesktop-resolve1/">org.freedesktop.resolve1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_add_match/">sd_journal_add_match</a></b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/3-udev_device_get_syspath/">udev_device_get_syspath</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_device_has_tag/">udev_device_has_tag</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_enumerate_add_match_subsystem/">udev_enumerate_add_match_subsystem</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_enumerate_scan_devices/">udev_enumerate_scan_devices</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_monitor_filter_update/">udev_monitor_filter_update</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_monitor_receive_device/">udev_monitor_receive_device</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-org-freedesktop-resolve1/">org.freedesktop.resolve1</a></b>(5), <b>sd_bus_add_object</b>(3), <b>sd_bus_error</b>(3), <b>sd_event_add_time</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_add_match/">sd_journal_add_match</a></b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b>udev_device_get_syspath</b>(3), <b>udev_device_has_tag</b>(3), <b>udev_enumerate_add_match_subsystem</b>(3), <b>udev_enumerate_scan_devices</b>(3), <b>udev_monitor_filter_update</b>(3), <b>udev_monitor_receive_device</b>(3)</dl>
  
 
  <b>0755</b>
@@ -8753,7 +8753,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>1</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-oomd-service/">systemd-oomd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/3-udev_device_get_syspath/">udev_device_get_syspath</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b>sd_bus_add_object</b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b>systemd-oomd.service</b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b>udev_device_get_syspath</b>(3)</dl>
  
 
  <b>10</b>
@@ -8765,7 +8765,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>19532</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>2</b>
@@ -8793,7 +8793,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>4f68bce3-e8cd-4db1-96e7-fbcaf984b709</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>65</b>
@@ -8809,7 +8809,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>8cf2644b-4b0b-428f-9387-6d876050dc67</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>:</b>
@@ -8821,7 +8821,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>ACTION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3)</dl>
+<dl><dd><b>udev_device_new_from_syspath</b>(3)</dl>
  
 
  <b>AF_INET</b>
@@ -8841,7 +8841,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>AF_UNIX</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/5-crypttab/">crypttab</a></b>(5), <b><a HREF="/docs/linux/man/7-daemon/">daemon</a></b>(7), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/8-nss-resolve/">nss-resolve</a></b>(8), <b><a HREF="/docs/linux/man/8-pam_systemd/">pam_systemd</a></b>(8), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/5-crypttab/">crypttab</a></b>(5), <b><a HREF="/docs/linux/man/7-daemon/">daemon</a></b>(7), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>nss-resolve</b>(8), <b><a HREF="/docs/linux/man/8-pam_systemd/">pam_systemd</a></b>(8), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></b>(8), <b>systemd-journal-remote.service</b>(8), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5)</dl>
  
 
  <b>AF_UNSPEC</b>
@@ -8853,7 +8853,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>ALLOW_INTERACTIVE_AUTHORIZATION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_set_expect_reply</b>(3), <b>sd_bus_set_description</b>(3)</dl>
  
 
  <b>AND</b>
@@ -8869,11 +8869,11 @@ Various constants used and/or defined by systemd.
  
 
  <b>BLKDISCARD</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>BUS_MESSAGE_NO_REPLY_EXPECTED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3)</dl>
+<dl><dd><b>sd_bus_call</b>(3)</dl>
  
 
  <b>C</b>
@@ -8965,7 +8965,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>CAP_SYS_ADMIN</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b>sd_bus_add_object</b>(3), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>CAP_SYS_BOOT</b>
@@ -9009,27 +9009,27 @@ Various constants used and/or defined by systemd.
  
 
  <b>CLOCK_BOOTIME</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3)</dl>
+<dl><dd><b>sd-event</b>(3)</dl>
  
 
  <b>CLOCK_BOOTTIME</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3), <b><a HREF="/docs/linux/man/5-systemd-timer/">systemd.timer</a></b>(5)</dl>
+<dl><dd><b>sd_event_add_time</b>(3), <b>sd_event_now</b>(3), <b><a HREF="/docs/linux/man/5-systemd-timer/">systemd.timer</a></b>(5)</dl>
  
 
  <b>CLOCK_BOOTTIME_ALARM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3)</dl>
+<dl><dd><b>sd-event</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_now</b>(3)</dl>
  
 
  <b>CLOCK_MONOTONIC</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_monotonic_usec/">sd_bus_message_get_monotonic_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_seek_head/">sd_journal_seek_head</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-timer/">systemd.timer</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b>sd-event</b>(3), <b>sd_bus_get_fd</b>(3), <b>sd_bus_message_get_monotonic_usec</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_now</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_seek_head/">sd_journal_seek_head</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-timer/">systemd.timer</a></b>(5)</dl>
  
 
  <b>CLOCK_REALTIME</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-timedate1/">org.freedesktop.timedate1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_monotonic_usec/">sd_bus_message_get_monotonic_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_seek_head/">sd_journal_seek_head</a></b>(3), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-timer/">systemd.timer</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-timedate1/">org.freedesktop.timedate1</a></b>(5), <b>sd-event</b>(3), <b>sd_bus_message_get_monotonic_usec</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_now</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_seek_head/">sd_journal_seek_head</a></b>(3), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-timer/">systemd.timer</a></b>(5)</dl>
  
 
  <b>CLOCK_REALTIME_ALARM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3)</dl>
+<dl><dd><b>sd-event</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_now</b>(3)</dl>
  
 
  <b>CLONE_NEWNS</b>
@@ -9037,7 +9037,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>DEVPATH</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3)</dl>
+<dl><dd><b>udev_device_new_from_syspath</b>(3)</dl>
  
 
  <b>DHCPDECLINE</b>
@@ -9049,7 +9049,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>EOPNOTSUPP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3)</dl>
  
 
  <b>EPERM</b>
@@ -9061,31 +9061,31 @@ Various constants used and/or defined by systemd.
  
 
  <b>EPOLLERR</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_io</b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3)</dl>
  
 
  <b>EPOLLET</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3)</dl>
+<dl><dd><b>sd-event</b>(3), <b>sd_event_add_io</b>(3)</dl>
  
 
  <b>EPOLLHUP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_io</b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3)</dl>
  
 
  <b>EPOLLIN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_get_fd/">sd_event_get_fd</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_io</b>(3), <b>sd_event_get_fd</b>(3)</dl>
  
 
  <b>EPOLLOUT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_io</b>(3)</dl>
  
 
  <b>EPOLLPRI</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_io</b>(3)</dl>
  
 
  <b>EPOLLRDHUP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_io</b>(3)</dl>
  
 
  <b>ESC</b>
@@ -9093,7 +9093,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>EUCLEAN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>sd-bus-errors</b>(3), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>EXIT_ADDRESS_FAMILIES</b>
@@ -9149,7 +9149,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>EXIT_FAILURE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_set_exit_on_disconnect/">sd_bus_set_exit_on_disconnect</a></b>(3), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>sd_bus_set_exit_on_disconnect</b>(3), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>EXIT_FDS</b>
@@ -9381,23 +9381,23 @@ Various constants used and/or defined by systemd.
  
 
  <b>IN_ACCESS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_inotify</b>(3)</dl>
  
 
  <b>IN_ATTRIB</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_inotify</b>(3)</dl>
  
 
  <b>IN_CLOSE_WRITE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_inotify</b>(3)</dl>
  
 
  <b>IN_MASK_ADD</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_inotify</b>(3)</dl>
  
 
  <b>IN_ONESHOT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_inotify</b>(3)</dl>
  
 
  <b>IPPROTO_SCTP</b>
@@ -9521,19 +9521,19 @@ Various constants used and/or defined by systemd.
  
 
  <b>NO_AUTO_START</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_set_expect_reply</b>(3)</dl>
  
 
  <b>NO_REPLY_EXPECTED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_set_expect_reply</b>(3)</dl>
  
 
  <b>NUL</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-crypttab/">crypttab</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-pam_systemd/">pam_systemd</a></b>(8), <b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_array/">sd_bus_message_read_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_path_encode/">sd_bus_path_encode</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_get/">sd_hwdb_get</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_add_match/">sd_journal_add_match</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3), <b><a HREF="/docs/linux/man/1-systemd-ask-password/">systemd-ask-password</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7), <b><a HREF="/docs/linux/man/3-udev_device_has_tag/">udev_device_has_tag</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-crypttab/">crypttab</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-pam_systemd/">pam_systemd</a></b>(8), <b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_string_memfd</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_array</b>(3), <b>sd_bus_path_encode</b>(3), <b>sd_event_source_set_description</b>(3), <b>sd_hwdb_get</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_add_match/">sd_journal_add_match</a></b>(3), <b>sd_path_lookup</b>(3), <b><a HREF="/docs/linux/man/1-systemd-ask-password/">systemd-ask-password</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7), <b>udev_device_has_tag</b>(3)</dl>
  
 
  <b>NULL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_match/">sd_bus_add_match</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_attach_event/">sd_bus_attach_event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_can_send/">sd_bus_can_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_close/">sd_bus_close</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_default/">sd_bus_default</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_current_handler/">sd_bus_get_current_handler</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_interface_name_is_valid/">sd_bus_interface_name_is_valid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_is_open/">sd_bus_is_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_at_end/">sd_bus_message_at_end</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_signature/">sd_bus_message_get_signature</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_signal/">sd_bus_message_new_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_array/">sd_bus_message_read_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_strv/">sd_bus_message_read_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_rewind/">sd_bus_message_rewind</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_seal/">sd_bus_message_seal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_sensitive/">sd_bus_message_sensitive</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_destination/">sd_bus_message_set_destination</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_verify_type/">sd_bus_message_verify_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_new/">sd_bus_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_path_encode/">sd_bus_path_encode</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_query_sender_creds/">sd_bus_query_sender_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_error/">sd_bus_reply_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_return/">sd_bus_reply_method_return</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_exit_on_disconnect/">sd_bus_set_exit_on_disconnect</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_method_call_timeout/">sd_bus_set_method_call_timeout</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_property/">sd_bus_set_property</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_sender/">sd_bus_set_sender</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_get_bus/">sd_bus_slot_get_bus</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_ref/">sd_bus_slot_ref</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_description/">sd_bus_slot_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_destroy_callback/">sd_bus_slot_set_destroy_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_floating/">sd_bus_slot_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_userdata/">sd_bus_slot_set_userdata</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_start/">sd_bus_start</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_add_name/">sd_bus_track_add_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_new/">sd_bus_track_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_new/">sd_event_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_run/">sd_event_run</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_event/">sd_event_source_get_event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_destroy_callback/">sd_event_source_set_destroy_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_floating/">sd_event_source_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_userdata/">sd_event_source_set_userdata</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_unref/">sd_event_source_unref</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_get_seats/">sd_get_seats</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_get/">sd_hwdb_get</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_new/">sd_hwdb_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_has_runtime_files/">sd_journal_has_runtime_files</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_device_get_syspath/">udev_device_get_syspath</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_device_has_tag/">udev_device_has_tag</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_enumerate_new/">udev_enumerate_new</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_enumerate_scan_devices/">udev_enumerate_scan_devices</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_list_entry/">udev_list_entry</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_monitor_new_from_netlink/">udev_monitor_new_from_netlink</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_monitor_receive_device/">udev_monitor_receive_device</a></b>(3), <b><a HREF="/docs/linux/man/3-udev_new/">udev_new</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3), <b>sd_bus_add_match</b>(3), <b>sd_bus_add_node_enumerator</b>(3), <b>sd_bus_add_object</b>(3), <b>sd_bus_add_object_manager</b>(3), <b>sd_bus_attach_event</b>(3), <b>sd_bus_call</b>(3), <b>sd_bus_can_send</b>(3), <b>sd_bus_close</b>(3), <b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_default</b>(3), <b>sd_bus_emit_signal</b>(3), <b>sd_bus_error</b>(3), <b>sd_bus_get_current_handler</b>(3), <b>sd_bus_interface_name_is_valid</b>(3), <b>sd_bus_is_open</b>(3), <b>sd_bus_list_names</b>(3), <b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_array</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_at_end</b>(3), <b>sd_bus_message_copy</b>(3), <b>sd_bus_message_get_signature</b>(3), <b>sd_bus_message_get_type</b>(3), <b>sd_bus_message_new</b>(3), <b>sd_bus_message_new_method_call</b>(3), <b>sd_bus_message_new_method_error</b>(3), <b>sd_bus_message_new_signal</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_array</b>(3), <b>sd_bus_message_read_basic</b>(3), <b>sd_bus_message_read_strv</b>(3), <b>sd_bus_message_rewind</b>(3), <b>sd_bus_message_seal</b>(3), <b>sd_bus_message_sensitive</b>(3), <b>sd_bus_message_set_destination</b>(3), <b>sd_bus_message_set_expect_reply</b>(3), <b>sd_bus_message_skip</b>(3), <b>sd_bus_message_verify_type</b>(3), <b>sd_bus_new</b>(3), <b>sd_bus_path_encode</b>(3), <b>sd_bus_process</b>(3), <b>sd_bus_query_sender_creds</b>(3), <b>sd_bus_reply_method_error</b>(3), <b>sd_bus_reply_method_return</b>(3), <b>sd_bus_request_name</b>(3), <b>sd_bus_send</b>(3), <b>sd_bus_set_address</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_set_exit_on_disconnect</b>(3), <b>sd_bus_set_method_call_timeout</b>(3), <b>sd_bus_set_property</b>(3), <b>sd_bus_set_sender</b>(3), <b>sd_bus_set_server</b>(3), <b>sd_bus_slot_get_bus</b>(3), <b>sd_bus_slot_ref</b>(3), <b>sd_bus_slot_set_description</b>(3), <b>sd_bus_slot_set_destroy_callback</b>(3), <b>sd_bus_slot_set_floating</b>(3), <b>sd_bus_slot_set_userdata</b>(3), <b>sd_bus_start</b>(3), <b>sd_bus_track_add_name</b>(3), <b>sd_bus_track_new</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_exit</b>(3), <b>sd_event_new</b>(3), <b>sd_event_run</b>(3), <b>sd_event_source_get_event</b>(3), <b>sd_event_source_set_description</b>(3), <b>sd_event_source_set_destroy_callback</b>(3), <b>sd_event_source_set_enabled</b>(3), <b>sd_event_source_set_floating</b>(3), <b>sd_event_source_set_prepare</b>(3), <b>sd_event_source_set_userdata</b>(3), <b>sd_event_source_unref</b>(3), <b>sd_event_wait</b>(3), <b><a HREF="/docs/linux/man/3-sd_get_seats/">sd_get_seats</a></b>(3), <b>sd_hwdb_get</b>(3), <b>sd_hwdb_new</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_has_runtime_files/">sd_journal_has_runtime_files</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b>sd_path_lookup</b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></b>(3), <b>udev_device_get_syspath</b>(3), <b>udev_device_has_tag</b>(3), <b>udev_device_new_from_syspath</b>(3), <b>udev_enumerate_new</b>(3), <b>udev_enumerate_scan_devices</b>(3), <b>udev_list_entry</b>(3), <b>udev_monitor_new_from_netlink</b>(3), <b>udev_monitor_receive_device</b>(3), <b>udev_new</b>(3)</dl>
  
 
  <b>OR</b>
@@ -9541,7 +9541,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>O_NONBLOCK</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_stream_fd/">sd_journal_stream_fd</a></b>(3), <b><a HREF="/docs/linux/man/5-systemd-service/">systemd.service</a></b>(5)</dl>
+<dl><dd><b>sd_event_add_io</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_stream_fd/">sd_journal_stream_fd</a></b>(3), <b><a HREF="/docs/linux/man/5-systemd-service/">systemd.service</a></b>(5)</dl>
  
 
  <b>P</b>
@@ -9565,11 +9565,11 @@ Various constants used and/or defined by systemd.
  
 
  <b>POLLIN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_get_fd/">sd_event_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3)</dl>
+<dl><dd><b>sd_bus_get_fd</b>(3), <b>sd_event_get_fd</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3)</dl>
  
 
  <b>POLLOUT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3)</dl>
+<dl><dd><b>sd_bus_get_fd</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3)</dl>
  
 
  <b>PROT_EXEC</b>
@@ -9581,7 +9581,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>PR_SET_NO_NEW_PRIVS</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b>systemd.nspawn</b>(5)</dl>
  
 
  <b>RLIMIT_NICE</b>
@@ -9609,639 +9609,639 @@ Various constants used and/or defined by systemd.
  
 
  <b>SD_BUS_ARGS(</b><i>...</i><b>)</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_ARGS()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_AUDIT_LOGIN_UID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_AUDIT_SESSION_ID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_AUGMENT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_BOUNDING_CAPS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_CGROUP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_CMDLINE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_COMM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_DESCRIPTION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_EFFECTIVE_CAPS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_EGID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_EUID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_EXE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_FSGID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_FSUID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_GID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_INHERITABLE_CAPS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_OWNER_UID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_PERMITTED_CAPS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_PID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_PPID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_SELINUX_CONTEXT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_SESSION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_SGID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_SLICE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_SUID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_SUPPLEMENTARY_GIDS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_TID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_TID_COMM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_TTY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_UID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_UNIQUE_NAME</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_negotiate_fds</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_UNIT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_USER_SLICE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_USER_UNIT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>SD_BUS_CREDS_WELL_KNOWN_NAMES</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_negotiate_fds</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_ACCESS_DENIED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_ADDRESS_IN_USE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_AUTH_FAILED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_BAD_ADDRESS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_DISCONNECTED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_FAILED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_FILE_EXISTS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_FILE_NOT_FOUND</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_INCONSISTENT_MESSAGE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_INTERACTIVE_AUTHORIZATION_REQUIRED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_INVALID_ARGS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_INVALID_SIGNATURE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_IO_ERROR</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_LIMITS_EXCEEDED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_MAKE_CONST(</b><i>name</i><b>, </b><i>message</i><b>)</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3)</dl>
+<dl><dd><b>sd_bus_error</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_MAKE_CONST()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3)</dl>
+<dl><dd><b>sd_bus_error</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_MAP(</b><i>name</i><b>, </b><i>code</i><b>)</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_error_add_map/">sd_bus_error_add_map</a></b>(3)</dl>
+<dl><dd><b>sd_bus_error_add_map</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_MAP()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_error_add_map/">sd_bus_error_add_map</a></b>(3)</dl>
+<dl><dd><b>sd_bus_error_add_map</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_MAP_END</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_error_add_map/">sd_bus_error_add_map</a></b>(3)</dl>
+<dl><dd><b>sd_bus_error_add_map</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_MATCH_RULE_INVALID</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_MATCH_RULE_NOT_FOUND</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_NAME_HAS_NO_OWNER</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_NOT_SUPPORTED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3), <b>sd_bus_message_new_method_error</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_NO_MEMORY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3), <b>sd_bus_error</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_NO_NETWORK</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_NO_REPLY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_NO_SERVER</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_NULL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3)</dl>
+<dl><dd><b>sd_bus_call</b>(3), <b>sd_bus_error</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_PROPERTY_READ_ONLY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_SERVICE_UNKNOWN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_TIMEOUT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_UNIX_PROCESS_ID_UNKNOWN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_UNKNOWN_INTERFACE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_UNKNOWN_METHOD</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_UNKNOWN_OBJECT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_ERROR_UNKNOWN_PROPERTY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3)</dl>
+<dl><dd><b>sd-bus-errors</b>(3)</dl>
  
 
  <b>SD_BUS_MESSAGE_DUMP_SUBTREE_ONLY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_dump/">sd_bus_message_dump</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_dump</b>(3)</dl>
  
 
  <b>SD_BUS_MESSAGE_DUMP_WITH_HEADER</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_dump/">sd_bus_message_dump</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_dump</b>(3)</dl>
  
 
  <b>SD_BUS_MESSAGE_METHOD_CALL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_get_type</b>(3), <b>sd_bus_message_new</b>(3)</dl>
  
 
  <b>SD_BUS_MESSAGE_METHOD_ERROR</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_get_type</b>(3), <b>sd_bus_message_new</b>(3)</dl>
  
 
  <b>SD_BUS_MESSAGE_METHOD_RETURN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_get_type</b>(3), <b>sd_bus_message_new</b>(3)</dl>
  
 
  <b>SD_BUS_MESSAGE_SIGNAL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_get_type</b>(3), <b>sd_bus_message_new</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>result</i><b>, </b><i>handler</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_ARGS(</b><i>member</i><b>, </b><i>args</i><b>, </b><i>result</i><b>, </b><i>handler</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_ARGS()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_ARGS_OFFSET(</b><i>member</i><b>, </b><i>args</i><b>, </b><i>result</i><b>, </b><i>handler</i><b>, </b><i>offset</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_ARGS_OFFSET()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_NAMES(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>in_names</i><b>, </b><i>result</i><b>, </b><i>out_names</i><b>, </b><i>handler</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_NAMES()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_NAMES_OFFSET(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>in_names</i><b>, </b><i>result</i><b>, </b><i>out_names</i><b>, </b><i>handler</i><b>, </b><i>offset</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_NAMES_OFFSET()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_OFFSET(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>result</i><b>, </b><i>handler</i><b>, </b><i>offset</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_METHOD_WITH_OFFSET()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_NAME_ALLOW_REPLACEMENT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3)</dl>
+<dl><dd><b>sd_bus_request_name</b>(3)</dl>
  
 
  <b>SD_BUS_NAME_QUEUE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3)</dl>
+<dl><dd><b>sd_bus_request_name</b>(3)</dl>
  
 
  <b>SD_BUS_NAME_REPLACE_EXISTING</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3)</dl>
+<dl><dd><b>sd_bus_request_name</b>(3)</dl>
  
 
  <b>SD_BUS_NO_ARGS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_NO_RESULT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_PARAM(</b><i>name</i><b>)</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_PARAM()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_PROPERTY(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>get</i><b>, </b><i>offset</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_PROPERTY()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_RESULT(</b><i>...</i><b>)</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_RESULT()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_SIGNAL(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_SIGNAL()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_SIGNAL_WITH_ARGS(</b><i>member</i><b>, </b><i>args</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_SIGNAL_WITH_ARGS()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_SIGNAL_WITH_NAMES(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>names</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_SIGNAL_WITH_NAMES()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_can_send/">sd_bus_can_send</a></b>(3)</dl>
+<dl><dd><b>sd_bus_can_send</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_ARRAY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_message_read</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_BOOLEAN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_BYTE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_DICT_ENTRY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_open_container</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_DICT_ENTRY_BEGIN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_read</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_DICT_ENTRY_END</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_read</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_DOUBLE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_INT16</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_INT32</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_INT64</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_OBJECT_PATH</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_SIGNATURE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_STRING</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_STRUCT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_open_container</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_STRUCT_BEGIN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_read</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_STRUCT_END</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_read</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_UINT16</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_UINT32</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_UINT64</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_UNIX_FD</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_read_basic</b>(3), <b>sd_bus_negotiate_fds</b>(3)</dl>
  
 
  <b>SD_BUS_TYPE_VARIANT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3)</dl>
+<dl><dd><b>sd_bus_message_append</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_message_read</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_ABSOLUTE_OFFSET</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_CAPABILITY(</b><i>capability</i><b>)</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_DEPRECATED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_END</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_HIDDEN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_METHOD_NO_REPLY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_PROPERTY_CONST</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_PROPERTY_EMITS_CHANGE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_PROPERTY_EMITS_INVALIDATION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_PROPERTY_EXPLICIT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_SENSITIVE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_START(</b><i>flags</i><b>)</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_START()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_VTABLE_UNPRIVILEGED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_WRITABLE_PROPERTY(</b><i>member</i><b>, </b><i>signature</i><b>, </b><i>get</i><b>, </b><i>set</i><b>, </b><i>offset</i><b>, </b><i>flags</i><b>) </b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_BUS_WRITABLE_PROPERTY()</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>SD_EVENT_ARMED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_event_wait</b>(3)</dl>
  
 
  <b>SD_EVENT_EXITING</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_event_wait</b>(3)</dl>
  
 
  <b>SD_EVENT_FINISHED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_event_wait</b>(3)</dl>
  
 
  <b>SD_EVENT_INITIAL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_event_wait</b>(3)</dl>
  
 
  <b>SD_EVENT_OFF</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_ratelimit/">sd_event_source_set_ratelimit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_unref/">sd_event_source_unref</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_source_set_enabled</b>(3), <b>sd_event_source_set_ratelimit</b>(3), <b>sd_event_source_unref</b>(3)</dl>
  
 
  <b>SD_EVENT_ON</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_source_set_enabled</b>(3)</dl>
  
 
  <b>SD_EVENT_ONESHOT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_source_set_enabled</b>(3)</dl>
  
 
  <b>SD_EVENT_PENDING</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_event_wait</b>(3)</dl>
  
 
  <b>SD_EVENT_PREPARING</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_event_wait</b>(3)</dl>
  
 
  <b>SD_EVENT_PRIORITY_IDLE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3)</dl>
+<dl><dd><b>sd_event_source_set_priority</b>(3)</dl>
  
 
  <b>SD_EVENT_PRIORITY_IMPORTANT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3)</dl>
+<dl><dd><b>sd_event_source_set_priority</b>(3)</dl>
  
 
  <b>SD_EVENT_PRIORITY_NORMAL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3)</dl>
+<dl><dd><b>sd_event_source_set_priority</b>(3)</dl>
  
 
  <b>SD_EVENT_RUNNING</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3)</dl>
+<dl><dd><b>sd_event_wait</b>(3)</dl>
  
 
  <b>SD_ID128_ALLF</b>
@@ -10253,7 +10253,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>SD_ID128_NULL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_randomize/">sd_id128_randomize</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b>sd_bus_set_server</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_randomize/">sd_id128_randomize</a></b>(3)</dl>
  
 
  <b>SD_ID128_UUID_FORMAT_STR</b>
@@ -10317,251 +10317,251 @@ Various constants used and/or defined by systemd.
  
 
  <b>SD_PATH_BINFMT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_CATALOG</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_MODULES_LOAD</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_BINARIES</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_BINARIES_DEFAULT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_CONFIGURATION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_CONFIGURATION_FACTORY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_LIBRARY_ARCH</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_LIBRARY_PRIVATE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_SHARED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SEARCH_STATE_FACTORY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSCTL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SEARCH_NETWORK</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SEARCH_SYSTEM_GENERATOR</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SEARCH_SYSTEM_UNIT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SEARCH_USER_GENERATOR</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SEARCH_USER_UNIT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SHUTDOWN</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SLEEP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SYSTEM_CONF</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SYSTEM_GENERATOR</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SYSTEM_PRESET</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_SYSTEM_UNIT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_USER_CONF</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_USER_GENERATOR</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_USER_PRESET</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_USER_UNIT</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEMD_UTIL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_BINARIES</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_CONFIGURATION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_CONFIGURATION_FACTORY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_INCLUDE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_LIBRARY_ARCH</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_LIBRARY_PRIVATE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_RUNTIME</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_RUNTIME_LOGS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_SHARED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_STATE_CACHE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_STATE_FACTORY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_STATE_LOGS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_STATE_PRIVATE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSTEM_STATE_SPOOL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_SYSUSERS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_TEMPORARY</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_TEMPORARY_LARGE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_TMPFILES</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_BINARIES</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_CONFIGURATION</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_DESKTOP</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_DOCUMENTS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_DOWNLOAD</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_LIBRARY_ARCH</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_LIBRARY_PRIVATE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_MUSIC</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_PICTURES</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_PUBLIC</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_RUNTIME</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_SHARED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_STATE_CACHE</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_TEMPLATES</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_PATH_USER_VIDEOS</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  <b>SD_WARNING</b>
@@ -10569,7 +10569,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>SEQNUM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3)</dl>
+<dl><dd><b>udev_device_new_from_syspath</b>(3)</dl>
  
 
  <b>SHM_EXEC</b>
@@ -10581,7 +10581,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>SIGCHLD</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3)</dl>
  
 
  <b>SIGCONT</b>
@@ -10597,7 +10597,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>SIGKILL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-kill/">systemd.kill</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-service/">systemd.service</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-swap/">systemd.swap</a></b>(5)</dl>
+<dl><dd><b>sd_event_add_child</b>(3), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-kill/">systemd.kill</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-service/">systemd.service</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-swap/">systemd.swap</a></b>(5)</dl>
  
 
  <b>SIGPIPE</b>
@@ -10697,7 +10697,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>SIGTERM</b>
-<dl><dd><b><a HREF="/docs/linux/man/7-daemon/">daemon</a></b>(7), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-kill/">systemd.kill</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-service/">systemd.service</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-swap/">systemd.swap</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-daemon/">daemon</a></b>(7), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b>sd_event_exit</b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-kill/">systemd.kill</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-service/">systemd.service</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-swap/">systemd.swap</a></b>(5)</dl>
  
 
  <b>SIGUSR1</b>
@@ -10781,7 +10781,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>SUBSYSTEM</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3)</dl>
+<dl><dd><b>udev_device_new_from_syspath</b>(3)</dl>
  
 
  <b>TAB</b>
@@ -10809,7 +10809,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>UINT64_MAX</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_wait/">sd_bus_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3)</dl>
+<dl><dd><b>sd_bus_get_fd</b>(3), <b>sd_bus_wait</b>(3), <b>sd_event_add_time</b>(3)</dl>
  
 
  <b>USER_PROCESS</b>
@@ -10817,15 +10817,15 @@ Various constants used and/or defined by systemd.
  
 
  <b>WCONTINUED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3)</dl>
  
 
  <b>WEXITED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3)</dl>
  
 
  <b>WSTOPPED</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3)</dl>
+<dl><dd><b>sd_event_add_child</b>(3)</dl>
  
 
  <b>_NSIG</b>
@@ -10837,7 +10837,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>_SD_BUS_CREDS_ALL</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3)</dl>
+<dl><dd><b>sd_bus_creds_new_from_pid</b>(3)</dl>
  
 
  <b>a</b>
@@ -10857,7 +10857,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>alert</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>all</b>
@@ -10877,15 +10877,15 @@ Various constants used and/or defined by systemd.
  
 
  <b>arm64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  <b>auto</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>b</b>
-<dl><dd><b><a HREF="/docs/linux/man/7-systemd-net-naming-scheme/">systemd.net-naming-scheme</a></b>(7), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-systemd-net-naming-scheme/">systemd.net-naming-scheme</a></b>(7), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b>udev_device_new_from_syspath</b>(3)</dl>
  
 
  <b>bad-setting</b>
@@ -10901,7 +10901,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>c</b>
-<dl><dd><b><a HREF="/docs/linux/man/7-systemd-net-naming-scheme/">systemd.net-naming-scheme</a></b>(7), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-systemd-net-naming-scheme/">systemd.net-naming-scheme</a></b>(7), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b>udev_device_new_from_syspath</b>(3)</dl>
  
 
  <b>cache</b>
@@ -10933,15 +10933,15 @@ Various constants used and/or defined by systemd.
  
 
  <b>console</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>console-prefixed</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>const</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>continue</b>
@@ -10953,7 +10953,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>crit</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>d</b>
@@ -10965,7 +10965,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>debug</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>default</b>
@@ -10989,7 +10989,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>emerg</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>en</b>
@@ -10997,15 +10997,15 @@ Various constants used and/or defined by systemd.
  
 
  <b>err</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>error</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1)</dl>
+<dl><dd><b>sd_bus_message_new_method_error</b>(3), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1)</dl>
  
 
  <b>esp</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>f</b>
@@ -11017,7 +11017,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>false</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3)</dl>
+<dl><dd><b>sd_bus_error</b>(3)</dl>
  
 
  <b>getsockopt</b>
@@ -11029,15 +11029,15 @@ Various constants used and/or defined by systemd.
  
 
  <b>home</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>host</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>https</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  <b>i</b>
@@ -11057,7 +11057,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>info</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>ingress</b>
@@ -11065,7 +11065,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>invalidates</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>ipc</b>
@@ -11081,11 +11081,11 @@ Various constants used and/or defined by systemd.
  
 
  <b>journal</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>journal-or-kmsg</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>keep</b>
@@ -11105,7 +11105,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>kmsg</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>late</b>
@@ -11117,7 +11117,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>libsystemd</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd-bus/">sd-bus</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-daemon/">sd-daemon</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-hwdb/">sd-hwdb</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_booted/">sd_booted</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_match/">sd_bus_add_match</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_attach_event/">sd_bus_attach_event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_call_method/">sd_bus_call_method</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_can_send/">sd_bus_can_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_close/">sd_bus_close</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_default/">sd_bus_default</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_enqueue_for_read/">sd_bus_enqueue_for_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_error_add_map/">sd_bus_error_add_map</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_current_handler/">sd_bus_get_current_handler</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_creds/">sd_bus_get_name_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_interface_name_is_valid/">sd_bus_interface_name_is_valid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_is_open/">sd_bus_is_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_at_end/">sd_bus_message_at_end</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_dump/">sd_bus_message_dump</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_cookie/">sd_bus_message_get_cookie</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_monotonic_usec/">sd_bus_message_get_monotonic_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_signature/">sd_bus_message_get_signature</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_new_signal/">sd_bus_message_new_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_rewind/">sd_bus_message_rewind</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_seal/">sd_bus_message_seal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_sensitive/">sd_bus_message_sensitive</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_destination/">sd_bus_message_set_destination</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_message_verify_type/">sd_bus_message_verify_type</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_new/">sd_bus_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_path_encode/">sd_bus_path_encode</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_query_sender_creds/">sd_bus_query_sender_creds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_error/">sd_bus_reply_method_error</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_reply_method_return/">sd_bus_reply_method_return</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_close_on_exit/">sd_bus_set_close_on_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_connected_signal/">sd_bus_set_connected_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_exit_on_disconnect/">sd_bus_set_exit_on_disconnect</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_fd/">sd_bus_set_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_method_call_timeout/">sd_bus_set_method_call_timeout</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_property/">sd_bus_set_property</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_sender/">sd_bus_set_sender</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_watch_bind/">sd_bus_set_watch_bind</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_get_bus/">sd_bus_slot_get_bus</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_ref/">sd_bus_slot_ref</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_description/">sd_bus_slot_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_destroy_callback/">sd_bus_slot_set_destroy_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_floating/">sd_bus_slot_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_slot_set_userdata/">sd_bus_slot_set_userdata</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_start/">sd_bus_start</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_add_name/">sd_bus_track_add_name</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_track_new/">sd_bus_track_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_wait/">sd_bus_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_get_fd/">sd_event_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_new/">sd_event_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_now/">sd_event_now</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_run/">sd_event_run</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_set_watchdog/">sd_event_set_watchdog</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_event/">sd_event_source_get_event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_get_pending/">sd_event_source_get_pending</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_destroy_callback/">sd_event_source_set_destroy_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_exit_on_failure/">sd_event_source_set_exit_on_failure</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_floating/">sd_event_source_set_floating</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_ratelimit/">sd_event_source_set_ratelimit</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_set_userdata/">sd_event_source_set_userdata</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_source_unref/">sd_event_source_unref</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_get_seats/">sd_get_seats</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_get/">sd_hwdb_get</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_hwdb_new/">sd_hwdb_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_randomize/">sd_id128_randomize</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_add_match/">sd_journal_add_match</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_enumerate_fields/">sd_journal_enumerate_fields</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_catalog/">sd_journal_get_catalog</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cursor/">sd_journal_get_cursor</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_usage/">sd_journal_get_usage</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_has_runtime_files/">sd_journal_has_runtime_files</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_seek_head/">sd_journal_seek_head</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_stream_fd/">sd_journal_stream_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></b>(3)</dl>
+<dl><dd><b>sd-bus</b>(3), <b>sd-bus-errors</b>(3), <b><a HREF="/docs/linux/man/3-sd-daemon/">sd-daemon</a></b>(3), <b>sd-event</b>(3), <b>sd-hwdb</b>(3), <b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_booted/">sd_booted</a></b>(3), <b>sd_bus_add_match</b>(3), <b>sd_bus_add_node_enumerator</b>(3), <b>sd_bus_add_object</b>(3), <b>sd_bus_add_object_manager</b>(3), <b>sd_bus_attach_event</b>(3), <b>sd_bus_call</b>(3), <b>sd_bus_call_method</b>(3), <b>sd_bus_can_send</b>(3), <b>sd_bus_close</b>(3), <b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_creds_new_from_pid</b>(3), <b>sd_bus_default</b>(3), <b>sd_bus_emit_signal</b>(3), <b>sd_bus_enqueue_for_read</b>(3), <b>sd_bus_error</b>(3), <b>sd_bus_error_add_map</b>(3), <b>sd_bus_get_current_handler</b>(3), <b>sd_bus_get_fd</b>(3), <b>sd_bus_get_name_creds</b>(3), <b>sd_bus_get_name_machine_id</b>(3), <b>sd_bus_interface_name_is_valid</b>(3), <b>sd_bus_is_open</b>(3), <b>sd_bus_list_names</b>(3), <b>sd_bus_message_append</b>(3), <b>sd_bus_message_append_array</b>(3), <b>sd_bus_message_append_basic</b>(3), <b>sd_bus_message_append_string_memfd</b>(3), <b>sd_bus_message_append_strv</b>(3), <b>sd_bus_message_at_end</b>(3), <b>sd_bus_message_copy</b>(3), <b>sd_bus_message_dump</b>(3), <b>sd_bus_message_get_cookie</b>(3), <b>sd_bus_message_get_monotonic_usec</b>(3), <b>sd_bus_message_get_signature</b>(3), <b>sd_bus_message_get_type</b>(3), <b>sd_bus_message_new</b>(3), <b>sd_bus_message_new_method_call</b>(3), <b>sd_bus_message_new_method_error</b>(3), <b>sd_bus_message_new_signal</b>(3), <b>sd_bus_message_open_container</b>(3), <b>sd_bus_message_read</b>(3), <b>sd_bus_message_rewind</b>(3), <b>sd_bus_message_seal</b>(3), <b>sd_bus_message_sensitive</b>(3), <b>sd_bus_message_set_destination</b>(3), <b>sd_bus_message_set_expect_reply</b>(3), <b>sd_bus_message_skip</b>(3), <b>sd_bus_message_verify_type</b>(3), <b>sd_bus_negotiate_fds</b>(3), <b>sd_bus_new</b>(3), <b>sd_bus_path_encode</b>(3), <b>sd_bus_process</b>(3), <b>sd_bus_query_sender_creds</b>(3), <b>sd_bus_reply_method_error</b>(3), <b>sd_bus_reply_method_return</b>(3), <b>sd_bus_request_name</b>(3), <b>sd_bus_send</b>(3), <b>sd_bus_set_address</b>(3), <b>sd_bus_set_close_on_exit</b>(3), <b>sd_bus_set_connected_signal</b>(3), <b>sd_bus_set_description</b>(3), <b>sd_bus_set_exit_on_disconnect</b>(3), <b>sd_bus_set_fd</b>(3), <b>sd_bus_set_method_call_timeout</b>(3), <b>sd_bus_set_property</b>(3), <b>sd_bus_set_sender</b>(3), <b>sd_bus_set_server</b>(3), <b>sd_bus_set_watch_bind</b>(3), <b>sd_bus_slot_get_bus</b>(3), <b>sd_bus_slot_ref</b>(3), <b>sd_bus_slot_set_description</b>(3), <b>sd_bus_slot_set_destroy_callback</b>(3), <b>sd_bus_slot_set_floating</b>(3), <b>sd_bus_slot_set_userdata</b>(3), <b>sd_bus_start</b>(3), <b>sd_bus_track_add_name</b>(3), <b>sd_bus_track_new</b>(3), <b>sd_bus_wait</b>(3), <b>sd_event_add_child</b>(3), <b>sd_event_add_defer</b>(3), <b>sd_event_add_inotify</b>(3), <b>sd_event_add_io</b>(3), <b>sd_event_add_signal</b>(3), <b>sd_event_add_time</b>(3), <b>sd_event_exit</b>(3), <b>sd_event_get_fd</b>(3), <b>sd_event_new</b>(3), <b>sd_event_now</b>(3), <b>sd_event_run</b>(3), <b>sd_event_set_watchdog</b>(3), <b>sd_event_source_get_event</b>(3), <b>sd_event_source_get_pending</b>(3), <b>sd_event_source_set_description</b>(3), <b>sd_event_source_set_destroy_callback</b>(3), <b>sd_event_source_set_enabled</b>(3), <b>sd_event_source_set_exit_on_failure</b>(3), <b>sd_event_source_set_floating</b>(3), <b>sd_event_source_set_prepare</b>(3), <b>sd_event_source_set_priority</b>(3), <b>sd_event_source_set_ratelimit</b>(3), <b>sd_event_source_set_userdata</b>(3), <b>sd_event_source_unref</b>(3), <b>sd_event_wait</b>(3), <b><a HREF="/docs/linux/man/3-sd_get_seats/">sd_get_seats</a></b>(3), <b>sd_hwdb_get</b>(3), <b>sd_hwdb_new</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_randomize/">sd_id128_randomize</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_add_match/">sd_journal_add_match</a></b>(3), <b>sd_journal_enumerate_fields</b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_catalog/">sd_journal_get_catalog</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cursor/">sd_journal_get_cursor</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_cutoff_realtime_usec/">sd_journal_get_cutoff_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_fd/">sd_journal_get_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_realtime_usec/">sd_journal_get_realtime_usec</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_get_usage/">sd_journal_get_usage</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_has_runtime_files/">sd_journal_has_runtime_files</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_seek_head/">sd_journal_seek_head</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_journal_stream_fd/">sd_journal_stream_fd</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_notify/">sd_notify</a></b>(3), <b>sd_path_lookup</b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_seat_get_active/">sd_seat_get_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_session_is_active/">sd_session_is_active</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_uid_get_state/">sd_uid_get_state</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></b>(3)</dl>
  
 
  <b>link-local</b>
@@ -11125,7 +11125,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>linux-generic</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>loaded</b>
@@ -11213,7 +11213,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>none</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-kill/">systemd.kill</a></b>(5)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8), <b><a HREF="/docs/linux/man/5-systemd-kill/">systemd.kill</a></b>(5)</dl>
  
 
  <b>not-found</b>
@@ -11221,11 +11221,11 @@ Various constants used and/or defined by systemd.
  
 
  <b>notice</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>null</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>o</b>
@@ -11233,39 +11233,39 @@ Various constants used and/or defined by systemd.
  
 
  <b>org.freedesktop.DBus.Deprecated</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.Introspectable.Introspect</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b>sd_bus_add_node_enumerator</b>(3), <b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.Method.NoReply</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.ObjectManager</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object_manager</b>(3), <b>sd_bus_emit_signal</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.ObjectManager.GetManagedObjects</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_node_enumerator</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.Peer</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></b>(3)</dl>
+<dl><dd><b>sd_bus_get_name_machine_id</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.Properties</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_set_property/">sd_bus_set_property</a></b>(3)</dl>
+<dl><dd><b>sd_bus_emit_signal</b>(3), <b>sd_bus_set_property</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.Properties.PropertiesChanged</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>org.freedesktop.DBus.Property.EmitsChangedSignal</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>org.freedesktop.locale1.set-keyboard</b>
@@ -11333,11 +11333,11 @@ Various constants used and/or defined by systemd.
  
 
  <b>org.freedesktop.systemd1.Explicit</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>org.freedesktop.systemd1.Privileged</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3)</dl>
  
 
  <b>p</b>
@@ -11405,7 +11405,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>random</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  <b>recvmsg4</b>
@@ -11421,75 +11421,75 @@ Various constants used and/or defined by systemd.
  
 
  <b>root</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>root-arm</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-arm-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-arm64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-arm64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-ia64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-ia64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-riscv32</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-riscv32-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-riscv64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-riscv64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-secondary</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-secondary-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-x86</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-x86-64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-x86-64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>root-x86-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>runtime</b>
@@ -11565,7 +11565,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>srv</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>state</b>
@@ -11577,7 +11577,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>swap</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>symlink</b>
@@ -11605,11 +11605,11 @@ Various constants used and/or defined by systemd.
  
 
  <b>tmp</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>true</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></b>(3), <b><a HREF="/docs/linux/man/8-systemd-oomd-service/">systemd-oomd.service</a></b>(8)</dl>
+<dl><dd><b>sd_bus_add_object</b>(3), <b>systemd-oomd.service</b>(8)</dl>
  
 
  <b>u</b>
@@ -11617,11 +11617,11 @@ Various constants used and/or defined by systemd.
  
 
  <b>udev_hwdb</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-libudev/">libudev</a></b>(3)</dl>
+<dl><dd><b>libudev</b>(3)</dl>
  
 
  <b>udev_queue</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-libudev/">libudev</a></b>(3)</dl>
+<dl><dd><b>libudev</b>(3)</dl>
  
 
  <b>udp</b>
@@ -11637,75 +11637,75 @@ Various constants used and/or defined by systemd.
  
 
  <b>usr</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>usr-arm</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-arm-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-arm64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-arm64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-ia64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-ia64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-riscv32</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-riscv32-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-riscv64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-riscv64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-secondary</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-secondary-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-x86</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-x86-64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-x86-64-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>usr-x86-verity</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>uts</b>
@@ -11749,7 +11749,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>var</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>w</b>
@@ -11757,7 +11757,7 @@ Various constants used and/or defined by systemd.
  
 
  <b>warning</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-journalctl/">journalctl</a></b>(1), <b><a HREF="/docs/linux/man/1-localectl/">localectl</a></b>(1), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-analyze/">systemd-analyze</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  <b>wl</b>
@@ -11777,15 +11777,15 @@ Various constants used and/or defined by systemd.
  
 
  <b>x86</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  <b>x86-64</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  <b>xbootldr</b>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5)</dl>
  
 
  <b>yes</b>
@@ -11849,7 +11849,7 @@ Various constants used and/or defined by systemd.
 Other configuration elements which don't fit in any of the above groups. 
 
  <i>$LISTEN_FDS</i>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>A</b>
@@ -11865,11 +11865,11 @@ Other configuration elements which don't fit in any of the above groups.
  
 
  <i>CopyBlocks=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>CopyFiles=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>D</i>
@@ -11877,23 +11877,23 @@ Other configuration elements which don't fit in any of the above groups.
  
 
  <i>Encrypt=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>FactoryReset=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>Flags=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>Format=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>GrowFileSystem=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>H</i>
@@ -11929,31 +11929,31 @@ Other configuration elements which don't fit in any of the above groups.
  
 
  <i>Label=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>MakeDirectories=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>NoAuto=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>PaddingMaxBytes=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>PaddingMinBytes=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>PaddingWeight=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>Priority=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>Q</i>
@@ -11965,15 +11965,15 @@ Other configuration elements which don't fit in any of the above groups.
  
 
  <i>ReadOnly=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>SizeMaxBytes=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>SizeMinBytes=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>T</i>
@@ -11981,15 +11981,15 @@ Other configuration elements which don't fit in any of the above groups.
  
 
  <i>Type=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>UUID=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <i>Weight=</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5)</dl>
  
 
  <b>X</b>
@@ -12160,15 +12160,15 @@ Other configuration elements which don't fit in any of the above groups.
 Short strings which are substituted in configuration directives. 
 
  &quot;%%&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-swap/">systemd.swap</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-swap/">systemd.swap</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%A&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%B&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%C&quot;
@@ -12184,7 +12184,7 @@ Short strings which are substituted in configuration directives.
  
 
  &quot;%H&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%I&quot;
@@ -12200,7 +12200,7 @@ Short strings which are substituted in configuration directives.
  
 
  &quot;%M&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%N&quot;
@@ -12216,7 +12216,7 @@ Short strings which are substituted in configuration directives.
  
 
  &quot;%T&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%U&quot;
@@ -12224,19 +12224,19 @@ Short strings which are substituted in configuration directives.
  
 
  &quot;%V&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%W&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%a&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%b&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%f&quot;
@@ -12260,11 +12260,11 @@ Short strings which are substituted in configuration directives.
  
 
  &quot;%l&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%m&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%n&quot;
@@ -12272,7 +12272,7 @@ Short strings which are substituted in configuration directives.
  
 
  &quot;%o&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%p&quot;
@@ -12292,18 +12292,18 @@ Short strings which are substituted in configuration directives.
  
 
  &quot;%v&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  &quot;%w&quot;
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
 
 <h2>Files And Directories</h2>
 
 Paths and file names referred to in the documentation. 
 
  /
-<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b>systemd-repart</b>(8), <b>systemd.nspawn</b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  $XDG_CONFIG_DIRS/systemd/user/
@@ -12475,7 +12475,7 @@ Paths and file names referred to in the documentation.
  
 
  /dev/null
-<dl><dd><b><a HREF="/docs/linux/man/5-binfmt-d/">binfmt.d</a></b>(5), <b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-daemon/">daemon</a></b>(7), <b><a HREF="/docs/linux/man/5-dnssec-trust-anchors-d/">dnssec-trust-anchors.d</a></b>(5), <b><a HREF="/docs/linux/man/5-environment-d/">environment.d</a></b>(5), <b><a HREF="/docs/linux/man/7-hwdb/">hwdb</a></b>(7), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-modules-load-d/">modules-load.d</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-sysctl-d/">sysctl.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-environment-generator/">systemd.environment-generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-link/">systemd.link</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-preset/">systemd.preset</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-binfmt-d/">binfmt.d</a></b>(5), <b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-daemon/">daemon</a></b>(7), <b><a HREF="/docs/linux/man/5-dnssec-trust-anchors-d/">dnssec-trust-anchors.d</a></b>(5), <b><a HREF="/docs/linux/man/5-environment-d/">environment.d</a></b>(5), <b><a HREF="/docs/linux/man/7-hwdb/">hwdb</a></b>(7), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-modules-load-d/">modules-load.d</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b>oomd.conf</b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-sysctl-d/">sysctl.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-environment-generator/">systemd.environment-generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-link/">systemd.link</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-preset/">systemd.preset</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7)</dl>
  
 
  /dev/port
@@ -12531,7 +12531,7 @@ Paths and file names referred to in the documentation.
  
 
  /etc/
-<dl><dd><b><a HREF="/docs/linux/man/5-binfmt-d/">binfmt.d</a></b>(5), <b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-environment-d/">environment.d</a></b>(5), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/7-hwdb/">hwdb</a></b>(7), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></b>(7), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-machine-id/">machine-id</a></b>(5), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-modules-load-d/">modules-load.d</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></b>(8), <b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/5-os-release/">os-release</a></b>(5), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-sysctl-d/">sysctl.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-machine-id-commit-service/">systemd-machine-id-commit.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-modules-load-service/">systemd-modules-load.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-timedated-service/">systemd-timedated.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-update-done-service/">systemd-update-done.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-volatile-root-service/">systemd-volatile-root.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-environment-generator/">systemd.environment-generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-link/">systemd.link</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-preset/">systemd.preset</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-binfmt-d/">binfmt.d</a></b>(5), <b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-environment-d/">environment.d</a></b>(5), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/7-hwdb/">hwdb</a></b>(7), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></b>(7), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-machine-id/">machine-id</a></b>(5), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-modules-load-d/">modules-load.d</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></b>(8), <b>oomd.conf</b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/5-os-release/">os-release</a></b>(5), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-sysctl-d/">sysctl.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-delta/">systemd-delta</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-machine-id-commit-service/">systemd-machine-id-commit.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-modules-load-service/">systemd-modules-load.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-timedated-service/">systemd-timedated.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-update-done-service/">systemd-update-done.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-volatile-root-service/">systemd-volatile-root.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-environment-generator/">systemd.environment-generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-link/">systemd.link</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-preset/">systemd.preset</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7)</dl>
  
 
  /etc/.updated
@@ -12595,7 +12595,7 @@ Paths and file names referred to in the documentation.
  
 
  /etc/hosts
-<dl><dd><b><a HREF="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></b>(8), <b><a HREF="/docs/linux/man/8-nss-resolve/">nss-resolve</a></b>(8), <b><a HREF="/docs/linux/man/5-org-freedesktop-hostname1/">org.freedesktop.hostname1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-resolve1/">org.freedesktop.resolve1</a></b>(5), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></b>(8), <b>nss-resolve</b>(8), <b><a HREF="/docs/linux/man/5-org-freedesktop-hostname1/">org.freedesktop.hostname1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-resolve1/">org.freedesktop.resolve1</a></b>(5), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></b>(8)</dl>
  
 
  /etc/init.d/
@@ -12627,11 +12627,11 @@ Paths and file names referred to in the documentation.
  
 
  /etc/localtime
-<dl><dd><b><a HREF="/docs/linux/man/5-localtime/">localtime</a></b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-localtime/">localtime</a></b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b>systemd.nspawn</b>(5), <b><a HREF="/docs/linux/man/1-timedatectl/">timedatectl</a></b>(1)</dl>
  
 
  /etc/machine-id
-<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-machine-id/">machine-id</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-machine1/">org.freedesktop.machine1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/8-systemd-machine-id-commit-service/">systemd-machine-id-commit.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-bootctl/">bootctl</a></b>(1), <b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-machine-id/">machine-id</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-machine1/">org.freedesktop.machine1</a></b>(5), <b>sd_bus_get_name_machine_id</b>(3), <b><a HREF="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></b>(3), <b><a HREF="/docs/linux/man/8-systemd-machine-id-commit-service/">systemd-machine-id-commit.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5)</dl>
  
 
  /etc/machine-info
@@ -12655,11 +12655,11 @@ Paths and file names referred to in the documentation.
  
 
  /etc/nsswitch.conf
-<dl><dd><b><a HREF="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></b>(8), <b><a HREF="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></b>(8), <b><a HREF="/docs/linux/man/8-nss-resolve/">nss-resolve</a></b>(8), <b><a HREF="/docs/linux/man/8-nss-systemd/">nss-systemd</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></b>(8), <b><a HREF="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></b>(8), <b>nss-resolve</b>(8), <b><a HREF="/docs/linux/man/8-nss-systemd/">nss-systemd</a></b>(8)</dl>
  
 
  /etc/os-release
-<dl><dd><b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-os-release/">os-release</a></b>(5), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/8-kernel-install/">kernel-install</a></b>(8), <b><a HREF="/docs/linux/man/5-os-release/">os-release</a></b>(5), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-dnssd/">systemd.dnssd</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  /etc/passwd
@@ -12667,7 +12667,7 @@ Paths and file names referred to in the documentation.
  
 
  /etc/portables/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /etc/rc.local
@@ -12675,11 +12675,11 @@ Paths and file names referred to in the documentation.
  
 
  /etc/repart.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>repart.d</b>(5), <b>systemd-repart</b>(8)</dl>
  
 
  /etc/resolv.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-resolve1/">org.freedesktop.resolve1</a></b>(5), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-resolve1/">org.freedesktop.resolve1</a></b>(5), <b><a HREF="/docs/linux/man/1-resolvectl/">resolvectl</a></b>(1), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b>systemd.nspawn</b>(5)</dl>
  
 
  /etc/shadow
@@ -12687,23 +12687,23 @@ Paths and file names referred to in the documentation.
  
 
  /etc/ssl/ca/trusted.pem
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  /etc/ssl/certs/journal-remote.pem
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  /etc/ssl/certs/journal-upload.pem
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  /etc/ssl/private/journal-remote.pem
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  /etc/ssl/private/journal-upload.pem
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  /etc/sysctl.d/*.conf
@@ -12727,11 +12727,11 @@ Paths and file names referred to in the documentation.
  
 
  /etc/systemd/
-<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b>oomd.conf</b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
  
 
  /etc/systemd/*.conf.d/
-<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b>oomd.conf</b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
  
 
  /etc/systemd/coredump.conf
@@ -12751,7 +12751,7 @@ Paths and file names referred to in the documentation.
  
 
  /etc/systemd/journal-remote.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  /etc/systemd/journal-remote.conf.d/*.conf
@@ -12759,11 +12759,11 @@ Paths and file names referred to in the documentation.
  
 
  /etc/systemd/journal-upload.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>journal-upload.conf</b>(5), <b>systemd-journal-upload.service</b>(8)</dl>
  
 
  /etc/systemd/journal-upload.conf.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b>journal-upload.conf</b>(5)</dl>
  
 
  /etc/systemd/journald.conf
@@ -12803,19 +12803,19 @@ Paths and file names referred to in the documentation.
  
 
  /etc/systemd/nspawn/
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b>systemd.nspawn</b>(5)</dl>
  
 
  /etc/systemd/oomd.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5)</dl>
+<dl><dd><b>oomd.conf</b>(5)</dl>
  
 
  /etc/systemd/oomd.conf.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5)</dl>
+<dl><dd><b>oomd.conf</b>(5)</dl>
  
 
  /etc/systemd/portable/profile/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /etc/systemd/pstore.conf
@@ -12867,7 +12867,7 @@ Paths and file names referred to in the documentation.
  
 
  /etc/systemd/system.attached
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5)</dl>
  
 
  /etc/systemd/system.conf
@@ -12995,11 +12995,11 @@ Paths and file names referred to in the documentation.
  
 
  /etc/xdg/user-dirs.conf
-<dl><dd><b><a HREF="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></b>(3)</dl>
+<dl><dd><b>sd_path_lookup</b>(3)</dl>
  
 
  /home/
-<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  /home/lennart
@@ -13043,7 +13043,7 @@ Paths and file names referred to in the documentation.
  
 
  /proc/
-<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-coredump/">systemd-coredump</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-busctl/">busctl</a></b>(1), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3), <b>sd_bus_creds_get_pid</b>(3), <b>sd_bus_creds_new_from_pid</b>(3), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></b>(3), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-coredump/">systemd-coredump</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  /proc/$PID/ns/ipc
@@ -13235,11 +13235,11 @@ Paths and file names referred to in the documentation.
  
 
  /run/portables/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /run/repart.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>repart.d</b>(5), <b>systemd-repart</b>(8)</dl>
  
 
  /run/screens
@@ -13255,7 +13255,7 @@ Paths and file names referred to in the documentation.
  
 
  /run/system/nspawn/
-<dl><dd><b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b>systemd.nspawn</b>(5)</dl>
  
 
  /run/systemd/coredump.conf.d/*.conf
@@ -13283,7 +13283,7 @@ Paths and file names referred to in the documentation.
  
 
  /run/systemd/journal-upload.conf.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b>journal-upload.conf</b>(5)</dl>
  
 
  /run/systemd/journal/dev-log
@@ -13323,11 +13323,11 @@ Paths and file names referred to in the documentation.
  
 
  /run/systemd/nspawn/
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b>systemd.nspawn</b>(5)</dl>
  
 
  /run/systemd/portables/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /run/systemd/private
@@ -13339,7 +13339,7 @@ Paths and file names referred to in the documentation.
  
 
  /run/systemd/resolve/io.systemd.Resolve
-<dl><dd><b><a HREF="/docs/linux/man/8-nss-resolve/">nss-resolve</a></b>(8)</dl>
+<dl><dd><b>nss-resolve</b>(8)</dl>
  
 
  /run/systemd/resolve/resolv.conf
@@ -13375,7 +13375,7 @@ Paths and file names referred to in the documentation.
  
 
  /run/systemd/system.attached
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5)</dl>
  
 
  /run/systemd/system.conf.d/*.conf
@@ -13483,7 +13483,7 @@ Paths and file names referred to in the documentation.
  
 
  /srv/
-<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b>systemd-repart</b>(8)</dl>
  
 
  /srv/webserver
@@ -13495,7 +13495,7 @@ Paths and file names referred to in the documentation.
  
 
  /sys/
-<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-device/">systemd.device</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/1-loginctl/">loginctl</a></b>(1), <b><a HREF="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></b>(5), <b><a HREF="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></b>(3), <b><a HREF="/docs/linux/man/1-systemd/">systemd</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-device/">systemd.device</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-socket/">systemd.socket</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5), <b>udev_device_new_from_syspath</b>(3), <b><a HREF="/docs/linux/man/8-udevadm/">udevadm</a></b>(8)</dl>
  
 
  /sys/class/<i>subsystem</i>/<i>name</i>/max_brightness
@@ -13507,7 +13507,7 @@ Paths and file names referred to in the documentation.
  
 
  /sys/devices
-<dl><dd><b><a HREF="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></b>(3)</dl>
+<dl><dd><b>udev_device_new_from_syspath</b>(3)</dl>
  
 
  /sys/fs/bpf/
@@ -13555,7 +13555,7 @@ Paths and file names referred to in the documentation.
  
 
  /sysroot
-<dl><dd><b><a HREF="/docs/linux/man/7-bootup/">bootup</a></b>(7), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-bootup/">bootup</a></b>(7), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b>systemd-repart</b>(8), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7)</dl>
  
 
  /sysroot/etc/fstab
@@ -13571,15 +13571,15 @@ Paths and file names referred to in the documentation.
  
 
  /tmp/
-<dl><dd><b><a HREF="/docs/linux/man/5-crypttab/">crypttab</a></b>(5), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-crypttab/">crypttab</a></b>(5), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  /upload
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  /usr/
-<dl><dd><b><a HREF="/docs/linux/man/5-binfmt-d/">binfmt.d</a></b>(5), <b><a HREF="/docs/linux/man/7-bootup/">bootup</a></b>(7), <b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-environment-d/">environment.d</a></b>(5), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></b>(7), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-modules-load-d/">modules-load.d</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-sysctl-d/">sysctl.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-modules-load-service/">systemd-modules-load.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-timedated-service/">systemd-timedated.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-update-done-service/">systemd-update-done.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-volatile-root-service/">systemd-volatile-root.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-binfmt-d/">binfmt.d</a></b>(5), <b><a HREF="/docs/linux/man/7-bootup/">bootup</a></b>(7), <b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-environment-d/">environment.d</a></b>(5), <b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></b>(7), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-modules-load-d/">modules-load.d</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b>oomd.conf</b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5), <b>portablectl</b>(1), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-sysctl-d/">sysctl.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b>systemd-dissect</b>(1), <b><a HREF="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-modules-load-service/">systemd-modules-load.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-timedated-service/">systemd-timedated.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-update-done-service/">systemd-update-done.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-volatile-root-service/">systemd-volatile-root.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-mount/">systemd.mount</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-network/">systemd.network</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-udev/">udev</a></b>(7)</dl>
  
 
  /usr/bin/
@@ -13663,11 +13663,11 @@ Paths and file names referred to in the documentation.
  
 
  /usr/lib/portables/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /usr/lib/repart.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>repart.d</b>(5), <b>systemd-repart</b>(8)</dl>
  
 
  /usr/lib/sysctl.d/*.conf
@@ -13679,7 +13679,7 @@ Paths and file names referred to in the documentation.
  
 
  /usr/lib/systemd/*.conf.d/
-<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b>oomd.conf</b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
  
 
  /usr/lib/systemd/coredump.conf.d/*.conf
@@ -13699,7 +13699,7 @@ Paths and file names referred to in the documentation.
  
 
  /usr/lib/systemd/journal-upload.conf.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5)</dl>
+<dl><dd><b>journal-upload.conf</b>(5)</dl>
  
 
  /usr/lib/systemd/journald.conf.d/*.conf
@@ -13743,15 +13743,15 @@ Paths and file names referred to in the documentation.
  
 
  /usr/lib/systemd/oomd.conf.d/*.conf
-<dl><dd><b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5)</dl>
+<dl><dd><b>oomd.conf</b>(5)</dl>
  
 
  /usr/lib/systemd/portable/profile/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /usr/lib/systemd/portable/profile/default/service.conf
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /usr/lib/systemd/random-seed
@@ -13911,11 +13911,11 @@ Paths and file names referred to in the documentation.
  
 
  <b>/lib/systemd/systemd-journal-remote</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  <b>/lib/systemd/systemd-journal-upload</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  /lib/systemd/systemd-journald
@@ -13955,11 +13955,11 @@ Paths and file names referred to in the documentation.
  
 
  /lib/systemd/systemd-oomd
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-oomd-service/">systemd-oomd.service</a></b>(8)</dl>
+<dl><dd><b>systemd-oomd.service</b>(8)</dl>
  
 
  /lib/systemd/systemd-portabled
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-portabled-service/">systemd-portabled.service</a></b>(8)</dl>
+<dl><dd><b>systemd-portabled.service</b>(8)</dl>
  
 
  /lib/systemd/systemd-pstore
@@ -14139,11 +14139,11 @@ Paths and file names referred to in the documentation.
  
 
  /usr/local/lib/portables/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /usr/local/lib/systemd/*.conf.d/
-<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-oomd-conf/">oomd.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/5-coredump-conf/">coredump.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></b>(5), <b>journal-upload.conf</b>(5), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-logind-conf/">logind.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-networkd-conf/">networkd.conf</a></b>(5), <b>oomd.conf</b>(5), <b><a HREF="/docs/linux/man/5-pstore-conf/">pstore.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-resolved-conf/">resolved.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-sleep-conf/">systemd-sleep.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-timesyncd-conf/">timesyncd.conf</a></b>(5)</dl>
  
 
  /usr/local/lib/systemd/dnssd
@@ -14247,7 +14247,7 @@ Paths and file names referred to in the documentation.
  
 
  /var/
-<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></b>(7), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-random-seed-service/">systemd-random-seed.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-update-done-service/">systemd-update-done.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-volatile-root-service/">systemd-volatile-root.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-offline-updates/">systemd.offline-updates</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-journald-conf/">journald.conf</a></b>(5), <b><a HREF="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></b>(7), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/1-systemctl/">systemctl</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/8-systemd-random-seed-service/">systemd-random-seed.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-sysext/">systemd-sysext</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-update-done-service/">systemd-update-done.service</a></b>(8), <b><a HREF="/docs/linux/man/8-systemd-volatile-root-service/">systemd-volatile-root.service</a></b>(8), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-generator/">systemd.generator</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-offline-updates/">systemd.offline-updates</a></b>(7), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  /var/.updated
@@ -14291,11 +14291,11 @@ Paths and file names referred to in the documentation.
  
 
  /var/lib/machines/
-<dl><dd><b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-org-freedesktop-import1/">org.freedesktop.import1</a></b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/1-machinectl/">machinectl</a></b>(1), <b><a HREF="/docs/linux/man/5-org-freedesktop-import1/">org.freedesktop.import1</a></b>(5), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b>systemd.nspawn</b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  /var/lib/portables/
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  /var/lib/private
@@ -14315,7 +14315,7 @@ Paths and file names referred to in the documentation.
  
 
  /var/lib/systemd/journal-upload/state
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  /var/lib/systemd/pstore/
@@ -14347,11 +14347,11 @@ Paths and file names referred to in the documentation.
  
 
  /var/log/journal/remote/
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  /var/log/journal/remote/remote-some.host.journal
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  /var/log/private
@@ -14367,7 +14367,7 @@ Paths and file names referred to in the documentation.
  
 
  /var/tmp/
-<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b><a HREF="/docs/linux/man/5-repart-d/">repart.d</a></b>(5), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
+<dl><dd><b><a HREF="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></b>(7), <b>repart.d</b>(5), <b><a HREF="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></b>(8), <b><a HREF="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></b>(1), <b><a HREF="/docs/linux/man/5-systemd-system-conf/">systemd-system.conf</a></b>(5), <b><a HREF="/docs/linux/man/5-systemd-exec/">systemd.exec</a></b>(5), <b><a HREF="/docs/linux/man/7-systemd-special/">systemd.special</a></b>(7), <b><a HREF="/docs/linux/man/5-systemd-unit/">systemd.unit</a></b>(5), <b><a HREF="/docs/linux/man/5-sysusers-d/">sysusers.d</a></b>(5), <b><a HREF="/docs/linux/man/5-tmpfiles-d/">tmpfiles.d</a></b>(5)</dl>
  
 
  <i>ESP</i>/loader/entries/*.conf
@@ -14543,7 +14543,7 @@ Paths and file names referred to in the documentation.
  
 
  libnss_resolve.so.2
-<dl><dd><b><a HREF="/docs/linux/man/8-nss-resolve/">nss-resolve</a></b>(8)</dl>
+<dl><dd><b>nss-resolve</b>(8)</dl>
  
 
  libnss_systemd.so.2
@@ -14627,7 +14627,7 @@ Paths and file names referred to in the documentation.
  
 
  <b>oomctl</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-oomctl/">oomctl</a></b>(1)</dl>
+<dl><dd><b>oomctl</b>(1)</dl>
  
 
  pam_systemd.so
@@ -14643,11 +14643,11 @@ Paths and file names referred to in the documentation.
  
 
  <b>pkg-config</b>
-<dl><dd><b><a HREF="/docs/linux/man/3-libudev/">libudev</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-bus/">sd-bus</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-daemon/">sd-daemon</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-event/">sd-event</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-hwdb/">sd-hwdb</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3)</dl>
+<dl><dd><b>libudev</b>(3), <b>sd-bus</b>(3), <b><a HREF="/docs/linux/man/3-sd-daemon/">sd-daemon</a></b>(3), <b>sd-event</b>(3), <b>sd-hwdb</b>(3), <b><a HREF="/docs/linux/man/3-sd-id128/">sd-id128</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-journal/">sd-journal</a></b>(3), <b><a HREF="/docs/linux/man/3-sd-login/">sd-login</a></b>(3)</dl>
  
 
  <b>portablectl</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-portablectl/">portablectl</a></b>(1)</dl>
+<dl><dd><b>portablectl</b>(1)</dl>
  
 
  <b>poweroff</b>
@@ -14899,7 +14899,7 @@ Paths and file names referred to in the documentation.
  
 
  <b>systemd-dissect</b>
-<dl><dd><b><a HREF="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></b>(1)</dl>
+<dl><dd><b>systemd-dissect</b>(1)</dl>
  
 
  <b>systemd-escape</b>
@@ -14979,15 +14979,15 @@ Paths and file names referred to in the documentation.
  
 
  systemd-journal-remote.service
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  systemd-journal-remote.socket
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-remote.service</b>(8)</dl>
  
 
  systemd-journal-upload.service
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></b>(8)</dl>
+<dl><dd><b>systemd-journal-upload.service</b>(8)</dl>
  
 
  systemd-journald-audit.socket
@@ -15079,7 +15079,7 @@ Paths and file names referred to in the documentation.
  
 
  systemd-oomd.service
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-oomd-service/">systemd-oomd.service</a></b>(8)</dl>
+<dl><dd><b>systemd-oomd.service</b>(8)</dl>
  
 
  <b>systemd-path</b>
@@ -15087,7 +15087,7 @@ Paths and file names referred to in the documentation.
  
 
  systemd-portabled.service
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-portabled-service/">systemd-portabled.service</a></b>(8)</dl>
+<dl><dd><b>systemd-portabled.service</b>(8)</dl>
  
 
  systemd-poweroff.service
@@ -15115,11 +15115,11 @@ Paths and file names referred to in the documentation.
  
 
  <b>systemd-repart</b>
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  systemd-repart.service
-<dl><dd><b><a HREF="/docs/linux/man/8-systemd-repart/">systemd-repart</a></b>(8)</dl>
+<dl><dd><b>systemd-repart</b>(8)</dl>
  
 
  systemd-resolved.service
@@ -15386,7 +15386,7 @@ Interfaces exposed over D-Bus.
  
 
  <i>org.freedesktop.oom1.Manager</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-oom1/">org.freedesktop.oom1</a></b>(5)</dl>
+<dl><dd><b>org.freedesktop.oom1</b>(5)</dl>
  
 
  <i>org.freedesktop.portable1.Image</i>
@@ -15669,7 +15669,7 @@ Methods exposed in the D-Bus interface.
  
 
  <i>DumpByFileDescriptor()</i>
-<dl><dd><b><a HREF="/docs/linux/man/5-org-freedesktop-oom1/">org.freedesktop.oom1</a></b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5)</dl>
+<dl><dd><b>org.freedesktop.oom1</b>(5), <b><a HREF="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></b>(5)</dl>
  
 
  <i>EnableUnitFiles()</i>

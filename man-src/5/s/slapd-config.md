@@ -136,7 +136,7 @@ description: "slapd-config – configuration backend to slapd"
 <dt><code>olcLogFile: &lt;filename&gt;</code></p>
 <dd>Specify a file for recording debug log messages. By default these messages only go to stderr and are not recorded anywhere else. Specifying a logfile copies messages to both stderr and the logfile.</p>
 <dt><code>olcLogLevel: &lt;integer&gt; [&#8230;]</code></p>
-<dd>Specify the level at which debugging statements and operation statistics should be syslogged (currently logged to the <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) LOG_LOCAL4 facility). They must be considered subsystems rather than increasingly verbose log levels. Some messages with higher priority are logged regardless of the configured loglevel as soon as any logging is configured. Log levels are additive, and available levels are:</p>
+<dd>Specify the level at which debugging statements and operation statistics should be syslogged (currently logged to the <code>syslogd</code>(8) LOG_LOCAL4 facility). They must be considered subsystems rather than increasingly verbose log levels. Some messages with higher priority are logged regardless of the configured loglevel as soon as any logging is configured. Log levels are additive, and available levels are:</p>
 <dl>
 <dd>
 <dl>
@@ -236,7 +236,7 @@ description: "slapd-config – configuration backend to slapd"
 </dl>
 <p> To check what ciphers a given spec selects in OpenSSL, use: </p>
 <pre> openssl ciphers -v &lt;cipher-suite-spec&gt;</pre>
-<p>With GnuTLS the available specs can be found in the manual page of <code><a href="/docs/linux/man/1-gnutls-cli/">gnutls-cli</a></code>(1) (see the description of the option <code>&#8211;priority</code>). </p>
+<p>With GnuTLS the available specs can be found in the manual page of <code>gnutls-cli</code>(1) (see the description of the option <code>&#8211;priority</code>). </p>
 <p> In older versions of GnuTLS, where gnutls-cli does not support the option &#8211;priority, you can obtain the &#8212; more limited &#8212; list of ciphers by calling: </p>
 <pre> gnutls-cli -l</pre>
 <p>When using Mozilla NSS, the OpenSSL cipher suite specifications are used and translated into the format used internally by Mozilla NSS. There isn&#8217;t an easy way to list the cipher suites from the command line. The authoritative list is in the source code for Mozilla NSS in the file sslinfo.c in the structure </p>
@@ -483,9 +483,9 @@ objectClass: olcFrontendConfig
 olcDatabase: frontend
 # Subtypes of &quot;name&quot; (e.g. &quot;cn&quot; and &quot;ou&quot;) with the
 # option &quot;;x-hidden&quot; can be searched for/compared,
-# but are not shown. See <code><a href="//www.systutorials.com/docs/linux/man/5-slapd.access/">slapd.access</a></code>(5).
+# but are not shown. See <code>slapd.access</code>(5).
 olcAccess: to attrs=name;x-hidden by * =cs
-# Protect passwords. See <code><a href="//www.systutorials.com/docs/linux/man/5-slapd.access/">slapd.access</a></code>(5).
+# Protect passwords. See <code>slapd.access</code>(5).
 olcAccess: to attrs=userPassword by * auth
 # Read access to other attributes and entries.
 olcAccess: to * by * read
@@ -534,7 +534,7 @@ olcDbUri: <a href="ldap://ldap.some-server.com/">ldap://ldap.some-server.com/</a
 <dt>/etc/openldap/slapd.d</p>
 <dd>default slapd configuration directory</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/5-ldif/">ldif</a></code>(5), <code><a href="/docs/linux/man/1-gnutls-cli/">gnutls-cli</a></code>(1), <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5), <code><a href="/docs/linux/man/5-slapd-backends/">slapd.backends</a></code>(5), <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-overlays/">slapd.overlays</a></code>(5), <code><a href="/docs/linux/man/5-slapd-plugin/">slapd.plugin</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code><a href="/docs/linux/man/8-slapacl/">slapacl</a></code>(8), <code><a href="/docs/linux/man/8-slapadd/">slapadd</a></code>(8), <code><a href="/docs/linux/man/8-slapauth/">slapauth</a></code>(8), <code><a href="/docs/linux/man/8-slapcat/">slapcat</a></code>(8), <code><a href="/docs/linux/man/8-slapdn/">slapdn</a></code>(8), <code><a href="/docs/linux/man/8-slapindex/">slapindex</a></code>(8), <code><a href="/docs/linux/man/8-slappasswd/">slappasswd</a></code>(8), <code><a href="/docs/linux/man/8-slaptest/">slaptest</a></code>(8). </p>
+<p><code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/5-ldif/">ldif</a></code>(5), <code>gnutls-cli</code>(1), <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5), <code><a href="/docs/linux/man/5-slapd-backends/">slapd.backends</a></code>(5), <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-overlays/">slapd.overlays</a></code>(5), <code><a href="/docs/linux/man/5-slapd-plugin/">slapd.plugin</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code><a href="/docs/linux/man/8-slapacl/">slapacl</a></code>(8), <code><a href="/docs/linux/man/8-slapadd/">slapadd</a></code>(8), <code><a href="/docs/linux/man/8-slapauth/">slapauth</a></code>(8), <code><a href="/docs/linux/man/8-slapcat/">slapcat</a></code>(8), <code><a href="/docs/linux/man/8-slapdn/">slapdn</a></code>(8), <code><a href="/docs/linux/man/8-slapindex/">slapindex</a></code>(8), <code><a href="/docs/linux/man/8-slappasswd/">slappasswd</a></code>(8), <code><a href="/docs/linux/man/8-slaptest/">slaptest</a></code>(8). </p>
 <p> &quot;OpenLDAP Administrator&#8217;s Guide&quot; (<a rel="nofollow" href="http://www.OpenLDAP.org/doc/admin/)">http://www.OpenLDAP.org/doc/admin/)</a></p>
 <h2>Acknowledgements</h2>
 <p><code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release.</p>

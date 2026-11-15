@@ -79,7 +79,7 @@ description: "gvhdl – Frontend to the VHDL compiler/simulator FreeHDL."
 <p>./top -cmd&nbsp;<wbr>&quot;d;run 1000 ns;q;&quot; </p>
 <p> will start simulation program &#8216;top&#8217;, dump all signals and run simulation for 1000 ns. Finally, simulation is terminated. Actually, the last command &#8216;q;&#8217; is optional as the simulator automatically terminates as soon as the last command has been executed.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-freehdl-v2cc/">freehdl-v2cc</a>(1), <a href="/docs/linux/man/1-freehdl-config/">freehdl-config</a>(1), <a href="/docs/linux/man/5-v2cc-libs/">v2cc.libs</a>(5)</p>
+<p> <a href="/docs/linux/man/1-freehdl-v2cc/">freehdl-v2cc</a>(1), <a href="/docs/linux/man/1-freehdl-config/">freehdl-config</a>(1), v2cc.libs(5)</p>
 <h2>AVAILABILITY</h2>
 <p> The latest version of FreeHDL can always be obtained from <code><a rel="nofollow" href="http://www.freehdl.seul.org">www.freehdl.seul.org</a></code></p>
 <h2>REPORTING BUGS</h2>

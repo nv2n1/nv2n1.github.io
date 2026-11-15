@@ -26,6 +26,6 @@ description: "fmtdump – decode nmh format files"
 <dt>Path:</p>
 <dd>To determine the user&#8217;s nmh directory.</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5), <i><a href="/docs/linux/man/8-mh-sequences/">mh-sequences</a></i>(8)</p>
+<p><i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5), <i>mh-sequences</i>(8)</p>
 <h2>Context</h2>
 <p>None</p>

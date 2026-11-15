@@ -200,5 +200,5 @@ description: "qselect – select pbs batch jobs"
 <p> Upon successful processing of all options presented to the qselect command, the exit status will be a value of zero. </p>
 <p> If the qselect command fails to process any option, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B), <a href="//www.systutorials.com/docs/linux/man/1B-qstat/">qstat</a>(1B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_selectjob/">pbs_selectjob</a>(3B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_selstat/">pbs_selstat</a>(3B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_statjob/">pbs_statjob</a>(3B) </p>
+<p> qsub(1B), qstat(1B), pbs_selectjob(3B), pbs_selstat(3B), pbs_statjob(3B) </p>
 <h2>Index</h2>

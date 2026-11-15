@@ -41,7 +41,7 @@ description: "Enchant – a spellchecker"
 <h2>MORE INFORMATION</h2>
 <p> <a rel="nofollow" href="http://www.abisource.com/enchant/">http://www.abisource.com/enchant/</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-aspell/">aspell</a>(1),</code> <code><a href="/docs/linux/man/1-ispell/">ispell</a>(1),</code></p>
+<p> <code><a href="/docs/linux/man/1-aspell/">aspell</a>(1),</code> <code>ispell(1),</code></p>
 <h2>AUTHOR</h2>
 <p>&nbsp;Dom Lachowicz<br />
 &nbsp;WEB:&nbsp;<a rel="nofollow" href="http://www.abisource.com/enchant/">http://www.abisource.com/enchant/</a><br />

@@ -33,7 +33,7 @@ description: "serialver – Returns the serial version UID for specified classes
 <h2>See Also</h2>
 <dl COMPACT>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-policytool/">policytool</a>(1)</p>
+<dd>policytool(1)</p>
 <dt>&bull;</p>
 <dd>The <code>java.io.ObjectStream</code> class description at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/io/ObjectStreamClass.html">http://docs.oracle.com/javase/8/docs/api/java/io/ObjectStreamClass.html</a> </p>
 </dl>

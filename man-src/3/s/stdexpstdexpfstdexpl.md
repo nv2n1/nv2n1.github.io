@@ -75,7 +75,7 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-exp/">exp</a><code>(1)</code> = 2.71828<br />
+<p>&nbsp;<wbr>&nbsp;exp<code>(1)</code> = 2.71828<br />
 &nbsp;<wbr>&nbsp;FV of $100, continuously compounded at 3% for 1 year = 103.045<br />
 &nbsp;<wbr>&nbsp;exp(-0) = 1<br />
 &nbsp;<wbr>&nbsp;exp(-Inf) = 0<br />

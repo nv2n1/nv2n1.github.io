@@ -13,7 +13,7 @@ description: "libssh2_session_startup – begin transport layer"
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_session_startup(LIBSSH2_SESSION *session, int socket);</p>
 <h2>DESCRIPTION</h2>
-<p> Starting in libssh2 version 1.2.8 this function is considered deprecated. Use <i><a href="/docs/linux/man/3-libssh2_session_handshake/">libssh2_session_handshake</a>(3)</i> instead. </p>
+<p> Starting in libssh2 version 1.2.8 this function is considered deprecated. Use <i>libssh2_session_handshake(3)</i> instead. </p>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>socket</i> &#8211; Connected socket descriptor. Typically a TCP connection though the protocol allows for any reliable transport and the library will attempt to use any berkeley socket. </p>
 <p> Begin transport layer protocol negotiation with the connected host.</p>

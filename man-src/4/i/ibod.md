@@ -34,7 +34,7 @@ This file contains the initial configuration values for the ibod daemon. Each li
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/1-ibod/">ibod</a>(1) and <a HREF="/docs/linux/man/1-xibod/">xibod</a>(1) 
+<a HREF="/docs/linux/man/1-ibod/">ibod</a>(1) and xibod(1) 
 
 <h2>Author</h2>
 

@@ -25,4 +25,4 @@ description: "qstop – stop pbs batch job processing at a destination"
 <p>Upon successful processing of all the operands presented to the qstop command, the exit status will be a value of zero. </p>
 <p> If the qstop command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-qstart/">qstart</a>(8B), and <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B) </p>
+<p>pbs_server(8B), qstart(8B), and qmgr(1B) </p>

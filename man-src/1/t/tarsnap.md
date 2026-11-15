@@ -278,8 +278,8 @@ New data                                 17858641          5658308
 <h2>SEE ALSO</h2>
 <p> tarsnap-keygen1, tarsnap.conf5, <a href="/docs/linux/man/5-tar/">tar</a>(5)</p>
 <h2>HISTORY</h2>
-<p> A <code>tar</code> command appeared in Seventh Edition Unix, which was released in January, 1979. There have been numerous other implementations, many of which extended the file format. John Gilmore&#8217;s <code>pdtar</code> public-domain implementation (circa November, 1987) was quite influential, and formed the basis of GNU tar. GNU tar was included as the standard system tar in FreeBSD beginning with FreeBSD 1.0, but was replaced by Tim Kientzle&#8217;s <code>bsdtar</code> utility and <a href="/docs/linux/man/3-libarchive/">libarchive</a>(3) library in FreeBSD 5.3. </p>
-<p> is built around <code>bsdtar</code> and <a href="/docs/linux/man/3-libarchive/">libarchive</a>(3).</p>
+<p> A <code>tar</code> command appeared in Seventh Edition Unix, which was released in January, 1979. There have been numerous other implementations, many of which extended the file format. John Gilmore&#8217;s <code>pdtar</code> public-domain implementation (circa November, 1987) was quite influential, and formed the basis of GNU tar. GNU tar was included as the standard system tar in FreeBSD beginning with FreeBSD 1.0, but was replaced by Tim Kientzle&#8217;s <code>bsdtar</code> utility and libarchive(3) library in FreeBSD 5.3. </p>
+<p> is built around <code>bsdtar</code> and libarchive(3).</p>
 <h2>BUGS</h2>
 <p> This program follows St -p1003.1-96 for the definition of the &#8211;<code>l</code> option to <a href="/docs/linux/man/5-tar/">tar</a>(5). Note that GNU tar prior to version 1.15 treated &#8211;<code>l</code> as a synonym for the &#8211;<code>-one-file-system</code> option. </p>
 <p> To archive a file called @foo @@foo or -foo you must specify it as ./@foo ./@@foo or ./-foo respectively. </p>

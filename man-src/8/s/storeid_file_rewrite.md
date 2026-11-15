@@ -70,4 +70,4 @@ Bug reports need to be made in English. See <a rel="nofollow" HREF="http://wiki.
 
 <h2>See Also</h2>
 
-squid (8), <font SIZE="-1">GPL \<a HREF="/docs/linux/man/7-fis0/">fIs0</a>(7), The Squid wiki <a rel="nofollow" HREF="http://wiki.squid-cache.org/Features/StoreID">http://wiki.squid-cache.org/Features/StoreID</a> The Squid Configuration Manual <a rel="nofollow" HREF="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> 
+squid (8), <font SIZE="-1">GPL \fIs0(7), The Squid wiki <a rel="nofollow" HREF="http://wiki.squid-cache.org/Features/StoreID">http://wiki.squid-cache.org/Features/StoreID</a> The Squid Configuration Manual <a rel="nofollow" HREF="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> 

@@ -22,7 +22,7 @@ ssize_t libssh2_sftp_write(LIBSSH2_SFTP_HANDLE *handle,
 <p> <i>handle</i> &#8211; SFTP file handle as returned by <i><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</i>. </p>
 <p> <i>buffer</i> &#8211; points to the data to send off. </p>
 <p> <i>count</i> &#8211; Number of bytes from &#8216;buffer&#8217; to write. Note that it may not be possible to write all bytes as requested. </p>
-<p> <i><a href="/docs/linux/man/3-libssh2_sftp_handle/">libssh2_sftp_handle</a>(3)</i> will use as much as possible of the buffer and put it into a single SFTP protocol packet. This means that to get maximum performance when sending larger files, you should try to always pass in at least 32K of data to this function. </p>
+<p> <i>libssh2_sftp_handle(3)</i> will use as much as possible of the buffer and put it into a single SFTP protocol packet. This means that to get maximum performance when sending larger files, you should try to always pass in at least 32K of data to this function. </p>
 <h2>WRITE AHEAD</h2>
 <p> Starting in libssh2 version 1.2.8, the default behavior of libssh2 is to create several smaller outgoing packets for all data you pass to this function and it will return a positive number as soon as the first packet is acknowledged from the server. </p>
 <p> This has the effect that sometimes more data has been sent off but isn&#8217;t acked yet when this function returns, and when this function is subsequently called again to write more data, libssh2 will immediately figure out that the data is already received remotely. </p>

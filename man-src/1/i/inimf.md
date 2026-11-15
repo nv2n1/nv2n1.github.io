@@ -44,35 +44,35 @@ description: "mf, inimf, mf-nowin – Metafont, a language for font and logo des
 </td>
 </tr>
 <tr VALIGN=top>
-<td>mag=<a href="/docs/linux/man/1-magstep/">magstep</a>(1)</td>
+<td>mag=magstep(1)</td>
 <td>142</td>
 <td>288</td>
 <td>360
 </td>
 </tr>
 <tr VALIGN=top>
-<td>mag=<a href="/docs/linux/man/2-magstep/">magstep</a>(2)</td>
+<td>mag=magstep(2)</td>
 <td>170</td>
 <td>346</td>
 <td>432
 </td>
 </tr>
 <tr VALIGN=top>
-<td>mag=<a href="/docs/linux/man/3-magstep/">magstep</a>(3)</td>
+<td>mag=magstep(3)</td>
 <td>204</td>
 <td>415</td>
 <td>518
 </td>
 </tr>
 <tr VALIGN=top>
-<td>mag=<a href="/docs/linux/man/4-magstep/">magstep</a>(4)</td>
+<td>mag=magstep(4)</td>
 <td>245</td>
 <td>498</td>
 <td>622
 </td>
 </tr>
 <tr VALIGN=top>
-<td>mag=<a href="/docs/linux/man/5-magstep/">magstep</a>(5)</td>
+<td>mag=magstep(5)</td>
 <td>294</td>
 <td>597</td>
 <td>746

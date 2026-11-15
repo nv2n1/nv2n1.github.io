@@ -20,7 +20,7 @@ description: "ipsec_rangetosubnet – convert address range to subnet"
 <dd>accepts two IP addresses which define an address range, from <i>start</i> to <i>stop</i> inclusive, and converts this to a subnet if possible. The addresses must both be IPv4 or both be IPv6, and the address family of the resulting subnet is the same. </p>
 <p> <i>Rangetosubnet</i> returns NULL for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ipsec_initsubnet/">ipsec_initsubnet</a></code>(3), <code><a href="/docs/linux/man/3-ipsec_ttosubnet/">ipsec_ttosubnet</a></code>(3)</p>
+<p> <code>ipsec_initsubnet</code>(3), <code>ipsec_ttosubnet</code>(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Fatal errors in <code>rangetosubnet</code> are: mixed address families; unknown address family; <i>start</i> and <i>stop</i> do not define a subnet.</p>
 <h2>HISTORY</h2>

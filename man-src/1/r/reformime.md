@@ -167,7 +167,7 @@ Hóla!
 <dd> This &#8220;undocumented&#8221; option reads a MIME message on standard input, and converts its contents to an UTF-8-encoded character stream, which is written to standard output. </p>
 <p> The standard output receives a concatenated amalgam of the headers and &#8220;text&#8221; MIME object data. It is meant to be used as part of a generic search function. This option decodes various kinds of header MIME encoding, the quoted-printable and base64 transfer encodings of &#8220;text&#8221; MIME objects.</dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[3]</font>, <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[4]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code><a href="/docs/linux/man/5-maildropfilter/">maildropfilter</a></code>(5)m[]<font SIZE="-2">[6]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8).</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[3]</font>, <code>sendmail</code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[4]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code>maildropfilter</code>(5)m[]<font SIZE="-2">[6]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code>sendmail</code>(8).</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
@@ -201,7 +201,7 @@ Hóla!
 <dt>
 <dd> [set $man.base.url.for.relative.links]/maildrop.html</dl>
 <dt> 6.</p>
-<dd> <code><a href="/docs/linux/man/5-maildropfilter/">maildropfilter</a></code>(5)</p>
+<dd> <code>maildropfilter</code>(5)</p>
 <dl>
 <dt>
 <dd> [set $man.base.url.for.relative.links]/maildropfilter.html</dl>

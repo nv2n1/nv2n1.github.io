@@ -39,7 +39,8 @@ description: "Dislocate – disconnect and reconnect processes"
          set i 0
      }
      {$i &lt; 100} {incr i} {
-         expect - i $in "next #" send - i $out "$i"
+         expect - i $in "next #" send - i $out "$i
+"
      }
 </code></pre>
 <p> Scripts can also be prepared and sourced in so that you don&#8217;t have to type them on the spot. </p>
@@ -48,7 +49,7 @@ description: "Dislocate – disconnect and reconnect processes"
 <h2>CAVEATS</h2>
 <p> This program was written by the author as an exercise to show that communicating with disconnected processes is easy. There are many features that could be added, but that is not the intent of this program. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-tcl/">Tcl</a></code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br />
  <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.</p>
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>

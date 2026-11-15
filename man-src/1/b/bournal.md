@@ -57,7 +57,7 @@ description: "bournal – When nobody else cares what you have to say!"
 <dt><code>~/.bournalrc</code></p>
 <dd> Default configuration file.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/7-regex/">regex</a>(7), <a href="/docs/linux/man/3-readline/">readline</a>(3), <a href="/docs/linux/man/1-vim/">vim</a>(1), <a href="/docs/linux/man/1-nano/">nano</a>(1), <a href="/docs/linux/man/1-nanorc/">nanorc</a>(1), <a href="/docs/linux/man/1-jed/">jed</a>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/7-regex/">regex</a>(7), <a href="/docs/linux/man/3-readline/">readline</a>(3), <a href="/docs/linux/man/1-vim/">vim</a>(1), <a href="/docs/linux/man/1-nano/">nano</a>(1), nanorc(1), <a href="/docs/linux/man/1-jed/">jed</a>(1)</code> </p>
 <dl>
 <dt><code>Bournal web page</code></p>
 <dd> <i><a rel="nofollow" href="http://freshmeat.net/projects/bournal">http://freshmeat.net/projects/bournal</a></i></dl>

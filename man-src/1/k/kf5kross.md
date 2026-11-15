@@ -41,7 +41,7 @@ description: "kf5kross – KDE application to run kross scripts."
 <p> <code>kf5kross</code><i>file</i> runs the script in <i>file</i> after loading the interpreter plugin for the script language (detected by filename suffix). </p>
 <p> To interpret other languages than KDE Javascript, <i>kdebindings</i> must be installed.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-kf5options/">kf5options</a></i>(7), <i><a href="/docs/linux/man/7-qt5options/">qt5options</a></i>(7), <i><a href="/docs/linux/man/1-python/">python</a></i>(1), <i><a href="/docs/linux/man/1-ruby/">ruby</a></i>(1), <i><a href="/docs/linux/man/1-kjs5/">kjs5</a></i>(1), <i><a href="/docs/linux/man/1-java/">java</a></i>(1), <i><a href="/docs/linux/man/1-falcon/">falcon</a></i>(1) </p>
+<p> <i>kf5options</i>(7), <i>qt5options</i>(7), <i><a href="/docs/linux/man/1-python/">python</a></i>(1), <i><a href="/docs/linux/man/1-ruby/">ruby</a></i>(1), <i><a href="/docs/linux/man/1-kjs5/">kjs5</a></i>(1), <i><a href="/docs/linux/man/1-java/">java</a></i>(1), <i><a href="/docs/linux/man/1-falcon/">falcon</a></i>(1) </p>
 <p> Look at <i><a rel="nofollow" href="http://kross.dipe.org/solution.html">http://kross.dipe.org/solution.html</a></i> for more information and tutorials.</p>
 <h2>BUGS</h2>
 <p> Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[]<font SIZE="-2">[1]</font> to report bugs.</p>

@@ -63,5 +63,5 @@ description: "linux-update-symlinks – maintain symlinks to default kernel and 
 <h2>AUTHOR</h2>
 <p> <code>linux-update-symlinks</code> and this manual page were written by Ben Hutchings as part of the Debian <code>linux-base</code> package. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-kernel-img-conf/">kernel-img.conf</a></i>(5), <i><a href="/docs/linux/man/1-linux-version/">linux-version</a></i>(1). </p>
+<p> <i>kernel-img.conf</i>(5), <i><a href="/docs/linux/man/1-linux-version/">linux-version</a></i>(1). </p>
 <h2>Index</h2>

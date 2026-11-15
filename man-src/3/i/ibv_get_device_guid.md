@@ -38,7 +38,7 @@ uint64_t ibv_get_device_guid(struct ibv_device *device);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_get_device_list/">ibv_get_device_list</a>(3), <a HREF="/docs/linux/man/3-ibv_get_device_name/">ibv_get_device_name</a>(3), <a HREF="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a>(3)
+ ibv_get_device_list(3), ibv_get_device_name(3), ibv_open_device(3)
 
 <h2>AUTHOR</h2>
 

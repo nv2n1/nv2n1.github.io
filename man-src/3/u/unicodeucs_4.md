@@ -33,9 +33,9 @@ bool unicode::iconvert::convert(const std::string &amp;text, const std::string &
 <dd>&bull; A vector of unicode characters (not null-terminated) to a character string in a supported character set.</dl>
 <dl>
 <dd>&bull; Initialize a vector of unicode characters, passed by reference, by converting a text string in a given character set to unicode.</dl>
-<p> These functions use <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3), and can use any character set that&#8217;s supported by <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3). Use <i>unicode::ucs_2</i> and <i>unicode::ucs_4</i> to specify the 16 and the 32 bit unicode octet in native byte order. Use <i>unicode::utf_8</i> and <i>unicode::iso_8859_1</i> to specify these two standard character sets. The overloaded versions that pass a reference to a bool set the flag to true if some characters could not be converted. The overloaded version that initializes a unicode vector returns the bool flag, instead.</p>
+<p> These functions use <code>iconv</code>(3), and can use any character set that&#8217;s supported by <code>iconv</code>(3). Use <i>unicode::ucs_2</i> and <i>unicode::ucs_4</i> to specify the 16 and the 32 bit unicode octet in native byte order. Use <i>unicode::utf_8</i> and <i>unicode::iso_8859_1</i> to specify these two standard character sets. The overloaded versions that pass a reference to a bool set the flag to true if some characters could not be converted. The overloaded version that initializes a unicode vector returns the bool flag, instead.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code><a href="/docs/linux/man/3-unicode--convert--convert_tocase/">unicode::convert::convert_tocase</a></code>(3), <code><a href="/docs/linux/man/3-unicode_convert/">unicode_convert</a></code>(3), m[blue]<code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3)m[]<font SIZE="-2">[1]</font>.</p>
+<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode::convert::convert_tocase</code>(3), <code><a href="/docs/linux/man/3-unicode_convert/">unicode_convert</a></code>(3), m[blue]<code>iconv</code>(3)m[]<font SIZE="-2">[1]</font>.</p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
@@ -43,6 +43,6 @@ bool unicode::iconvert::convert(const std::string &amp;text, const std::string &
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3)</p>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <code>iconv</code>(3)</p>
 <dl>
 <dd><a rel="nofollow" href="http://manpages.courier-mta.org/htmlman3/iconv.3.html">http://manpages.courier-mta.org/htmlman3/iconv.3.html</a></dl>

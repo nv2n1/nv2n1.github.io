@@ -24,7 +24,7 @@ g #launch();
 ocamlfind opt prog.ml - package guestfs - linkpkg - o prog or : ocamlopt - I + guestfs mlguestfs.cmxa prog.ml - o prog
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents how to call libguestfs from the OCaml programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> This manual page documents how to call libguestfs from the OCaml programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
 <h3><font SIZE="-1">PROGRAMMING STYLES</font></h3>
 <p> There are two different programming styles supported by the OCaml bindings. You can use a module style, with each C function mapped to an OCaml function: </p>
 <p>int guestfs_set_verbose(guestfs_h *g, int flag);</p>
@@ -219,7 +219,7 @@ g #close()
                                        let() = main()
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-erlang/">guestfs-erlang</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-golang/">guestfs-golang</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-java/">guestfs-java</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-lua/">guestfs-lua</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-perl/">guestfs-perl</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-python/">guestfs-python</a></i>(3), <i><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></i>(1), <i><a href="/docs/linux/man/3-guestfs-ruby/">guestfs-ruby</a></i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://caml.inria.fr/.">http://caml.inria.fr/.</a></p>
+<p> <i>guestfs</i>(3), <i>guestfs-examples</i>(3), <i>guestfs-erlang</i>(3), <i>guestfs-golang</i>(3), <i>guestfs-java</i>(3), <i><a href="/docs/linux/man/3-guestfs-lua/">guestfs-lua</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-perl/">guestfs-perl</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-python/">guestfs-python</a></i>(3), <i><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></i>(1), <i>guestfs-ruby</i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://caml.inria.fr/.">http://caml.inria.fr/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

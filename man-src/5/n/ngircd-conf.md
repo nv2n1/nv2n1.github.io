@@ -71,7 +71,7 @@ description: "ngircd.conf – configuration file of ngIRCd"
 <dt><code>ConnectRetry</code> (number)</p>
 <dd>The server tries every &lt;ConnectRetry&gt; seconds to establish a link to not yet (or no longer) connected servers. Default: 60.</p>
 <dt><code>IdleTimeout</code> (number)</p>
-<dd>Number of seconds after which the whole daemon should shutdown when no connections are left active after handling at least one client (0: never). This can be useful for testing or when ngIRCd is started using &quot;socket activation&quot; with <a href="/docs/linux/man/8-systemd/">systemd</a>(8), for example. Default: 0.</p>
+<dd>Number of seconds after which the whole daemon should shutdown when no connections are left active after handling at least one client (0: never). This can be useful for testing or when ngIRCd is started using &quot;socket activation&quot; with systemd(8), for example. Default: 0.</p>
 <dt><code>MaxConnections</code> (number)</p>
 <dd>Maximum number of simultaneous in- and outbound connections the server is allowed to accept (0: unlimited). Default: 0.</p>
 <dt><code>MaxConnectionsIP</code> (number)</p>

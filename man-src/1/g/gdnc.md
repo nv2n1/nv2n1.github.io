@@ -32,7 +32,7 @@ description: "gdnc – GNUstep Distributed Notification Center"
 <p> <code>gdomap -L GDNCServer</code> will lookup instances of gdnc which were launched with the NSHost, GSPublic, or GSNetwork command line arguments. </p>
 <p> Alternatively, <code>gdomap -N</code> will list all registered names on the local host. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-gdomap/">gdomap</a>(8), <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7), <a href="/docs/linux/man/1-gpbs/">gpbs</a>(1) </p>
+<p> <a href="/docs/linux/man/8-gdomap/">gdomap</a>(8), <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7), gpbs(1) </p>
 <p> <i>The GNUstep Build Guide</i> example startup script: &lt;<a rel="nofollow" href="http://gnustep.made-it.com/BuildGuide/index.html#GNUSTEP.SERVICES">http://gnustep.made-it.com/BuildGuide/index.html#GNUSTEP.SERVICES</a>&gt; </p>
 <h2>HISTORY</h2>
 <p> Work on <code>gdnc</code> started October 1998. </p>

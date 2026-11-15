@@ -69,4 +69,4 @@ KeyCode *modifiermap;
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XSetDeviceKeyMapping/">XSetDeviceKeyMapping</a>(3), <a HREF="//www.systutorials.com/docs/linux/man/3-XSetDeviceButtonMapping/">XSetDeviceButtonMapping</a>(3)</pre></dl>
+ set of alternatives can generate this error.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XSetDeviceKeyMapping(3), XSetDeviceButtonMapping(3)</pre></dl>

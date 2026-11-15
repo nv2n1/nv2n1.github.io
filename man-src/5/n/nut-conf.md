@@ -48,7 +48,7 @@ description: "nut.conf – UPS definitions for Network UPS Tools"
 <h2>Example</h2>
 <dl>
 <dd>
-<pre># /etc/nut/nut.conf. See <a href="//www.systutorials.com/docs/linux/man/5-nut.conf/">nut.conf</a>(5)</pre>
+<pre># /etc/nut/nut.conf. See nut.conf(5)</pre>
 </dl>
 <dl>
 <dd>

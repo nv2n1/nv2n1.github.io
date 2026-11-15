@@ -12,7 +12,7 @@ description: "dsniff – password sniffer"
 <p><code>dsniff</code> [<code>-c</code>] [<code>-d</code>] [<code>-m</code>] [<code>-n</code>] [<code>-i </code><i>interface</i> | <code>-p </code><i>pcapfile</i>] [<code>-s </code><i>snaplen</i>] [<code>-f </code><i>services</i>] [<code>-t </code><i>trigger[,&#8230;]</i>]] [<code>-r</code>|<code>-w</code> <i>savefile</i>] [<i>expression</i>]</p>
 <h2>Description</h2>
 <p><code>dsniff</code> is a password sniffer which handles FTP, Telnet, SMTP, HTTP, POP, poppass, NNTP, IMAP, SNMP, LDAP, Rlogin, RIP, OSPF, PPTP MS-CHAP, NFS, VRRP, YP/NIS, SOCKS, X11, CVS, IRC, AIM, ICQ, Napster, PostgreSQL, Meeting Maker, Citrix ICA, Symantec pcAnywhere, NAI Sniffer, Microsoft SMB, Oracle SQL*Net, Sybase and Microsoft SQL protocols. </p>
-<p> <code>dsniff</code> automatically detects and minimally parses each application protocol, only saving the interesting bits, and uses Berkeley DB as its output file format, only logging unique authentication attempts. Full TCP/IP reassembly is provided by <a href="/docs/linux/man/3-libnids/">libnids</a>(3). </p>
+<p> <code>dsniff</code> automatically detects and minimally parses each application protocol, only saving the interesting bits, and uses Berkeley DB as its output file format, only logging unique authentication attempts. Full TCP/IP reassembly is provided by libnids(3). </p>
 <p> I wrote <code>dsniff</code> with honest intentions &#8211; to audit my own network, and to demonstrate the insecurity of cleartext network protocols. Please do not abuse this software.</p>
 <h2>Options</h2>
 <dl>
@@ -48,7 +48,7 @@ description: "dsniff – password sniffer"
 <dt><i>/etc/dsniff/dsniff.magic</i></p>
 <dd>Network protocol magic</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-arpspoof/">arpspoof</a>(8), <a href="/docs/linux/man/3-libnids/">libnids</a>(3), <a href="/docs/linux/man/5-services/">services</a>(5), <a href="/docs/linux/man/5-magic/">magic</a>(5)</p>
+<p><a href="/docs/linux/man/8-arpspoof/">arpspoof</a>(8), libnids(3), <a href="/docs/linux/man/5-services/">services</a>(5), <a href="/docs/linux/man/5-magic/">magic</a>(5)</p>
 <h2>Author</h2>
 <pre>Dug Song &lt;dugsong [at] monkey.org&gt;</pre>
 <h2>Bugs</h2>

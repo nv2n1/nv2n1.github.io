@@ -32,7 +32,7 @@ description: "systemd-logind.conf – Login manager configuration file"
 <p> Note that setting <i>KillUserProcesses=1</i> will break tools like <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1). </p>
 <p> Note that <i>KillUserProcesses=1</i> is a weaker version of <i>kill-session-processes=1</i> which may be configured per-service for <code><a href="/docs/linux/man/8-pam_systemd/">pam_systemd</a></code>(8). The latter kills processes of a session as soon as it ends, the former kills processes as soon as the last session of the user ends.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-logind-service/">systemd-logind.service</a></code>(8), <code><a href="/docs/linux/man/1-loginctl/">loginctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-conf/">systemd.conf</a></code>(5)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-logind-service/">systemd-logind.service</a></code>(8), <code><a href="/docs/linux/man/1-loginctl/">loginctl</a></code>(1), <code>systemd.conf</code>(5)</p>
 <h2>Author</h2>
 <p><code>Lennart Poettering</code> &lt;lennart [at] poettering.net&gt;</p>
 <dl>

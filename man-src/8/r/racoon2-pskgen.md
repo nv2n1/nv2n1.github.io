@@ -44,4 +44,4 @@ description: "pskgen – Pre-shared key generater and converter for IKE"
 <dt><code>-d</code></p>
 <dd>debug mode. no harm to any file.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/7-racoon2/">racoon2</a>(7), racoon2.conf5, <a href="/docs/linux/man/8-iked/">iked</a>(8) </p>
+<p>racoon2(7), racoon2.conf5, iked(8) </p>

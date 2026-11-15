@@ -26,6 +26,6 @@ description: "tiff2rgba – convert a TIFF image to RGBA color space"
 <dt><code>-n</code></p>
 <dd> Drop the alpha component from the output file, producing a pure RGB file. Currently this does not work if the <code>-b</code> flag is also in effect.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tiff2bw/">tiff2bw</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/3t-TIFFReadRGBAImage/">TIFFReadRGBAImage</a></code>(3t), <code><a href="/docs/linux/man/3-libtiff/">libtiff</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-tiff2bw/">tiff2bw</a></code>(1), <code>TIFFReadRGBAImage</code>(3t), <code>libtiff</code>(3) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
 <h2>Index</h2>

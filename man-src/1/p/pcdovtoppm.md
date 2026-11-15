@@ -43,5 +43,5 @@ description: "pcdovtoppm – create index image for a photo CD"
 <h2>HISTORY</h2>
 <p> This program was formerly called <code>pcdindex</code>, which did not fit Netpbm naming conventions. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-hpcdtoppm/">hpcdtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmindex/">pnmindex</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtojpeg/">ppmtojpeg</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code>hpcdtoppm</code>(1) , <code><a href="/docs/linux/man/1-pnmindex/">pnmindex</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtojpeg/">ppmtojpeg</a></code>(1) , <code>ppm</code>(1) </p>
 <h2>Index</h2>

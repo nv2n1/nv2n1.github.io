@@ -14,7 +14,7 @@ description: "tsocks – Library for intercepting outgoing network connections a
 <h2>Description</h2>
 <p><code>tsocks</code> is a library to allow transparent SOCKS proxying. It wraps the normal connect() function. When a connection is attempted, it consults the configuration file (which is defined at configure time but defaults to /etc/tsocks.conf) and determines if the IP address specified is local. If it is not, the library redirects the connection to a SOCKS server specified in the configuration file. It then negotiates that connection with the SOCKS server and passes the connection back to the calling program. <code>tsocks</code> is designed for use in machines which are firewalled from then internet. It avoids the need to recompile applications like lynx or telnet so they can use SOCKS to reach the internet. It behaves much like the SOCKSified TCP/IP stacks seen on other platforms.</p>
 <h3>Arguments</h3>
-<p>Most arguments to <code>tsocks</code> are provided in the configuration file (the location of which is defined at configure time by the &#8211;with-conf=&lt;file&gt; argument but defaults to /etc/tsocks.conf). The structure of this file is documented in <a href="/docs/linux/man/8-tsocks-conf/">tsocks.conf</a>(8) Some configuration options can be specified at run time using environment variables as follows:</p>
+<p>Most arguments to <code>tsocks</code> are provided in the configuration file (the location of which is defined at configure time by the &#8211;with-conf=&lt;file&gt; argument but defaults to /etc/tsocks.conf). The structure of this file is documented in tsocks.conf(8) Some configuration options can be specified at run time using environment variables as follows:</p>
 <dl>
 <dt><i>TSOCKS_CONF_FILE</i></p>
 <dd>This environment variable overrides the default location of the tsocks configuration file. This variable is not honored if the program tsocks is embedded in is setuid. In addition this environment variable can be compiled out of tsocks with the &#8211;disable-envconf argument to configure at build time</p>
@@ -23,9 +23,9 @@ description: "tsocks – Library for intercepting outgoing network connections a
 <dt><i>TSOCKS_DEBUG_FILE</i></p>
 <dd>This option can be used to redirect the tsocks output (which would normally be sent to standard error) to a file. This variable is not honored if the program tsocks is embedded in is setuid. For programs where tsocks output interferes with normal operation this option is generally better than disabling messages (with TSOCKS_DEBUG = -1)</p>
 <dt><i>TSOCKS_USERNAME</i></p>
-<dd>This environment variable can be used to specify the username to be used when version 5 SOCKS servers request username/password authentication. This overrides the default username that can be specified in the configuration file using &#8216;default_user&#8217;, see <a href="/docs/linux/man/8-tsocks-conf/">tsocks.conf</a>(8) for more information. This variable is ignored for version 4 SOCKS servers.</p>
+<dd>This environment variable can be used to specify the username to be used when version 5 SOCKS servers request username/password authentication. This overrides the default username that can be specified in the configuration file using &#8216;default_user&#8217;, see tsocks.conf(8) for more information. This variable is ignored for version 4 SOCKS servers.</p>
 <dt><i>TSOCKS_PASSWORD</i></p>
-<dd>This environment variable can be used to specify the password to be used when version 5 SOCKS servers request username/password authentication. This overrides the default password that can be specified in the configuration file using &#8216;default_pass&#8217;, see <a href="/docs/linux/man/8-tsocks-conf/">tsocks.conf</a>(8) for more information. This variable is ignored for version 4 SOCKS servers.<br />
+<dd>This environment variable can be used to specify the password to be used when version 5 SOCKS servers request username/password authentication. This overrides the default password that can be specified in the configuration file using &#8216;default_pass&#8217;, see tsocks.conf(8) for more information. This variable is ignored for version 4 SOCKS servers.<br />
 &nbsp;<wbr></dl>
 <h3>Dns Issues</h3>
 <p><code>tsocks</code> will normally not be able to send DNS queries through a SOCKS server since SOCKS V4 works on TCP and DNS normally uses UDP. Version 1.5 and up do however provide a method to force DNS lookups to use TCP, which then makes them proxyable. This option can only enabled at compile time, please consult the INSTALL file for more information.</p>
@@ -38,7 +38,7 @@ description: "tsocks – Library for intercepting outgoing network connections a
 <h2>Files</h2>
 <p>/etc/tsocks.conf &#8211; default tsocks configuration file</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-tsocks-conf/">tsocks.conf</a>(5) <a href="/docs/linux/man/1-tsocks/">tsocks</a>(1) </p>
+<p>tsocks.conf(5) <a href="/docs/linux/man/1-tsocks/">tsocks</a>(1) </p>
 <h2>Author</h2>
 <p>Shaun Clowes (delius [at] progsoc.uts.edu.au)</p>
 <h2>Copyright</h2>

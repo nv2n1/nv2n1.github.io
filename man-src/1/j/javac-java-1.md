@@ -592,7 +592,7 @@ warning: [options] bootstrap class path not set in conjunction with -source 1.6
 <dt>o</p>
 <dd> <a href="/docs/linux/man/1-jdb/">jdb</a>(1) &#8211; Java Application Debugger</p>
 <dt>o</p>
-<dd> <a href="/docs/linux/man/1-javah/">javah</a>(1) &#8211; C Header and Stub File Generator</p>
+<dd> javah(1) &#8211; C Header and Stub File Generator</p>
 <dt>o</p>
 <dd> <a href="/docs/linux/man/1-javap/">javap</a>(1) &#8211; Class File Disassembler</p>
 <dt>o</p>

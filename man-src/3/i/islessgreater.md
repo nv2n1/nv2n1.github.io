@@ -67,7 +67,7 @@ int isunordered(x, y);
 <h2>NOTES</h2>
 <p> Not all hardware supports these functions, and where hardware support isn&#8217;t provided, they will be emulated by macros. This will result in a performance penalty. Don&#8217;t use these functions if NaN is of no concern for you.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-fpclassify/">fpclassify</a></code>(3), <code><a href="/docs/linux/man/3-isnan/">isnan</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-fpclassify/">fpclassify</a></code>(3), <code>isnan</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

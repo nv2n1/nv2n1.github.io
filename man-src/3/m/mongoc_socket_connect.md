@@ -28,8 +28,8 @@ mongoc_socket_connect (mongoc_socket_t *sock,
 <dt><code>expire_at</code></p>
 <dd>A int64_t containing the absolute timeout using the monotonic clock.</dl>
 <h2>Description</h2>
-<p>This function is a wrapper around the BSD socket <code><a href="/docs/linux/man/3-connect/">connect</a>(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
-<p> This function performs a socket connection but will fail if @expire_at has been reached by the monotonic clock. Keep in mind that this is an absolute timeout in milliseconds. You should add your desired timeout to <code><a href="/docs/linux/man/3-bson_get_monotonic_time/">bson_get_monotonic_time</a>(3)</code> \&amp;. </p>
+<p>This function is a wrapper around the BSD socket <code>connect(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
+<p> This function performs a socket connection but will fail if @expire_at has been reached by the monotonic clock. Keep in mind that this is an absolute timeout in milliseconds. You should add your desired timeout to <code>bson_get_monotonic_time(3)</code> \&amp;. </p>
 <h2>Returns</h2>
 <p>0 if successful, -1 on failure and errno is set. </p>
 <h2>Colophon</h2>

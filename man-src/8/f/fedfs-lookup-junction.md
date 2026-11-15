@@ -35,7 +35,7 @@ description: "fedfs-lookup-junction – send a FEDFS_LOOKUP_JUNCTION ADMIN proto
 <dt><code>-h, &#8211;hostname=</code><i>hostname</i></p>
 <dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</p>
 <dt><code>-n, &#8211;nettype=</code><i>nettype</i></p>
-<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code><a href="//www.systutorials.com/docs/linux/man/3t-rpc/">rpc</a></code>(3t) for details.</p>
+<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</p>
 <dt><code>-p, &#8211;path=</code><i>pathname</i></p>
 <dd>Specifies the location on the remote server where the target FedFS junction resides. This pathname is relative to the remote server&#8217;s physical root directory, not the remote server&#8217;s NFS pseudoroot.</p>
 <dt><code>-t, &#8211;resolvetype=</code><i>type</i></p>
@@ -61,7 +61,7 @@ description: "fedfs-lookup-junction – send a FEDFS_LOOKUP_JUNCTION ADMIN proto
 <p> The RPC client uses the Kerberos v5 GSS mechanism if a Kerberos security flavor is specified. When specifying a Kerberos security flavor, the user must first obtain a valid Kerberos ticket using <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1) before running <code><a href="/docs/linux/man/8-fedfs-create-junction/">fedfs-create-junction</a></code>(8). </p>
 <p> The AUTH_NONE security flavor is no longer supported by this implementation.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/3t-rpc/">rpc</a></code>(3t) </p>
+<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code>rpc</code>(3t) </p>
 <p> RFC 5716 for FedFS requirements and overview</p>
 <h2>Colophon</h2>
 <p>This page is part of the fedfs-utils package. A description of the project and information about reporting bugs can be found at <i><a rel="nofollow" href="http://wiki.linux-nfs.org/wiki/index.php/FedFsUtilsProject">http://wiki.linux-nfs.org/wiki/index.php/FedFsUtilsProject</a></i>.</p>

@@ -84,6 +84,6 @@ description: "nfsiostat – Emulate iostat for NFS mount points using /proc/self
 <dt><code>/proc/self/mountstats</code></p>
 <dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-iostat/">iostat</a></code>(8), <code><a href="/docs/linux/man/8-mountstats/">mountstats</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a>(8)</code></p>
+<p><code>iostat</code>(8), <code><a href="/docs/linux/man/8-mountstats/">mountstats</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a>(8)</code></p>
 <h2>Author</h2>
 <p>Chuck Lever &lt;chuck.lever [at] oracle.com&gt;</p>

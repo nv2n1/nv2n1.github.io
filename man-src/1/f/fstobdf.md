@@ -24,7 +24,7 @@ description: "fstobdf – generate BDF font from X font server"
 <dt><code>FONTSERVER</code></p>
 <dd> The default server to use. The server name must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7).</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-xfs/">xfs</a>(1), <a href="/docs/linux/man/1-bdftopcf/">bdftopcf</a>(1), <a href="/docs/linux/man/1-showfont/">showfont</a>(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
+<p> xfs(1), <a href="/docs/linux/man/1-bdftopcf/">bdftopcf</a>(1), <a href="/docs/linux/man/1-showfont/">showfont</a>(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>AUTHOR</h2>
 <p> Olaf Brandt, Network Computing Devices<br />
  Dave Lemke, Network Computing Devices </p>

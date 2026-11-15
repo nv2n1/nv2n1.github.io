@@ -44,9 +44,9 @@ description: "h5ls – Prints information about a file or dataset."
 <dt><code>-x </code></p>
 <dd> or <code>&#8211;hexdump</code> Show raw data in hexadecimal format.</p>
 <dt><code>file</code></p>
-<dd> The file name may include a <a href="//www.systutorials.com/docs/linux/man/3C-printf/">printf</a>(3C) integer format such as %%05d to open a file family.</p>
+<dd> The file name may include a printf(3C) integer format such as %%05d to open a file family.</p>
 <dt><code>objects</code></p>
-<dd> Each object consists of an HDF5 file name optionally followed by a slash and an object name within the file (if no object is specified within the file then the contents of the root group are displayed). The file name may include a <a href="//www.systutorials.com/docs/linux/man/3C-printf/">printf</a>(3C) integer format such as &quot;%05d&quot; to open a file family.</dl>
+<dd> Each object consists of an HDF5 file name optionally followed by a slash and an object name within the file (if no object is specified within the file then the contents of the root group are displayed). The file name may include a printf(3C) integer format such as &quot;%05d&quot; to open a file family.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5diff/">h5diff</a></i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i><a href="/docs/linux/man/1-h5perf/">h5perf</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5diff/">h5diff</a></i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i>h5perf</i>(1) </p>
 <h2>Index</h2>

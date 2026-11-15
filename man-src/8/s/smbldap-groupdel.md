@@ -20,4 +20,4 @@ The smbldap-groupdel command modifies the system account files, deleting all ent
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/1-groupdel/">groupdel</a></i>(1) 
+<i>groupdel</i>(1) 

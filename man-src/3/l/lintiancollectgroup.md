@@ -31,4 +31,4 @@ Lintian::Collect::Group - Lintian interface to group data collection
 <dd>Returns a hashref of words, which the spell checker should ignore. These words are generally based on the package names in the group to avoid false-positive ``spelling error'' when packages have ``fun'' names. 
 
  Example: Package alot-doc (#687464)</dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.
-<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i><a HREF="/docs/linux/man/3-lintian--collect--binary/">Lintian::Collect::Binary</a></i>(3), <i><a HREF="/docs/linux/man/3-lintian--collect--changes/">Lintian::Collect::Changes</a></i>(3), <i><a HREF="/docs/linux/man/3-lintian--collect--source/">Lintian::Collect::Source</a></i>(3)
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i>Lintian::Collect::Binary</i>(3), <i>Lintian::Collect::Changes</i>(3), <i>Lintian::Collect::Source</i>(3)

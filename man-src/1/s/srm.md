@@ -67,7 +67,7 @@ description: "srm – securely remove files or directories"
 <dd> <a rel="nofollow" href="http://www.gnu.org/software/coreutils/manual/coreutils.html#rm-invocation">http://www.gnu.org/software/coreutils/manual/coreutils.html#rm-invocation</a></p>
 <dt><code><a href="/docs/linux/man/1-shred/">shred</a>(1)</code></p>
 <dd> <a rel="nofollow" href="http://www.gnu.org/software/coreutils/manual/coreutils.html#shred-invocation">http://www.gnu.org/software/coreutils/manual/coreutils.html#shred-invocation</a></p>
-<dt><code><a href="/docs/linux/man/1-wipe/">wipe</a>(1)</code></p>
+<dt><code>wipe(1)</code></p>
 <dd> <a rel="nofollow" href="http://lambda-diode.com/software/wipe">http://lambda-diode.com/software/wipe</a></p>
 <dt><code>secure-delete</code></p>
 <dd> <a rel="nofollow" href="http://packages.debian.org/lenny/secure-delete">http://packages.debian.org/lenny/secure-delete</a></p>

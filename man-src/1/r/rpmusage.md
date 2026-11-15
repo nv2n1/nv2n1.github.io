@@ -128,7 +128,7 @@ description: "rpmusage – display rpm packages last use"
 <h2>NOTES</h2>
 <p> this program should be used as root superuser, because it needs to access (in read mode) to all files</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-rpm/">rpm</a></i>(1) for rpm call </p>
+<p> <i>rpm</i>(1) for rpm call </p>
 <p> <i><a href="/docs/linux/man/1-rpmorphan/">rpmorphan</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmdep/">rpmdep</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmduplicates/">rpmduplicates</a></i>(1) </p>

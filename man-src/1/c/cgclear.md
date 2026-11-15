@@ -42,5 +42,5 @@ description: "cgclear – unload the cgroup filesystem"
 <dd> unload a subsystem of cgroup filesystem based on <code>/etc/cgconfig.conf</code> definition. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cgconfigparser/">cgconfigparser</a>(1), <a href="/docs/linux/man/5-cgconfig-conf/">cgconfig.conf</a>(5) </p>
+<p> cgconfigparser(1), <a href="/docs/linux/man/5-cgconfig-conf/">cgconfig.conf</a>(5) </p>
 <h2>Index</h2>

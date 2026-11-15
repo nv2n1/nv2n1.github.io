@@ -47,7 +47,7 @@ Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the e
 
 <h2>See Also</h2>
 
-<b><a HREF="/docs/linux/man/3-xcb-requests/">xcb-requests</a></b>(3), <b><a HREF="/docs/linux/man/3-xcb_generate_id/">xcb_generate_id</a></b>(3)
+<b><a HREF="/docs/linux/man/3-xcb-requests/">xcb-requests</a></b>(3), <b>xcb_generate_id</b>(3)
 
 <h2>Author</h2>
 

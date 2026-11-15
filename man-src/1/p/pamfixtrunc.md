@@ -24,7 +24,7 @@ description: "pamfixtrunc – repair a Netpbm image whose file is truncated"
 <p> If you want to test an image file to see if it is corrupted by being too small, use <code>pamfile &#8211;allimages</code> . It fails with an error message if the file is too small. </p>
 <p> If you want to cut the bottom off a valid Netpbm image, use <code>pamcut</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , </p>
+<p> <code>pnm</code>(1) , <code>pam</code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamfixtrunc</code> was new in Netpbm 10.38 (March 2007). </p>
 <h2>Index</h2>

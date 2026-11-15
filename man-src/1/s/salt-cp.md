@@ -54,7 +54,7 @@ salt - cp '*'[options] SOURCE DEST salt - cp - E '.*'[options] SOURCE DEST salt 
 <dd> Instead of using shell globs to evaluate the target, use a range expression to identify targets. Range expressions look like %cluster. </p>
 <p> Using the Range option requires that a range server is set up and the location of the range server is referenced in the master configuration file.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-salt/">salt</a>(1)</i> <i><a href="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a href="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i></p>
+<p> <i>salt(1)</i> <i><a href="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a href="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i></p>
 <h2>AUTHOR</h2>
 <p> Thomas S. Hatch &lt;thatch45 [at] gmail.com&gt; and many others, please see the Authors file</p>
 <h2>COPYRIGHT</h2>

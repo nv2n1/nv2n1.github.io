@@ -16,4 +16,4 @@ void normalize_vector_f(float *x, float *y, float *z);</code></pre>
 <h2>Description</h2>
 <p>Converts the vector (*x, *y, *z) to a unit vector. This points in the same direction as the original vector, but has a length of one. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-vector_length/">vector_length</a></code>(3), <code><a href="/docs/linux/man/3-dot_product/">dot_product</a></code>(3), <code><a href="/docs/linux/man/3-cross_product/">cross_product</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>
+<p><code>vector_length</code>(3), <code>dot_product</code>(3), <code><a href="/docs/linux/man/3-cross_product/">cross_product</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>

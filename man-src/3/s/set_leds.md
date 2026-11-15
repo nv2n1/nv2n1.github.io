@@ -24,4 +24,4 @@ void set_leds(int leds);</code></pre>
  set_leds(-1);</pre>
 <p>Note that the led behaviour cannot be guaranteed on some platforms, some leds might not react, or none at all. Therefore you shouldn&#8217;t rely only on them to communicate information to the user, just in case it doesn&#8217;t get through. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-key_led_flag/">key_led_flag</a></code>(3) </p>
+<p><code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-key_led_flag/">key_led_flag</a></code>(3) </p>

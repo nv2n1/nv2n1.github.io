@@ -46,7 +46,7 @@ description: "sha512hmac – compute and check HMAC values"
 &nbsp;<wbr>&nbsp;<wbr>d732d6df77114ea6b81a43d64655f86b1e5ee925&nbsp;<wbr>&nbsp;<wbr>/etc/services<br />
 &nbsp;<wbr>&nbsp;<wbr>ad92162bef979054a75d1f3510e6b05902bec641&nbsp;<wbr>&nbsp;<wbr>/etc/hosts </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-fipshmac/">fipshmac</a></code>(1), <code><a href="/docs/linux/man/1-fipscheck/">fipscheck</a></code>(1), <code><a href="/docs/linux/man/8-prelink/">prelink</a></code>(8) </p>
+<p><code>fipshmac</code>(1), <code>fipscheck</code>(1), <code><a href="/docs/linux/man/8-prelink/">prelink</a></code>(8) </p>
 <h2>Bugs</h2>
 <p>Probably, but let&#8217;s hope not. If you find any, please either report them in the bug database at <a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a> against the &quot;hmaccalc&quot; component, or in the trac instance at <a rel="nofollow" href="https://fedorahosted.org/hmaccalc/.">https://fedorahosted.org/hmaccalc/.</a> </p>
 <h2>Author</h2>

@@ -89,7 +89,7 @@ description: "hddtemp – Utility to monitor hard drive temperature"
 <h2>Bugs</h2>
 <p>If hddtemp crashes (yes, it might) for some unknown reasons, look for a file named hddtemp.backtrace.&lt;PID&gt;.XXXXXX (where XXXXXX is a random number generated at runtime) in /tmp. Then, you can then send me this file and the hddtemp binary. The backtrace functionality is currently supported on i386 architectures only. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). </p>
+<p><code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code>syslogd</code>(8). </p>
 <h2>Author</h2>
 <p>Emmanuel Varagnat (hddtemp [at] guzu.net). </p>
 <p> This manual page was originally written by Aurelien Jarno &lt;aurel32 [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others).</p>

@@ -44,7 +44,7 @@ description: "rdrand-gen – Generate randomness by using RdRand on Intel’s CP
  rdrand-gen -a -k &lt;(head -n 3100 /dev/random | \<br />
  xxd -p -c 24 | head -n 129 | tail -n 128) </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-librdrand/">librdrand</a>(3) <a href="/docs/linux/man/3-librdrand-aes/">librdrand-aes</a>(3) </p>
+<p>librdrand(3) librdrand-aes(3) </p>
 <h2>Bugs</h2>
 <p>No known bugs. </p>
 <h2>Author</h2>

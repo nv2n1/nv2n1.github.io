@@ -12,7 +12,7 @@ description: "std::setw – std::setw"
 <pre><code>Defined in header&lt;iomanip&gt;
 
 /*unspecified*/ setw(int n);</code></pre>
-<p>When used in an expression out &lt;&lt; <a href="/docs/linux/man/n-setw/">setw</a>(n) or in &gt;&gt; <a href="/docs/linux/man/n-setw/">setw</a>(n), sets the width parameter of the stream out or in to exactly n. </p>
+<p>When used in an expression out &lt;&lt; setw(n) or in &gt;&gt; setw(n), sets the width parameter of the stream out or in to exactly n. </p>
 <h2>Parameters</h2>
 <p>n &#8211; new value for width</p>
 <h2>Return value</h2>
@@ -56,9 +56,9 @@ int main()
 </code></pre>
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;no setw:42<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/6-setw/">setw</a><code>(6)</code>: 42<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/6-setw/">setw</a><code>(6)</code>, several elements: 89 1234<br />
-&nbsp;<wbr>&nbsp;Input from &quot;hello, world&quot; with <a href="/docs/linux/man/6-setw/">setw</a><code>(6)</code> gave &quot;hello&quot;</p>
+&nbsp;<wbr>&nbsp;setw<code>(6)</code>: 42<br />
+&nbsp;<wbr>&nbsp;setw<code>(6)</code>, several elements: 89 1234<br />
+&nbsp;<wbr>&nbsp;Input from &quot;hello, world&quot; with setw<code>(6)</code> gave &quot;hello&quot;</p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages field width<br />
 width <i>(public member function of std::ios_base)</i><br />

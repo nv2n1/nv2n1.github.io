@@ -543,7 +543,7 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt>&bull;</p>
 <dd> Invert phase of the second channel: </p>
 <pre>
-        aeval=val(0)|<a href="//www.systutorials.com/docs/linux/man/1--val/">-val</a>(1)
+        aeval=val(0)|-val(1)
 </pre>
 </dl>
 <h3>aexciter</h3>
@@ -8413,7 +8413,7 @@ ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = framese
 <dt><code>minknorm</code></p>
 <dd> The Minkowski parameter to be used for calculating the Minkowski distance. Must be chosen in the range [0,20] and default value is 1. Set to 0 for getting max value instead of calculating Minkowski distance.</p>
 <dt><code>sigma</code></p>
-<dd> The standard deviation of Gaussian blur to be applied on the scene. Must be chosen in the range [0,1024.0] and default value = 1. floor( <i>sigma</i> * <code><a href="/docs/linux/man/3-break_off_sigma/">break_off_sigma</a></code>(3) ) can&#8217;t be equal to 0 if <i>difford</i> is greater than 0.</dl>
+<dd> The standard deviation of Gaussian blur to be applied on the scene. Must be chosen in the range [0,1024.0] and default value = 1. floor( <i>sigma</i> * <code>break_off_sigma</code>(3) ) can&#8217;t be equal to 0 if <i>difford</i> is greater than 0.</dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</p>
@@ -11330,7 +11330,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt>&bull;</p>
 <dd> Rotate the video, reduce the output size so that no background is ever shown: </p>
 <pre>
-        rotate=2*PI*t:ow='min(iw,ih)/<a href="//www.systutorials.com/docs/linux/man/2-sqrt/">sqrt</a>(2)':oh=ow:c=none
+        rotate=2*PI*t:ow='min(iw,ih)/sqrt(2)':oh=ow:c=none
 </pre>
 </dl>
 <p> <i>Commands</i> </p>
@@ -17696,7 +17696,7 @@ amovie = part2.mp4[a2];<br />
 <dl>
 <dt>
 <dd>
-<p> Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(<a href="/docs/linux/man/1-1-ld/">1-ld</a>(1)) + b(<a href="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl>
+<p> Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(1-ld(1)) + b(<a href="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl>
 <dt><code>axisfile</code></p>
 <dd> Specify image file to draw the axis. This option override <i>fontfile</i> and <i>fontcolor</i> option.</p>
 <dt><code>axis, text</code></p>

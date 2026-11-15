@@ -34,7 +34,7 @@ description: "pamtosrf – convert a sequence of Netpbm images to a SRF image fi
 <p> <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) </p>
 <dt>&bull;</p>
 <dd>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <p>&nbsp;<wbr>&nbsp;<wbr> </p>
 </dl>
 <h2>HISTORY</h2>

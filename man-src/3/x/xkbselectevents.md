@@ -142,4 +142,4 @@ description: "XkbSelectEvents – Selects and / or deselects for delivery of one
 <dt>False</p>
 <dd>The <i>XkbSelectEvents </i> function returns False if the Xkb extension has not been initilialized.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbselecteventdetails/">XkbSelectEventDetails</a></code>(3), <code><a href="/docs/linux/man/3-xkbusecorekbd/">XkbUseCoreKbd</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-xkbselecteventdetails/">XkbSelectEventDetails</a></code>(3), <code>XkbUseCoreKbd</code>(3)</p>

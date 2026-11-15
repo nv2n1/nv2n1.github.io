@@ -104,7 +104,7 @@ virt - make - fs[--options] input.tar output.img virt - make - fs[--options] inp
 <dt><code>-x</code></p>
 <dd> Enable libguestfs trace.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-format/">virt-format</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar-in/">virt-tar-in</a></i>(1), <i><a href="/docs/linux/man/1-mkisofs/">mkisofs</a></i>(1), <i><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></i>(1), <i><a href="/docs/linux/man/1-mksquashfs/">mksquashfs</a></i>(1), <i><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></i>(8), <i><a href="/docs/linux/man/8-resize2fs/">resize2fs</a></i>(8), <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-format/">virt-format</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar-in/">virt-tar-in</a></i>(1), <i><a href="/docs/linux/man/1-mkisofs/">mkisofs</a></i>(1), <i><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></i>(1), <i><a href="/docs/linux/man/1-mksquashfs/">mksquashfs</a></i>(1), <i><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></i>(8), <i><a href="/docs/linux/man/8-resize2fs/">resize2fs</a></i>(8), <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
 <h2>COPYRIGHT</h2>

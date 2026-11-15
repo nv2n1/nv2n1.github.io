@@ -33,5 +33,5 @@ set_tab(250, courier);
 </code></pre>
 <p> The first version of gstream didn&#8217;t have these overloaded functions, but used a more clumsy syntax (involving a constant) which is now deprecated. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-remove_tab/">gstream-remove_tab</a></code>(3), <code><a href="/docs/linux/man/3-gstream-remove_all_tabs/">gstream-remove_all_tabs</a></code>(3), <code><a href="/docs/linux/man/3-gstream-restore/">gstream-restore</a></code>(3) </p>
+<p> <code>gstream-remove_tab</code>(3), <code>gstream-remove_all_tabs</code>(3), <code><a href="/docs/linux/man/3-gstream-restore/">gstream-restore</a></code>(3) </p>
 <h2>Index</h2>

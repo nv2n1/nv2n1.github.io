@@ -71,7 +71,7 @@ description: "kgb.conf — KGB bot configuration file"
 <h3>smart_answers</h3>
 <p>A list of strings to be used as replies when the bot is addressed on <font SIZE="-1">IRC.</font></p>
 <h3>smart_answers_polygen</h3>
-<p>If set to a true value, <i><a href="/docs/linux/man/1-polygen/">polygen</a></i>(1) will be used to generate replies when the bot is addressed on <font SIZE="-1">IRC.</font></p>
+<p>If set to a true value, <i>polygen</i>(1) will be used to generate replies when the bot is addressed on <font SIZE="-1">IRC.</font></p>
 <h3>debug</h3>
 <p>Enables logging of additional diagnostic information.</p>
 <h3>admins</h3>

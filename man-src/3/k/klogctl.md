@@ -18,7 +18,7 @@ int syslog(int type, char *bufp, int len);
 int klogctl(int type, char *bufp, int len);
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <i>Note</i>: Probably, you are looking for the C library function <code>syslog</code>(), which talks to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8); see <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) for details. </p>
+<p> <i>Note</i>: Probably, you are looking for the C library function <code>syslog</code>(), which talks to <code>syslogd</code>(8); see <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) for details. </p>
 <p> This page describes the kernel <code>syslog</code>() system call, which is used to control the kernel <i>printk</i>() buffer; the glibc wrapper function for the system call is called <code>klogctl</code>().</p>
 <h3>The kernel log buffer</h3>
 <p> The kernel has a cyclic buffer of length <code>LOG_BUF_LEN</code> in which messages given as arguments to the kernel function <code>printk</code>() are stored (regardless of their log level). In early kernels, <code>LOG_BUF_LEN</code> had the value 4096; from kernel 1.3.54, it was 8192; from kernel 2.1.113, it was 16384; since kernel 2.4.23/2.6, the value is a kernel configuration option (<code>CONFIG_LOG_BUF_SHIFT</code>, default value dependent on the architecture). Since Linux 2.6.6, the size can be queried with command type 10 (see below).</p>

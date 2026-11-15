@@ -31,7 +31,7 @@ description: "ieee1284_close – close an open port"
 <dt>
 <dd> There was a problem at the operating system level. The global variable <i>errno</i> has been set appropriately.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ieee1284_open/">ieee1284_open</a></code>(3)</p>
+<p> <code>ieee1284_open</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>

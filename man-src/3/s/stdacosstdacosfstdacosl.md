@@ -72,7 +72,7 @@ int main()
 <p>&nbsp;<wbr>&nbsp;acos(-1) = 3.14159<br />
 &nbsp;<wbr>&nbsp;acos(0.0) = 1.5708 2*acos(0.0) = 3.14159<br />
 &nbsp;<wbr>&nbsp;acos(0.5) = 1.0472 3*acos(0.5) = 3.14159<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-acos/">acos</a><code>(1)</code> = 0<br />
+&nbsp;<wbr>&nbsp;acos<code>(1)</code> = 0<br />
 &nbsp;<wbr>&nbsp;acos(1.1) = nan<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errno == EDOM: Numerical argument out of domain<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FE_INVALID raised</p>

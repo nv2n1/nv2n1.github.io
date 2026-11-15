@@ -24,7 +24,7 @@ kismet_drone[-svh][-f config - file][-c capture - source]
 <h2>ENCRYPTION</h2>
 <p> It may be desireable to encrypt the packet stream between the remote drone and the kismet system. Standard SSH packet tunneling or any other tunneling/forwarding system may be used, and is recommended.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1), <code><a href="/docs/linux/man/5-kismet_drone-conf/">kismet_drone.conf</a></code>(5)</p>
+<p> <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1), <code>kismet_drone.conf</code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Mike Kershaw </p>
 <h2>Index</h2>

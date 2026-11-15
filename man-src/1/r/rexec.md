@@ -12,8 +12,8 @@ description: "rexec — remote execution client for an exec server"
 <h2>SYNOPSIS</h2>
 <p> <code>rexec </code> [ <code>-abcdhns -l </code> username <code>-p </code> password ] host command</p>
 <h2>DESCRIPTION</h2>
-<p> <code>Rexec</code> calls the <code><a href="/docs/linux/man/3-rexec/">rexec</a>(3)</code> routine to act as a client for the remote host&#8217;s <code><a href="/docs/linux/man/8-rexecd/">rexecd</a>(8)</code> server. </p>
-<p> It asks that &#8220;command&#8221; be run on the host computer, using username/password authentication. See <code><a href="/docs/linux/man/3-rexec/">rexec</a>(3)</code> and <code><a href="/docs/linux/man/8-rexecd/">rexecd</a>(8)</code> for details of the protocol.</p>
+<p> <code>Rexec</code> calls the <code><a href="/docs/linux/man/3-rexec/">rexec</a>(3)</code> routine to act as a client for the remote host&#8217;s <code>rexecd(8)</code> server. </p>
+<p> It asks that &#8220;command&#8221; be run on the host computer, using username/password authentication. See <code><a href="/docs/linux/man/3-rexec/">rexec</a>(3)</code> and <code>rexecd(8)</code> for details of the protocol.</p>
 <h2>OPTIONS</h2>
 <p> <code>Rexec</code> accepts several options, but only three are likely to be very useful: </p>
 <p> <code>-l username</code></p>
@@ -65,7 +65,7 @@ description: "rexec — remote execution client for an exec server"
 <h2>BUGS</h2>
 <p> Please send bug reports, system incompatibilities, and job offers to the author.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-rexec/">rexec</a>(3), <a href="/docs/linux/man/8-rexecd/">rexecd</a>(8), <a href="/docs/linux/man/1-rsh/">rsh</a>(1)</p>
+<p> <a href="/docs/linux/man/3-rexec/">rexec</a>(3), rexecd(8), <a href="/docs/linux/man/1-rsh/">rsh</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Michael Sadd<br />
  mas22 [at] cornell.edu<br />

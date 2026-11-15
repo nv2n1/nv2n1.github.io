@@ -26,7 +26,7 @@ description: "cistopbm – convert Compuserve RLE image to PBM"
 <p> <code><a href="/docs/linux/man/1-pbmtocis/">pbmtocis</a></code>(1) </p>
 <dt>&bull;</p>
 <dd>
-<p> <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) CompuServe RLE file format </p>
+<p> <code>pbm</code>(1) CompuServe RLE file format </p>
 </dl>
 <h2>HISTORY</h2>
 <p> <code>cistopbm</code> was new in Netpbm 10.48 (September 2009). </p>

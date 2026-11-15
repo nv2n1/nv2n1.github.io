@@ -58,7 +58,7 @@ description: "sg_verify – invoke SCSI VERIFY command(s) on a block device"
 <h2>Notes</h2>
 <p>Various numeric arguments (e.g. <i>LBA</i>) may include multiplicative suffixes or be given in hexadecimal. See the &quot;NUMERIC ARGUMENTS&quot; section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. </p>
 <p> The amount of error correction and the number of retries attempted before a block is considered defective are controlled in part by the Verify Error Recovery mode page. A note in the SBC-3 draft (rev 29 section 6.4.9 on the Verify Error Recovery mode page) advises that to minimize the number of checks (and hence have the most &quot;sensitive&quot; verify check) do the following in that mode page: set the EER bit to 0, the PER bit to 1, the DTE bit to 1, the DCR bit to 1, the verify retry count to 0 and the verify recovery time limit to 0. Mode pages can be modified with the <code>sdparm</code> utility. </p>
-<p> The SCSI <a href="/docs/linux/man/6-verify/">VERIFY</a>(6) command defined in the SSC-2 standard and later (i.e. for tape drive systems) is not supported by this utility.</p>
+<p> The SCSI VERIFY(6) command defined in the SSC-2 standard and later (i.e. for tape drive systems) is not supported by this utility.</p>
 <h2>Exit Status</h2>
 <p>The exit status of sg_verify is 0 when it is successful. When <i>BCH</i> is other than 0 then a comparison takes place and if it fails then the exit status is 14 which happens to be the sense key value of MISCOMPARE. Otherwise see the EXIT STATUS section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. </p>
 <p> Earlier versions of this utility set an exit status of 98 when there was a MISCOMPARE.</p>

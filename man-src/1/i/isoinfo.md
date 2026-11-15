@@ -53,7 +53,7 @@ description: "devdump, isoinfo, isovfy, isodump – Utility programs for dumping
 <dt><code>-J</code></p>
 <dd> Extract information from Joliet extensions (if present) for file names.</p>
 <dt><code>-j charset</code></p>
-<dd> Convert Joliet file names (if present) to the supplied charset. See <code><a href="/docs/linux/man/8-genisoimage/">genisoimage</a></code>(8) for details.</p>
+<dd> Convert Joliet file names (if present) to the supplied charset. See <code>genisoimage</code>(8) for details.</p>
 <dt><code>-T sector</code></p>
 <dd> Quick hack to help examine multi-session images that have already been burned to a multi-session disc. The sector number specified is the sector number for the start of the session we wish to display.</p>
 <dt><code>-x pathname</code></p>
@@ -102,7 +102,7 @@ description: "devdump, isoinfo, isovfy, isodump – Utility programs for dumping
 </dl>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></code>(1), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code><a href="/docs/linux/man/1-readcd/">readcd</a></code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></code>(1), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code>readcd</code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1).</p>
 <h2>SOURCES</h2>
 <p> [1] Cdrtools 2.01.01a08 from May 2006, <a rel="nofollow" href="http://cdrecord.berlios.de">http://cdrecord.berlios.de</a> </p>
 <h2>Index</h2>

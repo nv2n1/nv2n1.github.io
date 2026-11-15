@@ -17,4 +17,4 @@ description: "voice_check – Checks whether a voice is currently allocated. All
 <h2>Return Value</h2>
 <p>Returns a pointer to the sample that the voice is using, or NULL if the voice is inactive (ie. it has been deallocated, or the release_voice() function has been called and the sample has then finished playing). </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-allocate_voice/">allocate_voice</a></code>(3), <code><a href="/docs/linux/man/3-voice_start/">voice_start</a></code>(3), <code><a href="/docs/linux/man/3-voice_get_position/">voice_get_position</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-allocate_voice/">allocate_voice</a></code>(3), <code>voice_start</code>(3), <code>voice_get_position</code>(3) </p>

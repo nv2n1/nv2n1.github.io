@@ -141,5 +141,5 @@ sed '1,/---- .*/d / ^$ /, $d ' | awk ' tot &gt; 0 {
 </pre>
 <p> to process only the events in the good-time intervals.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

@@ -262,5 +262,5 @@ for (i = 0; i &lt; got; i++) {
 <p> Support for struct of arrays in the <i>FunTableRowPut()</i> call is handled analogously. </p>
 <p> See the evread example code and evmerge example code for working examples of how <i>FunColumnSelect()</i> is used.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

@@ -49,7 +49,7 @@ description: "wimlib-imagex-export – Exports an image from a WIM archive to an
 <dt><code>&#8211;ref</code>=&quot;<i>GLOB</i>&quot;</p>
 <dd> File glob of additional WIMs or split WIM parts to reference resources from. See <code>SPLIT_WIMS</code>. This option can be specified multiple times. Note: <i>GLOB</i> is listed in quotes because it is interpreted by <code>wimlib-imagex</code> and may need to be quoted to protect against shell expansion.</p>
 <dt><code>&#8211;pipable</code></p>
-<dd> Build, or rebuild, <i>DEST_WIMFILE</i> as a &quot;pipable WIM&quot; so that it can be applied fully sequentially, including from a pipe. See <code>wimlib-imagex <a href="/docs/linux/man/1-capture/">capture</a></code>(1) for more details about creating pipable WIMs. The default without this option is to make <i>DEST_WIMFILE</i> pipable if and only if it already existed and was already pipable, or was &quot;-&quot; (standard output).</p>
+<dd> Build, or rebuild, <i>DEST_WIMFILE</i> as a &quot;pipable WIM&quot; so that it can be applied fully sequentially, including from a pipe. See <code>wimlib-imagex capture</code>(1) for more details about creating pipable WIMs. The default without this option is to make <i>DEST_WIMFILE</i> pipable if and only if it already existed and was already pipable, or was &quot;-&quot; (standard output).</p>
 <dt><code>&#8211;not-pipable</code></p>
 <dd> Build, or rebuild, <i>DEST_WIMFILE</i> as a normal, non-pipable WIM. This is the default behavior, unless <i>DEST_WIMFILE</i> already existed and was already pipable, or if <i>DEST_WIMFILE</i> was &quot;-&quot; (standard output).</p>
 <dt><code>&#8211;wimboot</code></p>

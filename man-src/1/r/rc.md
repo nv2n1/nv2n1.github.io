@@ -30,7 +30,7 @@ R1 2 3
 <dt> R-e</p>
 <dd> If the R-e flag is present, then <i>rc</i> will exit if the exit status of a command is false (nonzero). <i>rc</i> will not exit, however, if a conditional fails, e.g., an Rif() command.</p>
 <dt> R-i</p>
-<dd> If the R-i flag is present or if the input to <i>rc</i> is from a terminal (as determined by <i><a href="/docs/linux/man/3-isatty/">isatty</a></i>(3)) then <i>rc</i> will be in <i>interactive</i> mode. That is, a prompt (from R$<a href="/docs/linux/man/1-prompt/">prompt</a>(1)R) R$<a href="/docs/linux/man/1-prompt/">prompt</a>(1) will be printed before an input line is taken, and <i>rc</i> will ignore RSIGINTR. RSIGINT</p>
+<dd> If the R-i flag is present or if the input to <i>rc</i> is from a terminal (as determined by <i>isatty</i>(3)) then <i>rc</i> will be in <i>interactive</i> mode. That is, a prompt (from R$prompt(1)R) R$prompt(1) will be printed before an input line is taken, and <i>rc</i> will ignore RSIGINTR. RSIGINT</p>
 <dt> R-I</p>
 <dd> If the R-I flag is present, or if the input to <i>rc</i> is not from a terminal, then <i>rc</i> will not be in interactive mode. No prompts will be printed, and RSIGINT will cause <i>rc</i> to exit.</p>
 <dt> R-l</p>
@@ -441,9 +441,9 @@ Rbqstatus=1
 <dt> RpidR (default no-export) Rpid</p>
 <dd> On startup, R$pid is initialized to the numeric process ID of the currently running <i>rc</i>.</p>
 <dt> RpromptR (default) Rprompt</p>
-<dd> This variable holds the two prompts (in list form, of course) that <i>rc</i> prints. R$<a href="/docs/linux/man/1-prompt/">prompt</a>(1) is printed before each command is read, and R$<a href="/docs/linux/man/2-prompt/">prompt</a>(2) is printed when input is expected to continue on the next line. <i>rc</i> sets R$prompt to R(&#8216;; &#8216; &#8221;) by default. The reason for this is that it enables an <i>rc</i> user to grab commands from previous lines using a mouse, and to present them to <i>rc</i> for re-interpretation; the semicolon prompt is simply ignored by <i>rc</i>. The null R$<a href="/docs/linux/man/2-prompt/">prompt</a>(2) also has its justification: an <i>rc</i> script, when typed interactively, will not leave R$<a href="/docs/linux/man/2-prompt/">prompt</a>(2)R&#8217;s R$<a href="/docs/linux/man/2-prompt/">prompt</a>(2) on the screen, and can therefore be grabbed by a mouse and placed directly into a file for use as a shell script, without further editing being necessary.</p>
+<dd> This variable holds the two prompts (in list form, of course) that <i>rc</i> prints. R$prompt(1) is printed before each command is read, and R$prompt(2) is printed when input is expected to continue on the next line. <i>rc</i> sets R$prompt to R(&#8216;; &#8216; &#8221;) by default. The reason for this is that it enables an <i>rc</i> user to grab commands from previous lines using a mouse, and to present them to <i>rc</i> for re-interpretation; the semicolon prompt is simply ignored by <i>rc</i>. The null R$prompt(2) also has its justification: an <i>rc</i> script, when typed interactively, will not leave R$prompt(2)R&#8217;s R$prompt(2) on the screen, and can therefore be grabbed by a mouse and placed directly into a file for use as a shell script, without further editing being necessary.</p>
 <dt> RpromptR (function) Rprompt</p>
-<dd> If this function is defined, then it gets executed every time <i>rc</i> is about to print R$<a href="/docs/linux/man/1-prompt/">prompt</a>(1)R. R$<a href="/docs/linux/man/1-prompt/">prompt</a>(1)</p>
+<dd> If this function is defined, then it gets executed every time <i>rc</i> is about to print R$prompt(1)R. R$prompt(1)</p>
 <dt> RstatusR (no-export read-only) Rstatus</p>
 <dd> The exit status of the last command. If the command exited with a numeric value, that number is the status. If the command died with a signal, the status is the name of that signal; if a core file was created, the string R&#8220;R+coreR&#8221; R&#8220;R+core R&#8220; is appended. The value of R$status for a pipeline is a list, with one entry, as above, for each process in the pipeline. For example, the command </p>
 <pre>
@@ -452,7 +452,7 @@ Rls | wc
 <dt>
 <dd> usually sets R$status to R(0 0)R. R(0 0)</p>
 <dt> RversionR (default) Rversion</p>
-<dd> On startup, the first element of this list variable is initialized to a string which identifies this version of <i>rc</i>. The second element is initialized to a string which can be found by <i><a href="/docs/linux/man/1-ident/">ident</a></i>(1) and the <i>what</i> command of <i><a href="/docs/linux/man/1-sccs/">sccs</a></i>(1).</dl>
+<dd> On startup, the first element of this list variable is initialized to a string which identifies this version of <i>rc</i>. The second element is initialized to a string which can be found by <i><a href="/docs/linux/man/1-ident/">ident</a></i>(1) and the <i>what</i> command of <i>sccs</i>(1).</dl>
 <h2>FUNCTIONS</h2>
 <p> <i>rc</i> functions are identical to <i>rc</i> scripts, except that they are stored in memory and are automatically exported into the environment. A shell function is declared as: </p>
 <pre>
@@ -507,7 +507,7 @@ R. -i /dev/tty
 Rfn ls { builtin ls -FC $* }
 </pre>
 <dt>
-<dd> is a reasonable way to pass a default set of arguments to <a href="/docs/linux/man/1-rlsr/">RlsR</a>(1), Rls whereas </p>
+<dd> is a reasonable way to pass a default set of arguments to RlsR(1), Rls whereas </p>
 <pre>
 Rfn ls { ls -FC $* } # WRONG
 </pre>

@@ -27,42 +27,42 @@ description: "libipq — iptables userspace packet queuing library."
 <h3>Libipq Overview</h3>
 <p> Libipq provides an API for communicating with ip_queue. The following is an overview of API usage, refer to individual man pages for more details on each function. </p>
 <p> <code>Initialisation</code><br />
- To initialise the library, call <code><a href="/docs/linux/man/3-ipq_create_handle/">ipq_create_handle</a></code>(3). This will attempt to bind to the Netlink socket used by ip_queue and return an opaque context handle for subsequent library calls. </p>
+ To initialise the library, call <code>ipq_create_handle</code>(3). This will attempt to bind to the Netlink socket used by ip_queue and return an opaque context handle for subsequent library calls. </p>
 <p> <code>Setting the Queue Mode</code><br />
- <code><a href="/docs/linux/man/3-ipq_set_mode/">ipq_set_mode</a></code>(3) allows the application to specify whether packet metadata, or packet payloads as well as metadata are copied to userspace. It is also used to initially notify ip_queue that an application is ready to receive queue messages. </p>
+ <code>ipq_set_mode</code>(3) allows the application to specify whether packet metadata, or packet payloads as well as metadata are copied to userspace. It is also used to initially notify ip_queue that an application is ready to receive queue messages. </p>
 <p> <code>Receiving Packets from the Queue</code><br />
- <code><a href="/docs/linux/man/3-ipq_read/">ipq_read</a></code>(3) waits for queue messages to arrive from ip_queue and copies them into a supplied buffer. Queue messages may be <i>packet messages</i> or <i>error messages.</i> </p>
-<p> The type of packet may be determined with <code><a href="/docs/linux/man/3-ipq_message_type/">ipq_message_type</a></code>(3). </p>
-<p> If it&#8217;s a packet message, the metadata and optional payload may be retrieved with <code><a href="/docs/linux/man/3-ipq_get_packet/">ipq_get_packet</a></code>(3). </p>
-<p> To retrieve the value of an error message, use <code><a href="/docs/linux/man/3-ipq_get_msgerr/">ipq_get_msgerr</a></code>(3). </p>
+ <code>ipq_read</code>(3) waits for queue messages to arrive from ip_queue and copies them into a supplied buffer. Queue messages may be <i>packet messages</i> or <i>error messages.</i> </p>
+<p> The type of packet may be determined with <code>ipq_message_type</code>(3). </p>
+<p> If it&#8217;s a packet message, the metadata and optional payload may be retrieved with <code>ipq_get_packet</code>(3). </p>
+<p> To retrieve the value of an error message, use <code>ipq_get_msgerr</code>(3). </p>
 <p> <code>Issuing Verdicts on Packets</code><br />
- To issue a verdict on a packet, and optionally return a modified version of the packet to the kernel, call <code><a href="/docs/linux/man/3-ipq_set_verdict/">ipq_set_verdict</a></code>(3). </p>
+ To issue a verdict on a packet, and optionally return a modified version of the packet to the kernel, call <code>ipq_set_verdict</code>(3). </p>
 <p> <code>Error Handling</code><br />
- An error string corresponding to the current value of the internal error variable <code>ipq_errno</code> may be obtained with <code><a href="/docs/linux/man/3-ipq_errstr/">ipq_errstr</a></code>(3). </p>
-<p> For simple applications, calling <code><a href="/docs/linux/man/3-ipq_perror/">ipq_perror</a></code>(3) will print the same message as <code><a href="/docs/linux/man/3-ipq_errstr/">ipq_errstr</a></code>(3), as well as the string corresponding to the global <code>errno</code> value (if set) to stderr. </p>
+ An error string corresponding to the current value of the internal error variable <code>ipq_errno</code> may be obtained with <code>ipq_errstr</code>(3). </p>
+<p> For simple applications, calling <code>ipq_perror</code>(3) will print the same message as <code>ipq_errstr</code>(3), as well as the string corresponding to the global <code>errno</code> value (if set) to stderr. </p>
 <p> <code>Cleaning Up</code><br />
- To free up the Netlink socket and destroy resources associated with the context handle, call <code><a href="/docs/linux/man/3-ipq_destroy_handle/">ipq_destroy_handle</a></code>(3).</p>
+ To free up the Netlink socket and destroy resources associated with the context handle, call <code>ipq_destroy_handle</code>(3).</p>
 <h2>SUMMARY</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/3-ipq_create_handle/">ipq_create_handle</a></code>(3)</p>
+<dt><code>ipq_create_handle</code>(3)</p>
 <dd> Initialise library, return context handle.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_set_mode/">ipq_set_mode</a></code>(3)</p>
+<dt><code>ipq_set_mode</code>(3)</p>
 <dd> Set the queue mode, to copy either packet metadata, or payloads as well as metadata to userspace.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_read/">ipq_read</a></code>(3)</p>
+<dt><code>ipq_read</code>(3)</p>
 <dd> Wait for a queue message to arrive from ip_queue and read it into a buffer.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_message_type/">ipq_message_type</a></code>(3)</p>
+<dt><code>ipq_message_type</code>(3)</p>
 <dd> Determine message type in the buffer.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_get_packet/">ipq_get_packet</a></code>(3)</p>
+<dt><code>ipq_get_packet</code>(3)</p>
 <dd> Retrieve a packet message from the buffer.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_get_msgerr/">ipq_get_msgerr</a></code>(3)</p>
+<dt><code>ipq_get_msgerr</code>(3)</p>
 <dd> Retrieve an error message from the buffer.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_set_verdict/">ipq_set_verdict</a></code>(3)</p>
+<dt><code>ipq_set_verdict</code>(3)</p>
 <dd> Set a verdict on a packet, optionally replacing its contents.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_errstr/">ipq_errstr</a></code>(3)</p>
+<dt><code>ipq_errstr</code>(3)</p>
 <dd> Return an error message corresponding to the internal ipq_errno variable.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_perror/">ipq_perror</a></code>(3)</p>
+<dt><code>ipq_perror</code>(3)</p>
 <dd> Helper function to print error messages to stderr.</p>
-<dt><code><a href="/docs/linux/man/3-ipq_destroy_handle/">ipq_destroy_handle</a></code>(3)</p>
+<dt><code>ipq_destroy_handle</code>(3)</p>
 <dd> Destroy context handle and associated resources.</dl>
 <h2>EXAMPLE</h2>
 <p> The following is an example of a simple application which receives packets and issues NF_ACCEPT verdicts on each packet.</p>
@@ -149,6 +149,6 @@ int main(int argc, char **argv)
 <p> Joost Remijn implemented the <code>ipq_read</code> timeout feature, which appeared in the 1.2.4 release of iptables. </p>
 <p> Fernando Anton added support for IPv6.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/3-ipq_create_handle/">ipq_create_handle</a></code>(3), <code><a href="/docs/linux/man/3-ipq_destroy_handle/">ipq_destroy_handle</a></code>(3), <code><a href="/docs/linux/man/3-ipq_errstr/">ipq_errstr</a></code>(3), <code><a href="/docs/linux/man/3-ipq_get_msgerr/">ipq_get_msgerr</a></code>(3), <code><a href="/docs/linux/man/3-ipq_get_packet/">ipq_get_packet</a></code>(3), <code><a href="/docs/linux/man/3-ipq_message_type/">ipq_message_type</a></code>(3), <code><a href="/docs/linux/man/3-ipq_perror/">ipq_perror</a></code>(3), <code><a href="/docs/linux/man/3-ipq_read/">ipq_read</a></code>(3), <code><a href="/docs/linux/man/3-ipq_set_mode/">ipq_set_mode</a></code>(3), <code><a href="/docs/linux/man/3-ipq_set_verdict/">ipq_set_verdict</a></code>(3). </p>
+<p> <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code>ipq_create_handle</code>(3), <code>ipq_destroy_handle</code>(3), <code>ipq_errstr</code>(3), <code>ipq_get_msgerr</code>(3), <code>ipq_get_packet</code>(3), <code>ipq_message_type</code>(3), <code>ipq_perror</code>(3), <code>ipq_read</code>(3), <code>ipq_set_mode</code>(3), <code>ipq_set_verdict</code>(3). </p>
 <p> The Netfilter home page at <a rel="nofollow" href="http://netfilter.samba.org/">http://netfilter.samba.org/</a> which has links to The Networking Concepts HOWTO, The Linux 2.4 Packet Filtering HOWTO, The Linux 2.4 NAT HOWTO, The Netfilter Hacking HOWTO, The Netfilter FAQ and many other useful resources. </p>
 <h2>Index</h2>

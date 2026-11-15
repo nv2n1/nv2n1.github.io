@@ -49,4 +49,4 @@ description: "netplugd – network cable hotplug management daemon"
 <p> <code>netplugd</code> is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 2, as published by the Free Software Foundation. You are forbidden from redistributing or modifying it under the terms of any other license, including other versions of the GNU General Public License. </p>
 <p> <code>netplugd</code> is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-cardmgr/">cardmgr</a>(5), <a href="/docs/linux/man/8-hotplug/">hotplug</a>(8), <a href="/docs/linux/man/8-ip/">ip</a>(8), <a href="/docs/linux/man/7-netlink/">netlink</a>(7) </p>
+<p>cardmgr(5), hotplug(8), <a href="/docs/linux/man/8-ip/">ip</a>(8), <a href="/docs/linux/man/7-netlink/">netlink</a>(7) </p>

@@ -221,7 +221,7 @@ SNMPv2-MIB::sysUpTime.0 = Timeticks: (14096763) 1 day, 15:09:27.63
 <dd>
 <pre>
     $ snmpget -c public -v 1 localhost ipForwarding.0
-    IP-MIB::ipForwarding.0 = INTEGER: <a href="//www.systutorials.com/docs/linux/man/1-forwarding/">forwarding</a>(1)
+    IP-MIB::ipForwarding.0 = INTEGER: forwarding(1)
     $ snmpget -c public -v 1 <code>-Oe</code> localhost ipForwarding.0
     IP-MIB::ipForwarding.0 = INTEGER: 1
 </pre>
@@ -283,7 +283,7 @@ SNMPv2-MIB::sysUpTime.0 = Timeticks: (14096763) 1 day, 15:09:27.63
 <dd>
 <pre>
     $ snmpget -c public -v 1 <code>-Ov</code> localhost ipForwarding.0
-    INTEGER: <a href="//www.systutorials.com/docs/linux/man/1-forwarding/">forwarding</a>(1)
+    INTEGER: forwarding(1)
 </pre>
 </dl>
 <dt><code>-Ox</code></p>

@@ -67,7 +67,7 @@ Smokeping::probes::CiscoRTTMonEchoICMP - Probe for SmokePing
 
  This setting is mandatory.
 <dt>iosint
-<dd>The (optional) iosint parameter is the source address for the pings sent. This should be one of the active (!) <font SIZE="-1">IP</font> addresses of the router to get results. <font SIZE="-1">IOS</font> looks up the target host address in the forwarding table and then uses the interface(s) listed there to send the ping packets. By default <font SIZE="-1">IOS</font> uses the (primary) <font SIZE="-1">IP</font> address on the sending interface as source address for a ping. The RTTMon <font SIZE="-1">MIB</font> versions before <font SIZE="-1">IOS 12.0\<a HREF="/docs/linux/man/3-fis0/">fIs0</a>(3)T didn't support this parameter. 
+<dd>The (optional) iosint parameter is the source address for the pings sent. This should be one of the active (!) <font SIZE="-1">IP</font> addresses of the router to get results. <font SIZE="-1">IOS</font> looks up the target host address in the forwarding table and then uses the interface(s) listed there to send the ping packets. By default <font SIZE="-1">IOS</font> uses the (primary) <font SIZE="-1">IP</font> address on the sending interface as source address for a ping. The RTTMon <font SIZE="-1">MIB</font> versions before <font SIZE="-1">IOS 12.0\fIs0(3)T didn't support this parameter. 
 
  Example value: 10.33.22.11
 <dt>packetsize
@@ -85,7 +85,7 @@ Smokeping::probes::CiscoRTTMonEchoICMP - Probe for SmokePing
 
  Default value: 15
 <dt>tos
-<dd>The (optional) tos parameter specifies the value of the ToS byte in the <font SIZE="-1">IP</font> header of the pings. Multiply <font SIZE="-1">DSCP</font> values times 4 and Precedence values times 32 to calculate the ToS values to configure, e.g. ToS 160 corresponds to a <font SIZE="-1">DSCP</font> value 40 and a Precedence value of 5. The RTTMon <font SIZE="-1">MIB</font> versions before <font SIZE="-1">IOS 12.0\<a HREF="/docs/linux/man/3-fis0/">fIs0</a>(3)T didn't support this parameter. 
+<dd>The (optional) tos parameter specifies the value of the ToS byte in the <font SIZE="-1">IP</font> header of the pings. Multiply <font SIZE="-1">DSCP</font> values times 4 and Precedence values times 32 to calculate the ToS values to configure, e.g. ToS 160 corresponds to a <font SIZE="-1">DSCP</font> value 40 and a Precedence value of 5. The RTTMon <font SIZE="-1">MIB</font> versions before <font SIZE="-1">IOS 12.0\fIs0(3)T didn't support this parameter. 
 
  Example value: 160 
 
@@ -94,7 +94,7 @@ Smokeping::probes::CiscoRTTMonEchoICMP - Probe for SmokePing
 <dd>The the </font><font SIZE="-2">VPN</font> name in which the <font SIZE="-1">RTT</font> operation will be used. For regular <font SIZE="-1">RTT</font> operation this field should not be configured. The agent will use this field to identify the <font SIZE="-1">VPN</font> routing Table for this operation. 
 
  Example value: <font SIZE="-1">INTERNET</font></dl><h2>Authors</h2>Joerg.Kummer at Roche.com
-<h2>Notes</h2><h3><font SIZE="-1">IOS VERSIONS</font></h3>It is highly recommended to use this probe with routers running <font SIZE="-1">IOS 12.0\<a HREF="/docs/linux/man/3-fis0/">fIs0</a>(3)T or higher and to test it on less critical routers first. I managed to crash a router with <a HREF="/docs/linux/man/9-12-0/">12.0</a>(9) quite consistently ( in </font><font SIZE="-2">IOS</font> lingo <a HREF="/docs/linux/man/9-12-0/">12.0</a>(9) is older code than <a HREF="/docs/linux/man/3-12-0/">12.0</a>(3)T ). I did not observe crashes on higher <font SIZE="-1">IOS</font> releases, but messages on the router like the one below, when multiple processes concurrently accessed the same router (this case was <font SIZE="-1">IOS 12.1</font>(12b) ): 
+<h2>Notes</h2><h3><font SIZE="-1">IOS VERSIONS</font></h3>It is highly recommended to use this probe with routers running <font SIZE="-1">IOS 12.0\fIs0(3)T or higher and to test it on less critical routers first. I managed to crash a router with 12.0(9) quite consistently ( in </font><font SIZE="-2">IOS</font> lingo 12.0(9) is older code than 12.0(3)T ). I did not observe crashes on higher <font SIZE="-1">IOS</font> releases, but messages on the router like the one below, when multiple processes concurrently accessed the same router (this case was <font SIZE="-1">IOS 12.1</font>(12b) ): 
 
  Aug 20 07:30:14: <tt>%RTT</tt>-3-SemaphoreBadUnlock: <tt>%RTR:</tt> Attempt to unlock semaphore by wrong <font SIZE="-1">RTR</font> process 70, locked by 78 
 

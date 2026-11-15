@@ -694,7 +694,7 @@ adds a header reading
 &nbsp;<wbr>/var/spool/mqueue/*</p>
 <dd>temp files</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-mail/">mail</a>(1), <a href="/docs/linux/man/1-rmail/">rmail</a>(1), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), <a href="/docs/linux/man/5-aliases/">aliases</a>(5), <a href="/docs/linux/man/7-mailaddr/">mailaddr</a>(7), </p>
+<p><a href="/docs/linux/man/1-mail/">mail</a>(1), rmail(1), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), <a href="/docs/linux/man/5-aliases/">aliases</a>(5), <a href="/docs/linux/man/7-mailaddr/">mailaddr</a>(7), </p>
 <p> DARPA Internet Request For Comments <i>RFC819</i>, <i>RFC821</i>, <i>RFC822</i>. <i>Sendmail Installation and Operation Guide</i>, No. 8, SMM. </p>
 <p> <a rel="nofollow" href="http://www.sendmail.org/">http://www.sendmail.org/</a> </p>
 <p> US Patent Numbers 6865671, 6986037.</p>

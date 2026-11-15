@@ -59,6 +59,6 @@ description: "cupsfilter – convert a file to another format using cups filters
 <p>The following command will generate a PDF preview of job 42 for a printer named &quot;myprinter&quot; and save it to a file named &quot;preview.pdf&quot;: </p>
 <pre> cupsfilter -m application/pdf -d myprinter -j 42 &gt;preview.pdf</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-cups/">cups</a></code>(1), <code><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a></code>(5), <code><a href="/docs/linux/man/7-filter/">filter</a>(7),</code> <code><a href="/docs/linux/man/7-mime-convs/">mime.convs</a></code>(7), <code><a href="/docs/linux/man/7-mime-types/">mime.types</a></code>(7), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
+<p><code><a href="/docs/linux/man/1-cups/">cups</a></code>(1), <code><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a></code>(5), <code><a href="/docs/linux/man/7-filter/">filter</a>(7),</code> <code>mime.convs</code>(7), <code>mime.types</code>(7), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2021-2022 by OpenPrinting.</p>

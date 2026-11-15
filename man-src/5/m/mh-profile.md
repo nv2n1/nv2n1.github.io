@@ -120,7 +120,7 @@ description: "mh-profile – user profile customization for nmh message handler"
 <p> This <i>netrc</i> file must be owned and readable only by you. (profile, default: legacy)</dl>
 <h3>Process Profile Entries</h3>
 <p>The following profile elements are used whenever an <code>nmh</code> program invokes some other program such as <code>more</code>. The <i>.mh_profile</i> can be used to select alternate programs if the user wishes. The default values are given in the examples. </p>
-<p> If the profile element contains spaces, the element is split at spaces into tokens and each token is given as a separate argument to the <i><a href="/docs/linux/man/2-execvp/">execvp</a></i>(2) system call. If the element contains shell metacharacters then the entire element is executed using <code>/bin/sh</code>. </p>
+<p> If the profile element contains spaces, the element is split at spaces into tokens and each token is given as a separate argument to the <i>execvp</i>(2) system call. If the element contains shell metacharacters then the entire element is executed using <code>/bin/sh</code>. </p>
 <p> <code>buildmimeproc</code>: /usr/bin/mhbuild</p>
 <dl>
 <dd>This is the program used by <code>whatnow</code> to process drafts which are MIME composition files.</dl>
@@ -129,7 +129,7 @@ description: "mh-profile – user profile customization for nmh message handler"
 <dd>This program is used to refile or link a message to another folder. It is used by <code>send</code> to file a copy of a message into a folder given by a &#8220;Fcc:&#8221; field. It is used by the draft folder facility in <code>comp</code>, <code>dist</code>, <code>forw</code>, and <code>repl</code> to refile a draft message into another folder. It is used to refile a draft message in response to the <code>refile</code> directive at the &#8220;What now?&#8221; prompt.</dl>
 <p> <code>formatproc</code>:</p>
 <dl>
-<dd>Program called by <code>mhl</code> to filter a component when it is tagged with the &#8220;format&#8221; variable in the mhl filter. See <i><a href="/docs/linux/man/5-mhl/">mhl</a></i>(5) for more information.</dl>
+<dd>Program called by <code>mhl</code> to filter a component when it is tagged with the &#8220;format&#8221; variable in the mhl filter. See <i>mhl</i>(5) for more information.</dl>
 <p> <code>incproc</code>: /usr/bin/inc</p>
 <dl>
 <dd>Program called by <code>mhmail</code> to incorporate new mail when it is invoked with no arguments.</dl>

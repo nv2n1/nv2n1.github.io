@@ -20,5 +20,5 @@ description: "mrtg2pcp – import MRTG data and create a PCP archive"
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mrtg/">mrtg</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/3-logimport/">LOGIMPORT</a></code>(3) and <code><a href="//www.systutorials.com/docs/linux/man/3pm-PCP::LogImport/">PCP::LogImport</a></code>(3pm). </p>
+<p> <code><a href="/docs/linux/man/1-mrtg/">mrtg</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/3-logimport/">LOGIMPORT</a></code>(3) and <code>PCP::LogImport</code>(3pm). </p>
 <h2>Index</h2>

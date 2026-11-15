@@ -52,7 +52,7 @@ description: "texconfig – configures teTeX or TeX Live"
 <dd> This command allows to edit the hyphenation configuration file for formats that support this, and recreates the formats afterwards to enable the new languages. Available formats are shown when no <i>FORMAT</i> is given.</p>
 <dt>
 <dd> Note that for formats that use LaTeX&#8217;s <i>language.dat,</i><br />
-&nbsp;<wbr>e.g. <i>(pdf)jadetex</i> and <i>latex</i> itself, this change is not persistent, since this file is a generated file. You should not use this command in these cases, read <code><a href="/docs/linux/man/1-update-language/">update-language</a>(1)</code> for alternatives.</p>
+&nbsp;<wbr>e.g. <i>(pdf)jadetex</i> and <i>latex</i> itself, this change is not persistent, since this file is a generated file. You should not use this command in these cases, read <code>update-language(1)</code> for alternatives.</p>
 <dt><code>init [format]</code></p>
 <dd> Recreate <i>format</i> or all formats if none is given, and the font information. This is the same as calling <code>fmtutil &#8211;byfmt format</code> or <code>fmtutil &#8211;all,</code> respectively, followed by <code>updmap.</code></p>
 <dt><code>mode-list</code></p>

@@ -735,7 +735,7 @@ optional arguments:<br />
 <h3>Description</h3>
 <p> This command mounts an archive as a FUSE filesystem. This can be useful for browsing an archive or restoring individual files. Unless the <code>&#8211;foreground</code> option is given the command will run in the background until the filesystem is <code>umounted</code>. </p>
 <p> The BORG_MOUNT_DATA_CACHE_ENTRIES environment variable is meant for advanced users to tweak the performance. It sets the number of cached data chunks; additional memory usage can be up to ~8 MiB times this number. The default is the number of CPU cores. </p>
-<p> For mount options, see the <a href="/docs/linux/man/8-fuse/">fuse</a>(8) manual page. Additional mount options supported by borg:</p>
+<p> For mount options, see the fuse(8) manual page. Additional mount options supported by borg:</p>
 <dl>
 <dt>&bull;</p>
 <dd> allow_damaged_files: by default damaged files (where missing chunks were replaced with runs of zeros by borg check &#8211;repair) are not readable and return EIO (I/O error). Set this option to read such files. </p>

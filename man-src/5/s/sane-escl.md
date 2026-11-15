@@ -45,6 +45,6 @@ description: "sane-escl – SANE backend for eSCL scanners"
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) <code>xscanimage</code>(1) <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
 <h2>Authors</h2>
 <p>Touboul Nathane, Thierry HUCHARD</p>

@@ -79,5 +79,5 @@ description: "prelude-manager – Collects and normalize events."
 <h2>BUGS</h2>
 <p> This man page hadn&#8217;t been proof-read yet. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-prelude-adduser/">prelude-adduser</a>(1) </p>
+<p> prelude-adduser(1) </p>
 <h2>Index</h2>

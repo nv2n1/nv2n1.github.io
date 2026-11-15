@@ -1691,7 +1691,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>TLSProtocol</code> <i>protocol</i></p>
 <dd>If configured, this specifies the string protocol version (e.g. <tt>&quot;tlsv1&quot;</tt>, <tt>&quot;tlsv1.2&quot;</tt>) to use for the <font SIZE="-1">TLS</font> connection to the broker. If not set a default version is used which depends on the version of OpenSSL the Mosquitto library was linked against.</p>
 <dt><code>CipherSuite</code> <i>ciphersuite</i></p>
-<dd>A string describing the ciphers available for use. See <i><a href="/docs/linux/man/1-ciphers/">ciphers</a></i>(1) and the <tt>&quot;openssl ciphers&quot;</tt> utility for more information. If unset, the default ciphers will be used.</dl>
+<dd>A string describing the ciphers available for use. See <i>ciphers</i>(1) and the <tt>&quot;openssl ciphers&quot;</tt> utility for more information. If unset, the default ciphers will be used.</dl>
 <h3>Plugin mysql</h3>
 <p>The <tt>&quot;mysql plugin&quot;</tt> requires <code>mysqlclient</code> to be installed. It connects to one or more databases when started and keeps the connection up as long as possible. When the connection is interrupted for whatever reason it will try to re-connect. The plugin will complain loudly in case anything goes wrong. </p>
 <p> This plugin issues the MySQL <tt>&quot;SHOW STATUS&quot;</tt> / <tt>&quot;SHOW GLOBAL STATUS&quot;</tt> command and collects information about MySQL network traffic, executed statements, requests, the query cache and threads by evaluating the <tt>&quot;Bytes_{received,sent}&quot;</tt>, <tt>&quot;Com_*&quot;</tt>, <tt>&quot;Handler_*&quot;</tt>, <tt>&quot;Qcache_*&quot;</tt> and <tt>&quot;Threads_*&quot;</tt> return values. Please refer to the <code>MySQL reference manual</code>, <i>5.1.6. Server Status Variables</i> for an explanation of these values. </p>
@@ -2025,7 +2025,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 <dt><code>Filter</code> <i>Interface</i> [<i>Filter</i>]</p>
 <dd>Collect the octets and packets that pass a certain qdisc, class or filter. </p>
-<p> QDiscs and classes are identified by their type and handle (or classid). Filters don&#8217;t necessarily have a handle, therefore the parent&#8217;s handle is used. The notation used in collectd differs from that used in <i><a href="/docs/linux/man/1-tc/">tc</a></i>(1) in that it doesn&#8217;t skip the major or minor number if it&#8217;s zero and doesn&#8217;t print special ids by their name. So, for example, a qdisc may be identified by <tt>&quot;pfifo_fast-1:0&quot;</tt> even though the minor number of <code>all</code> qdiscs is zero and thus not displayed by <i><a href="/docs/linux/man/1-tc/">tc</a></i>(1). </p>
+<p> QDiscs and classes are identified by their type and handle (or classid). Filters don&#8217;t necessarily have a handle, therefore the parent&#8217;s handle is used. The notation used in collectd differs from that used in <i>tc</i>(1) in that it doesn&#8217;t skip the major or minor number if it&#8217;s zero and doesn&#8217;t print special ids by their name. So, for example, a qdisc may be identified by <tt>&quot;pfifo_fast-1:0&quot;</tt> even though the minor number of <code>all</code> qdiscs is zero and thus not displayed by <i>tc</i>(1). </p>
 <p> If <code>QDisc</code>, <code>Class</code>, or <code>Filter</code> is given without the second argument, i. .e. without an identifier, all qdiscs, classes, or filters that are associated with that interface will be collected. </p>
 <p> Since a filter itself doesn&#8217;t necessarily have a handle, the parent&#8217;s handle is used. This may lead to problems when more than one filter is attached to a qdisc or class. This isn&#8217;t nice, but we don&#8217;t know how this could be done any better. If you have a idea, please don&#8217;t hesitate to tell us. </p>
 <p> As with the <code>Interface</code> option you can specify <code>All</code> as the interface, meaning all interfaces. </p>
@@ -2213,7 +2213,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> The two modes are distinguished automatically by the format of the address. It is not possible to mix the two modes. Once a full path is detected in any <code>Sensor</code> then the whole addressing (all sensors) is considered to be this way (and as standard addresses will fail parsing they will be ignored).</p>
 <dl>
 <dt><code>Device</code> <i>Device</i></p>
-<dd>Sets the device to read the values from. This can either be a &#8220;real&#8221; hardware device, such as a serial port or an <font SIZE="-1">USB</font> port, or the address of the <i><a href="/docs/linux/man/1-owserver/">owserver</a></i>(1) socket, usually <code>localhost:4304</code>. </p>
+<dd>Sets the device to read the values from. This can either be a &#8220;real&#8221; hardware device, such as a serial port or an <font SIZE="-1">USB</font> port, or the address of the <i>owserver</i>(1) socket, usually <code>localhost:4304</code>. </p>
 <p> Though the documentation claims to automatically recognize the given address format, with version 2.7p4 we had to specify the type explicitly. So with that version, the following configuration worked for us: </p>
 <pre> &lt;Plugin onewire&gt;
  Device &quot;-s localhost:4304&quot;
@@ -2371,7 +2371,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><font SIZE="-1"><code>TTL</code></font> <i>0-255</i></p>
 <dd>Sets the Time-To-Live of generated <font SIZE="-1">ICMP</font> packets.</p>
 <dt><code>Size</code> <i>size</i></p>
-<dd>Sets the size of the data payload in <font SIZE="-1">ICMP</font> packet to specified <i>size</i> (it will be filled with regular <font SIZE="-1">ASCII</font> pattern). If not set, default 56 byte long string is used so that the packet size of an ICMPv4 packet is exactly 64 bytes, similar to the behaviour of normal <i><a href="/docs/linux/man/1-ping/">ping</a></i>(1) command.</p>
+<dd>Sets the size of the data payload in <font SIZE="-1">ICMP</font> packet to specified <i>size</i> (it will be filled with regular <font SIZE="-1">ASCII</font> pattern). If not set, default 56 byte long string is used so that the packet size of an ICMPv4 packet is exactly 64 bytes, similar to the behaviour of normal <i>ping</i>(1) command.</p>
 <dt><code>SourceAddress</code> <i>host</i></p>
 <dd>Sets the source address to use. <i>host</i> may either be a numerical network address or a network hostname.</p>
 <dt><code>Device</code> <i>name</i></p>
@@ -2935,7 +2935,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dl>
 <dt><code>ReportByDevice</code> <code>false</code>|<code>true</code></p>
 <dd>Configures how to report physical swap devices. If set to <code>false</code> (the default), the summary over all swap devices is reported only, i.e. the globally used and available space over all devices. If <code>true</code> is configured, the used and available space of each device will be reported separately. </p>
-<p> This option is only available if the <i>Swap plugin</i> can read <tt>&quot;/proc/swaps&quot;</tt> (under Linux) or use the <i><a href="/docs/linux/man/2-swapctl/">swapctl</a></i>(2) mechanism (under <i>Solaris</i>).</p>
+<p> This option is only available if the <i>Swap plugin</i> can read <tt>&quot;/proc/swaps&quot;</tt> (under Linux) or use the <i>swapctl</i>(2) mechanism (under <i>Solaris</i>).</p>
 <dt><code>ReportBytes</code> <code>false</code>|<code>true</code></p>
 <dd>When enabled, the <i>swap I/O</i> is reported in bytes. When disabled, the default, <i>swap I/O</i> is reported in pages. This option is available under Linux only.</p>
 <dt><code>ValuesAbsolute</code> <code>true</code>|<code>false</code></p>
@@ -4298,6 +4298,6 @@ description: "collectd.conf – Configuration for the system statistics collecti
  Target &quot;write&quot;
  &lt;/Chain&gt;</pre>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5), <i><a href="/docs/linux/man/5-collectd-perl/">collectd-perl</a></i>(5), <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5), <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5), <i><a href="/docs/linux/man/8-hddtemp/">hddtemp</a></i>(8), <i><a href="/docs/linux/man/8-iptables/">iptables</a></i>(8), kstat(3KSTAT), <i><a href="/docs/linux/man/1-mbmon/">mbmon</a></i>(1), <i><a href="/docs/linux/man/1-psql/">psql</a></i>(1), <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7), <i><a href="/docs/linux/man/1-rrdtool/">rrdtool</a></i>(1), <i><a href="/docs/linux/man/1-sensors/">sensors</a></i>(1)</p>
+<p><i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5), <i><a href="/docs/linux/man/5-collectd-perl/">collectd-perl</a></i>(5), <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5), <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5), <i><a href="/docs/linux/man/8-hddtemp/">hddtemp</a></i>(8), <i><a href="/docs/linux/man/8-iptables/">iptables</a></i>(8), kstat(3KSTAT), <i>mbmon</i>(1), <i><a href="/docs/linux/man/1-psql/">psql</a></i>(1), <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7), <i><a href="/docs/linux/man/1-rrdtool/">rrdtool</a></i>(1), <i><a href="/docs/linux/man/1-sensors/">sensors</a></i>(1)</p>
 <h2>Author</h2>
 <p>Florian Forster &lt;octo [at] collectd.org&gt;</p>

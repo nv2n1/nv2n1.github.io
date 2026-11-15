@@ -26,7 +26,7 @@ description: "nash – script interpretor to interpret linuxrc images"
 <dt><code>mkdir</code> <i>[-p]</i> <i>path</i></p>
 <dd>Creates the directory <i>path</i>. If <i>-p</i> is specified, this command will not complain if the directory exists. Note this is a subset of the standard <code>mkdir</code> <i>-p</i> behavior.</p>
 <dt><code>mknod</code> <i>path</i> <i>[c|b]</i> <i>major</i> <i>minor</i></p>
-<dd>Creates a device inode for <i>path</i>. This is identical to <code><a href="/docs/linux/man/1-mkdev/">mkdev</a></code>(1) which the exceptions that it will not create named pipes and if the directories in <i>path</i> do not exist they will be automatically created.</p>
+<dd>Creates a device inode for <i>path</i>. This is identical to <code>mkdev</code>(1) which the exceptions that it will not create named pipes and if the directories in <i>path</i> do not exist they will be automatically created.</p>
 <dt><code>mkdmnod</code></p>
 <dd>Creates a device inode for the device mapper control inode as <i>/dev/mapper/control</i>. If it already exists with the correct major/minor, it will not be recreated.</p>
 <dt><code>mkrootdev </code><i>path</i></p>

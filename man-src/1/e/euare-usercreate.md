@@ -33,11 +33,11 @@ description: "euare-usercreate – Create a new user"
 <dt><code>-v</code>, <code>&#8211;verbose</code></p>
 <dd> show the new user&#8217;s ARN and GUID</p>
 <dt><code>-w</code>, <code>&#8211;write-config</code></p>
-<dd> output access keys and region information in the form of a <a href="/docs/linux/man/5-euca2ools-ini/">euca2ools.ini</a>(5) configuration file instead of by themselves (implies <code>-k</code>)</p>
+<dd> output access keys and region information in the form of a euca2ools.ini(5) configuration file instead of by themselves (implies <code>-k</code>)</p>
 <dt><code>-d</code> DOMAIN, <code>&#8211;domain</code> DOMAIN</p>
 <dd> the DNS domain to use for region information in configuration file output (default: based on IAM URL)</p>
 <dt><code>-l</code>, <code>&#8211;set-default-user</code></p>
-<dd> set this user as the default user for the region in <a href="/docs/linux/man/5-euca2ools-ini/">euca2ools.ini</a>(5) configuration file output. This option is only useful when used with <code>-w</code>.</p>
+<dd> set this user as the default user for the region in euca2ools.ini(5) configuration file output. This option is only useful when used with <code>-w</code>.</p>
 <dt><code>&#8211;as-account</code> ACCOUNT</p>
 <dd> [Eucalyptus cloud admin only] run this command as the administrator of another account</p>
 <dt><code>-U</code> URL, <code>&#8211;url</code> URL</p>

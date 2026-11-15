@@ -35,4 +35,4 @@ description: "xqmstats – Display XFS quota manager statistics from /proc"
 <h2>Options</h2>
 <p>None.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-quotastats/">quotastats</a></code>(1), <code><a href="/docs/linux/man/1-quota/">quota</a></code>(1). </p>
+<p><code>quotastats</code>(1), <code><a href="/docs/linux/man/1-quota/">quota</a></code>(1). </p>

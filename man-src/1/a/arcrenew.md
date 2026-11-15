@@ -46,7 +46,7 @@ description: "arcrenew – ARC Proxy Renewal"
 <h2>EXTENDED DESCRIPTION</h2>
 <p> The <code>arcrenew</code> command renews the proxy of a job submitted an ARC enabled resource. The job can be referred to either by the jobid that was returned by <code><a href="/docs/linux/man/1-arcsub/">arcsub</a></code>(1) at submission time or by its jobname if the job description that was submitted contained a jobname attribute. </p>
 <p> More than one jobid and/or jobname can be given. If several jobs were submitted with the same jobname the proxies of all those jobs are renewed. If the <code>&#8211;joblist</code> option is used the list of jobs is read from a file with the specified filename. By specifying the <code>&#8211;all</code> option, the proxies of all active jobs will be renewed. </p>
-<p> The <code>&#8211;cluster</code> option can be used to select or reject jobs at specific clusters. See <code><a href="/docs/linux/man/1-arcsub/">arcsub</a></code>(1) for a discussion of the format of arguments to this option. The <code>&#8211;status</code> option can be used to select jobs in a specific state. These options can be repeated several times. See <code><a href="/docs/linux/man/1-arstat/">arstat</a></code>(1) for possible state values. </p>
+<p> The <code>&#8211;cluster</code> option can be used to select or reject jobs at specific clusters. See <code><a href="/docs/linux/man/1-arcsub/">arcsub</a></code>(1) for a discussion of the format of arguments to this option. The <code>&#8211;status</code> option can be used to select jobs in a specific state. These options can be repeated several times. See <code>arstat</code>(1) for possible state values. </p>
 <h2>FILES</h2>
 <dl>
 <dt><code>~/.arc/client.conf</code></p>

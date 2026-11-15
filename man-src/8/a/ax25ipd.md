@@ -25,7 +25,7 @@ description: "ax25ipd – AX.25 into IP Encapsulator"
 <h2>Files</h2>
 <p>/etc/ax25/ax25ipd.conf</p>
 <h2>See Also</h2>
-<p><code>ax25ipd.conf</code> <code><a href="/docs/linux/man/1-beacon/">beacon</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8). </p>
+<p><code>ax25ipd.conf</code> <code>beacon</code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8). </p>
 <h2>Bugs</h2>
 <p>Routing needs to be looked at seriously, the method of routing is a real hack, and improvements to it have only added to the hack. </p>
 <p> Logging needs to be properly implemented. </p>

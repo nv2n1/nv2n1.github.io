@@ -20,12 +20,12 @@ description: "dlaed6.f –"
 <dd>
 <pre> DLAED6 computes the positive or negative root (closest to the origin)
  of
- <a href="//www.systutorials.com/docs/linux/man/1-z/">z</a>(1) <a href="//www.systutorials.com/docs/linux/man/2-z/">z</a>(2) <a href="//www.systutorials.com/docs/linux/man/3-z/">z</a>(3)
+ z(1) z(2) z(3)
  f(x) = rho + --------- + ---------- + ---------
- <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1)-x <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2)-x <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3)-x
+ <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1)-x d(2)-x <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3)-x
  It is assumed that
- if ORGATI = .true. the root is between <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2) and <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3);
- otherwise it is between <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) and <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2)
+ if ORGATI = .true. the root is between d(2) and <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3);
+ otherwise it is between <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) and d(2)
  This routine will be called by DLAED4 when necessary. In most cases,
  the root sought is the smallest in magnitude, though it might not be
  in some extremely rare situations.</pre>
@@ -37,15 +37,15 @@ description: "dlaed6.f –"
  Refer to DLAED4 for its significance.</pre>
 <p><i>ORGATI</i> </p>
 <pre> ORGATI is LOGICAL
- If ORGATI is true, the needed root is between <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2) and
- <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3); otherwise it is between <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) and <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2). See
+ If ORGATI is true, the needed root is between d(2) and
+ <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3); otherwise it is between <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) and d(2). See
  DLAED4 for further details.</pre>
 <p><i>RHO</i> </p>
 <pre> RHO is DOUBLE PRECISION
  Refer to the equation f(x) above.</pre>
 <p><i>D</i> </p>
 <pre> D is DOUBLE PRECISION array, dimension (3)
- D satisfies <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) &lt; <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2) &lt; <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3).</pre>
+ D satisfies <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) &lt; d(2) &lt; <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3).</pre>
 <p><i>Z</i> </p>
 <pre> Z is DOUBLE PRECISION array, dimension (3)
  Each of the elements in z must be positive.</pre>

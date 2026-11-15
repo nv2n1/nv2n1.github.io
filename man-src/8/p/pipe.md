@@ -33,7 +33,8 @@ description: "pipe – Postfix delivery to external command"
 <dd>The output record delimiter. Typically one would use either <code>
 </code> or <code>
 </code>. The usual C-style backslash escape sequences are recognized: <code>   
-  	  \</code><i>ddd</i> (up to three octal digits) and <code>\</code>.</p>
+ 
+ 	  \</code><i>ddd</i> (up to three octal digits) and <code>\</code>.</p>
 <dt><code>flags=BDFORXhqu.&gt;</code> (optional)</p>
 <dd>Optional message processing flags. By default, a message is copied unchanged.</p>
 <dl>
@@ -154,7 +155,7 @@ description: "pipe – Postfix delivery to external command"
 <h2>Diagnostics</h2>
 <p>Command exit status codes are expected to follow the conventions defined in &lt;<code>sysexits.h</code>&gt;. Exit status 0 means normal successful completion. </p>
 <p> In the case of a non-zero exit status, a limited amount of command output is reported in an delivery status notification. When the output begins with a 4.X.X or 5.X.X enhanced status code, the status code takes precedence over the non-zero exit status (Postfix version 2.3 and later). </p>
-<p> Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue for further inspection.</p>
+<p> Problems and transactions are logged to <code>syslogd</code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue for further inspection.</p>
 <h2>Security</h2>
 <p>This program needs a dual personality 1) to access the private Postfix queue and IPC mechanisms, and 2) to execute external commands as the specified user. It is therefore security sensitive.</p>
 <h2>Configuration Parameters</h2>
@@ -206,7 +207,7 @@ description: "pipe – Postfix delivery to external command"
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>License</h2>
 <p>The Secure Mailer license must be distributed with this software.</p>
 <h2>Author(S)</h2>

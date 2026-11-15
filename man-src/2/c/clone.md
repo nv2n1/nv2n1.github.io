@@ -365,7 +365,7 @@ long clone3(struct clone_args *cl_args, size_t size);
 <dt><code>CLONE_UNTRACED</code> (since Linux 2.5.46)</p>
 <dd> If <code>CLONE_UNTRACED</code> is specified, then a tracing process cannot force <code>CLONE_PTRACE</code> on this child process.</p>
 <dt><code>CLONE_VFORK</code> (since Linux 2.2)</p>
-<dd> If <code>CLONE_VFORK</code> is set, the execution of the calling process is suspended until the child releases its virtual memory resources via a call to <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) or <code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2) (as with <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2)).</p>
+<dd> If <code>CLONE_VFORK</code> is set, the execution of the calling process is suspended until the child releases its virtual memory resources via a call to <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) or <code>_exit</code>(2) (as with <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2)).</p>
 <dt>
 <dd> If <code>CLONE_VFORK</code> is not set, then both the calling process and the child are schedulable after the call, and an application should not rely on execution occurring in any particular order.</p>
 <dt><code>CLONE_VM</code> (since Linux 2.0)</p>
@@ -465,7 +465,7 @@ long clone3(struct clone_args *cl_args, size_t size);
 <p> Glibc does not provide a wrapper for <code>clone3</code>(); call it using <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2). </p>
 <p> Note that the glibc <code>clone</code>() wrapper function makes some changes in the memory pointed to by <i>stack</i> (changes required to set the stack up correctly for the child) <i>before</i> invoking the <code>clone</code>() system call. So, in cases where <code>clone</code>() is used to recursively create children, do not use the buffer employed for the parent&#8217;s stack as the stack of the child. </p>
 <p> The <code><a href="/docs/linux/man/2-kcmp/">kcmp</a></code>(2) system call can be used to test whether two processes share various resources such as a file descriptor table, System V semaphore undo operations, or a virtual address space. </p>
-<p> Handlers registered using <code><a href="/docs/linux/man/3-pthread_atfork/">pthread_atfork</a></code>(3) are not executed during a clone call. </p>
+<p> Handlers registered using <code>pthread_atfork</code>(3) are not executed during a clone call. </p>
 <p> In the Linux 2.4.x series, <code>CLONE_THREAD</code> generally does not make the parent of the new thread the same as the parent of the calling process. However, for kernel versions 2.4.7 to 2.4.18 the <code>CLONE_THREAD</code> flag implied the <code>CLONE_PARENT</code> flag (as in Linux 2.6.0 and later). </p>
 <p> On i386, <code>clone</code>() should not be called through vsyscall, but directly through <i>int $0x80</i>.</p>
 <h3>C library/kernel differences</h3>

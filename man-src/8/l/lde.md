@@ -247,7 +247,7 @@ description: "lde – a curses based file system viewer/editor for Linux"
 <dd>Find all tgz files which have been deleted, display possible inodes and check if it is possible to recover the files, open the file system read only while searching.</dl>
 <p> See docs/UNERASE included with the lde distribution for more examples and instructions for the best way to go about restoring files.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-fsck-minix/">fsck.minix</a></code>(8), <code><a href="/docs/linux/man/8-e2fsck/">e2fsck</a></code>(8), <code><a href="/docs/linux/man/8-xfsck/">xfsck</a></code>(8), <code><a href="/docs/linux/man/8-debugfs/">debugfs</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-fsck-minix/">fsck.minix</a></code>(8), <code><a href="/docs/linux/man/8-e2fsck/">e2fsck</a></code>(8), <code>xfsck</code>(8), <code><a href="/docs/linux/man/8-debugfs/">debugfs</a></code>(8)</p>
 <h2>Author</h2>
 <p>Scott D. Heavner (sdh [at] po.cwru.edu) </p>
 <p> For more info, see the lde project page at sourceforge <i>&lt;<a rel="nofollow" href="http://lde.sourceforge.net/">http://lde.sourceforge.net/</a>&gt;</i>.</p>

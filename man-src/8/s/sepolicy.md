@@ -12,7 +12,7 @@ description: "sepolicy – SELinux Policy Inspection tool"
 <p><code>sepolicy [-h] [-P policy_path ] {booleans,communicate,generate,interface,manpage,network,transition} OPTIONS</code><br />
  Arguments:<br />
  <code>booleans</code><br />
- Query SELinux policy to see description of booleans <code><a href="/docs/linux/man/8-sepolicy-boolean/">sepolicy-boolean</a>(8)</code><br />
+ Query SELinux policy to see description of booleans <code>sepolicy-boolean(8)</code><br />
  <code>communicate</code><br />
  Query SELinux policy to see if domains can communicate with each other <code><a href="/docs/linux/man/8-sepolicy-communicate/">sepolicy-communicate</a>(8)</code><br />
  <code>generate</code> </p>

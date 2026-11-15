@@ -50,7 +50,7 @@ description: "dstemr.f –"
  For more details, see:
  - Inderjit S. Dhillon and Beresford N. Parlett: &quot;Multiple representations
  to compute orthogonal eigenvectors of symmetric tridiagonal matrices,&quot;
- Linear Algebra and its Applications, <a href="//www.systutorials.com/docs/linux/man/1-387/">387</a>(1), pp. 1-28, August 2004.
+ Linear Algebra and its Applications, 387(1), pp. 1-28, August 2004.
  - Inderjit Dhillon and Beresford Parlett: &quot;Orthogonal Eigenvectors and
  Relative Gaps,&quot; SIAM Journal on Matrix Analysis and Applications, Vol. 25,
  2004. Also LAPACK Working Note 154.
@@ -172,7 +172,7 @@ description: "dstemr.f –"
  message related to LWORK is issued by XERBLA.</pre>
 <p><i>IWORK</i> </p>
 <pre> IWORK is INTEGER array, dimension (LIWORK)
- On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal LIWORK.</pre>
+ On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.</pre>
 <p><i>LIWORK</i> </p>
 <pre> LIWORK is INTEGER
  The dimension of the array IWORK. LIWORK &gt;= max(1,10*N)

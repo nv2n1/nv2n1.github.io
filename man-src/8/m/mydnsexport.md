@@ -37,4 +37,4 @@ description: "mydnsexport – Output zone data in various foreign file formats"
 <h2>Homepage</h2>
 <p><a rel="nofollow" href="http://mydns.bboy.net">http://mydns.bboy.net</a></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-mydns/">mydns</a></code>(8), <code><a href="/docs/linux/man/5-mydns-conf/">mydns.conf</a></code>(5), <code><a href="/docs/linux/man/8-mydnscheck/">mydnscheck</a></code>(8), <code><a href="/docs/linux/man/8-mydnsimport/">mydnsimport</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-mydns/">mydns</a></code>(8), <code>mydns.conf</code>(5), <code><a href="/docs/linux/man/8-mydnscheck/">mydnscheck</a></code>(8), <code><a href="/docs/linux/man/8-mydnsimport/">mydnsimport</a></code>(8) </p>

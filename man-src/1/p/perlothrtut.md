@@ -477,7 +477,7 @@ sub sample_sub
 <dt>Advanced Semaphores
 <dd> By default, semaphores behave like locks, letting only one thread <i>down()</i> them at a time. However, there are other uses for semaphores. 
 
- Each semaphore has a counter attached to it. <i>down()</i> decrements the counter and <i>up()</i> increments the counter. By default, semaphores are created with the counter set to one, <i>down()</i> decrements by one, and <i>up()</i> increments by one. If <i>down()</i> attempts to decrement the counter below zero, it blocks until the counter is large enough. Note that while a semaphore can be created with a starting count of zero, any <i>up()</i> or <i>down()</i> always changes the counter by at least one. <tt>$semaphore</tt>-&gt;<i>down</i>(0) is the same as <tt>$semaphore</tt>-&gt;<i><a HREF="/docs/linux/man/1-down/">down</a></i>(1). 
+ Each semaphore has a counter attached to it. <i>down()</i> decrements the counter and <i>up()</i> increments the counter. By default, semaphores are created with the counter set to one, <i>down()</i> decrements by one, and <i>up()</i> increments by one. If <i>down()</i> attempts to decrement the counter below zero, it blocks until the counter is large enough. Note that while a semaphore can be created with a starting count of zero, any <i>up()</i> or <i>down()</i> always changes the counter by at least one. <tt>$semaphore</tt>-&gt;<i>down</i>(0) is the same as <tt>$semaphore</tt>-&gt;<i>down</i>(1). 
 
  The question, of course, is why would you do something like this? Why create a semaphore with a starting count that's not one, or why decrement/increment it by more than one? The answer is resource availability. Many resources that you want to manage access for can be safely used by more than one thread at once. 
 

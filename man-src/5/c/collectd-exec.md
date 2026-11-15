@@ -9,7 +9,7 @@ description: "collectd-exec – Documentation of collectd’s \"exec plugin\""
 
 <p>collectd-exec &#8211; Documentation of collectd&#8217;s &quot;exec plugin&quot;</p>
 <h2>Synopsis</h2>
-<pre> # See <a href="//www.systutorials.com/docs/linux/man/5-collectd.conf/">collectd.conf</a>(5)
+<pre> # See collectd.conf(5)
  LoadPlugin exec
  # ...
  &lt;Plugin exec&gt;

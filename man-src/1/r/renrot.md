@@ -367,5 +367,5 @@ description: "renrot – rename and rotate images according EXIF data"
 <p> Copyright 2005-2012, Zeus Panchenko, Andy Shevchenko. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="//www.systutorials.com/docs/linux/man/3pm-Image::ExifTool/">Image::ExifTool</a></i>(3pm), <i><a href="/docs/linux/man/1-exiftool/">exiftool</a></i>(1), <i><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></i>(1), <i><a href="//www.systutorials.com/docs/linux/man/3pm-Image::Magick/">Image::Magick</a></i>(3pm) </p>
+<p> <i>Image::ExifTool</i>(3pm), <i><a href="/docs/linux/man/1-exiftool/">exiftool</a></i>(1), <i><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></i>(1), <i>Image::Magick</i>(3pm) </p>
 <h2>Index</h2>

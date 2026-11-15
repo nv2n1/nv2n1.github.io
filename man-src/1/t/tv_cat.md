@@ -19,7 +19,7 @@ description: "tv_cat – Concatenate XMLTV listings files."
 <p> But if you do want to combine multiple input files with different character encodings then you can use the &#8211;utf8 command-line parameter which will create a combined output file in <font SIZE="-1">UTF-8</font> format. (Note: it is not safe to combine mixed encodings to anything other than <font SIZE="-1">UTF-8</font> so no other output encoding is provided for.) (Note 2: any input file which does not have an encoding specified in the xml tag is not only naughty but is assumed to already be <font SIZE="-1">UTF-8,</font> which may not be true!) </p>
 <p> This tool is rather useless, but it makes a good testbed for the <font SIZE="-1">XMLTV</font> module.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com </p>
 <h2>Index</h2>

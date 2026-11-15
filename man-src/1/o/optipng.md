@@ -164,7 +164,7 @@ description: "OptiPNG – Optimize Portable Network Graphics files"
 <p> Metadata is not imported from the external image formats. </p>
 <p> There is no support for pipes, streams, extended file attributes or access control lists. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-png/">png</a></code>(5), <code><a href="/docs/linux/man/3-libpng/">libpng</a></code>(3), <code><a href="/docs/linux/man/3-zlib/">zlib</a></code>(3), <code><a href="/docs/linux/man/1-pngcrush/">pngcrush</a></code>(1), <code><a href="/docs/linux/man/1-pngrewrite/">pngrewrite</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/5-png/">png</a></code>(5), <code><a href="/docs/linux/man/3-libpng/">libpng</a></code>(3), <code><a href="/docs/linux/man/3-zlib/">zlib</a></code>(3), <code>pngcrush</code>(1), <code>pngrewrite</code>(1). </p>
 <h2>STANDARDS</h2>
 <p> The files produced by <code>OptiPNG</code> are compliant with <code>PNG-2003</code>:<br />
  Glenn Randers-Pehrson et al. <i>Portable Network Graphics (PNG) Specification, Second Edition</i>.<br />

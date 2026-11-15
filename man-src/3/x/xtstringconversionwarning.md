@@ -22,6 +22,6 @@ description: "XtStringConversionWarning – issue a conversion warning message"
 <p>The <code>XtStringConversionWarning</code> function issues a warning message with name &#8220;conversionError&#8221;, type &#8220;string&#8221;, class &#8220;XtToolkitError&#8221;, and the default message string &#8220;Cannot convert &quot;<i>src</i>&quot; to type <i>dst_type</i>&#8221;. </p>
 <p> <code>XtStringConversionWarning</code> has been replaced by <code>XtDisplayStringConversionWarning</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddconverter/">XtAppAddConverter</a>(3), <a href="//www.systutorials.com/docs/linux/man/3t-XtAppErrorMsg/">XtAppErrorMsg</a>(3t), <a href="/docs/linux/man/3-xtconvert/">XtConvert</a>(3), <a href="/docs/linux/man/3-xtdisplaystringconversionwarning/">XtDisplayStringConversionWarning</a>(3)<br />
+<p><a href="/docs/linux/man/3-xtappaddconverter/">XtAppAddConverter</a>(3), XtAppErrorMsg(3t), <a href="/docs/linux/man/3-xtconvert/">XtConvert</a>(3), <a href="/docs/linux/man/3-xtdisplaystringconversionwarning/">XtDisplayStringConversionWarning</a>(3)<br />
  <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
  <i>Xlib &#8211; C Language X Interface</i></p>

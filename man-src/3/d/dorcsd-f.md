@@ -98,8 +98,8 @@ description: "dorcsd.f –"
 <p><i>THETA</i> </p>
 <pre> THETA is DOUBLE PRECISION array, dimension (R), in which R =
  MIN(P,M-P,Q,M-Q).
- C = DIAG( COS(<a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1)), ... , COS(THETA(R)) ) and
- S = DIAG( SIN(<a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1)), ... , SIN(THETA(R)) ).</pre>
+ C = DIAG( COS(THETA(1)), ... , COS(THETA(R)) ) and
+ S = DIAG( SIN(THETA(1)), ... , SIN(THETA(R)) ).</pre>
 <p><i>U1</i> </p>
 <pre> U1 is DOUBLE PRECISION array, dimension (P)
  If JOBU1 = 'Y', U1 contains the P-by-P orthogonal matrix U1.</pre>
@@ -134,8 +134,8 @@ description: "dorcsd.f –"
 <p><i>WORK</i> </p>
 <pre> WORK is DOUBLE PRECISION array, dimension (MAX(1,LWORK))
  On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
- If INFO &gt; 0 on exit, WORK(2:R) contains the values <a href="//www.systutorials.com/docs/linux/man/1-PHI/">PHI</a>(1),
- ..., PHI(R-1) that, together with <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1), ..., THETA(R),
+ If INFO &gt; 0 on exit, WORK(2:R) contains the values PHI(1),
+ ..., PHI(R-1) that, together with THETA(1), ..., THETA(R),
  define the matrix in intermediate bidiagonal-block form
  remaining after nonconvergence. INFO specifies the number
  of nonzero PHI's.</pre>
@@ -157,7 +157,7 @@ description: "dorcsd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, <a href="/docs/linux/man/1-50/">50</a>(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dd>Univ. of Tennessee </p>

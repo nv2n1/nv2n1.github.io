@@ -83,7 +83,7 @@ description: "ocf_heartbeat_SAPDatabase – Manages any SAP database (based on O
 <dl>
 <dd>Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a SAPDatabase resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a SAPDatabase resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_SAPDatabase ocf:heartbeat:SAPDatabase \
 params \
 SID=string \

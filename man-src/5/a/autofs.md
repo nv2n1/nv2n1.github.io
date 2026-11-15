@@ -115,11 +115,11 @@ Multiple hosts, some with same path, some with another
 Multiple replicated hosts, different (potentially) paths:
 &lt;path&gt; host1:/path/pathA host2:/path/pathB
 Mutliple weighted, replicated hosts same path:
-&lt;path&gt; <a href="//www.systutorials.com/docs/linux/man/5-host1/">host1</a>(5),<a href="//www.systutorials.com/docs/linux/man/6-host2/">host2</a>(6),<a href="//www.systutorials.com/docs/linux/man/1-host3/">host3</a>(1):/path/path
+&lt;path&gt; host1(5),host2(6),host3(1):/path/path
 Multiple weighted, replicated hosts different (potentially) paths:
-&lt;path&gt; <a href="//www.systutorials.com/docs/linux/man/3-host1/">host1</a>(3):/path/pathA <a href="//www.systutorials.com/docs/linux/man/5-host2/">host2</a>(5):/path/pathB
+&lt;path&gt; host1(3):/path/pathA host2(5):/path/pathB
 Anything else is questionable and unsupported, but these variations will also work:
-&lt;path&gt; <a href="//www.systutorials.com/docs/linux/man/3-host1/">host1</a>(3),host:/blah</pre>
+&lt;path&gt; host1(3),host:/blah</pre>
 </dl>
 <h2>Unsupported</h2>
 <p>This version of the automounter supports direct maps stored in FILE, NIS, NISPLUS and LDAP only.</p>

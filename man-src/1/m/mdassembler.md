@@ -92,7 +92,7 @@ description: "mdassembler – Compile documentation for use in monodoc browser"
 </pre>
 <p> (Note the backticks used in the <code>pkg-config</code> command!) This copies the <i>.source</i> , <i>.tree</i> , and <i>.zip</i> files into the <code>monodoc</code> <i>sources</i> directory, which will allow <code>monodoc</code> to display the documentation.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mdcs2ecma/">mdcs2ecma</a></code>(1), <code><a href="/docs/linux/man/1-mdnormalizer/">mdnormalizer</a></code>(1), <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1), <code><a href="/docs/linux/man/1-mdoc-assemble/">mdoc-assemble</a></code>(1), <code><a href="/docs/linux/man/1-mdvalidator/">mdvalidator</a></code>(1), <code><a href="/docs/linux/man/1-monodocer/">monodocer</a></code>(1), <code><a href="/docs/linux/man/1-monodocs2html/">monodocs2html</a></code>(1)</p>
+<p> <code>mdcs2ecma</code>(1), <code>mdnormalizer</code>(1), <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1), <code><a href="/docs/linux/man/1-mdoc-assemble/">mdoc-assemble</a></code>(1), <code>mdvalidator</code>(1), <code><a href="/docs/linux/man/1-monodocer/">monodocer</a></code>(1), <code><a href="/docs/linux/man/1-monodocs2html/">monodocs2html</a></code>(1)</p>
 <h2>MAILING LISTS</h2>
 <dl>
 <dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>

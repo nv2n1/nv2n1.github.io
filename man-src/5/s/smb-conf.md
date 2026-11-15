@@ -689,7 +689,7 @@ chmod 1770 /usr/local/samba/lib/usershares</pre>
 <p> Default: <i>client ipc signing</i><i> = </i><i>default</i><i> </i></dl>
 <p> client lanman auth (G) </p>
 <dl>
-<dd>This parameter determines whether or not <code><a href="/docs/linux/man/8-smbclient/">smbclient</a></code>(8) and other samba client tools will attempt to authenticate itself to servers using the weaker LANMAN password hash. If disabled, only server which support NT password hashes (e.g. Windows NT/2000, Samba, etc&#8230; but not Windows 95/98) will be able to be connected from the Samba client. </p>
+<dd>This parameter determines whether or not <code>smbclient</code>(8) and other samba client tools will attempt to authenticate itself to servers using the weaker LANMAN password hash. If disabled, only server which support NT password hashes (e.g. Windows NT/2000, Samba, etc&#8230; but not Windows 95/98) will be able to be connected from the Samba client. </p>
 <p> The LANMAN encrypted response is easily broken, due to its case-insensitive nature, and the choice of algorithm. Clients without Windows 95/98 servers are advised to disable this option. </p>
 <p> Disabling this option will also disable the client plaintext auth option. </p>
 <p> Likewise, if the client ntlmv2 auth parameter is enabled, then only NTLMv2 logins will be attempted. </p>
@@ -763,7 +763,7 @@ chmod 1770 /usr/local/samba/lib/usershares</pre>
 <p> Example: <i>client min protocol</i><i> = </i><i>NT1</i><i> </i></dl>
 <p> client NTLMv2 auth (G) </p>
 <dl>
-<dd>This parameter determines whether or not <code><a href="/docs/linux/man/8-smbclient/">smbclient</a></code>(8) will attempt to authenticate itself to servers using the NTLMv2 encrypted password response. </p>
+<dd>This parameter determines whether or not <code>smbclient</code>(8) will attempt to authenticate itself to servers using the NTLMv2 encrypted password response. </p>
 <p> If enabled, only an NTLMv2 and LMv2 response (both much more secure than earlier versions) will be sent. Older servers (including NT4 &lt; SP4, Win9x and Samba 2.2) are not compatible with NTLMv2 when not in an NTLMv2 supporting domain </p>
 <p> Similarly, if enabled, NTLMv1, client lanman auth and client plaintext auth authentication will be disabled. This also disables share-level authentication. </p>
 <p> If disabled, an NTLM response (and possibly a LANMAN response) will be sent by the client, depending on the value of client lanman auth. </p>
@@ -791,7 +791,7 @@ chmod 1770 /usr/local/samba/lib/usershares</pre>
 <p> Default: <i>client signing</i><i> = </i><i>default</i><i> </i></dl>
 <p> client use spnego principal (G) </p>
 <dl>
-<dd>This parameter determines whether or not <code><a href="/docs/linux/man/8-smbclient/">smbclient</a></code>(8) and other samba components acting as a client will attempt to use the server-supplied principal sometimes given in the SPNEGO exchange. </p>
+<dd>This parameter determines whether or not <code>smbclient</code>(8) and other samba components acting as a client will attempt to use the server-supplied principal sometimes given in the SPNEGO exchange. </p>
 <p> If enabled, Samba can attempt to use Kerberos to contact servers known only by IP address. Kerberos relies on names, so ordinarily cannot function in this situation. </p>
 <p> This is a VERY BAD IDEA for security reasons, and so this parameter SHOULD NOT BE USED. It will be removed in a future version of Samba. </p>
 <p> If disabled, Samba will use the name used to look up the server when asking the KDC for a ticket. This avoids situations where a server may impersonate another, soliciting authentication as one principal while being known on the network as another. </p>

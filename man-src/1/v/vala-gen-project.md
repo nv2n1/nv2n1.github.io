@@ -40,5 +40,5 @@ description: "vala-gen-project – generate the and automake skeleton for your v
 <h2>AUTHOR</h2>
 <p> Andrea Del Signore (sejerpz (at) tin.it)</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-valac/">valac</a>(1) </p>
+<p> valac(1) </p>
 <h2>Index</h2>

@@ -57,7 +57,7 @@ int main()
 </code></pre>
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;Ei<code>(0)</code> = -inf<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-ei/">Ei</a><code>(1)</code> = 1.89512<br />
+&nbsp;<wbr>&nbsp;Ei<code>(1)</code> = 1.89512<br />
 &nbsp;<wbr>&nbsp;Gompetz constant = 0.596347</p>
 <h2>External links</h2>
 <p>Weisstein,_Eric_W._&quot;Exponential_Integral.&quot; From MathWorld&#8211;A Wolfram Web Resource.</p>

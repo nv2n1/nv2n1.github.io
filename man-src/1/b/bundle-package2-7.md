@@ -17,8 +17,8 @@ description: "bundle-package – Package your needed .gem files into your applic
 <h2>Support For Multiple Platforms</h2>
 <p>When using gems that have different packages for different platforms, Bundler 1.8 and newer support caching of gems for other platforms where the Gemfile has been resolved (i.e. present in the lockfile) in <code>vendor/cache</code>. This needs to be enabled via the <code>&#8211;all-platforms</code> option. This setting will be remembered in your local bundler configuration.</p>
 <h2>Remote Fetching</h2>
-<p>By default, if you run <code>bundle <a href="/docs/linux/man/1-install/">install</a>(1)</code>](bundle-install.1.html) after running bundle <a href="/docs/linux/man/1-package/">package</a>(1) <i>bundle-package.1.html</i>, bundler will still connect to <code>rubygems.org</code> to check whether a platform-specific gem exists for any of the gems in <code>vendor/cache</code>. </p>
-<p> For instance, consider this <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5):</p>
+<p>By default, if you run <code>bundle <a href="/docs/linux/man/1-install/">install</a>(1)</code>](bundle-install.1.html) after running bundle package(1) <i>bundle-package.1.html</i>, bundler will still connect to <code>rubygems.org</code> to check whether a platform-specific gem exists for any of the gems in <code>vendor/cache</code>. </p>
+<p> For instance, consider this Gemfile(5):</p>
 <dl>
 <dd>
 <pre>source &quot;<a rel="nofollow" href="https://rubygems.org">https://rubygems.org</a>&quot;
@@ -29,4 +29,4 @@ gem &quot;nokogiri&quot;</pre>
 <p> This problem is also not limited to the <code>&quot;java&quot;</code> platform. A similar (common) problem can happen when developing on Windows and deploying to Linux, or even when developing on OSX and deploying to Linux. </p>
 <p> If you know for sure that the gems packaged in <code>vendor/cache</code> are appropriate for the platform you are on, you can run <code>bundle install &#8211;local</code> to skip checking for more appropriate gems, and use the ones in <code>vendor/cache</code>. </p>
 <p> One way to be sure that you have the right platformed versions of all your gems is to run <code>bundle package</code> on an identical machine and check in the gems. For instance, you can run <code>bundle package</code> on an identical staging box during your staging process, and check in the <code>vendor/cache</code> before deploying to production. </p>
-<p> By default, bundle <a href="/docs/linux/man/1-package/">package</a>(1) <i>bundle-package.1.html</i> fetches and also installs the gems to the default location. To package the dependencies to <code>vendor/cache</code> without installing them to the local install location, you can run <code>bundle package &#8211;no-install</code>.</p>
+<p> By default, bundle package(1) <i>bundle-package.1.html</i> fetches and also installs the gems to the default location. To package the dependencies to <code>vendor/cache</code> without installing them to the local install location, you can run <code>bundle package &#8211;no-install</code>.</p>

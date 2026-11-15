@@ -38,4 +38,4 @@ This calls polls the send completion queue associated with an rdma_cm_id. If a c
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7), <a HREF="/docs/linux/man/3-ibv_poll_cq/">ibv_poll_cq</a>(3), <a HREF="/docs/linux/man/3-rdma_get_recv_comp/">rdma_get_recv_comp</a>(3), <a HREF="/docs/linux/man/3-rdma_post_send/">rdma_post_send</a>(3), <a HREF="/docs/linux/man/3-rdma_post_read/">rdma_post_read</a>(3), <a HREF="/docs/linux/man/3-rdma_post_write/">rdma_post_write</a>(3) 
+<a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7), ibv_poll_cq(3), <a HREF="/docs/linux/man/3-rdma_get_recv_comp/">rdma_get_recv_comp</a>(3), <a HREF="/docs/linux/man/3-rdma_post_send/">rdma_post_send</a>(3), <a HREF="/docs/linux/man/3-rdma_post_read/">rdma_post_read</a>(3), <a HREF="/docs/linux/man/3-rdma_post_write/">rdma_post_write</a>(3) 

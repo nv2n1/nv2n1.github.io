@@ -724,4 +724,4 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| location</p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/6-bzflag/">bzflag</a>(6), <a href="/docs/linux/man/6-bzadmin/">bzadmin</a>(6), <a href="/docs/linux/man/6-bzfs/">bzfs</a>(6) </p>
+<p>bzflag(6), bzadmin(6), bzfs(6) </p>

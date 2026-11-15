@@ -70,7 +70,7 @@ description: "alevt-cap – simple capture of teletext pages"
 <h2>FILES</h2>
 <p> <i>/dev/vbi*</i> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/1x-alevt/">alevt</a></code>(1x), <code><a href="/docs/linux/man/1-alevt-date/">alevt-date</a></code>(1), </p>
+<p> <code>alevt</code>(1x), <code><a href="/docs/linux/man/1-alevt-date/">alevt-date</a></code>(1), </p>
 <h2>BUGS</h2>
 <p> If you give a page number that is never transmitted the program will not terminate. </p>
 <p> Bug reports to &lt;froese [at] gmx.de&gt;. </p>

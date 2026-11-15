@@ -33,4 +33,4 @@ description: "psf – PostScript filter"
 <p> Note that if the host in question spools to more than one AppleTalk printer, /dev/null should not be used for the <code>lp</code> capability. Instead, a null device should be created with <code>mknod</code> for each printer, as has been done above. </p>
 <p> Finally, there is a file in the spool directory, /var/spool/lpd/laser, called <code>.paprc</code>, which <code>pap</code> reads for the AppleTalk name of the printer.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-psorder/">psorder</a></code>(1), <code><a href="/docs/linux/man/5-printcap/">printcap</a></code>(5), <code><a href="/docs/linux/man/1-lpd/">lpd</a></code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code><a href="/docs/linux/man/1-pap/">pap</a></code>(1). </p>
+<p><code><a href="/docs/linux/man/1-psorder/">psorder</a></code>(1), <code>printcap</code>(5), <code>lpd</code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code><a href="/docs/linux/man/1-pap/">pap</a></code>(1). </p>

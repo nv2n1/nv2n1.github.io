@@ -451,7 +451,7 @@ example:
 
  <a HREF="/docs/linux/man/1-rbox/">rbox</a>(1) 
 
- Barber, C. B., D.P. Dobkin, and H.T. Huhdanpaa, &quot;The Quickhull Algorithm for Convex Hulls,&quot; ACM Trans. on Mathematical Software, <a HREF="/docs/linux/man/4-22/">22</a>(4):469-483, Dec. 1996. <a rel="nofollow" HREF="http://www.acm.org/pubs/citations/journals/toms/1996-22-4/p469-barber/">http://www.acm.org/pubs/citations/journals/toms/1996-22-4/p469-barber/</a> <a rel="nofollow" HREF="http://citeseer.nj.nec.com/83502.html">http://citeseer.nj.nec.com/83502.html</a> 
+ Barber, C. B., D.P. Dobkin, and H.T. Huhdanpaa, &quot;The Quickhull Algorithm for Convex Hulls,&quot; ACM Trans. on Mathematical Software, 22(4):469-483, Dec. 1996. <a rel="nofollow" HREF="http://www.acm.org/pubs/citations/journals/toms/1996-22-4/p469-barber/">http://www.acm.org/pubs/citations/journals/toms/1996-22-4/p469-barber/</a> <a rel="nofollow" HREF="http://citeseer.nj.nec.com/83502.html">http://citeseer.nj.nec.com/83502.html</a> 
 
  Clarkson, K.L., K. Mehlhorn, and R. Seidel, &quot;Four results on randomized incremental construction,&quot; Computational Geometry: Theory and Applications, vol. 3, p. 185-211, 1993. 
 

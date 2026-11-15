@@ -27,7 +27,7 @@ description: "create_makefiles – Recreates all Makefiles beneath a directory"
 <dd> A <code>sed</code> expression that is used to transform the source directory into the build directory. For instance, if the source directory is <i>kdesdk/obj-i386-linux</i>, then <code>OBJ_REPLACEMENT</code> should be set to <i>s#kdesdk#kdesdk-obj#</i>. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-create_makefile/">create_makefile</a>(1) <a href="/docs/linux/man/2-make/">make</a>(2) </p>
+<p> <a href="/docs/linux/man/1-create_makefile/">create_makefile</a>(1) make(2) </p>
 <h2>AUTHORS</h2>
 <p> <code>create_makefiles</code> was written by David Faure &lt;faure [at] kde.org&gt;. </p>
 <p> This manual page was prepared by Ben Burton &lt;bab [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>

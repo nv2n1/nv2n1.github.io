@@ -101,7 +101,7 @@ description: "dbus-binding-tool – C language GLib bindings generation utility.
 <p> The following files are used by this application: </p>
 <p> <code>/usr/bin/dbus-binding-tool</code> Executable for the D-Bus Binding Tool application. </p>
 <h2>ATTRIBUTES</h2>
-<p> See <code><a href="/docs/linux/man/5-attributes/">attributes</a></code>(5) for descriptions of the following attributes: </p>
+<p> See <code>attributes</code>(5) for descriptions of the following attributes: </p>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center>ATTRIBUTE TYPE</td>
@@ -120,7 +120,7 @@ description: "dbus-binding-tool – C language GLib bindings generation utility.
 </tr>
 </table>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dbus-cleanup-sockets/">dbus-cleanup-sockets</a></code>(1), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), <code><a href="/docs/linux/man/1-dbus-monitor/">dbus-monitor</a></code>(1), <code><a href="/docs/linux/man/1-dbus-send/">dbus-send</a></code>(1), <code><a href="/docs/linux/man/1-dbus-uuidgen/">dbus-uuidgen</a></code>(1), <code><a href="/docs/linux/man/3-libdbus-glib-1/">libdbus-glib-1</a></code>(3), <code><a href="/docs/linux/man/5-attributes/">attributes</a></code>(5)</p>
+<p> <code><a href="/docs/linux/man/1-dbus-cleanup-sockets/">dbus-cleanup-sockets</a></code>(1), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), <code><a href="/docs/linux/man/1-dbus-monitor/">dbus-monitor</a></code>(1), <code><a href="/docs/linux/man/1-dbus-send/">dbus-send</a></code>(1), <code><a href="/docs/linux/man/1-dbus-uuidgen/">dbus-uuidgen</a></code>(1), <code>libdbus-glib-1</code>(3), <code>attributes</code>(5)</p>
 <h2>NOTES</h2>
 <p> Written by Brian Cameron, Sun Microsystems Inc., 2009. </p>
 <h2>Index</h2>

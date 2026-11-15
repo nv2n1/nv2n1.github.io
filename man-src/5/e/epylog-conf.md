@@ -97,4 +97,4 @@ description: "epylog.conf – epylog configuration"
 <h2>Authors</h2>
 <p>Konstantin Ryabitsev &lt;icon [at] linux.duke.edu&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-epylog/">epylog</a>(3), <a href="/docs/linux/man/8-epylog/">epylog</a>(8), <a href="/docs/linux/man/5-epylog-modules/">epylog-modules</a>(5) </p>
+<p>epylog(3), <a href="/docs/linux/man/8-epylog/">epylog</a>(8), <a href="/docs/linux/man/5-epylog-modules/">epylog-modules</a>(5) </p>

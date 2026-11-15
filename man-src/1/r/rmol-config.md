@@ -29,7 +29,7 @@ description: "rmol-config –"
 <p> <code>&#8211;prefix</code> </p>
 <p>&nbsp;<wbr>Show the RMOL installation prefix.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-rmol/">rmol</a>(1)</code>, <code><a href="/docs/linux/man/1-rmol-config/">rmol-config</a></code>(1), <code><a href="/docs/linux/man/1-boost-config/">boost-config</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-rmol/">rmol</a>(1)</code>, <code><a href="/docs/linux/man/1-rmol-config/">rmol-config</a></code>(1), <code>boost-config</code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright © 2007-2013 Denis Arnaud </p>
 <p> See the COPYING file for more information on the (LGPLv2+) license, or directly on Internet: </p>

@@ -13,7 +13,7 @@ description: "fcron – daemon to execute scheduled tasks"
 <h2>Description</h2>
 <p><code>Fcron</code> should be started from <i>/etc/rc</i> or <i>/etc/rc.local</i>. Unless the <code>-f</code> (or <code>&#8211;foreground</code>) option is given, it will return immediately, so you don&#8217;t need to start it with &#8216;&amp;&#8217;. </p>
 <p> <code>Fcron</code> loads users <code>fcrontab</code>s (see <code><a href="/docs/linux/man/5-fcrontab/">fcrontab</a></code>(5)) files previously installed by <code>fcrontab</code> (see <code><a href="/docs/linux/man/1-fcrontab/">fcrontab</a></code>(1)). Then, <code>fcron</code> calculates the time and date of each job&#8217;s next execution, and determines how long it has to sleep, and sleeps for this amount of time. When it wakes up, it checks all jobs loaded and runs them if needed. When a job is executed, <code>fcron</code> forks, changes its user and group permissions to match those of the user the job is being done for, executes that job and mails the outputs to the user (this can be changed: see <code><a href="/docs/linux/man/5-fcrontab/">fcrontab</a></code>(5)). </p>
-<p> Informative message about what <code>fcron</code> is doing are sent to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) under facility <code>cron</code>, priority <code>notice</code>. Warning and error messages are sent respectively at priority <code>warning</code> and <code>error</code>. </p>
+<p> Informative message about what <code>fcron</code> is doing are sent to <code>syslogd</code>(8) under facility <code>cron</code>, priority <code>notice</code>. Warning and error messages are sent respectively at priority <code>warning</code> and <code>error</code>. </p>
 <dl>
 <dd><code>Note:</code> <code>fcron</code> sleeps at least 20 seconds after it has been started before executing a job to avoid to use too much resources during system boot.</dl>
 <h2>Options</h2>
@@ -89,7 +89,7 @@ description: "fcron – daemon to execute scheduled tasks"
 <h2>Files</h2>
 <dl>
 <dt><i>/usr/local/etc/fcron.conf</i></p>
-<dd>Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code><a href="/docs/linux/man/5-fcron-conf/">fcron.conf</a></code>(5) for more details.</p>
+<dd>Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code>fcron.conf</code>(5) for more details.</p>
 <dt><i>/usr/local/etc/fcron.allow</i></p>
 <dd>Users allowed to use <code>fcrontab</code> and <code>fcrondyn</code> (one name per line, special name &quot;all&quot; acts for everyone)</p>
 <dt><i>/usr/local/etc/fcron.deny</i></p>
@@ -100,7 +100,7 @@ description: "fcron – daemon to execute scheduled tasks"
 <p><code><a href="/docs/linux/man/1-fcrontab/">fcrontab</a></code>(1), </p>
 <p> <code><a href="/docs/linux/man/1-fcrondyn/">fcrondyn</a></code>(1), </p>
 <p> <code><a href="/docs/linux/man/5-fcrontab/">fcrontab</a></code>(5), </p>
-<p> <code><a href="/docs/linux/man/5-fcron-conf/">fcron.conf</a></code>(5), </p>
+<p> <code>fcron.conf</code>(5), </p>
 <p> <code><a href="/docs/linux/man/8-fcron/">fcron</a></code>(8). </p>
 <p> If you&#8217;re learning how to use fcron from scratch, I suggest that you read the HTML version of the documentation (if your are not reading it right now! :) ): the content is the same, but it is easier to navigate thanks to the hyperlinks.</p>
 <h2>Author</h2>

@@ -41,13 +41,13 @@ Smokeping::probes::FPing6 - FPing6 Probe for SmokePing
 
  Example value: true
 <dt>hostinterval
-<dd>The fping ``-p'' parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i><a HREF="/docs/linux/man/1-fping/">fping</a></i>(1): 
+<dd>The fping ``-p'' parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i>fping</i>(1): 
 
  This parameter sets the time that fping waits between successive packets to an individual target. 
 
  Example value: 1.5
 <dt>mininterval
-<dd>The fping ``-i'' parameter, but in (probably fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i><a HREF="/docs/linux/man/1-fping/">fping</a></i>(1): 
+<dd>The fping ``-i'' parameter, but in (probably fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i>fping</i>(1): 
 
  The minimum amount of time between sending a ping packet to any target. 
 
@@ -67,7 +67,7 @@ Smokeping::probes::FPing6 - FPing6 Probe for SmokePing
 
  Example value: 20
 <dt>sourceaddress
-<dd>The fping ``-S'' parameter . From <i><a HREF="/docs/linux/man/1-fping/">fping</a></i>(1): 
+<dd>The fping ``-S'' parameter . From <i>fping</i>(1): 
 
  Set source address. 
 

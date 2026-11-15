@@ -75,6 +75,6 @@ description: "rpc.nfsd – NFS server process"
 <h2>Notes</h2>
 <p>If the program is built with TI-RPC support, it will enable any protocol and address family combinations that are marked visible in the <code>netconfig</code> database. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rpc-mountd/">rpc.mountd</a></code>(8), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/8-exportfs/">exportfs</a></code>(8), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code><a href="/docs/linux/man/8-rpc-rquotad/">rpc.rquotad</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></code>(8), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a>(5).</code></p>
+<p><code>rpc.mountd</code>(8), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/8-exportfs/">exportfs</a></code>(8), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code><a href="/docs/linux/man/8-rpc-rquotad/">rpc.rquotad</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></code>(8), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a>(5).</code></p>
 <h2>Author</h2>
 <p>Olaf Kirch, Bill Hawes, H. J. Lu, G. Allan Morris III, and a host of others.</p>

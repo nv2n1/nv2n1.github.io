@@ -78,7 +78,7 @@ Ezmap_params - This document briefly describes all internal parameters of EZMAP.
 <dt>'PT' - Integer or Real
 <dd>For retrieval only. The value of PLAT from the last call to MAPROJ. The default value is zero.
 <dt>'Pn' - Integer or Real
-<dd>For retrieval only. The character &quot;n&quot; is a digit from 1 to 8, inclusive. Retrieves values from the call to MAPSET. P1 through P4 specify <a HREF="/docs/linux/man/1-plm1/">PLM1</a>(1), <a HREF="/docs/linux/man/1-plm2/">PLM2</a>(1), <a HREF="/docs/linux/man/1-plm3/">PLM3</a>(1), and <a HREF="/docs/linux/man/1-plm4/">PLM4</a>(1), while P5 through P8 specify <a HREF="/docs/linux/man/2-plm1/">PLM1</a>(2), <a HREF="/docs/linux/man/2-plm2/">PLM2</a>(2), <a HREF="/docs/linux/man/2-plm3/">PLM3</a>(2), and <a HREF="/docs/linux/man/2-plm4/">PLM4</a>(2). Default values are all zero.
+<dd>For retrieval only. The character &quot;n&quot; is a digit from 1 to 8, inclusive. Retrieves values from the call to MAPSET. P1 through P4 specify PLM1(1), PLM2(1), PLM3(1), and PLM4(1), while P5 through P8 specify PLM1(2), PLM2(2), PLM3(2), and PLM4(2). Default values are all zero.
 <dt>'RE' - Integer or Real
 <dd>The width of the target plotter, in plotter units. The default value is 4096.
 <dt>'RO' - Integer or Real

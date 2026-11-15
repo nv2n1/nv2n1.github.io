@@ -32,7 +32,7 @@ description: "myproxy-admin-adduser – add a user or service credential"
 <dt><code>-t</code><i> hours</i></p>
 <dd>Specifies the maximum lifetime of credentials retrieved from the <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) using the stored credential. Default: 12 hours</p>
 <dt><code>-p</code><i> CA-password</i></p>
-<dd>Specifies the password for the CA&#8217;s private key using the format documented in the PASS PHRASE ARGUMENTS section of <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1).</p>
+<dd>Specifies the password for the CA&#8217;s private key using the format documented in the PASS PHRASE ARGUMENTS section of <code>openssl</code>(1).</p>
 <dt><code>-n</code></p>
 <dd>Disables passphrase authentication for the stored credential. If specified, the command will not prompt for a passphrase, the credential will not be encrypted by a passphrase in the repository, and the credential will not be retrievable using passphrase authentication with <code><a href="/docs/linux/man/1-myproxy-logon/">myproxy-logon</a></code>(1). This option is used for storing renewable credentials and is implied by <code>-R</code>.</p>
 <dt><code>-d</code></p>

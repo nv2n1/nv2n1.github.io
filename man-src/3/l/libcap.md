@@ -48,7 +48,7 @@ Link with - lcap.
 <dt><i>cap_flag_t</i></p>
 <dd> identifies one of the three flags associated with a capability (i.e., it identifies one of the three capability sets). Valid values for this type are <code>CAP_EFFECTIVE</code>, <code>CAP_INHERITABLE</code> or <code>CAP_PERMITTED</code>.</p>
 <dt><i>cap_flag_value_t</i></p>
-<dd> identifies the setting of a particular capability flag (i.e, the value of a capability in a set). Valid values for this type are <code>CAP_CLEAR</code>(0) or <code><a href="/docs/linux/man/1-cap_set/">CAP_SET</a></code>(1).</dl>
+<dd> identifies the setting of a particular capability flag (i.e, the value of a capability in a set). Valid values for this type are <code>CAP_CLEAR</code>(0) or <code>CAP_SET</code>(1).</dl>
 <h2>RETURN VALUE</h2>
 <p> The return value is generally specific to the individual function called. On failure, <i>errno</i> is set appropriately.</p>
 <h2>CONFORMING TO</h2>

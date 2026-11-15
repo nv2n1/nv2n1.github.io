@@ -41,11 +41,11 @@ description: "bundle-lock – Creates / Updates a lockfile without installing"
 <h2>Updating All Gems</h2>
 <p>If you run <code>bundle lock</code> with <code>&#8211;update</code> option without list of gems, bundler will ignore any previously installed gems and resolve all dependencies again based on the latest versions of all gems available in the sources.</p>
 <h2>Updating A List Of Gems</h2>
-<p>Sometimes, you want to update a single gem in the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5), and leave the rest of the gems that you specified locked to the versions in the <code>Gemfile.lock</code>. </p>
+<p>Sometimes, you want to update a single gem in the Gemfile(5), and leave the rest of the gems that you specified locked to the versions in the <code>Gemfile.lock</code>. </p>
 <p> For instance, you only want to update <code>nokogiri</code>, run <code>bundle lock &#8211;update nokogiri</code>. </p>
 <p> Bundler will update <code>nokogiri</code> and any of its dependencies, but leave the rest of the gems that you specified locked to the versions in the <code>Gemfile.lock</code>.</p>
 <h2>Supporting Other Platforms</h2>
 <p>If you want your bundle to support platforms other than the one you&#8217;re running locally, you can run <code>bundle lock &#8211;add-platform PLATFORM</code> to add PLATFORM to the lockfile, force bundler to re-resolve and consider the new platform when picking gems, all without needing to have a machine that matches PLATFORM handy to install those platform-specific gems on. </p>
 <p> For a full explanation of gem platforms, see <code>gem help platform</code>.</p>
 <h2>Patch Level Options</h2>
-<p>See bundle <a href="/docs/linux/man/1-update/">update</a>(1) <i>bundle-update.1.html</i> for details.</p>
+<p>See bundle update(1) <i>bundle-update.1.html</i> for details.</p>

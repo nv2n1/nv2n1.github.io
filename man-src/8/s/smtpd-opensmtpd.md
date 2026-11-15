@@ -16,7 +16,7 @@ description: "smtpd – Simple Mail Transfer Protocol daemon"
 [-P system]
 [-T trace]</code></pre>
 <h2>Description</h2>
-<p><code>smtpd</code> is a Simple Mail Transfer Protocol (SMTP) daemon which can be used as a machine&#8217;s primary mail system. <code>smtpd</code> can listen on a network interface and handle SMTP transactions; it can also be fed messages through the standard <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8) interface. It can relay messages through remote mail transfer agents or store them locally using either the mbox or maildir format. This implementation supports SMTP as defined by RFC 5321 as well as several extensions. A running <code>smtpd</code> can be controlled through <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8). </p>
+<p><code>smtpd</code> is a Simple Mail Transfer Protocol (SMTP) daemon which can be used as a machine&#8217;s primary mail system. <code>smtpd</code> can listen on a network interface and handle SMTP transactions; it can also be fed messages through the standard <code>sendmail</code>(8) interface. It can relay messages through remote mail transfer agents or store them locally using either the mbox or maildir format. This implementation supports SMTP as defined by RFC 5321 as well as several extensions. A running <code>smtpd</code> can be controlled through <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8). </p>
 <p> The options are as follows:</p>
 <dl>
 <dd>
@@ -94,7 +94,7 @@ description: "smtpd – Simple Mail Transfer Protocol daemon"
 <dd>Spool directories for mail during processing.</dl>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-smtpd-conf/">smtpd.conf</a></code>(5), <code><a href="/docs/linux/man/8-mailwrapper/">mailwrapper</a></code>(8), <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/5-smtpd-conf/">smtpd.conf</a></code>(5), <code>mailwrapper</code>(8), <code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8)</p>
 <h2>Standards</h2>
 <p>Rs %A J. Klensin %D October 2008 %R RFC 5321 %T Simple Mail Transfer Protocol Re</p>
 <h2>History</h2>

@@ -35,7 +35,7 @@ description: "ippeveprinter – an ipp everywhere printer application for cups"
 <dt><code>-M </code><i>manufacturer</i></p>
 <dd> Set the manufacturer of the printer. The default is &quot;Example&quot;.</p>
 <dt><code>-P </code><i>filename.ppd</i></p>
-<dd> Load printer attributes from the specified PPD file. This option is typically used in conjunction with the <code><a href="/docs/linux/man/7-ippeveps/">ippeveps</a></code>(7) printer command (&quot;-c ippeveps&quot;).</p>
+<dd> Load printer attributes from the specified PPD file. This option is typically used in conjunction with the <code>ippeveps</code>(7) printer command (&quot;-c ippeveps&quot;).</p>
 <dt><code>-V 1.1</code></p>
 <dd>
 <dt><code>-V 2.0</code></p>
@@ -103,7 +103,7 @@ description: "ippeveprinter – an ipp everywhere printer application for cups"
     ippeveprinter -c /usr/bin/file &quot;My Cool Printer&quot;
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-ippevepcl/">ippevepcl</a></code>(7), <code><a href="/docs/linux/man/7-ippeveps/">ippeveps</a></code>(7), PWG Internet Printing Protocol Workgroup (<a rel="nofollow" href="http://www.pwg.org/ipp)">http://www.pwg.org/ipp)</a></p>
+<p> <code>ippevepcl</code>(7), <code>ippeveps</code>(7), PWG Internet Printing Protocol Workgroup (<a rel="nofollow" href="http://www.pwg.org/ipp)">http://www.pwg.org/ipp)</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
 <h2>Index</h2>

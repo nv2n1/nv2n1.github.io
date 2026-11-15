@@ -68,7 +68,7 @@ void if_freenameindex(struct if_nameindex *ptr);
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if_freenameindex(if_ni); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2), <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2), <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3), <code><a href="/docs/linux/man/3-if_indextoname/">if_indextoname</a></code>(3), <code><a href="/docs/linux/man/3-if_nametoindex/">if_nametoindex</a></code>(3), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8)</p>
+<p> <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2), <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2), <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3), <code>if_indextoname</code>(3), <code>if_nametoindex</code>(3), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

@@ -44,7 +44,7 @@ description: "pamrubber – a rubber-sheeting utility that stretches an image ba
 <p> Before Netpbm 10.61 (December 2012), this was called <code>-randseed</code>, and that still works. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1)<br />
+<p> <code>pam</code>(1)<br />
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamperspective/">pamperspective</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamrubber</code> was new in Netpbm 10.54 (March 2011). </p>

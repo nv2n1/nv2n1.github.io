@@ -30,5 +30,5 @@ description: "bundle-doctor – Checks the bundle for common problems"
 <dt><code>&#8211;quiet</code></p>
 <dd>Only output warnings and errors.</p>
 <dt><code>&#8211;gemfile=&lt;gemfile&gt;</code></p>
-<dd>The location of the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) which Bundler should use. This defaults to a <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) in the current working directory. In general, Bundler will assume that the location of the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) is also the project&#8217;s root and will try to find <code>Gemfile.lock</code> and <code>vendor/cache</code> relative to this location. </p>
+<dd>The location of the Gemfile(5) which Bundler should use. This defaults to a Gemfile(5) in the current working directory. In general, Bundler will assume that the location of the Gemfile(5) is also the project&#8217;s root and will try to find <code>Gemfile.lock</code> and <code>vendor/cache</code> relative to this location. </p>
 </dl>

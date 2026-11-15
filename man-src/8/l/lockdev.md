@@ -8,11 +8,11 @@ description: "Lockdev is a setgid binary, which provides a reliable way to put a
 ---
 
 <p><code>Lockdev</code> is a setgid binary, which provides a reliable way to put an exclusive lock in /var/lock to devices (e.g. ttyS0) using both FSSTND and SVr4 methods, so regular users don&#8217;t need write access there. This task is achieved through calls to the </p>
-<p><a href="/docs/linux/man/3-liblockdev/">liblockdev</a>(3) API. </p>
+<p>liblockdev(3) API. </p>
 <h2>Synopsis</h2>
 <p><code>/usr/sbin/lockdev</code> [&lt;<code>operation</code>&gt;] &lt;<code>device</code>&gt; </p>
 <h2>Description</h2>
-<p>The <code>lockdev</code> command can perform one of the following operations (calls to <a href="/docs/linux/man/3-liblockdev/">liblockdev</a>(3) API): <code>-l</code> &#8211; lock device with <code>dev_lock()</code> function <code>-u</code> &#8211; unlock device with <code>dev_unlock()</code> function <code>no operation</code> &#8211; test lock with <code>dev_testlock()</code> function </p>
+<p>The <code>lockdev</code> command can perform one of the following operations (calls to liblockdev(3) API): <code>-l</code> &#8211; lock device with <code>dev_lock()</code> function <code>-u</code> &#8211; unlock device with <code>dev_unlock()</code> function <code>no operation</code> &#8211; test lock with <code>dev_testlock()</code> function </p>
 <h2>Return Values</h2>
 <p>Value&nbsp;<wbr>&nbsp;<wbr>dev_lock&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>dev_unlock&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>dev_testlock<br />
 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>OK&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>OK&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>not locked<br />

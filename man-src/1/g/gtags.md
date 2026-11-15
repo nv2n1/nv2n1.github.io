@@ -28,7 +28,7 @@ description: "gtags – create tag files for global."
 <dt><code>&#8211;gtagslabel</code> <i>label</i></p>
 <dd> <i>label</i> is used as the label of configuration file. The default is default.</p>
 <dt><code>-I</code>, <code>&#8211;idutils</code></p>
-<dd> Make index files for <code><a href="/docs/linux/man/1-idutils/">idutils</a></code>(1) too.</p>
+<dd> Make index files for <code>idutils</code>(1) too.</p>
 <dt><code>-i</code>, <code>&#8211;incremental</code></p>
 <dd> Update tag files incrementally. You had better use <code><a href="/docs/linux/man/1-global/">global</a></code>(1) with the -u option.</p>
 <dt><code>-n</code>, <code>&#8211;max-args</code> <i>number</i></p>

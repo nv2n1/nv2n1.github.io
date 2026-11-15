@@ -39,7 +39,7 @@ description: "bing – compute point to point throughput using two sizes of ICMP
 <dt><code>-R</code></p>
 <dd>Record route. Includes the RECORD_ROUTE option in the ECHO_REQUEST packet and displays the route buffer on returned packets. Note that the IP header is only large enough for nine such routes. Many hosts ignore or discard this option.</p>
 <dt><code>-r</code></p>
-<dd>Bypass the normal routing tables and send directly to a host on an attached network. If the host is not on a directly-attached network, an error is returned. This option can be used to ping a local host through an interface that has no route through it (e.g., after the interface was dropped by <a href="/docs/linux/man/8-routed/">routed</a>(8)).</p>
+<dd>Bypass the normal routing tables and send directly to a host on an attached network. If the host is not on a directly-attached network, an error is returned. This option can be used to ping a local host through an interface that has no route through it (e.g., after the interface was dropped by routed(8)).</p>
 <dt><code>-s</code> <i>small packetsize</i></p>
 <dd>Specifies the number of data bytes to be sent in the small packets. The default and minimum value is 44.</p>
 <dt><code>-S</code> <i>big packetsize</i></p>
@@ -61,7 +61,7 @@ description: "bing – compute point to point throughput using two sizes of ICMP
 <p> The maximum IP header length is too small for options like RECORD_ROUTE to be completely useful. There&#8217;s not much that that can be done about this, however. </p>
 <p> Some of the final stats (average throughputs) almost never give a even marginally correct result.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-netstat/">netstat</a>(1), <a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8), <a href="/docs/linux/man/8-ping/">ping</a>(8), <a href="/docs/linux/man/8-routed/">routed</a>(8), <a href="/docs/linux/man/8-traceroute/">traceroute</a>(8)</p>
+<p>netstat(1), <a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8), <a href="/docs/linux/man/8-ping/">ping</a>(8), routed(8), <a href="/docs/linux/man/8-traceroute/">traceroute</a>(8)</p>
 <h2>Author</h2>
 <p>Pierre Beyssac &lt;pb [at] fasterix.freenix.fr&gt; </p>
 <p> Port to Windows: Francois Gouget &lt;fgouget [at] mygale.org&gt;</p>

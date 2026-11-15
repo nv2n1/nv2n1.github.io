@@ -33,8 +33,8 @@ description: "pamtotga – convert a Netpbm image to a TrueVision Targa file"
 <p> By default, <code>pamtotga</code> uses the input file name argument, up to the first period (or the whole thing if there is no period). It truncates it as necessary to meet TGA standards. If you specify (or default to) Standard Input, <code>pamtotga</code> omits the image ID from the TGA header. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tgatoppm/">tgatoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-pamstack/">pamstack</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-tgatoppm/">tgatoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-pamstack/">pamstack</a></code>(1) , <code>pam</code>(1) </p>
+<p> <code>pnm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> This program was called <code>ppmtotga</code> until Netpbm 10.6 (July 2002). That was always a misnomer, though, because a PPM class program would not be able to tell the difference between PGM and PPM input (it would all look like PPM), and thus could not choose the output Targa image type based on the type of the input. Netpbm 10.6 also added the ability to handle an alpha channel, so it became a PAM class program. </p>
 <p> In Netpbm 10.15 (April 2003), the program became the first in the Netpbm package to recognize an alpha channel in a PAM. It recognized tuple type &#8216;RGBA&#8217;. But when this kind of PAM image was later added to the PAM specification, it was specified with tuple type &#8216;RGB_ALPHA&#8217;. So in Netpbm 10-26 (January 2005), <code>pamtotga</code> changed to recognize &#8216;RGB_ALPHA&#8217; instead of &#8216;RGBA&#8217;. </p>

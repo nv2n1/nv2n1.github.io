@@ -116,7 +116,7 @@ description: "gropdf – PDF driver for groff"
 <dt><code>\X&#8217;ps: exec %%%%ENDONCE</code></p>
 <dd> This terminates the block defined by %%%%BEGINONCE. This pair of commands is what implements the .BLOCKS Once/.BLOCKE commands in present.tmac.</dl>
 <p> The <code>mom</code> macro set already has integration with these extensions so you can build slides with <code>mom</code>. </p>
-<p> If you use present.tmac with <code>gropdf</code> there is no need to run the program <code><a href="/docs/linux/man/1-presentps/">presentps</a></code>(1) since the output will already be a presentation pdf. </p>
+<p> If you use present.tmac with <code>gropdf</code> there is no need to run the program <code>presentps</code>(1) since the output will already be a presentation pdf. </p>
 <p> All other <code>ps:</code> tags are silently ignored. </p>
 <p> One <code>\X</code> special used by the DVI driver is also recognised:</p>
 <dl>
@@ -183,7 +183,7 @@ description: "gropdf – PDF driver for groff"
 <dd> <code>Note:</code> not all PDF Readers support any or all these transitions.</dl>
 <h3>Importing graphics</h3>
 <p> <code>gropdf</code> only supports importing other PDF files as graphics. But that PDF file may contain any of the graphic formats supported by the PDF standard (such as JPEG, PNG, GIF, etc.). So any application which outputs PDF can be used as an embedded file in <code>gropdf</code>. The PDF file you wish to insert must be a single page and the drawing must just fit inside the media size of the PDF file. So, in <code><a href="/docs/linux/man/1-inkscape/">inkscape</a></code>(1) or <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1) (for example) make sure the canvas size just fits the image. </p>
-<p> The PDF parser used in <code>gropdf</code> has not been rigorously tested with all possible applications which produce PDFs. If you find a single page PDF which fails to import properly, it is worth running it through the <code><a href="/docs/linux/man/1-pdftk/">pdftk</a></code>(1) program by issuing the command:</p>
+<p> The PDF parser used in <code>gropdf</code> has not been rigorously tested with all possible applications which produce PDFs. If you find a single page PDF which fails to import properly, it is worth running it through the <code>pdftk</code>(1) program by issuing the command:</p>
 <dl>
 <dt>
 <dd>

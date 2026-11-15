@@ -47,7 +47,7 @@ amk_ccc[options] dim[tfile] amk_fft2[options] dim[tfile] amk_hy[options] dim[tfi
     $ amk_p2 3 5 | gmap brol.grf - brol.map
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gmk_msh/">gmk_msh</a></code>(1), <code><a href="/docs/linux/man/1-gtst/">gtst</a></code>(1), <code><a href="/docs/linux/man/1-gmap/">gmap</a></code>(1), <code><a href="/docs/linux/man/1-gord/">gord</a></code>(1), <code><a href="/docs/linux/man/1-gout/">gout</a></code>(1), <code><a href="/docs/linux/man/1-amk_grf/">amk_grf</a></code>(1). </p>
+<p> <code>gmk_msh</code>(1), <code>gtst</code>(1), <code>gmap</code>(1), <code>gord</code>(1), <code>gout</code>(1), <code>amk_grf</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

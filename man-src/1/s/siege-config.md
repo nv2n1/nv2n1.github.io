@@ -21,4 +21,4 @@ url: "/docs/linux/man/1-siege-config/"
 
  You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA</font> 02139, <font SIZE="-1">USA</font>.
 <h3><font SIZE="-1">AVAILABILITY</font></h3><tt>siege</tt>.config is distributed as part of <tt>siege</tt>
-<h3><font SIZE="-1">SEE</font> <font SIZE="-1">ALSO</font></h3>$<i><a HREF="/docs/linux/man/1-_program/">_PROGRAM</a></i>(1)
+<h3><font SIZE="-1">SEE</font> <font SIZE="-1">ALSO</font></h3>$<i>_PROGRAM</i>(1)

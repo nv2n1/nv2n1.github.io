@@ -39,6 +39,6 @@ int
 <p> <code>Tk_DrawChars</code> draws the <i>string</i> at the given location in the given <i>drawable</i>. </p>
 <p> <code>Tk_UnderlineChars</code> underlines the given range of characters in the given <i>string</i>. It does not draw the characters (which are assumed to have been displayed previously by <code>Tk_DrawChars</code>); it just draws the underline. This procedure is used to underline a few characters without having to construct an underlined font. To produce natively underlined text, the appropriate underlined font should be constructed and used.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-font/">font</a>(n), <a href="/docs/linux/man/3-fontid/">FontId</a>(3)</p>
+<p>font(n), FontId(3)</p>
 <h2>Keywords</h2>
 <p>font, measurement</p>

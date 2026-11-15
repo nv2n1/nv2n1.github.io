@@ -107,7 +107,7 @@ description: "chpevd.f –"
 <p> <i>RWORK</i> </p>
 <pre>
           RWORK is REAL array, dimension (MAX(1,LRWORK))
-          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-RWORK/">RWORK</a>(1) returns the required LRWORK.
+          On exit, if INFO = 0, RWORK(1) returns the required LRWORK.
 </pre>
 <p> <i>LRWORK</i> </p>
 <pre>
@@ -126,7 +126,7 @@ description: "chpevd.f –"
 <p> <i>IWORK</i> </p>
 <pre>
           IWORK is INTEGER array, dimension (MAX(1,LIWORK))
-          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the required LIWORK.
+          On exit, if INFO = 0, IWORK(1) returns the required LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
 <pre>

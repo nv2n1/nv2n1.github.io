@@ -50,5 +50,5 @@ description: "smtptest – interactive SMTP test program"
 <dt><code>-v</code></p>
 <dd> Verbose. Print out more information than usual.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-sendmail/">sendmail</a>(8)</code> </p>
+<p> <code>sendmail(8)</code> </p>
 <h2>Index</h2>

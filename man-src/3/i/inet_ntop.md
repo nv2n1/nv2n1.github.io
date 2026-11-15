@@ -17,7 +17,7 @@ const char *inet_ntop(int af, const void *src,
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> This function converts the network address structure <i>src</i> in the <i>af</i> address family into a character string. The resulting string is copied to the buffer pointed to by <i>dst</i>, which must be a non-null pointer. The caller specifies the number of bytes available in this buffer in the argument <i>size</i>. </p>
-<p> <code>inet_ntop</code>() extends the <code><a href="/docs/linux/man/3-inet_ntoa/">inet_ntoa</a></code>(3) function to support multiple address families, <code><a href="/docs/linux/man/3-inet_ntoa/">inet_ntoa</a></code>(3) is now considered to be deprecated in favor of <code>inet_ntop</code>(). The following address families are currently supported:</p>
+<p> <code>inet_ntop</code>() extends the <code>inet_ntoa</code>(3) function to support multiple address families, <code>inet_ntoa</code>(3) is now considered to be deprecated in favor of <code>inet_ntop</code>(). The following address families are currently supported:</p>
 <dl>
 <dt><code>AF_INET</code></p>
 <dd> <i>src</i> points to a <i>struct in_addr</i> (in network byte order) which is converted to an IPv4 network address in the dotted-decimal format, &quot;<i>ddd.ddd.ddd.ddd</i>&quot;. The buffer <i>dst</i> must be at least <code>INET_ADDRSTRLEN</code> bytes long.</p>
@@ -52,9 +52,9 @@ const char *inet_ntop(int af, const void *src,
 <h2>BUGS</h2>
 <p> <code>AF_INET6</code> converts IPv4-mapped IPv6 addresses into an IPv6 format.</p>
 <h2>EXAMPLES</h2>
-<p> See <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3).</p>
+<p> See <code>inet_pton</code>(3).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), <code><a href="/docs/linux/man/3-inet/">inet</a></code>(3), <code><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), <code>inet</code>(3), <code>inet_pton</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

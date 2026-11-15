@@ -13,7 +13,7 @@ description: "nutcpc – NuFW console-mode client for GNU/Linux and BSD systems"
 <p> <code>nutcpc</code> [ <code>-d </code> ] [ <code>-l </code> ] [ <code>-k </code> ] [ <code>-c </code> ] [ <code>-V </code> ] [ <code>-h </code> ] [ <code>-q </code> ] [ <code>-Q </code> ] [ <code>-N </code> ] [ <code>-H </code><i>Nuauth IP</i> ] [ <code>-p </code><i>Nuauth port </i> ] [ <code>-U </code><i>UserID</i> ] [ <code>-P </code><i>UserPassword</i> ] [ <code>-I </code><i>Interval</i> ] [ <code>-Z </code><i>Service</i> ] [ <code>-C </code><i>CertFile</i> ] [ <code>-A </code><i>AuthorityFile</i> ] [ <code>-K </code><i>KeyFile</i> ] [ <code>-W </code><i>CertPass</i> ] [ <code>-R </code><i>CrlFile</i> ] [ <code>-a </code><i>NuauthDN</i> ] </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>nutcpc</code> command. </p>
-<p> nutcpc is a console-mode client for the NuFW authenticating firewall. It sends authentication packets to the nuauth server. All parameters can be set on commandline but nutcpc can also be configured via the file <a href="/docs/linux/man/5-nuclient-conf/">nuclient.conf</a>(5). </p>
+<p> nutcpc is a console-mode client for the NuFW authenticating firewall. It sends authentication packets to the nuauth server. All parameters can be set on commandline but nutcpc can also be configured via the file nuclient.conf(5). </p>
 <p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -62,7 +62,7 @@ description: "nutcpc – NuFW console-mode client for GNU/Linux and BSD systems"
 <h2>LOCK FILE</h2>
 <p> By default, the lock file set by nutcpc is at ~/.nufw/nutcpc.</p>
 <h2>CERTIFICATE AUTHENTICATION</h2>
-<p> User authentication can be done using a certificate and a private key. Such a method will be used, if nutcpc can find a certificate at ~/.nufw/cert.pem and the corresponding private key at ~/.nufw/key.pem. The server identity will be checked if a CA certificate is provided in ~/.nufw/cacert.pem. Certificates and key can also be provided on command line or via <a href="/docs/linux/man/5-nuclient-conf/">nuclient.conf</a>(5).</p>
+<p> User authentication can be done using a certificate and a private key. Such a method will be used, if nutcpc can find a certificate at ~/.nufw/cert.pem and the corresponding private key at ~/.nufw/key.pem. The server identity will be checked if a CA certificate is provided in ~/.nufw/cacert.pem. Certificates and key can also be provided on command line or via nuclient.conf(5).</p>
 <h2>SIGNALS</h2>
 <dl>
 <dt><code>HUP </code></p>
@@ -70,7 +70,7 @@ description: "nutcpc – NuFW console-mode client for GNU/Linux and BSD systems"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-nufw/">nufw</a>(8) </p>
 <p> <a href="/docs/linux/man/8-nuauth/">nuauth</a>(8) </p>
-<p> <a href="/docs/linux/man/5-nuclient-conf/">nuclient.conf</a>(5)</p>
+<p> nuclient.conf(5)</p>
 <h2>AUTHOR</h2>
 <p> Nuauth was designed and coded by Eric Leblond, aka Regit (&lt;eric [at] regit.org&gt;) , and Vincent Deffontaines, aka gryzor (&lt;vincent [at] gryzor.com&gt;). Original idea in 2001, while working on NSM Ldap support. </p>
 <p> This manual page was written by Eric Leblond. </p>

@@ -44,7 +44,7 @@ description: "statist – calculate Huffman distribution for freeze(1)"
 <p> If you find values, which are better THAN DEFAULT both for text (C programs) and binary (executable) files, please send them to me. </p>
 <p> Important note: statist.c is NOT a part of freeze package, it is an aditional feature. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-freeze/">freeze</a>(1), <a href="/docs/linux/man/1-melt/">melt</a>(1), <a href="/docs/linux/man/1-fcat/">fcat</a>(1)</p>
+<p> <a href="/docs/linux/man/1-freeze/">freeze</a>(1), melt(1), <a href="/docs/linux/man/1-fcat/">fcat</a>(1)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Huffman tree has more than 8 levels, reducing&#8230; Self-explanatory, but sometimes reducing falls into infinite loop. <i>xxx</i>K Progress indicator is written after each 4K of a file processed.</p>
 <h2>BUGS</h2>

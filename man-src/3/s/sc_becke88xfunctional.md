@@ -29,7 +29,7 @@ description: "sc::Becke88XFunctional –"
 double beta6_</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements Becke&#8217;s 1988 exchange functional. </p>
-<p> A. D. Becke, Phys. Rev. A, <a href="/docs/linux/man/6-38/">38</a>(6), pp. 3098-3100, 1988.</p>
+<p> A. D. Becke, Phys. Rev. A, 38(6), pp. 3098-3100, 1988.</p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::Becke88XFunctional::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

@@ -62,4 +62,4 @@ description: "avahi-autoipd – IPv4LL network address configuration daemon"
 <p><code><a href="/docs/linux/man/8-avahi-autoipd-action/">avahi-autoipd.action</a>(8)</code>, <code><a href="/docs/linux/man/8-dhclient/">dhclient</a>(8)</code> </p>
 <p> <a rel="nofollow" href="http://avahi.org/wiki/AvahiAutoipd">http://avahi.org/wiki/AvahiAutoipd</a> documents how avahi-autoipd is best packaged and integrated into distributions.</p>
 <h2>Comments</h2>
-<p>This man page was written using <code><a href="/docs/linux/man/1-xml2man/">xml2man</a>(1)</code> by Oliver Kurth.</p>
+<p>This man page was written using <code>xml2man(1)</code> by Oliver Kurth.</p>

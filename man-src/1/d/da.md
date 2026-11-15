@@ -57,5 +57,5 @@ description: "da – setup development environment and create basic projects in 
 <dd> A colon-separated list of directories in which to search for assistants. Searched in before the standard paths. If multiple assistants with the same name are found only the first of them will be used. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-da-gui/">da-gui</a></code>(1) </p>
+<p> <code>da-gui</code>(1) </p>
 <h2>Index</h2>

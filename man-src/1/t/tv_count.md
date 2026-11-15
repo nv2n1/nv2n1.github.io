@@ -25,7 +25,7 @@ url: "/docs/linux/man/1-tv_count/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/5-xmltv/">xmltv</a></i>(5)
+ <i>xmltv</i>(5)
 
 <h2>AUTHOR</h2>
 

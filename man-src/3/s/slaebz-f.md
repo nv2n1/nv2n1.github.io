@@ -205,7 +205,7 @@ description: "slaebz.f –"
  IJOB=1. After this (IJOB=2) call, eigenvalues NAB(i,1)+1
  through NAB(i,2) are approximately AB(i,1) (or AB(i,2)) to the
  tolerance specified by ABSTOL and RELTOL.
- (b) finding an interval (a',b'] containing eigenvalues w(f),...,<a href="//www.systutorials.com/docs/linux/man/l-w/">w</a>(l).
+ (b) finding an interval (a',b'] containing eigenvalues w(f),...,w(l).
  In this case, start with a Gershgorin interval (a,b). Set up
  AB to contain 2 search intervals, both initially (a,b). One
  NVAL element should contain f-1 and the other should contain l
@@ -216,7 +216,7 @@ description: "slaebz.f –"
  j -- will have AB(j,1)=AB(j,2) and NAB(j,1)=NAB(j,2)=f-1, while
  if, to the specified tolerance, w(f-k)=...=w(f+r), k &gt; 0 and r
  &gt;= 0, then the interval will have N(AB(j,1))=NAB(j,1)=f-k and
- N(AB(j,2))=NAB(j,2)=f+r. The cases <a href="//www.systutorials.com/docs/linux/man/l-w/">w</a>(l) &lt; w(l+1) and
+ N(AB(j,2))=NAB(j,2)=f+r. The cases w(l) &lt; w(l+1) and
  w(l-r)=...=w(l+k) are handled similarly.</pre>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 318 of file slaebz.f.</p>

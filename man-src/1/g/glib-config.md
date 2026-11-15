@@ -29,7 +29,7 @@ description: "glib-config – script to get information about the installed vers
 <dt><code>&#8211;exec-prefix=PREFIX</code></p>
 <dd> If specified, use PREFIX instead of the installation exec prefix that <i>GLib</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gtk-config/">gtk-config</a></code>(1), <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code><a href="/docs/linux/man/1-gimptool/">gimptool</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-gtk-config/">gtk-config</a></code>(1), <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code>gimptool</code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1998 Owen Taylor </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>

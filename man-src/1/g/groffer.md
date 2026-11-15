@@ -110,7 +110,7 @@ description: "groffer – display groff files and man pages on X and tty"
 <dt><code>&#8211;default-modes</code><i>&nbsp;mode1,mode2,&#8230; </i></p>
 <dd> Set the sequence of modes for <i>auto~mode</i> to the comma separated list given in the argument. See <code>&#8211;mode</code> for details on modes. Display in the default manner; actually, this means to try the modes <i>x</i>, <i>ps</i>, and <i>tty</i> in this sequence.</p>
 <dt><code>&#8211;dvi</code></p>
-<dd> Equivalent to <code>&#8211;mode=dvi</code>. Known <i>DVI</i> viewers for the X Window System include <code><a href="/docs/linux/man/1-xdvi/">xdvi</a></code>(1) and <code><a href="/docs/linux/man/1-dvilx/">dvilx</a></code>(1).</p>
+<dd> Equivalent to <code>&#8211;mode=dvi</code>. Known <i>DVI</i> viewers for the X Window System include <code><a href="/docs/linux/man/1-xdvi/">xdvi</a></code>(1) and <code>dvilx</code>(1).</p>
 <dt><code>&#8211;groff</code></p>
 <dd> Equivalent to <code>&#8211;mode=groff</code>.</p>
 <dt><code>&#8211;html</code></p>
@@ -128,7 +128,7 @@ description: "groffer – display groff files and man pages on X and tty"
 <dt><code>groff</code></p>
 <dd> After the file determination, switch <code>groffer</code> to process the input like <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) would do. This disables the <i>groffer</i> viewing features.</p>
 <dt><code>html</code></p>
-<dd> Translate the input into HTML format and display the result in a web browser program. By default, the existence of a sequence of standard web browsers is tested, starting with <code><a href="/docs/linux/man/1-konqueror/">konqueror</a></code>(1) and <code><a href="/docs/linux/man/1-mozilla/">mozilla</a></code>(1). The text HTML viewer is <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1). By default, the existence of a sequence of standard web browsers is tested, starting with <code><a href="/docs/linux/man/1-konqueror/">konqueror</a></code>(1) and <code><a href="/docs/linux/man/1-mozilla/">mozilla</a></code>(1). The text HTML viewer is <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1).</p>
+<dd> Translate the input into HTML format and display the result in a web browser program. By default, the existence of a sequence of standard web browsers is tested, starting with <code>konqueror</code>(1) and <code>mozilla</code>(1). The text HTML viewer is <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1). By default, the existence of a sequence of standard web browsers is tested, starting with <code>konqueror</code>(1) and <code>mozilla</code>(1). The text HTML viewer is <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1).</p>
 <dt><code>pdf</code></p>
 <dd> Transform <i>roff input files</i> into a <i>PDF file</i> by using the <code>groff (1)</code> device <code>-Tpdf</code>. This is the default <code>PDF</code> generator. The generated <i>PDF file</i> is displayed with suitable viewer programs, such as <code><a href="/docs/linux/man/1-okular/">okular</a></code>(1).</p>
 <dt><code>pdf2</code></p>
@@ -157,7 +157,7 @@ description: "groffer – display groff files and man pages on X and tty"
 <dt><code>&#8211;pdf</code></p>
 <dd> Equivalent to <code>&#8211;mode=pdf</code>. <code>&#8211;pdf2</code> Equivalent to <code>&#8211;mode=pdf2</code>.</p>
 <dt><code>&#8211;ps</code></p>
-<dd> Equivalent to <code>&#8211;mode=ps</code>. Common PostScript viewers include <code><a href="/docs/linux/man/1-okular/">okular</a></code>(1), <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1), <code><a href="/docs/linux/man/1-gv/">gv</a></code>(1), <code><a href="/docs/linux/man/1-ghostview/">ghostview</a></code>(1), and <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), In each case, arguments can be provided additionally.</p>
+<dd> Equivalent to <code>&#8211;mode=ps</code>. Common PostScript viewers include <code><a href="/docs/linux/man/1-okular/">okular</a></code>(1), <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1), <code><a href="/docs/linux/man/1-gv/">gv</a></code>(1), <code>ghostview</code>(1), and <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), In each case, arguments can be provided additionally.</p>
 <dt><code>&#8211;source</code></p>
 <dd> Equivalent to <code>&#8211;mode=source</code>.</p>
 <dt><code>&#8211;text</code></p>
@@ -579,7 +579,7 @@ description: "groffer – display groff files and man pages on X and tty"
 <p> The arguments that are not existing files are looked-up as the following <i>man~pages</i>: <code>groff</code> (automatic search, should be found in <i>man</i>~section~1), <code>troff</code> (in section~1), and <code>roff</code> (in the section with the lowest number, being~7 in this case). The quotes around <i>&#8216;<a href="/docs/linux/man/1-troff/">troff</a>(1)&#8217;</i> are necessary because the parentheses are special shell characters; escaping them with a backslash character <i>\(</i> and <i>\)</i> would be possible, too. The formatted files are concatenated and displayed in one piece. </p>
 <p> <i>sh#</i>~LANG=de~groffer~&#8211;man~&#8211;viewer=galeon~ls </p>
 <p> Retrieve the German <i>man~page</i> (language <i>de</i>) for the <code>ls</code> program, decompress it, format it to <i>html</i> or <i>xhtml</i> format (<i>www~mode</i>) and view the result in the web browser <code>galeon</code>. The option <code>&#8211;man</code> guarantees that the <i>man~page</i> is retrieved, even when a local file <code>ls</code> exists in the actual directory. </p>
-<p> <i>sh#</i>~groffer~&#8211;source~&#8217;<a href="/docs/linux/man/7-man-roff/">man:roff</a>(7)&#8217; </p>
+<p> <i>sh#</i>~groffer~&#8211;source~&#8217;man:roff(7)&#8217; </p>
 <p> Get the <i>man~page</i> called <i>roff</i> in <i>man</i>~section 7, decompress it, and print its unformatted content, its source code. </p>
 <p> <i>sh#</i>~groffer~&#8211;de-p~&#8211;in~&#8211;ap </p>
 <p> This is a set of abbreviated arguments, it is determined as </p>
@@ -628,21 +628,21 @@ description: "groffer – display groff files and man pages on X and tty"
 <dt><code><a href="/docs/linux/man/1-man/">man</a></code>(1)</p>
 <dd> The standard program to display <i>man~pages</i>. The information there is only useful if it is the <i>man~page</i> for GNU <code>man</code>. Then it documents the options and environment variables that are supported by <code>groffer</code>.</p>
 <dt><code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1)</p>
-<dd> <code><a href="//www.systutorials.com/docs/linux/man/1x-xditview/">xditview</a></code>(1x)</p>
+<dd> <code>xditview</code>(1x)</p>
 <dl>
 <dt>
 <dd> Viewers for <code>groffer</code>&#8216;s <i>x~mode</i>.</dl>
-<dt><code><a href="/docs/linux/man/1-kpdf/">kpdf</a></code>(1)</p>
-<dd> <code><a href="/docs/linux/man/1-kghostview/">kghostview</a></code>(1) <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1) <code><a href="/docs/linux/man/1-ggv/">ggv</a></code>(1) <code><a href="/docs/linux/man/1-gv/">gv</a></code>(1) <code><a href="/docs/linux/man/1-ghostview/">ghostview</a></code>(1) <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) Viewers for <code>groffer</code>&#8216;s <i>ps~mode</i>.</p>
-<dt><code><a href="/docs/linux/man/1-kpdf/">kpdf</a></code>(1)</p>
-<dd> <code><a href="/docs/linux/man/1-acroread/">acroread</a></code>(1) <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1) <code><a href="/docs/linux/man/1-xpdf/">xpdf</a></code>(1) <code><a href="/docs/linux/man/1-gpdf/">gpdf</a></code>(1) <code><a href="/docs/linux/man/1-kghostview/">kghostview</a></code>(1) <code><a href="/docs/linux/man/1-ggv/">ggv</a></code>(1) Viewers for <code>groffer</code>&#8216;s <i>pdf~mode</i>.</dl>
-<p> <code><a href="/docs/linux/man/1-kdvi/">kdvi</a></code>(1), <code><a href="/docs/linux/man/1-xdvi/">xdvi</a></code>(1), <code><a href="/docs/linux/man/1-dvilx/">dvilx</a></code>(1)</p>
+<dt><code>kpdf</code>(1)</p>
+<dd> <code>kghostview</code>(1) <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1) <code>ggv</code>(1) <code><a href="/docs/linux/man/1-gv/">gv</a></code>(1) <code>ghostview</code>(1) <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) Viewers for <code>groffer</code>&#8216;s <i>ps~mode</i>.</p>
+<dt><code>kpdf</code>(1)</p>
+<dd> <code><a href="/docs/linux/man/1-acroread/">acroread</a></code>(1) <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1) <code><a href="/docs/linux/man/1-xpdf/">xpdf</a></code>(1) <code>gpdf</code>(1) <code>kghostview</code>(1) <code>ggv</code>(1) Viewers for <code>groffer</code>&#8216;s <i>pdf~mode</i>.</dl>
+<p> <code>kdvi</code>(1), <code><a href="/docs/linux/man/1-xdvi/">xdvi</a></code>(1), <code>dvilx</code>(1)</p>
 <dl>
 <dt>
 <dd> Viewers for <code>groffer</code>&#8216;s <i>dvi~mode</i>.</dl>
 <dl>
-<dt><code><a href="/docs/linux/man/1-konqueror/">konqueror</a></code>(1)</p>
-<dd> <code><a href="/docs/linux/man/1-epiphany/">epiphany</a></code>(1) <code><a href="/docs/linux/man/1-firefox/">firefox</a></code>(1) <code><a href="/docs/linux/man/1-mozilla/">mozilla</a></code>(1) <code><a href="/docs/linux/man/1-netscape/">netscape</a></code>(1) <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1) Web-browsers for <code>groffer</code>&#8216;s <i>html</i>, <i>xhtml</i>, or <i>www~mode</i>.</p>
+<dt><code>konqueror</code>(1)</p>
+<dd> <code><a href="/docs/linux/man/1-epiphany/">epiphany</a></code>(1) <code><a href="/docs/linux/man/1-firefox/">firefox</a></code>(1) <code>mozilla</code>(1) <code>netscape</code>(1) <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1) Web-browsers for <code>groffer</code>&#8216;s <i>html</i>, <i>xhtml</i>, or <i>www~mode</i>.</p>
 <dt><code><a href="/docs/linux/man/1-less/">less</a></code>(1)</p>
 <dd> <code><a href="/docs/linux/man/1-more/">more</a></code>(1) Standard pager program for the <i>tty~mode</i>.</p>
 <dt><code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1)</p>

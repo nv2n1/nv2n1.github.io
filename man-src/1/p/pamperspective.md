@@ -317,7 +317,7 @@ pamperspective
 </pre>
 <p>&nbsp;<wbr>&nbsp;<wbr></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-netpbm/">netpbm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pnmshear/">pnmshear</a></code>(1) , <code><a href="/docs/linux/man/1-pnmstitch/">pnmstitch</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-netpbm/">netpbm</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pnmshear/">pnmshear</a></code>(1) , <code><a href="/docs/linux/man/1-pnmstitch/">pnmstitch</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> Mark Weyer wrote <code>pamperspective</code> in March 2004. </p>
 <p> It was new in Netpbm 10.22 (April 2004). </p>

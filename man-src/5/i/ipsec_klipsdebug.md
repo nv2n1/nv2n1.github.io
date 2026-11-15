@@ -60,7 +60,7 @@ description: "ipsec_klipsdebug – list KLIPS (kernel IPSEC support) debug featu
 <p> <code>verbose</code></p>
 <dl>
 <dd>give even more information, beware this will probably trample the 4k kernel printk buffer giving inaccurate output</dl>
-<p> All KLIPS debug output appears as <code>kernel.info</code> messages to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). Most systems are set up to log these messages to /var/log/messages.</p>
+<p> All KLIPS debug output appears as <code>kernel.info</code> messages to <code>syslogd</code>(8). Most systems are set up to log these messages to /var/log/messages.</p>
 <h2>Examples</h2>
 <p><code>debug_tunnel=00000010.</code><code>debug_netlink=00000000.</code><code>debug_xform=00000000.</code><code>debug_eroute=00000000.</code><code>debug_spi=00000000.</code><code>debug_radij=00000000.</code><code>debug_esp=00000000.</code><code>debug_ah=00000000.</code><code>debug_rcv=00000000.</code><code>debug_pfkey=ffffffff.</code> </p>
 <p> means that one <code>tunnel</code> flag has been set (tunnel-xmit), full <code>pfkey</code> sockets debugging has been set and everything else is not set.</p>

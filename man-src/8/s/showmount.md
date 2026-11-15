@@ -15,7 +15,7 @@ description: "showmount – show mount information for an NFS server"
 <h2>Options</h2>
 <dl>
 <dt><code>-a</code> or <code>&#8211;all</code></p>
-<dd>List both the client hostname or IP address and mounted directory in host:dir format. This info should not be considered reliable. See the notes on rmtab in <code><a href="/docs/linux/man/8-rpc-mountd/">rpc.mountd</a></code>(8).</p>
+<dd>List both the client hostname or IP address and mounted directory in host:dir format. This info should not be considered reliable. See the notes on rmtab in <code>rpc.mountd</code>(8).</p>
 <dt><code>-d</code> or <code>&#8211;directories</code></p>
 <dd>List only the directories mounted by some client.</p>
 <dt><code>-e</code> or <code>&#8211;exports</code></p>
@@ -27,7 +27,7 @@ description: "showmount – show mount information for an NFS server"
 <dt><code>&#8211;no-headers</code></p>
 <dd>Suppress the descriptive headings from the output.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rpc-mountd/">rpc.mountd</a></code>(8), <code><a href="/docs/linux/man/8-rpc-nfsd/">rpc.nfsd</a></code>(8)</p>
+<p><code>rpc.mountd</code>(8), <code>rpc.nfsd</code>(8)</p>
 <h2>Bugs</h2>
 <p>The completeness and accuracy of the information that <code>showmount</code> displays varies according to the NFS server&#8217;s implementation. </p>
 <p> Because <code>showmount</code> sorts and uniqs the output, it is impossible to determine from the output whether a client is mounting the same directory more than once.</p>

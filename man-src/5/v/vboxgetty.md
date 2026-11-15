@@ -51,6 +51,6 @@ description: "vboxgetty.conf – config file for vboxgetty"
 <dd>this configuration file </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-vboxgetty/">vboxgetty</a>(8), <a href="/docs/linux/man/5-vbox/">vbox</a>(5), <a href="/docs/linux/man/5-vboxtcl/">vboxtcl</a>(5)</code> </p>
+<p><code><a href="/docs/linux/man/8-vboxgetty/">vboxgetty</a>(8), <a href="/docs/linux/man/5-vbox/">vbox</a>(5), vboxtcl(5)</code> </p>
 <h2>Author</h2>
 <p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.</p>

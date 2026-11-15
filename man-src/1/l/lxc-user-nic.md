@@ -25,7 +25,7 @@ description: "lxc-user-nic – Create and attach a nic to another network namesp
 <dt><i>nicname</i></p>
 <dd> The desired interface name in the container. This will be <i>eth0</i> if unspecified.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-lxc/">lxc</a></code>(1), <code><a href="/docs/linux/man/1-lxc-start/">lxc-start</a></code>(1), <code><a href="/docs/linux/man/5-lxc-usernet/">lxc-usernet</a></code>(5)</p>
+<p> <code>lxc</code>(1), <code><a href="/docs/linux/man/1-lxc-start/">lxc-start</a></code>(1), <code><a href="/docs/linux/man/5-lxc-usernet/">lxc-usernet</a></code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Daniel Lezcano &lt;daniel.lezcano [at] free.fr&gt; </p>
 <h2>Index</h2>

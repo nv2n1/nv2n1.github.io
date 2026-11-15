@@ -11,7 +11,7 @@ description: "milter-regex – sendmail milter plugin for regular expression fil
 <h2>Synopsis</h2>
 <p>[-<code>d</code> ] [-<code>c </code><i>config</i> ] [-<code>j </code><i>dirname</i> ] [-<code>l </code><i>loglevel</i> ] [-<code>m </code><i>number</i> ] [-<code>p </code><i>pipe</i> ] [-<code>u </code><i>user</i> ]</p>
 <h2>Description</h2>
-<p>The plugin can be used with the milter API of <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) to filter mails using regular expressions matching SMTP envelope parameters and mail headers and body. The options are as follows:</p>
+<p>The plugin can be used with the milter API of sendmail(8) to filter mails using regular expressions matching SMTP envelope parameters and mail headers and body. The options are as follows:</p>
 <dl>
 <dt><code>-d</code></p>
 <dd>Don&#8217;t detach from controlling terminal and produce verbose debug output on stdout.</p>
@@ -24,18 +24,18 @@ description: "milter-regex – sendmail milter plugin for regular expression fil
 <dt><code>-m </code><i>number</i></p>
 <dd>Ignore mail body after the specified number of lines.</p>
 <dt><code>-p </code><i>pipe</i></p>
-<dd>Use the specified pipe to interface <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8). Default is unix:/var/spool/milter-regex/sock.</p>
+<dd>Use the specified pipe to interface sendmail(8). Default is unix:/var/spool/milter-regex/sock.</p>
 <dt><code>-u </code><i>user</i></p>
 <dd>Run as the specified user instead of the default, mregex. When is started as root, it calls <a href="/docs/linux/man/2-setuid/">setuid</a>(2) to drop privileges. The non-privileged user should have read access to the configuration file and read-write access to the pipe.</dl>
 <h2>Sendmail Configuration</h2>
-<p>The plugin needs to be registered in the <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) configuration, by adding the following lines to the .mc file </p>
+<p>The plugin needs to be registered in the sendmail(8) configuration, by adding the following lines to the .mc file </p>
 <blockquote>
 <pre>INPUT_MAIL_FILTER(`milter-regex',
  `S=unix:/var/spool/milter-regex/sock, T=S:30s;R:2m')</pre>
 </blockquote>
-<p> rebuilding /etc/mail/sendmail.cf from the .mc file using <a href="/docs/linux/man/1-m4/">m4</a>(1), and restarting <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8).</p>
+<p> rebuilding /etc/mail/sendmail.cf from the .mc file using <a href="/docs/linux/man/1-m4/">m4</a>(1), and restarting sendmail(8).</p>
 <h2>Plugin Configuration</h2>
-<p>The configuration file consists of rules that, when matched, cause <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) to reject mails. Emtpy lines and lines starting with # are ignored, as well as leading whitespace (blanks, tabs). Trailing backslashes can be used to wrap long rules into multiple lines. Each rule starts with one of the following commands:</p>
+<p>The configuration file consists of rules that, when matched, cause sendmail(8) to reject mails. Emtpy lines and lines starting with # are ignored, as well as leading whitespace (blanks, tabs). Trailing backslashes can be used to wrap long rules into multiple lines. Each rule starts with one of the following commands:</p>
 <dl>
 <dt><code>reject &lt;message&gt;</code></p>
 <dd>Subsequent rules cause the mail to be rejected with a permanent error consisting of the specified text part. The SMTP reply consists of the three-digit code 554 (RFC 2821 &quot;command rejected for policy reasons&quot;), the extended reply code 5.7.1 (RFC 1893 &quot;Permanent Failure&quot;, &quot;Security or Policy Status&quot;, &quot;Delivery not authorized, message refused&quot;) and the text part (which defaults to &quot;Command rejected&quot;, if not specified). This is a permanent failure, which causes the sender to remove the message from its queue without trying to retransmit, commonly generating a bounce message to the sender.</p>
@@ -44,13 +44,13 @@ description: "milter-regex – sendmail milter plugin for regular expression fil
 <dt><code>discard</code></p>
 <dd>Subsequent matching rules cause the mail to be accepted but then discarded silently. Note that <i>connect</i> and <i>helo</i> rules should not use <i>discard</i></p>
 <dt><code>quarantine &lt;message&gt;</code></p>
-<dd>Subsequent matching rules cause the mail to be quarantined in <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8).</p>
+<dd>Subsequent matching rules cause the mail to be quarantined in sendmail(8).</p>
 <dt><code>accept</code></p>
 <dd>Subsequent matching rules cause the mail to be accepted without further rule evaluation. Can be used for whitelist criteria.</dl>
 <p> A command is followed by one or more expressions, each causing the previous command to be executed when matched. The following expressions can be used:</p>
 <dl>
 <dt><code>connect &lt;hostname&gt; &lt;address&gt;</code></p>
-<dd>Reject the connection if both the sender&#8217;s hostname and address match the specified regular expressions. The numerical address is either dotted-quad (IPv4) or coloned-hex (IPv6). The hostname is the result of a DNS reverse resolution of the numerical address (which <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) performs independantly of the milter plugin). When resolution fails, the hostname contains the numerical address in square brackets.</p>
+<dd>Reject the connection if both the sender&#8217;s hostname and address match the specified regular expressions. The numerical address is either dotted-quad (IPv4) or coloned-hex (IPv6). The hostname is the result of a DNS reverse resolution of the numerical address (which sendmail(8) performs independantly of the milter plugin). When resolution fails, the hostname contains the numerical address in square brackets.</p>
 <dt><code>helo &lt;name&gt;</code></p>
 <dd>Reject the connection if the sender supplied HELO name matches the specified regular expression. Commonly, the sender supplies his fully-qualified hostname as HELO name.</p>
 <dt><code>envfrom &lt;address&gt;</code></p>
@@ -63,7 +63,7 @@ description: "milter-regex – sendmail milter plugin for regular expression fil
 <dd>Reject the mail if a body line matches the specified regular expression.</p>
 <dt><code>macro &lt;name&gt; &lt;value&gt;</code></p>
 <dd>Reject the mail if a sendmail macro value matches.</dl>
-<p> The plugin regularly checks the configuration file for modification and reloads it automatically. Signals like SIGHUP will terminate the plugin, according to the milter signal handler. The plugin reacts to any kind of error, like syntax errors in the configuration file, by failing open, accepting all messages. When the plugin is not running, <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) will accept all messages.</p>
+<p> The plugin regularly checks the configuration file for modification and reloads it automatically. Signals like SIGHUP will terminate the plugin, according to the milter signal handler. The plugin reacts to any kind of error, like syntax errors in the configuration file, by failing open, accepting all messages. When the plugin is not running, sendmail(8) will accept all messages.</p>
 <h2>Regular Expressions</h2>
 <p>The regular expressions used in the configuration rules are enclosed in arbitrary delimiters, no further escaping is needed. </p>
 <p> The first character of an argument is taken as the delimiter, and all subsequent characters up to the next occurance of the same delimiter are taken literally as the regular expression. Since the delimiter itself cannot be part of the regular expression (no escaping is supported), a delimiter must be chosen that doesn&#8217;t occur in the regular expression itself. Each argument can use a different delimiter, all characters except spaces and tabs are valid. </p>
@@ -124,7 +124,7 @@ reject &quot;Business Corp spam, get lost&quot;
 body /^Business Corp. for W.&amp; L. AG/i and \
  ( body /043.*317.*0285/ or body /0041.43.317.02.85/ )</pre>
 <h2>Logging</h2>
-<p>sends log messages to <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8) using <i>facility</i> daemon and, with increasing verbosity, <i>level</i> err, notice, info and debug. The following syslog.conf5 section can be used to log messages to a dedicated file: </p>
+<p>sends log messages to syslogd(8) using <i>facility</i> daemon and, with increasing verbosity, <i>level</i> err, notice, info and debug. The following syslog.conf5 section can be used to log messages to a dedicated file: </p>
 <pre>!milter-regex
 daemon.err;daemon.notice /var/log/milter-regex</pre>
 <h2>Grammar</h2>
@@ -146,7 +146,7 @@ macro = name '=' expr</pre>
 <h2>Files</h2>
 <p>/etc/mail/milter-regex.conf</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-mailstats/">mailstats</a>(1), <a href="/docs/linux/man/3-regex/">regex</a>(3), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), syslog.conf5, re_format7, <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8), <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8)</p>
+<p>mailstats(1), <a href="/docs/linux/man/3-regex/">regex</a>(3), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), syslog.conf5, re_format7, sendmail(8), syslogd(8)</p>
 <dl>
 <dd><i>Simple Mail Transfer Protocol</i> RFC 2821</dl>
 <dl>

@@ -32,7 +32,7 @@ CONOP3 - sets option switches and specifys various REAL parameters to be used by
 
  If program set: CALL CONOP3('CHL=OFF',0.,0) 
 
- If user set: CALL CONOP3('CHL=ON',ARRAY,2) where <a HREF="/docs/linux/man/1-array/">ARRAY</a>(1)=HI, <a HREF="/docs/linux/man/2-array/">ARRAY</a>(2)=FLO 
+ If user set: CALL CONOP3('CHL=ON',ARRAY,2) where ARRAY(1)=HI, ARRAY(2)=FLO 
 
  Note: The values supplied for contour increment and contour high and low values assume unscaled data values. See the SDC parameter, below.
 <dt>CIL
@@ -67,7 +67,7 @@ CONOP3 - sets option switches and specifys various REAL parameters to be used by
 
  To see how various dash line patterns can be assigned to various contours see parameter DBP in &quot;man conop4&quot;.
 <dt>SDC
-<dd>The parameter to determine how to scale the input data from which the contours are generated. (Does not apply to entry CONRAQ.) If SDC=ON, the scaling factor is set to <a HREF="/docs/linux/man/1-array/">ARRAY</a>(1). If SDC=OFF, the default scale factor of 1. is used. 
+<dd>The parameter to determine how to scale the input data from which the contours are generated. (Does not apply to entry CONRAQ.) If SDC=ON, the scaling factor is set to ARRAY(1). If SDC=OFF, the default scale factor of 1. is used. 
 
  If program set: CALL CONOP3('SDC=OFF',0.,0) 
 

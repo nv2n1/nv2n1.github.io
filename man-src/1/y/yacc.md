@@ -8,11 +8,11 @@ description: "Yacc – an LALR(1) parser generator"
 ---
 
 <h2>NAME</h2>
-<p> Yacc &#8211; an <a href="/docs/linux/man/1-lalr/">LALR</a>(1) parser generator</p>
+<p> Yacc &#8211; an LALR(1) parser generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yacc [ -dgilrtv ] [ -b</code> <i>file_prefix</i> <code>] [ -p</code> <i>symbol_prefix</i> <code>]</code> <i>filename</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>Yacc</code> reads the grammar specification in the file <i>filename</i> and generates an <a href="/docs/linux/man/1-lalr/">LALR</a>(1) parser for it. The parsers consist of a set of <a href="/docs/linux/man/1-lalr/">LALR</a>(1) parsing tables and a driver routine written in the C programming language. <code>Yacc</code> normally writes the parse tables and the driver routine to the file <i>y.tab.c.</i> </p>
+<p> <code>Yacc</code> reads the grammar specification in the file <i>filename</i> and generates an LALR(1) parser for it. The parsers consist of a set of LALR(1) parsing tables and a driver routine written in the C programming language. <code>Yacc</code> normally writes the parse tables and the driver routine to the file <i>y.tab.c.</i> </p>
 <p> The following options are available:</p>
 <dl>
 <dt><code>-b </code><i>file_prefix</i></p>
@@ -20,7 +20,7 @@ description: "Yacc – an LALR(1) parser generator"
 <dt><code>-d</code></p>
 <dd> The <code>-d</code> option causes the header file <code>y.tab.h</code> to be written. It contains #define&#8217;s for the token identifiers.</p>
 <dt><code>-g</code></p>
-<dd> The <code>-g</code> option causes a graphical description of the generated <a href="/docs/linux/man/1-lalr/">LALR</a>(1) parser to be written to the file <code>y.dot</code> in graphviz format, ready to be processed by <a href="/docs/linux/man/1-dot/">dot</a>(1).</p>
+<dd> The <code>-g</code> option causes a graphical description of the generated LALR(1) parser to be written to the file <code>y.dot</code> in graphviz format, ready to be processed by <a href="/docs/linux/man/1-dot/">dot</a>(1).</p>
 <dt><code>-i</code></p>
 <dd> The <code>-i</code> option causes a supplementary header file <code>y.tab.i</code> to be written. It contains extern declarations and supplementary #define&#8217;s as needed to map the conventional <i>yacc</i> <code>yy</code>-prefixed names to whatever the <code>-p</code> option may specify. The code file, e.g., <code>y.tab.c</code> is modified to #include this file as well as the <code>y.tab.h</code> file, enforcing consistent usage of the symbols defined in those files.</p>
 <dt>
@@ -77,7 +77,7 @@ description: "Yacc – an LALR(1) parser generator"
 <h2>PORTABILITY</h2>
 <p> According to Robert Corbett, </p>
 <pre>
-    Berkeley Yacc is an <a href="//www.systutorials.com/docs/linux/man/1-LALR/">LALR</a>(1) parser generator.  Berkeley Yacc has been made
+    Berkeley Yacc is an LALR(1) parser generator.  Berkeley Yacc has been made
 as compatible as possible with AT&amp;T Yacc.  Berkeley Yacc can accept any input
 specification that conforms to the AT&amp;T Yacc documentation.  Specifications
 that take advantage of undocumented features of AT&amp;T Yacc will probably be
@@ -106,5 +106,5 @@ rejected.
 <dt>&bull;</p>
 <dd> Bison&#8217;s &quot;<code>-y</code>&quot; option does not affect bison&#8217;s lack of support for features of AT&amp;T yacc which were deemed obsolescent.</dl>
 <h2>DIAGNOSTICS</h2>
-<p> If there are rules that are never reduced, the number of such rules is reported on standard error. If there are any <a href="/docs/linux/man/1-lalr/">LALR</a>(1) conflicts, the number of conflicts is reported on standard error. </p>
+<p> If there are rules that are never reduced, the number of such rules is reported on standard error. If there are any LALR(1) conflicts, the number of conflicts is reported on standard error. </p>
 <h2>Index</h2>

@@ -37,7 +37,7 @@ description: "ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ip
 <p> The <i>format</i> parameter of <i>addrtot</i> and <i>subnettot</i> specifies what format is to be used for the conversion. The value <code>0</code> (not the character <code>&#8216;0&#8217;</code>, but a zero value) specifies a reasonable default, and is in fact the only format currently available in <i>subnettot</i>. <i>Addrtot</i> also accepts format values <code>&#8216;r&#8217;</code> (signifying a text form suitable for DNS reverse lookups, e.g. <code>4.3.2.1.IN-ADDR.ARPA.</code> for IPv4 and RFC 2874 format for IPv6), and <code>&#8216;R&#8217;</code> (signifying an alternate reverse-lookup form, an error for IPv4 and RFC 1886 format for IPv6). Reverse-lookup names always end with a &#8220;.&#8221;. </p>
 <p> The text-to-binary functions return NULL for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS. The binary-to-text functions return <code>0</code> for a failure, and otherwise always return the size of buffer which would be needed to accommodate the full conversion result, including terminating NUL; it is the caller&#8217;s responsibility to check this against the size of the provided buffer to determine whether truncation has occurred.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3)</p>
+<p> inet(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Fatal errors in <i>ttoaddr</i> are: empty input; unknown address family; attempt to allocate temporary storage for a very long name failed; name lookup failed; syntax error in dotted-decimal or colon-hex form; dotted-decimal or colon-hex component too large. </p>
 <p> Fatal errors in <i>ttosubnet</i> are: no <code>/</code> in <i>src</i>; <i>ttoaddr</i> error in conversion of <i>network</i> or <i>mask</i>; bit-count mask too big; mask non-contiguous. </p>
@@ -45,7 +45,7 @@ description: "ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ip
 <h2>HISTORY</h2>
 <p> Written for the FreeS/WAN project by Henry Spencer.</p>
 <h2>BUGS</h2>
-<p> The interpretation of incomplete dotted-decimal addresses (e.g. <code>10/24</code> means <code>10.0.0.0/24</code>) differs from that of some older conversion functions, e.g. those of <i><a href="/docs/linux/man/3-inet/">inet</a></i>(3). The behavior of the older functions has never been particularly consistent or particularly useful. </p>
+<p> The interpretation of incomplete dotted-decimal addresses (e.g. <code>10/24</code> means <code>10.0.0.0/24</code>) differs from that of some older conversion functions, e.g. those of <i>inet</i>(3). The behavior of the older functions has never been particularly consistent or particularly useful. </p>
 <p> Ignoring leading zeros in dotted-decimal components and bit counts is arguably the most useful behavior in this application, but it might occasionally cause confusion with the historical use of leading zeros to denote octal numbers. </p>
 <p> <i>Ttoaddr</i> does not support the mixed colon-hex-dotted-decimal convention used to embed an IPv4 address in an IPv6 address. </p>
 <p> <i>Addrtot</i> always uses the <code>::</code> abbreviation (which can appear only once in an address) for the <i>first</i> sequence of multiple zeros in an IPv6 address. One can construct addresses (unlikely ones) in which this is suboptimal. </p>

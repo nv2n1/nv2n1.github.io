@@ -42,7 +42,7 @@ description: "bchunk – CD image format conversion from bin/cue to iso/cdr"
 <dt><code>*.wav</code></p>
 <dd> Audio tracks in WAV format.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cdrecord/">cdrecord</a></code>(1), <code><a href="/docs/linux/man/8-mkisofs/">mkisofs</a></code>(8), <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1), <code><a href="/docs/linux/man/1-cdrdao/">cdrdao</a></code>(1)</p>
+<p> <code>cdrecord</code>(1), <code>mkisofs</code>(8), <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1), <code><a href="/docs/linux/man/1-cdrdao/">cdrdao</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> Heikki Hannikainen &lt;hessu [at] hes.iki.fi&gt;<br />
  Bob Marietta &lt;marietrg [at] SLU.EDU&gt;<br />

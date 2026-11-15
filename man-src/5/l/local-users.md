@@ -9,9 +9,9 @@ description: "local.users – The SELinux local users configuration file"
 
 <p>local.users &#8211; The SELinux local users configuration file</p>
 <h2>Description</h2>
-<p>The file contains local user definitions in the form of policy language user statements and is only found on older SELinux systems as it has been deprecated and replaced by the <code><a href="/docs/linux/man/8-semange/">semange</a></code>(8) services. </p>
+<p>The file contains local user definitions in the form of policy language user statements and is only found on older SELinux systems as it has been deprecated and replaced by the <code>semange</code>(8) services. </p>
 <p> This file is only read by <code><a href="/docs/linux/man/3-selinux_mkload_policy/">selinux_mkload_policy</a></code>(3) when <code>SETLOCALDEFS</code> in the SELinux <i>config</i> file (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)) is set to <i>1</i>. </p>
-<p> <code><a href="/docs/linux/man/3-selinux_users_path/">selinux_users_path</a></code>(3) will return the active policy path to the directory where this file is located. The default local users file is:</p>
+<p> <code>selinux_users_path</code>(3) will return the active policy path to the directory where this file is located. The default local users file is:</p>
 <dl>
 <dd><i>/etc/selinux/{SELINUXTYPE}/contexts/users/local.users</i></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)).</p>
@@ -50,4 +50,4 @@ description: "local.users – The SELinux local users configuration file"
 <p># ./users/local.users<br />
  user test_u roles staff_r level s0 range s0 &#8211; s15:c0.c1023;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-semanage/">semanage</a></code>(8), <code><a href="/docs/linux/man/3-selinux_users_path/">selinux_users_path</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5), <code><a href="/docs/linux/man/3-selinux_mkload_policy/">selinux_mkload_policy</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-semanage/">semanage</a></code>(8), <code>selinux_users_path</code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5), <code><a href="/docs/linux/man/3-selinux_mkload_policy/">selinux_mkload_policy</a></code>(3) </p>

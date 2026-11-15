@@ -18,7 +18,7 @@ The <i>zmq_setsockopt()</i> function shall set the option specified by the <i>op
 
 <h3>ZMQ_AFFINITY: Set I/O thread affinity</h3>
 
-The <i>ZMQ_AFFINITY</i> option shall set the I/O thread affinity for newly created connections on the specified <i>socket</i>. Affinity determines which threads from the 0MQ I/O thread pool associated with the socket's <i>context</i> shall handle newly created connections. A value of zero specifies no affinity, meaning that work shall be distributed fairly among all 0MQ I/O threads in the thread pool. For non-zero values, the lowest bit corresponds to thread 1, second lowest bit to thread 2 and so on. For example, a value of 3 specifies that subsequent connections on <i>socket</i> shall be handled exclusively by I/O threads 1 and 2. See also <b><a HREF="/docs/linux/man/3-zmq_init/">zmq_init</a></b>(3) for details on allocating the number of I/O threads for a specific <i>context</i>. <table> <tr VALIGN=top><td> Option value type </td><td> uint64_t 
+The <i>ZMQ_AFFINITY</i> option shall set the I/O thread affinity for newly created connections on the specified <i>socket</i>. Affinity determines which threads from the 0MQ I/O thread pool associated with the socket's <i>context</i> shall handle newly created connections. A value of zero specifies no affinity, meaning that work shall be distributed fairly among all 0MQ I/O threads in the thread pool. For non-zero values, the lowest bit corresponds to thread 1, second lowest bit to thread 2 and so on. For example, a value of 3 specifies that subsequent connections on <i>socket</i> shall be handled exclusively by I/O threads 1 and 2. See also <b>zmq_init</b>(3) for details on allocating the number of I/O threads for a specific <i>context</i>. <table> <tr VALIGN=top><td> Option value type </td><td> uint64_t 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> N/A (bitmap) 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 0 
 </td></tr><tr VALIGN=top><td> Applicable socket types </td><td> N/A 
@@ -88,7 +88,7 @@ Sets the socket's long term server key. You must set this on CURVE client socket
 
 <h3>ZMQ_GSSAPI_PLAINTEXT: Disable GSSAPI encryption</h3>
 
-Defines whether communications on the socket will encrypted, see <b><a HREF="/docs/linux/man/7-zmq_gssapi/">zmq_gssapi</a></b>(7). A value of <i>1</i> means that communications will be plaintext. A value of <i>0</i> means communications will be encrypted. <table> <tr VALIGN=top><td> Option value type </td><td> int 
+Defines whether communications on the socket will encrypted, see <b>zmq_gssapi</b>(7). A value of <i>1</i> means that communications will be plaintext. A value of <i>0</i> means communications will be encrypted. <table> <tr VALIGN=top><td> Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> 0, 1 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 0 (false) 
 </td></tr><tr VALIGN=top><td> Applicable socket types </td><td> all, when using TCP transport 
@@ -104,7 +104,7 @@ Sets the name of the pricipal for whom GSSAPI credentials should be acquired. <t
 
 <h3>ZMQ_GSSAPI_SERVER: Set GSSAPI server role</h3>
 
-Defines whether the socket will act as server for GSSAPI security, see <b><a HREF="/docs/linux/man/7-zmq_gssapi/">zmq_gssapi</a></b>(7). A value of <i>1</i> means the socket will act as GSSAPI server. A value of <i>0</i> means the socket will act as GSSAPI client. <table> <tr VALIGN=top><td> Option value type </td><td> int 
+Defines whether the socket will act as server for GSSAPI security, see <b>zmq_gssapi</b>(7). A value of <i>1</i> means the socket will act as GSSAPI server. A value of <i>0</i> means the socket will act as GSSAPI client. <table> <tr VALIGN=top><td> Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> 0, 1 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 0 (false) 
 </td></tr><tr VALIGN=top><td> Applicable socket types </td><td> all, when using TCP transport 
@@ -152,7 +152,7 @@ Set the IPv6 option for the socket. A value of 1 means IPv6 is enabled on the so
 
 <h3>ZMQ_LINGER: Set linger period for socket shutdown</h3>
 
-The <i>ZMQ_LINGER</i> option shall set the linger period for the specified <i>socket</i>. The linger period determines how long pending messages which have yet to be sent to a peer shall linger in memory after a socket is disconnected with <b><a HREF="/docs/linux/man/3-zmq_disconnect/">zmq_disconnect</a></b>(3) or closed with <b><a HREF="/docs/linux/man/3-zmq_close/">zmq_close</a></b>(3), and further affects the termination of the socket's context with <b><a HREF="/docs/linux/man/3-zmq_term/">zmq_term</a></b>(3). The following outlines the different behaviours:
+The <i>ZMQ_LINGER</i> option shall set the linger period for the specified <i>socket</i>. The linger period determines how long pending messages which have yet to be sent to a peer shall linger in memory after a socket is disconnected with <b><a HREF="/docs/linux/man/3-zmq_disconnect/">zmq_disconnect</a></b>(3) or closed with <b><a HREF="/docs/linux/man/3-zmq_close/">zmq_close</a></b>(3), and further affects the termination of the socket's context with <b>zmq_term</b>(3). The following outlines the different behaviours:
 <dl><dd>&bull; The default value of <i>-1</i> specifies an infinite linger period. Pending messages shall not be discarded after a call to <i>zmq_disconnect()</i> or <i>zmq_close()</i>; attempting to terminate the socket's context with <i>zmq_term()</i> shall block until all pending messages have been sent to a peer.</dl><dl><dd>&bull; The value of <i>0</i> specifies no linger period. Pending messages shall be discarded immediately after a call to <i>zmq_disconnect()</i> or <i>zmq_close()</i>.</dl><dl><dd>&bull; Positive values specify an upper bound for the linger period in milliseconds. Pending messages shall not be discarded after a call to <i>zmq_disconnect()</i> or <i>zmq_close()</i>; attempting to terminate the socket's context with <i>zmq_term()</i> shall block until either all pending messages have been sent to a peer, or the linger period expires, after which any pending messages shall be discarded. <table> <tr VALIGN=top><td> Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> milliseconds 
 </td></tr><tr VALIGN=top><td> Default value </td><td> -1 (infinite) 
@@ -177,7 +177,7 @@ Sets the time-to-live field in every multicast packet sent from this socket. The
 
 <h3>ZMQ_PLAIN_PASSWORD: Set PLAIN security password</h3>
 
-Sets the password for outgoing connections over TCP or IPC. If you set this to a non-null value, the security mechanism used for connections shall be PLAIN, see <b><a HREF="/docs/linux/man/7-zmq_plain/">zmq_plain</a></b>(7). If you set this to a null value, the security mechanism used for connections shall be NULL, see <b><a HREF="/docs/linux/man/3-zmq_null/">zmq_null</a></b>(3). <table> <tr VALIGN=top><td> Option value type </td><td> character string 
+Sets the password for outgoing connections over TCP or IPC. If you set this to a non-null value, the security mechanism used for connections shall be PLAIN, see <b><a HREF="/docs/linux/man/7-zmq_plain/">zmq_plain</a></b>(7). If you set this to a null value, the security mechanism used for connections shall be NULL, see <b>zmq_null</b>(3). <table> <tr VALIGN=top><td> Option value type </td><td> character string 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> N/A 
 </td></tr><tr VALIGN=top><td> Default value </td><td> not set 
 </td></tr><tr VALIGN=top><td> Applicable socket types </td><td> all, when using TCP transport 
@@ -193,7 +193,7 @@ Defines whether the socket will act as server for PLAIN security, see <b><a HREF
 
 <h3>ZMQ_PLAIN_USERNAME: Set PLAIN security username</h3>
 
-Sets the username for outgoing connections over TCP or IPC. If you set this to a non-null value, the security mechanism used for connections shall be PLAIN, see <b><a HREF="/docs/linux/man/7-zmq_plain/">zmq_plain</a></b>(7). If you set this to a null value, the security mechanism used for connections shall be NULL, see <b><a HREF="/docs/linux/man/3-zmq_null/">zmq_null</a></b>(3). <table> <tr VALIGN=top><td> Option value type </td><td> character string 
+Sets the username for outgoing connections over TCP or IPC. If you set this to a non-null value, the security mechanism used for connections shall be PLAIN, see <b><a HREF="/docs/linux/man/7-zmq_plain/">zmq_plain</a></b>(7). If you set this to a null value, the security mechanism used for connections shall be NULL, see <b>zmq_null</b>(3). <table> <tr VALIGN=top><td> Option value type </td><td> character string 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> N/A 
 </td></tr><tr VALIGN=top><td> Default value </td><td> not set 
 </td></tr><tr VALIGN=top><td> Applicable socket types </td><td> all, when using TCP transport 

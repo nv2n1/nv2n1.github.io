@@ -17,7 +17,7 @@ description: "outocp – debug an OCP file"
 <h2>BUGS</h2>
 <p> None known, but report any found to &lt;omega [at] ens.fr&gt; (mailing list). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ocp2otp/">ocp2otp</a></code>(1), <code><a href="/docs/linux/man/1-otp2ocp/">otp2ocp</a></code>(1), <code><a href="/docs/linux/man/1-omega/">omega</a></code>(1). </p>
+<p> <code>ocp2otp</code>(1), <code><a href="/docs/linux/man/1-otp2ocp/">otp2ocp</a></code>(1), <code><a href="/docs/linux/man/1-omega/">omega</a></code>(1). </p>
 <p> &lt;<a rel="nofollow" href="https://ctan.org/pkg/omega">https://ctan.org/pkg/omega</a>&gt; </p>
 <h2>AUTHOR</h2>
 <p> <code>mkocp</code> is part of Omega. The primary authors of Omega are John Plaice and Yannis Haralambous. </p>

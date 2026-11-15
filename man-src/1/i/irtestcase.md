@@ -37,7 +37,7 @@ description: "irtestcase – create or check decoding testcases."
 <dt><code>durations.log</code></p>
 <dd> Printable space/pulse durations in the same format as <a href="/docs/linux/man/1-mode2/">mode2</a>(1). This file is usable as -t/&#8211;testdata input.</p>
 <dt><code>codes.log</code></p>
-<dd> The decoded buttons, in same format as <a href="/docs/linux/man/1-irw/">irw</a>(1).</p>
+<dd> The decoded buttons, in same format as irw(1).</p>
 <dt><code>app_strings.log</code></p>
 <dd> The application strings, as presented by <a href="/docs/linux/man/1-ircat/">ircat</a>(1). </p>
 </dl>

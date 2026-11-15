@@ -187,7 +187,7 @@ description: "xfsrestore – XFS filesystem incremental restore utility"
 <dt>/var/lib/xfsdump/inventory</p>
 <dd>dump inventory database</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-rmt/">rmt</a>(8), <a href="/docs/linux/man/8-xfsdump/">xfsdump</a>(8), <a href="/docs/linux/man/8-xfsinvutil/">xfsinvutil</a>(8), <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8), <a href="/docs/linux/man/2-attr_set/">attr_set</a>(2).</p>
+<p><a href="/docs/linux/man/8-rmt/">rmt</a>(8), <a href="/docs/linux/man/8-xfsdump/">xfsdump</a>(8), <a href="/docs/linux/man/8-xfsinvutil/">xfsinvutil</a>(8), <a href="/docs/linux/man/8-xfs_quota/">xfs_quota</a>(8), attr_set(2).</p>
 <h2>Diagnostics</h2>
 <p>The exit code is 0 on normal completion, and non-zero if an error occurred or the restore was terminated by the operator. </p>
 <p> For all verbosity levels greater than 0 (<code>silent</code>) the final line of the output shows the exit status of the restore. It is of the form: <code> </p>

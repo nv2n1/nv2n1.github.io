@@ -25,7 +25,7 @@ description: "dsecndtst.f –"
 <dl COMPACT>
 <dd>November 2011</dl>
 <p> Definition at line 37 of file dsecndtst.f.</p>
-<h3>subroutine mysub (integerN, double precision, <a href="/docs/linux/man/n-dimension/">dimension</a>(n)X, double precision, <a href="/docs/linux/man/n-dimension/">dimension</a>(n)Y)</h3>
+<h3>subroutine mysub (integerN, double precision, dimension(n)X, double precision, dimension(n)Y)</h3>
 <p>Definition at line 120 of file dsecndtst.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

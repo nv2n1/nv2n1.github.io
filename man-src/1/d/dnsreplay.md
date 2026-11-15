@@ -38,7 +38,7 @@ description: "dnsreplay – A PowerDNS nameserver debugging tool"
 <h2>BUGS</h2>
 <p> dnsreplay has no certain handling for timeouts. It handles around at most 65536 outstanding answers.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/3PCAP-pcap/">pcap</a>(3PCAP), <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8), <a href="/docs/linux/man/8-dnswascher/">dnswascher</a>(8)</p>
+<p> pcap(3PCAP), <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8), dnswascher(8)</p>
 <h2>AUTHORS</h2>
 <p> This manpage was written by Joerg Jungermann (jj+debian At borkum.net) for the Debian Project and the PowerDNS versatile DNS server. </p>
 <h2>Index</h2>

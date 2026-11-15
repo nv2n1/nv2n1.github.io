@@ -98,8 +98,8 @@ description: "socket – create an endpoint for communication"
 <tr VALIGN=top>
 <td> <code>AF_RDS</code> &nbsp;</td>
 <td> Reliable Datagram Sockets (RDS) protocol </td>
-<td> <code><a href="/docs/linux/man/7-rds/">rds</a></code>(7)<br />
- <code><a href="/docs/linux/man/7-rds-rdma/">rds-rdma</a></code>(7)
+<td> <code>rds</code>(7)<br />
+ <code>rds-rdma</code>(7)
 </td>
 </tr>
 <tr VALIGN=top>

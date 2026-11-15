@@ -16,7 +16,7 @@ description: "ieee1284_open – open a port"
 <dl>
 <dt> <code>int ieee1284_open(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>flags</i><code>, int&nbsp;<wbr>*</code><i>capabilities</i><code>);</code></dl>
 <h2>DESCRIPTION</h2>
-<dd>In order to begin using a port it must be opened. Any initial set-up of the port is done at this stage. When an open port is no longer needed it should be closed with <code><a href="/docs/linux/man/3-ieee1284_close/">ieee1284_close</a></code>(3). </p>
+<dd>In order to begin using a port it must be opened. Any initial set-up of the port is done at this stage. When an open port is no longer needed it should be closed with <code>ieee1284_close</code>(3). </p>
 <p> The possible <i>flags</i> are: </p>
 <p> <code>F1284_EXCL</code></p>
 <dl>
@@ -67,7 +67,7 @@ description: "ieee1284_open – open a port"
 <p> <code>CAP1284_IRQ</code></p>
 <dl>
 <dt>
-<dd> An interrupt line is configured for this port and interrupt notifications can be received using <code><a href="/docs/linux/man/3-ieee1284_get_irq_fd/">ieee1284_get_irq_fd</a></code>(3).</dl>
+<dd> An interrupt line is configured for this port and interrupt notifications can be received using <code>ieee1284_get_irq_fd</code>(3).</dl>
 <p> <code>CAP1284_DMA</code></p>
 <dl>
 <dt>
@@ -98,7 +98,7 @@ description: "ieee1284_open – open a port"
 <dt>
 <dd> There was a problem at the operating system level. The global variable <i>errno</i> has been set appropriately.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ieee1284_close/">ieee1284_close</a></code>(3)</p>
+<p> <code>ieee1284_close</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>

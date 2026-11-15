@@ -55,6 +55,6 @@ description: "g_sgangle – computes the angle and distance between two groups"
 <p> <code>-[no]z</code><i>no </i><br />
 &nbsp;<wbr>Use the Z-axis as reference </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

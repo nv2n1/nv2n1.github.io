@@ -16,7 +16,7 @@ description: "nss – Name Service Switch configuration file"
 <p> The variables currently recognized are:</p>
 <dl>
 <dt><code>NETID_AUTHORITATIVE =</code> <i>TRUE</i>|<i>FALSE</i></p>
-<dd>If set to TRUE, the NIS backend for the <code><a href="/docs/linux/man/3-initgroups/">initgroups</a></code>(3) function will accept the information from the <i>netid.byname</i> NIS map as authoritative. This can speed up the function significantly if the <i>group.byname</i> map is large. The content of the <i>netid.byname</i> map is used <code>as is</code>. The system administrator has to make sure it is correctly generated.</p>
+<dd>If set to TRUE, the NIS backend for the <code>initgroups</code>(3) function will accept the information from the <i>netid.byname</i> NIS map as authoritative. This can speed up the function significantly if the <i>group.byname</i> map is large. The content of the <i>netid.byname</i> map is used <code>as is</code>. The system administrator has to make sure it is correctly generated.</p>
 <dt><code>SERVICES_AUTHORITATIVE =</code> <i>TRUE</i>|<i>FALSE</i></p>
 <dd>If set to TRUE, the NIS backend for the <code><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></code>(3) and <code><a href="/docs/linux/man/3-getservbyname_r/">getservbyname_r</a></code>(3) functions will assume that the <i>services.byservicename</i> NIS map exists and is authoritative, particularly that it contains both keys with /proto and without /proto for both primary service names and service aliases. The system administrator has to make sure it is correctly generated.</p>
 <dt><code>SETENT_BATCH_READ =</code> <i>TRUE</i>|<i>FALSE</i></p>

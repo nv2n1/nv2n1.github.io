@@ -17,7 +17,7 @@ KURV1 - calculate values for KURV2 usage
 <dt>Y
 <dd>(real, input) An array containing the Y values of the points. Adjacent pairs of points must be distinct.
 <dt>SLP1
-<dd>(real, input) A value (in radians) containing the slope at (<a HREF="/docs/linux/man/1-x/">X</a>(1),<a HREF="/docs/linux/man/1-y/">Y</a>(1)). The angles are measured counter-clockwise from the X axis and the positive sense of the curve is assumed to be that moving from point 1 to point N. A value for SLP1 may be omitted as indicated by the switch ISLPSW.
+<dd>(real, input) A value (in radians) containing the slope at (X(1),Y(1)). The angles are measured counter-clockwise from the X axis and the positive sense of the curve is assumed to be that moving from point 1 to point N. A value for SLP1 may be omitted as indicated by the switch ISLPSW.
 <dt>SLPN
 <dd>(real, input) A value (in radians) containing the slope at (X(N),Y(N)). The angles are measured counter-clockwise from the X axis and the positive sense of the curve is assumed to be that moving from point 1 to point N. A value for SLP2 may be omitted as indicated by the switch ISLPSW.
 <dt>ISLPSW

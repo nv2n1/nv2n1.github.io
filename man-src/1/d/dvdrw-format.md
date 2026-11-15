@@ -23,6 +23,6 @@ description: "dvd+rw-format – format DVD+-RW/-RAM disk"
 </dl>
 <h2>See Also</h2>
 <p>Most up-to-date information on dvd+rw-tools is available at <a rel="nofollow" href="http://fy.chalmers.se/~appro/linux/DVD+RW/.">http://fy.chalmers.se/~appro/linux/DVD+RW/.</a> </p>
-<p> The manpage for <code><a href="/docs/linux/man/8-genisofs/">genisofs</a></code>(8), <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1), <code>dvd+<a href="/docs/linux/man/1-rw-mediainfo/">rw-mediainfo</a></code>(1), <code>dvd+<a href="/docs/linux/man/1-rw-booktype/">rw-booktype</a></code>(1). </p>
+<p> The manpage for <code>genisofs</code>(8), <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1), <code>dvd+rw-mediainfo</code>(1), <code>dvd+rw-booktype</code>(1). </p>
 <h2>Author</h2>
 <p><code>dvd+rw-format</code> was written by Andy Polyakov &lt;appro [at] fy.chalmers.se&gt;. This manual page was written by Osamu Aoki &lt;osamu [at] debian.org&gt; for the Debian project.</p>

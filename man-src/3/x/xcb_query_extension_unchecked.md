@@ -64,6 +64,6 @@ Request function
 <h2>Errors</h2>
 <p>This request does never generate any errors.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a></code>(3), <code><a href="/docs/linux/man/3-xcb_get_extension_data/">xcb_get_extension_data</a></code>(3), <code><a href="/docs/linux/man/1-xdpyinfo/">xdpyinfo</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a></code>(3), <code>xcb_get_extension_data</code>(3), <code><a href="/docs/linux/man/1-xdpyinfo/">xdpyinfo</a></code>(1)</p>
 <h2>Author</h2>
 <p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

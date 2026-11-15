@@ -64,7 +64,7 @@ ColorPage HR6 V1 0x0458 0x2004</pre>
 <p> Example: export SANE_DEBUG_U12=10 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<br />
  <i>/usr/share/doc/libsane/u12/U12.changes</i> </p>
 <h2>Contact And Bug-Reports</h2>
 <p>Please send any information and bug-reports to:<br />
@@ -72,7 +72,7 @@ ColorPage HR6 V1 0x0458 0x2004</pre>
 <p> Additional info and hints can be obtained from our<br />
  Mailing-List archive at:<br />
  <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> </p>
-<p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_U12</code> before calling your favorite scan-frontend (i.e. <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1)), i.e.: </p>
+<p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_U12</code> before calling your favorite scan-frontend (i.e. <code>xscanimage</code>(1)), i.e.: </p>
 <p> <i>export SANE_DEBUG_U12=20 ; xscanimage</i> </p>
 <p> The value controls the verbosity of the backend.</p>
 <h2>KNOWN BUGS &amp; RESTRICTIONS</h2>

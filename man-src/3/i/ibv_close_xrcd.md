@@ -38,7 +38,7 @@ struct ibv_xrcd_init_attr {
 <h2>NOTES</h2>
 <p> <code>ibv_close_xrcd()</code> may fail if any other resource is still associated with the XRCD being closed.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_srq_ex/">ibv_create_srq_ex</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a></code>(3),</p>
+<p> <code>ibv_create_srq_ex</code>(3), <code>ibv_create_qp_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Sean Hefty &lt;sean.hefty [at] intel.com&gt;</p>

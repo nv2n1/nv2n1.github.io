@@ -414,7 +414,7 @@ trap section
 <h2>Examples</h2>
 <p>The <code>mon</code> distribution comes with an example configuration called <i>example.cf</i>. Refer to that file for more information. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-moncmd/">moncmd</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/3pm-Time::Period/">Time::Period</a></code>(3pm), <code><a href="//www.systutorials.com/docs/linux/man/3pm-Mon::Client/">Mon::Client</a></code>(3pm)</p>
+<p><code><a href="/docs/linux/man/1-moncmd/">moncmd</a></code>(1), <code>Time::Period</code>(3pm), <code>Mon::Client</code>(3pm)</p>
 <h2>History</h2>
 <p><code>mon</code> was written because I couldn&#8217;t find anything out there that did just what I needed, and nothing was worth modifying to add the features I wanted. It doesn&#8217;t have a cool name, and that bothers me because I couldn&#8217;t think of one.</p>
 <h2>Bugs</h2>

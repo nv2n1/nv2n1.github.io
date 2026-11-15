@@ -71,5 +71,5 @@ description: "cryptoflex-tool – utility for manipulating Schlumberger Cryptofl
 <dt>
 <dd> Causes <code>cryptoflex-tool</code> to be more verbose. Specify this flag several times to enable debug output in the opensc library.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-opensc/">opensc</a>(7), <a href="/docs/linux/man/1-pkcs15-tool/">pkcs15-tool</a>(1) </p>
+<p> opensc(7), <a href="/docs/linux/man/1-pkcs15-tool/">pkcs15-tool</a>(1) </p>
 <h2>Index</h2>

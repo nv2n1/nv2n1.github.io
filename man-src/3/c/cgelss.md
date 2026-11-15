@@ -84,20 +84,20 @@ description: "cgelss.f –"
 <pre>
           S is REAL array, dimension (min(M,N))
           The singular values of A in decreasing order.
-          The condition number of A in the 2-norm = <a href="//www.systutorials.com/docs/linux/man/1-S/">S</a>(1)/S(min(m,n)).
+          The condition number of A in the 2-norm = S(1)/S(min(m,n)).
 </pre>
 <p> <i>RCOND</i> </p>
 <pre>
           RCOND is REAL
           RCOND is used to determine the effective rank of A.
-          Singular values S(i) &lt;= RCOND*<a href="//www.systutorials.com/docs/linux/man/1-S/">S</a>(1) are treated as zero.
+          Singular values S(i) &lt;= RCOND*S(1) are treated as zero.
           If RCOND &lt; 0, machine precision is used instead.
 </pre>
 <p> <i>RANK</i> </p>
 <pre>
           RANK is INTEGER
           The effective rank of A, i.e., the number of singular values
-          which are greater than RCOND*<a href="//www.systutorials.com/docs/linux/man/1-S/">S</a>(1).
+          which are greater than RCOND*S(1).
 </pre>
 <p> <i>WORK</i> </p>
 <pre>

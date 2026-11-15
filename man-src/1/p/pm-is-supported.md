@@ -48,7 +48,7 @@ description: "pm-is-supported – Test whether suspend or hibernate is supported
 </tr>
 </table>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-hald/">hald</a></code>(8), <code><a href="/docs/linux/man/8-pm-suspend/">pm-suspend</a></code>(8), <code><a href="/docs/linux/man/8-s2both/">s2both</a></code>(8), <code><a href="/docs/linux/man/7-upower/">UPower</a></code>(7)</p>
+<p> <code><a href="/docs/linux/man/8-hald/">hald</a></code>(8), <code>pm-suspend</code>(8), <code>s2both</code>(8), <code><a href="/docs/linux/man/7-upower/">UPower</a></code>(7)</p>
 <h2>AUTHOR</h2>
 <p> <code>Tim Dijkstra</code> &lt;tim [at] famdijkstra.org&gt;</p>
 <dl>

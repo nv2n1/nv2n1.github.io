@@ -38,7 +38,7 @@ description: "autogen – The Automated Program Generator"
 <p> By default, when AutoGen is built, the configuration is probed for a reasonable Bourne-like shell to use for shell script processing. If a particular template needs an alternate shell, it must be specified with this option on the command line, with an environment variable (<code>SHELL</code>) or in the configuration/initialization file.</p>
 <dt><code>-m</code>, <code>&#8211;no-fmemopen</code></p>
 <dd> Do not use in-mem streams. </p>
-<p> If the local C library supports &quot;<code><a href="//www.systutorials.com/docs/linux/man/3GNU-fopencookie/">fopencookie</a>(3GNU)</code>&quot;, or &quot;<code><a href="//www.systutorials.com/docs/linux/man/3BSD-funopen/">funopen</a>(3BSD)</code>&quot; then AutoGen prefers to use in-memory stream buffer opens instead of anonymous files. This may lead to problems if there is a shortage of virtual memory. If, for a particular application, you run out of memory, then specify this option. This is unlikely in a modern 64-bit virtual memory environment. </p>
+<p> If the local C library supports &quot;<code>fopencookie(3GNU)</code>&quot;, or &quot;<code>funopen(3BSD)</code>&quot; then AutoGen prefers to use in-memory stream buffer opens instead of anonymous files. This may lead to problems if there is a shortage of virtual memory. If, for a particular application, you run out of memory, then specify this option. This is unlikely in a modern 64-bit virtual memory environment. </p>
 <p> On platforms without these functions, the option is accepted but ignored. <code>fmemopen(POSIX)</code> is not adequate because its string buffer is not reallocatable. <code>open_memstream(POSIX)</code> is <i>also</i> not adequate because the stream is only opened for output. AutoGen needs a reallocatable buffer available for both reading and writing.</p>
 <dt><code>&#8211;equate</code>=<i>char-list</i></p>
 <dd> characters considered equivalent. The default <i>char-list</i> for this option is:<br />
@@ -205,7 +205,7 @@ autogen -Tagtexi-cmd.tpl -MFtexi-dep -MTtexi-stamp opts.def
 <dt><code>4</code> (EXIT_LOAD_ERROR)</p>
 <dd> An error was encountered during the load phase.</p>
 <dt><code>128</code> (EXIT_SIGNAL)</p>
-<dd> <code>autogen</code> exited due to catching a signal. If your template includes string formatting, a number argument to a &quot;%s&quot; formatting element will trigger a segmentation fault. Autogen will catch the seg fault signal and exit with <code><a href="/docs/linux/man/5-autogen_exit_signal/">AUTOGEN_EXIT_SIGNAL</a>(5)</code>. Alternatively, AutoGen may have been interrupted with a <code><a href="/docs/linux/man/2-kill/">kill</a>(2)</code> signal. Subtract 128 from the actual exit code to detect the signal number.</p>
+<dd> <code>autogen</code> exited due to catching a signal. If your template includes string formatting, a number argument to a &quot;%s&quot; formatting element will trigger a segmentation fault. Autogen will catch the seg fault signal and exit with <code>AUTOGEN_EXIT_SIGNAL(5)</code>. Alternatively, AutoGen may have been interrupted with a <code><a href="/docs/linux/man/2-kill/">kill</a>(2)</code> signal. Subtract 128 from the actual exit code to detect the signal number.</p>
 <dt><code>66</code> (EX_NOINPUT)</p>
 <dd> A specified configuration file could not be loaded.</p>
 <dt><code>70</code> (EX_SOFTWARE)</p>

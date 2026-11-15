@@ -98,7 +98,7 @@ VL15Dropped=100</pre>
 <p> A global config file is provided to set some of the common options for all tools. See supplied config file for details.</p>
 <h3>Node Name Map File Format</h3>
 <p>The node name map is used to specify user friendly names for nodes in the output. GUIDs are used to perform the lookup. </p>
-<p> This functionality is provided by the opensm-libs package. See <code><a href="/docs/linux/man/8-opensm/">opensm</a>(8)</code> for the file location for your installation. </p>
+<p> This functionality is provided by the opensm-libs package. See <code>opensm(8)</code> for the file location for your installation. </p>
 <p> <code>Generically:</code> </p>
 <pre># comment
 &lt;guid&gt; &quot;&lt;name&gt;&quot;</pre>

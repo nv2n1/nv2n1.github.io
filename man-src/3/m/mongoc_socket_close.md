@@ -16,7 +16,7 @@ mongoc_socket_close (mongoc_socket_t *socket);</pre>
 <dt><code>socket</code></p>
 <dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
 <h2>Description</h2>
-<p>This function is a wrapper around the BSD socket <code><a href="/docs/linux/man/3-shutdown/">shutdown</a>(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
+<p>This function is a wrapper around the BSD socket <code>shutdown(3)</code> interface. It provides better portability between UNIX-like and Microsoft Windows platforms. </p>
 <h2>Returns</h2>
 <p>0 on success, -1 on failure to close the socket. </p>
 <h2>Colophon</h2>

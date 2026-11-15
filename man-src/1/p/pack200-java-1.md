@@ -168,7 +168,7 @@ description: "pack200 – Packages a JAR file into a compressed pack200 file for
 <h2>EXIT STATUS</h2>
 <p> The following exit values are returned: 0 for successful completion and a number greater than 0 when an error occurs.</p>
 <h2>NOTES</h2>
-<p> This command should not be confused with <code><a href="/docs/linux/man/1-pack/">pack</a></code>(1). The <code>pack</code> and <code>pack200</code> commands are separate products. </p>
+<p> This command should not be confused with <code>pack</code>(1). The <code>pack</code> and <code>pack200</code> commands are separate products. </p>
 <p> The Java SE API Specification provided with the JDK is the superseding authority, when there are discrepancies.</p>
 <h2>SEE ALSO</h2>
 <dl>

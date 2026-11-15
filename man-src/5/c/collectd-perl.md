@@ -424,7 +424,7 @@ description: "collectd-perl – Documentation of collectd’s \"perl plugin\""
 <h2>Caveats</h2>
 <dl>
 <dt>&bull;</p>
-<dd>collectd is heavily multi-threaded. Each collectd thread accessing the perl plugin will be mapped to a Perl interpreter thread (see <i><a href="//www.systutorials.com/docs/linux/man/3perl-threads/">threads</a></i>(3perl)). Any such thread will be created and destroyed transparently and on-the-fly. </p>
+<dd>collectd is heavily multi-threaded. Each collectd thread accessing the perl plugin will be mapped to a Perl interpreter thread (see <i>threads</i>(3perl)). Any such thread will be created and destroyed transparently and on-the-fly. </p>
 <p> Hence, any plugin has to be thread-safe if it provides several entry points from collectd (i. e. if it registers more than one callback or if a registered callback may be called more than once in parallel). Please note that no data is shared between threads by default. You have to use the <code>threads::shared</code> module to do so.</p>
 <dt>&bull;</p>
 <dd>Each function name registered with collectd has to be available before the first thread has been created (i. e. basically at compile time). This basically means that hacks (yes, I really consider this to be a hack) like <tt>&quot;*foo = \&amp;bar; plugin_register (TYPE_READ, &quot;plugin&quot;, &quot;foo&quot;);&quot;</tt> most likely will not work. This is due to the fact that the symbol table is not shared across different threads.</p>
@@ -433,7 +433,7 @@ description: "collectd-perl – Documentation of collectd’s \"perl plugin\""
 <dt>&bull;</p>
 <dd>The perl plugin exports the internal <font SIZE="-1">API</font> of collectd which is considered unstable and subject to change at any time. We try hard to not break backwards compatibility in the Perl <font SIZE="-1">API</font> during the life cycle of one major release. However, this cannot be guaranteed at all times. Watch out for warnings dispatched by the perl plugin after upgrades.</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5), <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5), <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i><a href="//www.systutorials.com/docs/linux/man/3perl-threads/">threads</a></i>(3perl), <i><a href="//www.systutorials.com/docs/linux/man/3perl-threads::shared/">threads::shared</a></i>(3perl), <i><a href="/docs/linux/man/1-perldebug/">perldebug</a></i>(1)</p>
+<p><i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5), <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5), <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>threads</i>(3perl), <i>threads::shared</i>(3perl), <i><a href="/docs/linux/man/1-perldebug/">perldebug</a></i>(1)</p>
 <h2>Author</h2>
 <p>The <tt>&quot;perl plugin&quot;</tt> has been written by Sebastian Harl &lt;sh at tokkee.org&gt;. </p>
 <p> This manpage has been written by Florian Forster &lt;octo at collectd.org&gt; and Sebastian Harl &lt;sh at tokkee.org&gt;.</p>

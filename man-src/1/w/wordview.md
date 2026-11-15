@@ -40,10 +40,10 @@ description: "wordview – displays text contained in MS-Word file in X window"
 <dt><code>Wordview.Menu.activeBackground</code></p>
 <dd> Background color of active menu item.</p>
 <dt><code>Wordview.Menu.activeBorderWidth</code></p>
-<dd> Width (in pixels) of border around highlighted menu item. Default is 0, which differs from Tk global default. See <code><a href="/docs/linux/man/n-options/">options</a></code>(n) for more details.</dl>
+<dd> Width (in pixels) of border around highlighted menu item. Default is 0, which differs from Tk global default. See <code>options</code>(n) for more details.</dl>
 <p> A lot of other resource options which affect behavoir of standard Tk widgets can affect wordview. See Tcl/Tk manual pages for more information. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1),<code><a href="/docs/linux/man/1-wish/">wish</a></code>(1),<code><a href="/docs/linux/man/n-options/">options</a></code>(n) </p>
+<p> <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1),<code><a href="/docs/linux/man/1-wish/">wish</a></code>(1),<code>options</code>(n) </p>
 <h2>AUTHOR</h2>
 <p> Victor Wagner &lt;vitus [at] 45.free.net&gt;. </p>
 <h2>Index</h2>

@@ -147,7 +147,7 @@ gout[options][gfile][xfile][mfile][vfile]
     $ gout '-op{c,e,d,x=0.3,X=0.6,y=0.2,Y=0.5}' brol.grf brol.xyz brol.map brol.ps
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gmap/">gmap</a></code>(1), <code><a href="/docs/linux/man/1-gout/">gout</a></code>(1), <code><a href="/docs/linux/man/1-gtst/">gtst</a></code>(1). </p>
+<p> <code>gmap</code>(1), <code>gout</code>(1), <code>gtst</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

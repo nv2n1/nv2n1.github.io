@@ -82,7 +82,7 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-expm1/">expm1</a><code>(1)</code> = 1.71828<br />
+<p>&nbsp;<wbr>&nbsp;expm1<code>(1)</code> = 1.71828<br />
 &nbsp;<wbr>&nbsp;Interest earned in 2 days on on $100, compounded daily at 1%<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;on a 30/360 calendar = 0.00555563<br />
 &nbsp;<wbr>&nbsp;exp(1e-16)-1 = 0 expm1(1e-16) = 1e-16<br />

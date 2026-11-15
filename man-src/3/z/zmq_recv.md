@@ -46,6 +46,6 @@ nbytes = zmq_recv(socket, buf, 256, 0);
 assert(nbytes != -1);
 </code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-zmq_send/">zmq_send</a></code>(3) <code><a href="/docs/linux/man/3-zmq_getsockopt/">zmq_getsockopt</a></code>(3) <code><a href="/docs/linux/man/7-zmq_socket/">zmq_socket</a></code>(7) <code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)</p>
+<p><code><a href="/docs/linux/man/3-zmq_send/">zmq_send</a></code>(3) <code><a href="/docs/linux/man/3-zmq_getsockopt/">zmq_getsockopt</a></code>(3) <code>zmq_socket</code>(7) <code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)</p>
 <h2>Authors</h2>
 <p>This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></code>m[].</p>

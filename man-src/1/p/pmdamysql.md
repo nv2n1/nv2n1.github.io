@@ -21,7 +21,7 @@ description: "pmdamysql – MySQL database PMDA"
 <p> This file can contain overridden values (Perl code) for the settings listed at the start of pmdamysql.pl, namely:</p>
 <dl>
 <dt>&bull;</p>
-<dd> database name (see <font SIZE="-1"><i><a href="/docs/linux/man/3-dbi/">DBI</a></i></font><i></i>(3) for details)</p>
+<dd> database name (see <font SIZE="-1"><i>DBI</i></font><i></i>(3) for details)</p>
 <dt>&bull;</p>
 <dd> database username</dl>
 <p> Once this is setup, you can access the names and values for the mysql performance metrics by doing the following as root: </p>
@@ -55,5 +55,5 @@ description: "pmdamysql – MySQL database PMDA"
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdadbping/">pmdadbping</a></code>(1), <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) and <code><a href="/docs/linux/man/3-dbi/">DBI</a></code>(3). </p>
+<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdadbping/">pmdadbping</a></code>(1), <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) and <code>DBI</code>(3). </p>
 <h2>Index</h2>

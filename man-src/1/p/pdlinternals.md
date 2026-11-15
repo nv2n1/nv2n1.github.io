@@ -151,7 +151,7 @@ description: "PDL::Internals – description of some aspects of the current inte
  $a Double D [7,7] P 0.38Kb 
  $b Double D [3,3] VC 0.00Kb</pre>
 <p>Now, if I suddenly decide that <tt>$a</tt> should be flagged as possibly containing bad values, using </p>
-<pre> pdl&gt; $a-&gt;<a href="//www.systutorials.com/docs/linux/man/1-baddata/">baddata</a>(1)</pre>
+<pre> pdl&gt; $a-&gt;baddata(1)</pre>
 <p>then I want the state of <tt>$b</tt> &#8211; it&#8217;s <i>child</i> &#8211; to be changed as well (since it will either share or inherit some of <tt>$a</tt>&#8216;s data and so be also <i>bad</i>), so that I get a &#8216;B&#8217; in the <i>State</i> field: </p>
 <pre> pdl&gt; ? vars 
  PDL variables in package main::

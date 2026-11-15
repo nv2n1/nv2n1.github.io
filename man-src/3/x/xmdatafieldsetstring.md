@@ -22,4 +22,4 @@ description: "XmDataFieldSetString — A DataField function that sets the string
 <dd>Specifies the character pointer to the string value and places the string into the text edit window</dl>
 <p> For a complete definition of DataField and its associated resources, see <code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3) and <code><a href="/docs/linux/man/3-xmdatafieldsetstringwcs/">XmDataFieldSetStringWcs</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3) and <code>XmDataFieldSetStringWcs</code>(3).</p>

@@ -44,7 +44,7 @@ description: "renice – alter priority of running processes"
 <dt>
 <dd> to map user names to user IDs</dl>
 <h2>NOTES</h2>
-<p> Users other than the superuser may only alter the priority of processes they own. Furthermore, an unprivileged user can only <i>increase</i> the &quot;nice value&quot; (i.e., choose a lower priority) and such changes are irreversible unless (since Linux 2.6.12) the user has a suitable &quot;nice&quot; resource limit (see <code><a href="//www.systutorials.com/docs/linux/man/1p-ulimit/">ulimit</a></code>(1p) and <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)). </p>
+<p> Users other than the superuser may only alter the priority of processes they own. Furthermore, an unprivileged user can only <i>increase</i> the &quot;nice value&quot; (i.e., choose a lower priority) and such changes are irreversible unless (since Linux 2.6.12) the user has a suitable &quot;nice&quot; resource limit (see <code>ulimit</code>(1p) and <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)). </p>
 <p> The superuser may alter the priority of any process and set the priority to any value in the range -20 to 19. Useful priorities are: 19 (the affected processes will run only when nothing else in the system wants to), 0 (the &quot;base&quot; scheduling priority), anything negative (to make things go very fast).</p>
 <h2>HISTORY</h2>
 <p> The <code>renice</code> command appeared in 4.0BSD.</p>

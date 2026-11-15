@@ -56,6 +56,6 @@ description: "rxe – Software RDMA over Ethernet"
 <dd>Read/Write file that controls the default mtu used for UD packets. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rxe_cfg/">rxe_cfg</a></code>(8), <code><a href="/docs/linux/man/7-verbs/">verbs</a></code>(7), </p>
+<p><code><a href="/docs/linux/man/8-rxe_cfg/">rxe_cfg</a></code>(8), <code>verbs</code>(7), </p>
 <h2>Authors</h2>
 <p>Written by John Groves, Frank Zago and Bob Pearson at System Fabric Works.</p>

@@ -58,7 +58,7 @@ double a_x
 double x_d_coef</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements a modified 1991 Perdew-Wang exchange functional. </p>
-<p> C. Adamo and V. Barone, J. Chem. Phys., <a href="/docs/linux/man/2-108/">108</a>(2), pp. 664-674, 1998.</p>
+<p> C. Adamo and V. Barone, J. Chem. Phys., 108(2), pp. 664-674, 1998.</p>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>sc::mPW91XFunctional::mPW91XFunctional (Func variant)</h3>
 <p>Construct an mPW form exchange functional using the given functional variant. The variant can be B88, PW91, or mPW91.</p>

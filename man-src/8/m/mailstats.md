@@ -58,4 +58,4 @@ description: "mailstats – display mail statistics"
 <dt>/var/log/mail/statistics</p>
 <dd>The default <code>sendmail</code> statistics file.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-mailq/">mailq</a>(1), <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) </p>
+<p><a href="/docs/linux/man/1-mailq/">mailq</a>(1), sendmail(8) </p>

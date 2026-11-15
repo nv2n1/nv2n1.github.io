@@ -55,11 +55,11 @@ $ stap-merge -v stpd_cpu0 stpd_cpu1
 </dl>
 <h2>SEE ALSO</h2>
 <pre>
-<i><a href="//www.systutorials.com/docs/linux/man/3stap-stapprobes/">stapprobes</a></i>(3stap),
+<i>stapprobes</i>(3stap),
 <i><a href="//www.systutorials.com/docs/linux/man/7-stappaths/">stappaths</a></i>(7),
 <i><a href="//www.systutorials.com/docs/linux/man/8-staprun/">staprun</a></i>(8),
-<i><a href="//www.systutorials.com/docs/linux/man/3stap-stapvars/">stapvars</a></i>(3stap),
-<i><a href="//www.systutorials.com/docs/linux/man/3stap-stapex/">stapex</a></i>(3stap),
+<i>stapvars</i>(3stap),
+<i>stapex</i>(3stap),
 <i><a href="//www.systutorials.com/docs/linux/man/8-stap-server/">stap-server</a></i>(8),
 <i><a href="//www.systutorials.com/docs/linux/man/1-gdb/">gdb</a></i>(1)
 </pre>

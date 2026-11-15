@@ -59,5 +59,5 @@ KEY  := { DOTTED_QUAD | NUMBER }
 <h2>Homepage</h2>
 <p><code>&lt;<a rel="nofollow" href="https://sourceforge.net/projects/net-tools/">https://sourceforge.net/projects/net-tools/</a>&gt;</code></p>
 <h2>Authors</h2>
-<p>This manpage was written by Sergio Durigan Junior &lt;sergiodj (at) sergiodj (dot) net&gt;. A few parts were inspired by <code><a href="/docs/linux/man/1-ip-tunnel/">ip-tunnel</a>(1)</code>&#8216;s manpage. </p>
+<p>This manpage was written by Sergio Durigan Junior &lt;sergiodj (at) sergiodj (dot) net&gt;. A few parts were inspired by <code>ip-tunnel(1)</code>&#8216;s manpage. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation.</p>

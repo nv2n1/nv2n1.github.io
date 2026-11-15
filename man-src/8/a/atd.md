@@ -31,6 +31,6 @@ description: "atd – run jobs queued for later execution"
 <p> <i>/var/spool/at/spool</i> The directory for storing output; this should be mode 700, owner root. </p>
 <p> <i>/etc/at.allow</i>, <i>/etc/at.deny</i> determine who can use the <code>at</code> system.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-at/">at</a></code>(1), <code><a href="/docs/linux/man/5-at-deny/">at.deny</a></code>(5), <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5), <code><a href="/docs/linux/man/8-cron/">cron</a></code>(8), <code><a href="/docs/linux/man/1-crontab/">crontab</a></code>(1), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/1-at/">at</a></code>(1), <code>at.deny</code>(5), <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5), <code><a href="/docs/linux/man/8-cron/">cron</a></code>(8), <code><a href="/docs/linux/man/1-crontab/">crontab</a></code>(1), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</p>
 <h2>Bugs</h2>
 <p>The functionality of <code>atd</code> should be merged into <code><a href="/docs/linux/man/8-cron/">cron</a></code>(8)<code>.</code> </p>

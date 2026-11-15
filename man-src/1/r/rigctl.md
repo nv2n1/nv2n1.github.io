@@ -264,5 +264,5 @@ description: "rigctl – control radio transceivers and receivers"
  Copyright &#169; 2000-2010 the Hamlib Group. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-hamlib/">hamlib</a></code>(3), <code><a href="/docs/linux/man/8-rpc-rigd/">rpc.rigd</a></code>(8) <code><a href="/docs/linux/man/8-rigctld/">rigctld</a>(8)</code> </p>
+<p> <code>hamlib</code>(3), <code><a href="/docs/linux/man/8-rpc-rigd/">rpc.rigd</a></code>(8) <code><a href="/docs/linux/man/8-rigctld/">rigctld</a>(8)</code> </p>
 <h2>Index</h2>

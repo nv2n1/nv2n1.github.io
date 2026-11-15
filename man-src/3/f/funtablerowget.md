@@ -42,5 +42,5 @@ while ((buf = (Ev)FunTableRowGet(fun, NULL, MAXROW, NULL, &amp;got))) {
 <p> As shown above, successive calls to <i>FunTableRowGet()</i> will return the next set of rows from the input file until all rows have been read, i.e., the routine behaves like sequential Unix I/O calls such as <i>fread()</i>. See evmerge example code for a more complete example. </p>
 <p> Note that <i>FunTableRowGet()</i> also can be called as <i>FunEventsGet()</i>, for backward compatibility.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

@@ -43,5 +43,5 @@ description: "qsig – signal pbs batch job"
 <p> Upon successful processing of all the operands presented to the qsig command, the exit status will be a value of zero. </p>
 <p> If the qsig command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_sigjob/">pbs_sigjob</a>(3B), pbs_resources_*(7B) where * is system type, and the PBS ERS. </p>
+<p> qsub(1B), pbs_sigjob(3B), pbs_resources_*(7B) where * is system type, and the PBS ERS. </p>
 <h2>Index</h2>

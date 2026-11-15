@@ -621,7 +621,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> The virt-p2v tool for converting physical machines to virtual machines was substantially improved. This includes: clearer, coloured output during conversions, support for Gtk 3, more detailed information about hardware, click to identify network interfaces, more debugging tools included with the <font SIZE="-1">ISO,</font> and many bug fixes. </p>
 <p> f2fs (Flash Friendly File System) is now supported (Pino Toscano). </p>
 <p> <i>New tools</i> </p>
-<p> <code><a href="/docs/linux/man/1-virt-p2v-make-kiwi/">virt-p2v-make-kiwi</a></code>(1) can be used to build the virt-p2v <font SIZE="-1">ISO</font> based on <font SIZE="-1">SLES</font> and openSUSE, using the kiwi utility (Cédric Bosdonnat). </p>
+<p> <code>virt-p2v-make-kiwi</code>(1) can be used to build the virt-p2v <font SIZE="-1">ISO</font> based on <font SIZE="-1">SLES</font> and openSUSE, using the kiwi utility (Cédric Bosdonnat). </p>
 <p> <i>New features in existing tools</i> </p>
 <p> virt-resize will now preserve the <font SIZE="-1">GPT GUID.</font> This was required for Windows Server 2012 R2, where the bootloader would become confused if the <font SIZE="-1">GUID</font> changed (Maxim Perevedentsev). </p>
 <p> virt-resize will use sparse copying for (old MBR-style) extended partitions. This makes resizing of guests that use extended partitions much faster (Maxim Perevedentsev). </p>
@@ -921,7 +921,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> If it exists, <i>/etc/os-release</i> will be preferred for inspecting Linux guests (Pino Toscano). </p>
 <p> The correct kernel version is returned for Windows guests ≥ 10. </p>
 <p> <i>Documentation</i> </p>
-<p> The large <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) man page has been split into several separate man pages: <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1) <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1) <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1). In the source tree, a new <i>docs</i> directory contains this documentation. </p>
+<p> The large <code>guestfs</code>(3) man page has been split into several separate man pages: <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1) <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1) <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1). In the source tree, a new <i>docs</i> directory contains this documentation. </p>
 <p> <i>Architectures and platforms</i> </p>
 <p> Libguestfs now supports <font SIZE="-1">ARM 64</font> bit platforms with vGICv3.</p>
 <h3>Security</h3>
@@ -1107,7 +1107,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> virt-v2v now securely passes options to curl, so passwords, cookies and so on cannot be seen by users with shell access on the same machine. </p>
 <p> virt-v2v has a new <i>&#8211;password-file</i> option to allow you to securely pass in a password, and to avoid an interactive prompt. </p>
 <p> virt-v2v disables Windows autoreboot, making debugging conversion failures on Windows easier. </p>
-<p> virt-v2v now comes with an extensive external test suite. See <code><a href="/docs/linux/man/1-virt-v2v-test-harness/">virt-v2v-test-harness</a></code>(1). </p>
+<p> virt-v2v now comes with an extensive external test suite. See <code>virt-v2v-test-harness</code>(1). </p>
 <p> virt-v2v allows virtio drivers to come from any location (Roman Kagan), and drivers can be read directly from the virtio <font SIZE="-1">ISO.</font> </p>
 <p> virt-v2v supports conversion of Windows ≥ 8. Note this is experimental, and possibly broken. Use with caution. </p>
 <p> virt-v2v can now convert <font SIZE="-1">UEFI</font> guests. </p>
@@ -1832,7 +1832,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.24</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.22.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
-<p> User-Mode Linux (<font SIZE="-1">UML</font>) can be used as an alternative backend (ie. instead of <font SIZE="-1">KVM</font>). This improves performance especially when using libguestfs inside a <font SIZE="-1">VM</font> (eg. in the cloud). <font SIZE="-1">UML</font> is supported as a first-class backend. See &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) for how to use this. </p>
+<p> User-Mode Linux (<font SIZE="-1">UML</font>) can be used as an alternative backend (ie. instead of <font SIZE="-1">KVM</font>). This improves performance especially when using libguestfs inside a <font SIZE="-1">VM</font> (eg. in the cloud). <font SIZE="-1">UML</font> is supported as a first-class backend. See &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <code>guestfs</code>(3) for how to use this. </p>
 <p> <font SIZE="-1">ARM</font> (32 bit) and <font SIZE="-1">PPC64</font> are now fully supported. </p>
 <p> <i>Tools</i> </p>
 <p> <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) is a new tool for building virtual machine images. It lets you rapidly and securely create guests and customize them. </p>
@@ -1898,7 +1898,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>golang ≥ 1.1.1</p>
 <dd> For Go language bindings.</dl>
 <h3>Internals</h3>
-<p> New <tt>&quot;make check-*&quot;</tt> rules replace <tt>&quot;make extra-tests&quot;</tt>. See <tt>&quot;make help&quot;</tt> and <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) for details. </p>
+<p> New <tt>&quot;make check-*&quot;</tt> rules replace <tt>&quot;make extra-tests&quot;</tt>. See <tt>&quot;make help&quot;</tt> and <code>guestfs</code>(3) for details. </p>
 <p> Perl code can now be valgrinded. </p>
 <p> Inspection code is now fuzz-tested. </p>
 <p> <tt>&quot;make&quot;</tt> no longer recurses into the generator directory in every other directory. This reduces the overhead of builds considerably. </p>
@@ -2212,7 +2212,7 @@ ew_file'&quot;</tt> now works as expected. </p>
 <p> <font SIZE="-1">RHEL 5</font> is now explicitly supported through the &#8216;oldlinux&#8217; branch in upstream git. </p>
 <p> PowerPC 64 bit is now supported. Also libguestfs has been examined for endianness bugs and these have been fixed. </p>
 <p> <i>daemon</i> </p>
-<p> A man page for the daemon (<code><a href="/docs/linux/man/8-guestfsd/">guestfsd</a></code>(8)) is included.</p>
+<p> A man page for the daemon (<code>guestfsd</code>(8)) is included.</p>
 <h3>Security</h3>
 <p> <i>guestfish history file</i> </p>
 <p> The <i></i>$HOME<i>/.guestfish</i> history file is now created with 0600 permissions (instead of 0644 before) so it is no longer world readable. </p>
@@ -2935,7 +2935,7 @@ line 2
 <h3>Internals</h3>
 <pre>
  - The 'HACKING' file is obsolete.  The contents have been moved into
-   a section of the <a href="//www.systutorials.com/docs/linux/man/3-guestfs/">guestfs</a>(3) manual page.
+   a section of the guestfs(3) manual page.
  - libguestfs-test-tool simplified.  It no longer needs the static
    binary or tries to construct an ISO.
  - rpcgen-generated files are compiled with -fno-strict-aliasing
@@ -3013,7 +3013,7 @@ line 2
  &#8211; ROADMAP file covers roadmap and goals for future releases.</p>
 <h3>Security</h3>
 <pre>
- - New SECURITY section in <a href="//www.systutorials.com/docs/linux/man/3-guestfs/">guestfs</a>(3) API documentation.
+ - New SECURITY section in guestfs(3) API documentation.
  - virt-inspector no longer runs any guest commands.
  - Inspection code is more careful about avoiding very large files
    from guests which might previously have caused a denial of service.
@@ -3363,7 +3363,7 @@ line 2
 <dt>2009-04-01 (the initial announcement)</p>
 <dd> <a rel="nofollow" href="http://rwmj.wordpress.com/2009/04/01/libguestfs-access-and-modify-virtual-machine-disk-images/">http://rwmj.wordpress.com/2009/04/01/libguestfs-access-and-modify-virtual-machine-disk-images/</a></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-guestfs-examples/">guestfs-examples</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-faq/">guestfs-faq</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-performance/">guestfs-performance</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-testing/">guestfs-testing</a></code>(1), <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a></p>
+<p> <code>guestfs-examples</code>(1), <code><a href="/docs/linux/man/1-guestfs-faq/">guestfs-faq</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-performance/">guestfs-performance</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-testing/">guestfs-testing</a></code>(1), <code>guestfs</code>(3), <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a></p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones</p>
 <h2>COPYRIGHT</h2>

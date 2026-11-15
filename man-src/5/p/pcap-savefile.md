@@ -123,4 +123,4 @@ description: "pcap-savefile – libpcap savefile format"
 </dl>
 <p> All fields in the per-packet header are in the byte order of the host writing the file. The per-packet header begins with a time stamp giving the approximate time the packet was captured; the time stamp consists of a 4-byte value, giving the time in seconds since January 1, 1970, 00:00:00 UTC, followed by a 4-byte value, giving the time in microseconds or nanoseconds since that second, depending on the magic number in the file header. Following that are a 4-byte value giving the number of bytes of captured data that follow the per-packet header and a 4-byte value giving the number of bytes that would have been present had the packet not been truncated by the snapshot length. The two lengths will be equal if the number of bytes of packet data are less than or equal to the snapshot length.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/3PCAP-pcap/">pcap</a>(3PCAP), <a href="/docs/linux/man/7-pcap-linktype/">pcap-linktype</a>(7) </p>
+<p>pcap(3PCAP), <a href="/docs/linux/man/7-pcap-linktype/">pcap-linktype</a>(7) </p>

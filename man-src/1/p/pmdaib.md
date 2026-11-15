@@ -39,5 +39,5 @@ description: "pmdaib – Infiniband performance metrics domain agent (PMDA)"
 <h2>LOCAL CONTEXT</h2>
 <p> The Infiniband pmda also supports accessing the metrics via <code>PM_CONTEXT_LOCAL</code> when using the PMAPI interface. In order to use the Infiniband pmda in this way, set the environment variable <code>PMDA_LOCAL_IB</code> prior to calling <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a>(3).</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a>(1),</code> <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a>(3),</code> <code><a href="/docs/linux/man/3-pmcontextnew/">pmContextNew</a>(3),</code> <code><a href="/docs/linux/man/8-ibnetdiscover/">ibnetdiscover</a>(8).</code> </p>
+<p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a>(1),</code> <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a>(3),</code> <code>pmContextNew(3),</code> <code><a href="/docs/linux/man/8-ibnetdiscover/">ibnetdiscover</a>(8).</code> </p>
 <h2>Index</h2>

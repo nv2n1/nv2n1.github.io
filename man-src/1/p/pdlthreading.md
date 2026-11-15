@@ -108,7 +108,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  pdl&gt; p $c-&gt;info =&gt; PDL: Double D [11,3,7,2]</pre>
 <p>This time <font SIZE="-1">PDL</font> has threaded over three higher dimensions automatically, subtracting <tt>$line</tt> all the way. </p>
 <p> But, maybe you don&#8217;t want to subtract from the rows (dimension 0), but from the columns (dimension 1). How do I subtract a column of numbers from each column in <tt>$a</tt>? </p>
-<pre> pdl&gt; $cols = <a href="//www.systutorials.com/docs/linux/man/9-sequence/">sequence</a>(9)
+<pre> pdl&gt; $cols = sequence(9)
  pdl&gt; p $a-&gt;info =&gt; PDL: Double D [11,9]
  pdl&gt; p $cols-&gt;info =&gt; PDL: Double D [9]</pre>
 <p>Naturally, we can&#8217;t just type <tt>&quot;$a - $cols&quot;</tt>. The dimensions don&#8217;t match: </p>
@@ -214,7 +214,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 <h2>Putting It All Together</h2>
 <p>Now we are ready to solve the problem that motivated this whole discussion: </p>
 <pre> pdl&gt; $a = sequence(11,9)
- pdl&gt; $cols = <a href="//www.systutorials.com/docs/linux/man/9-sequence/">sequence</a>(9)
+ pdl&gt; $cols = sequence(9)
  pdl&gt;
  pdl&gt; p $a-&gt;info =&gt; PDL: Double D [11,9]
  pdl&gt; p $cols-&gt;info =&gt; PDL: Double D [9]</pre>

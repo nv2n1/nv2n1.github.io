@@ -174,7 +174,7 @@ description: "rygel.conf – Rygel configuration file"
 <dd>Mime-type of the pipeline.</dl>
 <p> <code>identifier-launch</code></p>
 <dl>
-<dd>Definition of the pipeline in gst-launch syntax. For some examples on writing pipelines see <code><a href="/docs/linux/man/1-gst-launch/">gst-launch</a></code>(1).</dl>
+<dd>Definition of the pipeline in gst-launch syntax. For some examples on writing pipelines see <code>gst-launch</code>(1).</dl>
 <p> <code>identifier-dlnaprofile</code></p>
 <dl>
 <dd>DLNA profile for the stream.</dl>
@@ -202,7 +202,7 @@ title=@REALNAME@'s Banshee on @HOSTNAME@</pre>
 </dl>
 <p> This plugin has no additional options.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-rygel/">rygel</a></code>(1), <code><a href="/docs/linux/man/1-gst-launch/">gst-launch</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/1-rygel/">rygel</a></code>(1), <code>gst-launch</code>(1)</p>
 <h2>Author</h2>
 <p><code>Jens Georg</code> &lt;mail [at] jensge.org&gt;</p>
 <dl>

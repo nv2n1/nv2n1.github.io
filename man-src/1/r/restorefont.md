@@ -12,7 +12,7 @@ description: "restorefont – save or restore the SVGA font for textmode."
 <h2>SYNOPSIS</h2>
 <p> <code>restorefont {-r|-w} </code><i>filename</i> </p>
 <h2>DESCRIPTION</h2>
-<p> The font used by SVGA when in textmode is written to or restored from <i>filename</i> using the <code><a href="/docs/linux/man/3-vga_gettextfont/">vga_gettextfont</a></code>(3) and <code><a href="/docs/linux/man/3-vga_puttextfont/">vga_puttextfont</a></code>(3) functions. </p>
+<p> The font used by SVGA when in textmode is written to or restored from <i>filename</i> using the <code>vga_gettextfont</code>(3) and <code>vga_puttextfont</code>(3) functions. </p>
 <h2>FILE FORMAT</h2>
 <p> The VGA font file <i>filename</i> has the following format: </p>
 <dl>
@@ -45,7 +45,7 @@ description: "restorefont – save or restore the SVGA font for textmode."
 <dd> restore the font from the file <i>filename</i>. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code><a href="/docs/linux/man/7-vgagl/">vgagl</a></code>(7), <code><a href="/docs/linux/man/5-libvga-config/">libvga.config</a></code>(5), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8), <code><a href="/docs/linux/man/3-vga_gettextfont/">vga_gettextfont</a></code>(3), <code><a href="/docs/linux/man/3-vga_puttextfont/">vga_puttextfont</a></code>(3), <code><a href="/docs/linux/man/1-dumpreg/">dumpreg</a></code>(1), <code><a href="/docs/linux/man/1-convfont/">convfont</a></code>(1), <code><a href="/docs/linux/man/1-fix132x43/">fix132x43</a></code>(1), <code><a href="/docs/linux/man/1-restoretextmode/">restoretextmode</a></code>(1), <code><a href="/docs/linux/man/1-restorepalette/">restorepalette</a></code>(1), <code><a href="/docs/linux/man/1-runx/">runx</a></code>(1), <code><a href="/docs/linux/man/1-savetextmode/">savetextmode</a></code>(1), <code><a href="/docs/linux/man/1-setmclk/">setmclk</a></code>(1), <code><a href="/docs/linux/man/1-textmode/">textmode</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code><a href="/docs/linux/man/7-vgagl/">vgagl</a></code>(7), <code>libvga.config</code>(5), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8), <code>vga_gettextfont</code>(3), <code>vga_puttextfont</code>(3), <code><a href="/docs/linux/man/1-dumpreg/">dumpreg</a></code>(1), <code><a href="/docs/linux/man/1-convfont/">convfont</a></code>(1), <code><a href="/docs/linux/man/1-fix132x43/">fix132x43</a></code>(1), <code><a href="/docs/linux/man/1-restoretextmode/">restoretextmode</a></code>(1), <code><a href="/docs/linux/man/1-restorepalette/">restorepalette</a></code>(1), <code><a href="/docs/linux/man/1-runx/">runx</a></code>(1), <code><a href="/docs/linux/man/1-savetextmode/">savetextmode</a></code>(1), <code><a href="/docs/linux/man/1-setmclk/">setmclk</a></code>(1), <code><a href="/docs/linux/man/1-textmode/">textmode</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was edited by Michael Weller &lt;eowmob [at] exp-math.uni-essen.de&gt;. The exact source of the referenced utility as well as of the original documentation is unknown. </p>
 <p> It is very likely that both are at least to some extent are due to Harm Hanemaayer &lt;H.Hanemaayer [at] inter.nl.net&gt;. </p>

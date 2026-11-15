@@ -18,7 +18,7 @@ description: "rlatopam – convert Alias/Wavefront RLA and RPF image files to PA
 <p> <i>rlafile</i> is the file name of the input file. If you omit this parameter, <code>rlatopam</code> reads the image from Standard Input. </p>
 <p> There is no program in Netpbm that converts the other direction.x </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>rlatopam</code> was new in Netpbm 10.32 (February 2006). </p>
 <h2>AUTHOR</h2>

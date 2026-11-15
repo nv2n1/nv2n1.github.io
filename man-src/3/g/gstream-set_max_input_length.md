@@ -15,7 +15,7 @@ description: "set_max_input_length"
 <h2>DESCRIPTION</h2>
 <p> This sets the maximum number of characters that the inputter will accept from the user at the next, and only the next, input, i.e. if you call this function with 5 </p>
 <pre>
-   <a href="//www.systutorials.com/docs/linux/man/5-set_max_input_length/">set_max_input_length</a>(5);
+   set_max_input_length(5);
    
 </pre>
 <p> and the user has made the following input </p>

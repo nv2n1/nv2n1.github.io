@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-xrdp-sesrun/"
 description: "xrdp-sesrun – sesman(8) session launcher"
 ---
 
-<p>xrdp-sesrun &#8211; <code><a href="/docs/linux/man/8-sesman/">sesman</a></code>(8) session launcher </p>
+<p>xrdp-sesrun &#8211; <code>sesman</code>(8) session launcher </p>
 <h2>Syntax</h2>
 <p><code>xrdp-sesrun</code> <i>server username password width height bpp</i></p>
 <h2>Description</h2>

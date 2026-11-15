@@ -28,7 +28,7 @@ int PAPI_num_counters( void );</pre>
 <pre>* int num_hwcntrs;
 * // The installation does not support PAPI 
 * if ((num_hwcntrs = PAPI_num_counters()) &lt; 0 )
-* <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+* handle_error(1);
 * // The installation supports PAPI, but has no counters 
 * if ((num_hwcntrs = PAPI_num_counters()) == 0 )
 * fprintf(stderr,&quot;Info:: This machine does not provide hardware counters.);

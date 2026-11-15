@@ -35,6 +35,6 @@ description: "xcb_circulate_request_event_t – NOT YET DOCUMENTED"
 <dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb_generic_event_t/">xcb_generic_event_t</a></code>(3), <code><a href="/docs/linux/man/3-xcb_circulate_window/">xcb_circulate_window</a></code>(3)</p>
+<p><code>xcb_generic_event_t</code>(3), <code><a href="/docs/linux/man/3-xcb_circulate_window/">xcb_circulate_window</a></code>(3)</p>
 <h2>Author</h2>
 <p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

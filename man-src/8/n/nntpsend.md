@@ -54,4 +54,4 @@ description: "nntpsend – Send Usenet articles to remote sites"
 <p>Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; and Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> nntpsend.pod 9590 2013-12-19 17:48:22Z iulius $</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/1-innxmit/">innxmit</a></i>(1), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/5-nntpsend-ctl/">nntpsend.ctl</a></i>(5), <i><a href="/docs/linux/man/1-shlock/">shlock</a></i>(1), <i><a href="/docs/linux/man/1-shrinkfile/">shrinkfile</a></i>(1). </p>
+<p><i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i>innxmit</i>(1), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/5-nntpsend-ctl/">nntpsend.ctl</a></i>(5), <i><a href="/docs/linux/man/1-shlock/">shlock</a></i>(1), <i><a href="/docs/linux/man/1-shrinkfile/">shrinkfile</a></i>(1). </p>

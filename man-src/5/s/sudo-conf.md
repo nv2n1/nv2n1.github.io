@@ -85,7 +85,7 @@ Path askpass /usr/X11R6/bin/ssh-askpass</pre>
 <blockquote>
 <pre>Set disable_coredump false</pre>
 </blockquote>
-<p> All modern operating systems place restrictions on core dumps from set-user-ID processes like <code>sudo</code> so this option can be enabled without compromising security. To actually get a <code>sudo</code> core file you will likely need to enable core dumps for set-user-ID processes. On BSD and Linux systems this is accomplished in the <a href="/docs/linux/man/8-sysctl/">sysctl</a>(8) command. On Solaris, the <a href="//www.systutorials.com/docs/linux/man/1m-coreadm/">coreadm</a>(1m) command is used to configure core dump behavior. </p>
+<p> All modern operating systems place restrictions on core dumps from set-user-ID processes like <code>sudo</code> so this option can be enabled without compromising security. To actually get a <code>sudo</code> core file you will likely need to enable core dumps for set-user-ID processes. On BSD and Linux systems this is accomplished in the <a href="/docs/linux/man/8-sysctl/">sysctl</a>(8) command. On Solaris, the coreadm(1m) command is used to configure core dump behavior. </p>
 <p> This setting is only available in <code>sudo</code> version 1.8.4 and higher.</p>
 <dt><code>developer_mode</code></p>
 <dd>By default <code>sudo</code> refuses to load plugins which can be modified by other than the root user. The plugin should be owned by root and write access permissions should be disabled for &#8220;group&#8221; and &#8220;other&#8221; . To make development of a plugin easier, you can disable that by setting &#8220;developer_mode&#8221; option to true in <code>sudo.conf</code> as follows: </p>

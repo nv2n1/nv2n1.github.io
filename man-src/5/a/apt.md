@@ -119,7 +119,7 @@ description: "apt.conf – Configuration file for APT"
 <p> Acquire::http::AllowRedirect controls whether APT will follow redirects, which is enabled by default. </p>
 <p> The used bandwidth can be limited with Acquire::http::Dl-Limit which accepts integer values in kilobytes per second. The default value is 0 which deactivates the limit and tries to use all available bandwidth. Note that this option implicitly disables downloading from multiple servers at the same time. </p>
 <p> Acquire::http::User-Agent can be used to set a different User-Agent for the http download method as some proxies allow access for clients only if the client uses a known identifier. </p>
-<p> Acquire::http::Proxy-Auto-Detect can be used to specify an external command to discover the http proxy to use. Apt expects the command to output the proxy on stdout in the style <a rel="nofollow" href="http://proxy:port/.">http://proxy:port/.</a> This will override the generic Acquire::http::Proxy but not any specific host proxy configuration set via Acquire::http::Proxy::$HOST. See the <code><a href="/docs/linux/man/1-squid-deb-proxy-client/">squid-deb-proxy-client</a></code>(1) package for an example implementation that uses avahi. This option takes precedence over the legacy option name ProxyAutoDetect.</dl>
+<p> Acquire::http::Proxy-Auto-Detect can be used to specify an external command to discover the http proxy to use. Apt expects the command to output the proxy on stdout in the style <a rel="nofollow" href="http://proxy:port/.">http://proxy:port/.</a> This will override the generic Acquire::http::Proxy but not any specific host proxy configuration set via Acquire::http::Proxy::$HOST. See the <code>squid-deb-proxy-client</code>(1) package for an example implementation that uses avahi. This option takes precedence over the legacy option name ProxyAutoDetect.</dl>
 <p> <code>https</code></p>
 <dl>
 <dd>The Cache-control, Timeout, AllowRedirect, Dl-Limit and proxy options work for HTTPS URIs in the same way as for the http method, and default to the same values if they are not explicitly set. The Pipeline-Depth option is not yet supported. </p>
@@ -368,7 +368,7 @@ DPkg::TriggersPending &quot;true&quot;;</pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apt-cache/">apt-cache</a></code>(8), <code><a href="/docs/linux/man/8-apt-config/">apt-config</a></code>(8), <code><a href="/docs/linux/man/5-apt_preferences/">apt_preferences</a></code>(5).</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Authors</h2>
 <p><code>Jason Gunthorpe</code></p>
 <dl>

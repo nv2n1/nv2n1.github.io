@@ -11,7 +11,7 @@ description: "terminfo – terminal capability database"
 <h2>Synopsis</h2>
 <p>/etc/terminfo/*/*</p>
 <h2>Description</h2>
-<p><i>Terminfo</i> is a database describing terminals, used by screen-oriented programs such as <code><a href="/docs/linux/man/1-nvi/">nvi</a></code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), and other curses applications, using high-level calls to libraries such as <code>ncurses</code>(3NCURSES). It is also used via low-level calls by non-curses applications which may be screen-oriented (such as <code><a href="/docs/linux/man/1-clear/">clear</a></code>(1)) or non-screen (such as <code><a href="/docs/linux/man/1-tabs/">tabs</a></code>(1)). <i>Terminfo</i> describes terminals by giving a set of capabilities which they have, by specifying how to perform screen operations, and by specifying padding requirements and initialization sequences. This manual describes <code>ncurses</code> version 6.3 (patch 20211021).</p>
+<p><i>Terminfo</i> is a database describing terminals, used by screen-oriented programs such as <code>nvi</code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), and other curses applications, using high-level calls to libraries such as <code>ncurses</code>(3NCURSES). It is also used via low-level calls by non-curses applications which may be screen-oriented (such as <code><a href="/docs/linux/man/1-clear/">clear</a></code>(1)) or non-screen (such as <code><a href="/docs/linux/man/1-tabs/">tabs</a></code>(1)). <i>Terminfo</i> describes terminals by giving a set of capabilities which they have, by specifying how to perform screen operations, and by specifying padding requirements and initialization sequences. This manual describes <code>ncurses</code> version 6.3 (patch 20211021).</p>
 <h3>Terminfo Entry Syntax</h3>
 <p>Entries in <i>terminfo</i> consist of a sequence of fields:<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Each field ends with a comma &#8220;,&#8221; (embedded commas may be escaped with a backslash or written as &#8220;,&#8221;).<br />
@@ -21,7 +21,7 @@ description: "terminfo – terminal capability database"
 <dl>
 <dd>The <code>infocmp</code> <code>-f</code> and <code>-W</code> options rely on this to format if-then-else expressions, or to enforce maximum line-width. The resulting formatted terminal description can be read by <code>tic</code>.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The first field for each terminal gives the names which are known for the terminal, separated by &#8220;|&#8221; characters.</p>
-<dd>The first name given is the most common abbreviation for the terminal (its primary name), the last name given should be a long name fully identifying the terminal (see <code><a href="//www.systutorials.com/docs/linux/man/3X-longname/">longname</a></code>(3X)), and all others are treated as synonyms (aliases) for the primary terminal name.</p>
+<dd>The first name given is the most common abbreviation for the terminal (its primary name), the last name given should be a long name fully identifying the terminal (see <code>longname</code>(3X)), and all others are treated as synonyms (aliases) for the primary terminal name.</p>
 <dd>X/Open Curses advises that all names but the last should be in lower case and contain no blanks; the last name may well contain upper case and blanks for readability.</p>
 <dd>This implementation is not so strict; it allows mixed case in the primary name and aliases. If the last name has no embedded blanks, it allows that to be both an alias and a verbose name (but will warn about this ambiguity).<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Lines beginning with a &#8220;#&#8221; in the first column are treated as comments.</p>
@@ -136,8 +136,8 @@ description: "terminfo – terminal capability database"
 <dt>(P)</p>
 <dd>indicates that padding may be specified</p>
 <dt>#[1-9]</p>
-<dd>in the description field indicates that the string is passed through <code><a href="//www.systutorials.com/docs/linux/man/3X-tparm/">tparm</a></code>(3X) with parameters as given (#<i>i</i>).</p>
-<dd>If no parameters are listed in the description, passing the string through <code><a href="//www.systutorials.com/docs/linux/man/3X-tparm/">tparm</a></code>(3X) may give unexpected results, e.g., if it contains percent (%%) signs.</p>
+<dd>in the description field indicates that the string is passed through <code>tparm</code>(3X) with parameters as given (#<i>i</i>).</p>
+<dd>If no parameters are listed in the description, passing the string through <code>tparm</code>(3X) may give unexpected results, e.g., if it contains percent (%%) signs.</p>
 <dt>(P*)</p>
 <dd>indicates that padding may vary in proportion to the number of lines affected</p>
 <dt>(#<i>i</i>)</p>
@@ -2100,7 +2100,7 @@ No motion for subsequent character</code></pre>
 </table>
 <p></center> <font SIZE="-1"> </font></p>
 <h3>User-Defined Capabilities</h3>
-<p>The preceding section listed the <i>predefined</i> capabilities. They deal with some special features for terminals no longer (or possibly never) produced. Occasionally there are special features of newer terminals which are awkward or impossible to represent by reusing the predefined capabilities. <code>ncurses</code> addresses this limitation by allowing user-defined capabilities. The <code>tic</code> and <code>infocmp</code> programs provide the <code>-x</code> option for this purpose. When <code>-x</code> is set, <code>tic</code> treats unknown capabilities as user-defined. That is, if <code>tic</code> encounters a capability name which it does not recognize, it infers its type (boolean, number or string) from the syntax and makes an extended table entry for that capability. The <code><a href="//www.systutorials.com/docs/linux/man/3X-use_extended_names/">use_extended_names</a></code>(3X) function makes this information conditionally available to applications. The ncurses library provides the data leaving most of the behavior to applications:<br />
+<p>The preceding section listed the <i>predefined</i> capabilities. They deal with some special features for terminals no longer (or possibly never) produced. Occasionally there are special features of newer terminals which are awkward or impossible to represent by reusing the predefined capabilities. <code>ncurses</code> addresses this limitation by allowing user-defined capabilities. The <code>tic</code> and <code>infocmp</code> programs provide the <code>-x</code> option for this purpose. When <code>-x</code> is set, <code>tic</code> treats unknown capabilities as user-defined. That is, if <code>tic</code> encounters a capability name which it does not recognize, it infers its type (boolean, number or string) from the syntax and makes an extended table entry for that capability. The <code>use_extended_names</code>(3X) function makes this information conditionally available to applications. The ncurses library provides the data leaving most of the behavior to applications:<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 User-defined capability strings whose name begins with &#8220;k&#8221; are treated as function keys.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The types (boolean, number, string) determined by <code>tic</code> can be inferred by successful calls on <code>tigetflag</code>, etc.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the capability name happens to be two characters, the capability is also available through the termcap interface. While termcap is said to be extensible because it does not use a predefined set of capabilities, in practice it has been limited to the capabilities defined by terminfo implementations. As a rule, user-defined capabilities intended for use by termcap applications should be limited to booleans and numbers to avoid running past the 1023 byte limit assumed by termcap implementations and their applications. In particular, providing extended sets of function keys (past the 60 numbered keys and the handful of special named keys) is best done using the longer names available using terminfo.</p>
@@ -2121,7 +2121,8 @@ No motion for subsequent character</code></pre>
  ich=\E[%p1%d@, il=\E[%p1%dL, il1=\E[L, ind=^J,
  indn=\E[%p1%dS, invis=\E[8m, kbs=^H, kcbt=\E[Z, kcub1=\E[D,
  kcud1=\E[B, kcuf1=\E[C, kcuu1=\E[A, khome=\E[H, kich1=\E[L,
- mc4=\E[4i, mc5=\E[5i, nel=\E[S, op=\E[39;49m,
+ mc4=\E[4i, mc5=\E[5i, nel=
+\E[S, op=\E[39;49m,
  rep=%p1%c\E[%p2%{1}%-%db, rev=\E[7m, rin=\E[%p1%dT,
  rmacs=\E[10m, rmpch=\E[10m, rmso=\E[m, rmul=\E[m,
  s0ds=\E(B, s1ds=\E)B, s2ds=\E*B, s3ds=\E+B,
@@ -2148,7 +2149,8 @@ No motion for subsequent character</code></pre>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 the sequences</p>
 <dl>
 <dd><code>
-</code>, <code>\l</code>, <code></code>, <code>	</code>, <code></code>, <code></code>, and <code>\s</code></dl>
+</code>, <code>\l</code>, <code>
+</code>, <code>	</code>, <code></code>, <code></code>, and <code>\s</code></dl>
 <dl>
 <dd>produce</p>
 <dl>

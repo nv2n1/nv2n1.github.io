@@ -52,5 +52,5 @@ for (i = 1; i &lt;= dim2; i++) {
 <p> The data are assumed to be in the native machine format and will automatically be swapped to big-endian <font SIZE="-1">FITS</font> format if necessary. This behavior can be over-ridden with the <code>convert=[true|false]</code> keyword in the <code>plist</code> param list string. </p>
 <p> When you are finished writing the image, you should call <i>FunFlush()</i> to write out the <font SIZE="-1">FITS</font> image padding. However, this is not necessary if you subsequently call <i>FunClose()</i> without doing any other I/O to the <font SIZE="-1">FITS</font> file.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

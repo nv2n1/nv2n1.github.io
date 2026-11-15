@@ -177,9 +177,9 @@ description: "upsmon – UPS monitor and shutdown controller"
 <p>In the event that upsmon can&#8217;t reach <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8), it declares that UPS &quot;dead&quot; after some interval controlled by DEADTIME in the <code><a href="/docs/linux/man/5-upsmon-conf/">upsmon.conf</a></code>(5). If this happens while that UPS was last known to be on battery, it is assumed to have gone critical and no longer contributes to the overall power value. </p>
 <p> upsmon will alert you to a UPS that can&#8217;t be contacted for monitoring with a &quot;NOCOMM&quot; notifier by default every 300 seconds. This can be changed with the NOCOMMWARNTIME setting.</p>
 <h2>Reloading Nuances</h2>
-<p>upsmon usually gives up root powers for the process that does most of the work, including handling signals like SIGHUP to reload the configuration file. This means your <code><a href="/docs/linux/man/8-upsmon-conf/">upsmon.conf</a></code>(8) file must be readable by the non-root account that upsmon switches to. </p>
+<p>upsmon usually gives up root powers for the process that does most of the work, including handling signals like SIGHUP to reload the configuration file. This means your <code>upsmon.conf</code>(8) file must be readable by the non-root account that upsmon switches to. </p>
 <p> If you want reloads to work, upsmon must run as some user that has permissions to read the configuration file. I recommend making a new user just for this purpose, as making the file readable by &quot;nobody&quot; (the default user) would be a bad idea. </p>
-<p> See the RUN_AS_USER section in <code><a href="/docs/linux/man/8-upsmon-conf/">upsmon.conf</a></code>(8) for more on this topic. </p>
+<p> See the RUN_AS_USER section in <code>upsmon.conf</code>(8) for more on this topic. </p>
 <p> Additionally, you can&#8217;t change the SHUTDOWNCMD or POWERDOWNFLAG definitions with a reload due to the split-process model. If you change those values, you <code>must</code> stop upsmon and start it back up. upsmon will warn you in the syslog if you make changes to either of those values during a reload.</p>
 <h2>Simulating Power Failures</h2>
 <p>To test a synchronized shutdown without pulling the plug on your UPS(es), you need only set the forced shutdown (FSD) flag on them. You can do this by calling upsmon again to set the flag, i.e.: </p>

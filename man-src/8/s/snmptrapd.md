@@ -153,4 +153,4 @@ description: "snmptrapd – Receive and log SNMP trap messages."
 <h2>Extensibility And Configuration</h2>
 <p>See the <i><a href="/docs/linux/man/5-snmptrapd-conf/">snmptrapd.conf</a>(5)</i> manual page.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/8-snmpd/">snmpd</a>(8), <a href="/docs/linux/man/3-printf/">printf</a>(3), <a href="/docs/linux/man/5-snmptrapd-conf/">snmptrapd.conf</a>(5), <a href="/docs/linux/man/8-syslog/">syslog</a>(8), <a href="/docs/linux/man/5-variables/">variables</a>(5) </p>
+<p><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/8-snmpd/">snmpd</a>(8), <a href="/docs/linux/man/3-printf/">printf</a>(3), <a href="/docs/linux/man/5-snmptrapd-conf/">snmptrapd.conf</a>(5), syslog(8), <a href="/docs/linux/man/5-variables/">variables</a>(5) </p>

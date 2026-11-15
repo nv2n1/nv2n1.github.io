@@ -47,7 +47,7 @@ description: "ocf_heartbeat_ClusterMon – Runs crm_mon in the background, recor
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 30.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a ClusterMon resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a ClusterMon resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_ClusterMon ocf:heartbeat:ClusterMon \
 
 op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;10&quot;</code></pre>

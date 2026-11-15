@@ -22,7 +22,7 @@ url: "/docs/linux/man/1-xml2pmx/"
 <h2>BUGS</h2>
 <p> <code>xml2pmx </code> processes input in UTF-8 encoding only. MusicXML files in UTF-16 encoding should be converted using, for example, <code>recode</code> (in Unix-like systems) or by importing into an editor like <code>notepad</code> and saving in UTF-8 encoding. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pmx/">pmx</a></code>(1) <code><a href="/docs/linux/man/1-obc/">obc</a></code>(1) <code><a href="/docs/linux/man/1-musixtex/">musixtex</a></code>(1) <code><a href="/docs/linux/man/1-recode/">recode</a></code>(1) </p>
+<p> <code>pmx</code>(1) <code>obc</code>(1) <code><a href="/docs/linux/man/1-musixtex/">musixtex</a></code>(1) <code><a href="/docs/linux/man/1-recode/">recode</a></code>(1) </p>
 <h2>AUTHORS</h2>
 <p> This man page was written by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. <code>xml2pmx</code> was written by Dieter Gloetzel &lt;d.gloetzel [at] web.de&gt; and adapted for compilation by obc (the Oxford Oberon Compiler) by Mike Spivey &lt;mike [at] cs.ox.ac.uk&gt;. </p>
 <h2>Index</h2>

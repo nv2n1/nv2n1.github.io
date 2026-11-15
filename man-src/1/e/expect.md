@@ -56,7 +56,7 @@ description: "expect – programmed dialogue with interactive programs, Version 
 &quot;
 </pre>
 <h2>COMMANDS</h2>
-<p> <code>Expect</code> uses <i>Tcl</i> (Tool Command Language). Tcl provides control flow (e.g., if, for, break), expression evaluation and several other features such as recursion, procedure definition, etc. Commands used here but not defined (e.g., <code>set</code>, <code>if</code>, <code>exec</code>) are Tcl commands (see <a href="/docs/linux/man/3-tcl/">tcl</a>(3)). <code>Expect</code> supports additional commands, described below. Unless otherwise specified, commands return the empty string. </p>
+<p> <code>Expect</code> uses <i>Tcl</i> (Tool Command Language). Tcl provides control flow (e.g., if, for, break), expression evaluation and several other features such as recursion, procedure definition, etc. Commands used here but not defined (e.g., <code>set</code>, <code>if</code>, <code>exec</code>) are Tcl commands (see tcl(3)). <code>Expect</code> supports additional commands, described below. Unless otherwise specified, commands return the empty string. </p>
 <p> Commands are listed alphabetically so that they can be quickly located. However, new users may find it easier to start by reading the descriptions of <code>spawn</code>, <code>send</code>, <code>expect</code>, and <code>interact</code>, in that order. </p>
 <p> Note that the best introduction to the language (both Expect and Tcl) is provided in the book &quot;Exploring Expect&quot; (see SEE ALSO below). Examples are included in this man page but they are very limited since this man page is meant primarily as reference material. </p>
 <p> Note that in the text of this man page, &quot;Expect&quot; with an uppercase &quot;E&quot; refers to the <code>Expect</code> program while &quot;expect&quot; with a lower-case &quot;e&quot; refers to the <code>expect</code> command within the <code>Expect</code> program.) <i></p>
@@ -103,7 +103,8 @@ exit
         }<br />
         disconnect<br />
             spawn priv_prog<br />
-                expect Password : send &#8220;$expect_out(1,string)&#8221;<br />
+                expect Password : send &#8220;$expect_out(1,string)
+&#8221;<br />
                                       &#8230;exit<br />
     }<br />
  An advantage to using <code>disconnect</code> over the shell asynchronous process feature (&amp;) is that <code>Expect</code> can save the terminal parameters prior to disconnection, and then later apply them to new ptys. With &amp;, <code>Expect</code> does not have a chance to read the terminal&#8217;s parameters since the terminal is already disconnected by the time <code>Expect</code> receives control.</p>
@@ -111,7 +112,7 @@ exit
 <dd> causes <code>Expect</code> to exit or otherwise prepare to do so. </p>
 <p> The <code>-onexit</code> flag causes the next argument to be used as an exit handler. Without an argument, the current exit handler is returned. </p>
 <p> The <code>-noexit</code> flag causes <code>Expect</code> to prepare to exit but stop short of actually returning control to the operating system. The user-defined exit handler is run as well as Expect&#8217;s own internal handlers. No further Expect commands should be executed. This is useful if you are running Expect with other Tcl extensions. The current interpreter (and main window if in the Tk environment) remain so that other Tcl extensions can clean up. If Expect&#8217;s <code>exit</code> is called again (however this might occur), the handlers are not rerun. </p>
-<p> Upon exiting, all connections to spawned processes are closed. Closure will be detected as an EOF by spawned processes. <code>exit</code> takes no other actions beyond what the normal <a href="/docs/linux/man/2-_exit/">_exit</a>(2) procedure does. Thus, spawned processes that do not check for EOF may continue to run. (A variety of conditions are important to determining, for example, what signals a spawned process will be sent, but these are system-dependent, typically documented under <a href="/docs/linux/man/3-exit/">exit</a>(3).) Spawned processes that continue to run will be inherited by init. </p>
+<p> Upon exiting, all connections to spawned processes are closed. Closure will be detected as an EOF by spawned processes. <code>exit</code> takes no other actions beyond what the normal _exit(2) procedure does. Thus, spawned processes that do not check for EOF may continue to run. (A variety of conditions are important to determining, for example, what signals a spawned process will be sent, but these are system-dependent, typically documented under <a href="/docs/linux/man/3-exit/">exit</a>(3).) Spawned processes that continue to run will be inherited by init. </p>
 <p> <i>status</i> (or 0 if not specified) is returned as the exit status of <code>Expect</code>. <code>exit</code> is implicitly executed if the end of the script is reached.</p>
 <dt><code>exp_continue</code> [-continue_timer]</p>
 <dd> The command <code>exp_continue</code> allows <code>expect</code> itself to continue executing rather than returning as it normally would. By default <code>exp_continue</code> resets the timeout timer. The <i>-continue_timer</i> flag prevents timer from being restarted. (See <code>expect</code> for more information.)</p>
@@ -258,7 +259,8 @@ expect<br />
 Password : {<br />
     stty &#8211; echo send_user &#8220;password (for $user) on $host: &#8221; expect_user &#8211; re &#8220;(.*)
 &#8221; send_user &#8220;
-&#8221; send &#8220;$expect_out(1,string)&#8221; stty echo exp_continue<br />
+&#8221; send &#8220;$expect_out(1,string)
+&#8221; stty echo exp_continue<br />
 }<br />
     incorrect{<br />
         send_user &#8220;invalid password or account
@@ -276,7 +278,10 @@ stty raw &#8211; echo<br />
     -i $user_spawn_id<br />
         &#8220;p&#8221;<br />
     {<br />
-        send &#8220;&#8221;;<br />
+        send &#8220;
+
+
+&#8221;;<br />
         exp_continue<br />
     }<br />
     &#8220;+&#8221;<br />
@@ -386,7 +391,8 @@ interact<br />
  The <code>-nobuffer</code> flag sends characters that match the following pattern on to the output process as characters are read. </p>
 <p> This is useful when you wish to let a program echo back the pattern. For example, the following might be used to monitor where a person is dialing (a Hayes-style modem). Each time &quot;atd&quot; is seen the script logs the rest of the line.<br />
 proc lognumber{} {<br />
-    interact &#8211; nobuffer &#8211; re &#8220;(.*)&#8221; return puts $log &#8220;[clock format [clock seconds]]: dialed $interact_out(1,string)&#8221;} interact &#8211;<br />
+    interact &#8211; nobuffer &#8211; re &#8220;(.*)
+&#8221; return puts $log &#8220;[clock format [clock seconds]]: dialed $interact_out(1,string)&#8221;} interact &#8211;<br />
     nobuffer &#8220;atd&#8221; lognumber</p>
 <dt>
 <dd> During <code>interact</code>, previous use of <code>log_user</code> is ignored. In particular, <code>interact</code> will force its output to be logged (sent to the standard output) since it is presumed the user doesn&#8217;t wish to interact blindly.</p>
@@ -455,11 +461,13 @@ proc lognumber{} {<br />
 <dt><code>send</code><i> [-flags] string</i></p>
 <dd> Sends <i>string</i> to the current process. For example, the command </p>
 <pre>
-    send &quot;hello world&quot;
+    send &quot;hello world
+&quot;
 </pre>
 <p> sends the characters, h e l l o &lt;blank&gt; w o r l d &lt;return&gt; to the current process. (Tcl includes a printf-like command (called <code>format</code>) which can build arbitrarily complex strings.)</p>
 <dt>
-<dd> Characters are sent immediately although programs with line-buffered input will not read the characters until a return character is sent. A return character is denoted &quot;&quot;. </p>
+<dd> Characters are sent immediately although programs with line-buffered input will not read the characters until a return character is sent. A return character is denoted &quot;
+&quot;. </p>
 <p> The <code>&#8212;</code> flag forces the next argument to be interpreted as a string rather than a flag. Any string can be preceded by &quot;&#8211;&quot; whether or not it actually looks like a flag. This provides a reliable mechanism to specify variable strings without being tripped up by those that accidentally look like flags. (All strings starting with &quot;-&quot; are reserved for future options.) </p>
 <p> The <code>-i</code> flag declares that the string be sent to the named spawn_id. If the spawn_id is <i>user_spawn_id</i>, and the terminal is in raw mode, newlines in the string are translated to return-newline sequences so that they appear as if the terminal was in cooked mode. The <code>-raw</code> flag disables this translation. </p>
 <p> The <code>-null</code> flag sends null characters (0 bytes). By default, one null is sent. An integer may follow the <code>-null</code> to indicate how many nulls to send. </p>
@@ -527,7 +535,7 @@ else<br />
 <p> Internally, <code>spawn</code> uses a pty, initialized the same way as the user&#8217;s tty. This is further initialized so that all settings are &quot;sane&quot; (according to <a href="/docs/linux/man/1-stty/">stty</a>(1)). If the variable <i>stty_init</i> is defined, it is interpreted in the style of stty arguments as further configuration. For example, &quot;set stty_init raw&quot; will cause further spawned processes&#8217;s terminals to start in raw mode. <code>-nottycopy</code> skips the initialization based on the user&#8217;s tty. <code>-nottyinit</code> skips the &quot;sane&quot; initialization.</p>
 <dt>
 <dd> Normally, <code>spawn</code> takes little time to execute. If you notice spawn taking a significant amount of time, it is probably encountering ptys that are wedged. A number of tests are run on ptys to avoid entanglements with errant processes. (These take 10 seconds per wedged pty.) Running Expect with the <code>-d</code> option will show if <code>Expect</code> is encountering many ptys in odd states. If you cannot kill the processes to which these ptys are attached, your only recourse may be to reboot. </p>
-<p> If <i>program</i> cannot be spawned successfully because <a href="/docs/linux/man/2-exec/">exec</a>(2) fails (e.g. when <i>program</i> doesn&#8217;t exist), an error message will be returned by the next <code>interact</code> or <code>expect</code> command as if <i>program</i> had run and produced the error message as output. This behavior is a natural consequence of the implementation of <code>spawn</code>. Internally, spawn forks, after which the spawned process has no way to communicate with the original <code>Expect</code> process except by communication via the spawn_id. </p>
+<p> If <i>program</i> cannot be spawned successfully because exec(2) fails (e.g. when <i>program</i> doesn&#8217;t exist), an error message will be returned by the next <code>interact</code> or <code>expect</code> command as if <i>program</i> had run and produced the error message as output. This behavior is a natural consequence of the implementation of <code>spawn</code>. Internally, spawn forks, after which the spawned process has no way to communicate with the original <code>Expect</code> process except by communication via the spawn_id. </p>
 <p> The <code>-open</code> flag causes the next argument to be interpreted as a Tcl file identifier (i.e., returned by <code>open</code>.) The spawn id can then be used as if it were a spawned process. (The file identifier should no longer be used.) This lets you treat raw devices, files, and pipelines as spawned processes without using a pty. 0 is returned to indicate there is no associated process. When the connection to the spawned process is closed, so is the Tcl file identifier. The <code>-leaveopen</code> flag is similar to <code>-open</code> except that <code>-leaveopen</code> causes the file identifier to be left open even after the spawn id is closed. </p>
 <p> The <code>-pty</code> flag causes a pty to be opened but no process spawned. 0 is returned to indicate there is no associated process. Spawn_id is set as usual. </p>
 <p> The variable <i>spawn_out(slave,fd)</i> is set to a file identifier corresponding to the pty slave. It can be closed using &quot;close -slave&quot;. </p>
@@ -590,7 +598,7 @@ else<br />
 <p> The <code>-seconds</code> flag introduces a number of seconds since the epoch to be used as a source from which to format. Otherwise, the current time is used. </p>
 <p> The <code>-gmt</code> flag forces timestamp output to use the GMT timezone. With no flag, the local timezone is used.</p>
 <dt><code>trap</code><i> [[command] signals]</i></p>
-<dd> causes the given <i>command</i> to be executed upon future receipt of any of the given signals. The command is executed in the global scope. If <i>command</i> is absent, the signal action is returned. If <i>command </i> is the string SIG_IGN, the signals are ignored. If <i>command</i> is the string SIG_DFL, the signals are result to the system default. <i>signals</i> is either a single signal or a list of signals. Signals may be specified numerically or symbolically as per <a href="/docs/linux/man/3-signal/">signal</a>(3). The &quot;SIG&quot; prefix may be omitted. </p>
+<dd> causes the given <i>command</i> to be executed upon future receipt of any of the given signals. The command is executed in the global scope. If <i>command</i> is absent, the signal action is returned. If <i>command </i> is the string SIG_IGN, the signals are ignored. If <i>command</i> is the string SIG_DFL, the signals are result to the system default. <i>signals</i> is either a single signal or a list of signals. Signals may be specified numerically or symbolically as per signal(3). The &quot;SIG&quot; prefix may be omitted. </p>
 <p> With no arguments (or the argument -number), <code>trap</code> returns the signal number of the trap command currently being executed. </p>
 <p> The <code>-code</code> flag uses the return code of the command in place of whatever code Tcl was about to return when the command originally started running. </p>
 <p> The <code>-interp</code> flag causes the command to be evaluated using the interpreter active at the time the command started running rather than when the trap was declared. </p>
@@ -616,7 +624,7 @@ if {<br />
 }<br />
  Alternatively, you can trap to the debugger using some other signal. </p>
 <p> <code>trap</code> will not let you override the action for SIGALRM as this is used internally to <code>Expect</code>. The disconnect command sets SIGALRM to SIG_IGN (ignore). You can reenable this as long as you disable it during subsequent spawn commands. </p>
-<p> See <a href="/docs/linux/man/3-signal/">signal</a>(3) for more info.</p>
+<p> See signal(3) for more info.</p>
 <dt><code>wait</code><i> [args]</i></p>
 <dd> delays until a spawned process (or the current process if none is named) terminates.</p>
 <dt>
@@ -670,12 +678,14 @@ if {<br />
 <p> will fail. To avoid this, invoke non-interactive programs with <code>exec</code> rather than <code>spawn</code>. While such situations are conceivable, in practice I have never encountered a situation in which the final output of a truly interactive program would be lost due to this behavior. </p>
 <p> On the other hand, Cray UNICOS ptys throw away any unread output immediately after the process has closed the file descriptor. I have reported this to Cray and they are working on a fix. </p>
 <p> Sometimes a delay is required between a prompt and a response, such as when a tty interface is changing UART settings or matching baud rates by looking for start/stop bits. Usually, all this is require is to sleep for a second or two. A more robust technique is to retry until the hardware is ready to receive input. The following example uses both strategies:<br />
-send &#8220;speed 9600&#8221;;<br />
+send &#8220;speed 9600
+&#8221;;<br />
 sleep 1 expect<br />
 {<br />
     timeout<br />
     {<br />
-        send &#8220;&#8221;;<br />
+        send &#8220;
+&#8221;;<br />
         exp_continue<br />
     }<br />
     $prompt<br />
@@ -707,7 +717,7 @@ bar&quot;. </p>
 <p> Create the <code>Expect</code> script (that contains the secret data) as usual. Make its permissions be 750 (-rwxr-x&#8212;) and owned by a trusted group, i.e., a group which is allowed to read it. If necessary, create a new group for this purpose. Next, create a /bin/sh script with permissions 2751 (-rwxr-s&#8211;x) owned by the same group as before. </p>
 <p> The result is a script which may be executed (and read) by anyone. When invoked, it runs the <code>Expect</code> script.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-tcl/">Tcl</a></code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br />
  <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, pp. 602, ISBN 1-56592-090-2, O&#8217;Reilly and Associates, 1995.<br />
  <i>&quot;expect: Curing Those Uncontrollable Fits of Interactivity&quot; </i>by Don Libes, Proceedings of the Summer 1990 USENIX Conference, Anaheim, California, June 11-15, 1990.<br />
  <i>&quot;Using</i> <code>expect</code> to Automate System Administration Tasks&quot; by Don Libes, Proceedings of the 1990 USENIX Large Installation Systems Administration Conference, Colorado Springs, Colorado, October 17-19, 1990.<br />

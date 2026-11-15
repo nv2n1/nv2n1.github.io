@@ -65,7 +65,7 @@ description: "mimedefang – Sendmail MIME mail filter"
 <dt><code>-N</code></p>
 <dd>Normally, <code>mimedefang</code> sees all envelope recipients, even ones that Sendmail knows to be invalid. If you don&#8217;t want Sendmail to perform a milter callback for recipients it knows to be invalid, invoke <code>mimedefang</code> with the -N flag. <i>Please note that this flag only works with Sendmail and Milter 8.14.0 and newer. It has no effect if you&#8217;re running an older version of Sendmail or Milter.</i> </p>
 <dt>-S <i>facility</i></p>
-<dd>Specifies the syslog facility for log messages. The default is <i>mail</i>. See <code><a href="/docs/linux/man/3-openlog/">openlog</a></code>(3) for a list of valid facilities. You can use either the short name (&quot;mail&quot;) or long name (&quot;LOG_MAIL&quot;) for the facility name. </p>
+<dd>Specifies the syslog facility for log messages. The default is <i>mail</i>. See <code>openlog</code>(3) for a list of valid facilities. You can use either the short name (&quot;mail&quot;) or long name (&quot;LOG_MAIL&quot;) for the facility name. </p>
 <dt>-a <i>macro</i></p>
 <dd>Pass the value of the specified Sendmail macro through to the Perl filter. You can repeat the -a option to write more macros than the built-in defaults. Note that in addition to asking <code>mimedefang</code> to pass the macro value to the filter, you must configure Sendmail to pass the macro through to <code>mimedefang</code> using the confMILTER_MACROS_ENVFROM definition in Sendmail&#8217;s m4 configuration file. </p>
 <dt><code>-c</code></p>

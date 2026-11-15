@@ -35,7 +35,7 @@ description: "ieee1284_negotiate, ieee1284_terminate – IEEE 1284 negotiation"
 <h3>Bi-directional modes</h3>
 <dl>
 <dt>
-<dd> &bull; <code>M1284_ECP</code>: ECP mode. On entry to ECP mode it is a host-to-peripheral (i.e. forward) mode, but it may be set to reverse mode using <code><a href="/docs/linux/man/3-ieee1284_ecp_fwd_to_rev/">ieee1284_ecp_fwd_to_rev</a></code>(3). It is common for PC hardware to provide assistance with this mode by the use of a FIFO which the host (or, in reverse mode, the peripheral) may fill, so that the hardware can do the handshaking itself.</dl>
+<dd> &bull; <code>M1284_ECP</code>: ECP mode. On entry to ECP mode it is a host-to-peripheral (i.e. forward) mode, but it may be set to reverse mode using <code>ieee1284_ecp_fwd_to_rev</code>(3). It is common for PC hardware to provide assistance with this mode by the use of a FIFO which the host (or, in reverse mode, the peripheral) may fill, so that the hardware can do the handshaking itself.</dl>
 <dl>
 <dt>
 <dd> &bull; <code>M1284_EPP</code>: EPP mode. In this bi-directional mode the direction of data transfer is signalled at each byte.</dl>

@@ -21,7 +21,7 @@ description: "ppmtoapplevol – convert a PPM into an Apple volume label image"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>ppmtoapplevol</code> was new in Neptbm 10.54 (March 2011). </p>
 <h2>Index</h2>

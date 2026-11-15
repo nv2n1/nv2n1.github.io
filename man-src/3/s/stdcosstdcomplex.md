@@ -48,8 +48,8 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;cos(1.000000,0.000000) = (0.540302,-0.000000) ( <a href="/docs/linux/man/1-cos/">cos</a><code>(1)</code> = 0.540302)<br />
-&nbsp;<wbr>&nbsp;cos(0.000000,1.000000) = (1.543081,-0.000000) (<a href="/docs/linux/man/1-cosh/">cosh</a><code>(1)</code> = 1.543081)</p>
+<p>&nbsp;<wbr>&nbsp;cos(1.000000,0.000000) = (0.540302,-0.000000) ( cos<code>(1)</code> = 0.540302)<br />
+&nbsp;<wbr>&nbsp;cos(0.000000,1.000000) = (1.543081,-0.000000) (cosh<code>(1)</code> = 1.543081)</p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes sine of a complex number (sin(z))<br />
 sin(std::complex) <i>(function template)</i><br />

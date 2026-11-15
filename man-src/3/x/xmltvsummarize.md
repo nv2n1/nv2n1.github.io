@@ -34,4 +34,4 @@ XMLTV::Summarize - Perl extension to summarize XMLTV data
 
  The list of acceptable languages normally contains just one element, taken from <font SIZE="-1">LANG,</font> but you can set it manually as <tt>@XMLTV::Summarize::PREF_LANGS</tt> if wished.
 <h2>Author</h2>Ed Avis, ed [at] membled.com
-<h2>See Also</h2><font SIZE="-1"><i><a HREF="/docs/linux/man/1-xmltv/">XMLTV</a></i></font><i></i>(1).
+<h2>See Also</h2><font SIZE="-1"><i>XMLTV</i></font><i></i>(1).

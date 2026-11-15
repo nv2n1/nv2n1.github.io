@@ -170,7 +170,7 @@ description: "cggesx.f –"
 <p> <i>RCONDE</i> </p>
 <pre>
           RCONDE is REAL array, dimension ( 2 )
-          If SENSE = 'E' or 'B', <a href="//www.systutorials.com/docs/linux/man/1-RCONDE/">RCONDE</a>(1) and <a href="//www.systutorials.com/docs/linux/man/2-RCONDE/">RCONDE</a>(2) contain the
+          If SENSE = 'E' or 'B', RCONDE(1) and RCONDE(2) contain the
           reciprocal condition numbers for the average of the selected
           eigenvalues.
           Not referenced if SENSE = 'N' or 'V'.
@@ -178,7 +178,7 @@ description: "cggesx.f –"
 <p> <i>RCONDV</i> </p>
 <pre>
           RCONDV is REAL array, dimension ( 2 )
-          If SENSE = 'V' or 'B', <a href="//www.systutorials.com/docs/linux/man/1-RCONDV/">RCONDV</a>(1) and <a href="//www.systutorials.com/docs/linux/man/2-RCONDV/">RCONDV</a>(2) contain the
+          If SENSE = 'V' or 'B', RCONDV(1) and RCONDV(2) contain the
           reciprocal condition number for the selected deflating
           subspaces.
           Not referenced if SENSE = 'N' or 'E'.
@@ -210,7 +210,7 @@ the routine
 <p> <i>IWORK</i> </p>
 <pre>
           IWORK is INTEGER array, dimension (MAX(1,LIWORK))
-          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the minimum LIWORK.
+          On exit, if INFO = 0, IWORK(1) returns the minimum LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
 <pre>

@@ -18,5 +18,5 @@ enum ibv_rate mult_to_ibv_rate(int mult);</pre></dl><h2>Description</h2>ibv_rate
 <h2>Return Value</h2>ibv_rate_to_mult() returns the multiplier of the base rate 2.5 Gbit/sec. 
 
  mult_to_ibv_rate() returns the enumeration representing the IB transmission rate.
-<h2>See Also</h2><a HREF="/docs/linux/man/3-ibv_query_port/">ibv_query_port</a>(3)
+<h2>See Also</h2>ibv_query_port(3)
 <h2>Author</h2>Dotan Barak &lt;dotanba [at] gmail.com&gt;

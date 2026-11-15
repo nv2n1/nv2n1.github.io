@@ -117,8 +117,8 @@ description: "ncidd – Network Caller ID Server"
  Default: verbose = 1<br />
  Most Useful: verbose = 3</dl>
 <h2>Configuration</h2>
-<p>The <a href="/docs/linux/man/5-ncidd-conf/">ncidd.conf</a>(5) file is used to set options. The syntax of the <a href="/docs/linux/man/5-ncidd-conf/">ncidd.conf</a>(5) file is discussed seperately, and should be consulted for detailed reference information. </p>
-<p> The <a href="/docs/linux/man/5-ncidd-alias/">ncidd.alias</a>(5) file is used to create aliases. The syntax of the <a href="/docs/linux/man/5-ncidd-alias/">ncidd.alias</a>(5) file is discussed seperately, and should be consulted for detailed reference information.</p>
+<p>The ncidd.conf(5) file is used to set options. The syntax of the ncidd.conf(5) file is discussed seperately, and should be consulted for detailed reference information. </p>
+<p> The ncidd.alias(5) file is used to create aliases. The syntax of the ncidd.alias(5) file is discussed seperately, and should be consulted for detailed reference information.</p>
 <h2>Data Line Format Examples</h2>
 <p>These are five examples of the three types of lines sent to <i>NCID</i> clients. The first field is line identifier. </p>
 <p> The <i>CID:</i> line gives the CID information of the current call. </p>

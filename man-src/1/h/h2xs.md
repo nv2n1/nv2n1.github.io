@@ -214,13 +214,13 @@ h2xs rpcsvc / rusers
 <p> <i>h2xs</i> would not distinguish whether an argument to a C function which is of the form, say, <tt>&quot;int *&quot;</tt>, is an input, output, or input/output parameter. In particular, argument declarations of the form </p>
 <pre>
     int
-    <a href="//www.systutorials.com/docs/linux/man/n-foo/">foo</a>(n)
+    foo(n)
         int *n
 </pre>
 <p> should be better rewritten as </p>
 <pre>
     int
-    <a href="//www.systutorials.com/docs/linux/man/n-foo/">foo</a>(n)
+    foo(n)
         int &amp;n
 </pre>
 <p> if <tt>&quot;n&quot;</tt> is an input parameter. </p>

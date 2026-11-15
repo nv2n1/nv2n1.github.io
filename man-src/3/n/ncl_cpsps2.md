@@ -37,7 +37,7 @@ CPSPS2 - Interpolates from an array of data on a &quot;sparse&quot; rectangular 
 <dd>(INTEGER, input) is the length of IWRK.
 <dt>ZDAT
 <dd>(REAL array, dimensioned LZDT, output) is the array in which the interpolated &quot;dense&quot; array of data is to be returned. The dimensions of the interpolated array may be supplied by the user or determined by Conpack, depending on the value of the parameter 'ZDS'. Note that, if Conpack determines the dimensions of the &quot;dense&quot; array, it will attempt to use an aspect ratio which is close to that implied by the value of the ratio
-<dl COMPACT><dd>(XSPS(MSPS)<a HREF="/docs/linux/man/1--xsps/">-XSPS</a>(1))/(YSPS(NSPS)<a HREF="/docs/linux/man/1--ysps/">-YSPS</a>(1))</dl><dt>LZDT
+<dl COMPACT><dd>(XSPS(MSPS)-XSPS(1))/(YSPS(NSPS)-YSPS(1))</dl><dt>LZDT
 <dd>(INTEGER, input) is the length of ZDAT.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions, with the following exceptions: 
 
 <dl COMPACT><dt>zsps(l,ksps)

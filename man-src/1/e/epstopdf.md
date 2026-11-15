@@ -95,7 +95,7 @@ $program --nogs test.ps &gt;testcorr.ps
 <p> The case of &quot;%%BoundingBox: (atend)&quot; when input is not seekable (e.g., from a pipe) is not supported. </p>
 <p> Report bugs in the program or this man page to tex-k [at] tug.org. When reporting bugs, please include an input file and the command line options specified, so the problem can be reproduced.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-pdfcrop/">pdfcrop</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code>pdfcrop</code>(1). </p>
 <p> The epstopdf LaTeX package, part of the oberdiek bundle, which automates running this script on the fly under TeX: <a rel="nofollow" href="http://ctan.org/pkg/epstopdf-pkg.">http://ctan.org/pkg/epstopdf-pkg.</a></p>
 <h2>AUTHOR</h2>
 <p> Originally written by Sebastian Rahtz, for Elsevier Science, with subsequent contributions from Thomas Esser, Gerben Wierda, Heiko Oberdiek, and many others. Currently maintained by Karl Berry. </p>

@@ -34,7 +34,7 @@ virt - win - reg domname 'HKLM\Path\To\Subkey' virt - win - reg domname 'HKLM\Pa
  $ virt-win-reg --merge Windows7 changes.reg
 </pre>
 <h3><font SIZE="-1">NOTE</font></h3>
-<p> This program is only meant for simple access to the registry. If you want to do complicated things with the registry, we suggest you download the Registry hive files from the guest using <i><a href="/docs/linux/man/3-libguestfs/">libguestfs</a></i>(3) or <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) and access them locally, eg. using <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3), <i><a href="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1) or <i><a href="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1).</p>
+<p> This program is only meant for simple access to the registry. If you want to do complicated things with the registry, we suggest you download the Registry hive files from the guest using <i>libguestfs</i>(3) or <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) and access them locally, eg. using <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3), <i><a href="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1) or <i><a href="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></p>
@@ -56,7 +56,7 @@ virt - win - reg domname 'HKLM\Path\To\Subkey' virt - win - reg domname 'HKLM\Pa
 <dd> In merge mode, this merges a textual regedit file into the Windows Registry of the virtual machine. If this flag is <i>not</i> given then virt-win-reg displays or exports Registry entries instead. </p>
 <p> Note that <i>&#8211;merge</i> is <i>unsafe</i> to use on live virtual machines, and will result in disk corruption. However exporting (without this flag) is always safe.</p>
 <dt><code>&#8211;encoding</code> UTF-16LE|ASCII</p>
-<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i><a href="/docs/linux/man/3-win--hivex--regedit/">Win::Hivex::Regedit</a></i>(3). </p>
+<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3). </p>
 <p> The default is to use <font SIZE="-1">UTF-16LE,</font> which should work with recent versions of Windows.</p>
 <dt><code>&#8211;unsafe-printable-strings</code></p>
 <dd> When exporting (only), assume strings are <font SIZE="-1">UTF-16LE</font> and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </p>
@@ -75,7 +75,7 @@ virt - win - reg domname 'HKLM\Path\To\Subkey' virt - win - reg domname 'HKLM\Pa
 <dl>
 <dt>
 <dd>
-<p> This all happens because the Registry itself contains no information about how strings are encoded (see &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i><a href="/docs/linux/man/3-win--hivex--regedit/">Win::Hivex::Regedit</a></i>(3)). </p>
+<p> This all happens because the Registry itself contains no information about how strings are encoded (see &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3)). </p>
 <p> You should only use this option for quick hacking and debugging of the Registry contents, and <i>never</i> use it if the output is going to be passed into another program or stored in another Registry.</dl>
 </dl>
 <h2>SUPPORTED SYSTEMS</h2>

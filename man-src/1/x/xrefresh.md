@@ -39,7 +39,7 @@ description: "xrefresh – refresh all or part of an X screen"
 <dt><code>-version</code></p>
 <dd> This argument prints the program version and exits.</dl>
 <h2>X DEFAULTS</h2>
-<p> The <i>xrefresh</i> program uses the routine <i><a href="/docs/linux/man/3-xgetdefault/">XGetDefault</a>(3)</i> to read defaults, so its resource names are all capitalized. </p>
+<p> The <i>xrefresh</i> program uses the routine <i>XGetDefault(3)</i> to read defaults, so its resource names are all capitalized. </p>
 <dl>
 <dt><code>Black</code>, <code>White</code>, <code>Solid</code>, <code>None</code>, <code>Root</code></p>
 <dd> Determines what sort of window background to use.</dl>

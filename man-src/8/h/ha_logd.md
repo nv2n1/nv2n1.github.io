@@ -29,7 +29,7 @@ description: "ha_logd – Logging Daemon for High-Availability Linux"
 <p><i>/var/run/ha_logd.pid </i> Default PID file. </p>
 <p> <i>ha_logd.cf </i> Sample config file for ha_logd. This file is installed together with other Heartbeat documents.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-heartbeat/">heartbeat</a>(8) <a href="/docs/linux/man/8-ha_logger/">ha_logger</a>(8) </p>
+<p><a href="/docs/linux/man/8-heartbeat/">heartbeat</a>(8) ha_logger(8) </p>
 <h2>Documentation</h2>
 <p>More information may be found at <a rel="nofollow" href="http://www.linux-ha.org.">http://www.linux-ha.org.</a></p>
 <h2>Authors</h2>

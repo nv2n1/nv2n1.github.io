@@ -57,9 +57,9 @@ description: "BPF – BPF programmable classifier and actions for ingress/egress
 <h3>skip_hw | skip_sw</h3>
 <p>hardware offload control flags. By default TC will try to offload filters to hardware if possible. <code>skip_hw</code> explicitly disables the attempt to offload. <code>skip_sw</code> forces the offload and disables running the eBPF program in the kernel. If hardware offload is not possible and this flag was set kernel will report an error and filter will not be installed at all.</p>
 <h3>police</h3>
-<p>is an optional parameter for an eBPF/cBPF classifier that specifies a police in <code><a href="/docs/linux/man/1-tc/">tc</a>(1)</code> which is attached to the classifier, for example, on an ingress qdisc.</p>
+<p>is an optional parameter for an eBPF/cBPF classifier that specifies a police in <code>tc(1)</code> which is attached to the classifier, for example, on an ingress qdisc.</p>
 <h3>action</h3>
-<p>is an optional parameter for an eBPF/cBPF classifier that specifies a subsequent action in <code><a href="/docs/linux/man/1-tc/">tc</a>(1)</code> which is attached to a classifier.</p>
+<p>is an optional parameter for an eBPF/cBPF classifier that specifies a subsequent action in <code>tc(1)</code> which is attached to a classifier.</p>
 <h3>classid</h3>
 <h3>flowid</h3>
 <p>provides the default traffic control class identifier for this eBPF/cBPF classifier. The default class identifier can also be overwritten by the return code of the eBPF/cBPF program. A default return code of <code>-1</code> specifies the here provided default class identifier to be used. A return code of the eBPF/cBPF program of 0 implies that no match took place, and a return code other than these two will override the default classid. This allows for efficient, non-linear classification with only a single eBPF/cBPF program as opposed to having multiple individual programs for various class identifiers which would need to reparse packet contents.</p>
@@ -236,7 +236,7 @@ drop: ret #0</pre>
 <p>Further and more technical details about the BPF architecture can be found in the Linux kernel source tree under <code>Documentation/networking/filter.txt</code> . </p>
 <p> Further details on eBPF <code><a href="/docs/linux/man/8-tc/">tc</a>(8)</code> examples can be found in the iproute2 source tree under <code>examples/bpf/</code> .</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-ematch/">tc-ematch</a></code>(8) <code><a href="/docs/linux/man/2-bpf/">bpf</a></code>(2) <code><a href="/docs/linux/man/4-bpf/">bpf</a></code>(4) </p>
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-ematch/">tc-ematch</a></code>(8) <code><a href="/docs/linux/man/2-bpf/">bpf</a></code>(2) <code>bpf</code>(4) </p>
 <h2>Authors</h2>
 <p>Manpage written by Daniel Borkmann. </p>
 <p> Please report corrections or improvements to the Linux kernel networking mailing list: <code>&lt;netdev [at] vger.kernel.org&gt;</code></p>

@@ -138,7 +138,7 @@ description: "grace – command line interface xmgrace – full-featured GUI mod
 <p> <code>templates/Default.agr</code> &#8211; the default template, loaded whenever a new project is started. </p>
 <p> <code>fonts/FontDataBase</code> &#8211; the file responsible for font configuration. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-grconvert/">grconvert</a>(1), <a href="/docs/linux/man/1-x/">X</a>(1) [or <a href="/docs/linux/man/1-xorg/">Xorg</a>(1)], Grace User&#8217;s Guide </p>
+<p> <a href="/docs/linux/man/1-grconvert/">grconvert</a>(1), X(1) [or <a href="/docs/linux/man/1-xorg/">Xorg</a>(1)], Grace User&#8217;s Guide </p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://plasma-gate.weizmann.ac.il/Grace/">http://plasma-gate.weizmann.ac.il/Grace/</a> </p>
 <h2>BUGS</h2>

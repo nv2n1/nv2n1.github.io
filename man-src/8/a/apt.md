@@ -56,7 +56,7 @@ description: "apt – command-line interface"
 <h2>Diagnostics</h2>
 <p><code>apt</code> returns zero on normal operation, decimal 100 on error.</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Author</h2>
 <p><code>APT team</code></p>
 <dl>

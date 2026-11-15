@@ -16,7 +16,7 @@ description: "bison – GNU Project parser generator (yacc replacement)"
 <p> Input files should follow the <i>yacc</i> convention of ending in <code>.y</code>. Unlike <i>yacc</i>, the generated files do not have fixed names, but instead use the prefix of the input file. Moreover, if you need to put <i>C++</i> code in the input file, you can end his name by a C++-like extension (.ypp or .y++), then bison will follow your extension to name the output file (.cpp or .c++). For instance, a grammar description file named <code>parse.yxx</code> would produce the generated parser in a file named <code>parse.tab.cxx</code>, instead of <i>yacc</i>&#8216;s <code>y.tab.c</code> or old <i>Bison</i> version&#8217;s <code>parse.tab.c</code>. </p>
 <p> This description of the options that can be given to <i>bison</i> is adapted from the node <code>Invocation</code> in the <code>bison.texi</code> manual, which should be taken as authoritative. </p>
 <p> <i>Bison</i> supports both traditional single-letter options and mnemonic long option names. Long option names are indicated with <code>&#8212;</code> instead of <code>&#8211;</code>. Abbreviations for option names are allowed as long as they are unique. When a long option takes an argument, like <code>&#8211;file-prefix</code>, connect the option name and the argument with <code>=</code>. </p>
-<p> Generate a deterministic LR or generalized LR (GLR) parser employing <a href="/docs/linux/man/1-lalr/">LALR</a>(1), <a href="/docs/linux/man/1-ielr/">IELR</a>(1), or canonical <a href="/docs/linux/man/1-lr/">LR</a>(1) parser tables. <a href="/docs/linux/man/1-ielr/">IELR</a>(1) and canonical <a href="/docs/linux/man/1-lr/">LR</a>(1) support is experimental. </p>
+<p> Generate a deterministic LR or generalized LR (GLR) parser employing LALR(1), IELR(1), or canonical LR(1) parser tables. IELR(1) and canonical LR(1) support is experimental. </p>
 <p> Mandatory arguments to long options are mandatory for short options too. The same is true for optional arguments.</p>
 <h3>Operation modes:</h3>
 <dl>
@@ -134,7 +134,7 @@ description: "bison – GNU Project parser generator (yacc replacement)"
 <p> Copyright &#169; 2015 Free Software Foundation, Inc.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-lex/">lex</a></code>(1), <code><a href="/docs/linux/man/1-flex/">flex</a></code>(1), <code><a href="/docs/linux/man/1-yacc/">yacc</a></code>(1). </p>
+<p> <code>lex</code>(1), <code><a href="/docs/linux/man/1-flex/">flex</a></code>(1), <code><a href="/docs/linux/man/1-yacc/">yacc</a></code>(1). </p>
 <p> The full documentation for <code>bison</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>bison</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>

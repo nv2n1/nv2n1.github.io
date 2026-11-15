@@ -252,7 +252,7 @@ description: "stunnel – universal SSL tunnel"
 <p> currently supported flags: <font SIZE="-1">NOCERTS</font>, <font SIZE="-1">NOINTERN</font> <font SIZE="-1">NOSIGS</font>, <font SIZE="-1">NOCHAIN</font>, <font SIZE="-1">NOVERIFY</font>, <font SIZE="-1">NOEXPLICIT</font>, <font SIZE="-1">NOCASIGN</font>, <font SIZE="-1">NODELEGATED</font>, <font SIZE="-1">NOCHECKS</font>, <font SIZE="-1">TRUSTOTHER</font>, <font SIZE="-1">RESPID_KEY</font>, <font SIZE="-1">NOTIME</font></p>
 <dt><code>options</code> = SSL_options</p>
 <dd><code>OpenSSL</code> library options </p>
-<p> The parameter is the <code>OpenSSL</code> option name as described in the <i><a href="//www.systutorials.com/docs/linux/man/3ssl-SSL_CTX_set_options/">SSL_CTX_set_options</a>(3ssl)</i> manual, but without <i></i><font SIZE="-1"><i>SSL_OP_</i></font><i></i> prefix. Several <i>options</i> can be used to specify multiple options. </p>
+<p> The parameter is the <code>OpenSSL</code> option name as described in the <i>SSL_CTX_set_options(3ssl)</i> manual, but without <i></i><font SIZE="-1"><i>SSL_OP_</i></font><i></i> prefix. Several <i>options</i> can be used to specify multiple options. </p>
 <p> For example for compatibility with erroneous Eudora <font SIZE="-1">SSL</font> implementation the following option can be used: </p>
 <pre> options = DONT_INSERT_EMPTY_FRAGMENTS</pre>
 <dt><code>protocol</code> = proto</p>
@@ -516,7 +516,7 @@ description: "stunnel – universal SSL tunnel"
 <dl>
 <dt><i><a href="/docs/linux/man/8-tcpd/">tcpd</a></i>(8)</p>
 <dd>access control facility for internet services</p>
-<dt><i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8)</p>
+<dt><i>inetd</i>(8)</p>
 <dd>internet &#8216;super-server&#8217;</p>
 <dt><i><a rel="nofollow" href="http://www.stunnel.org/">http://www.stunnel.org/</a></i></p>
 <dd><code>stunnel</code> homepage</p>

@@ -96,5 +96,5 @@ bincols = ([xname[:tlmin[:tlmax:[binsiz]]]], [yname[:tlmin[:tlmax[:binsiz]]]])
 [sh] funimage "test.ev[2:8,3:7,2]" stdout | fundisp stdin 1 2 3 -- -- -- -- - -- -- -- -- - -- -- -- -- -1 : 20 28 36 2 : 28 36 44
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

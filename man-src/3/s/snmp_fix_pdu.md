@@ -18,4 +18,4 @@ description: "snmp_pdu_create, snmp_clone_pdu, snmp_fix_pdu, snmp_free_pdu – n
 <p> <code>snmp_fix_pdu</code> </p>
 <p> <code>snmp_free_pdu</code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-varbind_api/">varbind_api</a></code>(3) <code><a href="/docs/linux/man/3-session_api/">session_api</a></code>(3) </p>
+<p><code>varbind_api</code>(3) <code>session_api</code>(3) </p>

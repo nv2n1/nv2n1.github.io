@@ -106,7 +106,7 @@ xset dpms force off
 <h2>UPGRADES</h2>
 <p> The latest version of <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1) and related tools can always be found at <a rel="nofollow" href="https://www.jwz.org/xscreensaver/">https://www.jwz.org/xscreensaver/</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-x/">X</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xset/">xset</a></code>(1)</p>
+<p> <code>X</code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xset/">xset</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1992-2013 by Jamie Zawinski. Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. No representations are made about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty.</p>
 <h2>AUTHOR</h2>

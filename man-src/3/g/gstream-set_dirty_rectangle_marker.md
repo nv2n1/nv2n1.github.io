@@ -39,5 +39,5 @@ set_dirty_rectangle_marker(NULL);
 <p> The default value of the dirty rectangle marker is the null pointer so that the gstream will not bother marking any rectangles. </p>
 <p> Note that only the outputter will mark any rectangles dirty, and not the inputter since it is blocking program anyway, waiting for input, meanwhile preventing the main loop from reaching the place where it updates the rectangles. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-get_dirty_rectangle_marker/">gstream-get_dirty_rectangle_marker</a></code>(3) </p>
+<p> <code>gstream-get_dirty_rectangle_marker</code>(3) </p>
 <h2>Index</h2>

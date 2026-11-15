@@ -46,6 +46,6 @@ description: "callback – call a user back, presenting a login prompt"
 <h2>Bugs</h2>
 <p><i>callback</i> is &quot;alpha&quot; code, not very stable right now. <i>callback</i> is fairly dumb concerning retries. <i>callback</i> must be run as root. Most of the documentation consists of &quot;reading the source&quot;. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-mgetty/">mgetty</a>(8), <a href="/docs/linux/man/1-ct/">ct</a>(1)</p>
+<p><a href="/docs/linux/man/8-mgetty/">mgetty</a>(8), ct(1)</p>
 <h2>Author</h2>
 <p><i>callback</i> is Copyright (C) 1993-1996 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;.</p>

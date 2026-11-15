@@ -14,7 +14,7 @@ description: "userpasswd – A graphical tool to allow users to change their pas
 <h2>DESCRIPTION</h2>
 <p> <code>userpasswd</code> is a graphical tool to allow users to easily change their passwords. Aside from being a nice GUI frontend, this program does the right thing when the pam configuration has changed.</p>
 <h2>OPTIONS</h2>
-<p> This program has no command line options of its own, but it does take the standard X program options like <code>-display</code> and such. See the <i><a href="/docs/linux/man/1-x/">X</a></i>(1) man page for some of the common options.</p>
+<p> This program has no command line options of its own, but it does take the standard X program options like <code>-display</code> and such. See the <i>X</i>(1) man page for some of the common options.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-userhelper/">userhelper</a></i>(8)</p>
 <h2>BUGS</h2>

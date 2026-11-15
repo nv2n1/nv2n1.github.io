@@ -160,7 +160,7 @@ description: "uberftp – GridFTP-enabled client"
  <i>A</i> Expect the remote identity to be mine. (Default)<br />
  <i>S</i> <i>subject</i> Expect the remote identity to be <i>subject</i>.</p>
 <dt><code>debug [</code><i>0-3</i>]</p>
-<dd> Turn debug statements on/off. If no value is given, this command will toggle between <a href="/docs/linux/man/2-debug/">debug</a>(2) and non <a href="/docs/linux/man/1-debug/">debug</a>(1) mode. Otherwise the debug level is set to the given level.<br />
+<dd> Turn debug statements on/off. If no value is given, this command will toggle between debug(2) and non debug(1) mode. Otherwise the debug level is set to the given level.<br />
  0 Only errors are printed<br />
  1 Default. Errors and some helpful messages are printed<br />
  2 Print useful control channel information<br />
@@ -386,7 +386,7 @@ description: "uberftp – GridFTP-enabled client"
 <p>&nbsp;<wbr>&nbsp;<wbr>uberftp tg-grid<a href="ftp://ftp.sdsc.teragrid.org">ftp.sdsc.teragrid.org</a>&nbsp;<wbr>\<br />
 &nbsp;<wbr>&nbsp;<wbr>&quot;tcpbuf 16777216;&nbsp;<wbr>cd scr;&nbsp;<wbr>put file.tar&quot;</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mssftp/">mssftp</a></code>(1), <code><a href="/docs/linux/man/1-msscmd/">msscmd</a></code>(1), <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1),<br />
+<p> <code>mssftp</code>(1), <code>msscmd</code>(1), <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1),<br />
  GridFTP: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.globus.org/datagrid/gridftp.html">http://www.globus.org/datagrid/gridftp.html</a><br />
  TCP Window Size: </p>

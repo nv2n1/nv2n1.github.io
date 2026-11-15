@@ -518,7 +518,7 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <dt>
 <dd> The first column <i>EXTN</i> defines the Unix filename extension to be mapped. The default mapping for any filename extension that doesn&#8217;t match is defined with the `*&#8217; character.</p>
 <dt>
-<dd> The <i>Xlate</i> column defines the type of text translation between the Unix and Macintosh file it is ignored by <code>genisoimage</code>, but is kept to be compatible with <code><a href="/docs/linux/man/1-aufs/">aufs</a></code>(1). Although <code>genisoimage</code> does not alter the contents of a file, if a binary file has its TYPE set as <i>TEXT</i>, it <i>may</i> be read incorrectly on a Macintosh. Therefore a better choice for the default TYPE may be <i>????</i>.</p>
+<dd> The <i>Xlate</i> column defines the type of text translation between the Unix and Macintosh file it is ignored by <code>genisoimage</code>, but is kept to be compatible with <code>aufs</code>(1). Although <code>genisoimage</code> does not alter the contents of a file, if a binary file has its TYPE set as <i>TEXT</i>, it <i>may</i> be read incorrectly on a Macintosh. Therefore a better choice for the default TYPE may be <i>????</i>.</p>
 <dt>
 <dd> The <i>CREATOR</i> and <i>TYPE</i> keywords must be 4 characters long and enclosed in single quotes.</p>
 <dt>
@@ -698,8 +698,11 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> The existing <code>genisoimage</code> code will filter out any illegal characters for the ISO9660 and Joliet filenames, but as <code>genisoimage</code> expects to be dealing directly with Unix names, it leaves the Rock Ridge names as is. But as `/&#8217; is a legal HFS filename character, <code>-mac-name</code> converts `/&#8217; to a `_&#8217; in Rock Ridge filenames. </p>
 <p> If the Apple extensions are used, only the ISO9660 filenames will appear on the Macintosh. However, as the Macintosh ISO9660 drivers can use <i>Level 2</i> filenames, you can use options like <code>-allow-multidot</code> without problems on a Macintosh &#8212; still take care over the names, for example <i>this.file.name</i> will be converted to <i>THIS.FILE</i> i.e. only have one `.&#8217;, also filename <i>abcdefgh</i> will be seen as <i>ABCDEFGH</i> but <i>abcdefghi</i> will be seen as <i>ABCDEFGHI.</i> i.e. with a `.&#8217; at the end &#8212; don&#8217;t know if this is a Macintosh problem or a <code>genisoimage</code>/<code>mkhybrid</code> problem. All filenames will be in uppercase when viewed on a Macintosh. Of course, DOS/Win3.X machines will not be able to see Level 2 filenames&#8230;</p>
 <h2>HFS CUSTOM VOLUME/FOLDER ICONS</h2>
-<p> To give a HFS CD a custom icon, make sure the root (top level) folder includes a standard Macintosh volume icon file. To give a volume a custom icon on a Macintosh, an icon has to be pasted over the volume&#8217;s icon in the &quot;Get Info&quot; box of the volume. This creates an invisible file called <i>Icon</i> (`&#8217; is the carriage return character) in the root folder. </p>
-<p> A custom folder icon is very similar &#8212; an invisible file called <i>Icon</i> exists in the folder itself. </p>
+<p> To give a HFS CD a custom icon, make sure the root (top level) folder includes a standard Macintosh volume icon file. To give a volume a custom icon on a Macintosh, an icon has to be pasted over the volume&#8217;s icon in the &quot;Get Info&quot; box of the volume. This creates an invisible file called <i>Icon
+</i> (`
+&#8217; is the carriage return character) in the root folder. </p>
+<p> A custom folder icon is very similar &#8212; an invisible file called <i>Icon
+</i> exists in the folder itself. </p>
 <p> Probably the easiest way to create a custom icon that <code>genisoimage</code> can use is to format a blank HFS floppy disk on a Mac and paste an icon to its &quot;Get Info&quot; box. If using Linux with the HFS module installed, mount the floppy:</p>
 <dl>
 <dt>
@@ -718,7 +721,8 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <dl>
 <dt>
 <dd> genisoimage &#8211;macbin -o output source_dir icon_dir</dl>
-<p> The procedure for creating/using custom folder icons is very similar &#8212; paste an icon to folder&#8217;s &quot;Get Info&quot; box and transfer the resulting <i>Icon</i> file to the relevant directory in the <code>genisoimage</code> source tree. </p>
+<p> The procedure for creating/using custom folder icons is very similar &#8212; paste an icon to folder&#8217;s &quot;Get Info&quot; box and transfer the resulting <i>Icon
+</i> file to the relevant directory in the <code>genisoimage</code> source tree. </p>
 <p> You may want to hide the icon files from the ISO9660 and Joliet trees. </p>
 <p> To give a custom icon to a Joliet CD, follow the instructions found at <i><a rel="nofollow" href="http://www.cdrfaq.org/faq03.html#S3-21-1">http://www.cdrfaq.org/faq03.html#S3-21-1</a></i>.</p>
 <h2>HFS BOOT DRIVER</h2>
@@ -858,7 +862,7 @@ MD5sum   File size  Path
 <p> It is not possible to use <code>-sparc-boot</code> or <code>-generic-boot</code> with <code>-boot-hfs-file</code> or <code>-prep-boot</code>. </p>
 <p> <code>genisoimage</code> should be able to create HFS hybrid images over 4Gb, although this has not been fully tested.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-genisoimagerc/">genisoimagerc</a></code>(5), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code><a href="/docs/linux/man/8-mkzftree/">mkzftree</a></code>(8), <code><a href="/docs/linux/man/5-magic/">magic</a></code>(5).</p>
+<p> <code><a href="/docs/linux/man/5-genisoimagerc/">genisoimagerc</a></code>(5), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code>mkzftree</code>(8), <code><a href="/docs/linux/man/5-magic/">magic</a></code>(5).</p>
 <h2>AUTHORS</h2>
 <p> <code>genisoimage</code> is derived from <code>mkisofs</code> from the <code>cdrtools 2.01.01a08</code> package from May 2006 (with few updates extracted from cdrtools 2.01.01a24 from March 2007) from .IR <a rel="nofollow" href="http://cdrecord.berlios.de/">http://cdrecord.berlios.de/</a> , but is now part of the <code>cdrkit</code> suite, maintained by Joerg Jaspert, Eduard Bloch, Steve McIntyre, Peter Samuelson, Christian Fromme, Ben Hutchings, and other contributors. The maintainers can be contacted at <i>debburn-devel [at] lists.alioth.debian.org</i>, or see the <code>cdrkit</code> project web site at <i><a rel="nofollow" href="http://www.cdrkit.org/">http://www.cdrkit.org/</a></i>. </p>
 <p> Eric Youngdale wrote the first versions (1993-1998) of <code>mkisofs</code>. J&ouml;rg Schilling wrote the SCSI transport library and its interface, and has maintained <code>mkisofs</code> since 1999. James Pearson wrote the HFS hybrid code, using <i>libhfs</i> by Robert Leslie. Pearson, Schilling, Jungshik Shin and Jaakko Heinonen contributed to the character set conversion code. The <code>cdrkit</code> maintainers have maintained <code>genisoimage</code> since 2006. </p>

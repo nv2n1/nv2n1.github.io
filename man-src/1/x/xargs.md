@@ -71,7 +71,7 @@ description: "xargs – build and execute command lines from standard input"
 <p> <code>find /tmp -name core -type f -print0 | xargs -0 /bin/rm -f</code> </p>
 <p> Find files named <code>core</code> in or below the directory <code>/tmp</code> and delete them, processing filenames in such a way that file or directory names containing spaces or newlines are correctly handled. </p>
 <p> <code>find /tmp -depth -name core -type f -delete</code> </p>
-<p> Find files named <code>core</code> in or below the directory <code>/tmp</code> and delete them, but more efficiently than in the previous example (because we avoid the need to use <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code><a href="/docs/linux/man/2-exec/">exec</a></code>(2) to launch <code>rm</code> and we don&#8217;t need the extra <code>xargs</code> process). </p>
+<p> Find files named <code>core</code> in or below the directory <code>/tmp</code> and delete them, but more efficiently than in the previous example (because we avoid the need to use <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code>exec</code>(2) to launch <code>rm</code> and we don&#8217;t need the extra <code>xargs</code> process). </p>
 <pre>
 <code>cut -d: -f1 &lt; /etc/passwd | sort | xargs echo</code>
 </pre>
@@ -123,7 +123,7 @@ description: "xargs – build and execute command lines from standard input"
 <p> Copyright &#169; 1990-2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1), <code><a href="/docs/linux/man/1-updatedb/">updatedb</a></code>(1), <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/3-execvp/">execvp</a></code>(3), <code><a href="/docs/linux/man/5-locatedb/">locatedb</a></code>(5), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) </p>
+<p> <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1), <code>updatedb</code>(1), <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/3-execvp/">execvp</a></code>(3), <code>locatedb</code>(5), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/xargs">https://www.gnu.org/software/findutils/xargs</a>&gt;<br />
  or available locally via: <code>info xargs</code> </p>
 <h2>Index</h2>

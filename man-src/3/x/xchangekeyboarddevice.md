@@ -34,4 +34,4 @@ error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  server implementation does not support using the
  specified device as the X keyboard.</pre></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XChangeKeyboardDevice request
- was made specifying a device that has no keys.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XChangePointerDevice/">XChangePointerDevice</a>(3)</pre></dl>
+ was made specifying a device that has no keys.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangePointerDevice(3)</pre></dl>

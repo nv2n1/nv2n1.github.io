@@ -47,7 +47,7 @@ description: "aseqnet – ALSA sequencer connectors over network"
 <dd> Verbose mode. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-aconnect/">aconnect</a>(1), <a href="/docs/linux/man/1-pmidi/">pmidi</a>(1) </p>
+<p> <a href="/docs/linux/man/1-aconnect/">aconnect</a>(1), pmidi(1) </p>
 <h2>AUTHOR</h2>
 <p> Takashi Iwai &lt;tiwai [at] suse.de&gt;. </p>
 <h2>Index</h2>

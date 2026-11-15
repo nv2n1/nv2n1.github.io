@@ -56,7 +56,7 @@ description: "rpmduplicates – find program with several version installed"
 <p> this program can be used as &#8220;normal&#8221; user </p>
 <p> the gpg-pubkey packages are excluded from the result</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-rpm/">rpm</a></i>(1) for rpm call </p>
+<p> <i>rpm</i>(1) for rpm call </p>
 <p> <i><a href="/docs/linux/man/1-rpmorphan/">rpmorphan</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmusage/">rpmusage</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmdep/">rpmdep</a></i>(1) </p>

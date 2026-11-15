@@ -64,7 +64,7 @@ description: "pamtotiff – convert a Netpbm image to a TIFF file"
 <p> With some older TIFF libraries, <code>-lzw</code> doesn&#8217;t work because the TIFF library doesn&#8217;t do LZW compression. This is because of concerns about Unisys&#8217;s patent on LZW which was then in force. Actually, with very old TIFF libraries, <code>-lzw</code> works because no distributors of the TIFF library were sensitive yet to the patent issue. </p>
 <p> <code>-flate</code> chooses &#8216;flate&#8217; compression, which is the patent-free compression common in the Unix world implemented by the &#8216;Z&#8217; library. It is what the PNG format uses. </p>
 <p> <code>Fax Compression</code> </p>
-<p> If you have bilevel data (e.g. PBM), you can generate a TIFF that uses the same compression scheme specified for use by fax machines. See the <code>Fax</code><a href="/docs/linux/man/1-format/">Format</a><code>(1)</code><br />
+<p> If you have bilevel data (e.g. PBM), you can generate a TIFF that uses the same compression scheme specified for use by fax machines. See the <code>Fax</code>Format<code>(1)</code><br />
 &nbsp;<wbr>page for more information on these compression schemes. </p>
 <p> These formats all relate to ITU Group 3 and Group 4 fax machine standards. </p>
 <p> The <code>-g3</code> option chooses MH or MR compression: MR with the additional option <code>-2d</code>; MH without it. <code>-g4</code> selects MMR. The option names are a little unfortunate and historical, but are consistent with the TIFF specification. </p>
@@ -148,7 +148,7 @@ description: "pamtotiff – convert a Netpbm image to a TIFF file"
 <h2>HISTORY</h2>
 <p> <code>pamtotiff</code> was originally <code>pnmtotiff</code> and did not handle PAM input. It was extended and renamed in Netpbm 10.30 (October 2005). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tifftopnm/">tifftopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtotiffcmyk/">pnmtotiffcmyk</a></code>(1) , <code><a href="/docs/linux/man/1-pamdepth/">pamdepth</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-tifftopnm/">tifftopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtotiffcmyk/">pnmtotiffcmyk</a></code>(1) , <code><a href="/docs/linux/man/1-pamdepth/">pamdepth</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code>pam</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Derived by Jef Poskanzer from ras2tiff.c, which is Copyright (c) 1990 by Sun Microsystems, Inc. Author: Patrick J. Naughton (<i>naughton [at] wind.sun.com</i>). </p>
 <h2>Index</h2>

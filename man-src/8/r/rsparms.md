@@ -32,6 +32,6 @@ description: "rsparms – Configure the Rose interface."
 <p>/etc/ax25/axports<br />
  /etc/ax25/rsports</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-call/">call</a></code>(1), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/5-rsports/">rsports</a></code>(5), <code><a href="/docs/linux/man/8-rsctl/">rsctl</a></code>(8), <code><a href="/docs/linux/man/8-rsparms/">rsparms</a></code>(8).</p>
+<p><code>call</code>(1), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/5-rsports/">rsports</a></code>(5), <code>rsctl</code>(8), <code><a href="/docs/linux/man/8-rsparms/">rsparms</a></code>(8).</p>
 <h2>Author</h2>
 <p>Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;</p>

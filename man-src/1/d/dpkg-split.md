@@ -75,7 +75,7 @@ description: "dpkg-split – Debian package archive split/join tool"
 <dt><font SIZE="-1"><code>DPKG_COLORS</code></font></p>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</p>
 <dt><font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font></p>
-<dd> If set, it will be used as the timestamp (as seconds since the epoch) in the <code><a href="/docs/linux/man/5-deb-split/">deb-split</a></code>(5)&#8217;s <code><a href="/docs/linux/man/5-ar/">ar</a></code>(5) container.</dl>
+<dd> If set, it will be used as the timestamp (as seconds since the epoch) in the <code><a href="/docs/linux/man/5-deb-split/">deb-split</a></code>(5)&#8217;s <code>ar</code>(5) container.</dl>
 <h2>FILES</h2>
 <dl>
 <dt><i>/var/lib/dpkg/parts</i></p>

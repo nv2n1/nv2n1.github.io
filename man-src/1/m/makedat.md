@@ -47,7 +47,7 @@ makedat blacklist /etc/mail/blacklist.tmp /etc/mail/blacklist.dat
 </dl>
 <p> Takes blacklist, and creates /etc/mail/blacklist.dat, using /etc/mail/blacklist.tmp as a temporary file.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/5-maildropgdbm/">maildropgdbm</a></code>(5)m[]<font SIZE="-2">[2]</font>.</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code>maildropgdbm</code>(5)m[]<font SIZE="-2">[2]</font>.</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
@@ -61,7 +61,7 @@ makedat blacklist /etc/mail/blacklist.tmp /etc/mail/blacklist.dat
 <dt>
 <dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildrop.html">http://www.courier-mta.org/maildrop/maildrop.html</a></dl>
 <dt> 2.</p>
-<dd> <code><a href="/docs/linux/man/5-maildropgdbm/">maildropgdbm</a></code>(5)</p>
+<dd> <code>maildropgdbm</code>(5)</p>
 <dl>
 <dt>
 <dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildropgdbm.html">http://www.courier-mta.org/maildrop/maildropgdbm.html</a></dl>

@@ -146,13 +146,13 @@ description: "blkzone – run zone command on a device"
 <p>The command <code>blkzone capacity</code> is used to report device capacity information. </p>
 <p> By default, the command will report the sum, in number of sectors, of all zone capacities on the device. Options may be used to modify this behavior, changing the starting zone or the size of the report, as explained below.</p>
 <h3>reset</h3>
-<p>The command <code>blkzone reset</code> is used to reset one or more zones. Unlike <code><a href="/docs/linux/man/8-sg_reset_wp/">sg_reset_wp</a></code>(8), this command operates from the block layer and can reset a range of zones.</p>
+<p>The command <code>blkzone reset</code> is used to reset one or more zones. Unlike <code>sg_reset_wp</code>(8), this command operates from the block layer and can reset a range of zones.</p>
 <h3>open</h3>
-<p>The command <code>blkzone open</code> is used to explicitly open one or more zones. Unlike <code><a href="/docs/linux/man/8-sg_zone/">sg_zone</a></code>(8), open action, this command operates from the block layer and can open a range of zones.</p>
+<p>The command <code>blkzone open</code> is used to explicitly open one or more zones. Unlike <code>sg_zone</code>(8), open action, this command operates from the block layer and can open a range of zones.</p>
 <h3>close</h3>
-<p>The command <code>blkzone close</code> is used to close one or more zones. Unlike <code><a href="/docs/linux/man/8-sg_zone/">sg_zone</a></code>(8), close action, this command operates from the block layer and can close a range of zones.</p>
+<p>The command <code>blkzone close</code> is used to close one or more zones. Unlike <code>sg_zone</code>(8), close action, this command operates from the block layer and can close a range of zones.</p>
 <h3>finish</h3>
-<p>The command <code>blkzone finish</code> is used to finish (transition to full condition) one or more zones. Unlike <code><a href="/docs/linux/man/8-sg_zone/">sg_zone</a></code>(8), finish action, this command operates from the block layer and can finish a range of zones. </p>
+<p>The command <code>blkzone finish</code> is used to finish (transition to full condition) one or more zones. Unlike <code>sg_zone</code>(8), finish action, this command operates from the block layer and can finish a range of zones. </p>
 <p> By default, the reset, open, close and finish commands will operate from the zone at device sector 0 and operate on all zones. Options may be used to modify this behavior as explained below.</p>
 <h2>Options</h2>
 <p>The <i>offset</i> and <i>length</i> option arguments may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;) or the suffixes KB (=1000), MB (=1000*1000), and so on for GB, TB, PB, EB, ZB and YB. Additionally, the 0x prefix can be used to specify <i>offset</i> and <i>length</i> in hex. </p>
@@ -179,7 +179,7 @@ description: "blkzone – run zone command on a device"
 <dd>Display help text and exit.</dl>
 <h2>Authors</h2>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-sg_rep_zones/">sg_rep_zones</a></code>(8)</p>
+<p><code>sg_rep_zones</code>(8)</p>
 <h2>Reporting Bugs</h2>
 <p>For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.</p>
 <h2>Availability</h2>

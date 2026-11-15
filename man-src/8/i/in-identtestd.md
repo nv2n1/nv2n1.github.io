@@ -35,4 +35,4 @@ Connection closed by foreign host.</pre>
 <p>Peter Eriksson &lt;pen [at] lysator.liu.se&gt;<br />
  Manpage written for Debian by Paul Slootman &lt;paul [at] debian.org&gt;.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/3-ident/">ident</a></i>(3), <i><a href="/docs/linux/man/8-identd/">identd</a></i>(8), <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8) </p>
+<p><i>ident</i>(3), <i>identd</i>(8), <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8) </p>

@@ -15,5 +15,5 @@ description: "adime_draw_text_button"
 <h2>DESCRIPTION</h2>
 <p> Draws a button with a text on it, at the given position of the bitmap and using the given colors and font. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-adime_draw_text_button_down/">adime_draw_text_button_down</a></code>(3), <code><a href="/docs/linux/man/3-adime_draw_empty_button/">adime_draw_empty_button</a></code>(3), <code><a href="/docs/linux/man/3-adime_draw_picture_button/">adime_draw_picture_button</a></code>(3) </p>
+<p> <code>adime_draw_text_button_down</code>(3), <code>adime_draw_empty_button</code>(3), <code><a href="/docs/linux/man/3-adime_draw_picture_button/">adime_draw_picture_button</a></code>(3) </p>
 <h2>Index</h2>

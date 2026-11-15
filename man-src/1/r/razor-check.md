@@ -40,9 +40,9 @@ razor - check[options][mail1[mail2..]] $ cat mbox | razor - check $ razor - chec
 <dt>&quot;-s&quot;
 <dd> Simulate a check. Do everything except talk to the server.
 <dt>&quot;-conf=filename&quot;
-<dd> Specifies an alternate configuration file. If not specified, it is computed, see <i><a HREF="/docs/linux/man/1-razor-agents/">razor-agents</a></i>(1) manpage for details. See <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5) manpage for various configuration options. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.conf&quot;</tt>.
+<dd> Specifies an alternate configuration file. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details. See <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5) manpage for various configuration options. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.conf&quot;</tt>.
 <dt>&quot;-home=dir&quot;
-<dd> Specify razorhome directory. This is where the configuration file, logfiles, identities, and server files live. If not specified, it is computed, see <i><a HREF="/docs/linux/man/1-razor-agents/">razor-agents</a></i>(1) manpage for details.
+<dd> Specify razorhome directory. This is where the configuration file, logfiles, identities, and server files live. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details.
 <dt>&quot;-logfile=file&quot;
 <dd> Specify file to log to instead of what is in the configuration file. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.log&quot;</tt>.
 <dt>&quot;-rs=razor.server.com&quot;
@@ -90,7 +90,7 @@ razor - check[options][mail1[mail2..]] $ cat mbox | razor - check $ razor - chec
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-razor-agents/">razor-agents</a></i>(1), <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5), <i><a HREF="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-report/">razor-report</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1), <i><a HREF="/docs/linux/man/5-razor-whitelist/">razor-whitelist</a></i>(5)
+ <i>razor-agents</i>(1), <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5), <i><a HREF="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-report/">razor-report</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1), <i><a HREF="/docs/linux/man/5-razor-whitelist/">razor-whitelist</a></i>(5)
 
 <h2>LICENSE</h2>
 

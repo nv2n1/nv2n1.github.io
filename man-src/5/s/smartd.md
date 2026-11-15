@@ -465,6 +465,6 @@ sleep 30
 <h2>Home Page For Smartmontools:</h2>
 <p>Please see the following web site for updates, further documentation, bug reports and patches: <code><a rel="nofollow" href="http://smartmontools.sourceforge.net/">http://smartmontools.sourceforge.net/</a></code></p>
 <h2>See Also:</h2>
-<p><code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8), <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8), <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8), <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5), <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8), <code><a href="/docs/linux/man/8-ide-smart/">ide-smart</a></code>(8), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7).</p>
+<p><code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8), <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8), <code>syslogd</code>(8), <code>syslog.conf</code>(5), <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8), <code>ide-smart</code>(8), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7).</p>
 <h2>Svn Id Of This Page:</h2>
 <p>$Id: smartd.conf.5.in 3833 2013-07-20 15:00:04Z chrfranke $</p>

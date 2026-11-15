@@ -43,7 +43,7 @@ description: "mtree – format of mtree dir hierarchy files"
 <dt><code>contents</code></p>
 <dd>The full pathname of a file that holds the contents of this file.</p>
 <dt><code>flags</code></p>
-<dd>The file flags as a symbolic name. See <a href="/docs/linux/man/1-chflags/">chflags</a>(1) for information on these names. If no flags are to be set the string &#8220;none&#8221; may be used to override the current default.</p>
+<dd>The file flags as a symbolic name. See chflags(1) for information on these names. If no flags are to be set the string &#8220;none&#8221; may be used to override the current default.</p>
 <dt><code>gid</code></p>
 <dd>The file group as a numeric value.</p>
 <dt><code>gname</code></p>
@@ -101,7 +101,7 @@ description: "mtree – format of mtree dir hierarchy files"
 <dt><code>uname</code></p>
 <dd>The file owner as a symbolic name.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-cksum/">cksum</a>(1), <a href="/docs/linux/man/1-find/">find</a>(1), <a href="/docs/linux/man/8-mtree/">mtree</a>(8)</p>
+<p><a href="/docs/linux/man/1-cksum/">cksum</a>(1), <a href="/docs/linux/man/1-find/">find</a>(1), mtree(8)</p>
 <h2>Bugs</h2>
 <p>The Fx implementation of mtree does not currently support the 2.0 format. The requirement for a &#8220;#mtree&#8221; signature line is new and not yet widely implemented.</p>
 <h2>History</h2>

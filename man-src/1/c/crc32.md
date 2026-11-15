@@ -16,7 +16,7 @@ description: "crc32 – compute CRC-32 checksums for the given files"
 <p> Note that the CRC-32 checksum is merely used for error detection in transmission and storage. It is not intended to guard against the malicious modification of files (i.e., it is not a cryptographic hash). </p>
 <p> This utility is supplied with the <code>Archive::Zip</code> module for Perl.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/3pm-Archive::Zip/">Archive::Zip</a></code>(3pm).</p>
+<p> <code>Archive::Zip</code>(3pm).</p>
 <h2>AUTHOR</h2>
 <p> The Archive::Zip module was written by Ned Konz.<br />
  This manual page was prepared by Ben Burton &lt;bab [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>

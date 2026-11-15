@@ -17,5 +17,5 @@ description: "restore"
 <p> It is automatically called when a newline (&#8216;
 &#8217;) is encountered, and in a few other situations. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-set_tab/">gstream-set_tab</a></code>(3), <code><a href="/docs/linux/man/3-gstream-remove_tab/">gstream-remove_tab</a></code>(3), <code><a href="/docs/linux/man/3-gstream-remove_all_tabs/">gstream-remove_all_tabs</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-gstream-set_tab/">gstream-set_tab</a></code>(3), <code>gstream-remove_tab</code>(3), <code>gstream-remove_all_tabs</code>(3) </p>
 <h2>Index</h2>

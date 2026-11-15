@@ -86,7 +86,7 @@ int main()
 <h2>Possible output:</h2>
 <p>&nbsp;<wbr>&nbsp;tgamma<code>(10)</code> = 362880, 9! = 362880<br />
 &nbsp;<wbr>&nbsp;tgamma(0.5) = 1.77245, sqrt(pi) = 1.77245<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-tgamma/">tgamma</a><code>(1)</code> = 1<br />
+&nbsp;<wbr>&nbsp;tgamma<code>(1)</code> = 1<br />
 &nbsp;<wbr>&nbsp;tgamma(+Inf) = inf<br />
 &nbsp;<wbr>&nbsp;tgamma(-1) = nan<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errno == EDOM: Numerical argument out of domain<br />

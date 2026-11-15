@@ -71,5 +71,5 @@ ibv_wr_rdma_write(qpx, rkey, remote_addr_1);
 ibv_wr_set_sge(qpx, lkey, local_addr_1, length_1);
 /* Use mlx5 DC setter using mlx5dv_qp_ex object */
 mlx5dv_wr_set_wr_dc_addr(mqpx, ah, remote_dctn, remote_dc_key);
-ret = ibv_wr_complete(qpx);</pre></dl><h2>See Also</h2><a HREF="/docs/linux/man/3-ibv_post_send/">ibv_post_send</a>(3), <a HREF="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a>(3), <a HREF="/docs/linux/man/3-ibv_wr_post/">ibv_wr_post</a>(3).
+ret = ibv_wr_complete(qpx);</pre></dl><h2>See Also</h2>ibv_post_send(3), ibv_create_qp_ex(3), ibv_wr_post(3).
 <h2>Author</h2>Guy Levi &lt;guyle [at] mellanox.com&gt;

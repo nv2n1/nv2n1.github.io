@@ -29,7 +29,7 @@ description: "ods-signerd – OpenDNSSEC Signer Engine daemon"
 <dt><code>-V</code></p>
 <dd>Show version and exit.</dl>
 <h2>Diagnostics</h2>
-<p>will log all the problems via standard <a href="/docs/linux/man/8-syslog/">syslog</a>(8).</p>
+<p>will log all the problems via standard syslog(8).</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ods-control/">ods-control</a>(8), <a href="/docs/linux/man/8-ods-enforcerd/">ods-enforcerd</a>(8), <a href="/docs/linux/man/1-ods-hsmspeed/">ods-hsmspeed</a>(1), <a href="/docs/linux/man/1-ods-hsmutil/">ods-hsmutil</a>(1), <a href="/docs/linux/man/1-ods-kaspcheck/">ods-kaspcheck</a>(1), <a href="/docs/linux/man/1-ods-ksmutil/">ods-ksmutil</a>(1), <a href="/docs/linux/man/8-ods-signer/">ods-signer</a>(8), <a href="/docs/linux/man/5-ods-timing/">ods-timing</a>(5), <a href="/docs/linux/man/7-opendnssec/">opendnssec</a>(7), <code><a rel="nofollow" href="http://www.opendnssec.org/">http://www.opendnssec.org/</a></code></p>
 <h2>Authors</h2>

@@ -22,5 +22,5 @@ description: "install_allegro – Initialise the Allegro library."
 <h2>RETURN VALUE</h2>
 <p> This function returns zero on success and non-zero on failure (e.g. no system driver could be used). Note: in previous versions of Allegro this function would abort on error. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-allegro_init/">allegro_init</a></code>(3), <code><a href="/docs/linux/man/3-allegro_exit/">allegro_exit</a></code>(3), <code><a href="/docs/linux/man/3-set_uformat/">set_uformat</a></code>(3), <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3) </p>
+<p> <code>allegro_init</code>(3), <code><a href="/docs/linux/man/3-allegro_exit/">allegro_exit</a></code>(3), <code><a href="/docs/linux/man/3-set_uformat/">set_uformat</a></code>(3), <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3) </p>
 <h2>Index</h2>

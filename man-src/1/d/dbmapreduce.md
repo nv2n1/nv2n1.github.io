@@ -36,7 +36,7 @@ dbmapreduce[-dMS][-k KeyField][-f CodeFile][-C Filtercode][--][ReduceCommand[Red
 <h3>Assumptions and requirements</h3>
 <p> By default, data can be provided in arbitrary order and the program consumes O(number of unique tags) memory, and O(size of data) disk space. </p>
 <p> With the <tt>&quot;-S&quot;</tt> option, data must arrive group by tags (not necessarily sorted), and the program consumes O(number of tags) memory and no disk space. The program will check and abort if this precondition is not met. </p>
-<p> With two <tt>&quot;-S&quot;</tt>&#8216;s, program consumes <a href="/docs/linux/man/1-o/">O</a>(1) memory, but doesn&#8217;t verify that the data-arrival precondition is met. </p>
+<p> With two <tt>&quot;-S&quot;</tt>&#8216;s, program consumes O(1) memory, but doesn&#8217;t verify that the data-arrival precondition is met. </p>
 <p> The field separators of the input and the output can now be different (early versions of this tool prohibited such variation.) With <tt>&quot;--copy-fs&quot;</tt> we copy the input field separator to the output, but only for non-multi-key-aware reducers. (this used to be done automatically).</p>
 <h3>Known bugs</h3>
 <p> As of 2013-09-21, we don&#8217;t verify key order with options <tt>&quot;-M -S&quot;</tt>.</p>

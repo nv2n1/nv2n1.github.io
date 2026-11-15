@@ -32,4 +32,4 @@ description: "confdb2ldif – Create an LDIF file from a cluster configuration"
 <h2>Bugs</h2>
 <p><code>confdb2ldif</code> parses the cluster configuration without checking it against the loaded schema. So if there are attributes in the config file that are not known to the schema, parts of the load will fail. It is important to check the results of feeding the output into ldapmodify. In particular aisexec logging operations will not convert into LDIF because they rely on duplicate keys. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-libconfdb/">libconfdb</a>(3), <a href="/docs/linux/man/8-openais/">openais</a>(8), <a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a>(5) </p>
+<p>libconfdb(3), openais(8), cluster.conf(5) </p>

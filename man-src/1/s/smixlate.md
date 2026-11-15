@@ -32,7 +32,7 @@ description: "smixlate – translate SMI/SPPI identifiers"
 <dt><code>-f, &#8211;format</code></p>
 <dd> Preserve the input format as much as possible by inserting/removing white space characters.</p>
 <dt><i>module(s)</i></p>
-<dd> These are the modules to be loaded for the subsequent translation. If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code><a href="/docs/linux/man/3-smi_config/">smi_config</a>(3)</code> for more details.</dl>
+<dd> These are the modules to be loaded for the subsequent translation. If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code>smi_config(3)</code> for more details.</dl>
 <h2>EXAMPLE</h2>
 <p> This example translates numeric OIDs in the input text into a more human readable format. </p>
 <pre>
@@ -42,7 +42,7 @@ description: "smixlate – translate SMI/SPPI identifiers"
   $
 </pre>
 <h2>SEE ALSO</h2>
-<p> The <code><a href="/docs/linux/man/3-libsmi/">libsmi</a></code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>.</p>
+<p> The <code>libsmi</code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>.</p>
 <h2>AUTHORS</h2>
 <p> (C) 2006-2006 J. Schoenwaelder, International University Bremen, Germany<br />
  and contributions by many other people. </p>

@@ -732,7 +732,7 @@ include(CMakeDetermineVSServicePack)<br />
 <pre>
   CPACK_DMG_FORMAT - The disk image format. Common values are UDRO
   (UDIF read-only), UDZO (UDIF zlib-compressed) or UDBZ (UDIF
-  bzip2-compressed). Refer to <a href="//www.systutorials.com/docs/linux/man/1-hdiutil/">hdiutil</a>(1) for more information on
+  bzip2-compressed). Refer to hdiutil(1) for more information on
   other available formats.
 </pre>
 <pre>
@@ -750,20 +750,20 @@ include(CMakeDetermineVSServicePack)<br />
   image is applied after applying the custom .DS_Store file.
 </pre>
 <pre>
-  CPACK_COMMAND_HDIUTIL - Path to the <a href="//www.systutorials.com/docs/linux/man/1-hdiutil/">hdiutil</a>(1) command used to
+  CPACK_COMMAND_HDIUTIL - Path to the hdiutil(1) command used to
   operate on disk image files on Mac OS X. This variable can be used
   to override the automatically detected command (or specify its
   location if the auto-detection fails to find it.)
 </pre>
 <pre>
-  CPACK_COMMAND_SETFILE - Path to the <a href="//www.systutorials.com/docs/linux/man/1-SetFile/">SetFile</a>(1) command used to set
+  CPACK_COMMAND_SETFILE - Path to the SetFile(1) command used to set
   extended attributes on files and directories on Mac OS X. This
   variable can be used to override the automatically detected
   command (or specify its location if the auto-detection fails to
   find it.)
 </pre>
 <pre>
-  CPACK_COMMAND_REZ - Path to the <a href="//www.systutorials.com/docs/linux/man/1-Rez/">Rez</a>(1) command used to compile
+  CPACK_COMMAND_REZ - Path to the Rez(1) command used to compile
   resources on Mac OS X. This variable can be used to override the
   automatically detected command (or specify its location if the
   auto-detection fails to find it.)

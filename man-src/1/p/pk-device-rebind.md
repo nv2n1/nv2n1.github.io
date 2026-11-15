@@ -47,7 +47,7 @@ description: "pk-device-rebind – Device software reloader"
 <dt>
 <dd> Failed to write to device.</dl>
 <h2>SEE ALSO</h2>
-<p> <code>packagekitd</code> (1). <code><a href="/docs/linux/man/1-udev/">udev</a></code>(1).</p>
+<p> <code>packagekitd</code> (1). <code>udev</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes richard [at] hughsie.com.</p>
 <h2>COPYRIGHT</h2>

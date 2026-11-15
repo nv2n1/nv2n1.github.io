@@ -325,7 +325,7 @@ description: "capiplugin – Plugin for pppd (Point-to-Point Protocol daemon)"
 <h2>Diagnostics</h2>
 <p>Messages are sent to the syslog daemon just as in normal pppd operation; see the pppd manual page.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-pppd/">pppd</a>(8), <a href="/docs/linux/man/8-capiinfo/">capiinfo</a>(8), <a href="/docs/linux/man/8-capiinit/">capiinit</a>(8), <a href="/docs/linux/man/8-capictrl/">capictrl</a>(8) </p>
+<p><a href="/docs/linux/man/8-pppd/">pppd</a>(8), <a href="/docs/linux/man/8-capiinfo/">capiinfo</a>(8), <a href="/docs/linux/man/8-capiinit/">capiinit</a>(8), capictrl(8) </p>
 <h2>Authors</h2>
 <p>Carsten Paeth (calle [at] calle.in-berlin.de)<br />
  AVM GmbH Berlin (info [at] avm.de)</p>

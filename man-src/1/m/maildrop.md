@@ -119,7 +119,7 @@ description: "maildrop – mail delivery filter/agent"
 <p> /etc/maildroprc is read only in delivery mode. </p>
 </dl>
 <h2>VIRTUAL ACCOUNTS</h2>
-<p> The <code>-d</code> option can also specify a name of a virtual account or mailbox. See the <code><a href="/docs/linux/man/1-makeuserdb/">makeuserdb</a></code>(1) manual page in the Courier Authentication library&#8217;s documentation for more information.</p>
+<p> The <code>-d</code> option can also specify a name of a virtual account or mailbox. See the <code>makeuserdb</code>(1) manual page in the Courier Authentication library&#8217;s documentation for more information.</p>
 <h2>EMBEDDED MODE</h2>
 <p> The embedded mode is used when <code>maildrop</code>&#8216;s filtering abilities are desired, but no actual mail delivery is needed. In embedded mode <code>maildrop</code> is executed by another application, and m[blue]<code>is passed the -m or the -M option.</code>m[]<font SIZE="-2">[5]</font><code>maildrop</code> reads the message, then runs the filtering rules specified in filename. </p>
 <p> filename may contain any filtering instructions EXCEPT the following: </p>
@@ -194,7 +194,7 @@ description: "maildrop – mail delivery filter/agent"
 <dt>
 <dd> Directory containing files used in special embedded mode.</dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-lockmail/">lockmail</a></code>(1)m[]<font SIZE="-2">[15]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[]<font SIZE="-2">[16]</font>, m[blue]<code><a href="/docs/linux/man/1-makedat/">makedat</a></code>(1)m[]<font SIZE="-2">[17]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropgdbm/">maildropgdbm</a></code>(7)m[]<font SIZE="-2">[9]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropex/">maildropex</a></code>(7)m[]<font SIZE="-2">[18]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[19]</font>, m[blue]<code><a href="/docs/linux/man/1-makemime/">makemime</a></code>(1)m[]<font SIZE="-2">[20]</font>, m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[]<font SIZE="-2">[21]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), , m[blue]<code><a href="/docs/linux/man/8-courier/">courier</a></code>(8)m[]<font SIZE="-2">[22]</font>, <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), m[blue]<code><a rel="nofollow" href="http://www.qmail.org">http://www.qmail.org</a></code>m[].</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-lockmail/">lockmail</a></code>(1)m[]<font SIZE="-2">[15]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[]<font SIZE="-2">[16]</font>, m[blue]<code><a href="/docs/linux/man/1-makedat/">makedat</a></code>(1)m[]<font SIZE="-2">[17]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropgdbm/">maildropgdbm</a></code>(7)m[]<font SIZE="-2">[9]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropex/">maildropex</a></code>(7)m[]<font SIZE="-2">[18]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[19]</font>, m[blue]<code><a href="/docs/linux/man/1-makemime/">makemime</a></code>(1)m[]<font SIZE="-2">[20]</font>, m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[]<font SIZE="-2">[21]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), , m[blue]<code>courier</code>(8)m[]<font SIZE="-2">[22]</font>, <code>sendmail</code>(8), m[blue]<code><a rel="nofollow" href="http://www.qmail.org">http://www.qmail.org</a></code>m[].</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
@@ -308,7 +308,7 @@ description: "maildrop – mail delivery filter/agent"
 <dt>
 <dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/reformime.html">http://www.courier-mta.org/maildrop/reformime.html</a></dl>
 <dt>22.</p>
-<dd> <code><a href="/docs/linux/man/8-courier/">courier</a></code>(8)</p>
+<dd> <code>courier</code>(8)</p>
 <dl>
 <dt>
 <dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/courier.html">http://www.courier-mta.org/maildrop/courier.html</a></dl>

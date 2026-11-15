@@ -18,5 +18,5 @@ description: "create_sub_zbuffer – Creates a sub-z-buffer. Allegro game progra
 <h2>RETURN VALUE</h2>
 <p> Returns the pointer to the sub ZBUFFER or NULL if there was an error. Remember to destroy the ZBUFFER once you are done with it, to avoid having memory leaks. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-create_zbuffer/">create_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-create_sub_bitmap/">create_sub_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-destroy_zbuffer/">destroy_zbuffer</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-create_zbuffer/">create_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-create_sub_bitmap/">create_sub_bitmap</a></code>(3), <code>destroy_zbuffer</code>(3) </p>
 <h2>Index</h2>

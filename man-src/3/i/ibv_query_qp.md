@@ -55,7 +55,7 @@ struct ibv_qp_attr {
 <p> Attribute values are valid if they have been set using <code>ibv_modify_qp()</code>. The exact list of valid attributes depends on the QP state. </p>
 <p> Multiple calls to <code>ibv_query_qp()</code> may yield some differences in the values returned for the following attributes: qp_state, path_mig_state, sq_draining, ah_attr (if APM is enabled).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_qp/">ibv_destroy_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_modify_qp/">ibv_modify_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah/">ibv_create_ah</a></code>(3)</p>
+<p> <code>ibv_create_qp</code>(3), <code>ibv_destroy_qp</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_create_ah</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

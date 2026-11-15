@@ -322,6 +322,6 @@ description: "multipath.conf – multipath daemon configuration file"
 <p>The usage of <code>queue_if_no_path</code> option can lead to <code>D state</code> processes being hung and not killable in situations where all the paths to the LUN go offline. It is advisable to use the <code>no_path_retry</code> option instead. </p>
 <p> The use of <code>queue_if_no_path</code> or <code>no_path_retry</code> might lead to a deadlock if the <code>dev_loss_tmo</code> setting results in a device being removed while I/O is still queued. The multipath daemon will update the <code>dev_loss_tmo</code> setting accordingly to avoid this deadlock. Hence if both values are specified the order of precedence is <i>no_path_retry, queue_if_no_path, dev_loss_tmo</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-udev/">udev</a></code>(8), <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) <code><a href="/docs/linux/man/8-multipath/">multipath</a></code>(8) <code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8)</p>
+<p><code>udev</code>(8), <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) <code><a href="/docs/linux/man/8-multipath/">multipath</a></code>(8) <code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8)</p>
 <h2>Authors</h2>
 <p><code>multipath</code> was developed by Christophe Varoqui, &lt;christophe.varoqui [at] opensvc.com&gt; and others.</p>

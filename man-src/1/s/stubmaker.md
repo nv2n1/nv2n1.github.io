@@ -29,7 +29,7 @@ url: "/docs/linux/man/1-stubmaker/"
 
  The ``class'' or ``package'' created by stubmaker.pl is actually a sub-class of the core SOAP::Lite object. As a result, all methods one can call upon SOAP::Lite one can also call upon generated stubs. 
 
- For example, suppose you wanted to obtain readable output from the generated stub, then simply call <tt><a HREF="/docs/linux/man/1-readable/">readable</a>(1)</tt> on the stub's instance. See the example below. 
+ For example, suppose you wanted to obtain readable output from the generated stub, then simply call <tt>readable(1)</tt> on the stub's instance. See the example below. 
 
  The following subroutines are unique to generated stub classes, and help the user control and configure the stub class.
 <dl>
@@ -46,7 +46,7 @@ url: "/docs/linux/man/1-stubmaker/"
 
  Command line: &gt; perl stubmaker.pl <a rel="nofollow" HREF="http://ws1.api.re2.yahoo.com/ws/soap-demo/full.wsdl">http://ws1.api.re2.yahoo.com/ws/soap-demo/full.wsdl</a> 
 
- File: echo.pl &gt; use full; &gt; use SOAP::Lite +trace =&gt; qw( debug ); &gt; my <tt>$f</tt> = new full; &gt; <tt>$f</tt>-&gt;<i>use_prefix</i>(0); &gt; <tt>$f</tt>-&gt;<i><a HREF="/docs/linux/man/1-readable/">readable</a></i>(1); &gt; <tt>$f</tt>-&gt;<i><a HREF="/docs/linux/man/1-want_som/">want_som</a></i>(1); &gt; <tt>$som</tt> = <tt>$f</tt>-&gt;echoViaBase64(``foo'');
+ File: echo.pl &gt; use full; &gt; use SOAP::Lite +trace =&gt; qw( debug ); &gt; my <tt>$f</tt> = new full; &gt; <tt>$f</tt>-&gt;<i>use_prefix</i>(0); &gt; <tt>$f</tt>-&gt;<i>readable</i>(1); &gt; <tt>$f</tt>-&gt;<i>want_som</i>(1); &gt; <tt>$som</tt> = <tt>$f</tt>-&gt;echoViaBase64(``foo'');
 
 <h2>COPYRIGHT</h2>
 

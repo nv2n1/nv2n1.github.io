@@ -265,7 +265,7 @@ description: "blender – a 3D modelling and rendering package"
 &nbsp;<wbr>&nbsp;<wbr><i>TMP</i>&nbsp;<wbr>or&nbsp;<wbr><i>TMPDIR</i>&nbsp;<wbr>Store temporary files here.<br />
 &nbsp;<wbr>&nbsp;<wbr><i>PYTHONHOME</i>&nbsp;<wbr>Path to the python directory, eg.&nbsp;<wbr>/usr/lib/python. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-yafaray/">yafaray</a>(1)</code> </p>
+<p> <code>yafaray(1)</code> </p>
 <h2>AUTHORS</h2>
 <p> This manpage was written for a Debian GNU/Linux system by Daniel Mester &lt;mester [at] uni-bremen.de&gt; and updated by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and Dan Eicher &lt;dan [at] trollwerks.org&gt;. </p>
 <h2>Index</h2>

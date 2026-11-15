@@ -32,4 +32,4 @@ description: "dump.f2fs – retrieve directory and file entries from an F2FS-for
 <h2>Availability</h2>
 <p><code>dump.f2fs</code> is available from <a href="git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.">git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.</a></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-mkfs-f2fs/">mkfs.f2fs</a>(8),</code> <code><a href="/docs/linux/man/8-fsck-f2fs/">fsck.f2fs</a>(8),</code> <code><a href="/docs/linux/man/8-defrag-f2fs/">defrag.f2fs</a>(8),</code> <code><a href="/docs/linux/man/8-resize-f2fs/">resize.f2fs</a>(8),</code> <code><a href="/docs/linux/man/8-sload-f2fs/">sload.f2fs</a>(8).</code> </p>
+<p><code>mkfs.f2fs(8),</code> <code><a href="/docs/linux/man/8-fsck-f2fs/">fsck.f2fs</a>(8),</code> <code><a href="/docs/linux/man/8-defrag-f2fs/">defrag.f2fs</a>(8),</code> <code>resize.f2fs(8),</code> <code>sload.f2fs(8).</code> </p>

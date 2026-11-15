@@ -27,5 +27,5 @@ description: "tracker-reset – Reset the index and configuration"
 <dd> Resets all indexed information about <i>FILE</i>, works recursively for directories. Nothing will be done if <i>FILE</i> is not currently indexed. After deletion, a request to reindex this data will be immediately issued. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tracker-daemon/">tracker-daemon</a></code>(1). <code><a href="/docs/linux/man/1-tracker/">tracker</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-tracker-daemon/">tracker-daemon</a></code>(1). <code>tracker</code>(1). </p>
 <h2>Index</h2>

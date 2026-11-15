@@ -91,7 +91,7 @@ description: "Galeon – gecko-based GNOME web browser"
 <dt><code>-t, &#8211;add-bookmark=URL</code></p>
 <dd> Add a temp bookmark (don&#8217;t open any window)</p>
 <dt><code>-g, &#8211;geometry=GEOMETRY</code></p>
-<dd> Create the initial window with the given geometry. See <code><a href="/docs/linux/man/1-x/">X</a>(1)</code> for the GEOMETRY format</p>
+<dd> Create the initial window with the given geometry. See <code>X(1)</code> for the GEOMETRY format</p>
 <dt><code>-c, &#8211;close</code></p>
 <dd> Close all Galeon windows</p>
 <dt><code>-q, &#8211;quit</code></p>
@@ -106,5 +106,5 @@ description: "Galeon – gecko-based GNOME web browser"
 <h2>OTHER INFO</h2>
 <p> The webpage for Galeon is at <a rel="nofollow" href="http://galeon.sourceforge.net.">http://galeon.sourceforge.net.</a> Here you can find info about Galeon and download the latest version.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gtm/">gtm</a></code>(1) </p>
+<p> <code>gtm</code>(1) </p>
 <h2>Index</h2>

@@ -139,7 +139,7 @@ description: "voms – VOMS server"
 <h2>Bugs</h2>
 <p>m[blue]<code>EGEE Bug Tracking Tool</code>m[]<font SIZE="-2">[1]</font></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-voms-proxy-init/">voms-proxy-init</a>(1), <a href="/docs/linux/man/1-voms-proxy-info/">voms-proxy-info</a>(1), <a href="/docs/linux/man/1-voms-proxy-destroy/">voms-proxy-destroy</a>(1) </p>
+<p>voms-proxy-init(1), voms-proxy-info(1), voms-proxy-destroy(1) </p>
 <p> m[blue]<code>EDT Auth Home page</code>m[]<font SIZE="-2">[2]</font> </p>
 <p> m[blue]<code>CVSweb</code>m[]<font SIZE="-2">[3]</font> </p>
 <p> m[blue]<code>RPM repository</code>m[]<font SIZE="-2">[4]</font></p>

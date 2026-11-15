@@ -12,7 +12,7 @@ description: "tripplite_usb – Driver for older Tripp Lite USB UPSes (not PDC H
 <p><code>tripplite_usb</code> -h </p>
 <p> <code>tripplite_usb</code> -a <i>UPS_NAME</i> [<i>OPTIONS</i>]</p>
 <h2>Supported Hardware</h2>
-<p>This driver should work with older Tripp Lite UPSes which are detected as USB HID-class devices, but are not true HID Power-Device Class devices. So far, the devices supported by tripplite_usb have product ID 0001, and the newer units (such as those with &quot;LCD&quot; in the model name) with product ID 2001 require the <code><a href="/docs/linux/man/8-usbhid-ups/">usbhid-ups</a></code>(8) driver instead. Please report success or failure to the nut-upsuser mailing list. A key piece of information is the protocol number, returned in ups.debug.0. Also, be sure to turn on debugging (<i>-DDD</i>) for more informative log messages. If your Tripp Lite UPS uses a serial port, you may wish to investigate the <code><a href="/docs/linux/man/8-tripplite/">tripplite</a></code>(8) or <code><a href="/docs/linux/man/8-tripplite_su/">tripplite_su</a></code>(8) driver. </p>
+<p>This driver should work with older Tripp Lite UPSes which are detected as USB HID-class devices, but are not true HID Power-Device Class devices. So far, the devices supported by tripplite_usb have product ID 0001, and the newer units (such as those with &quot;LCD&quot; in the model name) with product ID 2001 require the <code><a href="/docs/linux/man/8-usbhid-ups/">usbhid-ups</a></code>(8) driver instead. Please report success or failure to the nut-upsuser mailing list. A key piece of information is the protocol number, returned in ups.debug.0. Also, be sure to turn on debugging (<i>-DDD</i>) for more informative log messages. If your Tripp Lite UPS uses a serial port, you may wish to investigate the <code><a href="/docs/linux/man/8-tripplite/">tripplite</a></code>(8) or <code>tripplite_su</code>(8) driver. </p>
 <p> This driver has been tested with the following models: </p>
 <dl>
 <dd>&bull; INTERNETOFFICE700</dl>
@@ -51,7 +51,7 @@ description: "tripplite_usb – Driver for older Tripp Lite USB UPSes (not PDC H
 <dd>A regular expression to match the product string for the UPS. This would be useful if you have two different Tripp Lite UPS models connected to the system, and you want to be sure that you shut them down in the correct order.</dl>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font> </p>
-<p> This regex is matched against the full USB product string as seen in <a href="/docs/linux/man/8-lsusb/">lsusb</a>(8). The ups.model in the <code><a href="/docs/linux/man/1-upsc/">upsc</a></code>(1) output only lists the name after TRIPP LITE, so to match a SMART2200RMXL2U, you could use the regex .*SMART2200.*. </p>
+<p> This regex is matched against the full USB product string as seen in <a href="/docs/linux/man/8-lsusb/">lsusb</a>(8). The ups.model in the <code>upsc</code>(1) output only lists the name after TRIPP LITE, so to match a SMART2200RMXL2U, you could use the regex .*SMART2200.*. </p>
 </dl>
 <p> <code>productid</code></p>
 <dl>

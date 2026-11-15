@@ -274,7 +274,7 @@ ret = ibv_wr_complete(qpx);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_post_send/">ibv_post_send</a>(3), <a HREF="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a>(3).
+ ibv_post_send(3), ibv_create_qp_ex(3).
 
 <h2>AUTHOR</h2>
 

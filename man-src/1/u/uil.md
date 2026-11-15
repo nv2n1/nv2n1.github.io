@@ -41,5 +41,5 @@ description: "uil — The user interface language compiler"
 </dl>
 </dl>
 <h2>RELATED INFORMATION</h2>
-<p> <code><a href="/docs/linux/man/1-x/">X</a></code>(1) and <code><a href="/docs/linux/man/3-uil/">Uil</a></code>(3). </p>
+<p> <code>X</code>(1) and <code><a href="/docs/linux/man/3-uil/">Uil</a></code>(3). </p>
 <h2>Index</h2>

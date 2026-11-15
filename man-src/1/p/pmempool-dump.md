@@ -28,7 +28,7 @@ description: "pmempool-dump – Dump user data from specified pool"
 <p> <code>-c, &#8211;chunk</code> &lt;size&gt;</p>
 <dl>
 <dt>
-<dd> Size of chunk for <code>log</code> pool type. See <code>pmemlog_walk</code>() in <code><a href="/docs/linux/man/3-libpmemlog/">libpmemlog</a>(3)</code> for details.</dl>
+<dd> Size of chunk for <code>log</code> pool type. See <code>pmemlog_walk</code>() in <code>libpmemlog(3)</code> for details.</dl>
 <p> <code>-o, &#8211;output</code> &lt;file&gt;</p>
 <dl>
 <dt>
@@ -65,7 +65,7 @@ description: "pmempool-dump – Dump user data from specified pool"
 <dt>pmempool dump -r 1K-2K pool.bin</p>
 <dd> # Dump data form 1K to 2K from pool.bin file.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-libpmemblk/">libpmemblk</a>(3) <a href="/docs/linux/man/3-libpmemlog/">libpmemlog</a>(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
+<p> <code>libpmemblk(3) libpmemlog(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
 <h2>PMEMPOOL</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code> suite. </p>
 <h2>Index</h2>

@@ -41,7 +41,7 @@ description: "ocf_heartbeat_WAS6 – Manages a WebSphere Application Server 6 in
 <dl>
 <dd>Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a WAS6 resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a WAS6 resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_WAS6 ocf:heartbeat:WAS6 \
 
 op monitor depth=&quot;0&quot; timeout=&quot;30&quot; interval=&quot;10&quot;</code></pre>

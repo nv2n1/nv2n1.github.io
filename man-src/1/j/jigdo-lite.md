@@ -26,7 +26,7 @@ description: "jigdo-lite – Download jigdo files using wget"
 <dt><code>&#8211;noask</code></p>
 <dd> Do not ask any questions, instead behave as if the user had pressed Return at all prompts. This can be useful when running <code>jigdo-lite</code> from cron jobs or in other non-interactive environments.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-jigdo-file/">jigdo-file</a></code>(1), <code><a href="/docs/linux/man/1-jigdo-mirror/">jigdo-mirror</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) (or `<code>info wget</code>&#8216;) </p>
+<p> <code><a href="/docs/linux/man/1-jigdo-file/">jigdo-file</a></code>(1), <code>jigdo-mirror</code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) (or `<code>info wget</code>&#8216;) </p>
 <p> CD images for Debian Linux can be downloaded with jigdo &lt;URL:<a rel="nofollow" href="http://www.debian.org/CD/jigdo-cd/">http://www.debian.org/CD/jigdo-cd/</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Jigsaw Download &lt;URL:<a rel="nofollow" href="http://atterer.net/jigdo/">http://atterer.net/jigdo/</a>&gt; was written by Richard Atterer &lt;jigdo atterer.net&gt;, to make downloading of CD ROM images for the Debian Linux distribution more convenient. </p>

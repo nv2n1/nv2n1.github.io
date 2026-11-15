@@ -219,7 +219,7 @@ nmap $1.$2.$3[$1, $2].[$2, file]
 <dt><code>SHELL</code></p>
 <dd> For default shell.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-ftpd/">ftpd</a>(8), <a href="/docs/linux/man/5-netrc/">netrc</a>(5), RFC 959</p>
+<p> ftpd(8), <a href="/docs/linux/man/5-netrc/">netrc</a>(5), RFC 959</p>
 <h2>HISTORY</h2>
 <p> The <code>ftp</code> command appeared in BSD 4.2</p>
 <h2>BUGS</h2>

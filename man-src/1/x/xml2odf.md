@@ -27,7 +27,7 @@ xml2odf -o testdocument -s xml-file
 <p> <font SIZE="+1"></dl>
 <p> </font></p>
 <h2>See Also</h2>
-<p> <code><a href="/docs/linux/man/1-odftools/">odftools</a></code>(1), <code><a href="/docs/linux/man/1-odf2xml/">odf2xml</a></code>(1)</p>
+<p> <code>odftools</code>(1), <code><a href="/docs/linux/man/1-odf2xml/">odf2xml</a></code>(1)</p>
 <h2>Bugs</h2>
 <p> Doesn&#8217;t handle external data &#8212; images and such. </p>
 <p> The library used for the parsing of XML expands empty elements from &lt;element/&gt; to &lt;element&gt;&lt;/element&gt;. It should not have an effect on the document parsing.</p>

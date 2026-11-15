@@ -8,7 +8,7 @@ description: "tuxpaint-import — Import image files into Tux Paint(1)"
 ---
 
 <h2>NAME</h2>
-<p> tuxpaint-import &#8212; Import image files into Tux <a href="/docs/linux/man/1-paint/">Paint</a>(1) </p>
+<p> tuxpaint-import &#8212; Import image files into Tux Paint(1) </p>
 <h2>SYNOPSYS</h2>
 <dl>
 <dt><code>tuxpaint-import [&#8211;help]</code></p>

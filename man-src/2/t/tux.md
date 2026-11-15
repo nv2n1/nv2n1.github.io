@@ -179,7 +179,7 @@ typedef struct user_req_s {<br />
 <dt>object_addr</p>
 <dd> Set to an address for a buffer of at least <i>req-&gt;objectlen</i> size into which to read an object from the URL cache with the TUX_ACTION_READ_OBJECT <i>action</i>. TUX_ACTION_READ_OBJECT must not be called unless <i>req-&gt;objectlen</i> &gt;= 0, and TUX implicitly relies on <i>req-&gt;object_addr</i> being at least <i>req-&gt;objectlen</i> in size.</p>
 <dt>module_index</p>
-<dd> Used by the <a href="/docs/linux/man/8-tux/">tux</a>(8) daemon to determine which loadable module to associate with a <i>req</i>.</p>
+<dd> Used by the tux(8) daemon to determine which loadable module to associate with a <i>req</i>.</p>
 <dt>modulename</p>
 <dd> The name of the module as set by TUX_ACTION_REGISTER_MODULE; private data to the tux daemon.</p>
 <dt>client_host</p>

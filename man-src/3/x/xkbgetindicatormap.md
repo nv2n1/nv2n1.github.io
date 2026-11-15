@@ -34,4 +34,4 @@ description: "XkbGetIndicatorMap – Gets the map for one or more indicators, us
 <dt><code>BadImplementation</code></p>
 <dd>Invalid reply from server</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbfreeindicatormaps/">XkbFreeIndicatorMaps</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetnamedindicators/">XkbGetNamedIndicators</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-xkbfreeindicatormaps/">XkbFreeIndicatorMaps</a></code>(3), <code>XkbGetNamedIndicators</code>(3)</p>

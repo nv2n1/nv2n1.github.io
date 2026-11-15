@@ -14,7 +14,7 @@ description: "DMXGetInputAttributes – determine input device attributes"
 <code> int </code><i>id</i><code>,</code>
 <code> DMXInputAttributes </code><i>*attr</i><code>);</code></pre>
 <h2>Description</h2>
-<p><code>DMXGetInputAttributes()</code> returns information about the input device specified with <i>id</i>. This information cannot be obtained from the <code><a href="/docs/linux/man/3-xlistinputdeivices/">XListInputDeivices</a></code>(3) call. <i>id</i> is the same as that used by the <code><a href="/docs/linux/man/3-xlistinputdevices/">XListInputDevices</a></code>(3) call, and must be in the range 0 to one less than the value returned by <code><a href="/docs/linux/man/3-dmxgetinputcount/">DMXGetInputCount</a>(3)</code>, inclusive. </p>
+<p><code>DMXGetInputAttributes()</code> returns information about the input device specified with <i>id</i>. This information cannot be obtained from the <code>XListInputDeivices</code>(3) call. <i>id</i> is the same as that used by the <code><a href="/docs/linux/man/3-xlistinputdevices/">XListInputDevices</a></code>(3) call, and must be in the range 0 to one less than the value returned by <code><a href="/docs/linux/man/3-dmxgetinputcount/">DMXGetInputCount</a>(3)</code>, inclusive. </p>
 <p> The <code>DMXInputAttributes</code> structure is: </p>
 <pre>typedef struct {
  DMXInputEnum inputType;

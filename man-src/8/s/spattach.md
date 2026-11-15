@@ -32,7 +32,7 @@ description: "kissattach, spattach – Attach a KISS or 6PACK interface"
 <dt><code>-v</code></p>
 <dd>Display the version.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/4-axparms/">axparms</a></code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8).</p>
+<p><code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code>axparms</code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8).</p>
 <h2>Author</h2>
 <pre>Alan Cox GW4PTS &lt;alan [at] cymru.net&gt;
 <br>

@@ -51,7 +51,7 @@ description: "tmpwatch – removes files which haven’t been accessed for a per
 <dd>Skip paths matching <i>pattern</i>; if a directory matches <i>pattern</i>, all files contained in it are skipped too. <i>pattern</i> must match an absolute path that contains no symbolic links. </p>
 </dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-cron/">cron</a></i>(1), <i><a href="/docs/linux/man/1-ls/">ls</a></i>(1), <i><a href="/docs/linux/man/1-rm/">rm</a></i>(1), <i><a href="/docs/linux/man/1-fuser/">fuser</a></i>(1) </p>
+<p><i>cron</i>(1), <i><a href="/docs/linux/man/1-ls/">ls</a></i>(1), <i><a href="/docs/linux/man/1-rm/">rm</a></i>(1), <i><a href="/docs/linux/man/1-fuser/">fuser</a></i>(1) </p>
 <h2>Authors</h2>
 <pre>Erik Troan &lt;ewt [at] redhat.com&gt;
 Preston Brown &lt;pbrown [at] redhat.com&gt;

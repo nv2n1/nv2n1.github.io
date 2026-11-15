@@ -24,7 +24,7 @@ description: "saned – SANE network daemon"
 <dt><code>-p</code><i> port</i>, <code>&#8211;port=</code><i>port</i></p>
 <dd>tells <code>saned</code> to listen on the <i>port</i> given. A value of 0 tells <code>saned</code> to pick an unused port. The default is the <code>sane-port (6566).</code> </p>
 <dt><code>-l</code>, <code>&#8211;listen</code></p>
-<dd>requests that <code>saned</code> run in standalone daemon mode. In this mode, <code>saned</code> will listen for incoming client connections; <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) is not required for <code>saned</code> operations in this mode. </p>
+<dd>requests that <code>saned</code> run in standalone daemon mode. In this mode, <code>saned</code> will listen for incoming client connections; <code>inetd</code>(8) is not required for <code>saned</code> operations in this mode. </p>
 <dt><code>-D</code>, <code>&#8211;daemonize</code></p>
 <dd>will request <code>saned</code> to detach from the console and run in the background. </p>
 <dt><code>-o</code>, <code>&#8211;once</code></p>
@@ -35,7 +35,7 @@ description: "saned – SANE network daemon"
 <dd>will divert <code>saned</code> debug output to stderr instead of the syslog default. </p>
 <dt><code>-h</code>, <code>&#8211;help</code></p>
 <dd>displays a short help message.</dl>
-<p> If <code>saned</code> is run from other programs such as <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) and <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), check that program&#8217;s documentation on how to pass command-line options.</p>
+<p> If <code>saned</code> is run from other programs such as <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) and <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), check that program&#8217;s documentation on how to pass command-line options.</p>
 <h2>Configuration</h2>
 <p>First and foremost: <code>saned</code> is not intended to be exposed to the internet or other non-trusted networks. Make sure that access is limited by tcpwrappers and/or a firewall setup. Don&#8217;t depend only on <code>saned</code>&#8216;s own authentication. Don&#8217;t run <code>saned</code> as root if it&#8217;s not necessary. And do <code>not</code> install <code>saned</code> as setuid root. </p>
 <p> The <i>saned.conf</i> configuration file contains both options for the daemon and the access list.</p>
@@ -58,14 +58,14 @@ description: "saned – SANE network daemon"
  [2001:db8:185e::42:12]/64</dl>
 <p> The case of the host names does not matter, so AHost.COM is considered identical to ahost.com.</p>
 <h2>Server Daemon Configuration</h2>
-<p>For <code>saned</code> to work properly in its default mode of operation, it is also necessary to add the appropriate configuration for <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) or <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) (see below). Note that your <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) must support IPv6 if you want to connect to <code>saned</code> over IPv6; <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code><a href="/docs/linux/man/8-openbsd-inetd/">openbsd-inetd</a></code>(8) and <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) are known to support IPv6, check the documentation for your <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) daemon. </p>
-<p> In the sections below the configuration for <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) and <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) are described in more detail. </p>
+<p>For <code>saned</code> to work properly in its default mode of operation, it is also necessary to add the appropriate configuration for <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code>inetd</code>(8) or <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) (see below). Note that your <code>inetd</code>(8) must support IPv6 if you want to connect to <code>saned</code> over IPv6; <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code>openbsd-inetd</code>(8) and <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) are known to support IPv6, check the documentation for your <code>inetd</code>(8) daemon. </p>
+<p> In the sections below the configuration for <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) and <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) are described in more detail. </p>
 <p> For the configurations below it is necessary to add a line of the following form to <i>/etc/services</i>: </p>
 <dl>
 <dd>sane-port 6566/tcp # SANE network scanner daemon</dl>
 <p> The official IANA short name for port 6566 is &quot;sane-port&quot;. The older name &quot;sane&quot; is now deprecated.</p>
 <h2>Inetd Configuration</h2>
-<p>It is required to add a single line to the <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) configuration file <i>(/etc/inetd.conf)</i> </p>
+<p>It is required to add a single line to the <code>inetd</code>(8) configuration file <i>(/etc/inetd.conf)</i> </p>
 <p> The configuration line normally looks like this: </p>
 <dl>
 <dd>sane-port stream tcp nowait saned.saned /usr/sbin/saned saned</dl>
@@ -74,7 +74,7 @@ description: "saned – SANE network daemon"
 <dd>sane-port stream tcp nowait saned.saned /usr/sbin/tcpd /usr/sbin/saned</dl>
 <p> Note that both examples assume that there is a <code>saned</code> group and a <code>saned</code> user. If you follow this example, please make sure that the access permissions on the special device are set such that <code>saned</code> can access the scanner (the program generally needs read and write access to scanner devices).</p>
 <h2>Xinetd Configuration</h2>
-<p>If <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) is installed on your system instead of <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) the following example for <i>/etc/xinetd.conf</i> may be helpful: </p>
+<p>If <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) is installed on your system instead of <code>inetd</code>(8) the following example for <i>/etc/xinetd.conf</i> may be helpful: </p>
 <dl>
 <dd>
 <pre># default: off
@@ -130,7 +130,7 @@ Environment=SANE_CONFIG_DIR=/etc/sane.d
 Also=saned.socket</pre>
 </dl>
 <p> You need to set an environment variable for <code>SANE_CONFIG_DIR</code> pointing to the directory where <code>saned</code> can find its configuration files. You will have to remove the # on the last line and set the variables for the desired debugging information if required. Multiple variables can be set by separating the assignments by spaces as shown in the example above. </p>
-<p> Unlike <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) and <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) allows debugging output from backends set using <code>SANE_DEBUG_XXX</code> to be captured. See the man-page for your backend to see what options are supported. With the service unit as described above, the debugging output is forwarded to the system log.</p>
+<p> Unlike <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) and <code>inetd</code>(8), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) allows debugging output from backends set using <code>SANE_DEBUG_XXX</code> to be captured. See the man-page for your backend to see what options are supported. With the service unit as described above, the debugging output is forwarded to the system log.</p>
 <h2>Systemd configuration when saned is compiled without systemd support</h2>
 <p>This configuration will also work when <code>saned</code> is compiled WITH <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) integration support, but it does not allow debugging information to be logged. </p>
 <p> For <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) configuration for <code>saned</code>, we need to add 2 configuration files in <i>/etc/systemd/system</i>. </p>
@@ -177,7 +177,7 @@ Also=saned.socket</pre>
 <dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order). </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5), <code><a href="/docs/linux/man/5-sane-net/">sane-net</a></code>(5), <code><a href="/docs/linux/man/5-sane-backendname/">sane-backendname</a></code>(5), <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5), <code><a href="/docs/linux/man/5-sane-net/">sane-net</a></code>(5), <code>sane-backendname</code>(5), <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)<br />
  <i><a rel="nofollow" href="http://www.penguin-breeder.org/?page=sane-net">http://www.penguin-breeder.org/?page=sane-net</a></i></p>
 <h2>Author</h2>
 <p>David Mosberger</p>

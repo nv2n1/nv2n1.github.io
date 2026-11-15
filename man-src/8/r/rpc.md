@@ -39,4 +39,4 @@ description: "rpc.rquotad – remote quota server"
 <dt><code>/etc/mtab</code></p>
 <dd>default filesystems</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-quota/">quota</a></code>(1), <code><a href="/docs/linux/man/3-rpc/">rpc</a></code>(3), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-services/">services</a></code>(5), <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/1-quota/">quota</a></code>(1), <code><a href="/docs/linux/man/3-rpc/">rpc</a></code>(3), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-services/">services</a></code>(5), <code>inetd</code>(8) </p>

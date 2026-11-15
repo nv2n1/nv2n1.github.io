@@ -81,7 +81,8 @@ description: "dot – filter for drawing directed graphs neato – filter for dr
 <p> </i><code>fontsize=</code><i>n</i> sets the label type size to <i>n</i> points. </p>
 <p> <code>fontname=</code><i>name</i> sets the label font family name. </p>
 <p> <code>label=</code><i>text</i> where <i>text</i> may include escaped newlines 
-, \l, or  for center, left, and right justified lines. The string &#8216;\G&#8217; value will be replaced by the graph name. For node labels, the string &#8216;\N&#8217; value will be replaced by the node name. For edges, if the substring &#8216;\T&#8217; is found in a label, it will be replaced by the name of the tail node; if the substring &#8216;\H&#8217; is found in a label, it will be replaced by the name of the head node; if the substring &#8216;\E&#8217; value is found in a label it will be replaced by: <i>tail_node_name</i>-&gt;<i>head_node_name</i> or by: <i>tail_node_name</i>&#8212;<i>head_node_name</i> for undirected graphs. </p>
+, \l, or 
+ for center, left, and right justified lines. The string &#8216;\G&#8217; value will be replaced by the graph name. For node labels, the string &#8216;\N&#8217; value will be replaced by the node name. For edges, if the substring &#8216;\T&#8217; is found in a label, it will be replaced by the name of the tail node; if the substring &#8216;\H&#8217; is found in a label, it will be replaced by the name of the head node; if the substring &#8216;\E&#8217; value is found in a label it will be replaced by: <i>tail_node_name</i>-&gt;<i>head_node_name</i> or by: <i>tail_node_name</i>&#8212;<i>head_node_name</i> for undirected graphs. </p>
 <p> Graphviz also supports special HTML-like labels for constructing complex node content. A full-description of these is given at <a rel="nofollow" href="http://www.graphviz.org/content/node-shapes#html.">http://www.graphviz.org/content/node-shapes#html.</a> </p>
 <p> If a node has <code>shape=record</code>, the label may contain recursive box lists delimited by { | }. Port identifiers in labels are set off by angle brackets &lt; &gt;. </p>
 <h2> Graph Attributes</h2>
@@ -238,11 +239,11 @@ graph test123
 <p> The Truetype font renderer is from the Freetype Project (David Turner, Robert Wilhelm, and Werner Lemberg) (who can be contacted at freetype-devel [at] lists.lrz-muenchen.de).</p>
 <h2>SEE ALSO</h2>
 <p> This man page contains only a small amount of the information related to the Graphviz layout programs. The most complete information can be found at <a rel="nofollow" href="http://www.graphviz.org/Documentation.php,">http://www.graphviz.org/Documentation.php,</a> especially in the on-line reference pages. Most of these documents are also available in the <i>doc</i> and <i>doc/info</i> subtrees in the source and binary distributions. </p>
-<p> <code><a href="/docs/linux/man/1-dotty/">dotty</a></code>(1),<code><a href="/docs/linux/man/n-tcldot/">tcldot</a></code>(n),<code><a href="/docs/linux/man/1-xcolors/">xcolors</a></code>(1),<code><a href="/docs/linux/man/3-libgraph/">libgraph</a></code>(3). </p>
-<p> E. R. Gansner, S. C. North, K. P. Vo, &quot;DAG &#8211; A Program to Draw Directed Graphs&quot;, Software &#8211; Practice and Experience <a href="/docs/linux/man/1-17/">17</a>(1), 1988, pp. 1047-1062.<br />
- E. R. Gansner, E. Koutsofios, S. C. North, K. P. Vo, &quot;A Technique for Drawing Directed Graphs,&quot; IEEE Trans. on Soft. Eng. <a href="/docs/linux/man/3-19/">19</a>(3), 1993, pp. 214-230.<br />
+<p> <code><a href="/docs/linux/man/1-dotty/">dotty</a></code>(1),<code>tcldot</code>(n),<code>xcolors</code>(1),<code>libgraph</code>(3). </p>
+<p> E. R. Gansner, S. C. North, K. P. Vo, &quot;DAG &#8211; A Program to Draw Directed Graphs&quot;, Software &#8211; Practice and Experience 17(1), 1988, pp. 1047-1062.<br />
+ E. R. Gansner, E. Koutsofios, S. C. North, K. P. Vo, &quot;A Technique for Drawing Directed Graphs,&quot; IEEE Trans. on Soft. Eng. 19(3), 1993, pp. 214-230.<br />
  S. North and E. Koutsofios, &quot;Applications of graph visualization&quot;, Graphics Interface 94, pp. 234-245.<br />
  E. R. Gansner and E. Koutsofios and S. C. North, &quot;Drawing Graphs with dot,&quot; Available at <a rel="nofollow" href="http://www.graphviz.org/pdf/dotguide.pdf.">http://www.graphviz.org/pdf/dotguide.pdf.</a><br />
  S. C. North, &quot;NEATO User&#8217;s Manual&quot;. Available <a rel="nofollow" href="http://www.graphviz.org/pdf/neatoguide.pdf.">http://www.graphviz.org/pdf/neatoguide.pdf.</a><br />
- E. R. Gansner and Y. Hu, &quot;Efficient, Proximity-Preserving Node Overlap Removal&quot;, J. Graph Algorithms Appl., <a href="/docs/linux/man/1-14/">14</a>(1) pp. 53-74, 2010. </p>
+ E. R. Gansner and Y. Hu, &quot;Efficient, Proximity-Preserving Node Overlap Removal&quot;, J. Graph Algorithms Appl., 14(1) pp. 53-74, 2010. </p>
 <h2>Index</h2>

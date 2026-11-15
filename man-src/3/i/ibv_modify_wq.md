@@ -30,7 +30,7 @@ struct ibv_wq_attr {
 <h2>RETURN VALUE</h2>
 <p> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_wq/">ibv_create_wq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_wq/">ibv_destroy_wq</a></code>(3),</p>
+<p> <code>ibv_create_wq</code>(3), <code>ibv_destroy_wq</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>

@@ -15,7 +15,7 @@ description: "service_seusers – The SELinux GNU/Linux user and service to SELi
 <dl>
 <dd><i>/etc/selinux/{SELINUXTYPE}/logins</i></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
-<p> <code><a href="/docs/linux/man/3-getseuser/">getseuser</a></code>(3) reads this file to map services to an SELinux user.</p>
+<p> <code>getseuser</code>(3) reads this file to map services to an SELinux user.</p>
 <h2>File Format</h2>
 <p>Each line within the <i>username</i> file is formatted as follows with each component separated by a colon:</p>
 <dl>
@@ -44,4 +44,4 @@ description: "service_seusers – The SELinux GNU/Linux user and service to SELi
  ipa:unconfined_u:s0<br />
  that_service:unconfined_u:s0</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8), <code><a href="/docs/linux/man/3-selinux_policy_root/">selinux_policy_root</a></code>(3), <code><a href="/docs/linux/man/3-getseuser/">getseuser</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8), <code><a href="/docs/linux/man/3-selinux_policy_root/">selinux_policy_root</a></code>(3), <code>getseuser</code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

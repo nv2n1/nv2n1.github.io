@@ -25,4 +25,4 @@ description: "augenrules – a script that merges component audit rule files"
 <h2>Files</h2>
 <p>/etc/audit/rules.d/ /etc/audit/audit.rules</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-audit-rules/">audit.rules</a></code>(8), <code><a href="/docs/linux/man/8-auditctl/">auditctl</a></code>(8), <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8). </p>
+<p><code>audit.rules</code>(8), <code><a href="/docs/linux/man/8-auditctl/">auditctl</a></code>(8), <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8). </p>

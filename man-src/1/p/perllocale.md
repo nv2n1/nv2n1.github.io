@@ -867,7 +867,7 @@ print "\n";
 
  An <font SIZE="-1">XS</font> module that is locale-dependent could have been written under the assumption that it will never be called in a multi-threaded environment, and so uses other non-locale constructs that aren't multi-thread-safe. See ``Thread-aware system interfaces'' in perlxs. 
 
- <font SIZE="-1">POSIX</font> does not define a way to get the name of the current per-thread locale. Some systems, such as Darwin and NetBSD do implement a function, <b><a HREF="/docs/linux/man/3-querylocale/">querylocale</a></b>(3) to do this. On non-Windows systems without it, such as Linux, there are some additional caveats:
+ <font SIZE="-1">POSIX</font> does not define a way to get the name of the current per-thread locale. Some systems, such as Darwin and NetBSD do implement a function, <b>querylocale</b>(3) to do this. On non-Windows systems without it, such as Linux, there are some additional caveats:
 <dl>
 <dt>&bull;
 <dd> An embedded perl needs to be started up while the global locale is in effect. See ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.

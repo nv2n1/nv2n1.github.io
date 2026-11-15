@@ -202,14 +202,14 @@ description: "cgesvx.f –"
 <pre> WORK is COMPLEX array, dimension (2*N)</pre>
 <p><i>RWORK</i> </p>
 <pre> RWORK is REAL array, dimension (2*N)
- On exit, <a href="//www.systutorials.com/docs/linux/man/1-RWORK/">RWORK</a>(1) contains the reciprocal pivot growth
+ On exit, RWORK(1) contains the reciprocal pivot growth
  factor norm(A)/norm(U). The &quot;max absolute element&quot; norm is
- used. If <a href="//www.systutorials.com/docs/linux/man/1-RWORK/">RWORK</a>(1) is much less than 1, then the stability
+ used. If RWORK(1) is much less than 1, then the stability
  of the LU factorization of the (equilibrated) matrix A
  could be poor. This also means that the solution X, condition
  estimator RCOND, and forward error bound FERR could be
  unreliable. If factorization fails with 0&lt;INFO&lt;=N, then
- <a href="//www.systutorials.com/docs/linux/man/1-RWORK/">RWORK</a>(1) contains the reciprocal pivot growth factor for the
+ RWORK(1) contains the reciprocal pivot growth factor for the
  leading INFO columns of A.</pre>
 <p><i>INFO</i> </p>
 <pre> INFO is INTEGER

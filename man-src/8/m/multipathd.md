@@ -109,6 +109,6 @@ description: "multipathd – multipath daemon"
 <dd>Stop multipathd. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-multipath/">multipath</a></code>(8) <code><a href="/docs/linux/man/8-kpartx/">kpartx</a></code>(8) <code><a href="/docs/linux/man/8-hotplug/">hotplug</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-multipath/">multipath</a></code>(8) <code><a href="/docs/linux/man/8-kpartx/">kpartx</a></code>(8) <code>hotplug</code>(8)</p>
 <h2>Authors</h2>
 <p><code>multipathd</code> was developed by Christophe Varoqui, &lt;christophe.varoqui [at] opensvc.com&gt; and others.</p>

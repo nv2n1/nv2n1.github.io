@@ -500,7 +500,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <p> maximum symlink target length</p>
 <dl>
 <dd>depends on the <i>nodesize</i> value, for 4k it&#8217;s 3949 bytes, for larger nodesize it&#8217;s 4095 due to the system limit PATH_MAX </p>
-<p> The symlink target may not be a valid path, ie. the path name components can exceed the limits (NAME_MAX), there&#8217;s no content validation at <code><a href="/docs/linux/man/3-symlink/">symlink</a></code>(3) creation. </p>
+<p> The symlink target may not be a valid path, ie. the path name components can exceed the limits (NAME_MAX), there&#8217;s no content validation at <code>symlink</code>(3) creation. </p>
 </dl>
 <p> maximum number of inodes</p>
 <dl>

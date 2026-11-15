@@ -12,7 +12,7 @@ description: "pmdapipe – command output capture performance metrics domain age
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/pipe/pmdapipe</code> [<code>-c</code> <i>configfile</i>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>memory</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdapipe</code> is a configurable command output monitoring Performance Metrics Domain Agent (PMDA). It can be seen as analogous to a restricted shell, where options can be passed to preset commands, and each line of their output is converted into a performance event. These events can be consumed by client tools like <code><a href="/docs/linux/man/1-pmval/">pmval</a></code>(1). </p>
+<p> <code>pmdapipe</code> is a configurable command output monitoring Performance Metrics Domain Agent (PMDA). It can be seen as analogous to a restricted shell, where options can be passed to preset commands, and each line of their output is converted into a performance event. These events can be consumed by client tools like <code>pmval</code>(1). </p>
 <p> The <code>pipe</code> PMDA exports both event-style metrics reflecting timestamped event records for text-oriented command output, as well as the more orthodox sample-style metrics such as event counts and throughput size values. </p>
 <p> The PMDA is configured via a <i>configfile</i> which contains one line for each process from which output can be captured, as described in the &#8220;CONFIGURATION&#8221; section below. </p>
 <p> A brief description of the <code>pmdapipe</code> command line options follows:</p>
@@ -70,7 +70,7 @@ description: "pmdapipe – command output capture performance metrics domain age
 # cd $PCP_PMDAS_DIR/pipe
 # ./Install
 </pre>
-<p> This is an interactive installation process which prompts for each log file path to be monitored (or command to be run), a metric instance name to identify it, and whether access should be restricted (refer to the <code>-x</code> option to <code><a href="/docs/linux/man/1-pmval/">pmval</a></code>(1) for further details). </p>
+<p> This is an interactive installation process which prompts for each log file path to be monitored (or command to be run), a metric instance name to identify it, and whether access should be restricted (refer to the <code>-x</code> option to <code>pmval</code>(1) for further details). </p>
 <p> If you want to undo the installation, do the following as root: </p>
 <pre>
 # cd $PCP_PMDAS_DIR/pipe
@@ -107,5 +107,5 @@ bob &gt; pmval - i bdev_trace - x '5 sda' pipe.firehose 8, 2 5 1 0.000000000 252
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmval/">pmval</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3), <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3), <code><a href="/docs/linux/man/3-pmstore/">pmStore</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
+<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code>pmval</code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3), <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3), <code><a href="/docs/linux/man/3-pmstore/">pmStore</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
 <h2>Index</h2>

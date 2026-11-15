@@ -91,7 +91,7 @@ description: "aaxine – an ASCII art video player"
 <h2>BUGS</h2>
 <p> none, of course ;-) Well, there are surely a few of those. You can probably best ask for support (and report bugs) on our mailing list at &lt;xine-user [at] lists.sf.net&gt;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a rel="nofollow" href="http://www.xine-project.org/,">http://www.xine-project.org/,</a></code> <code><a rel="nofollow" href="http://aa-project.sf.net/aalib,">http://aa-project.sf.net/aalib,</a></code> <code><a href="/docs/linux/man/3-xine-lib/">xine-lib</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a rel="nofollow" href="http://www.xine-project.org/,">http://www.xine-project.org/,</a></code> <code><a rel="nofollow" href="http://aa-project.sf.net/aalib,">http://aa-project.sf.net/aalib,</a></code> <code>xine-lib</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> Siggi Langauf for the xine project. </p>
 <h2>COPYRIGHT</h2>

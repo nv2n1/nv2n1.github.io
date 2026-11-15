@@ -23,7 +23,7 @@ description: "pmdadbping – database response time and availability PMDA"
 <p> This file can contain overridden values (Perl code) for the settings listed at the start of <i>dbprobe.pl</i>, namely:</p>
 <dl>
 <dt>&bull;</p>
-<dd> database name (see <font SIZE="-1"><code><a href="/docs/linux/man/3-dbi/">DBI</a></code></font>(3) for details)</p>
+<dd> database name (see <font SIZE="-1"><code>DBI</code></font>(3) for details)</p>
 <dt>&bull;</p>
 <dd> database user name</p>
 <dt>&bull;</p>
@@ -52,5 +52,5 @@ description: "pmdadbping – database response time and availability PMDA"
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1) <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/3-dbi/">DBI</a></code>(3). </p>
+<p> <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1) <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code>DBI</code>(3). </p>
 <h2>Index</h2>

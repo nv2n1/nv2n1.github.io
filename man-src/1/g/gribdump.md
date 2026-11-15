@@ -65,7 +65,7 @@ gribdump -q &quot;lin,dlat=2.5,dlon=5.0&quot; avn-x.wmo
 </dl>
 <p> will decode and display values for the products in avn-x.wmo If the data contain quasi-regular grids, they will be expanded to full regular grids on a 2.5 by 5.0 degree grid before being written into the output file.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gribtonc/">gribtonc</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), <a href="/docs/linux/man/1-pqact/">pqact</a>(1), <a href="/docs/linux/man/3-udunits/">udunits</a>(3), <a href="/docs/linux/man/3-ulog/">ulog</a>(3)</p>
+<p> <a href="/docs/linux/man/1-gribtonc/">gribtonc</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), pqact(1), udunits(3), ulog(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Error messages and log messages are written to the log file. </p>
 <h2>Index</h2>

@@ -15,4 +15,4 @@ description: "selinuxconlist – list all SELinux context reachable for user"
 <h2>AUTHOR<tt>&nbsp;<wbr>&nbsp;<wbr></tt></h2>
 <p>This manual page was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-secon/">secon</a>(8), <a href="/docs/linux/man/8-selinuxdefcon/">selinuxdefcon</a>(8) </p>
+<p>secon(8), <a href="/docs/linux/man/8-selinuxdefcon/">selinuxdefcon</a>(8) </p>

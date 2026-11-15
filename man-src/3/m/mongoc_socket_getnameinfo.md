@@ -16,7 +16,7 @@ mongoc_socket_getnameinfo (mongoc_socket_t *sock);</pre>
 <dt><code>sock</code></p>
 <dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
 <h2>Description</h2>
-<p>This is a helper around getting the local name of a socket. It is a wrapper around <code><a href="/docs/linux/man/3-getpeername/">getpeername</a>(3)</code> and <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a>(3)</code> \&amp;. </p>
+<p>This is a helper around getting the local name of a socket. It is a wrapper around <code>getpeername(3)</code> and <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a>(3)</code> \&amp;. </p>
 <h2>Returns</h2>
 <p>A newly allocated string that should be freed with <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> \&amp;. </p>
 <h2>Colophon</h2>

@@ -22,4 +22,4 @@ description: "runc-kill – send a specified signal to container"
 <pre># runc kill ubuntu01 KILL</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-runc/">runc</a></code>(1). </p>
+<p><code>runc</code>(1). </p>

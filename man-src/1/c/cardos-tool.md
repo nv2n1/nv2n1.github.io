@@ -39,5 +39,5 @@ description: "cardos-tool – displays information about Card OS-based security 
 <dt>
 <dd> Causes <code>cardos-info</code> to be more verbose. Specify this flag several times to enable debug output in the opensc library.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-opensc/">opensc</a>(7) </p>
+<p> opensc(7) </p>
 <h2>Index</h2>

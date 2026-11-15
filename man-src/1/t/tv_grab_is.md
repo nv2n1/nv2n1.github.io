@@ -30,7 +30,7 @@ description: "tv_grab_is – Grab TV listings for Iceland."
 <p> <code>&#8211;version</code> Show the version of the grabber. </p>
 <p> <code>&#8211;help</code> Print a help message and exit.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5). =head1 <font SIZE="-1">AUTHOR</font> </p>
+<p> <i>xmltv</i>(5). =head1 <font SIZE="-1">AUTHOR</font> </p>
 <p> Yngvi <font SIZE="+2">I</font>oor Sigurjonsson (yngvi [at] teymi.is). Heavily based on tv_grab_dk by Jesper Skov (jskov [at] zoftcorp.dk). tv_grab_dk originally based on tv_grab_nl by Guido Diepen and Ed Avis (ed [at] membled.com) and tv_grab_fi by Matti Airas. </p>
 <p> Version 1.1, Eggert Thorlacius (eggert [at] thorlacius.com). Started out by replacing a couple of channels with <font SIZE="-1">XML</font> feeds, but ended up by removing the sjonvarp.is code completely. Left in the &#8220;xxx.sjonvarp.is&#8221; <font SIZE="-1">XMLTV</font> IDs for backwards compatibility.</p>
 <h2>BUGS</h2>

@@ -23,7 +23,7 @@ description: "arc4random arc4random_buf arc4random_uniform arc4random_stir arc4r
 <p> The following produces a drop-in replacement for the traditional Fn rand and Fn random functions using Fn arc4random : </p>
 <blockquote><p><tt>&quot;#define foo4random() (arc4random() % ((unsigned)RAND_MAX + 1))&quot;</tt></p></blockquote>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-rand/">rand</a>(3), <a href="/docs/linux/man/3-random/">random</a>(3), <a href="/docs/linux/man/3-srandomdev/">srandomdev</a>(3)</p>
+<p> <a href="/docs/linux/man/3-rand/">rand</a>(3), <a href="/docs/linux/man/3-random/">random</a>(3), srandomdev(3)</p>
 <h2>HISTORY</h2>
 <p> RC4 has been designed by RSA Data Security, Inc. It was posted anonymously to the USENET and was confirmed to be equivalent by several sources who had access to the original cipher. Since RC4 used to be a trade secret, the cipher is now referred to as ARC4 </p>
 <h2>Index</h2>

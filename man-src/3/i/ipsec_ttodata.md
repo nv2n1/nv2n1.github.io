@@ -59,7 +59,7 @@ description: "ipsec_ttodata, ipsec_datatot – convert binary data bytes from an
 <p> Unless <i>dstlen</i> is zero, the result supplied by <code>datatot</code> is always NUL-terminated, and its needed-size return value includes space for the terminating NUL. </p>
 <p> Several obsolete variants of these functions (<i>atodata</i>, <i>datatoa</i>, <i>atobytes</i>, and <i>bytestoa</i>) are temporarily also supported.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3), <code><a href="/docs/linux/man/3-ipsec_atoaddr/">ipsec_atoaddr</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3), <code>ipsec_atoaddr</code>(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Fatal errors in <code>ttodata</code> and <code>ttodatav</code> are: unknown characters in the input; unknown or missing prefix; unknown base; incomplete digit group; non-zero padding in a base64 less-than-three-bytes digit group; zero-length input. </p>
 <p> Fatal errors in <code>datatot</code> are: unknown format code; zero-length input.</p>

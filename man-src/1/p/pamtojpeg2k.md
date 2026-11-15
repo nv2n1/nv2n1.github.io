@@ -53,7 +53,7 @@ description: "pamtojpeg2k – convert PAM/PNM image to a JPEG-2000 code stream"
 <p> JPEG is much older than JPEG-2000 and far more popular. JPEG is one of the half dozen most popular graphics formats and virtually all graphics facilities understand it. JPEG-2000 is virtually unknown. </p>
 <p> There is no compatibility between JPEG and JPEG-2000. Programs that read JPEG do not automatically read JPEG-2000 and vice versa. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-jpeg2ktopam/">jpeg2ktopam</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtopeg/">pnmtopeg</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-jpeg2ktopam/">jpeg2ktopam</a></code>(1) , <code>pnmtopeg</code>(1) , <code>ppm</code>(1) , <code>pgm</code>(1) , <code>pbm</code>(1) , <code>pam</code>(1) , </p>
 <h2>History</h2>
 <p> <code>pamtojpeg2k</code> was added to Netpbm in Release 10.12 (November 2002). </p>
 <h2>Index</h2>

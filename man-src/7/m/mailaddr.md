@@ -37,7 +37,7 @@ description: "mailaddr – mail addressing description"
 <p><i>/etc/aliases</i><br />
  <i>~/.forward</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code><a href="/docs/linux/man/5-forward/">forward</a></code>(5), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code><a href="/docs/linux/man/5-forward/">forward</a></code>(5), <code>sendmail</code>(8) </p>
 <p> IETF RFC 5322</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

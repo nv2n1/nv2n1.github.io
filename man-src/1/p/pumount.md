@@ -21,7 +21,7 @@ description: "pumount – umount arbitrary hotpluggable devices as normal user"
 <dt><code>-l, &#8211;lazy</code></p>
 <dd> Lazy unmount. Detach the filesystem from the filesystem hierarchy now, and cleanup all references to the filesystem as soon as it is not busy anymore. (Requires kernel 2.4.11 or later.) <code>IMPORTANT NOTES</code> This option should not be used unless you <code>really</code> know what you are doing, as chances are high that it will result in data loss on the removable drive. Please run <code>pumount</code> manually and wait until it finishes. In addition, <code>pumount</code> will not <i>luksClose</i> a device which was unmounted lazily. </p>
 <dt><code>&#8211;luks-force</code></p>
-<dd> Normally, <code>pumount</code> will not <i>luksClose</i> (see <i><a href="/docs/linux/man/1-cryptsetup/">cryptsetup</a></i>(1)) a device <code>pmount</code> did not open. However, you can bypass this restriction with this flag. You probably will need it if you did mess around with the <i>/var/lock/pmount_luks</i> directory. </p>
+<dd> Normally, <code>pumount</code> will not <i>luksClose</i> (see <i>cryptsetup</i>(1)) a device <code>pmount</code> did not open. However, you can bypass this restriction with this flag. You probably will need it if you did mess around with the <i>/var/lock/pmount_luks</i> directory. </p>
 <dt><code>-h, &#8211;help</code></p>
 <dd> Print a help message and exit successfully. </p>
 <dt><code>-d, &#8211;debug</code></p>
@@ -44,7 +44,7 @@ description: "pumount – umount arbitrary hotpluggable devices as normal user"
 <h2>PUMOUNT AND MISSING DEVICES</h2>
 <p> <code>pumount</code> now supports unmounting devices that have gone missing for some reason, such as a brutal removal of the device, or a kernel/hardware problem. Just specify the mount point as argument for <code>pumount</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pmount/">pmount</a></code>(1), <code><a href="/docs/linux/man/1-cryptsetup/">cryptsetup</a></code>(1), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) </p>
+<p> <code><a href="/docs/linux/man/1-pmount/">pmount</a></code>(1), <code>cryptsetup</code>(1), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) </p>
 <h2>AUTHOR</h2>
 <p> <code>pmount</code> is developed by Martin Pitt &lt;martin.pitt [at] canonical.com&gt;. </p>
 <h2>Index</h2>

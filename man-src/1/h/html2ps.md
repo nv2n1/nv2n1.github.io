@@ -155,7 +155,7 @@ description: "html2ps – convert HTML to PostScript"
 <dt>$HOME/.html2psrc</p>
 <dd> User configuration file, see <a href="/docs/linux/man/5-html2psrc/">html2psrc</a>(5).</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/5-html2psrc/">html2psrc</a>(5), <a href="/docs/linux/man/1-perl/">perl</a>(1), <a href="/docs/linux/man/3-setlocale/">setlocale</a>(3), <a href="/docs/linux/man/3-strftime/">strftime</a>(3), <a href="/docs/linux/man/1-weblint/">weblint</a>(1)</p>
+<p> <a href="/docs/linux/man/5-html2psrc/">html2psrc</a>(5), <a href="/docs/linux/man/1-perl/">perl</a>(1), <a href="/docs/linux/man/3-setlocale/">setlocale</a>(3), <a href="/docs/linux/man/3-strftime/">strftime</a>(3), weblint(1)</p>
 <h2>VERSION</h2>
 <p> This manpage describes html2ps version 1.0 beta7.</p>
 <h2>AVAILABILITY</h2>

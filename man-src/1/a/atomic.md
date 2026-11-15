@@ -46,7 +46,7 @@ description: "atomic – Atomic Management Tool"
 <p> <code><a href="/docs/linux/man/1-atomic-trust/">atomic-trust</a>(1)</code> manage system container trust policy </p>
 <p> <code><a href="/docs/linux/man/1-atomic-uninstall/">atomic-uninstall</a>(1)</code> uninstall container from system </p>
 <p> <code><a href="/docs/linux/man/1-atomic-unmount/">atomic-unmount</a>(1)</code> unmount previously mounted image or container </p>
-<p> <code><a href="/docs/linux/man/1-atomic-update/">atomic-update</a>(1)</code> Downloads the latest container image. </p>
+<p> <code>atomic-update(1)</code> Downloads the latest container image. </p>
 <h2>CONNECTING TO DOCKER ENGINE</h2>
 <p> By default, atomic command connects to docker engine via UNIX domain socket located at /var/run/docker.sock. You can use different connection method via setting several environment variables: </p>
 <p> <code>DOCKER_HOST</code> — this variable specifies connection string. If your engine listens on UNIX domain socket, you can specify the path via http+unix://&lt;path&gt;, e.g. http+<a href="unix://var/run/docker2.sock.">unix://var/run/docker2.sock.</a> For TCP the string has this form: tcp://&lt;ip&gt;:&lt;port&gt;, e.g. <a href="tcp://127.0.0.1:2375">tcp://127.0.0.1:2375</a> </p>

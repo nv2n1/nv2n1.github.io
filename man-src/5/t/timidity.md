@@ -201,7 +201,7 @@ description: "timidity.cfg – configure file of TiMidity++"
 <dt><code>/etc/timidity/timidity.cfg</code></p>
 <dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-timidity/">timidity</a>(1), <a href="/docs/linux/man/1-lsmidiprog/">lsmidiprog</a>(1), <a href="/docs/linux/man/1-mididump/">mididump</a>(1), <a href="/docs/linux/man/1-patinfo/">patinfo</a>(1), <a href="/docs/linux/man/1-sf2text/">sf2text</a>(1), <a href="/docs/linux/man/1-wav2pat/">wav2pat</a>(1)</p>
+<p><a href="/docs/linux/man/1-timidity/">timidity</a>(1), lsmidiprog(1), mididump(1), patinfo(1), sf2text(1), wav2pat(1)</p>
 <h2>Copyright</h2>
 <p>Copyright (C) 1999-2004 Masanao Izumo &lt;iz [at] onicos.co.jp&gt;<br />
  Copyright (C) 1995 Tuukka Toivonen &lt;tt [at] cgs.fi&gt; </p>

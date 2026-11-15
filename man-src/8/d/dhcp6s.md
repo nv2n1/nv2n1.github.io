@@ -35,7 +35,7 @@ description: "dhcp6s – DHCPv6 server"
 <dt><code>-D</code></p>
 <dd>Even more debugging information is printed.</p>
 <dt><code>-f</code></p>
-<dd>Foreground mode (useful when debugging). Although usually prints warning, debugging, or error messages to <a href="/docs/linux/man/8-syslog/">syslog</a>(8), it prints the messages to standard error if this option is specified.</p>
+<dd>Foreground mode (useful when debugging). Although usually prints warning, debugging, or error messages to syslog(8), it prints the messages to standard error if this option is specified.</p>
 <dt><code>-k </code><i>ctlkeyfile</i></p>
 <dd>Use <i>ctlkeyfile</i> to store the shared secret to authenticate the communication with <code>dhcp6ctl</code> The default file name used when unspecified is /etc/wide-dhcpv6/dhcp6sctlkey The default name is intentionally same as that for <code>dhcp6ctl</code> so that the server and the control command can share the file when <code>dhcp6ctl</code> controls the server on the same node, which should be the typical case.</p>
 <dt><code>-p </code><i>ctlport</i></p>

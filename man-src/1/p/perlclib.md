@@ -68,7 +68,7 @@ Instead Of : Use : fprintf(stream, fmt, ...) PerlIO_printf(perlio, fmt, ...)
 <h3>Memory Management and String Handling</h3>
 <pre>
  Instead Of:                    Use:
- t* p = <a href="//www.systutorials.com/docs/linux/man/n-malloc/">malloc</a>(n)               Newx(p, n, t)
+ t* p = malloc(n)               Newx(p, n, t)
  t* p = calloc(n, s)            Newxz(p, n, t)
  p = realloc(p, n)              Renew(p, n, t)
  memcpy(dst, src, n)            Copy(src, dst, n, t)

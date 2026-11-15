@@ -92,6 +92,6 @@ description: "g_rms – calculates rmsd’s with a reference structure and rmsd 
 <p> <code>-ng</code><i> int</i><code> 1</code><br />
 &nbsp;<wbr>Number of groups to compute RMS between </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

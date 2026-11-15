@@ -120,7 +120,7 @@ description: "ipv6loganon – HTTP server log file anonymizer"
 <p> echo &quot;1.2.3.4&quot; | ./ipv6loganon &#8211;anonymize-preset keep-type-asn-cc 246.24.59.65 </p>
 <p> echo &quot;2001:a60:1400:1201:221:70ff:fe01:2345&quot; | ./ipv6loganon &#8211;anonymize-preset keep-type-asn-cc a909:16fa:9092:23ff:a909:4291:4022:1708</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-ipv6calc/">ipv6calc</a>(8), <a href="/docs/linux/man/8-ipv6logstat/">ipv6logstat</a>(8)</p>
+<p><a href="/docs/linux/man/8-ipv6calc/">ipv6calc</a>(8), ipv6logstat(8)</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;ipv6calc [at] lists.deepspace6.net&gt; or to the authors. </p>
 <p> Homepage: <a rel="nofollow" href="http://www.deepspace6.net/projects/ipv6calc.html">http://www.deepspace6.net/projects/ipv6calc.html</a></p>

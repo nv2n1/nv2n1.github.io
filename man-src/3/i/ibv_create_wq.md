@@ -43,7 +43,7 @@ enum ibv_wq_flags {
 <p> <code>ibv_create_wq()</code> returns a pointer to the created WQ, or NULL if the request fails. </p>
 <p> <code>ibv_destroy_wq()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_modify_wq/">ibv_modify_wq</a></code>(3),</p>
+<p> <code>ibv_modify_wq</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>

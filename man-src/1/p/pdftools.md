@@ -25,7 +25,7 @@ description: "pdftools – analyze PDF files, change image colors"
 <dd> Print the number of pages in each PDF file. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-texexec/">texexec</a></code>(1), <code><a href="/docs/linux/man/1-pdfinfo/">pdfinfo</a></code>(1), <code><a href="/docs/linux/man/1-pdftk/">pdftk</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-texexec/">texexec</a></code>(1), <code><a href="/docs/linux/man/1-pdfinfo/">pdfinfo</a></code>(1), <code>pdftk</code>(1) </p>
 <p> The pdftools manual <tt>mpdftools.pdf</tt> available from <a rel="nofollow" href="http://www.pragma-ade.com/dir/general/manuals/">http://www.pragma-ade.com/dir/general/manuals/</a> laURL: L raPRAGMA ADE </p>
 <p> <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> laURL: L raConTeXt wiki </p>
 <p> <a rel="nofollow" href="http://www.adobe.com/devnet/pdf/pdf_reference.html">http://www.adobe.com/devnet/pdf/pdf_reference.html</a> laURL: L raThe PDF specification </p>

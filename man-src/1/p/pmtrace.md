@@ -18,7 +18,7 @@ description: "pmtrace – command line performance instrumentation"
 <p> Trace data can be sent to the trace PMDA running on <i>host</i>, rather than the localhost, using the <code>-h</code> option. This overrides use of the environment variable <code>PCP_TRACE_HOST</code>. </p>
 <p> The <code>-q</code> option suppresses messages from a successful trace, so that <code>pmtrace</code> runs quietly. </p>
 <p> The <code>-c</code> option allows an arbitrary counter <i>value</i> to be exported through the trace.count metrics, while the <code>-v</code> option allows an arbitrary floating point <i>value</i> to be exported through the trace.observe metrics </p>
-<p> The <code>-S</code> option enables internal debugging and tracing. The value of <i>state</i> is a bit-wise combination of debug flags as defined in <code><a href="/docs/linux/man/3-pmtracestate/">pmtracestate</a></code>(3), and may be specified using the decimal or hexadecimal syntax prescribed by <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3). </p>
+<p> The <code>-S</code> option enables internal debugging and tracing. The value of <i>state</i> is a bit-wise combination of debug flags as defined in <code>pmtracestate</code>(3), and may be specified using the decimal or hexadecimal syntax prescribed by <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3). </p>
 <h2>ENVIRONMENT</h2>
 <p> Since <code>pmtrace</code> uses the <i>libpcp_trace</i> library routines, the environment variables <code>PCP_TRACE_HOST</code>, <code>PCP_TRACE_PORT</code>, and <code>PCP_TRACE_TIMEOUT</code> are all honored. Refer to <code><a href="/docs/linux/man/3-pmdatrace/">pmdatrace</a></code>(3) for a detailed description of the semantics of each.</p>
 <h2>FILES</h2>

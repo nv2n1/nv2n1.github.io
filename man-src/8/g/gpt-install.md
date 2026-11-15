@@ -76,6 +76,6 @@ description: "gpt-install – Installs GPT packages."
  foo-2.2-1-gcc32-pgm_static will not be replaced.
  foo-2.1-gcc32-pgm will not be replaced.</pre>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-gpt-uninstall/">gpt-uninstall</a></i>(1) <i><a href="/docs/linux/man/1-gpt-query/">gpt-query</a></i>(1) <i><a href="/docs/linux/man/1-gpt-verify/">gpt-verify</a></i>(1)</p>
+<p><i>gpt-uninstall</i>(1) <i>gpt-query</i>(1) <i>gpt-verify</i>(1)</p>
 <h2>Author</h2>
 <p>Michael Bletzinger &lt;mbletzin.ncsa.uiuc.edu&gt; and Eric Blau &lt;eblau.ncsa.uiuc.edu&gt;</p>

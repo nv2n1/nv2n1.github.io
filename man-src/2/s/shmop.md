@@ -77,7 +77,7 @@ int shmdt(const void *shmaddr);
 <h2>NOTES</h2>
 <p> After a <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), the child inherits the attached shared memory segments. </p>
 <p> After an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), all attached shared memory segments are detached from the process. </p>
-<p> Upon <code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2), all attached shared memory segments are detached from the process. </p>
+<p> Upon <code>_exit</code>(2), all attached shared memory segments are detached from the process. </p>
 <p> Using <code>shmat</code>() with <i>shmaddr</i> equal to NULL is the preferred, portable way of attaching a shared memory segment. Be aware that the shared memory segment attached in this way may be attached at different addresses in different processes. Therefore, any pointers maintained within the shared memory must be made relative (typically to the starting address of the segment), rather than absolute. </p>
 <p> On Linux, it is possible to attach a shared memory segment even if it is already marked to be deleted. However, POSIX.1 does not specify this behavior and many other implementations do not support it. </p>
 <p> The following system parameter affects <code>shmat</code>():</p>

@@ -98,4 +98,4 @@ description: "omping – test IP multicast"
 <dd>then cannot provide distance information.</p>
 <dt><code>Some OSes may not provide information about packet receive. Less precise actual time is then used.</code></p>
 <dd>
-<dd>highly depends on precise <a href="/docs/linux/man/2-poll/">poll</a>(2) and <a href="/docs/linux/man/3-gettimeofday/">gettimeofday</a>(3) functions. If OS doesn&#8217;t provide at least milliseconds precision, results may be incorrect.</dl>
+<dd>highly depends on precise <a href="/docs/linux/man/2-poll/">poll</a>(2) and gettimeofday(3) functions. If OS doesn&#8217;t provide at least milliseconds precision, results may be incorrect.</dl>

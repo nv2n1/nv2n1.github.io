@@ -38,6 +38,6 @@ void
 <p> Although the primary callers of <code>Tcl_Panic</code> are the procedures of the Tcl library, <code>Tcl_Panic</code> is a public function and may be called by any extension or application that wishes to abort the process and have a panic message displayed the same way that panic messages from Tcl will be displayed. </p>
 <p> <code>Tcl_PanicVA</code> is the same as <code>Tcl_Panic</code> except that instead of taking a variable number of arguments it takes an argument list. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-abort/">abort</a>(3), <a href="/docs/linux/man/3-printf/">printf</a>(3), <a href="/docs/linux/man/n-exec/">exec</a>(n), <a href="/docs/linux/man/n-format/">format</a>(n) </p>
+<p><a href="/docs/linux/man/3-abort/">abort</a>(3), <a href="/docs/linux/man/3-printf/">printf</a>(3), exec(n), format(n) </p>
 <h2>Keywords</h2>
 <p>abort, fatal, error</p>

@@ -98,7 +98,7 @@ description: "midi2abc – program to convert MIDI format files to abc notation"
 <p> * Deduce repeats. The output is just the notes in the input file. </p>
 <p> * Recover an abc tune as supplied to abc2midi. However, if you want to do this, &quot;midi2abc -xa -f file.mid&quot; comes close.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-abc2ps/">abc2ps</a>(1), <a href="/docs/linux/man/1-abc2midi/">abc2midi</a>(1), <a href="/docs/linux/man/1-abc2abc/">abc2abc</a>(1)</p>
+<p> abc2ps(1), <a href="/docs/linux/man/1-abc2midi/">abc2midi</a>(1), <a href="/docs/linux/man/1-abc2abc/">abc2abc</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> James Allwright &lt;J.R.Allwright [at] westminster.ac.uk&gt;</p>
 <h2>SUPPORTED</h2>

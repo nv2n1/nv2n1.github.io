@@ -28,7 +28,7 @@ description: "gtk-options – Standard Command Line Options for GTK Programs"
 <dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
 <dd>Set the X display to use. Use this option to override the <i>DISPLAY</i> environment variable.</p>
 <dt><code>&#8211;screen</code>=<i>SCREEN</i></p>
-<dd>X screen to use. Use this options to override the screen part of the <i>DISPLAY</i> environment variable (see the <i>DISPLAY NAMES</i> section of the <i><a href="//www.systutorials.com/docs/linux/man/7x-X/">X</a></i>(7x) manual page).</p>
+<dd>X screen to use. Use this options to override the screen part of the <i>DISPLAY</i> environment variable (see the <i>DISPLAY NAMES</i> section of the <i>X</i>(7x) manual page).</p>
 <dt><code>&#8211;sync</code></p>
 <dd>Make X calls synchronous. This slows down the program considerably, but may be useful for debugging purposes.</p>
 <dt><code>&#8211;no-xshm</code></p>
@@ -48,7 +48,7 @@ description: "gtk-options – Standard Command Line Options for GTK Programs"
 <dt><code>&#8211;gdk-no-debug</code>=<i>FLAGS</i></p>
 <dd>A colon-separated list of GDK debugging flags to unset. Use this options to override the <i>GDK_DEBUG</i> environment variable.</dl>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/7x-X/">X</a></code>(7x), the GTK documentation, and the GDK documentation. </p>
+<p><code>X</code>(7x), the GTK documentation, and the GDK documentation. </p>
 <p> For most GTK programs there will be additional command line options, which are specific to the program. These will be explained in the application&#8217;s documentation.</p>
 <h2>Author</h2>
 <p>This manual page was written by Jochen Voss &lt;voss [at] debian.org&gt;.</p>

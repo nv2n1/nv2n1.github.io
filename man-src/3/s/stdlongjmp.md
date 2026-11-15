@@ -46,14 +46,14 @@ int main()
 </code></pre>
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;a<code>(0)</code> called<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-a/">a</a><code>(1)</code> called<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/2-a/">a</a><code>(2)</code> called<br />
+&nbsp;<wbr>&nbsp;a<code>(1)</code> called<br />
+&nbsp;<wbr>&nbsp;a<code>(2)</code> called<br />
 &nbsp;<wbr>&nbsp;<a href="/docs/linux/man/3-a/">a</a><code>(3)</code> called<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/4-a/">a</a><code>(4)</code> called<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/5-a/">a</a><code>(5)</code> called<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/6-a/">a</a><code>(6)</code> called<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/7-a/">a</a><code>(7)</code> called<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/8-a/">a</a><code>(8)</code> called</p>
+&nbsp;<wbr>&nbsp;a<code>(4)</code> called<br />
+&nbsp;<wbr>&nbsp;a<code>(5)</code> called<br />
+&nbsp;<wbr>&nbsp;a<code>(6)</code> called<br />
+&nbsp;<wbr>&nbsp;a<code>(7)</code> called<br />
+&nbsp;<wbr>&nbsp;a<code>(8)</code> called</p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;saves the context<br />
 setjmp <i>(function macro)</i> </p>

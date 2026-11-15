@@ -61,7 +61,7 @@ ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
 <p> A global config file is provided to set some of the common options for all tools. See supplied config file for details.</p>
 <h3>Node Name Map File Format</h3>
 <p>The node name map is used to specify user friendly names for nodes in the output. GUIDs are used to perform the lookup. </p>
-<p> This functionality is provided by the opensm-libs package. See <code><a href="/docs/linux/man/8-opensm/">opensm</a>(8)</code> for the file location for your installation. </p>
+<p> This functionality is provided by the opensm-libs package. See <code>opensm(8)</code> for the file location for your installation. </p>
 <p> <code>Generically:</code> </p>
 <pre># comment
 &lt;guid&gt; &quot;&lt;name&gt;&quot;</pre>
@@ -85,7 +85,7 @@ ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
 0x0008f10400411a34 &quot;SW3 (Rack 3) ISR9024 Voltaire 9024D&quot;
 0x0008f104004119d0 &quot;SW4 (Rack 3) ISR9024 Voltaire 9024D&quot;</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-dump_lfts/">dump_lfts</a>(8), <a href="/docs/linux/man/8-dump_mfts/">dump_mfts</a>(8), <a href="/docs/linux/man/8-ibroute/">ibroute</a>(8), <a href="/docs/linux/man/8-ibswitches/">ibswitches</a>(8), <a href="/docs/linux/man/8-opensm/">opensm</a>(8)</code></p>
+<p><code>dump_lfts(8), dump_mfts(8), <a href="/docs/linux/man/8-ibroute/">ibroute</a>(8), <a href="/docs/linux/man/8-ibswitches/">ibswitches</a>(8), opensm(8)</code></p>
 <h2>Authors</h2>
 <dl>
 <dt><code>Ira Weiny</code></p>

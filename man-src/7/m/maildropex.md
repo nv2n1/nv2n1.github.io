@@ -97,7 +97,7 @@ MATCH = tolower($MATCH)
 to &quot;| ( cat - ; echo ''; cat vacation.msg) | $SENDMAIL&quot;</code></pre>
 <p> This script requires that <code>maildrop</code> must be compiled with GDBM support enabled, which is done by default if GDBM libraries are present. After you return from vacation, you can use a simple Perl script to obtain a list of everyone who sent you mail (of course, that can also be determined by examining your mailbox).</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[]<font SIZE="-2">[6]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[4]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8).</p>
+<p>m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[]<font SIZE="-2">[6]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[4]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code>sendmail</code>(8).</p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>

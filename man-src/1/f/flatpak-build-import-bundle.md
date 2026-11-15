@@ -54,5 +54,5 @@ description: "flatpak-build-import-bundle – Import a file bundle into a local 
 <dt>
 <dd> GPG Homedir to use when looking for keyrings</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ostree/">ostree</a></code>(1), <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-bundle/">flatpak-build-bundle</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-update-repo/">flatpak-build-update-repo</a></code>(1) </p>
+<p> <code>ostree</code>(1), <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-bundle/">flatpak-build-bundle</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-update-repo/">flatpak-build-update-repo</a></code>(1) </p>
 <h2>Index</h2>

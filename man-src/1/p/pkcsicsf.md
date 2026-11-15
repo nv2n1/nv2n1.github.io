@@ -51,7 +51,7 @@ description: "pkcsicsf – configuration utility for the ICSF token"
 <dd>
 <dt><code><a href="/docs/linux/man/8-pkcsslotd/">pkcsslotd</a></code>(8).</p>
 <dd>
-<dt><code><a href="/docs/linux/man/8-pkcsconf/">pkcsconf</a></code>(8).</p>
+<dt><code>pkcsconf</code>(8).</p>
 <dd>
 </dl>
 <h2>Index</h2>

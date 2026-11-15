@@ -36,8 +36,8 @@ description: "dlasrt.f –"
 <pre> D is DOUBLE PRECISION array, dimension (N)
  On entry, the array to be sorted.
  On exit, D has been sorted into increasing order
- (<a href="//www.systutorials.com/docs/linux/man/1-D/">D</a>(1) &lt;= ... &lt;= D(N) ) or into decreasing order
- (<a href="//www.systutorials.com/docs/linux/man/1-D/">D</a>(1) &gt;= ... &gt;= D(N) ), depending on ID.</pre>
+ (D(1) &lt;= ... &lt;= D(N) ) or into decreasing order
+ (D(1) &gt;= ... &gt;= D(N) ), depending on ID.</pre>
 <p><i>INFO</i> </p>
 <pre> INFO is INTEGER
  = 0: successful exit

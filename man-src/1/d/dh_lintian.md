@@ -20,7 +20,7 @@ description: "dh_lintian – install lintian override files into package build d
 <dt><i>debian/source/lintian-overrides</i></p>
 <dd> These files are not installed, but will be scanned by lintian to provide overrides for the source package.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-debhelper/">debhelper</a></i>(1) </p>
+<p> <i>debhelper</i>(1) </p>
 <p> This program is a part of debhelper. </p>
 <p> <i><a href="/docs/linux/man/1-lintian/">lintian</a></i>(1)</p>
 <h2>AUTHOR</h2>

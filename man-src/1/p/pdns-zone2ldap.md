@@ -45,7 +45,7 @@ description: "zone2ldap – convert zonefiles to ldif"
 <dd>
  Specify a zone name if zone is set</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-pdns_server/">pdns_server</a></code>(8) </p>
+<p> <code>pdns_server</code>(8) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Matthijs Möhlmann &lt;matthijs [at] cacholong.nl&gt;, for the Debian project (but may be used by others). </p>
 <h2>Index</h2>

@@ -89,5 +89,5 @@ description: "autossh – monitor and restart ssh sessions"
 <h2>AUTHOR</h2>
 <p> <code>autossh</code> was written by Carson Harding.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1, ssh-keygen1, <a href="/docs/linux/man/1-cygrunsrv/">cygrunsrv</a>(1). </p>
+<p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1, ssh-keygen1, cygrunsrv(1). </p>
 <h2>Index</h2>

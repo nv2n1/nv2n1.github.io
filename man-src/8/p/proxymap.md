@@ -51,7 +51,7 @@ description: "proxymap – Postfix lookup table proxy server"
 <p> Postfix-writable data files should be stored under a dedicated directory that is writable only by the Postfix mail system, such as the Postfix-owned <code>data_directory</code>. </p>
 <p> In particular, Postfix-writable files should never exist in root-owned directories. That would open up a particular type of security hole where ownership of a file or directory does not match the provider of its content.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>The <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) server provides service to multiple clients, and must therefore not be used for tables that have high-latency lookups. </p>
 <p> The <code><a href="/docs/linux/man/8-proxymap/">proxymap</a></code>(8) read-write service does not explicitly close lookup tables (even if it did, this could not be relied on, because the process may be terminated between table updates). The read-write service should therefore not be used with tables that leave persistent storage in an inconsistent state between updates (for example, CDB). Tables that support &quot;sync on update&quot; should be safe (for example, Berkeley DB) as should tables that are implemented by a real DBMS.</p>

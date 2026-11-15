@@ -66,7 +66,7 @@ struct ibv_device_attr {
 <h2>NOTES</h2>
 <p> The maximum values returned by this function are the upper limits of supported resources by the device. However, it may not be possible to use these maximum values, since the actual number of any resource that can be created may be limited by the machine configuration, the amount of host memory, user permissions, and the amount of resources already in use by other users/processes.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_port/">ibv_query_port</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_pkey/">ibv_query_pkey</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_gid/">ibv_query_gid</a></code>(3)</p>
+<p> <code>ibv_open_device</code>(3), <code>ibv_query_port</code>(3), <code>ibv_query_pkey</code>(3), <code>ibv_query_gid</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

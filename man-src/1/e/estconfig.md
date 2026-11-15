@@ -51,6 +51,6 @@ description: "estconfig – configuration utility of Hyper Estraier"
 <dd> to output the libraries for applications with multi thread.</dl>
 <p> estconfig always returns 0 as the exit status. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code><a href="/docs/linux/man/3-estraier/">estraier</a></code>(3) <code><a href="/docs/linux/man/3-estnode/">estnode</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code>estraier</code>(3) <code>estnode</code>(3) </p>
 <p> Please see <code><a rel="nofollow" href="http://hyperestraier.sourceforge.net/pguide-en.html">http://hyperestraier.sourceforge.net/pguide-en.html</a></code> for detail. </p>
 <h2>Index</h2>

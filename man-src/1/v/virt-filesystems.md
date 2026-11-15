@@ -123,7 +123,7 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 <dt><code>&#8211;long</code></p>
 <dd> Display extra columns of data (&#8220;long format&#8221;). </p>
 <p> A title row is added unless you also specify <i>&#8211;no-title</i>. </p>
-<p> The extra columns displayed depend on what output you select, and the ordering of columns may change in future versions. Use the title row, <i>&#8211;csv</i> output and/or <i><a href="/docs/linux/man/1-csvtool/">csvtool</a></i>(1) to match columns to data in external programs. </p>
+<p> The extra columns displayed depend on what output you select, and the ordering of columns may change in future versions. Use the title row, <i>&#8211;csv</i> output and/or <i>csvtool</i>(1) to match columns to data in external programs. </p>
 <p> Use <i>-h</i> if you want sizes to be displayed in human-readable format. The default is to show raw numbers of <i>bytes</i>. </p>
 <p> Use <i>&#8211;uuid</i> to display UUIDs too.</p>
 <dt><code>&#8211;lvs</code></p>
@@ -207,7 +207,7 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-filesystems/">virt-list-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-partitions/">virt-list-partitions</a></i>(1), <i><a href="/docs/linux/man/1-csvtool/">csvtool</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-filesystems/">virt-list-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-partitions/">virt-list-partitions</a></i>(1), <i>csvtool</i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
 <h2>COPYRIGHT</h2>

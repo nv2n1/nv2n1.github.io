@@ -81,7 +81,7 @@ description: "pnmtojbig – PNM to JBIG file converter"
 <p> <code>pnmtojbig</code> is based on the JBIG library by Markus Kuhn, part of his <code>JBIG-KIT</code> package. The <code>pbmtojbg</code> program is part of the <i>JBIG-KIT</i> package. The most recent version of that library and tools set is freely available on the Internet from anonymous ftp server <a href="ftp://ftp.informatik.uni-erlangen.de">ftp.informatik.uni-erlangen.de</a> in directory pub/doc/ISO/JBIG/. </p>
 <p> <code>pnmtojbig</code> is part of the Netpbm package of graphics tools. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-jbigtopnm/">jbigtopnm</a></code>(1) </p>
+<p> <code>pnm</code>(1) , <code><a href="/docs/linux/man/1-jbigtopnm/">jbigtopnm</a></code>(1) </p>
 <h2>LICENSE</h2>
 <p> If you use <code>pnmtojbig</code>, you are using various patents, particularly on its arithmetic encoding method, and in all probability you do not have a license from the patent owners to do so. </p>
 <h2>Index</h2>

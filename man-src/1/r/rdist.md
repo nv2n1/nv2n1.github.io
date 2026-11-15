@@ -39,7 +39,7 @@ description: "rdist – remote file distribution client program"
 install[dest];
 </code></pre>
 <p> The <code>-Server</code> option is recognized to provide partial backward compatible support for older versions of <i>rdist</i> which used this option to put <i>rdist</i> into server mode. If <i>rdist</i> is started with the <code>-Server</code> command line option, it will attempt to exec (run) the old version of <i>rdist.</i> This option will only work if <i>rdist</i> was compiled with the location of the old rdist (the path <i>/usr/bin/oldrdist</i> is used on Red Hat linux) and that program is available at run time. </p>
-<p> <i>Rdist</i> can use either the <i><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3)</i> function call or run an arbitrary transport program such as <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c)</i> to access each target host. The method used is selected at compile-time. However, if the later method is used, the transport program can be specified at run-time on the command line with the default being <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c).</i> If the <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c)</i> method is used and the target host is the string <code>localhost</code> and the remote user name is the same as the local user name, <i>rdist</i> will run the command </p>
+<p> <i>Rdist</i> can use either the <i><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3)</i> function call or run an arbitrary transport program such as <i>rsh(1c)</i> to access each target host. The method used is selected at compile-time. However, if the later method is used, the transport program can be specified at run-time on the command line with the default being <i>rsh(1c).</i> If the <i>rsh(1c)</i> method is used and the target host is the string <code>localhost</code> and the remote user name is the same as the local user name, <i>rdist</i> will run the command </p>
 <pre>
 <dl><dt><dd><code>/bin/sh -c rdistd -S</code>
 </dl>
@@ -49,13 +49,13 @@ install[dest];
 <dl><dt><dd><code>rsh </code><i>host</i><code> -l </code><i>remuser </i><code>rdistd -S</code>
 </dl>
 </pre>
-<p> where <i>host</i> is the name of the target host, <i>remuser</i> is the name of the user to make the connection as and, <i>rdistd</i> is the rdist server command on the target host as shown below. To use a transport program other than <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c)</i> use the <code>-P</code> option. Whatever transport program is used, must be compatible with the above specified syntax for <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c).</i> If the transport program is not, it should be <i>wrapped</i> in a shell script which does understand this command line syntax and which then executes the real transport program. </p>
+<p> where <i>host</i> is the name of the target host, <i>remuser</i> is the name of the user to make the connection as and, <i>rdistd</i> is the rdist server command on the target host as shown below. To use a transport program other than <i>rsh(1c)</i> use the <code>-P</code> option. Whatever transport program is used, must be compatible with the above specified syntax for <i>rsh(1c).</i> If the transport program is not, it should be <i>wrapped</i> in a shell script which does understand this command line syntax and which then executes the real transport program. </p>
 <p> Here&#8217;s an example which uses <i><a href="/docs/linux/man/1-ssh/">ssh</a>(1)</i> as the transport: </p>
 <pre>
 <dl><dt><dd><code>rdist -P /usr/local/bin/ssh -f myDistfile</code>
 </dl>
 </pre>
-<p> If the <i><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3) </i> method is used, then <i>rdist</i> makes the connection to the target host itself and runs the <i>rdistd</i> server program as shown below. The default, and preferred method, is to use <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c)</i> to make the connection to target hosts. This allows <i>rdist</i> to be run without being setuid to &#8220;root&#8221;. </p>
+<p> If the <i><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3) </i> method is used, then <i>rdist</i> makes the connection to the target host itself and runs the <i>rdistd</i> server program as shown below. The default, and preferred method, is to use <i>rsh(1c)</i> to make the connection to target hosts. This allows <i>rdist</i> to be run without being setuid to &#8220;root&#8221;. </p>
 <p> On each target host <i>Rdist</i> will attempt to run the command </p>
 <pre>
 <dl><dt><dd><i>rdistd -S</i>
@@ -102,7 +102,7 @@ install[dest];
 <dt><code>whole</code></p>
 <dd> Whole mode. The whole file name is appended to the destination directory name. Normally, only the last component of a name is used when renaming files. This will preserve the directory structure of the files being copied instead of flattening the directory structure. For example, rdisting a list of files such as <i>/path/dir1/f1 </i> and <i>/path/dir2/f2 </i> to <i>/tmp/dir </i> would create files <i>/tmp/dir/path/dir1/f1 </i> and <i>/tmp/dir/path/dir2/f2 </i> instead of <i>/tmp/dir/dir1/f1 </i> and <i>/tmp/dir/dir2/f2.</i></p>
 <dt><code>noexec</code></p>
-<dd> Automatically exclude executable files that are in <i><a href="/docs/linux/man/5-a-out/">a.out</a>(5)</i> format from being checked or updated.</p>
+<dd> Automatically exclude executable files that are in <i>a.out(5)</i> format from being checked or updated.</p>
 <dt><code>younger</code></p>
 <dd> Younger mode. Files are normally updated if their <i>mtime</i> and <i>size</i> (see <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2)) disagree. This option causes <i>rdist</i> not to update files that are younger than the master copy. This can be used to prevent newer copies on other hosts from being replaced. A warning message is printed for files which are newer than the master copy.</p>
 <dt><code>compare</code></p>
@@ -136,12 +136,12 @@ install[dest];
 <dt><code>savetargets</code></p>
 <dd> Save files that are updated instead of removing them. Any target file that is updates is first rename from <code>file</code> to <code>file.OLD.</code></p>
 <dt><code>sparse</code></p>
-<dd> Enable checking for sparse (aka <i>wholely</i>) files. One of the most common types of sparse files are those produced by <code><a href="/docs/linux/man/3-ndbm/">ndbm</a>(3).</code> This option adds some additional processing overhead so it should only be enabled for targets likely to contain sparse files.</dl>
+<dd> Enable checking for sparse (aka <i>wholely</i>) files. One of the most common types of sparse files are those produced by <code>ndbm(3).</code> This option adds some additional processing overhead so it should only be enabled for targets likely to contain sparse files.</dl>
 </dl>
 <dt><code>-p </code><i>&lt;rdistd-path&gt;</i></p>
 <dd> Set the path where the rdistd server is searched for on the target host.</p>
 <dt><code>-P </code><i>&lt;transport-path&gt;</i></p>
-<dd> Set the path to the transport command to be used. This is normally <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c)</i> but can be any other program &#8211; such as <i><a href="/docs/linux/man/1-ssh/">ssh</a>(1) &#8211;</i> which understands <i><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c)</i> command line syntax and which provides an appropriate connection to the remote host. The <i>transport-path</i> may be a colon seperated list of possible pathnames. In this case, the first component of the path to exist is used. i.e. <code>/usr/ucb/rsh:/usr/bin/remsh,</code> <code>/usr/bsd/rsh.</code></p>
+<dd> Set the path to the transport command to be used. This is normally <i>rsh(1c)</i> but can be any other program &#8211; such as <i><a href="/docs/linux/man/1-ssh/">ssh</a>(1) &#8211;</i> which understands <i>rsh(1c)</i> command line syntax and which provides an appropriate connection to the remote host. The <i>transport-path</i> may be a colon seperated list of possible pathnames. In this case, the first component of the path to exist is used. i.e. <code>/usr/ucb/rsh:/usr/bin/remsh,</code> <code>/usr/bsd/rsh.</code></p>
 <dt><code>-t </code><i>timeout</i></p>
 <dd> Set the timeout period (in seconds) for waiting for responses from the remote <i>rdist</i> server. The default is 900 seconds.</p>
 <dt><code>-V</code></p>
@@ -163,7 +163,7 @@ install[dest];
 <dt><code>file</code></p>
 <dd> Log to a file. To specify the file name, use the format &#8220;<code>file=</code><i>filename</i><code>=</code><i>types</i>&#8221;. e.g. <code>&#8220;file=/tmp/rdist.log=all,debug&#8221;.</code></p>
 <dt><code>syslog</code></p>
-<dd> Use the <i><a href="/docs/linux/man/8-syslogd/">syslogd</a>(8)</i> facility.</p>
+<dd> Use the <i>syslogd(8)</i> facility.</p>
 <dt><code>notify</code></p>
 <dd> Use the internal <i>rdist</i> <code>notify</code> facility. This facility is used in conjunction with the <code>notify</code> keyword in a <i>distfile</i> to specify what messages are mailed to the <code>notify</code> address.</dl>
 </dl>
@@ -298,7 +298,7 @@ distfile       - input command file
 $TMPDIR/rdist* - temporary file for update lists
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-sh/">sh</a>(1),</code> <code><a href="/docs/linux/man/1-csh/">csh</a>(1),</code> <code><a href="/docs/linux/man/2-stat/">stat</a>(2),</code> <code><a href="//www.systutorials.com/docs/linux/man/1c-rsh/">rsh</a>(1c),</code> <code><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3)</code></p>
+<p> <code><a href="/docs/linux/man/1-sh/">sh</a>(1),</code> <code><a href="/docs/linux/man/1-csh/">csh</a>(1),</code> <code><a href="/docs/linux/man/2-stat/">stat</a>(2),</code> <code>rsh(1c),</code> <code><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3)</code></p>
 <h2>DIAGNOSTICS</h2>
 <h2>NOTES</h2>
 <p> If the basename of a file (the last component in the pathname) is &quot;.&quot;, then <code>rdist </code> assumes the remote (destination) name is a directory. i.e. <code>/tmp/.</code> means that <code>/tmp</code> should be a directory on the remote host. </p>

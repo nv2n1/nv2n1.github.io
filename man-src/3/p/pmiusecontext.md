@@ -19,7 +19,7 @@ description: "pmiUseContext – change LOGIMPORT context"
 <p> pmiUseContext($</code><i>context</i>);</p>
 <h2>Description</h2>
 <p>As part of the Performance Co-Pilot Log Import API (see <code><a href="/docs/linux/man/3-logimport/">LOGIMPORT</a></code>(3)), <code>pmiUseContext</code> may be used by applications wishing to generate more than one PCP archive concurrently. </p>
-<p> The <i>context</i> argument is a value returned from a previous call to <code><a href="/docs/linux/man/3-pmstart/">pmStart</a></code>(3) and on successful return from <code>pmiUseContext</code>, the current context will have been changed to the one identified by <i>context</i>.</p>
+<p> The <i>context</i> argument is a value returned from a previous call to <code>pmStart</code>(3) and on successful return from <code>pmiUseContext</code>, the current context will have been changed to the one identified by <i>context</i>.</p>
 <h2>Diagnostics</h2>
 <p><code>pmiUseContext</code> returns zero on success else a negative value that can be turned into an error message by calling <code><a href="/docs/linux/man/3-pmierrstr/">pmiErrStr</a></code>(3).</p>
 <h2>See Also</h2>

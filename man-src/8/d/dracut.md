@@ -87,7 +87,7 @@ include ld.so.conf.d/*.conf</pre>
 <p>An initramfs generated without the &quot;hostonly&quot; mode, does not contain any system configuration files (except for some special exceptions), so the configuration has to be done on the kernel command line. With this flexibility, you can easily boot from a changed root partition, without the need to recompile the initramfs image. So, you could completly change your root partition (move it inside a md raid with encryption and LVM on top), as long as you specify the correct filesystem LABEL or UUID on the kernel command line for your root device, dracut will find it and boot from it. </p>
 <p> The kernel command line usually can be configured in <i>/boot/grub2/grub.cfg</i> (or <i>/boot/efi/EFI/redhat/grub.cfg</i> for EFI systems), if grub2 is your bootloader and it also can be edited in the real boot process in the grub menu. </p>
 <p> The kernel command line can also be provided by the dhcp server with the root-path option. See the section called &#8220;Network Boot&#8221;. </p>
-<p> For a full reference of all kernel command line parameters, see <code><a href="/docs/linux/man/5-dracut-cmdline/">dracut.cmdline</a></code>(5). </p>
+<p> For a full reference of all kernel command line parameters, see <code>dracut.cmdline</code>(5). </p>
 <p> To get a quick start for the suitable kernel command line on your system, use the <i>&#8211;print-cmdline</i> option: </p>
 <dl>
 <dd>
@@ -560,10 +560,10 @@ Key slot 0 unlocked.</pre>
 <dd>output debug information of the build process</dl>
 <p> <code>-v, &#8211;verbose</code></p>
 <dl>
-<dd>increase verbosity level (default is <a href="/docs/linux/man/4-info/">info</a>(4))</dl>
+<dd>increase verbosity level (default is info(4))</dl>
 <p> <code>-q, &#8211;quiet</code></p>
 <dl>
-<dd>decrease verbosity level (default is <a href="/docs/linux/man/4-info/">info</a>(4))</dl>
+<dd>decrease verbosity level (default is info(4))</dl>
 <p> <code>-c, &#8211;conf</code>&nbsp;<wbr><i>&lt;dracut configuration file&gt;</i></p>
 <dl>
 <dd>specify configuration file to use. </p>

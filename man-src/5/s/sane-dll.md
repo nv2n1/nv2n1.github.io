@@ -65,6 +65,6 @@ description: "sane-dll – SANE dynamic backend loader"
 <p>Example: export SANE_DEBUG_DLL=3 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/5-sane-backendname/">sane-backendname</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>sane-backendname</code>(5) </p>
 <h2>Author</h2>
 <p>David Mosberger</p>

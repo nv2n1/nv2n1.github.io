@@ -28,7 +28,7 @@ description: "fedfs-get-nsdb-params – send a FEDFS_GET_NSDB_PARAMS ADMIN proto
 <dt><code>-h, &#8211;hostname=</code><i>hostname</i></p>
 <dd>Specifies the hostname of a remote FedFS ADMIN service. If this option is not specified, the default value is <code>localhost</code>.</p>
 <dt><code>-n, &#8211;nettype=</code><i>nettype</i></p>
-<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code><a href="//www.systutorials.com/docs/linux/man/3t-rpc/">rpc</a></code>(3t) for details.</p>
+<dd>Specifies the transport to use when contacting the remote FedFS ADMIN service. Typically the <i>nettype</i> is one of <code>tcp</code> or <code>udp</code>. If this option is not specified, the default value is <code>netpath</code>. See <code>rpc</code>(3t) for details.</p>
 <dt><code>-l, &#8211;nsdbname=</code><i>NSDB-hostname</i></p>
 <dd>Specifies the hostname of the NSDB to insert into the new FedFS junction. If this option is not specified, the value of the FEDFS_NSDB_HOST environment variable is consulted. If the variable is not set and the <code>&#8211;nsdbname</code> option is not specified, the <code><a href="/docs/linux/man/8-fedfs-get-nsdb-params/">fedfs-get-nsdb-params</a></code>(8) command fails.</p>
 <dt><code>-r, &#8211;nsdbport=</code><i>NSDB-port</i></p>
@@ -48,7 +48,7 @@ description: "fedfs-get-nsdb-params – send a FEDFS_GET_NSDB_PARAMS ADMIN proto
 <p> The RPC client uses the Kerberos v5 GSS mechanism if a Kerberos security flavor is specified. When specifying a Kerberos security flavor, the user must first obtain a valid Kerberos ticket using <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1) before running <code><a href="/docs/linux/man/8-fedfs-create-junction/">fedfs-create-junction</a></code>(8). </p>
 <p> The AUTH_NONE security flavor is no longer supported by this implementation.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/7-nsdb-parameters/">nsdb-parameters</a></code>(7), <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8), <code><a href="/docs/linux/man/8-fedfs-get-nsdb-limited-params/">fedfs-get-nsdb-limited-params</a></code>(8), <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/3t-rpc/">rpc</a></code>(3t) </p>
+<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/7-nsdb-parameters/">nsdb-parameters</a></code>(7), <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8), <code>fedfs-get-nsdb-limited-params</code>(8), <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code>rpc</code>(3t) </p>
 <p> RFC 5716 for FedFS requirements and overview</p>
 <h2>Colophon</h2>
 <p>This page is part of the fedfs-utils package. A description of the project and information about reporting bugs can be found at <i><a rel="nofollow" href="http://wiki.linux-nfs.org/wiki/index.php/FedFsUtilsProject">http://wiki.linux-nfs.org/wiki/index.php/FedFsUtilsProject</a></i>.</p>

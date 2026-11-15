@@ -144,7 +144,7 @@ description: "sendmail – Postfix to Sendmail compatibility interface"
 <h2>Security</h2>
 <p> By design, this program is not set-user (or group) id. However, it must handle data from untrusted, possibly remote, users. Thus, the usual precautions need to be taken against malicious inputs.</p>
 <h2>Diagnostics</h2>
-<p> Problems are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) and to the standard error stream.</p>
+<p> Problems are logged to <code>syslogd</code>(8) and to the standard error stream.</p>
 <h2>Environment</h2>
 <dl COMPACT>
 <dt><code>MAIL_CONFIG</code></p>
@@ -246,7 +246,7 @@ description: "sendmail – Postfix to Sendmail compatibility interface"
 <a href="//www.systutorials.com/docs/linux/man/1-postdrop/">postdrop</a>(1), mail posting utility
 <a href="//www.systutorials.com/docs/linux/man/1-postfix/">postfix</a>(1), mail system control
 <a href="//www.systutorials.com/docs/linux/man/1-postqueue/">postqueue</a>(1), mail queue control
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging
+syslogd(8), system logging
 </pre>
 <h2>Readme_Files</h2>
 <p> Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>

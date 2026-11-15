@@ -37,7 +37,7 @@ description: "wall – write a message to all users"
 <dt>
 <dd> Display help text and exit.</dl>
 <h2>NOTES</h2>
-<p> Some sessions, such as <code><a href="//www.systutorials.com/docs/linux/man/1x-wdm/">wdm</a></code>(1x), that have in the beginning of <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5) ut_type data a &#8216;:&#8217; character will not get the message from <code>wall</code>. This is done to avoid write errors.</p>
+<p> Some sessions, such as <code>wdm</code>(1x), that have in the beginning of <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5) ut_type data a &#8216;:&#8217; character will not get the message from <code>wall</code>. This is done to avoid write errors.</p>
 <h2>HISTORY</h2>
 <p> A <code>wall</code> command appeared in Version 7 AT&amp;T UNIX.</p>
 <h2>SEE ALSO</h2>

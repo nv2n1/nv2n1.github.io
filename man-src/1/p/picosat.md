@@ -95,5 +95,5 @@ description: "picosat – Satisfiability (SAT) solver with proof and core suppor
 <p> picosat was written by Armin Biere &lt;biere [at] jku.at&gt; </p>
 <p> This man page was written by David A. Wheeler. It is released to the public domain; you may use it in any way you wish. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-picomus/">picomus</a></i>(1), <i><a href="/docs/linux/man/1-minisat2/">minisat2</a></i>(1). </p>
+<p> <i><a href="/docs/linux/man/1-picomus/">picomus</a></i>(1), <i>minisat2</i>(1). </p>
 <h2>Index</h2>

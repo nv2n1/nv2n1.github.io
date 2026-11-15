@@ -17,5 +17,5 @@ description: "load_midi_patches – Forces the MIDI driver to load a set of patc
 <h2>RETURN VALUE</h2>
 <p> Returns non-zero if an error occurred. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_sound/">install_sound</a></code>(3), <code><a href="/docs/linux/man/3-midi_out/">midi_out</a></code>(3) </p>
+<p> <code>install_sound</code>(3), <code><a href="/docs/linux/man/3-midi_out/">midi_out</a></code>(3) </p>
 <h2>Index</h2>

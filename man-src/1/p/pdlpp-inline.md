@@ -31,9 +31,9 @@ url: "/docs/linux/man/1-pdlpp-inline/"
  Code =&gt; '$o() = $i() + 1;',
  );
  pp_def('tcumul',
- Pars =&gt; '<a HREF="//www.systutorials.com/docs/linux/man/n-in/">in</a>(n);[o] mul()',
+ Pars =&gt; 'in(n);[o] mul()',
  Code =&gt; '$mul() = 1;
- <a HREF="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ loop(n) %{
  $mul() *= $in();
  %}',
  );
@@ -64,7 +64,7 @@ url: "/docs/linux/man/1-pdlpp-inline/"
  BOOT =&gt; 'set_nr_err_handler(nr_barf);';
  use Inline Pdlpp; # the actual code is in the __Pdlpp__ block below
  $a = zeroes(10) + 30;;
- print $a-&gt;<a HREF="//www.systutorials.com/docs/linux/man/5-poidev/">poidev</a>(5),&quot;\n&quot;;
+ print $a-&gt;poidev(5),&quot;\n&quot;;
  __DATA__
  __Pdlpp__
  pp_def('poidev',

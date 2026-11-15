@@ -30,4 +30,4 @@ description: "iv_tls_user_register, iv_tls_user_ptr – thread-local storage han
 <p> Use of <code>iv_tls</code> for managing thread-local state is preferred over direct use of the <code>__thread</code> keyword, as not all platforms that ivykis runs on provide the <code>__thread</code> keyword. </p>
 <p> Use of <code>iv_tls</code> for managing thread-local state is preferred over direct use of the <code>pthread_key_create</code> and <code>pthread_setspecific</code> APIs, as <code>iv_tls</code> provides a thread init hook as well as a destructor hook, and properly sequences <code>-&gt;init_thread</code> and <code>-&gt;deinit_thread</code> calls with core ivykis initialization and cleanup.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-iv_init/">iv_init</a></code>(3)</p>
+<p><code>iv_init</code>(3)</p>

@@ -12,7 +12,7 @@ description: "isodebug – print genisoimage debug info from ISO-9660 image"
 <h2>SYNOPSIS</h2>
 <p> <code>isodebug</code> [ <i>options</i> ] [ <i>file</i> ]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>Isodebug</code> reads the debug info written by <code><a href="/docs/linux/man/8-genisoimage/">genisoimage</a></code>(8) from within a ISO-9660 file system image and prints them.</p>
+<p> <code>Isodebug</code> reads the debug info written by <code>genisoimage</code>(8) from within a ISO-9660 file system image and prints them.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-help</code></p>

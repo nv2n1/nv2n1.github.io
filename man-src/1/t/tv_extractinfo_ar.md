@@ -17,7 +17,7 @@ description: "tv_extractinfo_ar – read Spanish (Argentinean) language listings
 <p> This tool also attempts to split multipart programmes into their constituents, by looking for a description that seems to contain lots of times and titles. But this depends on the description following one particular style and is useful only for some listings sources (Ananova). </p>
 <p> If some text is marked with the &#8216;lang&#8217; attribute as being some language other than Spanish (&#8216;es&#8217;), it is ignored.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Mariano Cosentino, Mok [at] marianok.com.ar</p>
 <h2>BUGS</h2>

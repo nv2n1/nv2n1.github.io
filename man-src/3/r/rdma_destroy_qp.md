@@ -30,4 +30,4 @@ Users must destroy any QP associated with an rdma_cm_id before destroying the ID
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/3-rdma_create_qp/">rdma_create_qp</a>(3), <a HREF="/docs/linux/man/3-rdma_destroy_id/">rdma_destroy_id</a>(3), <a HREF="/docs/linux/man/3-ibv_destroy_qp/">ibv_destroy_qp</a>(3) 
+<a HREF="/docs/linux/man/3-rdma_create_qp/">rdma_create_qp</a>(3), <a HREF="/docs/linux/man/3-rdma_destroy_id/">rdma_destroy_id</a>(3), ibv_destroy_qp(3) 

@@ -15,4 +15,4 @@ description: "DeviceKit-power – System-wide Power Management"
 <h2>Bugs</h2>
 <p>Please send bug reports to either the distribution or the DeviceKit mailing list, see m[blue]<code><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/devkit-devel">http://lists.freedesktop.org/mailman/listinfo/devkit-devel</a></code>m[] on how to subscribe.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-devicekit/">DeviceKit</a></code>(7), <code><a href="/docs/linux/man/8-policykit/">PolicyKit</a></code>(8), <code><a href="/docs/linux/man/8-devkit-power-daemon/">devkit-power-daemon</a></code>(8), <code><a href="/docs/linux/man/1-devkit-power/">devkit-power</a></code>(1) </p>
+<p><code>DeviceKit</code>(7), <code>PolicyKit</code>(8), <code><a href="/docs/linux/man/8-devkit-power-daemon/">devkit-power-daemon</a></code>(8), <code><a href="/docs/linux/man/1-devkit-power/">devkit-power</a></code>(1) </p>

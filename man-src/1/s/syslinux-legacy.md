@@ -19,7 +19,7 @@ description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 <dd> <code>syslinux /dev/fd0</code></dl>
 <p> This will alter the boot sector on the disk and copy a file named LDLINUX.SYS into its root directory. </p>
 <p> On boot time, by default, the kernel will be loaded from the image named LINUX on the boot floppy. This default can be changed, see the section on the <code>syslinux</code> configuration file. </p>
-<p> If the Shift or Alt keys are held down during boot, or the Caps or Scroll locks are set, <code>syslinux</code> will display a <code><a href="/docs/linux/man/8-lilo/">lilo</a></code>(8) -style &quot;boot:&quot; prompt. The user can then type a kernel file name followed by any kernel parameters. The <code>syslinux</code> loader does not need to know about the kernel file in advance; all that is required is that it is a file located in the root directory on the disk. </p>
+<p> If the Shift or Alt keys are held down during boot, or the Caps or Scroll locks are set, <code>syslinux</code> will display a <code>lilo</code>(8) -style &quot;boot:&quot; prompt. The user can then type a kernel file name followed by any kernel parameters. The <code>syslinux</code> loader does not need to know about the kernel file in advance; all that is required is that it is a file located in the root directory on the disk. </p>
 <p> <code>Syslinux</code> supports the loading of initial ramdisks (initrd) and the bzImage kernel format.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -45,7 +45,7 @@ description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 <dt>NOTE: Earlier versions of <font SIZE="-1">SYSLINUX</font> used to automatically</p>
 <dd> append the string &quot;auto&quot; to whatever the user specified using the DEFAULT command. As of version 1.54, this is no longer true, as it caused problems when using a shell as a substitute for &quot;init.&quot; You may want to include this option manually.</p>
 <dt><code>append</code><i> options &#8230;</i></p>
-<dd> Add one or more <i>options</i> to the kernel command line. These are added both for automatic and manual boots. The options are added at the very beginning of the kernel command line, usually permitting explicitly entered kernel options to override them. This is the equivalent of the <code><a href="/docs/linux/man/8-lilo/">lilo</a></code>(8)<br />
+<dd> Add one or more <i>options</i> to the kernel command line. These are added both for automatic and manual boots. The options are added at the very beginning of the kernel command line, usually permitting explicitly entered kernel options to override them. This is the equivalent of the <code>lilo</code>(8)<br />
 &nbsp;&quot;append&quot;&nbsp;option.</dl>
 <pre>
 <code>label&nbsp;</code><i>label</i>
@@ -76,7 +76,7 @@ description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 <dt><code>kbdmap&nbsp;</code><i>keymap</i></p>
 <dd> Install a simple keyboard map. The keyboard remapper used is <i>very</i> simplistic (it simply remaps the keycodes received from the BIOS, which means that only the key combinations relevant in the default layout &#8211; usually U.S. English &#8211; can be mapped) but should at least help people with AZERTY keyboard layout and the locations of = and , (two special characters used heavily on the Linux kernel command line.)</p>
 <dt>
-<dd> The included program <code><a href="/docs/linux/man/8-keytab-lilo-pl/">keytab-lilo.pl</a></code>(8) from the <code><a href="/docs/linux/man/8-lilo/">lilo</a></code>(8)<br />
+<dd> The included program <code>keytab-lilo.pl</code>(8) from the <code>lilo</code>(8)<br />
 &nbsp;distribution can be used to create such keymaps.</p>
 <dt><code>display&nbsp;</code><i>filename</i></p>
 <dd> Displays the indicated file on the screen at boot time (before the boot: prompt, if displayed). Please see the section below on DISPLAY files. If the file is missing, this option is simply ignored.</p>
@@ -189,7 +189,7 @@ COM              COMBOOT image (runnable from DOS)
 <p> <code>subscribe syslinux</code> </p>
 <p> in the body of the message. The submission address is syslinux [at] linux.kernel.org.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-lilo/">lilo</a></code>(8), <code><a href="/docs/linux/man/8-keytab-lilo-pl/">keytab-lilo.pl</a></code>(8), <code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/1-superformat/">superformat</a></code>(1).</p>
+<p> <code>lilo</code>(8), <code>keytab-lilo.pl</code>(8), <code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code>superformat</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page is a modified version of the original <code>syslinux</code> documentation by H. Peter Anvin &lt;hpa [at] zytor.com&gt;. The conversion to a manpage was made by Arthur Korn &lt;arthur [at] korn.ch&gt;. </p>
 <h2>Index</h2>

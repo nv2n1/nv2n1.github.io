@@ -27,7 +27,7 @@ description: "murmurd – VoIP server."
 <dt><code>-supw</code><i>&nbsp;<wbr>password</i><code>&nbsp;<wbr>[</code><i>serverid</i><code>]</code></p>
 <dd> This will forcefully set the SuperUser password for a server. SuperUser is a special account (similar to root ) which bypasses all access controls. This command may be used while the server is running.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mumble/">mumble</a></code>(1), <code><a href="/docs/linux/man/1-murmur-wrapper/">murmur-wrapper</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-mumble/">mumble</a></code>(1), <code>murmur-wrapper</code>(1). </p>
 <h2>AUTHOR</h2>
 <p> mumble and murmurd was written by Thorvald Natvig &lt;slicer [at] users.sourceforge.net&gt;. </p>
 <h2>Index</h2>

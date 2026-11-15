@@ -65,7 +65,7 @@ rootcint[-f][AxDict.C][-c] TAttAxis.h[-][!]&#8230;[LinkDef.h]
 <dt>2</p>
 <dd> Note that the <code>LinkDef </code> file name MUST contain the string: <code>LinkDef.h </code> or <code>linkdef.h</code>, i.e. <code>NA49_LinkDef.h </code> is fine just like, <code>mylinkdef.h</code>.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i><a href="/docs/linux/man/1-cint/">cint</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i>cint</i>(1) </p>
 <p> <code>rootcint </code> is documented fully on <i>ROOT web-site</i></p>
 <h2>ORIGINAL AUTHORS</h2>
 <p> The ROOT team (see web page above):</p>

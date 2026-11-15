@@ -40,5 +40,5 @@ then
 <p> Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews after a description of <font SIZE="-1">HDB</font> <font SIZE="-1">UUCP</font> locking given by Peter Honeyman, and improved by Berend Reitsma to solve a race condition. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> shlock.pod 9304 2011-08-04 22:10:47Z iulius $</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="//www.systutorials.com/docs/linux/man/3pm-INN::Utils::Shlock/">INN::Utils::Shlock</a></i>(3pm). </p>
+<p> <i>INN::Utils::Shlock</i>(3pm). </p>
 <h2>Index</h2>

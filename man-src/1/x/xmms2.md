@@ -82,7 +82,7 @@ description: "xmms2 – offers a simple command-line interface to the XMMS2 daem
 <dt><i>current [pattern]</i></p>
 <dd> Gives some summary of the currently playing song&#8217;s meta data. A pattern can be specified in the form &quot;${album} &#8211; ${tracknr}&quot;. Please be aware of your shells substitution features.</p>
 <dt><i>config config_key [=] value</i></p>
-<dd> Sets <i>config_key</i> to <i>value</i> on <i><a href="/docs/linux/man/8-xmms2d/">xmms2d</a>(8).</i></p>
+<dd> Sets <i>config_key</i> to <i>value</i> on <i>xmms2d(8).</i></p>
 <dt><i>config_list</i></p>
 <dd> Lists all the configuration values of <code>XMMS2.</code></p>
 <dt><i>plugin_list</i></p>
@@ -90,7 +90,7 @@ description: "xmms2 – offers a simple command-line interface to the XMMS2 daem
 <dt><i>stats</i></p>
 <dd> Retrieves the uptime and version from <code>XMMS2.</code></p>
 <dt><i>quit</i></p>
-<dd> Makes <i><a href="/docs/linux/man/8-xmms2d/">xmms2d</a>(8)</i> quit.</p>
+<dd> Makes <i>xmms2d(8)</i> quit.</p>
 <dt><i>help</i></p>
 <dd> Prints a concise overview of all commands offered by <i>xmms2.</i></dl>
 <h2>MEDIA LIBRARY</h2>
@@ -210,10 +210,10 @@ description: "xmms2 – offers a simple command-line interface to the XMMS2 daem
 <dt><i>XMMS_PATH</i></p>
 <dd> The URL path to <i>xmms2d.</i></p>
 <dt><i>XDG_CONFIG_HOME</i></p>
-<dd> The path where the xmms2 configuration files are located See <code>IPC SOCKET</code> in <i><a href="/docs/linux/man/8-xmms2d/">xmms2d</a>(8)</i> for details of possible values for this variable </p>
+<dd> The path where the xmms2 configuration files are located See <code>IPC SOCKET</code> in <i>xmms2d(8)</i> for details of possible values for this variable </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-xmms2d/">xmms2d</a>(8), <a rel="nofollow" href="http://xmms2.xmms.org">http://xmms2.xmms.org</a></p>
+<p> xmms2d(8), <a rel="nofollow" href="http://xmms2.xmms.org">http://xmms2.xmms.org</a></p>
 <h2>HISTORY</h2>
 <p> The <code>XMMS2</code> Project was started by Tobias Rundström and Anders Gustafsson. It is developed with their lead by a small group of contributors from all over the world.</p>
 <h2>AUTHOR</h2>

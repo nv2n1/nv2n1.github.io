@@ -139,7 +139,7 @@ description: "pound – HTTP/HTTPS reverse-proxy and load-balancer"
 <dt><code>Disable</code> SSLv2|SSLv3|TLSv1|TLSv1_1|TLSv1_2</p>
 <dd>Disable the protocol <code>and all lower protocols as well</code>. This is due to a limitation in OpenSSL, which does not support disabling a single protocol. For example, <i>Disable TLSv1</i> would disable SSLv2, SSLv3 and TLSv1, thus allowing only TLSv1_1 and TLSv1_2.</p>
 <dt><code>Ciphers</code> &quot;acceptable:cipher:list&quot;</p>
-<dd>This is the list of ciphers that will be accepted by the SSL connection; it is a string in the same format as in OpenSSL <i><a href="/docs/linux/man/1-ciphers/">ciphers</a>(1)</i> and <i><a href="/docs/linux/man/3-ssl_ctx_set_cipher_list/">SSL_CTX_set_cipher_list</a>(3).</i></p>
+<dd>This is the list of ciphers that will be accepted by the SSL connection; it is a string in the same format as in OpenSSL <i>ciphers(1)</i> and <i>SSL_CTX_set_cipher_list(3).</i></p>
 <dt><code>SSLHonorCipherOrder</code> 0|1</p>
 <dd>If this value is 1, the server will broadcast a preference to use <code>Ciphers</code> in the order supplied in the <code>Ciphers</code> directive. If the value is 0, the server will treat the Ciphers list as the list of Ciphers it will accept, but no preference will be indicated. Default value is 0.</p>
 <dt><code>SSLAllowClientRenegotiation</code> 0|1|2</p>
@@ -199,7 +199,7 @@ description: "pound – HTTP/HTTPS reverse-proxy and load-balancer"
 <dt><code>Disable</code> SSLv2|SSLv3|TLSv1|TLSv1_1|TLSv1_2</p>
 <dd>Disable the protocol <code>and all lower protocols as well</code>. This is due to a limitation in OpenSSL, which does not support disabling a single protocol. For example, <i>Disable TLSv1</i> would disable SSLv2, SSLv3 and TLSv1, thus allowing only TLSv1_1 and TLSv1_2. This directive may appear only after the <i>HTTPS</i> directive.</p>
 <dt><code>Ciphers</code> &quot;acceptable:cipher:list&quot;</p>
-<dd>This is the list of ciphers that will be accepted by the SSL connection; it is a string in the same format as in OpenSSL <i><a href="/docs/linux/man/1-ciphers/">ciphers</a>(1)</i> and <i><a href="/docs/linux/man/3-ssl_ctx_set_cipher_list/">SSL_CTX_set_cipher_list</a>(3).</i> This directive may appear only after the <i>HTTPS</i> directive.</p>
+<dd>This is the list of ciphers that will be accepted by the SSL connection; it is a string in the same format as in OpenSSL <i>ciphers(1)</i> and <i>SSL_CTX_set_cipher_list(3).</i> This directive may appear only after the <i>HTTPS</i> directive.</p>
 <dt><code>Priority</code> val</p>
 <dd>The priority of this back-end (between 1 and 9, 5 is default). Higher priority back-ends will be used more often than lower priority ones, so you should define higher priorities for more capable servers.</p>
 <dt><code>TimeOut</code> val</p>
@@ -424,7 +424,7 @@ End</code></pre>
 <dt><i>/usr/local/etc/pound.cfg</i></p>
 <dd>the default configuration file (the location may be changed when compiling &#8211; see the F_CONF flag in the Makefile).</p>
 <dt><i>/usr/local/etc/pound/cert.pem</i></p>
-<dd>the certificate file(s) for HTTPS. The location must be defined in the configuration file &#8211; this is only a suggestion. The file must contain a PEM-encoded certificate, optionally a certificate chain from a known Certificate Authority to your server certificate and a PEM-encoded private key (not password protected). See <i><a href="/docs/linux/man/1-openssl/">OpenSSL</a>(1)</i> for details. This file should be well protected, lest someone gets your server private key.</dl>
+<dd>the certificate file(s) for HTTPS. The location must be defined in the configuration file &#8211; this is only a suggestion. The file must contain a PEM-encoded certificate, optionally a certificate chain from a known Certificate Authority to your server certificate and a PEM-encoded private key (not password protected). See <i>OpenSSL(1)</i> for details. This file should be well protected, lest someone gets your server private key.</dl>
 <h2>Author</h2>
 <p>Written by Robert Segall, Apsis GmbH.</p>
 <h2>Reporting Bugs</h2>

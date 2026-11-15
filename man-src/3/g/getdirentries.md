@@ -41,7 +41,7 @@ description: "getdirentries – get directory entries in a filesystem-independen
 </tr>
 </table>
 <h2>CONFORMING TO</h2>
-<p> Not in POSIX.1. Present on the BSDs, and a few other systems. Use <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3) and <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3) instead.</p>
+<p> Not in POSIX.1. Present on the BSDs, and a few other systems. Use <code>opendir</code>(3) and <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3) instead.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2), <code><a href="/docs/linux/man/2-open/">open</a></code>(2)</p>
 <h2>COLOPHON</h2>

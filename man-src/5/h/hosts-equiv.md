@@ -52,6 +52,6 @@ description: "hosts.equiv – list of hosts and users that are granted \"trusted
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+@netgroup </p>
 <p> Note: the deny statements must always precede the allow statements because the file is processed sequentially until the first matching rule is found.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-rhosts/">rhosts</a></code>(5), <code><a href="/docs/linux/man/8-rlogind/">rlogind</a></code>(8), <code><a href="/docs/linux/man/8-rshd/">rshd</a></code>(8)</p>
+<p><code>rhosts</code>(5), <code>rlogind</code>(8), <code>rshd</code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

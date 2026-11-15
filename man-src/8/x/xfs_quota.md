@@ -75,7 +75,7 @@ description: "xfs_quota – manage use of quota on XFS filesystems"
 <dt>3.</p>
 <dd>XFS distinguishes between quota accounting and limit enforcement. Quota accounting must be turned on at the time of mounting the XFS filesystem. However, it is possible to turn on/off limit enforcement any time quota accounting is turned on. The &quot;quota&quot; option to the <code>mount</code> command turns on both (user) quota accounting and enforcement. The &quot;uqnoenforce&quot; option must be used to turn on user accounting with limit enforcement disabled.</p>
 <dt>4.</p>
-<dd>Turning on quotas on the root filesystem is slightly different from the above. For IRIX XFS, refer to <code><a href="//www.systutorials.com/docs/linux/man/1M-quotaon/">quotaon</a></code>(1M). For Linux XFS, the quota mount flags must be passed in with the &quot;rootflags=&quot; boot parameter.</p>
+<dd>Turning on quotas on the root filesystem is slightly different from the above. For IRIX XFS, refer to <code>quotaon</code>(1M). For Linux XFS, the quota mount flags must be passed in with the &quot;rootflags=&quot; boot parameter.</p>
 <dt>5.</p>
 <dd>It is useful to use the <code>state</code> to monitor the XFS quota subsystem at various stages &#8211; it can be used to see if quotas are turned on, and also to monitor the space occupied by the quota system itself..</p>
 <dt>6.</p>
@@ -163,7 +163,7 @@ description: "xfs_quota – manage use of quota on XFS filesystems"
 <dt><i>/etc/projid</i></p>
 <dd>Mapping of numeric project identifiers to project names.</dl>
 <h2>Irix See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/1M-quotaon/">quotaon</a></code>(1M), <code><a href="/docs/linux/man/4-xfs/">xfs</a></code>(4).</p>
+<p><code>quotaon</code>(1M), <code>xfs</code>(4).</p>
 <h2>Linux See Also</h2>
 <p><code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8), <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5).</p>
 <h2>See Also</h2>

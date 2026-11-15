@@ -86,7 +86,7 @@ To flush the mail queue : postqueue[-v][-c config_dir] - f postqueue[-v][-c conf
 RFC 7159 (JSON notation)
 </pre>
 <h2>DIAGNOSTICS</h2>
-<p> Problems are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) or <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8), and to the standard error stream.</p>
+<p> Problems are logged to <code>syslogd</code>(8) or <code>postlogd</code>(8), and to the standard error stream.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
 <dt>MAIL_CONFIG</p>
@@ -139,8 +139,8 @@ RFC 7159 (JSON notation)
 <a href="//www.systutorials.com/docs/linux/man/8-flush/">flush</a>(8), fast flush service
 <a href="//www.systutorials.com/docs/linux/man/1-sendmail/">sendmail</a>(1), Sendmail-compatible user interface
 <a href="//www.systutorials.com/docs/linux/man/1-postsuper/">postsuper</a>(1), privileged queue operations
-<a href="//www.systutorials.com/docs/linux/man/8-postlogd/">postlogd</a>(8), Postfix logging
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging
+postlogd(8), Postfix logging
+syslogd(8), system logging
 </pre>
 <h2>README FILES</h2>
 <p> Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>

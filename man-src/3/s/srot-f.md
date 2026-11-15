@@ -32,7 +32,7 @@ description: "srot.f –"
 <dl>
 <dd>
 <pre> jack dongarra, linpack, 3/11/78.
- modified 12/3/93, <a href="//www.systutorials.com/docs/linux/man/1-array/">array</a>(1) declarations changed to array(*)</pre>
+ modified 12/3/93, array(1) declarations changed to array(*)</pre>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 52 of file srot.f.</p>
 <h2>Author</h2>

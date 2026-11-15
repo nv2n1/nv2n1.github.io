@@ -368,7 +368,7 @@ description: "llvm-objcopy – object copying and editing tool"
 <p> To report bugs, please visit &lt;<i><a rel="nofollow" href="https://github.com/llvm/llvm-project/labels/tools:llvm-objcopy/strip/">https://github.com/llvm/llvm-project/labels/tools:llvm-objcopy/strip/</a></i>&gt;. </p>
 <p> There is a known issue with <i>&#8211;input-target</i> and <i>&#8211;target</i> causing only <code>binary</code> and <code>ihex</code> formats to have any effect. Other values will be ignored and <code>llvm-objcopy</code> will attempt to guess the input format.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-llvm-strip/">llvm-strip</a>(1)</code></p>
+<p> <code>llvm-strip(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>COPYRIGHT</h2>

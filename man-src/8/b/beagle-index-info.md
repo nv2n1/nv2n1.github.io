@@ -20,4 +20,4 @@ description: "beagle-index-info"
 <p>Copyright &#169; 2004-2007 Novell, Inc. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1), <code><a href="/docs/linux/man/1-beagle-index-info/">beagle-index-info</a>(1),</code> <code><a rel="nofollow" href="http://beagle-project.org">http://beagle-project.org</a></code> </p>
+<p><code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1), <code>beagle-index-info(1),</code> <code><a rel="nofollow" href="http://beagle-project.org">http://beagle-project.org</a></code> </p>

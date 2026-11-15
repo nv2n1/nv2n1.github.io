@@ -124,7 +124,7 @@ x</code>, <code>
 <dt><code>e</code></p>
 <dd><a href="/docs/linux/man/1-eqn/">eqn</a>(1)</p>
 <dt><code>g</code></p>
-<dd><a href="/docs/linux/man/1-grap/">grap</a>(1)</p>
+<dd>grap(1)</p>
 <dt><code>p</code></p>
 <dd><a href="/docs/linux/man/1-pic/">pic</a>(1)</p>
 <dt><code>r</code></p>
@@ -132,7 +132,7 @@ x</code>, <code>
 <dt><code>t</code></p>
 <dd><a href="/docs/linux/man/1-tbl/">tbl</a>(1)</p>
 <dt><code>v</code></p>
-<dd><a href="/docs/linux/man/1-vgrind/">vgrind</a>(1)</dl>
+<dd>vgrind(1)</dl>
 <h2>Bugs</h2>
 <p>Most of the macros describe formatting (e.g., font type and spacing) instead of marking semantic content (e.g., this text is a reference to another page), compared to formats like mdoc and DocBook (even HTML has more semantic markings). This situation makes it harder to vary the <code>man</code> format for different media, to make the formatting consistent for a given media, and to automatically insert cross-references. By sticking to the safe subset described above, it should be easier to automate transitioning to a different reference page format in the future. </p>
 <p> The Sun macro <code>TX</code> is not implemented.</p>

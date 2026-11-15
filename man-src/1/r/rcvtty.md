@@ -29,7 +29,7 @@ dtimenow  date     the current date
 folder    string   the name of the current folder
 </pre>
 </dl>
-<p> By default, <code>rcvtty</code> will send its output to every terminal on the local machine that is owned by current user, and that has given write permission as granted by the command <i><a href="/docs/linux/man/1-mesg/">mesg</a></i>(1). If the option <code>-biff</code> is given, then <code>rcvtty</code> will obey the notification status set by the command <i><a href="/docs/linux/man/1-biff/">biff</a></i>(1) instead.</p>
+<p> By default, <code>rcvtty</code> will send its output to every terminal on the local machine that is owned by current user, and that has given write permission as granted by the command <i><a href="/docs/linux/man/1-mesg/">mesg</a></i>(1). If the option <code>-biff</code> is given, then <code>rcvtty</code> will obey the notification status set by the command <i>biff</i>(1) instead.</p>
 <h2>FILES</h2>
 <pre>
 ^/etc/nmh/mts.conf~^nmh mts configuration file

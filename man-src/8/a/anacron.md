@@ -23,7 +23,7 @@ description: "anacron – runs commands periodically"
 <p> Unless the <code>-d</code> option is given (see below), Anacron forks to the background when it starts, and the parent process exits immediately. </p>
 <p> Unless the <code>-s</code> or <code>-n</code> options are given, Anacron starts jobs immediately when their delay is over. The execution of different jobs is completely independent. </p>
 <p> If a job generates any output on its standard output or standard error, the output is mailed to the user running Anacron (usually root), or to the address contained by the MAILTO environment variable in the crontab, if such exists. </p>
-<p> Informative messages about what Anacron is doing are sent to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a>(8)</code> under facility <code>cron</code>, priority <code>notice</code>. Error messages are sent at priority <code>error</code>. </p>
+<p> Informative messages about what Anacron is doing are sent to <code>syslogd(8)</code> under facility <code>cron</code>, priority <code>notice</code>. Error messages are sent at priority <code>error</code>. </p>
 <p> &quot;Active&quot; jobs (i.e. jobs that Anacron already decided to run and now wait for their delay to pass, and jobs that are currently being executed by Anacron), are &quot;locked&quot;, so that other copies of Anacron won&#8217;t run them at the same time.</p>
 <h2>Options</h2>
 <dl>

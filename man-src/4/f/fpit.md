@@ -34,7 +34,7 @@ description: "fpit – Fujitsu Stylistic input driver"
 <dt><code>setserial /dev/ttyS3 uart 16450 irq 5 port 0xfd68</code></p>
 <dd></dl>
 <h2>Configuration Details</h2>
-<p>Please refer to <a href="//www.systutorials.com/docs/linux/man/5x-xorg.conf/">xorg.conf</a>(5x) for general configuration details and for options that can be used with all input drivers. This section only covers configuration details specific to this driver. </p>
+<p>Please refer to xorg.conf(5x) for general configuration details and for options that can be used with all input drivers. This section only covers configuration details specific to this driver. </p>
 <p> The device supports the following options:</p>
 <dl>
 <dd>

@@ -99,5 +99,5 @@ description: "mimetype – Determine file type"
 <p> Copyright (c) 2003, 2012 Jaap G Karssenberg. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl. </p>
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a></i>(1), <i><a href="/docs/linux/man/3-file--mimeinfo/">File::MimeInfo</a></i>(3), &lt;<a rel="nofollow" href="http://freedesktop.org/Software/shared-mime-info">http://freedesktop.org/Software/shared-mime-info</a>&gt; </p>
+<p> <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a></i>(1), <i>File::MimeInfo</i>(3), &lt;<a rel="nofollow" href="http://freedesktop.org/Software/shared-mime-info">http://freedesktop.org/Software/shared-mime-info</a>&gt; </p>
 <h2>Index</h2>

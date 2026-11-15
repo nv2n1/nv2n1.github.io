@@ -19,4 +19,4 @@ description: "nntpsend.ctl – List of sites to feed via nntpsend"
 <p>Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> nntpsend.ctl.pod 9072 2010-05-31 17:42:04Z iulius $</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-innxmit/">innxmit</a></i>(1), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-nntpsend/">nntpsend</a></i>(8), <i><a href="/docs/linux/man/1-shrinkfile/">shrinkfile</a></i>(1). </p>
+<p><i>innxmit</i>(1), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-nntpsend/">nntpsend</a></i>(8), <i><a href="/docs/linux/man/1-shrinkfile/">shrinkfile</a></i>(1). </p>

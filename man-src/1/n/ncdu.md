@@ -90,7 +90,7 @@ description: "ncdu – NCurses Disk Usage"
 <dd> Refresh/recalculate the current directory.</p>
 <dt>b</p>
 <dd> Spawn shell in current directory. </p>
-<p> Ncdu will determine your preferred shell from the <tt>&quot;NCDU_SHELL&quot;</tt> or <tt>&quot;SHELL&quot;</tt> variable (in that order), or will call <tt>&quot;/bin/sh&quot;</tt> if neither are set. This allows you to also configure another command to be run when he &#8216;b&#8217; key is pressed. For example, to spawn the <i><a href="/docs/linux/man/1-vifm/">vifm</a></i>(1) file manager instead of a shell, run ncdu as follows: </p>
+<p> Ncdu will determine your preferred shell from the <tt>&quot;NCDU_SHELL&quot;</tt> or <tt>&quot;SHELL&quot;</tt> variable (in that order), or will call <tt>&quot;/bin/sh&quot;</tt> if neither are set. This allows you to also configure another command to be run when he &#8216;b&#8217; key is pressed. For example, to spawn the <i>vifm</i>(1) file manager instead of a shell, run ncdu as follows: </p>
 <pre>
   export NCDU_SHELL=vifm
   ncdu

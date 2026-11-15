@@ -11,7 +11,7 @@ description: "faxq-helper – privileged helper process to access the fax queue"
 <h2>Synopsis</h2>
 <p><code>faxq-helper &lt;command&gt; [&lt;options&gt;]</code></p>
 <h2>Description</h2>
-<p><i>faxq-helper</i> is part of the internal workings of <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1). Formerly, the /var/spool/fax/outgoing directory was world-writeable, leading to all sort of funny symlink attacks against <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) and <a href="/docs/linux/man/8-faxrunq/">faxrunq</a>(8). These days, it&#8217;s owned by the user &#8220;fax&#8221;, and only this user can write to it. To be able to put jobs there, <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) calls <i>faxq-helper</i> for very clearly defined purposes:<br />
+<p><i>faxq-helper</i> is part of the internal workings of <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1). Formerly, the /var/spool/fax/outgoing directory was world-writeable, leading to all sort of funny symlink attacks against <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) and faxrunq(8). These days, it&#8217;s owned by the user &#8220;fax&#8221;, and only this user can write to it. To be able to put jobs there, <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) calls <i>faxq-helper</i> for very clearly defined purposes:<br />
 &nbsp;<wbr>&#8211; make a new queue directory<br />
 &nbsp;<wbr>&#8211; put a new fax G3 file into this queue directory<br />
 &nbsp;<wbr>&#8211; put a JOB file into this queue directory, and activate the fax job and possibly:<br />

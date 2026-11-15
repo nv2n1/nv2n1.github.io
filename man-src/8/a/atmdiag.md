@@ -34,4 +34,4 @@ description: "atmdiag – show ATM device driver diagnostics"
 <h2>Author</h2>
 <p>Werner Almesberger, EPFL ICA &lt;Werner.Almesberger [at] epfl.ch&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-atmdump/">atmdump</a>(8), <a href="/docs/linux/man/8-sonetdiag/">sonetdiag</a>(8) </p>
+<p><a href="/docs/linux/man/8-atmdump/">atmdump</a>(8), sonetdiag(8) </p>

@@ -75,7 +75,7 @@ int ibv_rereg_mr(struct ibv_mr *mr,
 
  
 
- <a HREF="/docs/linux/man/3-ibv_dereg_mr/">ibv_dereg_mr</a>(3), <a HREF="/docs/linux/man/3-ibv_reg_mr/">ibv_reg_mr</a>(3)
+ ibv_dereg_mr(3), ibv_reg_mr(3)
 
 <h2>AUTHORS</h2>
 

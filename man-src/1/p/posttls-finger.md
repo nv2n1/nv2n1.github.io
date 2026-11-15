@@ -109,7 +109,7 @@ $ posttls-finger -cC -L none destination
 <dt><code>-p </code><i>protocols</i> (default: !SSLv2)</p>
 <dd> List of TLS protocols that posttls-finger will exclude or include. See smtp_tls_mandatory_protocols for details.</p>
 <dt><code>-P </code><i>CApath/</i> (default: none)</p>
-<dd> The OpenSSL CApath/ directory (indexed via <a href="/docs/linux/man/1-c_rehash/">c_rehash</a>(1)) for remote SMTP server certificate verification. By default no CApath is used and no public CAs are trusted.</p>
+<dd> The OpenSSL CApath/ directory (indexed via c_rehash(1)) for remote SMTP server certificate verification. By default no CApath is used and no public CAs are trusted.</p>
 <dt><code>-r </code><i>delay</i></p>
 <dd> With a cacheable TLS session, disconnect and reconnect after <i>delay</i> seconds. Report whether the session is re-used. Retry if a new server is encountered, up to 5 times or as specified with the <code>-m</code> option. By default reconnection is disabled, specify a positive delay to enable this behavior.</p>
 <dt><code>-s </code><i>servername</i></p>

@@ -117,6 +117,6 @@ ftp hard nproc 0
 600:700 hard locks 10</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-pam_limits/">pam_limits</a></code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7), <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2), <code><a href="//www.systutorials.com/docs/linux/man/3p-getrlimit/">getrlimit</a></code>(3p)</p>
+<p><code><a href="/docs/linux/man/8-pam_limits/">pam_limits</a></code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7), <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2), <code>getrlimit</code>(3p)</p>
 <h2>Author</h2>
 <p>pam_limits was initially written by Cristian Gafton &lt;gafton [at] redhat.com&gt;</p>

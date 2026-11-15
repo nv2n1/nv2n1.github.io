@@ -22,7 +22,7 @@ description: "fcrontab – manipulate per-user fcrontab files"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-u </code><i>user</i></p>
-<dd> Specify the user whose <code>fcrontab</code> will be managed, or &quot;systab&quot; for the system fcrontab. Should only be used by root. If not given, the <code>fcrontab</code> file of the user invoking <code>fcrontab</code> will be handled. It may be useful since the <code><a href="/docs/linux/man/8-su/">su</a></code>(8) command may confuse <code>fcrontab</code>. </p>
+<dd> Specify the user whose <code>fcrontab</code> will be managed, or &quot;systab&quot; for the system fcrontab. Should only be used by root. If not given, the <code>fcrontab</code> file of the user invoking <code>fcrontab</code> will be handled. It may be useful since the <code>su</code>(8) command may confuse <code>fcrontab</code>. </p>
 <dl>
 <dt>
 <dd> <code>Note:</code> the &#8216;<i>user</i>&#8216; in the synopsys is equivalent to a &#8216;<code>-u</code> <i>user</i>&#8216;.</dl>
@@ -51,7 +51,7 @@ description: "fcrontab – manipulate per-user fcrontab files"
 <h2>FILES</h2>
 <dl>
 <dt><i>/usr/local/etc/fcron.conf</i></p>
-<dd> Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code><a href="/docs/linux/man/5-fcron-conf/">fcron.conf</a></code>(5) for more details.</p>
+<dd> Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code>fcron.conf</code>(5) for more details.</p>
 <dt><i>/usr/local/etc/fcron.allow</i></p>
 <dd> Users allowed to use <code>fcrontab</code> and <code>fcrondyn</code> (one name per line, special name &quot;all&quot; acts for everyone)</p>
 <dt><i>/usr/local/etc/fcron.deny</i></p>
@@ -62,7 +62,7 @@ description: "fcrontab – manipulate per-user fcrontab files"
 <p> <code><a href="/docs/linux/man/1-fcrontab/">fcrontab</a></code>(1), </p>
 <p> <code><a href="/docs/linux/man/1-fcrondyn/">fcrondyn</a></code>(1), </p>
 <p> <code><a href="/docs/linux/man/5-fcrontab/">fcrontab</a></code>(5), </p>
-<p> <code><a href="/docs/linux/man/5-fcron-conf/">fcron.conf</a></code>(5), </p>
+<p> <code>fcron.conf</code>(5), </p>
 <p> <code><a href="/docs/linux/man/8-fcron/">fcron</a></code>(8). </p>
 <p> If you&#8217;re learning how to use fcron from scratch, I suggest that you read the HTML version of the documentation (if your are not reading it right now! :) ): the content is the same, but it is easier to navigate thanks to the hyperlinks.</p>
 <h2>AUTHOR</h2>

@@ -325,7 +325,7 @@ description: "rpm – RPM Package Manager"
 <code>M</code> <code>M</code>ode differs (includes permissions and file type)
 <code>5</code> digest (formerly MD<code>5</code> sum) differs
 <code>D</code> <code>D</code>evice major/minor number mismatch
-<code>L</code> read<code>L</code><a href="//www.systutorials.com/docs/linux/man/2-ink/">ink</a>(2) path mismatch
+<code>L</code> read<code>L</code>ink(2) path mismatch
 <code>U</code> <code>U</code>ser ownership differs
 <code>G</code> <code>G</code>roup ownership differs
 <code>T</code> m<code>T</code>ime differs

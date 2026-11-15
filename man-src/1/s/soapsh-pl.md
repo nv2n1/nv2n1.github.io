@@ -9,7 +9,7 @@ url: "/docs/linux/man/1-soapsh-pl/"
 SOAPsh.pl - Interactive shell for SOAP calls 
 
 <h2>Synopsis</h2><pre> perl SOAPsh.pl <a rel="nofollow" HREF="http://services.soaplite.com/examples.cgi">http://services.soaplite.com/examples.cgi</a> <a HREF="http://www.soaplite.com/My/Examples">http://www.soaplite.com/My/Examples</a>
- &gt; <a HREF="//www.systutorials.com/docs/linux/man/2-getStateName/">getStateName</a>(2)
+ &gt; getStateName(2)
  &gt; getStateNames(1,2,3,7)
  &gt; getStateList([1,9])
  &gt; getStateStruct({a=&gt;1, b=&gt;24})

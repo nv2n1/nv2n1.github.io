@@ -230,7 +230,7 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;
 <p> <i>IWORK</i> </p>
 <pre>
           IWORK is INTEGER array, dimension (MAX(1,LIWORK))
-          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal LWORK.
+          On exit, if INFO = 0, IWORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
 <pre>

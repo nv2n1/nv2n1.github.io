@@ -88,7 +88,7 @@ description: "xpr – print an X window dump"
 <dd> This option allows overhead transparencies to be printed using the PaintJet and PaintJet XL printers. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-xwd/">xwd</a>(1), <a href="/docs/linux/man/1-xwud/">xwud</a>(1), <a href="/docs/linux/man/1-x/">X</a>(1)</p>
+<p> <a href="/docs/linux/man/1-xwd/">xwd</a>(1), <a href="/docs/linux/man/1-xwud/">xwud</a>(1), X(1)</p>
 <h2>LIMITATIONS</h2>
 <p> The current version of <i>xpr</i> can generally print out on the LN03 most X windows that are not larger than two-thirds of the screen. For example, it will be able to print out a large Emacs window, but it will usually fail when trying to print out the entire screen. The LN03 has memory limitations that can cause it to incorrectly print very large or complex windows. The two most common errors encountered are &#8220;band too complex&#8221; and &#8220;page memory exceeded.&#8221; In the first case, a window may have a particular six pixel row that contains too many changes (from black to white to black). This will cause the printer to drop part of the line and possibly parts of the rest of the page. The printer will flash the number `1&#8242; on its front panel when this problem occurs. A possible solution to this problem is to increase the scale of the picture, or to split the picture onto two or more pages. The second problem, &#8220;page memory exceeded,&#8221; will occur if the picture contains too much black, or if the picture contains complex half-tones such as the background color of a display. When this problem occurs the printer will automatically split the picture into two or more pages. It may flash the number `5&#8242; on its from panel. There is no easy solution to this problem. It will probably be necessary to either cut and paste, or to rework the application to produce a less complex picture. </p>
 <p> There are several limitations on the LA100 support: the picture will always be printed in portrait mode, there is no scaling, and the aspect ratio will be slightly off. </p>
@@ -120,7 +120,7 @@ description: "xpr – print an X window dump"
 <p> The <code>-gray</code> option is not supported for HP or IBM printers.<br />
  Copyright 1986, Marvin Solomon and the University of Wisconsin.<br />
  Copyright 1988, Hewlett Packard Company.<br />
- See <i><a href="/docs/linux/man/1-x/">X</a>(1)</i> for a full statement of rights and permissions.</p>
+ See <i>X(1)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
 <p> Michael R. Gretzinger, MIT Project Athena, Jose Capo, MIT Project Athena (PP3812 support), Marvin Solomon, University of Wisconsin, Bob Scheifler, MIT, Angela Bock and E. Mike Durbin, Rich Inc. (grayscale), Larry Rupp, HP (HP printer support). </p>
 <h2>Index</h2>

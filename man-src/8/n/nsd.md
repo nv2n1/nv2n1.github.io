@@ -31,7 +31,7 @@ description: "nsd – Name Server Daemon (NSD) version 4.1.14."
 <dt><code>-h</code></p>
 <dd>Print help information and exit.</p>
 <dt><code>-i</code><i> identity</i></p>
-<dd>Return the specified <i>identity</i> when asked for <i>CH TXT ID.SERVER</i> (This option is used to determine which server is answering the queries when they are anycast). The default is the name returned by <a href="/docs/linux/man/3-gethostname/">gethostname</a>(3).</p>
+<dd>Return the specified <i>identity</i> when asked for <i>CH TXT ID.SERVER</i> (This option is used to determine which server is answering the queries when they are anycast). The default is the name returned by gethostname(3).</p>
 <dt><code>-I</code><i> nsid</i></p>
 <dd>Add the specified <i>nsid</i> to the EDNS section of the answer when queried with an NSID EDNS enabled packet. As a sequence of hex characters or with ascii_ prefix and then an ascii string.</p>
 <dt><code>-l</code><i> logfile</i></p>
@@ -47,7 +47,7 @@ description: "nsd – Name Server Daemon (NSD) version 4.1.14."
 <dt><code>-s</code><i> seconds</i></p>
 <dd>Produce statistics dump every <i>seconds</i> seconds. This is equal to sending <i>SIGUSR1</i> to the daemon periodically.</p>
 <dt><code>-t</code><i> chroot</i></p>
-<dd>Specifies a directory to <i>chroot </i> to upon startup. This option requires you to ensure that appropriate <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8) socket (e.g. <i>chrootdir </i> /dev/log) is available, otherwise <code>NSD</code> won&#8217;t produce any log output.</p>
+<dd>Specifies a directory to <i>chroot </i> to upon startup. This option requires you to ensure that appropriate syslogd(8) socket (e.g. <i>chrootdir </i> /dev/log) is available, otherwise <code>NSD</code> won&#8217;t produce any log output.</p>
 <dt><code>-u</code><i> username</i></p>
 <dd>Drop user and group privileges to those of <i>username</i> after binding the socket. The <i>username</i> must be one of: username, id, or id.gid. For example: nsd, 80, or 80.80.</p>
 <dt><code>-V</code><i> level</i></p>
@@ -71,7 +71,7 @@ description: "nsd – Name Server Daemon (NSD) version 4.1.14."
 <dt>/etc/nsd/nsd.conf</p>
 <dd>default <code>NSD</code> configuration file</dl>
 <h2>Diagnostics</h2>
-<p><code>NSD</code> will log all the problems via the standard <a href="/docs/linux/man/8-syslog/">syslog</a>(8) <i>daemon</i> facility, unless the <code>-d</code> option is specified.</p>
+<p><code>NSD</code> will log all the problems via the standard syslog(8) <i>daemon</i> facility, unless the <code>-d</code> option is specified.</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-nsd-conf/">nsd.conf</a></i>(5), <i><a href="/docs/linux/man/8-nsd-checkconf/">nsd-checkconf</a></i>(8), <i><a href="/docs/linux/man/8-nsd-control/">nsd-control</a></i>(8)</p>
 <h2>Authors</h2>

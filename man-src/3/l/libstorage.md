@@ -162,7 +162,7 @@ void OVclose(void);
 <dd> Get the newsgroup name and the article number of the token.</p>
 <dt>&quot;EXPENSIVESTAT&quot;</p>
 <dd> Check to see whether checking the existence of an article is expensive or not.</dl>
-<p> The <code>SMprintfiles</code> function shows file name or token usable by <i><a href="/docs/linux/man/8-fastrm/">fastrm</a></i>(8). </p>
+<p> The <code>SMprintfiles</code> function shows file name or token usable by <i>fastrm</i>(8). </p>
 <p> The <code>SMflushcacheddata</code> function flushes cached data on each storage method. <i>type</i> is one of following:</p>
 <dl>
 <dt>&quot;SM_HEAD&quot;</p>
@@ -214,5 +214,5 @@ void OVclose(void);
 <p> Written by Katsuhiro Kondou &lt;kondou [at] nec.co.jp&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> libstorage.pod 9074 2010-05-31 19:01:32Z iulius $</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/8-expire/">expire</a></i>(8), <i><a href="/docs/linux/man/8-fastrm/">fastrm</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). </p>
+<p> <i><a href="/docs/linux/man/8-expire/">expire</a></i>(8), <i>fastrm</i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). </p>
 <h2>Index</h2>

@@ -21,7 +21,7 @@ description: "rltest – test cases for QDBM Relic"
 <dd> Retrieve records of the database above.</dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/3-relic/">relic</a></code>(3) </p>
+<p> <code>qdbm</code>(3), <code>relic</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <h2>Index</h2>

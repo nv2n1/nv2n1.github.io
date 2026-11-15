@@ -25,7 +25,7 @@ description: "systemd-fstab-generator – Unit generator for /etc/fstab"
 <dl>
 <dd>Configures the operating system&#8217;s root filesystem to mount when running in the initrd. This accepts a device node path (usually /dev/disk/by-uuid/&#8230; or /dev/disk/by-label/&#8230; or similar), or the special values &quot;gpt-auto&quot; and &quot;tmpfs&quot;. </p>
 <p> Use &quot;gpt-auto&quot; to explicitly request automatic root file system discovery via <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8). </p>
-<p> Use &quot;tmpfs&quot; in order to mount a <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5) file system as root file system of the OS. This is useful in combination with <i>mount.usr=</i> (see below) in order to combine a volatile root file system with a separate, immutable /usr/ file system. Also see <i>systemd.volatile=</i> below.</dl>
+<p> Use &quot;tmpfs&quot; in order to mount a <code>tmpfs</code>(5) file system as root file system of the OS. This is useful in combination with <i>mount.usr=</i> (see below) in order to combine a volatile root file system with a separate, immutable /usr/ file system. Also see <i>systemd.volatile=</i> below.</dl>
 <p> <i>rootfstype=</i></p>
 <dl>
 <dd>Takes the root filesystem type that will be passed to the mount command. <i>rootfstype=</i> is honored by the initrd.</dl>

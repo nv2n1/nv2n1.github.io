@@ -226,7 +226,7 @@ description: "gprof – display call graph profile data"
 <p> Parents that are not themselves profiled will have the time of their profiled children propagated to them, but they will appear to be spontaneously invoked in the call graph listing, and will not have their time propagated further. Similarly, signal catchers, even though profiled, will appear to be spontaneous (although for more obscure reasons). Any profiled children of signal catchers should have their times propagated properly, unless the signal catcher was invoked during the execution of the profiling routine, in which case all is lost. </p>
 <p> The profiled program must call <tt>&quot;exit&quot;</tt>(2) or return normally for the profiling information to be saved in the <i>gmon.out</i> file.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), <code><a href="/docs/linux/man/1-prof/">prof</a></code>(1), and the Info entry for <i>gprof</i>. </p>
+<p> <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), <code>prof</code>(1), and the Info entry for <i>gprof</i>. </p>
 <p> &#8220;An Execution Profiler for Modular Programs&#8221;, by S. Graham, P. Kessler, M. McKusick; Software &#8211; Practice and Experience, Vol. 13, pp. 671-685, 1983. </p>
 <p> &#8220;gprof: A Call Graph Execution Profiler&#8221;, by S. Graham, P. Kessler, M. McKusick; Proceedings of the <font SIZE="-1">SIGPLAN</font> &#8217;82 Symposium on Compiler Construction, <font SIZE="-1">SIGPLAN</font> Notices, Vol. 17, No 6, pp. 120-126, June 1982.</p>
 <h2>COPYRIGHT</h2>

@@ -51,7 +51,7 @@ git repack[-a][-A][-d][-f][-F][-l][-n][-q][-b][-m][--window = &lt;n&gt;][--depth
 <p> -n</p>
 <dl>
 <dt>
-<dd> Do not update the server information with <i>git update-server-info</i>. This option skips updating local catalog files needed to publish this repository (or a direct copy of it) over HTTP or FTP. See <code><a href="/docs/linux/man/1-git-update-server-info/">git-update-server-info</a></code>(1).</dl>
+<dd> Do not update the server information with <i>git update-server-info</i>. This option skips updating local catalog files needed to publish this repository (or a direct copy of it) over HTTP or FTP. See <code>git-update-server-info</code>(1).</dl>
 <p> &#8211;window=&lt;n&gt;, &#8211;depth=&lt;n&gt;</p>
 <dl>
 <dt>

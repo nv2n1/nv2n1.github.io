@@ -39,13 +39,13 @@ fi_info &amp;nbsp;
 
  -P, --port=&lt;PORT&gt; : Port number used to filter interfaces. 
 
- -c, --caps=&lt;CAP1|CAP2&gt;.. : Pipe separated list of capabilities used to filter interfaces. Only interfaces supporting all of the given capabilities will respond. For more information on capabilities, see <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3). 
+ -c, --caps=&lt;CAP1|CAP2&gt;.. : Pipe separated list of capabilities used to filter interfaces. Only interfaces supporting all of the given capabilities will respond. For more information on capabilities, see fi_getinfo(3). 
 
- -m, --mode=&lt;MOD1|MOD2&gt;.. : Pipe separated list of modes used to filter interfaces. Only interfaces supporting all of the given modes will respond. For more information on, modes see <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3). 
+ -m, --mode=&lt;MOD1|MOD2&gt;.. : Pipe separated list of modes used to filter interfaces. Only interfaces supporting all of the given modes will respond. For more information on, modes see fi_getinfo(3). 
 
- -t, --ep_type=&lt;EPTYPE&gt; : Specifies the type of fabric interface communication desired. For example, specifying FI_EP_DGRAM would return only interfaces which support unreliable datagram. For more information on endpoint types, see <a HREF="/docs/linux/man/3-fi_endpoint/">fi_endpoint</a>(3). 
+ -t, --ep_type=&lt;EPTYPE&gt; : Specifies the type of fabric interface communication desired. For example, specifying FI_EP_DGRAM would return only interfaces which support unreliable datagram. For more information on endpoint types, see fi_endpoint(3). 
 
- -a, --addr_format=&lt;FMT&gt; : Filter fabric interfaces by their address format. For example, specifying FI_SOCKADDR_IN would return only interfaces which use sockaddr_in structures for addressing. For more information on address formats, see <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3). 
+ -a, --addr_format=&lt;FMT&gt; : Filter fabric interfaces by their address format. For example, specifying FI_SOCKADDR_IN would return only interfaces which use sockaddr_in structures for addressing. For more information on address formats, see fi_getinfo(3). 
 
  -p, --provider=&lt;PROV&gt; : Filter fabric interfaces by the provider implementation. For a list of providers, see the --list option. 
 
@@ -61,7 +61,7 @@ fi_info &amp;nbsp;
 
  -l, --list : List available libfabric providers. 
 
- -v, --verbose : By default, fi_info will display a summary of each of the interfaces discovered. If the verbose option is enabled, then all of the contents of the fi_info structure are displayed. For more information on the data contained in the fi_info structure, see <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3). 
+ -v, --verbose : By default, fi_info will display a summary of each of the interfaces discovered. If the verbose option is enabled, then all of the contents of the fi_info structure are displayed. For more information on the data contained in the fi_info structure, see fi_getinfo(3). 
 
  --version : Display versioning information.
 
@@ -117,7 +117,7 @@ protocol : FI_PROTO_UDP
 
  
 
- <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3), <a HREF="/docs/linux/man/3-fi_endpoint/">fi_endpoint</a>(3)
+ fi_getinfo(3), fi_endpoint(3)
 
 <h2>AUTHORS</h2>
 

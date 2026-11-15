@@ -57,4 +57,4 @@ description: "send-uucp – Send Usenet articles via UUCP"
 <h2>History</h2>
 <p>This program was originally written by Edvard Tuinder &lt;ed [at] elm.net&gt; and then maintained and extended by Miquel van Smoorenburg &lt;miquels [at] cistron.nl&gt;. Marco d&#8217;Itri &lt;md [at] linux.it&gt; cleaned up the code for inclusion in <font SIZE="-1">INN. </font> This manual page was written by Mark Brown &lt;broonie [at] sirena.org.uk&gt;.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-uucp/">uucp</a></i>(8). </p>
+<p><i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i>uucp</i>(8). </p>

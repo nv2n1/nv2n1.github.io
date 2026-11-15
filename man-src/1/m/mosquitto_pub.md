@@ -41,7 +41,7 @@ description: "mosquitto_pub – an MQTT version 3.1/3.1.1 client for publishing 
 <p> <code>&#8211;ciphers</code></p>
 <dl>
 <dt>
-<dd> An openssl compatible list of TLS ciphers to support in the client. See <code><a href="/docs/linux/man/1-ciphers/">ciphers</a></code>(1) for more information.</dl>
+<dd> An openssl compatible list of TLS ciphers to support in the client. See <code>ciphers</code>(1) for more information.</dl>
 <p> <code>-d</code>, <code>&#8211;debug</code></p>
 <dl>
 <dt>

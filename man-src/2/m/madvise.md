@@ -54,7 +54,7 @@ description: "madvise – give advice about use of memory"
 <dt>
 <dd> The specified address range must be mapped shared and writable. This flag cannot be applied to locked pages, Huge TLB pages, or <code>VM_PFNMAP</code> pages.</p>
 <dt>
-<dd> In the initial implementation, only <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5) was supported <code>MADV_REMOVE</code>; but since Linux 3.5, any filesystem which supports the <code><a href="/docs/linux/man/2-fallocate/">fallocate</a></code>(2) <code>FALLOC_FL_PUNCH_HOLE</code> mode also supports <code>MADV_REMOVE</code>. Hugetlbfs fails with the error <code>EINVAL</code> and other filesystems fail with the error <code>EOPNOTSUPP</code>.</p>
+<dd> In the initial implementation, only <code>tmpfs</code>(5) was supported <code>MADV_REMOVE</code>; but since Linux 3.5, any filesystem which supports the <code><a href="/docs/linux/man/2-fallocate/">fallocate</a></code>(2) <code>FALLOC_FL_PUNCH_HOLE</code> mode also supports <code>MADV_REMOVE</code>. Hugetlbfs fails with the error <code>EINVAL</code> and other filesystems fail with the error <code>EOPNOTSUPP</code>.</p>
 <dt><code>MADV_DONTFORK</code> (since Linux 2.6.16)</p>
 <dd> Do not make the pages in this range available to the child after a <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2). This is useful to prevent copy-on-write semantics from changing the physical location of a page if the parent writes to it after a <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2). (Such page relocations cause problems for hardware that DMAs into the page.)</p>
 <dt><code>MADV_DOFORK</code> (since Linux 2.6.16)</p>
@@ -76,7 +76,7 @@ description: "madvise – give advice about use of memory"
 <dt>
 <dd> This feature is intended for testing of memory error-handling code; it is available only if the kernel was configured with <code>CONFIG_MEMORY_FAILURE</code>.</p>
 <dt><code>MADV_HUGEPAGE</code> (since Linux 2.6.38)</p>
-<dd> Enable Transparent Huge Pages (THP) for pages in the range specified by <i>addr</i> and <i>length</i>. Currently, Transparent Huge Pages work only with private anonymous pages (see <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)). The kernel will regularly scan the areas marked as huge page candidates to replace them with huge pages. The kernel will also allocate huge pages directly when the region is naturally aligned to the huge page size (see <code><a href="/docs/linux/man/2-posix_memalign/">posix_memalign</a></code>(2)).</p>
+<dd> Enable Transparent Huge Pages (THP) for pages in the range specified by <i>addr</i> and <i>length</i>. Currently, Transparent Huge Pages work only with private anonymous pages (see <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)). The kernel will regularly scan the areas marked as huge page candidates to replace them with huge pages. The kernel will also allocate huge pages directly when the region is naturally aligned to the huge page size (see <code>posix_memalign</code>(2)).</p>
 <dt>
 <dd> This feature is primarily aimed at applications that use large mappings of data and access large regions of that memory at a time (e.g., virtualization systems such as QEMU). It can very easily waste memory (e.g., a 2 MB mapping that only ever accesses 1 byte will result in 2 MB of wired memory instead of one 4 KB page). See the Linux kernel source file <i>Documentation/admin-guide/mm/transhuge.rst</i> for more details.</p>
 <dt>

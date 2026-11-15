@@ -72,7 +72,7 @@ description: "htop – interactive process viewer"
 <dt><code>s</code></p>
 <dd> Trace process system calls: if <a href="/docs/linux/man/1-strace/">strace</a>(1) is installed, pressing this key will attach it to the currently selected process, presenting a live update of system calls issued by the process.</p>
 <dt><code>l</code></p>
-<dd> Display open files for a process: if <a href="/docs/linux/man/1-lsof/">lsof</a>(1) is installed, pressing this key will display the list of file descriptors opened by the process.</p>
+<dd> Display open files for a process: if lsof(1) is installed, pressing this key will display the list of file descriptors opened by the process.</p>
 <dt><code>w</code></p>
 <dd> Display the command line of the selected process in a separate screen, wrapped onto multiple lines as needed.</p>
 <dt><code>x</code></p>

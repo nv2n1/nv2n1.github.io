@@ -28,7 +28,7 @@ ldbmodify - Modify records in a LDB database
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. See <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7) for details.</dl>
+<dd> LDB URL to connect to. See ldb(7) for details.</dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -49,7 +49,7 @@ ldbmodify - Modify records in a LDB database
 
  
 
- <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7), ldbedit
+ ldb(7), ldbedit
 
 <h2>AUTHOR</h2>
 

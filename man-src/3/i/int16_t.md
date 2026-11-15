@@ -133,7 +133,7 @@ description: "system_data_types – overview of system data types"
 <dd> <i>Include</i>: <i>&lt;sys/types.h&gt;</i>. Alternatively, <i>&lt;grp.h&gt;</i>, <i>&lt;pwd.h&gt;</i>, <i>&lt;signal.h&gt;</i>, <i>&lt;stropts.h&gt;</i>, <i>&lt;sys/ipc.h&gt;</i>, <i>&lt;sys/stat.h&gt;</i>, or <i>&lt;unistd.h&gt;</i>. </p>
 <p> A type used to hold group IDs. According to POSIX, this shall be an integer type. </p>
 <p> <i>Conforming to</i>: POSIX.1-2001 and later. </p>
-<p> <i>See also</i>: <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2), <code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2), <code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2), <code><a href="/docs/linux/man/2-getgroups/">getgroups</a></code>(2), <code><a href="/docs/linux/man/2-getresgid/">getresgid</a></code>(2), <code><a href="/docs/linux/man/2-getgrnam/">getgrnam</a></code>(2), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)</dl>
+<p> <i>See also</i>: <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2), <code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2), <code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2), <code><a href="/docs/linux/man/2-getgroups/">getgroups</a></code>(2), <code><a href="/docs/linux/man/2-getresgid/">getresgid</a></code>(2), <code>getgrnam</code>(2), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)</dl>
 <dt><i>id_t</i></p>
 <dd>
 <dl>
@@ -150,9 +150,9 @@ description: "system_data_types – overview of system data types"
 <p> typedef struct {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;intmax_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;intmax_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rem;&nbsp;<wbr>&nbsp;/*&nbsp;Remainder&nbsp;*/ } imaxdiv_t; </p>
-<p> It is the type of the value returned by the <code><a href="/docs/linux/man/3-imaxdiv/">imaxdiv</a></code>(3) function. </p>
+<p> It is the type of the value returned by the <code>imaxdiv</code>(3) function. </p>
 <p> <i>Conforming to</i>: C99 and later; POSIX.1-2001 and later. </p>
-<p> <i>See also</i>: <code><a href="/docs/linux/man/3-imaxdiv/">imaxdiv</a></code>(3)</dl>
+<p> <i>See also</i>: <code>imaxdiv</code>(3)</dl>
 <dt><i>intmax_t</i></p>
 <dd>
 <dl>
@@ -216,7 +216,7 @@ description: "system_data_types – overview of system data types"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int_n_sign_posn;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;CHAR_MAX&nbsp;*/ }; </p>
 <p> Contains members related to the formatting of numeric values. In the &quot;C&quot; locale, its members have the values shown in the comments above. </p>
 <p> <i>Conforming to</i>: C11 and later; POSIX.1-2001 and later. </p>
-<p> <i>See also</i>: <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/3-localeconv/">localeconv</a></code>(3), <code><a href="/docs/linux/man/5-charsets/">charsets</a></code>(5), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7)</dl>
+<p> <i>See also</i>: <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/3-localeconv/">localeconv</a></code>(3), <code>charsets</code>(5), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7)</dl>
 <dt><i>ldiv_t</i></p>
 <dd>
 <dl>
@@ -362,7 +362,7 @@ description: "system_data_types – overview of system data types"
 <p> The length modifier for <i>size_t</i> for the <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) and the <code><a href="/docs/linux/man/3-scanf/">scanf</a></code>(3) families of functions is <code>z</code>; resulting commonly in <code>%zu</code> or <code>%zx</code> for printing <i>size_t</i> values. </p>
 <p> <i>Versions</i>: <i>&lt;aio.h&gt;</i>, <i>&lt;glob.h&gt;</i>, <i>&lt;grp.h&gt;</i>, <i>&lt;iconv.h&gt;</i>, <i>&lt;mqueue.h&gt;</i>, <i>&lt;pwd.h&gt;</i>, <i>&lt;signal.h&gt;</i>, and <i>&lt;sys/socket.h&gt;</i> define <i>size_t</i> since POSIX.1-2008. </p>
 <p> <i>Conforming to</i>: C99 and later; POSIX.1-2001 and later. </p>
-<p> <i>See also</i>: <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/3-fread/">fread</a></code>(3), <code><a href="/docs/linux/man/3-fwrite/">fwrite</a></code>(3), <code><a href="/docs/linux/man/3-memcmp/">memcmp</a></code>(3), <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3), <code><a href="/docs/linux/man/3-memset/">memset</a></code>(3), <code><a href="/docs/linux/man/3-offsetof/">offsetof</a></code>(3) </p>
+<p> <i>See also</i>: <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/3-fread/">fread</a></code>(3), <code><a href="/docs/linux/man/3-fwrite/">fwrite</a></code>(3), <code><a href="/docs/linux/man/3-memcmp/">memcmp</a></code>(3), <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3), <code><a href="/docs/linux/man/3-memset/">memset</a></code>(3), <code>offsetof</code>(3) </p>
 <p> See also the <i>ptrdiff_t</i> and <i>ssize_t</i> types in this page.</dl>
 <dt><i>ssize_t</i></p>
 <dd>
@@ -428,7 +428,7 @@ description: "system_data_types – overview of system data types"
 <dd> <i>Include</i>: <i>&lt;sys/types.h&gt;</i>. Alternatively, <i>&lt;pwd.h&gt;</i>, <i>&lt;signal.h&gt;</i>, <i>&lt;stropts.h&gt;</i>, <i>&lt;sys/ipc.h&gt;</i>, <i>&lt;sys/stat.h&gt;</i>, or <i>&lt;unistd.h&gt;</i>. </p>
 <p> A type used to hold user IDs. According to POSIX, this shall be an integer type. </p>
 <p> <i>Conforming to</i>: POSIX.1-2001 and later. </p>
-<p> <i>See also</i>: <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2), <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2), <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2), <code><a href="/docs/linux/man/2-getresuid/">getresuid</a></code>(2), <code><a href="/docs/linux/man/2-getpwnam/">getpwnam</a></code>(2), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)</dl>
+<p> <i>See also</i>: <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2), <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2), <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2), <code><a href="/docs/linux/man/2-getresuid/">getresuid</a></code>(2), <code>getpwnam</code>(2), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)</dl>
 <dt><i>uintmax_t</i></p>
 <dd>
 <dl>

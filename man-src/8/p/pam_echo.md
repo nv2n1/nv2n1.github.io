@@ -56,6 +56,6 @@ description: "pam_echo – PAM module for printing text messages"
 password required pam_unix.so</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-pam-conf/">pam.conf</a></code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
+<p><code>pam.conf</code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
 <h2>Author</h2>
 <p>Thorsten Kukuk &lt;kukuk [at] thkukuk.de&gt;</p>

@@ -71,7 +71,7 @@ description: "links – lynx-like alternative character mode WWW browser"
 <dt><code>-no-openmp</code></p>
 <dd> Don&#8217;t use OpenMP. </p>
 <dt><code>-async-dns </code><i>&lt;0&gt;/&lt;1&gt;</i></p>
-<dd> Asynchronous DNS resolver <a href="/docs/linux/man/1-on/">on</a>(1)/off(0). </p>
+<dd> Asynchronous DNS resolver on(1)/off(0). </p>
 <dt><code>-download-utime </code><i>&lt;0&gt;/&lt;1&gt;</i></p>
 <dd> Set time of downloaded files to last modification time reported by server. </p>
 <dt><code>-format-cache-size </code><i>&lt;num&gt;</i></p>

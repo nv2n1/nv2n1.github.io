@@ -77,6 +77,6 @@ description: "gpt-build – Builds and installs GPT source packages and bundles.
 <pre> &lt;NAME&gt;_GPTMACRO='new value'</pre>
 <p>Note that even though this feature seems extremely flexible, it has not been thoroughly tested mainly because the authors have not been able to figure out what people will want to do with these macros. Further details are found in the <code>Grid::GPT::PkgMngmt::BuildMacros</code> manpage.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-gpt-pkg/">gpt-pkg</a></i>(8) <i><a href="/docs/linux/man/8-gpt-bundle/">gpt-bundle</a></i>(8) <i><a href="/docs/linux/man/8-gpt-install/">gpt-install</a></i>(8) <i><a href="/docs/linux/man/3-buildmacros/">BuildMacros</a></i>(3)</p>
+<p><i><a href="/docs/linux/man/8-gpt-pkg/">gpt-pkg</a></i>(8) <i><a href="/docs/linux/man/8-gpt-bundle/">gpt-bundle</a></i>(8) <i><a href="/docs/linux/man/8-gpt-install/">gpt-install</a></i>(8) <i>BuildMacros</i>(3)</p>
 <h2>Author</h2>
 <p>Michael Bletzinger &lt;mbletzin.ncsa.uiuc.edu&gt; and Eric Blau &lt;blau.mcs.anl.gov&gt;</p>

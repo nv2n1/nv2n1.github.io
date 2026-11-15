@@ -59,7 +59,7 @@ description: "anvil – Postfix session count and request rate control"
 <p> The <code><a href="/docs/linux/man/8-anvil/">anvil</a></code>(8) server maintains an in-memory table with information about recent clients requests. No persistent state is kept because standard system library routines are not sufficiently robust for update-intensive applications. </p>
 <p> Although the in-memory state is kept only temporarily, this may require a lot of memory on systems that handle connections from many remote clients. To reduce memory usage, reduce the time unit over which state is kept.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). </p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8). </p>
 <p> Upon exit, and every <code>anvil_status_update_time</code> seconds, the server logs the maximal count and rate values measured, together with (service, client) information and the time of day associated with those events. In order to avoid unnecessary overhead, no measurements are done for activity that isn&#8217;t concurrency limited or rate limited.</p>
 <h2>Bugs</h2>
 <p>Systems behind network address translating routers or proxies appear to have the same client address and can run into connection count and/or rate limits falsely. </p>

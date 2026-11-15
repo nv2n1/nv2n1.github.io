@@ -23,7 +23,7 @@ description: "setproctitle – set process title"
 <pre>setproctitle(&quot;talking to %s&quot;, inet_ntoa(addr));</pre>
 </blockquote>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-w/">w</a>(1), <a href="/docs/linux/man/3-kvm/">kvm</a>(3), kvm_getargv3, <a href="/docs/linux/man/3-printf/">printf</a>(3)</p>
+<p><a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-w/">w</a>(1), kvm(3), kvm_getargv3, <a href="/docs/linux/man/3-printf/">printf</a>(3)</p>
 <h2>Standards</h2>
 <p>The Fn setproctitle function is implicitly non-standard. Other methods of causing the <a href="/docs/linux/man/1-ps/">ps</a>(1) command line to change, including copying over the argv[0] string are also implicitly non-portable. It is preferable to use an operating system supplied Fn setproctitle if present. </p>
 <p> Unfortunately, it is possible that there are other calling conventions to other versions of Fn setproctitle , although none have been found by the author as yet. This is believed to be the predominant convention. </p>

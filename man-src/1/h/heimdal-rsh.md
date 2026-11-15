@@ -12,7 +12,7 @@ description: "rsh – remote shell"
 <h2>SYNOPSIS</h2>
 <p> [-<code>45FGKdefnuxz</code> ] [-<code>U string </code> ] [-<code>p </code><i>port</i> ] [-<code>l </code><i>username</i> ] [-<code>P </code><i>N|O</i> ] <i>host [command]</i></p>
 <h2>DESCRIPTION</h2>
-<p> authenticates to the <a href="/docs/linux/man/8-rshd/">rshd</a>(8) daemon on the remote <i>host</i> and then executes the specified <i>command</i> </p>
+<p> authenticates to the rshd(8) daemon on the remote <i>host</i> and then executes the specified <i>command</i> </p>
 <p> copies its standard input to the remote command, and the standard output and error of the remote command to its own. </p>
 <p> Valid options are:</p>
 <dl>
@@ -80,7 +80,7 @@ description: "rsh – remote shell"
 <dt><code>/etc/hosts </code></p>
 <dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-rlogin/">rlogin</a>(1), krb_realmofhost3, krb_sendauth3, hosts.equiv5, krb5.conf5, <a href="/docs/linux/man/5-rhosts/">rhosts</a>(5), <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) <a href="/docs/linux/man/8-rshd/">rshd</a>(8)</p>
+<p> <a href="/docs/linux/man/1-rlogin/">rlogin</a>(1), krb_realmofhost3, krb_sendauth3, hosts.equiv5, krb5.conf5, rhosts(5), <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) rshd(8)</p>
 <h2>HISTORY</h2>
 <p> The command appeared in BSD 4.2</p>
 <h2>AUTHORS</h2>

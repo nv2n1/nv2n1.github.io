@@ -228,4 +228,4 @@ third -signature user:ADMINS</pre>
 &quot;special&quot; -notcp -defaultvol &lt;path&gt; -systemvol &lt;path&gt;</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8), <code><a href="/docs/linux/man/1-afppasswd/">afppasswd</a></code>(1), <code><a href="/docs/linux/man/5-applevolumes-default/">AppleVolumes.default</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8), <code><a href="/docs/linux/man/1-afppasswd/">afppasswd</a></code>(1), <code>AppleVolumes.default</code>(5) </p>

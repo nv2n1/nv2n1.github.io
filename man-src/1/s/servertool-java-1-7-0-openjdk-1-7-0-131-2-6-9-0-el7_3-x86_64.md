@@ -57,4 +57,4 @@ description: "servertool – The Java(TM) IDL Server Tool"
 <dd>Exit the server tool.</dl>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-orbd/">orbd</a>(1)</p>
+<p>orbd(1)</p>

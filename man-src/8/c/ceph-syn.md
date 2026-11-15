@@ -11,7 +11,7 @@ description: "ceph-syn – ceph synthetic workload generator"
 <h2>Synopsis</h2>
 <pre><code>ceph-syn</code> [ -m <i>monaddr</i>:<i>port</i> ] --syn <i>command</i> <i>...</i></pre>
 <h2>Description</h2>
-<p><code>ceph-syn</code> is a simple synthetic workload generator for the Ceph distributed file system. It uses the userspace client library to generate simple workloads against a currently running file system. The file system need not be mounted via <a href="/docs/linux/man/8-ceph-fuse/">ceph-fuse</a>(8) or the kernel client. </p>
+<p><code>ceph-syn</code> is a simple synthetic workload generator for the Ceph distributed file system. It uses the userspace client library to generate simple workloads against a currently running file system. The file system need not be mounted via ceph-fuse(8) or the kernel client. </p>
 <p> One or more <code>&#8211;syn</code> command arguments specify the particular workload, as documented below.</p>
 <h2>Options</h2>
 <dl>
@@ -47,6 +47,6 @@ description: "ceph-syn – ceph synthetic workload generator"
 <h2>Availability</h2>
 <p><code>ceph-syn</code> is part of Ceph, a massively scalable, open-source, distributed storage system. Please refer to the Ceph documentation at <i><a rel="nofollow" href="http://ceph.com/docs">http://ceph.com/docs</a></i> for more information.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ceph/">ceph</a></code>(8), <code><a href="/docs/linux/man/8-ceph-fuse/">ceph-fuse</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-ceph/">ceph</a></code>(8), <code>ceph-fuse</code>(8)</p>
 <h2>Copyright</h2>
 <p>2010-2014, Inktank Storage, Inc. and contributors. Licensed under Creative Commons BY-SA</p>

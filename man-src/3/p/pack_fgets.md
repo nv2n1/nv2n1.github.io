@@ -23,4 +23,4 @@ fclose(input_file);</code></pre>
 <h2>Return Value</h2>
 <p>Returns the pointer `p&#8217; on success, or NULL on error. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pack_fopen/">pack_fopen</a></code>(3), <code><a href="/docs/linux/man/3-pack_fopen_chunk/">pack_fopen_chunk</a></code>(3), <code><a href="/docs/linux/man/3-pack_fread/">pack_fread</a></code>(3), <code><a href="/docs/linux/man/3-pack_getc/">pack_getc</a></code>(3), <code><a href="/docs/linux/man/3-pack_ungetc/">pack_ungetc</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-pack_fopen/">pack_fopen</a></code>(3), <code><a href="/docs/linux/man/3-pack_fopen_chunk/">pack_fopen_chunk</a></code>(3), <code><a href="/docs/linux/man/3-pack_fread/">pack_fread</a></code>(3), <code>pack_getc</code>(3), <code><a href="/docs/linux/man/3-pack_ungetc/">pack_ungetc</a></code>(3) </p>

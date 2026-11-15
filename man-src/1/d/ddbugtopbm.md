@@ -31,7 +31,7 @@ description: "ddbugtopbm – convert Diddle or DiddleBug sketches to PBM files"
 <p> Russell Marks (<i>rus [at] svgalib.org</i>). </p>
 <p> Mitch Blevins&#8217;s decompression code is directly from DiddleBug itself, which like ddbugtopbm is distributed under the terms of the GNU GPL. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-palmtopnm/">palmtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-palmtopnm/">palmtopnm</a></code>(1) , <code>pbm</code>(1) </p>
 <p> Jens-Chr. Heyer&#8217;s `didcon&#8217; script does something similar. </p>
 <h2>HISTORY</h2>
 <p> <code>ddbugtopbm</code> was new in Netpbm 10.18 (August 2003). It was written and independently distributed in August 2002. </p>

@@ -17,7 +17,7 @@ description: "upssched.conf – Configuration for upssched timer program"
 <dt>PIPEFN <i>filename</i></p>
 <dd>Required. This sets the file name of the socket which will be used for interprocess communications. This should be in a directory where normal users can&#8217;t create the file, due to the possibility of symlinking and other evil.</p>
 <dd>Note: if you are running Solaris or similar, the permissions that upssched sets on this file <code>are not enough</code> to keep you safe. If your OS ignores the permissions on a FIFO, then you MUST put this in a protected directory!</p>
-<dd>Note 2: by default, <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8) will run upssched as whatever user you have defined with RUN_AS_USER in <code><a href="/docs/linux/man/8-upsmon-conf/">upsmon.conf</a></code>(8). Make sure that user can create files and write to files in the path you use for PIPEFN and LOCKFN.</p>
+<dd>Note 2: by default, <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8) will run upssched as whatever user you have defined with RUN_AS_USER in <code>upsmon.conf</code>(8). Make sure that user can create files and write to files in the path you use for PIPEFN and LOCKFN.</p>
 <dd>My recommendation: create a special directory for upssched, make it owned by your upsmon user, then use it for both.</p>
 <dd>The stock version of the upssched.conf ships with PIPEFN disabled to make you visit this portion of the documentation and think about how your system works before potentially opening a security hole. </p>
 <dt>LOCKFN <i>filename</i></p>

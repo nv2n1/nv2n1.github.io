@@ -151,7 +151,7 @@ Esc-I:  fill
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-od/">od</a>(1), <a HREF="/docs/linux/man/1-hdump/">hdump</a>(1), <a HREF="/docs/linux/man/1-hexdump/">hexdump</a>(1), <a HREF="/docs/linux/man/1-bpe/">bpe</a>(1), <a HREF="/docs/linux/man/1-hexed/">hexed</a>(1), <a HREF="/docs/linux/man/1-beav/">beav</a>(1).
+ <a HREF="/docs/linux/man/1-od/">od</a>(1), hdump(1), <a HREF="/docs/linux/man/1-hexdump/">hexdump</a>(1), bpe(1), hexed(1), beav(1).
 
 <h2>AUTHOR</h2>
 

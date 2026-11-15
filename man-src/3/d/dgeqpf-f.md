@@ -71,7 +71,7 @@ description: "dgeqpf.f –"
 <dl COMPACT>
 <dd>
 <pre> The matrix Q is represented as a product of elementary reflectors
- Q = H(1) H(2) . . . <a href="//www.systutorials.com/docs/linux/man/n-H/">H</a>(n)
+ Q = H(1) H(2) . . . H(n)
  Each H(i) has the form
  H = I - tau * v * v**T
  where tau is a real scalar, and v is a real vector with

@@ -32,7 +32,7 @@ description: "capsh – ‘bash’ wrapper to raise and lower the bset and pI ca
 <dt><code>&#8211;chroot</code>=<i>path</i></p>
 <dd><a href="/docs/linux/man/2-chroot/">chroot</a>(2) to this path to invoke bash</p>
 <dt><code>&#8211;killit=</code>&lt;n&gt;</p>
-<dd>send <a href="/docs/linux/man/n-signal/">signal</a>(n) to child</p>
+<dd>send signal(n) to child</p>
 <dt><code>&#8211;forkfor=</code>&lt;n&gt;</p>
 <dd>fork and make child sleep for &lt;n&gt; sec</p>
 <dt><code>==</code></p>

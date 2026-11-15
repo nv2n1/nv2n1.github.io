@@ -52,7 +52,7 @@ int ibv_dereg_mr(struct ibv_mr *mr);
 <h2>NOTES</h2>
 <p> <code>ibv_dereg_mr()</code> fails if any memory window is still bound to this MR.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_send/">ibv_post_send</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_recv/">ibv_post_recv</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_srq_recv/">ibv_post_srq_recv</a></code>(3)</p>
+<p> <code>ibv_alloc_pd</code>(3), <code>ibv_post_send</code>(3), <code>ibv_post_recv</code>(3), <code>ibv_post_srq_recv</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

@@ -34,7 +34,7 @@ description: "xa – 6502/R65C02/65816 cross-assembler"
 <dt><code>-e filename</code></p>
 <dd> Set errorlog filename, default is none.</p>
 <dt><code>-l filename</code></p>
-<dd> Set labellist filename, default is none. This is the symbol table and can be used by disassemblers such as <code><a href="/docs/linux/man/1-dxa/">dxa</a></code>(1) to reconstruct source.</p>
+<dd> Set labellist filename, default is none. This is the symbol table and can be used by disassemblers such as <code>dxa</code>(1) to reconstruct source.</p>
 <dt><code>-r</code></p>
 <dd> Add cross-reference list to labellist (requires <code>-l</code>).</p>
 <dt><code>-M</code></p>
@@ -269,7 +269,7 @@ description: "xa – 6502/R65C02/65816 cross-assembler"
 <p> Forward-defined labels &#8212; that is, labels that are defined after the current instruction is processed &#8212; cannot be optimized into zero page instructions even if the label does end up being defined as a zero page location, because the assembler does not know the value of the label in advance during the first pass when the length of an instruction is computed. On the second pass, a warning will be issued when an instruction that could have been optimized can&#8217;t be because of this limitation. (Obviously, this does not apply to branching or jumping instructions because they&#8217;re not optimizable anyhow, and those instructions that can <i>only</i> take an 8-bit parameter will always be casted to an 8-bit quantity.) If the label cannot otherwise be defined ahead of the instruction, the backtick prefix <code>`</code> may be used to force further optimization no matter where the label is defined as long as the instruction supports it. Indiscriminately forcing the issue can be fraught with peril, however, and is not recommended; to discourage this, the assembler will complain about its use in addressing mode situations where no ambiguity exists, such as indirect indexed, branching and so on. </p>
 <p> Also, as a further consequence of the way optimization is managed, we repeat that <code>all</code> 24-bit quantities and labels that reference a 24-bit quantity in 65816 mode, anteriorly declared or otherwise, <code>MUST</code> be prepended with the <code>@</code> prefix. Otherwise, the assembler will attempt to optimize to 16 bits, which may be undesirable. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-file65/">file65</a></code>(1), <code><a href="/docs/linux/man/1-ldo65/">ldo65</a></code>(1), <code><a href="/docs/linux/man/1-printcbm/">printcbm</a></code>(1), <code><a href="/docs/linux/man/1-reloc65/">reloc65</a></code>(1), <code><a href="/docs/linux/man/1-uncpk/">uncpk</a></code>(1), <code><a href="/docs/linux/man/1-dxa/">dxa</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-file65/">file65</a></code>(1), <code><a href="/docs/linux/man/1-ldo65/">ldo65</a></code>(1), <code><a href="/docs/linux/man/1-printcbm/">printcbm</a></code>(1), <code><a href="/docs/linux/man/1-reloc65/">reloc65</a></code>(1), <code><a href="/docs/linux/man/1-uncpk/">uncpk</a></code>(1), <code>dxa</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by David Weinehall &lt;tao [at] acc.umu.se&gt;, Andre Fachat &lt;fachat [at] web.de&gt; and Cameron Kaiser &lt;ckaiser [at] floodgap.com&gt;. Original xa package (C)1989-1997 Andre Fachat. Additional changes (C)1989-2015 Andre Fachat, Jolse Maginnis, David Weinehall, Cameron Kaiser. The official maintainer is Cameron Kaiser. </p>
 <h2>WEBSITE</h2>

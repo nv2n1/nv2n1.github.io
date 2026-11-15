@@ -40,6 +40,6 @@ int setlogmask(int mask);</code></pre>
 <p>POSIX.1-2001, POSIX.1-2008. </p>
 <p> <code>LOG_UPTO</code>() will be included in the next release of the POSIX specification (Issue 8).</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-closelog/">closelog</a></code>(3), <code><a href="/docs/linux/man/3-openlog/">openlog</a></code>(3), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-closelog/">closelog</a></code>(3), <code>openlog</code>(3), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

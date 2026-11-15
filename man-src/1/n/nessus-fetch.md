@@ -31,7 +31,7 @@ description: "nessus-fetch – A simple utility to retrieve plugins from www.nes
 <h2>BUGS</h2>
 <p> nessus-fetch will not retrieve files bigger than 40MB. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-nessus-update-plugins/">nessus-update-plugins</a></code>(1) </p>
+<p> <code>nessus-update-plugins</code>(1) </p>
 <h2>MORE INFORMATION ABOUT THE NESSUS PROJECT</h2>
 <p> The canonical place where you will find more information about the Nessus project is : </p>
 <dl>

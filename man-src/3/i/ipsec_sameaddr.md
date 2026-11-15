@@ -32,7 +32,7 @@ description: "ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubne
 <p> <i>Sameaddrtype</i> returns non-zero if addresses <i>a</i> and <i>b</i> are of the same address family, and <code>0</code> otherwise. </p>
 <p> <i>Samesubnettype</i> returns non-zero if subnets <i>a</i> and <i>b</i> are of the same address family, and <code>0</code> otherwise.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3), <a href="/docs/linux/man/3-ipsec_initaddr/">ipsec_initaddr</a>(3)</p>
+<p> inet(3), ipsec_initaddr(3)</p>
 <h2>HISTORY</h2>
 <p> Written for the FreeS/WAN project by Henry Spencer. </p>
 <h2>Index</h2>

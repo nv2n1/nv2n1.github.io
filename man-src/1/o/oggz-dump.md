@@ -40,10 +40,10 @@ description: "oggz-dump — Hexdump packets of an Ogg file, or revert an Ogg fil
 <dd> Dump only the logical bitstream with specified <code>serialno</code>.<br />
 &nbsp;<wbr></p>
 <dt>-O, &#8211;hide-offset</p>
-<dd> Hide the byte offset field of the preamble for each packet dumped. This is particularly useful in conjunction with <code><a href="/docs/linux/man/1-oggzdiff/">oggzdiff</a></code><code>(1)</code> when comparing Ogg bitstreams that differ only in page structure.<br />
+<dd> Hide the byte offset field of the preamble for each packet dumped. This is particularly useful in conjunction with <code>oggzdiff</code><code>(1)</code> when comparing Ogg bitstreams that differ only in page structure.<br />
 &nbsp;<wbr></p>
 <dt>-S, &#8211;hide-serialno</p>
-<dd> Hide the serialno field of the preamble for each packet dumped. This is particularly useful in conjunction with <code><a href="/docs/linux/man/1-oggzdiff/">oggzdiff</a></code><code>(1)</code> when comparing Ogg bitstreams that differ only in serialno assignment.<br />
+<dd> Hide the serialno field of the preamble for each packet dumped. This is particularly useful in conjunction with <code>oggzdiff</code><code>(1)</code> when comparing Ogg bitstreams that differ only in serialno assignment.<br />
 &nbsp;<wbr></p>
 <dt>-G, &#8211;hide-granulepos</p>
 <dd> Hide the granulepos field of the preamble for each packet dumped.<br />
@@ -87,5 +87,5 @@ description: "oggz-dump — Hexdump packets of an Ogg file, or revert an Ogg fil
 <p> Copyright &#169; 2003 CSIRO Australia<br />
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-oggz-diff/">oggz-diff</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-hogg/">hogg</a></code><code>(1)</code> <code><a href="/docs/linux/man/1-xxd/">xxd</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-hexdump/">hexdump</a></code><code>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-oggz-diff/">oggz-diff</a></code><code>(1)</code>, <code>hogg</code><code>(1)</code> <code><a href="/docs/linux/man/1-xxd/">xxd</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-hexdump/">hexdump</a></code><code>(1)</code> </p>
 <h2>Index</h2>

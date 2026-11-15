@@ -62,7 +62,7 @@ description: "rpc.mountd – NFS mount daemon"
 </dl>
 <h2>Configuration File</h2>
 <p>Many of the options that can be set on the command line can also be controlled through values set in the <code>[mountd]</code> or, in some cases, the <code>[nfsd]</code> sections of the <i>/etc/nfs.conf</i> configuration file. Values recognized in the <code>[mountd]</code> section include <code>manage-gids</code>, <code>descriptors</code>, <code>port</code>, <code>threads</code>, <code>reverse-lookup</code>, and <code>state-directory-path</code>, <code>ha-callout</code> which each have the same effect as the option with the same name. </p>
-<p> The values recognized in the <code>[nfsd]</code> section include <code>TCP</code>, <code>UDP</code>, <code>vers2</code>, <code>vers3</code>, and <code>vers4</code> which each have same same meaning as given by <code><a href="/docs/linux/man/8-rpc-nfsd/">rpc.nfsd</a></code>(8).</p>
+<p> The values recognized in the <code>[nfsd]</code> section include <code>TCP</code>, <code>UDP</code>, <code>vers2</code>, <code>vers3</code>, and <code>vers4</code> which each have same same meaning as given by <code>rpc.nfsd</code>(8).</p>
 <h2>Tcp_Wrappers Support</h2>
 <p>You can protect your <code>rpc.mountd</code> listeners using the <code>tcp_wrapper</code> library or <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8). </p>
 <p> Note that the <code>tcp_wrapper</code> library supports only IPv4 networking. </p>
@@ -77,7 +77,7 @@ description: "rpc.mountd – NFS mount daemon"
 <dt><i>/var/lib/nfs/rmtab</i></p>
 <dd>table of clients accessing server&#8217;s exports</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-exportfs/">exportfs</a></code>(8), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/8-showmount/">showmount</a></code>(8), <code><a href="/docs/linux/man/8-rpc-nfsd/">rpc.nfsd</a></code>(8), <code><a href="/docs/linux/man/8-rpc-rquotad/">rpc.rquotad</a></code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8), <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/8-exportfs/">exportfs</a></code>(8), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/8-showmount/">showmount</a></code>(8), <code>rpc.nfsd</code>(8), <code><a href="/docs/linux/man/8-rpc-rquotad/">rpc.rquotad</a></code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8), <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a></code>(5) </p>
 <p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br />
  RFC 1813 &#8211; &quot;NFS Version 3 Protocol Specification&quot;</p>
 <h2>Author</h2>

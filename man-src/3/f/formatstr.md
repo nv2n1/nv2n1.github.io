@@ -98,7 +98,7 @@ Override original method to return "" when the positional argument or named argu
 <dt>
 <dd>
 <p> Examples:</dl>
-<h3>out = <a href="//www.systutorials.com/docs/linux/man/1MB-num_units/">num_units</a>(1MB) # out = 1048576</h3>
+<h3>out = num_units(1MB) # out = 1048576</h3>
 <h3>str_units(value, precision=2)</h3>
 <p> Convert number to a string value with units </p>
 <dl>

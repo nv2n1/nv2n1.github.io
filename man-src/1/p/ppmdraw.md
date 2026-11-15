@@ -98,5 +98,5 @@ line_here 5 20;
 <h2>HISTORY</h2>
 <p> <code>ppmdraw</code> was new in Netpbm 10.29 (August 2005). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmlabel/">ppmlabel</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-ppmlabel/">ppmlabel</a></code>(1) , <code>ppm</code>(1) </p>
 <h2>Index</h2>

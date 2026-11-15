@@ -70,7 +70,7 @@ pki[CLI options] tps - profile pki[CLI options] tps - profile - find[command opt
 &lt;/Profile&gt;
 </pre>
 </dl>
-<p> The profile properties are described in <code><a href="/docs/linux/man/5-pki-tps-profile/">pki-tps-profile</a></code>(5). Then execute the following command: </p>
+<p> The profile properties are described in <code>pki-tps-profile</code>(5). Then execute the following command: </p>
 <p> <code>pki &lt;TPS admin authentication&gt; tps-profile-add &#8211;input &lt;file path&gt;</code> </p>
 <h3>Changing profile status</h3>
 <p> To change the profile status execute the following command: </p>
@@ -88,5 +88,5 @@ pki[CLI options] tps - profile pki[CLI options] tps - profile - find[command opt
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2015 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pki/">pki</a>(1),</code> <code><a href="/docs/linux/man/5-pki-tps-profile/">pki-tps-profile</a>(5)</code> </p>
+<p> <code><a href="/docs/linux/man/1-pki/">pki</a>(1),</code> <code>pki-tps-profile(5)</code> </p>
 <h2>Index</h2>

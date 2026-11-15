@@ -22,4 +22,4 @@ description: "set_palette_range – Sets a specific range of the palette. Allegr
    set_palette_range(palette, 0, 15, 1);
 </pre>
 <h2>See Also</h2>
-<p> <code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code><a href="/docs/linux/man/3-get_palette_range/">get_palette_range</a></code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code>get_palette_range</code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3)</p>

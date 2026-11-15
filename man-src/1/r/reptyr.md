@@ -14,7 +14,7 @@ description: "reptyr – Reparent a running program to a new terminal"
 <p> <code>reptyr -l|-L [COMMAND [ARGS]]</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>reptyr</code> is a utility for taking an existing running program and attaching it to a new terminal. Started a long-running process over ssh, but have to leave and don&#8217;t want to interrupt it? Just start a screen, use <code>reptyr</code> to grab it, and then kill the ssh session and head on home. </p>
-<p> <code>reptyr</code> works by attaching to the target program using <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2), redirecting relevant file descriptors, and changing the program&#8217;s controlling terminal (See <code><a href="/docs/linux/man/4-tty/">tty</a></code>(4)) It is this last detail that makes <code>reptyr</code> work much better than alternatives such as <code><a href="/docs/linux/man/1-retty/">retty</a></code>(1). </p>
+<p> <code>reptyr</code> works by attaching to the target program using <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2), redirecting relevant file descriptors, and changing the program&#8217;s controlling terminal (See <code><a href="/docs/linux/man/4-tty/">tty</a></code>(4)) It is this last detail that makes <code>reptyr</code> work much better than alternatives such as <code>retty</code>(1). </p>
 <p> After attaching a program, the program will appear to be either backgrounded or suspended to the shell it was launched from (depending on the shell). For maximal safety you can run</p>
 <dl>
 <dt>
@@ -61,5 +61,5 @@ description: "reptyr – Reparent a running program to a new terminal"
 <p> reptyr was written by Nelson Elhage &lt;nelhage [at] nelhage.com&gt;. </p>
 <h2>HOMEPAGE</h2>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-neercs/">neercs</a></code>(1), <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) </p>
+<p> <code>neercs</code>(1), <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) </p>
 <h2>Index</h2>

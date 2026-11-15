@@ -58,4 +58,4 @@ description: "avahi-daemon – The Avahi mDNS/DNS-SD daemon"
 <p><code><a href="/docs/linux/man/5-avahi-daemon-conf/">avahi-daemon.conf</a>(5)</code>, <code><a href="/docs/linux/man/5-avahi-hosts/">avahi.hosts</a>(5)</code>, <code><a href="/docs/linux/man/5-avahi-service/">avahi.service</a>(5)</code>, <code><a href="/docs/linux/man/8-avahi-dnsconfd/">avahi-dnsconfd</a>(8)</code>, <code><a href="/docs/linux/man/1-avahi-set-host-name/">avahi-set-host-name</a>(1)</code> </p>
 <p> <a rel="nofollow" href="http://avahi.org/wiki/AvahiAndUnicastDotLocal">http://avahi.org/wiki/AvahiAndUnicastDotLocal</a> documents the problems when using Avahi in a unicast DNS zone .local.</p>
 <h2>Comments</h2>
-<p>This man page was written using <code><a href="/docs/linux/man/1-xml2man/">xml2man</a>(1)</code> by Oliver Kurth.</p>
+<p>This man page was written using <code>xml2man(1)</code> by Oliver Kurth.</p>

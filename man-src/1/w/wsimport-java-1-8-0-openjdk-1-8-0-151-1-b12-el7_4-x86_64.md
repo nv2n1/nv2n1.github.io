@@ -85,7 +85,7 @@ description: "wsimport – Generates JAX-WS portable artifacts that can be packa
 <h2>See Also</h2>
 <dl COMPACT>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-wsgen/">wsgen</a>(1)</p>
+<dd>wsgen(1)</p>
 <dt>&bull;</p>
 <dd>The Tools tab of Wsimport Ant Task page <a rel="nofollow" href="http://jax-ws.java.net/nonav/2.1.1/docs/wsimportant.html">http://jax-ws.java.net/nonav/2.1.1/docs/wsimportant.html</a></p>
 <dt>&bull;</p>

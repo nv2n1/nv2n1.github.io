@@ -53,6 +53,6 @@ otto MSN=47111,47112
 <dd>This file. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-isdnlog/">isdnlog</a>(1) </code></p>
+<p><code>isdnlog(1) </code></p>
 <h2>Author</h2>
 <p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.</p>

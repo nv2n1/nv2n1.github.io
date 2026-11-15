@@ -75,6 +75,6 @@ exec wish &quot;$0&quot; ${1+&quot;$@&quot;}</code></pre>
 <h2>Prompts</h2>
 <p>When <code>wish</code> is invoked interactively it normally prompts for each command with &#8220;<code>% </code>&#8221;. You can change the prompt by setting the variables <code>tcl_prompt1</code> and <code>tcl_prompt2</code>. If variable <code>tcl_prompt1</code> exists then it must consist of a Tcl script to output a prompt; instead of outputting a prompt <code>wish</code> will evaluate the script in <code>tcl_prompt1</code>. The variable <code>tcl_prompt2</code> is used in a similar way when a newline is typed but the current command is not yet complete; if <code>tcl_prompt2</code> is not set then no prompt is output for incomplete commands.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), <a href="/docs/linux/man/n-toplevel/">toplevel</a>(n), <a href="/docs/linux/man/3-tk_main/">Tk_Main</a>(3), <a href="/docs/linux/man/3-tk_mainloop/">Tk_MainLoop</a>(3), <a href="/docs/linux/man/3-tk_mainwindow/">Tk_MainWindow</a>(3)</p>
+<p><a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), toplevel(n), <a href="/docs/linux/man/3-tk_main/">Tk_Main</a>(3), <a href="/docs/linux/man/3-tk_mainloop/">Tk_MainLoop</a>(3), <a href="/docs/linux/man/3-tk_mainwindow/">Tk_MainWindow</a>(3)</p>
 <h2>Keywords</h2>
 <p>application, argument, interpreter, prompt, script file, shell, toolkit, toplevel</p>

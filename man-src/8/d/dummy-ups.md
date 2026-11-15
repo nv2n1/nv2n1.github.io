@@ -13,7 +13,7 @@ description: "dummy-ups – Driver for multi-purpose UPS emulation"
 <h2>Description</h2>
 <p>This program is a multi-purpose UPS emulation tool. Its behavior depends on the running mode:</p>
 <h3>Dummy Mode</h3>
-<p><code>dummy-ups</code> looks like a standard device driver to <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) and allows one to change any value for testing purposes. It is both interactive, controllable through the <code><a href="/docs/linux/man/1-upsrw/">upsrw</a></code>(1) and <code><a href="/docs/linux/man/1-upscmd/">upscmd</a></code>(1) commands (or equivalent graphical tool), and batchable through script files. It can be configured, launched and used as any other real driver. This mode is mostly useful for development and testing purposes.</p>
+<p><code>dummy-ups</code> looks like a standard device driver to <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) and allows one to change any value for testing purposes. It is both interactive, controllable through the <code>upsrw</code>(1) and <code>upscmd</code>(1) commands (or equivalent graphical tool), and batchable through script files. It can be configured, launched and used as any other real driver. This mode is mostly useful for development and testing purposes.</p>
 <h3>Repeater Mode</h3>
 <p><code>dummy-ups</code> acts as a NUT client, simply forwarding data. This can be useful for supervision purposes. This can also allow some load sharing between several UPS instances, using a point-to-point communication with the UPS.</p>
 <h2>Implementation</h2>
@@ -57,7 +57,7 @@ TIMER 60</pre>
  desc = &quot;dummy-ups in repeater mode&quot;</pre>
 </dl>
 <h2>Interaction</h2>
-<p>Once the driver is loaded in dummy mode, you can change any variables, except those of the driver.* and server.* collections. You can do this by either editing the definition file, or use the <code><a href="/docs/linux/man/1-upsrw/">upsrw</a></code>(1) and <code><a href="/docs/linux/man/1-upscmd/">upscmd</a></code>(1) commands. </p>
+<p>Once the driver is loaded in dummy mode, you can change any variables, except those of the driver.* and server.* collections. You can do this by either editing the definition file, or use the <code>upsrw</code>(1) and <code>upscmd</code>(1) commands. </p>
 <p> Note that in simulation mode, new variables can be added on the fly, by adding these to the definition file. Conversely, if you need to remove variable (such as transient ones, like ups.alarm), simply update these by setting an empty value. As a result, they will get removed from the data. </p>
 <p> In repeater mode, the driver acts according to the capabilities of the UPS, and so support the same instant commands and settable values.</p>
 <h2>Background</h2>
@@ -70,6 +70,6 @@ TIMER 60</pre>
 <h2>Author</h2>
 <p>Arnaud Quette</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-upscmd/">upscmd</a></code>(1), <code><a href="/docs/linux/man/1-upsrw/">upsrw</a></code>(1), <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5), <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
+<p><code>upscmd</code>(1), <code>upsrw</code>(1), <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5), <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet Resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> </p>

@@ -131,12 +131,12 @@ CUNBDB1 simultaneously bidiagonalizes the blocks of a tall and skinny
 <dt>
 <dd>
 </dl>
-<p> The upper-bidiagonal blocks B11, B21 are represented implicitly by angles <a href="/docs/linux/man/1-theta/">THETA</a>(1), &#8230;, THETA(Q) and <a href="/docs/linux/man/1-phi/">PHI</a>(1), &#8230;, PHI(Q-1). Every entry in each bidiagonal band is a product of a sine or cosine of a THETA with a sine or cosine of a PHI. See [1] or CUNCSD for details. </p>
+<p> The upper-bidiagonal blocks B11, B21 are represented implicitly by angles THETA(1), &#8230;, THETA(Q) and PHI(1), &#8230;, PHI(Q-1). Every entry in each bidiagonal band is a product of a sine or cosine of a THETA with a sine or cosine of a PHI. See [1] or CUNCSD for details. </p>
 <p> P1, P2, and Q1 are represented as products of elementary reflectors. See CUNCSD2BY1 for details on generating P1, P2, and Q1 using CUNGQR and CUNGLQ. </p>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, <a href="/docs/linux/man/1-50/">50</a>(1):33-65, 2009.</dl>
+<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
 <p> Definition at line 202 of file cunbdb1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

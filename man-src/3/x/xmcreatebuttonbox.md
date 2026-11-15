@@ -30,4 +30,4 @@ description: "XmCreateButtonBox — The ButtonBox widget creation function"
 <h2>Return</h2>
 <p>Returns the BulletinBoard widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmbutonbox/">XmButonBox</a></code>(3).</p>
+<p><code>XmButonBox</code>(3).</p>

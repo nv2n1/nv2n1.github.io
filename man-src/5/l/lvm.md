@@ -151,4 +151,4 @@ description: "lvm.conf — Configuration file for LVM2"
  <i>/etc/lvm/cache/.cache</i><br />
  <i>/run/lock/lvm</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2), <code><a href="/docs/linux/man/2-uname/">uname</a></code>(2), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2), <code><a href="/docs/linux/man/2-uname/">uname</a></code>(2), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code>syslog.conf</code>(5) </p>

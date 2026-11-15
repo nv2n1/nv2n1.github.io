@@ -123,16 +123,16 @@ dump DEFINITIONS :: = BEGIN
 <dt>
 <dd>
 <pre>
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)<a href="//www.systutorials.com/docs/linux/man/1-.directory/">.directory</a>(1)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)<a href="//www.systutorials.com/docs/linux/man/2-.mgmt/">.mgmt</a>(2)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)<a href="//www.systutorials.com/docs/linux/man/2-.mgmt/">.mgmt</a>(2)<a href="//www.systutorials.com/docs/linux/man/1-.mib-2/">.mib-2</a>(1)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)<a href="//www.systutorials.com/docs/linux/man/2-.mgmt/">.mgmt</a>(2)<a href="//www.systutorials.com/docs/linux/man/1-.mib-2/">.mib-2</a>(1)<a href="//www.systutorials.com/docs/linux/man/1-.system/">.system</a>(1)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)<a href="//www.systutorials.com/docs/linux/man/2-.mgmt/">.mgmt</a>(2)<a href="//www.systutorials.com/docs/linux/man/1-.mib-2/">.mib-2</a>(1)<a href="//www.systutorials.com/docs/linux/man/1-.system/">.system</a>(1)<a href="//www.systutorials.com/docs/linux/man/1-.sysDescr/">.sysDescr</a>(1)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)<a href="//www.systutorials.com/docs/linux/man/2-.mgmt/">.mgmt</a>(2)<a href="//www.systutorials.com/docs/linux/man/1-.mib-2/">.mib-2</a>(1)<a href="//www.systutorials.com/docs/linux/man/1-.system/">.system</a>(1)<a href="//www.systutorials.com/docs/linux/man/2-.sysObjectID/">.sysObjectID</a>(2)
-<a href="//www.systutorials.com/docs/linux/man/1-.iso/">.iso</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.org/">.org</a>(3)<a href="//www.systutorials.com/docs/linux/man/6-.dod/">.dod</a>(6)<a href="//www.systutorials.com/docs/linux/man/1-.internet/">.internet</a>(1)<a href="//www.systutorials.com/docs/linux/man/2-.mgmt/">.mgmt</a>(2)<a href="//www.systutorials.com/docs/linux/man/1-.mib-2/">.mib-2</a>(1)<a href="//www.systutorials.com/docs/linux/man/1-.system/">.system</a>(1)<a href="//www.systutorials.com/docs/linux/man/3-.sysUpTime/">.sysUpTime</a>(3)
+.iso(1).org(3)
+.iso(1).org(3).dod(6)
+.iso(1).org(3).dod(6).internet(1)
+.iso(1).org(3).dod(6).internet(1).directory(1)
+.iso(1).org(3).dod(6).internet(1).mgmt(2)
+.iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1)
+.iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1).system(1)
+.iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1).system(1).sysDescr(1)
+.iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1).system(1).sysObjectID(2)
+.iso(1).org(3).dod(6).internet(1).mgmt(2).mib-2(1).system(1).sysUpTime(3)
 </pre>
 </dl>
 <dl>
@@ -180,16 +180,16 @@ dump DEFINITIONS :: = BEGIN
 <dt>
 <dd>
 <pre>
-  <a href="//www.systutorials.com/docs/linux/man/3-org/">org</a>(3) type=0
-    <a href="//www.systutorials.com/docs/linux/man/6-dod/">dod</a>(6) type=0
-      <a href="//www.systutorials.com/docs/linux/man/1-internet/">internet</a>(1) type=0
-        <a href="//www.systutorials.com/docs/linux/man/1-directory/">directory</a>(1) type=0
-        <a href="//www.systutorials.com/docs/linux/man/2-mgmt/">mgmt</a>(2) type=0
-          <a href="//www.systutorials.com/docs/linux/man/1-mib-2/">mib-2</a>(1) type=0
+  org(3) type=0
+    dod(6) type=0
+      internet(1) type=0
+        directory(1) type=0
+        mgmt(2) type=0
+          mib-2(1) type=0
             <a href="//www.systutorials.com/docs/linux/man/1-system/">system</a>(1) type=0
-              <a href="//www.systutorials.com/docs/linux/man/1-sysDescr/">sysDescr</a>(1) type=2 tc=4 hint=255a
-              <a href="//www.systutorials.com/docs/linux/man/2-sysObjectID/">sysObjectID</a>(2) type=1
-              <a href="//www.systutorials.com/docs/linux/man/3-sysUpTime/">sysUpTime</a>(3) type=8
+              sysDescr(1) type=2 tc=4 hint=255a
+              sysObjectID(2) type=1
+              sysUpTime(3) type=8
 </pre>
 </dl>
 <h2>SEE ALSO</h2>

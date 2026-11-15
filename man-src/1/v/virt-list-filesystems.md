@@ -15,7 +15,7 @@ virt - list - filesystems[--options] domname virt - list - filesystems[--options
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-list-filesystems&quot;</tt> is a command line tool to list the filesystems that are contained in a virtual machine or disk image. </p>
-<p> <tt>&quot;virt-list-filesystems&quot;</tt> is just a simple wrapper around <i><a href="/docs/linux/man/3-libguestfs/">libguestfs</a></i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
+<p> <tt>&quot;virt-list-filesystems&quot;</tt> is just a simple wrapper around <i>libguestfs</i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></p>
@@ -30,7 +30,7 @@ virt - list - filesystems[--options] domname virt - list - filesystems[--options
 <dt><code>-a</code> | <code>&#8211;all</code></p>
 <dd> Normally we only show mountable filesystems. If this option is given then swap devices are shown too.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar/">virt-tar</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-partitions/">virt-list-partitions</a></i>(1), <i><a href="/docs/linux/man/3-sys--guestfs/">Sys::Guestfs</a></i>(3), <i><a href="/docs/linux/man/3-sys--guestfs--lib/">Sys::Guestfs::Lib</a></i>(3), <i><a href="/docs/linux/man/3-sys--virt/">Sys::Virt</a></i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar/">virt-tar</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-partitions/">virt-list-partitions</a></i>(1), <i>Sys::Guestfs</i>(3), <i>Sys::Guestfs::Lib</i>(3), <i>Sys::Virt</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
 <h2>COPYRIGHT</h2>

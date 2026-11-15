@@ -86,6 +86,6 @@ description: "radiusd – Authentication, Authorization and Accounting server"
 <dt>users</p>
 <dd>Here the users are defined. On a typical setup, this file mainly contains DEFAULT entries to process the different types of logins, based on hints from the hints file. Authentication is then based on the contents of the UNIX <i>/etc/passwd</i> file. However it is also possible to define all users, and their passwords, in this file.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5), <a href="/docs/linux/man/5-users/">users</a>(5), <a href="/docs/linux/man/5-huntgroups/">huntgroups</a>(5), <a href="/docs/linux/man/5-hints/">hints</a>(5), <a href="/docs/linux/man/5-dictionary/">dictionary</a>(5), <a href="/docs/linux/man/8-raddebug/">raddebug</a>(8)</p>
+<p><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5), <a href="/docs/linux/man/5-users/">users</a>(5), huntgroups(5), hints(5), <a href="/docs/linux/man/5-dictionary/">dictionary</a>(5), <a href="/docs/linux/man/8-raddebug/">raddebug</a>(8)</p>
 <h2>Author</h2>
 <p>The FreeRADIUS Server Project (<a rel="nofollow" href="http://www.freeradius.org)">http://www.freeradius.org)</a></p>

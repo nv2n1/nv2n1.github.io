@@ -134,7 +134,7 @@ description: "cpio – format of cpio archive files"
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-cpio/">cpio</a>(1), <a href="/docs/linux/man/5-tar/">tar</a>(5)</p>
 <h2>Standards</h2>
-<p>The <code>cpio</code> utility is no longer a part of POSIX or the Single Unix Standard. It last appeared in St -susv2 . It has been supplanted in subsequent standards by <a href="/docs/linux/man/1-pax/">pax</a>(1). The portable ASCII format is currently part of the specification for the <a href="/docs/linux/man/1-pax/">pax</a>(1) utility.</p>
+<p>The <code>cpio</code> utility is no longer a part of POSIX or the Single Unix Standard. It last appeared in St -susv2 . It has been supplanted in subsequent standards by pax(1). The portable ASCII format is currently part of the specification for the pax(1) utility.</p>
 <h2>History</h2>
 <p>The original cpio utility was written by Dick Haight while working in AT&amp;T&#8217;s Unix Support Group. It appeared in 1977 as part of PWB/UNIX 1.0, the &#8220;Programmer&#8217;s Work Bench&#8221; derived from AT&amp;T System v6 that was used internally at AT&amp;T. Both the old binary and old character formats were in use by 1980, according to the System III source released by SCO under their &#8220;Ancient Unix&#8221; license. The character format was adopted as part of St -p1003.1-88 . XXX when did &quot;newc&quot; appear? Who invented it? When did HP come out with their variant? When did Sun introduce ACLs and extended attributes? XXX</p>
 <h2>Bugs</h2>

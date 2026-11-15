@@ -89,7 +89,7 @@ description: "pamflip – flip or rotate a PAM or PNM image"
 <dd> This option causes <code>pamflip</code> to issue messages to Standard Error about its progress. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code>jpegtran</code> manual </p>
+<p> <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , <code>jpegtran</code> manual </p>
 <h2>HISTORY</h2>
 <p> <code>pamflip</code> replaced <code>pnmflip</code> in Netpbm 10.13 (December 2002). <code>pamflip</code> is backward compatible, but also works on PAM images. </p>
 <h2>AUTHOR</h2>

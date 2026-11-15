@@ -25,15 +25,15 @@ description: "aplaymidi – play Standard MIDI Files"
 <dd> Sets the sequencer port(s) to which the events in the MIDI file(s) are sent. </p>
 <p> A client can be specified by its number, its name, or a prefix of its name. A port is specified by its number; for port 0 of a client, the &quot;:0&quot; part of the port specification can be omitted. </p>
 <p> Multiple ports can be specified to allow playback of MIDI file(s) that contain events for multiple devices (ports), as specified by &quot;Port Number&quot; meta events. </p>
-<p> For compatibility with <code><a href="/docs/linux/man/1-pmidi/">pmidi</a>(1),</code> the port specification is taken from the <i>ALSA_OUTPUT_PORTS</i> environment variable if none is given on the command line. </p>
+<p> For compatibility with <code>pmidi(1),</code> the port specification is taken from the <i>ALSA_OUTPUT_PORTS</i> environment variable if none is given on the command line. </p>
 <dt><i>-d, &#8211;delay=seconds</i></p>
 <dd> Specifies how long to wait after the end of each MIDI file, to allow the last notes to die away. </p>
 </dl>
 <h2>BUGS</h2>
 <p> <code>aplaymidi</code> handles &quot;Port Number&quot; meta events, but not &quot;Port Name&quot; meta events. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-pmidi/">pmidi</a>(1)<br />
- <a href="/docs/linux/man/1-playmidi/">playmidi</a>(1) </p>
+<p> pmidi(1)<br />
+ playmidi(1) </p>
 <h2>AUTHOR</h2>
 <p> Clemens Ladisch &lt;clemens [at] ladisch.de&gt; </p>
 <h2>Index</h2>

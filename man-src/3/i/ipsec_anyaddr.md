@@ -25,7 +25,7 @@ description: "ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecad
 <p> Similarly, <i>loopbackaddr</i> supplies, and <i>islookbackaddr</i> tests for, the loopback address. </p>
 <p> <i>Anyaddr</i>, <i>unspecaddr</i>, and <i>loopbackaddr</i> return <code>NULL</code> for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3), <a href="/docs/linux/man/3-ipsec_addrtot/">ipsec_addrtot</a>(3), <a href="/docs/linux/man/3-ipsec_sameaddr/">ipsec_sameaddr</a>(3)</p>
+<p> inet(3), ipsec_addrtot(3), ipsec_sameaddr(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Fatal errors in the address-supplying functions are: unknown address family.</p>
 <h2>HISTORY</h2>

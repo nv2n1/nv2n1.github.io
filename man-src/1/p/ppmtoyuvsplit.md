@@ -14,7 +14,7 @@ description: "ppmtoyuvsplit – convert a portable pixmap into 3 subsampled raw 
 <h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces 3 raw files basename.Y, basename.U and basename.V as output. These files are the subsampled raw YUV representation of the input pixmap, as required by the Stanford MPEG codec. The subsampling is done by arithmetic mean of 4 pixels colors into one. The YUV values are scaled according to CCIR.601, as assumed by MPEG.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-mpeg/">mpeg</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
+<p> mpeg(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by Andre Beck. (Andre_Beck [at] IRS.Inf.TU-Dresden.de) </p>
 <p> Based on ppmtoyuv.c </p>

@@ -69,7 +69,7 @@ void mod_ctype.wdouble(Number value, String endian, Buffer buf, Number offset);
 <h3><code>wfloat()</code>, <code>wdouble()</code></h3>
 <p> The functions &quot;<code>rfloat()</code> and <code>rdouble()</code>&quot; work like the other write functions, except that the domain for a float is that of a single precision 4 byte value. The domain for a double is any <code>Number</code> in ECMAScript, which is defined to be represented by a double. </p>
 <h2>ATTRIBUTES</h2>
-<p> See <code><a href="/docs/linux/man/5-attributes/">attributes</a></code>(5) for descriptions of the following attributes: </p>
+<p> See <code>attributes</code>(5) for descriptions of the following attributes: </p>
 <table BORDER>
 <tr>
 <td>

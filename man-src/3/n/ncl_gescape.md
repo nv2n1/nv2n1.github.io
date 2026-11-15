@@ -44,15 +44,15 @@ description: "gescape (Escape) – provides a standard way of implementing nonst
  int str_len = 5;
  gopen_gks(&quot;stdout&quot;,0);
  gopen_ws(3,NULL,8);
- <a href="//www.systutorials.com/docs/linux/man/3-gactivate_ws/">gactivate_ws</a>(3);
+ gactivate_ws(3);
  c_line(0.,0.,1.,1.);
  c_sflush();
  in_data.escape_r1.data = (Gdata *)malloc(str_len*sizeof(char));
  strcpy(in_data.escape_r1.data, &quot; 3&quot; );
  in_data.escape_r1.size = str_len;
  gescape(-1396,&amp;in_data,NULL,NULL);
- <a href="//www.systutorials.com/docs/linux/man/3-gdeactivate_ws/">gdeactivate_ws</a>(3);
- <a href="//www.systutorials.com/docs/linux/man/3-gclose_ws/">gclose_ws</a>(3);
+ gdeactivate_ws(3);
+ gclose_ws(3);
  gclose_gks();</pre>
 <p>The functions c_frame and c_ngpict are in general much easier to use and more flexible than the direct ESCAPE call for pausing in an X window. It is suggested that those functions be used.</p>
 <h2>Access</h2>

@@ -67,7 +67,7 @@ description: "imclient library – authenticating callback interface to IMAP/IMS
 <dd> Returns a Boolean indicating whether the imclient</code> library was compiled with TLS (SSL) support. If so, <code>imclient_starttls()</code> may be used to secure the IMAP connection.</p>
 <dt><code>imclient_starttls()</p>
 <dd> Issues a STARTTLS command on an existing IMAP connection and negotiates the secure link. The cert_file</code> and <code>key_file</code> arguments specify the client certificate and secret key to use to authenticate ourselves to the server. If client authentication is not needed, set both of these arguments to NULL. </p>
-<p> The <code>CAfile</code> and <code>CApath</code> arguments specify a file or directory, respectively, of CA certificates for validating server certificates. (See <code><a href="/docs/linux/man/3-ssl_ctx_load_verify_locations/">SSL_CTX_load_verify_locations</a>(3)</code> for details.) If both of these are NULL, the client will be unable to validate the server&#8217;s certificate, in which case the connection may succeed but a warning will be printed to stdout. </p>
+<p> The <code>CAfile</code> and <code>CApath</code> arguments specify a file or directory, respectively, of CA certificates for validating server certificates. (See <code>SSL_CTX_load_verify_locations(3)</code> for details.) If both of these are NULL, the client will be unable to validate the server&#8217;s certificate, in which case the connection may succeed but a warning will be printed to stdout. </p>
 </dl>
 <h2>EXAMPLES</h2>
 <p> The following code is a possible skeletion of <code>imclient</code> that relies on Kerberos to do authentication. This code preforms an IMAP CAPABILITY request and prints out the result. </p>

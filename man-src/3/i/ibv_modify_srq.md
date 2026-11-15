@@ -38,7 +38,7 @@ struct ibv_srq_attr {
 <p> Not all devices support resizing SRQs. To check if a device supports it, check if the <code>IBV_DEVICE_SRQ_RESIZE</code> bit is set in the device capabilities flags. </p>
 <p> Modifying the srq_limit arms the SRQ to produce an <code>IBV_EVENT_SRQ_LIMIT_REACHED</code> &quot;low watermark&quot; asynchronous event once the number of WRs in the SRQ drops below srq_limit.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_query_device/">ibv_query_device</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_srq/">ibv_create_srq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_srq/">ibv_destroy_srq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_srq/">ibv_query_srq</a></code>(3)</p>
+<p> <code>ibv_query_device</code>(3), <code>ibv_create_srq</code>(3), <code>ibv_destroy_srq</code>(3), <code>ibv_query_srq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

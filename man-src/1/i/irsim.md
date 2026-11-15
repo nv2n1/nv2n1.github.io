@@ -19,7 +19,7 @@ description: "irsim – An event-driven logic-level simulator for MOS circuits"
 <dt><code>linear</code></p>
 <dd> Each transistor is modeled as a resistor in series with a voltage-controlled switch; each node has a capacitance. Node values and transition times are computed from the resulting RC network, using Chorng-Yeoung Chu&#8217;s model. Chris Terman&#8217;s original model is not supported any more.</dl>
 <p> If the <code>-s</code> switch is specified, 2 or more transistors of the same type connected in series, with no other connections to their common source/drain will be <i>stacked</i> into a compound transistor with multiple gates. </p>
-<p> The <code>prm_file</code> is the electrical parameters file that configure the devices to be simulated. It defines the capacitance of the various layers, transistor resistances, threshold voltages, etc&#8230; (see <a href="/docs/linux/man/1-presim/">presim</a>(1)). </p>
+<p> The <code>prm_file</code> is the electrical parameters file that configure the devices to be simulated. It defines the capacitance of the various layers, transistor resistances, threshold voltages, etc&#8230; (see presim(1)). </p>
 <p> If <i>prm_file</i> does not specify an absolute path then IRSIM will search for the <i>prm_file</i> as follows (in that order): </p>
 <dl>
 <dt> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1) <i>./&lt;prm_file&gt;</i> (in the current directory).</p>
@@ -246,7 +246,7 @@ description: "irsim – An event-driven logic-level simulator for MOS circuits"
 <dt><code>ana </code><i>wnode&#8230;</i></p>
 <dd> This is a shorthand for the <code>analyzer</code> command (described below).</p>
 <dt><code>analyzer </code><i>wnode&#8230;</i></p>
-<dd> Add the specified node(s)/vector(s) to the analyzer display list (see <a href="/docs/linux/man/3-irsim-analyzer/">irsim-analyzer</a>(3) for a detailed explanation). If the analyzer window does not exist, it will be created. If no arguments are given and the analyzer window already exists, nothing happens.</p>
+<dd> Add the specified node(s)/vector(s) to the analyzer display list (see irsim-analyzer(3) for a detailed explanation). If the analyzer window does not exist, it will be created. If no arguments are given and the analyzer window already exists, nothing happens.</p>
 <dt><code>Xdisplay </code><i>[host:display]</i></p>
 <dd> You must be able to connect to an X-server to start the analyzer. If you haven&#8217;t set up the <code>DISPLAY</code> environment variable properly, the analyzer command may fail. If this is the case you can use the <code>Xdisplay</code> command to set it from within the simulator. With no arguments, the name of the current X-server will be printed.</p>
 <dt><code>clear</code></p>
@@ -564,9 +564,9 @@ description: "irsim – An event-driven logic-level simulator for MOS circuits"
 <dd> Gives a sum of <code>all </code> nodal capcitances, <code>not </code> just those selected with the <code>powtrace</code> command. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-presim/">presim</a>(1) (now obsolete) </p>
-<p> <a href="/docs/linux/man/1-rsim/">rsim</a>(1) </p>
-<p> <a href="/docs/linux/man/3-irsim-analyzer/">irsim-analyzer</a>(3) </p>
+<p> presim(1) (now obsolete) </p>
+<p> rsim(1) </p>
+<p> irsim-analyzer(3) </p>
 <p> <a href="/docs/linux/man/5-sim/">sim</a>(5) </p>
 <p> <a href="/docs/linux/man/5-netchange/">netchange</a>(5) </p>
 <h2>Index</h2>

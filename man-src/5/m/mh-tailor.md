@@ -88,7 +88,7 @@ description: "mh-tailor, mts.conf – mail transport configuration for nmh messa
 <h2>Profile Components</h2>
 <p>None</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-mh-mts/">mh-mts</a></i>(8), <i><a href="/docs/linux/man/8-post/">post</a></i>(8)</p>
+<p><i>mh-mts</i>(8), <i><a href="/docs/linux/man/8-post/">post</a></i>(8)</p>
 <h2>Defaults</h2>
 <p>As listed above. The path of the mail transport configuration file can be changed with the <code>MHMTSCONF</code> environment variable and augmented with the <code>MHMTSUSERCONF</code> environment variable, see <a href="/docs/linux/man/5-mh-profile/">mh-profile</a>(5).</p>
 <h2>Bugs</h2>

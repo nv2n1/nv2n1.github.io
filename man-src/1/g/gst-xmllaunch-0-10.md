@@ -14,7 +14,7 @@ description: "gst-xmllaunch – build and run a GStreamer pipeline from an XML s
 <p><i>gst-xmllaunch</i> is a tool that is used to build and run a basic <i>GStreamer</i> pipeline, loading it from an XML description. You can produce the XML description using <a href="/docs/linux/man/1-gst-launch-0-10/">gst-launch-0.10</a>(1) with the -o option or by calling gst_xml_write_file() in your own app. </p>
 <p> A simple commandline looks like: </p>
 <p>&nbsp;<wbr>gst-xmllaunch my-pipeline.xml filesrc0.location=music.mp3 </p>
-<p> This sets the location property of the element named filesrc0 to the value &quot;music.mp3&quot;. See <a href="/docs/linux/man/1-gst-launch/">gst-launch</a>(1) for syntax on setting element names, and gst-inspect to see what properties various elements have. </p>
+<p> This sets the location property of the element named filesrc0 to the value &quot;music.mp3&quot;. See gst-launch(1) for syntax on setting element names, and gst-inspect to see what properties various elements have. </p>
 <p> You can pass &quot;-&quot; as the XML-FILE to read from stdin. </p>
 <p> XML-FILE can be a URI as well, thanks to the wizardry of libxml. I&#8217;m not really sure what all is supported, it seems http works just fine though. </p>
 <h2>Warning</h2>
@@ -41,6 +41,6 @@ description: "gst-xmllaunch – build and run a GStreamer pipeline from an XML s
 <dt><code>&#8211;gst-plugin-path=PATH</code></p>
 <dd>Add directories separated with &#8216;:&#8217; to the plugin search path</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-gst-feedback/">gst-feedback</a></code>(1), <code><a href="/docs/linux/man/1-gst-inspect/">gst-inspect</a></code>(1), <code><a href="/docs/linux/man/1-gst-launch/">gst-launch</a></code>(1), <code><a href="/docs/linux/man/1-gst-typefind/">gst-typefind</a></code>(1)</p>
+<p><code>gst-feedback</code>(1), <code>gst-inspect</code>(1), <code>gst-launch</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>Author</h2>
 <p>The GStreamer team at <a rel="nofollow" href="http://gstreamer.freedesktop.org/">http://gstreamer.freedesktop.org/</a></p>

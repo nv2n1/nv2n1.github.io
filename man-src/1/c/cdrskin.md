@@ -600,10 +600,10 @@ description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn
 <dl>
 <dt>Formatting data track sources for cdrskin:</p>
 <dd>
- <code><a href="/docs/linux/man/8-mkisofs/">mkisofs</a></code>(8), <code><a href="/docs/linux/man/8-genisoimage/">genisoimage</a></code>(8), <code><a href="/docs/linux/man/1-xorriso/">xorriso</a></code>(1), <code><a href="/docs/linux/man/1-afio/">afio</a></code>(1), <code><a href="/docs/linux/man/1-star/">star</a></code>(1) </p>
+ <code>mkisofs</code>(8), <code>genisoimage</code>(8), <code>xorriso</code>(1), <code>afio</code>(1), <code><a href="/docs/linux/man/1-star/">star</a></code>(1) </p>
 <dt>Other CD/DVD/BD burn programs:</p>
 <dd>
- <code><a href="/docs/linux/man/1-cdrecord/">cdrecord</a></code>(1), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code><a href="/docs/linux/man/1-xorriso/">xorriso</a></code>(1) </p>
+ <code>cdrecord</code>(1), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code>xorriso</code>(1) </p>
 <dt>For DVD/BD burning (also tutor of libburn&#8217;s DVD/BD capabilities):</p>
 <dd>
  <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1)

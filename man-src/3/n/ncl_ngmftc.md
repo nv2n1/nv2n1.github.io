@@ -39,7 +39,7 @@ Use NGMFTC to close a metafile temporarily for reopening with NGREOP. The tempor
 
 <h2>Examples</h2>
 
-Assuming that an NCGM workstation, with workstation identifier 1, is open, then <pre> CALL <a HREF="//www.systutorials.com/docs/linux/man/1-NGMFTC/">NGMFTC</a>(1)</pre>would temporarily close the workstation. 
+Assuming that an NCGM workstation, with workstation identifier 1, is open, then <pre> CALL NGMFTC(1)</pre>would temporarily close the workstation. 
 
  Use the ncargex command to see the following relevant example: pgkex27.
 

@@ -13,7 +13,7 @@ description: "ircd – The IRCD-Hybrid Internet Relay Chat server"
 <dt><code>ircd</code></p>
 <dd>[-configfile filename] [-dlinefile filename] [-klinefile filename] [-xlinefile filename] [-logfile filename] [-pidfile filename] [-foreground] [-version]</dl>
 <h2>Description</h2>
-<p><i>ircd</i> is the server (daemon) program for the Internet Relay Chat Program. The <i>ircd</i> is a server in that its function is to &quot;serve&quot; the client program <i><a href="/docs/linux/man/1-irc/">irc</a>(1)</i> and other compatible programs with messages and commands. All commands and user messages are passed directly to the <i>ircd</i> for processing and relaying to other IRC servers. </p>
+<p><i>ircd</i> is the server (daemon) program for the Internet Relay Chat Program. The <i>ircd</i> is a server in that its function is to &quot;serve&quot; the client program <i>irc(1)</i> and other compatible programs with messages and commands. All commands and user messages are passed directly to the <i>ircd</i> for processing and relaying to other IRC servers. </p>
 <p> This is <i>ircd-hybrid</i>, the highly modified (and hopefully improved) variant of the original ircd program by Jarkko Oikarinen.</p>
 <h2>Options</h2>
 <dl>

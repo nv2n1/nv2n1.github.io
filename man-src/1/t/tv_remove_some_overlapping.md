@@ -18,7 +18,7 @@ description: "tv_remove_some_overlapping – Remove some overlapping programmes 
 <p> Filtering this tool won&#8217;t remove all overlapping programmes but it will deal with the &#8216;big magazine programme containing smaller programmes&#8217; data commonly seen from listings sources. </p>
 <p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com </p>
 <h2>Index</h2>

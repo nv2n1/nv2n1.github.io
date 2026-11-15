@@ -38,7 +38,7 @@ int ibv_get_srq_num(struct ibv_srq *srq, uint32_t *srq_num);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a>(3), <a HREF="/docs/linux/man/3-ibv_create_srq_ex/">ibv_create_srq_ex</a>(3), <a HREF="/docs/linux/man/3-ibv_modify_srq/">ibv_modify_srq</a>(3)
+ ibv_alloc_pd(3), ibv_create_srq_ex(3), ibv_modify_srq(3)
 
 <h2>AUTHOR</h2>
 

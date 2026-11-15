@@ -16,7 +16,7 @@ description: "qmqpd – Postfix QMQP server"
 <h2>Security</h2>
 <p>The QMQP server is moderately security-sensitive. It talks to QMQP clients and to DNS servers on the network. The QMQP server can be run chrooted at fixed low privilege.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>The QMQP protocol provides only one server reply per message delivery. It is therefore not possible to reject individual recipients. </p>
 <p> The QMQP protocol requires the server to receive the entire message before replying. If a message is malformed, or if any netstring component is longer than acceptable, Postfix replies immediately and closes the connection. It is left up to the client to handle the situation.</p>
@@ -85,7 +85,7 @@ description: "qmqpd – Postfix QMQP server"
 <pre><a rel="nofollow" href="http://cr.yp.to/proto/qmqp.html,">http://cr.yp.to/proto/qmqp.html,</a> QMQP protocol
 <a href="//www.systutorials.com/docs/linux/man/8-cleanup/">cleanup</a>(8), message canonicalization
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>QMQP_README, Postfix ezmlm-idx howto.</pre>

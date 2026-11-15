@@ -51,7 +51,7 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-asinh/">asinh</a><code>(1)</code> = 0.881374<br />
+<p>&nbsp;<wbr>&nbsp;asinh<code>(1)</code> = 0.881374<br />
 &nbsp;<wbr>&nbsp;asinh(-1) = -0.881374<br />
 &nbsp;<wbr>&nbsp;asinh(+0) = 0<br />
 &nbsp;<wbr>&nbsp;asinh(-0) = -0</p>

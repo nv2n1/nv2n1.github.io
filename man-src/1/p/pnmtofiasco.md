@@ -89,7 +89,7 @@ description: "pnmtofiasco – Convert a portable anymap to FIASCO compressed fil
 <dt><code>-2</code>, <code>&#8211;half-pixel</p>
 <dd> Use half pixel precise motion compensation. </p>
 <dt>-F</code> <i>N</i>, <code>&#8211;fps=</code><i>N</i></p>
-<dd> Set number of frames per second to <i>N</i>. This value is stored in the FIASCO output file and is used in the decoder <a href="/docs/linux/man/1-dfiasco/">dfiasco</a>(1) to control the framerate. </p>
+<dd> Set number of frames per second to <i>N</i>. This value is stored in the FIASCO output file and is used in the decoder dfiasco(1) to control the framerate. </p>
 <dt><code>-p</code> <i>type</i>, <code>&#8211;pattern=</code><i>type</i></p>
 <dd> Defines the type of inter frame compression which should be applied to individual frames of a video stream. <i>type</i> is a sequence of characters; default is &quot;IPPPPPPPPP&quot;. Element <code>N</code> defines the type of predicting which should be used for frame <code>N</code>; the frame type pattern is periodically extended. Valid characters are: </p>
 <p> <code>I</code>: intra frame, i.e., no motion compensated prediction is used at all. </p>

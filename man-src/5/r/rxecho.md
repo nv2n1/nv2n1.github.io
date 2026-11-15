@@ -15,4 +15,4 @@ description: "rxecho.conf – control rxecho AX.25 packet routing."
 <h2>Files</h2>
 <p>/etc/ax25/rxecho.conf</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-axports/">axports</a></code>(8), <code><a href="/docs/linux/man/8-rxecho/">rxecho</a></code>(8). </p>
+<p><code>axports</code>(8), <code><a href="/docs/linux/man/8-rxecho/">rxecho</a></code>(8). </p>

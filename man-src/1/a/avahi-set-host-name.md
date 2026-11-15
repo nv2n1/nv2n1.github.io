@@ -26,5 +26,5 @@ description: "avahi-set-host-name – Change mDNS host name"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-avahi-daemon/">avahi-daemon</a>(8)</code></p>
 <h2>COMMENTS</h2>
-<p> This man page was written using <code><a href="/docs/linux/man/1-xml2man/">xml2man</a>(1)</code> by Oliver Kurth. </p>
+<p> This man page was written using <code>xml2man(1)</code> by Oliver Kurth. </p>
 <h2>Index</h2>

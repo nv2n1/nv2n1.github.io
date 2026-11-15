@@ -26,7 +26,7 @@ int ibv_dealloc_mw(struct ibv_mw *mw);
 <h2>NOTES</h2>
 <p> <code>ibv_dereg_mr()</code> fails if any memory window is still bound to this MR.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_send/">ibv_post_send</a></code>(3), <code><a href="/docs/linux/man/3-ibv_bind_mw/">ibv_bind_mw</a></code>(3), <code><a href="/docs/linux/man/3-ibv_reg_mr/">ibv_reg_mr</a></code>(3),</p>
+<p> <code>ibv_alloc_pd</code>(3), <code>ibv_post_send</code>(3), <code>ibv_bind_mw</code>(3), <code>ibv_reg_mr</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</p>

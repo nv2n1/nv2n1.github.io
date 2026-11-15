@@ -29,7 +29,7 @@ description: "ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytes
 <p> <i>Initaddr</i> returns <code>NULL</code> for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS. </p>
 <p> The functions which return <i>size_t</i> return <code>0</code> for a failure.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3), <a href="/docs/linux/man/3-ipsec_ttoaddr/">ipsec_ttoaddr</a>(3)</p>
+<p> inet(3), ipsec_ttoaddr(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> An unknown address family is a fatal error for any of these functions except <i>addrtypeof</i>. An address-size mismatch is a fatal error for <i>initaddr</i>.</p>
 <h2>HISTORY</h2>

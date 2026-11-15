@@ -42,7 +42,7 @@ description: "obexftpd – Mobile Equipment file transfer server"
 <dt>Start listening for bluetooth connections and use a safe basedir:</p>
 <dd> <code>obexftpd -c /tmp/inbox -b</code></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-obexftp/">obexftp</a>(1), <a href="/docs/linux/man/3-openobex/">openobex</a>(3), <a href="/docs/linux/man/3-obexftp/">obexftp</a>(3), <a href="/docs/linux/man/3-multicobex/">multicobex</a>(3), <a href="/docs/linux/man/3-libbfb/">libbfb</a>(3).</p>
+<p> <a href="/docs/linux/man/1-obexftp/">obexftp</a>(1), openobex(3), obexftp(3), multicobex(3), libbfb(3).</p>
 <h2>BUGS</h2>
 <p> Bugs ? Features !</p>
 <h2>NOTES</h2>

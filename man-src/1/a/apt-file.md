@@ -171,7 +171,7 @@ EOF
 <dd> There was an internal errors / uncaught exception in <code>apt-file</code>. Please file a bug against <code>apt-file</code>.</dl>
 <p> Any other exit code is reserved for future use.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-apt/">apt</a></code>(1), <code><a href="/docs/linux/man/8-apt-cache/">apt-cache</a></code>(8), <code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) </p>
+<p> <code>apt</code>(1), <code><a href="/docs/linux/man/8-apt-cache/">apt-cache</a></code>(8), <code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) </p>
 <p> The <font SIZE="-1">APT</font> users guide in /usr/share/doc/apt/ </p>
 <p> The example config in /usr/share/doc/apt-file/examples </p>
 <p> The <font SIZE="-1">README</font> at <i>/usr/share/doc/apt-file/README.md.gz</i> </p>

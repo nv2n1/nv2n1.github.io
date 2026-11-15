@@ -29,4 +29,4 @@ if (ret == FLI_ERROR)
 <h2>Return Value</h2>
 <p>The FLI player returns FLI_OK if it reached the end of the file, FLI_ERROR if something went wrong, and the value returned by the callback function if that was what stopped it. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-play_memory_fli/">play_memory_fli</a></code>(3), <code><a href="/docs/linux/man/3-install_timer/">install_timer</a></code>(3), <code><a href="/docs/linux/man/3-fli_frame/">fli_frame</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-play_memory_fli/">play_memory_fli</a></code>(3), <code>install_timer</code>(3), <code><a href="/docs/linux/man/3-fli_frame/">fli_frame</a></code>(3) </p>

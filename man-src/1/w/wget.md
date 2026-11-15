@@ -778,7 +778,7 @@ No options-&gt;ftp.xemacs.org / pub / xemacs /
 <dd> If Wget has crashed, try to run it in a debugger, e.g. <tt>&quot;gdb `which wget` core&quot;</tt> and type <tt>&quot;where&quot;</tt> to get the backtrace. This may not work if the system administrator has disabled core files, but it is safe to try.</dl>
 <h2>SEE ALSO</h2>
 <p> This is <code>not</code> the complete manual for <font SIZE="-1">GNU</font> Wget. For more complete information, including more detailed explanations of some of the options, and a number of commands available for use with <i>.wgetrc</i> files and the <code>-e</code> option, see the <font SIZE="-1">GNU</font> Info entry for <i>wget</i>. </p>
-<p> Also see <code><a href="/docs/linux/man/1-wget2/">wget2</a></code>(1), the updated version of <font SIZE="-1">GNU</font> Wget with even better support for recursive downloading and modern protocols like <font SIZE="-1">HTTP/2.</font></p>
+<p> Also see <code>wget2</code>(1), the updated version of <font SIZE="-1">GNU</font> Wget with even better support for recursive downloading and modern protocols like <font SIZE="-1">HTTP/2.</font></p>
 <h2>AUTHOR</h2>
 <p> Originally written by Hrvoje Nikšić &lt;hniksic [at] xemacs.org&gt;. Currently maintained by Darshit Shah &lt;darnir [at] gnu.org&gt; and Tim Rühsen &lt;tim.ruehsen [at] gmx.de&gt;.</p>
 <h2>COPYRIGHT</h2>

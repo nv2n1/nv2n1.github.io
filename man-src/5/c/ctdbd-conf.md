@@ -402,7 +402,7 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dd>When CTDB should start and stop services if they become managed or unmanaged. </p>
 <p> Default is no.</dl>
 <h2>Tunables Configuration</h2>
-<p>CTDB tunables (see <code><a href="/docs/linux/man/7-ctdbd-tunables/">ctdbd-tunables</a></code>(7)) can be set from the configuration file. They are set as follows: </p>
+<p>CTDB tunables (see <code>ctdbd-tunables</code>(7)) can be set from the configuration file. They are set as follows: </p>
 <dl>
 <dd>
 <pre>CTDB_SET_<i>TUNABLE</i>=<i>VALUE</i></pre>

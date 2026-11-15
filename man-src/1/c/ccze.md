@@ -62,10 +62,10 @@ description: "ccze – A robust log colorizer"
 <dt><i>ftpstats</i></p>
 <dd> For coloring ftpStats compatible log files, such as Pure-FTPD&#8217;s <i>Stats</i> log format.</p>
 <dt><i>httpd</i></p>
-<dd> For coloring apache-style <i>access.log</i> and <i>error.log</i> files. (See <i><a href="/docs/linux/man/8-apache/">apache</a></i>(8)) </p>
+<dd> For coloring apache-style <i>access.log</i> and <i>error.log</i> files. (See <i>apache</i>(8)) </p>
 <p> As a side-effect, all compatible formats, like <i><a href="/docs/linux/man/8-pure-ftpd/">pure-ftpd</a></i>(8)&#8217;s common-log format is also supported by this plugin.</p>
 <dt><i>icecast</i></p>
-<dd> For coloring <i>icecast/icecast.log</i> and <i>icecast/usage.log</i> files. (See <i><a href="/docs/linux/man/8-icecast/">icecast</a></i>(8))</p>
+<dd> For coloring <i>icecast/icecast.log</i> and <i>icecast/usage.log</i> files. (See <i>icecast</i>(8))</p>
 <dt><i>oops</i></p>
 <dd> For coloring <i>oops/oops.log</i> files.</p>
 <dt><i>php</i></p>
@@ -81,9 +81,9 @@ description: "ccze – A robust log colorizer"
 <dt><i>sulog</i></p>
 <dd> For coloring <i>sulog</i> files. (See <i><a href="/docs/linux/man/1-su/">su</a></i>(1))</p>
 <dt><i>super</i></p>
-<dd> For coloring <i>super.log</i> files. (See <i><a href="/docs/linux/man/1-super/">super</a></i>(1))</p>
+<dd> For coloring <i>super.log</i> files. (See <i>super</i>(1))</p>
 <dt><i>syslog</i></p>
-<dd> For coloring generic syslog messages. (See <i><a href="/docs/linux/man/8-syslogd/">syslogd</a></i>(8))</p>
+<dd> For coloring generic syslog messages. (See <i>syslogd</i>(8))</p>
 <dt><i>ulogd</i></p>
 <dd> For coloring ulogd logs.</p>
 <dt><i>vsftpd</i></p>

@@ -24,4 +24,4 @@ description: "devkit-disks-daemon – DeviceKit-disks Daemon"
 <h2>Bugs</h2>
 <p>Please send bug reports to either the distribution or the hal mailing list, see m[blue]<code><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/hal">http://lists.freedesktop.org/mailman/listinfo/hal</a></code>m[] on how to subscribe.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-devicekit-disks/">DeviceKit-disks</a></code>(7), <code><a href="/docs/linux/man/1-devkit-disks/">devkit-disks</a></code>(1), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), </p>
+<p><code><a href="/docs/linux/man/7-devicekit-disks/">DeviceKit-disks</a></code>(7), <code>devkit-disks</code>(1), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), </p>

@@ -86,4 +86,4 @@ Lintian::Unpacker -- Job handler to unpack collections
 <dd>Returns or sets the max number of jobs to be processed in parallel. 
 
  If the limit is 0, then there is no limit for the number of parallel jobs.</dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.
-<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i><a HREF="/docs/linux/man/3-lintian--collscript/">Lintian::CollScript</a></i>(3), <i><a HREF="/docs/linux/man/3-lintian--lab--entry/">Lintian::Lab::Entry</a></i>(3)
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i>Lintian::CollScript</i>(3), <i>Lintian::Lab::Entry</i>(3)

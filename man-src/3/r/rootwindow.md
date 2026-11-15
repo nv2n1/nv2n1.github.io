@@ -74,5 +74,5 @@ description: "AllPlanes, BlackPixel, WhitePixel, ConnectionNumber, DefaultColorm
 <p> The <code>ServerVendor</code> macro returns a pointer to a null-terminated string that provides some identification of the owner of the X server implementation. </p>
 <p> The <code>VendorRelease</code> macro returns a number related to a vendor&#8217;s release of the X server.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), <a href="/docs/linux/man/3-imagebyteorder/">ImageByteOrder</a>(3), <a href="/docs/linux/man/3-iscursorkey/">IsCursorKey</a>(3), <a href="/docs/linux/man/3-xopendisplay/">XOpenDisplay</a>(3)<br />
+<p><a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), ImageByteOrder(3), IsCursorKey(3), <a href="/docs/linux/man/3-xopendisplay/">XOpenDisplay</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

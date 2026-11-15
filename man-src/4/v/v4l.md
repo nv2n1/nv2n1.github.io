@@ -22,6 +22,6 @@ description: "v4l – video4linux driver"
 <h2>Configuration Details</h2>
 <p>Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details. This section only covers configuration details specific to this driver.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xorgconfig/">xorgconfig</a>(1), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7)</p>
+<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), xorgconfig(1), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7)</p>
 <h2>Authors</h2>
 <p>Authors include: Gerd Knorr &lt;kraxel [at] bytesex.org&gt;</p>

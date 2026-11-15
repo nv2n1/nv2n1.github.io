@@ -18,4 +18,4 @@ int pack_ungetc(int c, PACKFILE *f);</code></pre>
 <h2>Return Value</h2>
 <p>Returns c on success, or EOF on error. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pack_getc/">pack_getc</a></code>(3), <code><a href="/docs/linux/man/3-pack_fgets/">pack_fgets</a></code>(3) </p>
+<p><code>pack_getc</code>(3), <code><a href="/docs/linux/man/3-pack_fgets/">pack_fgets</a></code>(3) </p>

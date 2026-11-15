@@ -27,7 +27,7 @@ description: "getconf – Query system configuration variables"
 <p> <code>system_var</code> </p>
 <pre>
         A system configuration variable, as defined by <a href="//www.systutorials.com/docs/linux/man/3-sysconf/">sysconf</a>(3) or
-        <a href="//www.systutorials.com/docs/linux/man/3-confstr/">confstr</a>(3).
+        confstr(3).
 </pre>
 <p> <code>path_var</code> </p>
 <pre>
@@ -38,5 +38,5 @@ description: "getconf – Query system configuration variables"
 <p> <i>getconf</i> was written by Roland McGrath for the GNU C Library </p>
 <p> This man page was written by Ben Collins &lt;bcollins [at] debian.org&gt; for the Debian GNU/Linux system.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3), <code><a href="/docs/linux/man/3-pathconf/">pathconf</a></code>(3), <code><a href="/docs/linux/man/3-confstr/">confstr</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3), <code><a href="/docs/linux/man/3-pathconf/">pathconf</a></code>(3), <code>confstr</code>(3) </p>
 <h2>Index</h2>

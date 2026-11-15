@@ -62,7 +62,7 @@ mord[options][mfile][ofile][lfile]
     $ mord brol.msh brol.ord
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gmk_msh/">gmk_msh</a></code>(1), <code><a href="/docs/linux/man/1-gotst/">gotst</a></code>(1), <code><a href="/docs/linux/man/1-mtst/">mtst</a></code>(1). </p>
+<p> <code>gmk_msh</code>(1), <code>gotst</code>(1), <code>mtst</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

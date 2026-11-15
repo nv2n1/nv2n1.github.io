@@ -24,7 +24,7 @@ description: "vpTracePixel – print a trace of the voxels composited into a pix
 <dt><i>trace_u, trace_v</i></p>
 <dd>Intermediate image coordinates of the pixel to trace.</dl>
 <h2>Description</h2>
-<p>This routine is for debugging the rendering algorithms. If <i>(trace_u, trace_v)</i> is a valid set of coordinates in the intermediate image then a printout appears during rendering showing a trace of all of the voxels that contribute to the pixel. The intermediate image is not the same as the final image; see <a href="/docs/linux/man/3-vpgetvpsetimage/">vpGetvpSetImage</a>(3). </p>
+<p>This routine is for debugging the rendering algorithms. If <i>(trace_u, trace_v)</i> is a valid set of coordinates in the intermediate image then a printout appears during rendering showing a trace of all of the voxels that contribute to the pixel. The intermediate image is not the same as the final image; see vpGetvpSetImage(3). </p>
 <p> The VolPack library must be compiled with the -DDEBUG compiler option for this function to have any effect.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3) </p>

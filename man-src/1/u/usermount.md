@@ -19,13 +19,13 @@ description: "usermount – A graphical tool to mount, unmount and format filesy
 <p> When run as root, <code>usermount</code> displays all of the entries in <i>/etc/fstab</i> rather than just the ones with the <i>user</i> option. </p>
 <p> Invoking <code>userformat</code> <i>device</i> allows formatting <i>device</i>, as if by selecting <i>device</i> in the <code>userformat</code> window, and by clicking the <i>Format</i> button.</p>
 <h2>OPTIONS</h2>
-<p> This program has no command line options of it&#8217;s own, but it does take the standard X program options like <code>-display</code> and such. See the <i><a href="/docs/linux/man/1-x/">X</a></i>(1) man page for some of the common options.</p>
+<p> This program has no command line options of it&#8217;s own, but it does take the standard X program options like <code>-display</code> and such. See the <i>X</i>(1) man page for some of the common options.</p>
 <h2>FILES</h2>
 <dl>
 <dt><i>/etc/fstab</i></p>
 <dd> The system file describing the mountable filesystems.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/8-mount/">mount</a></i>(8), <i><a href="/docs/linux/man/8-fdformat/">fdformat</a></i>(8), <i><a href="/docs/linux/man/8-mkfs/">mkfs</a></i>(8), <i><a href="/docs/linux/man/5-fstab/">fstab</a></i>(5) <i><a href="/docs/linux/man/1-x/">X</a></i>(1)</p>
+<p> <i><a href="/docs/linux/man/8-mount/">mount</a></i>(8), <i><a href="/docs/linux/man/8-fdformat/">fdformat</a></i>(8), <i><a href="/docs/linux/man/8-mkfs/">mkfs</a></i>(8), <i><a href="/docs/linux/man/5-fstab/">fstab</a></i>(5) <i>X</i>(1)</p>
 <h2>BUGS</h2>
 <p> Mount entries with a filesystem type of iso9660 are outright considered CD-ROMs and the format button is always disabled. </p>
 <p> Mount entries for swap files or partitions are also ignored. A nice feature might be to allow root to turn swap on and off for swap partitions.</p>

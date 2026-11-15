@@ -20,7 +20,7 @@ description: "system-config-selinux – SELinux Management tool"
 <p>To run the program type: system-config-selinux </p>
 <h2>See Also</h2>
 <dl>
-<dt><a href="/docs/linux/man/1-selinux/">selinux</a>(1), <a href="/docs/linux/man/8-semanage/">semanage</a>(8)</p>
+<dt>selinux(1), <a href="/docs/linux/man/8-semanage/">semanage</a>(8)</p>
 <dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>&gt;.</p>

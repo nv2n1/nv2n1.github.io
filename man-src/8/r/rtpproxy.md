@@ -141,7 +141,7 @@ description: "rtpproxy – RTP (Real-time Transport Protocol) Proxy Server"
 <h2>Availability</h2>
 <p>The latest version of this program can be found at m[blue]<code><a rel="nofollow" href="http://www.rtpproxy.org/">http://www.rtpproxy.org/</a></code>m[].</p>
 <h2>Seealso</h2>
-<p><a href="/docs/linux/man/8-ser/">ser</a>(8).</p>
+<p>ser(8).</p>
 <h2>Author</h2>
 <p><code>Maxim Sobolev</code></p>
 <dl>

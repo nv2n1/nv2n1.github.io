@@ -56,7 +56,7 @@ description: "trafgen – a fast, multithreaded network packet generator"
 <p>{&nbsp;<wbr>/*&nbsp;<wbr>packet 1 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>}<br />
 {&nbsp;<wbr>/*&nbsp;<wbr>packet 2 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>} </p>
 <p> When trafgen is started using multiple CPUs (default), then each of those packets will be scheduled for transmission on all CPUs by default. However, it is possible to tell trafgen to schedule a packet only on a particular CPU: </p>
-<p><a href="/docs/linux/man/1-cpu/">cpu</a>(1):&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>packet 1 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>}<br />
+<p>cpu(1):&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>packet 1 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>}<br />
 cpu(2-3):&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>packet 2 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>} </p>
 <p> Thus, in case we have a 4 core machine with CPU0-CPU3, packet 1 will be scheduled only on CPU1, packet 2 on CPU2 and CPU3. When using trafgen with &#8211;num option, then these constraints will still be valid and the packet is fairly distributed among those CPUs. </p>
 <p> Packet content is delimited either by a comma or whitespace, or both: </p>
@@ -99,7 +99,7 @@ const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&l
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>MAC Destination&nbsp;<wbr>*/<br />
 &nbsp;<wbr>&nbsp;<wbr>fill(0xff, ETH_ALEN),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>MAC Source&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>0x00, 0x02, 0xb3,&nbsp;<wbr><a href="/docs/linux/man/3-drnd/">drnd</a>(3),<br />
+&nbsp;<wbr>&nbsp;<wbr>0x00, 0x02, 0xb3,&nbsp;<wbr>drnd(3),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Protocol&nbsp;<wbr>*/<br />
 &nbsp;<wbr>&nbsp;<wbr>c16(ETH_P_IP),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Version, IHL, TOS&nbsp;<wbr>*/<br />
@@ -107,7 +107,7 @@ const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&l
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Total Len&nbsp;<wbr>*/<br />
 &nbsp;<wbr>&nbsp;<wbr>c16(59),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Ident&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr><a href="/docs/linux/man/2-drnd/">drnd</a>(2),<br />
+&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Flags, Frag Off&nbsp;<wbr>*/<br />
 &nbsp;<wbr>&nbsp;<wbr>0b01000000, 0,<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 TTL&nbsp;<wbr>*/<br />
@@ -117,15 +117,15 @@ const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&l
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Checksum&nbsp;<wbr>(IP header from, to)&nbsp;<wbr>*/<br />
 &nbsp;<wbr>&nbsp;<wbr>csumip(14, 33),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Source IP&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr><a href="/docs/linux/man/4-drnd/">drnd</a>(4),<br />
+&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Dest IP&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr><a href="/docs/linux/man/4-drnd/">drnd</a>(4),<br />
+&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Source Port&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr><a href="/docs/linux/man/2-drnd/">drnd</a>(2),<br />
+&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Dest Port&nbsp;<wbr>*/<br />
 &nbsp;<wbr>&nbsp;<wbr>c16(80),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Sequence Number&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr><a href="/docs/linux/man/4-drnd/">drnd</a>(4),<br />
+&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Ackn. Number&nbsp;<wbr>*/<br />
 &nbsp;<wbr>&nbsp;<wbr>c32(0),<br />
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Header length&nbsp;<wbr>+&nbsp;<wbr>TCP SYN/ECN Flag&nbsp;<wbr>*/<br />
@@ -152,7 +152,7 @@ const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&l
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 total len<br />
 &nbsp;<wbr>&nbsp;<wbr>const16(40),<br />
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>id&nbsp;<wbr>(note: runtime dynamic random)<br />
-&nbsp;<wbr>&nbsp;<wbr><a href="/docs/linux/man/2-drnd/">drnd</a>(2),<br />
+&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br />
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 3-bit flags&nbsp;<wbr>+&nbsp;<wbr>13-bit fragment offset<br />
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>001&nbsp;<wbr>=&nbsp;<wbr>more fragments<br />
 &nbsp;<wbr>&nbsp;<wbr>0b00100000, 0,<br />
@@ -200,7 +200,7 @@ const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&l
 &nbsp;<wbr>Cisco&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:7,&nbsp;<wbr>&nbsp;<wbr>594:4,&nbsp;<wbr>&nbsp;<wbr>1518:1<br />
 &nbsp;<wbr>RPR Trimodal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:60, 512:20, 1518:20<br />
 &nbsp;<wbr>RPR Quadrimodal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:50, 512:15, 1518:15, 9218:20 </p>
-<p> The low-level nature of trafgen makes trafgen rather protocol independent and therefore useful in many scenarios when stress testing is needed, for instance. However, if a traffic generator with higher level packet descriptions is desired, netsniff-ng&#8217;s <a href="/docs/linux/man/8-mausezahn/">mausezahn</a>(8) can be of good use as well. </p>
+<p> The low-level nature of trafgen makes trafgen rather protocol independent and therefore useful in many scenarios when stress testing is needed, for instance. However, if a traffic generator with higher level packet descriptions is desired, netsniff-ng&#8217;s mausezahn(8) can be of good use as well. </p>
 <p> For smoke/fuzz testing with trafgen, it is recommended to have a direct link between the host you want to analyze (&#8221;victim&#8221; machine) and the host you run trafgen on (&#8221;attacker&#8221; machine). If the ICMP reply from the victim fails, we assume that probably its kernel crashed, thus we print the last sent packet togther with the seed and quit probing. It might be very unlikely to find such a ping-of-death on modern Linux systems. However, there might be a good chance to find it on some proprietary (e.g. embedded) systems or buggy driver firmwares that are in the wild. Also, fuzz testing can be done on raw 802.11 frames, of course. In case you find a ping-of-death, please mention that you were using trafgen in your commit message of the fix!</p>
 <h2>Bugs</h2>
 <p>For old trafgen versions only, there could occur kernel crashes: we have fixed this bug in the mainline and stable kernels under commit 7f5c3e3a8 (&#8221;af_packet: remove BUG statement in tpacket_destruct_skb&#8221;) and also in trafgen. Probably the best is if you upgrade trafgen to the latest version. </p>
@@ -209,7 +209,7 @@ const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&l
 <h2>History</h2>
 <p><code>trafgen</code> was originally written for the netsniff-ng toolkit by Daniel Borkmann. It is currently maintained by Tobias Klauser &lt;tklauser [at] distanz.ch&gt; and Daniel Borkmann &lt;dborkma [at] tik.ee.ethz.ch&gt;.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-netsniff-ng/">netsniff-ng</a></code>(8), <code><a href="/docs/linux/man/8-mausezahn/">mausezahn</a></code>(8), <code><a href="/docs/linux/man/8-ifpps/">ifpps</a></code>(8), <code><a href="/docs/linux/man/8-bpfc/">bpfc</a></code>(8), <code><a href="/docs/linux/man/8-flowtop/">flowtop</a></code>(8), <code><a href="/docs/linux/man/8-astraceroute/">astraceroute</a></code>(8), <code><a href="/docs/linux/man/8-curvetun/">curvetun</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-netsniff-ng/">netsniff-ng</a></code>(8), <code>mausezahn</code>(8), <code><a href="/docs/linux/man/8-ifpps/">ifpps</a></code>(8), <code><a href="/docs/linux/man/8-bpfc/">bpfc</a></code>(8), <code>flowtop</code>(8), <code><a href="/docs/linux/man/8-astraceroute/">astraceroute</a></code>(8), <code>curvetun</code>(8) </p>
 <h2>Author</h2>
 <p>Manpage was written by Daniel Borkmann.</p>
 <h2>Colophon</h2>

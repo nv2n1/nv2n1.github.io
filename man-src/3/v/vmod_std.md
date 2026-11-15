@@ -240,7 +240,7 @@ std.set_ip_tos(0x0);
 <dd>Cache the req.body if it is smaller than <i>size</i>. </p>
 <p> Caching the req.body makes it possible to retry pass operations (POST, PUT).</p>
 <dt><code>Example</code></p>
-<dd><a href="//www.systutorials.com/docs/linux/man/1KB-std.cache_req_body/">std.cache_req_body</a>(1KB); </p>
+<dd>std.cache_req_body(1KB); </p>
 <p> This will cache the req.body if its size is smaller than 1KB.</dl>
 <h3>STRING strstr(STRING, STRING)</h3>
 <dl>

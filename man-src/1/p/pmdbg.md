@@ -16,7 +16,7 @@ description: "pmdbg – translate Performance Co-Pilot debug control flags"
 <h2>DESCRIPTION</h2>
 <p> The components of the Performance Co-Pilot (PCP) use a global vector of bit-fields to control diagnostic and debug output. </p>
 <p> <code>pmdbg</code> with a <code>-l</code> argument prints out the mnemonic and decimal values of all the bit-fields in the debug control vector. </p>
-<p> <code>pmdbg</code> with a <code>-D</code> argument parses the list of <i>names</i>(s) using <code><a href="/docs/linux/man/3-__pmparsedebug/">__pmParseDebug</a></code>(3) and reports the corresponding decimal value. This is most useful when debugging and wanting to set the internal value of the control vector (<code>pmDebug</code>) via a debugger, e.g. <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1). </p>
+<p> <code>pmdbg</code> with a <code>-D</code> argument parses the list of <i>names</i>(s) using <code>__pmParseDebug</code>(3) and reports the corresponding decimal value. This is most useful when debugging and wanting to set the internal value of the control vector (<code>pmDebug</code>) via a debugger, e.g. <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1). </p>
 <p> In the alternative usage, the <i>code</i> arguments are values for the debug vector, and the bit-fields that are enabled by each of these values is listed. </p>
 <p> Each <i>code</i> may be an integer, a hexadecimal value or a hexadecimal value prefixed by either &#8220;0x&#8221; or &#8220;0X&#8221;. </p>
 <p> Most applications using the facilities of the PCP support a <code>-D</code><i>N</i> command-line syntax to enable debug control. <code>pmdbg</code> is designed to help choose an appropriate value for <i>N</i>. </p>

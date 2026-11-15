@@ -86,7 +86,7 @@ description: "src/antlr3tokenstream.c –"
 <p>References ANTLR3_MALLOC, antlr3TokenStreamFree(), and ANTLR3_TOKEN_STREAM_struct::free. </p>
 <p> Referenced by antlr3CommonTokenStreamNew().</p>
 <h3>static void consume (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
-<p>Move the input pointer to the next incoming token. The stream must become active with <a href="/docs/linux/man/1-lt/">LT</a>(1) available. <code>consume()</code> simply moves the input pointer so that <a href="/docs/linux/man/1-lt/">LT</a>(1) points at the next input symbol. Consume at least one token. </p>
+<p>Move the input pointer to the next incoming token. The stream must become active with LT(1) available. <code>consume()</code> simply moves the input pointer so that LT(1) points at the next input symbol. Consume at least one token. </p>
 <p> Walk past any token not on the channel the parser is listening to. </p>
 <p> References ANTLR3_COMMON_TOKEN_STREAM_struct::p, ANTLR3_VECTOR_struct::size, skipOffTokenChannels(), ANTLR3_TOKEN_STREAM_struct::super, ANTLR3_INT_STREAM_struct::super, and ANTLR3_COMMON_TOKEN_STREAM_struct::tokens. </p>
 <p> Referenced by antlr3CommonTokenStreamNew(), and dbgConsume().</p>

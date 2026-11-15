@@ -17,7 +17,7 @@ description: "pgmtopgm – copy PGM image"
 <p> Even that is of limited usefulness because of the fact that almost any program to which you would feed the resulting PGM image could also just take the original image directly. However, sometimes you really need a true PGM image. </p>
 <p> When you know you have a PBM image and want a PGM image, <code>pbmtopgm</code> is a more general way to do that conversion. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmtoppm/">ppmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopam/">pamtopam</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-ppmtoppm/">ppmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopam/">pamtopam</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code>pbm</code>(1) , <code>pgm</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.9 (September 2002). </p>
 <h2>Index</h2>

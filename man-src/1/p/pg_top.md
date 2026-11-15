@@ -101,7 +101,7 @@ description: "pg_top – display and update information about the top cpu Postgr
 <dt><code>R</code></p>
 <dd> Display user table statistics.</p>
 <dt><code>r</code></p>
-<dd> Change the priority (the &quot;nice&quot;) of a list of processes. This acts similarly to the command <i><a href="/docs/linux/man/8-renice/">renice</a></i>(8)).</p>
+<dd> Change the priority (the &quot;nice&quot;) of a list of processes. This acts similarly to the command <i>renice</i>(8)).</p>
 <dt><code>s</code></p>
 <dd> Change the number of seconds to delay between displays (prompt for new number).</p>
 <dt><code>T</code></p>
@@ -149,7 +149,7 @@ description: "pg_top – display and update information about the top cpu Postgr
 <h2>BUGS</h2>
 <p> As with <i><a href="/docs/linux/man/1-ps/">ps</a></i>(1), things can change while <i>pg_top</i> is collecting information for an update. The picture it gives is only a close approximation to reality.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-kill/">kill</a>(1), <a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/4-mem/">mem</a>(4), <a href="/docs/linux/man/8-renice/">renice</a>(8)</p>
+<p> <a href="/docs/linux/man/1-kill/">kill</a>(1), <a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/4-mem/">mem</a>(4), renice(8)</p>
 <h2>LINUX NOTES</h2>
 <p> The Linux port was written by Richard Henderson &lt;rth [at] tamu.edu&gt;. The CPU% calculation was brazenly stolen from the Solaris 2 port and should be attributed to one of the many names listed in its man page. </p>
 <p> The order support was stolen from SUNOS 5 port by Alexey Klimkin &lt;kad [at] klon.tme.mcst.ru&gt; </p>

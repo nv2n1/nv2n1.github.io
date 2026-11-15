@@ -10,7 +10,8 @@ description: "muttrc – Configuration file for the Mutt Mail User Agent"
 <p>muttrc &#8211; Configuration file for the Mutt Mail User Agent</p>
 <h2>Description</h2>
 <p>A mutt configuration file consists of a series of &#8220;commands&#8221;. Each line of the file may contain one or more commands. When multiple commands are used, they must be separated by a semicolon (&#8220;<code>;</code>&#8220;). The hash mark, or pound sign (&#8220;<code>#</code>&#8220;), is used as a &#8220;comment&#8221; character. You can use it to annotate your initialization file. All text after the comment character to the end of the line is ignored. Single quotes (&#8220;<code>&#8216;</code>&#8220;) and double quotes (&#8220;<code>&quot;</code>&#8220;) can be used to quote strings which contain spaces or other special characters. The difference between the two types of quotes is similar to that of many popular shell programs, namely that a single quote is used to specify a literal string (one that is not interpreted for shell variables or quoting with a backslash [see next paragraph]), while double quotes indicate a string which should be evaluated. For example, backticks are evaluated inside of double quotes, but not single quotes. <code>\</code> quotes the next character, just as in shells such as bash and zsh. For example, if want to put quotes (&#8220;<code>&quot;</code>&#8220;) inside of a string, you can use &#8220;<code>\</code>&#8221; to force the next character to be a literal instead of interpreted character. &#8220;<code>\</code>&#8221; means to insert a literal &#8220;<code>\</code>&#8221; into the line. &#8220;<code>
-</code>&#8221; and &#8220;<code></code>&#8221; have their usual C meanings of linefeed and carriage-return, respectively. A &#8220;<code>\</code>&#8221; at the end of a line can be used to split commands over multiple lines, provided that the split points don&#8217;t appear in the middle of command names. It is also possible to substitute the output of a Unix command in an initialization file. This is accomplished by enclosing the command in backticks (<code>`</code><i>command</i><code>`</code>). UNIX environment variables can be accessed like the way it is done in shells like sh and bash: Prepend the name of the variable by a dollar (&#8220;<code>$</code>&#8220;) sign. </p>
+</code>&#8221; and &#8220;<code>
+</code>&#8221; have their usual C meanings of linefeed and carriage-return, respectively. A &#8220;<code>\</code>&#8221; at the end of a line can be used to split commands over multiple lines, provided that the split points don&#8217;t appear in the middle of command names. It is also possible to substitute the output of a Unix command in an initialization file. This is accomplished by enclosing the command in backticks (<code>`</code><i>command</i><code>`</code>). UNIX environment variables can be accessed like the way it is done in shells like sh and bash: Prepend the name of the variable by a dollar (&#8220;<code>$</code>&#8220;) sign. </p>
 <h2>Commands</h2>
 <pre><code>alias</code> [<code>-group</code> <i>name</i> [...]] <i>key</i> <i>address</i> [<code>,</code> <i>address</i> [ ... ]]
 <code>unalias</code> [<code> * </code> | <i>key</i> ]</pre>
@@ -47,7 +48,7 @@ description: "muttrc – Configuration file for the Mutt Mail User Agent"
 <dt><code>charset-hook</code> <i>alias</i> <i>charset</i></p>
 <dd>This command defines an alias for a character set. This is useful to properly display messages which are tagged with a character set name not known to mutt.</p>
 <dt><code>iconv-hook</code> <i>charset</i> <i>local-charset</i></p>
-<dd>This command defines a system-specific name for a character set. This is useful when your system&#8217;s <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3) implementation does not understand MIME character set names (such as <code>iso-8859-1</code>), but instead insists on being fed with implementation-specific character set names (such as <code>8859-1</code>). In this specific case, you&#8217;d put this into your configuration file:</p>
+<dd>This command defines a system-specific name for a character set. This is useful when your system&#8217;s <code>iconv</code>(3) implementation does not understand MIME character set names (such as <code>iso-8859-1</code>), but instead insists on being fed with implementation-specific character set names (such as <code>8859-1</code>). In this specific case, you&#8217;d put this into your configuration file:</p>
 <dd><code>iconv-hook iso-8859-1 8859-1</code></p>
 <dt><code>message-hook</code> [<code>!</code>]<i>pattern</i> <i>command</i></p>
 <dd>Before mutt displays (or formats for replying or forwarding) a message which matches the given <i>pattern</i> (or, when it is preceded by an exclamation mark, does not match the <i>pattern</i>), the given <i>command</i> is executed. When multiple <code>message-hook</code>s match, they are executed in the order in which they occur in the configuration file.</p>
@@ -761,7 +762,7 @@ Default: ""</pre>
 <dd>
 <pre>Type: path
 Default: "/usr/bin/mutt_dotlock"</pre>
-<dd>Contains the path of the <a href="/docs/linux/man/8-mutt_dotlock/">mutt_dotlock</a>(8) binary to be used by mutt. </p>
+<dd>Contains the path of the mutt_dotlock(8) binary to be used by mutt. </p>
 <dt><code>dsn_notify</code></p>
 <dd>
 <pre>Type: string
@@ -1069,7 +1070,7 @@ Default: yes</pre>
 <pre>Type: string
 Default: ""</pre>
 <dd>Specifies the fully-qualified hostname of the system mutt is running on containing the host&#8217;s name and the DNS domain it belongs to. It is used as the domain part (after &#8220;@&#8221;) for local email addresses as well as Message-Id headers.</p>
-<dd>Its value is determined at startup as follows: the node&#8217;s hostname is first determined by the <a href="/docs/linux/man/3-uname/">uname</a>(3) function. The domain is then looked up using the <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2) and <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3) functions. If those calls are unable to determine the domain, the full value returned by uname is used. Optionally, Mutt can be compiled with a fixed domain name in which case a detected one is not used.</p>
+<dd>Its value is determined at startup as follows: the node&#8217;s hostname is first determined by the uname(3) function. The domain is then looked up using the <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2) and <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3) functions. If those calls are unable to determine the domain, the full value returned by uname is used. Optionally, Mutt can be compiled with a fixed domain name in which case a detected one is not used.</p>
 <dd>Also see $use_domain and $hidden_host. </p>
 <dt><code>idn_decode</code></p>
 <dd>
@@ -2788,7 +2789,7 @@ Default: no</pre>
 <dd>
 <pre>Type: string
 Default: ""</pre>
-<dd>Contains a colon-seperated list of ciphers to use when using SSL. For OpenSSL, see <a href="/docs/linux/man/1-ciphers/">ciphers</a>(1) for the syntax of the string.</p>
+<dd>Contains a colon-seperated list of ciphers to use when using SSL. For OpenSSL, see ciphers(1) for the syntax of the string.</p>
 <dd>For GnuTLS, this option will be used in place of &#8220;NORMAL&#8221; at the start of the priority string. See <a href="/docs/linux/man/3-gnutls_priority_init/">gnutls_priority_init</a>(3) for the syntax and more details. (Note: GnuTLS version 2.1.7 or higher is required.) </p>
 <dt><code>status_chars</code></p>
 <dd>
@@ -3053,7 +3054,7 @@ Default: 10</pre>
 <dd>Also see the $read_inc, $net_inc and $time_inc variables and the &#8220;tuning&#8221; section of the manual for performance considerations. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3), <code><a href="/docs/linux/man/5-mailcap/">mailcap</a></code>(5), <code><a href="/docs/linux/man/5-maildir/">maildir</a></code>(5), <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5), <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code>iconv</code>(3), <code><a href="/docs/linux/man/5-mailcap/">mailcap</a></code>(5), <code><a href="/docs/linux/man/5-maildir/">maildir</a></code>(5), <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5), <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) </p>
 <p> The Mutt Manual </p>
 <p> The Mutt home page: <a rel="nofollow" href="http://www.mutt.org/">http://www.mutt.org/</a></p>
 <h2>Author</h2>

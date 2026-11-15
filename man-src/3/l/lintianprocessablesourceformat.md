@@ -23,4 +23,4 @@ description: "Lintian::Processable::Source::Format – Lintian interface to sour
 <h2>Author</h2>
 <p>Originally written by Russ Allbery &lt;rra [at] debian.org&gt; for Lintian. Amended by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1), <code><a href="/docs/linux/man/3-lintian--relation/">Lintian::Relation</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1), <code>Lintian::Relation</code>(3)</p>

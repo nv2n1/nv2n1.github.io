@@ -39,7 +39,7 @@ The configuration for report_Uploader event is read from /etc/libreport/events/r
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/5-report_event-conf/">report_event.conf</a>(5), <a HREF="/docs/linux/man/1-reporter-uploader/">reporter-uploader</a>(1)
+<a HREF="/docs/linux/man/5-report_event-conf/">report_event.conf</a>(5), reporter-uploader(1)
 
 <h2>Author</h2>
 

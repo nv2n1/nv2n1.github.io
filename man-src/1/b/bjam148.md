@@ -81,7 +81,7 @@ description: "bjam – Command-line utility to build Boost-related C++ projects 
 <p> The final concept is property propagation. Boost.Build does not require that every metatarget is called with the same properties. Instead, the &#8216;top-level&#8217; metatargets are called with the properties specified on the command line Each metatarget can elect to augment or override some properties (in particular, using the requirements mechanism, see the section called “Requirements”: <a rel="nofollow" href="http://www.boost.org/boost-build2/doc/html/bbv2/overview/targets.html#bbv2.overview.targets.requirements)">http://www.boost.org/boost-build2/doc/html/bbv2/overview/targets.html#bbv2.overview.targets.requirements)</a> Then, the dependency metatargets are called with modified properties and produce concrete targets that are then used in build process Of course, dependency metatargets maybe in turn modify build properties and have dependencies of their own. </p>
 <p> For more in-depth treatment of the requirements and concepts, you may refer to SYRCoSE 2009 Boost.Build article (<a rel="nofollow" href="http://syrcose.ispras.ru/2009/files/04_paper.pdf">http://syrcose.ispras.ru/2009/files/04_paper.pdf</a>).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-boost-libraries/">boost-libraries</a></code>(3)</p>
+<p> <code>boost-libraries</code>(3)</p>
 <h2>SUPPORT</h2>
 <p> Please report any bugs to <a rel="nofollow" href="https://svn.boost.org/trac/boost/">https://svn.boost.org/trac/boost/</a></p>
 <h2>COPYRIGHT</h2>

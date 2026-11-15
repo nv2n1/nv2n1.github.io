@@ -8,7 +8,7 @@ description: "pilot-reminders – Exports your Palm Datebook database into a rem
 ---
 
 <h2>NAME</h2>
-<p> pilot-reminders &#8211; Exports your Palm Datebook database into a <a href="/docs/linux/man/1-remind/">remind</a>(1) data file format.</p>
+<p> pilot-reminders &#8211; Exports your Palm Datebook database into a remind(1) data file format.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
 <h2>SYNOPSIS</h2>
@@ -47,5 +47,5 @@ description: "pilot-reminders – Exports your Palm Datebook database into a rem
 <h2>SEE ALSO</h2>
 <p>&nbsp;<wbr><i><a rel="nofollow" href="http://www.roaringpenguin.com/penguin/open_source_remind.php">http://www.roaringpenguin.com/penguin/open_source_remind.php</a></i>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><i><a href="/docs/linux/man/7-pilot-link/">pilot-link</a></i>(7) </p>
-<p>&nbsp;<wbr><i><a href="/docs/linux/man/1-remind/">remind</a></i>(1) </p>
+<p>&nbsp;<wbr><i>remind</i>(1) </p>
 <h2>Index</h2>

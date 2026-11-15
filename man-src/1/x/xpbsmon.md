@@ -360,5 +360,5 @@ description: "xpbsmon – GUI for displaying, monitoring the nodes/execution hos
 </dl>
 <p> The above message can be safely ignored.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/8B-pbs_sched_tcl/">pbs_sched_tcl</a>(8B) and <a href="//www.systutorials.com/docs/linux/man/8B-pbs_mom/">pbs_mom</a>(8B). </p>
+<p> pbs_sched_tcl(8B) and pbs_mom(8B). </p>
 <h2>Index</h2>

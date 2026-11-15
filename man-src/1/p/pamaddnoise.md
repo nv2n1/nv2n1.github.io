@@ -64,7 +64,7 @@ description: "pamaddnoise – add noise to a Netpbm image"
 <dd> &#8216;Digital Image Processing Algorithms&#8217; by Ioannis Pitas, Prentice Hall, 1993 ISBN 0-13-145814-0 </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pgmnoise/">pgmnoise</a></code>(1) , <code><a href="/docs/linux/man/1-pgmmedian/">pgmmedian</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-pgmnoise/">pgmnoise</a></code>(1) , <code><a href="/docs/linux/man/1-pgmmedian/">pgmmedian</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamaddnoise</code> was added to Netpbm in Version 10.29 (August 2005). It had been distributed by Mike Burns via his own web site before that (and continued to be so). </p>
 <p> Burns&#8217; version, and the one in Netpbm 10.29, was called <code>pnmaddnoise</code> and worked only on PNM images. In Netpbm 10.30, it was converted to handle PAM images and renamed to <code>pamaddnoise</code>. </p>

@@ -74,5 +74,5 @@ funtable - m input.fits '[cir(512,512,1);cir(520,520,1)...]' 'foo_evt'
 <p> By default, a new <font SIZE="-1">FITS</font> file is created and the binary table is written to the first extension. If the <code>-a</code> (append) switch is specified, the table is appended to an existing <font SIZE="-1">FITS</font> file as a <font SIZE="-1">BINTABLE</font> extension. Note that the output <font SIZE="-1">FITS</font> file must already exist. </p>
 <p> If the <code>-z</code> (&#8220;zero&#8221; pixel values) switch is specified and <code>-i</code> is not specified, then pixels having a zero value will be output with their &#8220;<font SIZE="-1">VALUE</font>&#8221; column set to zero. Obviously, this switch does not make sense when individual events are output.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

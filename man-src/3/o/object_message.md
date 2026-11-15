@@ -19,4 +19,4 @@ description: "object_message – Sends a message to an object and returns the an
 </pre>
 <p> The function will take care of scaring and unscaring the mouse if the message is MSG_DRAW. </p>
 <h2>See Also</h2>
-<p> <code><a href="/docs/linux/man/3-dialog_message/">dialog_message</a></code>(3), <code><a href="/docs/linux/man/3-scare_mouse/">scare_mouse</a></code>(3), <code><a href="/docs/linux/man/3-scare_mouse_area/">scare_mouse_area</a></code>(3), <code><a href="/docs/linux/man/3-unscare_mouse/">unscare_mouse</a></code>(3), <code><a href="/docs/linux/man/3-excustom/">excustom</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-dialog_message/">dialog_message</a></code>(3), <code><a href="/docs/linux/man/3-scare_mouse/">scare_mouse</a></code>(3), <code><a href="/docs/linux/man/3-scare_mouse_area/">scare_mouse_area</a></code>(3), <code>unscare_mouse</code>(3), <code><a href="/docs/linux/man/3-excustom/">excustom</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3)</p>

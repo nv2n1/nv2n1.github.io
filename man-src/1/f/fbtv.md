@@ -58,7 +58,7 @@ Enter        mute
 <p> The channel hotkeys defined in $HOME/.xawtv are supported too, with one exception: modifier keys (something like &quot;key = Ctrl+F1&quot;) do not work. </p>
 <h2>FULLSCREEN TV</h2>
 <p> Some hints from Dag Bakke &lt;dag.bakke [at] riksnett.no&gt;: </p>
-<p> The BT8xx cards can produce images up to 768&#215;576 pixels. In order to have fbtv make use of your entire monitor-size and get maximum image quality, you need to create a 768&#215;576 pixels framebufferconsole. This can be accomplished with the <a href="/docs/linux/man/1-fbset/">fbset</a>(1) utility, which is available at various locations. See: <a rel="nofollow" href="http://www.cs.kuleuven.ac.be/~geert/bin/">http://www.cs.kuleuven.ac.be/~geert/bin/</a> </p>
+<p> The BT8xx cards can produce images up to 768&#215;576 pixels. In order to have fbtv make use of your entire monitor-size and get maximum image quality, you need to create a 768&#215;576 pixels framebufferconsole. This can be accomplished with the fbset(1) utility, which is available at various locations. See: <a rel="nofollow" href="http://www.cs.kuleuven.ac.be/~geert/bin/">http://www.cs.kuleuven.ac.be/~geert/bin/</a> </p>
 <p> Or, you can let fbtv handle the videomode changes with the -m switch. This requires that you have a small database with the various videomodes available. The file containing the videomodes is normally named /etc/fb.modes. For example, the following entry produces a 768x576x32bpp mode, with 75Hz refresh on a Matrox G200. </p>
 <pre>
 mode &quot;tv&quot;

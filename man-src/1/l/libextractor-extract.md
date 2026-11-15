@@ -54,7 +54,7 @@ description: "extract – determine meta-information about a file"
 <dt><code>-x</code><i> type</i></p>
 <dd> Exclude keywords of the specified type from the output. By default, all keywords that are found and not removed as duplicates are printed.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-libextractor/">libextractor</a></code>(3) &#8211; description of the libextractor library </p>
+<p> <code>libextractor</code>(3) &#8211; description of the libextractor library </p>
 <h2>EXAMPLES</h2>
 <pre>
 $ extract test/test.jpg

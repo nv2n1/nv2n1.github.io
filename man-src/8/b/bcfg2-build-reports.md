@@ -23,6 +23,6 @@ description: "bcfg2-build-reports – Generate state reports for bcfg2 clients"
 <dl>
 <dd>Use an alternative path for the statistics file. The default is repo/etc/statistics.xml</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-bcfg/">bcfg</a>(1),</code> <code><a href="/docs/linux/man/8-bcfg2-server/">bcfg2-server</a>(8)</code></p>
+<p><code>bcfg(1),</code> <code><a href="/docs/linux/man/8-bcfg2-server/">bcfg2-server</a>(8)</code></p>
 <h2>Bugs</h2>
 <p>None currently known </p>

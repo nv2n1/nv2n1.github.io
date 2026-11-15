@@ -24,7 +24,7 @@ int ibv_dealloc_pd(struct ibv_pd *pd);
 <h2>NOTES</h2>
 <p> <code>ibv_dealloc_pd()</code> may fail if any other resource is still associated with the PD being freed.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_reg_mr/">ibv_reg_mr</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_srq/">ibv_create_srq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah/">ibv_create_ah</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah_from_wc/">ibv_create_ah_from_wc</a></code>(3)</p>
+<p> <code>ibv_reg_mr</code>(3), <code>ibv_create_srq</code>(3), <code>ibv_create_qp</code>(3), <code>ibv_create_ah</code>(3), <code>ibv_create_ah_from_wc</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

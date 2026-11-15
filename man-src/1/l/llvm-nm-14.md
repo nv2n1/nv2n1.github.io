@@ -115,7 +115,7 @@ description: "llvm-nm – list LLVM bitcode and object file’s symbol table"
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-nm</code> exits with an exit code of zero.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-llvm-ar/">llvm-ar</a>(1)</code>, <code><a href="/docs/linux/man/1-llvm-objdump/">llvm-objdump</a>(1)</code>, <code><a href="/docs/linux/man/1-llvm-readelf/">llvm-readelf</a>(1)</code>, <code><a href="/docs/linux/man/1-llvm-readobj/">llvm-readobj</a>(1)</code></p>
+<p> <code><a href="/docs/linux/man/1-llvm-ar/">llvm-ar</a>(1)</code>, <code>llvm-objdump(1)</code>, <code>llvm-readelf(1)</code>, <code>llvm-readobj(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>COPYRIGHT</h2>

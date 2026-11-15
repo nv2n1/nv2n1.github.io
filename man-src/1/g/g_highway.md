@@ -23,6 +23,6 @@ description: "highway – X-windows gadget for highway simulations"
 <p> <code>-nice</code><i> int</i><code> 0</code><br />
 &nbsp;<wbr>Set the nicelevel </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

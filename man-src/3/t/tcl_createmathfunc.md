@@ -59,6 +59,6 @@ Tcl_Obj *
 <p> If an error did not occur, the array reference placed in the variable pointed to by <i>argTypesPtr</i> is newly allocated, and should be released by passing it to <code>Tcl_Free</code>. Some functions (the standard set implemented in the core, and those defined by placing commands in the <code>tcl::mathfunc</code> namespace) do not have argument type information; attempting to retrieve values for them causes a NULL to be stored in the variable pointed to by <i>procPtr</i> and the variable pointed to by <i>clientDataPtr</i> will not be modified. The variable pointed to by <i>numArgsPointer</i> will contain -1, and no argument types will be stored in the variable pointed to by <i>argTypesPointer</i>. </p>
 <p> <code>Tcl_ListMathFuncs</code> returns a Tcl object containing a list of all the math functions defined in the interpreter whose name matches <i>pattern</i>. The returned object has a reference count of zero. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-expr/">expr</a>(n), <a href="/docs/linux/man/n-info/">info</a>(n), <a href="/docs/linux/man/3-tcl_createobjcommand/">Tcl_CreateObjCommand</a>(3), <a href="/docs/linux/man/3-tcl_free/">Tcl_Free</a>(3), <a href="/docs/linux/man/3-tcl_newlistobj/">Tcl_NewListObj</a>(3) </p>
+<p>expr(n), info(n), <a href="/docs/linux/man/3-tcl_createobjcommand/">Tcl_CreateObjCommand</a>(3), <a href="/docs/linux/man/3-tcl_free/">Tcl_Free</a>(3), <a href="/docs/linux/man/3-tcl_newlistobj/">Tcl_NewListObj</a>(3) </p>
 <h2>Keywords</h2>
 <p>expression, mathematical function</p>

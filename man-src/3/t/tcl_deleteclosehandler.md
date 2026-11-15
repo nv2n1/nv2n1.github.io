@@ -30,6 +30,6 @@ void
 <p> The <i>clientData</i> is the same as the value provided in the call to <code>Tcl_CreateCloseHandler</code>. </p>
 <p> <code>Tcl_DeleteCloseHandler</code> removes a close callback for <i>channel</i>. The <i>proc</i> and <i>clientData</i> identify which close callback to remove; <code>Tcl_DeleteCloseHandler</code> does nothing if its <i>proc</i> and <i>clientData</i> arguments do not match the <i>proc</i> and <i>clientData</i> for a close handler for <i>channel</i>. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-close/">close</a>(n), <a href="/docs/linux/man/3-tcl_close/">Tcl_Close</a>(3), <a href="/docs/linux/man/3-tcl_unregisterchannel/">Tcl_UnregisterChannel</a>(3) </p>
+<p>close(n), <a href="/docs/linux/man/3-tcl_close/">Tcl_Close</a>(3), <a href="/docs/linux/man/3-tcl_unregisterchannel/">Tcl_UnregisterChannel</a>(3) </p>
 <h2>Keywords</h2>
 <p>callback, channel closing</p>

@@ -32,7 +32,7 @@ ldbsearch - Search for records in a LDB database
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. See <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7) for details.</dl>
+<dd> LDB URL to connect to. See ldb(7) for details.</dl>
  
 
  -s one|sub|base
@@ -71,7 +71,7 @@ ldbsearch - Search for records in a LDB database
 
  
 
- <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7), <a HREF="/docs/linux/man/1-ldbedit/">ldbedit</a>(1)
+ ldb(7), <a HREF="/docs/linux/man/1-ldbedit/">ldbedit</a>(1)
 
 <h2>AUTHOR</h2>
 

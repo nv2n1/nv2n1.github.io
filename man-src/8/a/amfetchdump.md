@@ -103,7 +103,7 @@ description: "amfetchdump – extract backup images from multiple Amanda tapes."
 <p>A more likely scenario involves restoring a particular dump from a particular date. We&#8217;ll pipe this one to <code>GNU-tar</code> as well, to automatically extract the dump. </p>
 <pre>$ amfetchdump -p SetA vanya /home 20051020 | gtar -xvpf -</pre>
 <h2>Caveats</h2>
-<p><code>Amfetchdump</code> is dependent on accessing your server&#8217;s config, tape changer, and (normally) dump logs. As such, it&#8217;s not necessarily the most useful tool when those have all been wiped out and you desperately need to pull things from your tape. Pains have been taken to make it as capable as possible, but for seriously minimialist restores, look to <code><a href="/docs/linux/man/8-amrestore/">amrestore</a></code>(8) or <code><a href="/docs/linux/man/8-dd/">dd</a></code>(8) instead.</p>
+<p><code>Amfetchdump</code> is dependent on accessing your server&#8217;s config, tape changer, and (normally) dump logs. As such, it&#8217;s not necessarily the most useful tool when those have all been wiped out and you desperately need to pull things from your tape. Pains have been taken to make it as capable as possible, but for seriously minimialist restores, look to <code><a href="/docs/linux/man/8-amrestore/">amrestore</a></code>(8) or <code>dd</code>(8) instead.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7), <code><a href="/docs/linux/man/8-amadmin/">amadmin</a></code>(8), <code><a href="/docs/linux/man/8-amrestore/">amrestore</a></code>(8) </p>
 <p> The Amanda Wiki: : <a rel="nofollow" href="http://wiki.zmanda.com/">http://wiki.zmanda.com/</a></p>

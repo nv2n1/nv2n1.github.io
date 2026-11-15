@@ -63,5 +63,5 @@ testrepo        Test Repository  <a rel="nofollow" href="http://209.132.179.91/r
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-add-remote/">flatpak-add-remote</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-delete-remote/">flatpak-delete-remote</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code>flatpak-add-remote</code>(1), <code>flatpak-delete-remote</code>(1) </p>
 <h2>Index</h2>

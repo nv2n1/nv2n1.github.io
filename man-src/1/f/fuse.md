@@ -1515,7 +1515,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <h2>FILES</h2>
 <p> <i>~/.fuserc</i></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-bzip2/">bzip2</a></i>(3), <i><a href="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1), <i><a href="/docs/linux/man/3-gzip/">gzip</a></i>(3), <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3), <i><a href="/docs/linux/man/1-ogg123/">ogg123</a></i>(1), <i><a href="/docs/linux/man/1-xspect/">xspect</a></i>(1), <i><a href="/docs/linux/man/1-xzx/">xzx</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/3-bzip2/">bzip2</a></i>(3), <i><a href="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1), <i><a href="/docs/linux/man/3-gzip/">gzip</a></i>(3), <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3), <i><a href="/docs/linux/man/1-ogg123/">ogg123</a></i>(1), <i>xspect</i>(1), <i>xzx</i>(1) </p>
 <p> The comp.sys.sinclair Spectrum FAQ, at<br />
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>

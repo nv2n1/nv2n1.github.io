@@ -11,8 +11,8 @@ url: "/docs/linux/man/1-cshost/"
 <h2>SYNOPSIS</h2>
 <p> <code>cshost [{-cs|-cannaserver} </code><i>cannaserver</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> the <i><a href="/docs/linux/man/1-cshost/">cshost</a></i>(1) prints the list of machines that are allowed to make connections to <i><a href="//www.systutorials.com/docs/linux/man/1M-cannaserver/">cannaserver</a></i>(1M). </p>
-<p> <i><a href="//www.systutorials.com/docs/linux/man/1M-cannaserver/">cannaserver</a></i>(1M) allows network connections only from programs running on the same machine or machines listed in the file /etc/hosts.canna. If /etc/hosts.canna does not exist or the file is empty, access is granted to everyone.</p>
+<p> the <i><a href="/docs/linux/man/1-cshost/">cshost</a></i>(1) prints the list of machines that are allowed to make connections to <i>cannaserver</i>(1M). </p>
+<p> <i>cannaserver</i>(1M) allows network connections only from programs running on the same machine or machines listed in the file /etc/hosts.canna. If /etc/hosts.canna does not exist or the file is empty, access is granted to everyone.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>-cs <i>cannaserver</i> (or -cannaserver <i>cannaserver</i>)</p>

@@ -54,5 +54,5 @@ if (key[KEY_SPACE])
 </pre>
 <p> Finally, you may notice an `odd&#8217; behaviour of the KEY_PAUSE key. This key only generates an interrupt when it is pressed, not when it is released. For this reason, Allegro pretends the pause key is a `state&#8217; key, which is the only way to make it usable. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-poll_keyboard/">poll_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-key_shifts/">key_shifts</a></code>(3) </p>
+<p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-poll_keyboard/">poll_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-key_shifts/">key_shifts</a></code>(3) </p>
 <h2>Index</h2>

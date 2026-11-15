@@ -85,6 +85,6 @@ description: "openchrome – video driver for VIA Unichromes"
 <dd>Supports the following modes: &quot;640&#215;480&quot;, &quot;800&#215;600&quot;, &quot;1024&#215;768&quot;, &quot;848&#215;480&quot;, &quot;720&#215;480&quot; (NTSC only) and &quot;720&#215;576&quot; (PAL only). Use &quot;640x480Over&quot;, &quot;800x600Over&quot;, &quot;1024x768Over&quot;, &quot;848x480Over&quot;, &quot;720x480Over&quot; (NTSC) and &quot;720x576Over&quot; (PAL) for vertical overscan. The modes &quot;720x480Noscale&quot; (NTSC) and &quot;720x576Noscale&quot; (PAL) (available on VT1622 only) provide cleaner TV output (unscaled with only minimal overscan). These modes are made available by the driver; modelines provided in xorg.conf will be ignored. </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/5-exa/">EXA</a>(5), <a href="/docs/linux/man/5-xv/">Xv</a>(5)</p>
+<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7), EXA(5), Xv(5)</p>
 <h2>Authors</h2>
 <p>Authors include: &#8230;</p>

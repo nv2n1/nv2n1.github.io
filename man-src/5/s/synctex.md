@@ -60,11 +60,11 @@ description: "synctex – Synchronize TeXnology help file"
 <dd>&lt;EOL&gt;</p>
 <dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></p>
 <dd>
-<dt><code>&lt;<a href="/docs/linux/man/1-sheet/">sheet</a>(1)&gt;</code></p>
+<dt><code>&lt;sheet(1)&gt;</code></p>
 <dd>
 <dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></p>
 <dd>
-<dt><code>&lt;<a href="/docs/linux/man/2-sheet/">sheet</a>(2)&gt;</code></p>
+<dt><code>&lt;sheet(2)&gt;</code></p>
 <dd>
 <dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></p>
 <dd>
@@ -78,7 +78,7 @@ description: "synctex – Synchronize TeXnology help file"
 <dd>Qq ! &lt;byte offset&gt; &lt;end of record&gt; </p>
 </dl>
 <dl>
-<dt><code>&lt;<a href="/docs/linux/man/n-sheet/">sheet</a>(n)&gt; ::=</code></p>
+<dt><code>&lt;sheet(n)&gt; ::=</code></p>
 <dd>
 <dl>
 <dt><code>&lt;byte offset record&gt;</code></p>

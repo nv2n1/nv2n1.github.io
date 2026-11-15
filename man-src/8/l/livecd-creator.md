@@ -52,4 +52,4 @@ description: "livecd-creator – creates live CD or DVD images."
 <h2>Copyright</h2>
 <p>Copyright (C) Fedora Project 2008,2009, and various contributors. This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License <tt>&quot;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&quot;</tt>. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.</p>
 <h2>See Also</h2>
-<p><tt>&quot;<a href="/docs/linux/man/1-livecd-iso-to-disk/">livecd-iso-to-disk</a>(1)&quot;</tt>, project website <tt>&quot;<a rel="nofollow" href="http://fedoraproject.org/wiki/FedoraLiveCD">http://fedoraproject.org/wiki/FedoraLiveCD</a>&quot;</tt> </p>
+<p><tt>&quot;livecd-iso-to-disk(1)&quot;</tt>, project website <tt>&quot;<a rel="nofollow" href="http://fedoraproject.org/wiki/FedoraLiveCD">http://fedoraproject.org/wiki/FedoraLiveCD</a>&quot;</tt> </p>

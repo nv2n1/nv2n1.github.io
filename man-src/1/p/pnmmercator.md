@@ -19,7 +19,7 @@ description: "pnmmercator – transform a worldmap from rectangular projection t
 <p> To overcome this, the program will by default do interpolation of pixel colors, which will eliminate the banding effect, but will cause some blurring of the output. With the -nomix option, this interpolation of colors isn&#8217;t applied. You can obtain the highest quality output by starting with an input map of high resolution, so that you can follow the <code>pnmmercator</code> transformation with a <code>pamscale</code> reduction in size. </p>
 <p> This program can also convert a Mercator projection map back to a rectangular projection based. As said, the Mercator map doesn&#8217;t have information about the latitudes close to the poles. Therefore the top rows in the output image will be identical and copied from the row corresponding with latitude of 85 degrees. The same at the bottom of the map. </p>
 <p> Pnmmercator doesn&#8217;t have any provision for scaling the image. You can scale by piping the output of the program through Netpbm programs such as <code>pamscale</code>. </p>
-<p> You can find maps to be used as input at <code><a href="/docs/linux/man/1-flatplanet-sourceforge-net/">flatplanet.sourceforge.net</a></code>(1) </p>
+<p> You can find maps to be used as input at <code>flatplanet.sourceforge.net</code>(1) </p>
 <p> or uic.edu/pape . </p>
 <p> The point of a Mercator projection map is that compass directions work on it. If you draw a straight line northeast from some point on the Mercator map, the line traces the course you would sail if you sailed a compass bearing of northeast from that spot. Naturally, primitive navigators appreciated that. The biggest drawback of Mercator is that areas to the north and south appear much larger than they are in real life. For example, Greenland appears to be larger than South America even though it only a ninth as large. Note that areas away from the equator are stretched north-south as well as east-west. </p>
 <p> A rectangular projection is one where vertical distance is proportional to angular latitude distance of the represented area and horizontal distance is proportional to angular longitude. </p>
@@ -39,7 +39,7 @@ description: "pnmmercator – transform a worldmap from rectangular projection t
 <p> This parameter outputs some additional information. If you double the &#8216;v&#8217;, it will output debug data about the lat/long degree and Mercator conversions. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1)<br />
+<p> <code>pnm</code>(1)<br />
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-ppmglobe/">ppmglobe</a></code>(1) </p>
 <h2>HISTORY</h2>

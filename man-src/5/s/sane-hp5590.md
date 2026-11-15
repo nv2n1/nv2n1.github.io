@@ -25,7 +25,7 @@ description: "sane-hp5590 – SANE backend for Hewlett-Packard 4500C/4570C/5500C
 <dd>ScanJet 7650</dl>
 <p> If you own a scanner other than the ones listed above that works with this backend, please let us know this by sending the scanner&#8217;s exact model name and the USB vendor and device ids (e.g. from <i>/sys/bus/usb/devices</i>, <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) or syslog) to us. Even if the scanner&#8217;s name is only slightly different from the models mentioned above, please let us know.</p>
 <h2>Options</h2>
-<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). Valid command line options and their syntax can be listed by using:</p>
+<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). Valid command line options and their syntax can be listed by using:</p>
 <dl>
 <dd>
 <pre>scanimage --help -d hp5590:interface:device</pre>
@@ -127,9 +127,9 @@ description: "sane-hp5590 – SANE backend for Hewlett-Packard 4500C/4570C/5500C
 <dd>Get the state of the document-available indicator of the automatic document feeder (ADF). The state is either &#8220;yes&#8221; or &#8220;no&#8221;. </p>
 </dl>
 <h2>Hints For Users Of Scanbd</h2>
-<p><code><a href="/docs/linux/man/8-scanbd/">scanbd</a></code>(8) is a scanner button daemon, which can read scanner buttons and trigger scan actions. </p>
-<p> Do not use the old <code><a href="/docs/linux/man/8-scanbuttond/">scanbuttond</a></code>(8) interface with hp5590. It is outdated and shall not be used any more. The regular interface of <code><a href="/docs/linux/man/8-scanbd/">scanbd</a></code>(8) is fully supported by the current version of the hp5590 backend. </p>
-<p> This example shows a minimum configuration file and the corresponding script file for <code><a href="/docs/linux/man/8-scanbd/">scanbd</a></code>(8) to be included in <i>scanbd.conf</i>.</p>
+<p><code>scanbd</code>(8) is a scanner button daemon, which can read scanner buttons and trigger scan actions. </p>
+<p> Do not use the old <code>scanbuttond</code>(8) interface with hp5590. It is outdated and shall not be used any more. The regular interface of <code>scanbd</code>(8) is fully supported by the current version of the hp5590 backend. </p>
+<p> This example shows a minimum configuration file and the corresponding script file for <code>scanbd</code>(8) to be included in <i>scanbd.conf</i>.</p>
 <dl>
 <dt>&bull;</p>
 <dd><i>hp5590.conf</i></p>
@@ -191,6 +191,6 @@ esac</pre>
 <dt><code>Example:</code></p>
 <dd>export SANE_DEBUG_HP5590=50</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) <code><a href="/docs/linux/man/8-scanbd/">scanbd</a></code>(8), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) <code>scanbd</code>(8), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
 <h2>Authors</h2>
 <p>Ilia Sotnikov &lt;<i>hostcc [at] gmail.com</i>&gt;.</p>

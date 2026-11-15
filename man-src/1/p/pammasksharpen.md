@@ -43,7 +43,7 @@ description: "pammasksharpen – Sharpen an image via an unsharp mask"
 <p> This option was new in Netpbm 10.34 (June 2006). </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) , <code><a href="/docs/linux/man/1-pamedge/">pamedge</a></code>(1) , <code><a href="/docs/linux/man/1-pamsharpness/">pamsharpness</a></code>(1) , <code><a href="/docs/linux/man/1-pamsharpmap/">pamsharpmap</a></code>(1) , <code><a href="/docs/linux/man/1-pamarith/">pamarith</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) , <code><a href="/docs/linux/man/1-pamedge/">pamedge</a></code>(1) , <code><a href="/docs/linux/man/1-pamsharpness/">pamsharpness</a></code>(1) , <code><a href="/docs/linux/man/1-pamsharpmap/">pamsharpmap</a></code>(1) , <code><a href="/docs/linux/man/1-pamarith/">pamarith</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pammasksharpen</code> was new in Netpbm 10.23 (July 2004). </p>
 <h2>Index</h2>

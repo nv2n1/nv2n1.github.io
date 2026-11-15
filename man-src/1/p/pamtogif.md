@@ -83,7 +83,7 @@ $ pamtogif -comment &quot;this is a comment&quot; &lt;xxx.ppm &gt;xxx.gif
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-giftopnm/">giftopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtogif/">ppmtogif</a></code>(1) , </p>
-<p> <code>gifsicle</code> <a rel="nofollow" href="http://www.lcdf.org/gifsicle">http://www.lcdf.org/gifsicle</a> , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>gifsicle</code> <a rel="nofollow" href="http://www.lcdf.org/gifsicle">http://www.lcdf.org/gifsicle</a> , <code>pnm</code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamtogif</code> was new in Netpbm 10.37 (December 2006). It replaced <code>ppmtogif</code>, which created GIF images for Pbmplus/Netpbm users since 1989. </p>
 <p> The main outward change in the conversion from <code>ppmtogif</code> to <code>pamtogif</code> was that <code>pamtogif</code> was able to use transparency information (&#8216;alpha channel&#8217;) in PAM input, whereas with <code>ppmtogif</code>, one had to supply the transparency mask in a separate pseudo-PGM image (via the <code>-alpha</code> option). </p>

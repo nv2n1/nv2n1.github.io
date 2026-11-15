@@ -186,7 +186,7 @@ and <i>table_constraint</i> is:
 <h2>Examples</h2>
 <p>Create table <code>films</code> and table <code>distributors</code>: </p>
 <pre>CREATE TABLE films (
- code <a href="//www.systutorials.com/docs/linux/man/5-char/">char</a>(5) CONSTRAINT firstkey PRIMARY KEY,
+ code char(5) CONSTRAINT firstkey PRIMARY KEY,
  title varchar(40) NOT NULL,
  did integer NOT NULL,
  date_prod date,
@@ -203,7 +203,7 @@ and <i>table_constraint</i> is:
 );</pre>
 <p>Define a unique table constraint for the table films. Unique table constraints can be defined on one or more columns of the table: </p>
 <pre>CREATE TABLE films (
- code <a href="//www.systutorials.com/docs/linux/man/5-char/">char</a>(5),
+ code char(5),
  title varchar(40),
  did integer,
  date_prod date,
@@ -224,7 +224,7 @@ and <i>table_constraint</i> is:
 );</pre>
 <p>Define a primary key table constraint for the table <code>films</code>: </p>
 <pre>CREATE TABLE films (
- code <a href="//www.systutorials.com/docs/linux/man/5-char/">char</a>(5),
+ code char(5),
  title varchar(40),
  did integer,
  date_prod date,

@@ -73,7 +73,7 @@ description: "oping – send ICMP ECHO_REQUEST to network hosts"
 <p>If supported by the terminal, <i>noping</i> will highlight the round-trip times (<font SIZE="-1">RTT</font>) using the colors green, yellow and red. Green signals RTTs that are in the &#8220;expected&#8221; range, yellow marks moderately unusual times and times that differ a lot from the expected value are printed in red. </p>
 <p> The information used to categorize round-trip times is the <i>average</i> round-trip time and the <i>standard deviation</i>. RTTs that differ from the average by less than the standard deviation are considered to be &#8220;normal&#8221; and are printed in green. Times that differ from the average more than the standard deviation but less than twice the standard deviation are considered &#8220;moderately unusual&#8221; and are printed in yellow. Times differing more than twice the standard deviation from the average are considered to be &#8220;unusual&#8221; and are printed in red.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-ping/">ping</a></i>(8), &lt;<a rel="nofollow" href="http://www.fping.com/">http://www.fping.com/</a>&gt;, <i><a href="/docs/linux/man/3-liboping/">liboping</a></i>(3)</p>
+<p><i><a href="/docs/linux/man/8-ping/">ping</a></i>(8), &lt;<a rel="nofollow" href="http://www.fping.com/">http://www.fping.com/</a>&gt;, <i>liboping</i>(3)</p>
 <h2>Author</h2>
 <p>liboping is written by Florian &#8220;octo&#8221; Forster &lt;ff at octo.it&gt;. Its homepage can be found at &lt;<a rel="nofollow" href="http://verplant.org/liboping/">http://verplant.org/liboping/</a>&gt;. </p>
 <p> Copyright (c) 2005-2011 by Florian &#8220;octo&#8221; Forster.</p>

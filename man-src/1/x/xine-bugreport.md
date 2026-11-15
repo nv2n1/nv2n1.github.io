@@ -36,7 +36,7 @@ description: "xine-check – a checker for the xine video player"
 <h2>BUGS</h2>
 <p> none, of course ;-) Well, there are surely a few of those. You can probably best ask for support (and report bugs) on our mailing list at &lt;xine-user [at] lists.sf.net&gt;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a href="/docs/linux/man/1-aaxine/">aaxine</a></code>(1), <code><a href="/docs/linux/man/3-xine-lib/">xine-lib</a></code>(3), <code><a rel="nofollow" href="http://www.xine-project.org/">http://www.xine-project.org/</a></code> </p>
+<p> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a href="/docs/linux/man/1-aaxine/">aaxine</a></code>(1), <code>xine-lib</code>(3), <code><a rel="nofollow" href="http://www.xine-project.org/">http://www.xine-project.org/</a></code> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Philipp Hahn &lt;pmhahn [at] users.sf.net&gt; for the xine project. </p>
 <h2>COPYRIGHT NOTICE</h2>

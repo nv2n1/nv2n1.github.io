@@ -632,7 +632,7 @@ virt - resize template -- -- -- -- -- &gt;
 <p> For guests which make use of SELinux, special handling for them might be needed when using operations which create new files or alter existing ones. </p>
 <p> For further details, see &#8220;<font SIZE="-1">SELINUX&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1).</p>
 <h2>WINDOWS 8</h2>
-<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-sysprep from working. See &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-sysprep from working. See &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i>guestfs</i>(3).</p>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 on success, or 1 if there was an error.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
@@ -653,9 +653,9 @@ virt - resize template -- -- -- -- -- &gt;
 <dt>
 <dd></dl>
 </dl>
-<p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3).</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1), <i><a href="/docs/linux/man/1-virt-clone/">virt-clone</a></i>(1), <i><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1), <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></i>(8), <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1), <i><a href="/docs/linux/man/1-scrub/">scrub</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://libvirt.org/.">http://libvirt.org/.</a></p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1), <i><a href="/docs/linux/man/1-virt-clone/">virt-clone</a></i>(1), <i><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></i>(1), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1), <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></i>(8), <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1), <i><a href="/docs/linux/man/1-scrub/">scrub</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://libvirt.org/.">http://libvirt.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a> </p>
 <p> Wanlong Gao, Fujitsu Ltd.</p>

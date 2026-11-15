@@ -72,7 +72,7 @@ description: "QwtCounter –"
 QwtCounter *counter = new QwtCounter(parent);
 counter-&gt;setRange(0.0, 100.0); // From 0.0 to 100
 counter-&gt;setSingleStep( 1.0 ); // Step size 1.0
-counter-&gt;<a href="//www.systutorials.com/docs/linux/man/2-setNumButtons/">setNumButtons</a>(2); // Two buttons each side
+counter-&gt;setNumButtons(2); // Two buttons each side
 counter-&gt;setIncSteps(QwtCounter::Button1, 1); // Button 1 increments 1 step
 counter-&gt;setIncSteps(QwtCounter::Button2, 20); // Button 2 increments 20 steps
 connect(counter, SIGNAL(valueChanged(double)), myClass, SLOT(newValue(double)));</pre>

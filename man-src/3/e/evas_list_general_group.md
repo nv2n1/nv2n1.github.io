@@ -62,9 +62,9 @@ description: "Linked List General Functions – Miscellaneous functions that wor
 <pre> extern Evas_List *list;
  Evas_List *l;
  printf('The list:);
- for (l = list; l; l = <a href="//www.systutorials.com/docs/linux/man/l-evas_list_next/">evas_list_next</a>(l))
+ for (l = list; l; l = evas_list_next(l))
  {
- printf('%p, <a href="//www.systutorials.com/docs/linux/man/l-evas_list_data/">evas_list_data</a>(l));
+ printf('%p, evas_list_data(l));
  }</pre>
 <p>&nbsp;<wbr> </p>
 <p> References _Evas_List::data.</p>

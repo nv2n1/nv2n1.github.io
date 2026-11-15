@@ -56,6 +56,6 @@ description: "gpt-setup – Create automake and autoconf files to convert softwa
 <dt>Autoconf defines need to be tested for</p>
 <dd>Use <code>gpt-undefines</code> to identify all of the preprocesser macros that are used in the source code which are not defined internally. This list will highlight the autoconf tests that need to be added to the configure.in script.</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-gpt-edit/">gpt-edit</a></i>(8) <i><a href="/docs/linux/man/8-gpt-undefines/">gpt-undefines</a></i>(8) <i><a href="/docs/linux/man/1-automake/">automake</a></i>(1) <i><a href="/docs/linux/man/1-autoconf/">autoconf</a></i>(1) <i><a href="/docs/linux/man/3-package/">Package</a></i>(3) <i><a href="/docs/linux/man/3-version/">Version</a></i>(3) <i><a href="/docs/linux/man/3-sourcedependency/">SourceDependency</a></i>(3)</p>
+<p><i>gpt-edit</i>(8) <i><a href="/docs/linux/man/8-gpt-undefines/">gpt-undefines</a></i>(8) <i><a href="/docs/linux/man/1-automake/">automake</a></i>(1) <i><a href="/docs/linux/man/1-autoconf/">autoconf</a></i>(1) <i>Package</i>(3) <i><a href="/docs/linux/man/3-version/">Version</a></i>(3) <i>SourceDependency</i>(3)</p>
 <h2>Author</h2>
 <p>Michael Bletzinger &lt;mbletzin.ncsa.uiuc.edu&gt; and Eric Blau &lt;eblau.ncsa.uiuc.edu&gt;</p>

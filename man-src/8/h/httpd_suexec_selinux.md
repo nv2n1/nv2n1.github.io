@@ -13,7 +13,7 @@ description: "httpd_suexec_selinux – Security Enhanced Linux Policy for the ht
 <h2>Entrypoints</h2>
 <p>The httpd_suexec_t SELinux type can be entered via the <code>httpd_suexec_exec_t</code> file type. </p>
 <p> The default entrypoint paths for the httpd_suexec_t domain are the following: </p>
-<p> /usr/lib/<a href="/docs/linux/man/2-apache/">apache</a>(2)?/<a href="/docs/linux/man/2-suexec/">suexec</a>(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec</p>
+<p> /usr/lib/apache(2)?/suexec(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec</p>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux httpd_suexec policy is very flexible allowing users to setup their httpd_suexec processes in as secure a method as possible. </p>
@@ -92,7 +92,7 @@ description: "httpd_suexec_selinux – Security Enhanced Linux Policy for the ht
 <p> &#8211; Set files with the httpd_suexec_exec_t type, if you want to transition an executable to the httpd_suexec_t domain. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/usr/lib/<a href="/docs/linux/man/2-apache/">apache</a>(2)?/<a href="/docs/linux/man/2-suexec/">suexec</a>(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </p>
+<dd>/usr/lib/apache(2)?/suexec(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </p>
 </dl>
 <p> <code>httpd_suexec_tmp_t</code> </p>
 <p> &#8211; Set files with the httpd_suexec_tmp_t type, if you want to store httpd suexec temporary files in the /tmp directories. </p>
@@ -106,4 +106,4 @@ description: "httpd_suexec_selinux – Security Enhanced Linux Policy for the ht
 <h2>Author</h2>
 <p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-httpd_suexec/">httpd_suexec</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), httpd_suexec(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>

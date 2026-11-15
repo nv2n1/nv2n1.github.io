@@ -172,5 +172,5 @@ description: "pbs_sched_tcl – pbs Tcl scheduler"
 <h2>Exit Status</h2>
 <p>Upon normal termination, an exit status of zero is returned.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/8B-pbs_scheduler_cc/">pbs_scheduler_cc</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_scheduler_rule/">pbs_scheduler_rule</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), and <a href="//www.systutorials.com/docs/linux/man/8B-pbs_mom/">pbs_mom</a>(8B).<br />
+<p>pbs_scheduler_cc(8B), pbs_scheduler_rule(8B), pbs_server(8B), and pbs_mom(8B).<br />
  PBS Internal Design Specification </p>

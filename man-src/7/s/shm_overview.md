@@ -37,7 +37,7 @@ description: "shm_overview – overview of POSIX shared memory"
 <h3>Linking</h3>
 <p>Programs using the POSIX shared memory API must be compiled with <i>cc -lrt</i> to link against the real-time library, <i>librt</i>.</p>
 <h3>Accessing shared memory objects via the filesystem</h3>
-<p>On Linux, shared memory objects are created in a (<i><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></i>(5)) virtual filesystem, normally mounted under <i>/dev/shm</i>. Since kernel 2.6.19, Linux supports the use of access control lists (ACLs) to control the permissions of objects in the virtual filesystem.</p>
+<p>On Linux, shared memory objects are created in a (<i>tmpfs</i>(5)) virtual filesystem, normally mounted under <i>/dev/shm</i>. Since kernel 2.6.19, Linux supports the use of access control lists (ACLs) to control the permissions of objects in the virtual filesystem.</p>
 <h2>Notes</h2>
 <p>Typically, processes must synchronize their access to a shared memory object, using, for example, POSIX semaphores. </p>
 <p> System V shared memory (<code><a href="/docs/linux/man/2-shmget/">shmget</a></code>(2), <code><a href="/docs/linux/man/2-shmop/">shmop</a></code>(2), etc.) is an older shared memory API. POSIX shared memory provides a simpler, and better designed interface; on the other hand POSIX shared memory is somewhat less widely available (especially on older systems) than System V shared memory.</p>

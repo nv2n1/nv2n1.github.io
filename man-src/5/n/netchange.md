@@ -80,4 +80,4 @@ description: "netchange – format of netchange files read by irsim."
 <h2>Bugs</h2>
 <p>This is an experimental interface for the incremental simulator and is very likely to change in the future. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-irsim/">irsim</a>(5) <a href="/docs/linux/man/5-sim/">sim</a>(5) <a href="/docs/linux/man/1-presim/">presim</a>(1) </p>
+<p>irsim(5) <a href="/docs/linux/man/5-sim/">sim</a>(5) presim(1) </p>

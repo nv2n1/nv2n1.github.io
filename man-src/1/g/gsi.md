@@ -37,8 +37,8 @@ description: "gsi – Gambit-C Scheme Interpreter and Compiler"
 <dd> Show version of program.</dl>
 <h2>SEE ALSO</h2>
 <p> The documentation for these programs is arguably too extensive to cover with man pages. Only the common command line options are given here. The programs are documented fully in <code>Gambit-C</code>, available on-line at the Gambit-C Homepage. Once package gambc-doc is installed, this 200+ page document is available via the Info system (info gambit-c), in html via doc-base, or as files in /usr/share/doc/gambc (html, pdf, txt). </p>
-<p> The Debian package r5rs-doc provides the <a href="/docs/linux/man/5-revised/">Revised</a>(5) Report on the Algorithmic Language Scheme in several formats. That document is the defining description of the programming language Scheme. </p>
-<p> <code><a href="/docs/linux/man/1-dhelp/">dhelp</a>(1), <a href="/docs/linux/man/1-gcc/">gcc</a>(1), <a href="/docs/linux/man/8-update-alternatives/">update-alternatives</a>(8)</code></p>
+<p> The Debian package r5rs-doc provides the Revised(5) Report on the Algorithmic Language Scheme in several formats. That document is the defining description of the programming language Scheme. </p>
+<p> <code>dhelp(1), <a href="/docs/linux/man/1-gcc/">gcc</a>(1), update-alternatives(8)</code></p>
 <h2>COPYRIGHT</h2>
 <p> Gambit-C is Copyright (c) 1994-2009 by Marc Feeley, all rights reserved. </p>
 <p> Gambit-C is released under a dual LGPL and Apache 2 license.<br />

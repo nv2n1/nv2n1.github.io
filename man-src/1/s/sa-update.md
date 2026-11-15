@@ -123,7 +123,7 @@ sa - update-- channel foo.example.com-- install foo - 34958.tgz sa - update-- ch
 <p> An exit code of <tt>3</tt> means that at least one update succeeded while other channels failed. If using sa-compile, you should proceed with it. </p>
 <p> An exit code of <tt>4</tt> or higher, indicates that errors occurred while attempting to download and extract updates, and no channels were updated.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-mail--spamassassin/">Mail::SpamAssassin</a></i>(3) <i><a href="/docs/linux/man/3-mail--spamassassin--conf/">Mail::SpamAssassin::Conf</a></i>(3) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1) &lt;<a rel="nofollow" href="http://wiki.apache.org/spamassassin/RuleUpdates">http://wiki.apache.org/spamassassin/RuleUpdates</a>&gt;</p>
+<p> <i>Mail::SpamAssassin</i>(3) <i>Mail::SpamAssassin::Conf</i>(3) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1) &lt;<a rel="nofollow" href="http://wiki.apache.org/spamassassin/RuleUpdates">http://wiki.apache.org/spamassassin/RuleUpdates</a>&gt;</p>
 <h2>PREREQUESITES</h2>
 <p> <tt>&quot;Mail::SpamAssassin&quot;</tt></p>
 <h2>BUGS</h2>

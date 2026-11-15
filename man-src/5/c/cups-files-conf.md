@@ -132,7 +132,7 @@ description: "cups-files.conf – file and directory configuration file for cups
 <dt><code>PrintcapFormat solaris</code></p>
 <dd>Specifies the format to use for the Printcap file. &quot;bsd&quot; is the historical LPD printcap file format. &quot;plist&quot; is the Apple plist file format. &quot;solaris&quot; is the historical Solaris LPD printcap file format.</dl>
 <h2>Notes</h2>
-<p>The scheduler MUST be restarted manually after making changes to the <code>cups-files.conf</code> file. On Linux this is typically done using the <code><a href="/docs/linux/man/8-systemctl/">systemctl</a></code>(8) command, while on macOS the <code><a href="/docs/linux/man/8-launchctl/">launchctl</a></code>(8) command is used instead.</p>
+<p>The scheduler MUST be restarted manually after making changes to the <code>cups-files.conf</code> file. On Linux this is typically done using the <code>systemctl</code>(8) command, while on macOS the <code>launchctl</code>(8) command is used instead.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-classes-conf/">classes.conf</a></code>(5), <code><a href="/docs/linux/man/1-cups/">cups</a></code>(1), <code><a href="/docs/linux/man/8-cupsd/">cupsd</a></code>(8), <code><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a></code>(5), <code><a href="/docs/linux/man/5-mime-convs/">mime.convs</a></code>(5), <code><a href="/docs/linux/man/5-mime-types/">mime.types</a></code>(5), <code><a href="/docs/linux/man/5-printers-conf/">printers.conf</a></code>(5), <code><a href="/docs/linux/man/5-subscriptions-conf/">subscriptions.conf</a></code>(5), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>

@@ -41,7 +41,7 @@ int default_display_message(char *msg);</code></pre>
 <p> <code>GetDataOffset()</code> returns the synset offset for synset that contains the word sense <i>sense_key</i>, and <code>0</code> if <i>sense_key</i> is not in sense index file. </p>
 <p> <code>GetPolyCount()</code> returns the polysemy count (number of senses in WordNet) for <i>lemma</i> encoded in <i>sense_key</i> and <code>0</code> if word is not found. </p>
 <p> <code>WNSnsToStr()</code> returns sense key encoding for <i>sense_num</i> entry in <i>idx</i>. </p>
-<p> <code>GetValidIndexPointer()</code> returns the Index structure for <i>word</i> in <i>pos</i>. Calls <code><a href="/docs/linux/man/3-morphstr/">morphstr</a></code>(3) to find a valid base form if <i>word</i> is inflected. </p>
+<p> <code>GetValidIndexPointer()</code> returns the Index structure for <i>word</i> in <i>pos</i>. Calls <code>morphstr</code>(3) to find a valid base form if <i>word</i> is inflected. </p>
 <p> <code>GetWNSense()</code> returns the WordNet sense number for the sense key encoding represented by <i>lemma</i> and <i>lex_sense</i>. </p>
 <p> <code>GetSenseIndex()</code> returns parsed sense index entry for <i>sense_key</i> and <font SIZE="-1"><code>NULL</code></font> if <i>sense_key</i> is not in sense index. </p>
 <p> <code>GetTagcnt()</code> returns the number of times the sense passed has been tagged according to the <i>cntlist</i> file. </p>

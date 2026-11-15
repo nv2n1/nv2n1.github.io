@@ -610,7 +610,7 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> With this option, <i>composite image</i> is used as a displacement map. Black, within the displacement map, is a maximum positive displacement. White is a maximum negative displacement and middle gray is neutral. The displacement is scaled to determine the pixel shift. By default, the displacement applies in both the horizontal and vertical directions. However, if you specify <i>mask</i>, <i>composite image</i> is the horizontal X displacement and <i>mask</i> the vertical Y displacement.</p>
 <dt><code>-display </code><i>&lt;host:display[.screen]&gt;</i></p>
 <dd> specifies the X server to contact </p>
-<p> This option is used with convert for obtaining image or font from this X server. See <i><a href="/docs/linux/man/1-x/">X</a>(1)</i>.</p>
+<p> This option is used with convert for obtaining image or font from this X server. See <i>X(1)</i>.</p>
 <dt><code>-dispose </code><i>&lt;method&gt;</i></p>
 <dd> GIF disposal method </p>
 <p> The Disposal Method indicates the way in which the graphic is to be treated after being displayed. </p>
@@ -788,7 +788,7 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> The color is specified using the format described under the <code>-fill</code> option.</p>
 <dt><code>-format </code><i>&lt;type&gt;</i></p>
 <dd> the image format type </p>
-<p> When used with the <code>mogrify</code> utility, this option will convert any image to the image format you specify. See <i><a href="/docs/linux/man/1-graphicsmagick/">GraphicsMagick</a>(1)</i> for a list of image format types supported by <code>GraphicsMagick</code>, or see the output of &#8216;gm -list format&#8217;. </p>
+<p> When used with the <code>mogrify</code> utility, this option will convert any image to the image format you specify. See <i>GraphicsMagick(1)</i> for a list of image format types supported by <code>GraphicsMagick</code>, or see the output of &#8216;gm -list format&#8217;. </p>
 <p> By default the file is written to its original name. However, if the filename extension matches a supported format, the extension is replaced with the image format type specified with <code>-format</code>. For example, if you specify <i>tiff</i> as the format type and the input image filename is <i>image.gif</i>, the output image filename becomes <i>image.tiff</i>.</p>
 <dt><code>-format </code><i>&lt;string&gt;</i></p>
 <dd> output formatted image characteristics </p>
@@ -833,7 +833,8 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 &nbsp;<wbr>&nbsp;<wbr>%#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>signature<br />
 &nbsp;<wbr>&nbsp;<wbr>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>newline<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return<br />
+&nbsp;<wbr>&nbsp;<wbr>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return<br />
 &nbsp;<wbr>&nbsp;<wbr>%%&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>% </p>
 <p> For example, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>-format&nbsp;<wbr>&quot;%m:%f&nbsp;<wbr>%wx%h&quot; </p>
@@ -980,7 +981,7 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> To specify a percentage width or height instead, append %. The image size is multiplied by the width and height percentages to obtain the final image dimensions. To increase the size of an image, use a value greater than 100 (e.g. 125%). To decrease an image&#8217;s size, use a percentage less than 100. </p>
 <p> Use @ to specify the maximum area in pixels of an image. </p>
 <p> Use &gt; to change the dimensions of the image <i>only</i> if its width or height exceeds the geometry specification. &lt; resizes the image <i>only</i> if both of its dimensions are less than the geometry specification. For example, if you specify &#8216;640&#215;480&gt;&#8217; and the image size is 256&#215;256, the image size does not change. However, if the image is 512&#215;512 or 1024&#215;1024, it is resized to 480&#215;480. Enclose the geometry specification in quotation marks to prevent the &lt; or &gt; from being interpreted by your shell as a file redirection. </p>
-<p> When used with <i>animate</i> and <i>display</i>, offsets are handled in the same manner as in <i><a href="/docs/linux/man/1-x/">X</a>(1)</i> and the <code>-gravity</code> option is not used. If the <i>x</i> is negative, the offset is measured leftward from the right edge of the screen to the right edge of the image being displayed. Similarly, negative <i>y</i> is measured between the bottom edges. The offsets are not affected by &quot;%&quot;; they are always measured in pixels. </p>
+<p> When used with <i>animate</i> and <i>display</i>, offsets are handled in the same manner as in <i>X(1)</i> and the <code>-gravity</code> option is not used. If the <i>x</i> is negative, the offset is measured leftward from the right edge of the screen to the right edge of the image being displayed. Similarly, negative <i>y</i> is measured between the bottom edges. The offsets are not affected by &quot;%&quot;; they are always measured in pixels. </p>
 <p> When used as a <i>composite</i> option, <code>-geometry</code> gives the dimensions of the image and its location with respect to the composite image. If the <code>-gravity</code> option is present with <i>NorthEast, East,</i> or <i>SouthEast</i> gravity, the <i>x</i> represents the distance from the right edge of the image to the right edge of the composite image. Similarly, if the <code>-gravity</code> option is present with <i>SouthWest, South,</i> or <i>SouthEast</i> gravity, <i>y</i> is measured between the bottom edges. Accordingly, a positive offset will never point in the direction outside of the image. The offsets are not affected by &quot;%&quot;; they are always measured in pixels. To specify the dimensions of the composite image, use the <code>-resize</code> option. </p>
 <p> When used as a <i>convert</i>, <i>import</i> or <i>mogrify</i> option, <code>-geometry</code> is synonymous with <code>-resize</code> and specifies the size of the output image. The offsets, if present, are ignored. </p>
 <p> When used as a <i>montage</i> option, <code>-geometry</code> specifies the image size and border size for each tile; default is 256&#215;256+0+0. Negative offsets (border dimensions) are meaningless. The <code>-gravity</code> option affects the placement of the image within the tile; the default gravity for this purpose is <i>Center</i>. If the &quot;%&quot; sign appears in the geometry specification, the tile size is the specified percentage of the original dimensions of the first tile. To specify the dimensions of the montage, use the <code>-resize</code> option.</p>
@@ -1074,7 +1075,8 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 &nbsp;<wbr>&nbsp;<wbr>%%&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>percent sign<br />
 &nbsp;<wbr>&nbsp;<wbr>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>newline<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return </p>
+&nbsp;<wbr>&nbsp;<wbr>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return </p>
 <p> For example: </p>
 <p>&nbsp;<wbr>gm convert -debug coders -log&nbsp;<wbr>&quot;%u&nbsp;<wbr>%m:%l&nbsp;<wbr>%e&quot;&nbsp;<wbr>in.gif out.png </p>
 <p> The default behavior is to print all of the components.</p>
@@ -1933,7 +1935,7 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 <p> Any option you specify on the command line remains in effect for the group of images following it, until the group is terminated by the appearance of any option or <code>-noop</code>. For example, to animate three images, the first with 32 colors, the second with an unlimited number of colors, and the third with only 16 colors, use: </p>
 <p>&nbsp;<wbr>gm animate -colors 32 cockatoo.1 -noop cockatoo.2<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-colors 16 cockatoo.3 </p>
-<p> <code>Animate</code> options can appear on the command line or in your X resources file. See <i><a href="/docs/linux/man/1-x/">X</a>(1)</i>. Options on the command line supersede values specified in your X resources file. Image filenames may appear in any order on the command line if the image format is <i>MIFF</i> (refer to <code><a href="/docs/linux/man/5-miff/">miff</a>(5)</code> and the <code>scene</code> keyword is specified in the image. Otherwise the images will display in the order they appear on the command line.</dl>
+<p> <code>Animate</code> options can appear on the command line or in your X resources file. See <i>X(1)</i>. Options on the command line supersede values specified in your X resources file. Image filenames may appear in any order on the command line if the image format is <i>MIFF</i> (refer to <code>miff(5)</code> and the <code>scene</code> keyword is specified in the image. Otherwise the images will display in the order they appear on the command line.</dl>
 <h2>MOUSE BUTTONS</h2>
 <p> Press any button to map or unmap the Command widget. See the next section for more information about the Command widget.</p>
 <h2>COMMAND WIDGET</h2>
@@ -1964,7 +1966,7 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 &nbsp;<wbr> Press to display helpful information about <code><a href="/docs/linux/man/1-animate/">animate</a>(1)</code>. <code>Ctl-q</code><br />
 &nbsp;<wbr> Press to discard all images and exit program. </p>
 <h2>X RESOURCES</h2>
-<p> <code>Animate</code> options can appear on the command line or in your X resource file. Options on the command line supersede values specified in your X resource file. See <code><a href="/docs/linux/man/1-x/">X</a>(1)</code> for more information on X resources. </p>
+<p> <code>Animate</code> options can appear on the command line or in your X resource file. Options on the command line supersede values specified in your X resource file. See <code>X(1)</code> for more information on X resources. </p>
 <p> All <code>animate</code> options have a corresponding X resource. In addition, the <code>animate</code> program uses the following X resources: </p>
 <p> <code>background</code> <code>(</code><i>class</i> <code>Background)</code><br />
 &nbsp;<wbr> </p>
@@ -1978,7 +1980,7 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 &nbsp;<wbr> </p>
 <p> Specifies the preferred color to use for text within the Image window. The default is black. <code>geometry</code> <code>(</code><i>class</i> <code>geometry)</code><br />
 &nbsp;<wbr> </p>
-<p> Specifies the preferred size and position of the image window. It is not necessarily obeyed by all window managers. Offsets, if present, are handled in <i><a href="/docs/linux/man/1-x/">X</a>(1)</i> style. A negative x offset is measured from the right edge of the screen to the right edge of the icon, and a negative y offset is measured from the bottom edge of the screen to the bottom edge of the icon. <code>iconGeometry</code> <code>(</code><i>class</i> <code>IconGeometry)</code><br />
+<p> Specifies the preferred size and position of the image window. It is not necessarily obeyed by all window managers. Offsets, if present, are handled in <i>X(1)</i> style. A negative x offset is measured from the right edge of the screen to the right edge of the icon, and a negative y offset is measured from the bottom edge of the screen to the bottom edge of the icon. <code>iconGeometry</code> <code>(</code><i>class</i> <code>IconGeometry)</code><br />
 &nbsp;<wbr> </p>
 <p> Specifies the preferred size and position of the application when iconified. It is not necessarily obeyed by all window managers. Offsets, if present, are handled in the same manner as in class Geometry. <code>iconic</code> <code>(</code><i>class</i> <code>Iconic)</code><br />
 &nbsp;<wbr> </p>
@@ -2482,7 +2484,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 &nbsp;<wbr>color <code>&lt;trim&gt;</code><br />
 &nbsp;<wbr> </p>
 <h2>GM CONVERT</h2>
-<p> <code>Convert</code> converts an input file using one image format to an output file with a differing image format. In addition, various types of image processing can be performed on the converted image during the conversion process. <code>Convert</code> recognizes the image formats listed in <i><a href="/docs/linux/man/1-graphicsmagick/">GraphicsMagick</a>(1)</i>. </p>
+<p> <code>Convert</code> converts an input file using one image format to an output file with a differing image format. In addition, various types of image processing can be performed on the converted image during the conversion process. <code>Convert</code> recognizes the image formats listed in <i>GraphicsMagick(1)</i>. </p>
 <h2>EXAMPLES</h2>
 <p> To make a thumbnail of a JPEG image, use: </p>
 <p>&nbsp;<wbr>gm convert -size 120&#215;120 cockatoo.jpg -resize 120&#215;120<br />
@@ -2509,7 +2511,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>bird.jpg bird.miff </p>
 <p> To tile a 640&#215;480 image with a JPEG texture with bumps use: </p>
 <p>&nbsp;<wbr>gm convert -size 640&#215;480 tile:bumps.jpg tiled.png </p>
-<p> To surround an icon with an ornamental border to use with <a href="/docs/linux/man/1-mosaic/">Mosaic</a>(1), use: </p>
+<p> To surround an icon with an ornamental border to use with Mosaic(1), use: </p>
 <p>&nbsp;<wbr>gm convert -mattecolor&nbsp;<wbr>&quot;#697B8F&quot;&nbsp;<wbr>-frame 6&#215;6 bird.jpg<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>icon.png </p>
 <p> To create a MNG animation from a DNA molecule sequence, use: </p>
@@ -2910,7 +2912,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> Options are processed in command line order. Any option you specify on the command line remains in effect until it is explicitly changed by specifying the option again with a different effect. For example to display three images, the first with 32 colors, the second with an unlimited number of colors, and the third with only 16 colors, use: </p>
 <p>&nbsp;<wbr>gm display -colors 32 cockatoo.miff -noop duck.miff<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-colors 16 macaw.miff </p>
-<p> <code>Display</code> options can appear on the command line or in your X resources file. See <i><a href="/docs/linux/man/1-x/">X</a>(1)</i>. Options on the command line supersede values specified in your X resources file. </p>
+<p> <code>Display</code> options can appear on the command line or in your X resources file. See <i>X(1)</i>. Options on the command line supersede values specified in your X resources file. </p>
 <p> For a more detailed description of each option, see Options, above. </p>
 <dl>
 <dt><code>-authenticate </code><i>&lt;string&gt;</i></p>
@@ -3294,7 +3296,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> Use the arrow keys to move the image one pixel up, down, left, or right within the magnify window. Be sure to first map the magnify window by pressing button 2. </p>
 <p> Press ALT and one of the arrow keys to trim off one pixel from any side of the image.</p>
 <h2>X RESOURCES</h2>
-<p> <code>Display</code> options can appear on the command line or in your X resource file. Options on the command line supersede values specified in your X resource file. See <i><a href="/docs/linux/man/1-x/">X</a>(1)</i> for more information on X resources. </p>
+<p> <code>Display</code> options can appear on the command line or in your X resource file. Options on the command line supersede values specified in your X resource file. See <i>X(1)</i> for more information on X resources. </p>
 <p> Most <code>display</code> options have a corresponding X resource. In addition, <code>display</code> uses the following X resources:</p>
 <dl>
 <dt><code>background </code><i>(class Background)</i></p>
@@ -3321,7 +3323,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <dd> This resource, if true, will lighten or darken an image of known gamma to match the gamma of the display (see resource <code>displayGamma</code>). The default is True.</p>
 <dt><code>geometry </code><i>(class Geometry)</i></p>
 <dd> Specifies the preferred size and position of the image window. It is not necessarily obeyed by all window managers. </p>
-<p> Offsets, if present, are handled in <i><a href="/docs/linux/man/1-x/">X</a>(1)</i> style. A negative x offset is measured from the right edge of the screen to the right edge of the icon, and a negative y offset is measured from the bottom edge of the screen to the bottom edge of the icon.</p>
+<p> Offsets, if present, are handled in <i>X(1)</i> style. A negative x offset is measured from the right edge of the screen to the right edge of the icon, and a negative y offset is measured from the bottom edge of the screen to the bottom edge of the icon.</p>
 <dt><code>iconGeometry </code><i>(class IconGeometry)</i></p>
 <dd> Specifies the preferred size and position of the application when iconified. It is not necessarily obeyed by all window managers. </p>
 <p> Offsets, if present, are handled in the same manner as in class Geometry.</p>
@@ -3529,7 +3531,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> If you choose to rotate the text, choose <code>Rotate Text</code> from the menu and select an angle. Typically you will only want to rotate one line of text at a time. Depending on the angle you choose, subsequent lines may end up overwriting each other. </p>
 <p> Choosing a font and its color is optional. The default font is fixed and the default color is black. However, you must choose a location to begin entering text and press a button. An underscore character will appear at the location of the pointer. The cursor changes to a pencil to indicate you are in text mode. To exit immediately, press Dismiss. </p>
 <p> In text mode, any key presses will display the character at the location of the underscore and advance the underscore cursor. Enter your text and once completed press Apply to finish your image annotation. To correct errors press <code>BACK SPACE</code>. To delete an entire line of text, press <code>DELETE</code>. Any text that exceeds the boundaries of the image window is automatically continued onto the next line. </p>
-<p> The actual color you request for the font is saved in the image. However, the color that appears in your Image window may be different. For example, on a monochrome screen the text will appear black or white even if you choose the color red as the font color. However, the image saved to a file with <code>-write</code> is written with red lettering. To assure the correct color text in the final image, any <i>PseudoClass</i> image is promoted to <i>DirectClass</i> (see <a href="/docs/linux/man/5-miff/">miff</a>(5)). To force a <i>PseudoClass</i> image to remain <i>PseudoClass</i>, use <code>-colors</code>.</p>
+<p> The actual color you request for the font is saved in the image. However, the color that appears in your Image window may be different. For example, on a monochrome screen the text will appear black or white even if you choose the color red as the font color. However, the image saved to a file with <code>-write</code> is written with red lettering. To assure the correct color text in the final image, any <i>PseudoClass</i> image is promoted to <i>DirectClass</i> (see miff(5)). To force a <i>PseudoClass</i> image to remain <i>PseudoClass</i>, use <code>-colors</code>.</p>
 <h2>IMAGE COMPOSITING</h2>
 <p> An image composite is created interactively. <code>There is no command line argument to composite an image</code>. To begin, choose <code>Composite</code> of the <code>Image Edit</code> from the Command widget. Alternatively, press x in the Image window. </p>
 <p> First a popup window is displayed requesting you to enter an image name. Press <code>Composite</code>, <code>Grab</code> or type a file name. Press <code>Cancel</code> if you choose not to create a composite image. When you choose <code>Grab</code>, move the pointer to the desired window and press any button. </p>
@@ -3864,7 +3866,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>corner.png </p>
 <h2>OPTIONS</h2>
 <p> Options are processed in command line order. Any option you specify on the command line remains in effect until it is explicitly changed by specifying the option again with a different effect. </p>
-<p> <code>Import</code> options can appear on the command line or in your X resources file. See <i><a href="/docs/linux/man/1-x/">X</a>(1)</i>. Options on the command line supersede values specified in your X resources file. </p>
+<p> <code>Import</code> options can appear on the command line or in your X resources file. See <i>X(1)</i>. Options on the command line supersede values specified in your X resources file. </p>
 <p> For a more detailed description of each option, see Options, above. </p>
 <dl>
 <dt><code>-bordercolor </code><i>&lt;color&gt;</i></p>
@@ -3961,7 +3963,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 </dl>
 <h2>GM MOGRIFY</h2>
 <p> <code>Mogrify</code> transforms an image or a sequence of images. These transforms include image scaling, image rotation, color reduction, and others. Each transmogrified image overwrites the corresponding original image, unless an option such as <code>-format</code> causes the output filename to be different from the input filename. </p>
-<p> The graphics formats supported by <code>mogrify</code> are listed in <i><a href="/docs/linux/man/1-graphicsmagick/">GraphicsMagick</a>(1)</i>.</p>
+<p> The graphics formats supported by <code>mogrify</code> are listed in <i>GraphicsMagick(1)</i>.</p>
 <h2>EXAMPLES</h2>
 <p> To convert all the TIFF files in a particular directory to JPEG, use: </p>
 <p>&nbsp;<wbr>gm mogrify -format jpeg&nbsp;<wbr>*.tiff </p>
@@ -4258,12 +4260,12 @@ input.ppm -gaussian 0x2 output.ppm </p>
 </dl>
 <h2>GM MONTAGE</h2>
 <p> <code>montage</code> creates a composite image by combining several separate images. The images are tiled on the composite image with the name of the image optionally appearing just below the individual tile. </p>
-<p> The composite image is constructed in the following manner. First, each image specified on the command line, except for the last, is scaled to fit the maximum tile size. The maximum tile size by default is 120&#215;120. It can be modified with the <code>-geometry</code> command line argument or X resource. See <code>Options</code> for more information on command line arguments. See <code><a href="/docs/linux/man/1-x/">X</a>(1)</code> for more information on X resources. Note that the maximum tile size need not be a square. </p>
+<p> The composite image is constructed in the following manner. First, each image specified on the command line, except for the last, is scaled to fit the maximum tile size. The maximum tile size by default is 120&#215;120. It can be modified with the <code>-geometry</code> command line argument or X resource. See <code>Options</code> for more information on command line arguments. See <code>X(1)</code> for more information on X resources. Note that the maximum tile size need not be a square. </p>
 <p> Next the composite image is initialized with the color specified by the <code>-background</code> command line argument or X resource. The width and height of the composite image is determined by the title specified, the maximum tile size, the number of tiles per row, the tile border width and height, the image border width, and the label height. The number of tiles per row specifies how many images are to appear in each row of the composite image. The default is to have 5 tiles in each row and 4 tiles in each column of the composite. A specific value is specified with <code>-tile</code>. The tile border width and height, and the image border width defaults to the value of the X resource <code>-borderwidth</code>. It can be changed with the <code>-borderwidth</code> or <code>-geometry</code> command line argument or X resource. The label height is determined by the font you specify with the <code>-font</code> command line argument or X resource. If you do not specify a font, a font is chosen that allows the name of the image to fit the maximum width of a tiled area. The label colors is determined by the <code>-background</code> and <code>-fill</code> command line argument or X resource. Note, that if the background and pen colors are the same, labels will not appear. </p>
 <p> Initially, the composite image title is placed at the top if one is specified (refer to <code>-fill</code>). Next, each image is set onto the composite image, surrounded by its border color, with its name centered just below it. The individual images are left-justified within the width of the tiled area. The order of the images is the same as they appear on the command line unless the images have a scene keyword. If a scene number is specified in each image, then the images are tiled onto the composite in the order of their scene number. Finally, the last argument on the command line is the name assigned to the composite image. By default, the image is written in the <code>MIFF</code> format and can be viewed or printed with <i><a href="/docs/linux/man/1-display/">display</a>(1)</i>. </p>
 <p> Note, that if the number of tiles exceeds the default number of 20 (5 per row, 4 per column), more than one composite image is created. To ensure a single image is produced, use <code>-tile</code> to increase the number of tiles to meet or exceed the number of input images. </p>
 <p> Finally, to create one or more empty spaces in the sequence of tiles, use the <code>&quot;NULL:&quot;</code> image format. </p>
-<p> Note, a composite MIFF image displayed to an X server with <code>display</code> behaves differently than other images. You can think of the composite as a visual image directory. Choose a particular tile of the composite and press a button to display it. See <code><a href="/docs/linux/man/1-display/">display</a>(1)</code> and <code><a href="/docs/linux/man/5-miff/">miff</a>(5)</code></p>
+<p> Note, a composite MIFF image displayed to an X server with <code>display</code> behaves differently than other images. You can think of the composite as a visual image directory. Choose a particular tile of the composite and press a button to display it. See <code><a href="/docs/linux/man/1-display/">display</a>(1)</code> and <code>miff(5)</code></p>
 <h2>EXAMPLES</h2>
 <p> To create a montage of a cockatoo, a parrot, and a hummingbird and write it to a file called birds, use: </p>
 <p>&nbsp;<wbr>gm montage cockatoo.miff parrot.miff hummingbird.miff<br />
@@ -4434,7 +4436,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> For a more detailed description of each option, see Options, above. </p>
 </dl>
 <h2>X RESOURCES</h2>
-<p> <code>Montage</code> options can appear on the command line or in your X resource file. Options on the command line supersede values specified in your X resource file. See <code><a href="/docs/linux/man/1-x/">X</a>(1)</code> for more information on X resources. </p>
+<p> <code>Montage</code> options can appear on the command line or in your X resource file. Options on the command line supersede values specified in your X resource file. See <code>X(1)</code> for more information on X resources. </p>
 <p> All <code>montage</code> options have a corresponding X resource. In addition, <code>montage</code> uses the following X resources:</p>
 <dl>
 <dt><code>background </code><i>(class Background)</i></p>
