@@ -1,5 +1,5 @@
 {{ define "main" }}
-<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › Section {{ .Params.section }}</p>
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/{{ .Params.section }}/">Section {{ .Params.section }}</a></p>
 <article>
 <h1>{{ .Title }}</h1>
 {{ .Content }}
