@@ -44,6 +44,8 @@ jobs:
       # any other root files must not clobber the Jekyll blog's.
       - run: hugo --source man-site --destination ../_man_out --minify
       - run: cp -a _man_out/docs _site/
+      # Chunked sitemap index for the ~56k man pages (over the 50k single-file limit)
+      - run: python3 scripts/gen-man-sitemap.py _man_out/docs _site/docs
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
