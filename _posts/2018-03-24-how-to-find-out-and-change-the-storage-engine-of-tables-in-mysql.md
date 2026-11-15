@@ -4,7 +4,7 @@ date: 2018-03-24 08:17:32 +0000
 modified: 2026-04-13 00:02:13 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /how-to-find-out-and-change-the-storage-engine-of-tables-in-mysql/
 ---
 

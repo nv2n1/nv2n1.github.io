@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:49 +0000
 modified: 2026-04-12 16:47:06 +0000
 author: "David Yang"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /how-to-cat-a-single-files-content-from-a-tar-without-unpacking-it-on-linux/
 ---
 

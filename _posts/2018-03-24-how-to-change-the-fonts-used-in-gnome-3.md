@@ -4,7 +4,7 @@ date: 2018-03-24 08:20:24 +0000
 modified: 2026-04-12 16:21:05 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-system-configuration]
+categories: [packages-desktop-applications]
 canonical: /how-to-change-the-fonts-used-in-gnome-3/
 ---
 

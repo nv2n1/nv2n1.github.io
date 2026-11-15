@@ -4,7 +4,7 @@ date: 2013-12-30 08:54:10 +0000
 modified: 2026-04-11 16:40:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /installing-new-disks-and-setting-up-raid0-in-megaraid-bios-on-ibm-x3620m3/
 ---
 

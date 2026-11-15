@@ -4,11 +4,13 @@ title: "Security & Cryptography Path"
 permalink: /security-cryptography-path/
 ---
 
+# Security & Cryptography Path
+
 Learn cryptographic fundamentals, public key infrastructure, and system security hardening. Master key management, encryption algorithms, and digital signatures.
 
 ## Learning Posts
 
-### Cryptography & Keys
+### [Cryptography & Keys](/category/cryptography-keys/)
 
 - [Understanding PGP: A Technical Reference Guide](/a-comprehensive-guide-to-pgp-technical-deep-dive/)
 - [Generating ECDSA Keys with OpenSSL: K1 and R1 Curves](/generating-ecdsa-keys-using-openssl-in-linux/)
@@ -17,13 +19,13 @@ Learn cryptographic fundamentals, public key infrastructure, and system security
 - [Decrypting a Password-Protected RSA Private Key](/how-to-decrypt-a-password-protected-rsa-private-key/)
 - [TPM 2.0: Understanding Platform Configuration Registers](/understanding-tpm-2-0-and-platform-configuration-registers-pcrs/)
 
-### TLS & Email Security
+### [TLS & Email Security](/category/tls-email-security/)
 
 - [Free SSL/TLS Certificates: Let's Encrypt and Alternatives](/how-to-get-a-free-web-server-ssl-tls-certificates-for-my-websites/)
 - [Email Authentication Fundamentals: SPF, DKIM, and DMARC Explained](/setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/)
 - [Secure Email Best Practices](/sending-emails-securely/)
 
-### Data Protection
+### [Data Protection](/category/data-protection/)
 
 - [Setting Up eCryptFS on Linux](/setting-up-ecryptfs-in-linux/)
 

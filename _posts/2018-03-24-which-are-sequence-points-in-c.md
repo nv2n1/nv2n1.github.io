@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:26 +0000
 modified: 2026-04-11 17:49:24 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /which-are-sequence-points-in-c/
 ---
 

@@ -4,7 +4,7 @@ date: 2014-10-22 06:22:12 +0000
 modified: 2026-04-11 16:22:08 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /turning-gnome-terminal-to-a-pop-up-terminal/
 ---
 

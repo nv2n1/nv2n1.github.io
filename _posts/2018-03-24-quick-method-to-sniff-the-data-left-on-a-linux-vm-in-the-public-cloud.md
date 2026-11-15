@@ -4,7 +4,7 @@ date: 2018-03-24 08:19:28 +0000
 modified: 2026-04-12 16:57:11 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /quick-method-to-sniff-the-data-left-on-a-linux-vm-in-the-public-cloud/
 ---
 

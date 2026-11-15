@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:46 +0000
 modified: 2026-05-17 16:50:33 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [security-cryptography-2]
+categories: [cryptography-keys]
 canonical: /what-are-the-differences-between-bios-and-uefi/
 ---
 

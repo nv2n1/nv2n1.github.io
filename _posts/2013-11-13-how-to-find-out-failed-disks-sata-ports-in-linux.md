@@ -4,7 +4,7 @@ date: 2013-11-13 12:28:17 +0000
 modified: 2026-04-11 16:40:37 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-find-out-failed-disks-sata-ports-in-linux/
 ---
 

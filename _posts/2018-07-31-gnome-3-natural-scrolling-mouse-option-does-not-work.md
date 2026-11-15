@@ -4,7 +4,7 @@ date: 2018-07-31 10:00:03 +0000
 modified: 2026-04-11 17:38:34 +0000
 author: "Q A"
 layout: post
-categories: [linux-system-configuration]
+categories: [packages-desktop-applications]
 canonical: /gnome-3-natural-scrolling-mouse-option-does-not-work/
 ---
 

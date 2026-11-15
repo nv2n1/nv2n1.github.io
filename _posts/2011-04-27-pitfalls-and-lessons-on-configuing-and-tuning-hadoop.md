@@ -4,7 +4,7 @@ date: 2011-04-27 00:41:12 +0000
 modified: 2026-04-12 04:39:16 +0000
 author: "Eric Ma"
 layout: post
-categories: [design-patterns-architecture]
+categories: [software-design]
 canonical: /pitfalls-and-lessons-on-configuing-and-tuning-hadoop/
 ---
 

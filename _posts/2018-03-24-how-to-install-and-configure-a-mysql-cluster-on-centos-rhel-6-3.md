@@ -4,7 +4,7 @@ date: 2018-03-24 08:14:16 +0000
 modified: 2026-04-12 17:00:14 +0000
 author: "Q A"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /how-to-install-and-configure-a-mysql-cluster-on-centos-rhel-6-3/
 ---
 

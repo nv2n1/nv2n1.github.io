@@ -4,57 +4,39 @@ title: "Programming Academy"
 permalink: /programming-academy/
 ---
 
+# Programming Academy
+
 Master programming concepts from fundamentals to advanced patterns. Explore languages, algorithms, architecture, and modern development practices.
 
 ## Learning Topics
 
-### Programming Languages
+### [Programming Languages](/category/programming-languages/)
 
 C, C++, Python, Bash, Java, Go, Rust, and more
 
-- [Programming Languages](/category/programming-languages/)
-- [Languages & Frameworks](/category/languages-frameworks/)
-- [Object-Oriented Programming](/category/object-oriented-programming/)
-- [Functional Programming](/category/functional-programming/)
-
-### Algorithms & Data Structures
+### [Algorithms & Data Structures](/category/algorithms-data-structures/)
 
 Sorting, searching, trees, graphs, complexity analysis, and optimization
 
-- [Algorithms & Data Structures](/category/algorithms-data-structures/)
-- [Code Optimization](/category/code-optimization/)
-
-### Software Design
+### [Software Design](/category/software-design/)
 
 Design patterns, architecture, best practices, and clean code principles
 
-- [Design Patterns & Architecture](/category/design-patterns-architecture/)
-- [Software Architecture](/category/systems-architecture/)
-- [Development Best Practices](/category/development-best-practices/)
-
-### Web Development
+### [Web Development](/category/web-development/)
 
 Frontend, backend, APIs, frameworks, and modern web technologies
 
-- [Web Development](/category/web-development/)
-
-### Databases & Storage
+### [Databases & Storage](/category/databases-storage/)
 
 SQL, NoSQL, database design, queries, and data management
 
-- [Databases & Storage](/category/databases-storage/)
-
-### Scripting & Automation
+### [Scripting & Automation](/category/scripting-automation/)
 
 Shell scripting, Python automation, CLI tools, and productivity
 
-- [Scripting & Utilities](/category/scripting-utilities/)
-
-### Testing & DevOps
+### [Testing & DevOps](/category/testing-devops/)
 
 Unit testing, CI/CD, deployment, monitoring, and infrastructure
-
-- [Testing & DevOps](/category/testing-devops/)
 
 ## Back to Learning
 

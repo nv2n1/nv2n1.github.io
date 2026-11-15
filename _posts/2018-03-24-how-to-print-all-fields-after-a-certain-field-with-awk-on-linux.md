@@ -4,7 +4,7 @@ date: 2018-03-24 11:53:43 +0000
 modified: 2026-04-11 17:39:15 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [command-line-text-tools]
 canonical: /how-to-print-all-fields-after-a-certain-field-with-awk-on-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:55:14 +0000
 modified: 2026-04-12 16:54:10 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-split-and-iterate-a-string-separated-by-another-string-in-c/
 ---
 

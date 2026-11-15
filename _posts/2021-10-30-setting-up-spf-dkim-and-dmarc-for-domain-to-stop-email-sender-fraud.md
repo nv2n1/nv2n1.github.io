@@ -4,7 +4,7 @@ date: 2021-10-30 16:17:04 +0000
 modified: 2026-04-11 16:12:41 +0000
 author: "David Yang"
 layout: post
-categories: [systems-architecture]
+categories: [tls-email-security]
 canonical: /setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/
 ---
 

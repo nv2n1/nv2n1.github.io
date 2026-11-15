@@ -4,7 +4,7 @@ date: 2018-03-24 08:19:46 +0000
 modified: 2026-04-11 17:40:45 +0000
 author: "Q A"
 layout: post
-categories: [system-administration-cloud]
+categories: [virtualization-containers]
 canonical: /how-to-use-lvm-groups-with-libvirt/
 ---
 

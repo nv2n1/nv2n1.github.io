@@ -4,7 +4,7 @@ date: 2018-03-24 08:22:40 +0000
 modified: 2026-04-11 16:02:13 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [programming-languages]
 canonical: /how-to-set-up-the-java-environment-in-linux/
 ---
 

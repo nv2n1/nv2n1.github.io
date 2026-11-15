@@ -4,7 +4,7 @@ date: 2016-11-09 15:46:57 +0000
 modified: 2026-04-11 16:21:24 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /sched_setaffinity-works-inside-of-linux-kernel/
 ---
 

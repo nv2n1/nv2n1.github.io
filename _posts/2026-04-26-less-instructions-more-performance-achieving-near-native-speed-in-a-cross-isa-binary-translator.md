@@ -4,7 +4,7 @@ date: 2026-04-26 09:03:59 +0000
 modified: 2026-05-20 15:05:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [code-optimization]
+categories: [algorithms-data-structures]
 canonical: /less-instructions-more-performance-achieving-near-native-speed-in-a-cross-isa-binary-translator/
 ---
 

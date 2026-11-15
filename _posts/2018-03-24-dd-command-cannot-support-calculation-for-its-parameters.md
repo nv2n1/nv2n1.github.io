@@ -4,7 +4,7 @@ date: 2018-03-24 11:49:34 +0000
 modified: 2026-04-12 08:03:34 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [performance]
 canonical: /dd-command-cannot-support-calculation-for-its-parameters/
 ---
 

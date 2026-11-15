@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:42 +0000
 modified: 2026-04-12 16:38:55 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /how-to-make-a-static-library-a-on-linux/
 ---
 

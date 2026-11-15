@@ -4,7 +4,7 @@ date: 2018-03-24 11:42:59 +0000
 modified: 2026-04-12 16:57:55 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-back-up-emails-from-the-email-server/
 ---
 

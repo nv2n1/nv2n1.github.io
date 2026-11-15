@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:41 +0000
 modified: 2026-04-12 16:40:32 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [system-administration-cloud]
+categories: [general-system-administration]
 canonical: /how-to-get-a-servers-serial-number-remotely/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:52 +0000
 modified: 2026-04-12 16:53:33 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-get-a-paths-mtime-in-c-on-linux/
 ---
 

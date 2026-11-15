@@ -4,7 +4,7 @@ date: 2018-03-24 08:04:25 +0000
 modified: 2026-04-11 16:20:58 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-install-noip2-on-linux-2/
 ---
 

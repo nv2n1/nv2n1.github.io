@@ -4,7 +4,7 @@ date: 2013-07-12 16:47:40 +0000
 modified: 2026-04-11 17:51:49 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /java-calling-native-functions-in-dll/
 ---
 

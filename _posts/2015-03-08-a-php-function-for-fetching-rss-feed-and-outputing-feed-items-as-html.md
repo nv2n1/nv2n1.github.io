@@ -4,7 +4,7 @@ date: 2015-03-08 08:02:12 +0000
 modified: 2026-04-11 17:16:13 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /a-php-function-for-fetching-rss-feed-and-outputing-feed-items-as-html/
 ---
 

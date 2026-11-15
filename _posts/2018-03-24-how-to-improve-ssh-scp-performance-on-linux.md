@@ -4,7 +4,7 @@ date: 2018-03-24 08:22:31 +0000
 modified: 2026-04-11 16:02:27 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-to-improve-ssh-scp-performance-on-linux/
 ---
 

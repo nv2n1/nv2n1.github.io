@@ -4,7 +4,7 @@ date: 2018-03-24 11:41:32 +0000
 modified: 2026-04-11 16:00:23 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /how-to-erase-disk-partitions-on-u-disks-on-windows/
 ---
 

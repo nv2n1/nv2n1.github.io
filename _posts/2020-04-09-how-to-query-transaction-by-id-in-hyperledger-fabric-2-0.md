@@ -4,7 +4,7 @@ date: 2020-04-09 07:48:29 +0000
 modified: 2026-04-11 15:41:57 +0000
 author: "Eric Ma"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /how-to-query-transaction-by-id-in-hyperledger-fabric-2-0/
 ---
 

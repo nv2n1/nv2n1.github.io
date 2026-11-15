@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:25 +0000
 modified: 2026-04-11 16:06:43 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [programming-languages]
 canonical: /tutorial-how-to-trace-a-function-in-ocaml/
 ---
 

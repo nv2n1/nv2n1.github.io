@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:15 +0000
 modified: 2026-04-12 05:28:07 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [virtualization-containers]
 canonical: /problems-during-installing-xen-dom0-in-fedora/
 ---
 

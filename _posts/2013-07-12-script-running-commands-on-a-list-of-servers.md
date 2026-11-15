@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:35 +0000
 modified: 2026-04-11 16:41:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [shell-scripting]
 canonical: /script-running-commands-on-a-list-of-servers/
 ---
 

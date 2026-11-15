@@ -4,7 +4,7 @@ date: 2013-07-12 16:47:45 +0000
 modified: 2026-04-11 17:16:27 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /gdb-cheat-sheet/
 ---
 

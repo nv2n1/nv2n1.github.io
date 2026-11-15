@@ -4,7 +4,7 @@ date: 2013-03-25 13:06:06 +0000
 modified: 2026-04-12 04:40:13 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [systemd-services]
 canonical: /how-to-run-a-cron-job-every-two-weeks-months-days/
 ---
 

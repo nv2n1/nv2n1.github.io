@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:37 +0000
 modified: 2026-04-12 16:07:12 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-can-i-login-without-password-and-run-command-in-server-at-a-local-machine-remotely/
 ---
 

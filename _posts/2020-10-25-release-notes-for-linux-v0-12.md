@@ -4,7 +4,7 @@ date: 2020-10-25 06:59:35 +0000
 modified: 2026-04-11 16:13:20 +0000
 author: "Tony"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel-release-notes]
 canonical: /release-notes-for-linux-v0-12/
 ---
 

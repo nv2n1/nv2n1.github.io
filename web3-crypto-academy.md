@@ -4,23 +4,25 @@ title: "Web3 & Crypto Academy"
 permalink: /web3-crypto-academy/
 ---
 
+# Web3 & Crypto Academy
+
 Master blockchain, cryptocurrency, Web3, and decentralized finance. From Bitcoin fundamentals to smart contracts, DeFi protocols, trading strategies, and self-custody security.
 
 ## Learning Topics
 
-### Blockchain Fundamentals
+### [Blockchain Fundamentals](/category/blockchain-fundamentals/)
 
 Bitcoin transactions, consensus mechanisms, forks, distributed ledger technology, mining, hashing
 
-### Cryptocurrency & Trading
+### [Cryptocurrency & Trading](/category/cryptocurrency-trading/)
 
 Cryptocurrency fundamentals, trading strategies, options, futures, DEX routing, risk management
 
-### Web3 & DeFi
+### [Web3 & DeFi](/category/web3-defi/)
 
 Smart contracts, EVM, DeFi protocols, decentralized applications, protocol design, security
 
-### Self-Custody & Security
+### [Self-Custody & Security](/category/self-custody-security/)
 
 Private key management, hardware wallets, multisig, cold storage, key derivation, backup strategies
 

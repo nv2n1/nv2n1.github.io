@@ -4,7 +4,7 @@ date: 2018-03-24 11:43:56 +0000
 modified: 2026-04-12 07:57:19 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-list-all-files-from-a-deb-package/
 ---
 

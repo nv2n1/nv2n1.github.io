@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:07 +0000
 modified: 2026-04-12 16:09:43 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /making-dnf-yum-not-update-certain-packages/
 ---
 

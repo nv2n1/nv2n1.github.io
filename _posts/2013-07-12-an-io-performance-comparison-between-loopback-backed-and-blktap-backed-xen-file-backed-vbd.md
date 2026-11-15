@@ -4,7 +4,7 @@ date: 2013-07-12 16:31:54 +0000
 modified: 2026-04-12 05:27:23 +0000
 author: "Eric Ma"
 layout: post
-categories: [design-patterns-architecture]
+categories: [software-design]
 canonical: /an-io-performance-comparison-between-loopback-backed-and-blktap-backed-xen-file-backed-vbd/
 ---
 

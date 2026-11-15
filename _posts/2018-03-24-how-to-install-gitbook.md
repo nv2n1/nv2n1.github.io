@@ -4,7 +4,7 @@ date: 2018-03-24 11:43:38 +0000
 modified: 2026-04-12 16:05:21 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-install-gitbook/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:03 +0000
 modified: 2026-04-12 16:35:29 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [users-permissions]
 canonical: /cannot-make-directory-var-run-screen-s-apache-permission-denied/
 ---
 

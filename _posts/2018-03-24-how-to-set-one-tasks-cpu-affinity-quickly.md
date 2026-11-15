@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:16 +0000
 modified: 2026-04-12 16:21:02 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [code-optimization]
+categories: [performance]
 canonical: /how-to-set-one-tasks-cpu-affinity-quickly/
 ---
 

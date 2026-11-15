@@ -4,7 +4,7 @@ date: 2014-07-30 09:11:36 +0000
 modified: 2026-04-11 16:22:22 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /keyboard-key-mapping-for-emacs-evil-mode-and-rearranging-alt-ctrl-and-win-keys/
 ---
 

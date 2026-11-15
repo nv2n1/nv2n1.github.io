@@ -4,7 +4,7 @@ date: 2018-03-24 08:04:32 +0000
 modified: 2026-04-11 16:20:58 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /google-chrome-keyboard-and-mouse-shortcuts-for-linux-and-windows/
 ---
 

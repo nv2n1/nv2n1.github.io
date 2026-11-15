@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:47 +0000
 modified: 2026-04-11 15:56:25 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /how-to-check-whether-a-usb-disk-is-connected-to-a-linux-server/
 ---
 

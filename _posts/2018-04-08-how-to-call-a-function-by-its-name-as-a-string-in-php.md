@@ -4,7 +4,7 @@ date: 2018-04-08 09:05:57 +0000
 modified: 2026-04-11 17:12:07 +0000
 author: "Q A"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-call-a-function-by-its-name-as-a-string-in-php/
 ---
 

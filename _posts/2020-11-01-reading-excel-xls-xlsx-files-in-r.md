@@ -4,7 +4,7 @@ date: 2020-11-01 09:30:03 +0000
 modified: 2026-04-11 17:38:12 +0000
 author: "Daniel"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /reading-excel-xls-xlsx-files-in-r/
 ---
 

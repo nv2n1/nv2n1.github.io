@@ -4,7 +4,7 @@ date: 2018-03-24 11:49:09 +0000
 modified: 2026-04-11 15:52:38 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /how-to-keep-master-thesis-safety-and-availability-on-windows/
 ---
 

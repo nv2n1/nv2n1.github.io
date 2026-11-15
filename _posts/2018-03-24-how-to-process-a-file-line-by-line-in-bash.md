@@ -4,7 +4,7 @@ date: 2018-03-24 11:52:09 +0000
 modified: 2026-04-11 15:49:04 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-process-a-file-line-by-line-in-bash/
 ---
 

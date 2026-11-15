@@ -4,7 +4,7 @@ date: 2020-04-05 13:45:50 +0000
 modified: 2026-04-11 15:42:05 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /gcc-may-save-you-some-recursive-functions-calls-an-analysis-of-a-function-call-stack-length-example/
 ---
 

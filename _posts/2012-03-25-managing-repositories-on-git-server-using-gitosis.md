@@ -4,7 +4,7 @@ date: 2012-03-25 13:14:24 +0000
 modified: 2026-04-12 04:39:28 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /managing-repositories-on-git-server-using-gitosis/
 ---
 

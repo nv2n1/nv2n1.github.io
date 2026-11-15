@@ -4,7 +4,7 @@ date: 2013-07-18 03:45:02 +0000
 modified: 2026-04-11 16:41:01 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /copying-output-of-commands-in-linux-terminals-to-x-selection-clipboard/
 ---
 

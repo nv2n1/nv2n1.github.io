@@ -4,7 +4,7 @@ date: 2024-08-23 14:20:18 +0000
 modified: 2026-05-17 16:50:10 +0000
 author: "Eric Ma"
 layout: post
-categories: [security-cryptography-2]
+categories: [cryptography-keys]
 canonical: /extracting-ec-public-keys-with-openssl/
 ---
 

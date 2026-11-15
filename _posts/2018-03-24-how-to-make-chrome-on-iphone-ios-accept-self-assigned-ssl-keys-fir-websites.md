@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:58 +0000
 modified: 2026-04-12 16:56:20 +0000
 author: "Eric Ma"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /how-to-make-chrome-on-iphone-ios-accept-self-assigned-ssl-keys-fir-websites/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 08:15:56 +0000
 modified: 2026-04-12 16:47:47 +0000
 author: "Q A"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /how-to-call-c-functions-from-ocaml-code/
 ---
 

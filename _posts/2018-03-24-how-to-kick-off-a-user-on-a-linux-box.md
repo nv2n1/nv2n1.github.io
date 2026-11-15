@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:11 +0000
 modified: 2026-04-12 16:38:29 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [users-permissions]
 canonical: /how-to-kick-off-a-user-on-a-linux-box/
 ---
 

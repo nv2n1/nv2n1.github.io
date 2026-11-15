@@ -4,7 +4,7 @@ date: 2024-12-14 09:59:01 +0000
 modified: 2026-05-17 15:38:33 +0000
 author: "Eric Ma"
 layout: post
-categories: [blockchain-cryptocurrency]
+categories: [blockchain-fundamentals]
 canonical: /understanding-temporary-forks-and-reorganization-in-blockchain/
 ---
 

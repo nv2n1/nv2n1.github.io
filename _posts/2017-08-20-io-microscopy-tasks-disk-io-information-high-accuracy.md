@@ -4,7 +4,7 @@ date: 2017-08-20 06:26:19 +0000
 modified: 2026-04-11 16:24:48 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [systems-architecture]
+categories: [performance]
 canonical: /io-microscopy-tasks-disk-io-information-high-accuracy/
 ---
 

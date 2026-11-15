@@ -4,7 +4,7 @@ date: 2018-03-24 08:16:46 +0000
 modified: 2026-04-12 16:33:33 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [users-permissions]
 canonical: /how-to-delete-all-topics-and-posts-from-a-user-spammer-in-mybb/
 ---
 

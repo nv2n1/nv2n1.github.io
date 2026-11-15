@@ -4,7 +4,7 @@ date: 2018-03-24 08:20:24 +0000
 modified: 2026-04-12 14:18:52 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [shell-scripting]
 canonical: /how-to-change-the-fonts-of-gnome-shell-for-gnome3/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:14 +0000
 modified: 2026-04-12 16:30:40 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [shell-scripting]
 canonical: /how-to-unexport-an-exported-variable-in-bash-on-linux/
 ---
 

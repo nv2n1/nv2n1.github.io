@@ -4,7 +4,7 @@ date: 2014-09-27 09:25:42 +0000
 modified: 2026-04-11 16:22:13 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /rotating-video-from-iphone-on-linux/
 ---
 

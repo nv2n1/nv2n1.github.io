@@ -61,25 +61,5 @@ Welcome to SysTutorials! Learn through 5 focused learning academies. Explore sys
 
 ## Browse by Category
 
-<ul class="cat-grid">
-<li><a href="/category/linux-systems-administration/">linux systems administration</a> <span>(722)</span></li>
-<li><a href="/category/programming-languages/">programming languages</a> <span>(129)</span></li>
-<li><a href="/category/development-best-practices/">development best practices</a> <span>(99)</span></li>
-<li><a href="/category/languages-frameworks/">languages frameworks</a> <span>(89)</span></li>
-<li><a href="/category/scripting-utilities/">scripting utilities</a> <span>(68)</span></li>
-<li><a href="/category/systems-architecture/">systems architecture</a> <span>(36)</span></li>
-<li><a href="/category/testing-devops/">testing devops</a> <span>(32)</span></li>
-<li><a href="/category/system-administration-cloud/">system administration cloud</a> <span>(31)</span></li>
-<li><a href="/category/linux-system-configuration/">linux system configuration</a> <span>(28)</span></li>
-<li><a href="/category/web-development/">web development</a> <span>(25)</span></li>
-<li><a href="/category/design-patterns-architecture/">design patterns architecture</a> <span>(17)</span></li>
-<li><a href="/category/security-cryptography-2/">security cryptography 2</a> <span>(17)</span></li>
-<li><a href="/category/blockchain-cryptocurrency/">blockchain cryptocurrency</a> <span>(15)</span></li>
-<li><a href="/category/databases-storage/">databases storage</a> <span>(11)</span></li>
-<li><a href="/category/algorithms-data-structures/">algorithms data structures</a> <span>(10)</span></li>
-<li><a href="/category/code-optimization/">code optimization</a> <span>(8)</span></li>
-<li><a href="/category/object-oriented-programming/">object oriented programming</a> <span>(4)</span></li>
-<li><a href="/category/functional-programming/">functional programming</a> <span>(4)</span></li>
-<li><a href="/category/ai-engineering/">ai engineering</a> <span>(4)</span></li>
-</ul>
+Every category is a learning topic in an academy and learning path. See [all categories](/categories/), or start from an [academy](/#academies).
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:47:03 +0000
 modified: 2026-04-12 16:55:58 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /how-to-find-a-network-adapters-speed-in-linux/
 ---
 

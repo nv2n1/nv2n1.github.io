@@ -4,7 +4,7 @@ date: 2013-07-12 16:47:43 +0000
 modified: 2026-04-11 17:51:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 permalink: /setproxy-%e4%b8%80%e4%b8%aa%e8%ae%be%e7%bd%aeie%e4%bb%a3%e7%90%86%e7%9a%84%e5%b0%8f%e5%b7%a5%e5%85%b7/
 canonical: /setproxy-%e4%b8%80%e4%b8%aa%e8%ae%be%e7%bd%aeie%e4%bb%a3%e7%90%86%e7%9a%84%e5%b0%8f%e5%b7%a5%e5%85%b7/
 ---

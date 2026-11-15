@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:31 +0000
 modified: 2026-04-12 16:59:20 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /how-to-make-linux-automatically-reboot-after-a-kernel-panic/
 ---
 

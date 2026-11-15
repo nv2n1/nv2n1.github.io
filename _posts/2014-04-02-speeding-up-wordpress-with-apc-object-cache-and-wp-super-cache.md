@@ -4,7 +4,7 @@ date: 2014-04-02 17:34:13 +0000
 modified: 2026-04-11 16:22:45 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [performance]
 canonical: /speeding-up-wordpress-with-apc-object-cache-and-wp-super-cache/
 ---
 

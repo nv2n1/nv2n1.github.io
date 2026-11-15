@@ -4,7 +4,7 @@ date: 2013-07-16 01:38:27 +0000
 modified: 2026-04-11 17:51:26 +0000
 author: "Eric Ma"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /how-to-change-mediawikis-main-page-title-and-url/
 ---
 

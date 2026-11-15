@@ -4,7 +4,7 @@ date: 2015-02-02 13:03:31 +0000
 modified: 2026-04-11 16:22:04 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /lazy-linux-admins-going-to-server-rooms-less-forced-reboot-auto-reboot-after-kernel-panic-and-email-notification-after-reboot/
 ---
 

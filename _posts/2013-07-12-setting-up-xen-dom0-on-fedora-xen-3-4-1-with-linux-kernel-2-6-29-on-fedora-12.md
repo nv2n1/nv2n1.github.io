@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:03 +0000
 modified: 2026-04-12 05:27:39 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel-release-notes]
 canonical: /setting-up-xen-dom0-on-fedora-xen-3-4-1-with-linux-kernel-2-6-29-on-fedora-12/
 ---
 

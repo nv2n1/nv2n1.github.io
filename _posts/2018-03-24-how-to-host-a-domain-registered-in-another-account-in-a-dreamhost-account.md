@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:01 +0000
 modified: 2026-04-12 16:09:13 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-host-a-domain-registered-in-another-account-in-a-dreamhost-account/
 ---
 

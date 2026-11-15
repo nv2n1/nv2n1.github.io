@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:16 +0000
 modified: 2026-04-11 16:06:48 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /mount-ext4-partitions-in-windows-in-read-only-mode/
 ---
 

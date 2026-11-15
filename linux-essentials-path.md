@@ -4,11 +4,13 @@ title: "Linux Essentials Path"
 permalink: /linux-essentials-path/
 ---
 
+# Linux Essentials Path
+
 Master command-line fundamentals, file operations, and core system administration.
 
 ## Learning Posts
 
-### Command Line & Text Tools
+### [Command Line & Text Tools](/category/command-line-text-tools/)
 
 - [Converting ODT Files to TXT in Linux: 3 Command-Line Methods](/3-ways-of-odt-to-txt-file-conversion-in-command-line-in-linux/)
 - [Converting DOC Files to ODT Format on Linux](/docx-doc-to-odt-file-conversion-in-linux-command-line/)
@@ -18,23 +20,23 @@ Master command-line fundamentals, file operations, and core system administratio
 - [Getting the Hostname in Bash: 3 Methods](/how-to-get-the-hostname-of-the-node-in-bash/)
 - [Finding the Root Filesystem Disk in Linux Bash](/how-to-find-the-disk-where-root-is-on-in-bash-on-linux/)
 
-### Users & Permissions
+### [Users & Permissions](/category/users-permissions/)
 
 - [Managing Linux Users and Groups Effectively](/linux-user-group-management-and-operations/)
 - [Granting Root Access to NFS Shares](/how-to-allow-root-access-to-nfs/)
 
-### Files & Storage
+### [Files & Storage](/category/files-storage/)
 
 - [Handling Sparse Files on Linux](/handling-sparse-files-on-linux/)
 - [How to Set Up and Manage File-Based Swap on Linux](/how-to-add-a-file-based-swap-for-linux/)
 - [Compress PNG Images on Linux](/compressing-png-images-on-linux/)
 
-### Shell & Scripting
+### [Shell & Scripting](/category/shell-scripting/)
 
 - [Bash: From Basics to Production-Ready Scripts](/bash-learning-materials/)
 - [Mastering Git Log: Essential Commands for Filtering Commits](/how-to-list-all-commits-in-a-git-repository/)
 
-### Packages, Desktop & Applications
+### [Packages, Desktop & Applications](/category/packages-desktop-applications/)
 
 - [Installing Zlib on Ubuntu 24.04 and 22.04 LTS](/installing-zlib-in-ubuntu-22-04/)
 - [Configuring Custom Fonts in Thunderbird Snap](/configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/)

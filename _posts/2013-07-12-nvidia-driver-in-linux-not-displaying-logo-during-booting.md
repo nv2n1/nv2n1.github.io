@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:11 +0000
 modified: 2026-04-12 16:52:07 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /nvidia-driver-in-linux-not-displaying-logo-during-booting/
 ---
 

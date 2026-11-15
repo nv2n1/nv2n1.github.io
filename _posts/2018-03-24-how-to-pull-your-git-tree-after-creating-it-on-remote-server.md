@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:39 +0000
 modified: 2026-04-12 14:25:37 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [scripting-automation]
 canonical: /how-to-pull-your-git-tree-after-creating-it-on-remote-server/
 ---
 

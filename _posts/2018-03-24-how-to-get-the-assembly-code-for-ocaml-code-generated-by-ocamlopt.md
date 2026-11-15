@@ -4,7 +4,7 @@ date: 2018-03-24 08:16:46 +0000
 modified: 2026-04-12 16:47:38 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [programming-languages]
 canonical: /how-to-get-the-assembly-code-for-ocaml-code-generated-by-ocamlopt/
 ---
 

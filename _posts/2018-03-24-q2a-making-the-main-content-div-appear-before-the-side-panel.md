@@ -4,7 +4,7 @@ date: 2018-03-24 08:15:02 +0000
 modified: 2026-04-12 08:38:51 +0000
 author: "Q A"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /q2a-making-the-main-content-div-appear-before-the-side-panel/
 ---
 

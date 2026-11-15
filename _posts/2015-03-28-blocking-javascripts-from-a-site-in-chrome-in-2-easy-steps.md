@@ -4,7 +4,7 @@ date: 2015-03-28 14:32:19 +0000
 modified: 2026-04-12 16:48:20 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /blocking-javascripts-from-a-site-in-chrome-in-2-easy-steps/
 ---
 

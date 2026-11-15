@@ -4,7 +4,7 @@ date: 2015-03-29 04:51:52 +0000
 modified: 2026-04-11 16:21:49 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [performance]
 canonical: /profiling-vim-to-find-out-which-plugin-makes-vim-slow/
 ---
 

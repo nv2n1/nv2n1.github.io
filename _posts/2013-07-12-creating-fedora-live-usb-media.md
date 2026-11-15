@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:16 +0000
 modified: 2026-04-12 05:28:17 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /creating-fedora-live-usb-media/
 ---
 

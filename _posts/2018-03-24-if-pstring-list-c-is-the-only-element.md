@@ -4,7 +4,7 @@ date: 2018-03-24 11:43:14 +0000
 modified: 2026-04-12 16:38:04 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [programming-languages]
 canonical: /if-pstring-list-c-is-the-only-element/
 ---
 

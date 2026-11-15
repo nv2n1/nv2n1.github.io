@@ -4,7 +4,7 @@ date: 2020-09-27 12:55:44 +0000
 modified: 2026-04-11 16:13:57 +0000
 author: "Tony"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel-release-notes]
 canonical: /linux-kernel-4-19-70-release/
 ---
 

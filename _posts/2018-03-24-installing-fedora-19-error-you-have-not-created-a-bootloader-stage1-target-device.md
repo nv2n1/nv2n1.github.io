@@ -4,7 +4,7 @@ date: 2018-03-24 08:17:38 +0000
 modified: 2026-04-12 16:53:07 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /installing-fedora-19-error-you-have-not-created-a-bootloader-stage1-target-device/
 ---
 

@@ -4,7 +4,7 @@ date: 2015-11-29 02:20:05 +0000
 modified: 2026-04-11 17:41:22 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-system-configuration]
+categories: [general-system-administration]
 canonical: /notes-software-development-linux-beginners/
 ---
 

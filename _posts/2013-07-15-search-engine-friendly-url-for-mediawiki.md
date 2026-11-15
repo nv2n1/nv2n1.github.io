@@ -4,7 +4,7 @@ date: 2013-07-15 12:56:47 +0000
 modified: 2026-04-11 17:41:33 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [web-development]
 canonical: /search-engine-friendly-url-for-mediawiki/
 ---
 

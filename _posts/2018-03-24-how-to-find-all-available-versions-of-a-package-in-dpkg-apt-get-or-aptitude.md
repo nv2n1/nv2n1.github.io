@@ -4,7 +4,7 @@ date: 2018-03-24 11:43:05 +0000
 modified: 2026-04-12 16:48:34 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-find-all-available-versions-of-a-package-in-dpkg-apt-get-or-aptitude/
 ---
 

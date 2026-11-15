@@ -4,7 +4,7 @@ date: 2018-03-24 11:50:11 +0000
 modified: 2026-04-12 16:55:02 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-test-whether-path-has-a-specific-directory-in-it-in-bash-on-linux/
 ---
 

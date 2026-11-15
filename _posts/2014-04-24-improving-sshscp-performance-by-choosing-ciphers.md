@@ -4,7 +4,7 @@ date: 2014-04-24 13:39:43 +0000
 modified: 2026-04-11 16:22:43 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /improving-sshscp-performance-by-choosing-ciphers/
 ---
 

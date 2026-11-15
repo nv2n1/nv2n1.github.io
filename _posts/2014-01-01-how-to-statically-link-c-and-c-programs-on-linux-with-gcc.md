@@ -4,7 +4,7 @@ date: 2014-01-01 03:50:47 +0000
 modified: 2026-04-11 16:40:33 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-statically-link-c-and-c-programs-on-linux-with-gcc/
 ---
 

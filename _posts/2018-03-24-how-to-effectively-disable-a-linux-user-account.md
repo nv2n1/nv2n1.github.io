@@ -4,7 +4,7 @@ date: 2018-03-24 11:51:46 +0000
 modified: 2026-04-11 15:49:20 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [users-permissions]
 canonical: /how-to-effectively-disable-a-linux-user-account/
 ---
 

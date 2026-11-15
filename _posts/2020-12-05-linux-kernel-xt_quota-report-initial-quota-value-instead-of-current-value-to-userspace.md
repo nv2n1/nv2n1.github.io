@@ -4,7 +4,7 @@ date: 2020-12-05 04:16:35 +0000
 modified: 2026-04-12 16:33:55 +0000
 author: "Tony"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /linux-kernel-xt_quota-report-initial-quota-value-instead-of-current-value-to-userspace/
 ---
 

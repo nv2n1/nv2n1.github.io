@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:26 +0000
 modified: 2026-04-12 16:05:11 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-get-files-without-certain-strings-in-their-files-names-reverse-of-string-on-linux/
 ---
 

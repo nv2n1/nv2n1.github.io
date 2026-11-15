@@ -4,7 +4,7 @@ date: 2018-03-24 11:51:27 +0000
 modified: 2026-04-12 16:42:39 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [code-optimization]
+categories: [consistency-models]
 canonical: /whats-the-difference-between-memory-coherence-and-consistency/
 ---
 

@@ -4,7 +4,7 @@ date: 2024-08-24 04:24:24 +0000
 modified: 2026-04-11 16:11:42 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [consensus]
 canonical: /understanding-the-raft-consensus-protocol/
 ---
 

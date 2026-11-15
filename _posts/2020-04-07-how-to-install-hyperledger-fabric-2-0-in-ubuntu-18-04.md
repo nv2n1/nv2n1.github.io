@@ -4,7 +4,7 @@ date: 2020-04-07 17:44:25 +0000
 modified: 2026-04-11 15:41:59 +0000
 author: "Eric Ma"
 layout: post
-categories: [systems-architecture]
+categories: [engineering-lessons]
 canonical: /how-to-install-hyperledger-fabric-2-0-in-ubuntu-18-04/
 ---
 

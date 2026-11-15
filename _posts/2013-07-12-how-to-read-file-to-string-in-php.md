@@ -4,7 +4,7 @@ date: 2013-07-12 16:46:12 +0000
 modified: 2026-04-11 17:41:47 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [performance]
 canonical: /how-to-read-file-to-string-in-php/
 ---
 

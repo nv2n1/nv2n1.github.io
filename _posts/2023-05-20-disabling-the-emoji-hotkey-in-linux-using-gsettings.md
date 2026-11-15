@@ -4,7 +4,7 @@ date: 2023-05-20 07:58:03 +0000
 modified: 2026-04-12 16:32:19 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /disabling-the-emoji-hotkey-in-linux-using-gsettings/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:55:09 +0000
 modified: 2026-04-12 16:07:49 +0000
 author: "Eric Ma"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-operator-access-element-in-a-const-map-in-c/
 ---
 

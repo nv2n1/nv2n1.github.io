@@ -4,7 +4,7 @@ date: 2018-03-24 11:46:57 +0000
 modified: 2026-04-12 16:11:29 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [virtualization-containers]
 canonical: /printing-powernow-k8-transition-frequency-failed-after-install-xen/
 ---
 

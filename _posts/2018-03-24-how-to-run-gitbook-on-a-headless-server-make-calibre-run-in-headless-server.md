@@ -4,7 +4,7 @@ date: 2018-03-24 11:43:34 +0000
 modified: 2026-04-12 16:30:44 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /how-to-run-gitbook-on-a-headless-server-make-calibre-run-in-headless-server/
 ---
 

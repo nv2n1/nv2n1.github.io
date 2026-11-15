@@ -4,7 +4,7 @@ date: 2018-03-24 08:22:17 +0000
 modified: 2026-04-11 16:02:52 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-reset-the-keyboard-set-by-xmodmap-on-linux/
 ---
 

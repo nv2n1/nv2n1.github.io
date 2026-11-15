@@ -4,7 +4,7 @@ date: 2018-03-24 08:19:52 +0000
 modified: 2026-04-12 16:10:01 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /how-to-revert-only-one-file-back-to-a-revision-or-commit/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:26 +0000
 modified: 2026-04-12 16:54:30 +0000
 author: "David Yang"
 layout: post
-categories: [scripting-utilities]
+categories: [shell-scripting]
 canonical: /how-to-get-the-value-of-a-default-value-if-the-key-does-not-exist-in-dict-in-python/
 ---
 

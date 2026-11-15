@@ -4,7 +4,7 @@ date: 2018-03-24 11:53:27 +0000
 modified: 2026-04-12 16:53:51 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /how-to-count-the-number-of-reads-in-each-chromosome-in-a-bam-file/
 ---
 

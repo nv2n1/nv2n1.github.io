@@ -4,7 +4,7 @@ date: 2020-10-01 14:25:35 +0000
 modified: 2026-04-12 16:59:37 +0000
 author: "Tony"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /linux-kernel-drm-i915-guc-dont-enable-guc-huc-in-auto-mode-on-pre-gen11/
 ---
 

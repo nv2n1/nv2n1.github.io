@@ -4,7 +4,7 @@ date: 2018-03-24 11:51:21 +0000
 modified: 2026-04-12 16:43:49 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-save-the-output-of-screen-windows-to-a-file-on-linux/
 ---
 

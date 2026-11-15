@@ -4,7 +4,7 @@ date: 2013-10-25 12:47:25 +0000
 modified: 2026-04-11 16:40:39 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [storage-lvm]
 canonical: /fixing-ports-used-by-nfs-server/
 ---
 

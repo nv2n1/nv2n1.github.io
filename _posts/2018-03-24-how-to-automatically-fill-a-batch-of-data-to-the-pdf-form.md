@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:11 +0000
 modified: 2026-04-11 16:06:50 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-automatically-fill-a-batch-of-data-to-the-pdf-form/
 ---
 

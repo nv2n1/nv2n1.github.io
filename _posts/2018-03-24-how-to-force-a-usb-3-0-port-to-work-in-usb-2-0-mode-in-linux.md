@@ -4,7 +4,7 @@ date: 2018-03-24 11:48:19 +0000
 modified: 2026-04-12 16:53:24 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-force-a-usb-3-0-port-to-work-in-usb-2-0-mode-in-linux/
 ---
 

@@ -4,7 +4,7 @@ date: 2013-07-12 16:31:58 +0000
 modified: 2026-04-12 04:41:05 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /setting-up-gateway-using-iptables-and-route-on-linux/
 ---
 

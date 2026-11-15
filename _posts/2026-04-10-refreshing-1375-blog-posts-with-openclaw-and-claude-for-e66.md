@@ -4,7 +4,7 @@ date: 2026-04-10 16:12:24 +0000
 modified: 2026-04-13 16:34:38 +0000
 author: "Eric Ma"
 layout: post
-categories: [ai-engineering]
+categories: [model-fundamentals]
 canonical: /refreshing-1375-blog-posts-with-openclaw-and-claude-for-e66/
 ---
 

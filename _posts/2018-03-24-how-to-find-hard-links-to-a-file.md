@@ -4,7 +4,7 @@ date: 2018-03-24 07:43:06 +0000
 modified: 2026-04-12 16:34:27 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-find-hard-links-to-a-file/
 ---
 

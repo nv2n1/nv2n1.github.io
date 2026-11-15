@@ -4,7 +4,7 @@ date: 2012-11-30 01:27:47 +0000
 modified: 2026-04-12 04:39:58 +0000
 author: "Eric Ma"
 layout: post
-categories: [systems-architecture]
+categories: [storage-file-systems]
 canonical: /colossus-successor-to-google-file-system-gfs/
 ---
 

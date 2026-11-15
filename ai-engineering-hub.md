@@ -4,18 +4,20 @@ title: "AI Engineering Hub"
 permalink: /ai-engineering-hub/
 ---
 
+# AI Engineering Hub
+
 Build with modern AI models. Learn LLM fundamentals, CLI + AI integration, prompt engineering, and production deployment.
 
 ## Learning Topics
 
-### Model Fundamentals
+### [Model Fundamentals](/category/model-fundamentals/)
 
 LLM basics, model selection, API routing, cost optimization
 
 - [Refreshing 1,375 Blog Posts with OpenClaw and Claude for €66](/refreshing-1375-blog-posts-with-openclaw-and-claude-for-e66/)
 - [Switching from OpenClaw to Qwen on OpenRouter](/switching-openclaw-to-qwen-free-via-openrouter/)
 
-### CLI + AI Integration
+### [CLI + AI Integration](/category/cli-ai-integration/)
 
 OpenClaw, chaining CLI tools with LLMs, agentic workflows
 
@@ -32,7 +34,7 @@ Fine-tuning, multimodal models, scaling inference
 
 ## Resources
 
-- [View all AI engineering posts](/category/ai-engineering/)
+- [View all AI engineering posts](/category/cli-ai-integration/), or [model fundamentals](/category/model-fundamentals/)
 
 ## Back to Learning
 

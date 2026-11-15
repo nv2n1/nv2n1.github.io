@@ -4,7 +4,7 @@ date: 2014-03-30 08:01:01 +0000
 modified: 2026-04-11 16:40:22 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /customizing-fonts-in-gnome-3/
 ---
 

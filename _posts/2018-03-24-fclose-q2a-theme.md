@@ -4,7 +4,7 @@ date: 2018-03-24 11:41:12 +0000
 modified: 2026-04-12 16:56:40 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /fclose-q2a-theme/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:15 +0000
 modified: 2026-04-12 16:21:24 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [scripting-automation]
 canonical: /how-to-make-ctags-recognize-specific-files-with-certain-extensions-as-c-source-files/
 ---
 

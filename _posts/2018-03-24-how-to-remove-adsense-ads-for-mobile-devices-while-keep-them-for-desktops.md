@@ -4,7 +4,7 @@ date: 2018-03-24 11:44:21 +0000
 modified: 2026-04-12 16:44:44 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-system-configuration]
+categories: [packages-desktop-applications]
 canonical: /how-to-remove-adsense-ads-for-mobile-devices-while-keep-them-for-desktops/
 ---
 

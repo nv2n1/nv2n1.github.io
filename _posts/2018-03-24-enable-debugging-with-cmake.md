@@ -4,7 +4,7 @@ date: 2018-03-24 08:13:44 +0000
 modified: 2026-04-12 16:59:57 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /enable-debugging-with-cmake/
 ---
 

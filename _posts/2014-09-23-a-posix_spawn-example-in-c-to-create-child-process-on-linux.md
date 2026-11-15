@@ -4,7 +4,7 @@ date: 2014-09-23 14:35:38 +0000
 modified: 2026-04-11 16:22:17 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [programming-languages]
 canonical: /a-posix_spawn-example-in-c-to-create-child-process-on-linux/
 ---
 

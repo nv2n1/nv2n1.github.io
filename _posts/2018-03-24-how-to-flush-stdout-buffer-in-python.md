@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:16 +0000
 modified: 2026-04-12 16:33:16 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [shell-scripting]
 canonical: /how-to-flush-stdout-buffer-in-python/
 ---
 

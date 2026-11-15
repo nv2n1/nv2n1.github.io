@@ -4,7 +4,7 @@ date: 2020-02-28 11:47:02 +0000
 modified: 2026-04-11 17:11:49 +0000
 author: "David Yang"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /a-stonewall-solution-in-c/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:48:39 +0000
 modified: 2026-04-11 15:53:14 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [shell-scripting]
 canonical: /how-to-open-a-url-in-a-new-window-in-javascript/
 ---
 

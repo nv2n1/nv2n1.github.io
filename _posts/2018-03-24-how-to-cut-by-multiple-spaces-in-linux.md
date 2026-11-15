@@ -4,7 +4,7 @@ date: 2018-03-24 11:48:43 +0000
 modified: 2026-04-12 16:36:09 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [general-system-administration]
 canonical: /how-to-cut-by-multiple-spaces-in-linux/
 ---
 

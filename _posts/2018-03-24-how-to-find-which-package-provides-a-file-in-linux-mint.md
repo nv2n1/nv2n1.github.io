@@ -4,7 +4,7 @@ date: 2018-03-24 11:42:25 +0000
 modified: 2026-04-12 16:53:38 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-find-which-package-provides-a-file-in-linux-mint/
 ---
 

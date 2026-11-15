@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:13 +0000
 modified: 2026-04-12 06:45:09 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [packages-desktop-applications]
 canonical: /why-valueerror-zero-length-field-name-in-format-error-in-python-on-centos-6/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:49:04 +0000
 modified: 2026-04-11 15:52:42 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /how-to-change-the-dpi-of-tiff-images-exported-by-powerpoint/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:16 +0000
 modified: 2026-04-12 16:03:14 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-system-configuration]
+categories: [packages-desktop-applications]
 canonical: /how-to-install-musl-libc-on-fedora-21-linux/
 ---
 

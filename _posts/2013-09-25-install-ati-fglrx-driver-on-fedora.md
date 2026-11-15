@@ -4,7 +4,7 @@ date: 2013-09-25 10:32:06 +0000
 modified: 2026-04-11 16:40:42 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /install-ati-fglrx-driver-on-fedora/
 ---
 

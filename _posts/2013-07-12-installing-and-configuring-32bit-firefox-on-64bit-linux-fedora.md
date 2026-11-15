@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:22 +0000
 modified: 2026-04-12 16:34:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /installing-and-configuring-32bit-firefox-on-64bit-linux-fedora/
 ---
 

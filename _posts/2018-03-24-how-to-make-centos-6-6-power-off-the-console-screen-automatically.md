@@ -4,7 +4,7 @@ date: 2018-03-24 11:45:26 +0000
 modified: 2026-04-12 16:38:23 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-make-centos-6-6-power-off-the-console-screen-automatically/
 ---
 

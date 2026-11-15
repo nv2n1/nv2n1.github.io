@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:23 +0000
 modified: 2026-04-12 08:30:31 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /installing-the-flash-plugin-for-64-bit-firefox-in-linux-x86-64/
 ---
 

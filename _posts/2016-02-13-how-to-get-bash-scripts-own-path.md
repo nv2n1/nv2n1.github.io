@@ -4,7 +4,7 @@ date: 2016-02-13 17:49:58 +0000
 modified: 2026-04-12 16:10:34 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [shell-scripting]
 canonical: /how-to-get-bash-scripts-own-path/
 ---
 

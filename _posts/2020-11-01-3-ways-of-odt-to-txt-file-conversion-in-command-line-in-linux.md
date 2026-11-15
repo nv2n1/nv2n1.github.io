@@ -4,7 +4,7 @@ date: 2020-11-01 07:35:51 +0000
 modified: 2026-04-11 16:13:01 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [command-line-text-tools]
 canonical: /3-ways-of-odt-to-txt-file-conversion-in-command-line-in-linux/
 ---
 

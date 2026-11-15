@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:30 +0000
 modified: 2026-04-12 17:00:05 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /finding-the-number-of-files-inodes-in-a-directory-on-linux/
 ---
 

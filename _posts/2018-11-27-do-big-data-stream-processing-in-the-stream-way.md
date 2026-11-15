@@ -4,7 +4,7 @@ date: 2018-11-27 15:05:37 +0000
 modified: 2026-04-11 15:42:58 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [big-data-systems]
 canonical: /do-big-data-stream-processing-in-the-stream-way/
 ---
 

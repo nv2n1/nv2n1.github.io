@@ -4,7 +4,7 @@ date: 2021-09-19 03:59:29 +0000
 modified: 2026-04-12 16:54:08 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [virtualization-containers]
 canonical: /running-ephemeral-docker-containers-automatically-remove-a-docker-container-after-running-it/
 ---
 

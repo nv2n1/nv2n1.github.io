@@ -4,7 +4,7 @@ date: 2013-07-12 16:32:23 +0000
 modified: 2026-04-12 04:41:24 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [virtualization-containers]
 canonical: /setting-up-ubuntu-domu-on-xen-use-ubuntu-10-10-on-fedora-xen-dom0/
 ---
 

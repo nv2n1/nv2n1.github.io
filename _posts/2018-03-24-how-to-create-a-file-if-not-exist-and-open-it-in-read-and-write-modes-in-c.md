@@ -4,7 +4,7 @@ date: 2018-03-24 11:55:24 +0000
 modified: 2026-04-11 17:12:25 +0000
 author: "Q A"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /how-to-create-a-file-if-not-exist-and-open-it-in-read-and-write-modes-in-c/
 ---
 

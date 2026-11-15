@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:42 +0000
 modified: 2026-04-11 16:06:26 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /how-to-delete-multiple-items-from-kindle-library/
 ---
 

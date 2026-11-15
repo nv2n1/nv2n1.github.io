@@ -4,7 +4,7 @@ date: 2018-03-24 11:53:54 +0000
 modified: 2026-04-11 17:39:14 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [web-development]
 canonical: /how-to-get-a-substring-at-words-boundaries-in-php/
 ---
 

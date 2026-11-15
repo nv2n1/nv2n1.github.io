@@ -4,7 +4,7 @@ date: 2023-06-03 09:56:46 +0000
 modified: 2026-04-11 17:11:05 +0000
 author: "Ethan Ainsworth"
 layout: post
-categories: [languages-frameworks]
+categories: [programming-languages]
 canonical: /a-deep-dive-into-run-time-type-identification-rtti-in-c-with-detailed-examples/
 ---
 

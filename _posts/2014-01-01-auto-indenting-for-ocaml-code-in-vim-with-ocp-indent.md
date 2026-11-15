@@ -4,7 +4,7 @@ date: 2014-01-01 03:28:49 +0000
 modified: 2026-04-12 16:31:23 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [scripting-automation]
 canonical: /auto-indenting-for-ocaml-code-in-vim-with-ocp-indent/
 ---
 

@@ -4,7 +4,7 @@ date: 2016-08-07 02:00:53 +0000
 modified: 2026-04-12 16:55:14 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [networking]
 canonical: /change-linux-account-password-ssh-beginers-tutorials/
 ---
 

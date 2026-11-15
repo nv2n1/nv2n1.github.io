@@ -4,7 +4,7 @@ date: 2024-09-14 07:31:55 +0000
 modified: 2026-05-17 15:38:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [blockchain-cryptocurrency]
+categories: [cryptocurrency-trading]
 canonical: /understanding-bitcoin-transaction-structure-legacy-and-witness-versions/
 ---
 

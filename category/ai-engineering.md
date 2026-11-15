@@ -1,17 +1,6 @@
 ---
-layout: home
+layout: redirect
 title: "AI Engineering"
-category: ai-engineering
 permalink: /category/ai-engineering/
+redirect_to: /ai-engineering-hub/
 ---
-
-## "AI Engineering"
-
-{% assign posts = site.categories[page.category] | sort: date | reverse %}
-{{ posts | size }} posts.
-
-<ul class="posts">
-{% for post in posts %}
-  <li><time>{{ post.date | date: "%b %-d, %Y" }}</time> <a href="{{ post.url }}">{{ post.title | escape }}</a></li>
-{% endfor %}
-</ul>

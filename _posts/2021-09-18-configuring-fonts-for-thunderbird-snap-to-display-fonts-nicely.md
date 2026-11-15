@@ -4,7 +4,7 @@ date: 2021-09-18 14:41:17 +0000
 modified: 2026-04-12 16:05:33 +0000
 author: "David Yang"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/
 ---
 

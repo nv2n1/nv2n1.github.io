@@ -4,7 +4,7 @@ date: 2020-02-23 03:26:49 +0000
 modified: 2026-05-17 16:50:28 +0000
 author: "David Yang"
 layout: post
-categories: [security-cryptography-2]
+categories: [tls-email-security]
 canonical: /how-to-add-gmail-smtp-in-thunderbird/
 ---
 

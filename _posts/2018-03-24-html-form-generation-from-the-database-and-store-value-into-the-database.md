@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:51 +0000
 modified: 2026-04-11 16:06:19 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /html-form-generation-from-the-database-and-store-value-into-the-database/
 ---
 

@@ -4,7 +4,7 @@ date: 2017-02-14 01:56:21 +0000
 modified: 2026-04-11 16:21:17 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /linux-kernel-collect-task-stats-data/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:50:57 +0000
 modified: 2026-04-12 16:46:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [kernel]
 canonical: /how-to-change-config_hz-parameter-for-linux-kernel/
 ---
 

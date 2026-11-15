@@ -4,7 +4,7 @@ date: 2018-03-24 08:18:51 +0000
 modified: 2026-04-12 16:21:13 +0000
 author: "Q A"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /how-to-set-the-geometry-for-gnome-3-under-a-vnc-server/
 ---
 

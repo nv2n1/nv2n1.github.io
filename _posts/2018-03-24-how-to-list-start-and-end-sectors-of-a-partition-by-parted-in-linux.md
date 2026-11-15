@@ -4,7 +4,7 @@ date: 2018-03-24 11:55:04 +0000
 modified: 2026-04-12 16:05:36 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-system-configuration]
+categories: [storage-lvm]
 canonical: /how-to-list-start-and-end-sectors-of-a-partition-by-parted-in-linux/
 ---
 

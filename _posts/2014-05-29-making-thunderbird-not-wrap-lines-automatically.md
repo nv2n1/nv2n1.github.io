@@ -4,7 +4,7 @@ date: 2014-05-29 07:30:30 +0000
 modified: 2026-04-12 16:11:38 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [packages-desktop-applications]
 canonical: /making-thunderbird-not-wrap-lines-automatically/
 ---
 

@@ -4,7 +4,7 @@ date: 2018-03-24 11:54:30 +0000
 modified: 2026-04-12 16:07:14 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [users-permissions]
 canonical: /in-python-os-makedirs-with-0777-mode-does-not-give-others-write-permission/
 ---
 

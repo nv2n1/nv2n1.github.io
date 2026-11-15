@@ -4,7 +4,7 @@ date: 2018-03-31 17:28:30 +0000
 modified: 2026-04-12 16:11:22 +0000
 author: "Q A"
 layout: post
-categories: [development-best-practices]
+categories: [software-design]
 canonical: /good-mplayer-options-to-improve-video-rendering-quality/
 ---
 

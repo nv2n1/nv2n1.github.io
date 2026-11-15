@@ -4,7 +4,7 @@ date: 2018-03-24 11:48:34 +0000
 modified: 2026-04-12 16:34:01 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [files-storage]
 canonical: /how-to-set-the-replication-factor-for-one-file-when-it-is-uploaded-by-hdfs-dfs-put-command-line-in-hdfs/
 ---
 

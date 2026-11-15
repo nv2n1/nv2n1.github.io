@@ -4,7 +4,7 @@ date: 2018-03-24 08:21:39 +0000
 modified: 2026-04-11 17:40:27 +0000
 author: "Weiwei Jia"
 layout: post
-categories: [scripting-utilities]
+categories: [files-storage]
 canonical: /get-the-number-of-files-in-a-directory/
 ---
 

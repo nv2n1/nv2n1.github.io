@@ -4,7 +4,7 @@ date: 2013-07-12 16:47:41 +0000
 modified: 2026-04-11 17:41:40 +0000
 author: "Eric Ma"
 layout: post
-categories: [scripting-utilities]
+categories: [command-line-text-tools]
 canonical: /convert-string-to-int-and-reverse/
 ---
 

@@ -4,7 +4,7 @@ date: 2013-07-12 16:46:13 +0000
 modified: 2026-04-11 17:41:45 +0000
 author: "Eric Ma"
 layout: post
-categories: [system-administration-cloud]
+categories: [files-storage]
 canonical: /speeding-up-the-site-with-apache-gzip-compression/
 ---
 

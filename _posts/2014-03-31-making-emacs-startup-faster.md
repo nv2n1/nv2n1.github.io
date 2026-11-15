@@ -4,7 +4,7 @@ date: 2014-03-31 02:59:40 +0000
 modified: 2026-04-11 16:40:19 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [performance]
 canonical: /making-emacs-startup-faster/
 ---
 

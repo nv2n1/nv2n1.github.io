@@ -4,7 +4,7 @@ date: 2018-03-24 11:42:11 +0000
 modified: 2026-04-12 16:07:53 +0000
 author: "Eric Ma"
 layout: post
-categories: [linux-systems-administration]
+categories: [web-development]
 canonical: /how-to-redirect-http-to-https-in-apache-with-mod_rewrite/
 ---
 
