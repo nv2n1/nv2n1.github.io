@@ -89,6 +89,6 @@ description: "racoonctl – racoon administrative control tool"
 <dt><code>/var/run/racoon.sock </code></p>
 <dd><a href="/docs/linux/man/8-racoon/">racoon</a>(8) control socket.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/4-ipsec/">ipsec</a>(4), <a href="/docs/linux/man/8-racoon/">racoon</a>(8)</p>
+<p>ipsec(4), <a href="/docs/linux/man/8-racoon/">racoon</a>(8)</p>
 <h2>History</h2>
 <p>Once was <code>kmpstat</code> in the KAME project. It turned into but remained undocumented for a while. An Emmanuel Dreyfus Aq manu [at] NetBSD.org wrote this man page.</p>

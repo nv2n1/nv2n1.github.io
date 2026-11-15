@@ -31,7 +31,7 @@ description: "simfqt –"
 <p>&nbsp;<wbr>Path&nbsp;<wbr>(absolute or relative)&nbsp;<wbr>of the output log file. </p>
 <p> See the output of the `simfqt &#8211;help&#8217; command for default options.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-simfqt-config/">simfqt-config</a></code>(1), <code><a href="/docs/linux/man/1-simfqt-parsefarerules/">simfqt-parseFareRules</a></code>(1), <code><a href="/docs/linux/man/3-simfqt-library/">simfqt-library</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/1-simfqt-config/">simfqt-config</a></code>(1), <code>simfqt-parseFareRules</code>(1), <code><a href="/docs/linux/man/3-simfqt-library/">simfqt-library</a></code>(3)</p>
 <h2>SUPPORT</h2>
 <p> Please report any bugs to <a rel="nofollow" href="https://sourceforge.net/apps/trac/simfqt/report">https://sourceforge.net/apps/trac/simfqt/report</a></p>
 <h2>COPYRIGHT</h2>

@@ -139,7 +139,7 @@ digraph G
 }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code><a href="/docs/linux/man/3-libdict/">libdict</a></code>(3)<br />
+<p> <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code>libdict</code>(3)<br />
  S. C. North and K. P. Vo, &quot;Dictionary and Graph Libraries&#8221; 1993 Winter USENIX Conference Proceedings, pp. 1-11. </p>
 <h2>AUTHOR</h2>
 <p> Stephen North (north [at] ulysses.att.com), AT&amp;T Bell Laboratories. </p>

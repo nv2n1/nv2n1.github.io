@@ -20,7 +20,7 @@ description: "flopen – reliably open and lock a file"
 <h2>RETURN VALUES</h2>
 <p> If successful, Fn flopen returns a valid file descriptor. Otherwise, it returns -1, and sets <i>errno</i> as described in <a href="/docs/linux/man/2-flock/">flock</a>(2) and <a href="/docs/linux/man/2-open/">open</a>(2).</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/2-errno/">errno</a>(2), <a href="/docs/linux/man/2-flock/">flock</a>(2), <a href="/docs/linux/man/2-open/">open</a>(2)</p>
+<p> errno(2), <a href="/docs/linux/man/2-flock/">flock</a>(2), <a href="/docs/linux/man/2-open/">open</a>(2)</p>
 <h2>AUTHORS</h2>
 <p> An -nosplit The function and this manual page were written by An Dag-Erling Sm&oslash;rgrav Aq des [at] FreeBSD.org . </p>
 <h2>Index</h2>

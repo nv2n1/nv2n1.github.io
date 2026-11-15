@@ -80,7 +80,7 @@ description: "nfsstat – list NFS statistics"
 <dt><code>/proc/mounts</code></p>
 <dd><code>procfs</code>-based interface to the mounted filesystems.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rpc-nfsd/">rpc.nfsd</a></code>(8). <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5).</p>
+<p><code>rpc.nfsd</code>(8). <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5).</p>
 <h2>Bugs</h2>
 <p>The default output has been changed. To get the old default output you must run <code>nfsstat &#8211;auto -2</code>. </p>
 <p> The function of the <code>-v</code> and <code>-a</code> options have changed. The <code>-a</code> option is now reserved for future use. The <code>-v</code> does what the <code>-a</code> option used to do, and the new <code>-[234]</code> options replace the <code>-v</code> option. </p>

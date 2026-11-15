@@ -24,6 +24,6 @@ description: "libipmimonitoring – a library for IPMI system event and sensor m
  Copyright (C) 2006-2007 The Regents of the University of California. </p>
 <p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/5-freeipmi_interpret_sel-conf/">freeipmi_interpret_sel.conf</a>(5), <a href="/docs/linux/man/5-freeipmi_interpret_sensors-conf/">freeipmi_interpret_sensors.conf</a>(5) </p>
+<p> <a href="/docs/linux/man/5-freeipmi_interpret_sel-conf/">freeipmi_interpret_sel.conf</a>(5), freeipmi_interpret_sensors.conf(5) </p>
 <p> <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>
 <h2>Index</h2>

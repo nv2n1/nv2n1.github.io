@@ -33,4 +33,4 @@ description: "XmVaCreateColumn, XmVaCreateManagedColumn — A Column widget conv
 <h2>Return</h2>
 <p>Returns the Column widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmcolumn/">XmColumn</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatecolumn/">XmCreateColumn</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmcolumn/">XmColumn</a></code>(3), <code>XmCreateColumn</code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>

@@ -25,7 +25,7 @@ int ibv_close_device(struct ibv_context *context);
 <p> <code>ibv_close_device()</code> does not release all the resources allocated using context <i>context</i>. To avoid resource leaks, the user should release all associated resources before closing a context. </p>
 <p> Setting the environment variable **RDMAV_ALLOW_DISASSOC_DESTROY** tells the library to relate an EIO from destroy commands as a success as the kernel resources were already released. This comes to prevent memory leakage in the user space area upon device disassociation. Applications using this flag cannot call ibv_get_cq_event or ibv_get_async_event concurrently with any call to an object destruction function. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_get_device_list/">ibv_get_device_list</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_device/">ibv_query_device</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_port/">ibv_query_port</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_gid/">ibv_query_gid</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_pkey/">ibv_query_pkey</a></code>(3)</p>
+<p> <code>ibv_get_device_list</code>(3), <code>ibv_query_device</code>(3), <code>ibv_query_port</code>(3), <code>ibv_query_gid</code>(3), <code>ibv_query_pkey</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

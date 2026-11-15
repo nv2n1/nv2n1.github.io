@@ -42,7 +42,7 @@ description: "grub-syslinux2cfg – transform syslinux config into grub.cfg"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-grub [at] gnu.org&gt;.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-grub-menulst2cfg/">grub-menulst2cfg</a></code>(8) </p>
+<p> <code>grub-menulst2cfg</code>(8) </p>
 <p> The full documentation for <code>grub-syslinux2cfg</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-syslinux2cfg</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>

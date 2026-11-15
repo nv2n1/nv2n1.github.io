@@ -12,7 +12,7 @@ description: "dmail – procmail Mail Delivery Module"
 <h2>SYNOPSIS</h2>
 <p> <code>dmail</code> <i>[-D] [-f from_name] [-s] [-k keyword_list] [user][+folder]</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>dmail</i> delivers mail to a user&#8217;s INBOX or a designated folder. <i>dmail</i> may be configured as a drop-in replacement for <i><a href="/docs/linux/man/1-binmail/">binmail</a></i>(1), <i><a href="/docs/linux/man/1-mail-local/">mail.local</a></i>(1) for use with a mail delivery filter such as <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1)<i>.</i> </p>
+<p> <i>dmail</i> delivers mail to a user&#8217;s INBOX or a designated folder. <i>dmail</i> may be configured as a drop-in replacement for <i>binmail</i>(1), <i>mail.local</i>(1) for use with a mail delivery filter such as <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1)<i>.</i> </p>
 <p> Because of security considerations (see below) <i>dmail</i> is not intended to be used for direct delivery by the mailer daemon; <i><a href="/docs/linux/man/1-tmail/">tmail</a></i>(1) is the preferred tool for this purpose. If <i>dmail</i> is used for mailer daemon delivery, the mailer daemon must invoke <i>dmail</i> with the <i>dmail</i> process&#8217; user id set to the recipient&#8217;s user id. </p>
 <p> When <i>dmail</i> exits, it returns exit status values to enable <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1) to determine whether a message was delivered successfully or had a temporary (requeue for later delivery) or permanent (return to sender) failure. </p>
 <p> If the <i>user</i> name is present, it must be the same as the logged-in user name. </p>
@@ -27,11 +27,11 @@ description: "dmail – procmail Mail Delivery Module"
 <h2>RESTRICTIONS</h2>
 <p> Absolute pathnames and <i>~user</i> specifications are not permitted in <i>+folder</i> extensions.</p>
 <h2>SECURITY CONSIDERATIONS</h2>
-<p> Unlike <i>tmail</i> you can use <i>dmail</i> to deliver to IMAP4 namespace names via <i>+folder</i> extensions. This means that it is possible to deliver to <i><a href="/docs/linux/man/1-mh/">mh</a></i>(1) format mailboxes. </p>
-<p> However, this can also include such namespaces as #shared, #public, and #ftp. In most cases, it is undesirable to allow anybody sending mail to the user to deliver to these namespaces. Consequently, there needs to be a rule in place in the configuration of either <i><a href="/docs/linux/man/8-sendmail/">sendmail</a></i>(8) or <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1) to prevent such abuse.</p>
+<p> Unlike <i>tmail</i> you can use <i>dmail</i> to deliver to IMAP4 namespace names via <i>+folder</i> extensions. This means that it is possible to deliver to <i>mh</i>(1) format mailboxes. </p>
+<p> However, this can also include such namespaces as #shared, #public, and #ftp. In most cases, it is undesirable to allow anybody sending mail to the user to deliver to these namespaces. Consequently, there needs to be a rule in place in the configuration of either <i>sendmail</i>(8) or <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1) to prevent such abuse.</p>
 <h2>AUTHOR</h2>
 <p> Mark Crispin, MRC [at] CAC.Washington.EDU</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-binmail/">binmail</a>(1)<br />
+<p> binmail(1)<br />
  <a href="/docs/linux/man/1-procmail/">procmail</a>(1) </p>
 <h2>Index</h2>

@@ -15,7 +15,7 @@ description: "clog2, clog2f, clog2l – base-2 logarithm of a complex number"
  <code>float complex clog2f(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex clog2l(long double complex </code><i>z</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
-<p> The call <i>clog2(z)</i> is equivalent to <i>clog(z)/<a href="/docs/linux/man/2-log/">log</a>(2)</i>. </p>
+<p> The call <i>clog2(z)</i> is equivalent to <i>clog(z)/log(2)</i>. </p>
 <p> The other functions perform the same task for <i>float</i> and <i>long double</i>. </p>
 <p> Note that <i>z</i> close to zero will cause an overflow.</p>
 <h2>CONFORMING TO</h2>

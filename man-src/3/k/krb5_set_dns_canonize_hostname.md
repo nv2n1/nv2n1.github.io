@@ -40,5 +40,5 @@ description: "krb5_add_et_list krb5_add_extra_addresses krb5_add_ignore_addresse
 <p> Fn krb5_get_use_admin_kdc gets if all KDC requests should go admin KDC. </p>
 <p> Fn krb5_get_max_time_skew and Fn krb5_set_max_time_skew get and sets the maximum allowed time skew between client and server.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/2-errno/">errno</a>(2), <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_config3, krb5_context3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
+<p> errno(2), <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_config3, krb5_context3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
 <h2>Index</h2>

@@ -101,7 +101,7 @@ description: "cgebrd.f –"
 <pre> The matrices Q and P are represented as products of elementary
  reflectors:
  If m &gt;= n,
- Q = H(1) H(2) . . . <a href="//www.systutorials.com/docs/linux/man/n-H/">H</a>(n) and P = <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) . . . G(n-1)
+ Q = H(1) H(2) . . . H(n) and P = G(1) G(2) . . . G(n-1)
  Each H(i) and G(i) has the form:
  H(i) = I - tauq * v * v**H and G(i) = I - taup * u * u**H
  where tauq and taup are complex scalars, and v and u are complex
@@ -109,7 +109,7 @@ description: "cgebrd.f –"
  A(i+1:m,i); u(1:i) = 0, u(i+1) = 1, and u(i+2:n) is stored on exit in
  A(i,i+2:n); tauq is stored in TAUQ(i) and taup in TAUP(i).
  If m &lt; n,
- Q = H(1) H(2) . . . H(m-1) and P = <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) . . . G(m)
+ Q = H(1) H(2) . . . H(m-1) and P = G(1) G(2) . . . G(m)
  Each H(i) and G(i) has the form:
  H(i) = I - tauq * v * v**H and G(i) = I - taup * u * u**H
  where tauq and taup are complex scalars, and v and u are complex

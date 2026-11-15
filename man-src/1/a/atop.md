@@ -643,7 +643,7 @@ description: "atop – Advanced System & Process Monitor"
 <dt><code>/var/run/netatop.log</code></p>
 <dd> File that contains the netpertask structs containing the network counters of exited processes. These structs are written by the <i>netatopd</i> daemon and read by <i>atop</i> after reading the standard process accounting records.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-atopsar/">atopsar</a>(1),</code> <code><a href="/docs/linux/man/5-atoprc/">atoprc</a>(5),</code> <code><a href="/docs/linux/man/8-atopacctd/">atopacctd</a>(8),</code> <code><a href="/docs/linux/man/4-netatop/">netatop</a>(4),</code> <code><a href="/docs/linux/man/8-netatopd/">netatopd</a>(8),</code> <code><a href="/docs/linux/man/8-logrotate/">logrotate</a>(8)</code><br />
+<p> <code><a href="/docs/linux/man/1-atopsar/">atopsar</a>(1),</code> <code>atoprc(5),</code> <code>atopacctd(8),</code> <code>netatop(4),</code> <code>netatopd(8),</code> <code><a href="/docs/linux/man/8-logrotate/">logrotate</a>(8)</code><br />
  <code><a rel="nofollow" href="http://www.atoptool.nl">http://www.atoptool.nl</a></code></p>
 <h2>AUTHOR</h2>
 <p> Gerlof Langeveld (gerlof.langeveld [at] atoptool.nl)<br />

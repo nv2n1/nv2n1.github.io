@@ -56,7 +56,7 @@ description: "sensord – Sensor information logging daemon."
 <h2>Logging</h2>
 <p>All messages from this daemon are logged to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) under the program name `sensord&#8217; and facility <i>daemon</i>, or whatever is specified on the command line. </p>
 <p> Regular sensor readings are logged at the level <i>info</i>. Alarms are logged at the level <i>alert</i>. Inconsequential status messages are logged at the minimum level, <i>debug</i>, when debugging is enabled. </p>
-<p> You can use an appropriate `/etc/syslog.conf&#8217; file to direct these messages in a useful manner. See <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5) for full details. Assuming you set the logging facility to local4, the following is a sample configuration:</p>
+<p> You can use an appropriate `/etc/syslog.conf&#8217; file to direct these messages in a useful manner. See <code>syslog.conf</code>(5) for full details. Assuming you set the logging facility to local4, the following is a sample configuration:</p>
 <dl>
 <dd>
 <pre># Sample syslog.conf entries
@@ -77,7 +77,7 @@ local4.alert *</pre>
  endscript
 }</pre>
 </dl>
-<p> Note, of course, that you want to restart <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) and not <code><a href="/docs/linux/man/8-sensord/">sensord</a></code>(8)</p>
+<p> Note, of course, that you want to restart <code>syslogd</code>(8) and not <code><a href="/docs/linux/man/8-sensord/">sensord</a></code>(8)</p>
 <h2>Alarms</h2>
 <p>Alarms generally indicate a critical condition; for example, a fan failure or an unacceptable temperature or voltage. However, some sensor chips do not support alarms, while others are incorrectly configured and may signal alarms incorrectly. </p>
 <p> Note that some drivers may lack support for alarm reporting even though the chips they support do have alarms. As of Linux 2.6.23, many drivers still don&#8217;t report alarms in a format suitable for libsensors 3.</p>
@@ -116,7 +116,7 @@ chmod a+rx /usr/lib/cgi-bin/sensord.cgi</pre>
 <p> Here, we create a CGI script that will display sensor readings from the database. You must specify the location of the round-robin database, the location of the directory where the images should be stored, and whether you want the load average displayed. The <code>&#8211;rrd-cgi</code> command-line parameter causes <code><a href="/docs/linux/man/8-sensord/">sensord</a></code>(8) to display a suitable CGI script on <code>stdout</code> and then to exit. You will need to write this script to the CGI bin directory of your Web server, and edit the script if the image directory you chose is not the `/sensord/&#8217; directory of your Web server. </p>
 <p> Finally, you should be able to view your sensor readings from the URL `<a rel="nofollow" href="http://localhost/cgi-bin/sensord.cgi'.">http://localhost/cgi-bin/sensord.cgi&#8217;.</a></p>
 <h2>Modules</h2>
-<p>It is expected that all required sensor modules are loaded prior to this daemon being started. This can either be achieved with a system specific module loading scheme (e.g., listing the required modules in the file `/etc/modules&#8217; under Debian) or with explicit <code><a href="/docs/linux/man/1-modprobe/">modprobe</a></code>(1) commands in an init script before loading the daemon. </p>
+<p>It is expected that all required sensor modules are loaded prior to this daemon being started. This can either be achieved with a system specific module loading scheme (e.g., listing the required modules in the file `/etc/modules&#8217; under Debian) or with explicit <code>modprobe</code>(1) commands in an init script before loading the daemon. </p>
 <p> For example, a `sensord&#8217; initialization script might contain (among others) the following commands:</p>
 <dl>
 <dd>
@@ -132,7 +132,7 @@ daemon sensord</pre>
 </dl>
 <p> Ignore the platform-specific shell functions; the general idea should be fairly clear.</p>
 <h2>Errors</h2>
-<p>Errors encountered by this daemon are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) after which the daemon will exit.</p>
+<p>Errors encountered by this daemon are logged to <code>syslogd</code>(8) after which the daemon will exit.</p>
 <h2>Bugs</h2>
 <p>Round-robin database support doesn&#8217;t cope with multiple sensor chips having duplicate sensor labels.</p>
 <h2>Files</h2>
@@ -142,7 +142,7 @@ daemon sensord</pre>
 <dd>The system-wide <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. See <code><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a></code>(5) for further details.</dl>
 <p> <i>/etc/syslog.conf</i></p>
 <dl>
-<dd>The system-wide <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) / <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) configuration file. See <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5) for further details.</dl>
+<dd>The system-wide <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) / <code>syslogd</code>(8) configuration file. See <code>syslog.conf</code>(5) for further details.</dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5)</p>
 <h2>Authors</h2>

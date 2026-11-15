@@ -320,7 +320,7 @@ long clone3(struct clone_args *cl_args, size_t size);
 <dt><b>CLONE_UNTRACED</b> (since Linux 2.5.46)
 <dd> If <b>CLONE_UNTRACED</b> is specified, then a tracing process cannot force <b>CLONE_PTRACE</b> on this child process.
 <dt><b>CLONE_VFORK</b> (since Linux 2.2)
-<dd> If <b>CLONE_VFORK</b> is set, the execution of the calling process is suspended until the child releases its virtual memory resources via a call to <b><a HREF="/docs/linux/man/2-execve/">execve</a></b>(2) or <b><a HREF="/docs/linux/man/2-_exit/">_exit</a></b>(2) (as with <b><a HREF="/docs/linux/man/2-vfork/">vfork</a></b>(2)).
+<dd> If <b>CLONE_VFORK</b> is set, the execution of the calling process is suspended until the child releases its virtual memory resources via a call to <b><a HREF="/docs/linux/man/2-execve/">execve</a></b>(2) or <b>_exit</b>(2) (as with <b><a HREF="/docs/linux/man/2-vfork/">vfork</a></b>(2)).
 <dt>
 <dd> If <b>CLONE_VFORK</b> is not set, then both the calling process and the child are schedulable after the call, and an application should not rely on execution occurring in any particular order.
 <dt><b>CLONE_VM</b> (since Linux 2.0)
@@ -434,7 +434,7 @@ long clone3(struct clone_args *cl_args, size_t size);
 
  The <b><a HREF="/docs/linux/man/2-kcmp/">kcmp</a></b>(2) system call can be used to test whether two processes share various resources such as a file descriptor table, System V semaphore undo operations, or a virtual address space. 
 
- Handlers registered using <b><a HREF="/docs/linux/man/3-pthread_atfork/">pthread_atfork</a></b>(3) are not executed during a clone call. 
+ Handlers registered using <b>pthread_atfork</b>(3) are not executed during a clone call. 
 
  In the Linux 2.4.x series, <b>CLONE_THREAD</b> generally does not make the parent of the new thread the same as the parent of the calling process. However, for kernel versions 2.4.7 to 2.4.18 the <b>CLONE_THREAD</b> flag implied the <b>CLONE_PARENT</b> flag (as in Linux 2.6.0 and later). 
 

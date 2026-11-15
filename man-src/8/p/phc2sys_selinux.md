@@ -97,4 +97,4 @@ description: "phc2sys_selinux – Security Enhanced Linux Policy for the phc2sys
 <h2>Author</h2>
 <p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-phc2sys/">phc2sys</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), phc2sys(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>

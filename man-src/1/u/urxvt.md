@@ -211,7 +211,7 @@ while (&lt;$slave&gt;) {<br />
   5. $XENVIRONMENT file OR $HOME/.Xdefaults-&lt;nodename&gt;
   6. resources specified via -xrm on the commandline
 </pre>
-<p> Note that when reading X resources, <code>urxvt</code> recognizes two class names: <code>Rxvt</code> and <code>URxvt</code>. The class name <code>Rxvt</code> allows resources common to both <code>urxvt</code> and the original <i>rxvt</i> to be easily configured, while the class name <code>URxvt</code> allows resources unique to <code>urxvt</code>, to be shared between different <code>urxvt</code> configurations. If no resources are specified, suitable defaults will be used. Command-line arguments can be used to override resource settings. The following resources are supported (you might want to check the urxvt<i><a href="/docs/linux/man/3-perl/">perl</a></i>(3) manpage for additional settings by perl extensions not documented here):</p>
+<p> Note that when reading X resources, <code>urxvt</code> recognizes two class names: <code>Rxvt</code> and <code>URxvt</code>. The class name <code>Rxvt</code> allows resources common to both <code>urxvt</code> and the original <i>rxvt</i> to be easily configured, while the class name <code>URxvt</code> allows resources unique to <code>urxvt</code>, to be shared between different <code>urxvt</code> configurations. If no resources are specified, suitable defaults will be used. Command-line arguments can be used to override resource settings. The following resources are supported (you might want to check the urxvt<i>perl</i>(3) manpage for additional settings by perl extensions not documented here):</p>
 <dl>
 <dt><code>depth:</code> <i>bitdepth</i></p>
 <dd> Compile <i>xft</i>: Attempt to find a visual with the given bit depth; option <code>-depth</code>.</p>
@@ -369,7 +369,7 @@ while (&lt;$slave&gt;) {<br />
 <dd> The string to send when the delete key (not the keypad delete key) is pressed. If unset it will send the sequence traditionally associated with the <code>Execute</code> key.</p>
 <dt><code>cutchars:</code> <i>string</i></p>
 <dd> The characters used as delimiters for double-click word selection (whitespace delimiting is added automatically if resource is given). </p>
-<p> When the perl selection extension is in use (the default if compiled in, see the urxvt<i><a href="/docs/linux/man/3-perl/">perl</a></i>(3) manpage), a suitable regex using these characters will be created (if the resource exists, otherwise, no regex will be created). In this mode, characters outside <font SIZE="-1">ISO-8859-1</font> can be used. </p>
+<p> When the perl selection extension is in use (the default if compiled in, see the urxvt<i>perl</i>(3) manpage), a suitable regex using these characters will be created (if the resource exists, otherwise, no regex will be created). In this mode, characters outside <font SIZE="-1">ISO-8859-1</font> can be used. </p>
 <p> When the selection extension is not used, only <font SIZE="-1">ISO-8859-1</font> characters can be used. If not specified, the built-in default is used: </p>
 <p> <font SIZE="-1"><code>BACKSLASH</code></font><code> `&quot;&#8217;&amp;()*,;&lt;=&gt;?@[]^{|}</code></p>
 <dt><code>preeditType:</code> <i>style</i></p>

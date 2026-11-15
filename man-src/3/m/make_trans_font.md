@@ -21,5 +21,5 @@ set_alpha_blender();
 textprintf_centre_ex(screen, f, 320, 240, -1, -1, "Anti-aliased Font!");
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-is_trans_font/">is_trans_font</a></code>(3), <code><a href="/docs/linux/man/3-set_alpha_blender/">set_alpha_blender</a></code>(3), <code><a href="/docs/linux/man/3-load_font/">load_font</a></code>(3), <code><a href="/docs/linux/man/3-draw_trans_sprite/">draw_trans_sprite</a></code>(3) </p>
+<p> <code>is_trans_font</code>(3), <code><a href="/docs/linux/man/3-set_alpha_blender/">set_alpha_blender</a></code>(3), <code><a href="/docs/linux/man/3-load_font/">load_font</a></code>(3), <code><a href="/docs/linux/man/3-draw_trans_sprite/">draw_trans_sprite</a></code>(3) </p>
 <h2>Index</h2>

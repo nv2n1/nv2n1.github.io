@@ -120,7 +120,7 @@ description: "PDL::Scilab – A guide for Scilab users."
 <pre> Scilab: --&gt; linspace(2,10,5)
  ans = 2. 4. 6. 8. 10.
  
- PerlDL: pdl&gt; p <a href="//www.systutorials.com/docs/linux/man/5-zeroes/">zeroes</a>(5)-&gt;xlinvals(2,10)
+ PerlDL: pdl&gt; p zeroes(5)-&gt;xlinvals(2,10)
  [2 4 6 8 10]</pre>
 <p><code>Explanation</code>: Start with a 1-dimensional piddle of 5 elements and give it equally spaced values from 2 to 10. </p>
 <p> Scilab has a single function call for this. On the other hand, <font SIZE="-1">PDL</font>&#8216;s method is more flexible: </p>
@@ -300,7 +300,7 @@ description: "PDL::Scilab – A guide for Scilab users."
 <p>It is important to note the difference between a <i>Piddle</i> and a Perl array. Perl has a general-purpose array object that can hold any type of element: </p>
 <pre> @perl_array = 1..10;
  @perl_array = ( 12, &quot;Hello&quot; );
- @perl_array = ( 1, 2, 3, \@another_perl_array, <a href="//www.systutorials.com/docs/linux/man/5-sequence/">sequence</a>(5) );</pre>
+ @perl_array = ( 1, 2, 3, \@another_perl_array, sequence(5) );</pre>
 <p>Perl arrays allow you to create powerful data structures (see <code>Data structures</code> below), <code>but they are not designed for numerical work</code>. For that, use <i>piddles</i>: </p>
 <pre> $pdl = pdl [ 1, 2, 3, 4 ];
  $pdl = sequence 10_000_000; 

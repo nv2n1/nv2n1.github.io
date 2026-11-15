@@ -52,5 +52,5 @@ errors.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XChangeDeviceKeyboardControl/">XChangeDeviceKeyboardControl</a>(3), <a HREF="//www.systutorials.com/docs/linux/man/3-XChangeDeviceKeyMapping/">XChangeDeviceKeyMapping</a>(3),
-<a HREF="//www.systutorials.com/docs/linux/man/3-XChangeDeviceModifierMapping/">XChangeDeviceModifierMapping</a>(3)</pre></dl>
+ set of alternatives can generate this error.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeDeviceKeyboardControl(3), XChangeDeviceKeyMapping(3),
+XChangeDeviceModifierMapping(3)</pre></dl>

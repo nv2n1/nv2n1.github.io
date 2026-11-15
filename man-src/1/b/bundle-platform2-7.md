@@ -12,7 +12,7 @@ description: "bundle-platform – Displays platform compatibility information"
 <p><code>bundle platform</code> [&#8211;ruby]</p>
 <h2>Description</h2>
 <p><code>platform</code> will display information from your Gemfile, Gemfile.lock, and Ruby VM about your platform. </p>
-<p> For instance, using this <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5):</p>
+<p> For instance, using this Gemfile(5):</p>
 <dl>
 <dd>
 <pre>source &quot;<a rel="nofollow" href="https://rubygems.org">https://rubygems.org</a>&quot;
@@ -29,9 +29,9 @@ Your Gemfile specifies a Ruby version requirement:
 * ruby 1.9.3
 Your current platform satisfies the Ruby version requirement.</pre>
 <dd></dl>
-<p> <code>platform</code> will list all the platforms in your <code>Gemfile.lock</code> as well as the <code>ruby</code> directive if applicable from your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5). It will also let you know if the <code>ruby</code> directive requirement has been met. If <code>ruby</code> directive doesn&#8217;t match the running Ruby VM, it will tell you what part does not.</p>
+<p> <code>platform</code> will list all the platforms in your <code>Gemfile.lock</code> as well as the <code>ruby</code> directive if applicable from your Gemfile(5). It will also let you know if the <code>ruby</code> directive requirement has been met. If <code>ruby</code> directive doesn&#8217;t match the running Ruby VM, it will tell you what part does not.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>&#8211;ruby</code></p>
-<dd>It will display the ruby directive information, so you don&#8217;t have to parse it from the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5). </p>
+<dd>It will display the ruby directive information, so you don&#8217;t have to parse it from the Gemfile(5). </p>
 </dl>

@@ -65,7 +65,7 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <dt><code>-S .suf &#8211;suffix .suf</code></p>
 <dd> When compressing, use suffix .suf instead of .gz. Any non-empty suffix can be given, but suffixes other than .z and .gz should be avoided to avoid confusion when files are transferred to other systems. </p>
 <p> When decompressing, add .suf to the beginning of the list of suffixes to try, when deriving an output file name from an input file name. </p>
-<p> <i><a href="/docs/linux/man/1-pack/">pack</a></i>(1).</p>
+<p> <i>pack</i>(1).</p>
 <dt><code>-t &#8211;test</code></p>
 <dd> Test. Check the compressed file integrity.</p>
 <dt><code>-v &#8211;verbose</code></p>
@@ -98,7 +98,7 @@ for csh:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>setenv GZIP&nbsp;<wbr>&quot;-8v &#8211;
 for MSDOS: set GZIP=-8v &#8211;name </p>
 <p> On Vax/VMS, the name of the environment variable is GZIP_OPT, to avoid a conflict with the symbol set for invocation of the program.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-znew/">znew</a>(1), <a href="/docs/linux/man/1-zcmp/">zcmp</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1), <a href="/docs/linux/man/1-zip/">zip</a>(1), <a href="/docs/linux/man/1-unzip/">unzip</a>(1), <a href="/docs/linux/man/1-compress/">compress</a>(1), <a href="/docs/linux/man/1-pack/">pack</a>(1), <a href="/docs/linux/man/1-compact/">compact</a>(1) </p>
+<p> <a href="/docs/linux/man/1-znew/">znew</a>(1), <a href="/docs/linux/man/1-zcmp/">zcmp</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1), <a href="/docs/linux/man/1-zip/">zip</a>(1), <a href="/docs/linux/man/1-unzip/">unzip</a>(1), <a href="/docs/linux/man/1-compress/">compress</a>(1), pack(1), compact(1) </p>
 <p> The <i>gzip</i> file format is specified in P. Deutsch, <font SIZE="-1">GZIP</font> file format specification version 4.3, <code>&lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1952.txt">ftp://ftp.isi.edu/in-notes/rfc1952.txt</a>&gt;</code>, Internet RFC 1952 (May 1996). The <i>zip</i> deflation format is specified in P. Deutsch, <font SIZE="-1">DEFLATE</font> Compressed Data Format Specification version 1.3, <code>&lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1951.txt">ftp://ftp.isi.edu/in-notes/rfc1951.txt</a>&gt;</code>, Internet RFC 1951 (May 1996).</p>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is normally 0; if an error occurs, exit status is 1. If a warning occurs, exit status is 2.</p>

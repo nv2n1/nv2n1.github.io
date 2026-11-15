@@ -47,7 +47,7 @@ description: "and – auto nice daemon"
 <dd>Contains logging and status information for debugging purposes. Used in test mode only. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-and-conf/">and.conf</a></code>(5), <code><a href="/docs/linux/man/5-and-priorities/">and.priorities</a></code>(5), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="/docs/linux/man/8-renice/">renice</a></code>(8) </p>
+<p><code>and.conf</code>(5), <code>and.priorities</code>(5), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code>renice</code>(8) </p>
 <h2>Internet</h2>
 <p><code><a rel="nofollow" href="http://and.sourceforge.net/">http://and.sourceforge.net/</a></code></p>
 <h2>Author</h2>

@@ -42,7 +42,7 @@ SGTSV computes the solution to system of linear equations A * X = B for GT matri
  A.
  On exit, DL is overwritten by the (n-2) elements of the
  second super-diagonal of the upper triangular matrix U from
- the LU factorization of A, in <a href="//www.systutorials.com/docs/linux/man/1-DL/">DL</a>(1), ..., DL(n-2).</pre>
+ the LU factorization of A, in DL(1), ..., DL(n-2).</pre>
 <p><i>D</i> </p>
 <pre> D is REAL array, dimension (N)
  On entry, D must contain the diagonal elements of A.

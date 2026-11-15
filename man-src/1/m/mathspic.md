@@ -19,7 +19,7 @@ description: "mathsPIC"
 <p> Commands which can be used in the mathsPIC script file fall into four main groups (a) mathsPIC macro commands (prefixed with %def), (b) regular mathsPIC commands (do not have a backslash), (c) regular PiCTeX commands (all have a backslash), and (d) regular TeX and LaTeX commands (all have a backslash). </p>
 <p> The following mathematics functions can used (note that decimal fractions having an absolute value less than 1 must have a leading zero). Note also that all the trignometric functions require their argument in radians. </p>
 <p> Trigonometric: sin(), cos(), tan(), asin(), acos(), atan() </p>
-<p> Remainder: rem(); eg var r=12 <a href="/docs/linux/man/5-rem/">rem</a>(5) </p>
+<p> Remainder: rem(); eg var r=12 rem(5) </p>
 <p> Integer: int(); eg var r= int(3.87) &#8211;&gt; 3 </p>
 <p> Sign (returns -1, 0, +1): sgn(); eg var s=sgn(-3.27) &#8211;&gt; -1 </p>
 <p> Square root: sqrt(); eg var s = sqrt(14) </p>
@@ -115,7 +115,7 @@ ormalcolor&nbsp;<wbr>&nbsp;command as a delimiter within the&nbsp;eginpicture&#
 <p>&nbsp;&#8212;&#8211;syntax:<br />
 &nbsp;DrawAngleArc{angle(), radius(), external, clockwise} </p>
 <p>&nbsp;&#8212;&#8211;example:<br />
-&nbsp;DrawAngleArc{angle(ABC),&nbsp;<a href="/docs/linux/man/3-radius/">radius</a>(3), external, clockwise}<br />
+&nbsp;DrawAngleArc{angle(ABC),&nbsp;radius(3), external, clockwise}<br />
 &nbsp;var r=3<br />
 &nbsp;DrawAngleArc{angle(ABC), radius(r), external, clockwise} </p>
 <p> ============================== </p>
@@ -124,7 +124,7 @@ ormalcolor&nbsp;<wbr>&nbsp;command as a delimiter within the&nbsp;eginpicture&#
 <p>&nbsp;&#8212;&#8211;syntax:<br />
 &nbsp;DrawAngleArrow{angle(), radius(), external, clockwise} </p>
 <p>&nbsp;&#8212;&#8211;example:<br />
-&nbsp;DrawAngleArrow{angle(ABC),&nbsp;<a href="/docs/linux/man/3-radius/">radius</a>(3), external, clockwise}<br />
+&nbsp;DrawAngleArrow{angle(ABC),&nbsp;radius(3), external, clockwise}<br />
 &nbsp;var r=3<br />
 &nbsp;DrawAngleArrow{angle(ABC), radius(r), external, clockwise} </p>
 <p> ============================== </p>
@@ -295,9 +295,9 @@ ormalcolor&nbsp;<wbr>&nbsp;command as a delimiter within the&nbsp;eginpicture&#
 <p>&nbsp;&#8212;&#8211;examples:<br />
 &nbsp;point(A){5,5}<br />
 &nbsp;point(B2){22,46}[symbol=$\odot$]<br />
-&nbsp;point(B2){22,46}[symbol=<a href="/docs/linux/man/2-circle/">circle</a>(2),radius=5]<br />
+&nbsp;point(B2){22,46}[symbol=circle(2),radius=5]<br />
 &nbsp;var r=3<br />
-&nbsp;point(B2){22,46}[symbol=<a href="/docs/linux/man/3-square/">square</a>(3),radius=r]<br />
+&nbsp;point(B2){22,46}[symbol=square(3),radius=r]<br />
 &nbsp;point(B123){22,46}[radius=5]<br />
 &nbsp;point(D2){B2, shift(5,5)}<br />
 &nbsp;var s&nbsp;=&nbsp;3<br />

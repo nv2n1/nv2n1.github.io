@@ -39,7 +39,7 @@ description: "crond – daemon to execute scheduled commands"
 <dt><code>-i</code></p>
 <dd>Disables inotify support.</p>
 <dt><code>-m</code></p>
-<dd>This option allows you to specify a shell command to use for sending <i>Cron</i> mail output instead of using <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8) This command must accept a fully formatted mail message (with headers) on standard input and send it as a mail message to the recipients specified in the mail headers. Specifying the string <i>off</i> (i.e., crond -m off) will disable the sending of mail.</p>
+<dd>This option allows you to specify a shell command to use for sending <i>Cron</i> mail output instead of using <code>sendmail</code>(8) This command must accept a fully formatted mail message (with headers) on standard input and send it as a mail message to the recipients specified in the mail headers. Specifying the string <i>off</i> (i.e., crond -m off) will disable the sending of mail.</p>
 <dt><code>-n</code></p>
 <dd>Tells the daemon to run in the foreground. This can be useful when starting it out of init. With this option is needed to change pam setting. <i>/etc/pam.d/crond</i> must not enable <i>pam_loginuid.so</i> module.</p>
 <dt><code>-p</code></p>
@@ -49,7 +49,7 @@ description: "crond – daemon to execute scheduled commands"
 <dt><code>-c</code></p>
 <dd>This option enables clustering support, as described below.</p>
 <dt><code>-s</code></p>
-<dd>This option will direct <i>Cron</i> to send the job output to the system log using <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3). This is useful if your system does not have <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), installed or if mail is disabled.</p>
+<dd>This option will direct <i>Cron</i> to send the job output to the system log using <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3). This is useful if your system does not have <code>sendmail</code>(8), installed or if mail is disabled.</p>
 <dt><code>-x</code></p>
 <dd>This option allows you to set debug flags.</dl>
 <h2>Signals</h2>

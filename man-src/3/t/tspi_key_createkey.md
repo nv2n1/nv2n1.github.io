@@ -36,4 +36,4 @@ description: "Tspi_Key_CreateKey – create a key pair within the TPM, wrapping 
 <h2>Conforming To</h2>
 <p><code>Tspi_Key_CreateKey</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_key_wrapkey/">Tspi_Key_WrapKey</a></code>(3), <code><a href="/docs/linux/man/3-tspi_key_certifykey/">Tspi_Key_CertifyKey</a></code>(3), <code><a href="/docs/linux/man/3-tspi_key_registerkey/">Tspi_Key_RegisterKey</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-tspi_key_wrapkey/">Tspi_Key_WrapKey</a></code>(3), <code><a href="/docs/linux/man/3-tspi_key_certifykey/">Tspi_Key_CertifyKey</a></code>(3), <code>Tspi_Key_RegisterKey</code>(3).</p>

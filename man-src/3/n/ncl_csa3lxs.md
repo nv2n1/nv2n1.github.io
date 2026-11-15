@@ -17,7 +17,7 @@ CSA3LXS - cubic spline approximation, expanded entry for three-dimensional input
 <dt>UI
 <dd>(real, input) An array dimensioned for NI containing function values at the input XI values, that is, UI(L) is the value of the input function at XI(L) for L=1,NI.
 <dt>WTS
-<dd>(real, input) An array dimensioned for NI containing weights for the UI values at the input XI values, that is, WTS(L) is a weight for the value of UI(L) for L=1,NI. If you do not desire to weight the input UI values, then set <a HREF="/docs/linux/man/1-wts/">WTS</a>(1) to -1. The weights in the WTS array are relative and may be set to any non-negative value. When CSA3LXS is called, the weights are summed and the individual weights are normalized so that the weight sum is unity.
+<dd>(real, input) An array dimensioned for NI containing weights for the UI values at the input XI values, that is, WTS(L) is a weight for the value of UI(L) for L=1,NI. If you do not desire to weight the input UI values, then set WTS(1) to -1. The weights in the WTS array are relative and may be set to any non-negative value. When CSA3LXS is called, the weights are summed and the individual weights are normalized so that the weight sum is unity.
 <dt>KNOTS
 <dd>(integer, input) The number of knots to be used in constructing the approximation spline. KNOTS is dimensioned for 3 and provides the number of knots to be used in the X, Y, and Z directions. KNOTS(I) must be at least 4 for I=1,3. The larger the values for KNOTS, the closer the approximated curve will come to passing through the input function values.
 <dt>SMTH
@@ -35,7 +35,7 @@ CSA3LXS - cubic spline approximation, expanded entry for three-dimensional input
 <dt>UO
 <dd>(real, output) An array dimensioned for NO containing the calculated function values for the output spline. UO(I) is the calculated functional value at (XO(I),YO(I),ZO(I)) for I=1,NO.
 <dt>NWRK
-<dd>(integer, input) The size of the WORK array. NWRK must be at least NK * (NK+3) where NK = <a HREF="/docs/linux/man/1-knots/">KNOTS</a>(1) * <a HREF="/docs/linux/man/2-knots/">KNOTS</a>(2) * <a HREF="/docs/linux/man/3-knots/">KNOTS</a>(3).
+<dd>(integer, input) The size of the WORK array. NWRK must be at least NK * (NK+3) where NK = KNOTS(1) * KNOTS(2) * KNOTS(3).
 <dt>WORK
 <dd>(real, input) A work array dimensioned for NWRK.
 <dt>IER

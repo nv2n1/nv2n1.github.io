@@ -122,7 +122,7 @@ description: "formail – mail (re)formatter"
 </dl>
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code>RFC822</code>, <code>RFC2822</code>, <code>RFC1123</code> </p>
+<p> <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code>RFC822</code>, <code>RFC2822</code>, <code>RFC1123</code> </p>
 <h2>DIAGNOSTICS</h2>
 <p> Tp 2.3i Can&#8217;t fork Too many processes on this machine.<br />
  Tp Content-Length: field exceeds actual length by nnn bytes The Content-Length: field in the header specified a length that was longer than the actual body. This causes this message to absorb a number of subsequent messages following it in the same mailbox.<br />

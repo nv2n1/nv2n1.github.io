@@ -137,8 +137,8 @@ description: "mimedefang-filter – Configuration file for MIMEDefang mail filte
 <p> If you do not define a <code>filter_create_parser</code> function, then a built-in version equivalent to this is used: </p>
 <pre> sub filter_create_parser () {
  my $parser = MIME::Parser-&gt;new();
- $parser-&gt;<a href="//www.systutorials.com/docs/linux/man/1-extract_nested_messages/">extract_nested_messages</a>(1);
- $parser-&gt;<a href="//www.systutorials.com/docs/linux/man/1-extract_uuencode/">extract_uuencode</a>(1);
+ $parser-&gt;extract_nested_messages(1);
+ $parser-&gt;extract_uuencode(1);
  $parser-&gt;output_to_core(0);
  $parser-&gt;tmp_to_core(0);
  return $parser;
@@ -197,7 +197,7 @@ description: "mimedefang-filter – Configuration file for MIMEDefang mail filte
 <dd>By default, MIMEDefang tries to pass SpamAssassin a message that looks exactly like one it would receive via procmail. This means adding a Received: header, adding a Message-ID header if necessary, and adding a Return-Path: header. If you set $AddApparentlyToForSpamAssassin to 1, then MIMEDefang also adds an Apparently-To: header with all the envelope recipients before passing the message to SpamAssassin. This lets SpamAssassin detect possibly whitelisted recipient addresses. </p>
 <p> The default value for $AddApparentlyToForSpamAssassin is 0. </p>
 <dt><code>$SyslogFacility</code></p>
-<dd>This specifies the logging facility used by mimedefang.pl. By default, it is set to &quot;mail&quot;, but you can set it to other possibilites. See the <a href="/docs/linux/man/3-openlog/">openlog</a>(3) man page for details. You should name facilities as all-lowercase without the leading &quot;LOG_&quot;. That is, use &quot;local3&quot;, not &quot;LOG_LOCAL3&quot;. </p>
+<dd>This specifies the logging facility used by mimedefang.pl. By default, it is set to &quot;mail&quot;, but you can set it to other possibilites. See the openlog(3) man page for details. You should name facilities as all-lowercase without the leading &quot;LOG_&quot;. That is, use &quot;local3&quot;, not &quot;LOG_LOCAL3&quot;. </p>
 <dt><code>$WarningLocation </code>(default 0)</p>
 <dd>If set to 0 (the default), non-inline warnings are placed first. If you want the warning at the end of the e-mail, set $WarningLocation to -1. </p>
 <dt><code>$DaemonName </code>(default MIMEDefang)</p>

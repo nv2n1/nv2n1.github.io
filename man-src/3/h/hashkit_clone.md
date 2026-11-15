@@ -34,7 +34,7 @@ description: "hashkit_clone – libhashkit Documentation"
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://libmemcached.org/">http://libmemcached.org/</a></i></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-hashkit_create/">hashkit_create</a>(3)</i> <i><a href="/docs/linux/man/3-hashkit_value/">hashkit_value</a>(3)</i> <i><a href="/docs/linux/man/3-hashkit_set_hash_fn/">hashkit_set_hash_fn</a>(3)</i></p>
+<p> <i><a href="/docs/linux/man/3-hashkit_create/">hashkit_create</a>(3)</i> <i><a href="/docs/linux/man/3-hashkit_value/">hashkit_value</a>(3)</i> <i>hashkit_set_hash_fn(3)</i></p>
 <h2>AUTHOR</h2>
 <p> Brian Aker</p>
 <h2>COPYRIGHT</h2>

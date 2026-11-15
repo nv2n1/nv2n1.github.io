@@ -28,7 +28,7 @@ description: "QmcMetric – container for a metric and all its values"
 <dt><code>void removeInst(uint_t index);</code></p>
 <dd>Remove the instance at position <i>index </i> from the metric.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-qmc/">QMC</a></code>(3), <code><a href="/docs/linux/man/3-qmc_context/">QMC_Context</a></code>(3), <code><a href="/docs/linux/man/3-qmc_group/">QMC_Group</a></code>(3), <code><a href="/docs/linux/man/3-pmflush/">pmflush</a></code>(3) and <code><a href="/docs/linux/man/3-pmprintf/">pmprintf</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-qmc/">QMC</a></code>(3), <code>QMC_Context</code>(3), <code>QMC_Group</code>(3), <code><a href="/docs/linux/man/3-pmflush/">pmflush</a></code>(3) and <code>pmprintf</code>(3).</p>
 <h2>Diagnostics</h2>
-<p>Error messages are generated using <code><a href="/docs/linux/man/3-pmprintf/">pmprintf</a></code>(3) but are not flushed. It is the responsibility of the user to call <code><a href="/docs/linux/man/3-pmflush/">pmflush</a></code>(3) to output any messages. </p>
+<p>Error messages are generated using <code>pmprintf</code>(3) but are not flushed. It is the responsibility of the user to call <code><a href="/docs/linux/man/3-pmflush/">pmflush</a></code>(3) to output any messages. </p>
 <p> Additional diagnostics may be activated by adding <code>DBG_TRACE_PMC</code> to the global <i>pmDebug</i>.</p>

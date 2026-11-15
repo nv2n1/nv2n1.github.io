@@ -356,7 +356,7 @@ description: "‘ macro is mandatory. If not specified, the headers, footers and
 <dd><i>file ) )</i></dl>
 <p> If `.<i>file &#8230;</i> &#8216; is called without arguments, `<i>file &#8230;</i> &#8216; is assumed. The `.<i>file &#8230;</i> &#8216; macro is parsed and is callable.</p>
 <h3>Configuration Declaration (section four only)</h3>
-<p>The `.<code>macro</code> &#8216; is used to demonstrate a <a href="/docs/linux/man/8-config/">config</a>(8) declaration for a device interface in a section four manual. This macro accepts quoted arguments (double quotes only). </p>
+<p>The `.<code>macro</code> &#8216; is used to demonstrate a config(8) declaration for a device interface in a section four manual. This macro accepts quoted arguments (double quotes only). </p>
 <dl>
 <dt><code>device le0 at scode?</code></p>
 <dd>produced by: `.<code>device</code> &#8216; le0 at scode? .</dl>
@@ -542,9 +542,9 @@ description: "‘ macro is mandatory. If not specified, the headers, footers and
 <dd>mdoc</p>
 <dt><code>.mdoc </code></p>
 <dd>mdoc,</p>
-<dt><code><a href="/docs/linux/man/7--mdoc/">.mdoc</a>(7) </code></p>
+<dt><code>.mdoc(7) </code></p>
 <dd><a href="/docs/linux/man/7-mdoc/">mdoc</a>(7)</p>
-<dt><code><a href="/docs/linux/man/7--mdoc/">.mdoc</a>(7))) </code></p>
+<dt><code>.mdoc(7))) </code></p>
 <dd><a href="/docs/linux/man/7-mdoc/">mdoc</a>(7))),</dl>
 <p> The `.macro &#8216; is parsed and is callable. It is an error to call `.without &#8216; any arguments.</p>
 <h2>General Text Domain</h2>

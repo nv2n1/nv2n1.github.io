@@ -54,8 +54,8 @@ PDL::Dataflow -- description of the dataflow philosophy
  &gt; $b = pdl 5,6,7;
  &gt; $c = $a + $b;
  ...
- &gt; $a-&gt;<a HREF="//www.systutorials.com/docs/linux/man/4-resize/">resize</a>(4);
- &gt; $b-&gt;<a HREF="//www.systutorials.com/docs/linux/man/4-resize/">resize</a>(4);
+ &gt; $a-&gt;resize(4);
+ &gt; $b-&gt;resize(4);
  &gt; print $c;</pre>Now, if <tt>$c</tt> were evaluated between the two resizes, an error condition of incompatible sizes would occur. 
 
  What happens in the current version is that resizing <tt>$a</tt> raises a flag in <tt>$c:</tt> ``<font SIZE="-1">PDL_PARENTDIMSCHANGED''</font> and <tt>$b</tt> just raises the same flag again. When <tt>$c</tt> is next evaluated, the flags are checked and it is found that a recalculation is needed. 
@@ -98,7 +98,7 @@ PDL::Dataflow -- description of the dataflow philosophy
  $c = $a + $b;
  line($c);</pre>Now, if you know that <tt>$a</tt> is going to change and that you want its children to change with it, you can declare it into a data source (<font SIZE="-1">XXX</font> unimplemented in current version): 
 
- <pre> $a-&gt;<a HREF="//www.systutorials.com/docs/linux/man/1-datasource/">datasource</a>(1);</pre>After this, <tt>$a</tt>++ or <tt>$a</tt> .= something will not create a new family but will alter <tt>$a</tt> and cut its relation with its previous parents. All its children will follow its current value. 
+ <pre> $a-&gt;datasource(1);</pre>After this, <tt>$a</tt>++ or <tt>$a</tt> .= something will not create a new family but will alter <tt>$a</tt> and cut its relation with its previous parents. All its children will follow its current value. 
 
  So if <tt>$c</tt> in the previous section had been declared as a source, <tt>$e</tt> and <tt>$f</tt> would remain equal.
 <h2>Binding</h2>A dataflow mechanism would not be very useful without the ability to bind events onto changed data. Therefore, we provide such a mechanism: 

@@ -27,7 +27,7 @@ mail - lock[--use - pid][--retry retry - count] mail - unlock mail - touchlock[-
 </pre>
 <p> By default, the <i>filename</i> argument refers to the name of the file to be locked, and the name of the lockfile will be <i>filename</i> .lock. However, if the &#8211;lock-name argument is specified, then <i>filename</i> will be taken as the name of the lockfile itself. </p>
 <p> Each of the mail locking commands attempts to lock /var/spool/mail/&lt;user&gt;, where &lt;user&gt; is the name associated with the effective user ID, as determined by via <a href="/docs/linux/man/2-geteuid/">geteuid</a>(2). </p>
-<p> Once a file is locked, the lock must be touched at least once every five minutes or the lock will be considered stale, and subsequent lock attempts will succeed. Also see the <code>&#8211;use-pid</code> option and the <code><a href="/docs/linux/man/3-lockfile_create/">lockfile_create</a></code>(3) manpage. </p>
+<p> Once a file is locked, the lock must be touched at least once every five minutes or the lock will be considered stale, and subsequent lock attempts will succeed. Also see the <code>&#8211;use-pid</code> option and the <code>lockfile_create</code>(3) manpage. </p>
 <p> The <code>lockfile-check</code> command tests whether or not a valid lock already exists. </p>
 <h2>OPTIONS</h2>
 <p> <code>-q</code>, <code>&#8211;quiet</code></p>
@@ -45,7 +45,7 @@ mail - lock[--use - pid][--retry retry - count] mail - unlock mail - touchlock[-
 <p> <code>-p</code>, <code>&#8211;use-pid</code></p>
 <dl>
 <dt>
-<dd> Write the current process id (PID) to the lockfile whenever a lockfile is created, and use that pid when checking a lock&#8217;s validity. See the <code><a href="/docs/linux/man/3-lockfile_create/">lockfile_create</a></code>(3) manpage for more information. This option applies to <code>lockfile-create</code>, <code>lockfile-remove</code>, <code>lockfile-touch</code>, and <code>lockfile-check</code>.</dl>
+<dd> Write the current process id (PID) to the lockfile whenever a lockfile is created, and use that pid when checking a lock&#8217;s validity. See the <code>lockfile_create</code>(3) manpage for more information. This option applies to <code>lockfile-create</code>, <code>lockfile-remove</code>, <code>lockfile-touch</code>, and <code>lockfile-check</code>.</dl>
 <p> <code>-o</code>, <code>&#8211;oneshot</code></p>
 <dl>
 <dt>
@@ -75,13 +75,13 @@ mail - lock[--use - pid][--retry retry - count] mail - unlock mail - touchlock[-
 <dd> For <code>lockfile-check</code> a non-zero exit status indicates that the specified lock does not exist or is not valid. For other programs it indicates that some problem was encountered.</dl>
 <h2>SEE ALSO</h2>
 <pre>
-<code><a href="//www.systutorials.com/docs/linux/man/3-maillock/">maillock</a></code>(3)
-<code><a href="//www.systutorials.com/docs/linux/man/3-touchlock/">touchlock</a></code>(3)
-<code><a href="//www.systutorials.com/docs/linux/man/3-mailunlock/">mailunlock</a></code>(3)
-<code><a href="//www.systutorials.com/docs/linux/man/3-lockfile_create/">lockfile_create</a></code>(3)
-<code><a href="//www.systutorials.com/docs/linux/man/3-lockfile_remove/">lockfile_remove</a></code>(3)
-<code><a href="//www.systutorials.com/docs/linux/man/3-lockfile_touch/">lockfile_touch</a></code>(3)
-<code><a href="//www.systutorials.com/docs/linux/man/3-lockfile_check/">lockfile_check</a></code>(3)
+<code>maillock</code>(3)
+<code>touchlock</code>(3)
+<code>mailunlock</code>(3)
+<code>lockfile_create</code>(3)
+<code>lockfile_remove</code>(3)
+<code>lockfile_touch</code>(3)
+<code>lockfile_check</code>(3)
 </pre>
 <h2>AUTHOR</h2>
 <p> Written by Rob Browning &lt;rlb [at] defaultvalue.org&gt; </p>

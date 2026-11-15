@@ -20,5 +20,5 @@ description: "find-jar – find extension JAR or directory"
 <h2>REPORTING BUGS</h2>
 <p> Bugs should be reported through Red Hat Bugzilla at m[blue]<code><a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></code>m[].</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-build-classpath/">build-classpath</a></code>(1), <code><a href="/docs/linux/man/1-build-jar-repository/">build-jar-repository</a></code>(1), <code><a href="/docs/linux/man/1-xmvn-resolve/">xmvn-resolve</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-build-classpath/">build-classpath</a></code>(1), <code><a href="/docs/linux/man/1-build-jar-repository/">build-jar-repository</a></code>(1), <code>xmvn-resolve</code>(1). </p>
 <h2>Index</h2>

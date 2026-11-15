@@ -16,6 +16,6 @@ description: "update-reader.conf – (re)generate /etc/reader.conf"
 <h2>Files</h2>
 <p><code>update-reader.conf</code> will only use files that match the following wildcard: <code>*.conf</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-pcscd/">pcscd</a></code>(1),<code><a href="/docs/linux/man/5-reader-conf/">reader.conf</a></code>(5)</p>
+<p><code>pcscd</code>(1),<code><a href="/docs/linux/man/5-reader-conf/">reader.conf</a></code>(5)</p>
 <h2>Author</h2>
 <p>This manual page was written by Ludovic Rousseau &lt;ludovic.rousseau [at] free.fr&gt;.</p>

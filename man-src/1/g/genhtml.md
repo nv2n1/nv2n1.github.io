@@ -235,7 +235,7 @@ description: "genhtml – Generate HTML view from LCOV coverage data files"
 <dl>
 <dt>
 <dd> Specify whether to demangle C++ function names. </p>
-<p> Use this option if you want to convert C++ internal function names to human readable format for display on the HTML function overview page. This option requires that the c++filt tool is installed (see <code>c++<a href="/docs/linux/man/1-filt/">filt</a></code>(1)). </p>
+<p> Use this option if you want to convert C++ internal function names to human readable format for display on the HTML function overview page. This option requires that the c++filt tool is installed (see <code>c++filt</code>(1)). </p>
 </dl>
 <p> <code>&#8211;ignore-errors</code> <i>errors</i> </p>
 <dl>

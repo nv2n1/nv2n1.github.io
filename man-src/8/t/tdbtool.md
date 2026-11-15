@@ -13,7 +13,7 @@ description: "tdbtool – manipulate the contents TDB files"
 <dt> <code>tdbtool</code></p>
 <dt> <code>tdbtool</code> [-l] <i>TDBFILE</i> [<i>COMMANDS</i>&#8230;]</dl>
 <h2>Description</h2>
-<dd>This tool is part of the <code><a href="/docs/linux/man/1-samba/">samba</a></code>(1) suite. </p>
+<dd>This tool is part of the <code>samba</code>(1) suite. </p>
 <p> <code>tdbtool</code> a tool for displaying and altering the contents of Samba TDB (Trivial DataBase) files. Each of the commands listed below can be entered interactively or provided on the command line.</p>
 <h2>Options</h2>
 <p>-l</p>

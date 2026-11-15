@@ -59,11 +59,11 @@ description: "execve – execute program"
 <dt>*</p>
 <dd> POSIX timers are not preserved (<code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2)).</p>
 <dt>*</p>
-<dd> Any open directory streams are closed (<code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3)).</p>
+<dd> Any open directory streams are closed (<code>opendir</code>(3)).</p>
 <dt>*</p>
 <dd> Memory locks are not preserved (<code><a href="/docs/linux/man/2-mlock/">mlock</a></code>(2), <code><a href="/docs/linux/man/2-mlockall/">mlockall</a></code>(2)).</p>
 <dt>*</p>
-<dd> Exit handlers are not preserved (<code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3), <code><a href="/docs/linux/man/3-on_exit/">on_exit</a></code>(3)).</p>
+<dd> Exit handlers are not preserved (<code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3), <code>on_exit</code>(3)).</p>
 <dt>*</p>
 <dd> The floating-point environment is reset to the default (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)).</dl>
 <p> The process attributes in the preceding list are all specified in POSIX.1. The following Linux-specific process attributes are also not preserved during an <code>execve</code>():</p>

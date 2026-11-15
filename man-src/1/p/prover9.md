@@ -14,7 +14,7 @@ description: "prover9 – resolution/paramodulation theorem prover"
  <code>prover9</code> [<i>options</i>] -f <i>input-file</i> &gt; <i>output-file</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>prover9</code> command. </p>
-<p> <code>prover9</code> is an automated theorem prover for first-order and equational logic. It is a successor of the <code><a href="/docs/linux/man/1-otter/">otter</a></code>(1) prover. <code>prover9</code> uses the inference techniques of ordered resolution and paramodulation with literal selection.</p>
+<p> <code>prover9</code> is an automated theorem prover for first-order and equational logic. It is a successor of the <code>otter</code>(1) prover. <code>prover9</code> uses the inference techniques of ordered resolution and paramodulation with literal selection.</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
@@ -29,7 +29,7 @@ description: "prover9 – resolution/paramodulation theorem prover"
 <dt><code>-f </code><i>file</i></p>
 <dd> Take input from <i>file</i> instead of from standard input.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1), <code><a href="/docs/linux/man/1-otter/">otter</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1), <code>otter</code>(1).<br />
  On Debian systems, the manual is found in the <i>prover9-doc</i> package, at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> <code>prover9</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>

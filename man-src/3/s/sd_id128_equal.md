@@ -67,7 +67,7 @@ pkg-config --cflags --libs libsystemd</code></pre>
 <h2>Notes</h2>
 <p>These APIs are implemented as a shared library, which can be compiled and linked to with the <code>libsystemd</code>&nbsp;<wbr><code><a href="/docs/linux/man/1-pkg-config/">pkg-config</a></code>(1) file.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></code>(3), <code><a href="/docs/linux/man/3-sd_id128_randomize/">sd_id128_randomize</a></code>(3), <code><a href="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></code>(3), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/7-sd-journal/">sd-journal</a></code>(7), <code><a href="/docs/linux/man/1-pkg-config/">pkg-config</a></code>(1), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></code>(3), <code><a href="/docs/linux/man/3-sd_id128_randomize/">sd_id128_randomize</a></code>(3), <code><a href="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></code>(3), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code>sd-journal</code>(7), <code><a href="/docs/linux/man/1-pkg-config/">pkg-config</a></code>(1), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

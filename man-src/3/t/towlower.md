@@ -60,6 +60,6 @@ wint_t towlower_l(wint_t wc, locale_t locale);</code></pre>
 <p>The behavior of these functions depends on the <code>LC_CTYPE</code> category of the locale. </p>
 <p> These functions are not very appropriate for dealing with Unicode characters, because Unicode knows about three cases: upper, lower and title case.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-iswlower/">iswlower</a></code>(3), <code><a href="/docs/linux/man/3-towctrans/">towctrans</a></code>(3), <code><a href="/docs/linux/man/3-towupper/">towupper</a></code>(3), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7)</p>
+<p><code>iswlower</code>(3), <code><a href="/docs/linux/man/3-towctrans/">towctrans</a></code>(3), <code><a href="/docs/linux/man/3-towupper/">towupper</a></code>(3), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

@@ -250,6 +250,6 @@ description: "estcmd – command line interface of the core API"
 <p> The outer command specified by -fx option of gather receives the path of the target document by the first argument and the path for output by the second argument. The original path of the target document is given as the value of the environment variable `ESTORIGFILE&#8217;. </p>
 <p> Note that similarity search is very slow, by default. To improve the performance of similarity search, running &quot;estcmd extkeys&quot; beforehand is strongly recommended. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code><a href="/docs/linux/man/3-estraier/">estraier</a></code>(3), <code><a href="/docs/linux/man/3-estnode/">estnode</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code>estraier</code>(3), <code>estnode</code>(3) </p>
 <p> Please see <code><a rel="nofollow" href="http://hyperestraier.sourceforge.net/uguide-en.html">http://hyperestraier.sourceforge.net/uguide-en.html</a></code> for detail. </p>
 <h2>Index</h2>

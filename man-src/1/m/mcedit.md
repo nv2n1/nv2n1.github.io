@@ -170,7 +170,7 @@ context &#8221; &#8221; green<br />
 <pre><code>
 keyword #include red / Orange
 </code></pre>
-<p> <code>mcedit</code> uses the color before the slash. See <a href="/docs/linux/man/1-cooledit/">cooledit</a>(1) for supported <code>cooledit</code> colors. </p>
+<p> <code>mcedit</code> uses the color before the slash. See cooledit(1) for supported <code>cooledit</code> colors. </p>
 <p> Attributes can be any of bold, underline, reverse and blink, appended by a plus sign if more than one are desired. </p>
 <p> Comments may be put on a separate line starting with the hash sign (#). </p>
 <p> If you are describing case insensitive language you need to use <code>caseinsensitive</code> directive. It should be specified at the beginning of syntax file. </p>
@@ -279,7 +279,7 @@ apples %d oranges %d
 <h2>AVAILABILITY</h2>
 <p> The latest version of this program can be found at <a rel="nofollow" href="http://midnight-commander.org/.">http://midnight-commander.org/.</a></p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cooledit/">cooledit</a>(1), <a href="/docs/linux/man/1-mc/">mc</a>(1), <a href="/docs/linux/man/1-gpm/">gpm</a>(1), <a href="/docs/linux/man/1-terminfo/">terminfo</a>(1), <a href="/docs/linux/man/3-scanf/">scanf</a>(3).</p>
+<p> cooledit(1), <a href="/docs/linux/man/1-mc/">mc</a>(1), gpm(1), terminfo(1), <a href="/docs/linux/man/3-scanf/">scanf</a>(3).</p>
 <h2>AUTHORS</h2>
 <p> Paul Sheer (psheer [at] obsidian.co.za) is the original author of the Midnight Commander&#8217;s internal editor.</p>
 <h2>BUGS</h2>

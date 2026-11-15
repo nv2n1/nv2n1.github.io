@@ -108,7 +108,7 @@ struct ibv_wc_tm_info {
 <p> <code>ibv_create_cq_ex()</code> may create a CQ with size greater than or equal to the requested size. Check the cqe attribute in the returned CQ for the actual size. </p>
 <p> CQ should be destroyed with ibv_destroy_cq. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_cq/">ibv_create_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_cq/">ibv_destroy_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_resize_cq/">ibv_resize_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_req_notify_cq/">ibv_req_notify_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_ack_cq_events/">ibv_ack_cq_events</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3)</p>
+<p> <code>ibv_create_cq</code>(3), <code>ibv_destroy_cq</code>(3), <code>ibv_resize_cq</code>(3), <code>ibv_req_notify_cq</code>(3), <code>ibv_ack_cq_events</code>(3), <code>ibv_create_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</p>

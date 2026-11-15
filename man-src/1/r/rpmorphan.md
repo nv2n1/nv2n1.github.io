@@ -203,7 +203,7 @@ description: "rpmorphan – find orphaned packages"
 <dt><font SIZE="-1">RPMORPHAN_METHOD</font></p>
 <dd> for experts only : allow to force the method used to get rpm data. It can be set to <font SIZE="-1">URPM, RPM2</font> or &#8216;basic&#8217; (for external rpm query)</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-rpm/">rpm</a></i>(1) for rpm call </p>
+<p> <i>rpm</i>(1) for rpm call </p>
 <p> <i><a href="/docs/linux/man/1-rpmusage/">rpmusage</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmdep/">rpmdep</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmduplicates/">rpmduplicates</a></i>(1) </p>

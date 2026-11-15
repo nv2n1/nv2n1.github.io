@@ -63,7 +63,7 @@ url: "/docs/linux/man/1-bin_dec_hex/"
 
  and so on. 
 
- If you count the number of rows, you'll see that these are again 14 different numbers. The numbers are the same and mean the same as in the first list, we just used a different representation. This means that you have to know the representation used, or as it is called the numbering system or base. Normally, if we do not explicitly specify the numbering system used, we implicitly use the decimal system. If we want to use any other numbering system, we'll have to make that clear. There are a few widely adopted methods to do so. One common form is to write <a HREF="/docs/linux/man/2-1010/">1010</a>(2) which means that you wrote down a number in its binary representation. It is the number ten. If you would write 1010 without specifying the base, the number is interpreted as one thousand and ten using base 10. 
+ If you count the number of rows, you'll see that these are again 14 different numbers. The numbers are the same and mean the same as in the first list, we just used a different representation. This means that you have to know the representation used, or as it is called the numbering system or base. Normally, if we do not explicitly specify the numbering system used, we implicitly use the decimal system. If we want to use any other numbering system, we'll have to make that clear. There are a few widely adopted methods to do so. One common form is to write 1010(2) which means that you wrote down a number in its binary representation. It is the number ten. If you would write 1010 without specifying the base, the number is interpreted as one thousand and ten using base 10. 
 
  In books, another form is common. It uses subscripts (little characters, more or less in between two rows). You can leave out the parentheses in that case and write down the number in normal characters followed by a little two just behind it. 
 
@@ -71,7 +71,7 @@ url: "/docs/linux/man/1-bin_dec_hex/"
 
  Within the binary system, it is common to write leading zeros. The numbers are written down in series of four, eight or sixteen depending on the context. 
 
- We can use the binary form when talking to computers (...programming...), but the numbers will have large representations. The number 65'535 (often in the decimal system a ' is used to separate blocks of three digits for readability) would be written down as <a HREF="/docs/linux/man/2-1111111111111111/">1111111111111111</a>(2) which is 16 times the digit 1. This is difficult and prone to errors. Therefore, we usually would use another base, called hexadecimal. It uses 16 different symbols. First the symbols from the decimal system are used, thereafter we continue with alphabetic characters. We get 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E and F. This system is chosen because the hexadecimal form can be converted into the binary system very easily (and back). 
+ We can use the binary form when talking to computers (...programming...), but the numbers will have large representations. The number 65'535 (often in the decimal system a ' is used to separate blocks of three digits for readability) would be written down as 1111111111111111(2) which is 16 times the digit 1. This is difficult and prone to errors. Therefore, we usually would use another base, called hexadecimal. It uses 16 different symbols. First the symbols from the decimal system are used, thereafter we continue with alphabetic characters. We get 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E and F. This system is chosen because the hexadecimal form can be converted into the binary system very easily (and back). 
 
  There is yet another system in use, called the octal system. This was more common in the old days, but is not used very often anymore. As you might find it in use sometimes, you should get used to it and we'll show it below. It's the same story as with the other representations, but with eight different symbols. 
 
@@ -247,8 +247,8 @@ url: "/docs/linux/man/1-bin_dec_hex/"
  %001 010 000 001 000 101
     1   2   0   1   0   5 --&gt; 0120105
  So: %1010000001000101 = 0120105 = 0xA045 = 41029
- Or: <a HREF="//www.systutorials.com/docs/linux/man/2-1010000001000101/">1010000001000101</a>(2) = <a HREF="//www.systutorials.com/docs/linux/man/8-120105/">120105</a>(8) = A045(16) = 41029(10)
- Or: <a HREF="//www.systutorials.com/docs/linux/man/2-1010000001000101/">1010000001000101</a>(2) = <a HREF="//www.systutorials.com/docs/linux/man/8-120105/">120105</a>(8) = A045(16) = 41029
+ Or: 1010000001000101(2) = 120105(8) = A045(16) = 41029(10)
+ Or: 1010000001000101(2) = 120105(8) = A045(16) = 41029
 </pre> 
 
  At first while adding numbers, you'll convert them to their decimal form and then back into their original form after doing the addition. If you use the other numbering system often, you will see that you'll be able to do arithmetics directly in the base that is used. In any representation it is the same, add the numbers on the right, write down the right-most digit from the result, remember the other digits and use them in the next round. Continue with the second digit from the right and so on: 

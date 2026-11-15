@@ -64,7 +64,7 @@ description: "pamtosvg – convert a Netpbm image to a SVG (Scalable Vector Grap
 <h2>Application Notes</h2>
 <p> A convenient way to view an SVG document is with a web browser. Many understand a file whose name ends in &#8216;.svg&#8217; to be an SVG image and can render it. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-pbmclean/">pbmclean</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , Autotrace </p>
+<p> <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-pbmclean/">pbmclean</a></code>(1) , <code>pnm</code>(1) , Autotrace </p>
 <h2>HISTORY</h2>
 <p> <code>pamtosvg</code> was added to Netpbm in Version 10.33 (March 2006). </p>
 <p> The core of <code>pamtosvg</code> &#8212; the curve tracing logic &#8212; was taken nearly unmodified from Martin Weber&#8217;s Autotrace program. That program duplicates a lot of Netpbm function, so <code>pamtosvg</code> is a much leaner program. </p>

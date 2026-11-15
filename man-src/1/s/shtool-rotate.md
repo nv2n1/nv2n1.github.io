@@ -65,5 +65,5 @@ description: "shtool rotate – GNU shtool log file rotation"
 <h2>HISTORY</h2>
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>rotate</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 2001 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>. Its development was prompted by the need to have a flexible logfile rotation facility in the <code>OpenPKG</code> project.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <font SIZE="-1">BSD</font> <i><a href="/docs/linux/man/8-newsyslog/">newsyslog</a></i>(8). </p>
+<p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <font SIZE="-1">BSD</font> <i>newsyslog</i>(8). </p>
 <h2>Index</h2>

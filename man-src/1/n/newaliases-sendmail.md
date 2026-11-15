@@ -20,6 +20,6 @@ description: "newaliases – rebuild the data base for the mail aliases file"
 <dt>/etc/aliases</p>
 <dd>The mail aliases file</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-aliases/">aliases</a>(5), <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8)</p>
+<p><a href="/docs/linux/man/5-aliases/">aliases</a>(5), sendmail(8)</p>
 <h2>History</h2>
 <p>The <code>newaliases</code> command appeared in 4.0BSD.</p>

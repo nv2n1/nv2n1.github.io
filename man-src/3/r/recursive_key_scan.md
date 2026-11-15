@@ -42,4 +42,4 @@ long recursive_session_key_scan(recursive_key_scanner_t func,
 <h2>Linking</h2>
 <p>When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_describe_alloc/">keyctl_describe_alloc</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3), <code>keyctl_describe_alloc</code>(3) </p>

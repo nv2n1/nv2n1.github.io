@@ -284,4 +284,4 @@ Password for Administrator:</pre>
 <h2>Bugs</h2>
 <p>Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://bugs.freedesktop.org/enter_bug.cgi?product=realmd">https://bugs.freedesktop.org/enter_bug.cgi?product=realmd</a>&amp;component=adcli</code>m[]</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-realmd/">realmd</a></code>(8), <code><a href="/docs/linux/man/8-net/">net</a></code>(8), <code><a href="/docs/linux/man/8-sssd/">sssd</a></code>(8) Further details available in the realmd online documentation at m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/realmd/">http://www.freedesktop.org/software/realmd/</a></code>m[] </p>
+<p><code>realmd</code>(8), <code><a href="/docs/linux/man/8-net/">net</a></code>(8), <code><a href="/docs/linux/man/8-sssd/">sssd</a></code>(8) Further details available in the realmd online documentation at m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/realmd/">http://www.freedesktop.org/software/realmd/</a></code>m[] </p>

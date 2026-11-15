@@ -57,4 +57,4 @@ description: "XkbChangeIndicators – Changes indicator maps or state without pa
 <dt><code>BadImplementation</code></p>
 <dd>Invalid reply from server</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbindicatormapnotify/">XkbIndicatorMapNotify</a></code>(3), <code><a href="/docs/linux/man/3-xkbindicatorstatenotify/">XkbIndicatorStateNotify</a></code>(3)</p>
+<p><code>XkbIndicatorMapNotify</code>(3), <code>XkbIndicatorStateNotify</code>(3)</p>

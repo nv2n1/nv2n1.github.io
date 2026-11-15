@@ -20,4 +20,4 @@ system_u:system_r:system_mail_t:s0</pre>
 <h2>Author</h2>
 <p>This manual page was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-secon/">secon</a></code>(8) </p>
+<p><code>secon</code>(8) </p>

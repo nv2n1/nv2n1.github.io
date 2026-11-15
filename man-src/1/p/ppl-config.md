@@ -79,8 +79,8 @@ description: "ppl-config – obtain information about an installation of the Par
 <p> Copyright (C) 2001-2010 Roberto Bagnara &lt;bagnara [at] cs.unipr.it&gt; Copyright (C) 2010-2011 BUGSENG srl (<a rel="nofollow" href="http://bugseng.com)">http://bugseng.com)</a><br />
  This is free software; see the file <code>COPYING</code> in the source distribution or use the command <code>ppl-config &#8211;copying</code> to obtain the copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-libppl/">libppl</a>(3)</code> </p>
-<p> <code><a href="/docs/linux/man/3-libppl_c/">libppl_c</a>(3)</code> </p>
+<p> <code>libppl(3)</code> </p>
+<p> <code>libppl_c(3)</code> </p>
 <p> Roberto Bagnara, Patricia M. Hill, and Enea Zaffanella. <i>The Parma Polyhedra Library User&#8217;s Manual (version 0.11.2),</i> available (in several formats) at <code><a rel="nofollow" href="http://www.cs.unipr.it/ppl/">http://www.cs.unipr.it/ppl/</a></code> . </p>
 <p> Roberto Bagnara, Patricia M. Hill, and Enea Zaffanella. <i>The Parma Polyhedra Library C Language Interface User&#8217;s Manual (version 0.11.2),</i> available (in several formats) at <code><a rel="nofollow" href="http://www.cs.unipr.it/ppl/">http://www.cs.unipr.it/ppl/</a></code> . </p>
 <p> Roberto Bagnara, Patricia M. Hill, and Enea Zaffanella. <i>The Parma Polyhedra Library Java Language Interface User&#8217;s Manual (version 0.11.2),</i> available (in several formats) at <code><a rel="nofollow" href="http://www.cs.unipr.it/ppl/">http://www.cs.unipr.it/ppl/</a></code> . </p>

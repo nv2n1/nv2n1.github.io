@@ -774,13 +774,13 @@ shell&gt; <code>mysqlbinlog -v --base64-output=DECODE-ROWS </code><i>log_file</i
 <dd> &bull; There is no distinction made between corresponding binary and nonbinary string types (BINARY and CHAR, VARBINARY and VARCHAR, BLOB and TEXT). The output uses a data type of STRING for fixed-length strings and VARSTRING for variable-length strings.</dl>
 <dl>
 <dt>
-<dd> &bull; For multibyte character sets, the maximum number of bytes per character is not present in the binary log, so the length for string types is displayed in bytes rather than in characters. For example, <a href="/docs/linux/man/4-string/">STRING</a>(4) will be used as the data type for values from either of these column types: </p>
+<dd> &bull; For multibyte character sets, the maximum number of bytes per character is not present in the binary log, so the length for string types is displayed in bytes rather than in characters. For example, STRING(4) will be used as the data type for values from either of these column types: </p>
 <dl>
 <dt>
 <dd>
 <pre>
-<a href="//www.systutorials.com/docs/linux/man/4-CHAR/">CHAR</a>(4) CHARACTER SET latin1
-<a href="//www.systutorials.com/docs/linux/man/2-CHAR/">CHAR</a>(2) CHARACTER SET ucs2
+CHAR(4) CHARACTER SET latin1
+CHAR(2) CHARACTER SET ucs2
 </pre>
 </dl>
 </dl>

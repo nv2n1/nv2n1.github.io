@@ -450,7 +450,7 @@ description: "fd – floppy disk device"
 <dd>resets the floppy controller under certain conditions.</p>
 <dt><code>FDRAWCMD</code></p>
 <dd>sends a raw command to the floppy controller.</dl>
-<p> For more precise information, consult also the <i>&lt;linux/fd.h&gt;</i> and <i>&lt;linux/fdreg.h&gt;</i> include files, as well as the <code><a href="/docs/linux/man/1-floppycontrol/">floppycontrol</a></code>(1) manual page.</p>
+<p> For more precise information, consult also the <i>&lt;linux/fd.h&gt;</i> and <i>&lt;linux/fdreg.h&gt;</i> include files, as well as the <code>floppycontrol</code>(1) manual page.</p>
 <h2>Files</h2>
 <p>/dev/fd*</p>
 <h2>Notes</h2>
@@ -458,6 +458,6 @@ description: "fd – floppy disk device"
 <p> It is not possible to read floppies which are formatted using GCR (group code recording), which is used by Apple II and Macintosh computers (800k disks). </p>
 <p> Reading floppies which are hard sectored (one hole per sector, with the index hole being a little skewed) is not supported. This used to be common with older 8-inch floppies.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-chown/">chown</a></code>(1), <code><a href="/docs/linux/man/1-floppycontrol/">floppycontrol</a></code>(1), <code><a href="/docs/linux/man/1-getfdprm/">getfdprm</a></code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code><a href="/docs/linux/man/1-superformat/">superformat</a></code>(1), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-setfdprm/">setfdprm</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/1-chown/">chown</a></code>(1), <code>floppycontrol</code>(1), <code>getfdprm</code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code>superformat</code>(1), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code>setfdprm</code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 3.53 of the Linux <i>man-pages</i> project. A description of the project, and information about reporting bugs, can be found at <a rel="nofollow" href="http://www.kernel.org/doc/man-pages/.">http://www.kernel.org/doc/man-pages/.</a> </p>

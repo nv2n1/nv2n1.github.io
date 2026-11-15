@@ -43,4 +43,4 @@ Lintian::CollScript - Collection script handle
 <dd>Returns a truth value if this collection can be applied to a <font SIZE="-1">TYPE</font> package.
 <dt>collect (<font SIZE="-1">PKG, TASK, DIR</font>)
 <dd></dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.
-<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i><a HREF="/docs/linux/man/3-lintian--profile/">Lintian::Profile</a></i>(3), <i><a HREF="/docs/linux/man/3-lintian--tag--info/">Lintian::Tag::Info</a></i>(3)
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i>Lintian::Profile</i>(3), <i>Lintian::Tag::Info</i>(3)

@@ -25,6 +25,6 @@ description: "systemd-network-generator.service, systemd-network-generator – G
 <p> <i>vlan=</i>, <i>bond=</i>, <i>bridge=</i>, <i>bootdev=</i></p>
 <dl>
 <dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></code>(5) files.</dl>
-<p> See <code><a href="/docs/linux/man/7-dracut-kernel/">dracut.kernel</a></code>(7) for option syntax and details.</p>
+<p> See <code>dracut.kernel</code>(7) for option syntax and details.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/8-dracut/">dracut</a></code>(8) </p>

@@ -67,7 +67,7 @@ description: "exportfs – maintain table of exported NFS file systems"
 <p>To export the <i>/usr/tmp</i> directory to IPv6 link-local clients: </p>
 <pre><code># exportfs [fe80::]/64:/usr/tmp</code></pre>
 <h2>Usage Notes</h2>
-<p>Exporting to IP networks or DNS and NIS domains does not enable clients from these groups to access NFS immediately. Rather, these sorts of exports are hints to <code><a href="/docs/linux/man/8-rpc-mountd/">rpc.mountd</a></code>(8) to grant any mount requests from these clients. This is usually not a problem, because any existing mounts are preserved in <i>rmtab</i> across reboots. </p>
+<p>Exporting to IP networks or DNS and NIS domains does not enable clients from these groups to access NFS immediately. Rather, these sorts of exports are hints to <code>rpc.mountd</code>(8) to grant any mount requests from these clients. This is usually not a problem, because any existing mounts are preserved in <i>rmtab</i> across reboots. </p>
 <p> When unexporting a network or domain entry, any current exports to members of this group will be checked against the remaining valid exports and if they themselves are no longer valid they will be removed.</p>
 <h2>Files</h2>
 <dl>
@@ -80,7 +80,7 @@ description: "exportfs – maintain table of exported NFS file systems"
 <dt><i>/var/lib/nfs/rmtab</i></p>
 <dd>table of clients accessing server&#8217;s exports</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code><a href="/docs/linux/man/8-rpc-mountd/">rpc.mountd</a></code>(8), <code><a href="/docs/linux/man/5-netgroup/">netgroup</a></code>(5)</p>
+<p><code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code>rpc.mountd</code>(8), <code><a href="/docs/linux/man/5-netgroup/">netgroup</a></code>(5)</p>
 <h2>Authors</h2>
 <p>Olaf Kirch &lt;okir [at] monad.swb.de&gt;<br />
  Neil Brown &lt;neilb [at] cse.unsw.edu.au&gt;</p>

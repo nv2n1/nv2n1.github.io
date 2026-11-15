@@ -39,7 +39,7 @@ description: "ods-enforcerd – OpenDNSSEC Policy Enforcer daemon"
 <h2>Configuration</h2>
 <p>The configuration of ods-enforcerd is contained in the conf.xml file; the options available are described in the OpenDNSSEC documentation.</p>
 <h2>Diagnostics</h2>
-<p>will log all the problems via the standard <a href="/docs/linux/man/8-syslog/">syslog</a>(8) <i>daemon</i> facility.</p>
+<p>will log all the problems via the standard syslog(8) <i>daemon</i> facility.</p>
 <h2>Files</h2>
 <dl>
 <dt>/etc/opendnssec/conf.xml</p>

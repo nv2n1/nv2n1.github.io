@@ -49,4 +49,4 @@ description: "ldap-monitor – Real-time NorduGrid monitoring tool"
 <h2>Author</h2>
 <p>Oxana Smirnova &lt;oxana dot smirnova at quark dot lu dot se&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-ngsub/">ngsub</a></code>(1), <code><a href="/docs/linux/man/1-ngstat/">ngstat</a></code>(1), <code><a href="/docs/linux/man/1-ngdel/">ngdel</a></code>(1), <code><a href="/docs/linux/man/1-ngget/">ngget</a></code>(1), <code><a href="/docs/linux/man/1-ngsync/">ngsync</a></code>(1), <code><a href="/docs/linux/man/1-ngcopy/">ngcopy</a></code>(1), <code><a href="/docs/linux/man/1-ngremove/">ngremove</a></code>(1) </p>
+<p><code>ngsub</code>(1), <code>ngstat</code>(1), <code>ngdel</code>(1), <code>ngget</code>(1), <code>ngsync</code>(1), <code>ngcopy</code>(1), <code>ngremove</code>(1) </p>

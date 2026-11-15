@@ -71,7 +71,7 @@ RFC 3464 (Delivery status notifications)</pre>
 <h2>Security</h2>
 <p>The <code><a href="/docs/linux/man/8-oqmgr/">oqmgr</a></code>(8) daemon is not security sensitive. It reads single-character messages from untrusted local users, and thus may be susceptible to denial of service attacks. The <code><a href="/docs/linux/man/8-oqmgr/">oqmgr</a></code>(8) daemon does not talk to the outside world, and it can be run at fixed low privilege in a chrooted environment.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to the <code><a href="/docs/linux/man/8-syslog/">syslog</a></code>(8) daemon. Corrupted message files are saved to the <code>corrupt</code> queue for further inspection. </p>
+<p>Problems and transactions are logged to the <code>syslog</code>(8) daemon. Corrupted message files are saved to the <code>corrupt</code> queue for further inspection. </p>
 <p> Depending on the setting of the <code>notify_classes</code> parameter, the postmaster is notified of bounces and of other trouble.</p>
 <h2>Bugs</h2>
 <p>A single queue manager process has to compete for disk access with multiple front-end processes such as <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8). A sudden burst of inbound mail can negatively impact outbound delivery rates.</p>
@@ -191,7 +191,7 @@ RFC 3464 (Delivery status notifications)</pre>
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>QSHAPE_README, Postfix queue analysis</pre>

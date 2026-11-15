@@ -117,7 +117,7 @@ description: "ocf_heartbeat_IPaddr2 – Manages virtual IPv4 and IPv6 addresses 
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20s.</dl>
 <h2>Example Crm Shell</h2>
-<p>The following is an example configuration for a IPaddr2 resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a IPaddr2 resource using the <code>crm</code>(8) shell: </p>
 <dl>
 <dd>
 <pre>primitive p_IPaddr2 ocf:heartbeat:IPaddr2 \

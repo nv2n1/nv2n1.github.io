@@ -32,7 +32,7 @@ int vfscanf(FILE *stream, const char *format, va_list ap);</code></pre>
 <p> A directive is one of the following:</p>
 <dl>
 <dt>&bull;</p>
-<dd>A sequence of white-space characters (space, tab, newline, etc.; see <code><a href="/docs/linux/man/3-isspace/">isspace</a></code>(3)). This directive matches any amount of white space, including none, in the input.</p>
+<dd>A sequence of white-space characters (space, tab, newline, etc.; see <code>isspace</code>(3)). This directive matches any amount of white space, including none, in the input.</p>
 <dt>&bull;</p>
 <dd>An ordinary character (i.e., one other than white space or &#8216;%&#8217;). This character must exactly match the next character of input.</p>
 <dt>&bull;</p>

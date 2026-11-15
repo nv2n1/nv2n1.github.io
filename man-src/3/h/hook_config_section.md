@@ -41,5 +41,5 @@ int main(int argc, char *argv[])
 END_OF_MAIN()
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-config_is_hooked/">config_is_hooked</a></code>(3) </p>
+<p> <code>config_is_hooked</code>(3) </p>
 <h2>Index</h2>

@@ -65,7 +65,7 @@ description: "lastcomm – print out information about previously executed comma
 <p> <i>acct</i></p>
 <dl>
 <dt>
-<dd> The system wide process accounting file. See <code><a href="/docs/linux/man/5-acct/">acct</a></code>(5) (or <code><a href="/docs/linux/man/5-pacct/">pacct</a></code>(5)) for further details. <i>/var/log/account</i></p>
+<dd> The system wide process accounting file. See <code><a href="/docs/linux/man/5-acct/">acct</a></code>(5) (or <code>pacct</code>(5)) for further details. <i>/var/log/account</i></p>
 <dl>
 <dt>
 <dd> This directory contains pacct files which contain the binary process accounting data as written by the kernel.</dl>

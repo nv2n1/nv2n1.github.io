@@ -90,7 +90,7 @@ description: "xfsctl – control XFS filesystems and individual files"
 <code>XFS_IOC_ATTR_MULTI_BY_HANDLE</code></pre>
 <dl>
 <dt><code>XFS_IOC_FSSETDM_BY_HANDLE</code></p>
-<dd>These are all interfaces that are used to implement various <i>libhandle</i> functions (see <code><a href="/docs/linux/man/3-open_by_handle/">open_by_handle</a></code>(3)). They are all subject to change and should not be called directly by applications.</dl>
+<dd>These are all interfaces that are used to implement various <i>libhandle</i> functions (see <code>open_by_handle</code>(3)). They are all subject to change and should not be called directly by applications.</dl>
 <h3>Filesystem Operations</h3>
 <p>In order to effect one of the following operations, the pathname and descriptor arguments passed to <code>xfsctl</code>() can be any open file in the XFS filesystem in question.</p>
 <dl>

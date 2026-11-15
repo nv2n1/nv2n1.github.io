@@ -50,4 +50,4 @@ This manual page was written by Dominick Grift &lt;domg472 [at] gmail.com&gt;.
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/8-selinux/">selinux</a>(8), <a HREF="/docs/linux/man/8-git/">git</a>(8), <a HREF="/docs/linux/man/1-chcon/">chcon</a>(1), <a HREF="/docs/linux/man/8-semodule/">semodule</a>(8), <a HREF="/docs/linux/man/8-setsebool/">setsebool</a>(8) 
+<a HREF="/docs/linux/man/8-selinux/">selinux</a>(8), git(8), <a HREF="/docs/linux/man/1-chcon/">chcon</a>(1), <a HREF="/docs/linux/man/8-semodule/">semodule</a>(8), <a HREF="/docs/linux/man/8-setsebool/">setsebool</a>(8) 

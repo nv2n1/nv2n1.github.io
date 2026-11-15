@@ -21,7 +21,7 @@ description: "gpilot-install-file – gnome-pilot file conduit scheduler"
 <dt><code>&#8211;later</code></p>
 <dd> Schedule the file(s) for installation and exit. The files will be installed at the next synchronization.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gpilot-applet/">gpilot-applet</a></code>(1), <code><a href="/docs/linux/man/1-gpilotd/">gpilotd</a></code>(1), <code><a href="/docs/linux/man/1-file-conduit-control-applet/">file-conduit-control-applet</a></code>(1).</p>
+<p> <code>gpilot-applet</code>(1), <code>gpilotd</code>(1), <code>file-conduit-control-applet</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> The file installation conduit was written by Eskil Olsen &lt;eskil [at] eazel.com&gt;. This manual page was written by Mark Brown &lt;broonie [at] sirena.org.uk&gt;. </p>
 <h2>Index</h2>

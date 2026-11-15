@@ -661,7 +661,7 @@ __wrap_malloc(size_t c)<br />
 <dt><code>&#8211;hash-style=</code><i>style</i></p>
 <dd> Set the type of linker&#8217;s hash table(s). <i>style</i> can be either <tt>&quot;sysv&quot;</tt> for classic <font SIZE="-1">ELF</font> <tt>&quot;.hash&quot;</tt> section, <tt>&quot;gnu&quot;</tt> for new style <font SIZE="-1">GNU</font> <tt>&quot;.gnu.hash&quot;</tt> section or <tt>&quot;both&quot;</tt> for both the classic <font SIZE="-1">ELF</font> <tt>&quot;.hash&quot;</tt> and new style <font SIZE="-1">GNU</font> <tt>&quot;.gnu.hash&quot;</tt> hash tables. The default is <tt>&quot;sysv&quot;</tt>.</p>
 <dt><code>&#8211;reduce-memory-overheads</code></p>
-<dd> This option reduces memory requirements at ld runtime, at the expense of linking speed. This was introduced to select the old O(n^2) algorithm for link map file generation, rather than the new <a href="/docs/linux/man/n-o/">O</a>(n) algorithm which uses about 40% more memory for symbol storage. </p>
+<dd> This option reduces memory requirements at ld runtime, at the expense of linking speed. This was introduced to select the old O(n^2) algorithm for link map file generation, rather than the new O(n) algorithm which uses about 40% more memory for symbol storage. </p>
 <p> Another effect of the switch is to set the default hash table size to 1021, which again saves memory at the cost of lengthening the linker&#8217;s run time. This is not done however if the <code>&#8211;hash-size</code> switch has been used. </p>
 <p> The <code>&#8211;reduce-memory-overheads</code> switch may be also be used to enable other tradeoffs in future versions of the linker.</p>
 <dt><code>&#8211;build-id</code></p>

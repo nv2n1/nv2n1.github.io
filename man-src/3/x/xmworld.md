@@ -28,7 +28,7 @@ description: "XmWorldClass – Lesstif internal widget class"
 </tr>
 </table>
 <h2>Class Hierarchy</h2>
-<p><code><a href="/docs/linux/man/3-object/">Object</a></code>(3) <code><a href="/docs/linux/man/3-xmextobject/">XmExtObject</a></code>(3) <code><a href="/docs/linux/man/3-desktop/">Desktop</a></code>(3) <code><a href="/docs/linux/man/3-xmworldclass/">XmWorldClass</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-object/">Object</a></code>(3) <code>XmExtObject</code>(3) <code>Desktop</code>(3) <code>XmWorldClass</code>(3)</p>
 <h2>Callbacks</h2>
 <h2>Convenience Functions</h2>
 <h2>See Also</h2>

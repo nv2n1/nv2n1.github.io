@@ -19,7 +19,7 @@ description: "pavucontrol – A volume control for the PulseAudio sound server"
 <dt>
 <dd> Select tab <i>NUMBER</i> on load</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-pulseaudio/">pulseaudio</a>(1), <a href="/docs/linux/man/1-pavumeter/">pavumeter</a>(1), <a href="/docs/linux/man/1-padevchooser/">padevchooser</a>(1)</p>
+<p> <a href="/docs/linux/man/1-pulseaudio/">pulseaudio</a>(1), pavumeter(1), padevchooser(1)</p>
 <h2>RESOURCES</h2>
 <p> Homepage: <a rel="nofollow" href="http://0pointer.de/lennart/projects/pavucontrol/">http://0pointer.de/lennart/projects/pavucontrol/</a> </p>
 <p> PulseAudio web site: <a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></p>

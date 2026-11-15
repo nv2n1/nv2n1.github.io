@@ -20,7 +20,7 @@ description: "pamsharpmap – create map of sharpness in a PNM/PAM image"
 <p> <code>pamsharpmap</code> assumes that the image is a PNM or PNM equivalent PAM. If it isn&#8217;t, the results are not necessarily meaningful. </p>
 <p> The output image is the same dimensions, depth, and tuple type as the input, and has maxval 255. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamsharpness/">pamsharpness</a></code>(1) , <code><a href="/docs/linux/man/1-pammasksharpen/">pammasksharpen</a></code>(1) , <code><a href="/docs/linux/man/1-pamedge/">pamedge</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamsharpness/">pamsharpness</a></code>(1) , <code><a href="/docs/linux/man/1-pammasksharpen/">pammasksharpen</a></code>(1) , <code><a href="/docs/linux/man/1-pamedge/">pamedge</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamsharpmap</code> was added to Netpbm in Release 10.21 (March 2004). Bryan Henderson derived it from the program <code>pnmsharp</code> by B.W. van Schooten and distributed as part of the Photopnmtools package. </p>
 <h2>Index</h2>

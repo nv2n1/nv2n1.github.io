@@ -25,7 +25,7 @@ fi_strerror FI_ERROR_CODE
 
  
 
- Display the error string for the given numeric FI_ERROR_CODE. FI_ERROR_CODE may be a hexadecimal, octal, or decimal constant. Although the <a HREF="/docs/linux/man/3-fi_strerror/">fi_strerror</a>(3) library function only accepts positive error values, for convenience this utility accepts both positive and negative error values. 
+ Display the error string for the given numeric FI_ERROR_CODE. FI_ERROR_CODE may be a hexadecimal, octal, or decimal constant. Although the fi_strerror(3) library function only accepts positive error values, for convenience this utility accepts both positive and negative error values. 
 
  This is primarily a convenience tool for developers.
 
@@ -33,7 +33,7 @@ fi_strerror FI_ERROR_CODE
 
  
 
- <a HREF="/docs/linux/man/7-fabric/">fabric</a>(7) <a HREF="/docs/linux/man/3-fi_errno/">fi_errno</a>(3)
+ <a HREF="/docs/linux/man/7-fabric/">fabric</a>(7) fi_errno(3)
 
 <h2>AUTHORS</h2>
 

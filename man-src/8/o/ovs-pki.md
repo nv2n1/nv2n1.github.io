@@ -26,7 +26,7 @@ description: "ovs-pki – OpenFlow public key infrastructure management utility"
  [<code>-l</code> <i>file</i> | <code>&#8211;log=</code><i>file</i>]<br />
  [<code>-h</code> | <code>&#8211;help</code>] Some options do not apply to every command. </p>
 <h2>Description</h2>
-<p>The <code>ovs-pki</code> program sets up and manages a public key infrastructure for use with OpenFlow. It is intended to be a simple interface for organizations that do not have an established public key infrastructure. Other PKI tools can substitute for or supplement the use of <code>ovs-pki</code>. <code>ovs-pki</code> uses <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1) for certificate management and key generation. </p>
+<p>The <code>ovs-pki</code> program sets up and manages a public key infrastructure for use with OpenFlow. It is intended to be a simple interface for organizations that do not have an established public key infrastructure. Other PKI tools can substitute for or supplement the use of <code>ovs-pki</code>. <code>ovs-pki</code> uses <code>openssl</code>(1) for certificate management and key generation. </p>
 <h2>Offline Commands</h2>
 <p>The following <code>ovs-pki</code> commands support manual PKI administration: </p>
 <dl>

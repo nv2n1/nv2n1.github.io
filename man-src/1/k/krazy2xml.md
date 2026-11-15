@@ -12,7 +12,7 @@ description: "krazy2xml – KDE source code checking for the English Breakfast N
 <h2>SYNOPSIS</h2>
 <p> krazy2xml [options]</p>
 <h2>DESCRIPTION</h2>
-<p> krazy2xml is a big wrapper around <i><a href="/docs/linux/man/1-krazy/">krazy</a></i>(1) for no obvious use other than generating Code Checking Quality reports on the English Breakfast Network.</p>
+<p> krazy2xml is a big wrapper around <i>krazy</i>(1) for no obvious use other than generating Code Checking Quality reports on the English Breakfast Network.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></p>
@@ -61,12 +61,12 @@ description: "krazy2xml – KDE source code checking for the English Breakfast N
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA</font> 02110-1301, <font SIZE="-1">USA</font>.</p>
 <h2>FILES</h2>
-<p> <i><a href="/docs/linux/man/5-krazyrc/">krazyrc</a></i>(5) files are processed in descending hierarchical order with each sublevel setting appending in a logical way to the previous level settings. The following files are read:<br />
+<p> <i>krazyrc</i>(5) files are processed in descending hierarchical order with each sublevel setting appending in a logical way to the previous level settings. The following files are read:<br />
 &nbsp;<wbr><i>component/.krazy</i><br />
 &nbsp;<wbr><i>component/module/.krazy</i><br />
 &nbsp;<wbr><i>component/module/subdir/.krazy</i></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-krazyrc/">krazyrc</a></i>(5), <i><a href="/docs/linux/man/1-krazy2/">krazy2</a></i>(1), <i><a href="/docs/linux/man/1-krazy2all/">krazy2all</a></i>(1)</p>
+<p> <i>krazyrc</i>(5), <i><a href="/docs/linux/man/1-krazy2/">krazy2</a></i>(1), <i><a href="/docs/linux/man/1-krazy2all/">krazy2all</a></i>(1)</p>
 <h2>AUTHORS</h2>
 <p> Allen Winter, &lt;winter [at] kde.org&gt; </p>
 <h2>Index</h2>

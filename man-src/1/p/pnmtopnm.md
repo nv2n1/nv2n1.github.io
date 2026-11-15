@@ -25,5 +25,5 @@ description: "pnmtopnm – copy a PNM image"
 <p> <code><a href="/docs/linux/man/1-ppmtoppm/">ppmtoppm</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code>pnm</code>(1) </p>
 <h2>Index</h2>

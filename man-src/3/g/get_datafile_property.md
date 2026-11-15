@@ -24,5 +24,5 @@ if (name == empty_string)
 <h2>RETURN VALUE</h2>
 <p> Returns a pointer to the text string for the object, or a pointer to the variable empty_string if the property isn&#8217;t present. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-dat_id/">DAT_ID</a></code>(3), <code><a href="/docs/linux/man/3-empty_string/">empty_string</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-dat_id/">DAT_ID</a></code>(3), <code>empty_string</code>(3) </p>
 <h2>Index</h2>

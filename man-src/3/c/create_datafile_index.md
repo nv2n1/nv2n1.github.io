@@ -24,5 +24,5 @@ destroy_datafile_index(index);
 <h2>RETURN VALUE</h2>
 <p> A pointer value which you can pass to load_datafile_object_indexed. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-destroy_datafile_index/">destroy_datafile_index</a></code>(3), <code><a href="/docs/linux/man/3-load_datafile_object_indexed/">load_datafile_object_indexed</a></code>(3) </p>
+<p> <code>destroy_datafile_index</code>(3), <code><a href="/docs/linux/man/3-load_datafile_object_indexed/">load_datafile_object_indexed</a></code>(3) </p>
 <h2>Index</h2>

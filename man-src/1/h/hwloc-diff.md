@@ -44,5 +44,5 @@ description: "hwloc-diff – Compute differences between two XML topologies"
 <p> If the difference is too complex to be represented, an error is returned and the output is not generated. </p>
 <p> hwloc-diff also returns nonzero if any kind of error occurs, such as (but not limited to) failure to parse the command line.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-lstopo/">lstopo</a>(1), <a href="/docs/linux/man/1-hwloc-patch/">hwloc-patch</a>(1), <a href="/docs/linux/man/1-hwloc-compress-dir/">hwloc-compress-dir</a>(1) </p>
+<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-patch/">hwloc-patch</a>(1), <a href="/docs/linux/man/1-hwloc-compress-dir/">hwloc-compress-dir</a>(1) </p>
 <h2>Index</h2>

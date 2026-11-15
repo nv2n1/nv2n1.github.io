@@ -52,4 +52,4 @@ description: "dump – ext2/3/4 filesystem backup"
 <dt><code>-k</code></p>
 <dd>Use Kerberos authentication to talk to remote tape servers. (Only available if this option was enabled when <code>dump</code> was compiled.)</p>
 <dt><code>-L</code><i> label</i></p>
-<dd>The user-supplied text string <i>label</i> is placed into the dump header, where tools like <code><a href="/docs/linux/man/8-restore/">restore</a></code>(8) and <code><a href="/docs/linux/man/8-file/">file</a></code>(8) can access it. Note that this label is limited to be at most <code>LBLSIZE</code> (currently 16) characters, which must include the terminating 
+<dd>The user-supplied text string <i>label</i> is placed into the dump header, where tools like <code><a href="/docs/linux/man/8-restore/">restore</a></code>(8) and <code>file</code>(8) can access it. Note that this label is limited to be at most <code>LBLSIZE</code> (currently 16) characters, which must include the terminating 

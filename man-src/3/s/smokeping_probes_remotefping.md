@@ -48,11 +48,11 @@ description: "Smokeping::probes::RemoteFPing – Remote FPing Probe for SmokePin
 <dd>Send an extra ping and then discarge the first answer since the first is bound to be an outliner. </p>
 <p> Example value: true</p>
 <dt>hostinterval</p>
-<dd>The fping &#8220;-p&#8221; parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i><a href="/docs/linux/man/1-fping/">fping</a></i>(1): </p>
+<dd>The fping &#8220;-p&#8221; parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i>fping</i>(1): </p>
 <p> This parameter sets the time that fping waits between successive packets to an individual target. </p>
 <p> Example value: 1.5</p>
 <dt>mininterval</p>
-<dd>The fping &#8220;-i&#8221; parameter, but in (probably fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i><a href="/docs/linux/man/1-fping/">fping</a></i>(1): </p>
+<dd>The fping &#8220;-i&#8221; parameter, but in (probably fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i>fping</i>(1): </p>
 <p> The minimum amount of time between sending a ping packet to any target. </p>
 <p> Example value: 0.001 </p>
 <p> Default value: 0.01</p>
@@ -77,7 +77,7 @@ description: "Smokeping::probes::RemoteFPing – Remote FPing Probe for SmokePin
 <dd>The (optional) <code>ruser</code> option allows you to specify the remote user, if different from the one running the smokeping daemon. </p>
 <p> Example value: foo</p>
 <dt>sourceaddress</p>
-<dd>The fping &#8220;-S&#8221; parameter . From <i><a href="/docs/linux/man/1-fping/">fping</a></i>(1): </p>
+<dd>The fping &#8220;-S&#8221; parameter . From <i>fping</i>(1): </p>
 <p> Set source address. </p>
 <p> Example value: 192.168.0.1</p>
 <dt>step</p>

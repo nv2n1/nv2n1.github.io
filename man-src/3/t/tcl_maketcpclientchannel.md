@@ -57,6 +57,6 @@ Tcl_Channel
 <h2>Platform Issues</h2>
 <p>On Unix platforms, the socket handle is a Unix file descriptor as returned by the <code>socket</code> system call. On the Windows platform, the socket handle is a <code>SOCKET</code> as defined in the WinSock API. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-tcl_openfilechannel/">Tcl_OpenFileChannel</a>(3), <a href="/docs/linux/man/3-tcl_registerchannel/">Tcl_RegisterChannel</a>(3), <a href="/docs/linux/man/n-vwait/">vwait</a>(n) </p>
+<p><a href="/docs/linux/man/3-tcl_openfilechannel/">Tcl_OpenFileChannel</a>(3), <a href="/docs/linux/man/3-tcl_registerchannel/">Tcl_RegisterChannel</a>(3), vwait(n) </p>
 <h2>Keywords</h2>
 <p>client, server, TCP</p>

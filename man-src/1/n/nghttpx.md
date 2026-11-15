@@ -131,7 +131,7 @@ description: "nghttpx – HTTP/2 proxy"
 <h3>SSL/TLS</h3>
 <dl>
 <dt><code>&#8211;ciphers=&lt;SUITE&gt;</code></p>
-<dd> Set allowed cipher list. The format of the string is described in OpenSSL <a href="/docs/linux/man/1-ciphers/">ciphers</a>(1).</p>
+<dd> Set allowed cipher list. The format of the string is described in OpenSSL ciphers(1).</p>
 <dt><code>-k, &#8211;insecure</code></p>
 <dd> Don&#8217;t verify backend server&#8217;s certificate if <i>-p</i>, <i>&#8211;client</i> or <i>&#8211;http2-bridge</i> are given and <i>&#8211;backend-no-tls</i> is not given.</p>
 <dt><code>&#8211;cacert=&lt;PATH&gt;</code></p>

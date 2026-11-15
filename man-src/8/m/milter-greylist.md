@@ -44,7 +44,7 @@ description: "milter-greylist – grey listing filter for sendmail"
 <dt><code>-P </code><i>pidfile</i></p>
 <dd>write the daemon&#8217;s PID to <i>pidfile</i>. Equivalent to the <i>pidfile</i> option in the configuration file.</p>
 <dt><code>-p </code><i>socket</i></p>
-<dd>Use <i>socket</i> as the socket used by <code><a href="/docs/linux/man/8-sendmail/">sendmail</a>(8)</code> to communicate with <code>milter-greylist</code>.</p>
+<dd>Use <i>socket</i> as the socket used by <code>sendmail(8)</code> to communicate with <code>milter-greylist</code>.</p>
 <dt><code>-q</code></p>
 <dd>Quiet mode. <code>milter-greylist</code> will not tell SMTP clients how much time they have to wait before the message will be accepted. Equivalent to the <i>quiet</i> option in the configuration file.</p>
 <dt><code>-r</code></p>
@@ -56,7 +56,7 @@ description: "milter-greylist – grey listing filter for sendmail"
 <dt><code>-u </code><i>username</i>[:<i>groupname</i>]</p>
 <dd>Drop root privileges and switch to <i>username</i> (and optionally <i>groupname</i>) credentials. Make sure this user (and group) has write access to <i>greylist.db</i>. Equivalent to the <i>user</i> option in the configuration file.</p>
 <dt><code>-v</code></p>
-<dd>Enable debug output. <code>milter-greylist </code> will send messages (and debug output if it is given the <code>-v</code> flag) to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a>(8)</code> with facility LOG_MAIL. Equivalent to the <i>verbose</i> option in the configuration file.</p>
+<dd>Enable debug output. <code>milter-greylist </code> will send messages (and debug output if it is given the <code>-v</code> flag) to <code>syslogd(8)</code> with facility LOG_MAIL. Equivalent to the <i>verbose</i> option in the configuration file.</p>
 <dt><code>-w </code><i>greylist_delay</i></p>
 <dd>sets the minimum delay between the first attempt and the time the message can be accepted. Default is 30 minutes. A suffix can be added to specify seconds (s), minutes (m), hours (h), days (d) or weeks (w). Without any suffix, values are treated as seconds. Equivalent to the <i>greylist</i> option in the configuration file.</dl>
 <h2>Greylist Mx Sync</h2>
@@ -71,7 +71,7 @@ description: "milter-greylist – grey listing filter for sendmail"
 <p> <code>milter-greylist</code> received many contributions from (in alphabetical order): Adrian Dabrowski, Aida Shinra, Adam Katz, Alexander Lobodzinski, Alexandre Cherif, Alexey Popov, Andrew McGill, Attila Bruncsak, Benoit Branciard, Bernhard Schneider, Bob Smith, Constantine A. Murenin, Chris Bennett, Christian Pelissier, Cyril Guibourg, Dan Hollis, David Binderman, Denis Solovyov, Elrond, Enrico Scholz, Eugene Crosser, Fabien Tassin, Fredrik Pettai, Gary Aitken, Georg Horn, Gert Doering, Greg Troxel, Guido Kerkewitz, Hajimu Umemoto, Hideki ONO, Ivan F. Martinez, Jacques Beigbeder, Jean Benoit, Jean-Jacques Puig, Jeff Rife, Jim Klimov, Jobst Schmalenbach, Joe Pruett, Joel Bertrand, Johann E. Klasek, Johann Klasek, John Thiltges, John Wood, Jorgen Lundman, Klas Heggemann, Kouhei Sutou, Laurence Moindrot, Lev Walkin, Manuel Badzong, Mart Pirita, Martin Paul, Matt Kettler, Mattheu Herrb, Matthias Scheler, Matthieu Herrb, Michael Fromme, Moritz Both, Nerijus Baliunas, Ole Hansen, Pavel Cahyna, Pascal Lalonde, Per Holm, Petar Bogdanovic, Petr Kristof, Piotr Wadas, R P Herrold, Ralf S. Engelschall, Ranko Zivojnovic, Remy Card, Rick Adams, Rogier Maas, Romain Kang, Rudy Eschauzier, Stephane Lentz, Steven Hiscocks, Thomas Scheunemann, Tim Mooney, Vincent Dufresne, Wolfgang Solfrank, and Yaroslav Boychuk. </p>
 <p> Thanks to Helmut Messerer and Thomas Pfau for their feedback on the first releases of this software.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-greylist-conf/">greylist.conf</a>(5), <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8), <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8).</p>
+<p><a href="/docs/linux/man/5-greylist-conf/">greylist.conf</a>(5), sendmail(8), syslogd(8).</p>
 <dl>
 <dt>Evan Harris&#8217;s paper:</p>
 <dd><i><a rel="nofollow" href="http://projects.puremagic.com/greylisting/">http://projects.puremagic.com/greylisting/</a></i></p>

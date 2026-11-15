@@ -43,7 +43,7 @@ description: "pkcs11_eventmgr – SmartCard PKCS#11 Event Manager"
 <h2>AUTHORS</h2>
 <p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a>(8), <a href="/docs/linux/man/5-card_eventmgr/">card_eventmgr</a>(5)<br />
+<p> <a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a>(8), card_eventmgr(5)<br />
  README.eventmgr<br />
  PAM-PKCS11 User Manual </p>
 <h2>Index</h2>

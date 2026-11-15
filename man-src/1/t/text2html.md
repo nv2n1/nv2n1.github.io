@@ -36,7 +36,7 @@ text2html-- paras-- urls-- email-- bold-- underline
 <h2>DIAGNOSTICS</h2>
 <p> The <tt>&quot;text2html&quot;</tt> utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i><a href="/docs/linux/man/3-html--fromtext/">HTML::FromText</a></i>(3).</p>
+<p> <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>HTML::FromText</i>(3).</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>&bull;</p>

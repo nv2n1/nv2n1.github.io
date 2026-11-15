@@ -101,6 +101,6 @@ description: "sane-scsi – SCSI adapter tips for scanners"
 <dd>sets the timeout value for SCSI commands in seconds. Overriding the default value of 120 seconds should only be necessary for very slow scanners. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/5-sane-backendname/">sane-backendname</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code>sane-backendname</code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) </p>
 <h2>Author</h2>
 <p>David Mosberger</p>

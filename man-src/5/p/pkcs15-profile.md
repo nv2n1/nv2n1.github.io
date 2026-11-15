@@ -16,4 +16,4 @@ description: "pkcs15-profile – format of profile for pkcs15-init"
 <h2>Syntax</h2>
 <p>This section should contain information about the profile syntax. Will add this soonishly.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-pkcs15/">pkcs15</a></code>(7), <code><a href="/docs/linux/man/1-pkcs15-init/">pkcs15-init</a></code>(1), <code><a href="/docs/linux/man/1-pkcs15-crypt/">pkcs15-crypt</a></code>(1), <code><a href="/docs/linux/man/7-opensc/">opensc</a></code>(7), </p>
+<p><code>pkcs15</code>(7), <code><a href="/docs/linux/man/1-pkcs15-init/">pkcs15-init</a></code>(1), <code><a href="/docs/linux/man/1-pkcs15-crypt/">pkcs15-crypt</a></code>(1), <code>opensc</code>(7), </p>

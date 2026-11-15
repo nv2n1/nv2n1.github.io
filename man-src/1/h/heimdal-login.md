@@ -13,7 +13,7 @@ description: "login – authenticate a user and start new session"
 <p> [-<code>fp</code> ] [-<code>a </code><i>level</i> ] [-<code>h </code><i>hostname</i> ] <i>[username]</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>login</code> program distributed with the Heimdal Kerberos 5 implementation, it may differ in important ways from your system version. </p>
-<p> The <code>login</code> programs logs users into the system. It is intended to be run by system daemons like <a href="/docs/linux/man/8-getty/">getty</a>(8) or <a href="/docs/linux/man/8-telnetd/">telnetd</a>(8). If you are already logged in, but want to change to another user, you should use <a href="/docs/linux/man/1-su/">su</a>(1). </p>
+<p> The <code>login</code> programs logs users into the system. It is intended to be run by system daemons like <a href="/docs/linux/man/8-getty/">getty</a>(8) or telnetd(8). If you are already logged in, but want to change to another user, you should use <a href="/docs/linux/man/1-su/">su</a>(1). </p>
 <p> A username can be given on the command line, else one will be prompted for. </p>
 <p> A password is required to login, unless the &#8211;<code>f</code> option is given (indicating that the calling program has already done proper authentication). With &#8211;<code>f</code> the user will be logged in without further questions. </p>
 <p> For password authentication Kerberos 5, Kerberos 4 (if compiled in), OTP (if compiled in) and local <code>( /etc/passwd </code> passwords are supported. OTP will be used if the the user is registered to use it, and <code>login</code> is given the option &#8211;<code>a otp</code> When using OTP, a challenge is shown to the user. </p>
@@ -91,7 +91,7 @@ default:\
 </blockquote>
 <p> The limits.conf file consists of a table with four whitespace separated fields. First field is a username or a groupname (prefixed with `@ )&#8217; or `*&#8217; Second field is `soft&#8217; `hard&#8217; or `-&#8216; (the last meaning both soft and hard). Third field is a limit name (such as `cpu&#8217; or `core )&#8217; Last field is the limit value (a number or `-&#8216; for unlimited). In the case of data sizes, the value is in kilobytes, and cputime is in minutes.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-su/">su</a>(1), login.access5, <a href="/docs/linux/man/8-getty/">getty</a>(8), <a href="/docs/linux/man/8-telnetd/">telnetd</a>(8)</p>
+<p> <a href="/docs/linux/man/1-su/">su</a>(1), login.access5, <a href="/docs/linux/man/8-getty/">getty</a>(8), telnetd(8)</p>
 <h2>AUTHORS</h2>
 <p> This login program was written for the Heimdal Kerberos 5 implementation. The login.access code was written by Wietse Venema. </p>
 <h2>Index</h2>

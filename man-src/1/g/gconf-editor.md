@@ -25,6 +25,6 @@ description: "gconf-editor – an editor for the GConf configuration system"
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://bugzilla.gnome.org/.">http://bugzilla.gnome.org/.</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gconfd-2/">gconfd-2</a></code>(1), <code><a href="/docs/linux/man/1-gconftool-2/">gconftool-2</a></code>(1). </p>
+<p> <code>gconfd-2</code>(1), <code><a href="/docs/linux/man/1-gconftool-2/">gconftool-2</a></code>(1). </p>
 <p> <i><a rel="nofollow" href="http://www.gnome.org/projects/gconf/">http://www.gnome.org/projects/gconf/</a></i> </p>
 <h2>Index</h2>

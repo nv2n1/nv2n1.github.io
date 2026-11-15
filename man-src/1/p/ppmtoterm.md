@@ -25,7 +25,7 @@ description: "ppmtoterm – convert a PPM image to a ANSI ISO 6429 ascii image"
 <h2>OPTIONS</h2>
 <p> None. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtoascii/">pbmtoascii</a></code>(1) , <code><a href="/docs/linux/man/1-pbmto4425/">pbmto4425</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtoascii/">pbmtoascii</a></code>(1) , <code><a href="/docs/linux/man/1-pbmto4425/">pbmto4425</a></code>(1) , <code>ppm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2002 by Ero Carrera. </p>
 <h2>HISTORY</h2>

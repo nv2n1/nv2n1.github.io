@@ -103,7 +103,7 @@ description: "ipsec_pluto, ipsec_whack, pluto – ipsec whack : IPsec IKE keying
 <p> The <i>(potential) connection</i> database describes attributes of a connection. These include the IP addresses of the hosts and client subnets and the security characteristics desired. <code>pluto</code> requires this information (simply called a connection) before it can respond to a request to build an SA. Each connection is given a name when it is created, and all references are made using this name. </p>
 <p> During the IKE exchange to build an SA, the information about the negotiation is represented in a <i>state object</i>. Each state object reflects how far the negotiation has reached. Once the negotiation is complete and the SA established, the state object remains to represent the SA. When the SA is terminated, the state object is discarded. Each State object is given a serial number and this is used to refer to the state objects in logged messages. </p>
 <p> Each state object corresponds to a connection and can be thought of as an instantiation of that connection. At any particular time, there may be any number of state objects corresponding to a particular connection. Often there is one representing an ISAKMP SA and another representing an IPsec SA. </p>
-<p> <code>KLIPS</code> hooks into the routing code in a LINUX kernel. Traffic to be processed by an IPsec SA must be directed through <code>KLIPS</code> by routing commands. Furthermore, the processing to be done is specified by <i>ipsec <a href="/docs/linux/man/8-eroute/">eroute</a>(8)</i> commands. <code>pluto</code> takes the responsibility of managing both of these special kinds of routes. </p>
+<p> <code>KLIPS</code> hooks into the routing code in a LINUX kernel. Traffic to be processed by an IPsec SA must be directed through <code>KLIPS</code> by routing commands. Furthermore, the processing to be done is specified by <i>ipsec eroute(8)</i> commands. <code>pluto</code> takes the responsibility of managing both of these special kinds of routes. </p>
 <p> <code>NETKEY</code> requires no special routing. </p>
 <p> Each connection may be routed, and must be while it has an IPsec SA. The connection specifies the characteristics of the route: the interface on this machine, the &quot;gateway&quot; (the nexthop), and the peer&#8217;s client subnet. Two connections may not be simultaneously routed if they are for the same peer&#8217;s client subnet but use different interfaces or gateways (<code>pluto</code>&#8216;s logic does not reflect any advanced routing capabilities). </p>
 <p> On KLIPS, each eroute is associated with the state object for an IPsec SA because it has the particular characteristics of the SA. Two eroutes conflict if they specify the identical local and remote clients (unlike for routes, the local clients are taken into account). </p>
@@ -172,7 +172,7 @@ description: "ipsec_pluto, ipsec_whack, pluto – ipsec whack : IPsec IKE keying
 <dd>where to route packets for the peer&#8217;s client (presumably for the peer too, but it will not be used for this). When <code>pluto</code> installs an IPsec SA, it issues a route command. It uses the nexthop as the gateway. The default is the peer&#8217;s IP address (this can be explicitly written as <code>%direct</code>; the obsolete notation 0.0.0.0 is accepted). This option is necessary if <code>pluto</code>&#8216;s host&#8217;s interface used for sending packets to the peer is neither point-to-point nor directly connected to the peer.</dl>
 <p> <code>&#8211;client</code>&nbsp;<wbr><i>subnet</i></p>
 <dl>
-<dd>the subnet for which the IPsec traffic will be destined. If not specified, the host will be the client. The subnet can be specified in any of the forms supported by <code><a href="/docs/linux/man/3-ipsec_atosubnet/">ipsec_atosubnet</a></code>(3). The general form is <i>address</i>/<i>mask</i>. The <i>address</i> can be either a domain name or four decimal numbers (specifying octets) separated by dots. The most convenient form of the <i>mask</i> is a decimal integer, specifying the number of leading one bits in the mask. So, for example, 10.0.0.0/8 would specify the class A network &quot;Net 10&quot;.</dl>
+<dd>the subnet for which the IPsec traffic will be destined. If not specified, the host will be the client. The subnet can be specified in any of the forms supported by <code>ipsec_atosubnet</code>(3). The general form is <i>address</i>/<i>mask</i>. The <i>address</i> can be either a domain name or four decimal numbers (specifying octets) separated by dots. The most convenient form of the <i>mask</i> is a decimal integer, specifying the number of leading one bits in the mask. So, for example, 10.0.0.0/8 would specify the class A network &quot;Net 10&quot;.</dl>
 <p> <code>&#8211;clientwithin</code>&nbsp;<wbr><i>subnet</i></p>
 <dl>
 <dd>This option is obsolete and will be removed. Do not use this option anymore.</dl>
@@ -391,7 +391,7 @@ description: "ipsec_pluto, ipsec_whack, pluto – ipsec whack : IPsec IKE keying
 <dd>specifies that the new key is added to the collection; otherwise the new key replaces any old ones.</dl>
 <p> <code>&#8211;pubkeyrsa&nbsp;<wbr></code><i>key</i></p>
 <dl>
-<dd>specifies the value of the RSA public key. It is a sequence of bytes as described in RFC 2537 &quot;RSA/MD5 KEYs and SIGs in the Domain Name System (DNS)&quot;. It is denoted in a way suitable for <code><a href="/docs/linux/man/3-ipsec_ttodata/">ipsec_ttodata</a></code>(3). For example, a base 64 numeral starts with 0s.</dl>
+<dd>specifies the value of the RSA public key. It is a sequence of bytes as described in RFC 2537 &quot;RSA/MD5 KEYs and SIGs in the Domain Name System (DNS)&quot;. It is denoted in a way suitable for <code>ipsec_ttodata</code>(3). For example, a base 64 numeral starts with 0s.</dl>
 <p> The listen form tells <code>pluto</code> to start listening for IKE requests on its public interfaces. To avoid race conditions, it is normal to load the appropriate connections into <code>pluto</code> before allowing it to listen. If <code>pluto</code> isn&#8217;t listening, it is pointless to initiate negotiations, so it will refuse requests to do so. Whenever the listen form is used, <code>pluto</code> looks for public interfaces and will notice when new ones have been added and when old ones have been removed. This is also the trigger for <code>pluto</code> to read the <i>ipsec.secrets</i> file. So listen may useful more than once. </p>
 <p> <code>&#8211;listen</code></p>
 <dl>
@@ -568,7 +568,7 @@ description: "ipsec_pluto, ipsec_whack, pluto – ipsec whack : IPsec IKE keying
 <dd>if this option has been selected, pluto will be forced to be &quot;busy&quot;. In this state, which happens when there is a Denial of Service attack, will force pluto to use cookies before accepting new incoming IKE packets. Cookies are send and required in ikev1 Aggressive Mode and in ikev2. This option is mostly used for testing purposes, but can be selected by paranoid administrators as well.</dl>
 <p> <code>&#8211;stderrlog</code></p>
 <dl>
-<dd>log goes to standard out {default is to use <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8))</dl>
+<dd>log goes to standard out {default is to use <code>syslogd</code>(8))</dl>
 <p> For example </p>
 <p> pluto &#8211;secretsfile ipsec.secrets &#8211;ctlbase pluto.base &#8211;ikeport 8500 &#8211;nofork &#8211;use-nostack &#8211;stderrlog</p>
 <dl>
@@ -702,7 +702,7 @@ description: "ipsec_pluto, ipsec_whack, pluto – ipsec whack : IPsec IKE keying
 <p>The rest of the Libreswan distribution, in particular <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8). </p>
 <p> <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8) is designed to make using <code>pluto</code> more pleasant. Use it! </p>
 <p> <code><a href="/docs/linux/man/5-ipsec-secrets/">ipsec.secrets</a></code>(5) describes the format of the secrets file. </p>
-<p> <code><a href="/docs/linux/man/3-ipsec_atoaddr/">ipsec_atoaddr</a></code>(3), part of the Libreswan distribution, describes the forms that IP addresses may take. <code><a href="/docs/linux/man/3-ipsec_atosubnet/">ipsec_atosubnet</a></code>(3), part of the Libreswan distribution, describes the forms that subnet specifications. </p>
+<p> <code>ipsec_atoaddr</code>(3), part of the Libreswan distribution, describes the forms that IP addresses may take. <code>ipsec_atosubnet</code>(3), part of the Libreswan distribution, describes the forms that subnet specifications. </p>
 <p> For more information on IPsec, the mailing list, and the relevant documents, see: </p>
 <p> <i>m[blue]</i><code><a rel="nofollow" href="https://datatracker.ietf.org/wg/ipsecme/charter/">https://datatracker.ietf.org/wg/ipsecme/charter/</a></code>m[] </p>
 <p> At the time of writing, the most relevant IETF RFCs are: </p>

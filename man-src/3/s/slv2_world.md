@@ -40,14 +40,14 @@ description: "Global library state –"
 <p> This function should only be used by apps which ship with a special bundle (which it knows exists at some path because the bundle is shipped with the application). </p>
 <p> Time = Query</p>
 <h3>SLV2PluginClass slv2_world_get_plugin_class (SLV2Worldworld)</h3>
-<p>Get the parent of all other plugin classes, lv2:Plugin. Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p>Get the parent of all other plugin classes, lv2:Plugin. Time = O(1)</p>
 <h3>SLV2PluginClasses slv2_world_get_plugin_classes (SLV2Worldworld)</h3>
 <p>Return a list of all found plugin classes. Returned list is owned by world and must not be freed by the caller. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Plugins slv2_world_get_all_plugins (SLV2Worldworld)</h3>
 <p>Return a list of all found plugins. The returned list contains just enough references to query or instantiate plugins. The data for a particular plugin will not be loaded into memory until a call to an slv2_plugin_* function results in a query (at which time the data is cached with the SLV2Plugin so future queries are very fast). </p>
 <p> Returned list must be freed by user with slv2_plugins_free. The contained plugins are owned by <i>world</i> and must not be freed by caller. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Plugins slv2_world_get_plugins_by_filter (SLV2Worldworld, bool(*)(SLV2Plugin)include)</h3>
 <p>Return a list of found plugins filtered by a user-defined filter function. All plugins currently found in <i>world</i> that return true when passed to <i>include</i> (a pointer to a function which takes an SLV2Plugin and returns a bool) will be in the returned list. </p>
 <p> Returned list must be freed by user with slv2_plugins_free. The contained plugins are owned by <i>world</i> and must not be freed by caller. </p>

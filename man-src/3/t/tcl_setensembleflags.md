@@ -70,4 +70,4 @@ int
 <dd>The namespace to which the ensemble is bound; when the namespace is deleted, so too will the ensemble, and this namespace is also the namespace whose list of exported commands is used if both the mapping dictionary and the subcommand list properties are NULL. May be read using <code>Tcl_GetEnsembleNamespace</code> which returns a Tcl result code (TCL_OK, or TCL_ERROR if the token does not refer to an ensemble). </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-namespace/">namespace</a>(n), <a href="/docs/linux/man/3-tcl_deletecommandfromtoken/">Tcl_DeleteCommandFromToken</a>(3)</p>
+<p>namespace(n), <a href="/docs/linux/man/3-tcl_deletecommandfromtoken/">Tcl_DeleteCommandFromToken</a>(3)</p>

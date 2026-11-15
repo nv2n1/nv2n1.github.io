@@ -35,4 +35,4 @@ description: "glutBitmapString – Draw a string of bitmapped characters"
 &nbsp;<wbr>is an empty string or NULL pointer<br />
 &nbsp;<wbr>&#8211; The current OpenGL raster position is invalid </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-glrasterpos/">glRasterPos</a>(3) <a href="/docs/linux/man/3-glutbitmapcharacter/">glutBitmapCharacter</a>(3)</p>
+<p>glRasterPos(3) <a href="/docs/linux/man/3-glutbitmapcharacter/">glutBitmapCharacter</a>(3)</p>

@@ -65,7 +65,7 @@ auth_param negotiate keep_alive on</pre>
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8) <code><a href="/docs/linux/man/8-ext_kerberos_ldap_group_acl/">ext_kerberos_ldap_group_acl</a></code>(8)<br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8) <code>ext_kerberos_ldap_group_acl</code>(8)<br />
  <code>RFC4559</code> &#8211; SPNEGO-based Kerberos and NTLM HTTP Authentication in Microsoft Windows,<br />
  <code>RFC2478</code> &#8211; The Simple and Protected GSS-API Negotiation Mechanism,<br />
  <code>RFC1964</code> &#8211; The Kerberos Version 5 GSS-API Mechanism,<br />

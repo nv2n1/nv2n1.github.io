@@ -14,7 +14,7 @@ description: "CURLOPT_CLOSESOCKETFUNCTION – callback to socket close replaceme
 <p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_CLOSESOCKETFUNCTION, closesocket_callback);</p>
 <h2>Description</h2>
 <p>Pass a pointer to your callback function, which should match the prototype shown above. </p>
-<p> This callback function gets called by libcurl instead of the <i><a href="/docs/linux/man/3-close/">close</a>(3)</i> or <i><a href="/docs/linux/man/3-closesocket/">closesocket</a>(3)</i> call when sockets are closed (not for any other file descriptors). This is pretty much the reverse to the <i><a href="/docs/linux/man/3-curlopt_opensocketfunction/">CURLOPT_OPENSOCKETFUNCTION</a>(3)</i> option. Return 0 to signal success and 1 if there was an error. </p>
+<p> This callback function gets called by libcurl instead of the <i><a href="/docs/linux/man/3-close/">close</a>(3)</i> or <i>closesocket(3)</i> call when sockets are closed (not for any other file descriptors). This is pretty much the reverse to the <i><a href="/docs/linux/man/3-curlopt_opensocketfunction/">CURLOPT_OPENSOCKETFUNCTION</a>(3)</i> option. Return 0 to signal success and 1 if there was an error. </p>
 <p> The <i>clientp</i> pointer is set with <i><a href="/docs/linux/man/3-curlopt_closesocketdata/">CURLOPT_CLOSESOCKETDATA</a>(3)</i>. <i>item</i> is the socket libcurl wants to be closed.</p>
 <h2>Default</h2>
 <p>By default libcurl uses the standard socket close function.</p>

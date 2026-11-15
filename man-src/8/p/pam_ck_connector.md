@@ -21,6 +21,6 @@ description: "pam_ck_connector – Register session with ConsoleKit"
 <dd>Do not create a session if PAM specifies an X11 display instead of a /dev/tty terminal. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/8-pam-d/">pam.d</a></code>(8), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code>pam.d</code>(8), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1)</p>
 <h2>Author</h2>
 <p>pam_ck_connector was written by David Zeuthen &lt;davidz [at] redhat.com&gt;.</p>

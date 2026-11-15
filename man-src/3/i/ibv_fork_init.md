@@ -54,7 +54,7 @@ int ibv_fork_init(void);
 
  
 
- <a HREF="/docs/linux/man/3-exec/">exec</a>(3), <a HREF="/docs/linux/man/2-fork/">fork</a>(2), <a HREF="/docs/linux/man/3-ibv_get_device_list/">ibv_get_device_list</a>(3), <a HREF="/docs/linux/man/3-system/">system</a>(3), <a HREF="/docs/linux/man/2-wait/">wait</a>(2)
+ <a HREF="/docs/linux/man/3-exec/">exec</a>(3), <a HREF="/docs/linux/man/2-fork/">fork</a>(2), ibv_get_device_list(3), <a HREF="/docs/linux/man/3-system/">system</a>(3), <a HREF="/docs/linux/man/2-wait/">wait</a>(2)
 
 <h2>AUTHOR</h2>
 

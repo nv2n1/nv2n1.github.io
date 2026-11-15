@@ -17,5 +17,5 @@ description: "install_int – Installs a user timer handler. Allegro game progra
 <h2>RETURN VALUE</h2>
 <p> Returns zero on success, or a negative number if there is no room to add a new user timer. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_timer/">install_timer</a></code>(3), <code><a href="/docs/linux/man/3-remove_int/">remove_int</a></code>(3), <code><a href="/docs/linux/man/3-install_int_ex/">install_int_ex</a></code>(3), <code><a href="/docs/linux/man/3-install_param_int/">install_param_int</a></code>(3), <code><a href="/docs/linux/man/3-exscn3d/">exscn3d</a></code>(3), <code><a href="/docs/linux/man/3-exswitch/">exswitch</a></code>(3), <code><a href="/docs/linux/man/3-extimer/">extimer</a></code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3) </p>
+<p> <code>install_timer</code>(3), <code>remove_int</code>(3), <code>install_int_ex</code>(3), <code>install_param_int</code>(3), <code><a href="/docs/linux/man/3-exscn3d/">exscn3d</a></code>(3), <code><a href="/docs/linux/man/3-exswitch/">exswitch</a></code>(3), <code><a href="/docs/linux/man/3-extimer/">extimer</a></code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3) </p>
 <h2>Index</h2>

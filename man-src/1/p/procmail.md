@@ -87,7 +87,7 @@ SHIFT = 1                       # remove it from $@
  Tp <code>/usr/sbin/sendmail</code> default mail forwarder<br />
  Tp <code>_????`hostname`</code> temporary `unique&#8217; zero-length files created by procmail </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5), <code><a href="/docs/linux/man/5-procmailsc/">procmailsc</a></code>(5), <code><a href="/docs/linux/man/5-procmailex/">procmailex</a></code>(5), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/1-mailx/">mailx</a></code>(1), <code><a href="/docs/linux/man/1-uucp/">uucp</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-biff/">biff</a></code>(1), <code><a href="/docs/linux/man/8-comsat/">comsat</a></code>(8), <code><a href="/docs/linux/man/1-lockfile/">lockfile</a></code>(1), <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1), <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5), <code><a href="/docs/linux/man/5-procmailsc/">procmailsc</a></code>(5), <code><a href="/docs/linux/man/5-procmailex/">procmailex</a></code>(5), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/1-mailx/">mailx</a></code>(1), <code><a href="/docs/linux/man/1-uucp/">uucp</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code>biff</code>(1), <code>comsat</code>(8), <code><a href="/docs/linux/man/1-lockfile/">lockfile</a></code>(1), <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1), <code>cron</code>(1) </p>
 <h2>DIAGNOSTICS</h2>
 <p> Tp 2.3i Autoforwarding mailbox found The system mailbox had its suid or sgid bit set, procmail terminates with EX_NOUSER assuming that this mailbox must not be delivered to.<br />
  Tp Bad substitution of &quot;x&quot; Not a valid environment variable name specified.<br />
@@ -221,7 +221,7 @@ From '
 <pre>
 |/usr/bin/procmail
 </pre>
-<p> Procmail can also be invoked to postprocess an already filled system mailbox. This can be useful if you don&#8217;t want to or can&#8217;t use a $HOME/.forward file (in which case the following script could periodically be called from within <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1), or whenever you start reading mail): </p>
+<p> Procmail can also be invoked to postprocess an already filled system mailbox. This can be useful if you don&#8217;t want to or can&#8217;t use a $HOME/.forward file (in which case the following script could periodically be called from within <code>cron</code>(1), or whenever you start reading mail): </p>
 <pre><code>
 #!/ bin / sh
 ORGMAIL = / var / mail / $LOGNAME if cd $HOME &amp;&amp;

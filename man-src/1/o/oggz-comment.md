@@ -64,5 +64,5 @@ description: "oggz-comment — List or edit comments in an Ogg file."
 <p> Copyright &#169; 2007 Annodex Association<br />
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-vorbiscomment/">vorbiscomment</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-info/">oggz-info</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-hogg/">hogg</a></code><code>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-vorbiscomment/">vorbiscomment</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-info/">oggz-info</a></code><code>(1)</code>, <code>hogg</code><code>(1)</code> </p>
 <h2>Index</h2>

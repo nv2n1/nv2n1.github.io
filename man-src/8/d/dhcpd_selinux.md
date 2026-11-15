@@ -13,7 +13,7 @@ description: "dhcpd_selinux – Security Enhanced Linux Policy for the dhcpd pro
 <h2>Entrypoints</h2>
 <p>The dhcpd_t SELinux type can be entered via the <code>dhcpd_exec_t</code> file type. </p>
 <p> The default entrypoint paths for the dhcpd_t domain are the following: </p>
-<p> /usr/sbin/<a href="/docs/linux/man/6-dhcpd/">dhcpd</a>(6)?, /usr/sbin/<a href="/docs/linux/man/6-dhcrelay/">dhcrelay</a>(6)?</p>
+<p> /usr/sbin/dhcpd(6)?, /usr/sbin/dhcrelay(6)?</p>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux dhcpd policy is very flexible allowing users to setup their dhcpd processes in as secure a method as possible. </p>
@@ -86,11 +86,11 @@ description: "dhcpd_selinux – Security Enhanced Linux Policy for the dhcpd pro
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/rgmanager.pid</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/cluster/rgmanager.sk</p>
 <p> <code>dhcpd_state_t</code> </p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/<a href="/docs/linux/man/3-dhcp/">dhcp</a>(3)?/dhcpd.leases.*</p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/dhcp(3)?/dhcpd.leases.*</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/dhcpd(/.*)?</p>
 <p> <code>dhcpd_tmp_t</code> </p>
 <p> <code>dhcpd_var_run_t</code> </p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/<a href="/docs/linux/man/6-dhcpd/">dhcpd</a>(6)?.pid</p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/dhcpd(6)?.pid</p>
 <p> <code>root_t</code> </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/initrd</p>
@@ -107,19 +107,19 @@ description: "dhcpd_selinux – Security Enhanced Linux Policy for the dhcpd pro
 <p> &#8211; Set files with the dhcpd_exec_t type, if you want to transition an executable to the dhcpd_t domain. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/usr/sbin/<a href="/docs/linux/man/6-dhcpd/">dhcpd</a>(6)?, /usr/sbin/<a href="/docs/linux/man/6-dhcrelay/">dhcrelay</a>(6)? </p>
+<dd>/usr/sbin/dhcpd(6)?, /usr/sbin/dhcrelay(6)? </p>
 </dl>
 <p> <code>dhcpd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the dhcpd_initrc_exec_t type, if you want to transition an executable to the dhcpd_initrc_t domain. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/etc/rc.d/init.d/<a href="/docs/linux/man/6-dhcpd/">dhcpd</a>(6)?, /etc/rc.d/init.d/<a href="/docs/linux/man/6-dhcrelay/">dhcrelay</a>(6)? </p>
+<dd>/etc/rc.d/init.d/dhcpd(6)?, /etc/rc.d/init.d/dhcrelay(6)? </p>
 </dl>
 <p> <code>dhcpd_state_t</code> </p>
 <p> &#8211; Set files with the dhcpd_state_t type, if you want to treat the files as dhcpd state data. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/var/lib/<a href="/docs/linux/man/3-dhcp/">dhcp</a>(3)?/dhcpd.leases.*, /var/lib/dhcpd(/.*)? </p>
+<dd>/var/lib/dhcp(3)?/dhcpd.leases.*, /var/lib/dhcpd(/.*)? </p>
 </dl>
 <p> <code>dhcpd_tmp_t</code> </p>
 <p> &#8211; Set files with the dhcpd_tmp_t type, if you want to store dhcpd temporary files in the /tmp directories. </p>

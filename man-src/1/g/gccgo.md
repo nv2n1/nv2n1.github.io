@@ -43,10 +43,10 @@ description: "gccgo – A GCC-based compiler for the Go language"
 <dt><code>-fgo-check-divide-overflow</code></p>
 <dd> Add explicit checks for division overflow. For example, division overflow occurs when computing <tt>&quot;INT_MIN / -1&quot;</tt>. In Go this should be wrapped, to produce <tt>&quot;INT_MIN&quot;</tt>. Some processors, such as x86, generate a trap on division overflow. On those systems, this option may be used. Or the checks may be removed via <code>-fno-go-check-divide-overflow</code>. This option is currently on by default, but in the future may be off by default on systems that do not require it.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-gpl/">gpl</a></i>(7), <i><a href="/docs/linux/man/7-gfdl/">gfdl</a></i>(7), <i><a href="/docs/linux/man/7-fsf-funding/">fsf-funding</a></i>(7), <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1) and the Info entries for <i>gccgo</i> and <i>gcc</i>.</p>
+<p> <i>gpl</i>(7), <i>gfdl</i>(7), <i>fsf-funding</i>(7), <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1) and the Info entries for <i>gccgo</i> and <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2010-2013 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i><a href="/docs/linux/man/7-gfdl/">gfdl</a></i>(7). </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i>gfdl</i>(7). </p>
 <p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual

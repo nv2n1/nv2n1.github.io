@@ -26,7 +26,7 @@ int ibv_destroy_comp_channel(struct ibv_comp_channel *channel);
 <p> A &quot;completion channel&quot; is an abstraction introduced by libibverbs that does not exist in the InfiniBand Architecture verbs specification or RDMA Protocol Verbs Specification. A completion channel is essentially file descriptor that is used to deliver completion notifications to a userspace process. When a completion event is generated for a completion queue (CQ), the event is delivered via the completion channel attached to that CQ. This may be useful to steer completion events to different threads by using multiple completion channels. </p>
 <p> <code>ibv_destroy_comp_channel()</code> fails if any CQs are still associated with the completion event channel being destroyed.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_cq/">ibv_create_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_get_cq_event/">ibv_get_cq_event</a></code>(3)</p>
+<p> <code>ibv_open_device</code>(3), <code>ibv_create_cq</code>(3), <code>ibv_get_cq_event</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

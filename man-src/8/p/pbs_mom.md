@@ -233,7 +233,7 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <p> If the script detects a failure, it should return the keyword &#8216;ERROR&#8217; to stdout followed by an error message. The message (up to 256 characters) immediately following the ERROR string will be assigned to the node attribute &#8216;message&#8217; of the associated node. </p>
 <p> If the script detects a failure when run from &quot;jobstart&quot;, then the job will be rejected. This should probably only be used with advanced schedulers like Moab so that the job can be routed to another node. </p>
 <p> TORQUE currently ignores ERROR messages by default, but advanced schedulers like moab can be configured to react appropriately. </p>
-<p> If the experimental $down_on_error MOM setting is enabled, MOM will set itself to state down and report to pbs_server; and pbs_server will report the node as &quot;down&quot;. Additionally, the experimental &quot;down_on_error&quot; server attribute can be enabled which has the same effect but moves the decision to pbs_server. It is redundant to have MOM&#8217;s $down_on_error and pbs_server&#8217;s down_on_error features enabled. See &quot;down_on_error&quot; in <a href="//www.systutorials.com/docs/linux/man/7B-pbs_server_attributes/">pbs_server_attributes</a>(7B).</p>
+<p> If the experimental $down_on_error MOM setting is enabled, MOM will set itself to state down and report to pbs_server; and pbs_server will report the node as &quot;down&quot;. Additionally, the experimental &quot;down_on_error&quot; server attribute can be enabled which has the same effect but moves the decision to pbs_server. It is redundant to have MOM&#8217;s $down_on_error and pbs_server&#8217;s down_on_error features enabled. See &quot;down_on_error&quot; in pbs_server_attributes(7B).</p>
 <h2>Files</h2>
 <dl>
 <dt>$PBS_SERVER_HOME/server_name</p>
@@ -265,4 +265,4 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <h2>Exit Status</h2>
 <p>If the mini-server command fails to begin operation, the server exits with a value greater than zero.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_scheduler_basl/">pbs_scheduler_basl</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_scheduler_tcl/">pbs_scheduler_tcl</a>(8B), the PBS External Reference Specification, and the PBS Administrator&#8217;s Guide. </p>
+<p>pbs_server(8B), pbs_scheduler_basl(8B), pbs_scheduler_tcl(8B), the PBS External Reference Specification, and the PBS Administrator&#8217;s Guide. </p>

@@ -33,4 +33,4 @@ description: "XmVaCreateTabStack, XmVaCreateManagedTabStack — A TabStack widge
 <h2>Return</h2>
 <p>Returns the TabStack widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmtabstack/">XmTabStack</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatetabstack/">XmCreateTabStack</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmtabstack/">XmTabStack</a></code>(3), <code>XmCreateTabStack</code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>

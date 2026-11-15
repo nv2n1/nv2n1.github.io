@@ -88,7 +88,7 @@ description: "xrdp.ini – Configuration file for xrdp(8)"
 <dt><code>tcp_recv_buffer_bytes</code>=<i>buffer_size</i></p>
 <dd>Specify send/recv buffer sizes in bytes. The default value depends on operating system. </p>
 <dt><code>tls_ciphers</code>=<i>cipher_suite</i></p>
-<dd>Specifies TLS cipher suite. The format of this parameter is equivalent to which <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1) ciphers subcommand accepts. </p>
+<dd>Specifies TLS cipher suite. The format of this parameter is equivalent to which <code>openssl</code>(1) ciphers subcommand accepts. </p>
 <p> (ex. $ openssl ciphers &#8216;HIGH:!ADH:!SHA1&#8217;) </p>
 <p> This parameter is effective only if <code>security_layer</code> is set to <code>tls</code> or <code>negotiate</code>. </p>
 <dt><code>use_fastpath</code>=<i>[input|output|both|none]</i></p>
@@ -181,4 +181,4 @@ port=-1</pre>
 <h2>Files</h2>
 <p>${XRDP_CFG_DIR}/xrdp.ini</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8), <code><a href="/docs/linux/man/8-sesman/">sesman</a></code>(8), <code><a href="/docs/linux/man/8-sesrun/">sesrun</a></code>(8), <code><a href="/docs/linux/man/5-sesman-ini/">sesman.ini</a></code>(5) for more info on <code>xrdp</code> see <a rel="nofollow" href="http://www.xrdp.org/">http://www.xrdp.org/</a> </p>
+<p><code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8), <code>sesman</code>(8), <code>sesrun</code>(8), <code><a href="/docs/linux/man/5-sesman-ini/">sesman.ini</a></code>(5) for more info on <code>xrdp</code> see <a rel="nofollow" href="http://www.xrdp.org/">http://www.xrdp.org/</a> </p>

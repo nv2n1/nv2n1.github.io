@@ -15,7 +15,7 @@ description: "pamsumm – Summarize the samples in a Netpbm image arithmetically
 <h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamsumm</code> reads a Netpbm image (PNM or PAM) and performs a summary function over all the samples in all the rows, columns, and planes and prints the result to Standard Output. </p>
-<p> <code>pamsumm</code> performs the operation on the actual sample values. In the case of a PGM or PPM or PAM equivalent (i.e. a visual image), this is not the same as the light intensities represented by those samples. See the format specifications of <code><a href="/docs/linux/man/1-pgm/">PGM</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">PPM</a></code>(1) , and <code><a href="/docs/linux/man/1-pam/">PAM</a></code>(1) , for the precise meanings of samples in these formats. If you want to do arithmetic on light intensities of such a visual image, you can use <code>pnmgamma</code> to convert it to one with samples proportional to light intensity, and then use <code>pamsumm</code> on the result. </p>
+<p> <code>pamsumm</code> performs the operation on the actual sample values. In the case of a PGM or PPM or PAM equivalent (i.e. a visual image), this is not the same as the light intensities represented by those samples. See the format specifications of <code>PGM</code>(1) , <code>PPM</code>(1) , and <code>PAM</code>(1) , for the precise meanings of samples in these formats. If you want to do arithmetic on light intensities of such a visual image, you can use <code>pnmgamma</code> to convert it to one with samples proportional to light intensity, and then use <code>pamsumm</code> on the result. </p>
 <p> If you want to summarize by column (e.g. add up the columns separately), use <code>pamsummcol</code>. If you want to summarize by row, use a combination of <code>pamsummcol</code> and <code>pamflip</code>. If you want to summarize a particular plane, use <code>pamchannel</code> to extract it and then <code>pamsumm</code>. </p>
 <h2>OPTIONS</h2>
 <p> You must specify exactly one of <code>-sum</code>, <code>-mean</code>, <code>-min</code>, or <code>-max</code>. </p>
@@ -57,7 +57,7 @@ description: "pamsumm – Summarize the samples in a Netpbm image arithmetically
 <p> This option was new in Netpbm 10.22 (April 2004) </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamsumm</code> was added to Netpbm in Release 10.21 (March 2004). </p>
 <h2>Index</h2>

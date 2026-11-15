@@ -47,7 +47,7 @@ description: "fd2ps – Translates fdesign output to PostScript"
 <h2>BUGS</h2>
 <p> Not all objects are currently supported.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/1L-fdesign/">fdesign</a>(1L), <a href="/docs/linux/man/5-xforms/">xforms</a>(5)</p>
+<p> fdesign(1L), <a href="/docs/linux/man/5-xforms/">xforms</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (c) 1997-98 by T.C. Zhao (tc_zhao [at] yahoo.com)<br />
  Since 2002: GNU Lesser General Public License<br />

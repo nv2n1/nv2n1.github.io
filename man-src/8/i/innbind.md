@@ -46,9 +46,9 @@ description: "innbind – Helper program to bind sockets to privileged ports"
 <dt>invalid file descriptor %d: not <font SIZE="-1">SOCK_STREAM</font></p>
 <dd>(Fatal) The given file descriptor is not a <font SIZE="-1">SOCK_STREAM</font> socket. <code>innbind</code> can only bind <font SIZE="-1">SOCK_STREAM</font> sockets.</p>
 <dt>invalid IPv4 address %s in %s</p>
-<dd>(Fatal) The IPv4 address specified in the given command-line option could not be parsed by <i><a href="/docs/linux/man/3-inet_aton/">inet_aton</a></i>(3). IPv4 addresses should be specified in the standard dotted-quad format (10.2.3.4).</p>
+<dd>(Fatal) The IPv4 address specified in the given command-line option could not be parsed by <i>inet_aton</i>(3). IPv4 addresses should be specified in the standard dotted-quad format (10.2.3.4).</p>
 <dt>invalid IPv6 address %s in %s</p>
-<dd>(Fatal) The IPv6 address specified in the given command-line option could not be parsed by <i><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></i>(3). IPv6 addresses should be specified in <font SIZE="-1">RFC</font>&nbsp;<wbr>4291 format (1080:0:0:0:8:800:200C:417A or 1080::8:800:200C:417A).</p>
+<dd>(Fatal) The IPv6 address specified in the given command-line option could not be parsed by <i>inet_pton</i>(3). IPv6 addresses should be specified in <font SIZE="-1">RFC</font>&nbsp;<wbr>4291 format (1080:0:0:0:8:800:200C:417A or 1080::8:800:200C:417A).</p>
 <dt>invalid command-line argument %s</p>
 <dd>(Fatal) The specified command-line argument could not be parsed or was not in the correct format.</p>
 <dt>invalid file descriptor %s in %s</p>
@@ -75,4 +75,4 @@ description: "innbind – Helper program to bind sockets to privileged ports"
 <p>Written by Russ Allbery &lt;eagle [at] eyrie.org&gt; for InterNetNews. </p>
 <p> <tt>$Id:</tt> innbind.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/3-inet_aton/">inet_aton</a></i>(3), <i><a href="/docs/linux/man/3-inet_pton/">inet_pton</a></i>(3), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8). </p>
+<p><i>inet_aton</i>(3), <i>inet_pton</i>(3), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8). </p>

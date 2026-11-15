@@ -36,7 +36,7 @@ description: "sendfax – send group 3 fax files (G3 files) with a class 2 faxmo
 <dd>If this option is given, <i>sendfax</i> will rename all the fax G3 files to &#8220;&lt;filename&gt;.done&#8221; after successfully sending this. This is intended to be used from &#8220;faxrunq&#8221;, to make sure that a partially-sended fax isn&#8217;t retransmitted as a whole every time. </p>
 <p> If this option is set, sendfax will not (!) complain if not all files named on the command line exist.</p>
 <dt><code>-D &lt;dial prefix&gt;</code></p>
-<dd>Override the default (set by sendfax.config or in policy.h) for the &#8216;ATxxx&#8217; command to dial the remote number. This is rarely used from the command line, but you might want to use it in combination with faxrunqd&#8217;s policy routing option (see example in <a href="/docs/linux/man/5-faxrunqd-policy/">faxrunqd.policy</a>(5)).</p>
+<dd>Override the default (set by sendfax.config or in policy.h) for the &#8216;ATxxx&#8217; command to dial the remote number. This is rarely used from the command line, but you might want to use it in combination with faxrunqd&#8217;s policy routing option (see example in faxrunqd.policy(5)).</p>
 <dt><code>-M &lt;max speed&gt;</code></p>
 <dd>Sets the maximum transmission (modem to modem) speed. This is only needed in very rare cases, because normally the modems negotiate the correct speed automatically. Example: &quot;-M 7200&quot;.</p>
 <dt><code>-R &lt;max tries&gt;</code></p>
@@ -76,6 +76,6 @@ description: "sendfax – send group 3 fax files (G3 files) with a class 2 faxmo
 <h2>Bugs</h2>
 <p><i>sendfax</i> should be able to put a header on the page. <i>sendfax</i> should be able to read TIFF g3 input files. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-g3cat/">g3cat</a>(1), <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1), <a href="/docs/linux/man/1-mgetty/">mgetty</a>(1), <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1), <a href="/docs/linux/man/8-faxrunqd/">faxrunqd</a>(8)</p>
+<p><a href="/docs/linux/man/1-g3cat/">g3cat</a>(1), <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1), mgetty(1), <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1), <a href="/docs/linux/man/8-faxrunqd/">faxrunqd</a>(8)</p>
 <h2>Author</h2>
 <p><i>sendfax</i> is Copyright (C) 1993 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;.</p>

@@ -26,7 +26,7 @@ description: "mkreiserfs – The create tool for the Linux ReiserFS filesystem."
 <dt><code>&#8211;format </code><i>FORMAT</i></p>
 <dd><i>FORMAT</i> specifies the format for the new filsystem. Choose format 3.5 or 3.6. If none is specified <code>mkreiserfs</code> will create format 3.6 if running kernel is 2.4 or higher, and format 3.5 if kernel 2.2 is running, and will refuse creation under all other kernels.</p>
 <dt><code>-u</code> | <code>&#8211;uuid </code><i>UUID</i></p>
-<dd>Sets the Universally Unique IDentifier of the filesystem to <i>UUID</i> (see also <code><a href="/docs/linux/man/8-uuidgen/">uuidgen</a>(8)</code>). The format of the <i>UUID</i> is a series of hex digits separated by hypthens, e.g.: &quot;c1b9d5a2-f162-11cf-9ece-0020afc76f16&quot;. If the option is skipped, <code>mkreiserfs</code> will by default generate a new <i>UUID</i>.</p>
+<dd>Sets the Universally Unique IDentifier of the filesystem to <i>UUID</i> (see also <code>uuidgen(8)</code>). The format of the <i>UUID</i> is a series of hex digits separated by hypthens, e.g.: &quot;c1b9d5a2-f162-11cf-9ece-0020afc76f16&quot;. If the option is skipped, <code>mkreiserfs</code> will by default generate a new <i>UUID</i>.</p>
 <dt><code>-l</code> | <code>&#8211;label </code><i>LABEL</i></p>
 <dd>Sets the volume label of the filesystem. <i>LABEL</i> can at most be 16 characters long; if it is longer than 16 characters, <code>mkreiserfs</code> will truncate it.</p>
 <dt><code>-q</code> | <code>&#8211;quiet </code></p>

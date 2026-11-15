@@ -54,7 +54,7 @@ description: "pamx – display Netpbm image in X Window System window"
 <dd> Set the title bar title of the window. Default is the file name of the input file, or &#8216;stdin&#8217; if the image is from Standard Input. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmsvgalib/">ppmsvgalib</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code>xzgv</code>, <code>xwud</code>, <code>xloadimage</code>, <code>xli</code> </p>
+<p> <code>ppmsvgalib</code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code>xzgv</code>, <code>xwud</code>, <code>xloadimage</code>, <code>xli</code> </p>
 <h2>AUTHOR</h2>
 <p> <code>pamx</code> is by Bryan Henderson, in March 2006, based on <code>xloadimage</code> by Jim Frost, Centerline Software, jimf [at] centerline.com, 1989-1993. </p>
 <p> Jim&#8217;s code contained the following copyright notice and license: </p>

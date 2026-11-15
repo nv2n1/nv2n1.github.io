@@ -32,7 +32,7 @@ moon -addopts:=ro,intr \
 <h2>Bugs</h2>
 <p><i>automount2amd</i> does not understand newer Sun Automount map syntax, those used by autofs.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-conv2amd/">conv2amd</a></code>(8),<code><a href="/docs/linux/man/8-amd/">amd</a></code>(8). </p>
+<p><code>conv2amd</code>(8),<code><a href="/docs/linux/man/8-amd/">amd</a></code>(8). </p>
 <p> &#8220;am-utils&#8221; <code><a href="/docs/linux/man/1-info/">info</a></code>(1) entry. </p>
 <p> <i>Linux NFS and Automounter Administration</i> by Erez Zadok, ISBN 0-7821-2739-8, (Sybex, 2001). </p>
 <p> <i><a rel="nofollow" href="http://www.am-utils.org">http://www.am-utils.org</a></i> </p>

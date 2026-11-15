@@ -168,5 +168,5 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 <dt>
 <dd> <code>cimsub -c s -F filteraa -H handler01 </code></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cimserver/">cimserver</a>(1), <a href="//www.systutorials.com/docs/linux/man/1M-cimconfig/">cimconfig</a>(1M). </p>
+<p> cimserver(1), cimconfig(1M). </p>
 <h2>Index</h2>

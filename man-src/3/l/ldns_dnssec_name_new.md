@@ -45,7 +45,7 @@ description: "ldns_dnssec_name_new, ldns_dnssec_name_new_frm_rr, ldns_dnssec_nam
 <p> .br <code>name</code>: the dnssec name to set the domain name of .br <code>dname</code>: the domain name to set it to. This data is *not* copied.</dl>
 <dl>
 <dt> <i>ldns_dnssec_name_set_nsec</i>()</p>
-<dd>Sets the <a href="/docs/linux/man/3-nsec/">NSEC</a>(3) RR of the given dnssec_name structure </p>
+<dd>Sets the NSEC(3) RR of the given dnssec_name structure </p>
 <p> .br <code>name</code>: the dnssec name to set the domain name of .br <code>nsec</code>: the nsec rr to set it to. This data is *not* copied.</dl>
 <dl>
 <dt> <i>ldns_dnssec_name_cmp</i>()</p>

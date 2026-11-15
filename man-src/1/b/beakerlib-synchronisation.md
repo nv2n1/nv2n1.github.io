@@ -83,14 +83,14 @@ rlWaitForSocket{port | path}[-p PID][-t time][-d delay][--close]
 
  <i>rlWait</i> 
 
- Wrapper around bash builtin `wait' command. See <i><a HREF="/docs/linux/man/1-bash_builtins/">bash_builtins</a></i>(1) man page. Kills the process and all its children if the timeout elapses. 
+ Wrapper around bash builtin `wait' command. See <i>bash_builtins</i>(1) man page. Kills the process and all its children if the timeout elapses. 
 
  <pre><code>
 rlWaitFor[n...][-s SIGNAL][-t time]
 </code></pre>
 <dl>
 <dt>n
-<dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i><a HREF="/docs/linux/man/1-bash_builtins/">bash_builtins</a></i>(1) section for `wait' command/
+<dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i>bash_builtins</i>(1) section for `wait' command/
 <dt>-t time
 <dd> Timeout in seconds (optional, default=30). If the wait isn't successful before the time elapses then all specified tasks are killed.
 <dt>-s <font SIZE="-1">SIGNAL</font>

@@ -60,5 +60,5 @@ description: "yum-changelog"
  Panu Matilainen &lt;pmatilai [at] laiskiainen.org&gt;<br />
  James Antill &lt;james [at] and.org&gt;</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-yum/">yum</a>(1)</code> </p>
+<p> <code>yum(1)</code> </p>
 <h2>Index</h2>

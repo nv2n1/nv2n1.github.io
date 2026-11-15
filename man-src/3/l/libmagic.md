@@ -38,7 +38,7 @@ description: "magic_open magic_close magic_error magic_descriptor magic_buffer m
 <dt><code>MAGIC_CHECK</code></p>
 <dd> Check the magic database for consistency and print warnings to stderr.</p>
 <dt><code>MAGIC_PRESERVE_ATIME</code></p>
-<dd> On systems that support <a href="/docs/linux/man/3-utime/">utime</a>(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analysed.</p>
+<dd> On systems that support utime(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analysed.</p>
 <dt><code>MAGIC_RAW</code></p>
 <dd> Don&#8217;t translate unprintable characters to a \ooo octal representation.</p>
 <dt><code>MAGIC_ERROR</code></p>
@@ -65,7 +65,7 @@ description: "magic_open magic_close magic_error magic_descriptor magic_buffer m
 <dd> Don&#8217;t look for known tokens inside ascii files.</dl>
 <p> The Fn magic_close function closes the <a href="/docs/linux/man/5-magic/">magic</a>(5) database and deallocates any resources used. </p>
 <p> The Fn magic_error function returns a textual explanation of the last error, or <code>NULL</code> if there was no error. </p>
-<p> The Fn magic_errno function returns the last operating system error number (<a href="/docs/linux/man/2-errno/">errno</a>(2) ) that was encountered by a system call. </p>
+<p> The Fn magic_errno function returns the last operating system error number (errno(2) ) that was encountered by a system call. </p>
 <p> The Fn magic_file function returns a textual description of the contents of the <i>filename</i> argument, or <code>NULL</code> if an error occurred. If the <i>filename</i> is <code>NULL</code> then stdin is used. </p>
 <p> The Fn magic_descriptor function returns a textual description of the contents of the <i>fd</i> argument, or <code>NULL</code> if an error occurred. </p>
 <p> The Fn magic_buffer function returns a textual description of the contents of the <i>buffer</i> argument with <i>length</i> bytes size. </p>
@@ -76,7 +76,7 @@ description: "magic_open magic_close magic_error magic_descriptor magic_buffer m
 <p> The Fn magic_load function must be used to load the the colon separated list of database files passed in as <i>filename</i> or <code>NULL</code> for the default database file before any magic queries can performed. </p>
 <p> The default database file is named by the MAGIC environment variable. If that variable is not set, the default database file name is /usr/share/misc/magic. Fn magic_load adds &#8220;.mgc&#8221; to the database filename as appropriate.</p>
 <h2>RETURN VALUES</h2>
-<p> The function Fn magic_open returns a magic cookie on success and <code>NULL</code> on failure setting errno to an appropriate value. It will set errno to Er EINVAL if an unsupported value for flags was given. The Fn magic_list , Fn magic_load , Fn magic_compile , and Fn magic_check functions return 0 on success and -1 on failure. The Fn magic_buffer , Fn magic_getpath , and Fn magic_file , functions return a string on success and <code>NULL</code> on failure. The Fn magic_error function returns a textual description of the errors of the above functions, or <code>NULL</code> if there was no error. Finally, Fn magic_setflags returns -1 on systems that don&#8217;t support <a href="/docs/linux/man/3-utime/">utime</a>(3), or <a href="/docs/linux/man/2-utimes/">utimes</a>(2) when <code>MAGIC_PRESERVE_ATIME</code> is set.</p>
+<p> The function Fn magic_open returns a magic cookie on success and <code>NULL</code> on failure setting errno to an appropriate value. It will set errno to Er EINVAL if an unsupported value for flags was given. The Fn magic_list , Fn magic_load , Fn magic_compile , and Fn magic_check functions return 0 on success and -1 on failure. The Fn magic_buffer , Fn magic_getpath , and Fn magic_file , functions return a string on success and <code>NULL</code> on failure. The Fn magic_error function returns a textual description of the errors of the above functions, or <code>NULL</code> if there was no error. Finally, Fn magic_setflags returns -1 on systems that don&#8217;t support utime(3), or <a href="/docs/linux/man/2-utimes/">utimes</a>(2) when <code>MAGIC_PRESERVE_ATIME</code> is set.</p>
 <h2>FILES</h2>
 <dl>
 <dt><code>/usr/share/misc/magic </code></p>

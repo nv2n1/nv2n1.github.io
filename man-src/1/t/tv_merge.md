@@ -23,7 +23,7 @@ description: "tv_merge – Merge (combine) two XMLTV files."
 <h2>EXAMPLE</h2>
 <p> Use <tt>&quot;tv_merge -i master.xml -m newadditions.xml -o newmaster.xml&quot;</tt> to merge all channels/programmes in <i>newadditions.xml</i>.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5)</p>
+<p> <i>xmltv</i>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright Geoff Westcott, February 2013. </p>
 <p> This code is distributed under the <font SIZE="-1">GNU</font> General Public License v2 (GPLv2) . </p>

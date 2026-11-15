@@ -31,4 +31,4 @@ description: "systemd-binfmt.service, systemd-binfmt – Configure additional bi
 <dl>
 <dd>Print a short version string and exit.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-binfmt-d/">binfmt.d</a></code>(5), <code><a href="/docs/linux/man/8-wine/">wine</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-binfmt-d/">binfmt.d</a></code>(5), <code>wine</code>(8) </p>

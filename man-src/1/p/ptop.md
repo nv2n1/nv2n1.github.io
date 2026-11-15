@@ -41,7 +41,7 @@ description: "ptop – The FPC Pascal configurable source beautifier."
 <h2>SEE ALSO</h2>
 <dl>
 <dt>ptop config file</p>
-<dd> <code><a href="/docs/linux/man/5-ptop-cfg/">ptop.cfg</a></code>(5)</p>
+<dd> <code>ptop.cfg</code>(5)</p>
 <dt>Compiler</p>
 <dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1)</p>
 <dt>Other FPC utils</p>

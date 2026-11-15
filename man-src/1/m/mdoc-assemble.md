@@ -8,13 +8,13 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 ---
 
 <h2>NAME</h2>
-<p> mdoc assemble &#8211; Compile documentation for use in <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1)</p>
+<p> mdoc assemble &#8211; Compile documentation for use in <code>monodoc</code>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdoc assemble</code> [OPTIONS]+ PATHS+</p>
 <h2>DESCRIPTION</h2>
-<p> <code>mdoc assemble</code> creates <i>.tree</i> and <i>.zip</i> files from <i>PATHS</i> for use in the <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1) documentation browser. </p>
+<p> <code>mdoc assemble</code> creates <i>.tree</i> and <i>.zip</i> files from <i>PATHS</i> for use in the <code>monodoc</code>(1) documentation browser. </p>
 <p> The input files must have a supported <i>format</i>, specified with the <i>&#8211;format</i> option. </p>
-<p> The <i>.tree</i> and <i>.zip</i> files are copied into <code>monodoc</code>&#8216;s <i>sources</i> directory, alongside a <i>.source</i> file which is used by <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1) to specify where the documentation should be displayed. </p>
+<p> The <i>.tree</i> and <i>.zip</i> files are copied into <code>monodoc</code>&#8216;s <i>sources</i> directory, alongside a <i>.source</i> file which is used by <code>monodoc</code>(1) to specify where the documentation should be displayed. </p>
 <p> The <i>.source</i> file has the following format: </p>
 <pre><code>
   &lt;?xml version="1.0"?&gt;
@@ -32,8 +32,8 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 <p> <i>//node/@parent</i> is the node name to use as the parent node. <i>$MONO_INSTALL_PREFIX/lib/monodoc/monodoc.xml</i> contains a list of such names, and this can be any <i>//node/@name</i> value. If the <i>//node/@parent</i> value isn&#8217;t found, then it&#8217;s inserted under the &quot;Various&quot; tree node. </p>
 <p> The <i>/monodoc/source/@provider</i> attribute specifies which format provider should be used when reading the <i>.tree</i> and <i>.zip</i> files; this <i>must</i> correspond to one of the <i>&#8211;format</i> values. </p>
 <p> The <i>/monodoc/source/@basefile</i> attribute specifies the filename prefix for the documentation files. This must be the same prefix as used with the <i>&#8211;out</i> parameter. There should be <i>no</i> filename extension on this value. </p>
-<p> The <i>/monodoc/source/@path</i> attribute specifies the parent node in <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1)&#8217;s tree view where the documentation will be inserted. See the <i>$MONO_INSTALL_PREFIX/lib/monodoc/monodoc.xml</i> file for a list of <i>PATH</i> values (the <i>//node/@name</i> values), or it may be a <i>//node/@name</i> value in the same <i>.source</i> file. </p>
-<p> Once the <i>BASEFILE.source</i> has been written, the documentation can be installed so that <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1) will display the documentation with the command: </p>
+<p> The <i>/monodoc/source/@path</i> attribute specifies the parent node in <code>monodoc</code>(1)&#8217;s tree view where the documentation will be inserted. See the <i>$MONO_INSTALL_PREFIX/lib/monodoc/monodoc.xml</i> file for a list of <i>PATH</i> values (the <i>//node/@name</i> values), or it may be a <i>//node/@name</i> value in the same <i>.source</i> file. </p>
+<p> Once the <i>BASEFILE.source</i> has been written, the documentation can be installed so that <code>monodoc</code>(1) will display the documentation with the command: </p>
 <pre>
   cp BASEFILE.source BASEFILE.tree BASEFILE.zip \
     `pkg-config monodoc --variable=sourcesdir`
@@ -59,9 +59,9 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 <p> The <i>Mono ECMA Documentation Format</i>, an XML documentation format with one file per type. </p>
 <p> See the <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5) man page for more information.</p>
 <h3>ecmaspec</h3>
-<p> The <i>Mono ECMA Specification Documentation Format</i>. This is not the format you&#8217;re looking for; it is the format used to represent the ECMA-334 (C#) standard within <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1). It is not used to display class library documentation; for class library documentation, use the <code>ecma</code> format.</p>
+<p> The <i>Mono ECMA Specification Documentation Format</i>. This is not the format you&#8217;re looking for; it is the format used to represent the ECMA-334 (C#) standard within <code>monodoc</code>(1). It is not used to display class library documentation; for class library documentation, use the <code>ecma</code> format.</p>
 <h3>error</h3>
-<p> The <i>Error Documentation Format</i> is used to present detailed error messages, and is used in <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1)&#8217;s &quot;C# Compiler Error Reference&quot; tree. </p>
+<p> The <i>Error Documentation Format</i> is used to present detailed error messages, and is used in <code>monodoc</code>(1)&#8217;s &quot;C# Compiler Error Reference&quot; tree. </p>
 <p> In this format, <i>PATHS</i> is a configuration file, containing the XML: </p>
 <pre>
     &lt;ErrorProviderConfig&gt;
@@ -83,7 +83,7 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 <dt><i>/ErrorProviderConfig/ErrorNumSubstringLength</i></p>
 <dd> Specifies how many characters after <i>/ErrorProviderConfig/ErrorNumSubstringStart</i> to use for the error number.</p>
 <dt><i>/ErrorProviderConfig/FriendlyFormatString</i></p>
-<dd> Specifies the formatting/display of the node in the <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1) tree.</dl>
+<dd> Specifies the formatting/display of the node in the <code>monodoc</code>(1) tree.</dl>
 <p> For each file found, it is converted to HTML with C# syntax coloring applied.</p>
 <h3>simple</h3>
 <p> The <i>Simple Documentation Format</i> file format recursively adds all files and directories underneath <i>PATHS</i>. When displayed, HTML files are displayed as-is. Text files are converted into HTML by translating each newline into an HTML <i>&lt;br&gt;</i> element. No other file type is supported.</p>
@@ -97,12 +97,12 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
   &lt;/manpages&gt;
 </pre>
 <p> There may be multiple <i>//manpage</i> elements within the root <i>/manpage</i> element. </p>
-<p> The <i>/manpages/manpage/@name</i> attribute contains the display name for the tree view node, which is also the URL of the man page when using <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1)&#8217;s <i>Lookup URL</i> command (before prefixing with a <i>man:</i> prefix). Thus, if <i>/manpages/manpage/@name</i> contains <i><a href="/docs/linux/man/1-mono/">mono</a>(1)</i>, then <i><a href="/docs/linux/man/1-man-mono/">man:mono</a>(1)</i> can be used in the <i>Lookup URL</i> command to view the <i><a href="/docs/linux/man/1-mono/">mono</a>(1)</i> man page. </p>
+<p> The <i>/manpages/manpage/@name</i> attribute contains the display name for the tree view node, which is also the URL of the man page when using <code>monodoc</code>(1)&#8217;s <i>Lookup URL</i> command (before prefixing with a <i>man:</i> prefix). Thus, if <i>/manpages/manpage/@name</i> contains <i><a href="/docs/linux/man/1-mono/">mono</a>(1)</i>, then <i>man:mono(1)</i> can be used in the <i>Lookup URL</i> command to view the <i><a href="/docs/linux/man/1-mono/">mono</a>(1)</i> man page. </p>
 <p> The <i>/manpages/manpage/@page</i> attribute is the filename that contains the man page. If this file does not exist, then <i>/manpages/manpage/@name</i> will not be displayed within the tree view.</p>
 <h3>xhtml</h3>
 <p> The XHTML provider interprets <i>PATHS</i> as a Windows Help file XHTML TOC file and looks for referenced documents to create the help source.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1), <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5), <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1), <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5), <code>monodoc</code>(1)</p>
 <h2>MAILING LISTS</h2>
 <dl>
 <dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>

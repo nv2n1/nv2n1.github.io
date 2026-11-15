@@ -49,6 +49,6 @@ description: "ext_unix_group_acl – Squid UNIX Group ACL helper"
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt; </p>
 <p> Additionally bugs or bug-fixes can be reported to <i>Rodrigo Campos &lt;rodrigo [at] geekbunker.org&gt;</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/7-gpl/">GPL</a></code>(7),<br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code>GPL</code>(7),<br />
  The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

@@ -27,7 +27,7 @@ description: "sane-teco2 – SANE backend for TECO / RELISYS scanners"
  Relisys SCORPIO Pro-S VM6586 untested
  Relisys SCORPIO Super 3 VM3575 good</pre>
 </dl>
-<p> For all these scanners, lineart and gray mode work well. However, most of them do not support more than a handful of resolutions in color mode. See the backend home page (under AUTHOR) for the exact status of each scanner. Note that the untested scanner will not be directly supported. You should contact the author for that. The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code><a href="/docs/linux/man/1-quiteinsane/">quiteinsane</a></code>(1) or <code><a href="/docs/linux/man/1-kooka/">kooka</a></code>(1).<br />
+<p> For all these scanners, lineart and gray mode work well. However, most of them do not support more than a handful of resolutions in color mode. See the backend home page (under AUTHOR) for the exact status of each scanner. Note that the untested scanner will not be directly supported. You should contact the author for that. The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code>quiteinsane</code>(1) or <code>kooka</code>(1).<br />
  If you have any success with a scanner not listed here, or if you notice any strange behavior, please report to the backend maintainer or to the SANE mailing list. </p>
 <h2>Options</h2>
 <p>Valid command line options and their syntax can be listed by using: </p>
@@ -95,7 +95,7 @@ description: "sane-teco2 – SANE backend for TECO / RELISYS scanners"
 <h2>Bugs</h2>
 <p>Plenty. Parts of this backend are still under development. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
 <h2>Authors</h2>
 <dl>
 <dt>Frank Zago</p>

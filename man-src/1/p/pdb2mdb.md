@@ -19,7 +19,7 @@ description: "pdb2mdb – Program Database to Mono Debugging Symbol converter."
 <h2>LICENSE</h2>
 <p> The <i>pdb2mdb</i> tool is released under the terms of the Microsoft Public License (MS-PL). JB Evain wrote the tool. The PDB reading support came from Microsoft Common Compiler Infrastructure.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mdb/">mdb</a>(1)</p>
+<p> <a href="/docs/linux/man/1-mono/">mono</a>(1), mdb(1)</p>
 <h2>WEB SITE</h2>
 <p> <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> </p>
 <h2>Index</h2>

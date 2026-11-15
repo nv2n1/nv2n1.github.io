@@ -209,7 +209,7 @@ define void px(x)<br />
 &#8221;;<br />
 }<br />
 py(1)&#8212;&gt;1 &lt; &#8212; -0 px(1)&#8212;&gt;1 &lt; &#8212; &#8211;<br />
- Since <code>py</code> is not a void function, the call of <code><a href="/docs/linux/man/1-py/">py</a>(1)</code> prints the desired output and then prints a second line that is the value of the function. Since the value of a function that is not given an explicit return statement is zero, the zero is printed. For <code><a href="/docs/linux/man/1-px/">px</a>(1)</code>, no zero is printed because the function is a void function. </p>
+ Since <code>py</code> is not a void function, the call of <code>py(1)</code> prints the desired output and then prints a second line that is the value of the function. Since the value of a function that is not given an explicit return statement is zero, the zero is printed. For <code>px(1)</code>, no zero is printed because the function is a void function. </p>
 <p> Also, call by variable for arrays was added. To declare a call by variable array, the declaration of the array parameter in the function definition looks like &quot;,<i>*name/</i><code>[]</code>&quot;. The call to the function remains the same as call by value arrays.</p>
 <h3>MATH LIBRARY</h3>
 <p> If <code>bc</code> is invoked with the <code>-l</code> option, a math library is preloaded and the default scale is set to 20. The math functions will calculate their results to the scale set at the time of their call. The math library defines the following functions:</p>
@@ -230,7 +230,7 @@ py(1)&#8212;&gt;1 &lt; &#8212; -0 px(1)&#8212;&gt;1 &lt; &#8212; &#8211;<br />
 <p> In /bin/sh, the following will assign the value of &quot;pi&quot; to the shell variable <code>pi</code>.</p>
 <dl>
 <dt>
-<dd> <tt> pi=$(echo &quot;scale=10; 4*<a href="/docs/linux/man/1-a/">a</a>(1)&quot; | bc -l) </tt></dl>
+<dd> <tt> pi=$(echo &quot;scale=10; 4*a(1)&quot; | bc -l) </tt></dl>
 <p> The following is the definition of the exponential function used in the math library. This function is written in POSIX <code>bc</code>. </p>
 <p>scale = 20<br />
     /* Uses the fact that e^x = (e^(x/2))^2<br />

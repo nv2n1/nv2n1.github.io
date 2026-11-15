@@ -21,6 +21,6 @@ description: "zmq_ctx_shutdown – shutdown a 0MQ context"
 <dl>
 <dd>The provided <i>context</i> was invalid.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7) <code><a href="/docs/linux/man/3-zmq_init/">zmq_init</a></code>(3) <code><a href="/docs/linux/man/3-zmq_ctx_term/">zmq_ctx_term</a></code>(3) <code><a href="/docs/linux/man/3-zmq_close/">zmq_close</a></code>(3) <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7) <code>zmq_init</code>(3) <code><a href="/docs/linux/man/3-zmq_ctx_term/">zmq_ctx_term</a></code>(3) <code><a href="/docs/linux/man/3-zmq_close/">zmq_close</a></code>(3) <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3)</p>
 <h2>Authors</h2>
 <p>This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></code>m[].</p>

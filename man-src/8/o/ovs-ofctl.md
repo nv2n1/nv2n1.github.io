@@ -973,7 +973,7 @@ description: "ovs-ofctl – administer OpenFlow switches"
 <dt><code>obs_point_id=</code><i>id</i></p>
 <dd>When sending samples to IPFIX collectors, the unsigned 32-bit integer Observation Point ID sent in every IPFIX flow record. Defaults to 0.</dl>
 </dl>
-<dd>Refer to <code><a href="/docs/linux/man/8-ovs-vswitchd-conf-db/">ovs-vswitchd.conf.db</a></code>(8) for more details on configuring sample collector sets.</p>
+<dd>Refer to <code>ovs-vswitchd.conf.db</code>(8) for more details on configuring sample collector sets.</p>
 <dd>This action was added in Open vSwitch 1.10.90.</p>
 <dt><code>exit</code></p>
 <dd>This action causes Open vSwitch to immediately halt execution of further actions. Those actions which have already been executed are unaffected. Any further actions, including those which may be in other tables, or different levels of the <code>resubmit</code> call stack, are ignored. Actions in the action set is still executed (specify <code>clear_actions</code> before <code>exit</code> to discard them).</p>
@@ -1424,4 +1424,4 @@ description: "ovs-ofctl – administer OpenFlow switches"
 <dt><code>ovs-ofctl dump-flows br0</code></p>
 <dd>Prints the flow entries in the switch.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ovs-appctl/">ovs-appctl</a></code>(8), <code><a href="/docs/linux/man/8-ovs-vswitchd/">ovs-vswitchd</a></code>(8) <code><a href="/docs/linux/man/8-ovs-vswitchd-conf-db/">ovs-vswitchd.conf.db</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-ovs-appctl/">ovs-appctl</a></code>(8), <code><a href="/docs/linux/man/8-ovs-vswitchd/">ovs-vswitchd</a></code>(8) <code>ovs-vswitchd.conf.db</code>(8) </p>

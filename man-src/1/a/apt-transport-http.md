@@ -21,7 +21,7 @@ description: "apt-transport-http – APT transport for downloading via the Hyper
 <h3>Automatic Proxy Configuration</h3>
 <p> Acquire::http::Proxy-Auto-Detect can be used to specify an external command to discover the HTTP proxy to use. The first and only parameter is a URI denoting the host to be contacted, to allow for host-specific configuration. APT expects the command to output the proxy on stdout as a single line in the previously specified URI format or the word DIRECT if no proxy should be used. No output indicates that the generic proxy settings should be used. </p>
 <p> Note that auto-detection will not be used for a host if a host-specific proxy configuration is already set via Acquire::http::Proxy::<i>host</i>. </p>
-<p> See the <code><a href="/docs/linux/man/1-squid-deb-proxy-client/">squid-deb-proxy-client</a></code>(1) and <code><a href="/docs/linux/man/1-auto-apt-proxy/">auto-apt-proxy</a></code>(1) packages for example implementations. </p>
+<p> See the <code>squid-deb-proxy-client</code>(1) and <code>auto-apt-proxy</code>(1) packages for example implementations. </p>
 <p> This option takes precedence over the legacy option name Acquire::http::ProxyAutoDetect.</p>
 <h3>Connection Configuration</h3>
 <p> The option Acquire::http::Timeout sets the timeout timer used by the method; this value applies to the connection as well as the data timeout. </p>
@@ -55,7 +55,7 @@ Acquire::http
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) <code><a href="/docs/linux/man/5-apt_auth-conf/">apt_auth.conf</a></code>(5) <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5)</p>
 <h2>BUGS</h2>
-<p> m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1) command.</p>
+<p> m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>AUTHOR</h2>
 <p> <code>APT team</code></p>
 <dl>

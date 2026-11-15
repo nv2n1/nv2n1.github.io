@@ -83,7 +83,7 @@ int isinf(x);
 <h2>NOTES</h2>
 <p> In glibc 2.01 and earlier, <code>isinf</code>() returns a nonzero value (actually: 1) if <i>x</i> is positive infinity or negative infinity. (This is all that C99 requires.)</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-finite/">finite</a></code>(3), <code><a href="/docs/linux/man/3-infinity/">INFINITY</a></code>(3), <code><a href="/docs/linux/man/3-isgreater/">isgreater</a></code>(3), <code><a href="/docs/linux/man/3-signbit/">signbit</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-finite/">finite</a></code>(3), <code>INFINITY</code>(3), <code>isgreater</code>(3), <code><a href="/docs/linux/man/3-signbit/">signbit</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

@@ -56,7 +56,7 @@ description: "ocf_heartbeat_anything – Manages an arbitrary service"
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a anything resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a anything resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_anything ocf:heartbeat:anything \
 params \
 binfile=string \

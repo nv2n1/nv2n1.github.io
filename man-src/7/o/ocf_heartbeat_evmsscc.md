@@ -38,7 +38,7 @@ description: "ocf_heartbeat_EvmsSCC – Manages EVMS Shared Cluster Containers (
 <dl>
 <dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a EvmsSCC resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a EvmsSCC resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_EvmsSCC ocf:heartbeat:EvmsSCC \
 
 op monitor depth=&quot;0&quot; timeout=&quot;10&quot; interval=&quot;10&quot;</code></pre>

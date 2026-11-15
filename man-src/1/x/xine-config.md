@@ -41,7 +41,7 @@ description: "xine-config – script to get information about the installed vers
 <dd> &#8211;define-variable=exec_prefix=PREFIX<br />
  If specified, use PREFIX instead of the installation exec prefix that <i>xine-lib</i> was built with.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-xine-lib/">xine-lib</a></code>(3), <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1)</p>
+<p> <code>xine-lib</code>(3), <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001 Siggi Langauf, &#169; 2001-2008 the xine project. Based on the man page for gtk-config, &#169; 1998 Owen Taylor. </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>

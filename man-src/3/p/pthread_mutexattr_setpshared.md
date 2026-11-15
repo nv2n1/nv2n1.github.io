@@ -39,6 +39,6 @@ int pthread_mutexattr_setpshared(pthread_mutexattr_t *attr,
 <h2>Conforming To</h2>
 <p>POSIX.1-2001, POSIX.1-2008.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pthread_mutexattr_init/">pthread_mutexattr_init</a></code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
+<p><code>pthread_mutexattr_init</code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

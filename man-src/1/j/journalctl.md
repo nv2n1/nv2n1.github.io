@@ -496,7 +496,7 @@ journalctl -f -u apache
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-coredumpctl/">coredumpctl</a></code>(1), <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7), <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5), <code><a href="/docs/linux/man/7-systemd-time/">systemd.time</a></code>(7), <code><a href="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></code>(8)</p>
+<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-coredumpctl/">coredumpctl</a></code>(1), <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7), <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5), <code><a href="/docs/linux/man/7-systemd-time/">systemd.time</a></code>(7), <code>systemd-journal-remote.service</code>(8), <code>systemd-journal-upload.service</code>(8)</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</p>

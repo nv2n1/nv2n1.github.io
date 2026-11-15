@@ -49,5 +49,5 @@ description: "seahorse-daemon – seahorse pass phrase caching agent"
 <p> You are free to distribute this software under the terms of the GNU General Public License.<br />
  Documentation and help files are covered by GFDL license. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-seahorse-tool/">seahorse-tool</a>(1)</code>, <code><a href="/docs/linux/man/1-seahorse-agent/">seahorse-agent</a>(1)</code>, </p>
+<p> <code><a href="/docs/linux/man/1-seahorse-tool/">seahorse-tool</a>(1)</code>, <code>seahorse-agent(1)</code>, </p>
 <h2>Index</h2>

@@ -61,5 +61,5 @@ description: "pac – Perl Auto Connector"
 <p> <a rel="nofollow" href="http://sourceforge.net/projects/pacmanager/">http://sourceforge.net/projects/pacmanager/</a> </p>
 <p> <a rel="nofollow" href="https://sites.google.com/site/davidtv/">https://sites.google.com/site/davidtv/</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1), <code><a href="/docs/linux/man/1-sftp/">sftp</a></code>(1), <code><a href="/docs/linux/man/1-telnet/">telnet</a></code>(1) <code><a href="/docs/linux/man/1-rdesktop/">rdesktop</a></code>(1) <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1) <code><a href="/docs/linux/man/1-remote-tty/">remote-tty</a></code>(1) <code><a href="/docs/linux/man/1-cu/">cu</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1), <code><a href="/docs/linux/man/1-sftp/">sftp</a></code>(1), <code><a href="/docs/linux/man/1-telnet/">telnet</a></code>(1) <code><a href="/docs/linux/man/1-rdesktop/">rdesktop</a></code>(1) <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1) <code>remote-tty</code>(1) <code><a href="/docs/linux/man/1-cu/">cu</a></code>(1) </p>
 <h2>Index</h2>

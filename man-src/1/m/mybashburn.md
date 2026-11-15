@@ -33,6 +33,6 @@ description: "mybashburn – it can burn data cds/dvds and create mp3/ogg/flac."
 <p> This man was written for Fedora but also can be used for others. </p>
 <p> Please send mails about translation and documentation to the <code>mybashburn mailing list</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/5-mybashburnrc/">mybashburnrc</a>(5) &#8211; FIXME: Document this. </p>
+<p> mybashburnrc(5) &#8211; FIXME: Document this. </p>
 <p> mybashburn homepage: <code>(<a rel="nofollow" href="http://mybashburn.sf.net/)">http://mybashburn.sf.net/)</a></code> </p>
 <h2>Index</h2>

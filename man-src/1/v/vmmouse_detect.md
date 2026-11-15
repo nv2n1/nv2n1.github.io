@@ -30,5 +30,5 @@ description: "vmmouse_detect – VMware mouse device autodetection tool"
 <p> The <code>vmmouse_detect</code> source code is licensed under a BSD-like license. See COPYING for details. </p>
 <p> This manual page is licensed under the GNU General Public License.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-mdetect/">mdetect</a></i>(1), <i><a href="/docs/linux/man/1-xfree86/">XFree86</a></i>(1) </p>
+<p> <i>mdetect</i>(1), <i>XFree86</i>(1) </p>
 <h2>Index</h2>

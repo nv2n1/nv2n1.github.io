@@ -14,4 +14,4 @@ description: "set_mouse_range – Sets the area of the screen restricting mouse 
 <h2>Description</h2>
 <p> Sets the area of the screen within which the mouse can move. Pass the top left corner and the bottom right corner (inclusive). If you don&#8217;t call this function the range defaults to (0, 0, SCREEN_W-1, SCREEN_H-1). </p>
 <h2>See Also</h2>
-<p> <code><a href="/docs/linux/man/3-install_mouse/">install_mouse</a></code>(3), <code><a href="/docs/linux/man/3-set_mouse_speed/">set_mouse_speed</a></code>(3), <code><a href="/docs/linux/man/3-position_mouse/">position_mouse</a></code>(3)</p>
+<p> <code>install_mouse</code>(3), <code>set_mouse_speed</code>(3), <code><a href="/docs/linux/man/3-position_mouse/">position_mouse</a></code>(3)</p>

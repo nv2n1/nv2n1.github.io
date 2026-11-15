@@ -144,7 +144,7 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
 
 <h2>SEE ALSO</h2>
 
- <b><a HREF="/docs/linux/man/2-open/">open</a></b>(2), <b><a HREF="/docs/linux/man/3-fclose/">fclose</a></b>(3), <b><a HREF="/docs/linux/man/3-fileno/">fileno</a></b>(3), <b><a HREF="/docs/linux/man/3-fmemopen/">fmemopen</a></b>(3), <b><a HREF="/docs/linux/man/3-fopencookie/">fopencookie</a></b>(3), <b><a HREF="/docs/linux/man/3-open_memstream/">open_memstream</a></b>(3)
+ <b><a HREF="/docs/linux/man/2-open/">open</a></b>(2), <b><a HREF="/docs/linux/man/3-fclose/">fclose</a></b>(3), <b><a HREF="/docs/linux/man/3-fileno/">fileno</a></b>(3), <b><a HREF="/docs/linux/man/3-fmemopen/">fmemopen</a></b>(3), <b><a HREF="/docs/linux/man/3-fopencookie/">fopencookie</a></b>(3), <b>open_memstream</b>(3)
 
 <h2>COLOPHON</h2>
 

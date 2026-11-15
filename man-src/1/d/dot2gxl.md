@@ -41,5 +41,5 @@ description: "gxl2gv,gv2gxl – GXL-GV converters"
 <p> Krishnam Pericherla &lt;kp [at] research.att.com&gt;<br />
  Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/3-libgraph/">libgraph</a>(3), <a href="/docs/linux/man/3-libagraph/">libagraph</a>(3), <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-twopi/">twopi</a>(1) </p>
+<p> <a href="/docs/linux/man/1-dot/">dot</a>(1), libgraph(3), libagraph(3), <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-twopi/">twopi</a>(1) </p>
 <h2>Index</h2>

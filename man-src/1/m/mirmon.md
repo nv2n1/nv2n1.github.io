@@ -353,7 +353,7 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-mirmon-pm/">mirmon.pm</a>(3) </p>
+<p> mirmon.pm(3) </p>
 <h2>AUTHOR</h2>
 <pre><code>
 (c)2003 - 2016 Henk P.Penning

@@ -120,7 +120,7 @@ description: "med – NCAR CGM metafile frame editor"
 <p> <code>% med -e &#8216;4,5 me&#8217; -e &#8216;w!&#8217; ncgm1</code> </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code>cgm(5NCARG),</code> <i><a href="/docs/linux/man/1-ed/">ed</a>(1),</i> <code><a href="//www.systutorials.com/docs/linux/man/1V-sed/">sed</a>(1V)</code> </p>
+<p> <code>cgm(5NCARG),</code> <i><a href="/docs/linux/man/1-ed/">ed</a>(1),</i> <code>sed(1V)</code> </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>BUGS</h2>
 <p> <code>med</code><br />

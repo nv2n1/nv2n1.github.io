@@ -32,7 +32,7 @@ description: "guestfs-hacking – extending and contributing to libguestfs"
 <dt><i>builder</i></p>
 <dd> <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) command and documentation.</p>
 <dt><i>cat</i></p>
-<dd> The <code><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></code>(1), <code><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></code>(1), <code><a href="/docs/linux/man/1-virt-log/">virt-log</a></code>(1), <code><a href="/docs/linux/man/1-virt-ls/">virt-ls</a></code>(1) and <code><a href="/docs/linux/man/1-virt-tail/">virt-tail</a></code>(1) commands and documentation.</p>
+<dd> The <code><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></code>(1), <code><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></code>(1), <code><a href="/docs/linux/man/1-virt-log/">virt-log</a></code>(1), <code><a href="/docs/linux/man/1-virt-ls/">virt-ls</a></code>(1) and <code>virt-tail</code>(1) commands and documentation.</p>
 <dt><i>common</i></p>
 <dd> Various libraries of internal code can be found in the <i>common</i> subdirectory:</p>
 <dl>
@@ -195,7 +195,7 @@ description: "guestfs-hacking – extending and contributing to libguestfs"
 <dl>
 <dt>1.</p>
 <dd> You need to add a description of the call (name, parameters, return type, tests, documentation) to <i>generator/actions_*.ml</i> and possibly <i>generator/proc_nr.ml</i>. </p>
-<p> There are two sorts of <font SIZE="-1">API</font> action, depending on whether the call goes through to the daemon in the appliance, or is serviced entirely by the library (see &#8220;<font SIZE="-1">ARCHITECTURE&#8221;</font> in <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1)). &#8220;guestfs_sync&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) is an example of the former, since the sync is done in the appliance. &#8220;guestfs_set_trace&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) is an example of the latter, since a trace flag is maintained in the handle and all tracing is done on the library side. </p>
+<p> There are two sorts of <font SIZE="-1">API</font> action, depending on whether the call goes through to the daemon in the appliance, or is serviced entirely by the library (see &#8220;<font SIZE="-1">ARCHITECTURE&#8221;</font> in <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1)). &#8220;guestfs_sync&#8221; in <code>guestfs</code>(3) is an example of the former, since the sync is done in the appliance. &#8220;guestfs_set_trace&#8221; in <code>guestfs</code>(3) is an example of the latter, since a trace flag is maintained in the handle and all tracing is done on the library side. </p>
 <p> Most new actions are of the first type, and get added to the <tt>&quot;daemon_functions&quot;</tt> list. Each function has a unique procedure number used in the <font SIZE="-1">RPC</font> protocol which is assigned to that action when we publish libguestfs and cannot be reused. Take the latest procedure number and increment it. </p>
 <p> For library-only actions of the second type, add to the <tt>&quot;non_daemon_functions&quot;</tt> list. Since these functions are serviced by the library and do not travel over the <font SIZE="-1">RPC</font> mechanism to the daemon, these functions do not need a procedure number, and so the procedure number is set to <tt>&quot;-1&quot;</tt>.</p>
 <dt>2.</p>
@@ -220,19 +220,19 @@ description: "guestfs-hacking – extending and contributing to libguestfs"
 <dd> Used in a few tests where two block devices are needed.</p>
 <dt><i>/dev/sdd</i></p>
 <dd> <font SIZE="-1">ISO</font> with fixed content (see <i>images/test.iso</i>).</dl>
-<p> To be able to run the tests in a reasonable amount of time, the libguestfs appliance and block devices are reused between tests. So don&#8217;t try testing &#8220;guestfs_kill_subprocess&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) :-x </p>
+<p> To be able to run the tests in a reasonable amount of time, the libguestfs appliance and block devices are reused between tests. So don&#8217;t try testing &#8220;guestfs_kill_subprocess&#8221; in <code>guestfs</code>(3) :-x </p>
 <p> Each test starts with an initial scenario, selected using one of the <tt>&quot;Init*&quot;</tt> expressions, described in <i>generator/types.ml</i>. These initialize the disks mentioned above in a particular way as documented in <i>types.ml</i>. You should not assume anything about the previous contents of other disks that are not initialized. </p>
 <p> You can add a prerequisite clause to any individual test. This is a run-time check, which, if it fails, causes the test to be skipped. Useful if testing a command which might not work on all variations of libguestfs builds. A test that has prerequisite of <tt>&quot;Always&quot;</tt> means to run unconditionally. </p>
 <p> In addition, packagers can skip individual tests by setting environment variables before running <tt>&quot;make check&quot;</tt>. </p>
 <pre>
  SKIP_TEST_&lt;CMD&gt;_&lt;NUM&gt;=1
 </pre>
-<p> eg: <tt>&quot;SKIP_TEST_COMMAND_3=1&quot;</tt> skips test #3 of &#8220;guestfs_command&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3). </p>
+<p> eg: <tt>&quot;SKIP_TEST_COMMAND_3=1&quot;</tt> skips test #3 of &#8220;guestfs_command&#8221; in <code>guestfs</code>(3). </p>
 <p> or: </p>
 <pre>
  SKIP_TEST_&lt;CMD&gt;=1
 </pre>
-<p> eg: <tt>&quot;SKIP_TEST_ZEROFREE=1&quot;</tt> skips all &#8220;guestfs_zerofree&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) tests. </p>
+<p> eg: <tt>&quot;SKIP_TEST_ZEROFREE=1&quot;</tt> skips all &#8220;guestfs_zerofree&#8221; in <code>guestfs</code>(3) tests. </p>
 <p> Packagers can run only certain tests by setting for example: </p>
 <pre>
  TEST_ONLY=&quot;vfs_type zerofree&quot;
@@ -556,7 +556,7 @@ In libguestfs, indent with spaces everywhere(not TABs).;
  Version $(VERSION) stable
  Version $(VERSION) development
 </pre>
-<p> (See &#8220;<font SIZE="-1">LIBGUESTFS VERSION NUMBERS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) for the difference between a stable and development release.) </p>
+<p> (See &#8220;<font SIZE="-1">LIBGUESTFS VERSION NUMBERS&#8221;</font> in <code>guestfs</code>(3) for the difference between a stable and development release.) </p>
 <p> <i>make maintainer-check-authors</i> </p>
 <p> Check that all authors (found in git commit messages) are included in the <i>generator/authors.ml</i> file. </p>
 <p> <i>make maintainer-check-extra-dist</i> </p>
@@ -564,7 +564,7 @@ In libguestfs, indent with spaces everywhere(not TABs).;
 <p> <i>make maintainer-upload-website</i> </p>
 <p> This is used by the software used to automate libguestfs releases to copy the libguestfs website to another git repository before it is uploaded to the web server.</p>
 <h3><font SIZE="-1">MAKING A STABLE RELEASE</font></h3>
-<p> When we make a stable release, there are several steps documented here. See &#8220;<font SIZE="-1">LIBGUESTFS VERSION NUMBERS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) for general information about the stable branch policy.</p>
+<p> When we make a stable release, there are several steps documented here. See &#8220;<font SIZE="-1">LIBGUESTFS VERSION NUMBERS&#8221;</font> in <code>guestfs</code>(3) for general information about the stable branch policy.</p>
 <dl>
 <dt>&bull;</p>
 <dd> Check <tt>&quot;make &amp;&amp; make check&quot;</tt> works on at least:</p>
@@ -779,7 +779,7 @@ guestfs_int_cmd_add_string_quoted(cmd, filename);</p>
 <dt>4.</p>
 <dd> Set various flags, such as whether you want to capture errors in the regular libguestfs error log.</p>
 <dt>5.</p>
-<dd> Run the command. This is what does the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) call, optionally loops over the output, and then does a <code><a href="/docs/linux/man/3-waitpid/">waitpid</a></code>(3) and returns the exit status of the command. </p>
+<dd> Run the command. This is what does the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) call, optionally loops over the output, and then does a <code>waitpid</code>(3) and returns the exit status of the command. </p>
 <p>r = guestfs_int_cmd_run(cmd);<br />
 if (r == -1)<br />
 // error<br />

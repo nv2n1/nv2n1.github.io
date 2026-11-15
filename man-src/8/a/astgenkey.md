@@ -38,7 +38,7 @@ description: "astgenkey — generates keys for for Asterisk IAX2 RSA authenticat
 <dl>
 <dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-asterisk/">asterisk</a>(8), <a href="/docs/linux/man/1-genrsa/">genrsa</a>(1), <a href="/docs/linux/man/1-rsa/">rsa</a>(1), <a rel="nofollow" href="http://www.voip-info.org/wiki-Asterisk+iax+rsa+auth">http://www.voip-info.org/wiki-Asterisk+iax+rsa+auth</a> </p>
+<p><a href="/docs/linux/man/8-asterisk/">asterisk</a>(8), genrsa(1), rsa(1), <a rel="nofollow" href="http://www.voip-info.org/wiki-Asterisk+iax+rsa+auth">http://www.voip-info.org/wiki-Asterisk+iax+rsa+auth</a> </p>
 <h2>Author</h2>
 <p>This manual page was written by Tzafrir Cohen &lt;tzafrir.cohen [at] xorcom.com&gt; Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>

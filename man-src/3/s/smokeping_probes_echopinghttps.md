@@ -49,7 +49,7 @@ Smokeping::probes::EchoPingHttps - an
  timeout = 20
  tos = 0xa0
  url = /
- waittime = 1</pre><h2>Description</h2>As <i><a HREF="//www.systutorials.com/docs/linux/man/3pm-EchoPingHttp/">EchoPingHttp</a></i>(3pm), but SSL-enabled.
+ waittime = 1</pre><h2>Description</h2>As <i>EchoPingHttp</i>(3pm), but SSL-enabled.
 <h2>Variables</h2>Supported probe-specific variables:
 <dl COMPACT><dt>binary
 <dd>The location of your echoping binary. 

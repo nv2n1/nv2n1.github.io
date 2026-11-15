@@ -59,7 +59,7 @@ description: "ospent – Concatenates entities in an SGML/XML document"
 <dt>
 <dd> Print the version number.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospam/">ospam</a>(1)</code>, <code><a href="/docs/linux/man/1-onsgmlnorm/">onsgmlnorm</a>(1)</code>, <code><a href="/docs/linux/man/1-osx/">osx</a>(1)</code></p>
+<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospam/">ospam</a>(1)</code>, <code>onsgmlnorm(1)</code>, <code><a href="/docs/linux/man/1-osx/">osx</a>(1)</code></p>
 <h2>AUTHORS</h2>
 <p> <code>James Clark</code></p>
 <dl>

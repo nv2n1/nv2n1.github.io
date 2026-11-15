@@ -23,7 +23,7 @@ description: "ieee1284_ref, ieee1284_unref – modify a port’s reference count
 <h2>RETURN VALUE</h2>
 <p> These functions return the number of references held after the increment or decrement.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ieee1284_open/">ieee1284_open</a></code>(3)</p>
+<p> <code>ieee1284_open</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>

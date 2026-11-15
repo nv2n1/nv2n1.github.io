@@ -48,7 +48,7 @@ url: "/docs/linux/man/1-nqs2pbs/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B) 
+ qsub(1B) 
 
 <h2>Index</h2>
 

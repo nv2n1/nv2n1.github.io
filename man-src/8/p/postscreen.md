@@ -34,7 +34,7 @@ RFC 3461 (SMTP DSN Extension)
 RFC 3463 (Enhanced Status Codes)
 RFC 5321 (SMTP protocol, including multi-line 220 banners)</pre>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>The <code><a href="/docs/linux/man/8-postscreen/">postscreen</a></code>(8) built-in SMTP protocol engine currently does not announce support for AUTH, XCLIENT or XFORWARD. If you need to make these services available on port 25, then do not enable the optional &quot;after 220 server greeting&quot; tests, and do not use DNSBLs that reject traffic from dial-up and residential networks. </p>
 <p> The optional &quot;after 220 server greeting&quot; tests involve <code><a href="/docs/linux/man/8-postscreen/">postscreen</a></code>(8)&#8217;s built-in SMTP protocol engine. When these tests succeed, <code><a href="/docs/linux/man/8-postscreen/">postscreen</a></code>(8) adds the client to the temporary whitelist, but it cannot not hand off the &quot;live&quot; connection to a Postfix SMTP server process in the middle of a session. Instead, <code><a href="/docs/linux/man/8-postscreen/">postscreen</a></code>(8) defers attempts to deliver mail with a 4XX status, and waits for the client to disconnect. When the client connects again, <code><a href="/docs/linux/man/8-postscreen/">postscreen</a></code>(8) will allow the client to talk to a Postfix SMTP server process (provided that the whitelist status has not expired). <code><a href="/docs/linux/man/8-postscreen/">postscreen</a></code>(8) mitigates the impact of this limitation by giving the &quot;after 220 server greeting&quot; tests a long expiration time.</p>
@@ -188,7 +188,7 @@ RFC 5321 (SMTP protocol, including multi-line 220 banners)</pre>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a>(8), Postfix SMTP server
 <a href="//www.systutorials.com/docs/linux/man/8-tlsproxy/">tlsproxy</a>(8), Postfix TLS proxy server
 <a href="//www.systutorials.com/docs/linux/man/8-dnsblog/">dnsblog</a>(8), DNS black/whitelist logger
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>POSTSCREEN_README, Postfix Postscreen Howto</pre>

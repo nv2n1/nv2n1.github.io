@@ -23,7 +23,7 @@ description: "cupsd – cups scheduler"
 <dt><code>-h</code></p>
 <dd>Shows the program usage.</p>
 <dt><code>-l</code></p>
-<dd>This option is passed to <code>cupsd</code> when it is run from <code><a href="/docs/linux/man/8-launchd/">launchd</a></code>(8) or <code><a href="/docs/linux/man/8-systemd/">systemd</a></code>(8).</p>
+<dd>This option is passed to <code>cupsd</code> when it is run from <code>launchd</code>(8) or <code>systemd</code>(8).</p>
 <dt><code>-s</code><i>&nbsp;cups-files.conf</i></p>
 <dd>Uses the named cups-files.conf configuration file.</p>
 <dt><code>-t</code></p>
@@ -46,6 +46,6 @@ description: "cupsd – cups scheduler"
 <p>Run <code>cupsd</code> in the foreground with a test configuration file called <i>test.conf</i>: </p>
 <pre> cupsd -f -c test.conf</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-backend/">backend</a></code>(7), <code><a href="/docs/linux/man/5-classes-conf/">classes.conf</a></code>(5), <code><a href="/docs/linux/man/1-cups/">cups</a></code>(1), <code><a href="/docs/linux/man/5-cups-files-conf/">cups-files.conf</a></code>(5), <code><a href="/docs/linux/man/8-cups-lpd/">cups-lpd</a></code>(8), <code><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a></code>(5), <code><a href="/docs/linux/man/8-cupsd-helper/">cupsd-helper</a></code>(8), <code><a href="/docs/linux/man/8-cupsd-logs/">cupsd-logs</a></code>(8), <code><a href="/docs/linux/man/7-filter/">filter</a></code>(7), <code><a href="/docs/linux/man/8-launchd/">launchd</a></code>(8), <code><a href="/docs/linux/man/5-mime-convs/">mime.convs</a></code>(5), <code><a href="/docs/linux/man/5-mime-types/">mime.types</a></code>(5), <code><a href="/docs/linux/man/5-printers-conf/">printers.conf</a></code>(5), <code><a href="/docs/linux/man/8-systemd/">systemd</a></code>(8), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
+<p><code><a href="/docs/linux/man/7-backend/">backend</a></code>(7), <code><a href="/docs/linux/man/5-classes-conf/">classes.conf</a></code>(5), <code><a href="/docs/linux/man/1-cups/">cups</a></code>(1), <code><a href="/docs/linux/man/5-cups-files-conf/">cups-files.conf</a></code>(5), <code><a href="/docs/linux/man/8-cups-lpd/">cups-lpd</a></code>(8), <code><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a></code>(5), <code><a href="/docs/linux/man/8-cupsd-helper/">cupsd-helper</a></code>(8), <code><a href="/docs/linux/man/8-cupsd-logs/">cupsd-logs</a></code>(8), <code><a href="/docs/linux/man/7-filter/">filter</a></code>(7), <code>launchd</code>(8), <code><a href="/docs/linux/man/5-mime-convs/">mime.convs</a></code>(5), <code><a href="/docs/linux/man/5-mime-types/">mime.types</a></code>(5), <code><a href="/docs/linux/man/5-printers-conf/">printers.conf</a></code>(5), <code>systemd</code>(8), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2021-2022 by OpenPrinting.</p>

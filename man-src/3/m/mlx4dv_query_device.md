@@ -30,7 +30,7 @@ struct mlx4dv_context {
 <h2>NOTES</h2>
 <p>&nbsp;*&nbsp;Compatibility mask&nbsp;(comp_mask)&nbsp;is an in/out field.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-mlx4dv/">mlx4dv</a></code>(7), <code><a href="/docs/linux/man/3-ibv_query_device/">ibv_query_device</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/7-mlx4dv/">mlx4dv</a></code>(7), <code>ibv_query_device</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</p>

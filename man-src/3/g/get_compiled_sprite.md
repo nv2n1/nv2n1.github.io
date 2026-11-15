@@ -33,5 +33,5 @@ destroy_bitmap(bmp);
 </code></pre>
 <p> Returns a pointer to the created compiled sprite, or NULL if the compiled sprite could not be created. Remember to free this compiled sprite later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-draw_compiled_sprite/">draw_compiled_sprite</a></code>(3), <code><a href="/docs/linux/man/3-destroy_compiled_sprite/">destroy_compiled_sprite</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-draw_compiled_sprite/">draw_compiled_sprite</a></code>(3), <code>destroy_compiled_sprite</code>(3) </p>
 <h2>Index</h2>

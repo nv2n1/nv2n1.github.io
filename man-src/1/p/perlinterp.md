@@ -104,11 +104,11 @@ while ((PL_op = PL_op-&gt;op_ppaddr(aTHX))) {
 
  Perl's exception handing (i.e. <tt>&quot;die&quot;</tt> etc.) is built on top of the low-level <tt>&quot;setjmp()&quot;</tt>/<tt>&quot;longjmp()&quot;</tt> C-library functions. These basically provide a way to capture the current <font SIZE="-1">PC</font> and <font SIZE="-1">SP</font> registers and later restore them; i.e. a <tt>&quot;longjmp()&quot;</tt> continues at the point in code where a previous <tt>&quot;setjmp()&quot;</tt> was done, with anything further up on the C stack being lost. This is why code should always save values using <tt>&quot;SAVE_FOO&quot;</tt> rather than in auto variables. 
 
- The perl core wraps <tt>&quot;setjmp()&quot;</tt> etc in the macros <tt>&quot;JMPENV_PUSH&quot;</tt> and <tt>&quot;JMPENV_JUMP&quot;</tt>. The basic rule of perl exceptions is that <tt>&quot;exit&quot;</tt>, and <tt>&quot;die&quot;</tt> (in the absence of <tt>&quot;eval&quot;</tt>) perform a <tt><a HREF="/docs/linux/man/2-jmpenv_jump/">JMPENV_JUMP</a>(2)</tt>, while <tt>&quot;die&quot;</tt> within <tt>&quot;eval&quot;</tt> does a <tt><a HREF="/docs/linux/man/3-jmpenv_jump/">JMPENV_JUMP</a>(3)</tt>. 
+ The perl core wraps <tt>&quot;setjmp()&quot;</tt> etc in the macros <tt>&quot;JMPENV_PUSH&quot;</tt> and <tt>&quot;JMPENV_JUMP&quot;</tt>. The basic rule of perl exceptions is that <tt>&quot;exit&quot;</tt>, and <tt>&quot;die&quot;</tt> (in the absence of <tt>&quot;eval&quot;</tt>) perform a <tt>JMPENV_JUMP(2)</tt>, while <tt>&quot;die&quot;</tt> within <tt>&quot;eval&quot;</tt> does a <tt>JMPENV_JUMP(3)</tt>. 
 
  At entry points to perl, such as <tt>&quot;perl_parse()&quot;</tt>, <tt>&quot;perl_run()&quot;</tt> and <tt>&quot;call_sv(cv, G_EVAL)&quot;</tt> each does a <tt>&quot;JMPENV_PUSH&quot;</tt>, then enter a runops loop or whatever, and handle possible exception returns. For a 2 return, final cleanup is performed, such as popping stacks and calling <tt>&quot;CHECK&quot;</tt> or <tt>&quot;END&quot;</tt> blocks. Amongst other things, this is how scope cleanup still occurs during an <tt>&quot;exit&quot;</tt>. 
 
- If a <tt>&quot;die&quot;</tt> can find a <tt>&quot;CxEVAL&quot;</tt> block on the context stack, then the stack is popped to that level and the return op in that block is assigned to <tt>&quot;PL_restartop&quot;</tt>; then a <tt><a HREF="/docs/linux/man/3-jmpenv_jump/">JMPENV_JUMP</a>(3)</tt> is performed. This normally passes control back to the guard. In the case of <tt>&quot;perl_run&quot;</tt> and <tt>&quot;call_sv&quot;</tt>, a non-null <tt>&quot;PL_restartop&quot;</tt> triggers re-entry to the runops loop. The is the normal way that <tt>&quot;die&quot;</tt> or <tt>&quot;croak&quot;</tt> is handled within an <tt>&quot;eval&quot;</tt>. 
+ If a <tt>&quot;die&quot;</tt> can find a <tt>&quot;CxEVAL&quot;</tt> block on the context stack, then the stack is popped to that level and the return op in that block is assigned to <tt>&quot;PL_restartop&quot;</tt>; then a <tt>JMPENV_JUMP(3)</tt> is performed. This normally passes control back to the guard. In the case of <tt>&quot;perl_run&quot;</tt> and <tt>&quot;call_sv&quot;</tt>, a non-null <tt>&quot;PL_restartop&quot;</tt> triggers re-entry to the runops loop. The is the normal way that <tt>&quot;die&quot;</tt> or <tt>&quot;croak&quot;</tt> is handled within an <tt>&quot;eval&quot;</tt>. 
 
  Sometimes ops are executed within an inner runops loop, such as tie, sort or overload code. In this case, something like 
 
@@ -175,7 +175,7 @@ sub FETCH
     retop=nextstate
 </pre> 
 
- The die pops the first <tt>&quot;CxEVAL&quot;</tt> off the context stack, sets <tt>&quot;PL_restartop&quot;</tt> from it, does a <tt><a HREF="/docs/linux/man/3-jmpenv_jump/">JMPENV_JUMP</a>(3)</tt>, and control returns to the top <tt>&quot;docatch&quot;</tt>. This then starts another third-level runops level, which executes the nextstate, pushmark and die ops on line 4. At the point that the second <tt>&quot;pp_die&quot;</tt> is called, the C call stack looks exactly like that above, even though we are no longer within an inner eval; this is because of the optimization mentioned earlier. However, the context stack now looks like this, ie with the top CxEVAL popped: 
+ The die pops the first <tt>&quot;CxEVAL&quot;</tt> off the context stack, sets <tt>&quot;PL_restartop&quot;</tt> from it, does a <tt>JMPENV_JUMP(3)</tt>, and control returns to the top <tt>&quot;docatch&quot;</tt>. This then starts another third-level runops level, which executes the nextstate, pushmark and die ops on line 4. At the point that the second <tt>&quot;pp_die&quot;</tt> is called, the C call stack looks exactly like that above, even though we are no longer within an inner eval; this is because of the optimization mentioned earlier. However, the context stack now looks like this, ie with the top CxEVAL popped: 
 
  <pre>
     STACK 0: MAIN
@@ -194,7 +194,7 @@ sub FETCH
       CX 0: BLOCK  =&gt;
 </pre> 
 
- As usual, <tt>&quot;PL_restartop&quot;</tt> is extracted from the <tt>&quot;CxEVAL&quot;</tt>, and a <tt><a HREF="/docs/linux/man/3-jmpenv_jump/">JMPENV_JUMP</a>(3)</tt> done, which pops the C stack back to the docatch: 
+ As usual, <tt>&quot;PL_restartop&quot;</tt> is extracted from the <tt>&quot;CxEVAL&quot;</tt>, and a <tt>JMPENV_JUMP(3)</tt> done, which pops the C stack back to the docatch: 
 
  <pre>
     S_docatch
@@ -209,7 +209,7 @@ sub FETCH
     main
 </pre> 
 
- In this case, because the <tt>&quot;JMPENV&quot;</tt> level recorded in the <tt>&quot;CxEVAL&quot;</tt> differs from the current one, <tt>&quot;docatch&quot;</tt> just does a <tt><a HREF="/docs/linux/man/3-jmpenv_jump/">JMPENV_JUMP</a>(3)</tt> and the C stack unwinds to: 
+ In this case, because the <tt>&quot;JMPENV&quot;</tt> level recorded in the <tt>&quot;CxEVAL&quot;</tt> differs from the current one, <tt>&quot;docatch&quot;</tt> just does a <tt>JMPENV_JUMP(3)</tt> and the C stack unwinds to: 
 
  <pre>
     perl_run

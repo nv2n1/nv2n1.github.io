@@ -39,11 +39,11 @@ description: "tcpspray – TCP/IP bandwidth measurement tool (Discard and Echo c
 <dd> Display more verbose informations. In particular, tcpspray will print a dot each time a block is sent. If the Echo protocol is used (option -e), dots will be erased as data is received back. </p>
 </dl>
 <h2>DIAGNOSTICS</h2>
-<p> If you get no response while you know the remote host is up, it is most likely that it has no Discard/Echo service running, or that these services are blocked by a firewall. Running <a href="/docs/linux/man/8-tcptraceroute6/">tcptraceroute6</a>(8) resp. <a href="/docs/linux/man/8-tcptraceroute/">tcptraceroute</a>(8) toward the IPv6 resp. IPv4 remote host might help detecting such a situation. </p>
+<p> If you get no response while you know the remote host is up, it is most likely that it has no Discard/Echo service running, or that these services are blocked by a firewall. Running tcptraceroute6(8) resp. tcptraceroute(8) toward the IPv6 resp. IPv4 remote host might help detecting such a situation. </p>
 <h2>SECURITY</h2>
 <p> tcpspray does not require any privilege to run. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-tcp/">tcp</a>(7), <a href="/docs/linux/man/8-inetd/">inetd</a>(8), <a href="/docs/linux/man/8-tcptraceroute6/">tcptraceroute6</a>(8), <a href="/docs/linux/man/8-tcptraceroute/">tcptraceroute</a>(8) </p>
+<p> <a href="/docs/linux/man/7-tcp/">tcp</a>(7), inetd(8), tcptraceroute6(8), tcptraceroute(8) </p>
 <h2>AUTHOR</h2>
 <p> R33mi Denis-Courmont &lt;remi at remlab dot net&gt; </p>
 <p> <a rel="nofollow" href="http://www.remlab.net/ndisc6/">http://www.remlab.net/ndisc6/</a> </p>

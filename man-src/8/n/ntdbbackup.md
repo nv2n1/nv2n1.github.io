@@ -12,7 +12,7 @@ description: "ntdbbackup – tool for backing up and for validating the integrit
 <dl>
 <dt> <code>ntdbbackup</code> [-s suffix] [-v] [-h]</dl>
 <h2>Description</h2>
-<dd>This tool is part of the <code><a href="/docs/linux/man/1-samba/">samba</a></code>(1) suite. </p>
+<dd>This tool is part of the <code>samba</code>(1) suite. </p>
 <p> <code>ntdbbackup</code> is a tool that may be used to backup samba .ntdb files. This tool may also be used to verify the integrity of the .ntdb files prior to samba startup or during normal operation. If it finds file damage and it finds a prior backup the backup file will be restored.</p>
 <h2>Options</h2>
 <p>-h</p>

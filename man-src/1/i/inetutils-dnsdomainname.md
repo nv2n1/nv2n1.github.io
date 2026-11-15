@@ -14,7 +14,7 @@ description: "dnsdomainname – show DNS domain name"
 <p> <code>dnsdomainname</code> [<i>option &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> Show the domain part of the system&#8217;s fully qualified host name. </p>
-<p> The tool uses <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2) to get the host name of the system and <a href="/docs/linux/man/2-getaddrinfo/">getaddrinfo</a>(2) to resolve it into a canonical name. The part after the first period (`.&#8217; ) of the canonical name is shown.</p>
+<p> The tool uses <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2) to get the host name of the system and getaddrinfo(2) to resolve it into a canonical name. The part after the first period (`.&#8217; ) of the canonical name is shown.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-? , -help</code></p>

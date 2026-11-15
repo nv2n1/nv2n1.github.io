@@ -27,7 +27,7 @@ description: "pammosaicknit – validate a mosaic knitting pattern"
 <dl>
 <dt>&bull;</p>
 <dd>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 </dl>
 <h2>HISTORY</h2>
 <p> pammosaicknit was new in Netpbm 10.53 (December 2010). </p>

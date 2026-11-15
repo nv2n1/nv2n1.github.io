@@ -36,7 +36,7 @@ description: "systemd-journald.conf – Journal service configuration file"
 <dl>
 <dd>Controls whether kernel log messages shall be stored in the journal. Takes a boolean argument and defaults to enabled. Note that currently only one userspace service can read kernel messages at a time, which means that kernel log message reading might get corrupted if it is enabled in more than one service, for example in both the journal and a traditional syslog service.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7), <code><a href="/docs/linux/man/5-systemd-conf/">systemd.conf</a></code>(5)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7), <code>systemd.conf</code>(5)</p>
 <h2>Author</h2>
 <p><code>Lennart Poettering</code> &lt;lennart [at] poettering.net&gt;</p>
 <dl>

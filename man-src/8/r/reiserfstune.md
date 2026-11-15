@@ -42,7 +42,7 @@ description: "reiserfstune – The tunning tool for the ReiserFS filesystem."
 <dt><code>&#8211;make-journal-standard</code></p>
 <dd>As it was mentioned above, if your file system has non-standard journal, it can not be mounted on the kernel without journal relocation code. The thing can be changed, the only condition is that there is reserved area on main device of the standard journal size 8193 blocks (it will be so for instance if you convert standard journal to non-standard). Just specify this option when you relocate journal back, or without relocation if you already have it on main device.</p>
 <dt><code>-u</code> | <code>&#8211;uuid </code><i>UUID</i></p>
-<dd>Set the universally unique identifier (<code> UUID </code>) of the filesystem to <i>UUID</i> (see also <code><a href="/docs/linux/man/8-uuidgen/">uuidgen</a>(8)</code>). The format of the UUID is a series of hex digits separated by hypthens, like this: &quot;c1b9d5a2-f162-11cf-9ece-0020afc76f16&quot;.</p>
+<dd>Set the universally unique identifier (<code> UUID </code>) of the filesystem to <i>UUID</i> (see also <code>uuidgen(8)</code>). The format of the UUID is a series of hex digits separated by hypthens, like this: &quot;c1b9d5a2-f162-11cf-9ece-0020afc76f16&quot;.</p>
 <dt><code>-l</code> | <code>&#8211;label </code><i>LABEL</i></p>
 <dd>Set the volume label of the filesystem. <i>LABEL</i> can be at most 16 characters long; if it is longer than 16 characters, reiserfstune will truncate it.</p>
 <dt><code>-c</code> | <code>&#8211;check-interval </code><i>interval-in-days</i></p>

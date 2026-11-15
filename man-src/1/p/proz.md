@@ -46,7 +46,7 @@ description: "ProZilla – a download accelerator for GNU/Linux"
 <dt>&#8211;no-search</p>
 <dd> Do a direct download (no ftpsearch)</p>
 <dt>-k=n</p>
-<dd> Use &lt;n&gt; connections instead of the <a href="/docs/linux/man/4-default/">default</a>(4)</p>
+<dd> Use &lt;n&gt; connections instead of the default(4)</p>
 <dt>&#8211;timeout=n</p>
 <dd> Set the timeout for connections to &lt;n&gt; seconds (default 180)</p>
 <dt>-t, &#8211;tries=n</p>

@@ -22,7 +22,7 @@ description: "gnome-system-log – the GNOME System Log Viewer"
 <dt><i>/var/log/messages</i></p>
 <dd> The system&#8217;s main logfile.</p>
 <dt><i>/etc/syslog.conf</i></p>
-<dd> Configuration file for syslogd. See <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5) for exact information.</dl>
+<dd> Configuration file for syslogd. See <code>syslog.conf</code>(5) for exact information.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8), <code><a href="/docs/linux/man/8-sysklogd/">sysklogd</a></code>(8), <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5), <code><a href="/docs/linux/man/8-syslogd-listfiles/">syslogd-listfiles</a></code>(8) </p>
+<p> <code>syslogd</code>(8), <code>sysklogd</code>(8), <code>syslog.conf</code>(5), <code>syslogd-listfiles</code>(8) </p>
 <h2>Index</h2>

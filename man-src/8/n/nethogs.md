@@ -42,6 +42,6 @@ description: "nethogs – Net top tool grouping bandwidth per process"
 <dt>q</p>
 <dd>quit</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-netstat/">netstat</a>(8) <a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1) <a href="/docs/linux/man/3-pcap/">pcap</a>(3)</i></p>
+<p><i><a href="/docs/linux/man/8-netstat/">netstat</a>(8) tcpdump(1) pcap(3)</i></p>
 <h2>Author</h2>
 <pre>Written by Arnout Engelen &lt;arnouten [at] bzzt.net&gt;.</pre>

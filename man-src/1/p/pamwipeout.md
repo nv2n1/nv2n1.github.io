@@ -28,7 +28,7 @@ description: "pamwipeout – replace detail with smooth gradient from one edge t
 <p> This option chooses between a vertical and a horizontal gradient. You must specify one of these, but not both. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1)<br />
+<p> <code>pam</code>(1)<br />
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamcomp/">pamcomp</a></code>(1) , <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamwipeout</code> was new in Netpbm 10.54 (March 2011). </p>

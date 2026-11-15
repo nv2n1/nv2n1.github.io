@@ -53,7 +53,7 @@ git help[-a | --all[--[no - ] verbose]]
 <dl>
 <dt>
 <dd> Display manual page for the command in the <i>web</i> (HTML) format. A web browser will be used for that purpose. </p>
-<p> The web browser can be specified using the configuration variable <code>help.browser</code>, or <code>web.browser</code> if the former is not set. If none of these config variables is set, the <i>git web&#8211;browse</i> helper script (called by <i>git help</i>) will pick a suitable default. See <code><a href="/docs/linux/man/1-git-web--browse/">git-web&#8211;browse</a></code>(1) for more information about this.</dl>
+<p> The web browser can be specified using the configuration variable <code>help.browser</code>, or <code>web.browser</code> if the former is not set. If none of these config variables is set, the <i>git web&#8211;browse</i> helper script (called by <i>git help</i>) will pick a suitable default. See <code>git-web&#8211;browse</code>(1) for more information about this.</dl>
 <h2>CONFIGURATION VARIABLES</h2>
 <h3>help.format</h3>
 <p> If no command-line option is passed, the <code>help.format</code> configuration variable will be checked. The following values are supported for this variable; they make <i>git help</i> behave as their corresponding command- line option: </p>
@@ -67,7 +67,7 @@ git help[-a | --all[--[no - ] verbose]]
 <dt>
 <dd> &bull; &quot;web&quot; or &quot;html&quot; correspond to <i>-w|&#8211;web</i>.</dl>
 <h3>help.browser, web.browser and browser.&lt;tool&gt;.path</h3>
-<p> The <code>help.browser</code>, <code>web.browser</code> and <code>browser.&lt;tool&gt;.path</code> will also be checked if the <i>web</i> format is chosen (either by command-line option or configuration variable). See <i>-w|&#8211;web</i> in the OPTIONS section above and <code><a href="/docs/linux/man/1-git-web--browse/">git-web&#8211;browse</a></code>(1).</p>
+<p> The <code>help.browser</code>, <code>web.browser</code> and <code>browser.&lt;tool&gt;.path</code> will also be checked if the <i>web</i> format is chosen (either by command-line option or configuration variable). See <i>-w|&#8211;web</i> in the OPTIONS section above and <code>git-web&#8211;browse</code>(1).</p>
 <h3>man.viewer</h3>
 <p> The <code>man.viewer</code> configuration variable will be checked if the <i>man</i> format is chosen. The following values are currently supported: </p>
 <dl>

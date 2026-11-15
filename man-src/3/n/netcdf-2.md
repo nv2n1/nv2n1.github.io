@@ -307,4 +307,4 @@ long imap[2] = {
 <dl>
 <dd><code>help</code></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-ncdump/">ncdump</a></code>(1), <code><a href="/docs/linux/man/1-ncgen/">ncgen</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/3f-netcdf/">netcdf</a></code>(3f). <i>netCDF User&#8217;s Guide</i>, published by the Unidata Program Center, University Corporation for Atmospheric Research, located in Boulder, Colorado. </p>
+<p><code><a href="/docs/linux/man/1-ncdump/">ncdump</a></code>(1), <code><a href="/docs/linux/man/1-ncgen/">ncgen</a></code>(1), <code>netcdf</code>(3f). <i>netCDF User&#8217;s Guide</i>, published by the Unidata Program Center, University Corporation for Atmospheric Research, located in Boulder, Colorado. </p>

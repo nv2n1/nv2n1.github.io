@@ -20,7 +20,7 @@ description: "ipsec_pf_key – shows pfkey messages emitted by the kernel when u
 <h2>Files</h2>
 <p>/proc/net/pf_key</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-pf_key/">pf_key</a></code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/5-ipsec_eroute/">ipsec_eroute</a></code>(5), <code><a href="/docs/linux/man/5-ipsec_spi/">ipsec_spi</a></code>(5), <code><a href="/docs/linux/man/5-ipsec_spigrp/">ipsec_spigrp</a></code>(5), <code><a href="/docs/linux/man/5-ipsec_klipsdebug/">ipsec_klipsdebug</a></code>(5), <code><a href="/docs/linux/man/8-ipsec_tncfg/">ipsec_tncfg</a></code>(8), <code><a href="/docs/linux/man/5-ipsec_version/">ipsec_version</a></code>(5)</p>
+<p><code>pf_key</code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/5-ipsec_eroute/">ipsec_eroute</a></code>(5), <code><a href="/docs/linux/man/5-ipsec_spi/">ipsec_spi</a></code>(5), <code><a href="/docs/linux/man/5-ipsec_spigrp/">ipsec_spigrp</a></code>(5), <code><a href="/docs/linux/man/5-ipsec_klipsdebug/">ipsec_klipsdebug</a></code>(5), <code><a href="/docs/linux/man/8-ipsec_tncfg/">ipsec_tncfg</a></code>(8), <code><a href="/docs/linux/man/5-ipsec_version/">ipsec_version</a></code>(5)</p>
 <h2>History</h2>
 <p>Written for the Linux FreeS/WAN project &lt;m[blue]<code><a rel="nofollow" href="http://www.freeswan.org/">http://www.freeswan.org/</a></code>m[]&gt; by Michael Richardson &lt;mcr [at] freeswan.org&gt;</p>
 <h2>Author</h2>

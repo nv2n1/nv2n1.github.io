@@ -74,7 +74,7 @@ description: "dbrowcount – count the number of rows in an Fsdb stream"
     #  | /home/johnh/BIN/DB/dbcol absdiff
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-dbcolaccumulate/">dbcolaccumulate</a></i>(1), <i><a href="/docs/linux/man/1-dbcolstats/">dbcolstats</a></i>(1), <i><a href="/docs/linux/man/3-fsdb/">Fsdb</a></i>(3)</p>
+<p> <i>dbcolaccumulate</i>(1), <i><a href="/docs/linux/man/1-dbcolstats/">dbcolstats</a></i>(1), <i>Fsdb</i>(3)</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 2007-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
 <p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>

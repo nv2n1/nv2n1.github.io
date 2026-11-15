@@ -70,7 +70,7 @@ description: "user_caps – user-defined terminfo capabilities"
 </dl>
 <dd>Because there are several RGB encodings in use, applications which make assumptions about the number of bits per color are unlikely to work reliably. As a trivial case, for example, one could define <code>RGB#1</code> to represent the standard eight ANSI colors, i.e., one bit per color.</p>
 <dt>U8</p>
-<dd><i>number</i>, asserts that ncurses must use Unicode values for line-drawing characters, and that it should ignore the alternate character set capabilities when the locale uses UTF-8 encoding. For more information, see the discussion of <code>NCURSES_NO_UTF8_ACS</code> in <code><a href="//www.systutorials.com/docs/linux/man/3X-ncurses/">ncurses</a></code>(3X).</p>
+<dd><i>number</i>, asserts that ncurses must use Unicode values for line-drawing characters, and that it should ignore the alternate character set capabilities when the locale uses UTF-8 encoding. For more information, see the discussion of <code>NCURSES_NO_UTF8_ACS</code> in <code>ncurses</code>(3X).</p>
 <dd>Set this capability to a nonzero value to enable it.</p>
 <dt>XM</p>
 <dd><i>string</i>, override ncurses&#8217;s built-in string which enables/disables <code>xterm</code> mouse mode.</p>
@@ -270,8 +270,8 @@ description: "user_caps – user-defined terminfo capabilities"
 </table>
 </dl>
 <p> None of these are predefined; terminal descriptions can refer to <i>names</i> which ncurses will allocate at runtime to <i>key-codes</i>. To use these keys in an ncurses program, an application could do this:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 using a list of extended key <i>names</i>, ask <code><a href="//www.systutorials.com/docs/linux/man/3X-tigetstr/">tigetstr</a></code>(3X) for their values, and<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 given the list of values, ask <code><a href="//www.systutorials.com/docs/linux/man/3X-key_defined/">key_defined</a></code>(3X) for the <i>key-code</i> which would be returned for those keys by <code><a href="//www.systutorials.com/docs/linux/man/3X-wgetch/">wgetch</a></code>(3X). </p>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 using a list of extended key <i>names</i>, ask <code>tigetstr</code>(3X) for their values, and<br />
+&nbsp;.IP&nbsp;&bull;&nbsp;4 given the list of values, ask <code>key_defined</code>(3X) for the <i>key-code</i> which would be returned for those keys by <code>wgetch</code>(3X). </p>
 <h2>Portability</h2>
 <p>The &#8220;-x&#8221; extension feature of <code>tic</code> and <code>infocmp</code> has been adopted in NetBSD curses. That implementation stores user-defined capabilities, but makes no use of these capabilities itself.</p>
 <h2>See Also</h2>

@@ -24,7 +24,7 @@ description: "pamrgbatopng – convert PAM color/transparency image to PNG"
 <h2>OPTIONS</h2>
 <p> None. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pngtopam/">pngtopam</a></code>(1) </p>
 <h2>HISTORY</h2>

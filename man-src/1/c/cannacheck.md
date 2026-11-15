@@ -32,13 +32,13 @@ description: "cannacheck – Display information about Japanese input system Can
 <h2>FILES</h2>
 <dl>
 <dt>/etc/canna/cannahost</p>
-<dd> Name of the host under which <i><a href="//www.systutorials.com/docs/linux/man/1M-cannaserver/">cannaserver</a>(1M)</i> is in operation.</dl>
+<dd> Name of the host under which <i>cannaserver(1M)</i> is in operation.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/1M-cannaserver/">cannaserver</a>(1M), <a href="//www.systutorials.com/docs/linux/man/1M-cannakill/">cannakill</a>(1M), <a href="/docs/linux/man/1-cannastat/">cannastat</a>(1)</p>
+<p> cannaserver(1M), cannakill(1M), <a href="/docs/linux/man/1-cannastat/">cannastat</a>(1)</p>
 <h2>ENVIRONMENT</h2>
 <dl>
 <dt>CANNAHOST</p>
-<dd> Specifies the name of the host under which <i><a href="//www.systutorials.com/docs/linux/man/1M-cannaserver/">cannaserver</a>(1M)</i> is in operation.</p>
+<dd> Specifies the name of the host under which <i>cannaserver(1M)</i> is in operation.</p>
 <dt>CANNAFILE</p>
 <dd> Specifies the initialize file (.canna). </p>
 </dl>

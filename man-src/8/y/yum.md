@@ -432,7 +432,7 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <dl>
 <dd>[main]<br />
  enabled = 1</dl>
-<p> See the <code><a href="/docs/linux/man/5-yum-conf/">yum.conf</a>(5)</code> man page for more information on plugin related configuration options.</p>
+<p> See the <code>yum.conf(5)</code> man page for more information on plugin related configuration options.</p>
 <h2>Files</h2>
 <pre>/etc/yum.conf
 /etc/yum/version-groups.conf

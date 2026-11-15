@@ -22,8 +22,8 @@ iconv_t iconv_open(const char *tocode, const char *fromcode);
 <dd> When the string &quot;//TRANSLIT&quot; is appended to <i>tocode</i>, transliteration is activated. This means that when a character cannot be represented in the target character set, it can be approximated through one or several similarly looking characters.</p>
 <dt>//IGNORE</p>
 <dd> When the string &quot;//IGNORE&quot; is appended to <i>tocode</i>, characters that cannot be represented in the target character set will be silently discarded.</dl>
-<p> The resulting conversion descriptor can be used with <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3) any number of times. It remains valid until deallocated using <code><a href="/docs/linux/man/3-iconv_close/">iconv_close</a></code>(3). </p>
-<p> A conversion descriptor contains a conversion state. After creation using <code>iconv_open</code>(), the state is in the initial state. Using <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3) modifies the descriptor&#8217;s conversion state. To bring the state back to the initial state, use <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3) with NULL as <i>inbuf</i> argument.</p>
+<p> The resulting conversion descriptor can be used with <code>iconv</code>(3) any number of times. It remains valid until deallocated using <code>iconv_close</code>(3). </p>
+<p> A conversion descriptor contains a conversion state. After creation using <code>iconv_open</code>(), the state is in the initial state. Using <code>iconv</code>(3) modifies the descriptor&#8217;s conversion state. To bring the state back to the initial state, use <code>iconv</code>(3) with NULL as <i>inbuf</i> argument.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>iconv_open</code>() function returns a freshly allocated conversion descriptor. In case of error, it sets <i>errno</i> and returns <i>(iconv_t)&nbsp;-1</i>.</p>
 <h2>ERRORS</h2>
@@ -52,7 +52,7 @@ iconv_t iconv_open(const char *tocode, const char *fromcode);
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SUSv2.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3), <code><a href="/docs/linux/man/3-iconv_close/">iconv_close</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code>iconv</code>(3), <code>iconv_close</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

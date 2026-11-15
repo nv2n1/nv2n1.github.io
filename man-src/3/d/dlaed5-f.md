@@ -33,7 +33,7 @@ description: "dlaed5.f –"
  The index of the eigenvalue to be computed. I = 1 or I = 2.</pre>
 <p><i>D</i> </p>
 <pre> D is DOUBLE PRECISION array, dimension (2)
- The original eigenvalues. We assume <a href="//www.systutorials.com/docs/linux/man/1-D/">D</a>(1) &lt; <a href="//www.systutorials.com/docs/linux/man/2-D/">D</a>(2).</pre>
+ The original eigenvalues. We assume D(1) &lt; D(2).</pre>
 <p><i>Z</i> </p>
 <pre> Z is DOUBLE PRECISION array, dimension (2)
  The components of the updating vector.</pre>

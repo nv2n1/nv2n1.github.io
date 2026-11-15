@@ -30,7 +30,7 @@ funzip test.zip | more
 <pre>
 funzip test.zip &gt; /dev/null
 </pre>
-<p> To use <i>zip</i> and <i>funzip</i> in place of <i><a href="/docs/linux/man/1-compress/">compress</a></i>(1) and <i><a href="/docs/linux/man/1-zcat/">zcat</a></i>(1) (or <i><a href="/docs/linux/man/1-gzip/">gzip</a></i>(1) and <i><a href="/docs/linux/man/1-gzcat/">gzcat</a></i>(1)) for tape backups: </p>
+<p> To use <i>zip</i> and <i>funzip</i> in place of <i><a href="/docs/linux/man/1-compress/">compress</a></i>(1) and <i><a href="/docs/linux/man/1-zcat/">zcat</a></i>(1) (or <i><a href="/docs/linux/man/1-gzip/">gzip</a></i>(1) and <i>gzcat</i>(1)) for tape backups: </p>
 <pre>
 tar cf - . | zip -7 | dd of=/dev/nrst0 obs=8k
 dd if=/dev/nrst0 ibs=8k | funzip | tar xf -

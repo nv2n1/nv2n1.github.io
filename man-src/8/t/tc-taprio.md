@@ -17,13 +17,13 @@ description: "TAPRIO – Time Aware Priority Shaper"
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <code>sched-entry</code> &lt;command 3&gt; &lt;gate mask 3&gt; &lt;interval 3&gt;<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <code>sched-entry</code> &lt;command N&gt; &lt;gate mask N&gt; &lt;interval N&gt; </p>
 <h2>Description</h2>
-<p>The TAPRIO qdisc implements a simplified version of the scheduling state machine defined by IEEE 802.1Q-2018 Section 8.6.9, which allows configuration of a sequence of gate states, where each gate state allows outgoing traffic for a subset (potentially empty) of traffic classes. How traffic is mapped to different hardware queues is similar to <code><a href="/docs/linux/man/8-mqprio/">mqprio</a>(8)</code> and so the <code>map</code> and <code>queues</code> parameters have the same meaning. The other parameters specify the schedule, and at what point in time it should start (it can behave as the schedule started in the past). </p>
+<p>The TAPRIO qdisc implements a simplified version of the scheduling state machine defined by IEEE 802.1Q-2018 Section 8.6.9, which allows configuration of a sequence of gate states, where each gate state allows outgoing traffic for a subset (potentially empty) of traffic classes. How traffic is mapped to different hardware queues is similar to <code>mqprio(8)</code> and so the <code>map</code> and <code>queues</code> parameters have the same meaning. The other parameters specify the schedule, and at what point in time it should start (it can behave as the schedule started in the past). </p>
 <h2>Parameters</h2>
 <dl>
 <dt>num_tc</p>
 <dd>Number of traffic classes to use. Up to 16 classes supported. </p>
 <dt>map</p>
-<dd>The priority to traffic class map. Maps priorities 0..15 to a specified traffic class. See <code><a href="/docs/linux/man/8-mqprio/">mqprio</a>(8)</code> for more details. </p>
+<dd>The priority to traffic class map. Maps priorities 0..15 to a specified traffic class. See <code>mqprio(8)</code> for more details. </p>
 <dt>queues</p>
 <dd>Provide count and offset of queue range for each traffic class. In the format, <code>count [at] offset.</code> Queue ranges for each traffic classes cannot overlap and must be a contiguous range of queues. </p>
 <dt>base-time</p>
@@ -42,13 +42,13 @@ description: "TAPRIO – Time Aware Priority Shaper"
 <dd>
 <dl>
 <dt><i>0x1</i></p>
-<dd>Enables the txtime-assist feature. In this mode, taprio will set the transmit timestamp depending on the interval in which the packet needs to be transmitted. It will then utililize the <code><a href="/docs/linux/man/8-etf/">etf</a>(8)</code> qdisc to sort and transmit the packets at the right time. The second example can be used as a reference to configure this mode.</p>
+<dd>Enables the txtime-assist feature. In this mode, taprio will set the transmit timestamp depending on the interval in which the packet needs to be transmitted. It will then utililize the <code>etf(8)</code> qdisc to sort and transmit the packets at the right time. The second example can be used as a reference to configure this mode.</p>
 <dt><i>0x2</i></p>
 <dd>Enables the full-offload feature. In this mode, taprio will pass the gate control list to the NIC which will execute it cyclically in hardware. When using full-offload, there is no need to specify the <code>clockid</code> argument. </p>
 <p> The txtime-assist and full-offload features are mutually exclusive, i.e. setting flags to 0x3 is invalid.</dl>
 </dl>
 <dt>txtime-delay</p>
-<dd>This parameter is specific to the txtime offload mode. It specifies the maximum time a packet might take to reach the network card from the taprio qdisc. The value should always be greater than the delta specified in the <code><a href="/docs/linux/man/8-etf/">etf</a>(8)</code> qdisc. </p>
+<dd>This parameter is specific to the txtime offload mode. It specifies the maximum time a packet might take to reach the network card from the taprio qdisc. The value should always be greater than the delta specified in the <code>etf(8)</code> qdisc. </p>
 </dl>
 <h2>Examples</h2>
 <p>The following example shows how an traffic schedule with three traffic classes (&quot;num_tc 3&quot;), which are separated different traffic classes, we are going to call these TC 0, TC 1 and TC 2. We could read the &quot;map&quot; parameter below as: traffic with priority 3 is classified as TC 0, priority 2 is classified as TC 1 and the rest is classified as TC 2. The schedule will start at instant 1528743495910289987 using the reference CLOCK_TAI. The schedule is composed of three entries each of 300us duration. # tc qdisc replace dev eth0 parent root handle 100 taprio \<br />
@@ -59,7 +59,7 @@ description: "TAPRIO – Time Aware Priority Shaper"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sched-entry S 01 300000&nbsp;\<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sched-entry S 02 300000&nbsp;\<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sched-entry S 04 300000&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clockid CLOCK_TAI Following is an example to enable the txtime offload mode in taprio. See <code><a href="/docs/linux/man/8-etf/">etf</a>(8)</code> for more information about configuring the ETF qdisc. # tc qdisc replace dev eth0 parent root handle 100 taprio \<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clockid CLOCK_TAI Following is an example to enable the txtime offload mode in taprio. See <code>etf(8)</code> for more information about configuring the ETF qdisc. # tc qdisc replace dev eth0 parent root handle 100 taprio \<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;num_tc 3&nbsp;\<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;map 2 2 1 0 2 2 2 2 2 2 2 2 2 2 2 2&nbsp;\<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;queues 1@0 1@0 1@0&nbsp;\<br />

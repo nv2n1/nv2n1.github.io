@@ -44,6 +44,6 @@ description: "g_dist – calculates the distances between the centers of mass of
 <p> <code>-dist</code><i> real</i><code> 0 </code><br />
 &nbsp;<wbr>Print all atoms in group 2 closer than dist to the center of mass of group 1 </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

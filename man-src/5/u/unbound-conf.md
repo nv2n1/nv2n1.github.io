@@ -20,12 +20,12 @@ description: "unbound.conf – Unbound configuration file."
 <p>Most settings are the defaults. Stop the server with: </p>
 <pre> $ kill `cat /etc/unbound/unbound.pid`</pre>
 <p>Below is a minimal config file. The source distribution contains an extensive example.conf file with all the options. </p>
-<pre># <a href="//www.systutorials.com/docs/linux/man/5-unbound.conf/">unbound.conf</a>(5) config file for <a href="//www.systutorials.com/docs/linux/man/8-unbound/">unbound</a>(8).
+<pre># unbound.conf(5) config file for <a href="//www.systutorials.com/docs/linux/man/8-unbound/">unbound</a>(8).
 server:
  directory: &quot;/etc/unbound&quot;
  username: unbound
  # make sure unbound can access entropy from inside the chroot.
- # e.g. on linux the use these commands (on BSD, <a href="//www.systutorials.com/docs/linux/man/8-devfs/">devfs</a>(8) is used):
+ # e.g. on linux the use these commands (on BSD, devfs(8) is used):
  # mount --bind -n /dev/random /etc/unbound/dev/random
  # and mount --bind -n /dev/log /etc/unbound/dev/log
  chroot: &quot;/etc/unbound&quot;

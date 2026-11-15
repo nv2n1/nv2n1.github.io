@@ -36,8 +36,8 @@ description: "pcsc_scan – regularly scans every PC/SC readers connected to the
 <dd>
 &nbsp;<wbr>ATR: 3B 82 00 86 1E<br />
 &nbsp;<wbr>+&nbsp;<wbr>TS&nbsp;<wbr>=&nbsp;<wbr>3B &#8211;&gt;&nbsp;<wbr>Direct Convention<br />
-&nbsp;<wbr>+&nbsp;<wbr>T0&nbsp;<wbr>=&nbsp;<wbr>82,&nbsp;<wbr><a href="/docs/linux/man/1-y/">Y</a>(1): 1000, K: 2&nbsp;<wbr>(historical bytes)<br />
-<a href="/docs/linux/man/1-td/">TD</a>(1)&nbsp;<wbr>=&nbsp;<wbr>00 &#8211;&gt;&nbsp;<wbr>Y(i+1)&nbsp;<wbr>=&nbsp;<wbr>0000, Protocol T&nbsp;<wbr>=&nbsp;<wbr>0<br />
+&nbsp;<wbr>+&nbsp;<wbr>T0&nbsp;<wbr>=&nbsp;<wbr>82,&nbsp;<wbr>Y(1): 1000, K: 2&nbsp;<wbr>(historical bytes)<br />
+TD(1)&nbsp;<wbr>=&nbsp;<wbr>00 &#8211;&gt;&nbsp;<wbr>Y(i+1)&nbsp;<wbr>=&nbsp;<wbr>0000, Protocol T&nbsp;<wbr>=&nbsp;<wbr>0<br />
 &nbsp;<wbr>&#8212;&#8211;<br />
 &nbsp;<wbr>+&nbsp;<wbr>Historical bytes: 86 1E</dl>
 <h2>OPTIONS</h2>
@@ -49,7 +49,7 @@ description: "pcsc_scan – regularly scans every PC/SC readers connected to the
 <dt><code>-n</code></p>
 <dd> do not print ATR analysis</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-pcscd/">pcscd</a></code>(8), <code><a href="/docs/linux/man/1-atr_analysis/">ATR_analysis</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/8-pcscd/">pcscd</a></code>(8), <code>ATR_analysis</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Ludovic Rousseau &lt;ludovic.rousseau [at] free.fr&gt; </p>
 <h2>Index</h2>

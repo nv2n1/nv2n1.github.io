@@ -164,7 +164,7 @@ See the ncat(1) manpage for full options, descriptions and usage examples
 <p> <code>&#8211;ssl-ciphers </code><i>cipherlist</i> (Specify SSL ciphersuites)</p>
 <dl>
 <dt>
-<dd> This option sets the list of ciphersuites that Ncat will use when connecting to servers or when accepting SSL connections from clients. The syntax is described in the OpenSSL <a href="/docs/linux/man/1-ciphers/">ciphers</a>(1) man page, and defaults to ALL:!aNULL:!eNULL:!LOW:!EXP:!MD5:@STRENGTH</dl>
+<dd> This option sets the list of ciphersuites that Ncat will use when connecting to servers or when accepting SSL connections from clients. The syntax is described in the OpenSSL ciphers(1) man page, and defaults to ALL:!aNULL:!eNULL:!LOW:!EXP:!MD5:@STRENGTH</dl>
 <p> <code>&#8211;ssl-alpn </code><i>ALPN list</i> (Specify ALPN protocol list)</p>
 <dl>
 <dt>

@@ -1203,5 +1203,5 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> Related programs which can be used with GSM modem: </p>
 <p> <a href="/docs/linux/man/1-cu/">cu</a>(1), <a href="/docs/linux/man/1-gnokii/">gnokii</a>(1), <a href="/docs/linux/man/1-minicom/">minicom</a>(1) </p>
 <p> Graphical interfaces for Gammu: </p>
-<p> <a href="/docs/linux/man/1-wammu/">wammu</a>(1), <a href="/docs/linux/man/1-gmobilemedia/">gmobilemedia</a>(1) </p>
+<p> wammu(1), gmobilemedia(1) </p>
 <h2>Index</h2>

@@ -52,7 +52,7 @@ description: "pamslice – extract one line of values out of a Netpbm image"
 <p> <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pnmtopnm/">pnmtopnm</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pnmtoplainpnm/">pnmtoplainpnm</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code>pnm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamslice</code> replaced <code>pgmslice</code> in Netpbm 10.3 (June 2002). It was backward compatible, but worked on Netpbm images other than PGM and PBM and added the <code>-plane</code> and <code>-xmgr</code> options. </p>
 <h2>AUTHOR</h2>

@@ -29,7 +29,7 @@ url: "/docs/linux/man/1-puudecode/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-puuencode/">puuencode</a></i>(1), <i><a HREF="/docs/linux/man/3-convert--uu/">Convert::UU</a></i>(3)
+ <i><a HREF="/docs/linux/man/1-puuencode/">puuencode</a></i>(1), <i>Convert::UU</i>(3)
 
 <h2>AUTHOR</h2>
 

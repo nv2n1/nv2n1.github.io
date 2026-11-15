@@ -117,7 +117,7 @@ description: "jdb – Finds and fixes bugs in Java platform programs."
 <dt>&bull;</p>
 <dd><a href="/docs/linux/man/1-java/">java</a>(1)</p>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-javah/">javah</a>(1)</p>
+<dd>javah(1)</p>
 <dt>&bull;</p>
 <dd><a href="/docs/linux/man/1-javap/">javap</a>(1) </p>
 </dl>

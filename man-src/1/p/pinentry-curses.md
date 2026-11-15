@@ -32,7 +32,7 @@ description: "pinentry-curses – PIN or pass-phrase entry dialog for GnuPG"
 <dt><code>&#8211;display</code> <i>STRING</i>, <code>&#8211;ttyname</code> <i>STRING</i>, <code>&#8211;ttytype</code> <i>STRING</i>, <code>&#8211;lc-type</code> <i>STRING</i>, <code>&#8211;lc-messages</code> <i>STRING</i></p>
 <dd> These options are used to pass localization information to <code>pinentry-curses</code>. They are required because <code>pinentry-curses</code> is usually called by some background process which does not have any information on the locale and terminal to use. Assuan protocol options are an alternative way to pass these information.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pinentry-gtk-2/">pinentry-gtk-2</a></code>(1), <code><a href="/docs/linux/man/1-pinentry-qt/">pinentry-qt</a></code>(1), <code><a href="/docs/linux/man/1-pinentry-fltk/">pinentry-fltk</a></code>(1), <code><a href="/docs/linux/man/1-pinentry-gnome3/">pinentry-gnome3</a></code>(1), <code><a href="/docs/linux/man/1-pinentry-tty/">pinentry-tty</a></code>(1), <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), <code><a href="/docs/linux/man/1-gpg-agent/">gpg-agent</a></code>(1) </p>
+<p> <code>pinentry-gtk-2</code>(1), <code>pinentry-qt</code>(1), <code>pinentry-fltk</code>(1), <code><a href="/docs/linux/man/1-pinentry-gnome3/">pinentry-gnome3</a></code>(1), <code>pinentry-tty</code>(1), <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), <code><a href="/docs/linux/man/1-gpg-agent/">gpg-agent</a></code>(1) </p>
 <p> The full documentation for <code>pinentry-curses</code> is maintained as a Texinfo manual. If the <code>pinentry-doc</code> package is installed, the command</p>
 <dl>
 <dt>

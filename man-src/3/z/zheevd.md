@@ -83,7 +83,7 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
 
  <pre> RWORK is DOUBLE PRECISION array,
  dimension (LRWORK)
- On exit, if INFO = 0, <a HREF="//www.systutorials.com/docs/linux/man/1-RWORK/">RWORK</a>(1) returns the optimal LRWORK.</pre><i>LRWORK</i> 
+ On exit, if INFO = 0, RWORK(1) returns the optimal LRWORK.</pre><i>LRWORK</i> 
 
  <pre> LRWORK is INTEGER
  The dimension of the array RWORK.
@@ -98,7 +98,7 @@ subroutine <b>zheevd</b> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, 
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre><i>IWORK</i> 
 
  <pre> IWORK is INTEGER array, dimension (MAX(1,LIWORK))
- On exit, if INFO = 0, <a HREF="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal LIWORK.</pre><i>LIWORK</i> 
+ On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.</pre><i>LIWORK</i> 
 
  <pre> LIWORK is INTEGER
  The dimension of the array IWORK.

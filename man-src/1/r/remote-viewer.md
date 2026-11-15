@@ -88,7 +88,7 @@ description: "remote-viewer – a simple remote desktop client"
 <dd> The list of session channels to disable. </p>
 <p> The current <font SIZE="-1">SPICE</font> channels are: main, display, inputs, cursor, playback, record, smartcard, usbredir.</p>
 <dt>&quot;tls-ciphers&quot; (string)</p>
-<dd> Set the cipher list to use for the secure connection, in textual OpenSSL cipher list format. (see <i><a href="/docs/linux/man/1-ciphers/">ciphers</a></i>(1))</p>
+<dd> Set the cipher list to use for the secure connection, in textual OpenSSL cipher list format. (see <i>ciphers</i>(1))</p>
 <dt>&quot;title&quot; (string)</p>
 <dd> String to present in the window title.</p>
 <dt>&quot;fullscreen&quot; (boolean)</p>

@@ -38,7 +38,7 @@ description: "wimlib-imagex-optimize – Optimize a WIM archive"
 <dt><code>&#8211;threads</code>=<i>NUM_THREADS</i></p>
 <dd> Number of threads to use for compressing data. Default: autodetect (number of processors). This parameter only has an effect when data recompression is requested.</p>
 <dt><code>&#8211;pipable</code></p>
-<dd> Rebuild the WIM so that it can be applied fully sequentially, including from a pipe. See <code>wimlib-imagex <a href="/docs/linux/man/1-capture/">capture</a></code>(1) for more details about creating pipable WIMs. By default, when neither <code>&#8211;pipable</code> or <code>&#8211;not-pipable</code> is specified, the rebuilt WIM will be pipable if and only if it was already pipable.</p>
+<dd> Rebuild the WIM so that it can be applied fully sequentially, including from a pipe. See <code>wimlib-imagex capture</code>(1) for more details about creating pipable WIMs. By default, when neither <code>&#8211;pipable</code> or <code>&#8211;not-pipable</code> is specified, the rebuilt WIM will be pipable if and only if it was already pipable.</p>
 <dt><code>&#8211;not-pipable</code></p>
 <dd> Rebuild the WIM in the non-pipable format. (This is the default if <i>WIMFILE</i> is not pipable.)</p>
 <dt><code>&#8211;unsafe-compact</code></p>

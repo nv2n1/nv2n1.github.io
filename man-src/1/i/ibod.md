@@ -22,7 +22,7 @@ description: "ibod – ISDN MPPP bandwidth on demand daemon"
 <h2>DIAGNOSTICS</h2>
 <p> All logging is made to syslog with the identity tag <i>ibod.</i> </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/4-ibod-cf/">ibod.cf</a>(4) and <a href="/docs/linux/man/1-xibod/">xibod</a>(1) </p>
+<p> ibod.cf(4) and xibod(1) </p>
 <h2>AUTHOR</h2>
 <p> Bjoern Smith, Smith [at] Compound.SE </p>
 <h2>Index</h2>

@@ -54,7 +54,7 @@ description: "cameratopam – convert raw camera image to PAM"
 <p> Without <code>-linear</code>, <code>cameratopam</code> uses a 99th percentile white point. With <code>-linear</code>, it doesn&#8217;t. I don&#8217;t know what that means. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-411toppm/">411toppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-411toppm/">411toppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>cameratopam</code> was new in Netpbm 10.28 (June 2005). </p>
 <p> It was derived from the program <code>dcraw</code> by Dave Coffin , by Bryan Henderson in April 2005. Bryan replaced the part that generates the Netpbm output image and removed the Adobe Photoshop output function. Bryan changed the command syntax and made other small changes to make the program consistent with Netpbm. He also split the source code into manageable pieces (<code>dcraw</code> has a single 5000 line source file). </p>

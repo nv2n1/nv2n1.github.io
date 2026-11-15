@@ -77,7 +77,7 @@ url: "/docs/linux/man/3-sdot/"
 
  <pre>
      jack dongarra, linpack, 3/11/78.
-     modified 12/3/93, <a HREF="//www.systutorials.com/docs/linux/man/1-array/">array</a>(1) declarations changed to array(*)
+     modified 12/3/93, array(1) declarations changed to array(*)
 </pre> 
 
  

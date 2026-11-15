@@ -31,7 +31,7 @@ DANDR - Draws an isosurface when used in conjunction with entry INIT3D.
  40 40 40 75 75</pre><dt>IU
 <dd>(an input expression of type INTEGER) defines the unit number of a scratch file for the package. ST1 will be written NU times on this file.
 <dt>S
-<dd>(an input array of type REAL, dimensioned 4) contains the world coordinates of the area where the picture is to be drawn. That is, all plotting coordinates generated will be bounded as follows: X coordinates will be between <a HREF="/docs/linux/man/1-s/">S</a>(1) and <a HREF="/docs/linux/man/2-s/">S</a>(2), Y coordinates will be between <a HREF="/docs/linux/man/3-s/">S</a>(3) and <a HREF="/docs/linux/man/4-s/">S</a>(4). To prevent distortion, have <a HREF="/docs/linux/man/2-s/">S</a>(2)<a HREF="/docs/linux/man/1--s/">-S</a>(1) = <a HREF="/docs/linux/man/4-s/">S</a>(4)<a HREF="/docs/linux/man/3--s/">-S</a>(3). 
+<dd>(an input array of type REAL, dimensioned 4) contains the world coordinates of the area where the picture is to be drawn. That is, all plotting coordinates generated will be bounded as follows: X coordinates will be between S(1) and S(2), Y coordinates will be between <a HREF="/docs/linux/man/3-s/">S</a>(3) and S(4). To prevent distortion, have S(2)-S(1) = S(4)-S(3). 
 
  All coordinates should be in a range between 10. and 1010.
 <dt>IOBJS

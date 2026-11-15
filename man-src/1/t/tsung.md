@@ -86,7 +86,7 @@ description: "tsung – A distributed multi-protocol load testing tool."
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-erlang/">erlang</a></code>(3)</p>
+<p> <code>erlang</code>(3)</p>
 <h2>AUTHORS</h2>
 <p> <code>Tsung</code> is written by Nicolas Niclausse &lt;nicolas [at] niclux.org&gt;. Contributors list is available in <i>/usr/share/doc/tsung/CONTRIBUTORS</i> </p>
 <h2>Index</h2>

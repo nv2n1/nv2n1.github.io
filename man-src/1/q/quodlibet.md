@@ -138,6 +138,6 @@ tag = |(value1, value2)
 <pre>
 <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide">http://code.google.com/p/quodlibet/wiki/Guide</a></i>,
 <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/FAQ">http://code.google.com/p/quodlibet/wiki/FAQ</a></i>,
-<code><a href="//www.systutorials.com/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="//www.systutorials.com/docs/linux/man/1-gst-launch/">gst-launch</a></code>(1)
+<code><a href="//www.systutorials.com/docs/linux/man/7-regex/">regex</a></code>(7), <code>gst-launch</code>(1)
 </pre>
 <h2>Index</h2>

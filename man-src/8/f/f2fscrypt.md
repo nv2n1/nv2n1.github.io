@@ -64,4 +64,4 @@ Show process keyrings.
 <h2>Author</h2>
 <p>Written by Kinglong Mee &lt;kinglongmee [at] gmail.com&gt;, Migrated from e4crypt that Written by Michael Halcrow &lt;mhalcrow [at] google.com&gt;, Ildar Muslukhov &lt;muslukhovi [at] gmail.com&gt;, and Theodore Ts&#8217;o &lt;tytso [at] mit.edu&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code><a href="/docs/linux/man/8-mkfs-f2fs/">mkfs.f2fs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). </p>
+<p><code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code>mkfs.f2fs</code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). </p>

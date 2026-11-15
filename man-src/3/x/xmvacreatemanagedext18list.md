@@ -33,4 +33,4 @@ description: "XmVaCreateExt18List, XmVaCreateManagedExt18List — A Form widget 
 <h2>Return</h2>
 <p>Returns the Ext18List widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmcreateext18list/">XmCreateExt18List</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xmext18list/">XmExt18List</a></code>(3).</p>
+<p><code>XmCreateExt18List</code>(3), <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xmext18list/">XmExt18List</a></code>(3).</p>

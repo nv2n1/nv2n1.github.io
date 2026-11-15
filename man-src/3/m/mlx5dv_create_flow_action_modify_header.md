@@ -62,7 +62,7 @@ mlx5dv_create_flow_action_modify_header(struct ibv_context *ctx,
 
  
 
- <a HREF="/docs/linux/man/3-ibv_create_flow/">ibv_create_flow</a>(3), <a HREF="/docs/linux/man/3-ibv_create_flow_action/">ibv_create_flow_action</a>(3) 
+ ibv_create_flow(3), ibv_create_flow_action(3) 
 
 <h2>Index</h2>
 

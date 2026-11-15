@@ -413,7 +413,7 @@ description: "xpdf – Portable Document Format (PDF) file viewer for X (version
 </pre>
 <p> The default key bindings are as follows: </p>
 <pre>
-    bind ctrl-home      any         <a href="//www.systutorials.com/docs/linux/man/1-gotoPage/">gotoPage</a>(1)
+    bind ctrl-home      any         gotoPage(1)
     bind home           any         scrollToTopLeft
     bind ctrl-end       any         gotoLastPage
     bind end            any         scrollToBottomRight

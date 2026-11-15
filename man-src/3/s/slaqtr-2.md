@@ -25,7 +25,7 @@ description: "slaqtr.f –"
  in real arithmetic, where T is upper quasi-triangular.
  If LREAL = .FALSE., then the first diagonal block of T must be
  1 by 1, B is the specially structured matrix
- B = [ <a href="//www.systutorials.com/docs/linux/man/1-b/">b</a>(1) <a href="//www.systutorials.com/docs/linux/man/2-b/">b</a>(2) ... <a href="//www.systutorials.com/docs/linux/man/n-b/">b</a>(n) ]
+ B = [ b(1) b(2) ... b(n) ]
  [ w ]
  [ w ]
  [ . ]

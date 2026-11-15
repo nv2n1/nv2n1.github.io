@@ -14,5 +14,5 @@ description: "xmore – plain text display program for the X Window System"
 <h2>DESCRIPTION</h2>
 <p> xmore is a plain text browser.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-x11/">X11</a></code>(7), <code><a href="/docs/linux/man/1-xman/">xman</a></code>(1) </p>
+<p> <code>X11</code>(7), <code><a href="/docs/linux/man/1-xman/">xman</a></code>(1) </p>
 <h2>Index</h2>

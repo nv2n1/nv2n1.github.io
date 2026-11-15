@@ -99,7 +99,7 @@ then
 
 #Now it is safe to use the disk image.
 </code></pre>
-<p> Note that if you use the <tt>&quot;guestfs_mount_local&quot;</tt> <font SIZE="-1">API</font> directly (see &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)) then it is much easier to write a safe, race-free program.</p>
+<p> Note that if you use the <tt>&quot;guestfs_mount_local&quot;</tt> <font SIZE="-1">API</font> directly (see &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i>guestfs</i>(3)) then it is much easier to write a safe, race-free program.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a image</code></p>
@@ -131,7 +131,7 @@ then
 <dd>
 <dt><code>&#8211;format</code></p>
 <dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>). See also &#8220;guestfs_add_drive_opts&#8221; in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>). See also &#8220;guestfs_add_drive_opts&#8221; in <i>guestfs</i>(3).</p>
 <dt><code>&#8211;fuse-help</code></p>
 <dd> Display help on special <font SIZE="-1">FUSE</font> options (see <i>-o</i> below).</p>
 <dt><code>&#8211;help</code></p>
@@ -143,7 +143,7 @@ then
 <dt><code>&#8211;keys-from-stdin</code></p>
 <dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</p>
 <dt><code>&#8211;live</code></p>
-<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)).</p>
+<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i>guestfs</i>(3)).</p>
 <dt><code>-m dev[:mountpoint[:options[:fstype]]</code></p>
 <dd>
 <dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></p>
@@ -159,7 +159,7 @@ then
 <dt><code>-n</code></p>
 <dd>
 <dt><code>&#8211;no-sync</code></p>
-<dd> By default, we attempt to sync the guest disk when the <font SIZE="-1">FUSE</font> mountpoint is unmounted. If you specify this option, then we don&#8217;t attempt to sync the disk. See the discussion of autosync in the <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) manpage.</p>
+<dd> By default, we attempt to sync the guest disk when the <font SIZE="-1">FUSE</font> mountpoint is unmounted. If you specify this option, then we don&#8217;t attempt to sync the disk. See the discussion of autosync in the <i>guestfs</i>(3) manpage.</p>
 <dt><code>-o option</code></p>
 <dd>
 <dt><code>&#8211;option option</code></p>
@@ -178,7 +178,7 @@ then
 <dt><code>-o attr_timeout=N</code></p>
 <dd> Enable attribute caching by <font SIZE="-1">FUSE,</font> and set the timeout to <i>N</i> seconds.</p>
 <dt><code>-o kernel_cache</code></p>
-<dd> Allow the kernel to cache files (reduces the number of reads that have to go through the <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) <font SIZE="-1">API</font>). This is generally a good idea if you can afford the extra memory usage.</p>
+<dd> Allow the kernel to cache files (reduces the number of reads that have to go through the <i>guestfs</i>(3) <font SIZE="-1">API</font>). This is generally a good idea if you can afford the extra memory usage.</p>
 <dt><code>-o uid=N</code> <code>-o gid=N</code></p>
 <dd> Use these options to map all UIDs and GIDs inside the guest filesystem to the chosen values.</p>
 <dt><code>-o use_ino</code></p>
@@ -231,7 +231,7 @@ then
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-guestunmount/">guestunmount</a></i>(1), <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar/">virt-tar</a></i>(1), <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5), &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://fuse.sf.net/.">http://fuse.sf.net/.</a></p>
+<p> <i><a href="/docs/linux/man/1-guestunmount/">guestunmount</a></i>(1), <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar/">virt-tar</a></i>(1), <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5), &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://fuse.sf.net/.">http://fuse.sf.net/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

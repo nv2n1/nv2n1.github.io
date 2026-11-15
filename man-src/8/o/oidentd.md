@@ -43,7 +43,7 @@ description: "oidentd – TCP/IP IDENT protocol server"
 <dt><code>-i or &#8211;foreground</code></p>
 <dd>Run interactively, not as a daemon. This is useful when debugging, or when running from a service manager such as daemontools. </p>
 <dt><code>-I or &#8211;stdio</code></p>
-<dd>Service only a single client request then exit. The client is expected to be already connected via stdin and stdout. This mode is useful when running from listener utilities such as <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) or <code><a href="/docs/linux/man/8-tcpserver/">tcpserver</a></code>(8). This option implies <code>-i</code> (run in foreground) also. </p>
+<dd>Service only a single client request then exit. The client is expected to be already connected via stdin and stdout. This mode is useful when running from listener utilities such as <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8) or <code>tcpserver</code>(8). This option implies <code>-i</code> (run in foreground) also. </p>
 <dt><code>-l or &#8211;limit=&lt;number&gt;</code></p>
 <dd>Allow, at most, the specified number of open connections at once. </p>
 <dt><code>-m or &#8211;masq</code></p>
@@ -57,7 +57,7 @@ description: "oidentd – TCP/IP IDENT protocol server"
 <dt><code>-q or &#8211;quiet</code></p>
 <dd>Quiet mode; do not log any status messages to syslog. </p>
 <dt><code>-S or &#8211;nosyslog</code></p>
-<dd>Log any status messages to stderr, not syslog. This is useful for debugging or integration with external loggers such as <code><a href="/docs/linux/man/8-multilog/">multilog</a></code>(8). </p>
+<dd>Log any status messages to stderr, not syslog. This is useful for debugging or integration with external loggers such as <code>multilog</code>(8). </p>
 <dt><code>-t or &#8211;timeout=&lt;seconds&gt;</code></p>
 <dd>Sets the number of seconds to wait for input from a client before closing the connection. </p>
 <dt><code>-u or &#8211;user=&lt;user|UID&gt;</code></p>

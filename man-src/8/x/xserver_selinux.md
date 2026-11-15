@@ -105,7 +105,7 @@ description: "xserver_selinux – Security Enhanced Linux Policy for the xserver
 <p> &#8211; Set files with the xserver_log_t type, if you want to treat the data as xserver log data, usually stored under the /var/log directory. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/var/[xgkw]dm(/.*)?, /usr/var/[xgkw]dm(/.*)?, /var/log/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?(/.*)?, /var/log/Xorg.*, /var/log/XFree86.*, /var/log/lightdm(/.*)?, /var/log/nvidia-installer.log.* </p>
+<dd>/var/[xgkw]dm(/.*)?, /usr/var/[xgkw]dm(/.*)?, /var/log/gdm(3)?(/.*)?, /var/log/Xorg.*, /var/log/XFree86.*, /var/log/lightdm(/.*)?, /var/log/nvidia-installer.log.* </p>
 </dl>
 <p> <code>xserver_tmpfs_t</code> </p>
 <p> &#8211; Set files with the xserver_tmpfs_t type, if you want to store xserver files on a tmpfs file system. </p>
@@ -128,4 +128,4 @@ description: "xserver_selinux – Security Enhanced Linux Policy for the xserver
 <h2>Author</h2>
 <p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-xserver/">xserver</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), xserver(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>

@@ -7,7 +7,7 @@ url: "/docs/linux/man/5-yum-updatesd-conf/"
 description: "yum-updatesd.conf – Configuration file for yum-updatesd(8)."
 ---
 
-<p><code>yum-updatesd.conf</code> &#8211; Configuration file for <code><a href="/docs/linux/man/8-yum-updatesd/">yum-updatesd</a>(8)</code>.</p>
+<p><code>yum-updatesd.conf</code> &#8211; Configuration file for <code>yum-updatesd(8)</code>.</p>
 <h2>Description</h2>
 <p>yum-updatesd uses a configuration file at <code>/etc/yum/yum-updatesd.conf</code>. Additional configuration information is read from the main <code>yum.conf (5)</code> configuration file. </p>
 <h2>Parameters</h2>
@@ -47,4 +47,4 @@ description: "yum-updatesd.conf – Configuration file for yum-updatesd(8)."
 <h2>Files</h2>
 <pre>/etc/yum/yum-updatesd.conf</pre>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-yum-updatesd/">yum-updatesd</a>(8) <a href="/docs/linux/man/5-yum-conf/">yum.conf</a>(5) </p>
+<p>yum-updatesd(8) yum.conf(5) </p>

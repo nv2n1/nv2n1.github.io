@@ -399,10 +399,10 @@ if TRANS<br />
          not guaranteed. The solutions corresponding to other right-
          hand sides K with K &gt; J may not be guaranteed as well, but
          only the first such right-hand side is reported. If a small
-         componentwise error is not requested (<a href="//www.systutorials.com/docs/linux/man/3-PARAMS/">PARAMS</a>(3) = 0.0) then
+         componentwise error is not requested (PARAMS(3) = 0.0) then
          the Jth right-hand side is the first with a normwise error
          bound that is not guaranteed (the smallest J such
-         that ERR_BNDS_NORM(J,1) = 0.0). By default (<a href="//www.systutorials.com/docs/linux/man/3-PARAMS/">PARAMS</a>(3) = 1.0)
+         that ERR_BNDS_NORM(J,1) = 0.0). By default (PARAMS(3) = 1.0)
          the Jth right-hand side is the first with either a normwise or
          componentwise error bound that is not guaranteed (the smallest
          J such that either ERR_BNDS_NORM(J,1) = 0.0 or

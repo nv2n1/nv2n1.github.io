@@ -31,5 +31,5 @@ description: "WMXMMS – a dockable XMMS control applet."
 <dt><code>-v, &#8211;version</code></p>
 <dd> Print version number and exit.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xmms/">xmms</a></code>(1), <code><a href="/docs/linux/man/1-wmaker/">wmaker</a></code>(1), <code><a href="/docs/linux/man/1-gnomexmms/">gnomexmms</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-xmms/">xmms</a></code>(1), <code>wmaker</code>(1), <code>gnomexmms</code>(1) </p>
 <h2>Index</h2>

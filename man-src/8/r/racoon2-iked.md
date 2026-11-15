@@ -43,7 +43,7 @@ description: "iked – Internet Key Exchange protocol daemon"
 <dt><code>-V</code></p>
 <dd>Show the version.</dl>
 <p> Upon receiving SIGINT or SIGTERM, shuts down IKEv2 IKE_SAs with peer nodes by sending Informational exchange with Delete payload, deletes relevant IPsec SAs, and then exits. Upon receiving SIGHUP, similarly shuts down IKEv2 IKE_SAs and deletes relevant IPsec SAs, then reloads the configuration file. </p>
-<p> IPsec policies are managed by <a href="/docs/linux/man/8-spmd/">spmd</a>(8), thus it must be started before <code>.</code> When <a href="/docs/linux/man/8-spmd/">spmd</a>(8) restarts, needs to be reloaded to reconnect with it.</p>
+<p> IPsec policies are managed by spmd(8), thus it must be started before <code>.</code> When spmd(8) restarts, needs to be reloaded to reconnect with it.</p>
 <h2>Files</h2>
 <dl>
 <dt><code>@sysconfdir@/racoon2.conf </code></p>
@@ -51,7 +51,7 @@ description: "iked – Internet Key Exchange protocol daemon"
 <dt><code>/var/run/iked.pid </code></p>
 <dd>The PID file of the current instance of the daemon.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/7-racoon2/">racoon2</a>(7), racoon2.conf5, <a href="/docs/linux/man/8-spmd/">spmd</a>(8), <a href="/docs/linux/man/8-kinkd/">kinkd</a>(8), <a href="/docs/linux/man/4-ipsec/">ipsec</a>(4)</p>
+<p>racoon2(7), racoon2.conf5, spmd(8), kinkd(8), ipsec(4)</p>
 <dl>
 <dd><i>&quot;The Internet Key Exchange (IKE)&quot;</i> <i>RFC2409</i> November 1998</dl>
 <dl>

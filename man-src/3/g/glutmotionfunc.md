@@ -25,4 +25,4 @@ description: "glutMotionFunc – Reports mouse-motion while a button is held."
 <p>Events are reported until the mouse button is released, even if the mouse leaves the window. </p>
 <p> Windows created via glutCreateMenuWindow() always cascade keyboard and mouse events to their parent. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-glutmousefunc/">glutMouseFunc</a>(3) <a href="/docs/linux/man/3-glutpassivemotion/">glutPassiveMotion</a>(3)</p>
+<p><a href="/docs/linux/man/3-glutmousefunc/">glutMouseFunc</a>(3) glutPassiveMotion(3)</p>

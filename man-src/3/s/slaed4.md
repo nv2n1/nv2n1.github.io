@@ -61,7 +61,7 @@ description: "slaed4.f –"
 <pre>
           DELTA is REAL array, dimension (N)
          If N .GT. 2, DELTA contains (D(j) - lambda_I) in its  j-th
-         component.  If N = 1, then <a href="//www.systutorials.com/docs/linux/man/1-DELTA/">DELTA</a>(1) = 1. If N = 2, see SLAED5
+         component.  If N = 1, then DELTA(1) = 1. If N = 2, see SLAED5
          for detail. The vector DELTA contains the information necessary
          to construct the eigenvectors by SLAED3 and SLAED9.
 </pre>

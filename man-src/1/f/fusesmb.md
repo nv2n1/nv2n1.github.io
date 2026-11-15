@@ -27,7 +27,7 @@ description: "fusesmb – Mount network neighbourhood"
 <dd> A sorted list of all workgroups, servers and shares found on your network. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-fusesmb-conf/">fusesmb.conf</a></code>(5) </p>
+<p> <code>fusesmb.conf</code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Vincent Wagelaar &lt;vincent [at] ricardis.tudelft.nl&gt;. </p>
 <h2>Index</h2>

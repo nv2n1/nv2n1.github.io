@@ -18,7 +18,7 @@ description: "tv_split – Split XMLTV listings into separate files by date and 
 <h2>EXAMPLE</h2>
 <p> Use <tt>&quot;tv_split --output %channel-%Y%m%d.xml&quot;</tt> to separate standard input into separate files for each day and channel. The files will be created with names like <code>bbc1.bbc.co.uk-20020330.xml</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-date--manip/">Date::Manip</a></i>(3).</p>
+<p> <i>Date::Manip</i>(3).</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com. </p>
 <h2>Index</h2>

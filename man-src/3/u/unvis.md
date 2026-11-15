@@ -60,6 +60,6 @@ if (unvis(&amp;out, (char)0, &amp;state, UNVIS_END) == UNVIS_VALID)
  (void) putchar(out);</pre>
 </blockquote>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-unvis/">unvis</a>(1), <a href="/docs/linux/man/1-vis/">vis</a>(1), <a href="/docs/linux/man/3-vis/">vis</a>(3)</p>
+<p>unvis(1), vis(1), <a href="/docs/linux/man/3-vis/">vis</a>(3)</p>
 <h2>History</h2>
 <p>The Fn unvis function first appeared in BSD 4.4</p>

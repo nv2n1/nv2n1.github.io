@@ -72,4 +72,4 @@ description: "ccs_tool – The tool used to make online updates of CCS config fi
 <dd>Adds node ID numbers to all the nodes in cluster.conf. In RHEL4, node IDs were optional and assigned by cman when a node joined the cluster. In RHEL5 they must be pre-assigned in cluster.conf. This command will not change any node IDs that are already set in cluster.conf, it will simply add unique node ID numbers to nodes that do not already have them. </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a>(5) </p>
+<p>cluster.conf(5) </p>

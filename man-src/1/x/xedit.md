@@ -422,7 +422,7 @@ nto       not
 <dt><code>ispell*&lt;DICTIONARY&gt;.wordChars (</code>Class <code>ispell*Chars)</code></p>
 <dd> Specifies a set of characters that can be part of a legal word. The <i>&lt;DICTIONARY&gt;</i> field is one of the dictionaries specified in the <i>dictionaries</i> resource.</p>
 <dt><code>ispell.ispellCommand (</code>Class <code>ispell.CommandLine)</code></p>
-<dd> The path to the ispell program, and possibly, additional arguments. You don&#8217;t need to specify the &#8220;-w&#8221; option, neither the &#8220;-a&#8221; option. Refer to the <i><a href="/docs/linux/man/1-ispell/">ispell</a></i>(1) manpage for more information on ispell options.</p>
+<dd> The path to the ispell program, and possibly, additional arguments. You don&#8217;t need to specify the &#8220;-w&#8221; option, neither the &#8220;-a&#8221; option. Refer to the <i>ispell</i>(1) manpage for more information on ispell options.</p>
 <dt><code>ispell.formatting (</code>Class ispell.TextFormat)</p>
 <dd> Specifies which text formatting to use while spell checking the file. The available formats are <i>text</i> and <i>html</i>.</p>
 <dt><code>ispell*text.skipLines (</code>Class <code>ispell*text.Skip)</code></p>

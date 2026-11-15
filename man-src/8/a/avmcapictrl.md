@@ -17,7 +17,7 @@ description: "avmcapictrl – Add, reset or remove active AVM cards and load fir
  avmcapictrl trace [contrnr] [off|short|on|full|shortnodata|nodata]<br />
  avmcapictrl addcard &lt;driver&gt; &lt;portbase&gt; &lt;irq&gt; [ &lt;membase&gt; [ &lt;cardnr&gt; ] ]</p>
 <h2>Description</h2>
-<p><i>avmcapictrl</i> is used to register active AVM ISA cards kernelcapi system and therewith to the isdn system. You need it also to upload the firmware to any active AVM card. If an error occurred please also check the kernel error messages by using the command <a href="/docs/linux/man/8-dmesg/">dmesg</a>(8). </p>
+<p><i>avmcapictrl</i> is used to register active AVM ISA cards kernelcapi system and therewith to the isdn system. You need it also to upload the firmware to any active AVM card. If an error occurred please also check the kernel error messages by using the command dmesg(8). </p>
 <h2>Commands</h2>
 <dl>
 <dt><code>add &lt;portbase&gt; &lt;irq&gt; &lt;type&gt;</code></p>
@@ -45,7 +45,7 @@ description: "avmcapictrl – Add, reset or remove active AVM cards and load fir
  <i>contrnr</i> is the number of the controller (card) starting from 1.</dl>
 <dl>
 <dt><code>trace [contrnr] [off|short|on|full|shortnodata|nodata]</code></p>
-<dd>is used to trace CAPI2.0 messages. The trace will be done as kernel messages, see <a href="/docs/linux/man/8-dmesg/">dmesg</a>(8).<br />
+<dd>is used to trace CAPI2.0 messages. The trace will be done as kernel messages, see dmesg(8).<br />
  <i>contrnr</i> is the number of the controller (card) starting from 1.<br />
  <i>off</i> switch tracing off<br />
  <i>short</i> switch one line per CAPI2.0 message tracing on<br />
@@ -64,4 +64,4 @@ description: "avmcapictrl – Add, reset or remove active AVM cards and load fir
 <h2>Author</h2>
 <p>Carsten Paeth &lt;calle [at] calle.in-berlin.de&gt;</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/4-ttyi/">ttyI</a></i>(4), <i><a href="/docs/linux/man/8-isdnctrl/">isdnctrl</a></i>(8), <i><a href="/docs/linux/man/4-isdninfo/">isdninfo</a></i>(4). <i><a href="/docs/linux/man/8-dmesg/">dmesg</a></i>(8). <i><a href="/docs/linux/man/8-syslogd/">syslogd</a></i>(8). </p>
+<p><i><a href="/docs/linux/man/4-ttyi/">ttyI</a></i>(4), <i><a href="/docs/linux/man/8-isdnctrl/">isdnctrl</a></i>(8), <i><a href="/docs/linux/man/4-isdninfo/">isdninfo</a></i>(4). <i>dmesg</i>(8). <i>syslogd</i>(8). </p>

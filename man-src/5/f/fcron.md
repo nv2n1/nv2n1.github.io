@@ -33,7 +33,7 @@ description: "fcron.conf – configuration file for fcron and fcrontab"
 <h2>Files</h2>
 <dl>
 <dt><i>/usr/local/etc/fcron.conf</i></p>
-<dd>Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code><a href="/docs/linux/man/5-fcron-conf/">fcron.conf</a></code>(5) for more details.</p>
+<dd>Configuration file for <code>fcron</code>, <code>fcrontab</code> and <code>fcrondyn</code>: contains paths (spool dir, pid file) and default programs to use (editor, shell, etc). See <code>fcron.conf</code>(5) for more details.</p>
 <dt><i>/usr/local/etc/fcron.allow</i></p>
 <dd>Users allowed to use <code>fcrontab</code> and <code>fcrondyn</code> (one name per line, special name &quot;all&quot; acts for everyone)</p>
 <dt><i>/usr/local/etc/fcron.deny</i></p>
@@ -44,7 +44,7 @@ description: "fcron.conf – configuration file for fcron and fcrontab"
 <p><code><a href="/docs/linux/man/1-fcrontab/">fcrontab</a></code>(1), </p>
 <p> <code><a href="/docs/linux/man/1-fcrondyn/">fcrondyn</a></code>(1), </p>
 <p> <code><a href="/docs/linux/man/5-fcrontab/">fcrontab</a></code>(5), </p>
-<p> <code><a href="/docs/linux/man/5-fcron-conf/">fcron.conf</a></code>(5), </p>
+<p> <code>fcron.conf</code>(5), </p>
 <p> <code><a href="/docs/linux/man/8-fcron/">fcron</a></code>(8). </p>
 <p> If you&#8217;re learning how to use fcron from scratch, I suggest that you read the HTML version of the documentation (if your are not reading it right now! :) ): the content is the same, but it is easier to navigate thanks to the hyperlinks.</p>
 <h2>Author</h2>

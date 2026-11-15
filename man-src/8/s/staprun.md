@@ -64,7 +64,7 @@ description: "staprun – systemtap runtime"
  HelloWorld </p>
 <p> Spaces and exclamation marks currently cannot be passed into global variables this way.</p>
 <h2>Examples</h2>
-<p>See the <i><a href="//www.systutorials.com/docs/linux/man/3stap-stapex/">stapex</a></i>(3stap) manual page for a collection of sample scripts. </p>
+<p>See the <i>stapex</i>(3stap) manual page for a collection of sample scripts. </p>
 <p> Here is a very basic example of how to use <i>staprun.</i> First, use <i>stap</i> to compile a script. The <i>stap</i> program will report the pathname to the resulting module. </p>
 <p> $ stap -p4 -e &#8216;probe begin { printf(&quot;Hello World!
 &quot;); exit() }&#8217;<br />
@@ -99,6 +99,6 @@ description: "staprun – systemtap runtime"
 <dd>If MODULE is a module name, the module will be looked for in this directory. Users who are only in the <i>&#8216;stapusr&#8217;</i> group can install modules located in this directory. This directory must be owned by the root user and not be world writable. </p>
 </dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-stap/">stap</a></i>(1), <i><a href="//www.systutorials.com/docs/linux/man/3stap-stapprobes/">stapprobes</a></i>(3stap), <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8), <i><a href="/docs/linux/man/8-stapdyn/">stapdyn</a></i>(8), <i><a href="//www.systutorials.com/docs/linux/man/3stap-stapex/">stapex</a></i>(3stap) </p>
+<p><i><a href="/docs/linux/man/1-stap/">stap</a></i>(1), <i>stapprobes</i>(3stap), <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8), <i><a href="/docs/linux/man/8-stapdyn/">stapdyn</a></i>(8), <i>stapex</i>(3stap) </p>
 <h2>Bugs</h2>
 <p>Use the Bugzilla link of the project web page or our mailing list. <code><a rel="nofollow" href="http://sourceware.org/systemtap/">http://sourceware.org/systemtap/</a></code>, <code>&lt;systemtap [at] sourceware.org&gt;</code>. </p>

@@ -33,7 +33,7 @@ description: "odidx – indexer of document files"
 <p> Thus, to retrieve documents which include `unix&#8217; and `posix&#8217; and show the top 8 terms, perform the following command.<br />
  <code> odmgr search -max 8 -h casket &quot;unix posix&quot;</code> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/1-odmgr/">odmgr</a></code>(1), <code><a href="/docs/linux/man/3-odeum/">odeum</a></code>(3), <code><a href="/docs/linux/man/3-odopen/">odopen</a></code>(3).</p>
+<p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-odmgr/">odmgr</a></code>(1), <code>odeum</code>(3), <code>odopen</code>(3).</p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian project (but may be used by others). </p>

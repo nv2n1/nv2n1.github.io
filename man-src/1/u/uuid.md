@@ -97,5 +97,5 @@ description: "uuid – Universally Unique Identifier Command-Line Tool"
                   (no semantics: random data only)
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3), <i><a href="/docs/linux/man/3-ossp--uuid/">OSSP::uuid</a></i>(3). </p>
+<p> <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3), <i>OSSP::uuid</i>(3). </p>
 <h2>Index</h2>

@@ -22,9 +22,9 @@ $g-&gt;shutdown();
 $g-&gt;close();
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents how to call libguestfs from the Perl programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3). To read the full Perl <font SIZE="-1">API,</font> see <i><a href="/docs/linux/man/3-sys--guestfs/">Sys::Guestfs</a></i>(3).</p>
+<p> This manual page documents how to call libguestfs from the Perl programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3). To read the full Perl <font SIZE="-1">API,</font> see <i>Sys::Guestfs</i>(3).</p>
 <h3><font SIZE="-1">ERRORS</font></h3>
-<p> Errors from libguestfs functions turn into calls to <tt>&quot;croak&quot;</tt> (see <i><a href="/docs/linux/man/3-carp/">Carp</a></i>(3)).</p>
+<p> Errors from libguestfs functions turn into calls to <tt>&quot;croak&quot;</tt> (see <i>Carp</i>(3)).</p>
 <h2>EXAMPLE 1: CREATE A DISK IMAGE</h2>
 <p>#!/ usr / bin / env perl</p>
 <p>#Example showing how to create a disk image.</p>
@@ -158,7 +158,7 @@ if (@roots == 0) {
      }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-sys--guestfs/">Sys::Guestfs</a></i>(3), <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-erlang/">guestfs-erlang</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-golang/">guestfs-golang</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-java/">guestfs-java</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-lua/">guestfs-lua</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-ocaml/">guestfs-ocaml</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-python/">guestfs-python</a></i>(3), <i><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></i>(1), <i><a href="/docs/linux/man/3-guestfs-ruby/">guestfs-ruby</a></i>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i>Sys::Guestfs</i>(3), <i>guestfs</i>(3), <i>guestfs-examples</i>(3), <i>guestfs-erlang</i>(3), <i>guestfs-golang</i>(3), <i>guestfs-java</i>(3), <i><a href="/docs/linux/man/3-guestfs-lua/">guestfs-lua</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-ocaml/">guestfs-ocaml</a></i>(3), <i><a href="/docs/linux/man/3-guestfs-python/">guestfs-python</a></i>(3), <i><a href="/docs/linux/man/1-guestfs-recipes/">guestfs-recipes</a></i>(1), <i>guestfs-ruby</i>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

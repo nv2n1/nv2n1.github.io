@@ -29,7 +29,7 @@ To configure : tv_grab_fr-- configure[--config - file FILE][--gui OPTION] To con
 <p> <code>&#8211;version</code> Show the version of the grabber. </p>
 <p> <code>&#8211;help</code> Print a help message and exit.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5)</p>
+<p> <i>xmltv</i>(5)</p>
 <h2>AUTHOR</h2>
 <p> The original author was Sylvain Fabre, centraladmin at lahiette dot com with patches from:<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Francois Gouget, fgouget at free dot fr<br />

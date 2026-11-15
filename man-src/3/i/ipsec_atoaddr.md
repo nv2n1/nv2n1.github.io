@@ -20,7 +20,7 @@ description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa –
  <code>size_t subnettoa(struct in_addr addr, struct in_addr mask,</code><br />
  &nbsp;<wbr> <code>int format, char *dst, size_t dstlen);</code></p>
 <h2>DESCRIPTION</h2>
-<p> These functions are obsolete; see <i><a href="/docs/linux/man/3-ipsec_ttoaddr/">ipsec_ttoaddr</a></i>(3) for their replacements. </p>
+<p> These functions are obsolete; see <i>ipsec_ttoaddr</i>(3) for their replacements. </p>
 <p> <i>Atoaddr</i> converts an ASCII name or dotted-decimal address into a binary address (in network byte order). <i>Addrtoa</i> does the reverse conversion, back to an ASCII dotted-decimal address. <i>Atosubnet</i> and <i>subnettoa</i> do likewise for the &#8220;address/mask&#8221; ASCII form used to write a specification of a subnet. </p>
 <p> An address is specified in ASCII as a dotted-decimal address (e.g. <code>1.2.3.4</code>), an eight-digit network-order hexadecimal number with the usual C prefix (e.g. <code>0x01020304</code>, which is synonymous with <code>1.2.3.4</code>), an eight-digit host-order hexadecimal number with a <code>0h</code> prefix (e.g. <code>0h01020304</code>, which is synonymous with <code>1.2.3.4</code> on a big-endian host and <code>4.3.2.1</code> on a little-endian host), a DNS name to be looked up via <i><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></i>(3), or an old-style network name to be looked up via <i><a href="/docs/linux/man/3-getnetbyname/">getnetbyname</a></i>(3). </p>
 <p> A dotted-decimal address may be incomplete, in which case ASCII-to-binary conversion implicitly appends as many instances of <code>.0</code> as necessary to bring it up to four components. The components of a dotted-decimal address are always taken as decimal, and leading zeros are ignored. For example, <code>10</code> is synonymous with <code>10.0.0.0</code>, and <code>128.009.000.032</code> is synonymous with <code>128.9.0.32</code> (the latter example is verbatim from RFC 1166). The result of <i>addrtoa</i> is always complete and does not contain leading zeros. </p>
@@ -33,7 +33,7 @@ description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa –
 <p> The <i>format</i> parameter of <i>addrtoa</i> and <i>subnettoa</i> specifies what format is to be used for the conversion. The value <code>0</code> (not the ASCII character <code>&#8216;0&#8217;</code>, but a zero value) specifies a reasonable default, and is in fact the only format currently available. This parameter is a hedge against future needs. </p>
 <p> The ASCII-to-binary functions return NULL for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS. The binary-to-ASCII functions return <code>0</code> for a failure, and otherwise always return the size of buffer which would be needed to accommodate the full conversion result, including terminating NUL; it is the caller&#8217;s responsibility to check this against the size of the provided buffer to determine whether truncation has occurred.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3)</p>
+<p> inet(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Fatal errors in <i>atoaddr</i> are: empty input; attempt to allocate temporary storage for a very long name failed; name lookup failed; syntax error in dotted-decimal form; dotted-decimal component too large to fit in 8 bits. </p>
 <p> Fatal errors in <i>atosubnet</i> are: no <code>/</code> in <i>src</i>; <i>atoaddr</i> error in conversion of <i>network</i> or <i>mask</i>; bit-count mask too big; mask non-contiguous. </p>
@@ -41,7 +41,7 @@ description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa –
 <h2>HISTORY</h2>
 <p> Written for the FreeS/WAN project by Henry Spencer.</p>
 <h2>BUGS</h2>
-<p> The interpretation of incomplete dotted-decimal addresses (e.g. <code>10/24</code> means <code>10.0.0.0/24</code>) differs from that of some older conversion functions, e.g. those of <i><a href="/docs/linux/man/3-inet/">inet</a></i>(3). The behavior of the older functions has never been particularly consistent or particularly useful. </p>
+<p> The interpretation of incomplete dotted-decimal addresses (e.g. <code>10/24</code> means <code>10.0.0.0/24</code>) differs from that of some older conversion functions, e.g. those of <i>inet</i>(3). The behavior of the older functions has never been particularly consistent or particularly useful. </p>
 <p> Ignoring leading zeros in dotted-decimal components and bit counts is arguably the most useful behavior in this application, but it might occasionally cause confusion with the historical use of leading zeros to denote octal numbers. </p>
 <p> It is barely possible that somebody, somewhere, might have a legitimate use for non-contiguous subnet masks. </p>
 <p> <i><a href="/docs/linux/man/3-getnetbyname/">Getnetbyname</a></i>(3) is a historical dreg. </p>

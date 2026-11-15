@@ -36,4 +36,4 @@ description: "glutBitmapCharacter – Draw a bitmapped character"
 <h2>Caveats</h2>
 <p>glutBitmapString() is generally more efficient for strings of characters. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-glrasterpos/">glRasterPos</a>(3) <a href="/docs/linux/man/3-glutbitmapstring/">glutBitmapString</a>(3) <a href="/docs/linux/man/3-glutbitmapwidth/">glutBitmapWidth</a>(3) <a href="/docs/linux/man/3-glutbitmapheight/">glutBitmapHeight</a>(3) <a href="/docs/linux/man/3-glutstrokecharacter/">glutStrokeCharacter</a>(3)</p>
+<p>glRasterPos(3) <a href="/docs/linux/man/3-glutbitmapstring/">glutBitmapString</a>(3) <a href="/docs/linux/man/3-glutbitmapwidth/">glutBitmapWidth</a>(3) <a href="/docs/linux/man/3-glutbitmapheight/">glutBitmapHeight</a>(3) <a href="/docs/linux/man/3-glutstrokecharacter/">glutStrokeCharacter</a>(3)</p>

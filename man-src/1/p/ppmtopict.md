@@ -18,7 +18,7 @@ description: "ppmtopict – convert a portable pixmap into a Macintosh PICT file
 <h2>BUGS</h2>
 <p> The picture size field is only correct if the output is to a file since writing into this field requires seeking backwards on a file. However the PICT documentation seems to suggest that this field is not critical anyway since it is only the lower 16 bits of the picture size.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-picttoppm/">picttoppm</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5), <a href="/docs/linux/man/1-mcvert/">mcvert</a>(1)</p>
+<p> picttoppm(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5), mcvert(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1990 by Ken Yap &lt;ken [at] cs.rocester.edu&gt;. </p>
 <h2>Index</h2>

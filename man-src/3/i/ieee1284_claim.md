@@ -16,7 +16,7 @@ description: "ieee1284_claim – claim access to the port"
 <dl>
 <dt> <code>int ieee1284_claim(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dl>
 <h2>DESCRIPTION</h2>
-<dd>With the exception of <code><a href="/docs/linux/man/3-ieee1284_get_deviceid/">ieee1284_get_deviceid</a></code>(3), <code>ieee1284_claim</code> must be called on an open port before any other libieee1284 function for accessing a device on it.</p>
+<dd>With the exception of <code>ieee1284_get_deviceid</code>(3), <code>ieee1284_claim</code> must be called on an open port before any other libieee1284 function for accessing a device on it.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>E1284_OK</code></p>
 <dl>
@@ -35,7 +35,7 @@ description: "ieee1284_claim – claim access to the port"
 <dt>
 <dd> There was a problem at the operating system level. The global variable <i>errno</i> has been set appropriately.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ieee1284_release/">ieee1284_release</a></code>(3)</p>
+<p> <code>ieee1284_release</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>

@@ -42,7 +42,7 @@ description: "stapgraph – systemtap grapher"
 <h2>GRAPH DATA</h2>
 <p> <code> DATA SET </code> TIME <code> VALUE </code> Each data point that is to be plotted is tagged with the data set name, followed by the time and value of the point. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="//www.systutorials.com/docs/linux/man/3stap-stap/">stap</a></i>(3stap), <i><a href="//www.systutorials.com/docs/linux/man/3stap-staprun/">staprun</a></i>(3stap), </p>
+<p> <i>stap</i>(3stap), <i>staprun</i>(3stap), </p>
 <h2>BUGS</h2>
 <p> Use the Bugzilla link off of the project web page or our mailing list. <code><a rel="nofollow" href="http://sources.redhat.com/systemtap/">http://sources.redhat.com/systemtap/</a></code>,<code>&lt;systemtap [at] sources.redhat.com&gt;</code>. </p>
 <h2>Index</h2>

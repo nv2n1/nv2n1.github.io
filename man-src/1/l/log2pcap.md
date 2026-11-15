@@ -63,7 +63,7 @@ description: "log2pcap – Extract network traces from Samba log files"
 <p> Only SMB data is extracted from the samba logs, no LDAP, NetBIOS lookup or other data. </p>
 <p> The generated TCP and IP headers don&#8217;t contain a valid checksum.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-text2pcap/">text2pcap</a></code>(1), <code><a href="/docs/linux/man/1-ethereal/">ethereal</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-text2pcap/">text2pcap</a></code>(1), <code>ethereal</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
 <p> This manpage was written by Jelmer Vernooij. </p>

@@ -29,7 +29,7 @@ description: "spufs – the SPU file system"
 <p> the contents of the local storage memory of the SPU. This can be accessed like a regular shared memory file and contains both code and data in the address space of the SPU. The possible operations on an open <code>mem</code> file are:</p>
 <dl>
 <dt><code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-pread/">pread</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2), <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2)</p>
-<dd> These operate as documented, with the exception that <code><a href="/docs/linux/man/2-seek/">seek</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2) and <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2) are not supported beyond the end of the file. The file size is the size of the local storage of the SPU, which normally is 256 kilobytes.</p>
+<dd> These operate as documented, with the exception that <code>seek</code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2) and <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2) are not supported beyond the end of the file. The file size is the size of the local storage of the SPU, which normally is 256 kilobytes.</p>
 <dt><code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)</p>
 <dd> Mapping <code>mem</code> into the process address space gives access to the SPU local storage within the process address space. Only MAP_SHARED mappings are allowed. </p>
 </dl>

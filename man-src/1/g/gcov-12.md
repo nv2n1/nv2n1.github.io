@@ -492,10 +492,10 @@ else<br />
 <p> If an executable loads a dynamic shared object via dlopen functionality, <code>-Wl,&#8211;dynamic-list-data</code> is needed to dump all profile data. </p>
 <p> Profiling run-time library reports various errors related to profile manipulation and profile saving. Errors are printed into standard error output or <font SIZE="-1"><code>GCOV_ERROR_FILE</code></font> file, if environment variable is used. In order to terminate immediately after an errors occurs set <font SIZE="-1"><code>GCOV_EXIT_AT_ERROR</code></font> environment variable. That can help users to find profile clashing which leads to a misleading profile.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gpl/">gpl</a></code>(7), <code><a href="/docs/linux/man/7-gfdl/">gfdl</a></code>(7), <code><a href="/docs/linux/man/7-fsf-funding/">fsf-funding</a></code>(7), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) and the Info entry for <i>gcc</i>.</p>
+<p> <code>gpl</code>(7), <code>gfdl</code>(7), <code>fsf-funding</code>(7), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) and the Info entry for <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1996-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; and &#8220;Funding Free Software&#8221;, the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <code><a href="/docs/linux/man/7-gfdl/">gfdl</a></code>(7) man page. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; and &#8220;Funding Free Software&#8221;, the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <code>gfdl</code>(7) man page. </p>
 <p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual

@@ -21,7 +21,7 @@ description: "e2scrub – check the contents of a mounted ext[234] file system"
 <dt><code>-r</code></p>
 <dd>Remove the e2scrub snapshot and exit without checking anything.</p>
 <dt><code>-t</code></p>
-<dd>Run <code><a href="/docs/linux/man/1-fstrim/">fstrim</a>(1)</code> on the mounted file system if no errors are found.</p>
+<dd>Run <code>fstrim(1)</code> on the mounted file system if no errors are found.</p>
 <dt><code>-V</code></p>
 <dd>Print version information and exit.</dl>
 <h2>Exit Code</h2>

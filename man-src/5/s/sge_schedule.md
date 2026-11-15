@@ -10,7 +10,7 @@ description: "sge_schedule – format of the xxQS_NAMExx schedule file"
 <p>sge_schedule &#8211; format of the xxQS_NAMExx schedule file</p>
 <h2>Description</h2>
 <p>The <i>schedule</i> file is written by the qmaster when <code>MONITOR=1</code> is set in the <code>params</code> item of </p>
-<p> Note that the file tends to grow rapidly, and should be truncated/rotated, e.g. with <i><a href="/docs/linux/man/1-logrotate/">logrotate</a></i>(1). Also it should probably be placed on local disk, not an NFS-mounted filesystem, for instance, because of the large number of small writes it typically gets &#8211; e.g. make a symbolic link into the qmaster spool area (assuming that is local). </p>
+<p> Note that the file tends to grow rapidly, and should be truncated/rotated, e.g. with <i>logrotate</i>(1). Also it should probably be placed on local disk, not an NFS-mounted filesystem, for instance, because of the large number of small writes it typically gets &#8211; e.g. make a symbolic link into the qmaster spool area (assuming that is local). </p>
 <p> See for a tool to process the data and produce information on reservations.</p>
 <h2>Format</h2>
 <p>A line containing<br />

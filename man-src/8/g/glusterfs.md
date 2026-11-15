@@ -94,6 +94,6 @@ description: "GlusterFS – clustered file system"
 <h2>Examples</h2>
 <p>mount a volume named foo on server bar with log level DEBUG on mount point /mnt/foo # glusterfs &#8211;log-level=DEBUG &#8211;volfile-id=foo &#8211;volfile-server=bar /mnt/foo </p>
 <h2>See Also</h2>
-<pre><code><a href="//www.systutorials.com/docs/linux/man/1-fusermount/">fusermount</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/8-mount.glusterfs/">mount.glusterfs</a></code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-gluster/">gluster</a></code>(8)</pre>
+<pre><code><a href="//www.systutorials.com/docs/linux/man/1-fusermount/">fusermount</a></code>(1), <code>mount.glusterfs</code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-gluster/">gluster</a></code>(8)</pre>
 <h2>Copyright</h2>
 <pre>Copyright(c) 2006-2011 Red Hat, Inc. &lt;<a rel="nofollow" href="http://www.redhat.com">http://www.redhat.com</a>&gt;</pre>

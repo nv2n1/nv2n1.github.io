@@ -41,7 +41,7 @@ description: "ocf_heartbeat_scsi2reservation – scsi-2 reservation"
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 30.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a scsi2reservation resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a scsi2reservation resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_scsi2reservation ocf:heartbeat:scsi2reservation \
 
 op monitor depth=&quot;0&quot; timeout=&quot;20&quot; interval=&quot;20&quot;</code></pre>

@@ -55,7 +55,7 @@ description: "gdomap – GNUstep Distributed Objects name server"
 <p>Kill with SIGUSR1 to obtain a dump of all known peers in /tmp/gdomap.dump </p>
 <p> <code>gdomap -N</code> lists all registered names on the local host.</p>
 <h2>See Also</h2>
-<p><code>gdomap -C</code> gives above instructions on how to set up gdomap. <a href="/docs/linux/man/1-gdnc/">gdnc</a>(1), <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7), <a href="/docs/linux/man/1-gpbs/">gpbs</a>(1) <i>The GNUstep Build Guide</i> example rc script: &lt;<a rel="nofollow" href="http://gnustep.made-it.com/BuildGuide/index.html#GNUSTEP.SERVICES">http://gnustep.made-it.com/BuildGuide/index.html#GNUSTEP.SERVICES</a>&gt; </p>
+<p><code>gdomap -C</code> gives above instructions on how to set up gdomap. <a href="/docs/linux/man/1-gdnc/">gdnc</a>(1), <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7), gpbs(1) <i>The GNUstep Build Guide</i> example rc script: &lt;<a rel="nofollow" href="http://gnustep.made-it.com/BuildGuide/index.html#GNUSTEP.SERVICES">http://gnustep.made-it.com/BuildGuide/index.html#GNUSTEP.SERVICES</a>&gt; </p>
 <h2>History</h2>
 <p>Work on <code>gdomap</code> started in October 1996. </p>
 <p> This manual page first appeared in gnustep-base 1.7.1 (June 2003).</p>

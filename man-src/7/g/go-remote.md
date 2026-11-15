@@ -9,7 +9,7 @@ description: "go – tool for managing Go source code"
 
 <p>go &#8211; tool for managing Go source code</p>
 <h2>Description</h2>
-<p>An import path (see <code><a href="/docs/linux/man/1-go-importpath/">go-importpath</a></code>(1)) denotes a package stored in the local file system. Certain import paths also describe how to obtain the source code for the package using a revision control system. A few common code hosting sites have special syntax:</p>
+<p>An import path (see <code>go-importpath</code>(1)) denotes a package stored in the local file system. Certain import paths also describe how to obtain the source code for the package using a revision control system. A few common code hosting sites have special syntax:</p>
 <dl>
 <dt><code>BitBucket (Mercurial)</code></p>
 <dd>
@@ -56,6 +56,6 @@ import &quot;launchpad.net/~user/project/branch/sub/directory&quot;</pre>
  <a rel="nofollow" href="http://example.org/pkg/foo?go-get=1">http://example.org/pkg/foo?go-get=1</a> (fallback)</pre>
 <p>If that page contains the meta tag </p>
 <pre> &lt;meta name=&quot;go-import&quot; content=&quot;example.org git <a rel="nofollow" href="https://code.org/r/p/exproj">https://code.org/r/p/exproj</a>&quot;&gt;</pre>
-<p>the go tool will verify that <a rel="nofollow" href="https://example.org/?go-get=1">https://example.org/?go-get=1</a> contains the same meta tag and then git clone <a rel="nofollow" href="https://code.org/r/p/exproj">https://code.org/r/p/exproj</a> into GOPATH/src/example.org. New downloaded packages are written to the first directory listed in the GOPATH environment variable (see <code><a href="/docs/linux/man/1-go-path/">go-path</a></code>(1)). The go command attempts to download the version of the package appropriate for the Go release being used. See <code><a href="/docs/linux/man/1-go-install/">go-install</a></code>(1) for more.</p>
+<p>the go tool will verify that <a rel="nofollow" href="https://example.org/?go-get=1">https://example.org/?go-get=1</a> contains the same meta tag and then git clone <a rel="nofollow" href="https://code.org/r/p/exproj">https://code.org/r/p/exproj</a> into GOPATH/src/example.org. New downloaded packages are written to the first directory listed in the GOPATH environment variable (see <code>go-path</code>(1)). The go command attempts to download the version of the package appropriate for the Go release being used. See <code><a href="/docs/linux/man/1-go-install/">go-install</a></code>(1) for more.</p>
 <h2>Author</h2>
 <p>This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt;, for the Debian project (and may be used by others).</p>

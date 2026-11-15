@@ -188,9 +188,9 @@ This is another question, of boolean type. </p>
 &nbsp;<wbr>&nbsp;<wbr>0 Dialog</p>
 <h2>Libraries</h2>
 <p>Setting things up so you can talk to debconf, and speaking the debconf protocol by hand is a little too much work, so some thin libraries exist to relieve this minor drudgery. </p>
-<p> For shell programming, there is the /usr/share/debconf/confmodule library, which you can source at the top of a shell script, and talk to debconf in a fairly natural way, using lower-case versions of the debconf protocol commands, that are prefixed with &quot;db_&quot; (ie, &quot;db_input&quot; and &quot;db_go&quot;). For details, see <code><a href="/docs/linux/man/3-confmodule/">confmodule</a></code>(3)<br />
+<p> For shell programming, there is the /usr/share/debconf/confmodule library, which you can source at the top of a shell script, and talk to debconf in a fairly natural way, using lower-case versions of the debconf protocol commands, that are prefixed with &quot;db_&quot; (ie, &quot;db_input&quot; and &quot;db_go&quot;). For details, see <code>confmodule</code>(3)<br />
 &nbsp;<wbr>. </p>
-<p> Perl programmers can use the <code><a href="//www.systutorials.com/docs/linux/man/3pm-Debconf::Client::ConfModule/">Debconf::Client::ConfModule</a></code>(3pm) perl module, and python programmers can use the debconf python module. </p>
+<p> Perl programmers can use the <code>Debconf::Client::ConfModule</code>(3pm) perl module, and python programmers can use the debconf python module. </p>
 <p> The rest of this manual will use the /usr/share/debconf/confmodule library in example shell scripts. Here is an example config script using that library, that just asks a question: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#!/bin/sh<br />
 &nbsp;<wbr>&nbsp;<wbr>set -e<br />

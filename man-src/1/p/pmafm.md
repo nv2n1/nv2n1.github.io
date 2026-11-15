@@ -47,7 +47,7 @@ description: "pmafm – Performance Co-Pilot archive folio manager"
 <dt><code>repeat</code> <i>tool</i> [<i>arg</i> &#8230;]</p>
 <dd> Execute the known PCP <i>tool</i> once per selected archive. For example, the command </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> repeat pmval -t60 kernel.all.load<br />
- would run <code><a href="/docs/linux/man/1-pmval/">pmval</a></code>(1) once per archive, with an appropriate <code>-a</code> argument.</p>
+ would run <code>pmval</code>(1) once per archive, with an appropriate <code>-a</code> argument.</p>
 <dt><code>replay</code></p>
 <dd>
  Some archive folios are created by tools (e.g. <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1)) that provide sufficient information to allow all of the information in all of the archives of a folio to be replayed.</p>
@@ -66,7 +66,7 @@ description: "pmafm – Performance Co-Pilot archive folio manager"
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mkaf/">mkaf</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-pmview/">pmview</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmrecordsetup/">pmRecordSetup</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
+<p> <code><a href="/docs/linux/man/1-mkaf/">mkaf</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-pmview/">pmview</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code>pmRecordSetup</code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>DIAGNOSTICS</h2>
 <p> Many, but all are intended to be easily understood. </p>
 <h2>Index</h2>

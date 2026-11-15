@@ -51,7 +51,7 @@ description: "gcl – GCL Common Lisp interpreter/compiler"
 <dd> If <code>-data-file</code> is specified, leave the intermediate <i>.data</i> file there. </p>
 <dt><code>-system-p</code></p>
 <dd> If <code>-system-p</code> is specified then invoke <i>compile-file</i> with the <i>:system-p t</i> keyword argument, meaning that the C init function will bear a name based on the name of the file, so that it may be invoked by name by C code. </p>
-<p> This GNU package should not be confused with the proprietary program distributed by FRANZ, Inc. Nor should it be confused with the public domain or the proprietary . For anything other than program development, use of the lisp compiler <i><a href="//www.systutorials.com/docs/linux/man/1L-glc/">glc</a></i>(1L) is strongly recommended in preference to use of the interpreter, due to much higher speed.</dl>
+<p> This GNU package should not be confused with the proprietary program distributed by FRANZ, Inc. Nor should it be confused with the public domain or the proprietary . For anything other than program development, use of the lisp compiler <i>glc</i>(1L) is strongly recommended in preference to use of the interpreter, due to much higher speed.</dl>
 <h2>FILES</h2>
 <dl>
 <dt><i>/site/subsys/gcl/bin/gcl</p>

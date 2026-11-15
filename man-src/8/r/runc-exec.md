@@ -31,7 +31,7 @@ description: "runc-exec – execute new process inside the container"
 <dt><code>&#8211;pid-file</code> <i>path</i></p>
 <dd>Specify the file to write the container process&#8217; PID to. </p>
 <dt><code>&#8211;process-label</code> <i>label</i></p>
-<dd>Set the asm process label for the process commonly used with <code><a href="/docs/linux/man/7-selinux/">selinux</a></code>(7). </p>
+<dd>Set the asm process label for the process commonly used with <code>selinux</code>(7). </p>
 <dt><code>&#8211;apparmor</code> <i>profile</i></p>
 <dd>Set the <code><a href="/docs/linux/man/7-apparmor/">apparmor</a></code>(7) <i>profile</i> for the process. </p>
 <dt><code>&#8211;no-new-privs</code></p>

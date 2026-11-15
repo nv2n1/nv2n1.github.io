@@ -56,7 +56,7 @@ description: "clide – color and style highlighting program for text"
 <h3><font SIZE="-1">PERL REGULAR EXPRESSIONS</font></h3>
 <p> clide works by passing the expression that you specify into a <font SIZE="-1">PERL</font> matching operator. This means that you can pass almost any valid <font SIZE="-1">PERL</font> regular expression to clide and it should work as expected. </p>
 <p> The only limitation is in what flags you can pass to the search. Currently, you can only pass a &#8216;i&#8217; (case insensitive) and/or a &#8216;g&#8217; (global search) flag to the search expression. The multiline flag &#8216;m&#8217; is not supported. </p>
-<p> For more information about perl regular expressions, see the <i><a href="/docs/linux/man/1-pcre/">pcre</a></i>(1) man page.</p>
+<p> For more information about perl regular expressions, see the <i>pcre</i>(1) man page.</p>
 <h3><font SIZE="-1">REGULAR EXPRESSION SEARCH</font></h3>
 <p> The basic way to tell clide what text you want to affect is to use the regular expression search operator. This is passed to the -e option along with a command seperated list of attributes to set. </p>
 <pre>

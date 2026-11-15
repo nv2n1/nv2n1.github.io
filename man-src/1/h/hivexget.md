@@ -55,7 +55,7 @@ url: "/docs/linux/man/1-hivexget/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3), <i><a HREF="/docs/linux/man/1-hivexml/">hivexml</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i><a HREF="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), &lt;<a rel="nofollow" HREF="http://libguestfs.org/">http://libguestfs.org/</a>&gt;, <i><a HREF="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1).
+ <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3), <i><a HREF="/docs/linux/man/1-hivexml/">hivexml</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i>guestfs</i>(3), &lt;<a rel="nofollow" HREF="http://libguestfs.org/">http://libguestfs.org/</a>&gt;, <i><a HREF="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1).
 
 <h2>AUTHORS</h2>
 

@@ -158,7 +158,7 @@ description: "llvm-strip – object stripping tool"
 <h2>BUGS</h2>
 <p> To report bugs, please visit &lt;<i><a rel="nofollow" href="https://github.com/llvm/llvm-project/labels/tools:llvm-objcopy%2Fstrip">https://github.com/llvm/llvm-project/labels/tools:llvm-objcopy%2Fstrip</a></i>&gt;.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-llvm-objcopy/">llvm-objcopy</a>(1)</code></p>
+<p> <code>llvm-objcopy(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>COPYRIGHT</h2>

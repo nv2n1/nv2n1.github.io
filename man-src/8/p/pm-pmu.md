@@ -31,7 +31,7 @@ description: "pm-pmu – suspend the computer on machines using a Macintosh-styl
 <dl>
 <dd>Show help message.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-pm-suspend/">pm-suspend</a></code>(8)</p>
+<p><code>pm-suspend</code>(8)</p>
 <h2>Author</h2>
 <p>This manual page was written by Richard Hughes richard [at] hughsie.com.</p>
 <h2>Author</h2>

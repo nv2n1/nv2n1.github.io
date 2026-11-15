@@ -31,7 +31,7 @@ description: "node.perms – LinuxNode permissions file."
 <dt><code>rose</code></p>
 <dd>matches users coming in with ROSE.</p>
 <dt><code>local</code></p>
-<dd>matches TCP/IP connections where users host is in &quot;local&quot; network as defined in <a href="/docs/linux/man/5-node-conf/">node.conf</a>(5).</p>
+<dd>matches TCP/IP connections where users host is in &quot;local&quot; network as defined in node.conf(5).</p>
 <dt><code>ampr</code></p>
 <dd>matches TCP/IP connections where users host is in amprnet (44.0.0.0/8).</p>
 <dt><code>inet</code></p>
@@ -55,13 +55,13 @@ description: "node.perms – LinuxNode permissions file."
 <dt><code>4</code></p>
 <dd>permits outgoing NET/ROM connects.</p>
 <dt><code>8</code></p>
-<dd>permits telneting to hosts in the &quot;local&quot; network as defined in <a href="/docs/linux/man/5-node-conf/">node.conf</a>(5).</p>
+<dd>permits telneting to hosts in the &quot;local&quot; network as defined in node.conf(5).</p>
 <dt><code>16</code></p>
 <dd>permits telneting to hosts in amprnet.</p>
 <dt><code>32</code></p>
 <dd>permits telneting to hosts neither in the &quot;local&quot; network nor in amprnet.</p>
 <dt><code>64</code></p>
-<dd>permits using hidden ports in outgoing AX.25 connections. (See HiddenPorts command in <a href="/docs/linux/man/5-node-conf/">node.conf</a>(5).)</p>
+<dd>permits using hidden ports in outgoing AX.25 connections. (See HiddenPorts command in node.conf(5).)</p>
 <dt><code>128</code></p>
 <dd>permits outgoing ROSE connects.</p>
 <dt><code>256</code></p>
@@ -71,4 +71,4 @@ description: "node.perms – LinuxNode permissions file."
 <h2>Files</h2>
 <p>/etc/ax25/node.perms</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-node/">node</a></code>(8), <code><a href="/docs/linux/man/5-node-conf/">node.conf</a></code>(5), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4). </p>
+<p><code><a href="/docs/linux/man/8-node/">node</a></code>(8), <code>node.conf</code>(5), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4). </p>

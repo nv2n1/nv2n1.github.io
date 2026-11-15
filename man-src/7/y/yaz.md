@@ -22,7 +22,7 @@ description: "yaz – Z39.50 toolkit."
 <dd>*Neither the name of Index Data nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</dl>
 <p> THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS &#8220;AS IS&#8221; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-yaz-client/">yaz-client</a></code>(1), <code><a href="/docs/linux/man/8-yaz-ztest/">yaz-ztest</a></code>(8), <code><a href="/docs/linux/man/8-yaz-config/">yaz-config</a></code>(8), <code><a href="/docs/linux/man/1-zoomsh/">zoomsh</a></code>(1) <code><a href="/docs/linux/man/7-bib1-attr/">bib1-attr</a></code>(7) </p>
+<p><code>yaz-client</code>(1), <code>yaz-ztest</code>(8), <code>yaz-config</code>(8), <code>zoomsh</code>(1) <code><a href="/docs/linux/man/7-bib1-attr/">bib1-attr</a></code>(7) </p>
 <p> YAZ manual ( <i>/usr/local/share/doc/yaz</i>) </p>
 <p> <i>YAZ home page</i>[1]. </p>
 <p> <i>Z39.50 Maintenance Agency Page</i>[2].</p>

@@ -49,4 +49,4 @@ netgroup:       nis</code></pre>
 </dl>
 <p> In this case, the local hostname is <i>omega</i>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-nss-systemd/">nss-systemd</a></code>(8), <code><a href="/docs/linux/man/8-nss-resolve/">nss-resolve</a></code>(8), <code><a href="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></code>(8), <code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5), <code><a href="/docs/linux/man/1-getent/">getent</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-nss-systemd/">nss-systemd</a></code>(8), <code>nss-resolve</code>(8), <code><a href="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></code>(8), <code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5), <code><a href="/docs/linux/man/1-getent/">getent</a></code>(1) </p>

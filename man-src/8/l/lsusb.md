@@ -30,6 +30,6 @@ description: "lsusb – list USB devices"
 <h2>Return Value</h2>
 <p>If the specified device is not found, a non-zero exit code is returned. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-lspci/">lspci</a></code>(8), <code><a href="/docs/linux/man/8-usbview/">usbview</a></code>(8). </p>
+<p><code><a href="/docs/linux/man/8-lspci/">lspci</a></code>(8), <code>usbview</code>(8). </p>
 <h2>Author</h2>
 <p>Thomas Sailer, &lt;sailer [at] ife.ee.ethz.ch&gt;.</p>

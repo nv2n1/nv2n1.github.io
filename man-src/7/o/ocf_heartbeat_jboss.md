@@ -68,7 +68,7 @@ description: "ocf_heartbeat_jboss – Manages a JBoss application server instanc
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a jboss resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a jboss resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_jboss ocf:heartbeat:jboss \
 params \
 jboss_home=string \

@@ -27,7 +27,7 @@ description: "vboxgetty – isdn voice box (getty)"
 <p>vboxgetty should be started from the init process. To do this you need one line per vboxgetty in /etc/inittab like this one: </p>
 <p> I5:2345:respawn:/usr/sbin/vboxgetty -d /dev/ttyI5 </p>
 <p> The next step is to set up a working configuration for all ports in /etc/isdn/vboxgetty.conf: read <a href="/docs/linux/man/5-vboxgetty-conf/">vboxgetty.conf</a>(5) how to do this and look at the example config file in /usr/doc/isdnutils/examples. </p>
-<p> You should then create the spool directories for each user: /var/spool/vbox/&lt;user&gt;, /var/spool/vbox/&lt;user&gt;/incoming and /var/spool/vbox/&lt;user&gt;/messages. Copy the example config files vbox.conf and standard.tcl from /usr/doc/isdnutils/examples to /var/spool/vbox/&lt;user&gt;, read the man pages <a href="/docs/linux/man/5-vbox-conf/">vbox.conf</a>(5) and <a href="/docs/linux/man/5-vboxtcl/">vboxtcl</a>(5) and edit these config files. </p>
+<p> You should then create the spool directories for each user: /var/spool/vbox/&lt;user&gt;, /var/spool/vbox/&lt;user&gt;/incoming and /var/spool/vbox/&lt;user&gt;/messages. Copy the example config files vbox.conf and standard.tcl from /usr/doc/isdnutils/examples to /var/spool/vbox/&lt;user&gt;, read the man pages <a href="/docs/linux/man/5-vbox-conf/">vbox.conf</a>(5) and vboxtcl(5) and edit these config files. </p>
 <p> Change the owner of all files in /var/spool/vbox/&lt;user&gt; with &quot;chown &lt;user&gt;.&lt;group&gt; /var/spool/vbox/&lt;user&gt; -Rv&quot; and correct the permissions with &quot;chmod o-rwx,g-rwx /var/spool/vbox/&lt;user&gt; -Rv&quot;. </p>
 <p> The last step: run &quot;init q&quot; to force init to reread /etc/inittab</p>
 <h2>How It Works</h2>
@@ -53,6 +53,6 @@ description: "vboxgetty – isdn voice box (getty)"
 <dd>logfile of the vboxgetty </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-vboxgetty-conf/">vboxgetty.conf</a>(5), <a href="/docs/linux/man/5-vbox-conf/">vbox.conf</a>(5), <a href="/docs/linux/man/5-vboxtcl/">vboxtcl</a>(5), <a href="/docs/linux/man/5-isdntime/">isdntime</a>(5)</code> </p>
+<p><code><a href="/docs/linux/man/5-vboxgetty-conf/">vboxgetty.conf</a>(5), <a href="/docs/linux/man/5-vbox-conf/">vbox.conf</a>(5), vboxtcl(5), isdntime(5)</code> </p>
 <h2>Author</h2>
 <p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.</p>

@@ -45,52 +45,52 @@ setenv MANPATH /mit/kit/man:/usr/man
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/1-man1/">man1</a></td>
+<td>man1</td>
 <td>(1) User Commands
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/2-man2/">man2</a></td>
+<td>man2</td>
 <td>(2) System Calls
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/3-man3/">man3</a></td>
+<td>man3</td>
 <td>(3) Subroutines
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/4-man4/">man4</a></td>
+<td>man4</td>
 <td>(4) Devices
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/5-man5/">man5</a></td>
+<td>man5</td>
 <td>(5) File Formats
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/6-man6/">man6</a></td>
+<td>man6</td>
 <td>(6) Games
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/7-man7/">man7</a></td>
+<td>man7</td>
 <td>(7) Miscellaneous
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/8-man8/">man8</a></td>
+<td>man8</td>
 <td>(8) Sys. Administration
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/l-manl/">manl</a></td>
+<td>manl</td>
 <td>(l) Local
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/n-mann/">mann</a></td>
+<td>mann</td>
 <td>(n) New
 </td>
 </tr>
@@ -102,7 +102,7 @@ setenv MANPATH /mit/kit/man:/usr/man
 </table>
 <p> For instance, a user has three directories in her manual path and each contain a directory called <i>man3</i>. All these manual pages will appear alphabetically sorted when the user selects the menu item called <i>(3) Subroutines</i>. If there is no directory called <i>mano</i> in any of the directories in her MANPATH, or there are no manual pages in any of the directories called <i>mano</i> then no menu item will be displayed for the section called <i>(o) Old</i>.</p>
 <h2>BSD AND LINUX SYSTEMS</h2>
-<p> In newer BSD and Linux systems, <i>Xman</i> will search for a file named <i>/etc/man.conf</i> which will contain the list of directories containing manual pages. See <i><a href="/docs/linux/man/5-man-conf/">man.conf</a></i>(5) for a complete description of the file format.</p>
+<p> In newer BSD and Linux systems, <i>Xman</i> will search for a file named <i>/etc/man.conf</i> which will contain the list of directories containing manual pages. See <i>man.conf</i>(5) for a complete description of the file format.</p>
 <h2>THE MANDESC FILE</h2>
 <p> By using the <i>mandesc</i> file a user or system manager is able to more closely control which manual pages will appear in each of the sections represented by menu items in the <i>Sections</i> menu. This functionality is only available on a section by section basis, and individual manual pages may not be handled in this manner. (Although generous use of symbolic links &#8212; see <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1) &#8212; will allow almost any configuration you can imagine.) </p>
 <p> The format of the mandesc file is a character followed by a label. The character determines which of the sections will be added under this label. For instance suppose that you would like to create an extra menu item that contains all programmer subroutines. This label should contain all manual pages in both sections two and three. The <i>mandesc</i> file would look like this: </p>
@@ -118,16 +118,16 @@ no default sections
 <p> anywhere in your mandesc file. This keeps xman from searching the default manual sections <i>In that directory only</i>. As an example, suppose you want to do the same thing as above, but you don&#8217;t think that it is useful to have the <i>System Calls</i> or <i>Subroutines</i> sections any longer. You would need to duplicate the default entries, as well as adding your new one. </p>
 <pre>
 no default sections
-<a href="//www.systutorials.com/docs/linux/man/1-1/">1</a>(1) User Commands
+1(1) User Commands
 2Programmer Subroutines
 3Programmer Subroutines
-<a href="//www.systutorials.com/docs/linux/man/4-4/">4</a>(4) Devices
-<a href="//www.systutorials.com/docs/linux/man/5-5/">5</a>(5) File Formats
-<a href="//www.systutorials.com/docs/linux/man/6-6/">6</a>(6) Games
-<a href="//www.systutorials.com/docs/linux/man/7-7/">7</a>(7) Miscellaneous
-<a href="//www.systutorials.com/docs/linux/man/8-8/">8</a>(8) Sys. Administration
-<a href="//www.systutorials.com/docs/linux/man/l-l/">l</a>(l) Local
-<a href="//www.systutorials.com/docs/linux/man/n-n/">n</a>(n) New
+4(4) Devices
+5(5) File Formats
+6(6) Games
+7(7) Miscellaneous
+8(8) Sys. Administration
+l(l) Local
+n(n) New
 o(o) Old
 </pre>
 <p> Xman will read any section that is of the form <i>man&lt;character&gt;</i>, where &lt;character&gt; is an upper or lower case letter (they are treated distinctly) or a numeral (0-9). Be warned, however, that <a href="/docs/linux/man/1-man/">man</a>(1) and <a href="/docs/linux/man/8-catman/">catman</a>(8) will not search directories that are non-standard.</p>

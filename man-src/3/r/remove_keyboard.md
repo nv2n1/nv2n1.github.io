@@ -19,4 +19,4 @@ void remove_keyboard();</code></pre>
  set_config_string(&quot;system&quot;, &quot;keyboard&quot;, &quot;es&quot;);
  install_keyboard();</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-allegro_exit/">allegro_exit</a></code>(3), <code><a href="/docs/linux/man/3-set_config_string/">set_config_string</a></code>(3) </p>
+<p><code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-allegro_exit/">allegro_exit</a></code>(3), <code><a href="/docs/linux/man/3-set_config_string/">set_config_string</a></code>(3) </p>

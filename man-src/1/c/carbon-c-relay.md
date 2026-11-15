@@ -68,7 +68,7 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <dt>&bull;</p>
 <dd> <code>-c</code> <i>chars</i>: Defines the characters that are next to <code>[A-Za-z0-9]</code> allowed in metrics to <i>chars</i>. Any character not in this list, is replaced by the relay with <code>_</code> (underscore). The default list of allowed characters is <i>-_:#</i>.</p>
 <dt>&bull;</p>
-<dd> <code>-H</code> <i>hostname</i>: Override hostname determined by a call to <code><a href="/docs/linux/man/3-gethostname/">gethostname</a></code>(3) with <i>hostname</i>. The hostname is used mainly in the statistics metrics <code>carbon.relays.&lt;hostname&gt;.&lt;&#8230;&gt;</code> sent by the relay.</p>
+<dd> <code>-H</code> <i>hostname</i>: Override hostname determined by a call to <code>gethostname</code>(3) with <i>hostname</i>. The hostname is used mainly in the statistics metrics <code>carbon.relays.&lt;hostname&gt;.&lt;&#8230;&gt;</code> sent by the relay.</p>
 <dt>&bull;</p>
 <dd> <code>-P</code> <i>pidfile</i>: Write the pid of the relay process to a file called <i>pidfile</i>. This is in particular useful when daemonised in combination with init managers.</p>
 <dt>&bull;</p>

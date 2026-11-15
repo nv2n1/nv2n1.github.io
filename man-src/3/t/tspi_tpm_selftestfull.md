@@ -36,4 +36,4 @@ description: "Tspi_TPM_SelfTestFull – perform a self-test of each internal TPM
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_SelfTestFull</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_tpm_certifyselftest/">Tspi_TPM_CertifySelfTest</a></code>(3), <code><a href="/docs/linux/man/3-tspi_tpm_gettestresults/">Tspi_TPM_GetTestResults</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-tspi_tpm_certifyselftest/">Tspi_TPM_CertifySelfTest</a></code>(3), <code>Tspi_TPM_GetTestResults</code>(3).</p>

@@ -59,7 +59,7 @@ description: "netdump-server – handle crash dumps over the network"
 <p> The four executable scripts are run in the foreground by the netdump-server, so any time-consuming task done by the scripts will block the netdump-server from servicing any crash or log requests from any other source. Therefore it may be advisable to run any time-consuming tasks in the background, allowing the script to return back to the netdump-server. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-netdump/">netdump</a></code>(8) </p>
+<p><code>netdump</code>(8) </p>
 <h2>Bugs</h2>
 <p>Report any bugs you find to <a rel="nofollow" href="http://bugzilla.redhat.com/bugzilla">http://bugzilla.redhat.com/bugzilla</a> </p>
 <h2>Author</h2>

@@ -123,7 +123,7 @@ description: "dsytf2.f –"
   If s = 2, the upper triangle of D(k) overwrites A(k-1,k-1), A(k-1,k),
   and A(k,k), and v overwrites A(1:k-2,k-1:k).
   If UPLO = 'L', then A = L*D*L**T, where
-     L = <a href="//www.systutorials.com/docs/linux/man/1-P/">P</a>(1)*<a href="//www.systutorials.com/docs/linux/man/1-L/">L</a>(1)* ... *P(k)*L(k)* ...,
+     L = P(1)*L(1)* ... *P(k)*L(k)* ...,
   i.e., L is a product of terms P(k)*L(k), where k increases from 1 to
   n in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1
   and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as

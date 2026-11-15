@@ -35,7 +35,7 @@ Conrec_family - is a set of two dimensional contour mapping routines. There are 
 <dt>SUPER
 <dd>Command: &quot;ncargf77 -super mycode.f&quot; 
 
- The contours will be drawn as smoothed dashed or solid lines using splines under tension. There may be characters along the lines. Crowded lines can be thinned.</dl><h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by <a HREF="/docs/linux/man/4-i1mach/">I1MACH</a>(4)) and then terminates execution. The possible error messages are as follows: 
+ The contours will be drawn as smoothed dashed or solid lines using splines under tension. There may be characters along the lines. Crowded lines can be thinned.</dl><h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. The possible error messages are as follows: 
 
  CONREC - DIMENSION ERROR - M*N .GT. (2**IARTH) 
  The array to be contoured is dimensioned M by N. This is larger than the address space on this computer (2**IARTH) where IARTH is the size of an address integer. Check your dimension sizes. 

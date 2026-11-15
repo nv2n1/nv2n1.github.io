@@ -44,7 +44,7 @@ description: "sgsc – Find HST GSC stars in a square on the sky"
 <dt><code>-w</code></p>
 <dd> Write tab table output file imagename.gsc</dl>
 <h2>See Also</h2>
-<p> <a href="/docs/linux/man/1-scat/">scat</a>(1), <a href="/docs/linux/man/1-rgsc/">rgsc</a>(1), <a href="/docs/linux/man/1-suac/">suac</a>(1), <a href="/docs/linux/man/1-susac/">susac</a>(1), <a href="/docs/linux/man/1-imgsc/">imgsc</a>(1)</p>
+<p> <a href="/docs/linux/man/1-scat/">scat</a>(1), rgsc(1), suac(1), susac(1), <a href="/docs/linux/man/1-imgsc/">imgsc</a>(1)</p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
 <h2>Index</h2>

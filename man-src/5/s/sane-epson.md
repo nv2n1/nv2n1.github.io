@@ -40,7 +40,7 @@ CX-5200 USB</pre>
 <p>and many more. The official list is on the Sane web site.</dl>
 <p> For other scanners the software may or may not work. Please send mail to the backend author (<i>khk [at] khk.net</i>) to report success with scanners not on the list or problems with scanners that are listed.</p>
 <h2>Options</h2>
-<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in programs like <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). </p>
+<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in programs like <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). </p>
 <p> Valid command line options and their syntax can be listed by using: </p>
 <dl>
 <dd>scanimage &#8211;help -d epson</dl>
@@ -99,7 +99,7 @@ CX-5200 USB</pre>
 <dd>This allows one to override the function or command level that the backend uses to communicate with the scanner. The function level a scanner supports is determined during the initialization of the device. If the backend does not recognize the function level reported by the scanner it will default to function level B3. Valid function levels are A1, A2, B1, B2, B3, B4, B5, B6, B7, B8, D1 and F5. Use this feature only if you know what you are doing! </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
 <h2>Bugs</h2>
 <p>None :-) At least none are currently known. </p>
 <h2>Unsupported Devices</h2>

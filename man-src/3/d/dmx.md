@@ -28,8 +28,8 @@ description: "DMX – X Window System DMX (Distributed Multihead X) extension"
 <p> <a href="/docs/linux/man/3-dmxgetinputattributes/">DMXGetInputAttributes</a>(3) &#8211; determine input device attributes </p>
 <p> <a href="/docs/linux/man/3-dmxaddinput/">DMXAddInput</a>(3) &#8211; attach a new backend or console input </p>
 <p> <a href="/docs/linux/man/3-dmxremoveinput/">DMXRemoveInput</a>(3) &#8211; detach an input </p>
-<p> <a href="/docs/linux/man/3-dmxaddbackendinput/">DMXAddBackendInput</a>(3) &#8211; attach a new back-end input </p>
-<p> <a href="/docs/linux/man/3-dmxaddconsoleinput/">DMXAddConsoleInput</a>(3) &#8211; attach a new console input </p>
+<p> DMXAddBackendInput(3) &#8211; attach a new back-end input </p>
+<p> DMXAddConsoleInput(3) &#8211; attach a new console input </p>
 <p> Each of these functions is described in its own man page.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-xdmx/">Xdmx</a></code>(1), <code><a href="/docs/linux/man/1-xdmxconfig/">xdmxconfig</a></code>(1), <code><a href="/docs/linux/man/1-vdltodmx/">vdltodmx</a></code>(1)</p>

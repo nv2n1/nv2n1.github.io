@@ -18,7 +18,7 @@ description: "darkstat – network statistics gatherer"
 <dt><code>-i</code><i> interface</i></p>
 <dd>Capture traffic on the specified network interface. This is the only mandatory commandline argument.</p>
 <dt><code>-r</code><i> file</i></p>
-<dd>Instead of capturing live traffic, read it from a <code><a href="/docs/linux/man/3-pcap/">pcap</a></code>(3) capture file. This is only useful for development and benchmarking. The <code>-r</code> and <code>-i</code> arguments are mutually exclusive.</p>
+<dd>Instead of capturing live traffic, read it from a <code>pcap</code>(3) capture file. This is only useful for development and benchmarking. The <code>-r</code> and <code>-i</code> arguments are mutually exclusive.</p>
 <dt><code>&#8211;snaplen</code><i> bytes</i></p>
 <dd>How many bytes to capture from the start of each packet. You should not need to specify this; <i>darkstat</i> will calculate it automatically.</p>
 <dt><code>&#8211;pppoe</code></p>
@@ -33,7 +33,7 @@ description: "darkstat – network statistics gatherer"
 <dt><code>&#8211;no-daemon</code></p>
 <dd>Do not detach from the controlling terminal; stay in the foreground.</p>
 <dt><code>&#8211;no-promisc</code></p>
-<dd>Do not use promiscuous mode to capture. Note that an interface may already be in promiscuous mode, or may later enter promiscuous mode, due to circumstances beyond <i>darkstat</i>&#8216;s control. If this is a problem, use <code>-f</code> to specify an appropriate <code><a href="/docs/linux/man/4-bpf/">bpf</a></code>(4) filter.</p>
+<dd>Do not use promiscuous mode to capture. Note that an interface may already be in promiscuous mode, or may later enter promiscuous mode, due to circumstances beyond <i>darkstat</i>&#8216;s control. If this is a problem, use <code>-f</code> to specify an appropriate <code>bpf</code>(4) filter.</p>
 <dt><code>&#8211;no-dns</code></p>
 <dd>Do not resolve IPs to host names. This can significantly reduce memory footprint on small systems as an extra process is created for DNS resolution.</p>
 <dt><code>&#8211;no-macs</code></p>
@@ -54,7 +54,7 @@ description: "darkstat – network statistics gatherer"
 &nbsp;<wbr>ProxyPassReverse&nbsp;<wbr>/stats/&nbsp;<wbr><a rel="nofollow" href="http://localhost:667/stats/">http://localhost:667/stats/</a></dl>
 <p> The default is <i>/</i> (i.e. the root).</dl>
 <dt><code>-f</code><i> filter</i></p>
-<dd>Use the specified filter expression when capturing traffic. The filter syntax is beyond the scope of this manual page; please refer to the <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a></code>(1) documentation.</p>
+<dd>Use the specified filter expression when capturing traffic. The filter syntax is beyond the scope of this manual page; please refer to the <code>tcpdump</code>(1) documentation.</p>
 <dt><code>-l</code><i> network/netmask</i></p>
 <dd>Define a &quot;local network&quot; according to the network and netmask addresses. All traffic entering or leaving this network will be graphed, as opposed to the default behaviour of only graphing traffic to and from the local host.</p>
 <dl>
@@ -128,7 +128,7 @@ description: "darkstat – network statistics gatherer"
 <p> We don&#8217;t want to account for traffic between internal IPs:</p>
 <dl>
 <dd>darkstat -i fxp0 -f &quot;not (src net 192.168.0 and dst net 192.168.0)&quot;</dl>
-<p> (For a full reference on filter syntax, refer to the <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a></code>(1) manpage) </p>
+<p> (For a full reference on filter syntax, refer to the <code>tcpdump</code>(1) manpage) </p>
 <p> We have a network consisting of a gateway server (192.168.1.1) and a few workstations (192.168.1.2, 192.168.1.3, etc.) and we want to graph all traffic entering and leaving the local network, not just the gateway server (which is running <i>darkstat</i>):</p>
 <dl>
 <dd>darkstat -i fxp0 -l 192.168.1.0/255.255.255.0</dl>
@@ -148,7 +148,7 @@ description: "darkstat – network statistics gatherer"
 <p>The graphs only show traffic in/out of the local host, which is determined by getting the IP address of the interface you&#8217;re sniffing on. </p>
 <p> You can use the <code>-l</code> argument to override the local address for accounting purposes. You can also use it to do accounting for a whole subnet by specifying an appropriate netmask.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a></code>(1)</p>
+<p><code>tcpdump</code>(1)</p>
 <h2>History</h2>
 <p><i>darkstat</i> was written in 2001, largely as a result of a certain Australian cable Internet provider introducing a 3GB monthly traffic limit.</p>
 <h2>Authors</h2>

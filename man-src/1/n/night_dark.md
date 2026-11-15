@@ -35,7 +35,7 @@ url: "/docs/linux/man/1-night_dark/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-nightview/">nightview</a>(1). See the /usr/share/doc/nightview-doc directory for description. Homepage: <a rel="nofollow" HREF="http://www.physics.muni.cz/mb/nightview/">http://www.physics.muni.cz/mb/nightview/</a>
+ nightview(1). See the /usr/share/doc/nightview-doc directory for description. Homepage: <a rel="nofollow" HREF="http://www.physics.muni.cz/mb/nightview/">http://www.physics.muni.cz/mb/nightview/</a>
 
 <h2>AUTHOR</h2>
 

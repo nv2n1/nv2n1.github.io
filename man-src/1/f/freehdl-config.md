@@ -31,7 +31,7 @@ description: "FreeHDL-CONFIG – The FreeHDL configuration script."
 <dt><code>-cxx, &#8211;cxx</code></p>
 <dd> print C++ compiler <code>-linker, &#8211;linker</code> print libtool linker</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gvhdl/">gvhdl</a>(1), <a href="/docs/linux/man/1-freehdl-v2cc/">freehdl-v2cc</a>(1), <a href="/docs/linux/man/5-v2cc-libs/">v2cc.libs</a>(5)</p>
+<p> <a href="/docs/linux/man/1-gvhdl/">gvhdl</a>(1), <a href="/docs/linux/man/1-freehdl-v2cc/">freehdl-v2cc</a>(1), v2cc.libs(5)</p>
 <h2>AVAILABILITY</h2>
 <p> The latest version of FreeHDL can always be obtained from <code><a rel="nofollow" href="http://www.freehdl.seul.org">www.freehdl.seul.org</a></code></p>
 <h2>REPORTING BUGS</h2>

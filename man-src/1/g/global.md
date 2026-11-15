@@ -35,7 +35,7 @@ description: "global – print the locations of specified object."
 <dt><code>&#8211;help</code></p>
 <dd> Show help.</p>
 <dt><code>-I</code>, <code>&#8211;idutils</code> <i>pattern</i></p>
-<dd> Print all lines which match to the <i>pattern</i>. This function use <code><a href="/docs/linux/man/1-idutils/">idutils</a></code>(1) as a search engine. To use this command, you need to install <code><a href="/docs/linux/man/1-idutils/">idutils</a></code>(1) in your system and you must execute <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) with the <code>-I</code> option.</p>
+<dd> Print all lines which match to the <i>pattern</i>. This function use <code>idutils</code>(1) as a search engine. To use this command, you need to install <code>idutils</code>(1) in your system and you must execute <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) with the <code>-I</code> option.</p>
 <dt><code>-P</code>, <code>&#8211;path</code> [<i>pattern</i>]</p>
 <dd> Print the paths which match to the <i>pattern</i>. If no pattern specified, print all paths in the project.</p>
 <dt><code>-p</code>, <code>&#8211;print-dbpath</code></p>

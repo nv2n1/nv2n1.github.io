@@ -21,7 +21,7 @@ description: "ipsec_portof, ipsec_setportof, ipsec_sockaddrof, ipsec_sockaddrlen
 <p> <i>Sockaddrof</i> returns a pointer to the internal <i>sockaddr</i>, for passing to other functions. </p>
 <p> <i>Sockaddrlenof</i> reports the size of the internal <i>sockaddr</i>, for use in storage allocation.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3), <a href="/docs/linux/man/3-ipsec_initaddr/">ipsec_initaddr</a>(3)</p>
+<p> inet(3), ipsec_initaddr(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> <i>Portof</i> returns <code>-1</code>, <i>sockaddrof</i> returns <code>NULL</code>, and <i>sockaddrlenof</i> returns <code>0</code> if an unknown address family is found within the <i>ip_address</i>.</p>
 <h2>HISTORY</h2>

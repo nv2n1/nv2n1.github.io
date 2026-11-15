@@ -13,7 +13,7 @@ description: "nilfs_cleanerd – NILFS2 garbage collector"
 <h2>Description</h2>
 <p><code>nilfs_cleanerd</code> is a system daemon which reclaims disk space of a NILFS2 file system found in <i>device</i>. </p>
 <p> The optional <i>directory</i> argument specifies the mount point where the daemon operates. It must be an r/w-mount. </p>
-<p> This program can be invoked either automatically by <code><a href="/docs/linux/man/8-mount-nilfs2/">mount.nilfs2</a></code>(8) or manually by an administrator. However, users are recommended to invoke <code>nilfs_cleanerd</code> through <code><a href="/docs/linux/man/8-mount-nilfs2/">mount.nilfs2</a></code>(8) or <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) and shutdown it through <code><a href="/docs/linux/man/8-umount-nilfs2/">umount.nilfs2</a></code>(8) or <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) in order to avoid state inconsistencies among administration tools.</p>
+<p> This program can be invoked either automatically by <code>mount.nilfs2</code>(8) or manually by an administrator. However, users are recommended to invoke <code>nilfs_cleanerd</code> through <code>mount.nilfs2</code>(8) or <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) and shutdown it through <code>umount.nilfs2</code>(8) or <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) in order to avoid state inconsistencies among administration tools.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-c</code></p>
@@ -21,7 +21,7 @@ description: "nilfs_cleanerd – NILFS2 garbage collector"
 <dt><code>-h</code></p>
 <dd>Display help message and exit.</p>
 <dt><code>-n</code></p>
-<dd>invoke cleanerd without forking process. This option is intended for internal use from <code><a href="/docs/linux/man/8-mount-nilfs2/">mount.nilfs2</a></code>(8).</p>
+<dd>invoke cleanerd without forking process. This option is intended for internal use from <code>mount.nilfs2</code>(8).</p>
 <dt><code>-p</code></p>
 <dd>Override protection period with the specified number of seconds.</dl>
 <h2>Signals</h2>
@@ -43,10 +43,10 @@ description: "nilfs_cleanerd – NILFS2 garbage collector"
 <h2>Files</h2>
 <dl>
 <dt><i>/etc/nilfs_cleanerd.conf</i></p>
-<dd>Configuration file for <code>nilfs_cleanerd</code>. See <code><a href="/docs/linux/man/5-nilfs_cleanerd-conf/">nilfs_cleanerd.conf</a></code>(5) for details.</dl>
+<dd>Configuration file for <code>nilfs_cleanerd</code>. See <code>nilfs_cleanerd.conf</code>(5) for details.</dl>
 <h2>Author</h2>
 <p>Koji Sato &lt;koji [at] osrg.net&gt;</p>
 <h2>Availability</h2>
 <p><code>nilfs_cleanerd</code> is part of the nilfs-utils package and available from <a rel="nofollow" href="http://www.nilfs.org.">http://www.nilfs.org.</a></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-nilfs/">nilfs</a></code>(8), <code><a href="/docs/linux/man/8-mount-nilfs2/">mount.nilfs2</a></code>(8), <code><a href="/docs/linux/man/8-umount-nilfs2/">umount.nilfs2</a></code>(8), <code><a href="/docs/linux/man/5-nilfs_cleanerd-conf/">nilfs_cleanerd.conf</a></code>(5). </p>
+<p><code><a href="/docs/linux/man/8-nilfs/">nilfs</a></code>(8), <code>mount.nilfs2</code>(8), <code>umount.nilfs2</code>(8), <code>nilfs_cleanerd.conf</code>(5). </p>

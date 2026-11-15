@@ -52,7 +52,7 @@ description: "cheevr.f –"
  For more details, see DSTEMR's documentation and:
  - Inderjit S. Dhillon and Beresford N. Parlett: &quot;Multiple representations
  to compute orthogonal eigenvectors of symmetric tridiagonal matrices,&quot;
- Linear Algebra and its Applications, <a href="//www.systutorials.com/docs/linux/man/1-387/">387</a>(1), pp. 1-28, August 2004.
+ Linear Algebra and its Applications, 387(1), pp. 1-28, August 2004.
  - Inderjit Dhillon and Beresford Parlett: &quot;Orthogonal Eigenvectors and
  Relative Gaps,&quot; SIAM Journal on Matrix Analysis and Applications, Vol. 25,
  2004. Also LAPACK Working Note 154.
@@ -187,7 +187,7 @@ description: "cheevr.f –"
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre>
 <p><i>RWORK</i> </p>
 <pre> RWORK is REAL array, dimension (MAX(1,LRWORK))
- On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-RWORK/">RWORK</a>(1) returns the optimal
+ On exit, if INFO = 0, RWORK(1) returns the optimal
  (and minimal) LRWORK.</pre>
 <p><i>LRWORK</i> </p>
 <pre> LRWORK is INTEGER
@@ -199,7 +199,7 @@ description: "cheevr.f –"
  related to LWORK or LRWORK or LIWORK is issued by XERBLA.</pre>
 <p><i>IWORK</i> </p>
 <pre> IWORK is INTEGER array, dimension (MAX(1,LIWORK))
- On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal
+ On exit, if INFO = 0, IWORK(1) returns the optimal
  (and minimal) LIWORK.</pre>
 <p><i>LIWORK</i> </p>
 <pre> LIWORK is INTEGER

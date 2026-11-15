@@ -39,7 +39,7 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <pre>
  guestfish --version
 </pre>
-<p> Libguestfs development happens along an unstable branch and we periodically create a stable branch which we backport stable patches to. To find out more, read &#8220;<font SIZE="-1">LIBGUESTFS VERSION NUMBERS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3).</p>
+<p> Libguestfs development happens along an unstable branch and we periodically create a stable branch which we backport stable patches to. To find out more, read &#8220;<font SIZE="-1">LIBGUESTFS VERSION NUMBERS&#8221;</font> in <code>guestfs</code>(3).</p>
 <h3>How can I get help?</h3>
 <h3>What mailing lists or chat rooms are available?</h3>
 <p> If you are a Red Hat customer using Red Hat Enterprise Linux, please contact Red Hat Support: <a rel="nofollow" href="http://redhat.com/support">http://redhat.com/support</a> </p>
@@ -52,7 +52,7 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <p> Include as much detail as you can and a way to reproduce the problem. </p>
 <p> Include the full output of <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1).</p>
 <h2>COMMON PROBLEMS</h2>
-<p> See also &#8220;<font SIZE="-1">LIBGUESTFS GOTCHAS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) for some &#8220;gotchas&#8221; with using the libguestfs <font SIZE="-1">API.</font></p>
+<p> See also &#8220;<font SIZE="-1">LIBGUESTFS GOTCHAS&#8221;</font> in <code>guestfs</code>(3) for some &#8220;gotchas&#8221; with using the libguestfs <font SIZE="-1">API.</font></p>
 <h3>Could not allocate dynamic translator buffer</h3>
 <p> This obscure error is in fact an SELinux failure. You have to enable the following SELinux boolean: </p>
 <pre>
@@ -301,7 +301,7 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <p> Make sure Squid is running, and that the environment variables <tt>$http_proxy</tt> and <tt>$ftp_proxy</tt> are pointing to it. </p>
 <p> With Squid running and correctly configured, appliance builds should be reduced to a few minutes. </p>
 <p> <i>How can I speed up libguestfs builds (Debian)?</i> </p>
-<p> Hilko Bengen suggests using &#8220;approx&#8221; which is a Debian archive proxy (<a rel="nofollow" href="http://packages.debian.org/approx">http://packages.debian.org/approx</a>). This tool is documented on Debian in the <code><a href="/docs/linux/man/8-approx/">approx</a></code>(8) manual page.</p>
+<p> Hilko Bengen suggests using &#8220;approx&#8221; which is a Debian archive proxy (<a rel="nofollow" href="http://packages.debian.org/approx">http://packages.debian.org/approx</a>). This tool is documented on Debian in the <code>approx</code>(8) manual page.</p>
 <h2>SPEED, DISK SPACE USED BY LIBGUESTFS</h2>
 <p> <code>Note:</code> Most of the information in this section has moved: <code><a href="/docs/linux/man/1-guestfs-performance/">guestfs-performance</a></code>(1).</p>
 <h3>Upload or write seem very slow.</h3>
@@ -348,7 +348,7 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
  remote$ qemu-nbd -t -p 10809 guest.img
   local$ guestfish -a <a href="nbd://remote:10809">nbd://remote:10809</a> -i
 </pre>
-<p> Other possibilities include ssh (if qemu is recent enough), <font SIZE="-1">NFS</font> or iSCSI. See &#8220;<font SIZE="-1">REMOTE STORAGE&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3).</p>
+<p> Other possibilities include ssh (if qemu is recent enough), <font SIZE="-1">NFS</font> or iSCSI. See &#8220;<font SIZE="-1">REMOTE STORAGE&#8221;</font> in <code>guestfs</code>(3).</p>
 <h3>How can I open this strange disk source?</h3>
 <p> You have a disk image located inside another system that requires access via a library / <font SIZE="-1">HTTP / REST /</font> proprietary <font SIZE="-1">API,</font> or is compressed or archived in some way. (One example would be remote access to OpenStack glance images without actually downloading them.) </p>
 <p> We have a sister project called nbdkit (<a rel="nofollow" href="https://github.com/libguestfs/nbdkit">https://github.com/libguestfs/nbdkit</a>). This project lets you turn any disk source into an <font SIZE="-1">NBD</font> server. Libguestfs can access <font SIZE="-1">NBD</font> servers directly, eg: </p>
@@ -362,7 +362,7 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <dl>
 <dt>1.</p>
 <dd> If the guest is hosted on a live, reachable <font SIZE="-1">ESX</font> server, then locate and download the disk image called <i>somename-flat.vmdk</i>. Despite the name, this is a raw disk image, and can be opened by anything. </p>
-<p> If you have a recent enough version of qemu and libguestfs, then you may be able to access this disk image remotely using either <font SIZE="-1">HTTPS</font> or ssh. See &#8220;<font SIZE="-1">REMOTE STORAGE&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3).</p>
+<p> If you have a recent enough version of qemu and libguestfs, then you may be able to access this disk image remotely using either <font SIZE="-1">HTTPS</font> or ssh. See &#8220;<font SIZE="-1">REMOTE STORAGE&#8221;</font> in <code>guestfs</code>(3).</p>
 <dt>2.</p>
 <dd> Use VMware’s proprietary vdiskmanager tool to convert the image to raw format.</p>
 <dt>3.</p>
@@ -422,7 +422,7 @@ description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 <p> <font SIZE="-1">RHEL 7</font> guests, and any other guests that use <font SIZE="-1">XFS,</font> can be opened by libguestfs, but you have to install the <tt>&quot;libguestfs-xfs&quot;</tt> package.</p>
 <h2>USING LIBGUESTFS IN YOUR OWN PROGRAMS</h2>
 <h3>The <font SIZE="-1">API</font> has hundreds of methods, where do I start?</h3>
-<p> We recommend you start by reading the <font SIZE="-1">API</font> overview: &#8220;<font SIZE="-1">API OVERVIEW&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3). </p>
+<p> We recommend you start by reading the <font SIZE="-1">API</font> overview: &#8220;<font SIZE="-1">API OVERVIEW&#8221;</font> in <code>guestfs</code>(3). </p>
 <p> Although the <font SIZE="-1">API</font> overview covers the C <font SIZE="-1">API,</font> it is still worth reading even if you are going to use another programming language, because the <font SIZE="-1">API</font> is the same, just with simple logical changes to the names of the calls: </p>
 <pre><code>
 C guestfs_ln_sf(g, target, linkname);
@@ -432,7 +432,7 @@ Perl $g-&gt;ln_sf(target, linkname);
 Shell(guestfish) ln - sf target linkname
     PHP guestfs_ln_sf($g, $target, $linkname);
 </code></pre>
-<p> Once you&#8217;re familiar with the <font SIZE="-1">API</font> overview, you should look at this list of starting points for other language bindings: &#8220;<font SIZE="-1">USING LIBGUESTFS WITH OTHER PROGRAMMING LANGUAGES&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3).</p>
+<p> Once you&#8217;re familiar with the <font SIZE="-1">API</font> overview, you should look at this list of starting points for other language bindings: &#8220;<font SIZE="-1">USING LIBGUESTFS WITH OTHER PROGRAMMING LANGUAGES&#8221;</font> in <code>guestfs</code>(3).</p>
 <h3>Can I use libguestfs in my proprietary / closed source / commercial program?</h3>
 <p> In general, yes. However this is not legal advice &#8211; read the license that comes with libguestfs, and if you have specific questions contact a lawyer. </p>
 <p> In the source tree the license is in the file <tt>&quot;COPYING.LIB&quot;</tt> (LGPLv2+ for the library and bindings) and <tt>&quot;COPYING&quot;</tt> (GPLv2+ for the standalone programs).</p>
@@ -475,15 +475,15 @@ Shell(guestfish) ln - sf target linkname
  setenv LIBGUESTFS_TRACE 1
  setenv LIBGUESTFS_DEBUG 1
 </pre>
-<p> For further information, see: &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3).</p>
+<p> For further information, see: &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <code>guestfs</code>(3).</p>
 <h3>How do I debug when using guestfish?</h3>
 <p> You can use the same environment variables above. Alternatively use the guestfish options -x (to trace commands) or -v (to get the full debug output), or both. </p>
 <p> For further information, see: <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1).</p>
 <h3>How do I debug when using the <font SIZE="-1">API</font>?</h3>
-<p> Call &#8220;guestfs_set_trace&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) to enable command traces, and/or &#8220;guestfs_set_verbose&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) to enable debug messages. </p>
+<p> Call &#8220;guestfs_set_trace&#8221; in <code>guestfs</code>(3) to enable command traces, and/or &#8220;guestfs_set_verbose&#8221; in <code>guestfs</code>(3) to enable debug messages. </p>
 <p> For best results, call these functions as early as possible, just after creating the guestfs handle if you can, and definitely before calling launch.</p>
 <h3>How do I capture debug output and put it into my logging system?</h3>
-<p> Use the event <font SIZE="-1">API.</font> For examples, see: &#8220;<font SIZE="-1">SETTING CALLBACKS TO HANDLE EVENTS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) and the <i>examples/debug-logging.c</i> program in the libguestfs sources.</p>
+<p> Use the event <font SIZE="-1">API.</font> For examples, see: &#8220;<font SIZE="-1">SETTING CALLBACKS TO HANDLE EVENTS&#8221;</font> in <code>guestfs</code>(3) and the <i>examples/debug-logging.c</i> program in the libguestfs sources.</p>
 <h3>Digging deeper into the appliance boot process.</h3>
 <p> Enable debugging and then read this documentation on the appliance boot process: <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1).</p>
 <h3>libguestfs hangs or fails during run/launch.</h3>
@@ -551,7 +551,7 @@ Shell(guestfish) ln - sf target linkname
  &gt;&lt;rescue&gt; /sbin/fsck /dev/sda1
 </pre>
 <p> And the related question which then arises is why you can’t type in full shell commands with all the &#8211;options in guestfish (but you can in <code><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></code>(1)). </p>
-<p> <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) is a program providing structured access to the <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) <font SIZE="-1">API.</font> It happens to be a nice interactive shell too, but its primary purpose is structured access from shell scripts. Think of it more like a language binding, like Python and other bindings, but for shell. The key differentiating factor of guestfish (and the libguestfs <font SIZE="-1">API</font> in general) is the ability to automate changes. </p>
+<p> <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) is a program providing structured access to the <code>guestfs</code>(3) <font SIZE="-1">API.</font> It happens to be a nice interactive shell too, but its primary purpose is structured access from shell scripts. Think of it more like a language binding, like Python and other bindings, but for shell. The key differentiating factor of guestfish (and the libguestfs <font SIZE="-1">API</font> in general) is the ability to automate changes. </p>
 <p> <code><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></code>(1) is a free-for-all freeform way to boot the libguestfs appliance and make arbitrary changes to your <font SIZE="-1">VM.</font> It’s not structured, you can&#8217;t automate it, but for making quick ad-hoc fixes to your guests, it can be quite useful. </p>
 <p> But, libguestfs also has a &#8220;backdoor&#8221; into the appliance allowing you to send arbitrary shell commands. It’s not as flexible as virt-rescue, because you can&#8217;t interact with the shell commands, but here it is anyway: </p>
 <pre>
@@ -562,7 +562,7 @@ Shell(guestfish) ln - sf target linkname
 <h3>Why does virt-cat only work on a real <font SIZE="-1">VM</font> image, but virt-df works on any disk image?</h3>
 <h3>What does no root device found in this operating system image mean?</h3>
 <p> These questions are all related at a fundamental level which may not be immediately obvious. </p>
-<p> At the <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) <font SIZE="-1">API</font> level, a &#8220;disk image&#8221; is just a pile of partitions and filesystems. </p>
+<p> At the <code>guestfs</code>(3) <font SIZE="-1">API</font> level, a &#8220;disk image&#8221; is just a pile of partitions and filesystems. </p>
 <p> In contrast, when the virtual machine boots, it mounts those filesystems into a consistent hierarchy such as: </p>
 <pre>
  /          (/dev/sda2)
@@ -576,7 +576,7 @@ Shell(guestfish) ln - sf target linkname
  └── /var   (/dev/vg_os/lv_var)
 </pre>
 <p> (or drive letters on Windows). </p>
-<p> The <font SIZE="-1">API</font> first of all sees the disk image at the &#8220;pile of filesystems&#8221; level. But it also has a way to inspect the disk image to see if it contains an operating system, and how the disks are mounted when the operating system boots: &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3). </p>
+<p> The <font SIZE="-1">API</font> first of all sees the disk image at the &#8220;pile of filesystems&#8221; level. But it also has a way to inspect the disk image to see if it contains an operating system, and how the disks are mounted when the operating system boots: &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <code>guestfs</code>(3). </p>
 <p> Users expect some tools (like <code><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></code>(1)) to work with <font SIZE="-1">VM</font> paths: </p>
 <pre>
  virt-cat fedora.img /var/log/messages
@@ -588,7 +588,7 @@ Shell(guestfish) ln - sf target linkname
 <p> The error <tt>&quot;no root device found in this operating system image&quot;</tt> is related to this. It means inspection was unable to locate an operating system within the disk image you gave it. You might see this from programs like virt-cat if you try to run them on something which is just a disk image, not a virtual machine disk image.</p>
 <h3>What do these debug* and internal-* functions do?</h3>
 <p> There are some functions which are used for debugging and internal purposes which are <i>not</i> part of the stable <font SIZE="-1">API.</font> </p>
-<p> The <tt>&quot;debug*&quot;</tt> (or <tt>&quot;guestfs_debug*&quot;</tt>) functions, primarily &#8220;guestfs_debug&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) and a handful of others, are used for debugging libguestfs. Although they are not part of the stable <font SIZE="-1">API</font> and thus may change or be removed at any time, some programs may want to call these while waiting for features to be added to libguestfs. </p>
+<p> The <tt>&quot;debug*&quot;</tt> (or <tt>&quot;guestfs_debug*&quot;</tt>) functions, primarily &#8220;guestfs_debug&#8221; in <code>guestfs</code>(3) and a handful of others, are used for debugging libguestfs. Although they are not part of the stable <font SIZE="-1">API</font> and thus may change or be removed at any time, some programs may want to call these while waiting for features to be added to libguestfs. </p>
 <p> The <tt>&quot;internal-*&quot;</tt> (or <tt>&quot;guestfs_internal_*&quot;</tt>) functions are purely to be used by libguestfs itself. There is no reason for programs to call them, and programs should not try to use them. Using them will often cause bad things to happen, as well as not being part of the documented stable <font SIZE="-1">API.</font></p>
 <h2>DEVELOPERS</h2>
 <h3>Where do I send patches?</h3>
@@ -626,7 +626,7 @@ Shell(guestfish) ln - sf target linkname
 <dd> The <font SIZE="-1">VM</font> kernel (1) can cache data in memory, so it doesn&#8217;t appear in the disk image.</p>
 <dt>ii.</p>
 <dd> The libguestfs appliance kernel (2) doesn&#8217;t expect that the disk image is changing underneath it, so its own cache is not magically updated even when the <font SIZE="-1">VM</font> kernel (1) does update the disk image.</dl>
-<p> The only supported solution is to restart the entire libguestfs appliance whenever you want to look at changes in the disk image. At the <font SIZE="-1">API</font> level that corresponds to calling <tt>&quot;guestfs_shutdown&quot;</tt> followed by <tt>&quot;guestfs_launch&quot;</tt>, which is a heavyweight operation (see also <code><a href="/docs/linux/man/3-guestfs-performance/">guestfs-performance</a></code>(3)). </p>
+<p> The only supported solution is to restart the entire libguestfs appliance whenever you want to look at changes in the disk image. At the <font SIZE="-1">API</font> level that corresponds to calling <tt>&quot;guestfs_shutdown&quot;</tt> followed by <tt>&quot;guestfs_launch&quot;</tt>, which is a heavyweight operation (see also <code>guestfs-performance</code>(3)). </p>
 <p> There are some unsupported hacks you can try if relaunching the appliance is really too costly:</p>
 <dl>
 <dt>&bull;</p>
@@ -639,7 +639,7 @@ Shell(guestfish) ln - sf target linkname
 <p> Nothing helps if the guest is making more fundamental changes (eg. deleting filesystems). For those kinds of things you must relaunch the appliance. </p>
 <p> (Note there is a third problem that you need to use consistent snapshots to really examine live disk images, but that’s a general problem with using libguestfs against any live disk image.)</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <code>guestfs</code>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

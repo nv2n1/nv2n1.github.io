@@ -22,5 +22,5 @@ if (!sample)
 <h2>RETURN VALUE</h2>
 <p> Returns a pointer to the SAMPLE or NULL on error. Remember to free this sample later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-destroy_sample/">destroy_sample</a></code>(3), <code><a href="/docs/linux/man/3-load_voc/">load_voc</a></code>(3), <code><a href="/docs/linux/man/3-load_wav/">load_wav</a></code>(3), <code><a href="/docs/linux/man/3-play_sample/">play_sample</a></code>(3), <code><a href="/docs/linux/man/3-save_sample/">save_sample</a></code>(3), <code><a href="/docs/linux/man/3-register_sample_file_type/">register_sample_file_type</a></code>(3), <code><a href="/docs/linux/man/3-exsample/">exsample</a></code>(3) </p>
+<p> <code>destroy_sample</code>(3), <code><a href="/docs/linux/man/3-load_voc/">load_voc</a></code>(3), <code><a href="/docs/linux/man/3-load_wav/">load_wav</a></code>(3), <code><a href="/docs/linux/man/3-play_sample/">play_sample</a></code>(3), <code><a href="/docs/linux/man/3-save_sample/">save_sample</a></code>(3), <code><a href="/docs/linux/man/3-register_sample_file_type/">register_sample_file_type</a></code>(3), <code><a href="/docs/linux/man/3-exsample/">exsample</a></code>(3) </p>
 <h2>Index</h2>

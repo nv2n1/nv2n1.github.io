@@ -12,7 +12,7 @@ description: "llvm-addr2line – a drop-in replacement for addr2line"
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-addr2line</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>llvm-addr2line</code> is an alias for the <code><a href="/docs/linux/man/1-llvm-symbolizer/">llvm-symbolizer</a>(1)</code> tool with different defaults. The goal is to make it a drop-in replacement for GNU’s <code>addr2line</code>. </p>
+<p> <code>llvm-addr2line</code> is an alias for the <code>llvm-symbolizer(1)</code> tool with different defaults. The goal is to make it a drop-in replacement for GNU’s <code>addr2line</code>. </p>
 <p> Here are some of those differences:</p>
 <dl>
 <dt>&bull;</p>
@@ -28,7 +28,7 @@ description: "llvm-addr2line – a drop-in replacement for addr2line"
 <dt>&bull;</p>
 <dd> <code>llvm-addr2line</code> parses options from the environment variable <code>LLVM_ADDR2LINE_OPTS</code> instead of from <code>LLVM_SYMBOLIZER_OPTS</code>.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-llvm-symbolizer/">llvm-symbolizer</a>(1)</code></p>
+<p> <code>llvm-symbolizer(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>COPYRIGHT</h2>

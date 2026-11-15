@@ -43,7 +43,7 @@ description: "mdoc – Mono documentation management tool"
 </pre>
 <p> This will use <code><a href="/docs/linux/man/1-xsp/">xsp</a></code>(1) to serve the ASP.NET webapp; Visit <i><a rel="nofollow" href="http://localhost:8080/">http://localhost:8080/</a></i> to view the documentation.</p>
 <dt><code>*</code></p>
-<dd> To use the <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1) documentation browser, you must first <i>assemble</i> the documentation: </p>
+<dd> To use the <code>monodoc</code>(1) documentation browser, you must first <i>assemble</i> the documentation: </p>
 <pre>
     mdoc assemble -o ProjectName docs/en
 </pre>
@@ -66,7 +66,7 @@ description: "mdoc – Mono documentation management tool"
 <p> <code>mdoc assemble</code></p>
 <dl>
 <dt>
-<dd> Compiles documentation for use within the <code><a href="/docs/linux/man/1-monodoc/">monodoc</a></code>(1) browser. </p>
+<dd> Compiles documentation for use within the <code>monodoc</code>(1) browser. </p>
 <p> See the <code><a href="/docs/linux/man/1-mdoc-assemble/">mdoc-assemble</a></code>(1) man page for details.</dl>
 <p> <code>mdoc export-html</code></p>
 <dl>

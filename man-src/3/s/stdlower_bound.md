@@ -63,7 +63,7 @@ Iterator pointing to the first element that is not less than value, or last if n
 <h2>Complexity</h2>
 
 The number of comparisons performed is logarithmic in the distance between first and last (At most log 
-2(last - first) + <a HREF="/docs/linux/man/1-o/">O</a>(1) comparisons). However, for non-LegacyRandomAccessIterators, the number of iterator increments is linear.
+2(last - first) + O(1) comparisons). However, for non-LegacyRandomAccessIterators, the number of iterator increments is linear.
 
 <h2>Possible implementation</h2>
 

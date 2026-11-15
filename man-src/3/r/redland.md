@@ -472,7 +472,7 @@ librdf_free_model(model);
 librdf_free_storage(storage);
 librdf_free_world(world);</code></pre>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/3-libraptor/">libraptor</a></i>(3), <i><a href="/docs/linux/man/4-libxml/">libxml</a></i>(4).</p>
+<p><i><a href="/docs/linux/man/3-libraptor/">libraptor</a></i>(3), <i>libxml</i>(4).</p>
 <h2>History</h2>
 <p>The <code>redland</code> <font SIZE="-1">RDF</font> library was created by Dave Beckett in June 2000.</p>
 <h2>Author</h2>

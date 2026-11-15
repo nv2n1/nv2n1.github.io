@@ -31,11 +31,11 @@ int PAPI_accum_counters( long long *values, int array_len );</pre>
 <p> <code>PAPI_accum_counters()</code> adds the event counters into the array *values. </p>
 <pre>do_100events();
 if ( PAPI_read_counters( values, num_hwcntrs ) != PAPI_OK )
- <a href="//www.systutorials.com/docs/linux/man/1-handlw_error/">handlw_error</a>(1);
+ handlw_error(1);
 // values[0] now equals 100 
 do_100events();
 if ( PAPI_accum_counters( values, num_hwcntrs ) != PAPI_OK )
- <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+ handle_error(1);
 // values[0] now equals 200
 values[0] = -100;
 do_100events();

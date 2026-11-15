@@ -387,13 +387,13 @@ test</pre>
 <p> In the following examples, the left (which is identical to the right) and the middle part of the manual page header strings are shown. Note how `\&amp;&#8217; prevents the digit~7 from being a valid numeric expression.</p>
 <dl>
 <dt><code>. </code></p>
-<dd>`<a href="/docs/linux/man/7-foo/">FOO</a>(7)&#8217; `&#8217;</p>
+<dd>`FOO(7)&#8217; `&#8217;</p>
 <dt><code>. </code></p>
-<dd>`<a href="/docs/linux/man/7-foo/">FOO</a>(7)&#8217; `&#8217;</p>
+<dd>`FOO(7)&#8217; `&#8217;</p>
 <dt><code>. </code></p>
-<dd>`<a href="/docs/linux/man/7-foo/">FOO</a>(7)&#8217; `bar&#8217;</p>
+<dd>`FOO(7)&#8217; `bar&#8217;</p>
 <dt><code>. </code></p>
-<dd>`<a href="/docs/linux/man/2-foo/">FOO</a>(2)&#8217; `/&#8217;</p>
+<dd>`FOO(2)&#8217; `/&#8217;</p>
 <dt><code>. </code></p>
 <dd>`FOO&#8217; `bar&#8217;</dl>
 <p> Local, OS-specific additions might be found in the file mdoc.local look for strings named `volume-ds-XXX&#8217; (for the former type) and `volume-as-XXX&#8217; (for the latter type); `XXX&#8217; then denotes the keyword to be used with the `. &#8216; macro. </p>
@@ -540,7 +540,7 @@ test</pre>
 <dd><i>file ) )</i></dl>
 <p> The default width is 12n.</p>
 <h3>Configuration Declaration (Section Four Only)</h3>
-<p>The `.<code>macro</code> &#8216; is used to demonstrate a <a href="/docs/linux/man/8-config/">config</a>(8) declaration for a device interface in a section four manual. </p>
+<p>The `.<code>macro</code> &#8216; is used to demonstrate a config(8) declaration for a device interface in a section four manual. </p>
 <blockquote><p><tt>Usage: .</tt><code>Ao </code>argument Ac &#8230; </p></blockquote>
 <dl>
 <dt><code>.&quot;device le0 at scode?&quot;</code></p>
@@ -1026,10 +1026,10 @@ test</pre>
 <dd>mdoc</p>
 <dt><code>.mdoc, </code></p>
 <dd>mdoc,</p>
-<dt><code><a href="/docs/linux/man/7--mdoc/">.mdoc</a>(7) </code></p>
+<dt><code>.mdoc(7) </code></p>
 <dd><a href="/docs/linux/man/7-mdoc/">mdoc</a>(7)</p>
-<dt><code><a href="//www.systutorials.com/docs/linux/man/1x-.xinit/">.xinit</a>(1x); </code></p>
-<dd><a href="//www.systutorials.com/docs/linux/man/1x-xinit/">xinit</a>(1x);</dl>
+<dt><code>.xinit(1x); </code></p>
+<dd>xinit(1x);</dl>
 <p> The default width is 10n.</p>
 <h2>General Text Domain</h2>
 <h3>AT&amp;T Macro</h3>
@@ -1304,7 +1304,7 @@ test</pre>
 <pre>.Rs
 .%A &quot;Matthew Bar&quot;
 .%A &quot;John Foo&quot;
-.%T &quot;Implementation Notes on <a href="//www.systutorials.com/docs/linux/man/1-foobar/">foobar</a>(1)&quot;
+.%T &quot;Implementation Notes on foobar(1)&quot;
 .%R &quot;Technical Report ABC-DE-12-345&quot;
 .%Q &quot;Drofnats College&quot;
 .%C &quot;Nowhere&quot;
@@ -1314,7 +1314,7 @@ test</pre>
 <p> produces </p>
 <blockquote>
 <dl>
-<dd>&quot;Matthew Bar&quot; &quot;John Foo&quot; <i>&quot;Implementation Notes on <a href="/docs/linux/man/1-foobar/">foobar</a>(1)&quot;</i> <i>&quot;Technical Report ABC-DE-12-345&quot;</i> &quot;Drofnats College&quot; &quot;April 1991&quot;</dl>
+<dd>&quot;Matthew Bar&quot; &quot;John Foo&quot; <i>&quot;Implementation Notes on foobar(1)&quot;</i> <i>&quot;Technical Report ABC-DE-12-345&quot;</i> &quot;Drofnats College&quot; &quot;April 1991&quot;</dl>
 </blockquote>
 <h3>Trade Names (or Acronyms and Type Names)</h3>
 <p>The trade name macro prints its arguments in a smaller font. Its intended use is to imitate a small caps fonts for uppercase acronyms. </p>

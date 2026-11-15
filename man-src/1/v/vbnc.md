@@ -83,7 +83,7 @@ description: "vbnc – Mono Visual Basic Compiler."
 <h2>LICENSE</h2>
 <p> The Mono Visual Basic compiler is released under the terms of the GNU LGPL. Alternative licenses are available from Novell. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-mcs/">mcs</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mint/">mint</a>(1), <a href="/docs/linux/man/1-sn/">sn</a>(1) </p>
+<p> <a href="/docs/linux/man/1-mcs/">mcs</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), mint(1), <a href="/docs/linux/man/1-sn/">sn</a>(1) </p>
 <h2>BUGS</h2>
 <p> To report bugs in the compiler, you can file bug reports in our bug tracking system: <a rel="nofollow" href="http://bugzilla.ximian.com.">http://bugzilla.ximian.com.</a></p>
 <h2>MAILING LIST</h2>

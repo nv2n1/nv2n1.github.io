@@ -10,7 +10,7 @@ uuencode - format of an encoded uuencode file
 
 <h2>Description</h2>
 
-Files output by <a HREF="/docs/linux/man/1-uuencode/">uuencode</a>(1) consist of a header line, followed by a number of body lines, and a trailer line. The <a HREF="/docs/linux/man/1-uudecode/">uudecode</a>(1) command will ignore any lines preceding the header or following the trailer. Lines preceding a header must not, of course, look like a header. 
+Files output by uuencode(1) consist of a header line, followed by a number of body lines, and a trailer line. The uudecode(1) command will ignore any lines preceding the header or following the trailer. Lines preceding a header must not, of course, look like a header. 
 
  The header line is distinguished by having the first 5 characters be <i>begin</i> followed by a space, or else a hyphen and either <i>base64</i> or <i>encoded</i> or both (also separated with a hyphen). The <i>base64</i> option says the file has been encoded using base64. The <i>encoded</i> option says the output file <i>name</i> has been base64 encoded. It is never encoded with traditional uuencoding. This is a GNU extension. These are followed by a mode (in octal), and a string which names the remote file. The mode is separated from the <i>begin</i> clause and the file name by a single space character.
 
@@ -40,7 +40,7 @@ IEEE Std 1003.1, plus extensions
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/1-uuencode/">uuencode</a>(1), <a HREF="/docs/linux/man/1-uudecode/">uudecode</a>(1), base64(1GNU)
+uuencode(1), uudecode(1), base64(1GNU)
 
 <h2>History</h2>
 

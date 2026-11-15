@@ -25,7 +25,7 @@ description: "tv_grab_za – Grab TV listings for South Africa."
 <p> <code>&#8211;retries</code> number of retries before failing channel download. </p>
 <p> <code>&#8211;help</code> print a help message and exit.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHORS Chris Picton &lt;cpicton [at] users.sf.net&gt; Neil Garratt &lt;ngarratt [at] users.sf.net&gt;</h2>
 <p> Based on tv_grab_fi by Matti Airas. </p>
 <p> Latest version always available at <a rel="nofollow" href="http://xmltv.cvs.sourceforge.net/xmltv/xmltv/grab/za/">http://xmltv.cvs.sourceforge.net/xmltv/xmltv/grab/za/</a></p>

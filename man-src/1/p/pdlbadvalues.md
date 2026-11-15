@@ -77,7 +77,7 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
  pdl&gt; print &quot;&gt;&gt;c: &quot;, $c-&gt;badflag, &quot;
 &quot;;
  &gt;&gt;c: 0
- pdl&gt; $a-&gt;<a href="//www.systutorials.com/docs/linux/man/1-badflag/">badflag</a>(1);
+ pdl&gt; $a-&gt;badflag(1);
  pdl&gt; print &quot;&gt;&gt;c: &quot;, $c-&gt;badflag, &quot;
 &quot;;
  &gt;&gt;c: 1</pre>
@@ -94,14 +94,14 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <dt>&bull;</p>
 <dd>the badflag can <font SIZE="-1">ONLY</font> be cleared <font SIZE="-1">IF</font> a piddle has <font SIZE="-1">NO</font> parents, and that this change will propagate to all the children of that piddle. I am not so keen on this anymore (too awkward to code, for one).</p>
 <dt>&bull;</p>
-<dd><tt>&quot;$a-&gt;<a href="/docs/linux/man/1-badflag/">badflag</a>(1)&quot;</tt> should propagate the badflag to <font SIZE="-1">BOTH</font> parents and children.</dl>
+<dd><tt>&quot;$a-&gt;badflag(1)&quot;</tt> should propagate the badflag to <font SIZE="-1">BOTH</font> parents and children.</dl>
 <p> This shouldn&#8217;t be hard to implement (although an initial attempt failed!). Does it make sense though? There&#8217;s also the issue of what happens if you change the badvalue of a piddle &#8211; should these propagate to children/parents (yes) or whether you should only be able to change the badvalue at the &#8216;top&#8217; level &#8211; i.e. those piddles which do not have parents. </p>
 <p> The <tt>&quot;orig_badvalue()&quot;</tt> method returns the compile-time value for a given datatype. It works on piddles, PDL::Type objects, and numbers &#8211; eg </p>
-<pre> $pdl-&gt;orig_badvalue(), byte-&gt;orig_badvalue(), and <a href="//www.systutorials.com/docs/linux/man/4-orig_badvalue/">orig_badvalue</a>(4).</pre>
+<pre> $pdl-&gt;orig_badvalue(), byte-&gt;orig_badvalue(), and orig_badvalue(4).</pre>
 <p>It also has a horrible name&#8230; </p>
 <p> To get the current bad value, use the <tt>&quot;badvalue()&quot;</tt> method &#8211; it has the same syntax as <tt>&quot;orig_badvalue()&quot;</tt>. </p>
 <p> To change the current bad value, supply the new number to badvalue &#8211; eg </p>
-<pre> $pdl-&gt;badvalue(2.3), byte-&gt;<a href="//www.systutorials.com/docs/linux/man/2-badvalue/">badvalue</a>(2), badvalue(5,-3e34).</pre>
+<pre> $pdl-&gt;badvalue(2.3), byte-&gt;badvalue(2), badvalue(5,-3e34).</pre>
 <p><i>Note</i>: the value is silently converted to the correct C type, and returned &#8211; i.e. <tt>&quot;byte-&gt;badvalue(-26)&quot;</tt> returns 230 on my Linux machine. It is also a <tt>&quot;nop&quot;</tt> for floating-point types when <tt>&quot;BADVAL_USENAN&quot;</tt> is true. </p>
 <p> Note that changes to the bad value are <i></i><font SIZE="-1"><i>NOT</i></font><i></i> propagated to previously-created piddles &#8211; they will still have the bad value set, but suddenly the elements that were bad will become &#8216;good&#8217;, but containing the old bad value. See discussion below. It&#8217;s not a problem for floating-point types which use NaN, since you can not change their badvalue.</p>
 <h3>Bad values and boolean operators</h3>
@@ -119,7 +119,7 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <pre> pdl&gt; $a = byte( 1, 2, byte-&gt;badvalue, 4, 5 );
  pdl&gt; p $a;
  [1 2 255 4 5]
- pdl&gt; $a-&gt;<a href="//www.systutorials.com/docs/linux/man/1-badflag/">badflag</a>(1)
+ pdl&gt; $a-&gt;badflag(1)
  pdl&gt; p $a;
  [1 2 BAD 4 5]
  pdl&gt; byte-&gt;badvalue(0);
@@ -224,7 +224,7 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <pre> the piddle does not have its bad flag set
  the datatype is a float or double</pre>
 <p>otherwise we use the <tt>&quot;BadCode&quot;</tt> section. This is <i></i><font SIZE="-1"><i>NOT IMPLEMENTED</i></font><i></i>, as it will require reasonable hacking of PP::PDLCode! </p>
-<p> There&#8217;s also the problem of how we handle &#8216;exceptions&#8217; &#8211; since <tt>&quot;$a = <a href="/docs/linux/man/2-pdl/">pdl</a>(2) / pdl(0)&quot;</tt> produces a bad value but doesn&#8217;t update the badflag value of the piddle. Can we catch an exception, or do we have to trap for this (e.g. search for <tt>&quot;exception&quot;</tt> in <i>Basic/Ops/ops.pd</i>)? </p>
+<p> There&#8217;s also the problem of how we handle &#8216;exceptions&#8217; &#8211; since <tt>&quot;$a = pdl(2) / pdl(0)&quot;</tt> produces a bad value but doesn&#8217;t update the badflag value of the piddle. Can we catch an exception, or do we have to trap for this (e.g. search for <tt>&quot;exception&quot;</tt> in <i>Basic/Ops/ops.pd</i>)? </p>
 <p> Checking for <tt>&quot;Nan&quot;</tt>, and <tt>&quot;Inf&quot;</tt> is done by using the <tt>&quot;finite()&quot;</tt> system call. If you want to set a value to the <tt>&quot;NaN&quot;</tt> value, the following bit of code can be used (this can be found in both <i>Basic/Core/Core.xs.PL</i> and <i>Basic/Bad/bad.pd</i>): </p>
 <pre> /* for big-endian machines */
  static union { unsigned char __c[4]; float __d; } 
@@ -279,7 +279,7 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <pre> $b = $a-&gt;slice(); 
  $b-&gt;baddata(0)</pre>
 <p>doesn&#8217;t mean that <tt>$a</tt> shouldn&#8217;t have its badvalue cleared. however, after </p>
-<pre> $b-&gt;<a href="//www.systutorials.com/docs/linux/man/1-baddata/">baddata</a>(1)</pre>
+<pre> $b-&gt;baddata(1)</pre>
 <p>it&#8217;s sensible to assume that the parents now get flagged as containing bad values. </p>
 <p> <font SIZE="-1">PERHAPS</font> you can only clear the bad value flag if you are <font SIZE="-1">NOT</font> a child of another piddle, whereas if you set the flag then all children <font SIZE="-1">AND</font> parents should be set as well? </p>
 <p> Similarly, if you change the bad value in a piddle, should this be propagated to parent &amp; children? Or should you only be able to do this on the &#8216;top-level&#8217; piddle? Nasty&#8230;</p>

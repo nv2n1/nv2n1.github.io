@@ -26,7 +26,7 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
 <p> You can also run virt-inspector on install disks, live CDs, bootable <font SIZE="-1">USB</font> keys and similar. </p>
 <p> Virt-inspector can only inspect and report upon <i>one domain at a time</i>. To inspect several virtual machines, you have to run virt-inspector several times (for example, from a shell script for-loop). </p>
 <p> Because virt-inspector needs direct access to guest images, it won&#8217;t normally work over remote libvirt connections. </p>
-<p> All of the information available from virt-inspector is also available through the core libguestfs inspection <font SIZE="-1">API </font>(see &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)). The same information can also be fetched using guestfish or via libguestfs bindings in many programming languages (see &#8220;<font SIZE="-1">GETTING INSPECTION DATA FROM THE LIBGUESTFS API&#8221;</font>).</p>
+<p> All of the information available from virt-inspector is also available through the core libguestfs inspection <font SIZE="-1">API </font>(see &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <i>guestfs</i>(3)). The same information can also be fetched using guestfish or via libguestfs bindings in many programming languages (see &#8220;<font SIZE="-1">GETTING INSPECTION DATA FROM THE LIBGUESTFS API&#8221;</font>).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></p>
@@ -101,7 +101,7 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
      &lt;windows_systemroot&gt;/Windows&lt;/windows_systemroot&gt;
      &lt;format&gt;installed&lt;/format&gt;
 </pre>
-<p> In brief, &lt;name&gt; is the class of operating system (something like <tt>&quot;linux&quot;</tt> or <tt>&quot;windows&quot;</tt>), &lt;distro&gt; is the distribution (eg. <tt>&quot;fedora&quot;</tt> but many other distros are recognized) and &lt;arch&gt; is the guest architecture. The other fields are fairly self-explanatory, but because these fields are taken directly from the libguestfs inspection <font SIZE="-1">API</font> you can find precise information from &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3). </p>
+<p> In brief, &lt;name&gt; is the class of operating system (something like <tt>&quot;linux&quot;</tt> or <tt>&quot;windows&quot;</tt>), &lt;distro&gt; is the distribution (eg. <tt>&quot;fedora&quot;</tt> but many other distros are recognized) and &lt;arch&gt; is the guest architecture. The other fields are fairly self-explanatory, but because these fields are taken directly from the libguestfs inspection <font SIZE="-1">API</font> you can find precise information from &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <i>guestfs</i>(3). </p>
 <p> The &lt;root&gt; element is the root filesystem device, but from the point of view of libguestfs (block devices may have completely different names inside the <font SIZE="-1">VM</font> itself).</p>
 <h3>&lt;mountpoints&gt;</h3>
 <p> Un*x-like guests typically have multiple filesystems which are mounted at various mountpoints, and these are described in the &lt;mountpoints&gt; element which looks like this: </p>
@@ -146,7 +146,7 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
          &lt;release&gt;1&lt;/release&gt;
        &lt;/application&gt;
 </pre>
-<p> The version and release fields may not be available for some types guests. Other fields are possible, see &#8220;guestfs_inspect_list_applications&#8221; in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> The version and release fields may not be available for some types guests. Other fields are possible, see &#8220;guestfs_inspect_list_applications&#8221; in <i>guestfs</i>(3).</p>
 <h3>&lt;drive_mappings&gt;</h3>
 <p> For operating systems like Windows which use drive letters, virt-inspector is able to find out how drive letters map to filesystems. </p>
 <pre>
@@ -198,12 +198,12 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
     virt &#8211; inspector&#8211; xpath &#8216;string(//icon)&#8217; | base64 &#8211; i &#8211; d | display &#8211; [ displays the guest icon, if there is one ]</p>
 <h2>GETTING INSPECTION DATA FROM THE LIBGUESTFS API</h2>
 <p> In early versions of libguestfs, virt-inspector was a large Perl script that contained many heuristics for inspecting guests. This had several problems: in order to do inspection from other tools (like guestfish) we had to call out to this Perl script; and it privileged Perl over other languages that libguestfs supports. </p>
-<p> By libguestfs 1.8 we had rewritten the Perl code in C, and incorporated it all into the core libguestfs <font SIZE="-1">API </font>(<i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3)). Now virt-inspector is simply a thin C program over the core C <font SIZE="-1">API. </font> All of the inspection information is available from all programming languages that libguestfs supports, and from guestfish. </p>
-<p> For a description of the C inspection <font SIZE="-1">API,</font> read &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3). </p>
+<p> By libguestfs 1.8 we had rewritten the Perl code in C, and incorporated it all into the core libguestfs <font SIZE="-1">API </font>(<i>guestfs</i>(3)). Now virt-inspector is simply a thin C program over the core C <font SIZE="-1">API. </font> All of the inspection information is available from all programming languages that libguestfs supports, and from guestfish. </p>
+<p> For a description of the C inspection <font SIZE="-1">API,</font> read &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <i>guestfs</i>(3). </p>
 <p> For example code using the C inspection <font SIZE="-1">API,</font> look for <i>inspect-vm.c</i> which ships with libguestfs. </p>
-<p> <i>inspect-vm.c</i> has also been translated into other languages. For example, <i>inspect_vm.pl</i> is the Perl translation, and there are other translations for OCaml, Python, etc. See &#8220;<font SIZE="-1">USING LIBGUESTFS WITH OTHER PROGRAMMING LANGUAGES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) for a list of man pages which contain this example code.</p>
+<p> <i>inspect-vm.c</i> has also been translated into other languages. For example, <i>inspect_vm.pl</i> is the Perl translation, and there are other translations for OCaml, Python, etc. See &#8220;<font SIZE="-1">USING LIBGUESTFS WITH OTHER PROGRAMMING LANGUAGES&#8221;</font> in <i>guestfs</i>(3) for a list of man pages which contain this example code.</p>
 <h3><font SIZE="-1">GETTING INSPECTION DATA FROM GUESTFISH</font></h3>
-<p> If you use the guestfish <i>-i</i> option, then the main C inspection <font SIZE="-1">API </font>&#8220;guestfs_inspect_os&#8221; in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) is called. This is equivalent to the guestfish command <tt>&quot;inspect-os&quot;</tt>. You can also call this guestfish command by hand. </p>
+<p> If you use the guestfish <i>-i</i> option, then the main C inspection <font SIZE="-1">API </font>&#8220;guestfs_inspect_os&#8221; in <i>guestfs</i>(3) is called. This is equivalent to the guestfish command <tt>&quot;inspect-os&quot;</tt>. You can also call this guestfish command by hand. </p>
 <p> <tt>&quot;inspect-os&quot;</tt> performs inspection on the current disk image, returning the list of operating systems found. Each <font SIZE="-1">OS</font> is represented by its root filesystem device. In the majority of cases, this command prints nothing (no OSes found), or a single root device, but beware that it can print multiple lines if there are multiple OSes or if there is an install <font SIZE="-1">CD</font> attached to the guest. </p>
 <pre>
  $ guestfish --ro -a F15x32.img
@@ -278,7 +278,7 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <a rel="nofollow" href="http://www.w3.org/TR/xpath/,">http://www.w3.org/TR/xpath/,</a> <i><a href="/docs/linux/man/1-base64/">base64</a></i>(1), <i><a href="/docs/linux/man/1-xmlstarlet/">xmlstarlet</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <a rel="nofollow" href="http://www.w3.org/TR/xpath/,">http://www.w3.org/TR/xpath/,</a> <i><a href="/docs/linux/man/1-base64/">base64</a></i>(1), <i><a href="/docs/linux/man/1-xmlstarlet/">xmlstarlet</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>&bull;</p>

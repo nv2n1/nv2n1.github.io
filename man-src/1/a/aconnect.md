@@ -14,7 +14,7 @@ description: "aconnect – ALSA sequencer connection manager"
  <code>aconnect</code> -i|-o [-options]<br />
  <code>aconnect</code> -x </p>
 <h2>DESCRIPTION</h2>
-<p> <code>aconnect</code> is a utility to connect and disconnect two existing ports on ALSA sequencer system. The ports with the arbitrary subscription permission, such as created by <code><a href="/docs/linux/man/1-aseqview/">aseqview</a>(1),</code> can be connected to any (MIDI) device ports using <code>aconnect.</code> For example, to connect from port 64:0 to 65:0, run as follows:</p>
+<p> <code>aconnect</code> is a utility to connect and disconnect two existing ports on ALSA sequencer system. The ports with the arbitrary subscription permission, such as created by <code>aseqview(1),</code> can be connected to any (MIDI) device ports using <code>aconnect.</code> For example, to connect from port 64:0 to 65:0, run as follows:</p>
 <dl>
 <dt>
 <dd> % aconnect 64:0 65:0</dl>
@@ -61,7 +61,7 @@ description: "aconnect – ALSA sequencer connection manager"
 <dd> Remove all exported connections. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-aseqnet/">aseqnet</a>(1), <a href="/docs/linux/man/1-aseqview/">aseqview</a>(1) </p>
+<p> <a href="/docs/linux/man/1-aseqnet/">aseqnet</a>(1), aseqview(1) </p>
 <h2>AUTHOR</h2>
 <p> Takashi Iwai &lt;tiwai [at] suse.de&gt; </p>
 <h2>Index</h2>

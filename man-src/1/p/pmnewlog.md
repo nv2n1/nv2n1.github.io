@@ -13,8 +13,8 @@ description: "pmnewlog – stop and restart archive logging for PCP performance 
 <p> <code>$PCP_BINADM_DIR/pmnewlog</code> [<code>-a</code> <i>accessfile</i>] [<code>-C</code> <i>saveconfig</i>] [<code>-c</code> <i>configfile</i>] [<code>-N</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-P</code>] [<code>-p</code> <i>pid</i>] [<code>-s</code>] [<code>-V</code>] [<i>other pmlogger options</i>] <i>archive</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmnewlog</code> may be used to stop and restart a running instance of <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). This is most useful for managing multiple sets of Performance Co-Pilot (PCP) archive logs. These archive logs record the history of performance metric values that may be &#8220;played back&#8221; by other PCP tools, and they form the basis of the VCR paradigm and retrospective performance analysis services common to the PCP toolkit. </p>
-<p> In normal usage, <code>pmnewlog</code> would be executed by <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1) in the wee hours to terminate one PCP archive log and start another, i.e. to perform log rotation. </p>
-<p> Even more common, would be the execution of <code>pmnewlog</code> from the PCP archive management script <code><a href="/docs/linux/man/1-pmlogger_daily/">pmlogger_daily</a></code>(1). In this case, direct end-user execution of <code>pmnewlog</code> is most unlikely. </p>
+<p> In normal usage, <code>pmnewlog</code> would be executed by <code>cron</code>(1) in the wee hours to terminate one PCP archive log and start another, i.e. to perform log rotation. </p>
+<p> Even more common, would be the execution of <code>pmnewlog</code> from the PCP archive management script <code>pmlogger_daily</code>(1). In this case, direct end-user execution of <code>pmnewlog</code> is most unlikely. </p>
 <p> The mandatory argument <i>archive</i> is the base name for the physical files that will constitute the new archive log. </p>
 <p> The <code>pmlogger</code> instance to be stopped and restarted must be running on the same system as <code>pmnewlog</code> and is either the primary logger (the default) or the logger with <i>pid</i> as specified by the <code>-p</code> option. </p>
 <p> If the <code>-n</code> option is specified, then <code>pmnewlog</code> will use the namespace in the <i>pmnsfile</i>, rather than the default Performance Metrics Name Space (PMNS). </p>
@@ -37,9 +37,9 @@ description: "pmnewlog – stop and restart archive logging for PCP performance 
 <dt><code>-V</code> <i>version</i></p>
 <dd> The new <code>pmlogger</code> will always create the latest version PCP archive format, and the <code>-V</code> option of <code>pmnewlog</code> takes precedence.</p>
 <dt><code>-x</code> <i>fd</i></p>
-<dd> The launched <code>pmlogger</code> cannot be controlled by <code><a href="/docs/linux/man/3-pmrecordcontrol/">pmRecordControl</a></code>(3).</dl>
+<dd> The launched <code>pmlogger</code> cannot be controlled by <code>pmRecordControl</code>(3).</dl>
 <h2>EXAMPLE</h2>
-<p> The following <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) script could be executed by root via <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1) to start a new set of archive logs for the primary logger each evening. A more complete version of this script may be found in <i>$PCP_BINADM_DIR/pmlogger_daily</i>, and is documented in the manual page for <code><a href="/docs/linux/man/1-pmlogger_daily/">pmlogger_daily</a></code>(1). </p>
+<p> The following <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) script could be executed by root via <code>cron</code>(1) to start a new set of archive logs for the primary logger each evening. A more complete version of this script may be found in <i>$PCP_BINADM_DIR/pmlogger_daily</i>, and is documented in the manual page for <code>pmlogger_daily</code>(1). </p>
 <pre><code>
 #!/ bin / sh
 #start new logs for PCP primary logger on this host
@@ -64,7 +64,7 @@ LOGDIR = $PCP_LOG_DIR / pmlogger /`hostname`
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1), <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger_daily/">pmlogger_daily</a></code>(1), <code><a href="/docs/linux/man/1-pmsocks/">pmsocks</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
+<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1), <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code>pmlogger_daily</code>(1), <code><a href="/docs/linux/man/1-pmsocks/">pmsocks</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>DIAGNOSTICS</h2>
 <p> Due to the precious nature of the archive logs, <code>pmnewlog</code> is rather paranoid in its checking and validation, and will try very hard to ensure that an appropriately configured <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) can be restarted, before terminating the existing <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
 <p> As a consequence of this checking, <code>pmnewlog</code> tends to generate rather verbose error and warning messages.</p>

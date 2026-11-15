@@ -34,7 +34,7 @@ description: "ppmntsc – make a portable pixmap look like taken from an America
 <dd> Output only pixels that are corrected versions of illegal pixels. Output black in place of pixels that are already legal. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/1-ppmdepth/">ppmdepth</a></code>(1), <code><a href="/docs/linux/man/1-ppmdim/">ppmdim</a></code>(1), <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code>ppmdepth</code>(1), <code><a href="/docs/linux/man/1-ppmdim/">ppmdim</a></code>(1), <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Wes Barris, Minnesota Supercomputer Center, Inc., Bryan Henderson </p>
 <h2>Index</h2>

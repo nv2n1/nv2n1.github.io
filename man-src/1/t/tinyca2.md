@@ -28,7 +28,7 @@ description: "tinyca2 – Very simple Certification Authority"
 <dt>~/.TinyCA/</p>
 <dd> Storage place for the different CAs</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-openssl/">openssl</a>(1).</code></p>
+<p> <code>openssl(1).</code></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ulrich Scholler &lt;scholler [at] fnb.tu-darmstadt.de&gt;, for the Debian GNU/Linux system (but may be used by others). Modifications for Tinyca2 version 0.7.6 were done by Tuomo Soini &lt;tis [at] foobar.fi&gt; </p>
 <h2>Index</h2>

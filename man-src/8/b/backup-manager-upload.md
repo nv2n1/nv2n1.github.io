@@ -61,7 +61,7 @@ description: "backup-manager-upload – Multiprotocol uploader for backup-manage
 <dt>Unknown upload method: 23</p>
 <dd></dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/3-backup-manager/">backup-manager</a></i>(3)</p>
+<p><i>backup-manager</i>(3)</p>
 <h2>Authors</h2>
 <p>Alexis Sukrieh &#8211; main code and design </p>
 <p> Brad Dixon &#8211; Amazon S3 upload method </p>

@@ -21,7 +21,7 @@ maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MS
 
  The <tt>&quot;maketext&quot;</tt> script translates a natural language message into the user's language, by looking up the translation in a message <font SIZE="-1">MO</font> file, and process the plural transformation with Maketext. 
 
- The <tt>&quot;maketext&quot;</tt> script is a command-line interface to <i><a HREF="/docs/linux/man/3-locale--maketext--gettext/">Locale::Maketext::Gettext</a></i>(3) (and <i><a HREF="/docs/linux/man/3-locale--maketext/">Locale::Maketext</a></i>(3)). It can be used in shell scripts, etc, to translate, maketext and return the result. By this way, it enables Maketext to be integrated into other programming languages/systems, like bash/csh, python, <font SIZE="-1">PHP, C,</font> etc. It works like the command-line program gettext. 
+ The <tt>&quot;maketext&quot;</tt> script is a command-line interface to <i>Locale::Maketext::Gettext</i>(3) (and <i>Locale::Maketext</i>(3)). It can be used in shell scripts, etc, to translate, maketext and return the result. By this way, it enables Maketext to be integrated into other programming languages/systems, like bash/csh, python, <font SIZE="-1">PHP, C,</font> etc. It works like the command-line program gettext. 
 
  For example: 
 
@@ -65,7 +65,7 @@ maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MS
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/3-locale--maketext/">Locale::Maketext</a></i>(3), <i><a HREF="/docs/linux/man/3-locale--maketext--tpj13/">Locale::Maketext::TPJ13</a></i>(3), <i><a HREF="/docs/linux/man/3-locale--maketext--gettext/">Locale::Maketext::Gettext</a></i>(3), <i><a HREF="/docs/linux/man/3-locale--maketext--gettext--functions/">Locale::Maketext::Gettext::Functions</a></i>(3), <i><a HREF="/docs/linux/man/3-bindtextdomain/">bindtextdomain</a></i>(3), <i><a HREF="/docs/linux/man/3-textdomain/">textdomain</a></i>(3). Also, please refer to the official <font SIZE="-1">GNU</font> gettext manual at &lt;<a rel="nofollow" HREF="http://www.gnu.org/software/gettext/manual/">http://www.gnu.org/software/gettext/manual/</a>&gt;.
+ <i>Locale::Maketext</i>(3), <i>Locale::Maketext::TPJ13</i>(3), <i>Locale::Maketext::Gettext</i>(3), <i>Locale::Maketext::Gettext::Functions</i>(3), <i><a HREF="/docs/linux/man/3-bindtextdomain/">bindtextdomain</a></i>(3), <i><a HREF="/docs/linux/man/3-textdomain/">textdomain</a></i>(3). Also, please refer to the official <font SIZE="-1">GNU</font> gettext manual at &lt;<a rel="nofollow" HREF="http://www.gnu.org/software/gettext/manual/">http://www.gnu.org/software/gettext/manual/</a>&gt;.
 
 <h2>AUTHOR</h2>
 

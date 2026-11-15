@@ -1824,7 +1824,7 @@ static void main(String[] args)
 <dd> &bull; <a href="/docs/linux/man/1-jdb/">jdb</a>(1)</dl>
 <dl>
 <dt>
-<dd> &bull; <a href="/docs/linux/man/1-javah/">javah</a>(1)</dl>
+<dd> &bull; javah(1)</dl>
 <dl>
 <dt>
 <dd> &bull; <a href="/docs/linux/man/1-jar/">jar</a>(1)</dl>

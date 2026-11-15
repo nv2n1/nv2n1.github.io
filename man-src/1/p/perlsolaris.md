@@ -137,14 +137,14 @@ description: "perlsolaris – Perl version 5 on Solaris systems"
 <p> By default, perl will be compiled as a 32-bit application. Unless you want to allocate more than ~ 4GB of memory inside perl, or unless you need more than 255 open file descriptors, you probably don&#8217;t need perl to be a 64-bit app. </p>
 <p> <i>Large File Support</i> </p>
 <p> For Solaris 2.6 and onwards, there are two different ways for 32-bit applications to manipulate large files (files whose size is &gt; 2GByte). (A 64-bit application automatically has largefile support built in by default.) </p>
-<p> First is the &#8220;transitional compilation environment&#8221;, described in <code><a href="/docs/linux/man/5-lfcompile64/">lfcompile64</a></code>(5). According to the man page, </p>
+<p> First is the &#8220;transitional compilation environment&#8221;, described in <code>lfcompile64</code>(5). According to the man page, </p>
 <pre>
  The transitional compilation  environment  exports  all  the
  explicit 64-bit functions (xxx64()) and types in addition to
  all the regular functions (xxx()) and types. Both xxx()  and
  xxx64()  functions  are  available to the program source.  A
  32-bit application must use the xxx64() functions in  order
- to  access  large  files.  See the <a href="//www.systutorials.com/docs/linux/man/5-lf64/">lf64</a>(5) manual page for a
+ to  access  large  files.  See the lf64(5) manual page for a
  complete listing of the 64-bit transitional interfaces.
 </pre>
 <p> The transitional compilation environment is obtained with the following compiler and linker flags: </p>
@@ -153,7 +153,7 @@ description: "perlsolaris – Perl version 5 on Solaris systems"
  getconf LFS64_LDFLAG        # nothing special needed
  getconf LFS64_LIBS          # nothing special needed
 </pre>
-<p> Second is the &#8220;large file compilation environment&#8221;, described in <code><a href="/docs/linux/man/5-lfcompile/">lfcompile</a></code>(5). According to the man page, </p>
+<p> Second is the &#8220;large file compilation environment&#8221;, described in <code>lfcompile</code>(5). According to the man page, </p>
 <pre>
  Each interface named xxx() that needs to access 64-bit entities
  to  access  large  files maps to a xxx64() call in the
@@ -165,7 +165,7 @@ description: "perlsolaris – Perl version 5 on Solaris systems"
  files, rather than having to explicitly utilize the  transitional
  xxx64()  interface  calls to access large files.
 </pre>
-<p> Two exceptions are <code>fseek()</code> and <code>ftell()</code>. 32-bit applications should use <a href="//www.systutorials.com/docs/linux/man/3C-fseeko/">fseeko</a>(3C) and <a href="//www.systutorials.com/docs/linux/man/3C-ftello/">ftello</a>(3C). These will get automatically mapped to <code>fseeko64()</code> and <code>ftello64()</code>. </p>
+<p> Two exceptions are <code>fseek()</code> and <code>ftell()</code>. 32-bit applications should use fseeko(3C) and ftello(3C). These will get automatically mapped to <code>fseeko64()</code> and <code>ftello64()</code>. </p>
 <p> The large file compilation environment is obtained with </p>
 <pre>
  getconf LFS_CFLAGS      -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
@@ -242,13 +242,13 @@ description: "perlsolaris – Perl version 5 on Solaris systems"
 <p> You can pick up prebuilt binaries for Solaris from &lt;<a rel="nofollow" href="http://www.sunfreeware.com/">http://www.sunfreeware.com/</a>&gt;, &lt;<a rel="nofollow" href="http://www.blastwave.org">http://www.blastwave.org</a>&gt;, ActiveState &lt;<a rel="nofollow" href="http://www.activestate.com/">http://www.activestate.com/</a>&gt;, and &lt;<a rel="nofollow" href="http://www.perl.com/">http://www.perl.com/</a>&gt; under the Binaries list at the top of the page. There are probably other sources as well. Please note that these sites are under the control of their respective owners, not the perl developers.</p>
 <h2>RUNTIME ISSUES FOR PERL ON SOLARIS.</h2>
 <h3>Limits on Numbers of Open Files on Solaris.</h3>
-<p> The <a href="//www.systutorials.com/docs/linux/man/3C-stdio/">stdio</a>(3C) manpage notes that for <font SIZE="-1">LP32</font> applications, only 255 files may be opened using <code>fopen()</code>, and only file descriptors 0 through 255 can be used in a stream. Since perl calls <code>open()</code> and then <a href="//www.systutorials.com/docs/linux/man/3C-fdopen/">fdopen</a>(3C) with the resulting file descriptor, perl is limited to 255 simultaneous open files, even if <code>sysopen()</code> is used. If this proves to be an insurmountable problem, you can compile perl as a <font SIZE="-1">LP64</font> application, see &#8220;Building an <font SIZE="-1">LP64</font> perl&#8221; for details. Note also that the default resource limit for open file descriptors on Solaris is 255, so you will have to modify your ulimit or rctl (Solaris 9 onwards) appropriately.</p>
+<p> The stdio(3C) manpage notes that for <font SIZE="-1">LP32</font> applications, only 255 files may be opened using <code>fopen()</code>, and only file descriptors 0 through 255 can be used in a stream. Since perl calls <code>open()</code> and then fdopen(3C) with the resulting file descriptor, perl is limited to 255 simultaneous open files, even if <code>sysopen()</code> is used. If this proves to be an insurmountable problem, you can compile perl as a <font SIZE="-1">LP64</font> application, see &#8220;Building an <font SIZE="-1">LP64</font> perl&#8221; for details. Note also that the default resource limit for open file descriptors on Solaris is 255, so you will have to modify your ulimit or rctl (Solaris 9 onwards) appropriately.</p>
 <h2>SOLARIS-SPECIFIC MODULES.</h2>
 <p> See the modules under the Solaris:: and Sun::Solaris namespaces on <font SIZE="-1">CPAN,</font> see &lt;<a rel="nofollow" href="http://www.cpan.org/modules/by-module/Solaris/">http://www.cpan.org/modules/by-module/Solaris/</a>&gt; and &lt;<a rel="nofollow" href="http://www.cpan.org/modules/by-module/Sun/">http://www.cpan.org/modules/by-module/Sun/</a>&gt;.</p>
 <h2>SOLARIS-SPECIFIC PROBLEMS WITH MODULES.</h2>
 <h3>Proc::ProcessTable on Solaris</h3>
 <p> Proc::ProcessTable does not compile on Solaris with perl5.6.0 and higher if you have <font SIZE="-1">LARGEFILES</font> defined. Since largefile support is the default in 5.6.0 and later, you have to take special steps to use this module. </p>
-<p> The problem is that various structures visible via procfs use off_t, and if you compile with largefile support these change from 32 bits to 64 bits. Thus what you get back from procfs doesn&#8217;t match up with the structures in perl, resulting in garbage. See <code><a href="/docs/linux/man/4-proc/">proc</a></code>(4) for further discussion. </p>
+<p> The problem is that various structures visible via procfs use off_t, and if you compile with largefile support these change from 32 bits to 64 bits. Thus what you get back from procfs doesn&#8217;t match up with the structures in perl, resulting in garbage. See <code>proc</code>(4) for further discussion. </p>
 <p> A fix for Proc::ProcessTable is to edit Makefile to explicitly remove the largefile flags from the ones MakeMaker picks up from Config.pm. This will result in Proc::ProcessTable being built under the correct environment. Everything should then be <font SIZE="-1">OK</font> as long as Proc::ProcessTable doesn&#8217;t try to share off_t&#8217;s with the rest of perl, or if it does they should be explicitly specified as off64_t.</p>
 <h3>BSD::Resource on Solaris</h3>
 <p> BSD::Resource versions earlier than 1.09 do not compile on Solaris with perl 5.6.0 and higher, for the same reasons as Proc::ProcessTable. BSD::Resource versions starting from 1.09 have a workaround for the problem.</p>

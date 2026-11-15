@@ -43,7 +43,7 @@ int remap_file_pages(void *addr, size_t size, int prot,
 <h2>CONFORMING TO</h2>
 <p> The <code>remap_file_pages</code>() system call is Linux-specific.</p>
 <h2>NOTES</h2>
-<p> Since Linux 2.6.23, <code>remap_file_pages</code>() creates non-linear mappings only on in-memory filesystems such as <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5), hugetlbfs or ramfs. On filesystems with a backing store, <code>remap_file_pages</code>() is not much more efficient than using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) to adjust which parts of the file are mapped to which addresses.</p>
+<p> Since Linux 2.6.23, <code>remap_file_pages</code>() creates non-linear mappings only on in-memory filesystems such as <code>tmpfs</code>(5), hugetlbfs or ramfs. On filesystems with a backing store, <code>remap_file_pages</code>() is not much more efficient than using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) to adjust which parts of the file are mapped to which addresses.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-getpagesize/">getpagesize</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-mmap2/">mmap2</a></code>(2), <code><a href="/docs/linux/man/2-mprotect/">mprotect</a></code>(2), <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), <code><a href="/docs/linux/man/2-msync/">msync</a></code>(2)</p>
 <h2>COLOPHON</h2>

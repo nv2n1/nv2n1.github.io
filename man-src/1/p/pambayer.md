@@ -40,7 +40,7 @@ description: "pambayer – interpret Bayer patterns"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cameratopam/">cameratopam</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pambayer</code> was new in Netpbm 10.30 (October 2005). </p>
 <h2>Index</h2>

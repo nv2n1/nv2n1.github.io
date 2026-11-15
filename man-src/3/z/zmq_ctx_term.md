@@ -23,7 +23,7 @@ description: "zmq_ctx_term – destroy a 0MQ context"
 <dd>&bull; For each socket within <i>context</i>, all messages sent by the application with <i>zmq_send()</i> have either been physically transferred to a network peer, or the socket&#8217;s linger period set with the <i>ZMQ_LINGER</i> socket option has expired.</dl>
 </dl>
 <p> For further details regarding socket linger behavior refer to the <i>ZMQ_LINGER</i> option in <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3). </p>
-<p> This function replaces the deprecated function <code><a href="/docs/linux/man/3-zmq_term/">zmq_term</a></code>(3).</p>
+<p> This function replaces the deprecated function <code>zmq_term</code>(3).</p>
 <h2>Warning</h2>
 <p>As <i>ZMQ_LINGER</i> defaults to &quot;infinite&quot;, by default this function will block indefinitely if there are any pending connects or sends. We strongly recommend to (a) set <i>ZMQ_LINGER</i> to zero on all sockets and (b) close all sockets, before calling this function.</p>
 <h2>Return Value</h2>
@@ -36,6 +36,6 @@ description: "zmq_ctx_term – destroy a 0MQ context"
 <dl>
 <dd>Termination was interrupted by a signal. It can be restarted if needed.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7) <code><a href="/docs/linux/man/3-zmq_init/">zmq_init</a></code>(3) <code><a href="/docs/linux/man/3-zmq_close/">zmq_close</a></code>(3) <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7) <code>zmq_init</code>(3) <code><a href="/docs/linux/man/3-zmq_close/">zmq_close</a></code>(3) <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3)</p>
 <h2>Authors</h2>
 <p>This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></code>m[].</p>

@@ -23,7 +23,7 @@ description: "uniconv – convert Netatalk volume encoding"
 <p> -d</p>
 <dl>
 <dt>
-<dd> don&#8217;t CAP encode leading dots (:2e), equivalent to <code>usedots</code> in <code><a href="/docs/linux/man/5-applevolumes-default/">AppleVolumes.default</a></code>(5)</dl>
+<dd> don&#8217;t CAP encode leading dots (:2e), equivalent to <code>usedots</code> in <code>AppleVolumes.default</code>(5)</dl>
 <p> -f</p>
 <dl>
 <dt>
@@ -55,7 +55,7 @@ description: "uniconv – convert Netatalk volume encoding"
 <h2>WARNING</h2>
 <p> Setting the wrong options might render your data unusable!!! Make sure you know what you are doing. Always backup your data first. </p>
 <p> It is <code>*strongly*</code> recommended to do a `dry run&#8217; first and to check the output for conversion errors. </p>
-<p> <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) should <i>not</i> be running while you change the volume encoding. Remember to change <code>volcodepage</code> in <code><a href="/docs/linux/man/5-applevolumes-default/">AppleVolumes.default</a></code>(5) to the new codepage, before restarting afpd. </p>
+<p> <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) should <i>not</i> be running while you change the volume encoding. Remember to change <code>volcodepage</code> in <code>AppleVolumes.default</code>(5) to the new codepage, before restarting afpd. </p>
 <p> <code>USE AT YOUR OWN RISK!!!</code></p>
 <h2>SELECTABLE CHARSETS</h2>
 <p> Netatalk provides internal support for UTF-8 (pre- and decomposed) and CAP. If you want to use other charsets, they must be provided by <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) </p>
@@ -99,5 +99,5 @@ example%<code> uniconv -f UTF8 -t ASCII -m MAC_CYRILLIC /path/to/share</code>
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-applevolumes-default/">AppleVolumes.default</a></code>(5),<code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8),<code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1),<code><a href="/docs/linux/man/8-cnid_metad/">cnid_metad</a></code>(8),<code><a href="/docs/linux/man/8-cnid_dbd/">cnid_dbd</a></code>(8) </p>
+<p> <code>AppleVolumes.default</code>(5),<code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8),<code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1),<code><a href="/docs/linux/man/8-cnid_metad/">cnid_metad</a></code>(8),<code><a href="/docs/linux/man/8-cnid_dbd/">cnid_dbd</a></code>(8) </p>
 <h2>Index</h2>

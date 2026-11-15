@@ -76,7 +76,7 @@ The psm provider checks for the following environment variables:
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/7-fabric/">fabric</a>(7), <a HREF="/docs/linux/man/7-fi_provider/">fi_provider</a>(7), <a HREF="/docs/linux/man/7-fi_psm2/">fi_psm2</a>(7),
+<a HREF="/docs/linux/man/7-fabric/">fabric</a>(7), <a HREF="/docs/linux/man/7-fi_provider/">fi_provider</a>(7), fi_psm2(7),
 
 <h2>Authors</h2>
 

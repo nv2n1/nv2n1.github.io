@@ -25,7 +25,7 @@ description: "tv_check – Check TV guide listings"
 <p> <code>&#8211;output=FILE</code> Write to <font SIZE="-1">FILE</font> rather than standard output </p>
 <p> <code>&#8211;help</code> Provide a usage/help listing.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Robert Eden; manpage by Kenneth J. Pronovici. </p>
 <h2>Index</h2>

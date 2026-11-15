@@ -20,4 +20,4 @@ description: "DMXGetScreenCount – determine number of back-end screens"
 <h2>Notes</h2>
 <p>If Xinerama is active, only one logical screen will be available to clients of the <code><a href="/docs/linux/man/1-xdmx/">Xdmx</a></code>(1) server. However, this call will accurately reflect the number of composite back-end screens that the <code><a href="/docs/linux/man/1-xdmx/">Xdmx</a></code>(1) server is using.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-dmxgetscreenattribtues/">DMXGetScreenAttribtues</a></code>(3), <code><a href="/docs/linux/man/3-dmxchangescreenattributes/">DMXChangeScreenAttributes</a></code>(3), <code><a href="/docs/linux/man/3-dmx/">DMX</a></code>(3), <code><a href="/docs/linux/man/1-xdmx/">Xdmx</a></code>(1)</p>
+<p><code>DMXGetScreenAttribtues</code>(3), <code>DMXChangeScreenAttributes</code>(3), <code><a href="/docs/linux/man/3-dmx/">DMX</a></code>(3), <code><a href="/docs/linux/man/1-xdmx/">Xdmx</a></code>(1)</p>

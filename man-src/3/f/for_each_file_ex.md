@@ -31,5 +31,5 @@ allegro_message("%d game directories
 <h2>RETURN VALUE</h2>
 <p> Returns the number of successful calls made to callback(), that is, the number of times callback() was called and returned 0. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-al_findfirst/">al_findfirst</a></code>(3), <code><a href="/docs/linux/man/3-al_findnext/">al_findnext</a></code>(3), <code><a href="/docs/linux/man/3-al_findclose/">al_findclose</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-al_findfirst/">al_findfirst</a></code>(3), <code><a href="/docs/linux/man/3-al_findnext/">al_findnext</a></code>(3), <code>al_findclose</code>(3) </p>
 <h2>Index</h2>

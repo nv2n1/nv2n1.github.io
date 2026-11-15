@@ -59,7 +59,7 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-tanh/">tanh</a><code>(1)</code> = 0.761594<br />
+<p>&nbsp;<wbr>&nbsp;tanh<code>(1)</code> = 0.761594<br />
 &nbsp;<wbr>&nbsp;tanh(-1) = -0.761594<br />
 &nbsp;<wbr>&nbsp;tanh(0.1)*sinh(0.2)-cosh(0.2) = -1<br />
 &nbsp;<wbr>&nbsp;tanh(+0) = 0<br />

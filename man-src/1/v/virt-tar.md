@@ -32,7 +32,7 @@ virt - tar[--options] - x domname directory tarball virt - tar[--options] - u do
 <p> If you want to just view a single file, use <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1). If you just want to edit a single file, use <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1). For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool. </p>
 <p> There are two modes of operation: <tt>&quot;-x&quot;</tt> (eXtract) downloads a directory and its contents (recursively) from the virtual machine into a local tarball. <tt>&quot;-u&quot;</tt> uploads from a local tarball, unpacking it into a directory inside the virtual machine. You cannot use these two options together. </p>
 <p> In addition, you may need to use the <tt>&quot;-z&quot;</tt> (gZip) option to enable compression. When uploading, you have to specify <tt>&quot;-z&quot;</tt> if the upload file is compressed because virt-tar won&#8217;t detect this on its own. </p>
-<p> <tt>&quot;virt-tar&quot;</tt> can only handle tar (optionally gzipped) format tarballs. For example it cannot do PKZip files or bzip2 compression. If you want that then you&#8217;ll have to rebuild the tarballs yourself. (This is a limitation of the <i><a href="/docs/linux/man/3-libguestfs/">libguestfs</a></i>(3) <font SIZE="-1">API</font>).</p>
+<p> <tt>&quot;virt-tar&quot;</tt> can only handle tar (optionally gzipped) format tarballs. For example it cannot do PKZip files or bzip2 compression. If you want that then you&#8217;ll have to rebuild the tarballs yourself. (This is a limitation of the <i>libguestfs</i>(3) <font SIZE="-1">API</font>).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></p>
@@ -51,7 +51,7 @@ virt - tar[--options] - x domname directory tarball virt - tar[--options] - u do
 <dt><code>-z</code> | <code>&#8211;gzip</code></p>
 <dd> Specify that the input or output tarball is gzip-compressed.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i><a href="/docs/linux/man/3-sys--guestfs/">Sys::Guestfs</a></i>(3), <i><a href="/docs/linux/man/3-sys--guestfs--lib/">Sys::Guestfs::Lib</a></i>(3), <i><a href="/docs/linux/man/3-sys--virt/">Sys::Virt</a></i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i>Sys::Guestfs</i>(3), <i>Sys::Guestfs::Lib</i>(3), <i>Sys::Virt</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
 <h2>COPYRIGHT</h2>

@@ -33,7 +33,7 @@ description: "guestfs-internals – architecture and internals of libguestfs"
                                          │  disk image │
                                          └─────────────┘
 </pre>
-<p> The library, linked to the main program, creates the child process and hence the appliance in the &#8220;guestfs_launch&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) function. </p>
+<p> The library, linked to the main program, creates the child process and hence the appliance in the &#8220;guestfs_launch&#8221; in <code>guestfs</code>(3) function. </p>
 <p> Inside the appliance is a Linux kernel and a complete stack of userspace tools (such as <font SIZE="-1">LVM</font> and ext2 programs) and a small controlling daemon called &#8220;guestfsd&#8221;. The library talks to &#8220;guestfsd&#8221; using remote procedure calls (<font SIZE="-1">RPC</font>). There is a mostly one-to-one correspondence between libguestfs <font SIZE="-1">API</font> calls and <font SIZE="-1">RPC</font> calls to the daemon. Lastly the disk image(s) are attached to the qemu process which translates device access by the appliance’s Linux kernel into accesses to the image. </p>
 <p> A common misunderstanding is that the appliance &#8220;is&#8221; the virtual machine. Although the disk image you are attached to might also be used by some virtual machine, libguestfs doesn&#8217;t know or care about this. (But you will care if both libguestfs’s qemu process and your virtual machine are trying to update the disk image at the same time, since these usually results in massive disk corruption).</p>
 <h2>STATE MACHINE</h2>
@@ -62,10 +62,10 @@ description: "guestfs-internals – architecture and internals of libguestfs"
                     \________/
 </pre>
 <p> The normal transitions are (1) <font SIZE="-1">CONFIG</font> (when the handle is created, but there is no child process), (2) <font SIZE="-1">LAUNCHING</font> (when the child process is booting up), (3) <font SIZE="-1">READY</font> meaning the appliance is up, actions can be issued to, and carried out by, the child process. </p>
-<p> The guest may be killed by &#8220;guestfs_kill_subprocess&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), or may die asynchronously at any time (eg. due to some internal error), and that causes the state to transition back to <font SIZE="-1">CONFIG.</font> </p>
-<p> Configuration commands for qemu such as &#8220;guestfs_set_path&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) can only be issued when in the <font SIZE="-1">CONFIG</font> state. </p>
-<p> The <font SIZE="-1">API</font> offers one call that goes from <font SIZE="-1">CONFIG</font> through <font SIZE="-1">LAUNCHING</font> to <font SIZE="-1">READY.</font> &#8220;guestfs_launch&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) blocks until the child process is <font SIZE="-1">READY</font> to accept commands (or until some failure or timeout). &#8220;guestfs_launch&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) internally moves the state from <font SIZE="-1">CONFIG</font> to <font SIZE="-1">LAUNCHING</font> while it is running. </p>
-<p> <font SIZE="-1">API</font> actions such as &#8220;guestfs_mount&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) can only be issued when in the <font SIZE="-1">READY</font> state. These <font SIZE="-1">API</font> calls block waiting for the command to be carried out. There are no non-blocking versions, and no way to issue more than one command per handle at the same time. </p>
+<p> The guest may be killed by &#8220;guestfs_kill_subprocess&#8221; in <code>guestfs</code>(3), or may die asynchronously at any time (eg. due to some internal error), and that causes the state to transition back to <font SIZE="-1">CONFIG.</font> </p>
+<p> Configuration commands for qemu such as &#8220;guestfs_set_path&#8221; in <code>guestfs</code>(3) can only be issued when in the <font SIZE="-1">CONFIG</font> state. </p>
+<p> The <font SIZE="-1">API</font> offers one call that goes from <font SIZE="-1">CONFIG</font> through <font SIZE="-1">LAUNCHING</font> to <font SIZE="-1">READY.</font> &#8220;guestfs_launch&#8221; in <code>guestfs</code>(3) blocks until the child process is <font SIZE="-1">READY</font> to accept commands (or until some failure or timeout). &#8220;guestfs_launch&#8221; in <code>guestfs</code>(3) internally moves the state from <font SIZE="-1">CONFIG</font> to <font SIZE="-1">LAUNCHING</font> while it is running. </p>
+<p> <font SIZE="-1">API</font> actions such as &#8220;guestfs_mount&#8221; in <code>guestfs</code>(3) can only be issued when in the <font SIZE="-1">READY</font> state. These <font SIZE="-1">API</font> calls block waiting for the command to be carried out. There are no non-blocking versions, and no way to issue more than one command per handle at the same time. </p>
 <p> Finally, the child process sends asynchronous messages back to the main program, such as kernel log messages. You can register a callback to receive these messages.</p>
 <h2>INTERNALS</h2>
 <h3><font SIZE="-1">APPLIANCE BOOT PROCESS</font></h3>
@@ -178,10 +178,10 @@ description: "guestfs-internals – architecture and internals of libguestfs"
  sequence of chunks for FileOut param #1 etc.
 </code></pre>
 <p> <i></i><font SIZE="-1"><i>INITIAL MESSAGE</i></font><i></i> </p>
-<p> When the daemon launches it sends an initial word (<tt>&quot;GUESTFS_LAUNCH_FLAG&quot;</tt>) which indicates that the guest and daemon is alive. This is what &#8220;guestfs_launch&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) waits for. </p>
+<p> When the daemon launches it sends an initial word (<tt>&quot;GUESTFS_LAUNCH_FLAG&quot;</tt>) which indicates that the guest and daemon is alive. This is what &#8220;guestfs_launch&#8221; in <code>guestfs</code>(3) waits for. </p>
 <p> <i></i><font SIZE="-1"><i>PROGRESS NOTIFICATION MESSAGES</i></font><i></i> </p>
 <p> The daemon may send progress notification messages at any time. These are distinguished by the normal length word being replaced by <tt>&quot;GUESTFS_PROGRESS_FLAG&quot;</tt>, followed by a fixed size progress message. </p>
-<p> The library turns them into progress callbacks (see &#8220;<font SIZE="-1">GUESTFS_EVENT_PROGRESS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)) if there is a callback registered, or discards them if not. </p>
+<p> The library turns them into progress callbacks (see &#8220;<font SIZE="-1">GUESTFS_EVENT_PROGRESS&#8221;</font> in <code>guestfs</code>(3)) if there is a callback registered, or discards them if not. </p>
 <p> The daemon self-limits the frequency of progress messages it sends (see <tt>&quot;daemon/proto.c:notify_progress&quot;</tt>). Not all calls generate progress messages.</p>
 <h3><font SIZE="-1">FIXED APPLIANCE</font></h3>
 <p> When libguestfs (or libguestfs tools) are run, they search a path looking for an appliance. The path is built into libguestfs, or can be set using the <tt>&quot;LIBGUESTFS_PATH&quot;</tt> environment variable. </p>
@@ -196,10 +196,10 @@ description: "guestfs-internals – architecture and internals of libguestfs"
 <dd> <i>root</i></p>
 <dt>&bull;</p>
 <dd> <i></i><font SIZE="-1"><i>README</i></font><i>.fixed</i> (note that it <code>must</code> be present as well)</dl>
-<p> If the fixed appliance is found, libguestfs skips supermin entirely and just runs the virtual machine (using qemu or the current backend, see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)) with the kernel, initrd and root disk from the fixed appliance. </p>
-<p> Thus the fixed appliance can be used when a platform or a Linux distribution does not support supermin. You build the fixed appliance on a platform that does support supermin using <code><a href="/docs/linux/man/1-libguestfs-make-fixed-appliance/">libguestfs-make-fixed-appliance</a></code>(1), copy it over, and use that to run libguestfs.</p>
+<p> If the fixed appliance is found, libguestfs skips supermin entirely and just runs the virtual machine (using qemu or the current backend, see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code>guestfs</code>(3)) with the kernel, initrd and root disk from the fixed appliance. </p>
+<p> Thus the fixed appliance can be used when a platform or a Linux distribution does not support supermin. You build the fixed appliance on a platform that does support supermin using <code>libguestfs-make-fixed-appliance</code>(1), copy it over, and use that to run libguestfs.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1), <code><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></code>(3), <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1), <code><a href="/docs/linux/man/1-libguestfs-make-fixed-appliance/">libguestfs-make-fixed-appliance</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <code>guestfs</code>(3), <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1), <code>guestfs-examples</code>(3), <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1), <code>libguestfs-make-fixed-appliance</code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

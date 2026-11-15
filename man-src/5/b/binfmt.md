@@ -27,7 +27,7 @@ description: "binfmt.d – Configure additional binary formats for executables a
 :DOSWin:M::MZ::/usr/bin/wine:</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code><a href="/docs/linux/man/8-wine/">wine</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code>wine</code>(8)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

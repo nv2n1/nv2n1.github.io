@@ -22,15 +22,15 @@ CALL TDITRI (U, NU, V, NV, W, NW, F, LF1D, LF2D, FISO, RTRI, MTRI, NTRI, IRST)
 
 The arguments of TDITRI are as follows:
 <dl><dt>U
-<dd>(an input array, of type REAL, dimensioned NU) - values of an independent variable &quot;u&quot;. It must be the case that <a HREF="/docs/linux/man/1-u/">U</a>(1) &lt; <a HREF="/docs/linux/man/2-u/">U</a>(2) &lt; ... U(NU-1) &lt; U(NU).
+<dd>(an input array, of type REAL, dimensioned NU) - values of an independent variable &quot;u&quot;. It must be the case that U(1) &lt; U(2) &lt; ... U(NU-1) &lt; U(NU).
 <dt>NU
 <dd>(an input expression of type INTEGER) - the dimension of U.
 <dt>V
-<dd>(an input array, of type REAL, dimensioned NV) - values of an independent variable &quot;v&quot;. It must be the case that <a HREF="/docs/linux/man/1-v/">V</a>(1) &lt; <a HREF="/docs/linux/man/2-v/">V</a>(2) &lt; ... V(NV-1) &lt; V(NV).
+<dd>(an input array, of type REAL, dimensioned NV) - values of an independent variable &quot;v&quot;. It must be the case that <a HREF="/docs/linux/man/1-v/">V</a>(1) &lt; V(2) &lt; ... V(NV-1) &lt; V(NV).
 <dt>NV
 <dd>(an input expression of type INTEGER) - the dimension of V.
 <dt>W
-<dd>(an input array, of type REAL, dimensioned NW) - values of an independent variable &quot;w&quot;. It must be the case that <a HREF="/docs/linux/man/1-w/">W</a>(1) &lt; <a HREF="/docs/linux/man/2-w/">W</a>(2) &lt; ... W(NV-1) &lt; W(NV).
+<dd>(an input array, of type REAL, dimensioned NW) - values of an independent variable &quot;w&quot;. It must be the case that <a HREF="/docs/linux/man/1-w/">W</a>(1) &lt; W(2) &lt; ... W(NV-1) &lt; W(NV).
 <dt>NW
 <dd>(an input expression of type INTEGER) - the dimension of W.
 <dt>F

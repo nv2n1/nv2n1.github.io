@@ -24,5 +24,5 @@ char user_input[] = "/nice/and/short.txt";
 <h2>RETURN VALUE</h2>
 <p> Returns a copy of the `dest&#8217; parameter if it succeeds or NULL if it fails (eg. under DOS, one path starts with &quot;C:\&quot; and another with &quot;A:\&quot;). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-make_absolute_filename/">make_absolute_filename</a></code>(3), <code><a href="/docs/linux/man/3-is_relative_filename/">is_relative_filename</a></code>(3), <code><a href="/docs/linux/man/3-canonicalize_filename/">canonicalize_filename</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-make_absolute_filename/">make_absolute_filename</a></code>(3), <code>is_relative_filename</code>(3), <code><a href="/docs/linux/man/3-canonicalize_filename/">canonicalize_filename</a></code>(3) </p>
 <h2>Index</h2>

@@ -46,7 +46,7 @@ description: "trivial-rewrite – Postfix address rewriting and resolving daemon
 <h2>Security</h2>
 <p>The <code><a href="/docs/linux/man/8-trivial-rewrite/">trivial-rewrite</a></code>(8) daemon is not security sensitive. By default, this daemon does not talk to remote or local users. It can run at a fixed low privilege in a chrooted environment.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Configuration Parameters</h2>
 <p>On busy mail systems a long time may pass before a <code>main.cf</code> change affecting <code><a href="/docs/linux/man/8-trivial-rewrite/">trivial-rewrite</a></code>(8) is picked up. Use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
@@ -171,7 +171,7 @@ description: "trivial-rewrite – Postfix address rewriting and resolving daemon
 <a href="//www.systutorials.com/docs/linux/man/5-transport/">transport</a>(5), transport table format
 <a href="//www.systutorials.com/docs/linux/man/5-relocated/">relocated</a>(5), format of the &quot;user has moved&quot; table
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>ADDRESS_CLASS_README, Postfix address classes howto

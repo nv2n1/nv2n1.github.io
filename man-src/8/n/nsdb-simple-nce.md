@@ -83,7 +83,7 @@ description: "nsdb-simple-nce – Create a simple NSDB Container Entry"
 <p>LDAP naming contexts are typically writable only by administrative entities. The <code><a href="/docs/linux/man/8-nsdb-simple-nce/">nsdb-simple-nce</a></code>(8) command must bind as an administrative entity to perform this operation. The <code><a href="/docs/linux/man/8-nsdb-simple-nce/">nsdb-simple-nce</a></code>(8) command asks for a password on <i>stdin</i>. Standard password blanking techniques are used to obscure the password on the user&#8217;s terminal. </p>
 <p> The target LDAP server must be registered in the local NSDB connection parameter database. The connection security mode listed in the NSDB connection parameter database for the target LDAP server is used during this operation. See <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8) for details on how to register an NSDB in the local NSDB connection parameter database.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/8-nsdb-nces/">nsdb-nces</a></code>(8), <code><a href="/docs/linux/man/8-nsdb-update-nce/">nsdb-update-nce</a></code>(8), <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/8-nsdb-nces/">nsdb-nces</a></code>(8), <code>nsdb-update-nce</code>(8), <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8) </p>
 <p> RFC 5716 for FedFS requirements and overview </p>
 <p> RFC 4510 for an introduction to LDAP</p>
 <h2>Colophon</h2>

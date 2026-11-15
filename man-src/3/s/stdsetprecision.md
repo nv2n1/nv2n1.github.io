@@ -12,7 +12,7 @@ description: "std::setprecision – std::setprecision"
 <pre><code>Defined in header&lt;iomanip&gt;
 
 /*unspecified*/ setprecision(int n);</code></pre>
-<p>When used in an expression out &lt;&lt; <a href="/docs/linux/man/n-setprecision/">setprecision</a>(n) or in &gt;&gt; <a href="/docs/linux/man/n-setprecision/">setprecision</a>(n), sets the precision parameter of the stream out or in to exactly n. </p>
+<p>When used in an expression out &lt;&lt; setprecision(n) or in &gt;&gt; setprecision(n), sets the precision parameter of the stream out or in to exactly n. </p>
 <h2>Parameters</h2>
 <p>n &#8211; new value for precision</p>
 <h2>Return value</h2>

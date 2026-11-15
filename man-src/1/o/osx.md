@@ -123,7 +123,7 @@ description: "osx – An SGML to XML converter"
 <p> <code>sdata-as-pis</code> When translating SDATA entities (whether expanding them or providing a definition for them in the output&#8217;s internal subset), express them as processing instructions instead of as general internal entities. </p>
 <p> Multiple <code>-x</code> options are allowed.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospam/">ospam</a>(1)</code>, <code><a href="/docs/linux/man/1-onsgmlnorm/">onsgmlnorm</a>(1)</code>, <code><a href="/docs/linux/man/1-ospent/">ospent</a>(1)</code></p>
+<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospam/">ospam</a>(1)</code>, <code>onsgmlnorm(1)</code>, <code><a href="/docs/linux/man/1-ospent/">ospent</a>(1)</code></p>
 <h2>AUTHORS</h2>
 <p> <code>James Clark</code></p>
 <dl>

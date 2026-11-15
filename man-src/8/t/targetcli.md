@@ -41,7 +41,7 @@ description: "targetcli – administration shell for storage targets"
 <p>Allows kernel memory to be shared as a block SCSI device. Since memory is volatile, the contents of the ramdisk will be lost if the system restarts, and this backstore is best used for testing only. </p>
 <p> It also supports &quot;nullio&quot; mode, which is not backed by any storage. It discards all writes, and returns all-zeroes for reads.</p>
 <h3>Userspace-Backed</h3>
-<p>Backstores starting with &quot;user:&quot; are not supported in the kernel, but rely on a userspace process to handle requests. See <code><a href="/docs/linux/man/8-tcmu-runner/">tcmu-runner</a></code>(8) for more information on creating backstores of this type.</p>
+<p>Backstores starting with &quot;user:&quot; are not supported in the kernel, but rely on a userspace process to handle requests. See <code>tcmu-runner</code>(8) for more information on creating backstores of this type.</p>
 <h2>Targets</h2>
 <p><code>Targets</code> are instances of a <code>fabric</code>, which adapts the kernel target to a specific transport protocol such as iSCSI, Fibre Channel, or SBP-2. Creating a target in targetcli enables that target to be configured. The name of the target, its WWN (world wide name), may link the configuration to a specific hardware endpoint, like SRP for example, or it may not, like iSCSI. </p>
 <p> Aside from &quot;backstores&quot;, all other top-level configuration nodes in targetcli are fabrics that may have targets created for them. Fabrics that require hardware are only listed if the hardware is present and configured properly.</p>
@@ -145,7 +145,7 @@ description: "targetcli – administration shell for storage targets"
 <p><code>/etc/target/saveconfig.json</code><br />
  <code>/etc/target/backup/*</code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-targetctl/">targetctl</a></code>(8), <code><a href="/docs/linux/man/8-tcmu-runner/">tcmu-runner</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-targetctl/">targetctl</a></code>(8), <code>tcmu-runner</code>(8)</p>
 <h2>Author</h2>
 <p>Written by Jerome Martin &lt;jxm [at] risingtidesystems.com&gt;.<br />
  Man page written by Andy Grover &lt;agrover [at] redhat.com&gt;.</p>

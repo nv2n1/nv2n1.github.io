@@ -83,7 +83,7 @@ description: "/etc/isdn/callerid.conf – config file for isdnlog numbers and sc
 <dt><code>GROUP=xxx</code></p>
 <dd>Isdnlog will not run programs as group root, and will switch to a different group id for security. You must give the name or gid of the groups isdnlog has to use here. </p>
 <dt><code>TIME=xx</code></p>
-<dd>Restrict this flag to a special time. Pleas read <a href="/docs/linux/man/5-isdntime/">isdntime</a>(5). </p>
+<dd>Restrict this flag to a special time. Pleas read isdntime(5). </p>
 <dt><code>INTERVAL=xx</code></p>
 <dd>With connect (C) or ring (R) flag you can specify an interval, so isdnlog will start the program after every interval. The interval is in seconds and should be at least 2 seconds. If the flags do not include C or R, this option is ignored. </p>
 <dt><code>PROGRAM=xxx</code></p>
@@ -147,6 +147,6 @@ description: "/etc/isdn/callerid.conf – config file for isdnlog numbers and sc
 <dd>Per user telephone book. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8) <a href="/docs/linux/man/5-isdnformat/">isdnformat</a>(5) <a href="/docs/linux/man/5-isdntime/">isdntime</a>(5)</code></p>
+<p><code><a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8) <a href="/docs/linux/man/5-isdnformat/">isdnformat</a>(5) isdntime(5)</code></p>
 <h2>Author</h2>
 <p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.</p>

@@ -48,7 +48,7 @@ description: "pbs_server_attributes – pbs server attributes"
 <dt>default_queue</i></p>
 <dd>The queue which is the target queue when a request does not specify a queue name. Format: a queue name; default value: none, must be set to an existing queue. <i></p>
 <dt>down_on_error</i></p>
-<dd>Set a node&#8217;s state to &quot;down&quot; if MOM reports a message beginning with the string &quot;ERROR&quot;. This might interfere with moab&#8217;s node error handling. See the HEALTH CHECK section in <a href="//www.systutorials.com/docs/linux/man/8B-pbs_mom/">pbs_mom</a>(8B). This is an EXPERIMENTAL feature and may be removed in the future. Format: boolean; default value: false. <i></p>
+<dd>Set a node&#8217;s state to &quot;down&quot; if MOM reports a message beginning with the string &quot;ERROR&quot;. This might interfere with moab&#8217;s node error handling. See the HEALTH CHECK section in pbs_mom(8B). This is an EXPERIMENTAL feature and may be removed in the future. Format: boolean; default value: false. <i></p>
 <dt>disable_server_id_check</i></p>
 <dd>Makes it so the user for the job doesn&#8217;t have to exist on the server. The user must still exist on all the compute nodes or the job will fail when it tries to execute. Format: boolean; default value: false <i></p>
 <dt>extra_resc</i></p>
@@ -187,7 +187,7 @@ Exec host: %h
 <dt>owner_purge</i></font><font SIZE="+9"><i></i></p>
 <dd>Allows job owners to forcibly purge their own jobs from the server. This short-circuits the normal flow of events and is hightly discouraged. Default value: unset <i></p>
 <dt>poll_jobs</i></p>
-<dd>Controls how pbs_server will send job status requests to MOMs. When unset or false, statjob requests from clients (ie: <a href="//www.systutorials.com/docs/linux/man/1B-qstat/">qstat</a>(1B) or the scheduler) may trigger job status requests to MOMs and and must wait until the MOMs have replied; this is suitable for small to medium sized clusters. When set to true, pbs_server will send periodic job status requests; this is suitable for busy clusters with lots of jobs, lots of clients, <a href="//www.systutorials.com/docs/linux/man/1B-qstat/">qstat</a>(1B) is too slow, or your scheduler times out. (see job_stat_rate) Default value: TRUE <i></p>
+<dd>Controls how pbs_server will send job status requests to MOMs. When unset or false, statjob requests from clients (ie: qstat(1B) or the scheduler) may trigger job status requests to MOMs and and must wait until the MOMs have replied; this is suitable for small to medium sized clusters. When set to true, pbs_server will send periodic job status requests; this is suitable for busy clusters with lots of jobs, lots of clients, qstat(1B) is too slow, or your scheduler times out. (see job_stat_rate) Default value: TRUE <i></p>
 <dt>query_other_jobs</i></p>
 <dd>The setting of this attribute controls if general users, other than the job owner, are allowed to query the status of or select the job. Format: boolean (see acl_host_enable); Requires full manager privilege to set or alter. default value: false &#8211; users may not query or select jobs owned by other users. <i></p>
 <dt>resources_available</i></p>
@@ -245,4 +245,4 @@ Exec host: %h
 </dl>
 <p> </font></p>
 <h2>See Also</h2>
-<p>the PBS ERS, <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources/">pbs_resources</a>(7B) </p>
+<p>the PBS ERS, qmgr(1B), pbs_resources(7B) </p>

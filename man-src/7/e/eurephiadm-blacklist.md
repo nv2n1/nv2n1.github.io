@@ -56,6 +56,6 @@ description: "eurephiadm blacklist – Manage the eurephia blacklist"
 <dt><code>-b</code> | <code>&#8211;blid</code> &lt;ID&gt;</p>
 <dd>Blacklist record ID</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-eurephiadm-attempts/">eurephiadm-attempts</a></code>(7), <code><a href="/docs/linux/man/7-eurephia-config/">eurephia-config</a></code>(7)</p>
+<p><code><a href="/docs/linux/man/7-eurephiadm-attempts/">eurephiadm-attempts</a></code>(7), <code>eurephia-config</code>(7)</p>
 <h2>Author</h2>
 <p>Copyright (C) 2008-2010 David Sommerseth &lt;dazo [at] users.sourceforge.net&gt;</p>

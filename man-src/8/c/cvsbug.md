@@ -57,7 +57,7 @@ description: "cvsbug – send problem report (PR) about CVS to a central support
 <h2>Installation And Configuration</h2>
 <p>See <code>INSTALL</code> for installation instructions.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/l-gnats/">gnats</a></code>(l), <code><a href="/docs/linux/man/1-query-pr/">query-pr</a></code>(1), <code><a href="/docs/linux/man/1-edit-pr/">edit-pr</a></code>(1), <code><a href="/docs/linux/man/8-gnats/">gnats</a></code>(8), <code><a href="/docs/linux/man/8-queue-pr/">queue-pr</a></code>(8), <code><a href="/docs/linux/man/8-at-pr/">at-pr</a></code>(8), <code><a href="/docs/linux/man/8-mkcat/">mkcat</a></code>(8), <code><a href="/docs/linux/man/8-mkdist/">mkdist</a></code>(8).</p>
+<p><code>gnats</code>(l), <code>query-pr</code>(1), <code>edit-pr</code>(1), <code>gnats</code>(8), <code>queue-pr</code>(8), <code>at-pr</code>(8), <code>mkcat</code>(8), <code>mkdist</code>(8).</p>
 <h2>Authors</h2>
 <p>Jeffrey Osier, Brendan Kehoe, Jason Merrill, Heinz G. Seidl (Cygnus Support)</p>
 <h2>Copying</h2>

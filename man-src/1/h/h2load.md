@@ -41,7 +41,7 @@ description: "h2load – HTTP/2 benchmarking tool"
 <dt><code>-H, &#8211;header=&lt;HEADER&gt;</code></p>
 <dd> Add/Override a header to the requests.</p>
 <dt><code>&#8211;ciphers=&lt;SUITE&gt;</code></p>
-<dd> Set allowed cipher list. The format of the string is described in OpenSSL <a href="/docs/linux/man/1-ciphers/">ciphers</a>(1).</p>
+<dd> Set allowed cipher list. The format of the string is described in OpenSSL ciphers(1).</p>
 <dt><code>-p, &#8211;no-tls-proto=&lt;PROTOID&gt;</code></p>
 <dd> Specify ALPN identifier of the protocol to be used when accessing http URI without SSL/TLS. Available protocols: spdy/2, spdy/3, spdy/3.1, h2c and http/1.1 </p>
 <p> Default: <code>h2c</code></p>

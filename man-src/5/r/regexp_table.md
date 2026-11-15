@@ -41,7 +41,7 @@ description: "regexp_table – format of Postfix regular expression tables"
 <dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
 <dt>multi-line text</p>
 <dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
-<p> Each pattern is a POSIX regular expression enclosed by a pair of delimiters. The regular expression syntax is documented in <code><a href="/docs/linux/man/7-re_format/">re_format</a></code>(7) with 4.4BSD, in <code><a href="/docs/linux/man/5-regex/">regex</a></code>(5) with Solaris, and in <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7) with Linux. Other systems may use other document names. </p>
+<p> Each pattern is a POSIX regular expression enclosed by a pair of delimiters. The regular expression syntax is documented in <code><a href="/docs/linux/man/7-re_format/">re_format</a></code>(7) with 4.4BSD, in <code>regex</code>(5) with Solaris, and in <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7) with Linux. Other systems may use other document names. </p>
 <p> The expression delimiter can be any non-alphanumerical character, except whitespace or characters that have special meaning (traditionally the forward slash is used). The regular expression can contain whitespace. </p>
 <p> By default, matching is case-insensitive, and newlines are not treated as special characters. The behavior is controlled by flags, which are toggled by appending one or more of the following characters after the pattern:</p>
 <dl>

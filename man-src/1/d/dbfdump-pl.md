@@ -31,4 +31,4 @@ dbfdump.pl - Dump the record of the dbf file
  You can specify reading the standard input by putting dash (-) instead of file name.
 <h2>Available From</h2><a rel="nofollow" HREF="http://www.adelton.com/perl/DBD-XBase/">http://www.adelton.com/perl/DBD-XBase/</a>
 <h2>Author</h2>(c) 1998--2011 Jan Pazdziora.
-<h2>See Also</h2><i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1); <i><a HREF="/docs/linux/man/3-xbase/">XBase</a></i>(3)
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1); <i>XBase</i>(3)

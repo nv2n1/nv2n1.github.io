@@ -11,7 +11,7 @@ description: "fence_egenera – I/O Fencing agent for the Egenera BladeFrame"
 <h2>Synopsis</h2>
 <p><code>fence_egenera</code> [<i>OPTION</i>]&#8230; </p>
 <h2>Description</h2>
-<p>fence_egenera is an I/O Fencing agent which can be used with the Egenera BladeFrame. It logs into a control blade (cserver) via ssh and operates on a processing blade (pserver) identified by the pserver name and the logical process area network (LPAN) that it is in. fence_egenera requires that ssh keys have been setup so that the fence_egenera does not require a password to authenticate. Refer to <a href="/docs/linux/man/8-ssh/">ssh</a>(8) for more information on setting up ssh keys. fence_egenera accepts options on the command line as well as from stdin. Fenced sends parameters through stdin when it execs the agent. fence_egenera can also be run by itself with command line options. Vendor URL: <a rel="nofollow" href="http://www.egenera.com">http://www.egenera.com</a> </p>
+<p>fence_egenera is an I/O Fencing agent which can be used with the Egenera BladeFrame. It logs into a control blade (cserver) via ssh and operates on a processing blade (pserver) identified by the pserver name and the logical process area network (LPAN) that it is in. fence_egenera requires that ssh keys have been setup so that the fence_egenera does not require a password to authenticate. Refer to ssh(8) for more information on setting up ssh keys. fence_egenera accepts options on the command line as well as from stdin. Fenced sends parameters through stdin when it execs the agent. fence_egenera can also be run by itself with command line options. Vendor URL: <a rel="nofollow" href="http://www.egenera.com">http://www.egenera.com</a> </p>
 <h2>Options</h2>
 <dl>
 <dt><code>-c</code> <i>cserver</i></p>
@@ -49,4 +49,4 @@ description: "fence_egenera – I/O Fencing agent for the Egenera BladeFrame"
 <dd>Wait X seconds before fencing is started </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-fence/">fence</a>(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8), <a href="/docs/linux/man/8-ssh/">ssh</a>(8) </p>
+<p>fence(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8), ssh(8) </p>

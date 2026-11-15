@@ -137,7 +137,7 @@ description: "Lintian::Util – Lintian utility functions"
 <dd>Remove an initial ./ from <font SIZE="-1">STRING,</font> if present</p>
 <dt>signal_number2name(<font SIZE="-1">NUM</font>)</p>
 <dd>Given a number, returns the name of the signal (without leading &#8220;<font SIZE="-1">SIG&#8221;</font>). Example: </p>
-<pre> <a href="//www.systutorials.com/docs/linux/man/2-signal_number2name/">signal_number2name</a>(2) eq 'INT'</pre>
+<pre> signal_number2name(2) eq 'INT'</pre>
 <dt>normalize_pkg_path(<font SIZE="-1">PATH</font>)</p>
 <dd>Normalize <font SIZE="-1">PATH</font> by removing superfluous path segments. <font SIZE="-1">PATH</font> is assumed to be relative the package root. Note that the result will never start nor end with a slash, even if <font SIZE="-1">PATH</font> does. </p>
 <p> As the name suggests, this is a path &#8220;normalization&#8221; rather than a true path resolution (for that use Cwd::realpath). Particularly, it assumes none of the path segments are symlinks. </p>

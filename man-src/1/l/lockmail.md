@@ -50,7 +50,7 @@ description: "lockmail – create mail lock files"
 <h2>EXIT STATUS</h2>
 <p> <code>lockmail</code> terminates with the same exit status as <i>program</i><code>lockmail</code> terminates with the EX_TEMPFAIL exit status if it was unable to obtain a lock, or if <i>program</i> was killed by a signal.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8).</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, <code>sendmail</code>(8).</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

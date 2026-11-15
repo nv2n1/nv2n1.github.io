@@ -31,7 +31,7 @@ description: "fdformat – low-level format a floppy disk"
 /dev/fd1h720 (minor = 25)
 /dev/fd1H1440 (minor = 29)
 </dl></pre>
-<p>The generic floppy devices, /dev/fd0 and /dev/fd1, will fail to work with <code>fdformat</code> when a non-standard format is being used, or if the format has not been autodetected earlier. In this case, use <code><a href="/docs/linux/man/8-setfdprm/">setfdprm</a></code>(8) to load the disk parameters.</p>
+<p>The generic floppy devices, /dev/fd0 and /dev/fd1, will fail to work with <code>fdformat</code> when a non-standard format is being used, or if the format has not been autodetected earlier. In this case, use <code>setfdprm</code>(8) to load the disk parameters.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-f</code>, <code>&#8211;from</code> <i>N</i></p>
@@ -47,7 +47,7 @@ description: "fdformat – low-level format a floppy disk"
 <dt><code>-h</code>, <code>&#8211;help</code></p>
 <dd>Display help text and exit.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-fd/">fd</a></code>(4), <code><a href="/docs/linux/man/8-emkfs/">emkfs</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-setfdprm/">setfdprm</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/4-fd/">fd</a></code>(4), <code>emkfs</code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code>setfdprm</code>(8)</p>
 <h2>Author</h2>
 <p>Werner Almesberger (almesber [at] nessie.cs.id.ethz.ch)</p>
 <h2>Availability</h2>

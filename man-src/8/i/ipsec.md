@@ -35,7 +35,7 @@ description: "ipsec – invoke IPsec utilities"
 <h2>Files</h2>
 <p>/usr/libexec/ipsec usual utilities directory</p>
 <h2>See Also</h2>
-<p>ipsec.<code><a href="/docs/linux/man/5-conf/">conf</a></code>(5), ipsec.<code><a href="/docs/linux/man/5-secrets/">secrets</a></code>(5), <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_setup/">ipsec_setup</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8)</p>
+<p>ipsec.<code>conf</code>(5), ipsec.<code>secrets</code>(5), <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_setup/">ipsec_setup</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8)</p>
 <h2>Author</h2>
 <p><code>Henry Spencer</code></p>
 <dl>

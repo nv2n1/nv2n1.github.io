@@ -18,7 +18,7 @@ description: "flatpak – Build, install and run applications and runtimes"
 <p> System-wide remotes can be statically preconfigured by dropping flatpakrepo files into /etc/flatpak/remotes.d/. </p>
 <p> In addition to the system-wide installation in $prefix/var/lib/flatpak/, which is always considered the default one unless overridden, more system-wide installations can be defined via configuration files in /etc/flatpak/installations.d/, which must define at least the id of the installation and the absolute path to it. Other optional parameters like DisplayName, Priority or StorageType are also supported. </p>
 <p> Flatpak uses OSTree to distribute and deploy data. The repositories it uses are OSTree repositories and can be manipulated with the <code>ostree</code> utility. Installed runtimes and applications are OSTree checkouts. </p>
-<p> Basic commands for building flatpaks such as build-init, build and build-finish are included in the flatpak utility. For higher-level build support, see the separate <code><a href="/docs/linux/man/1-flatpak-builder/">flatpak-builder</a></code>(1) tool.</p>
+<p> Basic commands for building flatpaks such as build-init, build and build-finish are included in the flatpak utility. For higher-level build support, see the separate <code>flatpak-builder</code>(1) tool.</p>
 <h2>OPTIONS</h2>
 <p> The following global options are understood. Individual commands have their own options. </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
@@ -271,5 +271,5 @@ description: "flatpak – Build, install and run applications and runtimes"
 <dt>
 <dd> The location of flatpak site configuration. If this is not set, /etc/flatpak is used (unless overridden at build time by &#8211;sysconfdir).</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ostree/">ostree</a></code>(1), <code><a href="/docs/linux/man/5-ostree-repo/">ostree.repo</a></code>(5), <code><a href="/docs/linux/man/5-flatpak-remote/">flatpak-remote</a></code>(5), <code><a href="/docs/linux/man/5-flatpak-installation/">flatpak-installation</a></code>(5), m[blue]<code><a rel="nofollow" href="https://www.flatpak.org">https://www.flatpak.org</a></code>m[] </p>
+<p> <code>ostree</code>(1), <code>ostree.repo</code>(5), <code><a href="/docs/linux/man/5-flatpak-remote/">flatpak-remote</a></code>(5), <code><a href="/docs/linux/man/5-flatpak-installation/">flatpak-installation</a></code>(5), m[blue]<code><a rel="nofollow" href="https://www.flatpak.org">https://www.flatpak.org</a></code>m[] </p>
 <h2>Index</h2>

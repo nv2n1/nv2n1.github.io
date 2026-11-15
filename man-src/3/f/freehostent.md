@@ -108,7 +108,7 @@ void freehostent(struct hostent *ip);
 
 <h2>SEE ALSO</h2>
 
- <b><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></b>(3), <b><a HREF="/docs/linux/man/3-getnameinfo/">getnameinfo</a></b>(3), <b><a HREF="/docs/linux/man/3-inet_ntop/">inet_ntop</a></b>(3), <b><a HREF="/docs/linux/man/3-inet_pton/">inet_pton</a></b>(3)
+ <b><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></b>(3), <b><a HREF="/docs/linux/man/3-getnameinfo/">getnameinfo</a></b>(3), <b>inet_ntop</b>(3), <b>inet_pton</b>(3)
 
 <h2>COLOPHON</h2>
 

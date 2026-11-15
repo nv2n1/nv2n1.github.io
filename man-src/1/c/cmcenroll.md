@@ -42,4 +42,4 @@ description: "CMCEnroll – Used to sign a certificate request with an agent’s
 <h2>Copyright</h2>
 <p>Copyright (c) 2016 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a> </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-cmcrequest/">CMCRequest</a>(1),</code><a href="/docs/linux/man/1-cmcresponse/">CMCResponse</a>(1),<code><a href="/docs/linux/man/1-cmcrevoke/">CMCRevoke</a>(1),</code><a href="/docs/linux/man/1-pki/">pki</a>(1)</p>
+<p><code>CMCRequest(1),</code>CMCResponse(1),<code>CMCRevoke(1),</code><a href="/docs/linux/man/1-pki/">pki</a>(1)</p>

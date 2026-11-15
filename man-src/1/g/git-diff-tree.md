@@ -540,7 +540,7 @@ git diff - tree[--stdin][-m][-s][-v][--no - commit - id][--pretty]
 <p> &#8211;encoding=&lt;encoding&gt;</p>
 <dl>
 <dt>
-<dd> Commit objects record the character encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in <code>X</code> and we are outputting in <code>X</code>, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output. Likewise, if <a href="/docs/linux/man/3-iconv/">iconv</a>(3) fails to convert the commit, we will quietly output the original object verbatim.</dl>
+<dd> Commit objects record the character encoding used for the log message in their encoding header; this option can be used to tell the command to re-code the commit log message in the encoding preferred by the user. For non plumbing commands this defaults to UTF-8. Note that if an object claims to be encoded in <code>X</code> and we are outputting in <code>X</code>, we will output the object verbatim; this means that invalid sequences in the original commit may be copied to the output. Likewise, if iconv(3) fails to convert the commit, we will quietly output the original object verbatim.</dl>
 <p> &#8211;expand-tabs=&lt;n&gt;, &#8211;expand-tabs, &#8211;no-expand-tabs</p>
 <dl>
 <dt>

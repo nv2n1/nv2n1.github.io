@@ -62,7 +62,7 @@ description: "im-config – set up input method framework configuration"
 <dd>Used internally by <code>im-config</code> (not for auto)</dl>
 <p> This structure ensures to have different input methods to be installed side-by-side with minimal user configurations. </p>
 <h2>Troubleshoot</h2>
-<p>If you have any problem, see the first part of <code>~/.xsession-errors</code> and look for the cause. If you are running <code>im-config</code> while Debian (sid) system is undergoing a major library transition, you may need to manually set up <code>~/.xinputrc</code> with adjusted library version number etc. Please file a bug report to the im-config package using <a href="/docs/linux/man/1-reportbug/">reportbug</a>(1) describing your resolution experience.</p>
+<p>If you have any problem, see the first part of <code>~/.xsession-errors</code> and look for the cause. If you are running <code>im-config</code> while Debian (sid) system is undergoing a major library transition, you may need to manually set up <code>~/.xinputrc</code> with adjusted library version number etc. Please file a bug report to the im-config package using reportbug(1) describing your resolution experience.</p>
 <h2>See Also</h2>
 <p><code>/usr/share/doc/im-config/README.Debian.gz</code></p>
 <h2>Author</h2>

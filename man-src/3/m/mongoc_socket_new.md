@@ -24,7 +24,7 @@ mongoc_socket_new (int domain,
 <dt><code>protocol</code></p>
 <dd>A protocol subset, typically 0.</dl>
 <h2>Description</h2>
-<p>Creates a new <code>mongoc_socket_t</code> structure. This calls <code><a href="/docs/linux/man/3-socket/">socket</a>(3)</code> underneath to create a network socket. </p>
+<p>Creates a new <code>mongoc_socket_t</code> structure. This calls <code>socket(3)</code> underneath to create a network socket. </p>
 <h2>Returns</h2>
 <p>A new socket if successful, otherwise <code>NULL</code> and errno is set. The result should be freed with <code><a href="/docs/linux/man/3-mongoc_socket_destroy/">mongoc_socket_destroy</a>(3)</code> when no longer in use. </p>
 <h2>Colophon</h2>

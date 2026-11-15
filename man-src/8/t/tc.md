@@ -147,7 +147,7 @@ FORMAT := {
 <dt>PRIO</p>
 <dd>The PRIO qdisc is a non-shaping container for a configurable number of classes which are dequeued in order. This allows for easy prioritization of traffic, where lower classes are only able to send if higher ones have no packets available. To facilitate configuration, Type Of Service bits are honored by default.</p>
 <dt>QFQ</p>
-<dd>Quick Fair Queueing is an <a href="/docs/linux/man/1-o/">O</a>(1) scheduler that provides near-optimal guarantees, and is the first to achieve that goal with a constant cost also with respect to the number of groups and the packet length. The QFQ algorithm has no loops, and uses very simple instructions and data structures that lend themselves very well to a hardware implementation.</dl>
+<dd>Quick Fair Queueing is an O(1) scheduler that provides near-optimal guarantees, and is the first to achieve that goal with a constant cost also with respect to the number of groups and the packet length. The QFQ algorithm has no loops, and uses very simple instructions and data structures that lend themselves very well to a hardware implementation.</dl>
 <h2>Theory Of Operation</h2>
 <p>Classes form a tree, where each class has a single parent. A class may have multiple children. Some qdiscs allow for runtime addition of classes (CBQ, HTB) while others (PRIO) are created with a static number of children. </p>
 <p> Qdiscs which allow dynamic addition of classes can have zero or more subclasses to which traffic may be enqueued. </p>

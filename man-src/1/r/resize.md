@@ -84,7 +84,7 @@ description: "resize – set environment and terminal settings to current xterm 
 <dt>COLUMNS, LINES</p>
 <dd> <i>Resize</i>&#8216;s generated shell command sets these variables on systems using terminfo. Many applications (including the curses library) use those variables when set to override their screensize.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/3x-use_env/">use_env</a>(3x)<br />
+<p> use_env(3x)<br />
  <a href="/docs/linux/man/1-csh/">csh</a>(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/1-tset/">tset</a>(1)<br />
  <a href="/docs/linux/man/1-xterm/">xterm</a>(1)</p>
 <h2>AUTHORS</h2>

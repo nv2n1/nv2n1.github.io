@@ -21,4 +21,4 @@ description: "cons.saver – general-purpose Linux console screen save and resto
 <h2>Author</h2>
 <p>Manpage written by Rodrigo Rubira Branco &lt;rrbranco [at] br.ibm.com&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-mc/">mc</a></code>(1), <code><a href="/docs/linux/man/8-mcserv/">mcserv</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/1-mc/">mc</a></code>(1), <code>mcserv</code>(8) </p>

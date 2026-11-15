@@ -31,4 +31,4 @@ description: "xrdp – a Remote Desktop Protocol (RDP) server"
 <p>Jay Sorg &lt;jsorg71 [at] users.sourceforge.net&gt;<br />
  Simone Fedele &lt;ilsimo [at] users.sourceforge.net&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-xrdp-ini/">xrdp.ini</a></code>(5), <code><a href="/docs/linux/man/8-sesman/">sesman</a></code>(8), <code><a href="/docs/linux/man/5-sesman-ini/">sesman.ini</a></code>(5), <code><a href="/docs/linux/man/8-sesrun/">sesrun</a></code>(8) for more info on <code>xrdp</code> see <a rel="nofollow" href="http://www.xrdp.org/">http://www.xrdp.org/</a> </p>
+<p><code><a href="/docs/linux/man/5-xrdp-ini/">xrdp.ini</a></code>(5), <code>sesman</code>(8), <code><a href="/docs/linux/man/5-sesman-ini/">sesman.ini</a></code>(5), <code>sesrun</code>(8) for more info on <code>xrdp</code> see <a rel="nofollow" href="http://www.xrdp.org/">http://www.xrdp.org/</a> </p>

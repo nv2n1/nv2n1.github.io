@@ -43,7 +43,7 @@ description: "db5.3_dump – Write database to flat-text format"
 <dt><code>-P</code></p>
 <dd> Specify an environment password. Although Berkeley DB utilities overwrite password strings as soon as possible, be aware there may be a window of vulnerability on systems where unprivileged users can see command-line arguments or where utilities are not able to overwrite the memory containing the command-line arguments.</p>
 <dt><code>-p</code></p>
-<dd> If characters in either the key or data items are printing characters (as defined by <code><a href="/docs/linux/man/3-isprint/">isprint</a></code>(3)), use printing characters in <code>file</code> to represent them. This option permits users to use standard text editors and tools to modify the contents of databases. </p>
+<dd> If characters in either the key or data items are printing characters (as defined by <code>isprint</code>(3)), use printing characters in <code>file</code> to represent them. This option permits users to use standard text editors and tools to modify the contents of databases. </p>
 <p> Note: different systems may have different notions about what characters are considered <i>printing characters</i>, and databases dumped in this manner may be less portable to external systems.</p>
 <dt><code>-R</code></p>
 <dd> Aggressively salvage data from a possibly corrupt file. The <code>-R</code> flag differs from the <code>-r</code> option in that it will return all possible data from the file at the risk of also returning already deleted or otherwise nonsensical items. Data dumped in this fashion will almost certainly have to be edited by hand or other means before the data is ready for reload into another database</p>

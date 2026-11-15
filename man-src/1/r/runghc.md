@@ -32,7 +32,7 @@ description: "runghc – program to run Haskell programs without first having to
 <dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ghc/">ghc</a></code>(1), <code><a href="/docs/linux/man/1-ghci/">ghci</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-ghc/">ghc</a></code>(1), <code>ghci</code>(1). </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2002, The University Court of the University of Glasgow. All rights reserved. </p>
 <h2>AUTHOR</h2>

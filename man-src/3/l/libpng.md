@@ -2708,7 +2708,7 @@ PNG Development Group </p>
 &nbsp;<wbr>1.5.13&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>15&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>10513&nbsp;<wbr>&nbsp;<wbr>15.so.15.13[.0] </p>
 <p> Henceforth the source version will match the shared-library minor and patch numbers; the shared-library major version number will be used for changes in backward compatibility, as it is intended. The PNG_PNGLIB_VER macro, which is not used within libpng but is available for applications, is an unsigned integer of the form xyyzz corresponding to the source version x.y.z (leading zeros in y and z). Beta versions were given the previous public release number plus a letter, until version 1.0.6j; from then on they were given the upcoming public release number plus &quot;betaNN&quot; or &quot;rcN&quot;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-png/">png</a>(5),</code> <a href="/docs/linux/man/3-libpngpf/">libpngpf</a>(3),<code> <a href="/docs/linux/man/3-zlib/">zlib</a>(3),</code> <a href="/docs/linux/man/5-deflate/">deflate</a>(5),and<code> <a href="/docs/linux/man/5-zlib/">zlib</a>(5)</code> </p>
+<p> <code><a href="/docs/linux/man/5-png/">png</a>(5),</code> <a href="/docs/linux/man/3-libpngpf/">libpngpf</a>(3),<code> <a href="/docs/linux/man/3-zlib/">zlib</a>(3),</code> deflate(5),and<code> zlib(5)</code> </p>
 <p> <i>libpng</i>:</p>
 <dl>
 <dt>

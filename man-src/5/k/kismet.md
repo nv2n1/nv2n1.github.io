@@ -15,4 +15,4 @@ description: "kismet.conf – Wireless sniffing and monitoring configuration fil
 <h2>More Info</h2>
 <p>The config file comments explain each option, and the README offers more information.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-kismet_ui-conf/">kismet_ui.conf</a></code>(5), <code><a href="/docs/linux/man/5-kismet_drone-conf/">kismet_drone.conf</a></code>(5), <code><a href="/docs/linux/man/1-gpsmap/">gpsmap</a></code>(1), <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1), <code><a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a></code>(1) </p>
+<p><code>kismet_ui.conf</code>(5), <code>kismet_drone.conf</code>(5), <code>gpsmap</code>(1), <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1), <code><a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a></code>(1) </p>

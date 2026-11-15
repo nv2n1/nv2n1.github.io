@@ -31,7 +31,7 @@ description: "gfix — miscelenous Firebird database maintenance"
 <dd>
 <dt><code>-housekeeping</code> <i>number</i></p>
 <dd> Set the housekeeping interval. When the difference between the oldest interesting transaction and the current transaction exceeds <i>number</i>, an automatic garbage collection (sweep) process is started to make possible increasing of the oldest interesting transaction number. </p>
-<p> When <i>number</i> is <tt>0</tt>, there is no automatic sweep and <font SIZE="-1">OIT</font> advancement should be arranged by other means, e.g. <code>gfix -sweep</code> via <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1).</p>
+<p> When <i>number</i> is <tt>0</tt>, there is no automatic sweep and <font SIZE="-1">OIT</font> advancement should be arranged by other means, e.g. <code>gfix -sweep</code> via <code>cron</code>(1).</p>
 <dt><code>-icu</code></p>
 <dd> Fix the database to be usable with the available <font SIZE="-1">ICU</font> version. </p>
 <p> Some collations in Firebird are bound the the version of the <font SIZE="-1">ICU</font> library. When such a collation needs to be used in an environment with a different version of <font SIZE="-1">ICU,</font> an error occurs. <code>gfix -icu</code> is the remedy.</p>

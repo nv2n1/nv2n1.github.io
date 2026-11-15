@@ -92,7 +92,7 @@ postm
  -A&quot;X-Loop: your [at] own.mail.address&quot; ; \
  echo &quot;Mail received.&quot;) | $SENDMAIL -t
 </dl></pre>
-<p>A more complicated autoreply recipe that implements the functional equivalent of the well known <code><a href="/docs/linux/man/1-vacation/">vacation</a></code>(1) program. This recipe is based on the same principles as the last one (prevent `ringing&#8217; mail). In addition to that however, it maintains a vacation database by extracting the name of the sender and inserting it in the vacation.cache file if the name was new (the vacation.cache file is maintained by formail which will make sure that it always contains the most recent names, the size of the file is limited to a maximum of approximately 8192 bytes). If the name was new, an autoreply will be sent. As you can see, the following recipe has comments <code>between</code> the conditions. This is allowed. Do <code>not</code> put comments on the same line as a condition though. </p>
+<p>A more complicated autoreply recipe that implements the functional equivalent of the well known <code>vacation</code>(1) program. This recipe is based on the same principles as the last one (prevent `ringing&#8217; mail). In addition to that however, it maintains a vacation database by extracting the name of the sender and inserting it in the vacation.cache file if the name was new (the vacation.cache file is maintained by formail which will make sure that it always contains the most recent names, the size of the file is limited to a maximum of approximately 8192 bytes). If the name was new, an autoreply will be sent. As you can see, the following recipe has comments <code>between</code> the conditions. This is allowed. Do <code>not</code> put comments on the same line as a condition though. </p>
 <pre><dl><dt><dd>SHELL=/bin/sh # for other shells, this might need adjustment
 :0 Whc: vacation.lock
  # Perform a quick check to see if the mail was addressed to us
@@ -243,7 +243,7 @@ TRAP=&quot;exit 1;&quot; # The trailing semi-colon is important
     :0 ah
     | cat - ./$FILE 2&gt;&amp;1 | $SENDMAIL -oi -t
 }</code></pre>
-<p> The following example preconverts all plain-text mail arriving in certain encoded MIME formats into a more compact 8-bit format which can be used and displayed more easily by most programs. The <code><a href="/docs/linux/man/1-mimencode/">mimencode</a></code>(1) program is part of Nathaniel Borenstein&#8217;s metamail package. </p>
+<p> The following example preconverts all plain-text mail arriving in certain encoded MIME formats into a more compact 8-bit format which can be used and displayed more easily by most programs. The <code>mimencode</code>(1) program is part of Nathaniel Borenstein&#8217;s metamail package. </p>
 <pre><dl><dt><dd>:0
 * ^Content-Type: *text/plain
 {
@@ -280,7 +280,7 @@ urgent
  -I 'Content-Transfer-Encoding: quoted-printable'
 </dl></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5), <code><a href="/docs/linux/man/5-procmailsc/">procmailsc</a></code>(5), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/1-mailx/">mailx</a></code>(1), <code><a href="/docs/linux/man/1-uucp/">uucp</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-biff/">biff</a></code>(1), <code><a href="/docs/linux/man/8-comsat/">comsat</a></code>(8), <code><a href="/docs/linux/man/1-mimencode/">mimencode</a></code>(1), <code><a href="/docs/linux/man/1-lockfile/">lockfile</a></code>(1), <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5), <code><a href="/docs/linux/man/5-procmailsc/">procmailsc</a></code>(5), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/1-mailx/">mailx</a></code>(1), <code><a href="/docs/linux/man/1-uucp/">uucp</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code>biff</code>(1), <code>comsat</code>(8), <code>mimencode</code>(1), <code><a href="/docs/linux/man/1-lockfile/">lockfile</a></code>(1), <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1)</p>
 <h2>Authors</h2>
 <p>Stephen R. van den Berg </p>
 <pre><dl><dt><dd>&lt;srb [at] cuci.nl&gt;

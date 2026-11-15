@@ -9,7 +9,7 @@ description: "prerex_format — a format for prerequisite-chart descriptions"
 
 <p>prerex_format &#8212; a format for prerequisite-chart descriptions</p>
 <h2>Description</h2>
-<p>This manual describes the format of prerequisite-chart descriptions that can be processed by <code>[pdf]latex</code> (normally using a suitable <code><a href="/docs/linux/man/7-prerex-sty/">prerex.sty</a></code>(7) style file) and edited using the <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) interactive editor (or by any conventional text editor).</p>
+<p>This manual describes the format of prerequisite-chart descriptions that can be processed by <code>[pdf]latex</code> (normally using a suitable <code>prerex.sty</code>(7) style file) and edited using the <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) interactive editor (or by any conventional text editor).</p>
 <h2>Terminology</h2>
 <p>A prerequisite chart consists of a number of <i>course boxes,</i> linked by <i>arrows.</i> Courses are either <i>half</i> or <i>full,</i> and may be <i>required</i> or <i>optional</i> (or neither). Each course box can contain a course <i>code</i> (upper left corner), a course <i>title</i> (lower half), and <i>timetable</i> information (upper right corner). An arrow can be either a <i>prerequisite </i> (solid), a <i>corequisite </i> (dotted), or <i>recommended</i> (dashed). When a conventional arrow would be inappropriate, a <i>mini </i> course just above a target box can be used.</p>
 <h2>Structure</h2>
@@ -22,8 +22,10 @@ description: "prerex_format — a format for prerequisite-chart descriptions"
 <dl>
 <dt> <code>\halfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
 <dt> <code>ullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
-<dt> <code>eqhalfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
-<dt> <code>eqfullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
+<dt> <code>
+eqhalfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
+<dt> <code>
+eqfullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
 <dt> <code>\opthalfcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></p>
 <dt> <code>\optfullcourse</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}</code></dl>
 <dd>where <i>x,y</i> are the coordinates of the <i>centerpoint </i> of the box, relative to the origin of the coordinate system at the lower-left corner of the diagram. The <i>code,</i> <i>title,</i> and <i>timetable</i> arguments are arbitrary (well-bracketed) text, possibly with LaTeX markup. </p>
@@ -31,8 +33,10 @@ description: "prerex_format — a format for prerequisite-chart descriptions"
 <dl>
 <dd><code>\halfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
 <dd><code>ullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
-<dd><code>eqhalfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
-<dd><code>eqfullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
+<dd><code>
+eqhalfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
+<dd><code>
+eqfullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
 <dd><code>\opthalfcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></p>
 <dd><code>\optfullcoursec</code><i> x,y</i><code>:{</code><i>code</i><code>}{</code><i>title</i><code>}{</code><i>timetable</i><code>}{</code><i>color</i><code>}</code></dl>
 <h2>Mini Course Boxes And Text</h2>

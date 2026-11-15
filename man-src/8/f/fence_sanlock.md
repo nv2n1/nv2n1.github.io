@@ -43,7 +43,7 @@ description: "fence_sanlock – fence agent using watchdog and shared storage le
 <h2>Files</h2>
 <p>Example cluster.conf configuration for fence_sanlock.<br />
  (For cman based clusters in which fenced runs agents.)<br />
- Also see <a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a>(5), <a href="/docs/linux/man/8-fenced/">fenced</a>(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8). </p>
+ Also see cluster.conf(5), <a href="/docs/linux/man/8-fenced/">fenced</a>(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8). </p>
 <pre>&lt;clusternode name=&quot;node01&quot; nodeid=&quot;1&quot;&gt;
  &lt;fence&gt;
  &lt;method name=&quot;1&quot;&gt;

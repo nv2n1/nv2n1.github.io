@@ -51,7 +51,7 @@ url: "/docs/linux/man/1-kpatch/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-kpatch-build/">kpatch-build</a>(1)
+ kpatch-build(1)
 
 <h2>BUGS</h2>
 

@@ -55,7 +55,7 @@ description: "fork – create a child process"
 <p> Note the following further points:</p>
 <dl>
 <dt>*</p>
-<dd> The child process is created with a single thread&#8212;the one that called <code>fork</code>(). The entire virtual address space of the parent is replicated in the child, including the states of mutexes, condition variables, and other pthreads objects; the use of <code><a href="/docs/linux/man/3-pthread_atfork/">pthread_atfork</a></code>(3) may be helpful for dealing with problems that this can cause.</p>
+<dd> The child process is created with a single thread&#8212;the one that called <code>fork</code>(). The entire virtual address space of the parent is replicated in the child, including the states of mutexes, condition variables, and other pthreads objects; the use of <code>pthread_atfork</code>(3) may be helpful for dealing with problems that this can cause.</p>
 <dt>*</p>
 <dd> After a <code>fork</code>() in a multithreaded program, the child can safely call only async-signal-safe functions (see <code><a href="/docs/linux/man/7-signal-safety/">signal-safety</a></code>(7)) until such time as it calls <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
 <dt>*</p>
@@ -63,7 +63,7 @@ description: "fork – create a child process"
 <dt>*</p>
 <dd> The child inherits copies of the parent&#8217;s set of open message queue descriptors (see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7)). Each file descriptor in the child refers to the same open message queue description as the corresponding file descriptor in the parent. This means that the two file descriptors share the same flags (<i>mq_flags</i>).</p>
 <dt>*</p>
-<dd> The child inherits copies of the parent&#8217;s set of open directory streams (see <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3)). POSIX.1 says that the corresponding directory streams in the parent and child <i>may</i> share the directory stream positioning; on Linux/glibc they do not.</dl>
+<dd> The child inherits copies of the parent&#8217;s set of open directory streams (see <code>opendir</code>(3)). POSIX.1 says that the corresponding directory streams in the parent and child <i>may</i> share the directory stream positioning; on Linux/glibc they do not.</dl>
 <h2>RETURN VALUE</h2>
 <p> On success, the PID of the child process is returned in the parent, and 0 is returned in the child. On failure, -1 is returned in the parent, no child process is created, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
@@ -98,11 +98,11 @@ description: "fork – create a child process"
 <h2>NOTES</h2>
 <p> Under Linux, <code>fork</code>() is implemented using copy-on-write pages, so the only penalty that it incurs is the time and memory required to duplicate the parent&#8217;s page tables, and to create a unique task structure for the child.</p>
 <h3>C library/kernel differences</h3>
-<p> Since version 2.3.3, rather than invoking the kernel&#8217;s <code>fork</code>() system call, the glibc <code>fork</code>() wrapper that is provided as part of the NPTL threading implementation invokes <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with flags that provide the same effect as the traditional system call. (A call to <code>fork</code>() is equivalent to a call to <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) specifying <i>flags</i> as just <code>SIGCHLD</code>.) The glibc wrapper invokes any fork handlers that have been established using <code><a href="/docs/linux/man/3-pthread_atfork/">pthread_atfork</a></code>(3).</p>
+<p> Since version 2.3.3, rather than invoking the kernel&#8217;s <code>fork</code>() system call, the glibc <code>fork</code>() wrapper that is provided as part of the NPTL threading implementation invokes <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with flags that provide the same effect as the traditional system call. (A call to <code>fork</code>() is equivalent to a call to <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) specifying <i>flags</i> as just <code>SIGCHLD</code>.) The glibc wrapper invokes any fork handlers that have been established using <code>pthread_atfork</code>(3).</p>
 <h2>EXAMPLES</h2>
 <p> See <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2) and <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2), <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), <code><a href="/docs/linux/man/2-exit/">exit</a></code>(2), <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2), <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2), <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2), <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2), <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3), <code><a href="/docs/linux/man/3-pthread_atfork/">pthread_atfork</a></code>(3), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)</p>
+<p> <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2), <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), <code><a href="/docs/linux/man/2-exit/">exit</a></code>(2), <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2), <code><a href="/docs/linux/man/2-unshare/">unshare</a></code>(2), <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2), <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2), <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3), <code>pthread_atfork</code>(3), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

@@ -21,7 +21,7 @@ function = alloc_trampoline_r(address, data0, data1);</code></pre>
 <dl>
 <dd><code>trampoline_r_address(</code><i>function</i><code>)</code> returns <i>address</i>, <code>trampoline_r_data0(</code><i>function</i><code>)</code> returns <i>data0</i>, <code>trampoline_r_data1(</code><i>function</i><code>)</code> returns <i>data1</i>.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-trampoline/">trampoline</a></code>(3), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/3-varargs/">varargs</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-trampoline/">trampoline</a></code>(3), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code>varargs</code>(3) </p>
 <h2>Porting</h2>
 <p>The way <code>gcc</code> builds local functions is described in the gcc source, file gcc-2.6.3/config/<i>cpu</i>/<i>cpu</i>.h.</p>
 <h2>Author</h2>

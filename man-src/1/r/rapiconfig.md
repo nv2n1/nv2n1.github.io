@@ -39,5 +39,5 @@ description: "rapiconfig – upload an XML config file to a SynCE connected devi
 <h2>AUTHOR</h2>
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-synce/">synce</a>(1) </p>
+<p> synce(1) </p>
 <h2>Index</h2>

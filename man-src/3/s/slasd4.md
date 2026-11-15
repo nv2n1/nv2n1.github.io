@@ -62,7 +62,7 @@ description: "slasd4.f –"
 <pre>
           DELTA is REAL array, dimension ( N )
          If N .ne. 1, DELTA contains (D(j) - sigma_I) in its  j-th
-         component.  If N = 1, then <a href="//www.systutorials.com/docs/linux/man/1-DELTA/">DELTA</a>(1) = 1.  The vector DELTA
+         component.  If N = 1, then DELTA(1) = 1.  The vector DELTA
          contains the information necessary to construct the
          (singular) eigenvectors.
 </pre>

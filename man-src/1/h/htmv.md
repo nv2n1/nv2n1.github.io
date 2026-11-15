@@ -46,7 +46,7 @@ description: "htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping – file tra
 <dt>&#8211;cert &lt;X.509 cert path&gt; and &#8211;key &lt;X.509 key path&gt;</p>
 <dd> Path to the PEM-encoded X.509 or GSI Proxy user certificate and key to use for HTTPS connections, instead of &quot;anonymous mode.&quot; If only one of &#8211;key or &#8211;cert is given, then that will be tried for both. If neither is given, then the following order of precedence is used: the file name held by the variable X509_USER_PROXY; the file /tmp/x509up_uID (with Unix UID equal to ID); the file names held by X509_USER_CERT / X509_USER_KEY; the files ~/.globus/usercert.pem and ~/.globus/userkey.pem (where ~/ is the home directory of the user.) </p>
 <dt>&#8211;capath &lt;X.509 CA root certs directory or file&gt;</p>
-<dd> Path to the PEM-encoded CA root certificates to use when verifying remote servers&#8217; host certificates in HTTPS connections. Ideally this should be a directory of hash.0 files as described in the OpenSSL <a href="/docs/linux/man/1-verify/">verify</a>(1) man page, but a file may be used instead. If &#8211;capath is not given, the value of the environment variable X509_CERT_DIR will be tried. If this is not valid, then /etc/grid-security/certificates will be used. </p>
+<dd> Path to the PEM-encoded CA root certificates to use when verifying remote servers&#8217; host certificates in HTTPS connections. Ideally this should be a directory of hash.0 files as described in the OpenSSL verify(1) man page, but a file may be used instead. If &#8211;capath is not given, the value of the environment variable X509_CERT_DIR will be tried. If this is not valid, then /etc/grid-security/certificates will be used. </p>
 <dt>&#8211;no-verify</p>
 <dd> Do not use CA root certificates to verify remote servers&#8217; host certificates. This is useful for testing sites before their certificate is set up properly, but leaves you vulnerable to &quot;man in the middle&quot; attacks by hostile servers masquerading as your target. </p>
 <dt>&#8211;grid-http</p>
@@ -82,5 +82,5 @@ description: "htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping – file tra
 <p> Andrew McNab &lt;Andrew.McNab [at] manchester.ac.uk&gt; </p>
 <p> htcp is part of GridSite: <a rel="nofollow" href="http://www.gridsite.org/">http://www.gridsite.org/</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-scp/">scp</a>(1),</code> <code><a href="/docs/linux/man/1-curl/">curl</a>(1),</code> <code><a href="/docs/linux/man/1-wget/">wget</a>(1),</code> <code><a href="/docs/linux/man/1-verify/">verify</a>(1),</code> <code><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</code> </p>
+<p> <code><a href="/docs/linux/man/1-scp/">scp</a>(1),</code> <code><a href="/docs/linux/man/1-curl/">curl</a>(1),</code> <code><a href="/docs/linux/man/1-wget/">wget</a>(1),</code> <code>verify(1),</code> <code><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</code> </p>
 <h2>Index</h2>

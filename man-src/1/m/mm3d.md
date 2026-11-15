@@ -46,7 +46,7 @@ description: "mm3d – Misfit Model 3D"
 <dt><code>&#8211;no-errors</code></p>
 <dd> Do not display error messages in console</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-blender/">blender</a></code>(1), <code><a href="/docs/linux/man/1-wings3d/">wings3d</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/1-blender/">blender</a></code>(1), <code>wings3d</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> mm3d was written by Kevin Worcester. </p>
 <p> This manual page was written by G[:u]rkan Seng[:u]n &lt;gurkan [at] linuks.mine.nu&gt;, for the Debian project (but may be used by others). </p>

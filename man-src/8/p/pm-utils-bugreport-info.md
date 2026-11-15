@@ -15,7 +15,7 @@ description: "pm-utils-bugreport-info.sh – Print pm-utils bug report"
 <p><code>pm-utils-bugreport-info.sh</code></p>
 <dd>can be used to print pm-utils bug report including your HW configuration and pm-utils logs. This can help developers to diagnose problems regarding suspend / hibernate.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-pm-suspend/">pm-suspend</a></code>(8), <code><a href="/docs/linux/man/8-pm-hibernate/">pm-hibernate</a></code>(8)</p>
+<p><code>pm-suspend</code>(8), <code>pm-hibernate</code>(8)</p>
 <h2>Author</h2>
 <p><code>Jaroslav Škarvada</code> &lt;jskarvad [at] redhat.com&gt;</p>
 <dl>

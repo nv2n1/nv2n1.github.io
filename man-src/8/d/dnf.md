@@ -241,7 +241,7 @@ description: "dnf – DNF Command Reference"
 <dt><code>dnf [options] makecache</code></p>
 <dd>Downloads and caches in binary format metadata for all known repos. Tries to avoid downloading whenever possible (e.g. when the local metadata hasn&#8217;t expired yet or when the metadata timestamp hasn&#8217;t changed).</p>
 <dt><code>dnf [options] makecache timer</code></p>
-<dd>Like plain <code>makecache</code> but instructs DNF to be more resource-aware, meaning will not do anything if running on battery power and will terminate immediately if it&#8217;s too soon after the last successful <code>makecache</code> run (see <i><a href="/docs/linux/man/8-dnf-conf/">dnf.conf</a>(8)</i>, <i>metadata_timer_sync</i>).</dl>
+<dd>Like plain <code>makecache</code> but instructs DNF to be more resource-aware, meaning will not do anything if running on battery power and will terminate immediately if it&#8217;s too soon after the last successful <code>makecache</code> run (see <i>dnf.conf(8)</i>, <i>metadata_timer_sync</i>).</dl>
 <h3>Provides Command</h3>
 <dl>
 <dt><code>dnf [options] provides &lt;provide-spec&gt;</code></p>
@@ -368,12 +368,12 @@ description: "dnf – DNF Command Reference"
 <h2>Specifying Transactions</h2>
 <p><code>&lt;transaction-spec&gt;</code> can be in one of several forms. If it is an integer, it specifies a transaction ID. Specifying <code>last</code> is the same as specifying the ID of the most recent transaction. The last form is <code>last-&lt;offset&gt;</code>, where <code>&lt;offset&gt;</code> is a positive integer. It specifies offset-th transaction preceding the most recent transaction.</p>
 <h2>Metadata Synchronization</h2>
-<p>Correct operation of DNF depends on having access to up-to-date data from all enabled repositories but contacting remote mirrors on every operation considerably slows it down and costs bandwidth for both the client and the repository provider. The <i>metadata_expire</i> (see <i><a href="/docs/linux/man/8-dnf-conf/">dnf.conf</a>(8)</i>) repo config option is used by DNF to determine whether particular local copy of repository data is due to be re-synced. It is crucial that the repository providers set the option well, namely to a value where it is guaranteed that if particular metadata was available in time <code>T</code> on the server, then all packages it references will still be available for download from the server in time <code>T + metadata_expire</code>. </p>
+<p>Correct operation of DNF depends on having access to up-to-date data from all enabled repositories but contacting remote mirrors on every operation considerably slows it down and costs bandwidth for both the client and the repository provider. The <i>metadata_expire</i> (see <i>dnf.conf(8)</i>) repo config option is used by DNF to determine whether particular local copy of repository data is due to be re-synced. It is crucial that the repository providers set the option well, namely to a value where it is guaranteed that if particular metadata was available in time <code>T</code> on the server, then all packages it references will still be available for download from the server in time <code>T + metadata_expire</code>. </p>
 <p> To further reduce the bandwidth load, some of the commands where having up-to-date metadata is not critical (e.g. the <code>list</code> command) do not look at whether a repository is expired and whenever any version of it is locally available, it will be used. Note that in all situations the user can force synchronization of all enabled repositories with the <code>&#8211;refresh</code> switch.</p>
 <h2>See Also</h2>
 <dl>
 <dt>&bull;</p>
-<dd><i><a href="/docs/linux/man/8-dnf-conf/">dnf.conf</a>(8)</i>, <i>DNF Configuration Reference</i></p>
+<dd><i>dnf.conf(8)</i>, <i>DNF Configuration Reference</i></p>
 <dt>&bull;</p>
 <dd><i>dnf.plugin.*(8)</i>, assorted DNF plugins that might be installed on the system.</p>
 <dt>&bull;</p>

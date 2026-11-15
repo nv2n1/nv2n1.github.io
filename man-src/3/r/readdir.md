@@ -84,7 +84,7 @@ struct dirent *readdir(DIR *dirp);</code></pre>
 <h2>Conforming To</h2>
 <p>POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.</p>
 <h2>Notes</h2>
-<p>A directory stream is opened using <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3). </p>
+<p>A directory stream is opened using <code>opendir</code>(3). </p>
 <p> The order in which filenames are read by successive calls to <code>readdir</code>() depends on the filesystem implementation; it is unlikely that the names will be sorted in any fashion. </p>
 <p> Only the fields <i>d_name</i> and (as an XSI extension) <i>d_ino</i> are specified in POSIX.1. Other than Linux, the <i>d_type</i> field is available mainly only on BSD systems. The remaining fields are available on many, but not all systems. Under glibc, programs can check for the availability of the fields not defined in POSIX.1 by testing whether the macros <code>_DIRENT_HAVE_D_NAMLEN</code>, <code>_DIRENT_HAVE_D_RECLEN</code>, <code>_DIRENT_HAVE_D_OFF</code>, or <code>_DIRENT_HAVE_D_TYPE</code> are defined.</p>
 <h3>The d_name field</h3>

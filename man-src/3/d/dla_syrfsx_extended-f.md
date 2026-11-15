@@ -128,15 +128,15 @@ description: "dla_syrfsx_extended.f –"
  three fields:
  err = 1 &quot;Trust/don't trust&quot; boolean. Trust the answer if the
  reciprocal condition number is less than the threshold
- <a href="//www.systutorials.com/docs/linux/man/n-sqrt/">sqrt</a>(n) * slamch('Epsilon').
+ sqrt(n) * slamch('Epsilon').
  err = 2 &quot;Guaranteed&quot; error bound: The estimated forward error,
  almost certainly within a factor of 10 of the true error
  so long as the next entry is greater than the threshold
- <a href="//www.systutorials.com/docs/linux/man/n-sqrt/">sqrt</a>(n) * slamch('Epsilon'). This error bound should only
+ sqrt(n) * slamch('Epsilon'). This error bound should only
  be trusted if the previous boolean is true.
  err = 3 Reciprocal condition number: Estimated normwise
  reciprocal condition number. Compared with the threshold
- <a href="//www.systutorials.com/docs/linux/man/n-sqrt/">sqrt</a>(n) * slamch('Epsilon') to determine if the error
+ sqrt(n) * slamch('Epsilon') to determine if the error
  estimate is &quot;guaranteed&quot;. These reciprocal condition
  numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some
  appropriately scaled matrix Z.
@@ -160,7 +160,7 @@ description: "dla_syrfsx_extended.f –"
  componentwise relative error depends), and the type of error
  information as described below. There currently are up to three
  pieces of information returned for each right-hand side. If
- componentwise accuracy is not requested (<a href="//www.systutorials.com/docs/linux/man/3-PARAMS/">PARAMS</a>(3) = 0.0), then
+ componentwise accuracy is not requested (PARAMS(3) = 0.0), then
  ERR_BNDS_COMP is not accessed. If N_ERR_BNDS .LT. 3, then at most
  the first (:,N_ERR_BNDS) entries are returned.
  The first index in ERR_BNDS_COMP(i,:) corresponds to the ith
@@ -169,15 +169,15 @@ description: "dla_syrfsx_extended.f –"
  three fields:
  err = 1 &quot;Trust/don't trust&quot; boolean. Trust the answer if the
  reciprocal condition number is less than the threshold
- <a href="//www.systutorials.com/docs/linux/man/n-sqrt/">sqrt</a>(n) * slamch('Epsilon').
+ sqrt(n) * slamch('Epsilon').
  err = 2 &quot;Guaranteed&quot; error bound: The estimated forward error,
  almost certainly within a factor of 10 of the true error
  so long as the next entry is greater than the threshold
- <a href="//www.systutorials.com/docs/linux/man/n-sqrt/">sqrt</a>(n) * slamch('Epsilon'). This error bound should only
+ sqrt(n) * slamch('Epsilon'). This error bound should only
  be trusted if the previous boolean is true.
  err = 3 Reciprocal condition number: Estimated componentwise
  reciprocal condition number. Compared with the threshold
- <a href="//www.systutorials.com/docs/linux/man/n-sqrt/">sqrt</a>(n) * slamch('Epsilon') to determine if the error
+ sqrt(n) * slamch('Epsilon') to determine if the error
  estimate is &quot;guaranteed&quot;. These reciprocal condition
  numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some
  appropriately scaled matrix Z.

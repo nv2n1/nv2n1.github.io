@@ -24,7 +24,7 @@ description: "bestups – Driver for Best Power / SOLA (Phoenixtec protocol) UPS
 <p> <code>battvoltmult=</code><i>num</i></p>
 <dl>
 <dd>Multiply the reported battery voltage by this number. Some devices report only a fraction of the total battery voltage. </p>
-<p> For example, the SOLA 610 700VA UPS (with a 24V battery) reports the single cell voltage (about 2.27V when fully charged). In this particular case you can set battvoltmult = 12 in <code><a href="/docs/linux/man/8-ups-conf/">ups.conf</a></code>(8) to fix this.</dl>
+<p> For example, the SOLA 610 700VA UPS (with a 24V battery) reports the single cell voltage (about 2.27V when fully charged). In this particular case you can set battvoltmult = 12 in <code>ups.conf</code>(8) to fix this.</dl>
 <p> <code>ID=</code><i>string</i></p>
 <dl>
 <dd>Set the Identification response string. This should only be used with hardware that supports the Phoenixtec protocol status inquiry commands, but not the &quot;ID&quot; command, such as the Best/SOLA 610. Format of the ID string is: AAA,BBBB,CCC,DDD,EE.E,FF.F </p>
@@ -38,7 +38,7 @@ description: "bestups – Driver for Best Power / SOLA (Phoenixtec protocol) UPS
 <h2>Bugs</h2>
 <p>The battery charge percentage value (in battery.charge) is derived from the voltage data that the UPS returns, since the UPS doesn&#8217;t return that value directly. On some hardware, the charge will remain at 100% for a long time and then drops quickly shortly before the battery runs out. You can confirm from the battery.voltage readings that this is a problem with the UPS and not this driver. </p>
 <p> Similarly, the float from the charger in some models forces the battery charge percentage back up to 100% immedately after the UPS goes back on-line, so you can&#8217;t tell when it is really recharged. </p>
-<p> Finally, some models give one value for the battery&#8217;s nominal voltage and yet actually have a nominal voltage slightly below that. This leads to things such as the perpetual 98.7% charge on the author&#8217;s Fortress 750, even when it&#8217;s been charging for weeks. You can use nombattvolt= in <code><a href="/docs/linux/man/8-ups-conf/">ups.conf</a></code>(8) to fix this.</p>
+<p> Finally, some models give one value for the battery&#8217;s nominal voltage and yet actually have a nominal voltage slightly below that. This leads to things such as the perpetual 98.7% charge on the author&#8217;s Fortress 750, even when it&#8217;s been charging for weeks. You can use nombattvolt= in <code>ups.conf</code>(8) to fix this.</p>
 <h2>Author</h2>
 <p>Russell Kroll, Jason White</p>
 <h2>See Also</h2>

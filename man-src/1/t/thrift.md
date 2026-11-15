@@ -23,7 +23,7 @@ description: "thrift – program to do something"
 <dt><code>-v, &#8211;version</code></p>
 <dd> Show version of program.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-bar/">bar</a></code>(1), <code><a href="/docs/linux/man/1-baz/">baz</a></code>(1).<br />
+<p> <code>bar</code>(1), <code><a href="/docs/linux/man/1-baz/">baz</a></code>(1).<br />
  The programs are documented fully by <i>The Rise and Fall of a Fooish Bar</i>, available via the Info system.</p>
 <h2>AUTHOR</h2>
 <p> thrift was written by &lt;upstream author&gt;. </p>

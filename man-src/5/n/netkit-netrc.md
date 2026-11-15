@@ -30,4 +30,4 @@ description: "netrc – user configuration for ftp"
 <dt><code>macdef </code><i>name</i></p>
 <dd>Define a macro. This token functions like the <code>ftp</code> <code>macdef</code> command functions. A macro is defined with the specified name; its contents begin with the next .netrc line and continue until a null line (consecutive new-line characters) is encountered. If a macro named <code>init</code> is defined, it is automatically executed as the last step in the auto-login process.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-ftp/">ftp</a>(1), <a href="/docs/linux/man/8-ftpd/">ftpd</a>(8) </p>
+<p><a href="/docs/linux/man/1-ftp/">ftp</a>(1), ftpd(8) </p>

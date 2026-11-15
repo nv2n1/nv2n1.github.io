@@ -13,7 +13,7 @@ description: "gpg_selinux – Security Enhanced Linux Policy for the gpg process
 <h2>Entrypoints</h2>
 <p>The gpg_t SELinux type can be entered via the <code>gpg_exec_t</code> file type. </p>
 <p> The default entrypoint paths for the gpg_t domain are the following: </p>
-<p> /usr/bin/<a href="/docs/linux/man/2-gpg/">gpg</a>(2)?, /usr/lib/gnupg/.*, /usr/bin/gpgsm</p>
+<p> /usr/bin/gpg(2)?, /usr/lib/gnupg/.*, /usr/bin/gpgsm</p>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux gpg policy is very flexible allowing users to setup their gpg processes in as secure a method as possible. </p>
@@ -115,7 +115,7 @@ description: "gpg_selinux – Security Enhanced Linux Policy for the gpg process
 <p> &#8211; Set files with the gpg_exec_t type, if you want to transition an executable to the gpg_t domain. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/usr/bin/<a href="/docs/linux/man/2-gpg/">gpg</a>(2)?, /usr/lib/gnupg/.*, /usr/bin/gpgsm </p>
+<dd>/usr/bin/gpg(2)?, /usr/lib/gnupg/.*, /usr/bin/gpgsm </p>
 </dl>
 <p> <code>gpg_helper_exec_t</code> </p>
 <p> &#8211; Set files with the gpg_helper_exec_t type, if you want to transition an executable to the gpg_helper_t domain. </p>
@@ -139,4 +139,4 @@ description: "gpg_selinux – Security Enhanced Linux Policy for the gpg process
 <h2>Author</h2>
 <p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-gpg/">gpg</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8), <a href="/docs/linux/man/8-gpg_agent_selinux/">gpg_agent_selinux</a>(8), <a href="/docs/linux/man/8-gpg_agent_selinux/">gpg_agent_selinux</a>(8), <a href="/docs/linux/man/8-gpg_helper_selinux/">gpg_helper_selinux</a>(8), <a href="/docs/linux/man/8-gpg_helper_selinux/">gpg_helper_selinux</a>(8), <a href="/docs/linux/man/8-gpg_pinentry_selinux/">gpg_pinentry_selinux</a>(8), <a href="/docs/linux/man/8-gpg_pinentry_selinux/">gpg_pinentry_selinux</a>(8), <a href="/docs/linux/man/8-gpg_web_selinux/">gpg_web_selinux</a>(8), <a href="/docs/linux/man/8-gpg_web_selinux/">gpg_web_selinux</a>(8) </p>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), gpg(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8), <a href="/docs/linux/man/8-gpg_agent_selinux/">gpg_agent_selinux</a>(8), <a href="/docs/linux/man/8-gpg_agent_selinux/">gpg_agent_selinux</a>(8), <a href="/docs/linux/man/8-gpg_helper_selinux/">gpg_helper_selinux</a>(8), <a href="/docs/linux/man/8-gpg_helper_selinux/">gpg_helper_selinux</a>(8), <a href="/docs/linux/man/8-gpg_pinentry_selinux/">gpg_pinentry_selinux</a>(8), <a href="/docs/linux/man/8-gpg_pinentry_selinux/">gpg_pinentry_selinux</a>(8), <a href="/docs/linux/man/8-gpg_web_selinux/">gpg_web_selinux</a>(8), <a href="/docs/linux/man/8-gpg_web_selinux/">gpg_web_selinux</a>(8) </p>

@@ -19,7 +19,7 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <dd>
 <p> gcc -MM *.c</dl>
 <p> does for C. Nowadays makedepf90 actually supersedes this functionality, making me wonder if I should extend makedepf90 to support C and C++ too ;-). </p>
-<p> <i>makedepf90</i> supports both <code>modules</code>, <code>include</code>:s, <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) <code>#include</code>:s, <code><a href="/docs/linux/man/1-f90ppr/">f90ppr</a></code>(1) <code>$include</code>:s and <code><a href="/docs/linux/man/1-coco/">coco</a></code>(1) <code>??includes</code> and set-files. </p>
+<p> <i>makedepf90</i> supports both <code>modules</code>, <code>include</code>:s, <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) <code>#include</code>:s, <code>f90ppr</code>(1) <code>$include</code>:s and <code>coco</code>(1) <code>??includes</code> and set-files. </p>
 <p> <i>makedepf90</i> reads Fortran source files given on the command line, and writes a dependency list to stdout; for every file it writes a line with the following format:</p>
 <dl>
 <dt>
@@ -36,7 +36,7 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <dt><code>&#8212; </code></p>
 <dd> Include-files (including files included and mod-files of modules USEd from these include-files).</p>
 <dt><code>&#8212;</code></p>
-<dd> <code>Coco</code> set-files, if <code><a href="/docs/linux/man/1-coco/">coco</a></code>(1) is being used and set-files exist.</dl>
+<dd> <code>Coco</code> set-files, if <code>coco</code>(1) is being used and set-files exist.</dl>
 <p> Since different compilers use different naming conventions for the mod-files, listing them in the dependency list results in non-portable makefiles. Therefore it&#8217;s common practise to list the object file (<i>filename</i>.o) corresponding to the sourcefile containing the USEd modules instead. This is the default behaviour of <i>makedepf90</i>. To change this, use the <code>-m</code> option (e.g <code>-m &quot;%m.mod&quot;</code> if your compiler names the mod files <i>modulename</i>.mod) </p>
 <p> Include files not found in the working directory will not be listed in the dependency list, assuming they are part of a (seldom changing) library not part of the program. Neither will mod-files of modules whose definitions aren&#8217;t found be listed by the same reason. </p>
 <h2>OPTIONS</h2>
@@ -77,7 +77,7 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
  <code>$(FC) -o $@ $(FFLAGS) $(LDFLAGS) $(FOBJ) $(LIBS)</code>.<br />
  This option has no effect unless <code>-o</code> is used.</p>
 <dt><code>-coco</code></p>
-<dd> Look for <code><a href="/docs/linux/man/1-coco/">coco</a></code>(1) set-files (<code>coco</code> ??include:s are supported automatically). This option implies <code>-free</code>.</p>
+<dd> Look for <code>coco</code>(1) set-files (<code>coco</code> ??include:s are supported automatically). This option implies <code>-free</code>.</p>
 <dt><code>-D</code><i> NAME</i></p>
 <dd> Define the pre-processor symbol <i>NAME</i>.</p>
 <dt><code>-b</code><i> path</i></p>
@@ -126,7 +126,7 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <p> With this makefile, the command <code>make</code> should perform all the commands needed to compile and link the program <i>foobar</i> out of all *.f90 files in the working directory. </p>
 <p> The dependency list <i>.depend</i> will be (re)created if <i>.depend</i> doesn&#8217;t exist, or if the command <code>make depend</code> is run. This should be done every time changes has been made to the program that affect the dependencies of the files (e.g if new source files has been added to the project).</p>
 <h3>Example With Coco</h3>
-<p> If you are using a pre-processor, things might get more complicated. If you are lucky, your compiler supports your pre-processor and runs it on your code automatically, but if it doesn&#8217;t, you have to give the commands to run the pre-processor yourself. Below is an example of an Makefile for <code><a href="/docs/linux/man/1-coco/">coco</a></code>(1)-users. </p>
+<p> If you are using a pre-processor, things might get more complicated. If you are lucky, your compiler supports your pre-processor and runs it on your code automatically, but if it doesn&#8217;t, you have to give the commands to run the pre-processor yourself. Below is an example of an Makefile for <code>coco</code>(1)-users. </p>
 <p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
 &nbsp;<wbr>FC=f90 </p>
 <p>&nbsp;<wbr>FFLAGS=-O </p>
@@ -156,7 +156,7 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <p> Makedepf90&#8217;s support for pre processor conditionals and macro expension (#if:s, #define:s etc) is rather weak, but should work well enough for most cases. </p>
 <p> The include file search algorithm is broken. I may fix it some day. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-make/">make</a></code>(1), <code><a href="/docs/linux/man/1-f90/">f90</a></code>(1), <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1), <code><a href="/docs/linux/man/1-fpp/">fpp</a></code>(1), <code><a href="/docs/linux/man/1-f90ppr/">f90ppr</a></code>(1), <code><a href="/docs/linux/man/1-coco/">coco</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-make/">make</a></code>(1), <code>f90</code>(1), <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1), <code>fpp</code>(1), <code>f90ppr</code>(1), <code>coco</code>(1) </p>
 <p> The makedepf90 web site is found at<br />
  <a rel="nofollow" href="http://www.iki.fi/erik.edelmann/makedepf90">http://www.iki.fi/erik.edelmann/makedepf90</a> </p>
 <h2>COPYING</h2>

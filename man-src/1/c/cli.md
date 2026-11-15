@@ -363,13 +363,13 @@ abcrem Array bound checks removal<br />
 <h3>Log profiler</h3>
 <p> The log profiler can be used to collect a lot of information about a program running in the Mono runtime. This data can be used (both while the process is running and later) to do analyses of the program behavior, determine resource usage, performance issues or even look for particular execution patterns. </p>
 <p> This is accomplished by logging the events provided by the Mono runtime through the profiler API and periodically writing them to a file which can later be inspected with the <code><a href="/docs/linux/man/1-mprof-report/">mprof-report</a></code>(1) tool. </p>
-<p> More information about how to use the log profiler is available on the <code><a href="/docs/linux/man/1-mono-profilers/">mono-profilers</a></code>(1) page, under the <code>LOG PROFILER</code> section, as well as the <code><a href="/docs/linux/man/1-mprof-report/">mprof-report</a></code>(1) page.</p>
+<p> More information about how to use the log profiler is available on the <code>mono-profilers</code>(1) page, under the <code>LOG PROFILER</code> section, as well as the <code><a href="/docs/linux/man/1-mprof-report/">mprof-report</a></code>(1) page.</p>
 <h3>Coverage profiler</h3>
 <p> The code coverage profiler can instrument a program to help determine which classes, methods, code paths, etc are actually executed. This is most useful when running a test suite to determine whether the tests actually cover the code they&#8217;re expected to. </p>
-<p> More information about how to use the coverage profiler is available on the <code><a href="/docs/linux/man/1-mono-profilers/">mono-profilers</a></code>(1) page, under the <code>COVERAGE PROFILER</code> section.</p>
+<p> More information about how to use the coverage profiler is available on the <code>mono-profilers</code>(1) page, under the <code>COVERAGE PROFILER</code> section.</p>
 <h3>AOT profiler</h3>
 <p> The AOT profiler can help improve startup performance by logging which generic instantiations are used by a program, which the AOT compiler can then use to compile those instantiations ahead of time so that they won&#8217;t have to be JIT compiled at startup. </p>
-<p> More information about how to use the AOT profiler is available on the <code><a href="/docs/linux/man/1-mono-profilers/">mono-profilers</a></code>(1) page, under the <code>AOT PROFILER</code> section.</p>
+<p> More information about how to use the AOT profiler is available on the <code>mono-profilers</code>(1) page, under the <code>AOT PROFILER</code> section.</p>
 <h3>Custom profilers</h3>
 <p> Custom profiler modules can be loaded in exactly the same way as the standard modules that ship with Mono. They can also access the same profiler API to gather all kinds of information about the code being executed. </p>
 <p> For example, to use a third-party profiler called <code>custom</code>, you would load it like this: </p>
@@ -597,7 +597,7 @@ command script import $PREFIX/lib/mono/lldb/mono.py
 <pre>
         MonoIOMAP &lt;appalias&gt; all
 </pre>
-<p> See <a href="/docs/linux/man/8-mod_mono/">mod_mono</a>(8) for more details.</p>
+<p> See mod_mono(8) for more details.</p>
 <dt><code>MONO_LLVM</code></p>
 <dd> When Mono is using the LLVM code generation backend you can use this environment variable to pass code generation options to the LLVM compiler.</p>
 <dt><code>MONO_MANAGED_WATCHER</code></p>
@@ -834,7 +834,7 @@ Windows, Mac OS, iOS or Android.</p>
 <h2>WEB SITE</h2>
 <p> <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-certmgr/">certmgr</a></code>(1), <code><a href="/docs/linux/man/1-cert-sync/">cert-sync</a></code>(1), <code><a href="/docs/linux/man/1-csharp/">csharp</a></code>(1), <code><a href="/docs/linux/man/1-gacutil/">gacutil</a></code>(1), <code><a href="/docs/linux/man/1-mcs/">mcs</a></code>(1), <code><a href="/docs/linux/man/1-monodis/">monodis</a></code>(1), <code><a href="/docs/linux/man/5-mono-config/">mono-config</a></code>(5), <code><a href="/docs/linux/man/1-mono-profilers/">mono-profilers</a></code>(1), <code><a href="/docs/linux/man/1-mprof-report/">mprof-report</a></code>(1), <code><a href="/docs/linux/man/1-pdb2mdb/">pdb2mdb</a></code>(1), <code><a href="/docs/linux/man/1-xsp/">xsp</a></code>(1), <code><a href="/docs/linux/man/8-mod_mono/">mod_mono</a></code>(8) </p>
+<p> <code><a href="/docs/linux/man/1-certmgr/">certmgr</a></code>(1), <code>cert-sync</code>(1), <code><a href="/docs/linux/man/1-csharp/">csharp</a></code>(1), <code><a href="/docs/linux/man/1-gacutil/">gacutil</a></code>(1), <code><a href="/docs/linux/man/1-mcs/">mcs</a></code>(1), <code><a href="/docs/linux/man/1-monodis/">monodis</a></code>(1), <code><a href="/docs/linux/man/5-mono-config/">mono-config</a></code>(5), <code>mono-profilers</code>(1), <code><a href="/docs/linux/man/1-mprof-report/">mprof-report</a></code>(1), <code><a href="/docs/linux/man/1-pdb2mdb/">pdb2mdb</a></code>(1), <code><a href="/docs/linux/man/1-xsp/">xsp</a></code>(1), <code>mod_mono</code>(8) </p>
 <p> For more information on AOT: <a rel="nofollow" href="http://www.mono-project.com/docs/advanced/aot/">http://www.mono-project.com/docs/advanced/aot/</a> </p>
 <p> For ASP.NET-related documentation, see the <a href="/docs/linux/man/1-xsp/">xsp</a>(1) manual page </p>
 <h2>Index</h2>

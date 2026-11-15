@@ -374,9 +374,9 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt>1.</p>
 <dd>enables &#8216;SNMP::verbose&#8217; (see above)</p>
 <dt>2.</p>
-<dd>level 1 plus <i><a href="/docs/linux/man/1-snmp_set_do_debugging/">snmp_set_do_debugging</a></i>(1)</p>
+<dd>level 1 plus <i>snmp_set_do_debugging</i>(1)</p>
 <dt>3.</p>
-<dd>level 2 plus <i><a href="/docs/linux/man/1-snmp_set_dump_packet/">snmp_set_dump_packet</a></i>(1)</dl>
+<dd>level 2 plus <i>snmp_set_dump_packet</i>(1)</dl>
 </dl>
 <dl COMPACT>
 <dd></dl>

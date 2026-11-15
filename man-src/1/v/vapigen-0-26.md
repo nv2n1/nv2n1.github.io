@@ -11,7 +11,7 @@ description: "vapigen – generate a Vala API"
 <h2>Synopsis</h2>
 <p><code>vapigen </code><i>SOURCE</i> <i>PKGBASE</i> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
 <h2>Description</h2>
-<p><code>vapigen</code> is a utility which generates Vala API (VAPI) files from GI files, which may be generated using the <a href="/docs/linux/man/1-vala-gen-introspect/">vala-gen-introspect</a>(1) utility. </p>
+<p><code>vapigen</code> is a utility which generates Vala API (VAPI) files from GI files, which may be generated using the vala-gen-introspect(1) utility. </p>
 <h2>Examples</h2>
 <dl COMPACT>
 <dt>After compilation, the following command generates a GI for pango:</p>
@@ -41,7 +41,7 @@ description: "vapigen – generate a Vala API"
 <dd>Do not print messages to the console </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-vala-gen-introspect/">vala-gen-introspect</a></code>(1) </p>
+<p><code>vala-gen-introspect</code>(1) </p>
 <h2>Homepage And Bug Report</h2>
 <p><a rel="nofollow" href="http://www.vala-project.org/">http://www.vala-project.org/</a> </p>
 <h2>Author</h2>

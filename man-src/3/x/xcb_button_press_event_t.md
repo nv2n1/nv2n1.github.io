@@ -57,6 +57,6 @@ description: "xcb_button_press_event_t – a mouse button was pressed/released"
 <dd>Whether the <i>event</i> window is on the same screen as the <i>root</i> window.</dl>
 <h2>Description</h2>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb_generic_event_t/">xcb_generic_event_t</a></code>(3), <code><a href="/docs/linux/man/3-xcb_grab_button/">xcb_grab_button</a></code>(3), <code><a href="/docs/linux/man/3-xcb_grab_pointer/">xcb_grab_pointer</a></code>(3)</p>
+<p><code>xcb_generic_event_t</code>(3), <code><a href="/docs/linux/man/3-xcb_grab_button/">xcb_grab_button</a></code>(3), <code><a href="/docs/linux/man/3-xcb_grab_pointer/">xcb_grab_pointer</a></code>(3)</p>
 <h2>Author</h2>
 <p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

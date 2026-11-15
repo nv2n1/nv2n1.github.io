@@ -361,7 +361,7 @@ description: "tar – an archiving utility"
 <dt><code>&#8211;old-archive</code>, <code>&#8211;portability</code></p>
 <dd> Same as <code>&#8211;format=v7</code>.</p>
 <dt><code>&#8211;pax-option</code>=<i>keyword</i>[[:]=<i>value</i>][,<i>keyword</i>[[:]=<i>value</i>]]&#8230;</p>
-<dd> Control pax keywords when creating <code>PAX</code> archives (<code>-H pax</code>). This option is equivalent to the <code>-o</code> option of the <code><a href="/docs/linux/man/1-pax/">pax</a></code>(1) utility.</p>
+<dd> Control pax keywords when creating <code>PAX</code> archives (<code>-H pax</code>). This option is equivalent to the <code>-o</code> option of the <code>pax</code>(1) utility.</p>
 <dt><code>&#8211;posix</code></p>
 <dd> Same as <code>&#8211;format=posix</code>.</p>
 <dt><code>-V</code>, <code>&#8211;label</code>=<i>TEXT</i></p>

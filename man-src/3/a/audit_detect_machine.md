@@ -17,7 +17,7 @@ description: "audit_detect_machine – Detects the current machine type"
 <h2>RETURN VALUE</h2>
 <p> Returns -1 if an error occurs; otherwise, the return value is the machine&#8217;s type. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-uname/">uname</a></code>(3), <code><a href="/docs/linux/man/3-audit_name_to_syscall/">audit_name_to_syscall</a></code>(3). </p>
+<p> <code>uname</code>(3), <code>audit_name_to_syscall</code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
 <h2>Index</h2>

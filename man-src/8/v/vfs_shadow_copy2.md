@@ -14,7 +14,7 @@ description: "vfs_shadow_copy2 – Expose snapshots to Windows clients as shadow
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_shadow_copy2 VFS module offers a functionality similar to Microsoft Shadow Copy services. When set up properly, this module allows Microsoft Shadow Copy clients to browse through file system snapshots as &quot;shadow copies&quot; on Samba shares. </p>
-<p> This is a second implementation of a shadow copy module which has the following additional features (compared to the original <code><a href="/docs/linux/man/8-shadow_copy/">shadow_copy</a></code>(8) module): </p>
+<p> This is a second implementation of a shadow copy module which has the following additional features (compared to the original <code>shadow_copy</code>(8) module): </p>
 <dl>
 <dd>1. There is no need any more to populate your share&#8217;s root directory with symlinks to the snapshots if the file system stores the snapshots elsewhere. Instead, you can flexibly configure the module where to look for the file system snapshots. This can be very important when you have thousands of shares, or use [homes].</dl>
 <dl>

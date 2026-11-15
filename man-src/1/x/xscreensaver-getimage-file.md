@@ -27,7 +27,7 @@ description: "xscreensaver-getimage-file – put a randomly-selected image on th
 <dt><code>&#8211;no-cache</code></p>
 <dd> Update the cache immediately, even if it is not time yet. This will re-scan the directory, or re-poll the RSS feed.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-x/">X</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1), <code><a href="/docs/linux/man/1-xv/">xv</a></code>(1), <code><a href="/docs/linux/man/1-xli/">xli</a></code>(1), <code><a href="/docs/linux/man/1-xloadimage/">xloadimage</a></code>(1), <code><a href="/docs/linux/man/1-chbg/">chbg</a></code>(1)</p>
+<p> <code>X</code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1), <code><a href="/docs/linux/man/1-xv/">xv</a></code>(1), <code>xli</code>(1), <code>xloadimage</code>(1), <code>chbg</code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2012 by Jamie Zawinski. Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. No representations are made about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty.</p>
 <h2>AUTHOR</h2>

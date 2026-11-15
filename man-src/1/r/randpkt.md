@@ -66,5 +66,5 @@ description: "randpkt – Random Packet Generator"
     randpkt -b 100 -c 1 -t llc single_llc.pcap
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-pcap/">pcap</a></i>(3), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1) </p>
+<p> <i>pcap</i>(3), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1) </p>
 <h2>Index</h2>

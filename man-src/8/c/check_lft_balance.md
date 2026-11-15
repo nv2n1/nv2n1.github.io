@@ -12,7 +12,7 @@ description: "CHECK_LFT_BALANCE –"
 <h3>Synopsis</h3>
 <p>check_lft_balance.sh [-hRv]</p>
 <h3>Description</h3>
-<p>check_lft_balance.sh is a script which checks for balancing in Infiniband unicast forwarding tables. It analyzes the output of <code><a href="/docs/linux/man/8-dump_lfts/">dump_lfts</a>(8)</code> and <code><a href="/docs/linux/man/8-iblinkinfo/">iblinkinfo</a>(8)</code></p>
+<p>check_lft_balance.sh is a script which checks for balancing in Infiniband unicast forwarding tables. It analyzes the output of <code>dump_lfts(8)</code> and <code><a href="/docs/linux/man/8-iblinkinfo/">iblinkinfo</a>(8)</code></p>
 <h3>Options</h3>
 <dl>
 <dt><code>-h</code></p>
@@ -22,7 +22,7 @@ description: "CHECK_LFT_BALANCE –"
 <dt><code>-v</code></p>
 <dd>verbose output</dl>
 <h3>See Also</h3>
-<p><code><a href="/docs/linux/man/8-dump_lfts/">dump_lfts</a>(8)</code> <code><a href="/docs/linux/man/8-iblinkinfo/">iblinkinfo</a>(8)</code></p>
+<p><code>dump_lfts(8)</code> <code><a href="/docs/linux/man/8-iblinkinfo/">iblinkinfo</a>(8)</code></p>
 <h3>Authors</h3>
 <dl>
 <dt><code>Albert Chu</code></p>

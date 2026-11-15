@@ -654,7 +654,7 @@ be enabled.
 <i>n</i>
 bytes.
 The argument may contain a multiplier, as documented in
-<code><a href="//www.systutorials.com/docs/linux/man/3-scan_scaled/">scan_scaled</a></code>(3).
+<code>scan_scaled</code>(3).
 The default maximum message size is 35MB if none is specified.
 <dt><code> pki </code><i>hostname</i> <code> certificate </code><i>certfile</i><dd>Associate the certificate located in
 <i>certfile</i>
@@ -670,7 +670,7 @@ including a Certificate Authority certificate,
 to
 <i>certfile</i>.
 Creation of certificates is documented in
-<code><a href="//www.systutorials.com/docs/linux/man/8-starttls/">starttls</a></code>(8).
+<code>starttls</code>(8).
 <dl><dt><code> pki </code><i>hostname</i> <code> key </code><i>keyfile</i><dd>Associate the key located in
 <i>keyfile</i>
 with
@@ -686,13 +686,13 @@ The only supported algorithm at the moment is gzip.
 Envelopes and messages may be inspected using the
 <code><a href="//www.systutorials.com/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8)
 or
-<code><a href="//www.systutorials.com/docs/linux/man/1-gzcat/">gzcat</a></code>(1)
+<code>gzcat</code>(1)
 utilities.
 <dt><code> queue encryption [key </code><i>key</i>]<dd>Enable transparent encryption of envelopes and messages.
 <i>key</i>
 must be a 16-byte random key in hexadecimal representation.
 It can be obtained using the
-<code><a href="//www.systutorials.com/docs/linux/man/1-openssl/">openssl</a></code>(1)
+<code>openssl</code>(1)
 utility as follow:
 <dl><dt><dd>$ openssl rand -hex 16
 </dl></dl>
@@ -834,7 +834,7 @@ descriptions.
 <dt><code>/etc/opensmtpd/smtpd.conf</code></p>
 <dd>Default <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) configuration file.</p>
 <dt><code>/etc/opensmtpd/mailname</code></p>
-<dd>If this file exists, the first line is used as the server name. Otherwise, the server name is derived from the local hostname returned by <code><a href="/docs/linux/man/3-gethostname/">gethostname</a></code>(3), either directly if it is a fully qualified domain name, or by retrieving the associated canonical name through <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3).</p>
+<dd>If this file exists, the first line is used as the server name. Otherwise, the server name is derived from the local hostname returned by <code>gethostname</code>(3), either directly if it is a fully qualified domain name, or by retrieving the associated canonical name through <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3).</p>
 <dt><code>/var/spool/smtpd/</code></p>
 <dd>Spool directories for mail during processing.</dl>
 </dl>
@@ -915,6 +915,6 @@ accept from any for domain example.com \
  alias &lt;aliases&gt; deliver to mbox
 </dl></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-mailer-conf/">mailer.conf</a></code>(5), <code><a href="/docs/linux/man/5-table/">table</a></code>(5), <code><a href="/docs/linux/man/8-makemap/">makemap</a></code>(8), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8)</p>
+<p><code>mailer.conf</code>(5), <code><a href="/docs/linux/man/5-table/">table</a></code>(5), <code><a href="/docs/linux/man/8-makemap/">makemap</a></code>(8), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8)</p>
 <h2>History</h2>
 <p><code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) first appeared in OpenBSD 4.6.</p>

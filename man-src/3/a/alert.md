@@ -22,5 +22,5 @@ if (!exists(CONFIG_FILE))
 <h2>RETURN VALUE</h2>
 <p> Returns 1 or 2 depending on which button was clicked. If the alert is dismissed by pressing ESC when ESC is not one of the keyboard shortcuts, it treats it as a click on the second button (this is consistent with the common &quot;Ok&quot;, &quot;Cancel&quot; alert). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-alert3/">alert3</a></code>(3), <code><a href="/docs/linux/man/3-gui_fg_color/">gui_fg_color</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3), <code><a href="/docs/linux/man/3-expackf/">expackf</a></code>(3), <code><a href="/docs/linux/man/3-exspline/">exspline</a></code>(3) </p>
+<p> <code>alert3</code>(3), <code><a href="/docs/linux/man/3-gui_fg_color/">gui_fg_color</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3), <code><a href="/docs/linux/man/3-expackf/">expackf</a></code>(3), <code><a href="/docs/linux/man/3-exspline/">exspline</a></code>(3) </p>
 <h2>Index</h2>

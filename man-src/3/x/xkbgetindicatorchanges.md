@@ -52,4 +52,4 @@ description: "XkbGetIndicatorChanges – Updates a local copy of the keyboard de
 <dt><code>BadMatch</code></p>
 <dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbfreeindicators/">XkbFreeIndicators</a></code>(3), <code><a href="/docs/linux/man/3-xkbgetindicatorchanges/">XkbGetIndicatorChanges</a></code>(3), <code><a href="/docs/linux/man/3-xkbnoteindicatorchanges/">XkbNoteIndicatorChanges</a></code>(3), <code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3), <code><a href="/docs/linux/man/3-xkbselecteventdetail/">XkbSelectEventDetail</a></code>(3)</p>
+<p><code>XkbFreeIndicators</code>(3), <code><a href="/docs/linux/man/3-xkbgetindicatorchanges/">XkbGetIndicatorChanges</a></code>(3), <code><a href="/docs/linux/man/3-xkbnoteindicatorchanges/">XkbNoteIndicatorChanges</a></code>(3), <code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3), <code>XkbSelectEventDetail</code>(3)</p>

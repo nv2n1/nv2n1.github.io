@@ -46,7 +46,7 @@ description: "envy24control – GUI control tool for Envy24 (ice1712) based soun
 <dt><i>-t</i> tall-equal mixer heights</p>
 <dd> Using <i>-t</i> 1 enlarges the channel mixers to the same height as the digital mixer. With values &gt;1 the height of all mixers is increased in stages. <i>-t</i> 0 is the default, set for minimum window height.</dl>
 <h2>SEE ALSO</h2>
-<p> <code> <a href="/docs/linux/man/1-alsamixer/">alsamixer</a>(1), <a href="/docs/linux/man/1-amixer/">amixer</a>(1), <a href="/docs/linux/man/1-gamix/">gamix</a>(1) </code> </p>
+<p> <code> <a href="/docs/linux/man/1-alsamixer/">alsamixer</a>(1), <a href="/docs/linux/man/1-amixer/">amixer</a>(1), gamix(1) </code> </p>
 <h2>AUTHOR</h2>
 <p> <code>envy24control</code> is by Jaroslav Kysela &lt;perex [at] perex.cz&gt; This document is by James Tappin &lt;james [at] xena.uklinux.net&gt;. Updated by Dirk Kalis &lt;dirk.kalis [at] t-online.de&gt;. Options<i>-w and -t</i> added Alan Horstmann &lt;gineera [at] aspect135.co.uk&gt; </p>
 <h2>Index</h2>

@@ -41,7 +41,7 @@ description: "xforms – A GUI Toolkit for X Window Systems"
 <dd>specifies the application name under which resources are to be obtained, rather than the default executable file name. <code></dl>
 <p> </code></p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/1L-fdesign/">fdesign</a>(1L), <a href="//www.systutorials.com/docs/linux/man/1L-fd2ps/">fd2ps</a>(1L) </p>
+<p>fdesign(1L), fd2ps(1L) </p>
 <h2>Author</h2>
 <p>Copyright (c) 1996-2002 T.C. Zhao, Mark Overmars and Steve Lamont<br />
  Since 2002: GNU Lesser General Public License<br />

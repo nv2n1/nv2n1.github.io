@@ -115,4 +115,4 @@ description: "org.debian.apt.transaction – the main interface of an aptdaemon 
 <h2>Author</h2>
 <p>Sebastian Heinlein &lt;devel at glatzor dot de&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-org-debian-apt-transaction/">org.debian.apt.transaction</a></code>(7), <code><a href="/docs/linux/man/2-aptd/">aptd</a></code>(2), <code><a href="/docs/linux/man/2-aptdcon/">aptdcon</a></code>(2) </p>
+<p><code><a href="/docs/linux/man/7-org-debian-apt-transaction/">org.debian.apt.transaction</a></code>(7), <code>aptd</code>(2), <code>aptdcon</code>(2) </p>

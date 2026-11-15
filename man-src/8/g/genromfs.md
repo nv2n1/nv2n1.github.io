@@ -36,4 +36,4 @@ description: "genromfs – create a romfs image"
 <h2>Author</h2>
 <p>This manual page was initially written by Christoph Lameter &lt;clameter [at] debian.org&gt;, for the Debian GNU/Linux system.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-mkisofs/">mkisofs</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code>mkisofs</code>(8) </p>

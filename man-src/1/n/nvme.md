@@ -36,7 +36,7 @@ description: "nvme – the dumb pci-e storage utility"
 <dl>
 <dt>
 <dd> Submit flush</dl>
-<p> <code><a href="/docs/linux/man/1-nvme-dms/">nvme-dms</a></code>(1)</p>
+<p> <code>nvme-dms</code>(1)</p>
 <dl>
 <dt>
 <dd> Submit Data Set Management</dl>

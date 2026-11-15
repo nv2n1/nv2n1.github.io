@@ -64,7 +64,7 @@ description: "voms-proxy-init – create a proxy with VOMS extensions"
 <h2>BUGS</h2>
 <p> EGEE Bug Tracking Tool: <i><a rel="nofollow" href="https://savannah.cern.ch/projects/jra1mdw/">https://savannah.cern.ch/projects/jra1mdw/</a></i> </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-voms-proxy-info/">voms-proxy-info</a>(1), <a href="/docs/linux/man/1-voms-proxy-destroy/">voms-proxy-destroy</a>(1) </p>
+<p> voms-proxy-info(1), voms-proxy-destroy(1) </p>
 <p> EDT Auth Home page: <i><a rel="nofollow" href="http://grid-auth.infn.it">http://grid-auth.infn.it</a></i> </p>
 <p> CVSweb: <i><a rel="nofollow" href="http://datagrid.in2p3.fr/cgi-bin/cvsweb.cgi/Auth/voms">http://datagrid.in2p3.fr/cgi-bin/cvsweb.cgi/Auth/voms</a></i> </p>
 <p> RPM repository: <i><a rel="nofollow" href="http://datagrid.in2p3.fr/distribution/autobuild/i386-rh7.3">http://datagrid.in2p3.fr/distribution/autobuild/i386-rh7.3</a></i> </p>

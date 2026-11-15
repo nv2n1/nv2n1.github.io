@@ -130,7 +130,7 @@ description: "mutt – The Mutt Mail User Agent"
 <h2>NO WARRANTIES</h2>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-curses/">curses</a></code>(3), <code><a href="/docs/linux/man/5-mailcap/">mailcap</a></code>(5), <code><a href="/docs/linux/man/5-maildir/">maildir</a></code>(5), <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5), <code><a href="/docs/linux/man/1-mutt_dotlock/">mutt_dotlock</a></code>(1), <code><a href="/docs/linux/man/5-muttrc/">muttrc</a></code>(5), <code><a href="/docs/linux/man/3-ncurses/">ncurses</a></code>(3), <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1), <code><a href="/docs/linux/man/1-smail/">smail</a></code>(1). </p>
+<p> <code>curses</code>(3), <code><a href="/docs/linux/man/5-mailcap/">mailcap</a></code>(5), <code><a href="/docs/linux/man/5-maildir/">maildir</a></code>(5), <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5), <code><a href="/docs/linux/man/1-mutt_dotlock/">mutt_dotlock</a></code>(1), <code><a href="/docs/linux/man/5-muttrc/">muttrc</a></code>(5), <code>ncurses</code>(3), <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1), <code>smail</code>(1). </p>
 <p> Mutt Home Page: <a rel="nofollow" href="http://www.mutt.org/">http://www.mutt.org/</a> </p>
 <p> The Mutt manual</p>
 <h2>AUTHOR</h2>

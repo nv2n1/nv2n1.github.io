@@ -68,7 +68,7 @@ Note that multiple CPUs per core indicate support for Intel(R) Hyper-Threading T
 <p>The &quot;&#8211;debug&quot; option prints additional system information before measurements: </p>
 <pre>turbostat version 4.1 10-Feb, 2015 - Len Brown &lt;lenb [at] kernel.org&gt;
 CPUID(0): GenuineIntel 13 CPUID levels; family:model:stepping 0x6:3c:3 (6:60:3)
-<a href="//www.systutorials.com/docs/linux/man/6-CPUID/">CPUID</a>(6): APERF, DTS, PTM, EPB
+CPUID(6): APERF, DTS, PTM, EPB
 RAPL: 3121 sec. Joule Counter Range, at 84 Watts
 cpu0: MSR_NHM_PLATFORM_INFO: 0x80838f3012300
 8 * 100 = 800 MHz max efficiency

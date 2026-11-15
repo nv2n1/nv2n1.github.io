@@ -68,7 +68,7 @@ description: "wbemexec – submit a CIM operation request to a CIM Server"
 <dt>
 <dd> <code>wbemexec -h hpserver -p 49152 -u guest -w guest cimrequest.xml</code></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cimserver/">cimserver</a>(1), <a href="/docs/linux/man/1-cimconfig/">cimconfig</a>(1).</p>
+<p> cimserver(1), cimconfig(1).</p>
 <h2>STANDARDS CONFORMANCE</h2>
 <p> <code>wbemexec</code>: CIM Operations over HTTP 1.0, Representation of CIM in XML 2.0 </p>
 <h2>Index</h2>

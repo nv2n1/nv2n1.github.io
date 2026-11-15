@@ -56,6 +56,6 @@ description: "fxload – Firmware download to EZ-USB devices"
 <dt><code>DEVICE</code></p>
 <dd>normally names a &quot;usbfs&quot; file that will be used to talk to the device. This is provided by the Linux kernel as part of USB hotplugging.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-hotplug/">hotplug</a></code>(8)</p>
+<p><code>hotplug</code>(8)</p>
 <h2>Authors</h2>
 <p>Linux Hotplugging Project <i><a rel="nofollow" href="http://linux-hotplug.sourceforge.net/">http://linux-hotplug.sourceforge.net/</a></i></p>

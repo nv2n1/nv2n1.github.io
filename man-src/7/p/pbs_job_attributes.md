@@ -144,4 +144,4 @@ description: "pbs_job_attributes – pbs job attributes"
 <dd>A numerical indicator of the substate of the job. The substate is used by the PBS job server internally. The attribute is visible to privileged clients, such as the scheduler. Format: integer.</dl>
 <p> </font></p>
 <h2>See Also</h2>
-<p>PBS ERS, <a href="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B), <a href="//www.systutorials.com/docs/linux/man/1B-qalter/">qalter</a>(1B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources/">pbs_resources</a>(7B) </p>
+<p>PBS ERS, qsub(1B), qalter(1B), pbs_resources(7B) </p>

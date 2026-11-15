@@ -86,5 +86,5 @@ description: "opusenc – encode audio into the Opus format"
 <h2>AUTHORS</h2>
 <p> Gregory Maxwell &lt;greg [at] xiph.org&gt; </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-opusdec/">opusdec</a></code>(1), <code><a href="/docs/linux/man/1-opusinfo/">opusinfo</a></code>(1), <code><a href="/docs/linux/man/1-oggfwd/">oggfwd</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-opusdec/">opusdec</a></code>(1), <code><a href="/docs/linux/man/1-opusinfo/">opusinfo</a></code>(1), <code>oggfwd</code>(1) </p>
 <h2>Index</h2>

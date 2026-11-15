@@ -31,7 +31,7 @@ description: "from – print names of those who have sent mail"
 <dt><code>/var/mail/* </code></p>
 <dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-biff/">biff</a>(1), <a href="/docs/linux/man/1-mail/">mail</a>(1)</p>
+<p> biff(1), <a href="/docs/linux/man/1-mail/">mail</a>(1)</p>
 <h2>HISTORY</h2>
 <p> The command appeared in BSD 3.0 </p>
 <h2>Index</h2>

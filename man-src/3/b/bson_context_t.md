@@ -27,7 +27,7 @@ bson_context_t *bson_context_new(bson_context_flags_t flags);
 void bson_context_destroy(bson_context_t *context);
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The <code>bson_context_t</code> structure is context for generation of BSON Object IDs. This context allows for specialized overriding of how ObjectIDs are generated based on the applications requirements. For example, disabling of PID caching can be configured if the application cannot detect when a call to <code><a href="/docs/linux/man/3-fork/">fork</a>(3)</code> has occurred. \&amp;.</p>
+<p> The <code>bson_context_t</code> structure is context for generation of BSON Object IDs. This context allows for specialized overriding of how ObjectIDs are generated based on the applications requirements. For example, disabling of PID caching can be configured if the application cannot detect when a call to <code>fork(3)</code> has occurred. \&amp;.</p>
 <h2>EXAMPLE</h2>
 <pre><code>
 #include &lt;bson.h&gt;

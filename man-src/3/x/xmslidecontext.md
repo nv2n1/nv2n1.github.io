@@ -167,6 +167,6 @@ description: "XmSlideContext – The SlideContext widget class"
 <h3>Behavior</h3>
 <p>XmSlideContext behavior is described below: XmSlideContext installs an Xt timer that is called every XmNslideInterval miliseconds. At each call of the timer proc the XmNslideWidget geometry is adjusted such that the X/Y/Width/Height are 10 percent closer to the final values. The XmSlideContext is automatically destroyed when the XmNslideWidget reaches its destination. If the XmNslideWidget is destroyed before the slide is finished, the XmSlideContext is destroyed. </p>
 <h3>Virtual Bindings</h3>
-<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <i><a href="//www.systutorials.com/docs/linux/man/3X-VirtualBindings/">VirtualBindings</a>(3X)</i>.</p>
+<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <i>VirtualBindings(3X)</i>.</p>
 <h2>Related Information</h2>
-<p><i><a href="//www.systutorials.com/docs/linux/man/3X-Object/">Object</a>(3X)</i>,</p>
+<p><i>Object(3X)</i>,</p>

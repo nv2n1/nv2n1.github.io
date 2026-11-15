@@ -1401,9 +1401,9 @@ ffserver - ffserver video server
 <dl COMPACT><dt><font SIZE="-1"><b>PI</b></font>
 <dd>area of the unit disc, approximately 3.14
 <dt><b>E</b>
-<dd><i><a HREF="/docs/linux/man/1-exp/">exp</a></i>(1) (Euler's number), approximately 2.718
+<dd><i>exp</i>(1) (Euler's number), approximately 2.718
 <dt><font SIZE="-1"><b>PHI</b></font>
-<dd>golden ratio (1+<i><a HREF="/docs/linux/man/5-sqrt/">sqrt</a></i>(5))/2, approximately 1.618</dl>
+<dd>golden ratio (1+<i>sqrt</i>(5))/2, approximately 1.618</dl>
  
 
  Assuming that an expression is considered ``true'' if it has a non-zero value, note that: 
@@ -6433,7 +6433,7 @@ ffserver - ffserver video server
 
  For more detailed information read the file Documentation/fb/framebuffer.txt included in the Linux source tree. 
 
- See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <i><a HREF="/docs/linux/man/1-fbset/">fbset</a></i>(1). 
+ See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <i>fbset</i>(1). 
 
  To record from the framebuffer device <i>/dev/fb0</i> with <b>ffmpeg</b>: 
 
@@ -6942,7 +6942,7 @@ ffserver - ffserver video server
 
  Play a file on framebuffer device <i>/dev/fb0</i>. Required pixel format depends on current framebuffer settings. 
 
- <pre> ffmpeg -re -i INPUT -c:v rawvideo -pix_fmt bgra -f fbdev /dev/fb0</pre>See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <i><a HREF="/docs/linux/man/1-fbset/">fbset</a></i>(1).
+ <pre> ffmpeg -re -i INPUT -c:v rawvideo -pix_fmt bgra -f fbdev /dev/fb0</pre>See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <i>fbset</i>(1).
 <h3>opengl</h3>OpenGL output device. 
 
  To enable this output device you need to configure FFmpeg with <tt>&quot;--enable-opengl&quot;</tt>. 
@@ -7588,7 +7588,7 @@ ffserver - ffserver video server
  <pre> aeval=val(ch)/2:c=same</pre><dt>&bull;
 <dd>Invert phase of the second channel: 
 
- <pre> aeval=val(0)|<a HREF="//www.systutorials.com/docs/linux/man/1--val/">-val</a>(1)</pre></dl><h3>afade</h3>Apply fade-in/out effect to input audio. 
+ <pre> aeval=val(0)|-val(1)</pre></dl><h3>afade</h3>Apply fade-in/out effect to input audio. 
 
  A description of the accepted parameters follows.
 <dl COMPACT><dt><b>type, t</b>
@@ -13709,7 +13709,7 @@ ffserver - ffserver video server
  <pre> rotate='2*PI*t:ow=hypot(iw,ih):oh=ow'</pre><dt>&bull;
 <dd>Rotate the video, reduce the output size so that no background is ever shown: 
 
- <pre> rotate=2*PI*t:ow='min(iw,ih)/<a HREF="//www.systutorials.com/docs/linux/man/2-sqrt/">sqrt</a>(2)':oh=ow:c=none</pre></dl>
+ <pre> rotate=2*PI*t:ow='min(iw,ih)/sqrt(2)':oh=ow:c=none</pre></dl>
  
 
  <i>Commands</i> 
@@ -16685,7 +16685,7 @@ ffserver - ffserver video server
 <dl COMPACT><dt><b>midi(f)</b>
 <dd>midi number of frequency f, some midi numbers: E0(16), C1(24), C2(36), A4(69)
 <dt><b>r(x), g(x), b(x)</b>
-<dd>red, green, and blue value of intensity x.</dl></dl><dl COMPACT><dd>Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(<a HREF="/docs/linux/man/1-1-ld/">1-ld</a>(1)) + b(<a HREF="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl><dt><b>axisfile</b>
+<dd>red, green, and blue value of intensity x.</dl></dl><dl COMPACT><dd>Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(1-ld(1)) + b(<a HREF="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl><dt><b>axisfile</b>
 <dd>Specify image file to draw the axis. This option override <i>fontfile</i> and <i>fontcolor</i> option.
 <dt><b>axis, text</b>
 <dd>Enable/disable drawing text to the axis. If it is set to <tt>0</tt>, drawing to the axis is disabled, ignoring <i>fontfile</i> and <i>axisfile</i> option. Default value is <tt>1</tt>.

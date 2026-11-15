@@ -103,13 +103,13 @@ description: "PAPI_profil –"
 * unsigned short *profbuf;
 *
 * if ((prginfo = PAPI_get_executable_info()) == NULL)
-* <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+* handle_error(1);
 *
 * length = (unsigned long)(prginfo-&gt;text_end - prginfo-&gt;text_start);
 *
 * profbuf = (unsigned short *)malloc(length);
 * if (profbuf == NULL)
-* <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+* handle_error(1);
 * memset(profbuf,0x00,length);
 *
 * if ((retval = PAPI_profil(profbuf, length, start, 65536, EventSet,

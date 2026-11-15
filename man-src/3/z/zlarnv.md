@@ -34,7 +34,7 @@ description: "zlarnv.f –"
 <p><i>ISEED</i> </p>
 <pre> ISEED is INTEGER array, dimension (4)
  On entry, the seed of the random number generator; the array
- elements must be between 0 and 4095, and <a href="//www.systutorials.com/docs/linux/man/4-ISEED/">ISEED</a>(4) must be
+ elements must be between 0 and 4095, and ISEED(4) must be
  odd.
  On exit, the seed is updated.</pre>
 <p><i>N</i> </p>

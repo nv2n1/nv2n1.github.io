@@ -23,7 +23,7 @@ description: "pstopnm – convert a PostScript file into a portable anymap"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-forceplain</code></p>
-<dd> forces the output file to be in plain (text) format. Otherwise, it is in raw (binary) format. See <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1), etc.</p>
+<dd> forces the output file to be in plain (text) format. Otherwise, it is in raw (binary) format. See <code>pbm</code>(1), etc.</p>
 <dt><code>-llx </code><i>bx</i></p>
 <dd> selects <i>bx</i> as the lower left corner x coordinate (in inches).</p>
 <dt><code>-lly </code><i>by</i></p>
@@ -62,7 +62,7 @@ description: "pstopnm – convert a PostScript file into a portable anymap"
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;pstopnm -xborder 0 -yborder 0 -portrait -nocrop file.ps </p>
 <p> Additional options may be needed if the document is supposed to be rendered on a medium different from letter-size paper.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-pstofits/">pstofits</a></code>(1), <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1), <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1), <code><a href="/docs/linux/man/1-pbmtolps/">pbmtolps</a></code>(1), <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1), <code><a href="/docs/linux/man/1-pnmsplit/">pnmsplit</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code>pstofits</code>(1), <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1), <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1), <code><a href="/docs/linux/man/1-pbmtolps/">pbmtolps</a></code>(1), <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1), <code><a href="/docs/linux/man/1-pnmsplit/">pnmsplit</a></code>(1) </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1992 Smithsonian Astrophysical Observatory<br />
  PostScript is a Trademark of Adobe Systems Incorporated.</p>

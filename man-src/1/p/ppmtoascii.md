@@ -26,7 +26,7 @@ description: "ppmtoascii – convert a PPM image to ASCII graphics with ANSI ter
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmtoascii/">pbmtoascii</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-ppmtoterm/">ppmtoterm</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>ppmtoascii</code> was new in Netpbm 10.51 (June 2010). Frank Ch. Eigler derived it from <code>pbmtoascii</code>. </p>
 <h2>AUTHOR</h2>

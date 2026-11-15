@@ -355,7 +355,7 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <h2>SEE ALSO</h2>
 <p> Programs with a similar scope are among others</p>
 <dl>
-<dt><i><a href="/docs/linux/man/1-ddrescue/">ddrescue</a></i>(1), <i><a href="/docs/linux/man/1-dd-rescue/">dd-rescue</a></i>(1), &#8230;</p>
+<dt><i><a href="/docs/linux/man/1-ddrescue/">ddrescue</a></i>(1), <i>dd-rescue</i>(1), &#8230;</p>
 <dd>
 </dl>
 <h2>Index</h2>

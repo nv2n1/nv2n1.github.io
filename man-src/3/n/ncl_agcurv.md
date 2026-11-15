@@ -14,7 +14,7 @@ AGCURV - Draws a curve in a manner specified by the current values of the contro
  void c_agcurv (float *xvec, int iiex, float *yvec, 
  int iiey, int nexy, int kdsh)
 <h2>Description</h2><dl COMPACT><dt>XVEC
-<dd>(a singly-subscripted input array of type REAL), when IIEX is non-zero, contains NEXY X-coordinate data - curve point 1 has X coordinate <a HREF="/docs/linux/man/1-xvec/">XVEC</a>(1), curve point 2 has X coordinate XVEC(1+IIEX), curve point 3 has X coordinate XVEC(1+IIEX*2), etc. When IIEX is zero, the array XVEC is ignored - curve point 1 has X coordinate &quot;1.&quot;, curve point 2 has X coordinate &quot;2.&quot;, etc. 
+<dd>(a singly-subscripted input array of type REAL), when IIEX is non-zero, contains NEXY X-coordinate data - curve point 1 has X coordinate XVEC(1), curve point 2 has X coordinate XVEC(1+IIEX), curve point 3 has X coordinate XVEC(1+IIEX*2), etc. When IIEX is zero, the array XVEC is ignored - curve point 1 has X coordinate &quot;1.&quot;, curve point 2 has X coordinate &quot;2.&quot;, etc. 
 
  If the value of any X coordinate matches the current value of 'NULL/1.' (default - &quot;1.E36&quot;), the corresponding point is considered to be missing - curve segments on either side of that point are not drawn.
 <dt>IIEX

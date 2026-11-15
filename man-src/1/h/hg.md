@@ -3697,7 +3697,7 @@ meld =
 # English user, be sure to put &quot;let g:DirDiffDynamicDiffText = 1&quot; in
 # your .vimrc
 vimdiff = gvim -f &quot;+next&quot; \
-          &quot;+execute 'DirDiff' fnameescape(argv(0)) fnameescape(<a href="//www.systutorials.com/docs/linux/man/1-argv/">argv</a>(1))&quot;
+          &quot;+execute 'DirDiff' fnameescape(argv(0)) fnameescape(argv(1))&quot;
 </pre>
 <p> Tool arguments can include variables that are expanded at runtime: </p>
 <pre>
@@ -3734,7 +3734,7 @@ $parent is an alias for $parent1.
 <dd> exclude names matching the given patterns</dl>
 <h3>factotum</h3>
 <p> http authentication with factotum </p>
-<p> This extension allows the <a href="/docs/linux/man/4-factotum/">factotum</a>(4) facility on Plan 9 from Bell Labs platforms to provide authentication information for HTTP access. Configuration entries specified in the auth section as well as authentication information provided in the repository URL are fully supported. If no prefix is specified, a value of &quot;*&quot; will be assumed. </p>
+<p> This extension allows the factotum(4) facility on Plan 9 from Bell Labs platforms to provide authentication information for HTTP access. Configuration entries specified in the auth section as well as authentication information provided in the repository URL are fully supported. If no prefix is specified, a value of &quot;*&quot; will be assumed. </p>
 <p> By default, keys are specified as: </p>
 <pre>
 proto=pass service=hg prefix=&lt;prefix&gt; user=&lt;username&gt; !password=&lt;password&gt;

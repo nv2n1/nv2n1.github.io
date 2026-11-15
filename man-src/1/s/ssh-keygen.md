@@ -110,7 +110,7 @@ description: "ssh-keygen – OpenSSH authentication key utility"
 <dt><code>challenge = </code><i>path</i></p>
 <dd> Specifies a path to a challenge string that will be passed to the FIDO token during key generation. The challenge string may be used as part of an out-of-band protocol for key enrollment (a random challenge is used by default).</p>
 <dt><code>device</code></p>
-<dd> Explicitly specify a <a href="/docs/linux/man/4-fido/">fido</a>(4) device to use, rather than letting the token middleware select one.</p>
+<dd> Explicitly specify a fido(4) device to use, rather than letting the token middleware select one.</p>
 <dt><code>no-touch-required</code></p>
 <dd> Indicate that the generated private key should not require touch events (user presence) when making signatures. Note that <a href="/docs/linux/man/8-sshd/">sshd</a>(8) will refuse such signatures by default, unless overridden via an authorized_keys option.</p>
 <dt><code>resident</code></p>
@@ -203,7 +203,7 @@ description: "ssh-keygen – OpenSSH authentication key utility"
 <dt><code>generator = </code><i>value</i></p>
 <dd> Specify desired generator (in decimal) when testing candidate moduli for DH-GEX.</dl>
 <h2>CERTIFICATES</h2>
-<p> <code>ssh-keygen</code> supports signing of keys to produce certificates that may be used for user or host authentication. Certificates consist of a public key, some identity information, zero or more principal (user or host) names and a set of options that are signed by a Certification Authority (CA) key. Clients or servers may then trust only the CA key and verify its signature on a certificate rather than trusting many user/host keys. Note that OpenSSH certificates are a different, and much simpler, format to the X.509 certificates used in <a href="/docs/linux/man/8-ssl/">ssl</a>(8). </p>
+<p> <code>ssh-keygen</code> supports signing of keys to produce certificates that may be used for user or host authentication. Certificates consist of a public key, some identity information, zero or more principal (user or host) names and a set of options that are signed by a Certification Authority (CA) key. Clients or servers may then trust only the CA key and verify its signature on a certificate rather than trusting many user/host keys. Note that OpenSSH certificates are a different, and much simpler, format to the X.509 certificates used in ssl(8). </p>
 <p> <code>ssh-keygen</code> supports two types of certificates: user and host. User certificates authenticate users to servers, whereas host certificates authenticate server hosts to users. To generate a user certificate: </p>
 <blockquote><p><tt>$ ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub</tt></p></blockquote>
 <p> The resultant certificate will be placed in /path/to/user_key-cert.pub A host certificate requires the &#8211;<code>h</code> option: </p>

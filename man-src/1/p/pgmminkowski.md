@@ -32,7 +32,7 @@ description: "pgmminkowski – compute Minkowski integral"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pgmmorphconv/">pgmmorphconv</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pbmminkowski/">pbmminkowski</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) </p>
+<p> <code>pgm</code>(1) </p>
 <h2>AUTHORS</h2>
 <p> Luuk van Dijk, 2001. </p>
 <p> Based on work which is Copyright (C) 1989, 1991 by Jef Poskanzer. </p>

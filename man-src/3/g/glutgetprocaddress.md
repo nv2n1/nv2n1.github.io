@@ -24,4 +24,4 @@ description: "glutGetProcAddress – Determine if an OpenGLUT feature or extensi
 <h2>Caveats</h2>
 <p>The code makes no effort towards efficiency. It is advised that you cache the pointer retrieved from this function if you need a certain function repeatedly. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-glxgetprocaddress/">glXGetProcAddress</a>(3) <a href="/docs/linux/man/3-wglgetprocaddress/">wglGetProcAddress</a>(3)</p>
+<p>glXGetProcAddress(3) wglGetProcAddress(3)</p>

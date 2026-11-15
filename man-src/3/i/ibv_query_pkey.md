@@ -41,7 +41,7 @@ int ibv_query_pkey(struct ibv_context *context,
 
  
 
- <a HREF="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a>(3), <a HREF="/docs/linux/man/3-ibv_query_device/">ibv_query_device</a>(3), <a HREF="/docs/linux/man/3-ibv_query_gid/">ibv_query_gid</a>(3), <a HREF="/docs/linux/man/3-ibv_query_port/">ibv_query_port</a>(3)
+ ibv_open_device(3), ibv_query_device(3), ibv_query_gid(3), ibv_query_port(3)
 
 <h2>AUTHOR</h2>
 

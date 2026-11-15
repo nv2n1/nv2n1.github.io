@@ -32,7 +32,7 @@ int ares_set_servers(ares_channel channel, struct ares_addr_node *servers)
 <dt><code>ARES_ENOTINITIALIZED</code></p>
 <dd> c-ares library initialization not yet performed.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ares_set_servers_csv/">ares_set_servers_csv</a></code>(3), <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3), <code><a href="/docs/linux/man/3-ares_dup/">ares_dup</a>(3)</code></p>
+<p> <code>ares_set_servers_csv</code>(3), <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3), <code><a href="/docs/linux/man/3-ares_dup/">ares_dup</a>(3)</code></p>
 <h2>AVAILABILITY</h2>
 <p> <a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a>(3) was added in c-ares 1.7.1</p>
 <h2>AUTHOR</h2>

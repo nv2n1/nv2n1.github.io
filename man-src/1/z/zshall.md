@@ -185,6 +185,6 @@ description: "zshall – the Z shell meta-man page"
 <dt><code>/etc/zsh/zlogout</code> (installation-specific &#8211; <code>/etc</code> is the default)</p>
 <dd></dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1), <i><a href="/docs/linux/man/1-tcsh/">tcsh</a></i>(1), <i><a href="/docs/linux/man/1-rc/">rc</a></i>(1), <i><a href="/docs/linux/man/1-bash/">bash</a></i>(1), <i><a href="/docs/linux/man/1-ksh/">ksh</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1), <i><a href="/docs/linux/man/1-tcsh/">tcsh</a></i>(1), <i><a href="/docs/linux/man/1-rc/">rc</a></i>(1), <i><a href="/docs/linux/man/1-bash/">bash</a></i>(1), <i>ksh</i>(1) </p>
 <p> <code>IEEE Standard for information Technology &#8211; Portable Operating System Interface (POSIX) &#8211; Part 2: Shell and Utilities</code>, IEEE Inc, 1993, ISBN 1-55937-255-9. </p>
 <h2>Index</h2>

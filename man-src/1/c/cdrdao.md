@@ -363,12 +363,12 @@ FILE &quot;data_3.wav&quot; 0
 <dt>tmp_file_dir</p>
 <dd> Directory where temporary WAV files will be created from decoding MP3 and Ogg Vorbis files. Corresponding option: <i>&#8211;tmpdir</i></dl>
 <h2>BUGS</h2>
-<p> If the program is terminated during the write/simulation process used IPC resources may not be released. Use <a href="/docs/linux/man/8-ipcs/">ipcs</a>(8) and <a href="/docs/linux/man/8-ipcrm/">ipcrm</a>(8) to delete them.</p>
+<p> If the program is terminated during the write/simulation process used IPC resources may not be released. Use ipcs(8) and ipcrm(8) to delete them.</p>
 <h2>AUTHOR</h2>
 <pre><code>
 Andreas Mueller mueller[at] daneb.ping.de[DEFUNCT] Denis Leroy&lt;denis[at] poolshark.org&gt;
     Manuel Clos&lt;llanero[at] users.sourceforge.net&gt;
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gcdmaster/">gcdmaster</a></code>(1), <a href="/docs/linux/man/1-cdrecord/">cdrecord</a><code>(1), <a href="/docs/linux/man/1-cdda2wav/">cdda2wav</a></code>(1), <a href="/docs/linux/man/1-cdparanoia/">cdparanoia</a><code>(1), </code><a href="/docs/linux/man/1-sox/">sox</a><code>(1), <a href="/docs/linux/man/8-ipcs/">ipcs</a></code>(8), <code><a href="/docs/linux/man/8-ipcrm/">ipcrm</a></code>(8) </p>
+<p> <code><a href="/docs/linux/man/1-gcdmaster/">gcdmaster</a></code>(1), cdrecord<code>(1), cdda2wav</code>(1), <a href="/docs/linux/man/1-cdparanoia/">cdparanoia</a><code>(1), </code><a href="/docs/linux/man/1-sox/">sox</a><code>(1), ipcs</code>(8), <code>ipcrm</code>(8) </p>
 <h2>Index</h2>

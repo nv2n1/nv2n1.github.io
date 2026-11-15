@@ -108,7 +108,7 @@ OPCODE | IBV_QPT_UD | IBV_QPT_UC | IBV_QPT_RC | IBV_QPT_XRC_SEND | IBV_QPT_RAW_P
 <p> The buffers used by a WR can only be safely reused after WR the request is fully executed and a work completion has been retrieved from the corresponding completion queue (CQ). However, if the IBV_SEND_INLINE flag was set, the buffer can be reused immediately after the call returns. </p>
 <p> IBV_WR_DRIVER1 is an opcode that should be used to issue a specific driver operation.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah/">ibv_create_ah</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_recv/">ibv_post_recv</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_srq_recv/">ibv_post_srq_recv</a></code>(3), <code><a href="/docs/linux/man/3-ibv_poll_cq/">ibv_poll_cq</a></code>(3)</p>
+<p> <code>ibv_create_qp</code>(3), <code>ibv_create_ah</code>(3), <code>ibv_post_recv</code>(3), <code>ibv_post_srq_recv</code>(3), <code>ibv_poll_cq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

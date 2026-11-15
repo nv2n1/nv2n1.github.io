@@ -130,7 +130,7 @@ description: "rubber – a building system for LaTeX documents"
 <dt><code>aleph</code></p>
 <dd> Use the Aleph compiler instead of TeX, i.e. compiles the document using <code><a href="/docs/linux/man/1-lamed/">lamed</a></code>(1) instead of <code>latex</code>.</p>
 <dt><code>etex</code></p>
-<dd> Instructs Rubber to use <code><a href="/docs/linux/man/1-elatex/">elatex</a></code>(1) instead of <code>latex</code>.</p>
+<dd> Instructs Rubber to use <code>elatex</code>(1) instead of <code>latex</code>.</p>
 <dt><code>omega</code></p>
 <dd> Use the Omega compiler instead of TeX, i.e. compiles the document using <code><a href="/docs/linux/man/1-lambda/">lambda</a></code>(1) instead of <code>latex</code>. If the module <code>dvips</code> is used too, it will use <code><a href="/docs/linux/man/1-odvips/">odvips</a></code>(1) to translate the DVI file. Note that this module is triggered automatically when the document uses the package <code>omega</code>.</p>
 <dt><code>pdftex</code></p>
@@ -183,11 +183,11 @@ description: "rubber – a building system for LaTeX documents"
 <dt><code>dvips.options</code><i>&nbsp;<wbr>&lt;options&gt;</i></p>
 <dd> Pass the specified command-line switches to <code>dvips</code>.</p>
 <dt><code>index.tool</code><i>&nbsp;<wbr>(index)&nbsp;<wbr>&lt;name&gt;</i></p>
-<dd> Specifies which tool is to be used to process the index. The currently supported tools are <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1) (the default choice) and <code><a href="/docs/linux/man/1-xindy/">xindy</a></code>(1). The argument <i>index</i> is optional, it may be used to specify the list of indexes the command applies to. When present, it must be enclosed in parentheses; the list is comma-separated. When the argument is not present, the command applies to all indices.</p>
+<dd> Specifies which tool is to be used to process the index. The currently supported tools are <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1) (the default choice) and <code>xindy</code>(1). The argument <i>index</i> is optional, it may be used to specify the list of indexes the command applies to. When present, it must be enclosed in parentheses; the list is comma-separated. When the argument is not present, the command applies to all indices.</p>
 <dt><code>index.language</code><i>&nbsp;<wbr>(index)&nbsp;<wbr>&lt;language&gt;</i></p>
-<dd> Selects the language used for sorting the index. This only applies when using <code><a href="/docs/linux/man/1-xindy/">xindy</a></code>(1) as the indexing tool. The optional argument has the same semantics as above.</p>
+<dd> Selects the language used for sorting the index. This only applies when using <code>xindy</code>(1) as the indexing tool. The optional argument has the same semantics as above.</p>
 <dt><code>index.modules</code><i>&nbsp;<wbr>(index)&nbsp;<wbr>&lt;module&gt;&#8230;</i></p>
-<dd> Specify which modules to use when processing an index with <code><a href="/docs/linux/man/1-xindy/">xindy</a></code>(1). The optional argument has the same semantics as above.</p>
+<dd> Specify which modules to use when processing an index with <code>xindy</code>(1). The optional argument has the same semantics as above.</p>
 <dt><code>index.order</code><i>&nbsp;<wbr>(index)&nbsp;<wbr>&lt;options&gt;</i></p>
 <dd> Modifies the sorting options for the indexes. The arguments are words (separated by spaces) among <i>standard</i>, <i>german</i> and <i>letter</i>. This only applies when using <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1). The optional argument has the same semantics as above.</p>
 <dt><code>index.path</code><i>&nbsp;<wbr>(index)&nbsp;<wbr>&lt;directory&gt;</i></p>

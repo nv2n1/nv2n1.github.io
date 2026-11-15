@@ -106,5 +106,5 @@ description: "sediff – SELinux policy difference tool"
 <h2>BUGS</h2>
 <p> Please report bugs via an email to setools-bugs [at] tresys.com.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-sediffx/">sediffx</a>(1) </p>
+<p> sediffx(1) </p>
 <h2>Index</h2>

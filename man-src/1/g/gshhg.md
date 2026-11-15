@@ -56,7 +56,7 @@ gmt gshhg gshhs_h.b -Ee -N2 &gt; all_lakes.txt
 <h2>REFERENCES</h2>
 <p> Douglas, D. H., and T. K. Peucker, 1973, Algorithms for the reduction of the number of points required to represent a digitized line of its caricature, <i>Can. Cartogr., 10</i>, 112-122. </p>
 <p> Gorny, A. J., 1977, <i>World Data Bank II General User GuideRep. PB 271869</i>, 10pp, Central Intelligence Agency, Washington, DC. </p>
-<p> Soluri, E. A., and V. A. Woodson, 1990, World Vector Shoreline, <i>Int. Hydrograph. Rev., <a href="/docs/linux/man/1-lxvii/">LXVII</a>(1), 27-35.</i> </p>
+<p> Soluri, E. A., and V. A. Woodson, 1990, World Vector Shoreline, <i>Int. Hydrograph. Rev., LXVII(1), 27-35.</i> </p>
 <p> Wessel, P., and W. H. F. Smith, 1996, A global, self-consistent, hierarchical, high-resolution shoreline database, <i>J. Geophys. Res., 101(B4)</i>, 8741-8743.*</p>
 <h2>SEE ALSO</h2>
 <p> <code>gmt</code></p>

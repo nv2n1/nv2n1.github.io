@@ -162,7 +162,7 @@ description: "netpbm – package of graphics manipulation programs and libraries
 <dt><code>thinkjettopbm</code></p>
 <dd> convert HP Thinkjet printer stream to PBM</p>
 <dt><code>pbmtoplot </code></p>
-<dd> convert PBM into Unix <a href="/docs/linux/man/5-plot/">plot</a>(5) file</p>
+<dd> convert PBM into Unix plot(5) file</p>
 <dt><code>pbmtoptx </code></p>
 <dd> convert PBM to Printronix graphics</p>
 <dt><code>pbmtozinc </code></p>

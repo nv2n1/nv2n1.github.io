@@ -199,7 +199,7 @@ description: "elektra – A framework to store configuration atoms hierarchicall
 <dl>
 <dd>A stream of bytes, not necessarily text. It is recommended that you avoid using binary values because UNIX system administrators tend to consider them as unmanageable blackboxes. Anyway, the value will be encoded into pure text format based on hexadecimal digits, for openness and ease of administration. This data type should also be avoided because it is less efficient.</dl>
 <p> There are very good reasons why types like <code>Integer</code>, <code>Time</code>, <code>Font</code>, <code>List</code>, etc were not implemented: Elektra was designed to be usefull for any type of program, so having more specific data types implicates in the definition of value limits, separators in the storage format, etc, that may be good for some application and bad for other. So the semantics of the data is handled by the application. A program or framework may define its own special data handling methods using these essential basic types. See the <code>keyGetType()</code> and <code>keySetType()</code> methods documentation in the <code></p>
-<p><a href="/docs/linux/man/3-kdb/">kdb</a></code>(3) man page to understand how to set keys with your own data types. There are more two types of keys: <code>Directory</code></p>
+<p>kdb</code>(3) man page to understand how to set keys with your own data types. There are more two types of keys: <code>Directory</code></p>
 <dl>
 <dd>It can&#8217;t store a value, but, as a directory in a filesystem, it serves as a way to group correlated keys.</dl>
 <p> <code>Link</code></p>
@@ -238,7 +238,7 @@ description: "elektra – A framework to store configuration atoms hierarchicall
 <pre><code>bash#KDB_ROOT=user:http/sw/httpd kdb set -u nobody -g http key &quot;Some value&quot;</code></pre>
 <p> bash$<code>kdb set -b image.png -t bin user/example/binaryKey</code> bash$<code>kdb set -b file.txt user/example/regularKey</code> bash#<code>kdb set -t link system/sw/XFree/current system/sw/XFree/handmade</code> Getting Keys.PP bash$<code>KDB_ROOT=user/example kdb get some/key/name</code> bash$<code>eval `kdb get -s user/env/env1/PS1`</code> bash$<code>KDB_BACKEND=gconf kdb get user/sw/gnome-terminal/global/active_encodings</code> Listing.PP bash$<code>kdb ls -laR user:valeria</code> bash$<code>kdb ls -lR system/sw/xorg/current</code> bash$<code>KDB_ROOT=system/sw kdb ls -lR xorg</code> bash$<code>KDB_BACKEND=fstab kdb ls -Rv system/filesystems</code> bash$<code>eval `kdb ls -Rvs user/env/env2`</code> Miscelaneous.PP bash#<code>kdb ln system/sw/xorg/handmade system/sw/xorg/current</code> bash#<code>kdb mv system/sw/xorg/current system/sw/xorg/old</code> bash#<code>kdb rm system/inittab/rc4</code> bash$<code>KDB_BACKEND=gconf kdb rm user/gconfKey</code> XML Import and Export.PP bash#<code>kdb export user/sw/app | sed -e &#8216;s|/app/|/app2/|g&#8217; | kdb import</code> bash#<code>KDB_ROOT=system/sw kdb export myapp &gt; myappconf.xml</code> bash#<code>kdb import myappconf.xml</code> bash$<code>KDB_BACKEND=gconf kdb export user/sw</code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-kdb/">kdb</a></code>(1), <code><a href="/docs/linux/man/5-elektra/">elektra</a></code>(5)</p>
+<p><code>kdb</code>(1), <code><a href="/docs/linux/man/5-elektra/">elektra</a></code>(5)</p>
 <h2>Author</h2>
 <p><code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br />
  Linux Market Developer, Senior IT and Software Architect, IBM Linux Impact Team :: <i>ibm.com/linux</i> </p>

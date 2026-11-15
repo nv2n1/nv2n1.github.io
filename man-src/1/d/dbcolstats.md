@@ -13,10 +13,10 @@ description: "dbcolstats – compute statistics on a fsdb column"
 <p> dbcolstats [-amS] [-c ConfidenceFraction] [-q NumberOfQuantiles] column</p>
 <h2>DESCRIPTION</h2>
 <p> Compute statistics over a <font SIZE="-1">COLUMN</font> of data. Records containing non-numeric data are considered null do not contribute to the stats (with the <tt>&quot;-a&quot;</tt> option they are treated as zeros). </p>
-<p> Confidence intervals are a t-test (+/- (t_{a/2})*s/<a href="/docs/linux/man/n-sqrt/">sqrt</a>(n)) and assume the population takes a normal distribution with a small number of samples (&lt; 100). </p>
+<p> Confidence intervals are a t-test (+/- (t_{a/2})*s/sqrt(n)) and assume the population takes a normal distribution with a small number of samples (&lt; 100). </p>
 <p> By default, all statistics are computed for as a population <i>sample</i> (with an &#8220;n-1&#8221; term), not as representing the whole population (using &#8220;n&#8221;). Select between them with <code>&#8211;sample</code> or <code>&#8211;nosample</code>. When you measure the entire population, use the latter option. </p>
 <p> The output of this program is probably best looked at after reformatting with dblistize. </p>
-<p> Dbcolstats runs in <a href="/docs/linux/man/1-o/">O</a>(1) memory. Median or quantile requires sorting the data and invokes dbsort. Sorting will run in constant <font SIZE="-1">RAM</font> but O(number of records) disk space. If median or quantile is required and the data is already sorted, dbcolstats will run more efficiently with the -S option.</p>
+<p> Dbcolstats runs in O(1) memory. Median or quantile requires sorting the data and invokes dbsort. Sorting will run in constant <font SIZE="-1">RAM</font> but O(number of records) disk space. If median or quantile is required and the data is already sorted, dbcolstats will run more efficiently with the -S option.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code> or <code>&#8211;include-non-numeric</code></p>

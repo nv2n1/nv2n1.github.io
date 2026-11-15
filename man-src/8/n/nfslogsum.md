@@ -53,7 +53,7 @@ description: "nfslogsum – summarize nfswatch log file"
 <dt><font SIZE="-1"><code>STATFS</code></font></p>
 <dd>Get file system attributes (transfer size, block size, blocks in use, blocks free). This procedure is used by the <i><a href="/docs/linux/man/2-statfs/">statfs</a></i>(2) system call.</dl>
 <h2>See Also</h2>
-<p><i><a href="//www.systutorials.com/docs/linux/man/8L-nfswatch/">nfswatch</a></i>(8L)</p>
+<p><i>nfswatch</i>(8L)</p>
 <h2>Bugs</h2>
 <p><i>nfslogsum</i> is exteremely sensitive to the format of the log file produced by <i>nfswatch</i>. The log file should not be edited or changed before feeding it to <i>nfslogsum</i>.</p>
 <h2>Author</h2>

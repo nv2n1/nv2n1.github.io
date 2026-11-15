@@ -40,7 +40,7 @@ description: "pptpd – PPTP VPN daemon"
 <dt><code>-t</code>|<code>&#8211;stimeout </code><i>seconds</p>
 <dd>specifies the number of seconds to wait for the first packet before dropping the connection. This is a denial of service protection feature. </p>
 <dt></i><code>-w</code>|<code>&#8211;logwtmp</code></p>
-<dd>update <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) as users connect and disconnect. See <code><a href="/docs/linux/man/1-wtmp/">wtmp</a></code>(1). </p>
+<dd>update <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) as users connect and disconnect. See <code>wtmp</code>(1). </p>
 <dt><code>-C</code>|<code>&#8211;connections </code><i>n</p>
 <dd>limits the number of client connections that may be accepted. Corresponds to the </i><code>connections</code> option in <i>pptpd.conf</i>. If pptpd is allocating IP addresses (e.g. <code>&#8211;delegate</code> is not used) then the number of connections is also limited by the <code>remoteip</code> option in <i>pptpd.conf</i>. </p>
 <dt><code>-D</code>|<code>&#8211;delegate</code></p>

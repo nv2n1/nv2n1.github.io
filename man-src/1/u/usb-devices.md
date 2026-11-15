@@ -28,7 +28,7 @@ description: "usb-devices – print USB device details"
 <dd> Location where the <i>usb/devices</i> file can normally be found for Linux kernel 2.6.31 and later, if debugfs is mounted. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-lsusb/">lsusb</a></code>(8), <code><a href="/docs/linux/man/8-usbview/">usbview</a></code>(8). </p>
+<p> <code><a href="/docs/linux/man/8-lsusb/">lsusb</a></code>(8), <code>usbview</code>(8). </p>
 <h2>AUTHORS</h2>
 <p> Greg Kroah-Hartman &lt;greg [at] kroah.com&gt; </p>
 <p> Randy Dunlap &lt;rdunlap [at] xenotime.net&gt; </p>

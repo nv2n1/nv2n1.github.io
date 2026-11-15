@@ -25,6 +25,6 @@ description: "svgakeymap – generates keymaps for svgalib"
 <h2>AUTHOR</h2>
 <p> Brion Vibber &lt;brion [at] pobox.com&gt; </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-libvga-config/">libvga.config</a></code>(5) </p>
+<p> <code>libvga.config</code>(5) </p>
 <p> <i>README.keymap</i> from the svgalib distribution </p>
 <h2>Index</h2>

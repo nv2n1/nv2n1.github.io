@@ -28,7 +28,7 @@ Since glibc 2.21 : _DEFAULT_SOURCE
 <p> If <i>nochdir</i> is zero, <code>daemon</code>() changes the process&#8217;s current working directory to the root directory (&quot;/&quot;); otherwise, the current working directory is left unchanged. </p>
 <p> If <i>noclose</i> is zero, <code>daemon</code>() redirects standard input, standard output and standard error to <i>/dev/null</i>; otherwise, no changes are made to these file descriptors.</p>
 <h2>RETURN VALUE</h2>
-<p> (This function forks, and if the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) succeeds, the parent calls <code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2), so that further errors are seen by the child only.) On success <code>daemon</code>() returns zero. If an error occurs, <code>daemon</code>() returns -1 and sets <i>errno</i> to any of the errors specified for the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2).</p>
+<p> (This function forks, and if the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) succeeds, the parent calls <code>_exit</code>(2), so that further errors are seen by the child only.) On success <code>daemon</code>() returns zero. If an error occurs, <code>daemon</code>() returns -1 and sets <i>errno</i> to any of the errors specified for the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

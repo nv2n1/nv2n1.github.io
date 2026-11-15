@@ -58,7 +58,7 @@ description: "nsd.conf – NSD configuration file"
 <dt><code>database:</code> &lt;filename&gt;</p>
 <dd>By default <i>/var/db/nsd/nsd.db</i> is used. The specified file is used to store the compiled zone information. Same as commandline option <code>-f.</code></p>
 <dt><code>identity:</code> &lt;string&gt;</p>
-<dd>Returns the specified identity when asked for CH TXT ID.SERVER. Default is the name as returned by <a href="/docs/linux/man/3-gethostname/">gethostname</a>(3). Same as commandline option <code>-i</code>.</p>
+<dd>Returns the specified identity when asked for CH TXT ID.SERVER. Default is the name as returned by gethostname(3). Same as commandline option <code>-i</code>.</p>
 <dt><code>logfile:</code> &lt;filename&gt;</p>
 <dd>Log messages to the logfile. The default is to log to stderr and syslog. Same as commandline option <code>-l</code>.</p>
 <dt><code>server-count:</code> &lt;number&gt;</p>

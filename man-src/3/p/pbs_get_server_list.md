@@ -20,7 +20,7 @@ A character string is returned containing the names of the PBS servers.
 
 <h2>See Also</h2>
 
-<a HREF="//www.systutorials.com/docs/linux/man/3B-pbs_connect/">pbs_connect</a>(3B), <a HREF="//www.systutorials.com/docs/linux/man/3B-pbs_default/">pbs_default</a>(3B), <a HREF="//www.systutorials.com/docs/linux/man/3B-pbs_fbserver/">pbs_fbserver</a>(3B)
+pbs_connect(3B), pbs_default(3B), pbs_fbserver(3B)
 
 <h2>Diagnostics</h2>
 

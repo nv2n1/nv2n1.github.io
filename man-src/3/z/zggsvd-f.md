@@ -176,7 +176,7 @@ description: "zggsvd.f –"
  for I = K+1, min(M,K+L)
  swap ALPHA(I) and ALPHA(IWORK(I))
  endfor
- such that <a href="//www.systutorials.com/docs/linux/man/1-ALPHA/">ALPHA</a>(1) &gt;= <a href="//www.systutorials.com/docs/linux/man/2-ALPHA/">ALPHA</a>(2) &gt;= ... &gt;= ALPHA(N).</pre>
+ such that ALPHA(1) &gt;= ALPHA(2) &gt;= ... &gt;= ALPHA(N).</pre>
 <p><i>INFO</i> </p>
 <pre> INFO is INTEGER
  = 0: successful exit.

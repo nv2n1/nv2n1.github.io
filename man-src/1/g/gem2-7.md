@@ -22,4 +22,4 @@ description: "gem2.7 – frontend to RubyGems, the Ruby package manager"
 <h2>Examples</h2>
 <p>gem2.7 install rake gem2.7 list &#8211;local gem2.7 build package.gemspec gem2.7 help install</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-bundle/">bundle</a>(1)</p>
+<p>bundle(1)</p>

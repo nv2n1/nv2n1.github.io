@@ -27,5 +27,5 @@ g = getg_depth(bpp, color_value);
 b = getb_depth(bpp, color_value);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-getr/">getr</a></code>(3), <code><a href="/docs/linux/man/3-getr8/">getr8</a></code>(3), <code><a href="/docs/linux/man/3-geta32/">geta32</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-exlights/">exlights</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-getr/">getr</a></code>(3), <code><a href="/docs/linux/man/3-getr8/">getr8</a></code>(3), <code>geta32</code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-exlights/">exlights</a></code>(3) </p>
 <h2>Index</h2>

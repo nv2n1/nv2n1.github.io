@@ -68,4 +68,4 @@ description: "atmsigd.conf – configuration file for the ATM signaling demon"
 <h2>Author</h2>
 <p>Werner Almesberger, EPFL ICA &lt;Werner.Almesberger [at] epfl.ch&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-atmsigd/">atmsigd</a>(8), <a href="/docs/linux/man/7-qos/">qos</a>(7), <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8) </p>
+<p><a href="/docs/linux/man/8-atmsigd/">atmsigd</a>(8), <a href="/docs/linux/man/7-qos/">qos</a>(7), syslogd(8) </p>

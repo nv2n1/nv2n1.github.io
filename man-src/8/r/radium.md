@@ -36,7 +36,7 @@ description: "radium – argus record multiplexor"
 <dd>Indicate that <i>radium</i> should correct the timestamps of received <i>argus</i> records, if they are out of sync by threshold secconds. Threshold can be specified with the extensions s, m, or h for seconds, minutes or hours. <code>-X</code> Clear existing radium configuration. This removes any initialization done prior to encountering this flag. Allows you to eliminate the effects of the <i>/etc/radium.conf</i> file, or any radium.conf files that may have been loaded. </p>
 </dl>
 <h2>Signals</h2>
-<p><code>Radium</code> catches a number of <code><a href="/docs/linux/man/3-signal/">signal</a>(3)</code> events. The three signals <code>SIGHUP</code>, <code>SIGINT</code>, and <code>SIGTERM</code> cause <code>radium</code> to exit, writing TIMEDOUT status records for all currently active transactions. The signal <code>SIGUSR1</code> will turn on <code>debug</code> reporting, and subsequent <code>SIGUSR1</code> signals, will increment the <code>debug-level</code>. The signal <code>SIGUSR2</code> will cause <code>radium</code> to turn off all <code>debug</code> reporting.</p>
+<p><code>Radium</code> catches a number of <code>signal(3)</code> events. The three signals <code>SIGHUP</code>, <code>SIGINT</code>, and <code>SIGTERM</code> cause <code>radium</code> to exit, writing TIMEDOUT status records for all currently active transactions. The signal <code>SIGUSR1</code> will turn on <code>debug</code> reporting, and subsequent <code>SIGUSR1</code> signals, will increment the <code>debug-level</code>. The signal <code>SIGUSR2</code> will cause <code>radium</code> to turn off all <code>debug</code> reporting.</p>
 <h2>Environment</h2>
 <pre>$RADIUMHOME - Radium Root directory
 $RADIUMPATH - Radium.conf search path (/etc:$RADIUMHOME:$HOME)</pre>
@@ -81,4 +81,4 @@ $RADIUMPATH - Radium.conf search path (/etc:$RADIUMHOME:$HOME)</pre>
 <h2>Authors</h2>
 <pre>Carter Bullard (carter [at] qosient.com)</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-radium-conf/">radium.conf</a></code>(5), <code><a href="/docs/linux/man/8-argus/">argus</a></code>(8), <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/5-hosts_options/">hosts_options</a></code>(5), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8), <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/5-radium-conf/">radium.conf</a></code>(5), <code><a href="/docs/linux/man/8-argus/">argus</a></code>(8), <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/5-hosts_options/">hosts_options</a></code>(5), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8), <code>tcpdump</code>(1) </p>

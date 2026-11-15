@@ -28,7 +28,7 @@ CALL SET3 (XMIN,XMAX,YMIN,YMAX,UMIN,UMAX,VMIN,VMAX,WMIN,WMAX,PEYE)
 <dd>(input expressions of type REAL) are the limiting coordinates, in a 3-D coordinate space of the user's choosing, of the rectangular box that is to be projected. This box normally contains all of the objects whose projections are to be drawn.
 <dt>PEYE
 <dd>(an input array, dimensioned 3, of type REAL) is an array specifying the coordinates, in the user's 3-D coordinate system, of the eye position. The point
-<dl><dd><dl><dd>(<a HREF="/docs/linux/man/1-peye/">PEYE</a>(1),<a HREF="/docs/linux/man/2-peye/">PEYE</a>(2),<a HREF="/docs/linux/man/3-peye/">PEYE</a>(3))</dl></dl><dd>must be outside the box defined by UMIN, UMAX, VMIN, VMAX, WMIN, and WMAX. Objects will be drawn as they appear from this point.</dl>
+<dl><dd><dl><dd>(PEYE(1),PEYE(2),PEYE(3))</dl></dl><dd>must be outside the box defined by UMIN, UMAX, VMIN, VMAX, WMIN, and WMAX. Objects will be drawn as they appear from this point.</dl>
  
 
  The call to SET3 says what portion of the 3-D coordinate system is to be projected, from what point it is to be projected, and where the resulting picture is to be placed on the plotter frame. 
@@ -36,7 +36,7 @@ CALL SET3 (XMIN,XMAX,YMIN,YMAX,UMIN,UMAX,VMIN,VMAX,WMIN,WMAX,PEYE)
  The array PEYE specifies the position of the eye, which may be referred to as the &quot;viewpoint&quot; or &quot;center&quot; of the projection. 
 
  The &quot;line of sight&quot; runs from the point
-<dl><dd>(<a HREF="/docs/linux/man/1-peye/">PEYE</a>(1),<a HREF="/docs/linux/man/2-peye/">PEYE</a>(2),<a HREF="/docs/linux/man/3-peye/">PEYE</a>(3))</dl>
+<dl><dd>(PEYE(1),PEYE(2),PEYE(3))</dl>
  
 
  (the eye position) to the point

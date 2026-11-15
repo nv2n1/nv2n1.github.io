@@ -29,8 +29,8 @@ description: "XmVaCreateCombinationBox2, XmVaCreateManagedCombinationBox2 — A 
 <dd>Specifies the name of the created widget.</p>
 <dt><i>&#8230;</i></p>
 <dd>Specifies the variable argument list to override the resource defaults.</dl>
-<p> For a complete definition of Form and its associated resources, see <code><a href="/docs/linux/man/3-xmcombinationbox2/">XmCombinationBox2</a></code>(3).</p>
+<p> For a complete definition of Form and its associated resources, see <code>XmCombinationBox2</code>(3).</p>
 <h2>Return</h2>
 <p>Returns the CombinationBox2 widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmcombinationbox2/">XmCombinationBox2</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatecombinationbox2/">XmCreateCombinationBox2</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3).</p>
+<p><code>XmCombinationBox2</code>(3), <code><a href="/docs/linux/man/3-xmcreatecombinationbox2/">XmCreateCombinationBox2</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3).</p>

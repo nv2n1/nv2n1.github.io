@@ -23,7 +23,7 @@ dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;D</code><i>number</i></p>
-<dd> Debug according to the bits of <i>number</i>; see the <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3) manual for values. Also turns on general verbosity.</p>
+<dd> Debug according to the bits of <i>number</i>; see the <i>kpathsea</i>(3) manual for values. Also turns on general verbosity.</p>
 <dt><code>-c</code><i>number</i></p>
 <dd> Print each page <i>number</i> times (including original)</p>
 <dt><code>-d</code><i>number</i></p>
@@ -123,14 +123,14 @@ dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]
 <p> The following key/value combinations are valid:</p>
 <dl>
 <dt><code>hpfile</code>=<i>file</i></p>
-<dd> Insert <i>file</i> at the current position. <i>file</i> is searched with <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3), see below. </p>
+<dd> Insert <i>file</i> at the current position. <i>file</i> is searched with <i>kpathsea</i>(3), see below. </p>
 <p> The file content must be valid for this printer, i.e., it should contain <font SIZE="-1">PCL</font> escape sequences or <font SIZE="-1">HP-GL/2</font> commands. If the file is a graphics file, this typically means that the upper left corner of the graphics is placed at the current position. </p>
 <p> <font SIZE="-1">PCL</font> absolute positioning escape sequences in <i>file</i> are rewritten to be relative positioning commands; the lowest appearing coordinate is used as reference.</p>
 <dt><code>hpfile_verbatim</code>=<i>file</i></p>
-<dd> Insert <i>file</i> verbatim at the current position, without any changes of the file content. <i>file</i> is searched with <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3), see below. </p>
+<dd> Insert <i>file</i> verbatim at the current position, without any changes of the file content. <i>file</i> is searched with <i>kpathsea</i>(3), see below. </p>
 <p> This is mostly used to keep absolute positions in <font SIZE="-1">PCL</font> files.</p>
 <dt><code>psfile</code>=<i>file</i> <code>llx</code>=<i>x0</i> <code>lly</code>=<i>y0</i> <code>urx</code>=<i>x1</i> <code>ury</code>=<i>y1</i> <code>rwi</code>=<i>s</i></p>
-<dd> Convert Postscript file <i>file</i> to <font SIZE="-1">HP PCL,</font> by Ghostscript with device <tt>&quot;ljetplus&quot;</tt>, and insert the resulting graphics file at the current position, rewriting absolute position escape sequences. <i>file</i> is searched with <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3), see below. </p>
+<dd> Convert Postscript file <i>file</i> to <font SIZE="-1">HP PCL,</font> by Ghostscript with device <tt>&quot;ljetplus&quot;</tt>, and insert the resulting graphics file at the current position, rewriting absolute position escape sequences. <i>file</i> is searched with <i>kpathsea</i>(3), see below. </p>
 <p> The accompanying key/value pairs are mandatory, they can be specified in an arbitrary order. Values <i>x0</i>, <i>x1</i>, <i>y0</i>, <i>y1</i>, and <i>s</i> are integers. (<i>x0</i>,<i>y0</i>) is the lower left corner, (<i>x1</i>,<i>y1</i>) the upper right corner of the image. </p>
 <p> <code>Please note: The specific semantics of this special is not known.</code> In particular, the <code>rwi</code> parameter is some scale factor; but even looking at the source code it is not quite clear what the special&#8217;s author intended to implement here. In addition, it is unclear what dimensions are used to specify the corners, Postscript points or <font SIZE="-1">PCL</font> dots. </p>
 <p> <i>If you happen to know the psfile semantics, or if you spent the work analyzing them, please inform us at tex-k [at] tug.org, so that we can update this man page with the relevant information.</i></p>
@@ -193,14 +193,14 @@ dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]
 <p> Point <i>a</i> <code>must</code> be the upper left corner and point <i>b</i> <code>must</code> be the lower left corner of the rectangle. Otherwise the result is garbage. </p>
 <p> The default fill mode is 10% gray color filling.</p>
 <dt><i>filename</i></p>
-<dd> This is a legacy special, its use is depreciated. If the special is just one word that names an existing file, that file is verbatim included. Contrary to other file inclusion means, the file is not searched with <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3). <i>You are not supposed to use this special and we won&#8217;t fix any problems with it.</i></dl>
+<dd> This is a legacy special, its use is depreciated. If the special is just one word that names an existing file, that file is verbatim included. Contrary to other file inclusion means, the file is not searched with <i>kpathsea</i>(3). <i>You are not supposed to use this special and we won&#8217;t fix any problems with it.</i></dl>
 <p> It should be noted that the special parser does sometimes accept constructs that are not valid as in the documentation above. Then, the output is most often damaged in some way.</p>
 <h3>Searching for Included Files</h3>
-<p> Proper file include specials search the file with <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3). The search path is configured by variable <tt>&quot;DVILJINPUTS&quot;</tt> and, if the file is not found in that search path, by variable <tt>&quot;TEXINPUTS&quot;</tt>. </p>
+<p> Proper file include specials search the file with <i>kpathsea</i>(3). The search path is configured by variable <tt>&quot;DVILJINPUTS&quot;</tt> and, if the file is not found in that search path, by variable <tt>&quot;TEXINPUTS&quot;</tt>. </p>
 <p> Search via <tt>&quot;DVILJINPUTS&quot;</tt> covers the use case that one has common site-wide graphics that shall be included in documents, e.g., scanned signatures. Search via <tt>&quot;TEXINPUTS&quot;</tt> covers the use case that one has graphics as part of ones current document. </p>
 <p> <tt>&quot;dvilj&quot;</tt> is used as the <tt>&quot;.PROGRAM&quot;</tt> name in <i>texmf.cnf</i>, for all driver variants, independent of the actual program name.</p>
 <h3>Unknown Specials and TEX_HUSH configuration</h3>
-<p> <i><a href="/docs/linux/man/3-kpathsea/">Kpathsea</a></i>(3) has the concept of warning suppression with the configuration variable <tt>&quot;TEX_HUSH&quot;</tt>, please refer to its Info node <i>TeX support / Suppressing warnings</i>. That variable holds a colon-separated identifiers that specifies the to-be-suppressed warnings. </p>
+<p> <i>Kpathsea</i>(3) has the concept of warning suppression with the configuration variable <tt>&quot;TEX_HUSH&quot;</tt>, please refer to its Info node <i>TeX support / Suppressing warnings</i>. That variable holds a colon-separated identifiers that specifies the to-be-suppressed warnings. </p>
 <p> If <tt>&quot;special&quot;</tt> is among the listed values, <code>dvilj</code> does not output warnings any more about specials that it doesn&#8217;t know about. But if there is a recognized special and if that special has an invalid parameter, then a warning is output nevertheless, independent of the content of <tt>&quot;TEX_HUSH&quot;</tt>.</p>
 <h2>DOUBLE PAGE PRINTING</h2>
 <p> If the printer has a duplex unit installed, duplex printing can be demanded with the <code>-d</code> option. </p>
@@ -211,7 +211,7 @@ dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]
 <p> Caveat on the doubleside-option: When it is used frequently or on very large files, it might become necessary to clean the printer much more frequently. </p>
 <p> The command line option <code>-p</code><i>X</i> can be used to abort printing after the output of <i>X</i> pages (can lead to strange results together with <code>-D</code>). I personally dislike this option. The secure way of printing a part of a document is using <code>-f</code> (from) and <code>-t</code> (to).</p>
 <h2>ENVIRONMENT</h2>
-<p> <code>dvilj</code> uses the same environment variables and algorithms for finding font files as TeX and its friends do. See the documentation for the <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3) library for details. (Repeating it here is too cumbersome.)</p>
+<p> <code>dvilj</code> uses the same environment variables and algorithms for finding font files as TeX and its friends do. See the documentation for the <i>kpathsea</i>(3) library for details. (Repeating it here is too cumbersome.)</p>
 <dl>
 <dt>&quot;DVILJFONTS&quot;</p>
 <dd> If set, overrides all other font paths.</p>
@@ -233,12 +233,12 @@ dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]
   none      suppress no warnings
 </pre>
 <dt>&quot;KPATHSEA_DEBUG&quot;</p>
-<dd> Trace <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3) lookups; set to -1 for complete tracing.</p>
+<dd> Trace <i>kpathsea</i>(3) lookups; set to -1 for complete tracing.</p>
 <dt>&quot;GS_PATH&quot;</p>
 <dd> On Windows, this may be the path to Ghostscript; there the default is <i>gswin32c.exe</i>. </p>
 <p> On Unix, this environment variable is not used. Ghostscript is called as <i><a href="/docs/linux/man/1-gs/">gs</a></i>(1) and must be found over <tt>$PATH</tt>.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-dvihp/">dvihp</a></i>(1), <i><a href="/docs/linux/man/1-dvicopy/">dvicopy</a></i>(1), <i><a href="/docs/linux/man/1-dvips/">dvips</a></i>(1), <i><a href="/docs/linux/man/1-xdvi/">xdvi</a></i>(1), <i><a href="/docs/linux/man/1-mktexpk/">mktexpk</a></i>(1), <i><a href="/docs/linux/man/1-gs/">gs</a></i>(1), <i><a href="/docs/linux/man/3-kpathsea/">kpathsea</a></i>(3) </p>
+<p> <i><a href="/docs/linux/man/1-dvihp/">dvihp</a></i>(1), <i><a href="/docs/linux/man/1-dvicopy/">dvicopy</a></i>(1), <i><a href="/docs/linux/man/1-dvips/">dvips</a></i>(1), <i><a href="/docs/linux/man/1-xdvi/">xdvi</a></i>(1), <i><a href="/docs/linux/man/1-mktexpk/">mktexpk</a></i>(1), <i><a href="/docs/linux/man/1-gs/">gs</a></i>(1), <i>kpathsea</i>(3) </p>
 <p> Email bug reports to tex-k [at] tug.org. </p>
 <p> Source is at &lt;<a rel="nofollow" href="http://mirror.ctan.org/dviware/dviljk/">http://mirror.ctan.org/dviware/dviljk/</a>&gt;; but for compilation the texk build environment is needed, from &lt;<a href="svn://tug.org/texlive/*/Build/source">svn://tug.org/texlive/*/Build/source</a>&gt;. </p>
 <p> As of July 2007, <font SIZE="-1">PCL</font> reference documentation is found at <font SIZE="-1">HP</font>&#8216;s Web site at &lt;<a rel="nofollow" href="http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=bpl04568">http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=bpl04568</a>&gt;. At the end of that page are links to reference manuals for <font SIZE="-1">PCL</font> and <font SIZE="-1">PJL.</font> </p>

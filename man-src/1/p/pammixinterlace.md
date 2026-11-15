@@ -30,6 +30,6 @@ description: "pammixinterlace – mix adjacent lines to merge interlaced images"
 <dd> This option turns on &quot;adaptive&quot; filtering mode. In this mode <code>pammixinterlace</code> modifies only pixels that are obviously part of a &quot;comb&quot; pattern. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamdeinterlace/">pamdeinterlace</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamdeinterlace/">pamdeinterlace</a></code>(1) , <code>pam</code>(1) </p>
+<p> <code>pnm</code>(1) </p>
 <h2>Index</h2>

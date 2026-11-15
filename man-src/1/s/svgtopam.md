@@ -25,7 +25,7 @@ description: "svgtopam – convert an SVG (Scalable Vector Graphics) image to Ne
 <dd> This option makes <code>svgtopam</code> issue messages describing the drawing. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamtosvg/">pamtosvg</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-pamtosvg/">pamtosvg</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>svgtopam</code> was added to Netpbm in Version 10.34 (May 2006). </p>
 <p> Bryan Henderson created <code>svgtopam</code> to test <code>pamtosvg</code>. </p>

@@ -15,7 +15,7 @@ PNG (Portable Network Graphics) is an extensible file format for the lossless, p
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/3-libpng/">libpng</a>(3)</i>, <i><a HREF="/docs/linux/man/3-zlib/">zlib</a>(3)</i>, <i><a HREF="/docs/linux/man/5-deflate/">deflate</a>(5)</i>, and <i><a HREF="/docs/linux/man/5-zlib/">zlib</a>(5)</i> 
+<i><a HREF="/docs/linux/man/3-libpng/">libpng</a>(3)</i>, <i><a HREF="/docs/linux/man/3-zlib/">zlib</a>(3)</i>, <i>deflate(5)</i>, and <i>zlib(5)</i> 
 
  PNG specification (second edition), November 2003:
 <dl><dd>&nbsp;<wbr>&nbsp;<wbr>&lt;<a rel="nofollow" HREF="http://www.w3.org/TR/2003/REC-PNG-20031110/">http://www.w3.org/TR/2003/REC-PNG-20031110/</a> PNG 1.2 specification, July 1999:

@@ -19,7 +19,7 @@ description: "ppmwheel – make a PPM image of a color wheel"
 <h2>OPTIONS</h2>
 <p> None. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmcie/">ppmcie</a></code>(1) , <code><a href="/docs/linux/man/1-ppmrainbow/">ppmrainbow</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-ppmcie/">ppmcie</a></code>(1) , <code><a href="/docs/linux/man/1-ppmrainbow/">ppmrainbow</a></code>(1) , <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>ppmwheel</code> was added to Netpbm in Release 10.14 (March 2003). </p>
 <h2>AUTHOR</h2>

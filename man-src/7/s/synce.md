@@ -60,4 +60,4 @@ This manual page was written by David Eriksson &lt;twogood [at] users.sourceforg
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/1-odccm/">odccm</a>(1) 
+odccm(1) 

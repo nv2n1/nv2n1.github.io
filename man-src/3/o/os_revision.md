@@ -15,4 +15,4 @@ description: "os_version, os_revision – Version of the OS currently running. A
 <h2>Description</h2>
 <p>The major and minor version of the Operating System currently running. Set by allegro_init(). If Allegro for some reason was not able to retrieve the version of the Operating System, os_version and os_revision will be set to -1. For example: Under Win98 SE (v4.10.2222) os_version will be set to 4 and os_revision to 10. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-os_type/">os_type</a></code>(3), <code><a href="/docs/linux/man/3-os_multitasking/">os_multitasking</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-os_type/">os_type</a></code>(3), <code>os_multitasking</code>(3) </p>

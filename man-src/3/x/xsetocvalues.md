@@ -55,5 +55,5 @@ description: "XCreateOC, XDestroyOC, XSetOCValues, XGetOCValues, XOMOfOC – cre
 <p> Each argument value following a name must point to a location where the value is to be stored. </p>
 <p> The <code>XOMOfOC</code> function returns the output method associated with the specified output context.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreateom/">XCreateOM</a>(3), <a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3)<br />
+<p>XCreateOM(3), <a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

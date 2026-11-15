@@ -146,4 +146,4 @@ description: "Lintian::Collect::Source – Lintian interface to source package d
 <h2>Author</h2>
 <p>Originally written by Russ Allbery &lt;rra [at] debian.org&gt; for Lintian.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i><a href="/docs/linux/man/3-lintian--collect/">Lintian::Collect</a></i>(3), <i><a href="/docs/linux/man/3-lintian--relation/">Lintian::Relation</a></i>(3)</p>
+<p><i><a href="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i>Lintian::Collect</i>(3), <i>Lintian::Relation</i>(3)</p>

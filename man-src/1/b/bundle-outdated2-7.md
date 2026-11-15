@@ -45,7 +45,7 @@ description: "bundle-outdated – List installed gems with newer versions availa
 <dt><code>&#8211;only-explicit</code></p>
 <dd>Only list gems specified in your Gemfile, not their dependencies.</dl>
 <h2>Patch Level Options</h2>
-<p>See bundle <a href="/docs/linux/man/1-update/">update</a>(1) <i>bundle-update.1.html</i> for details. </p>
+<p>See bundle update(1) <i>bundle-update.1.html</i> for details. </p>
 <p> One difference between the patch level options in <code>bundle update</code> and here is the <code>&#8211;strict</code> option. <code>&#8211;strict</code> was already an option on outdated before the patch level options were added. <code>&#8211;strict</code> wasn&#8217;t altered, and the <code>&#8211;update-strict</code> option on <code>outdated</code> reflects what <code>&#8211;strict</code> does on <code>bundle update</code>.</p>
 <h2>Filtering Output</h2>
 <p>The 3 filtering options do not affect the resolution of versions, merely what versions are shown in the output. </p>

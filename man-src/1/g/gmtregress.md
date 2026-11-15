@@ -88,7 +88,7 @@ gmt regress points.txt -A0/90/0.2 -Eo -Nr &gt; points_analysis.txt
 <h2>REFERENCES</h2>
 <p> Draper, N. R., and H. Smith, 1998, <i>Applied regression analysis</i>, 3rd ed., 736 pp., John Wiley and Sons, New York. </p>
 <p> Rousseeuw, P. J., and A. M. Leroy, 1987, <i>Robust regression and outlier detection</i>, 329 pp., John Wiley and Sons, New York. </p>
-<p> York, D., N. M. Evensen, M. L. Martinez, and J. De Basebe Delgado, 2004, Unified equations for the slope, intercept, and standard errors of the best straight line, <i>Am. J. Phys.</i>, <a href="/docs/linux/man/3-72/">72</a>(3), 367-375.</p>
+<p> York, D., N. M. Evensen, M. L. Martinez, and J. De Basebe Delgado, 2004, Unified equations for the slope, intercept, and standard errors of the best straight line, <i>Am. J. Phys.</i>, 72(3), 367-375.</p>
 <h2>SEE ALSO</h2>
 <p> <code>gmt</code>, <code>trend1d</code>, <code>trend2d</code></p>
 <h2>COPYRIGHT</h2>

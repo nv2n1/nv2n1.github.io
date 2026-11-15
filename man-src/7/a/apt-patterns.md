@@ -37,7 +37,7 @@ description: "apt-patterns – Syntax and semantics of apt search patterns"
 <p> ?any-version(PATTERN)</p>
 <dl>
 <dd>Selects any version where the pattern matches on the version. </p>
-<p> For example, while ?and(?<a href="/docs/linux/man/1-version/">version</a>(1),?<a href="/docs/linux/man/2-version/">version</a>(2)) matches a package which has one version containing 1 and one version containing 2, ?any-version(?and(?<a href="/docs/linux/man/1-version/">version</a>(1),?<a href="/docs/linux/man/2-version/">version</a>(2))) restricts the ?and to act on the same version.</dl>
+<p> For example, while ?and(?version(1),?version(2)) matches a package which has one version containing 1 and one version containing 2, ?any-version(?and(?version(1),?version(2))) restricts the ?and to act on the same version.</dl>
 <p> ?narrow(PATTERN&#8230;)</p>
 <dl>
 <dd>Selects any version matching all PATTERNs, short for ?any-version(?and(PATTERN&#8230;)).</dl>
@@ -148,7 +148,7 @@ description: "apt-patterns – Syntax and semantics of apt search patterns"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8)</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Author</h2>
 <p>APT was written by the APT team &lt;apt [at] packages.debian.org&gt;.</p>
 <h2>Authors</h2>

@@ -31,7 +31,7 @@ Bivar - Provides bivariate interpolation and smooth surface fitting for values g
 <h2>Examples</h2>See the example &quot;cbex01&quot;.
 <h2>Access</h2>To use the Bivar Fortran or C routines, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order. 
 
-<h2>Messages</h2>When error conditions are detected, the support routine SETER is called. By default, SETER writes a message to the standard error file (as defined by <a HREF="/docs/linux/man/4-i1mach/">I1MACH</a>(4)) and then terminates execution. It is possible to put SETER into recovery mode and regain control after a recoverable error (which includes all of the possible errors). 
+<h2>Messages</h2>When error conditions are detected, the support routine SETER is called. By default, SETER writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. It is possible to put SETER into recovery mode and regain control after a recoverable error (which includes all of the possible errors). 
 
  The possible error messages are listed below. All errors are recoverable in the sense that a user program which has called ENTSR to set recovery mode will get control back after one of these errors occurs. 
 

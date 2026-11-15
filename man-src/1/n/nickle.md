@@ -42,7 +42,8 @@ description: "nickle – a desk calculator language"
 <dd> Start with &quot;0x&quot; (e.g., 0x1a is the same as 26).</p>
 <dt>string</p>
 <dd> As in C. String constants are surrounded by double-quotes. Backslashed characters (including double-quotes) stand for themselves, except &quot;
-&quot; stands for newline, &quot;&quot; for carriage return, &quot;&quot; for backspace, &quot;	&quot; for tab and &quot;&quot; for formfeed.</p>
+&quot; stands for newline, &quot;
+&quot; for carriage return, &quot;&quot; for backspace, &quot;	&quot; for tab and &quot;&quot; for formfeed.</p>
 <dt>name</p>
 <dd> A variable reference.</p>
 <dt>name() name(E,E,&#8230;,E)</p>
@@ -172,7 +173,7 @@ int[ *, *] name = &#123;&#123;0, 1}, {2, 3}} int[2, 2] name = &#123;&#123;0...}.
 <dt>rational</p>
 <dd> Arbitrary precision rational numbers.</p>
 <dt>real</p>
-<dd> Arbitrary exponent precision floating point numbers. As many computations cannot be carried out exactly as rational numbers, Nickle implements non-precise arithmetic using its own machine-independent representation for floating point numbers. The builtin function <a href="/docs/linux/man/n-imprecise/">imprecise</a>(n) generates a real number with 256 bits of precision from the number n, while imprecise(n,p) generates a real number with p bits of precision.</p>
+<dd> Arbitrary exponent precision floating point numbers. As many computations cannot be carried out exactly as rational numbers, Nickle implements non-precise arithmetic using its own machine-independent representation for floating point numbers. The builtin function imprecise(n) generates a real number with 256 bits of precision from the number n, while imprecise(n,p) generates a real number with p bits of precision.</p>
 <dt>T[]</p>
 <dd> An array of type T, of one or more dimensions. There are no zero-dimensional arrays in Nickle.</p>
 <dt>T[*]</p>
@@ -364,7 +365,7 @@ int[ *, *] name = &#123;&#123;0, 1}, {2, 3}} int[2, 2] name = &#123;&#123;0...}.
 <dt>int is_int(poly v)</p>
 <dd> Type predicate.</p>
 <dt>int is_rational(poly v)</p>
-<dd> Numeric type predicates are inclusive: e.g., <a href="/docs/linux/man/1-is_rational/">is_rational</a>(1) returns 1.</p>
+<dd> Numeric type predicates are inclusive: e.g., is_rational(1) returns 1.</p>
 <dt>int is_number(poly v)</p>
 <dd> Type predicate.</p>
 <dt>int is_string(poly v)</p>

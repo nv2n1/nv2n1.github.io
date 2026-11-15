@@ -1396,6 +1396,6 @@ description: "XmIconBox — The IconBox widget class"
 <h3>Translations</h3>
 <p>XmIconBox inherits translations from XmManager. </p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-constraint/">Constraint</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmcreateiconbox/">XmCreateIconBox</a></code>(3), <code><a href="/docs/linux/man/3-xmiconboxiscellempty/">XmIconBoxIsCellEmpty</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreateiconbox/">XmVaCreateIconBox</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanagediconbox/">XmVaCreateManagedIconBox</a></code>(3). </p>
+<p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-constraint/">Constraint</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code>XmCreateIconBox</code>(3), <code><a href="/docs/linux/man/3-xmiconboxiscellempty/">XmIconBoxIsCellEmpty</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code>XmVaCreateIconBox</code>(3), and <code>XmVaCreateManagedIconBox</code>(3). </p>
 <h2>Copyright</h2>
 <p>Copyright (c) 1992 by Integrated Computer Solutions, Inc.</p>

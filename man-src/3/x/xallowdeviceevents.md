@@ -37,4 +37,4 @@ display
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
  specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadValue
- An invalid mode was specified on the request.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XGrabDevice/">XGrabDevice</a>(3)</pre></dl>
+ An invalid mode was specified on the request.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XGrabDevice(3)</pre></dl>

@@ -75,7 +75,7 @@ description: "gxine – a GTK/GNOME frontend to the xine video player"
 <h2>FEATURES</h2>
 <p> There are a couple of features which aren&#8217;t immediately obvious: in full-screen mode, you can right-click to get access to the menus, or middle-click to show or hide the player controls. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a rel="nofollow" href="http://www.xine-project.org/,">http://www.xine-project.org/,</a></i> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a href="/docs/linux/man/1-totem/">totem</a></code>(1), <code><a href="/docs/linux/man/1-kaffeine/">kaffeine</a></code>(1).<br />
+<p> <i><a rel="nofollow" href="http://www.xine-project.org/,">http://www.xine-project.org/,</a></i> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a href="/docs/linux/man/1-totem/">totem</a></code>(1), <code>kaffeine</code>(1).<br />
  <code><a href="/docs/linux/man/5-xine/">xine</a></code>(5) for MRL syntax documentation (libxine &gt;= 1.0.2). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Darren Salt &lt;linux [at] youmustbejoking.demon.co.uk&gt;. It is based on an older version written by Philipp Matthias Hahn &lt;pmhahn [at] titan.lahn.de&gt; for Debian. </p>

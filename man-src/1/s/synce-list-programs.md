@@ -33,5 +33,5 @@ description: "synce-list-programs – shows a list of all installed programs"
 <h2>AUTHOR</h2>
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-synce/">synce</a>(1) <a href="/docs/linux/man/1-synce-install-cab/">synce-install-cab</a>(1) <a href="/docs/linux/man/1-synce-remove-program/">synce-remove-program</a>(1) </p>
+<p> synce(1) <a href="/docs/linux/man/1-synce-install-cab/">synce-install-cab</a>(1) <a href="/docs/linux/man/1-synce-remove-program/">synce-remove-program</a>(1) </p>
 <h2>Index</h2>

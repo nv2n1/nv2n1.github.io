@@ -45,7 +45,7 @@ description: "snmpset – communicates with a network entity using SNMP SET requ
 <p> snmpset -c private -v 1 test-hub system.sysContact.0 s dpz [at] noc.rutgers.edu ip.ipforwarding.0 = 2 </p>
 <p> will set the variables sysContact.0 and ipForwarding.0: </p>
 <p> system.sysContact.0 = STRING: &quot;dpz [at] noc.rutgers.edu&quot;<br />
- ip.ipForwarding.0 = INTEGER: <a href="/docs/linux/man/2-not-forwarding/">not-forwarding</a>(2) </p>
+ ip.ipForwarding.0 = INTEGER: not-forwarding(2) </p>
 <p> If the network entity has an error processing the request packet, an error packet will be returned and a message will be shown, helping to pinpoint in what way the request was malformed.</p>
 <h2>OPTIONS</h2>
 <p> <code>snmpset</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. Note that <code>snmpset</code> REQUIRES an argument specifying the agent to query and at least one set of OID/type/value arguments, as described in there.</p>

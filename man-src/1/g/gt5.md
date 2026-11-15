@@ -81,5 +81,5 @@ description: "gt5 – a diff-capable ‘du-browser’"
 <h2>AUTHOR</h2>
 <p> Thomas Sattler &lt;gt5 at gmx dot net&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-du/">du</a></code>(1), <code><a href="/docs/linux/man/1-links/">links</a></code>(1), <code><a href="/docs/linux/man/1-elinks/">elinks</a></code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-du/">du</a></code>(1), <code>links</code>(1), <code><a href="/docs/linux/man/1-elinks/">elinks</a></code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1) </p>
 <h2>Index</h2>

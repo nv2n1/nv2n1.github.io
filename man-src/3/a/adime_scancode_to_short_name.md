@@ -15,5 +15,5 @@ description: "adime_scancode_to_short_name"
 <h2>DESCRIPTION</h2>
 <p> Converts a keyboard scancode to a string. The string is exactly the text after `KEY_&#8217; in the macro name for the key (so the function returns &quot;DELETE&quot; if you feed it with KEY_DELETE). Returns the buffer, or NULL if the scancode didn&#8217;t match any known key. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-adime_scancode_to_pretty_name/">adime_scancode_to_pretty_name</a></code>(3), <code><a href="/docs/linux/man/3-adime_short_name_to_scancode/">adime_short_name_to_scancode</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-adime_scancode_to_pretty_name/">adime_scancode_to_pretty_name</a></code>(3), <code>adime_short_name_to_scancode</code>(3) </p>
 <h2>Index</h2>

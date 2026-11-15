@@ -53,5 +53,5 @@ set_keyboard_rate(0, 0);
 }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-keyboard_callback/">keyboard_callback</a></code>(3), <code><a href="/docs/linux/man/3-keyboard_ucallback/">keyboard_ucallback</a></code>(3), <code><a href="/docs/linux/man/3-exkeys/">exkeys</a></code>(3) </p>
+<p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-keyboard_callback/">keyboard_callback</a></code>(3), <code><a href="/docs/linux/man/3-keyboard_ucallback/">keyboard_ucallback</a></code>(3), <code><a href="/docs/linux/man/3-exkeys/">exkeys</a></code>(3) </p>
 <h2>Index</h2>

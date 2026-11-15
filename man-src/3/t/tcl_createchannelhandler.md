@@ -34,6 +34,6 @@ void
 <p> <code>Tcl_DeleteChannelHandler</code> deletes a channel handler identified by <i>channel</i>, <i>proc</i> and <i>clientData</i>; if no such handler exists, the call has no effect. </p>
 <p> Channel handlers are invoked via the Tcl event mechanism, so they are only useful in applications that are event-driven. Note also that the conditions specified in the <i>mask</i> argument to <i>proc</i> may no longer exist when <i>proc</i> is invoked: for example, if there are two handlers for <code>TCL_READABLE</code> on the same channel, the first handler could consume all of the available input so that the channel is no longer readable when the second handler is invoked. For this reason it may be useful to use nonblocking I/O on channels for which there are event handlers. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-notifier/">Notifier</a>(3), <a href="/docs/linux/man/3-tcl_createchannel/">Tcl_CreateChannel</a>(3), <a href="/docs/linux/man/3-tcl_openfilechannel/">Tcl_OpenFileChannel</a>(3), <a href="/docs/linux/man/n-vwait/">vwait</a>(n). </p>
+<p><a href="/docs/linux/man/3-notifier/">Notifier</a>(3), <a href="/docs/linux/man/3-tcl_createchannel/">Tcl_CreateChannel</a>(3), <a href="/docs/linux/man/3-tcl_openfilechannel/">Tcl_OpenFileChannel</a>(3), vwait(n). </p>
 <h2>Keywords</h2>
 <p>blocking, callback, channel, events, handler, nonblocking.</p>

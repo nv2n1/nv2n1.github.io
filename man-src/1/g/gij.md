@@ -75,10 +75,10 @@ description: "gij – GNU interpreter for Java bytecode"
 <dd> Each time a class is initialized, print a short message on standard error.</dl>
 <p> <tt>&quot;gij&quot;</tt> also recognizes and ignores the following options, for compatibility with existing application launch scripts: <tt>&quot;-client&quot;</tt>, <tt>&quot;-server&quot;</tt>, <tt>&quot;-hotspot&quot;</tt>, <tt>&quot;-jrockit&quot;</tt>, <tt>&quot;-agentlib&quot;</tt>, <tt>&quot;-agentpath&quot;</tt>, <tt>&quot;-debug&quot;</tt>, <tt>&quot;-d32&quot;</tt>, <tt>&quot;-d64&quot;</tt>, <tt>&quot;-javaagent&quot;</tt>, <tt>&quot;-noclassgc&quot;</tt>, <tt>&quot;-verify&quot;</tt>, and <tt>&quot;-verifyremote&quot;</tt>.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-gcj/">gcj</a></i>(1), <i><a href="/docs/linux/man/1-gcjh/">gcjh</a></i>(1), <i><a href="/docs/linux/man/1-jcf-dump/">jcf-dump</a></i>(1), <i><a href="/docs/linux/man/7-gfdl/">gfdl</a></i>(7), and the Info entries for <i>gcj</i> and <i>gcc</i>.</p>
+<p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-gcj/">gcj</a></i>(1), <i><a href="/docs/linux/man/1-gcjh/">gcjh</a></i>(1), <i><a href="/docs/linux/man/1-jcf-dump/">jcf-dump</a></i>(1), <i>gfdl</i>(7), and the Info entries for <i>gcj</i> and <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i><a href="/docs/linux/man/7-gfdl/">gfdl</a></i>(7). </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i>gfdl</i>(7). </p>
 <p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual

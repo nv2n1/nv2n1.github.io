@@ -289,7 +289,7 @@ description: "hier – description of the filesystem hierarchy"
 <dt><i>/var/spool/rwho</i></p>
 <dd>Spooled files for <code><a href="/docs/linux/man/8-rwhod/">rwhod</a></code>(8) (optional).</p>
 <dt><i>/var/spool/smail</i></p>
-<dd>Spooled files for the <code><a href="/docs/linux/man/1-smail/">smail</a></code>(1) mail delivery program.</p>
+<dd>Spooled files for the <code>smail</code>(1) mail delivery program.</p>
 <dt><i>/var/spool/uucp</i></p>
 <dd>Spooled files for <code><a href="/docs/linux/man/1-uucp/">uucp</a></code>(1) (optional).</p>
 <dt><i>/var/tmp</i></p>

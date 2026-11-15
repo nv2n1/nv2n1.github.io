@@ -23,5 +23,5 @@ while (update_menu(player))
 return shutdown_menu(player);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-update_menu/">update_menu</a></code>(3), <code><a href="/docs/linux/man/3-shutdown_menu/">shutdown_menu</a></code>(3), <code><a href="/docs/linux/man/3-do_menu/">do_menu</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-update_menu/">update_menu</a></code>(3), <code>shutdown_menu</code>(3), <code><a href="/docs/linux/man/3-do_menu/">do_menu</a></code>(3) </p>
 <h2>Index</h2>

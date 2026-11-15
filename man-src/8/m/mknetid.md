@@ -51,6 +51,6 @@ description: "mknetid – generate data for netid map"
 <dl>
 <dd>password file</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-passwd/">passwd</a></code>(8), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-hosts/">hosts</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5)</p>
+<p><code>passwd</code>(8), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-hosts/">hosts</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5)</p>
 <h2>Author</h2>
 <p><code>mknetid</code> was written by Thorsten Kukuk &lt;kukuk [at] linux-nis.org&gt;.</p>

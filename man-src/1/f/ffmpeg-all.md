@@ -2826,9 +2826,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><font SIZE="-1"><b>PI</b></font>
 <dd> area of the unit disc, approximately 3.14
 <dt><b>E</b>
-<dd> <b><a HREF="/docs/linux/man/1-exp/">exp</a></b>(1) (Euler's number), approximately 2.718
+<dd> <b>exp</b>(1) (Euler's number), approximately 2.718
 <dt><font SIZE="-1"><b>PHI</b></font>
-<dd> golden ratio (1+<b><a HREF="/docs/linux/man/5-sqrt/">sqrt</a></b>(5))/2, approximately 1.618</dl>
+<dd> golden ratio (1+<b>sqrt</b>(5))/2, approximately 1.618</dl>
  
 
  Assuming that an expression is considered ``true'' if it has a non-zero value, note that: 
@@ -12770,7 +12770,7 @@ $ ffmpeg - f dshow - audio_pin_name "Audio Out" - video_pin_name 2 - i video = v
 
  For more detailed information read the file Documentation/fb/framebuffer.txt included in the Linux source tree. 
 
- See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <b><a HREF="/docs/linux/man/1-fbset/">fbset</a></b>(1). 
+ See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <b>fbset</b>(1). 
 
  To record from the framebuffer device <i>/dev/fb0</i> with <b>ffmpeg</b>: 
 
@@ -13663,7 +13663,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
         ffmpeg -re -i INPUT -c:v rawvideo -pix_fmt bgra -f fbdev /dev/fb0
 </pre> 
 
- See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <b><a HREF="/docs/linux/man/1-fbset/">fbset</a></b>(1).
+ See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <b>fbset</b>(1).
 
 <h3>opengl</h3>
 
@@ -14858,7 +14858,7 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 <dd> Invert phase of the second channel: 
 
  <pre>
-        aeval=val(0)|<a HREF="//www.systutorials.com/docs/linux/man/1--val/">-val</a>(1)
+        aeval=val(0)|-val(1)
 </pre></dl>
 
 <h3>aexciter</h3>
@@ -24628,7 +24628,7 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
 <dt><b>minknorm</b>
 <dd> The Minkowski parameter to be used for calculating the Minkowski distance. Must be chosen in the range [0,20] and default value is 1. Set to 0 for getting max value instead of calculating Minkowski distance.
 <dt><b>sigma</b>
-<dd> The standard deviation of Gaussian blur to be applied on the scene. Must be chosen in the range [0,1024.0] and default value = 1. floor( <i>sigma</i> * <b><a HREF="/docs/linux/man/3-break_off_sigma/">break_off_sigma</a></b>(3) ) can't be equal to 0 if <i>difford</i> is greater than 0.</dl>
+<dd> The standard deviation of Gaussian blur to be applied on the scene. Must be chosen in the range [0,1024.0] and default value = 1. floor( <i>sigma</i> * <b>break_off_sigma</b>(3) ) can't be equal to 0 if <i>difford</i> is greater than 0.</dl>
  
 
  <i>Examples</i>
@@ -28404,7 +28404,7 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 <dd> Rotate the video, reduce the output size so that no background is ever shown: 
 
  <pre>
-        rotate=2*PI*t:ow='min(iw,ih)/<a HREF="//www.systutorials.com/docs/linux/man/2-sqrt/">sqrt</a>(2)':oh=ow:c=none
+        rotate=2*PI*t:ow='min(iw,ih)/sqrt(2)':oh=ow:c=none
 </pre></dl>
  
 
@@ -36306,7 +36306,7 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
 <dt>
 <dd> 
 
- Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(<a HREF="/docs/linux/man/1-1-ld/">1-ld</a>(1)) + b(<a HREF="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl>
+ Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(1-ld(1)) + b(<a HREF="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl>
 
 <dt><b>axisfile</b>
 <dd> Specify image file to draw the axis. This option override <i>fontfile</i> and <i>fontcolor</i> option.

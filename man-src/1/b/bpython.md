@@ -57,7 +57,7 @@ description: "bpython – a fancy {curses, GTK+, urwid} interface to the Python 
 <p> <code>bpython</code>&#8216;s keys are fully configurable. See <i><a rel="nofollow" href="http://docs.bpython-interpreter.org/configuration.html#keyboard">http://docs.bpython-interpreter.org/configuration.html#keyboard</a></i></p>
 <h2>FILES</h2>
 <p> <code>$XDG_CONFIG_HOME/bpython/config</code> </p>
-<p> Your bpython config. See sample-config (in /usr/share/doc/bpython/examples on Debian) for various options you can use, or read <i><a href="/docs/linux/man/5-python-config/">python-config</a>(5)</i>.</p>
+<p> Your bpython config. See sample-config (in /usr/share/doc/bpython/examples on Debian) for various options you can use, or read <i>python-config(5)</i>.</p>
 <h2>KNOWN BUGS</h2>
 <p> See <i><a rel="nofollow" href="http://bitbucket.org/bobf/bpython/issues/">http://bitbucket.org/bobf/bpython/issues/</a></i> for a list of known issues.</p>
 <h2>SEE ALSO</h2>

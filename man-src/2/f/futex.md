@@ -89,7 +89,7 @@ long futex(uint32_t *uaddr, int futex_op, uint32_t val,
 <dt>
 <dd> If a waker thread used <code>FUTEX_WAKE</code>, then all waiters waiting on B would be woken up, and they would all try to acquire lock A. However, waking all of the threads in this manner would be pointless because all except one of the threads would immediately block on lock A again. By contrast, a requeue operation wakes just one waiter and moves the other waiters to lock A, and when the woken waiter unlocks A then the next waiter can proceed.</p>
 <dt><code>FUTEX_WAKE_OP</code> (since Linux 2.6.14)</p>
-<dd> This operation was added to support some user-space use cases where more than one futex must be handled at the same time. The most notable example is the implementation of <code><a href="/docs/linux/man/3-pthread_cond_signal/">pthread_cond_signal</a></code>(3), which requires operations on two futexes, the one used to implement the mutex and the one used in the implementation of the wait queue associated with the condition variable. <code>FUTEX_WAKE_OP</code> allows such cases to be implemented without leading to high rates of contention and context switching.</p>
+<dd> This operation was added to support some user-space use cases where more than one futex must be handled at the same time. The most notable example is the implementation of <code>pthread_cond_signal</code>(3), which requires operations on two futexes, the one used to implement the mutex and the one used in the implementation of the wait queue associated with the condition variable. <code>FUTEX_WAKE_OP</code> allows such cases to be implemented without leading to high rates of contention and context switching.</p>
 <dt>
 <dd> The <code>FUTEX_WAKE_OP</code> operation is equivalent to executing the following code atomically and totally ordered with respect to other futex operations on any of the two supplied futex words:</p>
 <dt>
@@ -427,7 +427,7 @@ long futex(uint32_t *uaddr, int futex_op, uint32_t val,
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wait(NULL); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/2-get_robust_list/">get_robust_list</a></code>(2), <code><a href="/docs/linux/man/2-restart_syscall/">restart_syscall</a></code>(2), <code><a href="/docs/linux/man/3-pthread_mutexattr_getprotocol/">pthread_mutexattr_getprotocol</a></code>(3), <code><a href="/docs/linux/man/7-futex/">futex</a></code>(7), <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7) </p>
+<p> <code><a href="/docs/linux/man/2-get_robust_list/">get_robust_list</a></code>(2), <code><a href="/docs/linux/man/2-restart_syscall/">restart_syscall</a></code>(2), <code>pthread_mutexattr_getprotocol</code>(3), <code><a href="/docs/linux/man/7-futex/">futex</a></code>(7), <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7) </p>
 <p> The following kernel source files:</p>
 <dl>
 <dt>*</p>

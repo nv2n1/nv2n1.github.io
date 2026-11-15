@@ -80,9 +80,9 @@ std::vector&lt;std::pair&lt;int, unicode_char&gt;&gt; linebreaks;
 
 std::copy(beg_iter, end_iter, std::back_insert_iterator&lt;std::vector&lt;int&gt;&gt;(linebreaks));</code></pre>
 <h2>Description</h2>
-<p>unicode::linebreak_callback_base is a C++ binding for the unicode line-breaking rule implementation described in <code><a href="/docs/linux/man/3-unicode_line_break/">unicode_line_break</a></code>(3). </p>
+<p>unicode::linebreak_callback_base is a C++ binding for the unicode line-breaking rule implementation described in <code>unicode_line_break</code>(3). </p>
 <p> Subclass unicode::linebreak_callback_base and implement callback() that&#8217;s virtually inherited from unicode::linebreak_callback_base. The callback() callback function receives the output values from the line-breaking algorithm, the UNICODE_LB_MANDATORY, UNICODE_LB_NONE, or the UNICODE_LB_ALLOWED value, for each unicode character. </p>
-<p> callback() should return 0. A non-zero return reports an error, that stops the line-breaking algorithm. See <code><a href="/docs/linux/man/3-unicode_line_break/">unicode_line_break</a></code>(3) for more information. </p>
+<p> callback() should return 0. A non-zero return reports an error, that stops the line-breaking algorithm. See <code>unicode_line_break</code>(3) for more information. </p>
 <p> The alternate unicode::linebreakc_callback_base interface uses a virtually inherited callback() that receives two parameters, the line-break code value, and the corresponding unicode character. </p>
 <p> The input unicode characters for the line-breaking algorithm are provided by the &lt;&lt; operator, one unicode character at a time; or by the () operator, passing either a container, or a beginning and an ending iterator value for an input sequence of unicode characters. finish() indicates the end of the unicode character sequence. </p>
 <p> set_opts sets line-breaking options (see unicode_lb_set_opts() for more information). </p>
@@ -91,7 +91,7 @@ std::copy(beg_iter, end_iter, std::back_insert_iterator&lt;std::vector&lt;int&gt
 <p> The iterator implements a set_opts() methods that sets the options for the line-breaking algorithm. </p>
 <p> The linebreakc_iter template implements a similar input iterator, with the difference that it ends up iterating over a std::pair of line-breaking values and the corresponding unicode_char from the underlying input sequence.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code><a href="/docs/linux/man/3-unicode_line_break/">unicode_line_break</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode_line_break</code>(3).</p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>

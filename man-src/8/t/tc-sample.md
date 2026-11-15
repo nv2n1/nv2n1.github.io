@@ -49,4 +49,4 @@ description: "sample – packet sampling tc action"
 <dd>tc qdisc add dev eth1 handle ffff: ingress tc filter add dev eth1 parent ffff: matchall \<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action sample index 19</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-matchall/">tc-matchall</a></code>(8) <code><a href="/docs/linux/man/1-psample/">psample</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-matchall/">tc-matchall</a></code>(8) <code>psample</code>(1) </p>

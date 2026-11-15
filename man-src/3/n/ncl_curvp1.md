@@ -17,7 +17,7 @@ CURVP1 - calculate values for CURVP2 usage.
 <dt>Y
 <dd>(real, input) An array containing the functional values of the input function -- Y(K) is the functional value at X(K) for K=1,N.
 <dt>P
-<dd>(real, input) The period of the function. P must be greater than X(N)<a HREF="/docs/linux/man/1--x/">-X</a>(1).
+<dd>(real, input) The period of the function. P must be greater than X(N)-X(1).
 <dt>YP
 <dd>(real, output) Contains values for the second derivative (these are calculated by CURVP1).
 <dt>TEMP
@@ -29,7 +29,7 @@ CURVP1 - calculate values for CURVP2 usage.
 
  
  = 1 if N is less than 2. 
- = 2 if P is less than or equal to X(N)<a HREF="/docs/linux/man/1--x/">-X</a>(1). 
+ = 2 if P is less than or equal to X(N)-X(1). 
  = 3 if the X values are not strictly increasing.</dl><h2>Access</h2>To use CURVP1, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>curvp2, fitgrid_params. 
 

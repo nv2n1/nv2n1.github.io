@@ -31,7 +31,7 @@ description: "odtest – test cases for QDBM Odeum"
 <dd> <code>-tune ibnum idnum cbnum csiz</code> : set tuning parameters.</dl>
 <p> This command returns 0 on success, another on failure. The environment variable `QDBMDBGFD&#8217; specifies the file descriptor to output the history of updating the variable `dpecode&#8217;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/3-odeum/">odeum</a></code>(3) </p>
+<p> <code>qdbm</code>(3), <code>odeum</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <h2>Index</h2>

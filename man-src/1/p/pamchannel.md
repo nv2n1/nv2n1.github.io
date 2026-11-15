@@ -28,7 +28,7 @@ description: "pamchannel – extract channels from a PAM image"
 <dd> This specified the tuple type name to be recorded in the output. You may use any string up to 255 characters. Some programs recognize some names. If you omit this option, the default tuple type name is null. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pamstack/">pamstack</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamchannel</code> was new, along with the PAM format, in Netpbm 9.7 (August 2000). </p>

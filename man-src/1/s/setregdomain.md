@@ -18,5 +18,5 @@ description: "setregdomain – set regulatory domain based on country code"
 <h2>FILES</h2>
 <p> <code>/etc/sysconfig/regdomain</code> <code>/etc/localtime</code> <code>/usr/share/zoneinfo/zone.tab</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-iw/">iw</a></code>(1) </p>
+<p> <code>iw</code>(1) </p>
 <h2>Index</h2>

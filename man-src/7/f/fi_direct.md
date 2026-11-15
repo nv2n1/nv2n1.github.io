@@ -34,7 +34,7 @@ In order that application code may be optimized during compile time, direct prov
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3), <a HREF="/docs/linux/man/3-fi_endpoint/">fi_endpoint</a>(3), <a HREF="/docs/linux/man/3-fi_domain/">fi_domain</a>(3)
+fi_getinfo(3), fi_endpoint(3), fi_domain(3)
 
 <h2>Authors</h2>
 

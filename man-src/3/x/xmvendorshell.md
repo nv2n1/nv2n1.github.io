@@ -202,7 +202,7 @@ description: "VendorShell – Motif-compatible replacement for X Intrinsics Vend
 <p> <code>XmNdarkThreshold</code> </p>
 <p> <code>XmNforegroundThreshold</code> </p>
 <h2>Class Hierarchy</h2>
-<p><code><a href="/docs/linux/man/3-object/">Object</a></code>(3) <code><a href="/docs/linux/man/3-xmextobject/">XmExtObject</a></code>(3) <code><a href="/docs/linux/man/3-desktop/">Desktop</a></code>(3) <code><a href="/docs/linux/man/3-shell/">Shell</a></code>(3) <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-object/">Object</a></code>(3) <code>XmExtObject</code>(3) <code>Desktop</code>(3) <code><a href="/docs/linux/man/3-shell/">Shell</a></code>(3) <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3)</p>
 <h2>Callbacks</h2>
 <h2>Convenience Functions</h2>
 <h2>See Also</h2>

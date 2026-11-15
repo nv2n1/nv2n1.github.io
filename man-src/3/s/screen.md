@@ -17,4 +17,4 @@ description: "screen – Global pointer to the screen hardware video memory. All
 <pre> putpixel(screen, x, y, color);</pre>
 <p>Or to implement a double-buffered system:  Warning: be very careful when using this pointer at the same time as any bitmaps created by the create_video_bitmap() function (see the description of this function for more detailed information). And never try to destroy it with destroy_bitmap(). </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-is_screen_bitmap/">is_screen_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-create_video_bitmap/">create_video_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-scroll_screen/">scroll_screen</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code>is_screen_bitmap</code>(3), <code><a href="/docs/linux/man/3-create_video_bitmap/">create_video_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-scroll_screen/">scroll_screen</a></code>(3) </p>

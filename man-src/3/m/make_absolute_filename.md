@@ -23,5 +23,5 @@ char buf[256];
 <h2>RETURN VALUE</h2>
 <p> Returns a copy of the `dest&#8217; parameter. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-make_relative_filename/">make_relative_filename</a></code>(3), <code><a href="/docs/linux/man/3-is_relative_filename/">is_relative_filename</a></code>(3), <code><a href="/docs/linux/man/3-replace_filename/">replace_filename</a></code>(3), <code><a href="/docs/linux/man/3-canonicalize_filename/">canonicalize_filename</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-make_relative_filename/">make_relative_filename</a></code>(3), <code>is_relative_filename</code>(3), <code><a href="/docs/linux/man/3-replace_filename/">replace_filename</a></code>(3), <code><a href="/docs/linux/man/3-canonicalize_filename/">canonicalize_filename</a></code>(3) </p>
 <h2>Index</h2>

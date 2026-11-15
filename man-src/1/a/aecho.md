@@ -30,5 +30,5 @@ example % aecho bloodsport 11 bytes from 8195.13 : aep_seq = 0. time = 10. ms 11
 <dt>
 <dd> Stop after <i>count</i> packets.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ping/">ping</a></code>(1), <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3), <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code><a href="/docs/linux/man/4-aep/">aep</a></code>(4), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>
+<p> <code>ping</code>(1), <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3), <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code>aep</code>(4), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>
 <h2>Index</h2>

@@ -153,7 +153,7 @@ xrdfs[--no - cwd] host[:port][command[args]] command : help, chmod, ls, locate, 
 <dd> Get space statistics for given path. </p>
 </dl>
 <h2>NOTES</h2>
-<p> For the list of available environment variables please refere to <a href="/docs/linux/man/1-xrdcopy/">xrdcopy</a>(1) </p>
+<p> For the list of available environment variables please refere to xrdcopy(1) </p>
 <h2>DIAGNOSTICS</h2>
 <p> Errors yield an error message and a non-zero exit status. </p>
 <h2>LICENSE</h2>

@@ -17,7 +17,7 @@ CSA2LS - cubic spline approximation, simple entry for two-dimensional input, lis
 <dt>UI
 <dd>(real, input) An array dimensioned for NI containing function values at the input XI values, that is UI(L) is the value of the input function at the coordinate (XI(1,L),XI(2,L)) for L=1,NI.
 <dt>KNOTS
-<dd>(integer, input) The number of knots to be used in constructing the approximation spline. KNOTS is dimensioned for 2 and provides the number of knots to be used in the X and the Y directions. Both <a HREF="/docs/linux/man/1-knots/">KNOTS</a>(1) and <a HREF="/docs/linux/man/2-knots/">KNOTS</a>(2) must be at least 4. The larger the values for KNOTS, the closer the approximated curve will come to passing through the input function values.
+<dd>(integer, input) The number of knots to be used in constructing the approximation spline. KNOTS is dimensioned for 2 and provides the number of knots to be used in the X and the Y directions. Both KNOTS(1) and KNOTS(2) must be at least 4. The larger the values for KNOTS, the closer the approximated curve will come to passing through the input function values.
 <dt>NO
 <dd>(integer, input) The number of coordinate values in the output list. NO can be any positive number.
 <dt>XO
@@ -27,7 +27,7 @@ CSA2LS - cubic spline approximation, simple entry for two-dimensional input, lis
 <dt>UO
 <dd>(real, output) An array dimensioned for NO containing the calculated function values for the output spline. UO(I) is the calculated functional value at (XO(I),YO(I)) for I=1,NO.
 <dt>NWRK
-<dd>(integer, input) The size of the WORK array. NWRK must be at least <a HREF="/docs/linux/man/1-knots/">KNOTS</a>(1)*<a HREF="/docs/linux/man/2-knots/">KNOTS</a>(2)*(<a HREF="/docs/linux/man/1-knots/">KNOTS</a>(1)*<a HREF="/docs/linux/man/2-knots/">KNOTS</a>(2)+3).
+<dd>(integer, input) The size of the WORK array. NWRK must be at least KNOTS(1)*KNOTS(2)*(KNOTS(1)*KNOTS(2)+3).
 <dt>WORK
 <dd>(real, input) A work array dimensioned for NWRK.
 <dt>IER

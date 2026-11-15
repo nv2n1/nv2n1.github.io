@@ -1099,9 +1099,9 @@ ffplay - FFplay media player
 <dl COMPACT><dt><font SIZE="-1"><b>PI</b></font>
 <dd>area of the unit disc, approximately 3.14
 <dt><b>E</b>
-<dd><b><a HREF="/docs/linux/man/1-exp/">exp</a></b>(1) (Euler's number), approximately 2.718
+<dd><b>exp</b>(1) (Euler's number), approximately 2.718
 <dt><font SIZE="-1"><b>PHI</b></font>
-<dd>golden ratio (1+<b><a HREF="/docs/linux/man/5-sqrt/">sqrt</a></b>(5))/2, approximately 1.618</dl>
+<dd>golden ratio (1+<b>sqrt</b>(5))/2, approximately 1.618</dl>
  
 
  Assuming that an expression is considered ``true'' if it has a non-zero value, note that: 
@@ -4249,7 +4249,7 @@ ffplay - FFplay media player
 
  For more detailed information read the file Documentation/fb/framebuffer.txt included in the Linux source tree. 
 
- See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <b><a HREF="/docs/linux/man/1-fbset/">fbset</a></b>(1). 
+ See also &lt;<b><a rel="nofollow" HREF="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></b>&gt;, and <b>fbset</b>(1). 
 
  To record from the framebuffer device <i>/dev/fb0</i> with <b>ffmpeg</b>: 
 
@@ -5347,7 +5347,7 @@ ffplay - FFplay media player
  <pre> aeval=val(ch)/2:c=same</pre><dt>&bull;
 <dd>Invert phase of the second channel: 
 
- <pre> aeval=val(0)|<a HREF="//www.systutorials.com/docs/linux/man/1--val/">-val</a>(1)</pre></dl><h3>aexciter</h3>An exciter is used to produce high sound that is not present in the original signal. This is done by creating harmonic distortions of the signal which are restricted in range and added to the original signal. An Exciter raises the upper end of an audio signal without simply raising the higher frequencies like an equalizer would do to create a more ``crisp'' or ``brilliant'' sound. 
+ <pre> aeval=val(0)|-val(1)</pre></dl><h3>aexciter</h3>An exciter is used to produce high sound that is not present in the original signal. This is done by creating harmonic distortions of the signal which are restricted in range and added to the original signal. An Exciter raises the upper end of an audio signal without simply raising the higher frequencies like an equalizer would do to create a more ``crisp'' or ``brilliant'' sound. 
 
  The filter accepts the following options:
 <dl COMPACT><dt><b>level_in</b>
@@ -11630,7 +11630,7 @@ ffplay - FFplay media player
 <dt><b>minknorm</b>
 <dd>The Minkowski parameter to be used for calculating the Minkowski distance. Must be chosen in the range [0,20] and default value is 1. Set to 0 for getting max value instead of calculating Minkowski distance.
 <dt><b>sigma</b>
-<dd>The standard deviation of Gaussian blur to be applied on the scene. Must be chosen in the range [0,1024.0] and default value = 1. floor( <i>sigma</i> * <b><a HREF="/docs/linux/man/3-break_off_sigma/">break_off_sigma</a></b>(3) ) can't be equal to 0 if <i>difford</i> is greater than 0.</dl>
+<dd>The standard deviation of Gaussian blur to be applied on the scene. Must be chosen in the range [0,1024.0] and default value = 1. floor( <i>sigma</i> * <b>break_off_sigma</b>(3) ) can't be equal to 0 if <i>difford</i> is greater than 0.</dl>
  
 
  <i>Examples</i>
@@ -14032,7 +14032,7 @@ ffplay - FFplay media player
  <pre> rotate='2*PI*t:ow=hypot(iw,ih):oh=ow'</pre><dt>&bull;
 <dd>Rotate the video, reduce the output size so that no background is ever shown: 
 
- <pre> rotate=2*PI*t:ow='min(iw,ih)/<a HREF="//www.systutorials.com/docs/linux/man/2-sqrt/">sqrt</a>(2)':oh=ow:c=none</pre></dl>
+ <pre> rotate=2*PI*t:ow='min(iw,ih)/sqrt(2)':oh=ow:c=none</pre></dl>
  
 
  <i>Commands</i> 
@@ -17289,7 +17289,7 @@ ffplay - FFplay media player
  {
  const sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE;
  
- int2 location = (int2)(get_global_id(0), <a HREF="//www.systutorials.com/docs/linux/man/1-get_global_id/">get_global_id</a>(1));
+ int2 location = (int2)(get_global_id(0), get_global_id(1));
  
  float4 value = read_imagef(source, sampler, location);
  
@@ -17312,7 +17312,7 @@ ffplay - FFplay media player
  float2 dst_cen = dst_dim / 2.0f;
  float2 src_cen = src_dim / 2.0f;
  
- int2 dst_loc = (int2)(get_global_id(0), <a HREF="//www.systutorials.com/docs/linux/man/1-get_global_id/">get_global_id</a>(1));
+ int2 dst_loc = (int2)(get_global_id(0), get_global_id(1));
  
  float2 dst_pos = convert_float2(dst_loc) - dst_cen;
  float2 src_pos = {
@@ -17341,7 +17341,7 @@ ffplay - FFplay media player
  
  float blend = (cos((float)index / 50.0f) + 1.0f) / 2.0f;
  
- int2 dst_loc = (int2)(get_global_id(0), <a HREF="//www.systutorials.com/docs/linux/man/1-get_global_id/">get_global_id</a>(1));
+ int2 dst_loc = (int2)(get_global_id(0), get_global_id(1));
  int2 src1_loc = dst_loc * get_image_dim(src1) / get_image_dim(dst);
  int2 src2_loc = dst_loc * get_image_dim(src2) / get_image_dim(dst);
  
@@ -17511,8 +17511,8 @@ ffplay - FFplay media player
  {
  const sampler_t sampler = (CLK_NORMALIZED_COORDS_FALSE |
  CLK_FILTER_LINEAR);
- int2 p = (int2)(get_global_id(0), <a HREF="//www.systutorials.com/docs/linux/man/1-get_global_id/">get_global_id</a>(1));
- float2 rp = (float2)(get_global_id(0), <a HREF="//www.systutorials.com/docs/linux/man/1-get_global_id/">get_global_id</a>(1));
+ int2 p = (int2)(get_global_id(0), get_global_id(1));
+ float2 rp = (float2)(get_global_id(0), get_global_id(1));
  float2 dim = (float2)(get_image_dim(src1).x, get_image_dim(src1).y);
  rp = rp / dim;
  
@@ -17922,7 +17922,7 @@ ffplay - FFplay media player
  <pre> __kernel void ramp(__write_only image2d_t dst,
  unsigned int index)
  {
- int2 loc = (int2)(get_global_id(0), <a HREF="//www.systutorials.com/docs/linux/man/1-get_global_id/">get_global_id</a>(1));
+ int2 loc = (int2)(get_global_id(0), get_global_id(1));
  
  float4 val;
  val.xy = val.zw = convert_float2(loc) / convert_float2(get_image_dim(dst));
@@ -17934,7 +17934,7 @@ ffplay - FFplay media player
  <pre> __kernel void sierpinski_carpet(__write_only image2d_t dst,
  unsigned int index)
  {
- int2 loc = (int2)(get_global_id(0), <a HREF="//www.systutorials.com/docs/linux/man/1-get_global_id/">get_global_id</a>(1));
+ int2 loc = (int2)(get_global_id(0), get_global_id(1));
  
  float4 value = 0.0f;
  int x = loc.x + index;
@@ -18779,7 +18779,7 @@ ffplay - FFplay media player
 <dl COMPACT><dt><b>midi(f)</b>
 <dd>midi number of frequency f, some midi numbers: E0(16), C1(24), C2(36), A4(69)
 <dt><b>r(x), g(x), b(x)</b>
-<dd>red, green, and blue value of intensity x.</dl></dl><dl COMPACT><dd>Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(<a HREF="/docs/linux/man/1-1-ld/">1-ld</a>(1)) + b(<a HREF="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl><dt><b>axisfile</b>
+<dd>red, green, and blue value of intensity x.</dl></dl><dl COMPACT><dd>Default value is <tt>&quot;st(0, (midi(f)-59.5)/12); st(1, if(between(ld(0),0,1), 0.5-0.5*cos(2*PI*ld(0)), 0)); r(1-ld(1)) + b(<a HREF="/docs/linux/man/1-ld/">ld</a>(1))&quot;</tt>.</dl><dt><b>axisfile</b>
 <dd>Specify image file to draw the axis. This option override <i>fontfile</i> and <i>fontcolor</i> option.
 <dt><b>axis, text</b>
 <dd>Enable/disable drawing text to the axis. If it is set to <tt>0</tt>, drawing to the axis is disabled, ignoring <i>fontfile</i> and <i>axisfile</i> option. Default value is <tt>1</tt>.

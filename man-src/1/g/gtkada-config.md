@@ -27,7 +27,7 @@ description: "gtkada-config – script to get information about the installed ve
 <dt><code>&#8211;prefix=PREFIX</code></p>
 <dd> If specified, use PREFIX instead of the installation prefix that <i>GTKADA</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gate/">gate</a></code>(1), <code><a href="/docs/linux/man/1-dgate/">dgate</a></code>(1), <code><a href="/docs/linux/man/1-glade/">glade</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-gate/">gate</a></code>(1), <code>dgate</code>(1), <code><a href="/docs/linux/man/1-glade/">glade</a></code>(1)</p>
 <h2>COPYRIGHT FOR THIS MAN PAGE</h2>
 <p> This man page has been written by Samuel Tardieu for the Debian GNU/Linux distribution, from informations given by the GtkAda authors Emmanuel Briot, Joel Brobecker and Arnaud Charlet. </p>
 <p> Permission to use, copy, modify, and distribute this documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>

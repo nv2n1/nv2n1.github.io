@@ -38,7 +38,7 @@ description: "kcookiejar5 – Command line interface to the KDE HTTP cookie daem
 <p> When started without parameters it loads the kded module to provide the dbus interface to store cookies. </p>
 <p> When <code>kcookiejar5</code> is started with some parameters, it does additional tasks to the cookies jar it provides, like removing the cookies from one <i>domain</i>.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/7-kf5options/">kf5options</a></i>(7), <i><a href="/docs/linux/man/7-qt5options/">qt5options</a></i>(7)</p>
+<p><i>kf5options</i>(7), <i>qt5options</i>(7)</p>
 <h2>Bugs</h2>
 <p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[]<font SIZE="-2">[1]</font> to report bugs.</p>
 <h2>Authors</h2>

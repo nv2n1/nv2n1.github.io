@@ -32,7 +32,7 @@ url: "/docs/linux/man/1-tiffdump/"
 
 <h2>SEE ALSO</h2>
 
- <b><a HREF="/docs/linux/man/1-tiffinfo/">tiffinfo</a></b>(1), <b><a HREF="//www.systutorials.com/docs/linux/man/3TIFF-libtiff/">libtiff</a></b>(3TIFF) 
+ <b><a HREF="/docs/linux/man/1-tiffinfo/">tiffinfo</a></b>(1), <b>libtiff</b>(3TIFF) 
 
  Libtiff library home page: <b><a rel="nofollow" HREF="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></b> 
 

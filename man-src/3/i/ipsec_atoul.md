@@ -17,7 +17,7 @@ description: "ipsec_atoul, ipsec_ultoa – convert unsigned-long numbers to and 
 <dt> <code>const char *atoul(const char&nbsp;<wbr>*&nbsp;<wbr></code><i>src</i><code>, size_t&nbsp;<wbr></code><i>srclen</i><code>, int&nbsp;<wbr></code><i>base</i><code>, unsigned long&nbsp;<wbr>*&nbsp;<wbr></code><i>n</i><code>);</code> </p>
 <dt> <code>size_t ultoa(unsigned long&nbsp;<wbr></code><i>n</i><code>, int&nbsp;<wbr></code><i>base</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>, size_t&nbsp;<wbr></code><i>dstlen</i><code>);</code></dl>
 <h2>DESCRIPTION</h2>
-<dd>These functions are obsolete; see <code><a href="/docs/linux/man/3-ipsec_ttoul/">ipsec_ttoul</a></code>(3) for their replacements. </p>
+<dd>These functions are obsolete; see <code>ipsec_ttoul</code>(3) for their replacements. </p>
 <p> <i>Atoul</i> converts an ASCII number into a binary <code>unsigned long</code> value. <i>Ultoa</i> does the reverse conversion, back to an ASCII version. </p>
 <p> Numbers are specified in ASCII as decimal (e.g. 123), octal with a leading zero (e.g. 012, which has value 10), or hexadecimal with a leading <code>0x</code> (e.g. <code>0x1f</code>, which has value 31) in either upper or lower case. </p>
 <p> The <i>srclen</i> parameter of <code>atoul</code> specifies the length of the ASCII string pointed to by <i>src</i>; it is an error for there to be anything else (e.g., a terminating NUL) within that length. As a convenience for cases where an entire NUL-terminated string is to be converted, a <i>srclen</i> value of 0 is taken to mean <code>strlen(src)</code>. </p>

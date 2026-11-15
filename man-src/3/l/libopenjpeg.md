@@ -235,7 +235,7 @@ description: "libopenjpeg – a library for reading and writing JPEG2000 image f
 <p> Copyright (c) 2005, Herve Drolon, FreeImage Team </p>
 <p> Copyright (c) 2006-2007, Parvatha Elangovan </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-image_to_j2k/">image_to_j2k</a></code>(1) <code><a href="/docs/linux/man/1-j2k_to_image/">j2k_to_image</a></code>(1) <code><a href="/docs/linux/man/1-j2k_dump/">j2k_dump</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-jpwl_image_to_j2k/">JPWL_image_to_j2k</a></code>(1) <code><a href="/docs/linux/man/1-jpwl_j2k_to_image/">JPWL_j2k_to_image</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-extract_j2k_from_mj2/">extract_j2k_from_mj2</a></code>(1) <code><a href="/docs/linux/man/1-wrap_j2k_in_mj2/">wrap_j2k_in_mj2</a></code>(1) <code><a href="/docs/linux/man/1-frames_to_mj2/">frames_to_mj2</a></code>(1) <code><a href="/docs/linux/man/1-mj2_to_frames/">mj2_to_frames</a></code>(1) </p>
+<p> <code>image_to_j2k</code>(1) <code>j2k_to_image</code>(1) <code>j2k_dump</code>(1) </p>
+<p> <code>JPWL_image_to_j2k</code>(1) <code>JPWL_j2k_to_image</code>(1) </p>
+<p> <code>extract_j2k_from_mj2</code>(1) <code>wrap_j2k_in_mj2</code>(1) <code>frames_to_mj2</code>(1) <code>mj2_to_frames</code>(1) </p>
 <h2>Index</h2>

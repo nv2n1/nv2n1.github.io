@@ -64,7 +64,7 @@ description: "ppmrough – create PPM image of two colors with a ragged border b
 <dd> Run <code>ppmrough</code> in verbose mode. It reports all parameters on Standard Error. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code>ppm</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.9 (September 2002). </p>
 <h2>AUTHOR</h2>

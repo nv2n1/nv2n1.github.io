@@ -66,8 +66,8 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;sinh(1.000000,0.000000) = (1.175201,0.000000) (<a href="/docs/linux/man/1-sinh/">sinh</a><code>(1)</code> = 1.175201)<br />
-&nbsp;<wbr>&nbsp;sinh(0.000000,1.000000) = (0.000000,0.841471) ( <a href="/docs/linux/man/1-sin/">sin</a><code>(1)</code> = 0.841471)</p>
+<p>&nbsp;<wbr>&nbsp;sinh(1.000000,0.000000) = (1.175201,0.000000) (sinh<code>(1)</code> = 1.175201)<br />
+&nbsp;<wbr>&nbsp;sinh(0.000000,1.000000) = (0.000000,0.841471) ( sin<code>(1)</code> = 0.841471)</p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic cosine of a complex number (ch(z))<br />
 cosh(std::complex) <i>(function template)</i><br />

@@ -88,6 +88,6 @@ description: "estcall – command line interface of the node API"
  <code>-eh</code> specifies an additional HTTP header. By default, &quot;Host&quot;, &quot;Connection&quot;, &quot;User-Agent&quot;, and &quot;Content-Length&quot; is added.</dl>
 <p> All sub commands return 0 if the operation is success, else return 1. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code><a href="/docs/linux/man/3-estraier/">estraier</a></code>(3), <code><a href="/docs/linux/man/3-estnode/">estnode</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code>estraier</code>(3), <code>estnode</code>(3) </p>
 <p> Please see <code><a rel="nofollow" href="http://hyperestraier.sourceforge.net/nguide-en.html">http://hyperestraier.sourceforge.net/nguide-en.html</a></code> for detail. </p>
 <h2>Index</h2>

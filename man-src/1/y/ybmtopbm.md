@@ -14,7 +14,7 @@ description: "ybmtopbm – convert a Bennet Yee \"face\" file into a portable bi
 <h2>DESCRIPTION</h2>
 <p> Reads a file acceptable to the <i>face</i> and <i>xbm</i> programs by Bennet Yee (bsy+ [at] cs.cmu.edu). Writes a portable bitmap as output.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-pbmtoybm/">pbmtoybm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), <a href="/docs/linux/man/1-face/">face</a>(1), <a href="/docs/linux/man/5-face/">face</a>(5), <a href="/docs/linux/man/1-xbm/">xbm</a>(1)</p>
+<p> <a href="/docs/linux/man/1-pbmtoybm/">pbmtoybm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), face(1), face(5), xbm(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jamie Zawinski and Jef Poskanzer. </p>
 <h2>Index</h2>

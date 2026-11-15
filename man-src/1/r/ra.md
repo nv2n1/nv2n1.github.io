@@ -492,7 +492,7 @@ minimum packet size for traffic transmitted by the dst.</p>
 <h2>FILTER EXPRESSION</h2>
 <p> If arguments remain after option processing, the collection is interpreted as a single filter <code>expression</code>. In order to indicate the end of arguments, a &#8216;&#8211;&#8216; (double dash) is required before the filter expression is added to the command line. Historically, a &#8216;-&#8216; (single dash) was used to separate the filter <code>expression</code> from the command line options, but newer versions of <code>getopt.1</code> now require the &#8216;&#8211;&#8216; (double dash). </p>
 <p> The filter expression specifies which <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records will be selected for processing. If no <i>expression</i> is given, all records are selected, otherwise, only those records for which <i>expression</i> is `true&#8217; will be printed. </p>
-<p> The syntax is very similar to the expression syntax for <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1)</code>, as the tcpdump compiler was a starting point for the <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> filter expression compiler. However, the semantics for <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1)&#8217;s</code> packet filter expressions are different when applied to transaction record filtering, so there are some major differences. </p>
+<p> The syntax is very similar to the expression syntax for <code>tcpdump(1)</code>, as the tcpdump compiler was a starting point for the <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> filter expression compiler. However, the semantics for <code>tcpdump(1)&#8217;s</code> packet filter expressions are different when applied to transaction record filtering, so there are some major differences. </p>
 <p> When attached to a remote argus, <code>ra</code> will send the filter to the argus process, which compiles the filter, and uses it to select which argus records will be transmitted to the <code>ra</code> application. If you do not want to send a filter to the remote argus, prepend the filter with the keyword &quot;local&quot;, to indicate that the filtering will be done within the local <code>ra</code> process. </p>
 <p> The <i>expression</i> consists of one or more <i>primitives.</i> Primitives usually consist of an <i>id</i> (name or number) preceded by one or more qualifiers. There are three different kinds of qualifier:</p>
 <dl>
@@ -531,7 +531,7 @@ Any of the above host expressions can be prepended with the keywords
 </pre>
 <p> If <i>host</i> is a name with multiple IP addresses, each address will be checked for a match.</p>
 <dt><code>ether dst </code><i>ehost</i></p>
-<dd> True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i><a href="//www.systutorials.com/docs/linux/man/3N-ethers/">ethers</a></i>(3N) for numeric format).</p>
+<dd> True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i>ethers</i>(3N) for numeric format).</p>
 <dt><code>ether src </code><i>ehost</i></p>
 <dd> True if the ethernet source address is <i>ehost</i>.</p>
 <dt><code>ether host </code><i>ehost</i></p>
@@ -549,7 +549,7 @@ Any of the above host expressions can be prepended with the keywords
 <dt><code>net </code><i>cidr</i></p>
 <dd> True if either the IP source or destination address in the Argus record matches <i>cidr</i> address.</p>
 <dt><code>dst port </code><i>port</i></p>
-<dd> True if the network transaction is IP based, using either the TCP or UDP transport protocols, and a destination port value of <i>port</i>. The <i>port</i> can be a number or a name as configured in the /etc/services file.(see <i><a href="//www.systutorials.com/docs/linux/man/4P-tcp/">tcp</a></i>(4P) and <i><a href="//www.systutorials.com/docs/linux/man/4P-udp/">udp</a></i>(4P)). If a name is used, both the protocol number and port number, are checked. If a number or ambiguous name is used, the port number is checked for both UDP and TCP protocols (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will match both tcp/domain and udp/domain traffic). Port ranges can be specified using numeric values, such as <code>port 53-215</code>. </p>
+<dd> True if the network transaction is IP based, using either the TCP or UDP transport protocols, and a destination port value of <i>port</i>. The <i>port</i> can be a number or a name as configured in the /etc/services file.(see <i>tcp</i>(4P) and <i>udp</i>(4P)). If a name is used, both the protocol number and port number, are checked. If a number or ambiguous name is used, the port number is checked for both UDP and TCP protocols (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will match both tcp/domain and udp/domain traffic). Port ranges can be specified using numeric values, such as <code>port 53-215</code>. </p>
 <dt><code>src port </code><i>port</i></p>
 <dd> True if the network transaction has a source port value of <i>port</i>.</p>
 <dt><code>port </code><i>port</i></p>
@@ -559,7 +559,7 @@ Any of the above host expressions can be prepended with the keywords
 </pre>
 <p> which matches only tcp connections.</p>
 <dt><code>ip proto </code><i>protocol</i></p>
-<dd> True if the Argus record is an ip transaction (see <i><a href="//www.systutorials.com/docs/linux/man/4P-ip/">ip</a></i>(4P)) of protocol type <i>protocol</i>. <i>Protocol</i> can be a number or any of the string values found in <i>/etc/protocols</i>.</p>
+<dd> True if the Argus record is an ip transaction (see <i>ip</i>(4P)) of protocol type <i>protocol</i>. <i>Protocol</i> can be a number or any of the string values found in <i>/etc/protocols</i>.</p>
 <dt><code>multicast</code></p>
 <dd> True if the network transaction involved an ip multicast address. By specifing ether multicast, you can select argus records that involve an ethernet multicast address.</p>
 <dt><code>broadcast</code></p>
@@ -674,7 +674,7 @@ Any of the above host expressions can be prepended with the keywords
 </dl>
 <dl>
 <dt><code>time</code></p>
-<dd> The format of the <i>time</i> field is specified by the .rarc file, using syntax supported by the routine <code><a href="//www.systutorials.com/docs/linux/man/3V-strftime/">strftime</a>(3V).</code> The default is &#8216;%T&#8217;. <code>Argus</code> transactional data contains both starting and ending transaction times, with precision to the microsecond. However, <code>ra</code> by default prints out the &#8216;stime&#8217; field, the records starting time.</p>
+<dd> The format of the <i>time</i> field is specified by the .rarc file, using syntax supported by the routine <code>strftime(3V).</code> The default is &#8216;%T&#8217;. <code>Argus</code> transactional data contains both starting and ending transaction times, with precision to the microsecond. However, <code>ra</code> by default prints out the &#8216;stime&#8217; field, the records starting time.</p>
 <dt><code>flgs</code></p>
 <dd> The <i>flgs</i> indicator consists of a fixed length field. That reports various flow record and protocol identifiers, states and attributes. The format is: </p>
 <pre>

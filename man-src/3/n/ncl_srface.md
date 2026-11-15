@@ -36,7 +36,7 @@ CALL SRFACE (X,Y,Z,M,MX,NX,NY,S,STEREO)
 <dt>NY
 <dd>Number of data values in the Y direction (the second subscript direction) to be plotted.
 <dt>S
-<dd>S defines the line of sight. The viewer's eye is at (<a HREF="/docs/linux/man/1-s/">S</a>(1), <a HREF="/docs/linux/man/2-s/">S</a>(2), <a HREF="/docs/linux/man/3-s/">S</a>(3)) and the point looked at is at (<a HREF="/docs/linux/man/4-s/">S</a>(4), <a HREF="/docs/linux/man/5-s/">S</a>(5), <a HREF="/docs/linux/man/6-s/">S</a>(6)). The eye should be outside the block with opposite corners (<a HREF="/docs/linux/man/1-x/">X</a>(1), <a HREF="/docs/linux/man/1-y/">Y</a>(1), ZMIN) and (X(NX), Y(NY), ZMAX) and the point looked at should be inside it. For a nice perspective effect, the distance between the eye and the point looked at should be 5 to 10 times the size of the block.
+<dd>S defines the line of sight. The viewer's eye is at (S(1), S(2), <a HREF="/docs/linux/man/3-s/">S</a>(3)) and the point looked at is at (S(4), S(5), S(6)). The eye should be outside the block with opposite corners (X(1), Y(1), ZMIN) and (X(NX), Y(NY), ZMAX) and the point looked at should be inside it. For a nice perspective effect, the distance between the eye and the point looked at should be 5 to 10 times the size of the block.
 <dt>STEREO
 <dd>Flag to indicate if stereo pairs are to be drawn. 0.0 means no stereo pair (one picture). Non-zero means put out two pictures. The value of STEREO is the relative angle between the eyes. A value of 1.0 produces standard separation. Negative STEREO reverses the left and right figures.</dl>
 

@@ -17,4 +17,4 @@ description: "bearerbox, wapbox, smsbox – Parts of Kannel, the WAP and SMS gat
 <p> Kannel consists of three programs, usually run as daemons: <code>bearerbox</code>, <code>wapbox</code>, and <code>smsbox</code>. They implement the connection to the phone (SMS or UDP), the WAP protocol stack, and the SMS based services, respectively. </p>
 <p> For more information, see <code><a rel="nofollow" href="http://www.kannel.org">http://www.kannel.org</a></code> or <code>file://usr/doc/kannel/</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-run_kannel_box/">run_kannel_box</a></code>(8), <code><a href="/docs/linux/man/1-seewbmp/">seewbmp</a></code>(1). </p>
+<p><code><a href="/docs/linux/man/8-run_kannel_box/">run_kannel_box</a></code>(8), <code>seewbmp</code>(1). </p>

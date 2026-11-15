@@ -90,5 +90,5 @@ description: "tse3play – play/convert music files (MIDI or TSE3MDL) using the 
 <p> Pete Goodliffe &lt;pete [at] cthree.org&gt; </p>
 <p> Trax Software 2001</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-playmidi/">playmidi</a></code>(1), <code><a href="/docs/linux/man/3-tse3/">TSE3</a></code>(3) </p>
+<p> <code>playmidi</code>(1), <code>TSE3</code>(3) </p>
 <h2>Index</h2>

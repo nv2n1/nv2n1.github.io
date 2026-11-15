@@ -11,7 +11,7 @@ description: "xend-config.sxp – Xen daemon configuration file"
 <h2>Synopsis</h2>
 <p>/etc/xen/xend-config.sxp</p>
 <h2>Description</h2>
-<p>The <i><a href="/docs/linux/man/1-xend/">xend</a></i>(1) program requires xend-config.sxp to specify operating parameters which determine the behavior of the daemon at runtime. </p>
+<p>The <i>xend</i>(1) program requires xend-config.sxp to specify operating parameters which determine the behavior of the daemon at runtime. </p>
 <p> The parameters are specified in S-expression format. See the example configuration file in <i>/etc/xen/xend-config.sxp</i> for details.</p>
 <h2>Options</h2>
 <p>The following lists the daemon configuration parameters:</p>
@@ -65,6 +65,6 @@ description: "xend-config.sxp – Xen daemon configuration file"
 <h2>Caveats</h2>
 <p>Note that relocation is currently unsecured and is very dangerous if left enabled. No authentication is performed, and very little sanity checking takes place. Enable at your own risk.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-xend/">xend</a></code>(1)</p>
+<p><code>xend</code>(1)</p>
 <h2>Author</h2>
 <p>Dan Smith &lt;danms [at] us.ibm.com&gt;</p>

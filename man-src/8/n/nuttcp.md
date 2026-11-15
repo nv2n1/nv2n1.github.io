@@ -88,7 +88,7 @@ description: "nuttcp – network performance measurement tool"
 <p>Under Construction </p>
 <p> For now, see the examples.txt file for some examples of using nuttcp.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ping/">ping</a></code>(8), <code><a href="/docs/linux/man/8-traceroute/">traceroute</a></code>(8), <code><a href="/docs/linux/man/8-tracepath/">tracepath</a></code>(8), <code><a href="/docs/linux/man/8-pathchar/">pathchar</a></code>(8), <code><a href="/docs/linux/man/1-netstat/">netstat</a></code>(1), <code><a href="/docs/linux/man/8-mtrace/">mtrace</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-ping/">ping</a></code>(8), <code><a href="/docs/linux/man/8-traceroute/">traceroute</a></code>(8), <code><a href="/docs/linux/man/8-tracepath/">tracepath</a></code>(8), <code>pathchar</code>(8), <code>netstat</code>(1), <code>mtrace</code>(8)</p>
 <h2>Authors</h2>
 <p>Developed by Bill Fink based on nttcp which in turn was an enhancement of the original ttcp developed by Mike Muuss at BRL. IPv6 capability and some other fixes and enhancements contributed by Rob Scott. Many useful suggestions and testing performed by Phil Dykstra and others. </p>
 <p> The current version is available via anonymous ftp from: </p>

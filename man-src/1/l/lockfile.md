@@ -40,7 +40,7 @@ rm -f important.lock
 <p> Tp 2.3i <code>/etc/passwd</code> to verify and/or correct the invoker&#8217;s loginname (and to find out his HOME directory, if needed)<br />
  Tp <code>/var/mail/$LOGNAME.lock</code> lockfile for the system mailbox, the environment variables present in here will not be taken from the environment, but will be determined by looking in /etc/passwd </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-rm/">rm</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-rm/">rm</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1) </p>
 <h2>DIAGNOSTICS</h2>
 <p> Tp 2.3i Filename too long, &#8230; Use shorter filenames.<br />
  Tp Forced unlock denied on &quot;x&quot; No write permission in the directory where lockfile &quot;x&quot; resides, or more than one lockfile trying to force a lock at exactly the same time.<br />

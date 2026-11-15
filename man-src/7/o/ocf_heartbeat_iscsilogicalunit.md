@@ -48,15 +48,15 @@ description: "ocf_heartbeat_iSCSILogicalUnit – Manages iSCSI Logical Units (LU
 <p> (optional, string, no default)</dl>
 <p> <code>tgt_bstype</code></p>
 <dl>
-<dd>TGT specific backing store type. If you want to use aio, make sure your tgtadm is built against libaio. See <a href="/docs/linux/man/8-tgtadm/">tgtadm</a>(8). </p>
+<dd>TGT specific backing store type. If you want to use aio, make sure your tgtadm is built against libaio. See tgtadm(8). </p>
 <p> (optional, string, no default)</dl>
 <p> <code>tgt_bsoflags</code></p>
 <dl>
-<dd>TGT specific backing store open flags (direct|sync). See <a href="/docs/linux/man/8-tgtadm/">tgtadm</a>(8). </p>
+<dd>TGT specific backing store open flags (direct|sync). See tgtadm(8). </p>
 <p> (optional, string, no default)</dl>
 <p> <code>tgt_device_type</code></p>
 <dl>
-<dd>TGT specific device type. See <a href="/docs/linux/man/8-tgtadm/">tgtadm</a>(8). </p>
+<dd>TGT specific device type. See tgtadm(8). </p>
 <p> (optional, string, no default)</dl>
 <p> <code>additional_parameters</code></p>
 <dl>
@@ -93,7 +93,7 @@ description: "ocf_heartbeat_iSCSILogicalUnit – Manages iSCSI Logical Units (LU
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 10.</dl>
 <h2>Example Crm Shell</h2>
-<p>The following is an example configuration for a iSCSILogicalUnit resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a iSCSILogicalUnit resource using the <code>crm</code>(8) shell: </p>
 <dl>
 <dd>
 <pre>primitive p_iSCSILogicalUnit ocf:heartbeat:iSCSILogicalUnit \

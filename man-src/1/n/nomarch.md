@@ -44,7 +44,7 @@ description: "nomarch – extract `.arc’ archives"
 <p> One compression method, obsolete even by `.arc&#8217; standards :-), isn&#8217;t supported yet. This is partly because I&#8217;ve yet to find a single file which uses it, despite testing an awful lot of files. </p>
 <p> Subdirectories in Spark archives are extracted as the `.arc&#8217;-format files they really are, which may not be terribly convenient.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1), <i><a href="/docs/linux/man/1-gzip/">gzip</a></i>(1), <i><a href="/docs/linux/man/1-bzip2/">bzip2</a></i>(1), <i><a href="/docs/linux/man/1-lbrate/">lbrate</a></i>(1)</p>
+<p> <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1), <i><a href="/docs/linux/man/1-gzip/">gzip</a></i>(1), <i><a href="/docs/linux/man/1-bzip2/">bzip2</a></i>(1), <i>lbrate</i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Russell Marks (rus [at] svgalib.org). </p>
 <h2>Index</h2>

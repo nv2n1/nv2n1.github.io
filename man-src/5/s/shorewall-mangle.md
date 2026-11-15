@@ -130,20 +130,20 @@ DIVERTHA - - tcp</pre>
 <dl>
 <dd>
 <pre>2:P eth0 - tcp 22
-INLINE(<a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2)):P eth0 - tcp 22
-INLINE(<a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2)):P eth0 - ; -p tcp
+INLINE(MARK(2)):P eth0 - tcp 22
+INLINE(MARK(2)):P eth0 - ; -p tcp
 INLINE eth0 - tcp 22 ; -j MARK --set-mark 2
 INLINE eth0 - ; -p tcp -j MARK --set-mark 2</pre>
 </dl>
 <p> If INLINE_MATCHES=Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[2]</font> then the third rule above can be specified as follows:</p>
 <dl>
 <dd>
-<pre><a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2):P eth0 - ; -p tcp</pre>
+<pre>MARK(2):P eth0 - ; -p tcp</pre>
 </dl>
 <p> Beginning with Shorewall 5.0.0, the rule may also be written this way, irrespective of the setting of INLINE_MATCHES:</p>
 <dl>
 <dd>
-<pre><a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2):P eth0 - ;; -p tcp</pre>
+<pre>MARK(2):P eth0 - ;; -p tcp</pre>
 </dl>
 </dl>
 <p> <code>IPMARK</code></p>
@@ -411,11 +411,11 @@ Normal-Service =&gt; 0x00</pre>
 <dl>
 <dd>
 <pre> #ACTION SOURCE DEST PROTO DPORT SPORT USER TEST
- <a href="//www.systutorials.com/docs/linux/man/1-MARK/">MARK</a>(1):T 0.0.0.0/0 0.0.0.0/0 icmp echo-request
- <a href="//www.systutorials.com/docs/linux/man/1-MARK/">MARK</a>(1):T 0.0.0.0/0 0.0.0.0/0 icmp echo-reply
+ MARK(1):T 0.0.0.0/0 0.0.0.0/0 icmp echo-request
+ MARK(1):T 0.0.0.0/0 0.0.0.0/0 icmp echo-reply
  RESTORE:T 0.0.0.0/0 0.0.0.0/0 all - - - 0
  CONTINUE:T 0.0.0.0/0 0.0.0.0/0 all - - - !0
- <a href="//www.systutorials.com/docs/linux/man/4-MARK/">MARK</a>(4):T 0.0.0.0/0 0.0.0.0/0 ipp2p:all
+ MARK(4):T 0.0.0.0/0 0.0.0.0/0 ipp2p:all
  SAVE:T 0.0.0.0/0 0.0.0.0/0 all - - - !0</pre>
 </dl>
 <p> If a packet hasn&#8217;t been classified (packet mark is 0), copy the connection mark to the packet mark. If the packet mark is set, we&#8217;re done. If the packet is P2P, set the packet mark to 4. If the packet mark has been set, save it to the connection mark.</dl>
@@ -441,7 +441,7 @@ Normal-Service =&gt; 0x00</pre>
 <p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[]<font SIZE="-2">[4]</font> </p>
 <p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/PacketMarking.html">http://www.shorewall.net/PacketMarking.html</a></code>m[]<font SIZE="-2">[17]</font> </p>
 <p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[18]</font> </p>
-<p> <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-blacklist/">shorewall-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall-ecn/">shorewall-ecn</a>(5), <a href="/docs/linux/man/5-shorewall-exclusion/">shorewall-exclusion</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), <a href="/docs/linux/man/5-shorewall_interfaces/">shorewall_interfaces</a>(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-maclist/">shorewall-maclist</a>(5), <a href="/docs/linux/man/5-shorewall-masq/">shorewall-masq</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-routestopped/">shorewall-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-secmarks/">shorewall-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
+<p> <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-blacklist/">shorewall-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall-ecn/">shorewall-ecn</a>(5), <a href="/docs/linux/man/5-shorewall-exclusion/">shorewall-exclusion</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), shorewall_interfaces(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-maclist/">shorewall-maclist</a>(5), <a href="/docs/linux/man/5-shorewall-masq/">shorewall-masq</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-routestopped/">shorewall-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-secmarks/">shorewall-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

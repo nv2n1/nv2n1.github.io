@@ -156,6 +156,6 @@ description: "hhvm – Execute PHP and Hack files"
 <h2>COPYRIGHT</h2>
 <p> HHVM is licensed under the PHP and Zend licenses except as otherwise noted. The full license can be found at: <i><a rel="nofollow" href="https://github.com/facebook/hhvm">https://github.com/facebook/hhvm</a></i> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-hphpize/">hphpize</a></code>(1)<br />
+<p> <code>hphpize</code>(1)<br />
  <i><a rel="nofollow" href="http://docs.hhvm.com">http://docs.hhvm.com</a></i> </p>
 <h2>Index</h2>

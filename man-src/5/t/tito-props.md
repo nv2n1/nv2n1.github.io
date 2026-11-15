@@ -8,7 +8,7 @@ url: "/docs/linux/man/5-tito-props/"
 
 tito.props - directives for 
 
-<a HREF="/docs/linux/man/5-tito/">tito</a>(5) how to build package.
+tito(5) how to build package.
 
 <h2>Synopsis</h2>
 
@@ -33,11 +33,11 @@ tito.props can contain several sections:
 This section and a couple of it's properties are required. You can use following variables: 
 
  builder
-<dl><dd>The fully qualified Builder class implementation to use. You can either specify builders shipped with <a HREF="/docs/linux/man/5-tito/">tito</a>(5) (see BUILDERS section below), or a custom builder located within the directory your lib_dir option points to. This property is required.</dl>
+<dl><dd>The fully qualified Builder class implementation to use. You can either specify builders shipped with tito(5) (see BUILDERS section below), or a custom builder located within the directory your lib_dir option points to. This property is required.</dl>
  
 
  tagger
-<dl><dd>The fully qualified Tagger class implementation to use. You can either specify taggers shipped with <a HREF="/docs/linux/man/5-tito/">tito</a>(5) (see TAGGERS section below), or a custom tagger located within the directory your lib_dir option points to. This property is required.</dl>
+<dl><dd>The fully qualified Tagger class implementation to use. You can either specify taggers shipped with tito(5) (see TAGGERS section below), or a custom tagger located within the directory your lib_dir option points to. This property is required.</dl>
  
 
  lib_dir

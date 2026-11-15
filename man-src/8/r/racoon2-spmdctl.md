@@ -62,4 +62,4 @@ description: "spmdctl – Control spmd"
 <h2>Bugs</h2>
 <p><code>policy add</code> command currently doesn&#8217;t support tunnel mode.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-spmd/">spmd</a>(8) <a href="/docs/linux/man/5-racoon2-conf/">racoon2.conf</a>(5) <a href="/docs/linux/man/7-racoon2/">racoon2</a>(7). </p>
+<p>spmd(8) racoon2.conf(5) racoon2(7). </p>

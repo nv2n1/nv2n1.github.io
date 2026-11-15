@@ -34,7 +34,7 @@ description: "swapon, swapoff – start/stop swapping to file/device"
 <dt><code>EINVAL</code></p>
 <dd> The file <i>path</i> exists, but refers neither to a regular file nor to a block device;</p>
 <dt><code>EINVAL</code></p>
-<dd> (<code>swapon</code>()) The indicated path does not contain a valid swap signature or resides on an in-memory filesystem such as <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5).</p>
+<dd> (<code>swapon</code>()) The indicated path does not contain a valid swap signature or resides on an in-memory filesystem such as <code>tmpfs</code>(5).</p>
 <dt><code>EINVAL</code> (since Linux 3.4)</p>
 <dd> (<code>swapon</code>()) An invalid flag value was specified in <i>swapflags</i>.</p>
 <dt><code>EINVAL</code></p>

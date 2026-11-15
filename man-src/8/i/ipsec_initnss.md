@@ -16,7 +16,7 @@ description: "ipsec_initnss – Initialise the IPsec NSS database"
 <p><i>Initnss</i></p>
 <dd>initialises the NSS database where all private keys for RSA and certificate keypairs are stored. If already initialised, it will return an error. To remove an existing IPsec NSS database, remove all the *.db files and pkcs11.txt from the NSS data directory (default: /etc/ipsec.d).</p>
 <h2>See Also</h2>
-<p>ipsec.<code><a href="/docs/linux/man/5-conf/">conf</a></code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8)</p>
+<p>ipsec.<code>conf</code>(5), <code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8)</p>
 <h2>Bugs</h2>
 <p>none</p>
 <h2>Author</h2>

@@ -31,7 +31,7 @@ description: "flush – Postfix fast flush server"
 <h2>Security</h2>
 <p>The <code><a href="/docs/linux/man/8-flush/">flush</a></code>(8) server is not security-sensitive. It does not talk to the network, and it does not talk to local users. The fast flush server can run chrooted at fixed low privilege.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>Fast flush logfiles are truncated only after a &quot;send&quot; request, not when mail is actually delivered, and therefore can accumulate outdated or redundant data. In order to maintain sanity, &quot;refresh&quot; must be executed periodically. This can be automated with a suitable wakeup timer setting in the <code>master.cf</code> configuration file. </p>
 <p> Upon receipt of a request to deliver mail for an eligible destination, the <code><a href="/docs/linux/man/8-flush/">flush</a></code>(8) server requests delivery of all messages that are listed in that destination&#8217;s logfile, regardless of the recipients of those messages. This is not an issue for mail that is sent to a <code>relay_domains</code> destination because such mail typically only has recipients in one domain.</p>
@@ -75,7 +75,7 @@ description: "flush – Postfix fast flush server"
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>ETRN_README, Postfix ETRN howto</pre>

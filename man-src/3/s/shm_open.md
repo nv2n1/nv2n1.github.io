@@ -83,7 +83,7 @@ int shm_unlink(const char *name);</code></pre>
 <p> POSIX.1-2001 says that the group ownership of a newly created shared memory object is set to either the calling process&#8217;s effective group ID or &quot;a system default group ID&quot;. POSIX.1-2008 says that the group ownership may be set to either the calling process&#8217;s effective group ID or, if the object is visible in the filesystem, the group ID of the parent directory.</p>
 <h2>Notes</h2>
 <p>POSIX leaves the behavior of the combination of <code>O_RDONLY</code> and <code>O_TRUNC</code> unspecified. On Linux, this will successfully truncate an existing shared memory object&#8212;this may not be so on other UNIX systems. </p>
-<p> The POSIX shared memory object implementation on Linux makes use of a dedicated <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5) filesystem that is normally mounted under <i>/dev/shm</i>.</p>
+<p> The POSIX shared memory object implementation on Linux makes use of a dedicated <code>tmpfs</code>(5) filesystem that is normally mounted under <i>/dev/shm</i>.</p>
 <h2>Examples</h2>
 <p>The programs below employ POSIX shared memory and POSIX unnamed semaphores to exchange a piece of data. The &quot;bounce&quot; program (which must be run first) raises the case of a string that is placed into the shared memory by the &quot;send&quot; program. Once the data has been modified, the &quot;send&quot; program then prints the contents of the modified shared memory. An example execution of the two programs is the following: $ <code>./pshm_ucase_bounce /myshm &amp;</code> [1] 270171 $ <code>./pshm_ucase_send /myshm hello</code> HELLO Further detail about these programs is provided below.</p>
 <h3>Program source: pshm_ucase.h</h3>

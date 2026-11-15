@@ -39,7 +39,7 @@ description: "sftp-server – SFTP server subsystem"
 <dd>Sets an explicit <a href="/docs/linux/man/2-umask/">umask</a>(2) to be applied to newly-created files and directories, instead of the user&#8217;s default mask.</p>
 <dt><code>-m </code><i>force_file_perms</i></p>
 <dd>Sets explicit file permissions to be applied to newly-created files instead of the default or client requested mode. Numeric values include: 777, 755, 750, 666, 644, 640, etc. Option -u is ineffective if -m is set.</dl>
-<p> For logging to work, <code>sftp-server</code> must be able to access /dev/log Use of <code>sftp-server</code> in a chroot configuration therefore requires that <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8) establish a logging socket inside the chroot directory.</p>
+<p> For logging to work, <code>sftp-server</code> must be able to access /dev/log Use of <code>sftp-server</code> in a chroot configuration therefore requires that syslogd(8) establish a logging socket inside the chroot directory.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-sftp/">sftp</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), sshd_config5, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
 <dl>

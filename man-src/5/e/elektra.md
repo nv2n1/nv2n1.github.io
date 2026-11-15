@@ -10,7 +10,7 @@ description: "elektra – A framework to store configuration atoms hierarchicall
 <p>elektra &#8211; A framework to store configuration atoms hierarchically </p>
 <p> Note </p>
 <p> This section is provided for the sake of the openness of Elektra. You should not access the Elektra&#8217;s key files directly. You should use the API or the <code></p>
-<p><a href="/docs/linux/man/1-kdb/">kdb</a></code>(1) command for that. </p>
+<p>kdb</code>(1) command for that. </p>
 <p> Elektra Key Storage Strategy.PP Elektra implements a very simple way to store the key-value pairs. The value (and some metainfo) for each key is stored in a single file. The key name (and some of its context) is sufficient to find the file name that stores the value. </p>
 <p> The <i>system/*</i> keys are stored under <i>/etc/kdb/</i>, and the <i>user/*</i> keys can be found under each user&#8217;s <i>$HOME/.kdb/</i>. </p>
 <p> Here are some examples of key names, and where Elektra goes to look for them in the disk. </p>
@@ -68,7 +68,7 @@ Stay away from here
 <dd>Text, UTF-8 encoded. Values higher then 40 are reserved for future or application specific implementations of more abstract data types, like time/date, color, font, etc. But always represented as pure text that can be edited in any text editor like <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1).</dl>
 <p> Types between 0 and 19 are used only internaly in the API, and will never appear into a key file. They are used to define meta keys as directory, link, etc.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-kdb/">kdb</a></code>(1), <code><a href="/docs/linux/man/7-elektra/">elektra</a></code>(7)</p>
+<p><code>kdb</code>(1), <code><a href="/docs/linux/man/7-elektra/">elektra</a></code>(7)</p>
 <h2>Author</h2>
 <p><code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br />
  Linux Market Developer, Senior IT and Software Architect, IBM Linux Impact Team :: <i>ibm.com/linux</i> </p>

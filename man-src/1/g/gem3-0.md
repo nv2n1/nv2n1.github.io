@@ -22,4 +22,4 @@ description: "gem3.0 – frontend to RubyGems, the Ruby package manager"
 <h2>Examples</h2>
 <p>gem3.0 install rake gem3.0 list &#8211;local gem3.0 build package.gemspec gem3.0 help install</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-bundle/">bundle</a>(1)</p>
+<p>bundle(1)</p>

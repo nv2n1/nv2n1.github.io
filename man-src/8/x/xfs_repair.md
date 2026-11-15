@@ -76,7 +76,7 @@ description: "xfs_repair – repair an XFS filesystem"
 <dd>Super Block checks: total free block and/or free i-node count incorrect, filesystem geometry inconsistent, secondary and primary superblocks contradictory.</dl>
 <p> Orphaned files and directories (allocated, in-use but unreferenced) are reconnected by placing them in the <i>lost+found</i> directory. The name assigned is the inode number.</p>
 <h3>Disk Errors</h3>
-<p><code>xfs_repair</code> aborts on most disk I/O errors. Therefore, if you are trying to repair a filesystem that was damaged due to a disk drive failure, steps should be taken to ensure that all blocks in the filesystem are readable and writable before attempting to use <code>xfs_repair</code> to repair the filesystem. A possible method is using <code><a href="/docs/linux/man/8-dd/">dd</a></code>(8) to copy the data onto a good disk.</p>
+<p><code>xfs_repair</code> aborts on most disk I/O errors. Therefore, if you are trying to repair a filesystem that was damaged due to a disk drive failure, steps should be taken to ensure that all blocks in the filesystem are readable and writable before attempting to use <code>xfs_repair</code> to repair the filesystem. A possible method is using <code>dd</code>(8) to copy the data onto a good disk.</p>
 <h3>lost+found</h3>
 <p>The directory <i>lost+found</i> does not have to already exist in the filesystem being repaired. If the directory does not exist, it is automatically created if required. If it already exists, it will be checked for consistency and if valid will be used for additional orphaned files. Invalid <i>lost+found</i> directories are removed and recreated. Existing files in a valid <i>lost+found</i> are not removed or renamed.</p>
 <h3>Corrupted Superblocks</h3>

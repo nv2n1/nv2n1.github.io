@@ -10,7 +10,7 @@ collectd-email - Documentation of collectd's &quot;email plugin&quot;
 
 <h2>Synopsis</h2>
 
-<pre> # See <a HREF="//www.systutorials.com/docs/linux/man/5-collectd.conf/">collectd.conf</a>(5)
+<pre> # See collectd.conf(5)
  LoadPlugin email
  # ...
  &lt;Plugin email&gt;

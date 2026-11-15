@@ -28,7 +28,7 @@ description: "grub-macbless – bless a mac file/directory"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;bug-grub [at] gnu.org&gt;.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-grub-install/">grub-install</a></code>(1) The full documentation for <code>grub-macbless</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-macbless</code> programs are properly installed at your site, the command</p>
+<p><code>grub-install</code>(1) The full documentation for <code>grub-macbless</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-macbless</code> programs are properly installed at your site, the command</p>
 <dl>
 <dd><code>info grub-macbless</code></dl>
 <p> should give you access to the complete manual. </p>

@@ -67,7 +67,7 @@ file-in   DICOM input filename
 <h2>Wiki Link</h2>
 <p> The wiki page, will color pictures can be found at: <a rel="nofollow" href="http://sourceforge.net/apps/mediawiki/gdcm/index.php?title=Gdcmviewer">http://sourceforge.net/apps/mediawiki/gdcm/index.php?title=Gdcmviewer</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gdcmdump/">gdcmdump</a></code>(1), <code><a href="/docs/linux/man/1-gdcm2vtkraw/">gdcm2vtkraw</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-gdcmdump/">gdcmdump</a></code>(1), <code>gdcm2vtkraw</code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
 <h2>Index</h2>

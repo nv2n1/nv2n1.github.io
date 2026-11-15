@@ -29,5 +29,5 @@ Josef Bacik&lt;josef[at] toxicpanda.com&gt;
     Mike Snitzer&lt;msnitzer[at] fedoraproject.org&gt;
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-yum/">yum</a></code>(1) <code><a href="/docs/linux/man/5-yum-fs-snapshot-conf/">yum-fs-snapshot.conf</a></code>(5) </p>
+<p> <code>yum</code>(1) <code><a href="/docs/linux/man/5-yum-fs-snapshot-conf/">yum-fs-snapshot.conf</a></code>(5) </p>
 <h2>Index</h2>

@@ -11,7 +11,7 @@ description: "Lintian::Output – Lintian messaging handling"
 <h2>Synopsis</h2>
 <pre> # non-OO
  use Lintian::Output qw(:messages);
- $Lintian::Output::GLOBAL-&gt;<a href="//www.systutorials.com/docs/linux/man/1-verbosity_level/">verbosity_level</a>(1);
+ $Lintian::Output::GLOBAL-&gt;verbosity_level(1);
  msg(&quot;Something interesting&quot;);
  v_msg(&quot;Something less interesting&quot;);
  debug_msg(3, &quot;Something very specific&quot;);

@@ -42,6 +42,6 @@ description: "hugectl – Control policy for backing text, data and malloc() wit
 <dt><code>-q</code></p>
 <dd>The -q option will drecease the verbosity level by 1 each time it is specified to a minimum of 0. </p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1),</i> <i><a href="/docs/linux/man/7-hugeadm/">hugeadm</a>(7),</i> <i><a href="/docs/linux/man/7-libhugetlbfs/">libhugetlbfs</a>(7)</i></p>
+<p><i><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1),</i> <i>hugeadm(7),</i> <i><a href="/docs/linux/man/7-libhugetlbfs/">libhugetlbfs</a>(7)</i></p>
 <h2>Authors</h2>
 <p>libhugetlbfs was written by various people on the libhugetlbfs-devel mailing list.</p>

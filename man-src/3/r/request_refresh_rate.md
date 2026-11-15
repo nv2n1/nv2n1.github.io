@@ -21,4 +21,4 @@ if (get_refresh_rate() != 60)
     abort_on_error(&quot;Couldn't set refresh rate to 60Hz!&quot;);
 </code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-get_refresh_rate/">get_refresh_rate</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code>get_refresh_rate</code>(3) </p>

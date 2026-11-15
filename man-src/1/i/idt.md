@@ -15,7 +15,7 @@ description: "idt – X window interactive image display tool"
 <p> <code>idt</code> provides a graphical user interface to the NCAR View interactive metafile translator <code>ictrans</code>. <code>idt </code> supports a subset of the <code>ictrans</code> command interface. </p>
 <p> <code>idt </code> provides two types of command panels for interacting with imagery. The first type is the control panel, which you see when you initially invoke <code>idt</code>. The control panel displays messages from the translators, provides a metafile selection utility and is responsible for instantiating the second type of command panel, the display panel. The display panel provides mechanisms for controlling translators. Each display panel manages a single metafile translator. There can be multiple display panels in existence at the same time but only one control panel.</p>
 <h2>OPTIONS</h2>
-<p> <code>idt</code> accepts all of the standard X Toolkit command line options (see <a href="/docs/linux/man/1-x/">X</a>(1)). <code>idt</code> also accepts the following options:</p>
+<p> <code>idt</code> accepts all of the standard X Toolkit command line options (see X(1)). <code>idt</code> also accepts the following options:</p>
 <dl>
 <dt><code>-f</code><i> fontcap</i></p>
 <dd> Fontcap file to be used for stroking text. When interpreting CGM <code>TEXT</code> command elements use <i>fontcap</i> as the default font for textual translation. Note: CGMs may contain textual descriptions which are not embedded in CGM <code>TEXT</code> elements. Hence they are not influenced by <i>fontcap</i> specifications. Note also that a CGM may explicitly specify a named font which may override a font provided on the command line. The environment variable FONTCAP may also be used to specify a default fontcap.</p>
@@ -226,7 +226,7 @@ Idt  idt
 <dt>$NCARG_ROOT/lib/ncarg/ncarv_spool</p>
 <dd> &#8211; System spooler configuration file</dl>
 <h2>SEE ALSO</h2>
-<p> <code>ctrans(1NCARG),</code> <code>fcaps(1NCARG),</code> <code>gcaps(1NCARG),</code> <code>ictrans(1NCARG),</code> <code>ncarv_spool(5NCARG),</code> <code><a href="/docs/linux/man/1-x/">X</a>(1),</code> <code><a href="/docs/linux/man/1-xrdb/">xrdb</a>(1)</code> </p>
+<p> <code>ctrans(1NCARG),</code> <code>fcaps(1NCARG),</code> <code>gcaps(1NCARG),</code> <code>ictrans(1NCARG),</code> <code>ncarv_spool(5NCARG),</code> <code>X(1),</code> <code><a href="/docs/linux/man/1-xrdb/">xrdb</a>(1)</code> </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>BUGS</h2>
 <p> Zooming in on large cell arrays causes the translator to crash.</p>

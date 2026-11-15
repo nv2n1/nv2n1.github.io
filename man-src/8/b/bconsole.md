@@ -34,6 +34,6 @@ description: "bconsole – Bacula’s management Console"
 <dt><code>-?</code></p>
 <dd>Show version and usage of program.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8), <code><a href="/docs/linux/man/1-bls/">bls</a></code>(1), <code><a href="/docs/linux/man/1-bextract/">bextract</a></code>(1).</p>
+<p><code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8), <code>bls</code>(1), <code>bextract</code>(1).</p>
 <h2>Author</h2>
 <p>This manual page was written by Jose Luis Tallon &lt;jltallon [at] adv-solutions.net&gt;.</p>

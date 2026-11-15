@@ -73,8 +73,8 @@ T2M;
 K;
 </code></pre>
 </dl>
-<p> <code>gribtonc</code> can run as a subprocess of the LDM <code><a href="/docs/linux/man/1-pqact/">pqact</a></code>(1) program, receiving a stream of GRIB products from standard input and decoding them as they arrive. <code>gribtonc</code> can also be used as a standalone decoder, decoding products on its standard input into netCDF form, as specified by <i>netCDF_file</i> GRIB products that do not conform to the specified file structure (e.g. they are defined on a different grid or contain a grid parameter not included in the specified netCDF file) are skipped. </p>
-<p> To use <code>gribtonc</code> from the LDM <code><a href="/docs/linux/man/1-pqact/">pqact</a></code>(1) program requires adding entries to the <code>pqact</code> configuration file that invoke <code>gribtonc</code> on appropriate HRS products. The PIPE action should be used in pattern-action entries. The form of such an entry is:</p>
+<p> <code>gribtonc</code> can run as a subprocess of the LDM <code>pqact</code>(1) program, receiving a stream of GRIB products from standard input and decoding them as they arrive. <code>gribtonc</code> can also be used as a standalone decoder, decoding products on its standard input into netCDF form, as specified by <i>netCDF_file</i> GRIB products that do not conform to the specified file structure (e.g. they are defined on a different grid or contain a grid parameter not included in the specified netCDF file) are skipped. </p>
+<p> To use <code>gribtonc</code> from the LDM <code>pqact</code>(1) program requires adding entries to the <code>pqact</code> configuration file that invoke <code>gribtonc</code> on appropriate HRS products. The PIPE action should be used in pattern-action entries. The form of such an entry is:</p>
 <dl>
 <dt>
 &nbsp;<wbr>&nbsp;<wbr>HRS<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>pattern</i><tt>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>PIPE<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>gribtonc-executable</i><br />
@@ -92,11 +92,11 @@ K;
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>etc/eta.cdl<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>data/GRIB/(1:yyyy)(1:mm)12_eta.nc
 </dl>
-<p> Since <code>gribtonc</code> reads GRIB products from its standard input, it may be invoked independently of <code><a href="/docs/linux/man/1-pqact/">pqact</a></code>(1) by using I/O redirection.</p>
+<p> Since <code>gribtonc</code> reads GRIB products from its standard input, it may be invoked independently of <code>pqact</code>(1) by using I/O redirection.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-l </code><i>logpath</i></p>
-<dd> Log file pathname. The program uses Unidata&#8217;s <code><a href="/docs/linux/man/3-ulog/">ulog</a></code>(3) package to write error and log messages. The default is to write to the <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) daemon. If this option is specified, however, then messages will be written to the file <i>logpath</i> unless that pathname is &quot;-&quot;, in which case all messages will be written to standard error.</p>
+<dd> Log file pathname. The program uses Unidata&#8217;s <code>ulog</code>(3) package to write error and log messages. The default is to write to the <code>syslogd</code>(8) daemon. If this option is specified, however, then messages will be written to the file <i>logpath</i> unless that pathname is &quot;-&quot;, in which case all messages will be written to standard error.</p>
 <dt><code>-v</code></p>
 <dd> Verbose logging. Informative messages (level <code>LOG_INFO</code>) are logged, including a line for each GRIB product decoded. By default, only messages of severity <code>LOG_NOTICE</code> and greater are logged.</p>
 <dt><code>-t</code><i> timeout</i></p>
@@ -123,7 +123,7 @@ gribtonc -v -l- -q &quot;lin,dlat=2.5,dlon=5.0&quot; avn-x.cdl avn-x.nc &lt; avn
 </dl>
 <p> will decode the products in avn-x.wmo into the netCDF file avn-x.nc, creating the latter file if it does not already exist from the ASCII CDL template file avn-x.cdl. If the data contain quasi-regular grids, they will be expanded to full regular grids on a 2.5 by 5.0 degree grid before being written into the output file.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gribdump/">gribdump</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), <a href="/docs/linux/man/1-pqact/">pqact</a>(1), <a href="/docs/linux/man/3-udunits/">udunits</a>(3), <a href="/docs/linux/man/3-ulog/">ulog</a>(3)</p>
+<p> <a href="/docs/linux/man/1-gribdump/">gribdump</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), pqact(1), udunits(3), ulog(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Error messages and log messages are written to the log file. </p>
 <h2>Index</h2>

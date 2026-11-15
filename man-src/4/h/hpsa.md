@@ -47,10 +47,10 @@ description: "hpsa – HP Smart Array SCSI driver"
  Smart Array P700m
  Smart Array P800</pre>
 <h3>Configuration details</h3>
-<p>To configure HP Smart Array controllers, use the HP Array Configuration Utility (either <code><a href="/docs/linux/man/8-hpacuxe/">hpacuxe</a></code>(8) or <code><a href="/docs/linux/man/8-hpacucli/">hpacucli</a></code>(8)) or the Offline ROM-based Configuration Utility (ORCA) run from the Smart Array&#8217;s option ROM at boot time.</p>
+<p>To configure HP Smart Array controllers, use the HP Array Configuration Utility (either <code>hpacuxe</code>(8) or <code>hpacucli</code>(8)) or the Offline ROM-based Configuration Utility (ORCA) run from the Smart Array&#8217;s option ROM at boot time.</p>
 <h2>Files</h2>
 <h3>Device nodes</h3>
-<p>Logical drives are accessed via the SCSI disk driver (<code><a href="/docs/linux/man/4-sd/">sd</a></code>(4)), tape drives via the SCSI tape driver (<code><a href="/docs/linux/man/4-st/">st</a></code>(4)), and the RAID controller via the SCSI generic driver (<code><a href="/docs/linux/man/4-sg/">sg</a></code>(4)), with device nodes named <i>/dev/sd*</i>, <i>/dev/st*</i>, and <i>/dev/sg*</i>, respectively.</p>
+<p>Logical drives are accessed via the SCSI disk driver (<code><a href="/docs/linux/man/4-sd/">sd</a></code>(4)), tape drives via the SCSI tape driver (<code><a href="/docs/linux/man/4-st/">st</a></code>(4)), and the RAID controller via the SCSI generic driver (<code>sg</code>(4)), with device nodes named <i>/dev/sd*</i>, <i>/dev/st*</i>, and <i>/dev/sg*</i>, respectively.</p>
 <h3>HPSA-specific host attribute files in /sys</h3>
 <dl>
 <dt><i>/sys/class/scsi_host/host*/rescan</i></p>
@@ -88,7 +88,7 @@ description: "hpsa – HP Smart Array SCSI driver"
 <dt><code>CCISS_PASSTHRU</code>, <code>CCISS_BIG_PASSTHRU</code></p>
 <dd>Allows &quot;BMIC&quot; and &quot;CISS&quot; commands to be passed through to the Smart Array. These are used extensively by the HP Array Configuration Utility, SNMP storage agents, and so on. See <i>cciss_vol_status</i> at for some examples.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-cciss/">cciss</a></code>(4), <code><a href="/docs/linux/man/4-sd/">sd</a></code>(4), <code><a href="/docs/linux/man/4-st/">st</a></code>(4), <code><a href="/docs/linux/man/8-cciss_vol_status/">cciss_vol_status</a></code>(8), <code><a href="/docs/linux/man/8-hpacucli/">hpacucli</a></code>(8), <code><a href="/docs/linux/man/8-hpacuxe/">hpacuxe</a></code>(8), </p>
+<p><code><a href="/docs/linux/man/4-cciss/">cciss</a></code>(4), <code><a href="/docs/linux/man/4-sd/">sd</a></code>(4), <code><a href="/docs/linux/man/4-st/">st</a></code>(4), <code><a href="/docs/linux/man/8-cciss_vol_status/">cciss_vol_status</a></code>(8), <code>hpacucli</code>(8), <code>hpacuxe</code>(8), </p>
 <p> and <i>Documentation/scsi/hpsa.txt</i> and <i>Documentation/ABI/testing/sysfs-bus-pci-devices-cciss</i> in the Linux kernel source tree</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

@@ -19,4 +19,4 @@ description: "pmEventFlagsStr, pmEventFlagsStr_r – convert an event record fla
 <h2>Notes</h2>
 <p><code>pmEventFlagsStr</code> returns a pointer to a static buffer and hence is not thread-safe. Multi-threaded applications should use <code>pmEventFlagsStr_r</code> instead.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) and <code><a href="/docs/linux/man/3-pmdaeventaddrecord/">pmdaEventAddRecord</a></code>(3). </p>
+<p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) and <code>pmdaEventAddRecord</code>(3). </p>

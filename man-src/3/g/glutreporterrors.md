@@ -16,4 +16,4 @@ description: "glutReportErrors – Reports all available OpenGL errors."
 <p>Displays as an OpenGLUT warning every OpenGL error that OpenGL remembers giving to us and which we have not processed. Uses gluErrorString(). </p>
 <p> This is forcibly done by OpenGLUT periodically if &quot;-gldebug&quot; is one of the strings passed into glutInit() via rgv. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-gluerrorstring/">gluErrorString</a>(3) <a href="/docs/linux/man/3-glutinit/">glutInit</a>(3)</p>
+<p>gluErrorString(3) <a href="/docs/linux/man/3-glutinit/">glutInit</a>(3)</p>

@@ -105,4 +105,4 @@ BadWindow errors.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  argument's type is accepted. Any argument defined as a
  set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- Window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XAllowDeviceEvents/">XAllowDeviceEvents</a>(3), <a HREF="//www.systutorials.com/docs/linux/man/3-XGrabDevice/">XGrabDevice</a>(3), <a HREF="//www.systutorials.com/docs/linux/man/3-XGrabDeviceButton/">XGrabDeviceButton</a>(3)</pre></dl>
+ Window.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XAllowDeviceEvents(3), XGrabDevice(3), XGrabDeviceButton(3)</pre></dl>

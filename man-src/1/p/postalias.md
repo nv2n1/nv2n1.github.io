@@ -77,7 +77,7 @@ description: "postalias – Postfix alias database maintenance"
 <dt><i>file_name</i></p>
 <dd> The name of the alias database source file when creating a database.</dl>
 <h2>DIAGNOSTICS</h2>
-<p> Problems are logged to the standard error stream and to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) or <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8). No output means that no problems were detected. Duplicate entries are skipped and are flagged with a warning. </p>
+<p> Problems are logged to the standard error stream and to <code>syslogd</code>(8) or <code>postlogd</code>(8). No output means that no problems were detected. Duplicate entries are skipped and are flagged with a warning. </p>
 <p> <code><a href="/docs/linux/man/1-postalias/">postalias</a></code>(1) terminates with zero exit status in case of success (including successful &quot;<code>postalias -q</code>&quot; lookup) and terminates with non-zero exit status in case of failure.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
@@ -119,8 +119,8 @@ RFC 822 (ARPA Internet Text Messages)
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/1-postmap/">postmap</a>(1), create/update/query lookup tables
 <a href="//www.systutorials.com/docs/linux/man/1-newaliases/">newaliases</a>(1), Sendmail compatibility interface.
-<a href="//www.systutorials.com/docs/linux/man/8-postlogd/">postlogd</a>(8), Postfix logging
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging
+postlogd(8), Postfix logging
+syslogd(8), system logging
 </pre>
 <h2>README FILES</h2>
 <p> Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>

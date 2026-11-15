@@ -19,5 +19,5 @@ PALETTE pal;
 ... get_palette(pal);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-get_palette_range/">get_palette_range</a></code>(3), <code><a href="/docs/linux/man/3-get_color/">get_color</a></code>(3), <code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3) </p>
+<p> <code>get_palette_range</code>(3), <code>get_color</code>(3), <code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3) </p>
 <h2>Index</h2>

@@ -42,7 +42,7 @@ description: "pldd – display dynamic shared objects linked into a process"
 <h2>EXAMPLES</h2>
 <p> $ <code>echo $$</code> # Display PID of shell 1143 $ <code>pldd $$</code> # Display DSOs linked into the shell 1143: /usr/bin/bash linux-vdso.so.1 /lib64/libtinfo.so.5 /lib64/libdl.so.2 /lib64/libc.so.6 /lib64/ld-linux-x86-64.so.2 /lib64/libnss_files.so.2</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ldd/">ldd</a></code>(1), <code><a href="/docs/linux/man/1-lsof/">lsof</a></code>(1), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)</p>
+<p> <code><a href="/docs/linux/man/1-ldd/">ldd</a></code>(1), <code>lsof</code>(1), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

@@ -11,7 +11,7 @@ KURVP2 - does interpolation for closed parametric curves
 
  The interpolated curve is parameterized by mapping points in the interval [0.,1.] onto an interpolated closed curve. The resulting curve has a parametric representation both of whose components are splines under tension and functions of the polygonal arc length. The value 0. is mapped onto (X[1],Y[1]) and the value 1. is also mapped onto (X[1],Y[1]), since the interpolated curve is closed. KURVP1 must be called before calling KURVP2.
 <h2>Description</h2><dl COMPACT><dt>T
-<dd>(real,input) A value to be mapped to a point on the curve. The interval [0.,1.] is mapped onto the curve such that 0. is mapped to (<a HREF="/docs/linux/man/1-x/">X</a>(1),<a HREF="/docs/linux/man/1-y/">Y</a>(1)) and 1. is mapped to (<a HREF="/docs/linux/man/1-x/">X</a>(1),<a HREF="/docs/linux/man/1-y/">Y</a>(1)), since the interpolated curve is closed. Any interval [TT,TT+1.] maps onto the entire curve.
+<dd>(real,input) A value to be mapped to a point on the curve. The interval [0.,1.] is mapped onto the curve such that 0. is mapped to (X(1),Y(1)) and 1. is mapped to (X(1),Y(1)), since the interpolated curve is closed. Any interval [TT,TT+1.] maps onto the entire curve.
 <dt>XS
 <dd>(real, oputput) Contains the X coordinate of the interpolated point that T maps to.
 <dt>YS

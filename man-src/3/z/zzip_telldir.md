@@ -21,9 +21,9 @@ long zzip_telldir32((ZZIP_DIR * dir));
 
 void zzip_seekdir32((ZZIP_DIR * dir, long offset));</code></pre>
 <h2>Description</h2>
-<dd>The <code>zzip_rewinddir</code> function is the equivalent of a <code><a href="/docs/linux/man/2-rewinddir/">rewinddir</a>(2)</code> for a realdir or the zipfile in place of a directory. The ZZIP_DIR handle returned from <code>zzip_opendir</code> has a flag saying realdir or zipfile. As for a zipfile, the filenames will include the filesubpath, so take care. </p>
-<p> The <code>zzip_telldir</code> function is the equivalent of <code><a href="/docs/linux/man/2-telldir/">telldir</a>(2)</code> for a realdir or zipfile. </p>
-<p> The <code>zzip_seekdir</code> function is the equivalent of <code><a href="/docs/linux/man/2-seekdir/">seekdir</a>(2)</code> for a realdir or zipfile. </p>
+<dd>The <code>zzip_rewinddir</code> function is the equivalent of a <code>rewinddir(2)</code> for a realdir or the zipfile in place of a directory. The ZZIP_DIR handle returned from <code>zzip_opendir</code> has a flag saying realdir or zipfile. As for a zipfile, the filenames will include the filesubpath, so take care. </p>
+<p> The <code>zzip_telldir</code> function is the equivalent of <code>telldir(2)</code> for a realdir or zipfile. </p>
+<p> The <code>zzip_seekdir</code> function is the equivalent of <code>seekdir(2)</code> for a realdir or zipfile. </p>
 <p> The <code>zzip_telldir32</code> function is provided for users who can not use any largefile-mode. </p>
 <p> The <code>zzip_seekdir32</code> function is provided for users who can not use any largefile-mode.</p>
 <h2>Author</h2>

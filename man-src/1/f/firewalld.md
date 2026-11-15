@@ -54,7 +54,7 @@ description: "firewalld – Dynamic Firewall Manager"
 <h3>Permanent configuration</h3>
 <p> The permanent configuration is stored in config files and will be loaded and become new runtime configuration with every machine boot or service reload/restart.</p>
 <h3>Direct interface</h3>
-<p> The direct interface is mainly used by services or applications to add specific firewall rules. It requires basic knowledge of <a href="/docs/linux/man/6-ip/">ip</a>(6)tables concepts (tables, chains, commands, parameters, targets).</p>
+<p> The direct interface is mainly used by services or applications to add specific firewall rules. It requires basic knowledge of ip(6)tables concepts (tables, chains, commands, parameters, targets).</p>
 <h2>DIRECTORIES</h2>
 <p> firewalld supports two configuration directories:</p>
 <h3>Default/Fallback configuration in <i>/usr/lib/firewalld</i></h3>

@@ -55,5 +55,5 @@ description: "openvt – start a program on a new virtual terminal (VT)."
 <h2>HISTORY</h2>
 <p> Earlier, <code>openvt</code> was called <code>open</code>. It was written by Jon Tombs &lt;jon [at] gtex02.us.es&gt; or &lt;jon [at] robots.ox.ac.uk&gt;. The <i>-w</i> idea is from &quot;sam&quot;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-chvt/">chvt</a></code>(1), <code><a href="/docs/linux/man/8-doshell/">doshell</a></code>(8), <code><a href="/docs/linux/man/1-login/">login</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-chvt/">chvt</a></code>(1), <code>doshell</code>(8), <code><a href="/docs/linux/man/1-login/">login</a></code>(1) </p>
 <h2>Index</h2>

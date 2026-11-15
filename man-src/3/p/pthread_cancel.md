@@ -23,7 +23,7 @@ Compile and link with - pthread.</code></pre>
 <dt>1.</p>
 <dd>Cancellation clean-up handlers are popped (in the reverse of the order in which they were pushed) and called. (See <code><a href="/docs/linux/man/3-pthread_cleanup_push/">pthread_cleanup_push</a></code>(3).)</p>
 <dt>2.</p>
-<dd>Thread-specific data destructors are called, in an unspecified order. (See <code><a href="/docs/linux/man/3-pthread_key_create/">pthread_key_create</a></code>(3).)</p>
+<dd>Thread-specific data destructors are called, in an unspecified order. (See <code>pthread_key_create</code>(3).)</p>
 <dt>3.</p>
 <dd>The thread is terminated. (See <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3).)</dl>
 <p> The above steps happen asynchronously with respect to the <code>pthread_cancel</code>() call; the return status of <code>pthread_cancel</code>() merely informs the caller whether the cancellation request was successfully queued. </p>
@@ -128,6 +128,6 @@ main(void)
     exit(EXIT_SUCCESS);
 }</code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pthread_cleanup_push/">pthread_cleanup_push</a></code>(3), <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3), <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3), <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3), <code><a href="/docs/linux/man/3-pthread_key_create/">pthread_key_create</a></code>(3), <code><a href="/docs/linux/man/3-pthread_setcancelstate/">pthread_setcancelstate</a></code>(3), <code><a href="/docs/linux/man/3-pthread_setcanceltype/">pthread_setcanceltype</a></code>(3), <code><a href="/docs/linux/man/3-pthread_testcancel/">pthread_testcancel</a></code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
+<p><code><a href="/docs/linux/man/3-pthread_cleanup_push/">pthread_cleanup_push</a></code>(3), <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3), <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3), <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3), <code>pthread_key_create</code>(3), <code><a href="/docs/linux/man/3-pthread_setcancelstate/">pthread_setcancelstate</a></code>(3), <code><a href="/docs/linux/man/3-pthread_setcanceltype/">pthread_setcanceltype</a></code>(3), <code><a href="/docs/linux/man/3-pthread_testcancel/">pthread_testcancel</a></code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

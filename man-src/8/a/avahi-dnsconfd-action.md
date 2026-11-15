@@ -35,4 +35,4 @@ description: "avahi-dnsconfd.action – avahi-dnsconfd action script"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-avahi-dnsconfd/">avahi-dnsconfd</a>(8)</code>, <code><a href="/docs/linux/man/8-avahi-daemon/">avahi-daemon</a>(8)</code></p>
 <h2>Comments</h2>
-<p>This man page was written using <code><a href="/docs/linux/man/1-xml2man/">xml2man</a>(1)</code> by Oliver Kurth.</p>
+<p>This man page was written using <code>xml2man(1)</code> by Oliver Kurth.</p>

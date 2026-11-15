@@ -10,7 +10,7 @@ radius.conf - Configuration for nnrpd RADIUS authenticator
 
 <h2>Description</h2>
 
-This describes the format and attributes of the configuration file for the nnrpd <font SIZE="-1">RADIUS</font> authenticator. See <i><a HREF="/docs/linux/man/1-radius/">radius</a></i>(1) for more information about the authenticator program. The default location for this file is <i>radius.conf</i> in <i>pathetc</i>. 
+This describes the format and attributes of the configuration file for the nnrpd <font SIZE="-1">RADIUS</font> authenticator. See <i>radius</i>(1) for more information about the authenticator program. The default location for this file is <i>radius.conf</i> in <i>pathetc</i>. 
 
  Blank lines and lines beginning with <tt>&quot;#&quot;</tt> are ignored, as is anything after a <tt>&quot;#&quot;</tt> on a line. All other lines should begin with a parameter name followed by a colon and the value of that key, except that each section of configuration for a particular server should be enclosed in: 
 
@@ -55,4 +55,4 @@ This documentation was written by Russ Allbery &lt;rra [at] stanford.edu&gt; bas
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/1-radius/">radius</a></i>(1) 
+<i>radius</i>(1) 

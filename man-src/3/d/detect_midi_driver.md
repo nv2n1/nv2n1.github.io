@@ -18,5 +18,5 @@ description: "detect_midi_driver – Detects whether the specified MIDI sound de
 <p> Returns the maximum number of voices that the driver can provide, or zero if the hardware is not present. </p>
 <p> There are two special-case return values that you should watch out for: if this function returns -1 it is a note-stealing driver (eg. DIGMID) that shares voices with the current digital sound driver, and if it returns 0xFFFF it is an external device like an MPU-401 where there is no way to determine how many voices are available. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_sound/">install_sound</a></code>(3), <code><a href="/docs/linux/man/3-reserve_voices/">reserve_voices</a></code>(3) </p>
+<p> <code>install_sound</code>(3), <code><a href="/docs/linux/man/3-reserve_voices/">reserve_voices</a></code>(3) </p>
 <h2>Index</h2>

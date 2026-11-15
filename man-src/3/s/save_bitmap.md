@@ -24,4 +24,4 @@ destroy_bitmap(bmp);</code></pre>
 <h2>Return Value</h2>
 <p>Returns non-zero on error. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-save_bmp/">save_bmp</a></code>(3), <code><a href="/docs/linux/man/3-save_pcx/">save_pcx</a></code>(3), <code><a href="/docs/linux/man/3-save_tga/">save_tga</a></code>(3), <code><a href="/docs/linux/man/3-load_bitmap/">load_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-register_bitmap_file_type/">register_bitmap_file_type</a></code>(3) </p>
+<p><code>save_bmp</code>(3), <code>save_pcx</code>(3), <code>save_tga</code>(3), <code><a href="/docs/linux/man/3-load_bitmap/">load_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-register_bitmap_file_type/">register_bitmap_file_type</a></code>(3) </p>

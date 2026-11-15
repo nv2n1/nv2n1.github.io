@@ -32,7 +32,7 @@ description: "bglpp – a Scheme Pretty Printer"
 <p> To pretty print the file &#8220;foo.scm&#8221; translating identifier to lower case, for an output device with 50 columns: </p>
 <p> &#8220;bglpp foo.scm -w50 -lower&#8221;. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-indent/">indent</a>(1), <a href="/docs/linux/man/1-cb/">cb</a>(1) </p>
+<p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-indent/">indent</a>(1), cb(1) </p>
 <h2>AUTHOR</h2>
 <p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
 <h2>Index</h2>

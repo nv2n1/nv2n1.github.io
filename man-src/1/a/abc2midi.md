@@ -146,7 +146,7 @@ description: "abc2midi – converts abc file to MIDI file(s)"
 <p> %%abc-copyright (c) Copyright John Smith 2003 </p>
 <p> Abc2midi now inserts this in the MIDI file in the form of a metatext copyright tag. Changes were made to the event_specific function in store.c to process the copyright information. It is also copied into the Karaoke track (if it is created) as as @T field. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-abc2ps/">abc2ps</a>(1), <a href="/docs/linux/man/1-midi2abc/">midi2abc</a>(1), <a href="/docs/linux/man/1-yaps/">yaps</a>(1).</p>
+<p> abc2ps(1), <a href="/docs/linux/man/1-midi2abc/">midi2abc</a>(1), <a href="/docs/linux/man/1-yaps/">yaps</a>(1).</p>
 <h2>AUTHOR</h2>
 <p> James Allwright &lt;J.R.Allwright [at] westminster.ac.uk&gt;</p>
 <h2>SUPPORTED</h2>

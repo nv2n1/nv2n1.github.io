@@ -65,7 +65,7 @@ url: "/docs/linux/man/1-func-build-map/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-func-create-module/">func-create-module</a></i>(1), <i><a HREF="/docs/linux/man/1-func-transmit/">func-transmit</a></i>(1), <i><a HREF="/docs/linux/man/1-func-inventory/">func-inventory</a></i>(1), <i><a HREF="/docs/linux/man/1-func/">func</a></i>(1), <i><a HREF="/docs/linux/man/1-funcd/">funcd</a></i>(1).
+ <i>func-create-module</i>(1), <i><a HREF="/docs/linux/man/1-func-transmit/">func-transmit</a></i>(1), <i><a HREF="/docs/linux/man/1-func-inventory/">func-inventory</a></i>(1), <i><a HREF="/docs/linux/man/1-func/">func</a></i>(1), <i><a HREF="/docs/linux/man/1-funcd/">funcd</a></i>(1).
 
 <h2>AUTHOR</h2>
 

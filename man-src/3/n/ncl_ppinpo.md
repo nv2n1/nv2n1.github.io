@@ -56,7 +56,7 @@ CALL PPINPO (XCCP,YCCP,NCCP,XCSP,YCSP,NCSP,RWRK,IWRK,NWRK,URPP,IERR)
  DIMENSION XCRA(NCRA),YCRA(NCRA)
  ...(code to process a polygon boundary piece)...
  RETURN
- END</pre>Each of the arguments XCRA and YCRA is a real array, dimensioned NCRA; the former holds the X coordinates, and the latter the Y coordinates, of a piece of the polygon boundary. It will be the case that XCRA(NCRA)=<a HREF="/docs/linux/man/1-xcra/">XCRA</a>(1) and YCRA(NCRA)=<a HREF="/docs/linux/man/1-ycra/">YCRA</a>(1).
+ END</pre>Each of the arguments XCRA and YCRA is a real array, dimensioned NCRA; the former holds the X coordinates, and the latter the Y coordinates, of a piece of the polygon boundary. It will be the case that XCRA(NCRA)=XCRA(1) and YCRA(NCRA)=YCRA(1).
 <dt>IERR
 <dd>(an output variable of type INTEGER) is returned with the value zero if no errors occurred in the execution of PPINPO or with a small positive value if an error did occur. The value 1 indicates that a degenerate clip polygon was detected, the value 2 that a degenerate subject polygon was detected, and the value 3 that the workspace provided was too small; values greater than 3 should be reported to the author, as they indicate some problem with the algorithm. Currently, if IERR is returned non-zero, one can be sure that no calls to URPP were executed; in the future, this could change, but, in that case, there will be an internal parameter allowing one to request the current behavior.</dl>
 

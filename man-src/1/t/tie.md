@@ -22,7 +22,7 @@ description: "tie – merge or apply WEB change files"
 <h2>ENVIRONMENT</h2>
 <p> The environment variable WEBINPUTS is used to search for the input files, or the system default if WEBINPUTS is not set. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching. To avoid conflicts with other programs that also use the WEBINPUTS environment, you can be more specific and use WEBINPUTS_tie for special requirements in TIE.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-web/">web</a></code>(1), <code><a href="/docs/linux/man/1-ctie/">ctie</a></code>(1), <code><a href="/docs/linux/man/1-cweb/">cweb</a></code>(1).</p>
+<p> <code>web</code>(1), <code><a href="/docs/linux/man/1-ctie/">ctie</a></code>(1), <code><a href="/docs/linux/man/1-cweb/">cweb</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Klaus Guntermann, TH Darmstadt, Institut f. Theoretische Informatik. Man page by Joachim Schnitter, TH Darmstadt, Phys. Chemie I. </p>
 <h2>Index</h2>

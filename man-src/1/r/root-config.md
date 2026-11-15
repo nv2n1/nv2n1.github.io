@@ -144,7 +144,7 @@ libFoo_la_SOURCES       = Foo.cc  $(LIBFOOXTRA)
 <dt><code>&#8211;noldflags</code></p>
 <dd> Do not print library path link option in output of <code>&#8211;libs</code> and <code>&#8211;glibs</code>.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i><a href="/docs/linux/man/1-root-cint/">root-cint</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i>root-cint</i>(1) </p>
 <p> See also the <code>ROOT</code> webpages: <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i></p>
 <h2>ORIGINAL AUTHORS</h2>
 <p> The ROOT team (see web page above):</p>

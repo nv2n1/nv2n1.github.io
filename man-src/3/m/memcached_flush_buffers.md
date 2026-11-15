@@ -17,7 +17,7 @@ description: "memcached_flush_buffers – libmemcached Documentation"
 <dd>
 <p> Compile and link with -lmemcached</dl>
 <h2>DESCRIPTION</h2>
-<p> <i>memcached_flush_buffers()</i> is used in conjunction with <code>MEMCACHED_BEHAVIOR_BUFFER_REQUESTS</code> (see <a href="/docs/linux/man/3-memcached_behavior/">memcached_behavior</a>(3)) to flush all buffers by sending the buffered commands to the server for processing.</p>
+<p> <i>memcached_flush_buffers()</i> is used in conjunction with <code>MEMCACHED_BEHAVIOR_BUFFER_REQUESTS</code> (see memcached_behavior(3)) to flush all buffers by sending the buffered commands to the server for processing.</p>
 <h2>RETURN</h2>
 <p> A value of type <code>memcached_return_t</code> is returned On success that value will be <code>MEMCACHED_SUCCESS</code>. Use <code>memcached_strerror()</code> to translate this value to a printable string.</p>
 <h2>HOME</h2>

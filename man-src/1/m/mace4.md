@@ -38,7 +38,7 @@ description: "mace4 – searches for finite countermodels of first-order stateme
 <dt><code>-V </code><i>n</i></p>
 <dd> A rule is needed for distinguishing variables from constants in clauses and formulas with free variables. If this flag is clear, variables start with (lower case) `u&#8217; through `z&#8217;. If this flag is set, variables in clauses start with (upper case) `A&#8217; through `Z&#8217; or `_&#8217;.</p>
 <dt><code>-P </code><i>n</i></p>
-<dd> If this flag is set, all structures that are found are printed in `standard&#8217; form, which means they are suitable as input to other LADR programs such as <code><a href="/docs/linux/man/1-isofilter/">isofilter</a></code>(1) and <code><a href="/docs/linux/man/1-interpformat/">interpformat</a></code>(1).</p>
+<dd> If this flag is set, all structures that are found are printed in `standard&#8217; form, which means they are suitable as input to other LADR programs such as <code>isofilter</code>(1) and <code>interpformat</code>(1).</p>
 <dt><code>-p </code><i>n</i></p>
 <dd> If this flag is set, and if <code>-P</code> is clear, all structures that are found are printed in a tabular form.</p>
 <dt><code>-R </code><i>n</i></p>

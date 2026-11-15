@@ -40,4 +40,4 @@ description: "ggz – The GGZ Gaming Zone"
 <h2>Authors</h2>
 <p>The GGZ Development Team &lt;ggz-dev [at] mail.ggzgamingzone.org&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/6-kggz/">kggz</a>(6), <a href="/docs/linux/man/6-ggz-gtk/">ggz-gtk</a>(6), <a href="/docs/linux/man/6-ggz-txt/">ggz-txt</a>(6), <a href="/docs/linux/man/6-ggz-java/">ggz-java</a>(6) </p>
+<p>kggz(6), ggz-gtk(6), ggz-txt(6), ggz-java(6) </p>

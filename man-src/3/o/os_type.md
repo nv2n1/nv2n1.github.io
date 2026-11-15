@@ -40,4 +40,4 @@ description: "os_type – Stores the detected type of the OS. Allegro game progr
  OSTYPE_MACOS - MacOS
  OSTYPE_MACOSX - MacOS X</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-allegro_init/">allegro_init</a></code>(3), <code><a href="/docs/linux/man/3-os_version/">os_version</a></code>(3), <code><a href="/docs/linux/man/3-os_multitasking/">os_multitasking</a></code>(3) </p>
+<p><code>allegro_init</code>(3), <code><a href="/docs/linux/man/3-os_version/">os_version</a></code>(3), <code>os_multitasking</code>(3) </p>

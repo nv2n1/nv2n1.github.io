@@ -36,7 +36,7 @@ RFC 4409 (Message submission)
 RFC 4954 (AUTH command)
 RFC 5321 (SMTP protocol)</pre>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). </p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8). </p>
 <p> Depending on the setting of the <code>notify_classes</code> parameter, the postmaster is notified of bounces, protocol problems, policy violations, and of other trouble.</p>
 <h2>Configuration Parameters</h2>
 <p>Changes to <code>main.cf</code> are picked up automatically, as <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) processes run for only a limited amount of time. Use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
@@ -624,7 +624,7 @@ RFC 5321 (SMTP protocol)</pre>
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>ADDRESS_CLASS_README, blocking unknown hosted or relay recipients

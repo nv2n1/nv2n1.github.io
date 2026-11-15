@@ -46,7 +46,7 @@ Set Ep  to minimum E in remaining nodes</code></pre>
 <dd>is the largest normalized square quantization error for any single pixel in the image. </p>
 <p> This distance measure is normalized to a range between 0 and 1. It is independent of the range of red, green, and blue values in the image.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-display/">display</a>(1), <a href="/docs/linux/man/1-animate/">animate</a>(1), <a href="/docs/linux/man/1-mogrify/">mogrify</a>(1), <a href="/docs/linux/man/1-import/">import</a>(1), <a href="/docs/linux/man/5-miff/">miff</a>(5)</code></p>
+<p><code><a href="/docs/linux/man/1-display/">display</a>(1), <a href="/docs/linux/man/1-animate/">animate</a>(1), <a href="/docs/linux/man/1-mogrify/">mogrify</a>(1), <a href="/docs/linux/man/1-import/">import</a>(1), miff(5)</code></p>
 <h2>Copyright</h2>
 <p>Copyright (C) 2002 ImageMagick Studio, a non-profit organization dedicated to making software imaging solutions freely available. </p>
 <p> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (&quot;ImageMagick&quot;), to deal in ImageMagick without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of ImageMagick, and to permit persons to whom the ImageMagick is furnished to do so, subject to the following conditions: </p>

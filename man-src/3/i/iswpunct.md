@@ -15,7 +15,7 @@ description: "iswpunct – test for punctuation or symbolic wide character"
 int iswpunct(wint_t wc);
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The <code>iswpunct</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-ispunct/">ispunct</a></code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;punct&quot;. </p>
+<p> The <code>iswpunct</code>() function is the wide-character equivalent of the <code>ispunct</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;punct&quot;. </p>
 <p> The wide-character class &quot;punct&quot; is a subclass of the wide-character class &quot;graph&quot;, and therefore also a subclass of the wide-character class &quot;print&quot;. </p>
 <p> The wide-character class &quot;punct&quot; is disjoint from the wide-character class &quot;alnum&quot; and therefore also disjoint from its subclasses &quot;alpha&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;digit&quot;, &quot;xdigit&quot;. </p>
 <p> Being a subclass of the wide-character class &quot;print&quot;, the wide-character class &quot;punct&quot; is disjoint from the wide-character class &quot;cntrl&quot;. </p>
@@ -44,7 +44,7 @@ int iswpunct(wint_t wc);
 <p> The behavior of <code>iswpunct</code>() depends on the <code>LC_CTYPE</code> category of the current locale. </p>
 <p> This function&#8217;s name is a misnomer when dealing with Unicode characters, because the wide-character class &quot;punct&quot; contains both punctuation characters and symbol (math, currency, etc.) characters.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ispunct/">ispunct</a></code>(3), <code><a href="/docs/linux/man/3-iswctype/">iswctype</a></code>(3)</p>
+<p> <code>ispunct</code>(3), <code>iswctype</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

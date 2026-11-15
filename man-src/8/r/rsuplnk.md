@@ -27,6 +27,6 @@ description: "rsuplnk – User entry into the ROSE network."
 <h2>Files</h2>
 <p>/etc/ax25/rsports</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/5-ax25d-conf/">ax25d.conf</a></code>(5), <code><a href="/docs/linux/man/8-ax25d/">ax25d</a></code>(8), <code><a href="/docs/linux/man/8-rsdwnlnk/">rsdwnlnk</a></code>(8), <code><a href="/docs/linux/man/8-rose_call/">rose_call</a></code>(8).</p>
+<p><code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code>ax25d.conf</code>(5), <code><a href="/docs/linux/man/8-ax25d/">ax25d</a></code>(8), <code><a href="/docs/linux/man/8-rsdwnlnk/">rsdwnlnk</a></code>(8), <code><a href="/docs/linux/man/8-rose_call/">rose_call</a></code>(8).</p>
 <h2>Author</h2>
 <p>Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;</p>

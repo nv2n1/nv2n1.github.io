@@ -17,7 +17,7 @@ description: "pickup – Postfix local mail pickup"
 <h2>Security</h2>
 <p>The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon is moderately security sensitive. It runs with fixed low privilege and can run in a chrooted environment. However, the program reads files from potentially hostile users. The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon opens no files for writing, is careful about what files it opens for reading, and does not actually touch any data that is sent to its public service endpoint.</p>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon copies mail from file to the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon. It could avoid message copying overhead by sending a file descriptor instead of file data, but then the already complex <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon would have to deal with unfiltered user data.</p>
 <h2>Configuration Parameters</h2>
@@ -58,7 +58,7 @@ description: "pickup – Postfix local mail pickup"
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>License</h2>
 <p>The Secure Mailer license must be distributed with this software.</p>
 <h2>Author(S)</h2>

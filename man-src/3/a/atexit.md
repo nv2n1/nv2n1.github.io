@@ -40,13 +40,13 @@ int atexit(void (*function)(void));
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD.</p>
 <h2>NOTES</h2>
-<p> Functions registered using <code>atexit</code>() (and <code><a href="/docs/linux/man/3-on_exit/">on_exit</a></code>(3)) are not called if a process terminates abnormally because of the delivery of a signal. </p>
-<p> If one of the registered functions calls <code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2), then any remaining functions are not invoked, and the other process termination steps performed by <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) are not performed. </p>
+<p> Functions registered using <code>atexit</code>() (and <code>on_exit</code>(3)) are not called if a process terminates abnormally because of the delivery of a signal. </p>
+<p> If one of the registered functions calls <code>_exit</code>(2), then any remaining functions are not invoked, and the other process termination steps performed by <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) are not performed. </p>
 <p> POSIX.1 says that the result of calling <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) more than once (i.e., calling <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) within a function registered using <code>atexit</code>()) is undefined. On some systems (but not Linux), this can result in an infinite recursion; portable programs should not invoke <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) inside a function registered using <code>atexit</code>(). </p>
-<p> The <code>atexit</code>() and <code><a href="/docs/linux/man/3-on_exit/">on_exit</a></code>(3) functions register functions on the same list: at normal process termination, the registered functions are invoked in reverse order of their registration by these two functions. </p>
+<p> The <code>atexit</code>() and <code>on_exit</code>(3) functions register functions on the same list: at normal process termination, the registered functions are invoked in reverse order of their registration by these two functions. </p>
 <p> According to POSIX.1, the result is undefined if <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) is used to terminate execution of one of the functions registered using <code>atexit</code>().</p>
 <h3>Linux notes</h3>
-<p> Since glibc 2.2.3, <code>atexit</code>() (and <code><a href="/docs/linux/man/3-on_exit/">on_exit</a></code>(3)) can be used within a shared library to establish functions that are called when the shared library is unloaded.</p>
+<p> Since glibc 2.2.3, <code>atexit</code>() (and <code>on_exit</code>(3)) can be used within a shared library to establish functions that are called when the shared library is unloaded.</p>
 <h2>EXAMPLES</h2>
 <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; </p>
 <p> void bye(void) {<br />
@@ -66,7 +66,7 @@ int atexit(void (*function)(void));
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3), <code><a href="/docs/linux/man/3-on_exit/">on_exit</a></code>(3)</p>
+<p> <code>_exit</code>(2), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3), <code>on_exit</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

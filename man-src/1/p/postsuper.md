@@ -104,8 +104,8 @@ mailq | tail - n + 2 | grep - v '^ *(' | awk  'BEGIN { RS = "" }
 <dt><code>-v</code></p>
 <dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dl>
 <h2>DIAGNOSTICS</h2>
-<p> Problems are reported to the standard error stream and to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) or <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8). </p>
-<p> <code><a href="/docs/linux/man/1-postsuper/">postsuper</a></code>(1) reports the number of messages deleted with <code>-d</code>, the number of messages requeued with <code>-r</code>, and the number of messages whose queue file name was fixed with <code>-s</code>. The report is written to the standard error stream and to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) or <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8).</p>
+<p> Problems are reported to the standard error stream and to <code>syslogd</code>(8) or <code>postlogd</code>(8). </p>
+<p> <code><a href="/docs/linux/man/1-postsuper/">postsuper</a></code>(1) reports the number of messages deleted with <code>-d</code>, the number of messages requeued with <code>-r</code>, and the number of messages whose queue file name was fixed with <code>-s</code>. The report is written to the standard error stream and to <code>syslogd</code>(8) or <code>postlogd</code>(8).</p>
 <h2>ENVIRONMENT</h2>
 <dl>
 <dt>MAIL_CONFIG</p>
@@ -137,8 +137,8 @@ mailq | tail - n + 2 | grep - v '^ *(' | awk  'BEGIN { RS = "" }
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/1-sendmail/">sendmail</a>(1), Sendmail-compatible user interface
 <a href="//www.systutorials.com/docs/linux/man/1-postqueue/">postqueue</a>(1), unprivileged queue operations
-<a href="//www.systutorials.com/docs/linux/man/8-postlogd/">postlogd</a>(8), Postfix logging
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging
+postlogd(8), Postfix logging
+syslogd(8), system logging
 </pre>
 <h2>LICENSE</h2>
 <p> The Secure Mailer license must be distributed with this software.</p>

@@ -120,7 +120,7 @@ return socket(addr-&gt;family, addr-&gt;socktype, addr-&gt;protocol);
 <dt>CURLOPT_OPENSOCKETDATA</p>
 <dd> Pass a pointer that will be untouched by libcurl and passed as the first argument in the opensocket callback set with <i>CURLOPT_OPENSOCKETFUNCTION</i>. (Option added in 7.17.1.)</p>
 <dt>CURLOPT_CLOSESOCKETFUNCTION</p>
-<dd> Pass a pointer to a function that matches the following prototype: <code>int function(void *clientp, curl_socket_t item);</code>. This function gets called by libcurl instead of the <i><a href="/docs/linux/man/3-close/">close</a>(3)</i> or <i><a href="/docs/linux/man/3-closesocket/">closesocket</a>(3)</i> call when sockets are closed (not for any other file descriptors). This is pretty much the reverse to the <i>CURLOPT_OPENSOCKETFUNCTION</i> option. Return 0 to signal success and 1 if there was an error. (Option added in 7.21.7)</p>
+<dd> Pass a pointer to a function that matches the following prototype: <code>int function(void *clientp, curl_socket_t item);</code>. This function gets called by libcurl instead of the <i><a href="/docs/linux/man/3-close/">close</a>(3)</i> or <i>closesocket(3)</i> call when sockets are closed (not for any other file descriptors). This is pretty much the reverse to the <i>CURLOPT_OPENSOCKETFUNCTION</i> option. Return 0 to signal success and 1 if there was an error. (Option added in 7.21.7)</p>
 <dt>CURLOPT_CLOSESOCKETDATA</p>
 <dd> Pass a pointer that will be untouched by libcurl and passed as the first argument in the closesocket callback set with <i>CURLOPT_CLOSESOCKETFUNCTION</i>. (Option added in 7.21.7)</p>
 <dt>CURLOPT_PROGRESSFUNCTION</p>

@@ -17,7 +17,7 @@ description: "mwm — The Motif Window Manager"
 <h3>Options</h3>
 <dl>
 <dt><i>-display</i>&nbsp;<wbr><code>display</code></p>
-<dd> This option specifies the display to use; see <code><a href="/docs/linux/man/1-x/">X</a></code>(1).</p>
+<dd> This option specifies the display to use; see <code>X</code>(1).</p>
 <dt><i>-xrm</i>&nbsp;<wbr><code>resourcestring</code></p>
 <dd> This option specifies a resource string to use.</p>
 <dt><i>-multiscreen</i></p>
@@ -1596,5 +1596,5 @@ description: "mwm — The Motif Window Manager"
 <p> <code>$HOME/$LANG/.mwmrc</code> </p>
 <p> <code>$HOME/.mwmrc</code></p>
 <h3>RELATED INFORMATION</h3>
-<p> <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3), <code><a href="/docs/linux/man/1-x/">X</a></code>(1), <code><a href="/docs/linux/man/3-xminstallimage/">XmInstallImage</a></code>(3), <code><a href="/docs/linux/man/1-xrdb/">xrdb</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3), <code>X</code>(1), <code><a href="/docs/linux/man/3-xminstallimage/">XmInstallImage</a></code>(3), <code><a href="/docs/linux/man/1-xrdb/">xrdb</a></code>(1). </p>
 <h2>Index</h2>

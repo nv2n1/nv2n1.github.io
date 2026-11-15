@@ -14,9 +14,9 @@ poolset - persistent memory pool configuration file format
 
 <h2>Description</h2>
 
-Depending on the configuration of the system, the available non-volatile memory space may be divided into multiple memory devices. In such case, the maximum size of the transactional object store could be limited by the capacity of a single memory device. Therefore, <a HREF="/docs/linux/man/7-libpmemobj/">libpmemobj</a>(7), <a HREF="/docs/linux/man/7-libpmemblk/">libpmemblk</a>(7) and <a HREF="/docs/linux/man/7-libpmemlog/">libpmemlog</a>(7) allow building object stores spanning multiple memory devices by creation of persistent memory pools consisting of multiple files, where each part of such a pool set may be stored on a different pmem-aware filesystem. 
+Depending on the configuration of the system, the available non-volatile memory space may be divided into multiple memory devices. In such case, the maximum size of the transactional object store could be limited by the capacity of a single memory device. Therefore, libpmemobj(7), libpmemblk(7) and libpmemlog(7) allow building object stores spanning multiple memory devices by creation of persistent memory pools consisting of multiple files, where each part of such a pool set may be stored on a different pmem-aware filesystem. 
 
- To improve reliability and eliminate single point of failure, <a HREF="/docs/linux/man/7-libpmemobj/">libpmemobj</a>(7) also allows all the data written to a persistent memory pool to be copied to local or remote pool replicas, thereby providing backup for the persistent memory pool by producing a mirrored pool set. In practice, the pool replicas may be considered as binary copies of the "master" pool set. Data replication is not supported in <a HREF="/docs/linux/man/7-libpmemblk/">libpmemblk</a>(7) and <a HREF="/docs/linux/man/7-libpmemlog/">libpmemlog</a>(7). 
+ To improve reliability and eliminate single point of failure, libpmemobj(7) also allows all the data written to a persistent memory pool to be copied to local or remote pool replicas, thereby providing backup for the persistent memory pool by producing a mirrored pool set. In practice, the pool replicas may be considered as binary copies of the "master" pool set. Data replication is not supported in libpmemblk(7) and libpmemlog(7). 
 
  The set file for each type of pool is a plain text file. Lines in the file are formatted as follows:
 <dl><dt>&bull;
@@ -99,7 +99,7 @@ Sections defining replica sets are optional. There may be multiple replica secti
 <dl><dd><pre>REPLICA&nbsp;[&lt;user&gt;@]&lt;hostname&gt;&nbsp;[&lt;relative-path&gt;/]&lt;remote-pool-set-file&gt;</pre><dt>&bull;
 <dd>hostname must be in the format recognized by the <a HREF="/docs/linux/man/1-ssh/">ssh</a>(1) remote login client
 <dt>&bull;
-<dd>pathname is relative to the root config directory on the target node - see <a HREF="/docs/linux/man/7-librpmem/">librpmem</a>(7)</dl>
+<dd>pathname is relative to the root config directory on the target node - see librpmem(7)</dl>
  
 
  There are no other lines in the remote replica section - the REPLICA line defines a remote replica entirely. 
@@ -162,16 +162,16 @@ Providing a directory as a part's pathname allows the pool to dynamically create
 
 <h2>Notes</h2>
 
-Creation of all the parts of the pool set and the associated replica sets can be done with the <a HREF="/docs/linux/man/3-pmemobj_create/">pmemobj_create</a>(3), <a HREF="/docs/linux/man/3-pmemblk_create/">pmemblk_create</a>(3) or <a HREF="/docs/linux/man/3-pmemlog_create/">pmemlog_create</a>(3) function, or by using the <a HREF="/docs/linux/man/1-pmempool/">pmempool</a>(1) utility. 
+Creation of all the parts of the pool set and the associated replica sets can be done with the pmemobj_create(3), pmemblk_create(3) or pmemlog_create(3) function, or by using the <a HREF="/docs/linux/man/1-pmempool/">pmempool</a>(1) utility. 
 
- Restoring data from a local or remote replica can be done by using the <a HREF="/docs/linux/man/1-pmempool-sync/">pmempool-sync</a>(1) command or the pmempool_sync() API from the <a HREF="/docs/linux/man/7-libpmempool/">libpmempool</a>(7) library. 
+ Restoring data from a local or remote replica can be done by using the pmempool-sync(1) command or the pmempool_sync() API from the libpmempool(7) library. 
 
- Modifications of a pool set file configuration can be done by using the <a HREF="/docs/linux/man/1-pmempool-transform/">pmempool-transform</a>(1) command or the pmempool_transform() API from the <a HREF="/docs/linux/man/7-libpmempool/">libpmempool</a>(7) library. 
+ Modifications of a pool set file configuration can be done by using the pmempool-transform(1) command or the pmempool_transform() API from the libpmempool(7) library. 
 
- When creating a pool set consisting of multiple files, or when creating a replicated pool set, the path argument passed to <a HREF="/docs/linux/man/3-pmemobj_create/">pmemobj_create</a>(3), <a HREF="/docs/linux/man/3-pmemblk_create/">pmemblk_create</a>(3) or <a HREF="/docs/linux/man/3-pmemlog_create/">pmemlog_create</a>(3) must point to the special set file that defines the pool layout and the location of all the parts of the pool set. 
+ When creating a pool set consisting of multiple files, or when creating a replicated pool set, the path argument passed to pmemobj_create(3), pmemblk_create(3) or pmemlog_create(3) must point to the special set file that defines the pool layout and the location of all the parts of the pool set. 
 
- When opening a pool set consisting of multiple files, or when opening a replicated pool set, the path argument passed to <a HREF="/docs/linux/man/3-pmemobj_open/">pmemobj_open</a>(3), <a HREF="/docs/linux/man/3-pmemblk_open/">pmemblk_open</a>(3) or <a HREF="/docs/linux/man/3-pmemlog_open/">pmemlog_open</a>(3) must point to the same set file that was used for pool set creation.
+ When opening a pool set consisting of multiple files, or when opening a replicated pool set, the path argument passed to pmemobj_open(3), pmemblk_open(3) or pmemlog_open(3) must point to the same set file that was used for pool set creation.
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/1-ndctl-create-namespace/">ndctl-create-namespace</a>(1), <a HREF="/docs/linux/man/3-pmemblk_create/">pmemblk_create</a>(3), <a HREF="/docs/linux/man/3-pmemlog_create/">pmemlog_create</a>(3), <a HREF="/docs/linux/man/3-pmemobj_create/">pmemobj_create</a>(3), <a HREF="/docs/linux/man/3-sysconf/">sysconf</a>(3), <a HREF="/docs/linux/man/7-libpmemblk/">libpmemblk</a>(7), <a HREF="/docs/linux/man/7-libpmemlog/">libpmemlog</a>(7), <a HREF="/docs/linux/man/7-libpmemobj/">libpmemobj</a>(7) and &lt;<a rel="nofollow" HREF="https://pmem.io">https://pmem.io</a>&gt; 
+<a HREF="/docs/linux/man/1-ndctl-create-namespace/">ndctl-create-namespace</a>(1), pmemblk_create(3), pmemlog_create(3), pmemobj_create(3), <a HREF="/docs/linux/man/3-sysconf/">sysconf</a>(3), libpmemblk(7), libpmemlog(7), libpmemobj(7) and &lt;<a rel="nofollow" HREF="https://pmem.io">https://pmem.io</a>&gt; 

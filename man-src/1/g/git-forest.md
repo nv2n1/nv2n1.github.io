@@ -44,5 +44,5 @@ git-forest origin/master | less -RS
 </pre>
 <p> This tool does not try to minimize the empty space between branches like gitk does. Take it as a feature.</p>
 <h2>See also</h2>
-<p> <code><a href="/docs/linux/man/7-hxtools/">hxtools</a></code>(7) </p>
+<p> <code>hxtools</code>(7) </p>
 <h2>Index</h2>

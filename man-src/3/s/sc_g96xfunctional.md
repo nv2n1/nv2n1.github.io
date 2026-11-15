@@ -30,7 +30,7 @@ Protected Attributes
 double b_</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements the Gill 1996 (G96) exchange functional. </p>
-<p> P. M. W. Gill, Mol. Phys., <a href="/docs/linux/man/2-89/">89</a>(2), pp. 433-445, 1996.</p>
+<p> P. M. W. Gill, Mol. Phys., 89(2), pp. 433-445, 1996.</p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::G96XFunctional::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

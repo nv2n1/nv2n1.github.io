@@ -31,6 +31,6 @@ description: "rip98d – Send and receive RIP98 routing messages"
 <br>
 /etc/ax25/rip98d.conf</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-rip98-conf/">rip98.conf</a></code>(5), <code><a href="/docs/linux/man/8-arp/">arp</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8).</p>
+<p><code>rip98.conf</code>(5), <code><a href="/docs/linux/man/8-arp/">arp</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8).</p>
 <h2>Author</h2>
 <p>Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;</p>

@@ -93,7 +93,7 @@ description: "lshw – list hardware"
 <dt><code>lshw -disable dmi</code></p>
 <dd> Don&#8217;t use DMI to detect hardware.</dl>
 <h2>SEE ALSO</h2>
-<p> <i>/proc/*</i>, <code><a href="/docs/linux/man/1-linuxinfo/">linuxinfo</a></code>(1), <code><a href="/docs/linux/man/8-lspci/">lspci</a></code>(8), <code><a href="/docs/linux/man/8-lsusb/">lsusb</a></code>(8)</p>
+<p> <i>/proc/*</i>, <code>linuxinfo</code>(1), <code><a href="/docs/linux/man/8-lspci/">lspci</a></code>(8), <code><a href="/docs/linux/man/8-lsusb/">lsusb</a></code>(8)</p>
 <h2>COPYING</h2>
 <p> <code>lshw</code> is distributed under the GNU GENERAL PUBLIC LICENSE (GPL) version 2.</p>
 <h2>AUTHOR</h2>

@@ -22,7 +22,7 @@ description: "systemd-random-seed.service, systemd-random-seed – Load and save
 <dl>
 <dd>By default, systemd-random-seed.service does not credit any entropy when loading the random seed. With this option this behaviour may be changed: it either takes a boolean parameter or the special string &quot;force&quot;. Defaults to false, in which case no entropy is credited. If true, entropy is credited if the random seed file and system state pass various superficial concisistency checks. If set to &quot;force&quot; entropy is credited, regardless of these checks, as long as the random seed file exists.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/4-random/">random</a></code>(4), <code><a href="/docs/linux/man/7-systemd-boot/">systemd-boot</a></code>(7), <code><a href="/docs/linux/man/4-bootctl/">bootctl</a></code>(4)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/4-random/">random</a></code>(4), <code><a href="/docs/linux/man/7-systemd-boot/">systemd-boot</a></code>(7), <code>bootctl</code>(4)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

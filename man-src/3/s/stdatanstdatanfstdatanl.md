@@ -59,7 +59,7 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-atan/">atan</a><code>(1)</code> = 0.785398 4*<a href="/docs/linux/man/1-atan/">atan</a>(1) = 3.14159<br />
+<p>&nbsp;<wbr>&nbsp;atan<code>(1)</code> = 0.785398 4*atan(1) = 3.14159<br />
 &nbsp;<wbr>&nbsp;atan(Inf) = 1.5708 2*atan(Inf) = 3.14159<br />
 &nbsp;<wbr>&nbsp;atan(-0.0) = -0<br />
 &nbsp;<wbr>&nbsp;atan(+0.0) = 0</p>

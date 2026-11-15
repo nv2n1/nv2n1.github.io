@@ -364,7 +364,7 @@ description: "tbl – format tables for troff"
 <p> Using  directly in a table to get leaders does not work (except in compatibility mode). This is correct behaviour:  is an <code>uninterpreted</code> leader. To get leaders use a real leader, either by using a control A or like this:</p>
 <dl>
 <dt>
-<dd> .ds a  .TS tab(;); <a href="//www.systutorials.com/docs/linux/man/1i-lw/">lw</a>(1i) l. A\*a;B .TE</dl>
+<dd> .ds a  .TS tab(;); lw(1i) l. A\*a;B .TE</dl>
 <p> A leading and/or trailing &#8216;|&#8217; in a format line, such as</p>
 <dl>
 <dt>

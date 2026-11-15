@@ -74,7 +74,7 @@ description: "markdown – text to html conversion tool"
 <dd> Extract &lt;style&gt; blocks from the output.</dl>
 <p> As an example, the option &#8211;<code>f </code><i>nolinks,smarty</i> tells to not allow &lt;a tags, and to do smarty pants processing.</p>
 <dt><code>-F </code><i>bitmap</i></p>
-<dd> Set translation flags. <i>Bitmap</i> is a bit map of the various configuration options described in <a href="/docs/linux/man/3-markdown/">markdown</a>(3) (the flag values are defined in mkdio.h</p>
+<dd> Set translation flags. <i>Bitmap</i> is a bit map of the various configuration options described in markdown(3) (the flag values are defined in mkdio.h</p>
 <dt><code>-n</code></p>
 <dd> Don&#8217;t write generated html.</p>
 <dt><code>-o file </code></p>
@@ -88,15 +88,15 @@ description: "markdown – text to html conversion tool"
 <dt><code>-VV</code></p>
 <dd> Show the version#, the compile-time configuration, and the run-time configuration.</p>
 <dt><code>-t </code><i>text</i></p>
-<dd> Use mkd_text3 to format <i>text</i> instead of processing stdin with the <a href="/docs/linux/man/3-markdown/">markdown</a>(3) function.</p>
+<dd> Use mkd_text3 to format <i>text</i> instead of processing stdin with the markdown(3) function.</p>
 <dt><code>-T</code></p>
 <dd> If run with the table-of-content flag on, dump the table of contents before the formatted text.</p>
 <dt><code>-s </code><i>text</i></p>
-<dd> Use the <a href="/docs/linux/man/3-markdown/">markdown</a>(3) function to format <i>text</i></dl>
+<dd> Use the markdown(3) function to format <i>text</i></dl>
 <h2>RETURN VALUES</h2>
 <p> The utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-markdown/">markdown</a>(3), <a href="/docs/linux/man/7-markdown/">markdown</a>(7), mkd-extensions7.</p>
+<p> markdown(3), <a href="/docs/linux/man/7-markdown/">markdown</a>(7), mkd-extensions7.</p>
 <h2>AUTHOR</h2>
 <p> An David Parsons (<code>orc [at] pell.portland.or.us</code> ) </p>
 <h2>Index</h2>

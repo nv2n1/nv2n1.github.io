@@ -31,4 +31,4 @@ BadDevice or BadValue error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>
  An invalid device was specified. The device does not
  exist or is not a master pointer device.</pre></dl><dl COMPACT><dd><pre>BadValue
  A value for a PointerBarrier argument does not name a defined
- pointer barrier.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XFixesCreatePointerBarrier/">XFixesCreatePointerBarrier</a>(3)</pre></dl>
+ pointer barrier.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XFixesCreatePointerBarrier(3)</pre></dl>

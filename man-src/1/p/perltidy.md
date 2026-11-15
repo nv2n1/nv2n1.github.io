@@ -1102,7 +1102,7 @@ $opt_c = Text::CSV_XS-&gt;new (<br />
 <pre>
                     my @field
                       : field
-                      : <a href="//www.systutorials.com/docs/linux/man/1-Default/">Default</a>(1)
+                      : Default(1)
                       : Get('Name' =&gt; 'foo') : Set('Name');
 </pre>
 <p> If the attributes are on a single line in the source code then they will remain on a single line if possible. </p>
@@ -1473,7 +1473,7 @@ Token Type xxxxxx x-- -- -- -- -- -- -- -- -- --comment comment c
 <dt>Files extensions limitations</p>
 <dd> Perltidy does not operate on files for which the run could produce a file with a duplicated file extension. These extensions include <i>.LOG</i>, <i>.ERR</i>, <i>.TEE</i>, and perhaps <i>.tdy</i> and <i>.bak</i>, depending on the run type. The purpose of this rule is to prevent generating confusing filenames such as <i>somefile.tdy.tdy.tdy</i>.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-perlstyle/">perlstyle</a></i>(1), <i><a href="/docs/linux/man/3-perl--tidy/">Perl::Tidy</a></i>(3)</p>
+<p> <i><a href="/docs/linux/man/1-perlstyle/">perlstyle</a></i>(1), <i>Perl::Tidy</i>(3)</p>
 <h2>VERSION</h2>
 <p> This man page documents perltidy version 20121207.</p>
 <h2>CREDITS</h2>

@@ -11,17 +11,17 @@ description: "bundle-install – Install the dependencies specified in your Gemf
 <h2>Synopsis</h2>
 <p><code>bundle install</code> [&#8211;binstubs[=DIRECTORY]] [&#8211;clean] [&#8211;deployment] [&#8211;frozen] [&#8211;full-index] [&#8211;gemfile=GEMFILE] [&#8211;jobs=NUMBER] [&#8211;local] [&#8211;no-cache] [&#8211;no-prune] [&#8211;path PATH] [&#8211;quiet] [&#8211;redownload] [&#8211;retry=NUMBER] [&#8211;shebang] [&#8211;standalone[=GROUP[ GROUP&#8230;]]] [&#8211;system] [&#8211;trust-policy=POLICY] [&#8211;with=GROUP[ GROUP&#8230;]] [&#8211;without=GROUP[ GROUP&#8230;]]</p>
 <h2>Description</h2>
-<p>Install the gems specified in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5). If this is the first time you run bundle install (and a <code>Gemfile.lock</code> does not exist), Bundler will fetch all remote sources, resolve dependencies and install all needed gems. </p>
-<p> If a <code>Gemfile.lock</code> does exist, and you have not updated your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5), Bundler will fetch all remote sources, but use the dependencies specified in the <code>Gemfile.lock</code> instead of resolving dependencies. </p>
-<p> If a <code>Gemfile.lock</code> does exist, and you have updated your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5), Bundler will use the dependencies in the <code>Gemfile.lock</code> for all gems that you did not update, but will re-resolve the dependencies of gems that you did update. You can find more information about this update process below under <i>CONSERVATIVE UPDATING</i>.</p>
+<p>Install the gems specified in your Gemfile(5). If this is the first time you run bundle install (and a <code>Gemfile.lock</code> does not exist), Bundler will fetch all remote sources, resolve dependencies and install all needed gems. </p>
+<p> If a <code>Gemfile.lock</code> does exist, and you have not updated your Gemfile(5), Bundler will fetch all remote sources, but use the dependencies specified in the <code>Gemfile.lock</code> instead of resolving dependencies. </p>
+<p> If a <code>Gemfile.lock</code> does exist, and you have updated your Gemfile(5), Bundler will use the dependencies in the <code>Gemfile.lock</code> for all gems that you did not update, but will re-resolve the dependencies of gems that you did update. You can find more information about this update process below under <i>CONSERVATIVE UPDATING</i>.</p>
 <h2>Options</h2>
-<p>To apply any of <code>&#8211;binstubs</code>, <code>&#8211;deployment</code>, <code>&#8211;path</code>, or <code>&#8211;without</code> every time <code>bundle install</code> is run, use <code>bundle config</code> (see <a href="/docs/linux/man/1-bundle-config/">bundle-config</a>(1)).</p>
+<p>To apply any of <code>&#8211;binstubs</code>, <code>&#8211;deployment</code>, <code>&#8211;path</code>, or <code>&#8211;without</code> every time <code>bundle install</code> is run, use <code>bundle config</code> (see bundle-config(1)).</p>
 <dl>
 <dt><code>&#8211;binstubs[=&lt;directory&gt;]</code></p>
 <dd>Binstubs are scripts that wrap around executables. Bundler creates a small Ruby file (a binstub) that loads Bundler, runs the command, and puts it in <code>bin/</code>. This lets you link the binstub inside of an application to the exact gem version the application needs.</p>
 <dd>Creates a directory (defaults to <code>~/bin</code>) and places any executables from the gem there. These executables run in Bundler&#8217;s context. If used, you might add this directory to your environment&#8217;s <code>PATH</code> variable. For instance, if the <code>rails</code> gem comes with a <code>rails</code> executable, this flag will create a <code>bin/rails</code> executable that ensures that all referred dependencies will be resolved using the bundled gems.</p>
 <dt><code>&#8211;clean</code></p>
-<dd>On finishing the installation Bundler is going to remove any gems not present in the current <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5). Don&#8217;t worry, gems currently in use will not be removed.</p>
+<dd>On finishing the installation Bundler is going to remove any gems not present in the current Gemfile(5). Don&#8217;t worry, gems currently in use will not be removed.</p>
 <dt><code>&#8211;deployment</code></p>
 <dd>In <i>deployment mode</i>, Bundler will &#8216;roll-out&#8217; the bundle for production or CI use. Please check carefully if you want to have this option enabled in your development environment.</p>
 <dt><code>&#8211;redownload</code></p>
@@ -31,7 +31,7 @@ description: "bundle-install – Install the dependencies specified in your Gemf
 <dt><code>&#8211;full-index</code></p>
 <dd>Bundler will not call Rubygems&#8217; API endpoint (default) but download and cache a (currently big) index file of all gems. Performance can be improved for large bundles that seldom change by enabling this option.</p>
 <dt><code>&#8211;gemfile=&lt;gemfile&gt;</code></p>
-<dd>The location of the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) which Bundler should use. This defaults to a <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) in the current working directory. In general, Bundler will assume that the location of the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) is also the project&#8217;s root and will try to find <code>Gemfile.lock</code> and <code>vendor/cache</code> relative to this location.</p>
+<dd>The location of the Gemfile(5) which Bundler should use. This defaults to a Gemfile(5) in the current working directory. In general, Bundler will assume that the location of the Gemfile(5) is also the project&#8217;s root and will try to find <code>Gemfile.lock</code> and <code>vendor/cache</code> relative to this location.</p>
 <dt><code>&#8211;jobs=[&lt;number&gt;]</code>, <code>-j[&lt;number&gt;]</code></p>
 <dd>The maximum number of parallel download and install jobs. The default is <code>1</code>.</p>
 <dt><code>&#8211;local</code></p>
@@ -59,7 +59,7 @@ description: "bundle-install – Install the dependencies specified in your Gemf
 <dt><code>&#8211;without=&lt;list&gt;</code></p>
 <dd>A space-separated list of groups referencing gems to skip during installation. If a group is given that is in the remembered list of groups given to &#8211;with, it is removed from that list.</dl>
 <h2>Deployment Mode</h2>
-<p>Bundler&#8217;s defaults are optimized for development. To switch to defaults optimized for deployment and for CI, use the <code>&#8211;deployment</code> flag. Do not activate deployment mode on development machines, as it will cause an error when the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) is modified.</p>
+<p>Bundler&#8217;s defaults are optimized for development. To switch to defaults optimized for deployment and for CI, use the <code>&#8211;deployment</code> flag. Do not activate deployment mode on development machines, as it will cause an error when the Gemfile(5) is modified.</p>
 <dl>
 <dt>1.</p>
 <dd>A <code>Gemfile.lock</code> is required.</p>
@@ -67,8 +67,8 @@ description: "bundle-install – Install the dependencies specified in your Gemf
 <dd>This is mainly to ensure that you remember to check your <code>Gemfile.lock</code> into version control.</p>
 <dt>2.</p>
 <dd>The <code>Gemfile.lock</code> must be up to date</p>
-<dd>In development, you can modify your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) and re-run <code>bundle install</code> to <i>conservatively update</i> your <code>Gemfile.lock</code> snapshot.</p>
-<dd>In deployment, your <code>Gemfile.lock</code> should be up-to-date with changes made in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5).</p>
+<dd>In development, you can modify your Gemfile(5) and re-run <code>bundle install</code> to <i>conservatively update</i> your <code>Gemfile.lock</code> snapshot.</p>
+<dd>In deployment, your <code>Gemfile.lock</code> should be up-to-date with changes made in your Gemfile(5).</p>
 <dt>3.</p>
 <dd>Gems are installed to <code>vendor/bundle</code> not your default system location</p>
 <dd>In development, it&#8217;s convenient to share the gems used in your application with other applications and other scripts that run on the system.</p>
@@ -91,12 +91,12 @@ description: "bundle-install – Install the dependencies specified in your Gemf
 <p> Of these three, the first two could theoretically be performed by <code>chown</code>ing the resulting files to <code>$SUDO_USER</code>. The third, however, can only be performed by invoking the <code>git</code> command as the current user. Therefore, git gems are downloaded and installed into <code>~/.bundle</code> rather than $GEM_HOME or $BUNDLE_PATH. </p>
 <p> As a result, you should run <code>bundle install</code> as the current user, and Bundler will ask for your password if it is needed to put the gems into their final location.</p>
 <h2>Installing Groups</h2>
-<p>By default, <code>bundle install</code> will install all gems in all groups in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5), except those declared for a different platform. </p>
+<p>By default, <code>bundle install</code> will install all gems in all groups in your Gemfile(5), except those declared for a different platform. </p>
 <p> However, you can explicitly tell Bundler to skip installing certain groups with the <code>&#8211;without</code> option. This option takes a space-separated list of groups. </p>
-<p> While the <code>&#8211;without</code> option will skip <i>installing</i> the gems in the specified groups, it will still <i>download</i> those gems and use them to resolve the dependencies of every gem in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5). </p>
+<p> While the <code>&#8211;without</code> option will skip <i>installing</i> the gems in the specified groups, it will still <i>download</i> those gems and use them to resolve the dependencies of every gem in your Gemfile(5). </p>
 <p> This is so that installing a different set of groups on another machine (such as a production server) will not change the gems and versions that you have already developed and tested against. </p>
 <p> <code>Bundler offers a rock-solid guarantee that the third-party code you are running in development and testing is also the third-party code you are running in production. You can choose to exclude some of that code in different environments, but you will never be caught flat-footed by different versions of third-party code being used in different environments.</code> </p>
-<p> For a simple illustration, consider the following <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5):</p>
+<p> For a simple illustration, consider the following Gemfile(5):</p>
 <dl>
 <dd>
 <pre>source '<a rel="nofollow" href="https://rubygems.org'">https://rubygems.org'</a>
@@ -108,17 +108,17 @@ end</pre>
 <p> In this case, <code>sinatra</code> depends on any version of Rack (<code>&gt;= 1.0</code>), while <code>rack-perftools-profiler</code> depends on 1.x (<code>~&gt; 1.0</code>). </p>
 <p> When you run <code>bundle install &#8211;without production</code> in development, we look at the dependencies of <code>rack-perftools-profiler</code> as well. That way, you do not spend all your time developing against Rack 2.0, using new APIs unavailable in Rack 1.x, only to have Bundler switch to Rack 1.2 when the <code>production</code> group <i>is</i> used. </p>
 <p> This should not cause any problems in practice, because we do not attempt to <code>install</code> the gems in the excluded groups, and only evaluate as part of the dependency resolution process. </p>
-<p> This also means that you cannot include different versions of the same gem in different groups, because doing so would result in different sets of dependencies used in development and production. Because of the vagaries of the dependency resolution process, this usually affects more than the gems you list in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5), and can (surprisingly) radically change the gems you are using.</p>
+<p> This also means that you cannot include different versions of the same gem in different groups, because doing so would result in different sets of dependencies used in development and production. Because of the vagaries of the dependency resolution process, this usually affects more than the gems you list in your Gemfile(5), and can (surprisingly) radically change the gems you are using.</p>
 <h2>The Gemfile.Lock</h2>
-<p>When you run <code>bundle install</code>, Bundler will persist the full names and versions of all gems that you used (including dependencies of the gems specified in the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5)) into a file called <code>Gemfile.lock</code>. </p>
+<p>When you run <code>bundle install</code>, Bundler will persist the full names and versions of all gems that you used (including dependencies of the gems specified in the Gemfile(5)) into a file called <code>Gemfile.lock</code>. </p>
 <p> Bundler uses this file in all subsequent calls to <code>bundle install</code>, which guarantees that you always use the same exact code, even as your application moves across machines. </p>
-<p> Because of the way dependency resolution works, even a seemingly small change (for instance, an update to a point-release of a dependency of a gem in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5)) can result in radically different gems being needed to satisfy all dependencies. </p>
-<p> As a result, you <code>SHOULD</code> check your <code>Gemfile.lock</code> into version control, in both applications and gems. If you do not, every machine that checks out your repository (including your production server) will resolve all dependencies again, which will result in different versions of third-party code being used if <code>any</code> of the gems in the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) or any of their dependencies have been updated. </p>
+<p> Because of the way dependency resolution works, even a seemingly small change (for instance, an update to a point-release of a dependency of a gem in your Gemfile(5)) can result in radically different gems being needed to satisfy all dependencies. </p>
+<p> As a result, you <code>SHOULD</code> check your <code>Gemfile.lock</code> into version control, in both applications and gems. If you do not, every machine that checks out your repository (including your production server) will resolve all dependencies again, which will result in different versions of third-party code being used if <code>any</code> of the gems in the Gemfile(5) or any of their dependencies have been updated. </p>
 <p> When Bundler first shipped, the <code>Gemfile.lock</code> was included in the <code>.gitignore</code> file included with generated gems. Over time, however, it became clear that this practice forces the pain of broken dependencies onto new contributors, while leaving existing contributors potentially unaware of the problem. Since <code>bundle install</code> is usually the first step towards a contribution, the pain of broken dependencies would discourage new contributors from contributing. As a result, we have revised our guidance for gem authors to now recommend checking in the lock for gems.</p>
 <h2>Conservative Updating</h2>
-<p>When you make a change to the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) and then run <code>bundle install</code>, Bundler will update only the gems that you modified. </p>
+<p>When you make a change to the Gemfile(5) and then run <code>bundle install</code>, Bundler will update only the gems that you modified. </p>
 <p> In other words, if a gem that you <code>did not modify</code> worked before you called <code>bundle install</code>, it will continue to use the exact same versions of all dependencies as it used before the update. </p>
-<p> Let&#8217;s take a look at an example. Here&#8217;s your original <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5):</p>
+<p> Let&#8217;s take a look at an example. Here&#8217;s your original Gemfile(5):</p>
 <dl>
 <dd>
 <pre>source '<a rel="nofollow" href="https://rubygems.org'">https://rubygems.org'</a>
@@ -126,8 +126,8 @@ gem 'actionpack', '2.3.8'
 gem 'activemerchant'</pre>
 <dd></dl>
 <p> In this case, both <code>actionpack</code> and <code>activemerchant</code> depend on <code>activesupport</code>. The <code>actionpack</code> gem depends on <code>activesupport 2.3.8</code> and <code>rack ~&gt; 1.1.0</code>, while the <code>activemerchant</code> gem depends on <code>activesupport &gt;= 2.3.2</code>, <code>braintree &gt;= 2.0.0</code>, and <code>builder &gt;= 2.0.0</code>. </p>
-<p> When the dependencies are first resolved, Bundler will select <code>activesupport 2.3.8</code>, which satisfies the requirements of both gems in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5). </p>
-<p> Next, you modify your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) to:</p>
+<p> When the dependencies are first resolved, Bundler will select <code>activesupport 2.3.8</code>, which satisfies the requirements of both gems in your Gemfile(5). </p>
+<p> Next, you modify your Gemfile(5) to:</p>
 <dl>
 <dd>
 <pre>source '<a rel="nofollow" href="https://rubygems.org'">https://rubygems.org'</a>
@@ -142,9 +142,9 @@ gem 'activemerchant'</pre>
 <dt><code>rack ~&gt; 1.1.0</code></p>
 <dd>not currently being used to satisfy another dependency</dl>
 <p> Because you did not explicitly ask to update <code>activemerchant</code>, you would not expect it to suddenly stop working after updating <code>actionpack</code>. However, satisfying the new <code>activesupport 3.0.0.rc</code> dependency of actionpack requires updating one of its dependencies. </p>
-<p> Even though <code>activemerchant</code> declares a very loose dependency that theoretically matches <code>activesupport 3.0.0.rc</code>, Bundler treats gems in your <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) that have not changed as an atomic unit together with their dependencies. In this case, the <code>activemerchant</code> dependency is treated as <code>activemerchant 1.7.1 + activesupport 2.3.8</code>, so <code>bundle install</code> will report that it cannot update <code>actionpack</code>. </p>
-<p> To explicitly update <code>actionpack</code>, including its dependencies which other gems in the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) still depend on, run <code>bundle update actionpack</code> (see <code>bundle <a href="/docs/linux/man/1-update/">update</a>(1)</code>). </p>
-<p> <code>Summary</code>: In general, after making a change to the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) , you should first try to run <code>bundle install</code>, which will guarantee that no other gem in the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5) is impacted by the change. If that does not work, run bundle <a href="/docs/linux/man/1-update/">update</a>(1) <i>bundle-update.1.html</i>.</p>
+<p> Even though <code>activemerchant</code> declares a very loose dependency that theoretically matches <code>activesupport 3.0.0.rc</code>, Bundler treats gems in your Gemfile(5) that have not changed as an atomic unit together with their dependencies. In this case, the <code>activemerchant</code> dependency is treated as <code>activemerchant 1.7.1 + activesupport 2.3.8</code>, so <code>bundle install</code> will report that it cannot update <code>actionpack</code>. </p>
+<p> To explicitly update <code>actionpack</code>, including its dependencies which other gems in the Gemfile(5) still depend on, run <code>bundle update actionpack</code> (see <code>bundle update(1)</code>). </p>
+<p> <code>Summary</code>: In general, after making a change to the Gemfile(5) , you should first try to run <code>bundle install</code>, which will guarantee that no other gem in the Gemfile(5) is impacted by the change. If that does not work, run bundle update(1) <i>bundle-update.1.html</i>.</p>
 <h2>See Also</h2>
 <dl>
 <dt>&bull;</p>

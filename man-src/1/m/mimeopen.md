@@ -13,7 +13,7 @@ description: "mimeopen – Open files by mimetype"
 <p> mimeopen [options] [-] files</p>
 <h2>DESCRIPTION</h2>
 <p> This script tries to determine the mimetype of a file and open it with the default desktop application. If no default application is configured the user is prompted with an &#8220;open with&#8221; menu in the terminal. </p>
-<p> To use this script you need the freedesktop mime-info database and the freedesktop desktop-file-utils package. See <i><a href="/docs/linux/man/3-file--mimeinfo--applications/">File::MimeInfo::Applications</a></i>(3) for more details.</p>
+<p> To use this script you need the freedesktop mime-info database and the freedesktop desktop-file-utils package. See <i>File::MimeInfo::Applications</i>(3) for more details.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code>, <code>&#8211;ask</code></p>
@@ -40,12 +40,12 @@ description: "mimeopen – Open files by mimetype"
 <dd> Follow symbolic links. Deprecated because this is the logical default for this command. Ignored silently.</dl>
 <h2>BUGS</h2>
 <p> No known bugs, please mail the author if you find one. </p>
-<p> See <i><a href="/docs/linux/man/3-file--mimeinfo--applications/">File::MimeInfo::Applications</a></i>(3) and <i><a href="/docs/linux/man/3-file--desktopentry/">File::DesktopEntry</a></i>(3) for some limitations.</p>
+<p> See <i>File::MimeInfo::Applications</i>(3) and <i>File::DesktopEntry</i>(3) for some limitations.</p>
 <h2>AUTHOR</h2>
 <p> Jaap Karssenberg &lt;pardus [at] cpan.org&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2002, 2012 Jaap G Karssenberg. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl. </p>
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-mimetype/">mimetype</a></i>(1), <i><a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a></i>(1), <i><a href="/docs/linux/man/1-update-desktop-database/">update-desktop-database</a></i>(1), <i><a href="/docs/linux/man/3-file--mimeinfo/">File::MimeInfo</a></i>(3), <i><a href="/docs/linux/man/3-file--mimeinfo--applications/">File::MimeInfo::Applications</a></i>(3) </p>
+<p> <i><a href="/docs/linux/man/1-mimetype/">mimetype</a></i>(1), <i><a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a></i>(1), <i><a href="/docs/linux/man/1-update-desktop-database/">update-desktop-database</a></i>(1), <i>File::MimeInfo</i>(3), <i>File::MimeInfo::Applications</i>(3) </p>
 <h2>Index</h2>

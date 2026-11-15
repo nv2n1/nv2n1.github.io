@@ -50,7 +50,7 @@ description: "srscl.f –"
 <pre>
           INCX is INTEGER
           The increment between successive values of the vector SX.
-          &gt; 0:  <a href="//www.systutorials.com/docs/linux/man/1-SX/">SX</a>(1) = <a href="//www.systutorials.com/docs/linux/man/1-X/">X</a>(1) and SX(1+(i-1)*INCX) = x(i),     1&lt; i&lt;= n
+          &gt; 0:  SX(1) = X(1) and SX(1+(i-1)*INCX) = x(i),     1&lt; i&lt;= n
 </pre>
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>

@@ -15,7 +15,7 @@ description: "ode – numerical solution of ordinary differential equations"
 <p> <code>ode</code> is a tool that solves, by numerical integration, the initial value problem for a specified system of first-order ordinary differential equations. Three distinct numerical integration schemes are available: Runge-Kutta-Fehlberg (the default), Adams-Moulton, and Euler. The Adams-Moulton and Runge-Kutta schemes are available with adaptive step size. </p>
 <p> The operation of <code>ode</code> is specified by a program, written in its input language. The program is simply a list of expressions for the derivatives of the variables to be integrated, together with some control statements. Some examples are given in the <font SIZE="-1"><code>EXAMPLES </code></font> section. </p>
 <p> <code>ode</code> reads the program from the specified file, or from standard input if no file name is given. If reading from standard input, <code>ode</code> will stop reading and exit when it sees a single period on a line by itself. </p>
-<p> At each time step, the values of variables specified in the program are written to standard output. So a table of values will be produced, with each column showing the evolution of a variable. If there are only two columns, the output can be piped to <code><a href="/docs/linux/man/1-graph/">graph</a></code>(1) or a similar plotting program.</p>
+<p> At each time step, the values of variables specified in the program are written to standard output. So a table of values will be produced, with each column showing the evolution of a variable. If there are only two columns, the output can be piped to <code>graph</code>(1) or a similar plotting program.</p>
 <h2>OPTIONS</h2>
 <h3>Input Options</h3>
 <dl>

@@ -77,7 +77,7 @@ gmt grdvolume lake.nc -Cr-300/0
 <h2>SEE ALSO</h2>
 <p> <code>gmt</code>, <code>grdfilter</code>, <code>grdmask</code>, <code>grdmath</code></p>
 <h2>REFERENCES</h2>
-<p> Wessel, P., 1998, An empirical method for optimal robust regional-residual separation of geophysical data, <i>Math. Geol.</i>, <code><a href="/docs/linux/man/4-30/">30</a></code>(4), 391-408.</p>
+<p> Wessel, P., 1998, An empirical method for optimal robust regional-residual separation of geophysical data, <i>Math. Geol.</i>, <code>30</code>(4), 391-408.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
 <h2>Index</h2>

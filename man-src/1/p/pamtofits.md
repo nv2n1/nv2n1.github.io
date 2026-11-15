@@ -28,7 +28,7 @@ description: "pamtofits – convert a Netpbm image into FITS format"
 <p> <code>pamtofits</code> was originally <code>pnmtofits</code> and did not handle PAM input. It was extended and renamed in Netpbm 10.30 (October 2005). </p>
 <p> <code>pnmtofits</code> was itself an extension of <code>pgmtofits</code>, which was added to Pbmplus in 1989. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-fitstopnm/">fitstopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-fitstopnm/">fitstopnm</a></code>(1) , <code>pam</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Wilson H. Bent (<i>whb [at] hoh-2.att.com</i>), with modifications by Alberto Accomazzi (<i>alberto [at] cfa.harvard.edu</i>). </p>
 <h2>Index</h2>

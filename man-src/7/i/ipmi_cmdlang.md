@@ -146,7 +146,7 @@ description: "ipmi_cmdlang – A command language interface to the IPMI library"
 <p> The <i>&lt;hackname&gt;</i> enables certain hacks for broken platforms. This may be listed multiple times to enable multiple hacks. The currently available hacks are:</p>
 <dt> <code>intelplus</code> &#8211; For Intel platforms that have broken RMCP+.</p>
 <dt> <code>rakp3_wrong_rolem</code> &#8211; For systems that truncate role(m) in the RAKP3 msg.</p>
-<dt> <code>rmcpp_integ_sik</code> &#8211; For systems that use SIK instead of <a href="/docs/linux/man/1-k/">K</a>(1) for integrity. </p>
+<dt> <code>rmcpp_integ_sik</code> &#8211; For systems that use SIK instead of K(1) for integrity. </p>
 <dd>The -M option sets the maximum outstanding messages. The default is 2, ranges 1-63. </p>
 <p> Options enable and disable various automatic processing and are:</p>
 <dt> <code>-[no]all</code> &#8211; all automatic handling. This will override the other</p>
@@ -1692,7 +1692,7 @@ disable</pre>
  Channel: &lt;integer&gt;</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-ipmish/">ipmish</a></code>(1) </p>
+<p><code>ipmish</code>(1) </p>
 <h2>Known Problems</h2>
 <p>None</p>
 <h2>Author</h2>

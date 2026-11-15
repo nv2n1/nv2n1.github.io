@@ -105,7 +105,7 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
 <p> <code>fprint_objid</code> does the same, but prints to the FILE pointer specified by the initial parameter. </p>
 <p> <code>snprint_objid</code> prints the same information into the buffer pointed to by <i>buf</i> which is of length <i>len</i>. It returns the number of characters printed, or -1 if the buffer was not large enough. In the latter case, <i>buf</i> will typically contain a truncated version of the information (but this behaviour is not guaranteed). </p>
 <p> <code>print_description</code>, <code>fprint_description</code>, and <code>snprint_description</code> take a similar object identifier and print out a version of the MIB definition for that object, together with the full OID. The <i>width</i> argument controls how the OID is layed out. </p>
-<p> By default the parser does not save descriptions since they may be huge. In order to be able to print them, it is necessary to invoke <code><a href="/docs/linux/man/1-snmp_set_save_descriptions/">snmp_set_save_descriptions</a>(1)</code><i>before</i> calling <code>init_mib</code> (or similar).</p>
+<p> By default the parser does not save descriptions since they may be huge. In order to be able to print them, it is necessary to invoke <code>snmp_set_save_descriptions(1)</code><i>before</i> calling <code>init_mib</code> (or similar).</p>
 <h2>Environment Variables</h2>
 <p> The main use of environmental variables with respect to these API calls is to configure which MIB modules should be loaded, and where they are located.</p>
 <dl COMPACT>
@@ -127,4 +127,4 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
  Default: (none)<br />
  Used by <code>init_mib</code> only.</dl>
 <h2>See Also</h2>
-<p> <code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3), <code><a href="/docs/linux/man/3-output_api/">output_api</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3), <code>output_api</code>(3)</p>

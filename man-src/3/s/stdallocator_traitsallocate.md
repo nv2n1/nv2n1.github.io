@@ -25,8 +25,8 @@ const_void_pointer hint );                                          (2)         
 
 const_void_pointer hint );</code></pre> 
 Uses the allocator a to allocate n*sizeof(Alloc::value_type) bytes of uninitialized storage. 
-1) Calls <a HREF="/docs/linux/man/n-a-allocate/">a.allocate</a>(n) 
-2) Additionally passes memory locality hint hint. Calls a.allocate(n, hint) if possible. If not possible (e.g. a has no two-argument member function allocate()), calls <a HREF="/docs/linux/man/n-a-allocate/">a.allocate</a>(n) 
+1) Calls a.allocate(n) 
+2) Additionally passes memory locality hint hint. Calls a.allocate(n, hint) if possible. If not possible (e.g. a has no two-argument member function allocate()), calls a.allocate(n) 
 
 <h2>Parameters</h2>
 
@@ -36,7 +36,7 @@ hint - pointer to a nearby memory location
 
 <h2>Return value</h2>
 
-The pointer returned by the call to <a HREF="/docs/linux/man/n-a-allocate/">a.allocate</a>(n) 
+The pointer returned by the call to a.allocate(n) 
 
 <h2>See also</h2>
 

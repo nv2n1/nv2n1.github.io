@@ -31,7 +31,7 @@ description: "$(sysconfdir)/libgda/config – libgda global configuration file. 
 </dl>
 <p> You can also use <code>gda-config-tool-3.0</code> or <code>mergeant</code> (recommended) to modify this file.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-mergeant/">mergeant</a></code>(1), <code><a href="/docs/linux/man/1-gda-config-tool-3-0/">gda-config-tool-3.0</a></code>(1) </p>
+<p><code>mergeant</code>(1), <code>gda-config-tool-3.0</code>(1) </p>
 <h2>Name</h2>
 <p>$(sysconfdir)/libgda/config &#8211; libgda global configuration file. $(HOME)/.libgda/config &#8211; libgda user configuration file.</p>
 <h2>Description</h2>
@@ -57,4 +57,4 @@ description: "$(sysconfdir)/libgda/config – libgda global configuration file. 
 </dl>
 <p> You can also use <code>gda-config-tool-3.0</code> or <code>mergeant</code> (recommended) to modify this file.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-mergeant/">mergeant</a></code>(1), <code><a href="/docs/linux/man/1-gda-config-tool-3-0/">gda-config-tool-3.0</a></code>(1) </p>
+<p><code>mergeant</code>(1), <code>gda-config-tool-3.0</code>(1) </p>

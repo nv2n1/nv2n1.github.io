@@ -17,7 +17,7 @@ description: "pptpd.conf – PPTP VPN daemon configuration"
 <dt><code>stimeout </code><i>seconds</i></p>
 <dd>number of seconds to wait for a PPTP packet before forking the <code><a href="/docs/linux/man/8-pptpctrl/">pptpctrl</a></code>(8) program to handle the client. The default is 10 seconds. This is a denial of service protection feature. Equivalent to the command line <code>&#8211;stimeout</code> option.</p>
 <dt><code>logwtmp</code></p>
-<dd>update <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) as users connect and disconnect. See <code><a href="/docs/linux/man/1-wtmp/">wtmp</a></code>(1).</p>
+<dd>update <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) as users connect and disconnect. See <code>wtmp</code>(1).</p>
 <dt><code>debug</code></p>
 <dd>turns on debugging mode, sending debugging information to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3). Has no effect on <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) debugging. Equivalent to the command line <code>&#8211;debug</code> option.</p>
 <dt><code>bcrelay </code><i>internal-interface</i></p>

@@ -26,7 +26,7 @@ $ ls
                     [... Any changes are saved to the archive...]
 </code></pre>
 <h2>ARCHIVE FORMATS</h2>
-<p> Archive format support is provided by the <code><a href="/docs/linux/man/3-libarchive/">libarchive</a></code>(3) library. Read operations are supported for:</p>
+<p> Archive format support is provided by the <code>libarchive</code>(3) library. Read operations are supported for:</p>
 <dl>
 <dt>
 <dd>
@@ -61,7 +61,7 @@ $ ls
 <dt>&bull;</p>
 <dd> two different variants of shar archives.</dl>
 </dl>
-<p> Before writing, the original archive is renamed with a &#8220;.orig&#8221; extension appended to it. More detail about the read/write support can be found in the <code><a href="/docs/linux/man/3-libarchive/">libarchive</a></code>(3) documentation. </p>
+<p> Before writing, the original archive is renamed with a &#8220;.orig&#8221; extension appended to it. More detail about the read/write support can be found in the <code>libarchive</code>(3) documentation. </p>
 <h2>OPTIONS</h2>
 <p> <code>archivemount</code> is built upon the FUSE (Filesystem in Userspace) library, and the complete set of available options depends upon the specific FUSE implementation. Execute <code>archivemount -h</code> to retrieve a definitive list. </p>
 <h3>general options</h3>
@@ -283,10 +283,10 @@ $ ls
 <p> This is beta software and should be treated as such. Bug reports to the AUTHORS listed below would be appreciated. </p>
 <p> archivemount is forced to run a single-thread mode for now. Support for stable multithreading is planned in a future release. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-compress/">compress</a></code>(1), <code><a href="/docs/linux/man/1-cpio/">cpio</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/3-libarchive/">libarchive</a></code>(3), <code><a href="/docs/linux/man/1-pax/">pax</a></code>(1), <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8), and <code><a href="/docs/linux/man/1-zip/">zip</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-compress/">compress</a></code>(1), <code><a href="/docs/linux/man/1-cpio/">cpio</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code>libarchive</code>(3), <code>pax</code>(1), <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8), and <code><a href="/docs/linux/man/1-zip/">zip</a></code>(1) </p>
 <p> &#8220;Filesystem in Userspace&#8221;: <a rel="nofollow" href="http://fuse.sourceforge.net/">http://fuse.sourceforge.net/</a> </p>
 <p> &#8220;MacFUSE&#8221;: <a rel="nofollow" href="http://code.google.com/p/macfuse/">http://code.google.com/p/macfuse/</a> </p>
 <h2>AUTHORS</h2>
 <p> Archivemount is written and maintained by Andre Landwehr &lt;andrel [at] cybernoia.de&gt;. </p>
-<p> This man page was written by Tom Duck &lt;tom.duck [at] dal.ca&gt; with material drawn from the page for <code><a href="/docs/linux/man/3-libarchive/">libarchive</a></code>(3). </p>
+<p> This man page was written by Tom Duck &lt;tom.duck [at] dal.ca&gt; with material drawn from the page for <code>libarchive</code>(3). </p>
 <h2>Index</h2>

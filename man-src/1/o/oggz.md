@@ -56,5 +56,5 @@ description: "oggz — inspect and manipulate Ogg multimedia files"
 <p> Copyright &#169; 2008 Annodex Association<br />
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code><code>(1)</code> <code><a href="/docs/linux/man/1-hogg/">hogg</a></code><code>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code><code>(1)</code> <code>hogg</code><code>(1)</code> </p>
 <h2>Index</h2>

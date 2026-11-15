@@ -70,7 +70,7 @@ ip.ttl += 5;
  inject(&quot;./fake_packet&quot;)</p>
 <dt><code>log(</code><i>what</i>, <i>where</i>)</p>
 <dd>this function dumps in the file &#8216;where&#8217; the buffer &#8216;what&#8217;. No information is stored about the packet, only the payload is dumped. So you will see the stream in the file. If you want to log packets in a more enhanced mode, you need to use the ettercap -L option and analyze it with <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8).<br />
- The file &#8216;where&#8217; must be writable to the user EC_UID (see <a href="/docs/linux/man/5-etter-conf/">etter.conf</a>(5)). example:<br />
+ The file &#8216;where&#8217; must be writable to the user EC_UID (see etter.conf(5)). example:<br />
  log(DECODED.data, &quot;/tmp/interesting.log&quot;)</p>
 <dt><code>msg(</code><i>message</i>)</p>
 <dd>this function displays a message to the user in the User Messages window. It is useful to let the user know whether a particular filter has been successful or not. example:<br />
@@ -97,4 +97,4 @@ ip.ttl += 5;
  Marco Valleri (NaGA) &lt;naga [at] antifork.org&gt;</p>
 <h2>See Also</h2>
 <p><i>etter.filter.examples</i><br />
- <i><a href="/docs/linux/man/8-ettercap/">ettercap</a>(8)</i> <i><a href="/docs/linux/man/8-etterlog/">etterlog</a>(8)</i> <i><a href="/docs/linux/man/5-etter-conf/">etter.conf</a>(5)</i> <i><a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8)</i> <i><a href="/docs/linux/man/8-ettercap_plugins/">ettercap_plugins</a>(8)</i> </p>
+ <i><a href="/docs/linux/man/8-ettercap/">ettercap</a>(8)</i> <i><a href="/docs/linux/man/8-etterlog/">etterlog</a>(8)</i> <i>etter.conf(5)</i> <i><a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8)</i> <i><a href="/docs/linux/man/8-ettercap_plugins/">ettercap_plugins</a>(8)</i> </p>

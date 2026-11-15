@@ -59,9 +59,9 @@ description: "jstack – Stack Trace"
 <dd>
 <dl>
 <dt>o</p>
-<dd><a href="/docs/linux/man/1-pstack/">pstack</a>(1)</p>
+<dd>pstack(1)</p>
 <dt>o</p>
-<dd>c++<a href="/docs/linux/man/1-filt/">filt</a>(1)</p>
+<dd>c++filt(1)</p>
 <dt>o</p>
 <dd>jps</p>
 <dt>o</p>

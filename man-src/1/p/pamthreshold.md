@@ -42,9 +42,9 @@ description: "pamthreshold – threshold grayscale image to black and white"
 <p> If you don&#8217;t specify this option, <code>pamthreshold</code> uses a contrast threshold of 0.05. Without <code>-dual</code> this option is meaningless. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamditherbw/">pamditherbw</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamditherbw/">pamditherbw</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamthreshold</code> was new in Netpbm 10.34 (June 2006). </p>
 <h2>AUTHOR</h2>
-<p> <code>pamthreshold</code> is Copyright &#169; 2006 by Erik Auerswald and released under the <code><a href="/docs/linux/man/1-gpl/">GPL</a></code>(1) </p>
+<p> <code>pamthreshold</code> is Copyright &#169; 2006 by Erik Auerswald and released under the <code>GPL</code>(1) </p>
 <h2>Index</h2>

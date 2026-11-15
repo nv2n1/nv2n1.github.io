@@ -32,7 +32,7 @@ description: "memcached_server_cursor – libmemcached Documentation"
 <dd>
 <p> compile and link with -lmemcached</dl>
 <h2>DESCRIPTION</h2>
-<p> <code>libmemcached</code> performs operations on a list of hosts. The order of these hosts determine routing to keys. Functions are provided to add keys to memcached_st structures. To manipulate lists of servers see <a href="/docs/linux/man/3-memcached_server_st/">memcached_server_st</a>(3). </p>
+<p> <code>libmemcached</code> performs operations on a list of hosts. The order of these hosts determine routing to keys. Functions are provided to add keys to memcached_st structures. To manipulate lists of servers see memcached_server_st(3). </p>
 <p> <i>memcached_server_count()</i> provides you a count of the current number of servers being used by a <code>memcached_st</code> structure.</p>
 <dl>
 <dt><i>memcached_server_add()</i> pushes a single TCP server into the <code>memcached_st</code> structure. This server will be placed at the end. Duplicate servers</p>

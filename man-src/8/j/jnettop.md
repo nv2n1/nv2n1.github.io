@@ -41,7 +41,7 @@ description: "jnettop – View hosts/ports taking up the most network traffic"
 <dt><code>-s, &#8211;select-rule name</code></p>
 <dd>selects one of the rules defined in .jnettop configuration file (by it&#8217;s name)</p>
 <dt><code>-x, &#8211;filter rule</code></p>
-<dd>allows for specification of custom filtering rule. this allows for <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1)</code> style syntax. don&#8217;t forget to enclolse the filter into quotes when running from a shell.</dl>
+<dd>allows for specification of custom filtering rule. this allows for <code>tcpdump(1)</code> style syntax. don&#8217;t forget to enclolse the filter into quotes when running from a shell.</dl>
 <h2>Configuration</h2>
 <p>Program looks for settings in the file specified by parameter <code>-f</code>, which defaults to ~/.jnettop. Configuration file is an ordinary text file with keywords and their arguments. You HAVE to enclose arguments into double quotes. Available keywords are:</p>
 <dl>
@@ -71,7 +71,7 @@ description: "jnettop – View hosts/ports taking up the most network traffic"
 <dd>resolve_rule &quot;192.168.0.0&quot; &quot;255.255.255.0&quot; normal<br />
  resolve_rule &quot;192.168.0.0&quot; &quot;255.255.255.0&quot; external &quot;/usr/share/jnettop/jnettop-lookup-nbm&quot;</dl>
 <dt><code>rule &quot;&lt;rule_name&gt;&quot; &quot;&lt;rule_definition&gt;&quot;</code></p>
-<dd>The <code>rule</code> keyword defines a set of predefined <a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1)-like filters to apply. You can specify various filters as &quot;show me what 192.168.1.32&quot; sends:</p>
+<dd>The <code>rule</code> keyword defines a set of predefined tcpdump(1)-like filters to apply. You can specify various filters as &quot;show me what 192.168.1.32&quot; sends:</p>
 <dl>
 <dd>rule &quot;show 192.168.1.32&quot; &quot;src 192.168.1.32&quot;</dl>
 <dt><code>select_rule &quot;&lt;rule_name&gt;&quot;</code></p>

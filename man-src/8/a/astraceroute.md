@@ -88,7 +88,7 @@ description: "astraceroute – autonomous system trace route utility"
 <h2>History</h2>
 <p><code>astraceroute</code> was originally written for the netsniff-ng toolkit by Daniel Borkmann. It is currently maintained by Tobias Klauser &lt;tklauser [at] distanz.ch&gt; and Daniel Borkmann &lt;dborkma [at] tik.ee.ethz.ch&gt;.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-netsniff-ng/">netsniff-ng</a></code>(8), <code><a href="/docs/linux/man/8-trafgen/">trafgen</a></code>(8), <code><a href="/docs/linux/man/8-mausezahn/">mausezahn</a></code>(8), <code><a href="/docs/linux/man/8-ifpps/">ifpps</a></code>(8), <code><a href="/docs/linux/man/8-bpfc/">bpfc</a></code>(8), <code><a href="/docs/linux/man/8-flowtop/">flowtop</a></code>(8), <code><a href="/docs/linux/man/8-curvetun/">curvetun</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-netsniff-ng/">netsniff-ng</a></code>(8), <code><a href="/docs/linux/man/8-trafgen/">trafgen</a></code>(8), <code>mausezahn</code>(8), <code><a href="/docs/linux/man/8-ifpps/">ifpps</a></code>(8), <code><a href="/docs/linux/man/8-bpfc/">bpfc</a></code>(8), <code>flowtop</code>(8), <code>curvetun</code>(8) </p>
 <h2>Author</h2>
 <p>Manpage was written by Daniel Borkmann.</p>
 <h2>Colophon</h2>

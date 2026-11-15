@@ -59,5 +59,5 @@ org.freedesktop.DBus.Properties.Get org.qstardict.dbus mainWindowVisible)))
 <p> <code>QStarDict</code> was written by Alexander Rodin &lt;rodin.alexander [at] gmail.com&gt;. </p>
 <p> This manual page was written by Alexander Rodin &lt;rodin.alexander [at] gmail.com&gt;, for the Debian project (but may be used by others). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-stardict/">stardict</a>(1)</code> <code><a href="/docs/linux/man/1-sdcv/">sdcv</a>(1)</code> <code><a href="/docs/linux/man/1-qdbus/">qdbus</a>(1)</code> </p>
+<p> <code>stardict(1)</code> <code>sdcv(1)</code> <code><a href="/docs/linux/man/1-qdbus/">qdbus</a>(1)</code> </p>
 <h2>Index</h2>

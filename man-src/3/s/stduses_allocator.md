@@ -41,7 +41,7 @@ type std::integral_constant&lt;bool, value&gt;</p>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef std::scoped_allocator_adaptor&lt; myalloc&lt;elem_t&gt;, myalloc&lt;int&gt;&gt; Alloc;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Alloc a(1,2);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;std::vector&lt;elem_t, Alloc&gt; v(a);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-v-resize/">v.resize</a>(1); // uses allocator #1 for elements of v<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v.resize(1); // uses allocator #1 for elements of v<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;std::get&lt;1&gt;(v[0]).resize(10); // uses allocator #2 for innervector_t </p>
 <h2>See also</h2>
 <p>uses_allocator checks if the specified type supports uses-allocator construction<br />

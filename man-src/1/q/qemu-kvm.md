@@ -59,7 +59,7 @@ url: "/docs/linux/man/1-qemu-kvm/"
 
  <font SIZE="-1">QEMU</font> uses <font SIZE="-1">GUS</font> emulation (<font SIZE="-1">GUSEMU32</font> &lt;<b><a rel="nofollow" HREF="http://www.deinmeister.de/gusemu/">http://www.deinmeister.de/gusemu/</a></b>&gt;) by Tibor ``<font SIZE="-1">TS''</font> Schütz. 
 
- Note that, by default, <font SIZE="-1">GUS</font> shares <font SIZE="-1"><i><a HREF="/docs/linux/man/7-irq/">IRQ</a></i></font><i></i>(7) with parallel ports and so <font SIZE="-1">QEMU</font> must be told to not have parallel ports to have working <font SIZE="-1">GUS.</font> 
+ Note that, by default, <font SIZE="-1">GUS</font> shares <font SIZE="-1"><i>IRQ</i></font><i></i>(7) with parallel ports and so <font SIZE="-1">QEMU</font> must be told to not have parallel ports to have working <font SIZE="-1">GUS.</font> 
 
  <pre>
         qemu-kvm dos.img -soundhw gus -parallel none

@@ -36,7 +36,7 @@ git instaweb[--local][--httpd = &lt;httpd&gt;][--port = &lt;port&gt;]
 <p> -b, &#8211;browser</p>
 <dl>
 <dt>
-<dd> The web browser that should be used to view the gitweb page. This will be passed to the <i>git web&#8211;browse</i> helper script along with the URL of the gitweb instance. See <code><a href="/docs/linux/man/1-git-web--browse/">git-web&#8211;browse</a></code>(1) for more information about this. If the script fails, the URL will be printed to stdout.</dl>
+<dd> The web browser that should be used to view the gitweb page. This will be passed to the <i>git web&#8211;browse</i> helper script along with the URL of the gitweb instance. See <code>git-web&#8211;browse</code>(1) for more information about this. If the script fails, the URL will be printed to stdout.</dl>
 <p> start, &#8211;start</p>
 <dl>
 <dt>
@@ -63,7 +63,7 @@ git instaweb[--local][--httpd = &lt;httpd&gt;][--port = &lt;port&gt;]
         modulePath = /usr/lib/apache2/modules
 </pre>
 </dl>
-<p> If the configuration variable <code>instaweb.browser</code> is not set, <code>web.browser</code> will be used instead if it is defined. See <code><a href="/docs/linux/man/1-git-web--browse/">git-web&#8211;browse</a></code>(1) for more information about this.</p>
+<p> If the configuration variable <code>instaweb.browser</code> is not set, <code>web.browser</code> will be used instead if it is defined. See <code>git-web&#8211;browse</code>(1) for more information about this.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gitweb/">gitweb</a></code>(1)</p>
 <h2>GIT</h2>

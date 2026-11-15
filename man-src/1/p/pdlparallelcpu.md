@@ -15,8 +15,8 @@ description: "PDL::ParallelCPU – Parallel Processor MultiThreading Support in 
  
  # Set target of 4 parallel pthreads to create, with a lower limit of
  # 5Meg elements for splitting processing into parallel pthreads.
- <a href="//www.systutorials.com/docs/linux/man/4-set_autopthread_targ/">set_autopthread_targ</a>(4);
- <a href="//www.systutorials.com/docs/linux/man/5-set_autopthread_size/">set_autopthread_size</a>(5);
+ set_autopthread_targ(4);
+ set_autopthread_size(5);
  
  $a = zeroes(5000,5000); # Create 25Meg element array
  
@@ -43,7 +43,7 @@ description: "PDL::ParallelCPU – Parallel Processor MultiThreading Support in 
 <h2>Global Control of PDL PThreading using Environment Variables</h2>
 <p><font SIZE="-1">PDL</font> PThreading can be globally turned on, without modifying existing code by setting environment variables <font SIZE="-1"><code>PDL_AUTOPTHREAD_TARG</code></font> and <font SIZE="-1"><code>PDL_AUTOPTHREAD_SIZE</code></font> before running a <font SIZE="-1">PDL</font> script. These environment variables are checked when <font SIZE="-1">PDL</font> starts up and calls to <i>set_autopthread_targ</i> and <i>set_autopthread_size</i> functions made with the environment variable&#8217;s values. </p>
 <p> For example, if the environment var <font SIZE="-1"><code>PDL_AUTOPTHREAD_TARG</code></font> is set to 3, and <font SIZE="-1"><code>PDL_AUTOPTHREAD_SIZE</code></font> is set to 10, then any pdl script will run as if the following lines were at the top of the file: </p>
-<pre> <a href="//www.systutorials.com/docs/linux/man/3-set_autopthread_targ/">set_autopthread_targ</a>(3);
+<pre> set_autopthread_targ(3);
  set_autopthread_size(10);</pre>
 <h2>How It Works</h2>
 <p>The auto-pthreading process works by analyzing threaded array dimensions in <font SIZE="-1">PDL</font> operations and splitting up processing based on the thread dimension sizes and desired number of pthreads (i.e. the pthread target or pthread_targ). The offsets and increments that <font SIZE="-1">PDL</font> uses to step thru the data in memory are modified for each pthread so each one sees a different set of data when performing processing. </p>
@@ -51,11 +51,11 @@ description: "PDL::ParallelCPU – Parallel Processor MultiThreading Support in 
 <pre> $a = sequence(20,4,3); # Small 3-D Array, size 20,4,3
  
  # Setup auto-pthreading:
- <a href="//www.systutorials.com/docs/linux/man/2-set_autopthread_targ/">set_autopthread_targ</a>(2); # Target of 2 pthreads
+ set_autopthread_targ(2); # Target of 2 pthreads
  set_autopthread_size(0); # Zero so that the small PDLs in this example will be pthreaded
  # This will be split up into 2 pthreads
  $c = maximum($a);</pre>
-<p>For the above example, the <i>maximum</i> function has a signature of <tt>&quot;(<a href="/docs/linux/man/n-a/">a</a>(n); [o]c())&quot;</tt>, which means that the first dimension of <tt>$a</tt> (size 20) is a <i>Core</i> dimension of the <i>maximum</i> function. The other dimensions of <tt>$a</tt> (size 4,3) are <i>threaded</i> dimensions (i.e. will be threaded-over in the <i>maximum</i> function. </p>
+<p>For the above example, the <i>maximum</i> function has a signature of <tt>&quot;(a(n); [o]c())&quot;</tt>, which means that the first dimension of <tt>$a</tt> (size 20) is a <i>Core</i> dimension of the <i>maximum</i> function. The other dimensions of <tt>$a</tt> (size 4,3) are <i>threaded</i> dimensions (i.e. will be threaded-over in the <i>maximum</i> function. </p>
 <p> The auto-pthreading algorithm examines the threaded dims of size (4,3) and picks the 4 dimension, since it is evenly divisible by the autopthread_targ of 2. The processing of the maximum function is then split into two pthreads on the size-4 dimension, with dim indexes 0,2 processed by one pthread<br />
 &nbsp;<wbr>and dim indexes 1,3 processed by the other pthread.</p>
 <h2>Limitations</h2>

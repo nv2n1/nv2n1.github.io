@@ -28,7 +28,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dt><code>monotext</code> or <code>colortext</code></p>
 <dd>to specify if your EGA card is in monochrome or color configuration.</dl>
 <h3>If you use the Mach32 chipset driver</h3>
-<p>You should consider reading <code><a href="/docs/linux/man/7-svgalib-mach32/">svgalib.mach32</a></code>(7).</p>
+<p>You should consider reading <code>svgalib.mach32</code>(7).</p>
 <dl>
 <dt><code>Clocks </code><i>clock1 clock2 clock3 </i><code>&#8230;</code></p>
 <dd>to specify the Mach32 clocks. This is mandatory. However, if you omit it. svgalib will autodetect clocks and modify your <i>/etc/vga/libvga.config</i> file and abort. After this, every svgalib application started will find the proper <code>Clocks</code> command.</p>
@@ -268,7 +268,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
  <code>modeline 1024&#215;768@75 85 1024 1048 1376 1400 768 771 780 806</code> </p>
 <p> <code>IMPORTANT!</code> Not all drivers, that is SVGA cards, use the values. Only drivers using timing.c. As of this writing, drivers using this feature are: Ark, Cirrus, Chips &amp; Technologies, Et6000, S3. </p>
 <p> The Mach32 driver provides a similar feature separately, you have to use the <code>define</code> command described below. </p>
-<p> ET4000 (and to some extent EGA) allow one to use a binary file created by some utility. All other chipset driver use predefined timings that are hardcoded in register dumps within the drivers. See <code><a href="/docs/linux/man/7-svgalib-et4000/">svgalib.et4000</a></code>(7) for more information. </p>
+<p> ET4000 (and to some extent EGA) allow one to use a binary file created by some utility. All other chipset driver use predefined timings that are hardcoded in register dumps within the drivers. See <code>svgalib.et4000</code>(7) for more information. </p>
 </dl>
 <h3>Chipset detection</h3>
 <p>Usually svgalib does a good job autodetecting your hardware. However, if auto detection fails (or you want to fall back to a simpler driver, say VGA, as a bug work around), you may force detection of your chipset with </p>
@@ -309,7 +309,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dd>AT&amp;T 20C498</p>
 <dt><code>Ramdac IBMRGB52x</code></p>
 <dd>IBM RGB524, 526, 528 (and compatibles)</dl>
-<p> <code>BEWARE!</code> The Mach32 driver features an own <code>ramdac</code> command (which is usually not required). If you have a Mach32, see <code><a href="/docs/linux/man/7-svgalib-mach32/">svgalib.mach32</a></code>(7). </p>
+<p> <code>BEWARE!</code> The Mach32 driver features an own <code>ramdac</code> command (which is usually not required). If you have a Mach32, see <code>svgalib.mach32</code>(7). </p>
 <dl>
 <dt><code>Dacspeed </code><i>speed</i></p>
 <dd><i>speed</i> is a floating point number in MHz (like in <code>Dacspeed</code>40.0 ) specifying the maximal allowable pixel clock of the Ramdac in use. Currently this option is only supported by the S3 driver. The Mach32 driver supports <code>maxclock8</code>, <code>maxclock16</code>, <code>maxclock24</code>, and <code>maxclock32</code> commands which have a similar effect. Nevertheless, the Mach32 has a very good idea on the capabilities of the Ramdac in use. The settings are more intended to specify the VGA memory bandwidth. </p>
@@ -327,7 +327,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <h3>Miscanellous options</h3>
 <dl>
 <dt><code>security revoke-all-privs</code></p>
-<dd>Make sure it is impossible to regain root access after <code><a href="/docs/linux/man/3-vga_init/">vga_init</a></code>(3) was called. (default)</p>
+<dd>Make sure it is impossible to regain root access after <code>vga_init</code>(3) was called. (default)</p>
 <dt><code>security compat</code></p>
 <dd>For compatibility to pre 1.2.11, do not close a security hole using saved uids.</p>
 <dt><code>verbose</code></p>
@@ -342,7 +342,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dd>Allow <code>privileged</code> commands outside the main configuration file. </p>
 </dl>
 <h3>Common options currently used by Mach32 only</h3>
-<p>Options that may be useful for all drivers, but currently are only supported by Mach32 (Please read <code><a href="/docs/linux/man/7-svgalib-mach32/">svgalib.mach32</a></code>(7) if you use one): </p>
+<p>Options that may be useful for all drivers, but currently are only supported by Mach32 (Please read <code>svgalib.mach32</code>(7) if you use one): </p>
 <dl>
 <dt><code>maxclock16 </code><i>maxclk</i></p>
 <dd>The maximum pixel clock to use for 16bpp modes. This is used by Mach32 to find out which settings may be used for 16bpp modes. the Mach32 default for this is 2000, thus it is effectively switched off. <i>maxclk</i> must be an integer. </p>
@@ -374,10 +374,10 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
  <code> 30 32 37 39 40 0 75 65</code></dl>
 </dl>
 <dd>In my own correspondence with ATI they say every Mach32 would have a 18811-1, so it should be possible just to take the 18811-1 line. However I have now reports of third party cards and motherboards with on board Mach32 chips, so be careful. </p>
-<p> Please read <code><a href="/docs/linux/man/7-svgalib-mach32/">svgalib.mach32</a></code>(7) for additional info on clocks. </p>
+<p> Please read <code>svgalib.mach32</code>(7) for additional info on clocks. </p>
 <p> The <code>clocks</code> command is <code>privileged</code>. </p>
 <dt><code>variablelinelength</code></p>
-<dd>Sometimes a mode cannot be realized with the logical linelength = pixels in a row * bytes per pixel. (definitely true for Mach32 800&#215;600). The default behavior of Mach32 is to adjust <i>xbytes</i> (see <code><a href="/docs/linux/man/3-vga_getmodeinfo/">vga_getmodeinfo</a></code>(3)) in the info table appropriately. </p>
+<dd>Sometimes a mode cannot be realized with the logical linelength = pixels in a row * bytes per pixel. (definitely true for Mach32 800&#215;600). The default behavior of Mach32 is to adjust <i>xbytes</i> (see <code>vga_getmodeinfo</code>(3)) in the info table appropriately. </p>
 <p> This command enforces this default operation and adjusts <i>xbytes</i> appropriately, thus overriding the standard svgalib mode. This may yield to problems with ..umm.. not well designed applications. </p>
 <dt><code>duplicatelinelength</code></p>
 <dd>Don&#8217;t touch the standard mode but create an exact copy, a dynamic mode, with the adjusted <i>xbytes</i> value. Expect noise at some pixels in 800&#215;600 for more than 256 colors on Mach32 when not using the dynamic mode. </p>
@@ -427,7 +427,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dt><code>blit </code><i>subcommand1 subcommand2</i><code> &#8230;</code></p>
 <dd>This is a command to control the Mach32 support for oldstyle accelerator functions. </p>
 <p> Valid <i>subcommand</i>s are <code>bit</code>, <code>fill</code>, <code>image</code>, and <code>hlinelist</code>. They enable support for the corresponding blit functions. Preceed them with <code>no</code> to turn them off (no space after <code>no</code> allowed). Use <code>memimage</code> to emulate the <code>image</code> blit using a linearframebuffer, which is usually much faster for Mach32. Use <code>nomemimage</code> to never use this emulation. On the Mach32 this emulation can be used in more resolutions than the actual imageblit accelerator function. Again order is vital! (esp. for the <code>*image</code> commands). </p>
-<p> As the Mach32 now has also new style <code><a href="/docs/linux/man/3-vga_accel/">vga_accel</a></code>(3) support there are now also the <i>subcommand</i>s: <code>settrans</code>, <code>setrop</code>, <code>fillbox</code>, <code>screencopy</code>, <code>drawline</code>, <code>putimage</code>, <code>drawhlinelist</code>, <code>putbitmap</code>, <code>screencopymono</code>, <code>setmode</code>, <code>polyline</code>, <code>polyhline</code>, and <code>polyfillmode</code>. Which are also supported with a leading <code>no</code>. They allow to control support for the subfunctions of <code><a href="/docs/linux/man/3-vga_accel/">vga_accel</a></code>(3). In addition, <code>memimage</code> emulation applies to <code>putimage</code> as well. </p>
+<p> As the Mach32 now has also new style <code>vga_accel</code>(3) support there are now also the <i>subcommand</i>s: <code>settrans</code>, <code>setrop</code>, <code>fillbox</code>, <code>screencopy</code>, <code>drawline</code>, <code>putimage</code>, <code>drawhlinelist</code>, <code>putbitmap</code>, <code>screencopymono</code>, <code>setmode</code>, <code>polyline</code>, <code>polyhline</code>, and <code>polyfillmode</code>. Which are also supported with a leading <code>no</code>. They allow to control support for the subfunctions of <code>vga_accel</code>(3). In addition, <code>memimage</code> emulation applies to <code>putimage</code> as well. </p>
 <p> Some examples: </p>
 <dl>
 <dd>
@@ -461,7 +461,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
  <code>misc_ctl keep-off</code><br />
  <code>svgaclocks 9</code><br />
  <code>ramdac auto</code> </p>
-<p> For details about these options see <code><a href="/docs/linux/man/7-svgalib-mach32/">svgalib.mach32</a></code>(7). All of them are <code>privileged</code>.</p>
+<p> For details about these options see <code>svgalib.mach32</code>(7). All of them are <code>privileged</code>.</p>
 <h2>Obsolete Commands</h2>
 <p>Very old svgalib versions used a different style configuration file. For compatibility, svgalib can still parse these old options. Generally the options consist of one character (case sensitive) followed by a number. Whitespace characters (space, tab, newline) can be used after the characters <code>m</code> and <code>M</code> and the number. </p>
 <p> The old svgalib versions actually allowed a new option character to follow a number immediately. The current parser requires white space after the numbers. </p>
@@ -472,7 +472,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dt><code>M</code><i>class</i></p>
 <dd>Specify the monitor class like <code>monitor</code><i> class</i> does.</p>
 <dt><code>C</code><i>number</i></p>
-<dd>Force usage of the <i>number</i>-th chipset driver from the list of supported drivers <code><a href="/docs/linux/man/1-vga/">VGA</a></code>(1), <code><a href="/docs/linux/man/2-et4000/">ET4000</a></code>(2), <code><a href="/docs/linux/man/3-cirrus/">Cirrus</a></code>(3), <code><a href="/docs/linux/man/4-tvga/">TVGA</a></code>(4), <code><a href="/docs/linux/man/5-oak/">Oak</a></code>(5), <code><a href="/docs/linux/man/6-ega/">EGA</a></code>(6), <code><a href="/docs/linux/man/7-s3/">S3</a></code>(7), <code><a href="/docs/linux/man/8-et3000/">ET3000</a></code>(8), <code><a href="/docs/linux/man/9-mach32/">Mach32</a></code>(9), <code>GVGA6400</code>(10), <code>ARK</code>(11), <code>ATI</code>(12), <code>ALI</code>(13), <code>Mach64</code>(14), <code>C&amp;T</code>(15), <code>APM</code>(16), <code>NV3</code>(17), <code>ET6000</code>(18), <code>VESA</code>(19), <code>MX</code>(20), <code>PARADISE</code>(21), and <code>RAGE</code>(22). </p>
+<dd>Force usage of the <i>number</i>-th chipset driver from the list of supported drivers <code>VGA</code>(1), <code>ET4000</code>(2), <code>Cirrus</code>(3), <code>TVGA</code>(4), <code>Oak</code>(5), <code>EGA</code>(6), <code>S3</code>(7), <code>ET3000</code>(8), <code>Mach32</code>(9), <code>GVGA6400</code>(10), <code>ARK</code>(11), <code>ATI</code>(12), <code>ALI</code>(13), <code>Mach64</code>(14), <code>C&amp;T</code>(15), <code>APM</code>(16), <code>NV3</code>(17), <code>ET6000</code>(18), <code>VESA</code>(19), <code>MX</code>(20), <code>PARADISE</code>(21), and <code>RAGE</code>(22). </p>
 <p> <code>C0</code> reenables auto detection of the chipset (default). </p>
 <dt><code>c</code><i>flag</i></p>
 <dd>When using the EGA chipset driver, the card is in monochrome emulation mode for <i>flag</i> = 0 and in color emulation mode for <i>flag</i> = 1.</dl>
@@ -480,7 +480,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <p><i>/etc/vga/libvga.config</i><br />
  <i>/etc/vga/libvga.et4000</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code><a href="/docs/linux/man/7-svgalib-et4000/">svgalib.et4000</a></code>(7), <code><a href="/docs/linux/man/7-svgalib-chips/">svgalib.chips</a></code>(7), <code><a href="/docs/linux/man/7-svgalib-mach32/">svgalib.mach32</a></code>(7), </p>
+<p><code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code>svgalib.et4000</code>(7), <code>svgalib.chips</code>(7), <code>svgalib.mach32</code>(7), </p>
 <h2>Author</h2>
 <p>The newstyle configuration file was first implemented and documented by Michael Weller &lt;eowmob [at] exp-math.uni-essen.de&gt;. However, other people added new features. </p>
 <p> Finally this page was edited by Michael Weller &lt;eowmob [at] exp-math.uni-essen.de&gt;.</p>

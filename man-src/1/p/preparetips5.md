@@ -18,7 +18,7 @@ description: "preparetips5 – extract text from tips file"
 <dd>is a script to extract the text from a tips file. It outputs the text so <code>xgettext</code> can add the tips to a PO file. PO files provide a human-readable string format used for translations. </p>
 <p> <code>preparetips5</code> looks for <i>data/tips</i> as tips file.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-kf5options/">kf5options</a></code>(7)</p>
+<p> <code>kf5options</code>(7)</p>
 <h2>BUGS</h2>
 <p> Please use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report bugs, do not mail the author directly.</p>
 <h2>AUTHOR</h2>

@@ -20,7 +20,7 @@ description: "mrtg-mibhelp – A Table of some interesting OIDs"
  ASN.1 Syntax:          INTEGER
  Enumeration:           up 1, down 2, testing 3
 </pre>
-<p> The current operational state of the interface. The <i><a href="/docs/linux/man/3-testing/">testing</a></i>(3) state indicates that no operational packets can be passed.</p>
+<p> The current operational state of the interface. The <i>testing</i>(3) state indicates that no operational packets can be passed.</p>
 <h3>ifAdminStatus</h3>
 <pre>
  Descriptor:            ifAdminStatus
@@ -28,7 +28,7 @@ description: "mrtg-mibhelp – A Table of some interesting OIDs"
  ASN.1 Syntax:          INTEGER
  Enumeration:           up 1, down 2, testing 3
 </pre>
-<p> The current administrative state of the interface. The <i><a href="/docs/linux/man/3-testing/">testing</a></i>(3) state indicates that no operational packets can be passed.</p>
+<p> The current administrative state of the interface. The <i>testing</i>(3) state indicates that no operational packets can be passed.</p>
 <h3>ifInOctets</h3>
 <pre>
  Descriptor:            ifInOctets

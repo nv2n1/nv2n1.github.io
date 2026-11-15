@@ -72,7 +72,7 @@ description: "sa-compile – compile SpamAssassin ruleset into native code"
 <dt><code>-V</code>, <code>&#8211;version</code></p>
 <dd> Print sa-compile version and exit.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-mail--spamassassin/">Mail::SpamAssassin</a></i>(3) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1)</p>
+<p> <i>Mail::SpamAssassin</i>(3) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1)</p>
 <h2>PREREQUESITES</h2>
 <p> <tt>&quot;Mail::SpamAssassin&quot;</tt> <tt>&quot;re2c&quot;</tt> <tt>&quot;Mail::SpamAssassin::Plugin::Rule2XSBody&quot;</tt></p>
 <h2>BUGS</h2>

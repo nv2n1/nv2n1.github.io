@@ -42,7 +42,7 @@ description: "hash – hash database access method"
 <dd> is the byte order for integers in the stored database metadata. The number should represent the order as an integer; for example, big endian order would be the number 4,321. If <i>lorder</i> is 0 (no order is specified), the current host order is used. If the file already exists, the specified value is ignored and the value specified when the tree was created is used.</dl>
 <p> If the file already exists (and the <code>O_TRUNC</code> flag is not specified), the values specified for <i>bsize</i>, <i>ffactor</i>, <i>lorder</i>, and <i>nelem</i> are ignored and the values specified when the tree was created are used. </p>
 <p> If a hash function is specified, <i>hash_open</i> attempts to determine if the hash function specified is the same as the one with which the database was created, and fails if it is not. </p>
-<p> Backward-compatible interfaces to the routines described in <code><a href="/docs/linux/man/3-dbm/">dbm</a></code>(3), and <code><a href="/docs/linux/man/3-ndbm/">ndbm</a></code>(3) are provided, however these interfaces are not compatible with previous file formats.</p>
+<p> Backward-compatible interfaces to the routines described in <code>dbm</code>(3), and <code>ndbm</code>(3) are provided, however these interfaces are not compatible with previous file formats.</p>
 <h2>ERRORS</h2>
 <p> The <i>hash</i> access method routines may fail and set <i>errno</i> for any of the errors specified for the library routine <code><a href="/docs/linux/man/3-dbopen/">dbopen</a></code>(3).</p>
 <h2>BUGS</h2>

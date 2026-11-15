@@ -38,7 +38,7 @@ RFC 3463 (Enhanced Status Codes)
 RFC 3464 (Delivery status notifications)
 RFC 5322 (Internet Message Format)</pre>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8).</p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
 <h2>Bugs</h2>
 <p>Table-driven rewriting rules make it hard to express <code>if then else</code> and other logical relationships.</p>
 <h2>Configuration Parameters</h2>
@@ -268,7 +268,7 @@ RFC 5322 (Internet Message Format)</pre>
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>ADDRESS_REWRITING_README Postfix address manipulation

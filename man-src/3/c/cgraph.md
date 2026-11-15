@@ -274,7 +274,7 @@ strict graph H
 }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-libcdt/">Libcdt</a>(3) </p>
+<p> Libcdt(3) </p>
 <h2>BUGS</h2>
 <p> It is difficult to change endpoints of edges, delete string attributes or modify edge keys. The work-around is to create a new object and copy the contents of an old one (but new object obviously has a different ID, internal address, and object creation timestamp). </p>
 <p> The API lacks convenient functions to substitute programmer-defined ordering of nodes and edges but in principle this can be supported. </p>

@@ -98,5 +98,5 @@ description: "flatpak-build-update-repo – Create a repository from a build dir
 <dt>
 <dd> Print OSTree debug information during command processing.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ostree/">ostree</a></code>(1), <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-ls/">flatpak-remote-ls</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-export/">flatpak-build-export</a></code>(1) </p>
+<p> <code>ostree</code>(1), <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-ls/">flatpak-remote-ls</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-export/">flatpak-build-export</a></code>(1) </p>
 <h2>Index</h2>

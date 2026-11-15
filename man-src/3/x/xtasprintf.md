@@ -33,7 +33,7 @@ description: "XtMalloc, XtCalloc, XtRealloc, XtFree, XtNew, XtNewString – memo
 <dt><i>new_string</i></p>
 <dd>Specifies a pointer to write a newly allocated string to.</p>
 <dt><i>format</i></p>
-<dd>Specifies a formatting string as defined by <a href="//www.systutorials.com/docs/linux/man/3c-sprintf/">sprintf</a>(3c)</dl>
+<dd>Specifies a formatting string as defined by sprintf(3c)</dl>
 <h2>Description</h2>
 <p>The <code>XtMalloc</code> functions returns a pointer to a block of storage of at least the specified size bytes. If there is insufficient memory to allocate the new block, <code>XtMalloc</code> calls <code>XtErrorMsg</code>. </p>
 <p> The <code>XtCalloc</code> function allocates space for the specified number of array elements of the specified size and initializes the space to zero. If there is insufficient memory to allocate the new block, <code>XtCalloc</code> calls <code>XtErrorMsg</code>. </p>
@@ -43,7 +43,7 @@ description: "XtMalloc, XtCalloc, XtRealloc, XtFree, XtNew, XtNewString – memo
 <dl COMPACT>
 <dd>((type *) XtMalloc((unsigned) sizeof(type))</dl>
 <p> <code>XtNewString</code> returns a pointer to a new string which is a duplicate of <i>string</i>. If there is insufficient memory to allocate the new block, or the argument is NULL <code>XtNewString</code> returns NULL. The memory can be freed with <code>XtFree</code>. </p>
-<p> The <code>XtAsprintf</code> function allocates space for a string large enough to hold the string specified by the <a href="//www.systutorials.com/docs/linux/man/3c-sprintf/">sprintf</a>(3c) format pattern when used with the remaining arguments, and fills it with the formatted results. The address of the allocated string is placed into the pointer passed as ret. The length of the string (not including the terminating null byte) is returned. If there is insufficient memory to allocate the new block, <code>XtAsprintf</code> calls <code>XtErrorMsg</code>.</p>
+<p> The <code>XtAsprintf</code> function allocates space for a string large enough to hold the string specified by the sprintf(3c) format pattern when used with the remaining arguments, and fills it with the formatted results. The address of the allocated string is placed into the pointer passed as ret. The length of the string (not including the terminating null byte) is returned. If there is insufficient memory to allocate the new block, <code>XtAsprintf</code> calls <code>XtErrorMsg</code>.</p>
 <h2>See Also</h2>
 <p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
  <i>Xlib &#8211; C Language X Interface</i></p>

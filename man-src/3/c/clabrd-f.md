@@ -103,7 +103,7 @@ description: "clabrd.f –"
 <dd>
 <pre> The matrices Q and P are represented as products of elementary
  reflectors:
- Q = H(1) H(2) . . . H(nb) and P = <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) . . . G(nb)
+ Q = H(1) H(2) . . . H(nb) and P = G(1) G(2) . . . G(nb)
  Each H(i) and G(i) has the form:
  H(i) = I - tauq * v * v**H and G(i) = I - taup * u * u**H
  where tauq and taup are complex scalars, and v and u are complex

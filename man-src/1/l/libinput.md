@@ -26,7 +26,7 @@ description: "libinput – tool to interface with libinput"
 <dl>
 <dt><code><a href="/docs/linux/man/1-libinput-debug-events/">libinput-debug-events</a>(1)</code></p>
 <dd> Print all events as seen by libinput</p>
-<dt><code><a href="/docs/linux/man/1-libinput-debug-gui/">libinput-debug-gui</a>(1)</code></p>
+<dt><code>libinput-debug-gui(1)</code></p>
 <dd> Show a GUI to visualize libinput&#8217;s events</p>
 <dt><code><a href="/docs/linux/man/1-libinput-debug-tablet/">libinput-debug-tablet</a>(1)</code></p>
 <dd> A commandline tool to debug tablet axis values</p>

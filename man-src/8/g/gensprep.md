@@ -11,7 +11,7 @@ description: "gensprep – compile StringPrep data from files filtered by filter
 <h2>Synopsis</h2>
 <p><code>gensprep</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ]</p>
 <h2>Description</h2>
-<p><code>gensprep</code> reads filtered RFC 3454 files and compiles their information into a binary form. The resulting file, <code>&lt;name&gt;.icu</code>, can then be read directly by ICU, or used by <code><a href="/docs/linux/man/8-pkgdata/">pkgdata</a></code>(8) for incorporation into a larger archive or library. </p>
+<p><code>gensprep</code> reads filtered RFC 3454 files and compiles their information into a binary form. The resulting file, <code>&lt;name&gt;.icu</code>, can then be read directly by ICU, or used by <code>pkgdata</code>(8) for incorporation into a larger archive or library. </p>
 <p> The files read by <code>gensprep</code> are described in the <code>FILES</code> section.</p>
 <h2>Options</h2>
 <dl>
@@ -47,4 +47,4 @@ description: "gensprep – compile StringPrep data from files filtered by filter
 <h2>Copyright</h2>
 <p>Copyright (C) 2000-2002 IBM, Inc. and others.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-pkgdata/">pkgdata</a></code>(8) </p>
+<p><code>pkgdata</code>(8) </p>

@@ -145,5 +145,5 @@ vol:50:50
 <p> or by sending a message with just `subscribe&#8217; in the subject to Aq aumix-l-request [at] lilax.org . To post without subscribing, omit &quot;-request&quot; from the address. </p>
 <p> Information such as the version of aumix, the architecture and operating system, and the model of sound hardware is sometimes needed to diagnose problems, so it is best if you include such details in any bug reports.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gpm/">gpm</a>(1), <a href="/docs/linux/man/8-moused/">moused</a>(8), <a href="/docs/linux/man/4-sb/">sb</a>(4), <a href="/docs/linux/man/1-xaumix/">xaumix</a>(1) </p>
+<p> gpm(1), moused(8), sb(4), <a href="/docs/linux/man/1-xaumix/">xaumix</a>(1) </p>
 <h2>Index</h2>

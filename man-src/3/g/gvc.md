@@ -47,7 +47,7 @@ extern char **gvPluginList(GVC_t *gvc, char *kind, int *cnt, char *);
 <h2>DESCRIPTION</h2>
 <p> <i>libgvc</i> provides a context for applications wishing to manipulate and render graphs. It provides a command line parsing, common rendering code, and a plugin mechanism for renderers. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code><a href="/docs/linux/man/3-libcdt/">libcdt</a></code>(3) <code><a href="/docs/linux/man/3-libgraph/">libgraph</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code>libcdt</code>(3) <code>libgraph</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> John Ellson (ellson [at] research.att.com), AT&amp;T </p>
 <h2>Index</h2>

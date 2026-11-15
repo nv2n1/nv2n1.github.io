@@ -1284,7 +1284,7 @@ description: "zip – package and compress (archive) files"
 <dt><code>ZIP_OPTS</code></p>
 <dd> [VMS] see ZIPOPT</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-compress/">compress</a>(1), <a href="/docs/linux/man/1-shar/">shar</a>(1), <a href="/docs/linux/man/1-tar/">tar</a>(1), <a href="/docs/linux/man/1-unzip/">unzip</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1)</p>
+<p> <a href="/docs/linux/man/1-compress/">compress</a>(1), shar(1), <a href="/docs/linux/man/1-tar/">tar</a>(1), <a href="/docs/linux/man/1-unzip/">unzip</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1)</p>
 <h2>DIAGNOSTICS</h2>
 <p> The exit status (or error level) approximates the exit codes defined by PKWARE and takes on the following values, except under VMS:</p>
 <dl>

@@ -46,7 +46,7 @@ struct ibv_mr *ibv_alloc_null_mr(struct ibv_pd *pd);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_reg_mr/">ibv_reg_mr</a>(3), <a HREF="/docs/linux/man/3-ibv_dereg_mr/">ibv_dereg_mr</a>(3),
+ ibv_reg_mr(3), ibv_dereg_mr(3),
 
 <h2>AUTHOR</h2>
 

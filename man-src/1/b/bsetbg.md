@@ -76,5 +76,5 @@ description: "bsetbg – utility to manipulate the appearance of the X11 desktop
 <h2>AUTHOR</h2>
 <p> The author of <code>bsetbg</code> may be reached at <i>tmk [at] lordzork.com</i>. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-blackbox/">blackbox</a></i>(1), <i><a href="/docs/linux/man/1-bsetroot/">bsetroot</a></i>(1), <i><a href="/docs/linux/man/1-qiv/">qiv</a></i>(1), <i><a href="/docs/linux/man/1-xli/">xli</a></i>(1), <i><a href="/docs/linux/man/1-xv/">xv</a></i>(1), <i><a href="/docs/linux/man/1-display/">display</a></i>(1), <i><a href="/docs/linux/man/1-wmsetbg/">wmsetbg</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-blackbox/">blackbox</a></i>(1), <i><a href="/docs/linux/man/1-bsetroot/">bsetroot</a></i>(1), <i>qiv</i>(1), <i>xli</i>(1), <i><a href="/docs/linux/man/1-xv/">xv</a></i>(1), <i><a href="/docs/linux/man/1-display/">display</a></i>(1), <i>wmsetbg</i>(1) </p>
 <h2>Index</h2>

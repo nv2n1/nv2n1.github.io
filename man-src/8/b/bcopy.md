@@ -36,6 +36,6 @@ description: "bcopy – Bacula’s ‘Copy from tape’"
 <dt><code>-v</code></p>
 <dd>Set verbose mode.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-bls/">bls</a></code>(1), <code><a href="/docs/linux/man/1-bextract/">bextract</a></code>(1).</p>
+<p><code>bls</code>(1), <code>bextract</code>(1).</p>
 <h2>Author</h2>
 <p>This manual page was written by Jose Luis Tallon &lt;jltallon [at] adv-solutions.net&gt;.</p>

@@ -36,7 +36,7 @@ description: "ocf_heartbeat_rabbitmq-cluster – rabbitmq clustered"
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 20.</dl>
 <h2>Example Crm Shell</h2>
-<p>The following is an example configuration for a rabbitmq-cluster resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a rabbitmq-cluster resource using the <code>crm</code>(8) shell: </p>
 <dl>
 <dd>
 <pre>primitive p_rabbitmq-cluster ocf:heartbeat:rabbitmq-cluster \

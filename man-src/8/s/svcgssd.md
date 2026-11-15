@@ -27,7 +27,7 @@ description: "rpc.svcgssd – server-side rpcsec_gss daemon"
 <dt><code>-n</code></p>
 <dd>Use the system default credentials (host/<i>FQDN</i>@<i>REALM</i>) rather than the default nfs/<i>FQDN</i>@<i>REALM</i>.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-rpc-gssd/">rpc.gssd</a>(8),</code></p>
+<p><code>rpc.gssd(8),</code></p>
 <h2>Authors</h2>
 <p>Dug Song &lt;dugsong [at] umich.edu&gt;<br />
  Andy Adamson &lt;andros [at] umich.edu&gt;<br />

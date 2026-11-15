@@ -30,4 +30,4 @@ description: "qrun – run a pbs batch job"
 <p>Upon successful processing of all the operands presented to the qrun command, the exit status will be a value of zero. </p>
 <p> If the qrun command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/8B-pbs_server/">pbs_server</a>(8B), <a href="//www.systutorials.com/docs/linux/man/8B-pbs_sched/">pbs_sched</a>(8B), <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B) </p>
+<p>pbs_server(8B), pbs_sched(8B), qmgr(1B) </p>

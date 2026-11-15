@@ -15,7 +15,7 @@ description: "logcheck – program to scan system logs for interesting lines"
 <p> <code>logcheck</code> supports three level of filtering: &quot;paranoid&quot; is for high-security machines running as few services as possible. Don&#8217;t use it if you can&#8217;t handle its verbose messages. &quot;server&quot; is the default and contains rules for many different daemons. &quot;workstation&quot; is for sheltered machines and filters most of the messages. The ignore rules work in additive manner. &quot;paranoid&quot; rules are also included at level &quot;server&quot;. &quot;workstation&quot; level includes both &quot;paranoid&quot; and &quot;server&quot; rules. </p>
 <p> The messages reported are sorted into three layers, system events, security events and attack alerts. The verbosity of system events is controlled by which level you choose, paranoid, server or workstation. However, security events and attack alerts are not affected by this.</p>
 <h2>Examples</h2>
-<p><code>logcheck</code> can be invoked directly thanks to <a href="/docs/linux/man/8-su/">su</a>(8) or <a href="/docs/linux/man/8-sudo/">sudo</a>(8), which change the user ID. The following example checks the logfiles without updating the offset and outputs everything to STDOUT. </p>
+<p><code>logcheck</code> can be invoked directly thanks to su(8) or <a href="/docs/linux/man/8-sudo/">sudo</a>(8), which change the user ID. The following example checks the logfiles without updating the offset and outputs everything to STDOUT. </p>
 <p> sudo -u logcheck <code>logcheck</code> -o -t</p>
 <h2>Options</h2>
 <p>A summary of options is included below.</p>

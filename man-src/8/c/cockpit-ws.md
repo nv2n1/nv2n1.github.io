@@ -12,7 +12,7 @@ description: "cockpit-ws – Cockpit web service"
 <dl>
 <dt> <code>cockpit-ws</code> [<code>&#8211;help</code>] [<code>&#8211;port</code>&nbsp;<wbr><i>PORT</i>] [<code>&#8211;no-tls</code>] [<code>&#8211;local-ssh</code>] [<code>&#8211;address</code>&nbsp;<wbr><i>ADDRESS</i>]</dl>
 <h2>Description</h2>
-<dd>The <code>cockpit-ws</code> program is the web service component used for communication between the browser application and various configuration tools and services like <code><a href="/docs/linux/man/8-cockpit-bridge/">cockpit-bridge</a></code>(8). </p>
+<dd>The <code>cockpit-ws</code> program is the web service component used for communication between the browser application and various configuration tools and services like <code>cockpit-bridge</code>(8). </p>
 <p> Users or administrators should never need to start this program as it automatically started by <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) on bootup.</p>
 <h2>Transport Security</h2>
 <p>To specify the TLS certificate the web service should use, simply drop a file with the extension .cert in the /etc/cockpit/ws-certs.d directory. If there are multiple files in this directory, then the highest priority one is chosen after sorting. </p>

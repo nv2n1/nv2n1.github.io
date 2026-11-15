@@ -43,7 +43,7 @@ description: "rdisc – network router discovery daemon"
 <h2>History</h2>
 <p>This program was developed by Sun Microsystems (see copyright notice in source file). It was ported to Linux by Alexey Kuznetsov &lt;kuznet [at] ms2.inr.ac.ru&gt;. It is now maintained by YOSHIFUJI Hideaki &lt;yoshfuji [at] skbuff.net&gt;.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-icmp/">icmp</a></code>(7), <code><a href="/docs/linux/man/7-inet/">inet</a></code>(7), <code><a href="/docs/linux/man/8-ping/">ping</a></code>(8).</p>
+<p><code><a href="/docs/linux/man/7-icmp/">icmp</a></code>(7), <code>inet</code>(7), <code><a href="/docs/linux/man/8-ping/">ping</a></code>(8).</p>
 <h2>References</h2>
 <p>Deering, S.E.,ed &quot;ICMP Router Discovery Messages&quot;, RFC1256, Network Information Center, SRI International, Menlo Park, Calif., September 1991.</p>
 <h2>Security</h2>

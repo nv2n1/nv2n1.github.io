@@ -108,7 +108,7 @@ On Windows Server containers, the processor resource controls are mutually exclu
 <p> <code>-d</code>, <code>&#8211;detach</code>=<i>true</i>|<i>false</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Detached mode: run the container in the background and print the new container ID. The default is&nbsp;<i>false</i>. </p>
 <p> At any time you can run <code>docker ps</code> in the other shell to view a list of the running containers. You can reattach to a detached container with <code>docker attach</code>. </p>
-<p> When attached in the tty mode, you can detach from the container (and leave it running) using a configurable key sequence. The default sequence is CTRL-p CTRL-q. You configure the key sequence using the <code>&#8211;detach-keys</code> option or a configuration file. See <code><a href="/docs/linux/man/5-config-json/">config-json</a>(5)</code> for documentation on using a configuration file. </p>
+<p> When attached in the tty mode, you can detach from the container (and leave it running) using a configurable key sequence. The default sequence is CTRL-p CTRL-q. You configure the key sequence using the <code>&#8211;detach-keys</code> option or a configuration file. See <code>config-json(5)</code> for documentation on using a configuration file. </p>
 <p> <code>&#8211;detach-keys</code>=<i>key</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Override the key sequence for detaching a container;&nbsp;<i>key</i>&nbsp;is a single character from the&nbsp;[a-Z]&nbsp;range, or&nbsp;<code>ctrl</code>&#8211;<i>value</i>, where&nbsp;<i>value</i>&nbsp;is one of:&nbsp;<code>a-z</code>,&nbsp;<code>@</code>,&nbsp;<code>^</code>,&nbsp;<code>[</code>,&nbsp;<code>,</code>, or&nbsp;<code>_</code>. </p>
 <p> <code>&#8211;device</code>=<i>onhost</i>:<i>incontainer</i>[:<i>mode</i>]<br />
@@ -369,12 +369,12 @@ On Windows Server containers, the processor resource controls are mutually exclu
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Tune the host&#8217;s OOM preferences for containers&nbsp;(accepts -1000 to 1000) </p>
 <p> <code>-P</code>, <code>&#8211;publish-all</code>=<i>true</i>|<i>false</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Publish all exposed ports to random ports on the host interfaces. The default is&nbsp;<i>false</i>. </p>
-<p> When set to true publish all exposed ports to the host interfaces. The default is false. If the operator uses -P (or -p) then Docker will make the exposed port accessible on the host and the ports will be available to any client that can reach the host. When using -P, Docker will bind any exposed port to a random port on the host within an <i>ephemeral port range</i> defined by /proc/sys/net/ipv4/ip_local_port_range. To find the mapping between the host ports and the exposed ports, use docker <a href="/docs/linux/man/1-port/">port</a>(1). </p>
+<p> When set to true publish all exposed ports to the host interfaces. The default is false. If the operator uses -P (or -p) then Docker will make the exposed port accessible on the host and the ports will be available to any client that can reach the host. When using -P, Docker will bind any exposed port to a random port on the host within an <i>ephemeral port range</i> defined by /proc/sys/net/ipv4/ip_local_port_range. To find the mapping between the host ports and the exposed ports, use docker port(1). </p>
 <p> <code>-p</code>, <code>&#8211;publish</code> <i>ip</i>:[<i>hostPort</i>]:<i>containerPort</i> | [<i>hostPort</i>:]<i>containerPort</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Publish a container&#8217;s port, or range of ports, to the host. </p>
 <p> Both <i>hostPort</i> and <i>containerPort</i> can be specified as a range. When specifying ranges for both, the number of ports in ranges should be equal. </p>
 <p> Examples: <code>-p 1234-1236:1222-1224</code>, <code>-p 127.0.0.1:$HOSTPORT:$CONTAINERPORT</code>. </p>
-<p> Use docker <a href="/docs/linux/man/1-port/">port</a>(1) to see the actual mapping, e.g. docker port CONTAINER $CONTAINERPORT. </p>
+<p> Use docker port(1) to see the actual mapping, e.g. docker port CONTAINER $CONTAINERPORT. </p>
 <p> <code>&#8211;pid</code>=&quot;&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Set the PID mode for the container<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Default is to create a private PID namespace for the container<br />

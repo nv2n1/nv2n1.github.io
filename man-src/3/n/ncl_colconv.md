@@ -29,7 +29,7 @@ Colconv - Allows a user to convert among the color models RGB, HSV, HLS, and YIQ
  c_yiqrgb
 <h2>Access</h2>To use Colconv or c_colconv routines, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order. 
 
-<h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by <a HREF="/docs/linux/man/4-i1mach/">I1MACH</a>(4)) and then terminates execution. The possible error messages are as follows:
+<h2>Messages</h2>When error conditions are detected, the support routine SETER is called in such a way that it writes a message to the standard error file (as defined by I1MACH(4)) and then terminates execution. The possible error messages are as follows:
 <dl COMPACT><dt>HLSRGB - L out of range
 <dd>Lightness is less than 0. or greater than 100.
 <dt>HLSRGB - S out of range

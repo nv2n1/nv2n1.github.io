@@ -94,7 +94,7 @@ description: "xinetd.conf – Extended Internet Services Daemon configuration fi
 <dt><code>instances</code></p>
 <dd>determines the number of servers that can be simultaneously active for a service (the default is no limit). The value of this attribute can be either a number or <code>UNLIMITED</code> which means that there is no limit.</p>
 <dt><code>nice</code></p>
-<dd>determines the server priority. Its value is a (possibly negative) number; check <a href="/docs/linux/man/3-nice/">nice</a>(3) for more information.</p>
+<dd>determines the server priority. Its value is a (possibly negative) number; check nice(3) for more information.</p>
 <dt><code>server</code></p>
 <dd>determines the program to execute for this service.</p>
 <dt><code>server_args</code></p>
@@ -502,7 +502,7 @@ service unlisted
                     server = / home / user / some_server port = 20020
 }</code></pre>
 <h2>See Also</h2>
-<p><i><a href="//www.systutorials.com/docs/linux/man/1L-xinetd/">xinetd</a>(1L),</i> </p>
+<p><i>xinetd(1L),</i> </p>
 <p> <i><a href="/docs/linux/man/5-xinetd-log/">xinetd.log</a>(5)</i> </p>
 <p> Postel J., <i>Echo Protocol</i>, RFC 862, May 1983 </p>
 <p> Postel J., <i>Discard Protocol</i>, RFC 863, May 1983 </p>

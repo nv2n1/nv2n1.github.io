@@ -272,7 +272,7 @@ _main
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-symbolizer</code> returns 0. Other exit codes imply an internal program error.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-llvm-addr2line/">llvm-addr2line</a>(1)</code></p>
+<p> <code>llvm-addr2line(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>COPYRIGHT</h2>

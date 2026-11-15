@@ -83,6 +83,6 @@ description: "clufter – ccs2pcscmd-needle"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2016 Red Hat, Inc. Licensed under GPLv2+.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/8-pcs/">pcs</a></i>(8), <i>/usr/share/doc/clufter-0.59.5/rgmanager-pacemaker</i>, <i><a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a></i>(5), <i><a href="/docs/linux/man/7-ccs/">ccs</a></i>(7), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
+<p> <i><a href="/docs/linux/man/8-pcs/">pcs</a></i>(8), <i>/usr/share/doc/clufter-0.59.5/rgmanager-pacemaker</i>, <i>cluster.conf</i>(5), <i>ccs</i>(7), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> <i><a href="/docs/linux/man/1-clufter-ccs2pcscmd/">clufter-ccs2pcscmd</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs2pcscmd-flatiron/">clufter-ccs2pcscmd-flatiron</a></i>(1), and perhaps more </p>
 <h2>Index</h2>

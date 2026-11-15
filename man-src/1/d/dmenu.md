@@ -14,7 +14,7 @@ description: "dmenu – dynamic menu"
 <p> <code>dmenu_run</code> &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>dmenu</code> is a dynamic menu for X, which reads a list of newline-separated items from stdin. When the user selects an item and presses Return, their choice is printed to stdout and dmenu terminates. Entering text will narrow the items to those matching the tokens in the input. </p>
-<p> <code>dmenu_run</code> is a script used by <i><a href="/docs/linux/man/1-dwm/">dwm</a></i>(1) which lists programs in the user&#8217;s $PATH and runs the result in their $SHELL.</p>
+<p> <code>dmenu_run</code> is a script used by <i>dwm</i>(1) which lists programs in the user&#8217;s $PATH and runs the result in their $SHELL.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-b</code></p>
@@ -109,5 +109,5 @@ description: "dmenu – dynamic menu"
 <dt>M-l</p>
 <dd> Down</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-dwm/">dwm</a></i>(1), <i><a href="/docs/linux/man/1-stest/">stest</a></i>(1) </p>
+<p> <i>dwm</i>(1), <i><a href="/docs/linux/man/1-stest/">stest</a></i>(1) </p>
 <h2>Index</h2>

@@ -12,7 +12,7 @@ description: "sheep – Distributed Block Storage System for KVM"
 <p><code>sheep [options] [PATH]</code></p>
 <h2>Description</h2>
 <p><code>sheep</code> Sheepdog is a distributed storage system for KVM/QEMU. It provides highly available block level storage volumes to virtual machines. Sheepdog supports advanced volume management features such as snapshot, cloning, and thin provisioning. The architecture of Sheepdog is fully symmetric; there is no central node such as a meta-data server. </p>
-<p> The server daemon is called <a href="/docs/linux/man/8-sheep/">sheep</a>(8). A command line utility is available via <a href="/docs/linux/man/8-collie/">collie</a>(8). KVM/QEMU virtual machines use the sheep daemon via a block driver available in <a href="/docs/linux/man/1-qemu/">qemu</a>(1).</p>
+<p> The server daemon is called <a href="/docs/linux/man/8-sheep/">sheep</a>(8). A command line utility is available via collie(8). KVM/QEMU virtual machines use the sheep daemon via a block driver available in <a href="/docs/linux/man/1-qemu/">qemu</a>(1).</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-p</code><i></i>, <code>&#8211;port</code><i> port</i></p>
@@ -33,6 +33,6 @@ description: "sheep – Distributed Block Storage System for KVM"
 <h2>Files</h2>
 <p><code>/var/lib/sheepdog &#8211; Directory containing block storage information</code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-collie/">collie</a>(8),<a href="/docs/linux/man/1-qemu/">qemu</a>(1),<a href="/docs/linux/man/8-corosync_overview/">corosync_overview</a>(8)</code> </p>
+<p><code>collie(8),<a href="/docs/linux/man/1-qemu/">qemu</a>(1),<a href="/docs/linux/man/8-corosync_overview/">corosync_overview</a>(8)</code> </p>
 <h2>Authors</h2>
 <p>This software is developed by the sheepdog community which may be reached via mailing list at &lt;sheepdog [at] lists.wpkg.org&gt;.</p>

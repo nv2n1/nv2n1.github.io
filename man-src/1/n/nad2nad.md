@@ -72,7 +72,7 @@ description: "nad2nad – North American Datum conversion filter"
 <p> Output data will be in tab separated fields of DMS or grid coordinates in meters or feet. </p>
 <p> Any data after the two input values are echoed after the two output data values.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/1U-cs2cs/">cs2cs</a>(1U), <a href="//www.systutorials.com/docs/linux/man/1U-proj/">proj</a>(1U),</code><br />
+<p> <code>cs2cs(1U), proj(1U),</code><br />
  <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).</p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://www.remotesensing.org/proj">http://www.remotesensing.org/proj</a> </p>

@@ -170,7 +170,7 @@ fatal_error(const char *msg)<br />
 <dd> And this is your standard <i><a href="/docs/linux/man/2-poll/">poll</a></i>(2) backend. It&#8217;s more complicated than select, but handles sparse fds better and has no artificial limit on the number of fds you can use (except it will slow down considerably with a lot of inactive fds). It scales similarly to select, i.e. O(total_fds). See the entry for <tt>&quot;EVBACKEND_SELECT&quot;</tt>, above, for performance tips. </p>
 <p> This backend maps <tt>&quot;EV_READ&quot;</tt> to <tt>&quot;POLLIN | POLLERR | POLLHUP&quot;</tt>, and <tt>&quot;EV_WRITE&quot;</tt> to <tt>&quot;POLLOUT | POLLERR | POLLHUP&quot;</tt>.</p>
 <dt>EVBACKEND_EPOLL (value 4, Linux)</p>
-<dd> For few fds, this backend is a bit little slower than poll and select, but it scales phenomenally better. While poll and select usually scale like O(total_fds) where n is the total number of fds (or the highest fd), epoll scales either <a href="/docs/linux/man/1-o/">O</a>(1) or O(active_fds). </p>
+<dd> For few fds, this backend is a bit little slower than poll and select, but it scales phenomenally better. While poll and select usually scale like O(total_fds) where n is the total number of fds (or the highest fd), epoll scales either O(1) or O(active_fds). </p>
 <p> The epoll mechanism deserves honorable mention as the most misdesigned of the more advanced event mechanisms: mere annoyances include silently dropping file descriptors, requiring a system call per change per file descriptor (and unnecessary guessing of parameters), problems with dup and so on. The biggest issue is fork races, however &#8211; if a program forks then <i>both</i> parent and child process have to recreate the epoll set, which can take considerable time (one syscall per file descriptor) and is of course hard to detect. </p>
 <p> Epoll is also notoriously buggy &#8211; embedding epoll fds <i>should</i> work, but of course <i>doesn&#8217;t</i>, and epoll just loves to report events for totally <i>different</i> file descriptors (even already closed ones, so one cannot even remove them from the set) than registered in the set (especially on <font SIZE="-1">SMP</font> systems). Libev tries to counter these spurious notifications by employing an additional generation counter and comparing that against the events to filter out spurious ones, recreating the set when required. </p>
 <p> While stopping, setting and starting an I/O watcher in the same iteration will result in some caching, there is still a system call per such incident (because the same <i>file descriptor</i> could point to a different <i>file description</i> now), so its best to avoid that. Also, <tt>&quot;dup ()&quot;</tt>&#8216;ed file descriptors might not work very well if you register events for both file descriptors. </p>
@@ -651,7 +651,7 @@ callback(loop, timer, EV_TIMEOUT);</p>
 <p> When starting the timeout, calculate the timeout value and put the timeout at the <i>end</i> of the list. </p>
 <p> Then use an <tt>&quot;ev_timer&quot;</tt> to fire when the timeout at the <i>beginning</i> of the list is expected to fire (for example, using the technique #3). </p>
 <p> When there is some activity, remove the timer from the list, recalculate the timeout, append it to the end of the list again, and make sure to update the <tt>&quot;ev_timer&quot;</tt> if it was taken from the beginning of the list. </p>
-<p> This way, one can manage an unlimited number of timeouts in <a href="/docs/linux/man/1-o/">O</a>(1) time for starting, stopping and updating the timers, at the expense of a major complication, and having to use a constant timeout. The constant timeout ensures that the list stays sorted.</dl>
+<p> This way, one can manage an unlimited number of timeouts in O(1) time for starting, stopping and updating the timers, at the expense of a major complication, and having to use a constant timeout. The constant timeout ensures that the list stays sorted.</dl>
 <p> So which method the best? </p>
 <p> Method #2 is a simple no-brain-required solution that is adequate in most situations. Method #3 requires a bit more thinking, but handles many cases better, and isn&#8217;t very complicated either. In most case, choosing either one is fine, with #3 being better in typical situations. </p>
 <p> Method #1 is almost always a bad idea, and buys you nothing. Method #4 is rather complicated, but extremely efficient, something that really pays off after the first million or so of active timers, i.e. it&#8217;s usually overkill :) </p>
@@ -1693,7 +1693,7 @@ pthread_mutex_unlock(&amp;u-&gt;lock);</p>
 #define EV_USE_SELECT 1
 #define EV_SELECT_IS_WINSOCKET 1 /* forces EV_SELECT_USE_FD_SET, too */
 </code></pre>
-<p> Note that winsockets handling of fd sets is <a href="/docs/linux/man/n-o/">O</a>(n), so you can easily get a complexity in the O(nAX) range when using win32.</p>
+<p> Note that winsockets handling of fd sets is O(n), so you can easily get a complexity in the O(nAX) range when using win32.</p>
 <dt>Limited number of file descriptors</p>
 <dd> Windows has numerous arbitrary (and low) limits on things. </p>
 <p> Early versions of winsocket&#8217;s select only supported waiting for a maximum of <tt>64</tt> handles (probably owning to the fact that all windows kernels can only wait for <tt>64</tt> things at the same time internally; Microsoft recommends spawning a chain of threads and wait for 63 handles and the previous thread in each. Sounds great!). </p>
@@ -1716,27 +1716,27 @@ pthread_mutex_unlock(&amp;u-&gt;lock);</p>
 <p> If you know of other additional requirements drop me a note.</p>
 <h2>ALGORITHMIC COMPLEXITIES</h2>
 <p> In this section the complexities of (many of) the algorithms used inside libev will be documented. For complexity discussions about backends see the documentation for <tt>&quot;ev_default_init&quot;</tt>. </p>
-<p> All of the following are about amortised time: If an array needs to be extended, libev needs to realloc and move the whole array, but this happens asymptotically rarer with higher number of elements, so <a href="/docs/linux/man/1-o/">O</a>(1) might mean that libev does a lengthy realloc operation in rare cases, but on average it is much faster and asymptotically approaches constant time.</p>
+<p> All of the following are about amortised time: If an array needs to be extended, libev needs to realloc and move the whole array, but this happens asymptotically rarer with higher number of elements, so O(1) might mean that libev does a lengthy realloc operation in rare cases, but on average it is much faster and asymptotically approaches constant time.</p>
 <dl>
 <dt>Starting and stopping timer/periodic watchers: O(log skipped_other_timers)</p>
 <dd> This means that, when you have a watcher that triggers in one hour and there are 100 watchers that would trigger before that, then inserting will have to skip roughly seven (<tt>&quot;ld 100&quot;</tt>) of these watchers.</p>
 <dt>Changing timer/periodic watchers (by autorepeat or calling again): O(log skipped_other_timers)</p>
 <dd> That means that changing a timer costs less than removing/adding them, as only the relative motion in the event queue has to be paid for.</p>
-<dt>Starting io/check/prepare/idle/signal/child/fork/async watchers: <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<dt>Starting io/check/prepare/idle/signal/child/fork/async watchers: O(1)</p>
 <dd> These just add the watcher into an array or at the head of a list.</p>
-<dt>Stopping check/prepare/idle/fork/async watchers: <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<dt>Stopping check/prepare/idle/fork/async watchers: O(1)</p>
 <dd>
 <dt>Stopping an io/signal/child watcher: O(number_of_watchers_for_this_(fd/signal/pid % <font SIZE="-1">EV_PID_HASHSIZE</font>))</p>
 <dd> These watchers are stored in lists, so they need to be walked to find the correct watcher to remove. The lists are usually short (you don&#8217;t usually have many watchers waiting for the same fd or signal: one is typical, two is rare).</p>
-<dt>Finding the next timer in each loop iteration: <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<dt>Finding the next timer in each loop iteration: O(1)</p>
 <dd> By virtue of using a binary or 4-heap, the next timer is always found at a fixed position in the storage array.</p>
 <dt>Each change on a file descriptor per loop iteration: O(number_of_watchers_for_this_fd)</p>
 <dd> A change means an I/O watcher gets started or stopped, which requires libev to recalculate its status (and possibly tell the kernel, depending on backend and whether <tt>&quot;ev_io_set&quot;</tt> was used).</p>
-<dt>Activating one watcher (putting it into the pending state): <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<dt>Activating one watcher (putting it into the pending state): O(1)</p>
 <dd>
 <dt>Priority handling: O(number_of_priorities)</p>
-<dd> Priorities are implemented by allocating some space for each priority. When doing priority-based operations, libev usually has to linearly search all the priorities, but starting/stopping and activating watchers becomes <a href="/docs/linux/man/1-o/">O</a>(1) with respect to priority handling.</p>
-<dt>Sending an ev_async: <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<dd> Priorities are implemented by allocating some space for each priority. When doing priority-based operations, libev usually has to linearly search all the priorities, but starting/stopping and activating watchers becomes O(1) with respect to priority handling.</p>
+<dt>Sending an ev_async: O(1)</p>
 <dd>
 <dt>Processing ev_async_send: O(number_of_async_watchers)</p>
 <dd>

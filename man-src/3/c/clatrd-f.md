@@ -99,7 +99,7 @@ description: "clatrd.f –"
 <dd>
 <pre> If UPLO = 'U', the matrix Q is represented as a product of elementary
  reflectors
- Q = <a href="//www.systutorials.com/docs/linux/man/n-H/">H</a>(n) H(n-1) . . . H(n-nb+1).
+ Q = H(n) H(n-1) . . . H(n-nb+1).
  Each H(i) has the form
  H(i) = I - tau * v * v**H
  where tau is a complex scalar, and v is a complex vector with

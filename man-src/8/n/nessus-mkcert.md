@@ -15,7 +15,7 @@ description: "nessus-mkcert – Creates a server certificate"
 <h2>Options</h2>
 <p><i>-q</i> quickly generates a new certificate, without asking any question</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-nessusd/">nessusd</a></code>(8),&nbsp;<wbr><code><a href="/docs/linux/man/1-nessus-mkcert-client/">nessus-mkcert-client</a></code>(1),&nbsp;<wbr><code><a href="/docs/linux/man/1-openssl/">openssl</a>(1)</code> </p>
+<p><code><a href="/docs/linux/man/8-nessusd/">nessusd</a></code>(8),&nbsp;<wbr><code><a href="/docs/linux/man/1-nessus-mkcert-client/">nessus-mkcert-client</a></code>(1),&nbsp;<wbr><code>openssl(1)</code> </p>
 <h2>More Information About The Nessus Project</h2>
 <p>The canonical places where you will find more information about the Nessus project are:</p>
 <dl>

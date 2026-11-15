@@ -15,7 +15,7 @@ description: "tnameserv – Interface Definition Language (IDL)."
 <dd>The initial port where the naming service listens for the bootstrap protocol used to implement the ORB <code>resolve_initial_references</code> and <code>list_initial_references</code> methods.</dl>
 <h2>Description</h2>
 <p>Java IDL includes the Object Request Broker Daemon (ORBD). ORBD is a daemon process that contains a Bootstrap Service, a Transient Naming Service, a Persistent Naming Service, and a Server Manager. The Java IDL tutorials all use ORBD, but you can substitute the <code>tnameserv</code> command for the <code>orbd</code> command in any of the examples that use a Transient Naming Service. </p>
-<p> See <a href="/docs/linux/man/1-orbd/">orbd</a>(1) or Naming Service at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html">http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html</a> </p>
+<p> See orbd(1) or Naming Service at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html">http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html</a> </p>
 <p> The CORBA Common Object Services (COS) Naming Service provides a tree-structure directory for object references similar to a file system that provides a directory structure for files. The Transient Naming Service provided with Java IDL, <code>tnameserv</code>, is a simple implementation of the COS Naming Service specification. </p>
 <p> Object references are stored in the name space by name and each object reference-name pair is called a name binding. Name bindings can be organized under naming contexts. Naming contexts are name bindings and serve the same organizational function as a file system subdirectory. All bindings are stored under the initial naming context. The initial naming context is the only persistent binding in the name space. The rest of the name space is lost when the Java IDL naming service process stops and restarts. </p>
 <p> For an applet or application to use COS naming, its ORB must know the port of a host running a naming service or have access to an initial naming context string for that naming service. The naming service can either be the Java IDL naming service or another COS-compliant naming service.</p>
@@ -139,5 +139,5 @@ description: "tnameserv – Interface Definition Language (IDL)."
 <h2>See Also</h2>
 <dl COMPACT>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-orbd/">orbd</a>(1) </p>
+<dd>orbd(1) </p>
 </dl>

@@ -24,7 +24,7 @@ description: "check-module – program to check gnulib modules."
 <h2>BUGS</h2>
 <p> Report bugs to &lt;bug-gnulib [at] gnu.org&gt;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gnulib/">gnulib</a></code>(1). </p>
+<p> <code>gnulib</code>(1). </p>
 <h2>AUTHOR</h2>
 <p> check-module was written by the Free Software Foundation and others (sources of various origins). </p>
 <p> This manual page was written by Daniel Baumann &lt;daniel [at] debian.org&gt;, for the Debian project (but may be used by others). </p>

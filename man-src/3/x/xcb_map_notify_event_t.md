@@ -34,6 +34,6 @@ description: "xcb_map_notify_event_t – a window was mapped"
 <dd>Window managers should ignore this window if <i>override_redirect</i> is 1.</dl>
 <h2>Description</h2>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb_generic_event_t/">xcb_generic_event_t</a></code>(3), <code><a href="/docs/linux/man/3-xcb_map_window/">xcb_map_window</a></code>(3)</p>
+<p><code>xcb_generic_event_t</code>(3), <code><a href="/docs/linux/man/3-xcb_map_window/">xcb_map_window</a></code>(3)</p>
 <h2>Author</h2>
 <p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>

@@ -68,5 +68,5 @@ description: "bidiv – bidirectional text filter"
 <p> Please send bug reports and comments to nyh [at] math.technion.ac.il. </p>
 <p> The latest version of this software can be found in <code><a href="ftp://ftp.ivrix.org.il/pub/ivrix/src/cmdline">ftp://ftp.ivrix.org.il/pub/ivrix/src/cmdline</a></code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code><a href="/docs/linux/man/3-fribidi/">fribidi</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code>fribidi</code>(3) </p>
 <h2>Index</h2>

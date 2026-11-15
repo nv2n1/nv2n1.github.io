@@ -24,5 +24,5 @@ description: "qorder – exchange order of two pbs batch jobs in a queue."
 <p> Upon successful processing of all the operands presented to the qorder command, the exit status will be a value of zero. </p>
 <p> If the qorder command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B), <a href="//www.systutorials.com/docs/linux/man/1B-qmove/">qmove</a>(1B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_orderjob/">pbs_orderjob</a>(3B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_movejob/">pbs_movejob</a>(3B) </p>
+<p> qsub(1B), qmove(1B), pbs_orderjob(3B), pbs_movejob(3B) </p>
 <h2>Index</h2>

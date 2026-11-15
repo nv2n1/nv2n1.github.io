@@ -140,7 +140,7 @@ handler(_State, Payload) -&gt;
  FaultString = lists:flatten(io_lib:format(&quot;Unknown call: ~p&quot;, [Payload])),
  {false, {response, {fault, -1, FaultString}}}.
 fib(0) -&gt; 1;
-<a href="//www.systutorials.com/docs/linux/man/1-fib/">fib</a>(1) -&gt; 1;
+fib(1) -&gt; 1;
 fib(N) -&gt; fib(N-1)+fib(N-2).</pre>
 <p>and how it can be called: </p>
 <pre>1&gt; xmlrpc:call({127, 0, 0, 1}, 4567, &quot;/&quot;, {call, fib, [0]}). 

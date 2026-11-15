@@ -17,5 +17,5 @@ description: "detect_digi_driver – Detects whether the specified digital sound
 <h2>RETURN VALUE</h2>
 <p> Returns the maximum number of voices that the driver can provide, or zero if the hardware is not present. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_sound/">install_sound</a></code>(3), <code><a href="/docs/linux/man/3-reserve_voices/">reserve_voices</a></code>(3) </p>
+<p> <code>install_sound</code>(3), <code><a href="/docs/linux/man/3-reserve_voices/">reserve_voices</a></code>(3) </p>
 <h2>Index</h2>

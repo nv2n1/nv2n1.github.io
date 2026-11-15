@@ -15,7 +15,7 @@ description: "install – copy files and set attributes"
  <code>install</code> [<i>,OPTION/</i>]&#8230; <i>,-t DIRECTORY SOURCE/</i>&#8230;<br />
  <code>install</code> [<i>,OPTION/</i>]&#8230; <i>,-d DIRECTORY/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> This install program copies files (often just compiled) into destination locations you choose. If you want to download and install a ready-to-use package on a GNU/Linux system, you should instead be using a package manager like <a href="/docs/linux/man/1-yum/">yum</a>(1) or <a href="/docs/linux/man/1-apt-get/">apt-get</a>(1). </p>
+<p> This install program copies files (often just compiled) into destination locations you choose. If you want to download and install a ready-to-use package on a GNU/Linux system, you should instead be using a package manager like yum(1) or apt-get(1). </p>
 <p> In the first three forms, copy SOURCE to DEST or multiple SOURCE(s) to the existing DIRECTORY, while setting permission modes and owner/group. In the 4th form, create all components of the given DIRECTORY(ies). </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

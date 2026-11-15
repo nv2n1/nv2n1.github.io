@@ -12,7 +12,7 @@ description: "png – Portable Network Graphics (PNG) format"
 <p>PNG (Portable Network Graphics) is an extensible file format for the lossless, portable, well-compressed storage of raster images. PNG provides a patent-free replacement for GIF and can also replace many common uses of TIFF. Indexed-color, grayscale, and truecolor images are supported, plus an optional alpha channel. Sample depths range from 1 to 16 bits.<br />
  PNG is designed to work well in online viewing applications, such as the World Wide Web, so it is fully streamable with a progressive display option. PNG is robust, providing both full file integrity checking and fast, simple detection of common transmission errors. Also, PNG can store gamma and chromaticity data for improved color matching on heterogeneous platforms. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-libpng/">libpng</a>(3),</code> <a href="/docs/linux/man/3-libpngpf/">libpngpf</a>(3),<code> <a href="/docs/linux/man/3-zlib/">zlib</a>(3),</code> <a href="/docs/linux/man/5-deflate/">deflate</a>(5),and<code> <a href="/docs/linux/man/5-zlib/">zlib</a>(5)</code> </p>
+<p><code><a href="/docs/linux/man/3-libpng/">libpng</a>(3),</code> <a href="/docs/linux/man/3-libpngpf/">libpngpf</a>(3),<code> <a href="/docs/linux/man/3-zlib/">zlib</a>(3),</code> deflate(5),and<code> zlib(5)</code> </p>
 <p> PNG specification (second edition), November 2003:</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&lt;<a rel="nofollow" href="http://www.w3.org/TR/2003/REC-PNG-20031110/">http://www.w3.org/TR/2003/REC-PNG-20031110/</a> PNG 1.2 specification, July 1999:</p>

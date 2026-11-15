@@ -65,7 +65,7 @@ description: "qblog.h –"
 <p>enum qb_log_filter_type { QB_LOG_FILTER_FILE, QB_LOG_FILTER_FUNCTION, QB_LOG_FILTER_FORMAT, QB_LOG_FILTER_FILE_REGEX, QB_LOG_FILTER_FUNCTION_REGEX, QB_LOG_FILTER_FORMAT_REGEX }</p>
 <p>enum qb_log_filter_conf { QB_LOG_FILTER_ADD, QB_LOG_FILTER_REMOVE, QB_LOG_FILTER_CLEAR_ALL, QB_LOG_TAG_SET, QB_LOG_TAG_CLEAR, QB_LOG_TAG_CLEAR_ALL }</p>
 <p>Functions<br />
- struct <code>qb_log_callsite</code> <code>__attribute__</code> ((<a href="/docs/linux/man/8-aligned/">aligned</a>(8))) </p>
+ struct <code>qb_log_callsite</code> <code>__attribute__</code> ((aligned(8))) </p>
 <p> void <code>qb_log_real_</code> (struct <code>qb_log_callsite</code> *cs,&#8230;)<br />
  <i>Internal function: use </i><code>qb_log()</code> or <code>qb_logt()</code><br />
  void <code>qb_log_real_va_</code> (struct <code>qb_log_callsite</code> *cs, va_list ap) </p>
@@ -312,14 +312,14 @@ enum qb_log_target_slot __attribute__</code></pre>
 <h3>#define QB_LOG_CTL2_S(a) ((<code>qb_log_ctl2_arg_t</code>) { .s = (a) })</h3>
 <h3>#define QB_LOG_INIT_DATA(name)</h3>
 <p><code>Value:</code> </p>
-<pre>void name(void); void name(void) { if (__start___verbose != __stop___verbose) {<a href="//www.systutorials.com/docs/linux/man/1-assert/">assert</a>(1);} } void __attribute__ ((constructor)) name(void);</pre>
+<pre>void name(void); void name(void) { if (__start___verbose != __stop___verbose) {assert(1);} } void __attribute__ ((constructor)) name(void);</pre>
 <h3>#define QB_LOG_MAX_LEN 512</h3>
 <h3>#define QB_LOG_STRERROR_MAX_LEN 128</h3>
 <h3>#define QB_LOG_TAG_LIBQB_MSG (1 &lt;&lt; <code>QB_LOG_TAG_LIBQB_MSG_BIT</code>)</h3>
 <h3>#define QB_LOG_TAG_LIBQB_MSG_BIT 31</h3>
 <h3>#define qb_logt(<code>priority</code>, <code>tags</code>, fmt, args&#8230;)</h3>
 <p><code>Value:</code> </p>
-<pre>do { static struct qb_log_callsite descriptor __attribute__((section(&quot;__verbose&quot;), <a href="//www.systutorials.com/docs/linux/man/8-aligned/">aligned</a>(8))) = { __func__, __FILE__, fmt, priority, __LINE__, 0, tags }; \
+<pre>do { static struct qb_log_callsite descriptor __attribute__((section(&quot;__verbose&quot;), aligned(8))) = { __func__, __FILE__, fmt, priority, __LINE__, 0, tags }; \
  qb_log_real_(&amp;descriptor, ##args); } while(0)</pre>
 <p>This is the function to generate a log message if you want to manually add tags. </p>
 <p> <code>Parameters:</code></p>
@@ -441,7 +441,7 @@ enum qb_log_target_slot __attribute__</code></pre>
 <dt><i>QB_LOG_STATE_ENABLED </i></p>
 <dd></dl>
 <h2>Function Documentation</h2>
-<h3>struct <code>qb_log_callsite</code> __attribute__ ((<a href="/docs/linux/man/8-aligned/">aligned</a>(8)))</h3>
+<h3>struct <code>qb_log_callsite</code> __attribute__ ((aligned(8)))</h3>
 <h3>void qb_log_blackbox_print_from_file (const char *filename)</h3>
 <p>Read the blackbox for file and print it out.</p>
 <h3>ssize_t qb_log_blackbox_write_to_file (const char *filename)</h3>

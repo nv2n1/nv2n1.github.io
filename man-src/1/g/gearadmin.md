@@ -37,7 +37,7 @@ description: "gearadmin – Gearmand Documentation, http://gearman.info/"
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://gearman.info/">http://gearman.info/</a></i></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/8-gearmand/">gearmand</a>(8)</i> <i><a href="/docs/linux/man/3-libgearman/">libgearman</a>(3)</i></p>
+<p> <i><a href="/docs/linux/man/8-gearmand/">gearmand</a>(8)</i> <i>libgearman(3)</i></p>
 <h2>AUTHOR</h2>
 <p> Data Differential <a rel="nofollow" href="http://www.datadifferential.com/">http://www.datadifferential.com/</a></p>
 <h2>COPYRIGHT</h2>

@@ -47,7 +47,7 @@ description: "eggdrop – an IRC bot"
 <dt><code>EGG_LANGDIR</code></p>
 <dd> Specifies the directory where all your language files are stored. The default is ./language.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), <a href="/docs/linux/man/1-irc/">irc</a>(1), <a href="/docs/linux/man/1-ircii/">ircII</a>(1), <a href="/docs/linux/man/8-ircd/">ircd</a>(8) </p>
+<p> <a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), irc(1), ircII(1), <a href="/docs/linux/man/8-ircd/">ircd</a>(8) </p>
 <p> There is extensive <code>online documentation.</code> Once you get the bot running, open a DCC chat with it, and type: <code>.help</code> </p>
 <p> In addition, the files in the <code>doc/</code> directory provide <code>detailed information</code> about how Eggdrop works and how to use it.</p>
 <h2>AUTHORS</h2>

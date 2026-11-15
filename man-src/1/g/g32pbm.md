@@ -35,7 +35,7 @@ description: "g32pbm – convert a Group 3 fax file into a portable bitmap"
 <p> Scaling is too slow. </p>
 <p> Turning is too slow (and not yet fully implemented either).</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), <a href="/docs/linux/man/1-g3cat/">g3cat</a>(1), <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8), <a href="/docs/linux/man/1-mgetty/">mgetty</a>(1)</p>
+<p> <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), <a href="/docs/linux/man/1-g3cat/">g3cat</a>(1), <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8), mgetty(1)</p>
 <h2>AUTHOR</h2>
 <p> <i>g32pbm</i> is Copyright (C) 1993 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. It is similar to the <i>g3topbm</i> program in Jef Poskanzers <i>pbmplus</i> package, but it&#8217;s a complete re-write. No code is copied. </p>
 <h2>Index</h2>

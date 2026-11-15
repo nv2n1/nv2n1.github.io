@@ -75,7 +75,7 @@ description: "ieee1284_nibble_read, ieee1284_compat_write, ieee1284_byte_read, i
 <p> If any bytes are successfully transferred, that number is returned. An error is returned only if no bytes are transferred. </p>
 <p> For host-to-peripheral transfers, all data is at the peripheral by the time the call returns.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ieee1284_ecp_fwd_to_rev/">ieee1284_ecp_fwd_to_rev</a></code>(3)</p>
+<p> <code>ieee1284_ecp_fwd_to_rev</code>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>

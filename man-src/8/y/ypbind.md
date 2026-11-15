@@ -82,6 +82,6 @@ After=NetworkManager-wait-online.service</code></pre>
 <dl>
 <dd>contains the process id of the currently running <code>ypbind</code> master process.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code><a href="/docs/linux/man/1-domainname/">domainname</a></code>(1), <code><a href="/docs/linux/man/5-yp-conf/">yp.conf</a></code>(5), <code><a href="/docs/linux/man/8-ypdomainname/">ypdomainname</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-ypset/">ypset</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code><a href="/docs/linux/man/1-domainname/">domainname</a></code>(1), <code><a href="/docs/linux/man/5-yp-conf/">yp.conf</a></code>(5), <code>ypdomainname</code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-ypset/">ypset</a></code>(8)</p>
 <h2>Author</h2>
 <p><code>ypbind-mt</code> was written by Thorsten Kukuk &lt;kukuk [at] thkukuk.de&gt;.</p>

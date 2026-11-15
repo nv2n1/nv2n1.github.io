@@ -11,7 +11,7 @@ description: "iconvconfig – create iconv module configuration cache"
 <h2>Synopsis</h2>
 <p><code>iconvconfig</code> [<i>options</i>] [<i>directory</i>]&#8230;</p>
 <h2>Description</h2>
-<p>The <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3) function internally uses <i>gconv</i> modules to convert to and from a character set. A configuration file is used to determine the needed modules for a conversion. Loading and parsing such a configuration file would slow down programs that use <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3), so a caching mechanism is employed. </p>
+<p>The <code>iconv</code>(3) function internally uses <i>gconv</i> modules to convert to and from a character set. A configuration file is used to determine the needed modules for a conversion. Loading and parsing such a configuration file would slow down programs that use <code>iconv</code>(3), so a caching mechanism is employed. </p>
 <p> The <code>iconvconfig</code> program reads iconv module configuration files and writes a fast-loading gconv module configuration cache file. </p>
 <p> In addition to the system provided gconv modules, the user can specify custom gconv module directories with the environment variable <code>GCONV_PATH</code>. However, iconv module configuration caching is used only when the environment variable <code>GCONV_PATH</code> is not set.</p>
 <h2>Options</h2>
@@ -39,6 +39,6 @@ description: "iconvconfig – create iconv module configuration cache"
 <dt><i>/usr/lib/gconv/gconv-modules.cache</i></p>
 <dd>Usual system gconv module configuration cache.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code>iconv</code>(3)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

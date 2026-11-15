@@ -29,7 +29,7 @@ description: "repotool – query or manipulate a CVS, Subversion, git, bzr, hg, 
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> This program uses the $TMPDIR environment variable, defaulting to /tmp if it is not set.</p>
 <h2>REQUIREMENTS</h2>
-<p> The export action is a wrapper around either native export facilities or the following engines: <code><a href="/docs/linux/man/1-cvs-fast-export/">cvs-fast-export</a></code>(1) (for CVS), <code><a href="/docs/linux/man/1-svnadmin/">svnadmin</a></code>(1) (for SVN), <code><a href="/docs/linux/man/1-hg-fast-export-py/">hg-fast-export.py</a></code>(1) (for hg). You must have the appropriate engine in your $PATH for whatever kind of repository you are streaming.</p>
+<p> The export action is a wrapper around either native export facilities or the following engines: <code>cvs-fast-export</code>(1) (for CVS), <code><a href="/docs/linux/man/1-svnadmin/">svnadmin</a></code>(1) (for SVN), <code>hg-fast-export.py</code>(1) (for hg). You must have the appropriate engine in your $PATH for whatever kind of repository you are streaming.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-reposurgeon/">reposurgeon</a></code>(1).</p>
 <h2>AUTHOR</h2>

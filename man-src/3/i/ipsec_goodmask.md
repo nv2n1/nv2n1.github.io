@@ -15,11 +15,11 @@ description: "ipsec_goodmask, ipsec_masktobits, ipsec_bitstomask – check if In
  <code>int masktobits(struct in_addr mask);</code><br />
  <code>struct in_addr bitstomask(int n);</code></p>
 <h2>DESCRIPTION</h2>
-<p> These functions are obsolete; see <i><a href="/docs/linux/man/3-ipsec_masktocount/">ipsec_masktocount</a></i>(3) for a partial replacement. </p>
+<p> These functions are obsolete; see <i>ipsec_masktocount</i>(3) for a partial replacement. </p>
 <p> <i>Goodmask</i> reports whether the subnet <i>mask</i> is a valid one, i.e. consists of a (possibly empty) sequence of <code>1</code>s followed by a (possibly empty) sequence of <code>0</code>s. <i>Masktobits</i> takes a (valid) subnet mask and returns the number of <code>1</code> bits in it. <i>Bitstomask</i> reverses this, returning the subnet mask corresponding to bit count <i>n</i>. </p>
 <p> All masks are in network byte order.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-inet/">inet</a>(3), <a href="/docs/linux/man/3-ipsec_atosubnet/">ipsec_atosubnet</a>(3)</p>
+<p> inet(3), ipsec_atosubnet(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> <i>Masktobits</i> returns <code>-1</code> for an invalid mask. <i>Bitstomask</i> returns an all-zeros mask for a negative or out-of-range <i>n</i>.</p>
 <h2>HISTORY</h2>

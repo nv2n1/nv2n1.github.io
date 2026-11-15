@@ -21,4 +21,4 @@ struct wl_display *wl_display_connect_to_fd(int fd);</code></pre>
 <h2>Return Value</h2>
 <p><code>wl_display_connect</code> and <code>wl_display_connect_to_fd</code> return a new display context object or NULL on failure. <i>errno</i> is set correspondingly.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-wayland-client/">wayland-client</a></code>(7), <code><a href="/docs/linux/man/3-wl_display_disconnect/">wl_display_disconnect</a></code>(3), <code><a href="/docs/linux/man/3-wl_display_iterate/">wl_display_iterate</a></code>(3) </p>
+<p><code>wayland-client</code>(7), <code><a href="/docs/linux/man/3-wl_display_disconnect/">wl_display_disconnect</a></code>(3), <code>wl_display_iterate</code>(3) </p>

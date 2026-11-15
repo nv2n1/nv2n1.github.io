@@ -131,11 +131,11 @@ description: "zarafa-server.cfg – The Zarafa configuration file"
 <p> Default: <i>512</i></dl>
 <p> <code>license_socket</code></p>
 <dl>
-<dd>Path to the <code><a href="/docs/linux/man/1-zarafa-licensed/">zarafa-licensed</a></code>(1) service. </p>
+<dd>Path to the <code>zarafa-licensed</code>(1) service. </p>
 <p> Default: <i>/var/run/zarafa-licensed</i></dl>
 <p> <code>license_timeout</code></p>
 <dl>
-<dd>Time (in seconds) to wait for a connection to the <code><a href="/docs/linux/man/1-zarafa-licensed/">zarafa-licensed</a></code>(1) before terminating the request. </p>
+<dd>Time (in seconds) to wait for a connection to the <code>zarafa-licensed</code>(1) before terminating the request. </p>
 <p> Default: <i>10</i></dl>
 <h2>Explanation Of The Logging Settings Parameters</h2>
 <p><code>log_method</code></p>
@@ -143,7 +143,7 @@ description: "zarafa-server.cfg – The Zarafa configuration file"
 <dd>The method which should be used for logging. Valid values are: </p>
 <p> <i>syslog</i></p>
 <dl>
-<dd>Use the Linux system log. All messages will be written to the mail facility. See also <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5).</dl>
+<dd>Use the Linux system log. All messages will be written to the mail facility. See also <code>syslog.conf</code>(5).</dl>
 <p> <i>file</i></p>
 <dl>
 <dd>Log to a file. The filename will be specified in <code>log_file</code>.</dl>
@@ -170,7 +170,7 @@ description: "zarafa-server.cfg – The Zarafa configuration file"
 <dd>The method which should be used for logging. Valid values are: </p>
 <p> <i>syslog</i></p>
 <dl>
-<dd>Use the Linux system log. All messages will be written to the authpriv facility. See also <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5).</dl>
+<dd>Use the Linux system log. All messages will be written to the authpriv facility. See also <code>syslog.conf</code>(5).</dl>
 <p> <i>file</i></p>
 <dl>
 <dd>Log to a file. The filename will be specified in <code>log_file</code>.</dl>

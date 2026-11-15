@@ -37,6 +37,6 @@ description: "transmission – a bittorrent client"
 <h2>AUTHORS</h2>
 <p> An -nosplit <code>transmission</code> was written by An Charles Kerr , An Josh Elsasser , An Eric Petit , and An Mitchell Livingston .</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-transmissioncli/">transmissioncli</a>(1), transmission-daemon1, transmission-remote1 </p>
+<p> transmissioncli(1), transmission-daemon1, transmission-remote1 </p>
 <p> <a rel="nofollow" href="http://www.transmissionbt.com/">http://www.transmissionbt.com/</a> </p>
 <h2>Index</h2>

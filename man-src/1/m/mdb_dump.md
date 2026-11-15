@@ -24,7 +24,7 @@ description: "mdb_dump – LMDB environment export tool"
 <dt><code>-n</code></p>
 <dd> Dump an LMDB database which does not use subdirectories.</p>
 <dt><code>-p</code></p>
-<dd> If characters in either the key or data items are printing characters (as defined by <a href="/docs/linux/man/3-isprint/">isprint</a>(3)), output them directly. This option permits users to use standard text editors and tools to modify the contents of databases. </p>
+<dd> If characters in either the key or data items are printing characters (as defined by isprint(3)), output them directly. This option permits users to use standard text editors and tools to modify the contents of databases. </p>
 <p> Note: different systems may have different notions about what characters are considered printing characters, and databases dumped in this manner may be less portable to external systems.</p>
 <dt><code>-a</code></p>
 <dd> Dump all of the subdatabases in the environment.</p>

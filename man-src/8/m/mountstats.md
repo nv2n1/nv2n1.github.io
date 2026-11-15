@@ -58,6 +58,6 @@ description: "mountstats – Displays various NFS client per-mount statistics"
 <dt><code>/proc/self/mountstats</code></p>
 <dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-iostat/">iostat</a></code>(8), <code><a href="/docs/linux/man/8-nfsiostat/">nfsiostat</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></code>(8)</p>
+<p><code>iostat</code>(8), <code><a href="/docs/linux/man/8-nfsiostat/">nfsiostat</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></code>(8)</p>
 <h2>Author</h2>
 <p>Chuck Lever &lt;chuck.lever [at] oracle.com&gt;</p>

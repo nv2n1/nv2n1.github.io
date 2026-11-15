@@ -33,7 +33,7 @@ description: "tcpick – tcp stream sniffer and connection tracker"
 <dt><code>-r &#8211;readfile</code></p>
 <dd>reads raw packets from a file written with <code>tcpdump -w</code> instead of using a network device.</p>
 <dt><code> &quot;filter&quot; </code></p>
-<dd>This is the filter for the capturer engine. You can set it in the same way of setting the <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1)</code> filter. Read <a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1) manpage for other explanations.</p>
+<dd>This is the filter for the capturer engine. You can set it in the same way of setting the <code>tcpdump(1)</code> filter. Read tcpdump(1) manpage for other explanations.</p>
 <dt><code>-a</code></p>
 <dd>Displays host names instead of ip addresses. Warning: for every new ip grabbed a dns query will be generated! Use it carefully on high-traffic network devices!</p>
 <dt><code>-C &#8211;colors</code></p>

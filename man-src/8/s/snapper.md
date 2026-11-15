@@ -282,4 +282,4 @@ description: "snapper – Command-line program for filesystem snapshot managemen
 <h2>Authors</h2>
 <p>Arvin Schnell &lt;aschnell [at] suse.de&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-snapper-configs/">snapper-configs</a></code>(5), <code><a href="/docs/linux/man/8-snapper-zypp-plugin/">snapper-zypp-plugin</a></code>(8), <code><a href="/docs/linux/man/8-pam_snapper/">pam_snapper</a></code>(8), <code><a href="/docs/linux/man/8-btrfs/">btrfs</a></code>(8), <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5), <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5) </p>
+<p><code><a href="/docs/linux/man/5-snapper-configs/">snapper-configs</a></code>(5), <code>snapper-zypp-plugin</code>(8), <code><a href="/docs/linux/man/8-pam_snapper/">pam_snapper</a></code>(8), <code><a href="/docs/linux/man/8-btrfs/">btrfs</a></code>(8), <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5), <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5) </p>

@@ -36,4 +36,4 @@ description: "rcS – variables that affect the behavior of boot scripts"
 <h2>Author</h2>
 <p>Miquel van Smoorenburg &lt;miquels [at] cistron.nl&gt; Roger Leigh &lt;rleigh [at] debian.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-hwclock/">hwclock</a></code>(5), <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8), <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8), <code><a href="/docs/linux/man/8-init/">init</a></code>(8), <code><a href="/docs/linux/man/5-inittab/">inittab</a></code>(5), <code><a href="/docs/linux/man/1-login/">login</a></code>(1), </p>
+<p><code><a href="/docs/linux/man/5-hwclock/">hwclock</a></code>(5), <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8), <code>inetd</code>(8), <code><a href="/docs/linux/man/8-init/">init</a></code>(8), <code><a href="/docs/linux/man/5-inittab/">inittab</a></code>(5), <code><a href="/docs/linux/man/1-login/">login</a></code>(1), </p>

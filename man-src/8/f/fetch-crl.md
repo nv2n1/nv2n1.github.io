@@ -58,7 +58,7 @@ description: "fetch-crl – retrieve certificate revocation lists"
 <h2>Notes</h2>
 <p>Defaults can be set in the fetch-crl system configuration file /etc/fetch-crl.conf. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-openssl/">openssl</a>(1), <a rel="nofollow" href="http://wiki.nikhef.nl/grid/FetchCRL3">http://wiki.nikhef.nl/grid/FetchCRL3</a> </p>
+<p>openssl(1), <a rel="nofollow" href="http://wiki.nikhef.nl/grid/FetchCRL3">http://wiki.nikhef.nl/grid/FetchCRL3</a> </p>
 <h2>Diagnostics</h2>
 <p>Exit status is normally 0; if an error occurs, exit status is 1 and diagnostics will be written to standard error.</p>
 <h2>License</h2>

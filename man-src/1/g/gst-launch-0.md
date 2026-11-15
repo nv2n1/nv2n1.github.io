@@ -76,7 +76,7 @@ description: "gst-launch – build and run a GStreamer pipeline"
 <p> Creates an element of type ELEMENTTYPE and sets the PROPERTIES. </p>
 <p> <code>Properties</code> </p>
 <p> PROPERTY=VALUE &#8230; </p>
-<p> Sets the property to the specified value. You can use <code><a href="/docs/linux/man/1-gst-inspect/">gst-inspect</a></code>(1) to find out about properties and allowed values of different elements.<br />
+<p> Sets the property to the specified value. You can use <code>gst-inspect</code>(1) to find out about properties and allowed values of different elements.<br />
  Enumeration properties can be set by name, nick or value. </p>
 <p> <code>Bins</code> </p>
 <p> <i>[BINTYPE.]</i> ( <i>[PROPERTY1 &#8230;]</i> PIPELINE-DESCRIPTION ) </p>
@@ -145,7 +145,7 @@ description: "gst-launch – build and run a GStreamer pipeline"
 <p> <code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gst-launch cdparanoiasrc track=5&nbsp;<wbr>!&nbsp;<wbr>audioconvert&nbsp;<wbr>!&nbsp;<wbr>lame&nbsp;<wbr>!&nbsp;<wbr>id3v2mux&nbsp;<wbr>!&nbsp;<wbr>filesink location=track5.mp3</code><br />
  rips track 5 from the CD and converts it into a single mp3 file </p>
-<p> Using <code><a href="/docs/linux/man/1-gst-inspect/">gst-inspect</a></code>(1), it is possible to discover settings like the above for cdparanoiasrc that will tell it to rip the entire cd or only tracks of it. Alternatively, you can use an URI and gst-launch-0.10 will find an element (such as cdparanoia) that supports that protocol for you, e.g.: <code><br />
+<p> Using <code>gst-inspect</code>(1), it is possible to discover settings like the above for cdparanoiasrc that will tell it to rip the entire cd or only tracks of it. Alternatively, you can use an URI and gst-launch-0.10 will find an element (such as cdparanoia) that supports that protocol for you, e.g.: <code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gst-launch&nbsp;<wbr><a href="cdda://5">cdda://5</a>&nbsp;<wbr>!&nbsp;<wbr>lame vbr=new vbr-quality=6&nbsp;<wbr>!&nbsp;<wbr>filesink location=track5.mp3</code> </p>
 <p> <code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gst-launch osssrc&nbsp;<wbr>!&nbsp;<wbr>audioconvert&nbsp;<wbr>!&nbsp;<wbr>vorbisenc&nbsp;<wbr>!&nbsp;<wbr>oggmux&nbsp;<wbr>!&nbsp;<wbr>filesink location=input.ogg</code><br />
@@ -232,7 +232,7 @@ description: "gst-launch – build and run a GStreamer pipeline"
 <dt>~/.gstreamer-0.10/registry-*.xml</p>
 <dd> The xml plugin database; can be deleted at any time, will be re-created automatically when it does not exist yet or plugins change.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gst-feedback/">gst-feedback</a></code>(1), <code><a href="/docs/linux/man/1-gst-inspect/">gst-inspect</a></code>(1), <code><a href="/docs/linux/man/1-gst-typefind/">gst-typefind</a></code>(1)</p>
+<p> <code>gst-feedback</code>(1), <code>gst-inspect</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.freedesktop.org/">http://gstreamer.freedesktop.org/</a> </p>
 <h2>Index</h2>

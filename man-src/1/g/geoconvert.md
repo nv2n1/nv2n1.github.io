@@ -158,7 +158,7 @@ description: "GeoConvert — convert geographic coordinates"
 <dd>World Geodetic System 1984, &lt;<a rel="nofollow" href="https://en.wikipedia.org/wiki/WGS84">https://en.wikipedia.org/wiki/WGS84</a>&gt;.</dl>
 <h2>See Also</h2>
 <p>An online version of this utility is availbable at &lt;<a rel="nofollow" href="http://geographiclib.sourceforge.net/cgi-bin/GeoConvert">http://geographiclib.sourceforge.net/cgi-bin/GeoConvert</a>&gt;. </p>
-<p> The algorithms for the transverse Mercator projection are described in C. F. F. Karney, <i>Transverse Mercator with an accuracy of a few nanometers</i>, J. Geodesy <code><a href="/docs/linux/man/8-85/">85</a></code>(8), 475-485 (Aug. 2011); <font SIZE="-1">DOI </font>&lt;<a rel="nofollow" href="https://dx.doi.org/10.1007/s00190-011-0445-3">https://dx.doi.org/10.1007/s00190-011-0445-3</a>&gt;; preprint &lt;<a rel="nofollow" href="http://arxiv.org/abs/1002.1417">http://arxiv.org/abs/1002.1417</a>&gt;.</p>
+<p> The algorithms for the transverse Mercator projection are described in C. F. F. Karney, <i>Transverse Mercator with an accuracy of a few nanometers</i>, J. Geodesy <code>85</code>(8), 475-485 (Aug. 2011); <font SIZE="-1">DOI </font>&lt;<a rel="nofollow" href="https://dx.doi.org/10.1007/s00190-011-0445-3">https://dx.doi.org/10.1007/s00190-011-0445-3</a>&gt;; preprint &lt;<a rel="nofollow" href="http://arxiv.org/abs/1002.1417">http://arxiv.org/abs/1002.1417</a>&gt;.</p>
 <h2>Author</h2>
 <p><code>GeoConvert</code> was written by Charles Karney.</p>
 <h2>History</h2>

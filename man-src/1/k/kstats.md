@@ -12,7 +12,7 @@ description: "kstats – show statistical FMS algorithm votes for an ivs dump an
 <h2>SYNOPSIS</h2>
 <p> <code>kstats</code> &lt;ivs file&gt; &lt;104-bit key&gt;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>kstats</code> is a tool designed to show the FMS algorithm votes for an ivs dump (intialization vectors) with a specified WEP key. The ivs dump can be get by using the combinaison of both <a href="/docs/linux/man/1-airodump/">airodump</a>(1) and <a href="/docs/linux/man/1-ivstools/">ivstools</a>(1).</p>
+<p> <code>kstats</code> is a tool designed to show the FMS algorithm votes for an ivs dump (intialization vectors) with a specified WEP key. The ivs dump can be get by using the combinaison of both airodump(1) and <a href="/docs/linux/man/1-ivstools/">ivstools</a>(1).</p>
 <h2>EXAMPLE</h2>
 <p> <code>kstats</code> kstats out.ivs 123456789ABCDEF123456789AB</p>
 <h2>AUTHOR</h2>

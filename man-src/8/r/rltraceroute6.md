@@ -45,7 +45,7 @@ description: "rltraceroute6 – IPv6 traceroute tool tcptraceroute6 – TCP/IPv6
 <dt><code>-m</code></p>
 <dd>Override the maximum hop limit (maximum number of hops). The default is 30 hops which should be sufficient on the IPv6 Internet for some time. </p>
 <dt><code>-N</code></p>
-<dd>Try to resolve each hop&#8217;s IPv6 address to a host name. This is the default. This option is meant for backward compatibility with <a href="/docs/linux/man/8-tcptraceroute/">tcptraceroute</a>(8). </p>
+<dd>Try to resolve each hop&#8217;s IPv6 address to a host name. This is the default. This option is meant for backward compatibility with tcptraceroute(8). </p>
 <dt><code>-n</code></p>
 <dd>Do not try to resolve each hop&#8217;s IPv6 address to a host name. That may speed up the traceroute significantly. </p>
 <dt><code>-p</code></p>
@@ -95,7 +95,7 @@ description: "rltraceroute6 – IPv6 traceroute tool tcptraceroute6 – TCP/IPv6
 <h2>Bugs</h2>
 <p>However useful they might be, -i and -r options are ignored by the official Linux kernel at the time of writing this manpage, and hence do not work as documented. Support for option -t was broken until Linux kernel version 2.6.18. Usage of Routing Header, with option -g, triggers an OOPS on Linux kernel versions below 2.6.17.12. Receiving TCP/SYN-ACK packets does not work on FreeBSD at all. This severely limits the usefulness of tcptraceroute6 on FreeBSD. Packet length takes the IPv6 header and, if present, extension headers into account. rltraceroute6 versions before 0.7.4 used it as IPv6 payload length instead, i.e. did not include the layer-3 headers in the computation. Linux iputils traceroute6 does not even include the UDP header. On the whole, the packet length semantic is very inconsistent among IPv6 traceroute implementations. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/7-ipv6/">ipv6</a>(7), <a href="/docs/linux/man/8-traceroute/">traceroute</a>(8), <a href="/docs/linux/man/8-tcptraceroute/">tcptraceroute</a>(8), <a href="/docs/linux/man/8-traceroute6/">traceroute6</a>(8) </p>
+<p><a href="/docs/linux/man/7-ipv6/">ipv6</a>(7), <a href="/docs/linux/man/8-traceroute/">traceroute</a>(8), tcptraceroute(8), <a href="/docs/linux/man/8-traceroute6/">traceroute6</a>(8) </p>
 <h2>Author</h2>
 <p>R33mi Denis-Courmont &lt;remi at remlab dot net&gt; </p>
 <p> <a rel="nofollow" href="http://www.remlab.net/ndisc6/">http://www.remlab.net/ndisc6/</a></p>

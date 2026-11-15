@@ -23,7 +23,7 @@ description: "amcrypt-ossl – crypt program for Amanda symmetric data encryptio
 <dl>
 <dd>File containing the pass phrase. It should not be readable by any user other than the Amanda user.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5), <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1), <code><a href="/docs/linux/man/8-amcrypt-ossl-asym/">amcrypt-ossl-asym</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5), <code>openssl</code>(1), <code><a href="/docs/linux/man/8-amcrypt-ossl-asym/">amcrypt-ossl-asym</a></code>(8) </p>
 <p> The Amanda Wiki: : <a rel="nofollow" href="http://wiki.zmanda.com/">http://wiki.zmanda.com/</a></p>
 <h2>Author</h2>
 <p><code>Kevin Till</code> &lt;kevin.till [at] zmanda.com&gt;</p>

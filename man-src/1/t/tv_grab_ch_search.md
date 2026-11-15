@@ -32,7 +32,7 @@ description: "tv_grab_ch_search – Grab TV listings for Switzerland (from tv.se
 <p> <code>&#8211;version</code> Show the version of the grabber. </p>
 <p> <code>&#8211;help</code> print a help message and exit.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Daniel Bittel &lt;betlit [at] gmx.net&gt;. Inspired by tv_grab_ch by Stefan Siegl.</p>
 <h2>BUGS</h2>

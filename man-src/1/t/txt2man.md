@@ -79,7 +79,7 @@ txt2man[-hpTX][-t mytitle][-P pname][-r rel][-s sect]
 <h2>HINTS</h2>
 <p> To obtain an overall good formating of output document, keep paragraphs indented correctly. If you have unwanted bold sections, search for multiple spaces between words, which are used to identify a tag list (term followed by a description). Choose also carefully the name of command line or function parameters, as they will be emphasized each time they are encountered in the document.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/7-mandoc/">mandoc</a></code>(7), <code><a href="/docs/linux/man/1-rman/">rman</a></code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-more/">more</a></code>(1), <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code>mandoc</code>(7), <code>rman</code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-more/">more</a></code>(1), <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1).</p>
 <h2>BUGS</h2>
 <dl>
 <dt>&bull;</p>

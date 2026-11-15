@@ -9,7 +9,7 @@ description: "MMDF – Multi-channel Memorandum Distribution Facility mailbox fo
 
 <p>MMDF &#8211; Multi-channel Memorandum Distribution Facility mailbox format</p>
 <h2>Description</h2>
-<p>This document describes the <code>MMDF</code> mailbox format used by some MTAs and MUAs (i.e. <code><a href="/docs/linux/man/1-scomail/">scomail</a></code>(1)) to store mail messages locally. </p>
+<p>This document describes the <code>MMDF</code> mailbox format used by some MTAs and MUAs (i.e. <code>scomail</code>(1)) to store mail messages locally. </p>
 <p> An <code>MMDF</code> mailbox is a text file containing an arbitrary number of e-mail messages. Each message consists of a postmark, followed by an e-mail message formatted according to <code>RFC822</code> / <code>RFC2822</code>, followed by a postmark. The file format is line-oriented. Lines are separated by line feed characters (ASCII 10). A postmark line consists of the four characters &quot;^A^A^A^A&quot; (Control-A; ASCII 1).</p>
 <dl>
 <dt>Example of a <code>MMDF</code> mailbox holding two mails:</p>
@@ -65,6 +65,6 @@ bar
 <h2>History</h2>
 <p><code>MMDF</code> was developed at the University of Delaware by Dave Crocker.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-scomail/">scomail</a></code>(1), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2), <code><a href="/docs/linux/man/2-link/">link</a></code>(2), <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2), <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5), <code>RFC822</code>, <code>RFC2822</code> </p>
+<p><code>scomail</code>(1), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2), <code><a href="/docs/linux/man/2-link/">link</a></code>(2), <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2), <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5), <code>RFC822</code>, <code>RFC2822</code> </p>
 <h2>Author</h2>
 <p>Urs Janssen &lt;urs [at] tin.org&gt;</p>

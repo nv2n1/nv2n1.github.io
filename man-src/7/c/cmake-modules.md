@@ -8734,7 +8734,7 @@ target_link_libraries(myexe Qt4::QtGui Qt4::QtXml)</pre>
 <h3>IMPORTED Targets</h3>
 <p>A particular Qt library may be used by using the corresponding <code>IMPORTED</code> target with the <code>target_link_libraries()</code> command: </p>
 <pre>target_link_libraries(myexe Qt4::QtGui Qt4::QtXml)</pre>
-<p>Using a target in this way causes <a href="/docs/linux/man/1--cmake/">:cmake</a>(1)` to use the appropriate include directories and compile definitions for the target when compiling <code>myexe</code>. </p>
+<p>Using a target in this way causes :cmake(1)` to use the appropriate include directories and compile definitions for the target when compiling <code>myexe</code>. </p>
 <p> Targets are aware of their dependencies, so for example it is not necessary to list <code>Qt4::QtCore</code> if another Qt library is listed, and it is not necessary to list <code>Qt4::QtGui</code> if <code>Qt4::QtDeclarative</code> is listed. Targets may be tested for existence in the usual way with the <code>if(TARGET)</code> command. </p>
 <p> The Qt toolkit may contain both debug and release libraries. <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> will choose the appropriate version based on the build configuration.</p>
 <dl>

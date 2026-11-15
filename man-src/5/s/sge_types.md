@@ -123,7 +123,7 @@ AND_OR = &quot;&amp;&quot; | &quot;|&quot;</pre>
  Character ranges may be specified using the a-z notation.
  The caret symbol (<code>^</code>) is <i>not</i> interpreted as a logical
  not; it is interpreted literally.</pre>
-<p>For more details please see <i><a href="/docs/linux/man/5-fnmatch/">fnmatch</a></i>(5), <i><a href="/docs/linux/man/7-glob/">glob</a></i>(7). </p>
+<p>For more details please see <i>fnmatch</i>(5), <i><a href="/docs/linux/man/7-glob/">glob</a></i>(7). </p>
 <p> A pattern on a shell command line should normally be quoted to avoid it being interpreted by the shell as a file match.</p>
 <h3><code>range</code></h3>
 <p>The task range specifier has the form </p>

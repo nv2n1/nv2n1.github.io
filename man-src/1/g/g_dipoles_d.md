@@ -115,6 +115,6 @@ description: "g_dipoles – computes the total dipole plus fluctuations"
 <p> <code>-endfit</code><i> real</i><code> -1 </code><br />
 &nbsp;<wbr>Time where to end the exponential fit of the correlation function, -1 is till the end </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

@@ -105,5 +105,5 @@ description: "funhead – display a header in a Funtools file"
 </pre>
 <p> See Column-based Text Files for more information about header parameter format.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

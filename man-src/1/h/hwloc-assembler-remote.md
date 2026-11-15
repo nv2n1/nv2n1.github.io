@@ -34,5 +34,5 @@ description: "hwloc-assembler-remote – Assemble multiple remote host topologie
 <p> Upon successful execution, hwloc-assembler-remote returns 0. </p>
 <p> hwloc-assembler-remote will return nonzero if any kind of error occurs, such as (but not limited to) failure to parse the command line.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-lstopo/">lstopo</a>(1), <a href="/docs/linux/man/1-hwloc-assembler/">hwloc-assembler</a>(1) </p>
+<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-assembler/">hwloc-assembler</a>(1) </p>
 <h2>Index</h2>

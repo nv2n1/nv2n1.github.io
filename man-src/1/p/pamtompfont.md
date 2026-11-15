@@ -21,7 +21,7 @@ description: "pamtompfont – Convert Netpbm image to Mplayer bitmap font file"
 <h2>OPTIONS</h2>
 <p> None. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamtompfont</code> was added to Netpbm in Release 10.43 (June 2008). </p>
 <h2>Index</h2>

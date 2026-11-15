@@ -77,7 +77,7 @@ description: "orbd – Enables clients to locate and call persistent objects on 
 <h2>See Also</h2>
 <dl COMPACT>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-servertool/">servertool</a>(1)</p>
+<dd>servertool(1)</p>
 <dt>&bull;</p>
 <dd>Naming Service at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html">http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html</a> </p>
 </dl>

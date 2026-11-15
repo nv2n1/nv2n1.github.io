@@ -53,7 +53,7 @@ Variables</code></pre>
 <dt><i>QB_IPC_NATIVE </i></p>
 <dd></dl>
 <h2>Function Documentation</h2>
-<h3>struct <code>qb_ipc_request_header</code> __attribute__ ((<a href="/docs/linux/man/8-aligned/">aligned</a>(8)))</h3>
+<h3>struct <code>qb_ipc_request_header</code> __attribute__ ((aligned(8)))</h3>
 <h2>Variable Documentation</h2>
 <h3>int32_t error __attribute__</h3>
 <h2>Author</h2>

@@ -118,4 +118,4 @@ man page written by Noel Butler &lt;noelb [at] ausics.net&gt;</pre>
 <h2>Files</h2>
 <p>/etc/minidlna.conf</p>
 <h2>See Also</h2>
-<p>&nbsp;<wbr><a href="/docs/linux/man/8-minidlna/">minidlna</a>(8) </p>
+<p>&nbsp;<wbr>minidlna(8) </p>

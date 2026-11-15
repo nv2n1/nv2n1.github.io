@@ -308,7 +308,7 @@ for (i = 0; i &lt; nbins; i++) {
 <p> &quot;opt.utrace&quot; (<code>bool</code>) r- [<code>&#8211;enable-utrace</code>]</p>
 <dl>
 <dt>
-<dd> Allocation tracing based on <code><a href="/docs/linux/man/2-utrace/">utrace</a></code>(2) enabled/disabled. This option is disabled by default.</dl>
+<dd> Allocation tracing based on <code>utrace</code>(2) enabled/disabled. This option is disabled by default.</dl>
 <p> &quot;opt.valgrind&quot; (<code>bool</code>) r- [<code>&#8211;enable-valgrind</code>]</p>
 <dl>
 <dt>
@@ -722,7 +722,7 @@ malloc_conf = &quot;lg_chunk:24&quot;;
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2), <code><a href="/docs/linux/man/2-utrace/">utrace</a></code>(2), <code><a href="/docs/linux/man/3-alloca/">alloca</a></code>(3), <code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3), <code><a href="/docs/linux/man/3-getpagesize/">getpagesize</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2), <code>utrace</code>(2), <code><a href="/docs/linux/man/3-alloca/">alloca</a></code>(3), <code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3), <code>getpagesize</code>(3)</p>
 <h2>STANDARDS</h2>
 <p> The <code>malloc</code>, <code>calloc</code>, <code>realloc</code>, and <code>free</code> functions conform to ISO/IEC 9899:1990 (&#8220;ISO C90&#8221;). </p>
 <p> The <code>posix_memalign</code> function conforms to IEEE Std 1003.1-2001 (&#8220;POSIX.1&#8221;).</p>

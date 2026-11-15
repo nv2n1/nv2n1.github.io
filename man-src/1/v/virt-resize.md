@@ -75,7 +75,7 @@ Name Type Size Parent / dev / sda1 partition 101M / dev / sda / dev / sda2 parti
  # rm -f outdisk
  # truncate -s 10G outdisk
 </pre>
-<p> Or use <i><a href="/docs/linux/man/1-lvcreate/">lvcreate</a></i>(1) to create a logical volume: </p>
+<p> Or use <i>lvcreate</i>(1) to create a logical volume: </p>
 <pre>
  # lvcreate -L 10G -n lv_name vg_name
 </pre>
@@ -346,7 +346,7 @@ Name Type Size Parent / dev / sda1 partition 101M / dev / sda / dev / sda2 parti
 <h3><font SIZE="-1">WINDOWS UNMOUNTABLE_BOOT_VOLUME BSOD</font></h3>
 <p> After sysprepping a Windows guest and then resizing it with virt-resize, you may see the guest fail to boot with an <tt>&quot;UNMOUNTABLE_BOOT_VOLUME&quot;</tt> <font SIZE="-1">BSOD. </font> This error is caused by having <tt>&quot;ExtendOemPartition=1&quot;</tt> in the sysprep.inf file. Removing this line before sysprepping should fix the problem.</p>
 <h3><font SIZE="-1">WINDOWS 8</font></h3>
-<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-resize from resizing <font SIZE="-1">NTFS</font> partitions. See &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3).</p>
+<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-resize from resizing <font SIZE="-1">NTFS</font> partitions. See &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i>guestfs</i>(3).</p>
 <h3><font SIZE="-1">SPARSE COPYING</font></h3>
 <p> You should create a fresh, zeroed target disk image for virt-resize to use. </p>
 <p> Virt-resize by default performs sparse copying. This means that it does not copy blocks from the source disk which are all zeroes. This improves speed and efficiency, but will produce incorrect results if the target disk image contains unzeroed data. </p>
@@ -377,7 +377,7 @@ Name Type Size Parent / dev / sda1 partition 101M / dev / sda / dev / sda2 parti
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/8-lvm/">lvm</a></i>(8), <i><a href="/docs/linux/man/8-pvresize/">pvresize</a></i>(8), <i><a href="/docs/linux/man/8-lvresize/">lvresize</a></i>(8), <i><a href="/docs/linux/man/8-resize2fs/">resize2fs</a></i>(8), <i><a href="/docs/linux/man/8-ntfsresize/">ntfsresize</a></i>(8), <i><a href="/docs/linux/man/8-btrfs/">btrfs</a></i>(8), <i><a href="/docs/linux/man/8-xfs_growfs/">xfs_growfs</a></i>(8), <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/8-parted/">parted</a></i>(8), <i><a href="/docs/linux/man/1-truncate/">truncate</a></i>(1), <i><a href="/docs/linux/man/1-fallocate/">fallocate</a></i>(1), <i><a href="/docs/linux/man/8-grub/">grub</a></i>(8), <i><a href="/docs/linux/man/8-grub-install/">grub-install</a></i>(8), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1), <i><a href="/docs/linux/man/1-virt-alignment-scan/">virt-alignment-scan</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/8-lvm/">lvm</a></i>(8), <i><a href="/docs/linux/man/8-pvresize/">pvresize</a></i>(8), <i><a href="/docs/linux/man/8-lvresize/">lvresize</a></i>(8), <i><a href="/docs/linux/man/8-resize2fs/">resize2fs</a></i>(8), <i><a href="/docs/linux/man/8-ntfsresize/">ntfsresize</a></i>(8), <i><a href="/docs/linux/man/8-btrfs/">btrfs</a></i>(8), <i><a href="/docs/linux/man/8-xfs_growfs/">xfs_growfs</a></i>(8), <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/8-parted/">parted</a></i>(8), <i><a href="/docs/linux/man/1-truncate/">truncate</a></i>(1), <i><a href="/docs/linux/man/1-fallocate/">fallocate</a></i>(1), <i><a href="/docs/linux/man/8-grub/">grub</a></i>(8), <i><a href="/docs/linux/man/8-grub-install/">grub-install</a></i>(8), <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1), <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1), <i><a href="/docs/linux/man/1-virt-alignment-scan/">virt-alignment-scan</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
 <h2>COPYRIGHT</h2>

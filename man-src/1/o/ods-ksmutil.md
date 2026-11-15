@@ -159,7 +159,7 @@ description: "ods-ksmutil – OpenDNSSEC zone and key management"
 <dt>DEAD</p>
 <dd> The key has been retired for long enough that its use is no longer cached, so it has been removed from the zone.</dl>
 <h2>KEY TYPES</h2>
-<p> Keys can be of two types: KSK or ZSK. These terms are explained in more detail in <a href="/docs/linux/man/1-opendnssec/">opendnssec</a>(1). </p>
+<p> Keys can be of two types: KSK or ZSK. These terms are explained in more detail in opendnssec(1). </p>
 <p> In DNS records, the KSK can usually be recognised by having its SEP (Secure Entry Point) flag set. But please note that officially this is a mere hint.</p>
 <h2>INTERVAL FORMAT</h2>
 <p> When specifying an interval for a key generation run the ISO 8601 standard is used, e.g. P2Y6M for 2 years and 6 months; or PT12H30M for 12 hours and 30 minutes. Note that a year is assumed to be 365 days and a month is assumed to be 31 days.</p>

@@ -1088,13 +1088,13 @@ description: "XbaeInput – The Input widget class."
 <dt><code>UdU[-]dUd</code></p>
 <dd>A Canadian postcode with optional dash.</dl>
 <h3>Virtual Bindings</h3>
-<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="//www.systutorials.com/docs/linux/man/3X-VirtualBindings/">VirtualBindings</a>(3X)</code>.</p>
+<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code>VirtualBindings(3X)</code>.</p>
 <h2>Author</h2>
 <p><code>Andrew Lister</code> (lister [at] db.com) </p>
 <h2>Release</h2>
 <p>This document describes XbaeInput from Xbae Version 4.9.</p>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/3X-Core/">Core</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-XmPrimitive/">XmPrimitive</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-XmText/">XmText</a>(3X)</code></p>
+<p><code>Core(3X), XmPrimitive(3X), XmText(3X)</code></p>
 <h2>Notice of Limitation</h2>
 <p>The Author, previous and current maintainers of the Xbae widgets (collectively &#8216;authors&#8217;) provide this information solely to professionals who have the appropriate degree of experience to understand and interpret its contents in accordance with generally accepted engineering or other professional standards and applicable regulations. No recommendations as to products or vendors is made or should be implied. </p>
 <p> While the information contained herein has been prepared from sources deemed to be reliable, the authors reserve the right to revise the information without notice, but have no obligation to do so. Unless the recipient has been expressly granted a license by Bellcore under separate applicable written agreement with Bellcore, no license, expressed or implied, is granted under any patents, copyrights or other intellectual property rights. Use of the information is at your discretion and shall not be deemed an inducement by Bellcore to infringe any existing or later-issued patent, copyrights or other intellectual property right. </p>

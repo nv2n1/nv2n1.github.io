@@ -96,7 +96,7 @@ description: "nsd.conf – NSD configuration file"
 <dt><code>zonelistfile:</code> &lt;filename&gt;</p>
 <dd>By default <i>/var/lib/nsd/zone.list</i> is used. The specified file is used to store the dynamically added list of zones. The list is written to by NSD to add and delete zones. It is a text file with a zone-name and pattern-name on each line. This file is used for the nsd-control addzone and delzone commands.</p>
 <dt><code>identity:</code> &lt;string&gt;</p>
-<dd>Returns the specified identity when asked for CH TXT ID.SERVER. Default is the name as returned by <a href="/docs/linux/man/3-gethostname/">gethostname</a>(3). Same as commandline option <code>-i</code>.</p>
+<dd>Returns the specified identity when asked for CH TXT ID.SERVER. Default is the name as returned by gethostname(3). Same as commandline option <code>-i</code>.</p>
 <dt><code>version:</code> &lt;string&gt;</p>
 <dd>Returns the specified version string when asked for CH TXT version.server, and version.bind queries. Default is the compiled package version. See hide-version to set the server to not respond to such queries.</p>
 <dt><code>nsid:</code> &lt;string&gt;</p>

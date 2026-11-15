@@ -12,7 +12,7 @@ description: "mangle – Shorewall Packet marking/mangling rules file"
 <dl>
 <dt> <code>/etc/shorewall6/mangle</code></dl>
 <h2>Description</h2>
-<dd>This file was introduced in Shorewall 4.6.0 and is intended to replace m[blue]<code><a href="/docs/linux/man/5-shorewall6-tcrules/">shorewall6-tcrules</a>(5)</code>m[]<font SIZE="-2">[1]</font>. This file is only processed by the compiler if:</p>
+<dd>This file was introduced in Shorewall 4.6.0 and is intended to replace m[blue]<code>shorewall6-tcrules(5)</code>m[]<font SIZE="-2">[1]</font>. This file is only processed by the compiler if:</p>
 <dl>
 <dd>1. No file named &#8216;tcrules&#8217; exists on the current CONFIG_PATH (see m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[2]</font>); or</dl>
 <dl>
@@ -130,20 +130,20 @@ DIVERTHA - - tcp</pre>
 <dl>
 <dd>
 <pre>2:P eth0 - tcp 22
-INLINE(<a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2)):P eth0 - tcp 22
-INLINE(<a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2)):P eth0 - ; -p tcp
+INLINE(MARK(2)):P eth0 - tcp 22
+INLINE(MARK(2)):P eth0 - ; -p tcp
 INLINE eth0 - tcp 22 ; -j MARK --set-mark 2
 INLINE eth0 - ; -p tcp -j MARK --set-mark 2</pre>
 </dl>
 <p> If INLINE_MATCHES=Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[11]</font> then the third rule above can be specified as follows:</p>
 <dl>
 <dd>
-<pre><a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2):P eth0 - ; -p tcp</pre>
+<pre>MARK(2):P eth0 - ; -p tcp</pre>
 </dl>
 <p> Beginning with Shorewall 5.0.0, the rule may also be written this way, irrespective of the setting of INLINE_MATCHES:</p>
 <dl>
 <dd>
-<pre><a href="//www.systutorials.com/docs/linux/man/2-MARK/">MARK</a>(2):P eth0 - ;; -p tcp</pre>
+<pre>MARK(2):P eth0 - ;; -p tcp</pre>
 </dl>
 </dl>
 <p> <code>IPMARK</code></p>
@@ -432,11 +432,11 @@ Normal-Service =&gt; 0x00</pre>
 <dl>
 <dd>
 <pre> #ACTION SOURCE DEST PROTO DPORT SPORT USER TEST
- <a href="//www.systutorials.com/docs/linux/man/1-MARK/">MARK</a>(1):T ::/0 ::/0 icmp echo-request
- <a href="//www.systutorials.com/docs/linux/man/1-MARK/">MARK</a>(1):T ::/0 ::/0 icmp echo-reply
+ MARK(1):T ::/0 ::/0 icmp echo-request
+ MARK(1):T ::/0 ::/0 icmp echo-reply
  RESTORE:T ::/0 ::/0 all - - - 0
  CONTINUE:T ::/0 ::/0 all - - - !0
- <a href="//www.systutorials.com/docs/linux/man/4-MARK/">MARK</a>(4):T ::/0 ::/0 ipp2p:all
+ MARK(4):T ::/0 ::/0 ipp2p:all
  SAVE:T ::/0 ::/0 all - - - !0</pre>
 </dl>
 <p> If a packet hasn&#8217;t been classified (packet mark is 0), copy the connection mark to the packet mark. If the packet mark is set, we&#8217;re done. If the packet is P2P, set the packet mark to 4. If the packet mark has been set, save it to the connection mark.</dl>
@@ -447,11 +447,11 @@ Normal-Service =&gt; 0x00</pre>
 <p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[]<font SIZE="-2">[4]</font> </p>
 <p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/PacketMarking.html">http://www.shorewall.net/PacketMarking.html</a></code>m[]<font SIZE="-2">[17]</font> </p>
 <p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[18]</font> </p>
-<p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), <a href="/docs/linux/man/5-shorewall6-blacklist/">shorewall6-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall6-ecn/">shorewall6-ecn</a>(5), <a href="/docs/linux/man/5-shorewall6-exclusion/">shorewall6-exclusion</a>(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6_interfaces/">shorewall6_interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-ipsets/">shorewall6-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-masq/">shorewall6-masq</a>(5), <a href="/docs/linux/man/5-shorewall6-nat/">shorewall6-nat</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5), <a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a href="/docs/linux/man/5-shorewall6-proxyarp/">shorewall6-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall6-routestopped/">shorewall6-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-tos/">shorewall6-tos</a>(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
+<p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), shorewall6-ecn(5), <a href="/docs/linux/man/5-shorewall6-exclusion/">shorewall6-exclusion</a>(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), shorewall6_interfaces(5), <a href="/docs/linux/man/5-shorewall6-ipsets/">shorewall6-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-masq/">shorewall6-masq</a>(5), <a href="/docs/linux/man/5-shorewall6-nat/">shorewall6-nat</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5), <a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), shorewall6-proxyarp(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>
-<dd><a href="/docs/linux/man/5-shorewall6-tcrules/">shorewall6-tcrules</a>(5)</p>
+<dd>shorewall6-tcrules(5)</p>
 <dl>
 <dd><a rel="nofollow" href="http://www.shorewall.net/manpages6/shorewall6-tcrules.html">http://www.shorewall.net/manpages6/shorewall6-tcrules.html</a></dl>
 <dt> 2.</p>

@@ -104,9 +104,9 @@ client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
 
  
 
- -p &lt;provider_name&gt; : The name of the underlying fabric provider (e.g., sockets, psm, usnic, etc.). If a provider is not specified via the -p switch, the test will pick one from the list of available providers (as returned by <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3)). 
+ -p &lt;provider_name&gt; : The name of the underlying fabric provider (e.g., sockets, psm, usnic, etc.). If a provider is not specified via the -p switch, the test will pick one from the list of available providers (as returned by fi_getinfo(3)). 
 
- -e &lt;endpoint&gt; : The type of endpoint to be used for data messaging between the two processes. Supported values are dgram, rdm, and msg. For more information on endpoint types, see <a HREF="/docs/linux/man/3-fi_endpoint/">fi_endpoint</a>(3). 
+ -e &lt;endpoint&gt; : The type of endpoint to be used for data messaging between the two processes. Supported values are dgram, rdm, and msg. For more information on endpoint types, see fi_endpoint(3). 
 
  -d &lt;domain&gt; : The name of the specific domain to be used.
 
@@ -187,7 +187,7 @@ client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
 
  
 
- There is no default provider; if a provider is not specified via the -p switch, the test will pick one from the list of available providers (as returned by <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3)). 
+ There is no default provider; if a provider is not specified via the -p switch, the test will pick one from the list of available providers (as returned by fi_getinfo(3)). 
 
  If no endpoint type is specified, 'dgram' is used. 
 
@@ -220,7 +220,7 @@ client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
 
  
 
- <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3), <a HREF="/docs/linux/man/3-fi_endpoint/">fi_endpoint</a>(3) <a HREF="/docs/linux/man/7-fabric/">fabric</a>(7),
+ fi_getinfo(3), fi_endpoint(3) <a HREF="/docs/linux/man/7-fabric/">fabric</a>(7),
 
 <h2>AUTHORS</h2>
 

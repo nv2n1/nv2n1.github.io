@@ -356,11 +356,11 @@ description: "guestfs-building – How to build libguestfs from source"
 <dt><code>&#8211;disable-static</code></p>
 <dd> Don’t build a static linked version of the libguestfs library.</p>
 <dt><code>&#8211;enable-install-daemon</code></p>
-<dd> Normally <code><a href="/docs/linux/man/8-guestfsd/">guestfsd</a></code>(8) is not installed by <tt>&quot;make install&quot;</tt>, since that wouldn&#8217;t be useful (instead it is &#8220;installed&#8221; inside the supermin appliance). However if packagers are building &#8220;libguestfs live&#8221; then they should use this option.</p>
+<dd> Normally <code>guestfsd</code>(8) is not installed by <tt>&quot;make install&quot;</tt>, since that wouldn&#8217;t be useful (instead it is &#8220;installed&#8221; inside the supermin appliance). However if packagers are building &#8220;libguestfs live&#8221; then they should use this option.</p>
 <dt><code>&#8211;enable-werror</code></p>
 <dd> This turns compiler warnings into errors (ie. <tt>&quot;-Werror&quot;</tt>). Use this for development, especially when submitting patches. It should generally <i>not</i> be used for production or distro builds.</p>
 <dt><code>&#8211;with-default-backend=libvirt</code></p>
-<dd> This controls the default method that libguestfs uses to run qemu (see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)). If not specified, the default backend is <tt>&quot;direct&quot;</tt>, which means libguestfs runs qemu directly. </p>
+<dd> This controls the default method that libguestfs uses to run qemu (see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code>guestfs</code>(3)). If not specified, the default backend is <tt>&quot;direct&quot;</tt>, which means libguestfs runs qemu directly. </p>
 <p> Fedora and Red Hat Enterprise Linux (<font SIZE="-1">RHEL</font>) ≥ 7 use this flag to change the default backend to <tt>&quot;libvirt&quot;</tt>, because (especially in <font SIZE="-1">RHEL</font>) the policy is not to allow any program to run qemu except via libvirt. </p>
 <p> Note that despite this setting, all backends are built into libguestfs, and you can override the backend at runtime by setting the <tt>$LIBGUESTFS_BACKEND</tt> environment variable (or using <font SIZE="-1">API</font> methods).</p>
 <dt><code>&#8211;with-distro=REDHAT|DEBIAN|&#8230;</code></p>
@@ -370,7 +370,7 @@ description: "guestfs-building – How to build libguestfs from source"
 <dt><code>&#8211;with-extra=&quot;</code><i>distroname</i>=<i>version</i>,libvirt,&#8230;<code>&quot;</code></p>
 <dd>
 <dt><code>&#8211;with-extra=&quot;local&quot;</code></p>
-<dd> This option controls the &#8220;extra&#8221; field returned by &#8220;guestfs_version&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) and also printed by virt tools&#8217; <i>&#8211;version</i> option. It is a free text field, but a good idea is to encode a comma-separated list of facts such as the distro name and version, whether libvirt is the default backend, and anything else that may help with debugging problems raised by users. </p>
+<dd> This option controls the &#8220;extra&#8221; field returned by &#8220;guestfs_version&#8221; in <code>guestfs</code>(3) and also printed by virt tools&#8217; <i>&#8211;version</i> option. It is a free text field, but a good idea is to encode a comma-separated list of facts such as the distro name and version, whether libvirt is the default backend, and anything else that may help with debugging problems raised by users. </p>
 <p> For custom and/or local builds, this can be set to <tt>&quot;local&quot;</tt> to indicate this is <i>not</i> a distro build.</p>
 <dt><code>&#8211;without-libvirt</code></p>
 <dd> Compile libguestfs without libvirt support, even if libvirt development libraries are installed.</p>
@@ -390,7 +390,7 @@ description: "guestfs-building – How to build libguestfs from source"
 <h2>NOTES ABOUT QEMU AND KVM</h2>
 <p> A common problem is with broken or incompatible qemu releases. </p>
 <p> Different versions of qemu have problems booting the appliance for different reasons. This varies between versions of qemu, and Linux distributions which add their own patches. </p>
-<p> If you find a problem, you could try using your own qemu built from source (qemu is very easy to build from source), with a &#8220;qemu wrapper&#8221;. See &#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3). </p>
+<p> If you find a problem, you could try using your own qemu built from source (qemu is very easy to build from source), with a &#8220;qemu wrapper&#8221;. See &#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <code>guestfs</code>(3). </p>
 <p> By default the configure script will look for qemu-kvm (<font SIZE="-1">KVM</font> support). <font SIZE="-1">KVM</font> is much faster than using plain qemu. </p>
 <p> You may also need to enable <font SIZE="-1">KVM</font> support for non-root users, by following these instructions: <a rel="nofollow" href="http://www.linux-kvm.org/page/FAQ#How_can_I_use_kvm_with_a_non-privileged_user.3F">http://www.linux-kvm.org/page/FAQ#How_can_I_use_kvm_with_a_non-privileged_user.3F</a> </p>
 <p> On some systems, this will work too: </p>
@@ -447,7 +447,7 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> This will result in a <i>virt-v2v-*.i686.rpm</i> file which can be unpacked to extract the 32 bit virt-p2v binary. </p>
 <p> The binary may be compressed to either <i>p2v/virt-p2v.i686.xz</i>, or <i></i>$libdir<i>/virt-p2v/virt-p2v.i686.xz</i> or <i></i>$VIRT_P2V_DATA_DIR<i>/virt-p2v.i686.xz</i> as appropriate. This enables the <code><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></code>(1) <i>&#8211;arch</i> option.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></code>(3), <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-performance/">guestfs-performance</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-release-notes/">guestfs-release-notes</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-testing/">guestfs-testing</a></code>(1), <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1), <code><a href="/docs/linux/man/1-libguestfs-make-fixed-appliance/">libguestfs-make-fixed-appliance</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <code>guestfs</code>(3), <code>guestfs-examples</code>(3), <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-performance/">guestfs-performance</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-release-notes/">guestfs-release-notes</a></code>(1), <code><a href="/docs/linux/man/1-guestfs-testing/">guestfs-testing</a></code>(1), <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1), <code>libguestfs-make-fixed-appliance</code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

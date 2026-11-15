@@ -205,7 +205,7 @@ freeaddrinfo(3).
 <p> This implementation of the asynchronous resolver interface is thread-safe and lock-free internally, but the following restriction applies: Two different threads must not create queries on the same context or run queries originating from the same context at the same time. If they want to do that, all calls must be protected by a mutex around that context. </p>
 <p> It is generally not a problem since the main point of the asynchronous resolver is to multiplex queries within a single thread of control, so sharing a resolver among threads is not useful.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), <code><a href="/docs/linux/man/3-getnetbyname/">getnetbyname</a></code>(3), <code><a href="/docs/linux/man/3-getrrsetbyname/">getrrsetbyname</a></code>(3), <code><a href="/docs/linux/man/3-res_send/">res_send</a></code>(3), <code><a href="/docs/linux/man/5-resolv-conf/">resolv.conf</a></code>(5)</p>
+<p> <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), <code><a href="/docs/linux/man/3-getnetbyname/">getnetbyname</a></code>(3), <code>getrrsetbyname</code>(3), <code><a href="/docs/linux/man/3-res_send/">res_send</a></code>(3), <code><a href="/docs/linux/man/5-resolv-conf/">resolv.conf</a></code>(5)</p>
 <h2>CAVEATS</h2>
 <p> This DNS resolver implementation doesn&#8217;t support the EDNS0 protocol extension yet. </p>
 <h2>Index</h2>

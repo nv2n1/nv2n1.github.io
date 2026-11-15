@@ -32,7 +32,7 @@ description: "theme – create a web page from a template file"
 <dt><i>title</i></p>
 <dd> Print the title returned by mkd_doc_title3, or, if that does not exist, the source filename.</p>
 <dt><i>version</i></p>
-<dd> Print the version of <a href="/docs/linux/man/7-discount/">discount</a>(7) that this copy of theme was compiled with.</dl>
+<dd> Print the version of discount(7) that this copy of theme was compiled with.</dl>
 <p> If input is coming from a file and the output was not set with the &#8211;<code>o</code> option, <code>writes the output to</code> file-sans-text.html (if ) <i>file</i> has a .text suffix, that will be stripped off and replaced with .html otherwise a .html will be appended to the end of the filename.) </p>
 <p> The options are as follows:</p>
 <dl>
@@ -51,7 +51,7 @@ description: "theme – create a web page from a template file"
 <h2>RETURN VALUES</h2>
 <p> The utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-markdown/">markdown</a>(1), <a href="/docs/linux/man/3-markdown/">markdown</a>(3), <a href="/docs/linux/man/7-markdown/">markdown</a>(7), mkd-extensions7.</p>
+<p> <a href="/docs/linux/man/1-markdown/">markdown</a>(1), markdown(3), <a href="/docs/linux/man/7-markdown/">markdown</a>(7), mkd-extensions7.</p>
 <h2>AUTHOR</h2>
 <p> An David Parsons (<code>orc [at] pell.portland.or.us</code> ) </p>
 <h2>Index</h2>

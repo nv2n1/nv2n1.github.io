@@ -211,4 +211,4 @@ description: "directfbrc – DirectFB configuration file"
 <dd>frame buffer modes file </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-fb-modes/">fb.modes</a></code>(5), <code><a href="/docs/linux/man/8-fbset/">fbset</a></code>(8), <code><a href="/docs/linux/man/4-mouse/">mouse</a></code>(4), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
+<p><code>fb.modes</code>(5), <code><a href="/docs/linux/man/8-fbset/">fbset</a></code>(8), <code><a href="/docs/linux/man/4-mouse/">mouse</a></code>(4), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>

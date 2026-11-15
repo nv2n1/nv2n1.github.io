@@ -19,4 +19,4 @@ int poll_keyboard();</code></pre>
 <h2>Return Value</h2>
 <p>Returns zero on success, or a negative number on failure (ie. no keyboard driver installed). </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-keyboard_needs_poll/">keyboard_needs_poll</a></code>(3), <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-key/">key</a></code>(3), <code><a href="/docs/linux/man/3-key_shifts/">key_shifts</a></code>(3), <code><a href="/docs/linux/man/3-excamera/">excamera</a></code>(3), <code><a href="/docs/linux/man/3-exsample/">exsample</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>
+<p><code>keyboard_needs_poll</code>(3), <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-key/">key</a></code>(3), <code><a href="/docs/linux/man/3-key_shifts/">key_shifts</a></code>(3), <code><a href="/docs/linux/man/3-excamera/">excamera</a></code>(3), <code><a href="/docs/linux/man/3-exsample/">exsample</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>

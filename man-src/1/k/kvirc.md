@@ -59,7 +59,7 @@ description: "KVIrc – an Internet Relay Chat client."
 <p> <code>$HOME</code>/.kvirc.rc . This is the first file that KVIrc looks for. If the -c commandline option is specified , the file passed as the option parameter is used instead of this one. If the file is found , KVIrc reads the first non-empty line and treats it as the path to the <i>KVIrc Local directory</i>. If the file can not be found or the <i>KVIrc Local directory</i> is not existing , KVIrc enters the setup mode and allows selecting a new <i>KVIrc Local directory</i>. </p>
 <p> <code>KVIrc Local directory</code>/* Directory with the local (per user) KVIrc settings. Similar to the global one. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-x/">X</a></code>(1) <code><a href="/docs/linux/man/1-talk/">talk</a></code>(1)</p>
+<p> <code>X</code>(1) <code><a href="/docs/linux/man/1-talk/">talk</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1999-2009 Szymon Stefanek and The KVIrc Development Team </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>

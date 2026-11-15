@@ -90,7 +90,7 @@ description: "kf5-config – Prints Qt(TM) and Frameworks installation paths"
 <p> Print the installed wallpaper path: </p>
 <p> %<code>kf5-config &#8211;path wallpaper</code></p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-kf5options/">kf5options</a>(7)</p>
+<p> kf5options(7)</p>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>AUTHOR</h2>

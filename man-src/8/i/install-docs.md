@@ -24,7 +24,7 @@ description: "install-docs – manage online Debian documentation"
 <dt><code>-d</code>, <code>&#8211;debug</code></p>
 <dd>Print some debugging information.</p>
 <dt><code>&#8211;no-update-menus</code></p>
-<dd>Inhibit running <i><a href="/docs/linux/man/8-dwww-build-menu/">dwww-build-menu</a></i>(8), <i><a href="/docs/linux/man/8-dhelp_parse/">dhelp_parse</a></i>(8), and <i><a href="/docs/linux/man/8-scrollkeeper-update/">scrollkeeper-update</a></i>(8).</p>
+<dd>Inhibit running <i>dwww-build-menu</i>(8), <i>dhelp_parse</i>(8), and <i>scrollkeeper-update</i>(8).</p>
 <dt><code>&#8211;rootdir</code> <i>dir</i></p>
 <dd>Set the root directory to <i>dir</i> instead of `<i>/</i>&#8216;. Useful and valid only with the <code>&#8211;check</code> action.</dl>
 <h2>Actions</h2>
@@ -83,7 +83,7 @@ description: "install-docs – manage online Debian documentation"
 <h2>Bugs</h2>
 <p>See <a rel="nofollow" href="http://bugs.debian.org/doc-base">http://bugs.debian.org/doc-base</a> &lt;<a href="http://bugs.debian.org/doc-base">http://bugs.debian.org/doc-base</a>&gt;.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-dhelp/">dhelp</a></i>(1), <i><a href="/docs/linux/man/1-doccentral/">doccentral</a></i>(1), <i><a href="/docs/linux/man/7-dwww/">dwww</a></i>(7), <i><a href="/docs/linux/man/7-scrollkeeper/">scrollkeeper</a></i>(7), Debian doc-base Manual <i>/usr/share/doc/doc-base/doc-base.html/index.html</i></p>
+<p><i>dhelp</i>(1), <i>doccentral</i>(1), <i>dwww</i>(7), <i>scrollkeeper</i>(7), Debian doc-base Manual <i>/usr/share/doc/doc-base/doc-base.html/index.html</i></p>
 <h2>Author</h2>
 <p>This program was originally written by Christian Schwarz &lt;schwarz [at] debian.org&gt;, for the Debian GNU/Linux system, and the next maintainer was Adam Di Carlo &lt;aph [at] debian.org&gt;. Robert Luberda &lt;robert [at] debian.org&gt; is currently maintaining and extending it. </p>
 <p> This software was meant to be for the benefit of the entire Debian user and developer community. If you are interested in being involved with this software, please join the mailing list &lt;debian-doc [at] lists.debian.org&gt;.</p>

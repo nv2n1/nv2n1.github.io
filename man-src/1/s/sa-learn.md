@@ -309,7 +309,7 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <h2>INSTALLATION</h2>
 <p> The <code>sa-learn</code> command is part of the <code>Mail::SpamAssassin</code> Perl module. Install this as a normal Perl module, using <tt>&quot;perl -MCPAN -e shell&quot;</tt>, or by hand.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/1-spamc/">spamc</a></i>(1) <i><a href="/docs/linux/man/3-mail--spamassassin/">Mail::SpamAssassin</a></i>(3) <i><a href="/docs/linux/man/3-mail--spamassassin--archiveiterator/">Mail::SpamAssassin::ArchiveIterator</a></i>(3) </p>
+<p> <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/1-spamc/">spamc</a></i>(1) <i>Mail::SpamAssassin</i>(3) <i>Mail::SpamAssassin::ArchiveIterator</i>(3) </p>
 <p> &lt;<a rel="nofollow" href="http://www.paulgraham.com/">http://www.paulgraham.com/</a>&gt; Paul Graham&#8217;s &#8220;A Plan For Spam&#8221; paper </p>
 <p> &lt;<a rel="nofollow" href="http://www.linuxjournal.com/article/6467">http://www.linuxjournal.com/article/6467</a>&gt; Gary Robinson&#8217;s f(x) and combining algorithms, as used in SpamAssassin </p>
 <p> &lt;<a rel="nofollow" href="http://www.bgl.nu/~glouis/bogofilter/">http://www.bgl.nu/~glouis/bogofilter/</a>&gt; &#8216;Training on error&#8217; page. A discussion of various Bayes training regimes, including &#8216;train on error&#8217; and unsupervised training.</p>

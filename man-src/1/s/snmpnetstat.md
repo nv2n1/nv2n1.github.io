@@ -33,7 +33,7 @@ description: "snmpnetstat – display networking status and configuration inform
 <p> <code>-CR</code><i> repeaters</i> For GETBULK requests, <i>repeaters</i> specifies the max-repeaters value to use. </p>
 <p> When snmpnetstat is invoked with an interval argument, it displays a running count of statistics related to network interfaces. <i>interval</i> is the number of seconds between reporting of statistics. </p>
 <p> <i>The Active Sockets Display (default)</i> </p>
-<p> The default display, for active sockets, shows the local and remote addresses, protocol, and the internal state of the protocol. Address formats are of the form &#8220;host.port&#8221; or &#8220;network.port&#8221; if a socket&#8217;s address specifies a network but no specific host address. When known, the host and network addresses are displayed symbolically according to the data bases <i>/etc/hosts and</i> <i>/etc/networks,</i> respectively. If a symbolic name for an address is unknown, or if the <code>-Cn</code> option is specified, the address is printed numerically, according to the address family. For more information regarding the Internet &#8220;dot format,&#8221; refer to <i><a href="//www.systutorials.com/docs/linux/man/3N-inet/">inet</a>(3N).</i> Unspecified, or &#8220;wildcard&#8221;, addresses and ports appear as &#8220;*&#8221;. </p>
+<p> The default display, for active sockets, shows the local and remote addresses, protocol, and the internal state of the protocol. Address formats are of the form &#8220;host.port&#8221; or &#8220;network.port&#8221; if a socket&#8217;s address specifies a network but no specific host address. When known, the host and network addresses are displayed symbolically according to the data bases <i>/etc/hosts and</i> <i>/etc/networks,</i> respectively. If a symbolic name for an address is unknown, or if the <code>-Cn</code> option is specified, the address is printed numerically, according to the address family. For more information regarding the Internet &#8220;dot format,&#8221; refer to <i>inet(3N).</i> Unspecified, or &#8220;wildcard&#8221;, addresses and ports appear as &#8220;*&#8221;. </p>
 <p> <i>The Interface Display</i> </p>
 <p> The interface display provides a table of cumulative statistics regarding packets transferred, errors, and col- lisions. The network addresses of the interface and the maximum transmission unit (&#8220;mtu&#8221;) are also displayed. </p>
 <p> <i>The Routing Table Display</i> </p>
@@ -86,7 +86,7 @@ tcp   *.smtp                        *.*                            LISTEN
 ...
 </pre>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-iostat/">iostat</a>(1), <a href="/docs/linux/man/1-vmstat/">vmstat</a>(1), <a href="/docs/linux/man/5-hosts/">hosts</a>(5), <a href="/docs/linux/man/5-networks/">networks</a>(5), <a href="/docs/linux/man/5-protocols/">protocols</a>(5), <a href="/docs/linux/man/5-services/">services</a>(5).</p>
+<p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-iostat/">iostat</a>(1), vmstat(1), <a href="/docs/linux/man/5-hosts/">hosts</a>(5), <a href="/docs/linux/man/5-networks/">networks</a>(5), <a href="/docs/linux/man/5-protocols/">protocols</a>(5), <a href="/docs/linux/man/5-services/">services</a>(5).</p>
 <h2>BUGS</h2>
 <p> The notion of errors is ill-defined. </p>
 <h2>Index</h2>

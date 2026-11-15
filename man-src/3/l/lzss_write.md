@@ -17,5 +17,5 @@ description: "lzss_write – Compresses data using LZSS. Allegro game programmin
 <h2>RETURN VALUE</h2>
 <p> Returns 0 on success, or EOF if there was an error. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-create_lzss_pack_data/">create_lzss_pack_data</a></code>(3), <code><a href="/docs/linux/man/3-free_lzss_pack_data/">free_lzss_pack_data</a></code>(3) </p>
+<p> <code>create_lzss_pack_data</code>(3), <code>free_lzss_pack_data</code>(3) </p>
 <h2>Index</h2>

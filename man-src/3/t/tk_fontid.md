@@ -42,6 +42,6 @@ int
 <p> The <i>descent</i> is the largest amount in pixels that any letter sticks below the baseline, plus any extra blank space added by the designer of the font. </p>
 <p> The <i>linespace</i> is the sum of the ascent and descent. How far apart two lines of text in the same font should be placed so that none of the characters in one line overlap any of the characters in the other line.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-font/">font</a>(n), <a href="/docs/linux/man/3-measurechar/">MeasureChar</a>(3)</p>
+<p>font(n), MeasureChar(3)</p>
 <h2>Keywords</h2>
 <p>font, measurement, Postscript</p>

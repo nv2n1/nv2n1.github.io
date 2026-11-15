@@ -24,7 +24,7 @@ void function(alist)
 <p> <code>vacall_function = </code><i>&amp;function</i><code>;</code> </p>
 <p> <i>val</i><code> = ((</code><i>return_type</i><code> (*) ()) vacall) (</code><i>arg1</i><code>,</code><i>arg2</i><code>,</code><i>&#8230;</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
-<p> This set of macros permit a C function <i>function</i> to be called with variable arguments and to return variable return values. This is much like the <code><a href="/docs/linux/man/3-varargs/">varargs</a></code>(3) facility, but also allows the return value to be specified at run time. </p>
+<p> This set of macros permit a C function <i>function</i> to be called with variable arguments and to return variable return values. This is much like the <code>varargs</code>(3) facility, but also allows the return value to be specified at run time. </p>
 <p> Function calling conventions differ considerably on different machines, and <i>vacall</i> attempts to provide some degree of isolation from such architecture dependencies. </p>
 <p> The function that can be called with any number and type of arguments and which will return any type of return value is <code>vacall</code>. It will do some magic and call the function stored in the variable <code>vacall_function</code>. If you want to make more than one use of <i>vacall</i>, use the <i><a href="/docs/linux/man/3-trampoline/">trampoline</a></i>(3) facility to store <i>&amp;function</i> into <code>vacall_function</code> just before calling <code>vacall</code>. </p>
 <p> Within <i>function</i>, the following macros can be used to walk through the argument list and specify a return value:</p>
@@ -61,7 +61,7 @@ struct {<br />
 <p> The macros <code>va_start_longlong()</code>, <code>va_start_ulonglong()</code>, <code>va_return_longlong()</code>, <code>va_return_ulonglong()</code>, <code>va_arg_longlong()</code> and <code>va_arg_ulonglong()</code> work only if the C compiler has a working <code>long long</code> 64-bit integer type. </p>
 <p> The struct types used in <code>va_start_struct()</code> and <code>va_struct()</code> must only contain (signed or unsigned) int, long, long long or pointer fields. Struct types containing (signed or unsigned) char, short, float, double or other structs are not supported. </p>
 <h2>EXAMPLE</h2>
-<p> This example, a possible implementation of <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) on top of <code><a href="/docs/linux/man/2-execv/">execv</a></code>(2) using <code><a href="/docs/linux/man/3-varargs/">varargs</a></code>(3), </p>
+<p> This example, a possible implementation of <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) on top of <code>execv</code>(2) using <code>varargs</code>(3), </p>
 <p>#include &lt;varargs.h&gt;<br />
 #define MAXARGS 100<br />
 /* execl is called by execl(file, arg1, arg2, &#8230;, (char *)0); */<br />
@@ -101,7 +101,7 @@ void execl(ap)
 vacall_function = &amp;execl;
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-varargs/">varargs</a></code>(3), <code><a href="/docs/linux/man/3-trampoline/">trampoline</a></code>(3), <code><a href="/docs/linux/man/3-callback/">callback</a></code>(3). </p>
+<p> <code>varargs</code>(3), <code><a href="/docs/linux/man/3-trampoline/">trampoline</a></code>(3), <code><a href="/docs/linux/man/3-callback/">callback</a></code>(3). </p>
 <h2>BUGS</h2>
 <p> The current implementations have been tested on a selection of common cases but there are probably still many bugs. </p>
 <p> There are typically built-in limits on the size of the argument-list, which may also include the size of any structure arguments. </p>

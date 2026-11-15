@@ -812,7 +812,7 @@ conflicting flags.
 <dd> TransProxyType may only be enabled when there is transparent proxy listener enabled. </p>
 <p> Set this to &quot;TPROXY&quot; if you wish to be able to use the TPROXY Linux module to transparently proxy connections that are configured using the TransPort option. This setting lets the listener on the TransPort accept connections for all addresses, even when the TransListenAddress is configured for an internal address. Detailed information on how to configure the TPROXY feature can be found in the Linux kernel source tree in the file Documentation/networking/tproxy.txt. </p>
 <p> Set this option to &quot;ipfw&quot; to use the FreeBSD ipfw interface. </p>
-<p> On *BSD operating systems when using pf, set this to &quot;pf-divert&quot; to take advantage of divert-to rules, which do not modify the packets like rdr-to rules do. Detailed information on how to configure pf to use divert-to rules can be found in the <a href="/docs/linux/man/5-pf-conf/">pf.conf</a>(5) manual page. On OpenBSD, divert-to is available to use on versions greater than or equal to OpenBSD 4.4. </p>
+<p> On *BSD operating systems when using pf, set this to &quot;pf-divert&quot; to take advantage of divert-to rules, which do not modify the packets like rdr-to rules do. Detailed information on how to configure pf to use divert-to rules can be found in the pf.conf(5) manual page. On OpenBSD, divert-to is available to use on versions greater than or equal to OpenBSD 4.4. </p>
 <p> Set this to &quot;default&quot;, or leave it unconfigured, to use regular IPTables on Linux, or to use pf rdr-to rules on *BSD systems. </p>
 <p> (Default: &quot;default&quot;.)</dl>
 <p> <code>NATDPort</code> [<i>address</i>:]<i>port</i>|<code>auto</code> [<i>isolation flags</i>]</p>

@@ -727,7 +727,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> On systems that support TCF (aix-ibm370, aix-ps2), <i>getspath</i> and <i>setspath</i> get and set the system execution path, <i>getxvers</i> and <i>setxvers</i> get and set the experimental version prefix and <i>migrate</i> migrates processes between sites. The <i>jobs</i> builtin prints the site on which each job is executing. </p>
 <p> Under BS2000, <i>bs2cmd</i> executes commands of the underlying BS2000/OSD operating system. </p>
 <p> Under Domain/OS, <i>inlib</i> adds shared libraries to the current environment, <i>rootnode</i> changes the rootnode and <i>ver</i> changes the systype. </p>
-<p> Under Mach, <i>setpath</i> is equivalent to Mach&#8217;s <i><a href="/docs/linux/man/1-setpath/">setpath</a></i>(1). </p>
+<p> Under Mach, <i>setpath</i> is equivalent to Mach&#8217;s <i>setpath</i>(1). </p>
 <p> Under Masscomp/RTU and Harris CX/UX, <i>universe</i> sets the universe. </p>
 <p> Under Harris CX/UX, <i>ucb</i> or <i>att</i> runs a command under the specified universe. </p>
 <p> Under Convex/OS, <i>warp</i> prints or sets the universe. </p>
@@ -826,7 +826,8 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dt><code>
 </code></p>
 <dd> Newline</p>
-<dt><code></code></p>
+<dt><code>
+</code></p>
 <dd> Carriage return</p>
 <dt><code>	</code></p>
 <dd> Horizontal tab</p>
@@ -1296,7 +1297,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dt><code>setenv </code>[<i>name </i>[<i>value</i>]]</p>
 <dd> Without arguments, prints the names and values of all environment variables. Given <i>name</i>, sets the environment variable <i>name</i> to <i>value</i> or, without <i>value</i>, to the null string.</p>
 <dt><code>setpath </code><i>path </i>(+)</p>
-<dd> Equivalent to <i><a href="/docs/linux/man/1-setpath/">setpath</a></i>(1). (Mach only)</p>
+<dd> Equivalent to <i>setpath</i>(1). (Mach only)</p>
 <dt><code>setspath</code> LOCAL|<i>site</i>|<i>cpu</i> &#8230; (+)</p>
 <dd> Sets the system execution path. (TCF only)</p>
 <dt><code>settc </code><i>cap value </i>(+)</p>
@@ -1415,7 +1416,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dt>
 <dd> &gt; set tperiod = 30<br />
  &gt; alias periodic checknews</dl>
-<p> then the <i><a href="/docs/linux/man/1-checknews/">checknews</a></i>(1) program runs every 30 minutes. If <i>periodic</i> is set but <code>tperiod</code> is unset or set to 0, <i>periodic</i> behaves like <i>precmd</i>.</dl>
+<p> then the <i>checknews</i>(1) program runs every 30 minutes. If <i>periodic</i> is set but <code>tperiod</code> is unset or set to 0, <i>periodic</i> behaves like <i>precmd</i>.</dl>
 <dt><code>precmd</code></p>
 <dd> Runs just before each prompt is printed. For example, if one does</p>
 <dl>
@@ -1968,7 +1969,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dt><code>COLUMNS</code></p>
 <dd> The number of columns in the terminal. See <code>Terminal management</code>.</p>
 <dt><code>DISPLAY</code></p>
-<dd> Used by X Window System (see <i><a href="/docs/linux/man/1-x/">X</a></i>(1)). If set, the shell does not set <code>autologout</code> (q.v.).</p>
+<dd> Used by X Window System (see <i>X</i>(1)). If set, the shell does not set <code>autologout</code> (q.v.).</p>
 <dt><code>EDITOR</code></p>
 <dd> The pathname to a default editor. See also the <code>VISUAL</code> environment variable and the <i>run-fg-editor</i> editor command.</p>
 <dt><code>GROUP </code>(+)</p>
@@ -2178,7 +2179,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> Command substitutions may substitute no more characters than are allowed in an argument list. </p>
 <p> To detect looping, the shell restricts the number of <i>alias</i> substitutions on a single line to 20.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-csh/">csh</a>(1), <a href="/docs/linux/man/1-emacs/">emacs</a>(1), <a href="/docs/linux/man/1-ls/">ls</a>(1), <a href="/docs/linux/man/1-newgrp/">newgrp</a>(1), <a href="/docs/linux/man/1-sh/">sh</a>(1), <a href="/docs/linux/man/1-setpath/">setpath</a>(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/1-su/">su</a>(1), <a href="/docs/linux/man/1-tset/">tset</a>(1), <a href="/docs/linux/man/1-vi/">vi</a>(1), <a href="/docs/linux/man/1-x/">x</a>(1), <a href="/docs/linux/man/2-access/">access</a>(2), <a href="/docs/linux/man/2-execve/">execve</a>(2), <a href="/docs/linux/man/2-fork/">fork</a>(2), <a href="/docs/linux/man/2-killpg/">killpg</a>(2), <a href="/docs/linux/man/2-pipe/">pipe</a>(2), <a href="/docs/linux/man/2-setrlimit/">setrlimit</a>(2), <a href="/docs/linux/man/2-sigvec/">sigvec</a>(2), <a href="/docs/linux/man/2-stat/">stat</a>(2), <a href="/docs/linux/man/2-umask/">umask</a>(2), <a href="/docs/linux/man/2-vfork/">vfork</a>(2), <a href="/docs/linux/man/2-wait/">wait</a>(2), <a href="/docs/linux/man/3-malloc/">malloc</a>(3), <a href="/docs/linux/man/3-setlocale/">setlocale</a>(3), <a href="/docs/linux/man/4-tty/">tty</a>(4), <a href="/docs/linux/man/5-a-out/">a.out</a>(5), <a href="/docs/linux/man/5-termcap/">termcap</a>(5), <a href="/docs/linux/man/7-environ/">environ</a>(7), <a href="/docs/linux/man/7-termio/">termio</a>(7), Introduction to the C Shell</p>
+<p> <a href="/docs/linux/man/1-csh/">csh</a>(1), <a href="/docs/linux/man/1-emacs/">emacs</a>(1), <a href="/docs/linux/man/1-ls/">ls</a>(1), <a href="/docs/linux/man/1-newgrp/">newgrp</a>(1), <a href="/docs/linux/man/1-sh/">sh</a>(1), setpath(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/1-su/">su</a>(1), <a href="/docs/linux/man/1-tset/">tset</a>(1), <a href="/docs/linux/man/1-vi/">vi</a>(1), x(1), <a href="/docs/linux/man/2-access/">access</a>(2), <a href="/docs/linux/man/2-execve/">execve</a>(2), <a href="/docs/linux/man/2-fork/">fork</a>(2), <a href="/docs/linux/man/2-killpg/">killpg</a>(2), <a href="/docs/linux/man/2-pipe/">pipe</a>(2), <a href="/docs/linux/man/2-setrlimit/">setrlimit</a>(2), sigvec(2), <a href="/docs/linux/man/2-stat/">stat</a>(2), <a href="/docs/linux/man/2-umask/">umask</a>(2), <a href="/docs/linux/man/2-vfork/">vfork</a>(2), <a href="/docs/linux/man/2-wait/">wait</a>(2), <a href="/docs/linux/man/3-malloc/">malloc</a>(3), <a href="/docs/linux/man/3-setlocale/">setlocale</a>(3), <a href="/docs/linux/man/4-tty/">tty</a>(4), a.out(5), <a href="/docs/linux/man/5-termcap/">termcap</a>(5), <a href="/docs/linux/man/7-environ/">environ</a>(7), <a href="/docs/linux/man/7-termio/">termio</a>(7), Introduction to the C Shell</p>
 <h2>VERSION</h2>
 <p> This manual documents tcsh 6.18.01 (Astron) 2012-02-14.</p>
 <h2>AUTHORS</h2>

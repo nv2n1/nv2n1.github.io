@@ -14,7 +14,7 @@ description: "fbset – show and modify frame buffer device settings"
 <p><code>This documentation is out of date!!</code> </p>
 <p> <code>fbset</code> is a system utility to show or change the settings of the frame buffer device. The frame buffer device provides a simple and unique interface to access different kinds of graphic displays. </p>
 <p> Frame buffer devices are accessed via special device nodes located in the /dev directory. The naming scheme for these nodes is always <i></i><code>fb</code>&lt;<i>n</i>&gt;, where <i>n</i> is the number of the used frame buffer device. </p>
-<p> <code>fbset</code> uses an own video mode database located in /etc/fb.modes. An unlimited number of video modes can be defined in this database. For further information see <code><a href="/docs/linux/man/5-fb-modes/">fb.modes</a></code>(5).</p>
+<p> <code>fbset</code> uses an own video mode database located in /etc/fb.modes. An unlimited number of video modes can be defined in this database. For further information see <code>fb.modes</code>(5).</p>
 <h2>Options</h2>
 <p>If no option is given, <code>fbset</code> will display the current frame buffer settings. </p>
 <p> General options:</p>
@@ -48,7 +48,7 @@ description: "fbset – show and modify frame buffer device settings"
 <dd>
 <dl>
 <dt><code>-db</code>&nbsp;<wbr>&lt;<i>file</i>&gt;</p>
-<dd>set an alternative video mode database file (default is <i>/etc/fb.modes</i>), see also <code><a href="/docs/linux/man/5-fb-modes/">fb.modes</a></code>(5)</dl>
+<dd>set an alternative video mode database file (default is <i>/etc/fb.modes</i>), see also <code>fb.modes</code>(5)</dl>
 </dl>
 <p> Display geometry:</p>
 <dl>
@@ -130,7 +130,7 @@ description: "fbset – show and modify frame buffer device settings"
 <p><i>/dev/fb*</i><br />
  <i>/etc/fb.modes</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-fb-modes/">fb.modes</a></code>(5), <code><a href="/docs/linux/man/4-fbdev/">fbdev</a></code>(4)</p>
+<p><code>fb.modes</code>(5), <code><a href="/docs/linux/man/4-fbdev/">fbdev</a></code>(4)</p>
 <h2>Authors</h2>
 <dl>
 <dt>Geert Uytterhoeven &lt;Geert.Uytterhoeven [at] cs.kuleuven.ac.be&gt;</p>

@@ -36,7 +36,7 @@ description: "sshd – OpenSSH daemon"
 <dt><code>-h </code><i>host_key_file</i></p>
 <dd>Specifies a file from which a host key is read. This option must be given if <code>sshd</code> is not run as root (as the normal host key files are normally not readable by anyone but root). The default is /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_ed25519_key and /etc/ssh/ssh_host_rsa_key It is possible to have multiple host key files for the different host key algorithms.</p>
 <dt><code>-i</code></p>
-<dd>Specifies that <code>sshd</code> is being run from <a href="/docs/linux/man/8-inetd/">inetd</a>(8).</p>
+<dd>Specifies that <code>sshd</code> is being run from inetd(8).</p>
 <dt><code>-o </code><i>option</i></p>
 <dd>Can be used to give options in the format used in the configuration file. This is useful for specifying options for which there is no separate command-line flag. For full details of the options, and their values, see sshd_config5.</p>
 <dt><code>-p </code><i>port</i></p>
@@ -152,7 +152,7 @@ fi</pre>
 <dt><code>restrict</code></p>
 <dd>Enable all restrictions, i.e. disable port, agent and X11 forwarding, as well as disabling PTY allocation and execution of ~/.ssh/rc If any future restriction capabilities are added to authorized_keys files they will be included in this set.</p>
 <dt><code>tunnel=n</code></p>
-<dd>Force a <a href="/docs/linux/man/4-tun/">tun</a>(4) device on the server. Without this option, the next available device will be used if the client requests a tunnel.</p>
+<dd>Force a tun(4) device on the server. Without this option, the next available device will be used if the client requests a tunnel.</p>
 <dt><code>user-rc</code></p>
 <dd>Enables execution of ~/.ssh/rc previously disabled by the <code>restrict</code> option.</p>
 <dt><code>X11-forwarding</code></p>
@@ -257,6 +257,6 @@ AAAA1234.....=
 <dt><code>/run/sshd.pid </code></p>
 <dd>Contains the process ID of the <code>sshd</code> listening for connections (if there are several daemons running concurrently for different ports, this contains the process ID of the one started last). The content of this file is not sensitive; it can be world-readable.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-scp/">scp</a>(1), <a href="/docs/linux/man/1-sftp/">sftp</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1, ssh-keygen1, ssh-keyscan1, <a href="/docs/linux/man/2-chroot/">chroot</a>(2), hosts_access5, <a href="/docs/linux/man/5-moduli/">moduli</a>(5), sshd_config5, <a href="/docs/linux/man/8-inetd/">inetd</a>(8), sftp-server8</p>
+<p><a href="/docs/linux/man/1-scp/">scp</a>(1), <a href="/docs/linux/man/1-sftp/">sftp</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1, ssh-keygen1, ssh-keyscan1, <a href="/docs/linux/man/2-chroot/">chroot</a>(2), hosts_access5, <a href="/docs/linux/man/5-moduli/">moduli</a>(5), sshd_config5, inetd(8), sftp-server8</p>
 <h2>Authors</h2>
 <p>OpenSSH is a derivative of the original and free ssh 1.2.12 release by Tatu Ylonen. Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt and Dug Song removed many bugs, re-added newer features and created OpenSSH. Markus Friedl contributed the support for SSH protocol versions 1.5 and 2.0. Niels Provos and Markus Friedl contributed support for privilege separation.</p>

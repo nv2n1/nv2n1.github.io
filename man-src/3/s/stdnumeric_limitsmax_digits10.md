@@ -30,9 +30,9 @@ long 0<br />
 unsigned long 0<br />
 long long 0<br />
 unsigned long long 0<br />
-float FLT_DECIMAL_DIG or std::ceil(std::numeric_limits&lt;float&gt;::digits * <a href="/docs/linux/man/2-std--log10/">std::log10</a><code>(2)</code> + 1)<br />
-double DBL_DECIMAL_DIG orstd::ceil(std::numeric_limits&lt;double&gt;::digits * <a href="/docs/linux/man/2-std--log10/">std::log10</a><code>(2)</code> + 1)<br />
-long double DECIMAL_DIG or LDBL_DECIMAL_DIG orstd::ceil(std::numeric_limits&lt;long double&gt;::digits * <a href="/docs/linux/man/2-std--log10/">std::log10</a><code>(2)</code> + 1)</p>
+float FLT_DECIMAL_DIG or std::ceil(std::numeric_limits&lt;float&gt;::digits * std::log10<code>(2)</code> + 1)<br />
+double DBL_DECIMAL_DIG orstd::ceil(std::numeric_limits&lt;double&gt;::digits * std::log10<code>(2)</code> + 1)<br />
+long double DECIMAL_DIG or LDBL_DECIMAL_DIG orstd::ceil(std::numeric_limits&lt;long double&gt;::digits * std::log10<code>(2)</code> + 1)</p>
 <h2>Notes</h2>
 <p>Unlike most mathematical operations, the conversion of a floating-point value to text and back is exact as long as at least max_digits10 were used (9 for float, 17 for double): it is guaranteed to produce the same floating-point value, even though the intermediate text representation is not exact. It may take over a hundred decimal digits to represent the precise value of a float in decimal notation. </p>
 <h2>Example</h2>

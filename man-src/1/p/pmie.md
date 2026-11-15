@@ -89,7 +89,7 @@ all_sample (
 <pre>
 delta = 20 sec;
 </pre>
-<p> If any disk is performing more than 60 I/Os per second, then print a message identifying the busy disk to standard output and launch <code><a href="/docs/linux/man/1-dkvis/">dkvis</a></code>(1): </p>
+<p> If any disk is performing more than 60 I/Os per second, then print a message identifying the busy disk to standard output and launch <code>dkvis</code>(1): </p>
 <pre>
 some_inst (
     disk.dev.total &gt; 60 count/sec
@@ -412,7 +412,7 @@ match_inst &quot;^dks[23]d&quot; disk.dev.total &gt; 20;
 </tr>
 <tr VALIGN=top>
 <td><code>alarm</code></td>
-<td>Raise a visible alarm with <code><a href="/docs/linux/man/1-xconfirm/">xconfirm</a></code>(1)
+<td>Raise a visible alarm with <code>xconfirm</code>(1)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -691,8 +691,8 @@ match_inst &quot;^dks[23]d&quot; disk.dev.total &gt; 20;
 <h2>AUTOMATIC RESTART</h2>
 <p> It is often useful for <code>pmie</code> processes to be started and stopped when the local host is booted or shutdown, or when they have been detected as no longer running (when they have unexpectedly exited for some reason). Refer to <code><a href="/docs/linux/man/1-pmie_check/">pmie_check</a></code>(1) for details on automating this process.</p>
 <h2>EVENT MONITORING</h2>
-<p> It is common for production systems to be monitored in a central location. Traditionally on UNIX systems this has been performed by the system log facilities &#8211; see <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1), and <code><a href="/docs/linux/man/1-syslogd/">syslogd</a></code>(1). On Windows, communication with the system event log is handled by <code><a href="/docs/linux/man/1-pcp-eventlog/">pcp-eventlog</a></code>(1). </p>
-<p> <code>pmie</code> fits into this model when rules use the <i>syslog</i> action. Note that if the action string begins with -p (priority) and/or -t (tag) then these are extracted from the string and treated in the same way as in <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1) and <code><a href="/docs/linux/man/1-pcp-eventlog/">pcp-eventlog</a></code>(1). </p>
+<p> It is common for production systems to be monitored in a central location. Traditionally on UNIX systems this has been performed by the system log facilities &#8211; see <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1), and <code>syslogd</code>(1). On Windows, communication with the system event log is handled by <code>pcp-eventlog</code>(1). </p>
+<p> <code>pmie</code> fits into this model when rules use the <i>syslog</i> action. Note that if the action string begins with -p (priority) and/or -t (tag) then these are extracted from the string and treated in the same way as in <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1) and <code>pcp-eventlog</code>(1). </p>
 <p> However, it is common to have other event monitoring frameworks also, into which you may wish to incorporate performance events from <code>pmie</code>. You can often use the <i>shell</i> action to send events to these frameworks, as they usually provide their a program for injecting events into the framework from external sources. </p>
 <p> A final option is use of the <i>stomp</i> (Streaming Text Oriented Messaging Protocol) action, which allows <code>pmie</code> to connect to a central JMS (Java Messaging System) server and send events to the PMIE topic. Tools can be written to extract these text messages and present them to operations people (via desktop popup windows, etc). Use of the <i>stomp</i> action requires a stomp configuration file to be setup, which specifies the location of the JMS server host, port number, and username/password. </p>
 <p> The format of this file is as follows: </p>
@@ -725,9 +725,9 @@ topic=PMIE              # JMS topic for pmie messages (optional)
 <h2>UNIX SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1).</p>
 <h2>WINDOWS SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcp-eventlog/">pcp-eventlog</a></code>(1).</p>
+<p> <code>pcp-eventlog</code>(1).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmconfirm/">pmconfirm</a></code>(1), <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1), <code><a href="/docs/linux/man/1-pmieconf/">pmieconf</a></code>(1), <code><a href="/docs/linux/man/1-pmie_check/">pmie_check</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/1-pmval/">pmval</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
+<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmconfirm/">pmconfirm</a></code>(1), <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1), <code><a href="/docs/linux/man/1-pmieconf/">pmieconf</a></code>(1), <code><a href="/docs/linux/man/1-pmie_check/">pmie_check</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code>pmval</code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>USER GUIDE</h2>
 <p> For a more complete description of the <code>pmie</code> language, refer to the <code>Performance Co-Pilot Users and Administrators Guide</code>. This is available online from: </p>
 <pre>

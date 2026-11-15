@@ -71,7 +71,7 @@ globus_simple_ca_0146c503.tar.gz
 <dt>
 <dd> Non-standard installation path of the Globus Toolkit.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-grid-cert-request/">grid-cert-request</a>(1), <a href="/docs/linux/man/1-grid-ca-sign/">grid-ca-sign</a>(1), <a href="/docs/linux/man/1-grid-default-ca/">grid-default-ca</a>(1), <a href="/docs/linux/man/1-grid-ca-create/">grid-ca-create</a>(1)</p>
+<p> <a href="/docs/linux/man/1-grid-cert-request/">grid-cert-request</a>(1), <a href="/docs/linux/man/1-grid-ca-sign/">grid-ca-sign</a>(1), grid-default-ca(1), <a href="/docs/linux/man/1-grid-ca-create/">grid-ca-create</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
 <h2>Index</h2>

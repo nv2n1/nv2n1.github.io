@@ -586,4 +586,4 @@ $HOME/.mwmrc
 /etc/X11/mwm/$LANG/system.mwmrc
 /etc/X11/mwm/system.mwmrc</code></pre>
 <h2>Related Information</h2>
-<p><code><a href="/docs/linux/man/1-mwm/">mwm</a></code>(1), <code><a href="/docs/linux/man/1-x/">X</a></code>(1).</p>
+<p><code><a href="/docs/linux/man/1-mwm/">mwm</a></code>(1), <code>X</code>(1).</p>

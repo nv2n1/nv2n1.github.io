@@ -22,7 +22,7 @@ description: "lwres_net_ntop – lightweight resolver IP address presentation"
 <h2>RETURN VALUES</h2>
 <p> If successful, the function returns <i>dst</i>: a pointer to a string containing the presentation format of the address. <code>lwres_net_ntop()</code> returns <code>NULL</code> and sets the global variable <code>errno</code> to <code>EAFNOSUPPORT</code> if the protocol family given in <i>af</i> is not supported.</p>
 <h2>SEE ALSO</h2>
-<p> <code>RFC1884</code>(), <code><a href="/docs/linux/man/3-inet_ntop/">inet_ntop</a></code>(3), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3).</p>
+<p> <code>RFC1884</code>(), <code>inet_ntop</code>(3), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3).</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

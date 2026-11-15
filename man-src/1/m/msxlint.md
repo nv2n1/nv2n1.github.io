@@ -19,7 +19,7 @@ description: "msxlint – detects incorrectly formatted notes lines in a MusiXTe
 <p> User-defined macros are not processed or expanded. Notes commands (
 otes, \Notes, etc.) can have line breaks, but other commands must fit on one line.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-fixmsxpart/">fixmsxpart</a></code>(1) </p>
+<p> <code>fixmsxpart</code>(1) </p>
 <p> musixdoc.pdf </p>
 <h2>AUTHOR</h2>
 <p> This program and manual page were written by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>

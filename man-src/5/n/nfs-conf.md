@@ -29,26 +29,26 @@ description: "nfs.conf – general configuration for NFS daemons and tools"
 <p> The <code>nfsdcltrack</code> program is run directly by the Linux kernel and there is no opportunity to provide command line arguments, so the configuration file is the only way to configure this program. See <code><a href="/docs/linux/man/8-nfsdcltrack/">nfsdcltrack</a></code>(8) for details. </p>
 <dt><code>nfsd</code></p>
 <dd>Recognized values: <code>threads</code>, <code>host</code>, <code>port</code>, <code>grace-time</code>, <code>lease-time</code>, <code>udp</code>, <code>tcp</code>, <code>vers2</code>, <code>vers3</code>, <code>vers4</code>, <code>vers4.0</code>, <code>vers4.1</code>, <code>vers4.2</code>, <code>rdma</code>. </p>
-<p> Version and protocol values are Boolean values as described above, and are also used by <code>rpc.mountd</code>. Threads and the two times are integers. <code>port</code> and <code>rdma</code> are service names or numbers. See <code><a href="/docs/linux/man/8-rpc-nfsd/">rpc.nfsd</a></code>(8) for details. </p>
+<p> Version and protocol values are Boolean values as described above, and are also used by <code>rpc.mountd</code>. Threads and the two times are integers. <code>port</code> and <code>rdma</code> are service names or numbers. See <code>rpc.nfsd</code>(8) for details. </p>
 <dt><code>mountd</code></p>
 <dd>Recognized values: <code>manage-gids</code>, <code>descriptors</code>, <code>port</code>, <code>threads</code>, <code>reverse-lookup</code>, <code>state-directory-path</code>, <code>ha-callout</code>. </p>
-<p> These, together with the protocol and version values in the <code>[nfsd]</code> section, are used to configure mountd. See <code><a href="/docs/linux/man/8-rpc-mountd/">rpc.mountd</a></code>(8) for details. </p>
+<p> These, together with the protocol and version values in the <code>[nfsd]</code> section, are used to configure mountd. See <code>rpc.mountd</code>(8) for details. </p>
 <dt><code>statd</code></p>
 <dd>Recognized values: <code>port</code>, <code>outgoing-port</code>, <code>name</code>, <code>state-directory-path</code>, <code>ha-callout</code>. </p>
-<p> See <code><a href="/docs/linux/man/8-rpc-statd/">rpc.statd</a></code>(8) for details. </p>
+<p> See <code>rpc.statd</code>(8) for details. </p>
 <dt><code>lockd</code></p>
 <dd>Recognized values: <code>port</code> and <code>udp-port</code>. </p>
-<p> See <code><a href="/docs/linux/man/8-rpc-statd/">rpc.statd</a></code>(8) for details. </p>
+<p> See <code>rpc.statd</code>(8) for details. </p>
 <dt><code>sm-notify</code></p>
 <dd>Recognized values: <code>retry-time</code>, <code>outgoing-port</code>, and <code>outgoing-addr</code>. </p>
 <p> See <code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8) for details. </p>
 <dt><code>gssd</code></p>
 <dd>Recognized values: <code>use-memcache</code>, <code>use-machine-creds</code>, <code>avoid-dns</code>, <code>limit-to-legacy-enctypes</code>, <code>context-timeout</code>, <code>rpc-timeout</code>, <code>pipefs-directory</code>, <code>keytab-file</code>, <code>cred-cache-directory</code>, <code>preferred-realm</code>. </p>
-<p> See <code><a href="/docs/linux/man/8-rpc-gssd/">rpc.gssd</a></code>(8) for details. </p>
+<p> See <code>rpc.gssd</code>(8) for details. </p>
 <dt><code>exportfs</code></p>
 <dd>Only <code>debug=</code> is recognized. </p>
 </dl>
 <h2>Files</h2>
 <p><i>/etc/nfs.conf</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-nfsdcltrack/">nfsdcltrack</a></code>(8), <code><a href="/docs/linux/man/8-rpc-nfsd/">rpc.nfsd</a></code>(8), <code><a href="/docs/linux/man/8-rpc-mountd/">rpc.mountd</a></code>(8), <code><a href="/docs/linux/man/5-nfsmount-conf/">nfsmount.conf</a></code>(5). </p>
+<p><code><a href="/docs/linux/man/8-nfsdcltrack/">nfsdcltrack</a></code>(8), <code>rpc.nfsd</code>(8), <code>rpc.mountd</code>(8), <code><a href="/docs/linux/man/5-nfsmount-conf/">nfsmount.conf</a></code>(5). </p>

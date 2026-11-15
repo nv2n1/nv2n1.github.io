@@ -78,6 +78,6 @@ description: "g_enemat – extracts an energy matrix from an energy file"
 <p> <code>-temp</code><i> real</i><code> 300 </code><br />
 &nbsp;<wbr>reference temperature for free energy calculation </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

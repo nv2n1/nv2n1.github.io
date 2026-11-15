@@ -76,7 +76,7 @@ description: "cupsd.conf – server configuration file for cups"
 <dt><code>FilterLimit </code><i>limit</i></p>
 <dd>Specifies the maximum cost of filters that are run concurrently, which can be used to minimize disk, memory, and CPU resource problems. A limit of 0 disables filter limiting. An average print to a non-PostScript printer needs a filter limit of about 200. A PostScript printer needs about half that (100). Setting the limit below these thresholds will effectively limit the scheduler to printing a single job at any time. The default limit is &quot;0&quot;.</p>
 <dt><code>FilterNice </code><i>nice-value</i></p>
-<dd>Specifies the scheduling priority ( <code><a href="/docs/linux/man/8-nice/">nice</a></code>(8) value) of filters that are run to print a job. The nice value ranges from 0, the highest priority, to 19, the lowest priority. The default is 0.</p>
+<dd>Specifies the scheduling priority ( <code>nice</code>(8) value) of filters that are run to print a job. The nice value ranges from 0, the highest priority, to 19, the lowest priority. The default is 0.</p>
 <dd><code>HostNameLookups On</code></p>
 <dt><code>HostNameLookups Off</code></p>
 <dd>
@@ -495,7 +495,7 @@ description: "cupsd.conf – server configuration file for cups"
 <p>The default is the empty string, which disables page logging. The string &quot;%p %u %j %T %P %C %{job-billing} %{job-originating-host-name} %{job-name} %{media} %{sides}&quot; creates a page log with the standard items. Use &quot;%{job-impressions-completed}&quot; to insert the number of pages (sides) that were printed, or &quot;%{job-media-sheets-completed}&quot; to insert the number of sheets that were printed.</dl>
 <h2>Notes</h2>
 <p>File, directory, and user configuration directives that used to be allowed in the <code>cupsd.conf</code> file are now stored in the <code><a href="/docs/linux/man/5-cups-files-conf/">cups-files.conf</a></code>(5) file instead in order to prevent certain types of privilege escalation attacks. </p>
-<p> The scheduler MUST be restarted manually after making changes to the <code>cupsd.conf</code> file. On Linux this is typically done using the <code><a href="/docs/linux/man/8-systemctl/">systemctl</a></code>(8) command, while on macOS the <code><a href="/docs/linux/man/8-launchctl/">launchctl</a></code>(8) command is used instead. </p>
+<p> The scheduler MUST be restarted manually after making changes to the <code>cupsd.conf</code> file. On Linux this is typically done using the <code>systemctl</code>(8) command, while on macOS the <code>launchctl</code>(8) command is used instead. </p>
 <p> The @LOCAL macro name can be confusing since the system running <code>cupsd</code> often belongs to a different set of subnets from its clients.</p>
 <h2>Conforming To</h2>
 <p>The <code>cupsd.conf</code> file format is based on the Apache HTTP Server configuration file format.</p>

@@ -39,7 +39,7 @@ description: "systemd.offline-updates – Implementation of offline updates in s
 <dl>
 <dd>5. It may be desirable to always run an auxiliary unit when booting into offline-updates mode, which itself does not install updates. To do this create a .service file with <i>Wants=system-update-pre.target</i> and <i>Before=system-update-pre.target</i> and add a symlink to that file under /lib/systemd/system-update.target.wants .</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-systemd-generator/">systemd.generator</a></code>(7), <code><a href="/docs/linux/man/8-systemd-system-update-generator/">systemd-system-update-generator</a></code>(8), <code><a href="/docs/linux/man/8-dnf-plugin-system-upgrade/">dnf.plugin.system-upgrade</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-systemd-generator/">systemd.generator</a></code>(7), <code><a href="/docs/linux/man/8-systemd-system-update-generator/">systemd-system-update-generator</a></code>(8), <code>dnf.plugin.system-upgrade</code>(8)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

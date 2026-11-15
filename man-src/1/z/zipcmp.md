@@ -32,7 +32,7 @@ description: "zipcmp – compare contents of zip archives"
 <h2>EXIT STATUS</h2>
 <p> <code>zipcmp</code> exits 0 if the two zip archives contain the same files, 1 if they differ, and &gt;1 if an error occurred.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-zipmerge/">zipmerge</a>(1), <a href="/docs/linux/man/1-ziptorrent/">ziptorrent</a>(1), <a href="/docs/linux/man/3-libzip/">libzip</a>(3)</p>
+<p> <a href="/docs/linux/man/1-zipmerge/">zipmerge</a>(1), <a href="/docs/linux/man/1-ziptorrent/">ziptorrent</a>(1), libzip(3)</p>
 <h2>AUTHORS</h2>
 <p> Dieter Baron &lt;dillo [at] giga.or.at&gt; and Thomas Klausner &lt;tk [at] giga.or.at&gt; </p>
 <h2>Index</h2>

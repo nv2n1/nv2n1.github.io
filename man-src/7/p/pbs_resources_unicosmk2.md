@@ -13,7 +13,7 @@ description: "pbs_resources_unicosmk2 – pbs resources under Unicos MK2"
 <h2>Resources</h2>
 <dl>
 <dt>cput</p>
-<dd>Maximum amount of CPU time used by all processes in the job. Root processes are not limited, see <a href="/docs/linux/man/2-limit/">limit</a>(2). Units: time.</p>
+<dd>Maximum amount of CPU time used by all processes in the job. Root processes are not limited, see limit(2). Units: time.</p>
 <dt>mem</p>
 <dd>Maximum amount of physical memory used by all concurrent processes in the job. Units: size.</p>
 <dt>mppe</p>
@@ -129,4 +129,4 @@ description: "pbs_resources_unicosmk2 – pbs resources under Unicos MK2"
 <dd>The maximum amount of a resource which is expressed as a simple integer.</dl>
 <p> </code></p>
 <h2>See Also</h2>
-<p>the PBS ERS, <a href="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B), <a href="//www.systutorials.com/docs/linux/man/1B-qalter/">qalter</a>(1B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_submit/">pbs_submit</a>(3B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_alterjob/">pbs_alterjob</a>(3B), <a href="//www.systutorials.com/docs/linux/man/3b-pbs_statjob/">pbs_statjob</a>(3b) <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_aix4/">pbs_resources_aix4</a>(7B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_irix5/">pbs_resources_irix5</a>(7B) <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_sp2/">pbs_resources_sp2</a>(7B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources_sunos4/">pbs_resources_sunos4</a>(7B) </p>
+<p>the PBS ERS, qsub(1B), qalter(1B), pbs_submit(3B), pbs_alterjob(3B), pbs_statjob(3b) pbs_resources_aix4(7B), pbs_resources_irix5(7B) pbs_resources_sp2(7B), pbs_resources_sunos4(7B) </p>

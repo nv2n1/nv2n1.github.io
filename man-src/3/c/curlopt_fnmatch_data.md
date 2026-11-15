@@ -13,7 +13,7 @@ description: "CURLOPT_FNMATCH_DATA – custom pointer to fnmatch callback"
 CURLcode curl_easy_setopt(CURL *handle, CURLOPT_FNMATCH_DATA,
  void *pointer);</pre>
 <h2>Description</h2>
-<p>Pass a pointer that will be untouched by libcurl and passed as the ptr argument to the <i><a href="/docs/linux/man/3-curl_fnmatch_function/">CURL_FNMATCH_FUNCTION</a>(3)</i>.</p>
+<p>Pass a pointer that will be untouched by libcurl and passed as the ptr argument to the <i>CURL_FNMATCH_FUNCTION(3)</i>.</p>
 <h2>Default</h2>
 <p>NULL</p>
 <h2>Protocols</h2>

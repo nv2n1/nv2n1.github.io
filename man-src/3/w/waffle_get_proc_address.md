@@ -16,7 +16,7 @@ void *waffle_get_proc_address(const char *name);</code></pre>
 <p><code>waffle_get_proc_address()</code></p>
 <dl>
 <dd>
-<dd>On GLX, this redirects to <code><a href="/docs/linux/man/3-glxgetprocaddress/">glXGetProcAddress</a></code>(3). On EGL, this redirects to <code><a href="/docs/linux/man/3-eglgetprocaddress/">eglGetProcAddress</a></code>(3). On CGL, this function returns <code>NULL</code> because there exists no <code>CGLGetProcAdress()</code>. On WGL, this redirects to <code><a href="/docs/linux/man/3-wglgetprocaddress/">wglGetProcAddress</a></code>(3). </p>
+<dd>On GLX, this redirects to <code>glXGetProcAddress</code>(3). On EGL, this redirects to <code>eglGetProcAddress</code>(3). On CGL, this function returns <code>NULL</code> because there exists no <code>CGLGetProcAdress()</code>. On WGL, this redirects to <code>wglGetProcAddress</code>(3). </p>
 <p> Some aspects of this function&#8217;s behavior are platform-specific and non-intuitive. For example, </p>
 <dl>
 <dd>&bull; If the queried function is not available, <code>waffle_get_proc_address()</code> may return a non-null pointer.</dl>

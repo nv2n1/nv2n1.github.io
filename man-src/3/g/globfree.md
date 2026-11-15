@@ -58,7 +58,7 @@ void globfree(glob_t *pglob);
 <dd> This provides behavior similar to that of <code>GLOB_TILDE</code>. The difference is that if the username is invalid, or the home directory cannot be determined, then instead of using the pattern itself as the name, <code>glob</code>() returns <code>GLOB_NOMATCH</code> to indicate an error.</p>
 <dt><code>GLOB_ONLYDIR</code></p>
 <dd> This is a <i>hint</i> to <code>glob</code>() that the caller is interested only in directories that match the pattern. If the implementation can easily determine file-type information, then nondirectory files are not returned to the caller. However, the caller must still check that returned files are directories. (The purpose of this flag is merely to optimize performance when the caller is interested only in directories.)</dl>
-<p> If <i>errfunc</i> is not NULL, it will be called in case of an error with the arguments <i>epath</i>, a pointer to the path which failed, and <i>eerrno</i>, the value of <i>errno</i> as returned from one of the calls to <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3), <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3), or <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2). If <i>errfunc</i> returns nonzero, or if <code>GLOB_ERR</code> is set, <code>glob</code>() will terminate after the call to <i>errfunc</i>. </p>
+<p> If <i>errfunc</i> is not NULL, it will be called in case of an error with the arguments <i>epath</i>, a pointer to the path which failed, and <i>eerrno</i>, the value of <i>errno</i> as returned from one of the calls to <code>opendir</code>(3), <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3), or <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2). If <i>errfunc</i> returns nonzero, or if <code>GLOB_ERR</code> is set, <code>glob</code>() will terminate after the call to <i>errfunc</i>. </p>
 <p> Upon successful return, <i>pglob-&gt;gl_pathc</i> contains the number of matched pathnames and <i>pglob-&gt;gl_pathv</i> contains a pointer to the list of pointers to matched pathnames. The list of pointers is terminated by a null pointer. </p>
 <p> It is possible to call <code>glob</code>() several times. In that case, the <code>GLOB_APPEND</code> flag has to be set in <i>flags</i> on the second and later invocations. </p>
 <p> As a GNU extension, <i>pglob-&gt;gl_flags</i> is set to the flags specified, <code>or</code>ed with <code>GLOB_MAGCHAR</code> if any metacharacters were found.</p>
@@ -100,7 +100,7 @@ void globfree(glob_t *pglob);
 <h2>NOTES</h2>
 <p> The structure elements <i>gl_pathc</i> and <i>gl_offs</i> are declared as <i>size_t</i> in glibc 2.1, as they should be according to POSIX.2, but are declared as <i>int</i> in glibc 2.0.</p>
 <h2>BUGS</h2>
-<p> The <code>glob</code>() function may fail due to failure of underlying function calls, such as <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) or <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3). These will store their error code in <i>errno</i>.</p>
+<p> The <code>glob</code>() function may fail due to failure of underlying function calls, such as <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) or <code>opendir</code>(3). These will store their error code in <i>errno</i>.</p>
 <h2>EXAMPLES</h2>
 <p> One example of use is the following code, which simulates typing </p>
 <p> ls -l *.c ../*.c </p>
@@ -108,7 +108,7 @@ void globfree(glob_t *pglob);
 <p> glob_t globbuf; </p>
 <p> globbuf.gl_offs = 2; glob(&quot;*.c&quot;, GLOB_DOOFFS, NULL, &amp;globbuf); glob(&quot;../*.c&quot;, GLOB_DOOFFS | GLOB_APPEND, NULL, &amp;globbuf); globbuf.gl_pathv[0] = &quot;ls&quot;; globbuf.gl_pathv[1] = &quot;-l&quot;; execvp(&quot;ls&quot;, &amp;globbuf.gl_pathv[0]);</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2), <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3), <code><a href="/docs/linux/man/3-fnmatch/">fnmatch</a></code>(3), <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3), <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3), <code><a href="/docs/linux/man/3-wordexp/">wordexp</a></code>(3), <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7)</p>
+<p> <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2), <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3), <code><a href="/docs/linux/man/3-fnmatch/">fnmatch</a></code>(3), <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code>opendir</code>(3), <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3), <code><a href="/docs/linux/man/3-wordexp/">wordexp</a></code>(3), <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

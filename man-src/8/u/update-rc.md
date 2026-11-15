@@ -83,4 +83,4 @@ runlevels 2-5 and stop in runlevels 0, 1 and 6.</pre>
 <h2>See Also</h2>
 <p><i>Debian Policy Manual</i>,<br />
  <code>/etc/init.d/skeleton</code>,<br />
- <code><a href="/docs/linux/man/8-insserv/">insserv</a></code>(8), <code><a href="/docs/linux/man/8-sysv-rc-conf/">sysv-rc-conf</a></code>(8), <code><a href="/docs/linux/man/8-bum/">bum</a></code>(8), <code><a href="/docs/linux/man/8-init/">init</a></code>(8). </p>
+ <code><a href="/docs/linux/man/8-insserv/">insserv</a></code>(8), <code>sysv-rc-conf</code>(8), <code>bum</code>(8), <code><a href="/docs/linux/man/8-init/">init</a></code>(8). </p>

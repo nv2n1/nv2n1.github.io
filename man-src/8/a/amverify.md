@@ -23,4 +23,4 @@ description: "amverify – check an Amanda tape for errors"
 <p>Axel Zinser &lt;fifi [at] icem.de&gt; : Original text </p>
 <p> Stefan G. Weichinger, &lt;sgw [at] amanda.org&gt;, maintainer of the <i>Amanda</i>-documentation: XML-conversion</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-amrestore/">amrestore</a></code>(8), <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/8-amverifyrun/">amverifyrun</a></code>(8), : <a rel="nofollow" href="http://wiki.zmanda.com">http://wiki.zmanda.com</a> </p>
+<p><code><a href="/docs/linux/man/8-amrestore/">amrestore</a></code>(8), <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code>amverifyrun</code>(8), : <a rel="nofollow" href="http://wiki.zmanda.com">http://wiki.zmanda.com</a> </p>

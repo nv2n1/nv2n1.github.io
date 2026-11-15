@@ -20,5 +20,5 @@ description: "eboard-addtheme – a program to easily install new eboard board a
 <h2>AUTHOR</h2>
 <p> This manual page was written by Daniel Burrows &lt;dburrows [at] debian.org&gt; (for the Debian GNU/Linux system) and by Felipe Bergo &lt;bergo [at] seul.org&gt;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/6-eboard/">eboard</a></code>(6), <code><a href="/docs/linux/man/1-eboard-config/">eboard-config</a></code>(1) </p>
+<p> <code>eboard</code>(6), <code><a href="/docs/linux/man/1-eboard-config/">eboard-config</a></code>(1) </p>
 <h2>Index</h2>

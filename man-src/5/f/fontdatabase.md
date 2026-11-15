@@ -31,4 +31,4 @@ Souvenir Souvenir-LightItalic -*- -itc-souvenir-light-i-normal--#-0-0-0-p-0-iso8
 <h2>Files</h2>
 <p><i>/etc/t1lib/FontDataBase</i></p>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/1x-mkfontdir/">mkfontdir</a></code>(1x) </p>
+<p><code>mkfontdir</code>(1x) </p>

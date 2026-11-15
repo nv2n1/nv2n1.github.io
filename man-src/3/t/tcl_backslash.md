@@ -22,6 +22,6 @@ char
 <p> This is a utility procedure provided for backwards compatibility with non-internationalized Tcl extensions. It parses a backslash sequence and returns the low byte of the Unicode character corresponding to the sequence. <code>Tcl_Backslash</code> modifies <i>*countPtr</i> to contain the number of characters in the backslash sequence. </p>
 <p> See the Tcl manual entry for information on the valid backslash sequences. All of the sequences described in the Tcl manual entry are supported by <code>Tcl_Backslash</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-tcl/">Tcl</a>(n), <a href="/docs/linux/man/3-tcl_utfbackslash/">Tcl_UtfBackslash</a>(3) </p>
+<p>Tcl(n), <a href="/docs/linux/man/3-tcl_utfbackslash/">Tcl_UtfBackslash</a>(3) </p>
 <h2>Keywords</h2>
 <p>backslash, parse</p>

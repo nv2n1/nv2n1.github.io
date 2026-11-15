@@ -31,7 +31,7 @@ struct ibv_qp_open_attr {
 <h2>NOTES</h2>
 <p> <code>ibv_open_qp()</code> will fail if a it is asked to open a QP that does not exist within the xrcd with the specified qp_num and qp_type.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a></code>(3), <code><a href="/docs/linux/man/3-ibv_modify_qp/">ibv_modify_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_qp/">ibv_query_qp</a></code>(3)</p>
+<p> <code>ibv_alloc_pd</code>(3), <code>ibv_create_qp</code>(3), <code>ibv_create_qp_ex</code>(3), <code>ibv_modify_qp</code>(3), <code>ibv_query_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Sean Hefty &lt;sean.hefty [at] intel.com&gt;</p>

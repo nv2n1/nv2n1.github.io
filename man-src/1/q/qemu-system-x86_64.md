@@ -50,7 +50,7 @@ description: "qemu-doc – QEMU version 4.2.0 User Documentation"
 <p> <font SIZE="-1">QEMU</font> uses the <font SIZE="-1">PC BIOS</font> from the Seabios project and the Plex86/Bochs <font SIZE="-1">LGPL VGA BIOS.</font> </p>
 <p> <font SIZE="-1">QEMU</font> uses <font SIZE="-1">YM3812</font> emulation by Tatsuyuki Satoh. </p>
 <p> <font SIZE="-1">QEMU</font> uses <font SIZE="-1">GUS</font> emulation (<font SIZE="-1">GUSEMU32</font> &lt;<code><a rel="nofollow" href="http://www.deinmeister.de/gusemu/">http://www.deinmeister.de/gusemu/</a></code>&gt;) by Tibor &#8220;<font SIZE="-1">TS&#8221;</font> Schütz. </p>
-<p> Note that, by default, <font SIZE="-1">GUS</font> shares <font SIZE="-1"><code><a href="/docs/linux/man/7-irq/">IRQ</a></code></font>(7) with parallel ports and so <font SIZE="-1">QEMU</font> must be told to not have parallel ports to have working <font SIZE="-1">GUS.</font> </p>
+<p> Note that, by default, <font SIZE="-1">GUS</font> shares <font SIZE="-1"><code>IRQ</code></font>(7) with parallel ports and so <font SIZE="-1">QEMU</font> must be told to not have parallel ports to have working <font SIZE="-1">GUS.</font> </p>
 <pre>
         qemu-system-x86_64 dos.img -soundhw gus -parallel none
 </pre>

@@ -34,7 +34,7 @@ struct ibv_qp *mlx5dv_create_qp(struct ibv_context *context,
 
  
 
- Please see <a HREF="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a>(3) man page for context and qp_attr.
+ Please see ibv_create_qp_ex(3) man page for context and qp_attr.
 
 <h3>mlx5_qp_attr</h3>
 
@@ -114,7 +114,7 @@ struct mlx5dv_dc_init_attr {
 
  
 
- <a HREF="/docs/linux/man/3-ibv_query_device_ex/">ibv_query_device_ex</a>(3), <a HREF="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a>(3),
+ ibv_query_device_ex(3), ibv_create_qp_ex(3),
 
 <h2>AUTHOR</h2>
 

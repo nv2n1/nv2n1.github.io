@@ -16,5 +16,5 @@ description: "gui_fg_color, gui_bg_color – The foreground and background color
 <h2>DESCRIPTION</h2>
 <p> The foreground and background colors for the standard dialogs (alerts, menus, and the file selector). They default to 255 and 0. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gui_mg_color/">gui_mg_color</a></code>(3), <code><a href="/docs/linux/man/3-set_dialog_color/">set_dialog_color</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
+<p> <code>gui_mg_color</code>(3), <code><a href="/docs/linux/man/3-set_dialog_color/">set_dialog_color</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
 <h2>Index</h2>

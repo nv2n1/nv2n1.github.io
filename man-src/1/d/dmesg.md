@@ -77,7 +77,7 @@ description: "dmesg – print or control the kernel ring buffer"
 <dl>
 <dt>
 <dd> Set the <i>level</i> at which printing of messages is done to the console. The <i>level</i> is a level number or abbreviation of the level name. For all supported levels see the <code>&#8211;help</code> output. </p>
-<p> For example, <code>-n 1</code> or <code>-n emerg</code> prevents all messages, except emergency (panic) messages, from appearing on the console. All levels of messages are still written to <i>/proc/kmsg</i>, so <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) can still be used to control exactly where kernel messages appear. When the <code>-n</code> option is used, <code>dmesg</code> will <i>not</i> print or clear the kernel ring buffer.</dl>
+<p> For example, <code>-n 1</code> or <code>-n emerg</code> prevents all messages, except emergency (panic) messages, from appearing on the console. All levels of messages are still written to <i>/proc/kmsg</i>, so <code>syslogd</code>(8) can still be used to control exactly where kernel messages appear. When the <code>-n</code> option is used, <code>dmesg</code> will <i>not</i> print or clear the kernel ring buffer.</dl>
 <p> <code>&#8211;noescape</code></p>
 <dl>
 <dt>

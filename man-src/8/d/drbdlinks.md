@@ -39,7 +39,7 @@ description: "drbdlinks – manages links into a shared DRBD partition"
 <dd>drbdlinks -c /shared1/drbdlinks-httpd.conf start</dl>
 <p> This would use the specified configuration file, found on our DRBD device mounted on /shared1. This would allow us to easily keep drbdlinks configurations tied to a specific set of data on a DRBD disk in an active/active sort of HA configuration. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-drbd/">DRBD</a></code>(8), <code><a href="/docs/linux/man/8-drbdadm/">drbdadm</a></code>(8), <code><a href="/docs/linux/man/8-drbdsetup/">drbdsetup</a></code>(8), <code><a href="/docs/linux/man/8-heartbeat/">heartbeat</a></code>(8).</p>
+<p><code>DRBD</code>(8), <code>drbdadm</code>(8), <code>drbdsetup</code>(8), <code><a href="/docs/linux/man/8-heartbeat/">heartbeat</a></code>(8).</p>
 <h2>Author</h2>
 <p>drbdlinks was written by Sean Reifschneider &lt;jafo [at] tummy.com&gt;. </p>
 <p> This manual page was written by Cyril Bouthors &lt;cyril [at] bouthors.org&gt;, for the Debian project (but may be used by others). Sean Reifschneider modified it for status and monitor arguments, and included it in the base drbdlinks release. Mike Loseke &lt;mike [at] tummy.com&gt; added the sections on options and examples.</p>

@@ -27,7 +27,7 @@ description: "vltsv – mutual converter between TSV and Villa database"
 <p> Thus, to retrieve the information of a user `mikio&#8217;, perform the following command.<br />
  <code> vlmgr get casket mikio</code> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/1-vlmgr/">vlmgr</a></code>(1), <code><a href="/docs/linux/man/3-villa/">villa</a></code>(3), <code><a href="/docs/linux/man/3-vlopen/">vlopen</a></code>(3).</p>
+<p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-vlmgr/">vlmgr</a></code>(1), <code>villa</code>(3), <code>vlopen</code>(3).</p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian project (but may be used by others). </p>

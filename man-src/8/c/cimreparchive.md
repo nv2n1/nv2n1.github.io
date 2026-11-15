@@ -14,7 +14,7 @@ description: "cimreparchive – create an archive copy of the CIM Server reposit
 <p> cimreparchive &#8211;version </code></p>
 <h2>Description</h2>
 <p>The <code>cimreparchive </code> command creates an archive copy of the CIM Server repository in the specified archive_file. The archive copy is assured to contain a consistent repository state even if it is created while the CIM Server is running. </p>
-<p> The archive_file is created using the <a href="/docs/linux/man/1-tar/">tar</a>(1) command. To restore the repository from the archive_file, stop the cimserver, move the active repository files to a different location, use <a href="/docs/linux/man/2-tar/">tar</a>(2) to extract the archived repository files, and restart the cimserver. (Note that the repository location is printed when an archive file is created.)</p>
+<p> The archive_file is created using the <a href="/docs/linux/man/1-tar/">tar</a>(1) command. To restore the repository from the archive_file, stop the cimserver, move the active repository files to a different location, use tar(2) to extract the archived repository files, and restart the cimserver. (Note that the repository location is printed when an archive file is created.)</p>
 <h3>Options</h3>
 <p><code>cimreparchive </code> recognizes the following options:</p>
 <dl>

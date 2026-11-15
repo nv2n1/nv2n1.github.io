@@ -131,8 +131,8 @@ supermin-- build-- if - newer-- lock / run / user /`id - u`/ supermin.lock-- for
 <dt><code>&#8211;packager-config</code> <font SIZE="-1">CONFIGFILE</font></p>
 <dd> (<i>&#8211;prepare</i> mode only) </p>
 <p> Set the configuration file for the package manager. This allows you to specify alternate software repositories. </p>
-<p> For ArchLinux, this sets the pacman configuration file (default <i>/etc/pacman.conf</i>). See <i><a href="/docs/linux/man/5-pacman-conf/">pacman.conf</a></i>(5). </p>
-<p> For Yum/RPM distributions, this sets the yum configuration file (default <i>/etc/yum.conf</i>). See <i><a href="/docs/linux/man/5-yum-conf/">yum.conf</a></i>(5).</p>
+<p> For ArchLinux, this sets the pacman configuration file (default <i>/etc/pacman.conf</i>). See <i>pacman.conf</i>(5). </p>
+<p> For Yum/RPM distributions, this sets the yum configuration file (default <i>/etc/yum.conf</i>). See <i>yum.conf</i>(5).</p>
 <dt><code>&#8211;prepare</code></p>
 <dd> Prepare the supermin appliance.</p>
 <dt><code>&#8211;use-installed</code></p>
@@ -247,7 +247,7 @@ supermin-- build-- if - newer-- lock / run / user /`id - u`/ supermin.lock-- for
 <dt><font SIZE="-1">SUPERMIN_KERNEL_VERSION</font></p>
 <dd> On non-x86 architectures, you may need to set this environment variable if supermin cannot determine the kernel version of <tt>&quot;SUPERMIN_KERNEL&quot;</tt> just by looking at the file.</dl>
 <h2>SEE ALSO</h2>
-<p> &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/supermin/">http://people.redhat.com/~rjones/supermin/</a>&gt;, <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
+<p> &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/supermin/">http://people.redhat.com/~rjones/supermin/</a>&gt;, <i>guestfs</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>&bull;</p>

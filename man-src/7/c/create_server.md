@@ -30,7 +30,7 @@ description: "CREATE SERVER – define a new foreign server"
 <dt><code>OPTIONS ( </code><i>option</i><code> &#8216;</code><i>value</i><code>&#8216; [, &#8230; ] )</code></p>
 <dd>This clause specifies the options for the server. The options typically define the connection details of the server, but the actual names and values are dependent on the server&#8217;s foreign-data wrapper.</dl>
 <h2>Notes</h2>
-<p>When using the <code>dblink</code> module (see in the documentation), the foreign server name can be used as an argument of the <code><a href="/docs/linux/man/l-dblink_connect/">dblink_connect</a></code>(l) function to indicate the connection parameters. See also there for more examples. It is necessary to have the USAGE privilege on the foreign server to be able to use it in this way.</p>
+<p>When using the <code>dblink</code> module (see in the documentation), the foreign server name can be used as an argument of the <code>dblink_connect</code>(l) function to indicate the connection parameters. See also there for more examples. It is necessary to have the USAGE privilege on the foreign server to be able to use it in this way.</p>
 <h2>Examples</h2>
 <p>Create a server foo that uses the built-in foreign-data wrapper default: </p>
 <pre>CREATE SERVER foo FOREIGN DATA WRAPPER &quot;default&quot;;</pre>

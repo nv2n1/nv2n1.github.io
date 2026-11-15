@@ -38,5 +38,5 @@ struct iv_fd_pump {
 <p> <code>iv_fd_pump_is_done</code> will return a true value if iv_fd_pump_pump has previously returned 0, otherwise it will return false. </p>
 <p> Internally, <code>iv_fd_pump_pump</code> will use <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) if it is available, otherwise it will fall back to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ivykis/">ivykis</a></code>(3), <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) </p>
+<p> <code>ivykis</code>(3), <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) </p>
 <h2>Index</h2>

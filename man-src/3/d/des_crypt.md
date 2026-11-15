@@ -55,7 +55,7 @@ int DES_FAILED(int status);
 <h2>CONFORMING TO</h2>
 <p> 4.3BSD. Not in POSIX.1.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-des/">des</a></code>(1), <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), <code><a href="/docs/linux/man/3-xcrypt/">xcrypt</a></code>(3)</p>
+<p> <code>des</code>(1), <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), <code><a href="/docs/linux/man/3-xcrypt/">xcrypt</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

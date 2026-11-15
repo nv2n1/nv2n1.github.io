@@ -38,8 +38,8 @@ description: "systemd.index – List all manpages from the systemd project"
 <h2>J</h2>
 <p><code><a href="/docs/linux/man/5-journal-remote-conf/">journal-remote.conf</a></code>(5) &#8212; Configuration files for the service accepting remote journal uploads<br />
  <code><a href="/docs/linux/man/5-journal-remote-conf-d/">journal-remote.conf.d</a></code>(5) &#8212; Configuration files for the service accepting remote journal uploads<br />
- <code><a href="/docs/linux/man/5-journal-upload-conf/">journal-upload.conf</a></code>(5) &#8212; Configuration files for the journal upload service<br />
- <code><a href="/docs/linux/man/5-journal-upload-conf-d/">journal-upload.conf.d</a></code>(5) &#8212; Configuration files for the journal upload service<br />
+ <code>journal-upload.conf</code>(5) &#8212; Configuration files for the journal upload service<br />
+ <code>journal-upload.conf.d</code>(5) &#8212; Configuration files for the journal upload service<br />
  <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1) &#8212; Query the systemd journal<br />
  <code><a href="/docs/linux/man/5-journald-conf/">journald.conf</a></code>(5) &#8212; Journal service configuration files<br />
  <code><a href="/docs/linux/man/5-journald-conf-d/">journald.conf.d</a></code>(5) &#8212; Journal service configuration files<br />
@@ -50,9 +50,9 @@ description: "systemd.index – List all manpages from the systemd project"
 <h2>L</h2>
 <p><code><a href="/docs/linux/man/8-libnss_myhostname-so-2/">libnss_myhostname.so.2</a></code>(8) &#8212; Hostname resolution for the locally configured system hostname<br />
  <code><a href="/docs/linux/man/8-libnss_mymachines-so-2/">libnss_mymachines.so.2</a></code>(8) &#8212; Hostname resolution for local container instances<br />
- <code><a href="/docs/linux/man/8-libnss_resolve-so-2/">libnss_resolve.so.2</a></code>(8) &#8212; Hostname resolution via systemd-resolved.service<br />
+ <code>libnss_resolve.so.2</code>(8) &#8212; Hostname resolution via systemd-resolved.service<br />
  <code><a href="/docs/linux/man/8-libnss_systemd-so-2/">libnss_systemd.so.2</a></code>(8) &#8212; UNIX user and group name resolution for user/group lookup via Varlink<br />
- <code><a href="/docs/linux/man/3-libudev/">libudev</a></code>(3) &#8212; API for enumerating and introspecting local devices<br />
+ <code>libudev</code>(3) &#8212; API for enumerating and introspecting local devices<br />
  <code><a href="/docs/linux/man/5-loader-conf/">loader.conf</a></code>(5) &#8212; Configuration file for systemd-boot<br />
  <code><a href="/docs/linux/man/5-locale-conf/">locale.conf</a></code>(5) &#8212; Configuration file for locale settings<br />
  <code><a href="/docs/linux/man/1-localectl/">localectl</a></code>(1) &#8212; Control the system locale and keyboard layout settings<br />
@@ -71,19 +71,19 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/5-networkd-conf-d/">networkd.conf.d</a></code>(5) &#8212; Global Network configuration files<br />
  <code><a href="/docs/linux/man/8-nss-myhostname/">nss-myhostname</a></code>(8) &#8212; Hostname resolution for the locally configured system hostname<br />
  <code><a href="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></code>(8) &#8212; Hostname resolution for local container instances<br />
- <code><a href="/docs/linux/man/8-nss-resolve/">nss-resolve</a></code>(8) &#8212; Hostname resolution via systemd-resolved.service<br />
+ <code>nss-resolve</code>(8) &#8212; Hostname resolution via systemd-resolved.service<br />
  <code><a href="/docs/linux/man/8-nss-systemd/">nss-systemd</a></code>(8) &#8212; UNIX user and group name resolution for user/group lookup via Varlink</p>
 <h2>O</h2>
-<p><code><a href="/docs/linux/man/1-oomctl/">oomctl</a></code>(1) &#8212; Analyze the state stored in systemd-oomd<br />
- <code><a href="/docs/linux/man/5-oomd-conf/">oomd.conf</a></code>(5) &#8212; Global systemd-oomd configuration files<br />
- <code><a href="/docs/linux/man/5-oomd-conf-d/">oomd.conf.d</a></code>(5) &#8212; Global systemd-oomd configuration files<br />
+<p><code>oomctl</code>(1) &#8212; Analyze the state stored in systemd-oomd<br />
+ <code>oomd.conf</code>(5) &#8212; Global systemd-oomd configuration files<br />
+ <code>oomd.conf.d</code>(5) &#8212; Global systemd-oomd configuration files<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-hostname1/">org.freedesktop.hostname1</a></code>(5) &#8212; The D-Bus interface of systemd-hostnamed<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-import1/">org.freedesktop.import1</a></code>(5) &#8212; The D-Bus interface of systemd-importd<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-locale1/">org.freedesktop.locale1</a></code>(5) &#8212; The D-Bus interface of systemd-localed<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-logcontrol1/">org.freedesktop.LogControl1</a></code>(5) &#8212; D-Bus interface to query and set logging configuration<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></code>(5) &#8212; The D-Bus interface of systemd-logind<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-machine1/">org.freedesktop.machine1</a></code>(5) &#8212; The D-Bus interface of systemd-machined<br />
- <code><a href="/docs/linux/man/5-org-freedesktop-oom1/">org.freedesktop.oom1</a></code>(5) &#8212; The D-Bus interface of systemd-oomd<br />
+ <code>org.freedesktop.oom1</code>(5) &#8212; The D-Bus interface of systemd-oomd<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-portable1/">org.freedesktop.portable1</a></code>(5) &#8212; The D-Bus interface of systemd-portabled<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-resolve1/">org.freedesktop.resolve1</a></code>(5) &#8212; The D-Bus interface of systemd-resolved<br />
  <code><a href="/docs/linux/man/5-org-freedesktop-systemd1/">org.freedesktop.systemd1</a></code>(5) &#8212; The D-Bus interface of systemd<br />
@@ -91,14 +91,14 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/5-os-release/">os-release</a></code>(5) &#8212; Operating system identification</p>
 <h2>P</h2>
 <p><code><a href="/docs/linux/man/8-pam_systemd/">pam_systemd</a></code>(8) &#8212; Register user sessions in the systemd login manager<br />
- <code><a href="/docs/linux/man/1-portablectl/">portablectl</a></code>(1) &#8212; Attach, detach or inspect portable service images<br />
+ <code>portablectl</code>(1) &#8212; Attach, detach or inspect portable service images<br />
  <code><a href="/docs/linux/man/8-poweroff/">poweroff</a></code>(8) &#8212; Halt, power-off or reboot the machine<br />
  <code><a href="/docs/linux/man/5-pstore-conf/">pstore.conf</a></code>(5) &#8212; PStore configuration file<br />
  <code><a href="/docs/linux/man/5-pstore-conf-d/">pstore.conf.d</a></code>(5) &#8212; PStore configuration file</p>
 <h2>R</h2>
 <p><code><a href="/docs/linux/man/8-rc-local-service/">rc-local.service</a></code>(8) &#8212; Compatibility generator and service to start /etc/rc.local during boot<br />
  <code><a href="/docs/linux/man/8-reboot/">reboot</a></code>(8) &#8212; Halt, power-off or reboot the machine<br />
- <code><a href="/docs/linux/man/5-repart-d/">repart.d</a></code>(5) &#8212; Partition Definition Files for Automatic Boot-Time Repartitioning<br />
+ <code>repart.d</code>(5) &#8212; Partition Definition Files for Automatic Boot-Time Repartitioning<br />
  <code><a href="/docs/linux/man/1-resolvconf/">resolvconf</a></code>(1) &#8212; Resolve domain names, IPV4 and IPv6 addresses, DNS resource records, and services; introspect and reconfigure the DNS resolver<br />
  <code><a href="/docs/linux/man/1-resolvectl/">resolvectl</a></code>(1) &#8212; Resolve domain names, IPV4 and IPv6 addresses, DNS resource records, and services; introspect and reconfigure the DNS resolver<br />
  <code><a href="/docs/linux/man/5-resolved-conf/">resolved.conf</a></code>(5) &#8212; Network Name Resolution configuration files<br />
@@ -106,535 +106,535 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/8-runlevel/">runlevel</a></code>(8) &#8212; Print previous and current SysV runlevel</p>
 <h2>S</h2>
 <p><code><a href="/docs/linux/man/7-sd-boot/">sd-boot</a></code>(7) &#8212; A simple UEFI boot manager<br />
- <code><a href="/docs/linux/man/3-sd-bus/">sd-bus</a></code>(3) &#8212; A lightweight D-Bus IPC client library<br />
- <code><a href="/docs/linux/man/3-sd-bus-errors/">sd-bus-errors</a></code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd-bus</code>(3) &#8212; A lightweight D-Bus IPC client library<br />
+ <code>sd-bus-errors</code>(3) &#8212; Standard D-Bus error names<br />
  <code><a href="/docs/linux/man/3-sd-daemon/">sd-daemon</a></code>(3) &#8212; APIs for new-style daemons<br />
- <code><a href="/docs/linux/man/3-sd-event/">sd-event</a></code>(3) &#8212; A generic event loop implementation<br />
- <code><a href="/docs/linux/man/3-sd-hwdb/">sd-hwdb</a></code>(3) &#8212; Read-only access to the hardware description database<br />
+ <code>sd-event</code>(3) &#8212; A generic event loop implementation<br />
+ <code>sd-hwdb</code>(3) &#8212; Read-only access to the hardware description database<br />
  <code><a href="/docs/linux/man/3-sd-id128/">sd-id128</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd-journal/">sd-journal</a></code>(3) &#8212; APIs for submitting and querying log entries to and from the journal<br />
  <code><a href="/docs/linux/man/3-sd-login/">sd-login</a></code>(3) &#8212; APIs for tracking logins<br />
  <code><a href="/docs/linux/man/3-sd_alert/">SD_ALERT</a></code>(3) &#8212; APIs for new-style daemons<br />
  <code><a href="/docs/linux/man/3-sd_booted/">sd_booted</a></code>(3) &#8212; Test whether the system is running the systemd init system<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_fallback/">sd_bus_add_fallback</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_fallback_vtable/">sd_bus_add_fallback_vtable</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_filter/">sd_bus_add_filter</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_match/">sd_bus_add_match</a></code>(3) &#8212; Add a match rule for incoming message dispatching<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_match_async/">sd_bus_add_match_async</a></code>(3) &#8212; Add a match rule for incoming message dispatching<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_node_enumerator/">sd_bus_add_node_enumerator</a></code>(3) &#8212; Add a node enumerator for a D-Bus object path prefix<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_object/">sd_bus_add_object</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_object_manager/">sd_bus_add_object_manager</a></code>(3) &#8212; Add a D-Bus object manager for a D-Bus object sub-tree<br />
- <code><a href="/docs/linux/man/3-sd_bus_add_object_vtable/">sd_bus_add_object_vtable</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_attach_event/">sd_bus_attach_event</a></code>(3) &#8212; Attach a bus connection object to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_bus_call/">sd_bus_call</a></code>(3) &#8212; Invoke a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_call_async/">sd_bus_call_async</a></code>(3) &#8212; Invoke a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_call_method/">sd_bus_call_method</a></code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_call_method_async/">sd_bus_call_method_async</a></code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_call_method_asyncv/">sd_bus_call_method_asyncv</a></code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_call_methodv/">sd_bus_call_methodv</a></code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_can_send/">sd_bus_can_send</a></code>(3) &#8212; Check which types can be sent over a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_close/">sd_bus_close</a></code>(3) &#8212; Close and flush a bus connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_close_unref/">sd_bus_close_unref</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_close_unrefp/">sd_bus_close_unrefp</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_audit_login_uid/">sd_bus_creds_get_audit_login_uid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_audit_session_id/">sd_bus_creds_get_audit_session_id</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_augmented_mask/">sd_bus_creds_get_augmented_mask</a></code>(3) &#8212; Retrieve credentials object for the specified PID<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_cgroup/">sd_bus_creds_get_cgroup</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_cmdline/">sd_bus_creds_get_cmdline</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_comm/">sd_bus_creds_get_comm</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_description/">sd_bus_creds_get_description</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_egid/">sd_bus_creds_get_egid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_euid/">sd_bus_creds_get_euid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_exe/">sd_bus_creds_get_exe</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_fsgid/">sd_bus_creds_get_fsgid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_fsuid/">sd_bus_creds_get_fsuid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_gid/">sd_bus_creds_get_gid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_mask/">sd_bus_creds_get_mask</a></code>(3) &#8212; Retrieve credentials object for the specified PID<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_owner_uid/">sd_bus_creds_get_owner_uid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_pid/">sd_bus_creds_get_pid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_ppid/">sd_bus_creds_get_ppid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_selinux_context/">sd_bus_creds_get_selinux_context</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_session/">sd_bus_creds_get_session</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_sgid/">sd_bus_creds_get_sgid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_slice/">sd_bus_creds_get_slice</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_suid/">sd_bus_creds_get_suid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_supplementary_gids/">sd_bus_creds_get_supplementary_gids</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_tid/">sd_bus_creds_get_tid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_tid_comm/">sd_bus_creds_get_tid_comm</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_tty/">sd_bus_creds_get_tty</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_uid/">sd_bus_creds_get_uid</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_unique_name/">sd_bus_creds_get_unique_name</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_unit/">sd_bus_creds_get_unit</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_user_slice/">sd_bus_creds_get_user_slice</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_user_unit/">sd_bus_creds_get_user_unit</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_get_well_known_names/">sd_bus_creds_get_well_known_names</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_has_bounding_cap/">sd_bus_creds_has_bounding_cap</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_has_effective_cap/">sd_bus_creds_has_effective_cap</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_has_inheritable_cap/">sd_bus_creds_has_inheritable_cap</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_has_permitted_cap/">sd_bus_creds_has_permitted_cap</a></code>(3) &#8212; Retrieve fields from a credentials object<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_new_from_pid/">sd_bus_creds_new_from_pid</a></code>(3) &#8212; Retrieve credentials object for the specified PID<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_ref/">sd_bus_creds_ref</a></code>(3) &#8212; Retrieve credentials object for the specified PID<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_unref/">sd_bus_creds_unref</a></code>(3) &#8212; Retrieve credentials object for the specified PID<br />
- <code><a href="/docs/linux/man/3-sd_bus_creds_unrefp/">sd_bus_creds_unrefp</a></code>(3) &#8212; Retrieve credentials object for the specified PID<br />
- <code><a href="/docs/linux/man/3-sd_bus_default/">sd_bus_default</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_default_flush_close/">sd_bus_default_flush_close</a></code>(3) &#8212; Close and flush a bus connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_default_system/">sd_bus_default_system</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_default_user/">sd_bus_default_user</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_destroy_t/">sd_bus_destroy_t</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_bus_detach_event/">sd_bus_detach_event</a></code>(3) &#8212; Attach a bus connection object to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_interfaces_added/">sd_bus_emit_interfaces_added</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_interfaces_added_strv/">sd_bus_emit_interfaces_added_strv</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_interfaces_removed/">sd_bus_emit_interfaces_removed</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_interfaces_removed_strv/">sd_bus_emit_interfaces_removed_strv</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_object_added/">sd_bus_emit_object_added</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_object_removed/">sd_bus_emit_object_removed</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_properties_changed/">sd_bus_emit_properties_changed</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_properties_changed_strv/">sd_bus_emit_properties_changed_strv</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_signal/">sd_bus_emit_signal</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_emit_signalv/">sd_bus_emit_signalv</a></code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
- <code><a href="/docs/linux/man/3-sd_bus_enqueue_for_read/">sd_bus_enqueue_for_read</a></code>(3) &#8212; Re-enqueue a bus message on a bus connection, for reading<br />
- <code><a href="/docs/linux/man/3-sd_bus_error/">sd_bus_error</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_access_denied/">SD_BUS_ERROR_ACCESS_DENIED</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_add_map/">sd_bus_error_add_map</a></code>(3) &#8212; Additional sd-dbus error mappings<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_address_in_use/">SD_BUS_ERROR_ADDRESS_IN_USE</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_auth_failed/">SD_BUS_ERROR_AUTH_FAILED</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_bad_address/">SD_BUS_ERROR_BAD_ADDRESS</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_copy/">sd_bus_error_copy</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_disconnected/">SD_BUS_ERROR_DISCONNECTED</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_end/">SD_BUS_ERROR_END</a></code>(3) &#8212; Additional sd-dbus error mappings<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_failed/">SD_BUS_ERROR_FAILED</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_file_exists/">SD_BUS_ERROR_FILE_EXISTS</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_file_not_found/">SD_BUS_ERROR_FILE_NOT_FOUND</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_free/">sd_bus_error_free</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_get_errno/">sd_bus_error_get_errno</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_has_name/">sd_bus_error_has_name</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_has_names/">sd_bus_error_has_names</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_has_names_sentinel/">sd_bus_error_has_names_sentinel</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_inconsistent_message/">SD_BUS_ERROR_INCONSISTENT_MESSAGE</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_interactive_authorization_required/">SD_BUS_ERROR_INTERACTIVE_AUTHORIZATION_REQUIRED</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_invalid_args/">SD_BUS_ERROR_INVALID_ARGS</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_invalid_signature/">SD_BUS_ERROR_INVALID_SIGNATURE</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_io_error/">SD_BUS_ERROR_IO_ERROR</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_is_set/">sd_bus_error_is_set</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_limits_exceeded/">SD_BUS_ERROR_LIMITS_EXCEEDED</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_make_const/">SD_BUS_ERROR_MAKE_CONST</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_map/">sd_bus_error_map</a></code>(3) &#8212; Additional sd-dbus error mappings<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_map/">SD_BUS_ERROR_MAP</a></code>(3) &#8212; Additional sd-dbus error mappings<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_match_rule_invalid/">SD_BUS_ERROR_MATCH_RULE_INVALID</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_match_rule_not_found/">SD_BUS_ERROR_MATCH_RULE_NOT_FOUND</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_move/">sd_bus_error_move</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_name_has_no_owner/">SD_BUS_ERROR_NAME_HAS_NO_OWNER</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_no_memory/">SD_BUS_ERROR_NO_MEMORY</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_no_network/">SD_BUS_ERROR_NO_NETWORK</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_no_reply/">SD_BUS_ERROR_NO_REPLY</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_no_server/">SD_BUS_ERROR_NO_SERVER</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_not_supported/">SD_BUS_ERROR_NOT_SUPPORTED</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_null/">SD_BUS_ERROR_NULL</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_property_read_only/">SD_BUS_ERROR_PROPERTY_READ_ONLY</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_service_unknown/">SD_BUS_ERROR_SERVICE_UNKNOWN</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_set/">sd_bus_error_set</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_set_const/">sd_bus_error_set_const</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_set_errno/">sd_bus_error_set_errno</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_set_errnof/">sd_bus_error_set_errnof</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_set_errnofv/">sd_bus_error_set_errnofv</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_setf/">sd_bus_error_setf</a></code>(3) &#8212; sd-bus error handling<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_timeout/">SD_BUS_ERROR_TIMEOUT</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_unix_process_id_unknown/">SD_BUS_ERROR_UNIX_PROCESS_ID_UNKNOWN</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_unknown_interface/">SD_BUS_ERROR_UNKNOWN_INTERFACE</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_unknown_method/">SD_BUS_ERROR_UNKNOWN_METHOD</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_unknown_object/">SD_BUS_ERROR_UNKNOWN_OBJECT</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_error_unknown_property/">SD_BUS_ERROR_UNKNOWN_PROPERTY</a></code>(3) &#8212; Standard D-Bus error names<br />
- <code><a href="/docs/linux/man/3-sd_bus_flush/">sd_bus_flush</a></code>(3) &#8212; Close and flush a bus connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_flush_close_unref/">sd_bus_flush_close_unref</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_flush_close_unrefp/">sd_bus_flush_close_unrefp</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_address/">sd_bus_get_address</a></code>(3) &#8212; Set or query the address of the bus connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_allow_interactive_authorization/">sd_bus_get_allow_interactive_authorization</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_bus_id/">sd_bus_get_bus_id</a></code>(3) &#8212; Configure connection mode for a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_close_on_exit/">sd_bus_get_close_on_exit</a></code>(3) &#8212; Control whether to close the bus connection during the event loop exit phase<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_connected_signal/">sd_bus_get_connected_signal</a></code>(3) &#8212; Control emission of local connection establishment signal on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_creds_mask/">sd_bus_get_creds_mask</a></code>(3) &#8212; Control feature negotiation on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_current_handler/">sd_bus_get_current_handler</a></code>(3) &#8212; Query information of the callback a bus object is currently running<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_current_message/">sd_bus_get_current_message</a></code>(3) &#8212; Query information of the callback a bus object is currently running<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_current_slot/">sd_bus_get_current_slot</a></code>(3) &#8212; Query information of the callback a bus object is currently running<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_current_userdata/">sd_bus_get_current_userdata</a></code>(3) &#8212; Query information of the callback a bus object is currently running<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_description/">sd_bus_get_description</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_event/">sd_bus_get_event</a></code>(3) &#8212; Attach a bus connection object to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_events/">sd_bus_get_events</a></code>(3) &#8212; Get the file descriptor, I/O events and timeout to wait for from a message bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_exit_on_disconnect/">sd_bus_get_exit_on_disconnect</a></code>(3) &#8212; Control the exit behavior when the bus object disconnects<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_fd/">sd_bus_get_fd</a></code>(3) &#8212; Get the file descriptor, I/O events and timeout to wait for from a message bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_method_call_timeout/">sd_bus_get_method_call_timeout</a></code>(3) &#8212; Set or query the default D-Bus method call timeout of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_n_queued_read/">sd_bus_get_n_queued_read</a></code>(3) &#8212; Get the number of pending bus messages in the read and write queues of a bus connection object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_n_queued_write/">sd_bus_get_n_queued_write</a></code>(3) &#8212; Get the number of pending bus messages in the read and write queues of a bus connection object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_name_creds/">sd_bus_get_name_creds</a></code>(3) &#8212; Query bus client credentials<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_name_machine_id/">sd_bus_get_name_machine_id</a></code>(3) &#8212; Retrieve a bus client&#8217;s machine identity<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_owner_creds/">sd_bus_get_owner_creds</a></code>(3) &#8212; Query bus client credentials<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_property/">sd_bus_get_property</a></code>(3) &#8212; Set or query D-Bus service properties<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_property_string/">sd_bus_get_property_string</a></code>(3) &#8212; Set or query D-Bus service properties<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_property_strv/">sd_bus_get_property_strv</a></code>(3) &#8212; Set or query D-Bus service properties<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_property_trivial/">sd_bus_get_property_trivial</a></code>(3) &#8212; Set or query D-Bus service properties<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_scope/">sd_bus_get_scope</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_sender/">sd_bus_get_sender</a></code>(3) &#8212; Configure default sender for outgoing messages<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_tid/">sd_bus_get_tid</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_timeout/">sd_bus_get_timeout</a></code>(3) &#8212; Get the file descriptor, I/O events and timeout to wait for from a message bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_unique_name/">sd_bus_get_unique_name</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_get_watch_bind/">sd_bus_get_watch_bind</a></code>(3) &#8212; Control socket binding watching on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_interface_name_is_valid/">sd_bus_interface_name_is_valid</a></code>(3) &#8212; Check if a string is a valid bus name or object path<br />
- <code><a href="/docs/linux/man/3-sd_bus_is_anonymous/">sd_bus_is_anonymous</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_is_bus_client/">sd_bus_is_bus_client</a></code>(3) &#8212; Configure connection mode for a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_is_monitor/">sd_bus_is_monitor</a></code>(3) &#8212; Configure connection mode for a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_is_open/">sd_bus_is_open</a></code>(3) &#8212; Check whether the bus connection is open or ready<br />
- <code><a href="/docs/linux/man/3-sd_bus_is_ready/">sd_bus_is_ready</a></code>(3) &#8212; Check whether the bus connection is open or ready<br />
- <code><a href="/docs/linux/man/3-sd_bus_is_server/">sd_bus_is_server</a></code>(3) &#8212; Configure connection mode for a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_is_trusted/">sd_bus_is_trusted</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_list_names/">sd_bus_list_names</a></code>(3) &#8212; Retrieve information about registered names on a bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_match_signal/">sd_bus_match_signal</a></code>(3) &#8212; Add a match rule for incoming message dispatching<br />
- <code><a href="/docs/linux/man/3-sd_bus_match_signal_async/">sd_bus_match_signal_async</a></code>(3) &#8212; Add a match rule for incoming message dispatching<br />
- <code><a href="/docs/linux/man/3-sd_bus_member_name_is_valid/">sd_bus_member_name_is_valid</a></code>(3) &#8212; Check if a string is a valid bus name or object path<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append/">sd_bus_message_append</a></code>(3) &#8212; Attach fields to a D-Bus message based on a type string<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_array/">sd_bus_message_append_array</a></code>(3) &#8212; Append an array of fields to a D-Bus message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_array_iovec/">sd_bus_message_append_array_iovec</a></code>(3) &#8212; Append an array of fields to a D-Bus message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_array_memfd/">sd_bus_message_append_array_memfd</a></code>(3) &#8212; Append an array of fields to a D-Bus message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_array_space/">sd_bus_message_append_array_space</a></code>(3) &#8212; Append an array of fields to a D-Bus message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_basic/">sd_bus_message_append_basic</a></code>(3) &#8212; Attach a single field to a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_string_iovec/">sd_bus_message_append_string_iovec</a></code>(3) &#8212; Attach a string to a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_string_memfd/">sd_bus_message_append_string_memfd</a></code>(3) &#8212; Attach a string to a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_string_space/">sd_bus_message_append_string_space</a></code>(3) &#8212; Attach a string to a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_append_strv/">sd_bus_message_append_strv</a></code>(3) &#8212; Attach an array of strings to a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_appendv/">sd_bus_message_appendv</a></code>(3) &#8212; Attach fields to a D-Bus message based on a type string<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_at_end/">sd_bus_message_at_end</a></code>(3) &#8212; Check if a message has been fully read<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_close_container/">sd_bus_message_close_container</a></code>(3) &#8212; Create and move between containers in D-Bus messages<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_copy/">sd_bus_message_copy</a></code>(3) &#8212; Copy the contents of one message to another<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_dump/">sd_bus_message_dump</a></code>(3) &#8212; Produce a string representation of a message for debugging purposes<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_enter_container/">sd_bus_message_enter_container</a></code>(3) &#8212; Create and move between containers in D-Bus messages<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_exit_container/">sd_bus_message_exit_container</a></code>(3) &#8212; Create and move between containers in D-Bus messages<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_allow_interactive_authorization/">sd_bus_message_get_allow_interactive_authorization</a></code>(3) &#8212; Set and query bus message metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_auto_start/">sd_bus_message_get_auto_start</a></code>(3) &#8212; Set and query bus message metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_bus/">sd_bus_message_get_bus</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_cookie/">sd_bus_message_get_cookie</a></code>(3) &#8212; Returns the transaction cookie of a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_creds/">sd_bus_message_get_creds</a></code>(3) &#8212; Query bus message addressing/credentials metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_destination/">sd_bus_message_get_destination</a></code>(3) &#8212; Set and query bus message addressing information<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_errno/">sd_bus_message_get_errno</a></code>(3) &#8212; Query bus message addressing/credentials metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_error/">sd_bus_message_get_error</a></code>(3) &#8212; Query bus message addressing/credentials metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_expect_reply/">sd_bus_message_get_expect_reply</a></code>(3) &#8212; Set and query bus message metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_interface/">sd_bus_message_get_interface</a></code>(3) &#8212; Set and query bus message addressing information<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_member/">sd_bus_message_get_member</a></code>(3) &#8212; Set and query bus message addressing information<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_monotonic_usec/">sd_bus_message_get_monotonic_usec</a></code>(3) &#8212; Retrieve the sender timestamps and sequence number of a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_path/">sd_bus_message_get_path</a></code>(3) &#8212; Set and query bus message addressing information<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_realtime_usec/">sd_bus_message_get_realtime_usec</a></code>(3) &#8212; Retrieve the sender timestamps and sequence number of a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_reply_cookie/">sd_bus_message_get_reply_cookie</a></code>(3) &#8212; Returns the transaction cookie of a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_sender/">sd_bus_message_get_sender</a></code>(3) &#8212; Set and query bus message addressing information<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_seqnum/">sd_bus_message_get_seqnum</a></code>(3) &#8212; Retrieve the sender timestamps and sequence number of a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_signature/">sd_bus_message_get_signature</a></code>(3) &#8212; Query bus message signature<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_get_type/">sd_bus_message_get_type</a></code>(3) &#8212; Query bus message addressing/credentials metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_has_signature/">sd_bus_message_has_signature</a></code>(3) &#8212; Query bus message signature<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_is_empty/">sd_bus_message_is_empty</a></code>(3) &#8212; Query bus message signature<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_is_method_call/">sd_bus_message_is_method_call</a></code>(3) &#8212; Query bus message addressing/credentials metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_is_method_error/">sd_bus_message_is_method_error</a></code>(3) &#8212; Query bus message addressing/credentials metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_is_signal/">sd_bus_message_is_signal</a></code>(3) &#8212; Query bus message addressing/credentials metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_method_call/">SD_BUS_MESSAGE_METHOD_CALL</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_method_error/">SD_BUS_MESSAGE_METHOD_ERROR</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_method_return/">SD_BUS_MESSAGE_METHOD_RETURN</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new/">sd_bus_message_new</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new_method_call/">sd_bus_message_new_method_call</a></code>(3) &#8212; Create a method call message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new_method_errno/">sd_bus_message_new_method_errno</a></code>(3) &#8212; Create an error reply for a method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new_method_errnof/">sd_bus_message_new_method_errnof</a></code>(3) &#8212; Create an error reply for a method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new_method_error/">sd_bus_message_new_method_error</a></code>(3) &#8212; Create an error reply for a method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new_method_errorf/">sd_bus_message_new_method_errorf</a></code>(3) &#8212; Create an error reply for a method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new_method_return/">sd_bus_message_new_method_return</a></code>(3) &#8212; Create a method call message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_new_signal/">sd_bus_message_new_signal</a></code>(3) &#8212; Create a signal message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_open_container/">sd_bus_message_open_container</a></code>(3) &#8212; Create and move between containers in D-Bus messages<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_peek_type/">sd_bus_message_peek_type</a></code>(3) &#8212; Read a sequence of values from a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_read/">sd_bus_message_read</a></code>(3) &#8212; Read a sequence of values from a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_read_array/">sd_bus_message_read_array</a></code>(3) &#8212; Access an array of elements in a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_read_basic/">sd_bus_message_read_basic</a></code>(3) &#8212; Read a basic type from a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_read_strv/">sd_bus_message_read_strv</a></code>(3) &#8212; Access an array of strings in a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_readv/">sd_bus_message_readv</a></code>(3) &#8212; Read a sequence of values from a message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_ref/">sd_bus_message_ref</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_rewind/">sd_bus_message_rewind</a></code>(3) &#8212; Return to beginning of message or current container<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_seal/">sd_bus_message_seal</a></code>(3) &#8212; Prepare a D-Bus message for transmission<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_send/">sd_bus_message_send</a></code>(3) &#8212; Queue a D-Bus message for transfer<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_sensitive/">sd_bus_message_sensitive</a></code>(3) &#8212; Mark a message object as containing sensitive data<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_set_allow_interactive_authorization/">sd_bus_message_set_allow_interactive_authorization</a></code>(3) &#8212; Set and query bus message metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_set_auto_start/">sd_bus_message_set_auto_start</a></code>(3) &#8212; Set and query bus message metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_set_destination/">sd_bus_message_set_destination</a></code>(3) &#8212; Set and query bus message addressing information<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_set_expect_reply/">sd_bus_message_set_expect_reply</a></code>(3) &#8212; Set and query bus message metadata<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_set_sender/">sd_bus_message_set_sender</a></code>(3) &#8212; Set and query bus message addressing information<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_signal/">SD_BUS_MESSAGE_SIGNAL</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_skip/">sd_bus_message_skip</a></code>(3) &#8212; Skip elements in a bus message<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_unref/">sd_bus_message_unref</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_unrefp/">sd_bus_message_unrefp</a></code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_message_verify_type/">sd_bus_message_verify_type</a></code>(3) &#8212; Check if the message has specified type at the current location<br />
- <code><a href="/docs/linux/man/3-sd_bus_method/">SD_BUS_METHOD</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_method_with_names/">SD_BUS_METHOD_WITH_NAMES</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_method_with_names_offset/">SD_BUS_METHOD_WITH_NAMES_OFFSET</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_method_with_offset/">SD_BUS_METHOD_WITH_OFFSET</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_negotiate_creds/">sd_bus_negotiate_creds</a></code>(3) &#8212; Control feature negotiation on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_negotiate_fds/">sd_bus_negotiate_fds</a></code>(3) &#8212; Control feature negotiation on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_negotiate_timestamp/">sd_bus_negotiate_timestamp</a></code>(3) &#8212; Control feature negotiation on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_new/">sd_bus_new</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_object_path_is_valid/">sd_bus_object_path_is_valid</a></code>(3) &#8212; Check if a string is a valid bus name or object path<br />
- <code><a href="/docs/linux/man/3-sd_bus_open/">sd_bus_open</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_system/">sd_bus_open_system</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_system_machine/">sd_bus_open_system_machine</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_system_remote/">sd_bus_open_system_remote</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_system_with_description/">sd_bus_open_system_with_description</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_user/">sd_bus_open_user</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_user_machine/">sd_bus_open_user_machine</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_user_with_description/">sd_bus_open_user_with_description</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_open_with_description/">sd_bus_open_with_description</a></code>(3) &#8212; Acquire a connection to a system or user bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_param/">SD_BUS_PARAM</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_path_decode/">sd_bus_path_decode</a></code>(3) &#8212; Convert an external identifier into an object path and back<br />
- <code><a href="/docs/linux/man/3-sd_bus_path_decode_many/">sd_bus_path_decode_many</a></code>(3) &#8212; Convert an external identifier into an object path and back<br />
- <code><a href="/docs/linux/man/3-sd_bus_path_encode/">sd_bus_path_encode</a></code>(3) &#8212; Convert an external identifier into an object path and back<br />
- <code><a href="/docs/linux/man/3-sd_bus_path_encode_many/">sd_bus_path_encode_many</a></code>(3) &#8212; Convert an external identifier into an object path and back<br />
- <code><a href="/docs/linux/man/3-sd_bus_process/">sd_bus_process</a></code>(3) &#8212; Drive the connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_property/">SD_BUS_PROPERTY</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_query_sender_creds/">sd_bus_query_sender_creds</a></code>(3) &#8212; Query bus message sender credentials/privileges<br />
- <code><a href="/docs/linux/man/3-sd_bus_query_sender_privilege/">sd_bus_query_sender_privilege</a></code>(3) &#8212; Query bus message sender credentials/privileges<br />
- <code><a href="/docs/linux/man/3-sd_bus_ref/">sd_bus_ref</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_release_name/">sd_bus_release_name</a></code>(3) &#8212; Request or release a well-known service name on a bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_release_name_async/">sd_bus_release_name_async</a></code>(3) &#8212; Request or release a well-known service name on a bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_errno/">sd_bus_reply_method_errno</a></code>(3) &#8212; Reply with an error to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_errnof/">sd_bus_reply_method_errnof</a></code>(3) &#8212; Reply with an error to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_errnofv/">sd_bus_reply_method_errnofv</a></code>(3) &#8212; Reply with an error to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_error/">sd_bus_reply_method_error</a></code>(3) &#8212; Reply with an error to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_errorf/">sd_bus_reply_method_errorf</a></code>(3) &#8212; Reply with an error to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_errorfv/">sd_bus_reply_method_errorfv</a></code>(3) &#8212; Reply with an error to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_return/">sd_bus_reply_method_return</a></code>(3) &#8212; Reply to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_reply_method_returnv/">sd_bus_reply_method_returnv</a></code>(3) &#8212; Reply to a D-Bus method call<br />
- <code><a href="/docs/linux/man/3-sd_bus_request_name/">sd_bus_request_name</a></code>(3) &#8212; Request or release a well-known service name on a bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_request_name_async/">sd_bus_request_name_async</a></code>(3) &#8212; Request or release a well-known service name on a bus<br />
- <code><a href="/docs/linux/man/3-sd_bus_send/">sd_bus_send</a></code>(3) &#8212; Queue a D-Bus message for transfer<br />
- <code><a href="/docs/linux/man/3-sd_bus_send_to/">sd_bus_send_to</a></code>(3) &#8212; Queue a D-Bus message for transfer<br />
- <code><a href="/docs/linux/man/3-sd_bus_service_name_is_valid/">sd_bus_service_name_is_valid</a></code>(3) &#8212; Check if a string is a valid bus name or object path<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_address/">sd_bus_set_address</a></code>(3) &#8212; Set or query the address of the bus connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_allow_interactive_authorization/">sd_bus_set_allow_interactive_authorization</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_anonymous/">sd_bus_set_anonymous</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_bus_client/">sd_bus_set_bus_client</a></code>(3) &#8212; Configure connection mode for a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_close_on_exit/">sd_bus_set_close_on_exit</a></code>(3) &#8212; Control whether to close the bus connection during the event loop exit phase<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_connected_signal/">sd_bus_set_connected_signal</a></code>(3) &#8212; Control emission of local connection establishment signal on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_description/">sd_bus_set_description</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_exec/">sd_bus_set_exec</a></code>(3) &#8212; Set or query the address of the bus connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_exit_on_disconnect/">sd_bus_set_exit_on_disconnect</a></code>(3) &#8212; Control the exit behavior when the bus object disconnects<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_fd/">sd_bus_set_fd</a></code>(3) &#8212; Set the file descriptors to use for bus communication<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_method_call_timeout/">sd_bus_set_method_call_timeout</a></code>(3) &#8212; Set or query the default D-Bus method call timeout of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_monitor/">sd_bus_set_monitor</a></code>(3) &#8212; Configure connection mode for a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_property/">sd_bus_set_property</a></code>(3) &#8212; Set or query D-Bus service properties<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_propertyv/">sd_bus_set_propertyv</a></code>(3) &#8212; Set or query D-Bus service properties<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_sender/">sd_bus_set_sender</a></code>(3) &#8212; Configure default sender for outgoing messages<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_server/">sd_bus_set_server</a></code>(3) &#8212; Configure connection mode for a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_trusted/">sd_bus_set_trusted</a></code>(3) &#8212; Set or query properties of a bus object<br />
- <code><a href="/docs/linux/man/3-sd_bus_set_watch_bind/">sd_bus_set_watch_bind</a></code>(3) &#8212; Control socket binding watching on bus connections<br />
- <code><a href="/docs/linux/man/3-sd_bus_signal/">SD_BUS_SIGNAL</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_signal_with_names/">SD_BUS_SIGNAL_WITH_NAMES</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_bus/">sd_bus_slot_get_bus</a></code>(3) &#8212; Query information attached to a bus slot object<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_current_handler/">sd_bus_slot_get_current_handler</a></code>(3) &#8212; Query information attached to a bus slot object<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_current_message/">sd_bus_slot_get_current_message</a></code>(3) &#8212; Query information attached to a bus slot object<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_current_userdata/">sd_bus_slot_get_current_userdata</a></code>(3) &#8212; Query information attached to a bus slot object<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_description/">sd_bus_slot_get_description</a></code>(3) &#8212; Set or query the description of bus slot objects<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_destroy_callback/">sd_bus_slot_get_destroy_callback</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_floating/">sd_bus_slot_get_floating</a></code>(3) &#8212; Control whether a bus slot object is &quot;floating&quot;<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_get_userdata/">sd_bus_slot_get_userdata</a></code>(3) &#8212; Set and query the value in the &quot;userdata&quot; field<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_ref/">sd_bus_slot_ref</a></code>(3) &#8212; Create and destroy references to a bus slot object<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_set_description/">sd_bus_slot_set_description</a></code>(3) &#8212; Set or query the description of bus slot objects<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_set_destroy_callback/">sd_bus_slot_set_destroy_callback</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_set_floating/">sd_bus_slot_set_floating</a></code>(3) &#8212; Control whether a bus slot object is &quot;floating&quot;<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_set_userdata/">sd_bus_slot_set_userdata</a></code>(3) &#8212; Set and query the value in the &quot;userdata&quot; field<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_unref/">sd_bus_slot_unref</a></code>(3) &#8212; Create and destroy references to a bus slot object<br />
- <code><a href="/docs/linux/man/3-sd_bus_slot_unrefp/">sd_bus_slot_unrefp</a></code>(3) &#8212; Create and destroy references to a bus slot object<br />
- <code><a href="/docs/linux/man/3-sd_bus_start/">sd_bus_start</a></code>(3) &#8212; Initiate a bus connection to the D-bus broker daemon<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_add_name/">sd_bus_track_add_name</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_add_sender/">sd_bus_track_add_sender</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_contains/">sd_bus_track_contains</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_count/">sd_bus_track_count</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_count_name/">sd_bus_track_count_name</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_count_sender/">sd_bus_track_count_sender</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_first/">sd_bus_track_first</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_get_bus/">sd_bus_track_get_bus</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_get_destroy_callback/">sd_bus_track_get_destroy_callback</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_get_recursive/">sd_bus_track_get_recursive</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_get_userdata/">sd_bus_track_get_userdata</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_new/">sd_bus_track_new</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_next/">sd_bus_track_next</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_ref/">sd_bus_track_ref</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_remove_name/">sd_bus_track_remove_name</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_remove_sender/">sd_bus_track_remove_sender</a></code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_set_destroy_callback/">sd_bus_track_set_destroy_callback</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_set_recursive/">sd_bus_track_set_recursive</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_set_userdata/">sd_bus_track_set_userdata</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_unref/">sd_bus_track_unref</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_track_unrefp/">sd_bus_track_unrefp</a></code>(3) &#8212; Track bus peers<br />
- <code><a href="/docs/linux/man/3-sd_bus_unref/">sd_bus_unref</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_unrefp/">sd_bus_unrefp</a></code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_bus_vtable_capability/">SD_BUS_VTABLE_CAPABILITY</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_vtable_end/">SD_BUS_VTABLE_END</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_vtable_start/">SD_BUS_VTABLE_START</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
- <code><a href="/docs/linux/man/3-sd_bus_wait/">sd_bus_wait</a></code>(3) &#8212; Wait for I/O on a bus connection<br />
- <code><a href="/docs/linux/man/3-sd_bus_writable_property/">SD_BUS_WRITABLE_PROPERTY</a></code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_add_fallback</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_add_fallback_vtable</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_add_filter</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_add_match</code>(3) &#8212; Add a match rule for incoming message dispatching<br />
+ <code>sd_bus_add_match_async</code>(3) &#8212; Add a match rule for incoming message dispatching<br />
+ <code>sd_bus_add_node_enumerator</code>(3) &#8212; Add a node enumerator for a D-Bus object path prefix<br />
+ <code>sd_bus_add_object</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_add_object_manager</code>(3) &#8212; Add a D-Bus object manager for a D-Bus object sub-tree<br />
+ <code>sd_bus_add_object_vtable</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_attach_event</code>(3) &#8212; Attach a bus connection object to an event loop<br />
+ <code>sd_bus_call</code>(3) &#8212; Invoke a D-Bus method call<br />
+ <code>sd_bus_call_async</code>(3) &#8212; Invoke a D-Bus method call<br />
+ <code>sd_bus_call_method</code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
+ <code>sd_bus_call_method_async</code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
+ <code>sd_bus_call_method_asyncv</code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
+ <code>sd_bus_call_methodv</code>(3) &#8212; Initialize a bus message object and invoke the corresponding D-Bus method call<br />
+ <code>sd_bus_can_send</code>(3) &#8212; Check which types can be sent over a bus object<br />
+ <code>sd_bus_close</code>(3) &#8212; Close and flush a bus connection<br />
+ <code>sd_bus_close_unref</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>sd_bus_close_unrefp</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>sd_bus_creds_get_audit_login_uid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_audit_session_id</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_augmented_mask</code>(3) &#8212; Retrieve credentials object for the specified PID<br />
+ <code>sd_bus_creds_get_cgroup</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_cmdline</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_comm</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_description</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_egid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_euid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_exe</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_fsgid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_fsuid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_gid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_mask</code>(3) &#8212; Retrieve credentials object for the specified PID<br />
+ <code>sd_bus_creds_get_owner_uid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_pid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_ppid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_selinux_context</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_session</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_sgid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_slice</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_suid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_supplementary_gids</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_tid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_tid_comm</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_tty</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_uid</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_unique_name</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_unit</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_user_slice</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_user_unit</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_get_well_known_names</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_has_bounding_cap</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_has_effective_cap</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_has_inheritable_cap</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_has_permitted_cap</code>(3) &#8212; Retrieve fields from a credentials object<br />
+ <code>sd_bus_creds_new_from_pid</code>(3) &#8212; Retrieve credentials object for the specified PID<br />
+ <code>sd_bus_creds_ref</code>(3) &#8212; Retrieve credentials object for the specified PID<br />
+ <code>sd_bus_creds_unref</code>(3) &#8212; Retrieve credentials object for the specified PID<br />
+ <code>sd_bus_creds_unrefp</code>(3) &#8212; Retrieve credentials object for the specified PID<br />
+ <code>sd_bus_default</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_default_flush_close</code>(3) &#8212; Close and flush a bus connection<br />
+ <code>sd_bus_default_system</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_default_user</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_destroy_t</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_bus_detach_event</code>(3) &#8212; Attach a bus connection object to an event loop<br />
+ <code>sd_bus_emit_interfaces_added</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_interfaces_added_strv</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_interfaces_removed</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_interfaces_removed_strv</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_object_added</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_object_removed</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_properties_changed</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_properties_changed_strv</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_signal</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_emit_signalv</code>(3) &#8212; Convenience functions for emitting (standard) D-Bus signals<br />
+ <code>sd_bus_enqueue_for_read</code>(3) &#8212; Re-enqueue a bus message on a bus connection, for reading<br />
+ <code>sd_bus_error</code>(3) &#8212; sd-bus error handling<br />
+ <code>SD_BUS_ERROR_ACCESS_DENIED</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd_bus_error_add_map</code>(3) &#8212; Additional sd-dbus error mappings<br />
+ <code>SD_BUS_ERROR_ADDRESS_IN_USE</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_AUTH_FAILED</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_BAD_ADDRESS</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd_bus_error_copy</code>(3) &#8212; sd-bus error handling<br />
+ <code>SD_BUS_ERROR_DISCONNECTED</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_END</code>(3) &#8212; Additional sd-dbus error mappings<br />
+ <code>SD_BUS_ERROR_FAILED</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_FILE_EXISTS</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_FILE_NOT_FOUND</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd_bus_error_free</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_get_errno</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_has_name</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_has_names</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_has_names_sentinel</code>(3) &#8212; sd-bus error handling<br />
+ <code>SD_BUS_ERROR_INCONSISTENT_MESSAGE</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_INTERACTIVE_AUTHORIZATION_REQUIRED</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_INVALID_ARGS</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_INVALID_SIGNATURE</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_IO_ERROR</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd_bus_error_is_set</code>(3) &#8212; sd-bus error handling<br />
+ <code>SD_BUS_ERROR_LIMITS_EXCEEDED</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_MAKE_CONST</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_map</code>(3) &#8212; Additional sd-dbus error mappings<br />
+ <code>SD_BUS_ERROR_MAP</code>(3) &#8212; Additional sd-dbus error mappings<br />
+ <code>SD_BUS_ERROR_MATCH_RULE_INVALID</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_MATCH_RULE_NOT_FOUND</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd_bus_error_move</code>(3) &#8212; sd-bus error handling<br />
+ <code>SD_BUS_ERROR_NAME_HAS_NO_OWNER</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_NO_MEMORY</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_NO_NETWORK</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_NO_REPLY</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_NO_SERVER</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_NOT_SUPPORTED</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_NULL</code>(3) &#8212; sd-bus error handling<br />
+ <code>SD_BUS_ERROR_PROPERTY_READ_ONLY</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_SERVICE_UNKNOWN</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd_bus_error_set</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_set_const</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_set_errno</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_set_errnof</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_set_errnofv</code>(3) &#8212; sd-bus error handling<br />
+ <code>sd_bus_error_setf</code>(3) &#8212; sd-bus error handling<br />
+ <code>SD_BUS_ERROR_TIMEOUT</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_UNIX_PROCESS_ID_UNKNOWN</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_UNKNOWN_INTERFACE</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_UNKNOWN_METHOD</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_UNKNOWN_OBJECT</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>SD_BUS_ERROR_UNKNOWN_PROPERTY</code>(3) &#8212; Standard D-Bus error names<br />
+ <code>sd_bus_flush</code>(3) &#8212; Close and flush a bus connection<br />
+ <code>sd_bus_flush_close_unref</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>sd_bus_flush_close_unrefp</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>sd_bus_get_address</code>(3) &#8212; Set or query the address of the bus connection<br />
+ <code>sd_bus_get_allow_interactive_authorization</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_get_bus_id</code>(3) &#8212; Configure connection mode for a bus object<br />
+ <code>sd_bus_get_close_on_exit</code>(3) &#8212; Control whether to close the bus connection during the event loop exit phase<br />
+ <code>sd_bus_get_connected_signal</code>(3) &#8212; Control emission of local connection establishment signal on bus connections<br />
+ <code>sd_bus_get_creds_mask</code>(3) &#8212; Control feature negotiation on bus connections<br />
+ <code>sd_bus_get_current_handler</code>(3) &#8212; Query information of the callback a bus object is currently running<br />
+ <code>sd_bus_get_current_message</code>(3) &#8212; Query information of the callback a bus object is currently running<br />
+ <code>sd_bus_get_current_slot</code>(3) &#8212; Query information of the callback a bus object is currently running<br />
+ <code>sd_bus_get_current_userdata</code>(3) &#8212; Query information of the callback a bus object is currently running<br />
+ <code>sd_bus_get_description</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_get_event</code>(3) &#8212; Attach a bus connection object to an event loop<br />
+ <code>sd_bus_get_events</code>(3) &#8212; Get the file descriptor, I/O events and timeout to wait for from a message bus object<br />
+ <code>sd_bus_get_exit_on_disconnect</code>(3) &#8212; Control the exit behavior when the bus object disconnects<br />
+ <code>sd_bus_get_fd</code>(3) &#8212; Get the file descriptor, I/O events and timeout to wait for from a message bus object<br />
+ <code>sd_bus_get_method_call_timeout</code>(3) &#8212; Set or query the default D-Bus method call timeout of a bus object<br />
+ <code>sd_bus_get_n_queued_read</code>(3) &#8212; Get the number of pending bus messages in the read and write queues of a bus connection object<br />
+ <code>sd_bus_get_n_queued_write</code>(3) &#8212; Get the number of pending bus messages in the read and write queues of a bus connection object<br />
+ <code>sd_bus_get_name_creds</code>(3) &#8212; Query bus client credentials<br />
+ <code>sd_bus_get_name_machine_id</code>(3) &#8212; Retrieve a bus client&#8217;s machine identity<br />
+ <code>sd_bus_get_owner_creds</code>(3) &#8212; Query bus client credentials<br />
+ <code>sd_bus_get_property</code>(3) &#8212; Set or query D-Bus service properties<br />
+ <code>sd_bus_get_property_string</code>(3) &#8212; Set or query D-Bus service properties<br />
+ <code>sd_bus_get_property_strv</code>(3) &#8212; Set or query D-Bus service properties<br />
+ <code>sd_bus_get_property_trivial</code>(3) &#8212; Set or query D-Bus service properties<br />
+ <code>sd_bus_get_scope</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_get_sender</code>(3) &#8212; Configure default sender for outgoing messages<br />
+ <code>sd_bus_get_tid</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_get_timeout</code>(3) &#8212; Get the file descriptor, I/O events and timeout to wait for from a message bus object<br />
+ <code>sd_bus_get_unique_name</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_get_watch_bind</code>(3) &#8212; Control socket binding watching on bus connections<br />
+ <code>sd_bus_interface_name_is_valid</code>(3) &#8212; Check if a string is a valid bus name or object path<br />
+ <code>sd_bus_is_anonymous</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_is_bus_client</code>(3) &#8212; Configure connection mode for a bus object<br />
+ <code>sd_bus_is_monitor</code>(3) &#8212; Configure connection mode for a bus object<br />
+ <code>sd_bus_is_open</code>(3) &#8212; Check whether the bus connection is open or ready<br />
+ <code>sd_bus_is_ready</code>(3) &#8212; Check whether the bus connection is open or ready<br />
+ <code>sd_bus_is_server</code>(3) &#8212; Configure connection mode for a bus object<br />
+ <code>sd_bus_is_trusted</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_list_names</code>(3) &#8212; Retrieve information about registered names on a bus<br />
+ <code>sd_bus_match_signal</code>(3) &#8212; Add a match rule for incoming message dispatching<br />
+ <code>sd_bus_match_signal_async</code>(3) &#8212; Add a match rule for incoming message dispatching<br />
+ <code>sd_bus_member_name_is_valid</code>(3) &#8212; Check if a string is a valid bus name or object path<br />
+ <code>sd_bus_message_append</code>(3) &#8212; Attach fields to a D-Bus message based on a type string<br />
+ <code>sd_bus_message_append_array</code>(3) &#8212; Append an array of fields to a D-Bus message<br />
+ <code>sd_bus_message_append_array_iovec</code>(3) &#8212; Append an array of fields to a D-Bus message<br />
+ <code>sd_bus_message_append_array_memfd</code>(3) &#8212; Append an array of fields to a D-Bus message<br />
+ <code>sd_bus_message_append_array_space</code>(3) &#8212; Append an array of fields to a D-Bus message<br />
+ <code>sd_bus_message_append_basic</code>(3) &#8212; Attach a single field to a message<br />
+ <code>sd_bus_message_append_string_iovec</code>(3) &#8212; Attach a string to a message<br />
+ <code>sd_bus_message_append_string_memfd</code>(3) &#8212; Attach a string to a message<br />
+ <code>sd_bus_message_append_string_space</code>(3) &#8212; Attach a string to a message<br />
+ <code>sd_bus_message_append_strv</code>(3) &#8212; Attach an array of strings to a message<br />
+ <code>sd_bus_message_appendv</code>(3) &#8212; Attach fields to a D-Bus message based on a type string<br />
+ <code>sd_bus_message_at_end</code>(3) &#8212; Check if a message has been fully read<br />
+ <code>sd_bus_message_close_container</code>(3) &#8212; Create and move between containers in D-Bus messages<br />
+ <code>sd_bus_message_copy</code>(3) &#8212; Copy the contents of one message to another<br />
+ <code>sd_bus_message_dump</code>(3) &#8212; Produce a string representation of a message for debugging purposes<br />
+ <code>sd_bus_message_enter_container</code>(3) &#8212; Create and move between containers in D-Bus messages<br />
+ <code>sd_bus_message_exit_container</code>(3) &#8212; Create and move between containers in D-Bus messages<br />
+ <code>sd_bus_message_get_allow_interactive_authorization</code>(3) &#8212; Set and query bus message metadata<br />
+ <code>sd_bus_message_get_auto_start</code>(3) &#8212; Set and query bus message metadata<br />
+ <code>sd_bus_message_get_bus</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>sd_bus_message_get_cookie</code>(3) &#8212; Returns the transaction cookie of a message<br />
+ <code>sd_bus_message_get_creds</code>(3) &#8212; Query bus message addressing/credentials metadata<br />
+ <code>sd_bus_message_get_destination</code>(3) &#8212; Set and query bus message addressing information<br />
+ <code>sd_bus_message_get_errno</code>(3) &#8212; Query bus message addressing/credentials metadata<br />
+ <code>sd_bus_message_get_error</code>(3) &#8212; Query bus message addressing/credentials metadata<br />
+ <code>sd_bus_message_get_expect_reply</code>(3) &#8212; Set and query bus message metadata<br />
+ <code>sd_bus_message_get_interface</code>(3) &#8212; Set and query bus message addressing information<br />
+ <code>sd_bus_message_get_member</code>(3) &#8212; Set and query bus message addressing information<br />
+ <code>sd_bus_message_get_monotonic_usec</code>(3) &#8212; Retrieve the sender timestamps and sequence number of a message<br />
+ <code>sd_bus_message_get_path</code>(3) &#8212; Set and query bus message addressing information<br />
+ <code>sd_bus_message_get_realtime_usec</code>(3) &#8212; Retrieve the sender timestamps and sequence number of a message<br />
+ <code>sd_bus_message_get_reply_cookie</code>(3) &#8212; Returns the transaction cookie of a message<br />
+ <code>sd_bus_message_get_sender</code>(3) &#8212; Set and query bus message addressing information<br />
+ <code>sd_bus_message_get_seqnum</code>(3) &#8212; Retrieve the sender timestamps and sequence number of a message<br />
+ <code>sd_bus_message_get_signature</code>(3) &#8212; Query bus message signature<br />
+ <code>sd_bus_message_get_type</code>(3) &#8212; Query bus message addressing/credentials metadata<br />
+ <code>sd_bus_message_has_signature</code>(3) &#8212; Query bus message signature<br />
+ <code>sd_bus_message_is_empty</code>(3) &#8212; Query bus message signature<br />
+ <code>sd_bus_message_is_method_call</code>(3) &#8212; Query bus message addressing/credentials metadata<br />
+ <code>sd_bus_message_is_method_error</code>(3) &#8212; Query bus message addressing/credentials metadata<br />
+ <code>sd_bus_message_is_signal</code>(3) &#8212; Query bus message addressing/credentials metadata<br />
+ <code>SD_BUS_MESSAGE_METHOD_CALL</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>SD_BUS_MESSAGE_METHOD_ERROR</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>SD_BUS_MESSAGE_METHOD_RETURN</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>sd_bus_message_new</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>sd_bus_message_new_method_call</code>(3) &#8212; Create a method call message<br />
+ <code>sd_bus_message_new_method_errno</code>(3) &#8212; Create an error reply for a method call<br />
+ <code>sd_bus_message_new_method_errnof</code>(3) &#8212; Create an error reply for a method call<br />
+ <code>sd_bus_message_new_method_error</code>(3) &#8212; Create an error reply for a method call<br />
+ <code>sd_bus_message_new_method_errorf</code>(3) &#8212; Create an error reply for a method call<br />
+ <code>sd_bus_message_new_method_return</code>(3) &#8212; Create a method call message<br />
+ <code>sd_bus_message_new_signal</code>(3) &#8212; Create a signal message<br />
+ <code>sd_bus_message_open_container</code>(3) &#8212; Create and move between containers in D-Bus messages<br />
+ <code>sd_bus_message_peek_type</code>(3) &#8212; Read a sequence of values from a message<br />
+ <code>sd_bus_message_read</code>(3) &#8212; Read a sequence of values from a message<br />
+ <code>sd_bus_message_read_array</code>(3) &#8212; Access an array of elements in a message<br />
+ <code>sd_bus_message_read_basic</code>(3) &#8212; Read a basic type from a message<br />
+ <code>sd_bus_message_read_strv</code>(3) &#8212; Access an array of strings in a message<br />
+ <code>sd_bus_message_readv</code>(3) &#8212; Read a sequence of values from a message<br />
+ <code>sd_bus_message_ref</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>sd_bus_message_rewind</code>(3) &#8212; Return to beginning of message or current container<br />
+ <code>sd_bus_message_seal</code>(3) &#8212; Prepare a D-Bus message for transmission<br />
+ <code>sd_bus_message_send</code>(3) &#8212; Queue a D-Bus message for transfer<br />
+ <code>sd_bus_message_sensitive</code>(3) &#8212; Mark a message object as containing sensitive data<br />
+ <code>sd_bus_message_set_allow_interactive_authorization</code>(3) &#8212; Set and query bus message metadata<br />
+ <code>sd_bus_message_set_auto_start</code>(3) &#8212; Set and query bus message metadata<br />
+ <code>sd_bus_message_set_destination</code>(3) &#8212; Set and query bus message addressing information<br />
+ <code>sd_bus_message_set_expect_reply</code>(3) &#8212; Set and query bus message metadata<br />
+ <code>sd_bus_message_set_sender</code>(3) &#8212; Set and query bus message addressing information<br />
+ <code>SD_BUS_MESSAGE_SIGNAL</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>sd_bus_message_skip</code>(3) &#8212; Skip elements in a bus message<br />
+ <code>sd_bus_message_unref</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>sd_bus_message_unrefp</code>(3) &#8212; Create a new bus message object and create or destroy references to it<br />
+ <code>sd_bus_message_verify_type</code>(3) &#8212; Check if the message has specified type at the current location<br />
+ <code>SD_BUS_METHOD</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>SD_BUS_METHOD_WITH_NAMES</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>SD_BUS_METHOD_WITH_NAMES_OFFSET</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>SD_BUS_METHOD_WITH_OFFSET</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_negotiate_creds</code>(3) &#8212; Control feature negotiation on bus connections<br />
+ <code>sd_bus_negotiate_fds</code>(3) &#8212; Control feature negotiation on bus connections<br />
+ <code>sd_bus_negotiate_timestamp</code>(3) &#8212; Control feature negotiation on bus connections<br />
+ <code>sd_bus_new</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>sd_bus_object_path_is_valid</code>(3) &#8212; Check if a string is a valid bus name or object path<br />
+ <code>sd_bus_open</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_system</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_system_machine</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_system_remote</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_system_with_description</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_user</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_user_machine</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_user_with_description</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>sd_bus_open_with_description</code>(3) &#8212; Acquire a connection to a system or user bus<br />
+ <code>SD_BUS_PARAM</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_path_decode</code>(3) &#8212; Convert an external identifier into an object path and back<br />
+ <code>sd_bus_path_decode_many</code>(3) &#8212; Convert an external identifier into an object path and back<br />
+ <code>sd_bus_path_encode</code>(3) &#8212; Convert an external identifier into an object path and back<br />
+ <code>sd_bus_path_encode_many</code>(3) &#8212; Convert an external identifier into an object path and back<br />
+ <code>sd_bus_process</code>(3) &#8212; Drive the connection<br />
+ <code>SD_BUS_PROPERTY</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_query_sender_creds</code>(3) &#8212; Query bus message sender credentials/privileges<br />
+ <code>sd_bus_query_sender_privilege</code>(3) &#8212; Query bus message sender credentials/privileges<br />
+ <code>sd_bus_ref</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>sd_bus_release_name</code>(3) &#8212; Request or release a well-known service name on a bus<br />
+ <code>sd_bus_release_name_async</code>(3) &#8212; Request or release a well-known service name on a bus<br />
+ <code>sd_bus_reply_method_errno</code>(3) &#8212; Reply with an error to a D-Bus method call<br />
+ <code>sd_bus_reply_method_errnof</code>(3) &#8212; Reply with an error to a D-Bus method call<br />
+ <code>sd_bus_reply_method_errnofv</code>(3) &#8212; Reply with an error to a D-Bus method call<br />
+ <code>sd_bus_reply_method_error</code>(3) &#8212; Reply with an error to a D-Bus method call<br />
+ <code>sd_bus_reply_method_errorf</code>(3) &#8212; Reply with an error to a D-Bus method call<br />
+ <code>sd_bus_reply_method_errorfv</code>(3) &#8212; Reply with an error to a D-Bus method call<br />
+ <code>sd_bus_reply_method_return</code>(3) &#8212; Reply to a D-Bus method call<br />
+ <code>sd_bus_reply_method_returnv</code>(3) &#8212; Reply to a D-Bus method call<br />
+ <code>sd_bus_request_name</code>(3) &#8212; Request or release a well-known service name on a bus<br />
+ <code>sd_bus_request_name_async</code>(3) &#8212; Request or release a well-known service name on a bus<br />
+ <code>sd_bus_send</code>(3) &#8212; Queue a D-Bus message for transfer<br />
+ <code>sd_bus_send_to</code>(3) &#8212; Queue a D-Bus message for transfer<br />
+ <code>sd_bus_service_name_is_valid</code>(3) &#8212; Check if a string is a valid bus name or object path<br />
+ <code>sd_bus_set_address</code>(3) &#8212; Set or query the address of the bus connection<br />
+ <code>sd_bus_set_allow_interactive_authorization</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_set_anonymous</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_set_bus_client</code>(3) &#8212; Configure connection mode for a bus object<br />
+ <code>sd_bus_set_close_on_exit</code>(3) &#8212; Control whether to close the bus connection during the event loop exit phase<br />
+ <code>sd_bus_set_connected_signal</code>(3) &#8212; Control emission of local connection establishment signal on bus connections<br />
+ <code>sd_bus_set_description</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_set_exec</code>(3) &#8212; Set or query the address of the bus connection<br />
+ <code>sd_bus_set_exit_on_disconnect</code>(3) &#8212; Control the exit behavior when the bus object disconnects<br />
+ <code>sd_bus_set_fd</code>(3) &#8212; Set the file descriptors to use for bus communication<br />
+ <code>sd_bus_set_method_call_timeout</code>(3) &#8212; Set or query the default D-Bus method call timeout of a bus object<br />
+ <code>sd_bus_set_monitor</code>(3) &#8212; Configure connection mode for a bus object<br />
+ <code>sd_bus_set_property</code>(3) &#8212; Set or query D-Bus service properties<br />
+ <code>sd_bus_set_propertyv</code>(3) &#8212; Set or query D-Bus service properties<br />
+ <code>sd_bus_set_sender</code>(3) &#8212; Configure default sender for outgoing messages<br />
+ <code>sd_bus_set_server</code>(3) &#8212; Configure connection mode for a bus object<br />
+ <code>sd_bus_set_trusted</code>(3) &#8212; Set or query properties of a bus object<br />
+ <code>sd_bus_set_watch_bind</code>(3) &#8212; Control socket binding watching on bus connections<br />
+ <code>SD_BUS_SIGNAL</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>SD_BUS_SIGNAL_WITH_NAMES</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_slot_get_bus</code>(3) &#8212; Query information attached to a bus slot object<br />
+ <code>sd_bus_slot_get_current_handler</code>(3) &#8212; Query information attached to a bus slot object<br />
+ <code>sd_bus_slot_get_current_message</code>(3) &#8212; Query information attached to a bus slot object<br />
+ <code>sd_bus_slot_get_current_userdata</code>(3) &#8212; Query information attached to a bus slot object<br />
+ <code>sd_bus_slot_get_description</code>(3) &#8212; Set or query the description of bus slot objects<br />
+ <code>sd_bus_slot_get_destroy_callback</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_bus_slot_get_floating</code>(3) &#8212; Control whether a bus slot object is &quot;floating&quot;<br />
+ <code>sd_bus_slot_get_userdata</code>(3) &#8212; Set and query the value in the &quot;userdata&quot; field<br />
+ <code>sd_bus_slot_ref</code>(3) &#8212; Create and destroy references to a bus slot object<br />
+ <code>sd_bus_slot_set_description</code>(3) &#8212; Set or query the description of bus slot objects<br />
+ <code>sd_bus_slot_set_destroy_callback</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_bus_slot_set_floating</code>(3) &#8212; Control whether a bus slot object is &quot;floating&quot;<br />
+ <code>sd_bus_slot_set_userdata</code>(3) &#8212; Set and query the value in the &quot;userdata&quot; field<br />
+ <code>sd_bus_slot_unref</code>(3) &#8212; Create and destroy references to a bus slot object<br />
+ <code>sd_bus_slot_unrefp</code>(3) &#8212; Create and destroy references to a bus slot object<br />
+ <code>sd_bus_start</code>(3) &#8212; Initiate a bus connection to the D-bus broker daemon<br />
+ <code>sd_bus_track_add_name</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_add_sender</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_contains</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_count</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_count_name</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_count_sender</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_first</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_get_bus</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_get_destroy_callback</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_bus_track_get_recursive</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_get_userdata</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_new</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_next</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_ref</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_remove_name</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_remove_sender</code>(3) &#8212; Add, remove and retrieve bus peers tracked in a bus peer tracking object<br />
+ <code>sd_bus_track_set_destroy_callback</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_bus_track_set_recursive</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_set_userdata</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_unref</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_track_unrefp</code>(3) &#8212; Track bus peers<br />
+ <code>sd_bus_unref</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>sd_bus_unrefp</code>(3) &#8212; Create a new bus object and create or destroy references to it<br />
+ <code>SD_BUS_VTABLE_CAPABILITY</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>SD_BUS_VTABLE_END</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>SD_BUS_VTABLE_START</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
+ <code>sd_bus_wait</code>(3) &#8212; Wait for I/O on a bus connection<br />
+ <code>SD_BUS_WRITABLE_PROPERTY</code>(3) &#8212; Declare properties and methods for a D-Bus path<br />
  <code><a href="/docs/linux/man/3-sd_crit/">SD_CRIT</a></code>(3) &#8212; APIs for new-style daemons<br />
  <code><a href="/docs/linux/man/3-sd_debug/">SD_DEBUG</a></code>(3) &#8212; APIs for new-style daemons<br />
  <code><a href="/docs/linux/man/3-sd_emerg/">SD_EMERG</a></code>(3) &#8212; APIs for new-style daemons<br />
  <code><a href="/docs/linux/man/3-sd_err/">SD_ERR</a></code>(3) &#8212; APIs for new-style daemons<br />
- <code><a href="/docs/linux/man/3-sd_event/">sd_event</a></code>(3) &#8212; Acquire and release an event loop object<br />
- <code><a href="/docs/linux/man/3-sd_event_add_child/">sd_event_add_child</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_child_pidfd/">sd_event_add_child_pidfd</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_defer/">sd_event_add_defer</a></code>(3) &#8212; Add static event sources to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_exit/">sd_event_add_exit</a></code>(3) &#8212; Add static event sources to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_inotify/">sd_event_add_inotify</a></code>(3) &#8212; Add an &quot;inotify&quot; file system inode event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_io/">sd_event_add_io</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_post/">sd_event_add_post</a></code>(3) &#8212; Add static event sources to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_signal/">sd_event_add_signal</a></code>(3) &#8212; Add a UNIX process signal event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_time/">sd_event_add_time</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_add_time_relative/">sd_event_add_time_relative</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_armed/">SD_EVENT_ARMED</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_child_handler_t/">sd_event_child_handler_t</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_default/">sd_event_default</a></code>(3) &#8212; Acquire and release an event loop object<br />
- <code><a href="/docs/linux/man/3-sd_event_destroy_t/">sd_event_destroy_t</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_event_dispatch/">sd_event_dispatch</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_exit/">sd_event_exit</a></code>(3) &#8212; Ask the event loop to exit<br />
- <code><a href="/docs/linux/man/3-sd_event_exiting/">SD_EVENT_EXITING</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_finished/">SD_EVENT_FINISHED</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_get_exit_code/">sd_event_get_exit_code</a></code>(3) &#8212; Ask the event loop to exit<br />
- <code><a href="/docs/linux/man/3-sd_event_get_fd/">sd_event_get_fd</a></code>(3) &#8212; Obtain a file descriptor to poll for event loop events<br />
- <code><a href="/docs/linux/man/3-sd_event_get_iteration/">sd_event_get_iteration</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_get_state/">sd_event_get_state</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_get_tid/">sd_event_get_tid</a></code>(3) &#8212; Acquire and release an event loop object<br />
- <code><a href="/docs/linux/man/3-sd_event_get_watchdog/">sd_event_get_watchdog</a></code>(3) &#8212; Enable event loop watchdog support<br />
- <code><a href="/docs/linux/man/3-sd_event_handler_t/">sd_event_handler_t</a></code>(3) &#8212; Add static event sources to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_initial/">SD_EVENT_INITIAL</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_inotify_handler_t/">sd_event_inotify_handler_t</a></code>(3) &#8212; Add an &quot;inotify&quot; file system inode event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_io_handler_t/">sd_event_io_handler_t</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_loop/">sd_event_loop</a></code>(3) &#8212; Run an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_new/">sd_event_new</a></code>(3) &#8212; Acquire and release an event loop object<br />
- <code><a href="/docs/linux/man/3-sd_event_now/">sd_event_now</a></code>(3) &#8212; Retrieve current event loop iteration timestamp<br />
- <code><a href="/docs/linux/man/3-sd_event_off/">SD_EVENT_OFF</a></code>(3) &#8212; Enable or disable event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_on/">SD_EVENT_ON</a></code>(3) &#8212; Enable or disable event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_oneshot/">SD_EVENT_ONESHOT</a></code>(3) &#8212; Enable or disable event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_pending/">SD_EVENT_PENDING</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_prepare/">sd_event_prepare</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_preparing/">SD_EVENT_PREPARING</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_priority_idle/">SD_EVENT_PRIORITY_IDLE</a></code>(3) &#8212; Set or retrieve the priority of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_priority_important/">SD_EVENT_PRIORITY_IMPORTANT</a></code>(3) &#8212; Set or retrieve the priority of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_priority_normal/">SD_EVENT_PRIORITY_NORMAL</a></code>(3) &#8212; Set or retrieve the priority of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_ref/">sd_event_ref</a></code>(3) &#8212; Acquire and release an event loop object<br />
- <code><a href="/docs/linux/man/3-sd_event_run/">sd_event_run</a></code>(3) &#8212; Run an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_running/">SD_EVENT_RUNNING</a></code>(3) &#8212; Low-level event loop operations<br />
- <code><a href="/docs/linux/man/3-sd_event_set_watchdog/">sd_event_set_watchdog</a></code>(3) &#8212; Enable event loop watchdog support<br />
- <code><a href="/docs/linux/man/3-sd_event_signal_handler_t/">sd_event_signal_handler_t</a></code>(3) &#8212; Add a UNIX process signal event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source/">sd_event_source</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_disable_unref/">sd_event_source_disable_unref</a></code>(3) &#8212; Increase or decrease event source reference counters<br />
- <code><a href="/docs/linux/man/3-sd_event_source_disable_unrefp/">sd_event_source_disable_unrefp</a></code>(3) &#8212; Increase or decrease event source reference counters<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_child_pid/">sd_event_source_get_child_pid</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_child_pidfd/">sd_event_source_get_child_pidfd</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_child_pidfd_own/">sd_event_source_get_child_pidfd_own</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_child_process_own/">sd_event_source_get_child_process_own</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_description/">sd_event_source_get_description</a></code>(3) &#8212; Set or retrieve descriptive names of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_destroy_callback/">sd_event_source_get_destroy_callback</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_enabled/">sd_event_source_get_enabled</a></code>(3) &#8212; Enable or disable event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_event/">sd_event_source_get_event</a></code>(3) &#8212; Retrieve the event loop of an event source<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_exit_on_failure/">sd_event_source_get_exit_on_failure</a></code>(3) &#8212; Set or retrieve the exit-on-failure feature of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_floating/">sd_event_source_get_floating</a></code>(3) &#8212; Set or retrieve &#8216;floating&#8217; state of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_inotify_mask/">sd_event_source_get_inotify_mask</a></code>(3) &#8212; Add an &quot;inotify&quot; file system inode event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_io_events/">sd_event_source_get_io_events</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_io_fd/">sd_event_source_get_io_fd</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_io_fd_own/">sd_event_source_get_io_fd_own</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_io_revents/">sd_event_source_get_io_revents</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_pending/">sd_event_source_get_pending</a></code>(3) &#8212; Determine pending state of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_priority/">sd_event_source_get_priority</a></code>(3) &#8212; Set or retrieve the priority of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_ratelimit/">sd_event_source_get_ratelimit</a></code>(3) &#8212; Configure rate limiting on event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_signal/">sd_event_source_get_signal</a></code>(3) &#8212; Add a UNIX process signal event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_time/">sd_event_source_get_time</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_time_accuracy/">sd_event_source_get_time_accuracy</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_time_clock/">sd_event_source_get_time_clock</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_get_userdata/">sd_event_source_get_userdata</a></code>(3) &#8212; Set or retrieve user data pointer of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_is_ratelimited/">sd_event_source_is_ratelimited</a></code>(3) &#8212; Configure rate limiting on event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_ref/">sd_event_source_ref</a></code>(3) &#8212; Increase or decrease event source reference counters<br />
- <code><a href="/docs/linux/man/3-sd_event_source_send_child_signal/">sd_event_source_send_child_signal</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_child_pidfd_own/">sd_event_source_set_child_pidfd_own</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_child_process_own/">sd_event_source_set_child_process_own</a></code>(3) &#8212; Add a child process state change event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_description/">sd_event_source_set_description</a></code>(3) &#8212; Set or retrieve descriptive names of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_destroy_callback/">sd_event_source_set_destroy_callback</a></code>(3) &#8212; Define the callback function for resource cleanup<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_enabled/">sd_event_source_set_enabled</a></code>(3) &#8212; Enable or disable event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_exit_on_failure/">sd_event_source_set_exit_on_failure</a></code>(3) &#8212; Set or retrieve the exit-on-failure feature of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_floating/">sd_event_source_set_floating</a></code>(3) &#8212; Set or retrieve &#8216;floating&#8217; state of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_io_events/">sd_event_source_set_io_events</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_io_fd/">sd_event_source_set_io_fd</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_io_fd_own/">sd_event_source_set_io_fd_own</a></code>(3) &#8212; Add an I/O event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_prepare/">sd_event_source_set_prepare</a></code>(3) &#8212; Set a preparation callback for event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_priority/">sd_event_source_set_priority</a></code>(3) &#8212; Set or retrieve the priority of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_ratelimit/">sd_event_source_set_ratelimit</a></code>(3) &#8212; Configure rate limiting on event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_time/">sd_event_source_set_time</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_time_accuracy/">sd_event_source_set_time_accuracy</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_time_relative/">sd_event_source_set_time_relative</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_source_set_userdata/">sd_event_source_set_userdata</a></code>(3) &#8212; Set or retrieve user data pointer of event sources<br />
- <code><a href="/docs/linux/man/3-sd_event_source_unref/">sd_event_source_unref</a></code>(3) &#8212; Increase or decrease event source reference counters<br />
- <code><a href="/docs/linux/man/3-sd_event_source_unrefp/">sd_event_source_unrefp</a></code>(3) &#8212; Increase or decrease event source reference counters<br />
- <code><a href="/docs/linux/man/3-sd_event_time_handler_t/">sd_event_time_handler_t</a></code>(3) &#8212; Add a timer event source to an event loop<br />
- <code><a href="/docs/linux/man/3-sd_event_unref/">sd_event_unref</a></code>(3) &#8212; Acquire and release an event loop object<br />
- <code><a href="/docs/linux/man/3-sd_event_unrefp/">sd_event_unrefp</a></code>(3) &#8212; Acquire and release an event loop object<br />
- <code><a href="/docs/linux/man/3-sd_event_wait/">sd_event_wait</a></code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event</code>(3) &#8212; Acquire and release an event loop object<br />
+ <code>sd_event_add_child</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_add_child_pidfd</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_add_defer</code>(3) &#8212; Add static event sources to an event loop<br />
+ <code>sd_event_add_exit</code>(3) &#8212; Add static event sources to an event loop<br />
+ <code>sd_event_add_inotify</code>(3) &#8212; Add an &quot;inotify&quot; file system inode event source to an event loop<br />
+ <code>sd_event_add_io</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_add_post</code>(3) &#8212; Add static event sources to an event loop<br />
+ <code>sd_event_add_signal</code>(3) &#8212; Add a UNIX process signal event source to an event loop<br />
+ <code>sd_event_add_time</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_add_time_relative</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>SD_EVENT_ARMED</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_child_handler_t</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_default</code>(3) &#8212; Acquire and release an event loop object<br />
+ <code>sd_event_destroy_t</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_event_dispatch</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_exit</code>(3) &#8212; Ask the event loop to exit<br />
+ <code>SD_EVENT_EXITING</code>(3) &#8212; Low-level event loop operations<br />
+ <code>SD_EVENT_FINISHED</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_get_exit_code</code>(3) &#8212; Ask the event loop to exit<br />
+ <code>sd_event_get_fd</code>(3) &#8212; Obtain a file descriptor to poll for event loop events<br />
+ <code>sd_event_get_iteration</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_get_state</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_get_tid</code>(3) &#8212; Acquire and release an event loop object<br />
+ <code>sd_event_get_watchdog</code>(3) &#8212; Enable event loop watchdog support<br />
+ <code>sd_event_handler_t</code>(3) &#8212; Add static event sources to an event loop<br />
+ <code>SD_EVENT_INITIAL</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_inotify_handler_t</code>(3) &#8212; Add an &quot;inotify&quot; file system inode event source to an event loop<br />
+ <code>sd_event_io_handler_t</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_loop</code>(3) &#8212; Run an event loop<br />
+ <code>sd_event_new</code>(3) &#8212; Acquire and release an event loop object<br />
+ <code>sd_event_now</code>(3) &#8212; Retrieve current event loop iteration timestamp<br />
+ <code>SD_EVENT_OFF</code>(3) &#8212; Enable or disable event sources<br />
+ <code>SD_EVENT_ON</code>(3) &#8212; Enable or disable event sources<br />
+ <code>SD_EVENT_ONESHOT</code>(3) &#8212; Enable or disable event sources<br />
+ <code>SD_EVENT_PENDING</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_prepare</code>(3) &#8212; Low-level event loop operations<br />
+ <code>SD_EVENT_PREPARING</code>(3) &#8212; Low-level event loop operations<br />
+ <code>SD_EVENT_PRIORITY_IDLE</code>(3) &#8212; Set or retrieve the priority of event sources<br />
+ <code>SD_EVENT_PRIORITY_IMPORTANT</code>(3) &#8212; Set or retrieve the priority of event sources<br />
+ <code>SD_EVENT_PRIORITY_NORMAL</code>(3) &#8212; Set or retrieve the priority of event sources<br />
+ <code>sd_event_ref</code>(3) &#8212; Acquire and release an event loop object<br />
+ <code>sd_event_run</code>(3) &#8212; Run an event loop<br />
+ <code>SD_EVENT_RUNNING</code>(3) &#8212; Low-level event loop operations<br />
+ <code>sd_event_set_watchdog</code>(3) &#8212; Enable event loop watchdog support<br />
+ <code>sd_event_signal_handler_t</code>(3) &#8212; Add a UNIX process signal event source to an event loop<br />
+ <code>sd_event_source</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_disable_unref</code>(3) &#8212; Increase or decrease event source reference counters<br />
+ <code>sd_event_source_disable_unrefp</code>(3) &#8212; Increase or decrease event source reference counters<br />
+ <code>sd_event_source_get_child_pid</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_source_get_child_pidfd</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_source_get_child_pidfd_own</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_source_get_child_process_own</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_source_get_description</code>(3) &#8212; Set or retrieve descriptive names of event sources<br />
+ <code>sd_event_source_get_destroy_callback</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_event_source_get_enabled</code>(3) &#8212; Enable or disable event sources<br />
+ <code>sd_event_source_get_event</code>(3) &#8212; Retrieve the event loop of an event source<br />
+ <code>sd_event_source_get_exit_on_failure</code>(3) &#8212; Set or retrieve the exit-on-failure feature of event sources<br />
+ <code>sd_event_source_get_floating</code>(3) &#8212; Set or retrieve &#8216;floating&#8217; state of event sources<br />
+ <code>sd_event_source_get_inotify_mask</code>(3) &#8212; Add an &quot;inotify&quot; file system inode event source to an event loop<br />
+ <code>sd_event_source_get_io_events</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_get_io_fd</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_get_io_fd_own</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_get_io_revents</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_get_pending</code>(3) &#8212; Determine pending state of event sources<br />
+ <code>sd_event_source_get_priority</code>(3) &#8212; Set or retrieve the priority of event sources<br />
+ <code>sd_event_source_get_ratelimit</code>(3) &#8212; Configure rate limiting on event sources<br />
+ <code>sd_event_source_get_signal</code>(3) &#8212; Add a UNIX process signal event source to an event loop<br />
+ <code>sd_event_source_get_time</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_source_get_time_accuracy</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_source_get_time_clock</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_source_get_userdata</code>(3) &#8212; Set or retrieve user data pointer of event sources<br />
+ <code>sd_event_source_is_ratelimited</code>(3) &#8212; Configure rate limiting on event sources<br />
+ <code>sd_event_source_ref</code>(3) &#8212; Increase or decrease event source reference counters<br />
+ <code>sd_event_source_send_child_signal</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_source_set_child_pidfd_own</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_source_set_child_process_own</code>(3) &#8212; Add a child process state change event source to an event loop<br />
+ <code>sd_event_source_set_description</code>(3) &#8212; Set or retrieve descriptive names of event sources<br />
+ <code>sd_event_source_set_destroy_callback</code>(3) &#8212; Define the callback function for resource cleanup<br />
+ <code>sd_event_source_set_enabled</code>(3) &#8212; Enable or disable event sources<br />
+ <code>sd_event_source_set_exit_on_failure</code>(3) &#8212; Set or retrieve the exit-on-failure feature of event sources<br />
+ <code>sd_event_source_set_floating</code>(3) &#8212; Set or retrieve &#8216;floating&#8217; state of event sources<br />
+ <code>sd_event_source_set_io_events</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_set_io_fd</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_set_io_fd_own</code>(3) &#8212; Add an I/O event source to an event loop<br />
+ <code>sd_event_source_set_prepare</code>(3) &#8212; Set a preparation callback for event sources<br />
+ <code>sd_event_source_set_priority</code>(3) &#8212; Set or retrieve the priority of event sources<br />
+ <code>sd_event_source_set_ratelimit</code>(3) &#8212; Configure rate limiting on event sources<br />
+ <code>sd_event_source_set_time</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_source_set_time_accuracy</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_source_set_time_relative</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_source_set_userdata</code>(3) &#8212; Set or retrieve user data pointer of event sources<br />
+ <code>sd_event_source_unref</code>(3) &#8212; Increase or decrease event source reference counters<br />
+ <code>sd_event_source_unrefp</code>(3) &#8212; Increase or decrease event source reference counters<br />
+ <code>sd_event_time_handler_t</code>(3) &#8212; Add a timer event source to an event loop<br />
+ <code>sd_event_unref</code>(3) &#8212; Acquire and release an event loop object<br />
+ <code>sd_event_unrefp</code>(3) &#8212; Acquire and release an event loop object<br />
+ <code>sd_event_wait</code>(3) &#8212; Low-level event loop operations<br />
  <code><a href="/docs/linux/man/3-sd_get_machine_names/">sd_get_machine_names</a></code>(3) &#8212; Determine available seats, sessions, logged in users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_get_seats/">sd_get_seats</a></code>(3) &#8212; Determine available seats, sessions, logged in users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_get_sessions/">sd_get_sessions</a></code>(3) &#8212; Determine available seats, sessions, logged in users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_get_uids/">sd_get_uids</a></code>(3) &#8212; Determine available seats, sessions, logged in users and virtual machines/containers<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_enumerate/">sd_hwdb_enumerate</a></code>(3) &#8212; Seek to a location in hwdb or access entries<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_foreach_property/">SD_HWDB_FOREACH_PROPERTY</a></code>(3) &#8212; Seek to a location in hwdb or access entries<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_get/">sd_hwdb_get</a></code>(3) &#8212; Seek to a location in hwdb or access entries<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_new/">sd_hwdb_new</a></code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_new_from_path/">sd_hwdb_new_from_path</a></code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_ref/">sd_hwdb_ref</a></code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_seek/">sd_hwdb_seek</a></code>(3) &#8212; Seek to a location in hwdb or access entries<br />
- <code><a href="/docs/linux/man/3-sd_hwdb_unref/">sd_hwdb_unref</a></code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
- <code><a href="/docs/linux/man/3-sd_id128_allf/">SD_ID128_ALLF</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>sd_hwdb_enumerate</code>(3) &#8212; Seek to a location in hwdb or access entries<br />
+ <code>SD_HWDB_FOREACH_PROPERTY</code>(3) &#8212; Seek to a location in hwdb or access entries<br />
+ <code>sd_hwdb_get</code>(3) &#8212; Seek to a location in hwdb or access entries<br />
+ <code>sd_hwdb_new</code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
+ <code>sd_hwdb_new_from_path</code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
+ <code>sd_hwdb_ref</code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
+ <code>sd_hwdb_seek</code>(3) &#8212; Seek to a location in hwdb or access entries<br />
+ <code>sd_hwdb_unref</code>(3) &#8212; Create a new hwdb object and create or destroy references to it<br />
+ <code>SD_ID128_ALLF</code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_const_str/">SD_ID128_CONST_STR</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_equal/">sd_id128_equal</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_format_str/">SD_ID128_FORMAT_STR</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_format_val/">SD_ID128_FORMAT_VAL</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_from_string/">sd_id128_from_string</a></code>(3) &#8212; Format or parse 128-bit IDs as strings<br />
  <code><a href="/docs/linux/man/3-sd_id128_get_boot/">sd_id128_get_boot</a></code>(3) &#8212; Retrieve 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_get_boot_app_specific/">sd_id128_get_boot_app_specific</a></code>(3) &#8212; Retrieve 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_get_invocation/">sd_id128_get_invocation</a></code>(3) &#8212; Retrieve 128-bit IDs<br />
+ <code>sd_id128_get_boot_app_specific</code>(3) &#8212; Retrieve 128-bit IDs<br />
+ <code>sd_id128_get_invocation</code>(3) &#8212; Retrieve 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></code>(3) &#8212; Retrieve 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_get_machine_app_specific/">sd_id128_get_machine_app_specific</a></code>(3) &#8212; Retrieve 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_in_set/">sd_id128_in_set</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_in_set_sentinel/">sd_id128_in_set_sentinel</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_in_setv/">sd_id128_in_setv</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_is_allf/">sd_id128_is_allf</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_is_null/">sd_id128_is_null</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>sd_id128_get_machine_app_specific</code>(3) &#8212; Retrieve 128-bit IDs<br />
+ <code>sd_id128_in_set</code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>sd_id128_in_set_sentinel</code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>sd_id128_in_setv</code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>sd_id128_is_allf</code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>sd_id128_is_null</code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_make/">SD_ID128_MAKE</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_make_str/">SD_ID128_MAKE_STR</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_make_uuid_str/">SD_ID128_MAKE_UUID_STR</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
- <code><a href="/docs/linux/man/3-sd_id128_null/">SD_ID128_NULL</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>SD_ID128_MAKE_STR</code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>SD_ID128_MAKE_UUID_STR</code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>SD_ID128_NULL</code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_randomize/">sd_id128_randomize</a></code>(3) &#8212; Generate 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_t/">sd_id128_t</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_id128_to_string/">sd_id128_to_string</a></code>(3) &#8212; Format or parse 128-bit IDs as strings<br />
- <code><a href="/docs/linux/man/3-sd_id128_uuid_format_str/">SD_ID128_UUID_FORMAT_STR</a></code>(3) &#8212; APIs for processing 128-bit IDs<br />
+ <code>SD_ID128_UUID_FORMAT_STR</code>(3) &#8212; APIs for processing 128-bit IDs<br />
  <code><a href="/docs/linux/man/3-sd_info/">SD_INFO</a></code>(3) &#8212; APIs for new-style daemons<br />
  <code><a href="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></code>(3) &#8212; Check the type of a file descriptor<br />
  <code><a href="/docs/linux/man/3-sd_is_mq/">sd_is_mq</a></code>(3) &#8212; Check the type of a file descriptor<br />
  <code><a href="/docs/linux/man/3-sd_is_socket/">sd_is_socket</a></code>(3) &#8212; Check the type of a file descriptor<br />
  <code><a href="/docs/linux/man/3-sd_is_socket_inet/">sd_is_socket_inet</a></code>(3) &#8212; Check the type of a file descriptor<br />
- <code><a href="/docs/linux/man/3-sd_is_socket_sockaddr/">sd_is_socket_sockaddr</a></code>(3) &#8212; Check the type of a file descriptor<br />
+ <code>sd_is_socket_sockaddr</code>(3) &#8212; Check the type of a file descriptor<br />
  <code><a href="/docs/linux/man/3-sd_is_socket_unix/">sd_is_socket_unix</a></code>(3) &#8212; Check the type of a file descriptor<br />
  <code><a href="/docs/linux/man/3-sd_is_special/">sd_is_special</a></code>(3) &#8212; Check the type of a file descriptor<br />
  <code><a href="/docs/linux/man/3-sd_journal/">sd_journal</a></code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_add_conjunction/">sd_journal_add_conjunction</a></code>(3) &#8212; Add or remove entry matches<br />
  <code><a href="/docs/linux/man/3-sd_journal_add_disjunction/">sd_journal_add_disjunction</a></code>(3) &#8212; Add or remove entry matches<br />
  <code><a href="/docs/linux/man/3-sd_journal_add_match/">sd_journal_add_match</a></code>(3) &#8212; Add or remove entry matches<br />
- <code><a href="/docs/linux/man/3-sd_journal_all_namespaces/">SD_JOURNAL_ALL_NAMESPACES</a></code>(3) &#8212; Open the system journal for reading<br />
+ <code>SD_JOURNAL_ALL_NAMESPACES</code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_append/">SD_JOURNAL_APPEND</a></code>(3) &#8212; Journal change notification interface<br />
  <code><a href="/docs/linux/man/3-sd_journal_close/">sd_journal_close</a></code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_current_user/">SD_JOURNAL_CURRENT_USER</a></code>(3) &#8212; Open the system journal for reading<br />
- <code><a href="/docs/linux/man/3-sd_journal_enumerate_available_data/">sd_journal_enumerate_available_data</a></code>(3) &#8212; Read data fields from the current journal entry<br />
- <code><a href="/docs/linux/man/3-sd_journal_enumerate_available_unique/">sd_journal_enumerate_available_unique</a></code>(3) &#8212; Read unique data fields from the journal<br />
+ <code>sd_journal_enumerate_available_data</code>(3) &#8212; Read data fields from the current journal entry<br />
+ <code>sd_journal_enumerate_available_unique</code>(3) &#8212; Read unique data fields from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_enumerate_data/">sd_journal_enumerate_data</a></code>(3) &#8212; Read data fields from the current journal entry<br />
- <code><a href="/docs/linux/man/3-sd_journal_enumerate_fields/">sd_journal_enumerate_fields</a></code>(3) &#8212; Read used field names from the journal<br />
+ <code>sd_journal_enumerate_fields</code>(3) &#8212; Read used field names from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_enumerate_unique/">sd_journal_enumerate_unique</a></code>(3) &#8212; Read unique data fields from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_flush_matches/">sd_journal_flush_matches</a></code>(3) &#8212; Add or remove entry matches<br />
  <code><a href="/docs/linux/man/3-sd_journal_foreach/">SD_JOURNAL_FOREACH</a></code>(3) &#8212; Advance or set back the read pointer in the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_foreach_backwards/">SD_JOURNAL_FOREACH_BACKWARDS</a></code>(3) &#8212; Advance or set back the read pointer in the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_foreach_data/">SD_JOURNAL_FOREACH_DATA</a></code>(3) &#8212; Read data fields from the current journal entry<br />
- <code><a href="/docs/linux/man/3-sd_journal_foreach_field/">SD_JOURNAL_FOREACH_FIELD</a></code>(3) &#8212; Read used field names from the journal<br />
+ <code>SD_JOURNAL_FOREACH_FIELD</code>(3) &#8212; Read used field names from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_foreach_unique/">SD_JOURNAL_FOREACH_UNIQUE</a></code>(3) &#8212; Read unique data fields from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_get_catalog/">sd_journal_get_catalog</a></code>(3) &#8212; Retrieve message catalog entry<br />
  <code><a href="/docs/linux/man/3-sd_journal_get_catalog_for_message_id/">sd_journal_get_catalog_for_message_id</a></code>(3) &#8212; Retrieve message catalog entry<br />
@@ -651,7 +651,7 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/3-sd_journal_get_usage/">sd_journal_get_usage</a></code>(3) &#8212; Journal disk usage<br />
  <code><a href="/docs/linux/man/3-sd_journal_has_persistent_files/">sd_journal_has_persistent_files</a></code>(3) &#8212; Query availability of runtime or persistent journal files<br />
  <code><a href="/docs/linux/man/3-sd_journal_has_runtime_files/">sd_journal_has_runtime_files</a></code>(3) &#8212; Query availability of runtime or persistent journal files<br />
- <code><a href="/docs/linux/man/3-sd_journal_include_default_namespace/">SD_JOURNAL_INCLUDE_DEFAULT_NAMESPACE</a></code>(3) &#8212; Open the system journal for reading<br />
+ <code>SD_JOURNAL_INCLUDE_DEFAULT_NAMESPACE</code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_invalidate/">SD_JOURNAL_INVALIDATE</a></code>(3) &#8212; Journal change notification interface<br />
  <code><a href="/docs/linux/man/3-sd_journal_local_only/">SD_JOURNAL_LOCAL_ONLY</a></code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_next/">sd_journal_next</a></code>(3) &#8212; Advance or set back the read pointer in the journal<br />
@@ -659,24 +659,24 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/3-sd_journal_nop/">SD_JOURNAL_NOP</a></code>(3) &#8212; Journal change notification interface<br />
  <code><a href="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_open_directory/">sd_journal_open_directory</a></code>(3) &#8212; Open the system journal for reading<br />
- <code><a href="/docs/linux/man/3-sd_journal_open_directory_fd/">sd_journal_open_directory_fd</a></code>(3) &#8212; Open the system journal for reading<br />
+ <code>sd_journal_open_directory_fd</code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_open_files/">sd_journal_open_files</a></code>(3) &#8212; Open the system journal for reading<br />
- <code><a href="/docs/linux/man/3-sd_journal_open_files_fd/">sd_journal_open_files_fd</a></code>(3) &#8212; Open the system journal for reading<br />
- <code><a href="/docs/linux/man/3-sd_journal_open_namespace/">sd_journal_open_namespace</a></code>(3) &#8212; Open the system journal for reading<br />
- <code><a href="/docs/linux/man/3-sd_journal_os_root/">SD_JOURNAL_OS_ROOT</a></code>(3) &#8212; Open the system journal for reading<br />
+ <code>sd_journal_open_files_fd</code>(3) &#8212; Open the system journal for reading<br />
+ <code>sd_journal_open_namespace</code>(3) &#8212; Open the system journal for reading<br />
+ <code>SD_JOURNAL_OS_ROOT</code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_perror/">sd_journal_perror</a></code>(3) &#8212; Submit log entries to the journal<br />
- <code><a href="/docs/linux/man/3-sd_journal_perror_with_location/">sd_journal_perror_with_location</a></code>(3) &#8212; Submit log entries to the journal<br />
+ <code>sd_journal_perror_with_location</code>(3) &#8212; Submit log entries to the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_previous/">sd_journal_previous</a></code>(3) &#8212; Advance or set back the read pointer in the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_previous_skip/">sd_journal_previous_skip</a></code>(3) &#8212; Advance or set back the read pointer in the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3) &#8212; Submit log entries to the journal<br />
- <code><a href="/docs/linux/man/3-sd_journal_print_with_location/">sd_journal_print_with_location</a></code>(3) &#8212; Submit log entries to the journal<br />
+ <code>sd_journal_print_with_location</code>(3) &#8212; Submit log entries to the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_printv/">sd_journal_printv</a></code>(3) &#8212; Submit log entries to the journal<br />
- <code><a href="/docs/linux/man/3-sd_journal_printv_with_location/">sd_journal_printv_with_location</a></code>(3) &#8212; Submit log entries to the journal<br />
+ <code>sd_journal_printv_with_location</code>(3) &#8212; Submit log entries to the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_process/">sd_journal_process</a></code>(3) &#8212; Journal change notification interface<br />
  <code><a href="/docs/linux/man/3-sd_journal_query_unique/">sd_journal_query_unique</a></code>(3) &#8212; Read unique data fields from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_reliable_fd/">sd_journal_reliable_fd</a></code>(3) &#8212; Journal change notification interface<br />
  <code><a href="/docs/linux/man/3-sd_journal_restart_data/">sd_journal_restart_data</a></code>(3) &#8212; Read data fields from the current journal entry<br />
- <code><a href="/docs/linux/man/3-sd_journal_restart_fields/">sd_journal_restart_fields</a></code>(3) &#8212; Read used field names from the journal<br />
+ <code>sd_journal_restart_fields</code>(3) &#8212; Read used field names from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_restart_unique/">sd_journal_restart_unique</a></code>(3) &#8212; Read unique data fields from the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_runtime_only/">SD_JOURNAL_RUNTIME_ONLY</a></code>(3) &#8212; Open the system journal for reading<br />
  <code><a href="/docs/linux/man/3-sd_journal_seek_cursor/">sd_journal_seek_cursor</a></code>(3) &#8212; Seek to a position in the journal<br />
@@ -685,9 +685,9 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/3-sd_journal_seek_realtime_usec/">sd_journal_seek_realtime_usec</a></code>(3) &#8212; Seek to a position in the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_seek_tail/">sd_journal_seek_tail</a></code>(3) &#8212; Seek to a position in the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_send/">sd_journal_send</a></code>(3) &#8212; Submit log entries to the journal<br />
- <code><a href="/docs/linux/man/3-sd_journal_send_with_location/">sd_journal_send_with_location</a></code>(3) &#8212; Submit log entries to the journal<br />
+ <code>sd_journal_send_with_location</code>(3) &#8212; Submit log entries to the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_sendv/">sd_journal_sendv</a></code>(3) &#8212; Submit log entries to the journal<br />
- <code><a href="/docs/linux/man/3-sd_journal_sendv_with_location/">sd_journal_sendv_with_location</a></code>(3) &#8212; Submit log entries to the journal<br />
+ <code>sd_journal_sendv_with_location</code>(3) &#8212; Submit log entries to the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_set_data_threshold/">sd_journal_set_data_threshold</a></code>(3) &#8212; Read data fields from the current journal entry<br />
  <code><a href="/docs/linux/man/3-sd_journal_stream_fd/">sd_journal_stream_fd</a></code>(3) &#8212; Create log stream file descriptor to the journal<br />
  <code><a href="/docs/linux/man/3-sd_journal_suppress_location/">SD_JOURNAL_SUPPRESS_LOCATION</a></code>(3) &#8212; Submit log entries to the journal<br />
@@ -696,7 +696,7 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/3-sd_journal_wait/">sd_journal_wait</a></code>(3) &#8212; Journal change notification interface<br />
  <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3) &#8212; Check for file descriptors passed by the system manager<br />
  <code><a href="/docs/linux/man/3-sd_listen_fds_start/">SD_LISTEN_FDS_START</a></code>(3) &#8212; Check for file descriptors passed by the system manager<br />
- <code><a href="/docs/linux/man/3-sd_listen_fds_with_names/">sd_listen_fds_with_names</a></code>(3) &#8212; Check for file descriptors passed by the system manager<br />
+ <code>sd_listen_fds_with_names</code>(3) &#8212; Check for file descriptors passed by the system manager<br />
  <code><a href="/docs/linux/man/3-sd_login_monitor/">sd_login_monitor</a></code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_login_monitor_flush/">sd_login_monitor_flush</a></code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_login_monitor_get_events/">sd_login_monitor_get_events</a></code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
@@ -704,30 +704,30 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/3-sd_login_monitor_get_timeout/">sd_login_monitor_get_timeout</a></code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_login_monitor_new/">sd_login_monitor_new</a></code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_login_monitor_unref/">sd_login_monitor_unref</a></code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
- <code><a href="/docs/linux/man/3-sd_login_monitor_unrefp/">sd_login_monitor_unrefp</a></code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
+ <code>sd_login_monitor_unrefp</code>(3) &#8212; Monitor login sessions, seats, users and virtual machines/containers<br />
  <code><a href="/docs/linux/man/3-sd_machine_get_class/">sd_machine_get_class</a></code>(3) &#8212; Determine the class and network interface indices of a locally running virtual machine or container<br />
  <code><a href="/docs/linux/man/3-sd_machine_get_ifindices/">sd_machine_get_ifindices</a></code>(3) &#8212; Determine the class and network interface indices of a locally running virtual machine or container<br />
  <code><a href="/docs/linux/man/3-sd_notice/">SD_NOTICE</a></code>(3) &#8212; APIs for new-style daemons<br />
  <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3) &#8212; Notify service manager about start-up completion and other service status changes<br />
- <code><a href="/docs/linux/man/3-sd_notify_barrier/">sd_notify_barrier</a></code>(3) &#8212; Notify service manager about start-up completion and other service status changes<br />
+ <code>sd_notify_barrier</code>(3) &#8212; Notify service manager about start-up completion and other service status changes<br />
  <code><a href="/docs/linux/man/3-sd_notifyf/">sd_notifyf</a></code>(3) &#8212; Notify service manager about start-up completion and other service status changes<br />
- <code><a href="/docs/linux/man/3-sd_path_lookup/">sd_path_lookup</a></code>(3) &#8212; Query well-known file system paths<br />
- <code><a href="/docs/linux/man/3-sd_path_lookup_strv/">sd_path_lookup_strv</a></code>(3) &#8212; Query well-known file system paths<br />
- <code><a href="/docs/linux/man/3-sd_peer_get_cgroup/">sd_peer_get_cgroup</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
+ <code>sd_path_lookup</code>(3) &#8212; Query well-known file system paths<br />
+ <code>sd_path_lookup_strv</code>(3) &#8212; Query well-known file system paths<br />
+ <code>sd_peer_get_cgroup</code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_peer_get_machine_name/">sd_peer_get_machine_name</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_peer_get_owner_uid/">sd_peer_get_owner_uid</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_peer_get_session/">sd_peer_get_session</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_peer_get_slice/">sd_peer_get_slice</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_peer_get_unit/">sd_peer_get_unit</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
- <code><a href="/docs/linux/man/3-sd_peer_get_user_slice/">sd_peer_get_user_slice</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
+ <code>sd_peer_get_user_slice</code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_peer_get_user_unit/">sd_peer_get_user_unit</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
- <code><a href="/docs/linux/man/3-sd_pid_get_cgroup/">sd_pid_get_cgroup</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
+ <code>sd_pid_get_cgroup</code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_pid_get_machine_name/">sd_pid_get_machine_name</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_pid_get_owner_uid/">sd_pid_get_owner_uid</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_pid_get_session/">sd_pid_get_session</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_pid_get_slice/">sd_pid_get_slice</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_pid_get_unit/">sd_pid_get_unit</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
- <code><a href="/docs/linux/man/3-sd_pid_get_user_slice/">sd_pid_get_user_slice</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
+ <code>sd_pid_get_user_slice</code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_pid_get_user_unit/">sd_pid_get_user_unit</a></code>(3) &#8212; Determine the owner uid of the user unit or session, or the session, user unit, system unit, container/VM or slice that a specific PID or socket peer belongs to<br />
  <code><a href="/docs/linux/man/3-sd_pid_notify/">sd_pid_notify</a></code>(3) &#8212; Notify service manager about start-up completion and other service status changes<br />
  <code><a href="/docs/linux/man/3-sd_pid_notify_with_fds/">sd_pid_notify_with_fds</a></code>(3) &#8212; Notify service manager about start-up completion and other service status changes<br />
@@ -784,7 +784,7 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></code>(1) &#8212; Recursively show control group contents<br />
  <code><a href="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></code>(1) &#8212; Show top control groups by their resource usage<br />
  <code><a href="/docs/linux/man/8-systemd-coredump/">systemd-coredump</a></code>(8) &#8212; Acquire, save and process core dumps<br />
- <code><a href="/docs/linux/man/8-systemd-coredump-socket/">systemd-coredump.socket</a></code>(8) &#8212; Acquire, save and process core dumps<br />
+ <code>systemd-coredump.socket</code>(8) &#8212; Acquire, save and process core dumps<br />
  <code>systemd-coredump [at] .service</code>(8) &#8212; Acquire, save and process core dumps<br />
  <code><a href="/docs/linux/man/1-systemd-cryptenroll/">systemd-cryptenroll</a></code>(1) &#8212; Enroll PKCS#11, FIDO2, TPM2 token/devices to LUKS2 encrypted volumes<br />
  <code><a href="/docs/linux/man/8-systemd-cryptsetup/">systemd-cryptsetup</a></code>(8) &#8212; Full disk decryption logic<br />
@@ -793,7 +793,7 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/8-systemd-debug-generator/">systemd-debug-generator</a></code>(8) &#8212; Generator for enabling a runtime debug shell and masking specific units at boot<br />
  <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1) &#8212; Find overridden configuration files<br />
  <code><a href="/docs/linux/man/1-systemd-detect-virt/">systemd-detect-virt</a></code>(1) &#8212; Detect execution in a virtualized environment<br />
- <code><a href="/docs/linux/man/1-systemd-dissect/">systemd-dissect</a></code>(1) &#8212; Dissect file system OS images<br />
+ <code>systemd-dissect</code>(1) &#8212; Dissect file system OS images<br />
  <code><a href="/docs/linux/man/8-systemd-environment-d-generator/">systemd-environment-d-generator</a></code>(8) &#8212; Load variables specified by environment.d<br />
  <code><a href="/docs/linux/man/1-systemd-escape/">systemd-escape</a></code>(1) &#8212; Escape strings for usage in systemd unit names<br />
  <code><a href="/docs/linux/man/8-systemd-fsck/">systemd-fsck</a></code>(8) &#8212; File system checker logic<br />
@@ -827,10 +827,10 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/8-systemd-journal-gatewayd-service/">systemd-journal-gatewayd.service</a></code>(8) &#8212; HTTP server for journal events<br />
  <code><a href="/docs/linux/man/8-systemd-journal-gatewayd-socket/">systemd-journal-gatewayd.socket</a></code>(8) &#8212; HTTP server for journal events<br />
  <code><a href="/docs/linux/man/8-systemd-journal-remote/">systemd-journal-remote</a></code>(8) &#8212; Receive journal messages over the network<br />
- <code><a href="/docs/linux/man/8-systemd-journal-remote-service/">systemd-journal-remote.service</a></code>(8) &#8212; Receive journal messages over the network<br />
- <code><a href="/docs/linux/man/8-systemd-journal-remote-socket/">systemd-journal-remote.socket</a></code>(8) &#8212; Receive journal messages over the network<br />
+ <code>systemd-journal-remote.service</code>(8) &#8212; Receive journal messages over the network<br />
+ <code>systemd-journal-remote.socket</code>(8) &#8212; Receive journal messages over the network<br />
  <code><a href="/docs/linux/man/8-systemd-journal-upload/">systemd-journal-upload</a></code>(8) &#8212; Send journal messages over the network<br />
- <code><a href="/docs/linux/man/8-systemd-journal-upload-service/">systemd-journal-upload.service</a></code>(8) &#8212; Send journal messages over the network<br />
+ <code>systemd-journal-upload.service</code>(8) &#8212; Send journal messages over the network<br />
  <code><a href="/docs/linux/man/8-systemd-journald/">systemd-journald</a></code>(8) &#8212; Journal service<br />
  <code><a href="/docs/linux/man/8-systemd-journald-audit-socket/">systemd-journald-audit.socket</a></code>(8) &#8212; Journal service<br />
  <code><a href="/docs/linux/man/8-systemd-journald-dev-log-socket/">systemd-journald-dev-log.socket</a></code>(8) &#8212; Journal service<br />
@@ -862,11 +862,11 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) &#8212; Network manager<br />
  <code><a href="/docs/linux/man/1-systemd-notify/">systemd-notify</a></code>(1) &#8212; Notify service manager about start-up completion and other daemon status changes<br />
  <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1) &#8212; Spawn a command or OS in a light-weight container<br />
- <code><a href="/docs/linux/man/8-systemd-oomd/">systemd-oomd</a></code>(8) &#8212; A userspace out-of-memory (OOM) killer<br />
- <code><a href="/docs/linux/man/8-systemd-oomd-service/">systemd-oomd.service</a></code>(8) &#8212; A userspace out-of-memory (OOM) killer<br />
+ <code>systemd-oomd</code>(8) &#8212; A userspace out-of-memory (OOM) killer<br />
+ <code>systemd-oomd.service</code>(8) &#8212; A userspace out-of-memory (OOM) killer<br />
  <code><a href="/docs/linux/man/1-systemd-path/">systemd-path</a></code>(1) &#8212; List and query system and user paths<br />
- <code><a href="/docs/linux/man/8-systemd-portabled/">systemd-portabled</a></code>(8) &#8212; Portable service manager<br />
- <code><a href="/docs/linux/man/8-systemd-portabled-service/">systemd-portabled.service</a></code>(8) &#8212; Portable service manager<br />
+ <code>systemd-portabled</code>(8) &#8212; Portable service manager<br />
+ <code>systemd-portabled.service</code>(8) &#8212; Portable service manager<br />
  <code><a href="/docs/linux/man/8-systemd-poweroff-service/">systemd-poweroff.service</a></code>(8) &#8212; System shutdown logic<br />
  <code><a href="/docs/linux/man/8-systemd-pstore/">systemd-pstore</a></code>(8) &#8212; A service to archive contents of pstore<br />
  <code><a href="/docs/linux/man/8-systemd-pstore-service/">systemd-pstore.service</a></code>(8) &#8212; A service to archive contents of pstore<br />
@@ -878,8 +878,8 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/8-systemd-reboot-service/">systemd-reboot.service</a></code>(8) &#8212; System shutdown logic<br />
  <code><a href="/docs/linux/man/8-systemd-remount-fs/">systemd-remount-fs</a></code>(8) &#8212; Remount root and kernel file systems<br />
  <code><a href="/docs/linux/man/8-systemd-remount-fs-service/">systemd-remount-fs.service</a></code>(8) &#8212; Remount root and kernel file systems<br />
- <code><a href="/docs/linux/man/8-systemd-repart/">systemd-repart</a></code>(8) &#8212; Automatically grow and add partitions<br />
- <code><a href="/docs/linux/man/8-systemd-repart-service/">systemd-repart.service</a></code>(8) &#8212; Automatically grow and add partitions<br />
+ <code>systemd-repart</code>(8) &#8212; Automatically grow and add partitions<br />
+ <code>systemd-repart.service</code>(8) &#8212; Automatically grow and add partitions<br />
  <code><a href="/docs/linux/man/8-systemd-resolved/">systemd-resolved</a></code>(8) &#8212; Network Name Resolution manager<br />
  <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8) &#8212; Network Name Resolution manager<br />
  <code><a href="/docs/linux/man/8-systemd-rfkill/">systemd-rfkill</a></code>(8) &#8212; Load and save the RF kill switch state at boot and change<br />
@@ -951,7 +951,7 @@ description: "systemd.index – List all manpages from the systemd project"
  <code><a href="/docs/linux/man/7-systemd-net-naming-scheme/">systemd.net-naming-scheme</a></code>(7) &#8212; Network device naming schemes<br />
  <code><a href="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></code>(5) &#8212; Virtual Network Device configuration<br />
  <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5) &#8212; Network configuration<br />
- <code><a href="/docs/linux/man/5-systemd-nspawn/">systemd.nspawn</a></code>(5) &#8212; Container settings<br />
+ <code>systemd.nspawn</code>(5) &#8212; Container settings<br />
  <code><a href="/docs/linux/man/7-systemd-offline-updates/">systemd.offline-updates</a></code>(7) &#8212; Implementation of offline updates in systemd<br />
  <code><a href="/docs/linux/man/5-systemd-path/">systemd.path</a></code>(5) &#8212; Path unit configuration<br />
  <code><a href="/docs/linux/man/5-systemd-positive/">systemd.positive</a></code>(5) &#8212; DNSSEC trust anchor configuration files<br />
@@ -978,74 +978,74 @@ description: "systemd.index – List all manpages from the systemd project"
 <h2>U</h2>
 <p><code><a href="/docs/linux/man/7-udev/">udev</a></code>(7) &#8212; Dynamic device management<br />
  <code><a href="/docs/linux/man/5-udev-conf/">udev.conf</a></code>(5) &#8212; Configuration for device event managing daemon<br />
- <code><a href="/docs/linux/man/3-udev_device_get_action/">udev_device_get_action</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_current_tags_list_entry/">udev_device_get_current_tags_list_entry</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_get_devlinks_list_entry/">udev_device_get_devlinks_list_entry</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_get_devnode/">udev_device_get_devnode</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_devnum/">udev_device_get_devnum</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_devpath/">udev_device_get_devpath</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_devtype/">udev_device_get_devtype</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_driver/">udev_device_get_driver</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_is_initialized/">udev_device_get_is_initialized</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_parent/">udev_device_get_parent</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_parent_with_subsystem_devtype/">udev_device_get_parent_with_subsystem_devtype</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_properties_list_entry/">udev_device_get_properties_list_entry</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_get_property_value/">udev_device_get_property_value</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_get_subsystem/">udev_device_get_subsystem</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_sysattr_list_entry/">udev_device_get_sysattr_list_entry</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_get_sysattr_value/">udev_device_get_sysattr_value</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_get_sysname/">udev_device_get_sysname</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_sysnum/">udev_device_get_sysnum</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_syspath/">udev_device_get_syspath</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_get_tags_list_entry/">udev_device_get_tags_list_entry</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_get_udev/">udev_device_get_udev</a></code>(3) &#8212; Query device properties<br />
- <code><a href="/docs/linux/man/3-udev_device_has_current_tag/">udev_device_has_current_tag</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_has_tag/">udev_device_has_tag</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_new_from_device_id/">udev_device_new_from_device_id</a></code>(3) &#8212; Create, acquire and release a udev device object<br />
- <code><a href="/docs/linux/man/3-udev_device_new_from_devnum/">udev_device_new_from_devnum</a></code>(3) &#8212; Create, acquire and release a udev device object<br />
- <code><a href="/docs/linux/man/3-udev_device_new_from_environment/">udev_device_new_from_environment</a></code>(3) &#8212; Create, acquire and release a udev device object<br />
- <code><a href="/docs/linux/man/3-udev_device_new_from_subsystem_sysname/">udev_device_new_from_subsystem_sysname</a></code>(3) &#8212; Create, acquire and release a udev device object<br />
- <code><a href="/docs/linux/man/3-udev_device_new_from_syspath/">udev_device_new_from_syspath</a></code>(3) &#8212; Create, acquire and release a udev device object<br />
- <code><a href="/docs/linux/man/3-udev_device_ref/">udev_device_ref</a></code>(3) &#8212; Create, acquire and release a udev device object<br />
- <code><a href="/docs/linux/man/3-udev_device_set_sysattr_value/">udev_device_set_sysattr_value</a></code>(3) &#8212; Retrieve or set device attributes<br />
- <code><a href="/docs/linux/man/3-udev_device_unref/">udev_device_unref</a></code>(3) &#8212; Create, acquire and release a udev device object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_match_is_initialized/">udev_enumerate_add_match_is_initialized</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_match_parent/">udev_enumerate_add_match_parent</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_match_property/">udev_enumerate_add_match_property</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_match_subsystem/">udev_enumerate_add_match_subsystem</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_match_sysattr/">udev_enumerate_add_match_sysattr</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_match_sysname/">udev_enumerate_add_match_sysname</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_match_tag/">udev_enumerate_add_match_tag</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_nomatch_subsystem/">udev_enumerate_add_nomatch_subsystem</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_nomatch_sysattr/">udev_enumerate_add_nomatch_sysattr</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_add_syspath/">udev_enumerate_add_syspath</a></code>(3) &#8212; Query or modify a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_get_list_entry/">udev_enumerate_get_list_entry</a></code>(3) &#8212; Query or modify a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_get_udev/">udev_enumerate_get_udev</a></code>(3) &#8212; Query or modify a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_new/">udev_enumerate_new</a></code>(3) &#8212; Create, acquire and release a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_ref/">udev_enumerate_ref</a></code>(3) &#8212; Create, acquire and release a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_scan_devices/">udev_enumerate_scan_devices</a></code>(3) &#8212; Query or modify a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_scan_subsystems/">udev_enumerate_scan_subsystems</a></code>(3) &#8212; Query or modify a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_enumerate_unref/">udev_enumerate_unref</a></code>(3) &#8212; Create, acquire and release a udev enumerate object<br />
- <code><a href="/docs/linux/man/3-udev_list_entry/">udev_list_entry</a></code>(3) &#8212; Iterate and access udev lists<br />
- <code><a href="/docs/linux/man/3-udev_list_entry_get_by_name/">udev_list_entry_get_by_name</a></code>(3) &#8212; Iterate and access udev lists<br />
- <code><a href="/docs/linux/man/3-udev_list_entry_get_name/">udev_list_entry_get_name</a></code>(3) &#8212; Iterate and access udev lists<br />
- <code><a href="/docs/linux/man/3-udev_list_entry_get_next/">udev_list_entry_get_next</a></code>(3) &#8212; Iterate and access udev lists<br />
- <code><a href="/docs/linux/man/3-udev_list_entry_get_value/">udev_list_entry_get_value</a></code>(3) &#8212; Iterate and access udev lists<br />
- <code><a href="/docs/linux/man/3-udev_monitor_enable_receiving/">udev_monitor_enable_receiving</a></code>(3) &#8212; Query and modify device monitor<br />
- <code><a href="/docs/linux/man/3-udev_monitor_filter_add_match_subsystem_devtype/">udev_monitor_filter_add_match_subsystem_devtype</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_monitor_filter_add_match_tag/">udev_monitor_filter_add_match_tag</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_monitor_filter_remove/">udev_monitor_filter_remove</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_monitor_filter_update/">udev_monitor_filter_update</a></code>(3) &#8212; Modify filters<br />
- <code><a href="/docs/linux/man/3-udev_monitor_get_fd/">udev_monitor_get_fd</a></code>(3) &#8212; Query and modify device monitor<br />
- <code><a href="/docs/linux/man/3-udev_monitor_get_udev/">udev_monitor_get_udev</a></code>(3) &#8212; Query and modify device monitor<br />
- <code><a href="/docs/linux/man/3-udev_monitor_new_from_netlink/">udev_monitor_new_from_netlink</a></code>(3) &#8212; Create, acquire and release a udev monitor object<br />
- <code><a href="/docs/linux/man/3-udev_monitor_receive_device/">udev_monitor_receive_device</a></code>(3) &#8212; Query and modify device monitor<br />
- <code><a href="/docs/linux/man/3-udev_monitor_ref/">udev_monitor_ref</a></code>(3) &#8212; Create, acquire and release a udev monitor object<br />
- <code><a href="/docs/linux/man/3-udev_monitor_set_receive_buffer_size/">udev_monitor_set_receive_buffer_size</a></code>(3) &#8212; Query and modify device monitor<br />
- <code><a href="/docs/linux/man/3-udev_monitor_unref/">udev_monitor_unref</a></code>(3) &#8212; Create, acquire and release a udev monitor object<br />
- <code><a href="/docs/linux/man/3-udev_new/">udev_new</a></code>(3) &#8212; Create, acquire and release a udev context object<br />
- <code><a href="/docs/linux/man/3-udev_ref/">udev_ref</a></code>(3) &#8212; Create, acquire and release a udev context object<br />
- <code><a href="/docs/linux/man/3-udev_unref/">udev_unref</a></code>(3) &#8212; Create, acquire and release a udev context object<br />
+ <code>udev_device_get_action</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_current_tags_list_entry</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_get_devlinks_list_entry</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_get_devnode</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_devnum</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_devpath</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_devtype</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_driver</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_is_initialized</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_parent</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_parent_with_subsystem_devtype</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_properties_list_entry</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_get_property_value</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_get_subsystem</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_sysattr_list_entry</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_get_sysattr_value</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_get_sysname</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_sysnum</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_syspath</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_get_tags_list_entry</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_get_udev</code>(3) &#8212; Query device properties<br />
+ <code>udev_device_has_current_tag</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_has_tag</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_new_from_device_id</code>(3) &#8212; Create, acquire and release a udev device object<br />
+ <code>udev_device_new_from_devnum</code>(3) &#8212; Create, acquire and release a udev device object<br />
+ <code>udev_device_new_from_environment</code>(3) &#8212; Create, acquire and release a udev device object<br />
+ <code>udev_device_new_from_subsystem_sysname</code>(3) &#8212; Create, acquire and release a udev device object<br />
+ <code>udev_device_new_from_syspath</code>(3) &#8212; Create, acquire and release a udev device object<br />
+ <code>udev_device_ref</code>(3) &#8212; Create, acquire and release a udev device object<br />
+ <code>udev_device_set_sysattr_value</code>(3) &#8212; Retrieve or set device attributes<br />
+ <code>udev_device_unref</code>(3) &#8212; Create, acquire and release a udev device object<br />
+ <code>udev_enumerate_add_match_is_initialized</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_match_parent</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_match_property</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_match_subsystem</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_match_sysattr</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_match_sysname</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_match_tag</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_nomatch_subsystem</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_nomatch_sysattr</code>(3) &#8212; Modify filters<br />
+ <code>udev_enumerate_add_syspath</code>(3) &#8212; Query or modify a udev enumerate object<br />
+ <code>udev_enumerate_get_list_entry</code>(3) &#8212; Query or modify a udev enumerate object<br />
+ <code>udev_enumerate_get_udev</code>(3) &#8212; Query or modify a udev enumerate object<br />
+ <code>udev_enumerate_new</code>(3) &#8212; Create, acquire and release a udev enumerate object<br />
+ <code>udev_enumerate_ref</code>(3) &#8212; Create, acquire and release a udev enumerate object<br />
+ <code>udev_enumerate_scan_devices</code>(3) &#8212; Query or modify a udev enumerate object<br />
+ <code>udev_enumerate_scan_subsystems</code>(3) &#8212; Query or modify a udev enumerate object<br />
+ <code>udev_enumerate_unref</code>(3) &#8212; Create, acquire and release a udev enumerate object<br />
+ <code>udev_list_entry</code>(3) &#8212; Iterate and access udev lists<br />
+ <code>udev_list_entry_get_by_name</code>(3) &#8212; Iterate and access udev lists<br />
+ <code>udev_list_entry_get_name</code>(3) &#8212; Iterate and access udev lists<br />
+ <code>udev_list_entry_get_next</code>(3) &#8212; Iterate and access udev lists<br />
+ <code>udev_list_entry_get_value</code>(3) &#8212; Iterate and access udev lists<br />
+ <code>udev_monitor_enable_receiving</code>(3) &#8212; Query and modify device monitor<br />
+ <code>udev_monitor_filter_add_match_subsystem_devtype</code>(3) &#8212; Modify filters<br />
+ <code>udev_monitor_filter_add_match_tag</code>(3) &#8212; Modify filters<br />
+ <code>udev_monitor_filter_remove</code>(3) &#8212; Modify filters<br />
+ <code>udev_monitor_filter_update</code>(3) &#8212; Modify filters<br />
+ <code>udev_monitor_get_fd</code>(3) &#8212; Query and modify device monitor<br />
+ <code>udev_monitor_get_udev</code>(3) &#8212; Query and modify device monitor<br />
+ <code>udev_monitor_new_from_netlink</code>(3) &#8212; Create, acquire and release a udev monitor object<br />
+ <code>udev_monitor_receive_device</code>(3) &#8212; Query and modify device monitor<br />
+ <code>udev_monitor_ref</code>(3) &#8212; Create, acquire and release a udev monitor object<br />
+ <code>udev_monitor_set_receive_buffer_size</code>(3) &#8212; Query and modify device monitor<br />
+ <code>udev_monitor_unref</code>(3) &#8212; Create, acquire and release a udev monitor object<br />
+ <code>udev_new</code>(3) &#8212; Create, acquire and release a udev context object<br />
+ <code>udev_ref</code>(3) &#8212; Create, acquire and release a udev context object<br />
+ <code>udev_unref</code>(3) &#8212; Create, acquire and release a udev context object<br />
  <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8) &#8212; udev management tool<br />
  <code>user-runtime-dir [at] .service</code>(5) &#8212; System units to start the user manager<br />
  <code><a href="/docs/linux/man/5-user-conf-d/">user.conf.d</a></code>(5) &#8212; System and session service manager configuration files<br />

@@ -33,7 +33,7 @@ description: "dasum.f –"
 <dd>
 <pre> jack dongarra, linpack, 3/11/78.
  modified 3/93 to return if incx .le. 0.
- modified 12/3/93, <a href="//www.systutorials.com/docs/linux/man/1-array/">array</a>(1) declarations changed to array(*)</pre>
+ modified 12/3/93, array(1) declarations changed to array(*)</pre>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 52 of file dasum.f.</p>
 <h2>Author</h2>

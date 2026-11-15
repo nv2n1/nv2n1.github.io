@@ -18,4 +18,4 @@ void reallocate_voice(int voice, const SAMPLE *spl);</code></pre>
 voice = allocate_voice(sample);
 </code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-allocate_voice/">allocate_voice</a></code>(3), <code><a href="/docs/linux/man/3-deallocate_voice/">deallocate_voice</a></code>(3), <code><a href="/docs/linux/man/3-load_sample/">load_sample</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-allocate_voice/">allocate_voice</a></code>(3), <code>deallocate_voice</code>(3), <code><a href="/docs/linux/man/3-load_sample/">load_sample</a></code>(3) </p>

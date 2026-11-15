@@ -36,6 +36,6 @@ description: "update-ca-certificates – update /etc/ssl/certs and ca-certificat
 <dt><i>/usr/local/share/ca-certificates</i></p>
 <dd>Directory of local CA certificates (with .crt extension).</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1)</p>
+<p><code>openssl</code>(1)</p>
 <h2>Author</h2>
 <p>This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian project (but may be used by others).</p>

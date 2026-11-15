@@ -165,7 +165,7 @@ description: "pack200 – JAR Packing tool"
 <dt>*</p>
 <dd>unpack200 &#8211; JAR Unpacking Tool</p>
 <dt>*</p>
-<dd><i><a href="/docs/linux/man/1-unpack200/">unpack200</a>(1)</i>, <i><a href="/docs/linux/man/1-jar/">jar</a>(1)</i>, <i><a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i>, <i><a href="/docs/linux/man/5-attributes/">attributes</a>(5)</i> man pages</p>
+<dd><i><a href="/docs/linux/man/1-unpack200/">unpack200</a>(1)</i>, <i><a href="/docs/linux/man/1-jar/">jar</a>(1)</i>, <i><a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i>, <i>attributes(5)</i> man pages</p>
 <dt>*</p>
 <dd>Java SE Documentation</p>
 <dt>*</p>
@@ -176,6 +176,6 @@ description: "pack200 – JAR Packing tool"
 <dd><i>jarsigner</i> &#8211; JAR Signer tool @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html">http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html</a></dl>
 </dl>
 <h2>Notes</h2>
-<p>This command should not be confused with <i><a href="/docs/linux/man/1-pack/">pack</a>(1)</i>. They are distinctly separate products. </p>
+<p>This command should not be confused with <i>pack(1)</i>. They are distinctly separate products. </p>
 <p> The Java SE API Specification provided with the SDK is the superseding authority, in case of discrepancies. </p>
 <p>&nbsp;<wbr></p>

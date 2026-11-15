@@ -72,4 +72,4 @@ BadAlloc, or BadValue error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>
  argument's type is accepted. Any argument defined as a
  set of alternatives can generate this error.</pre></dl><dl COMPACT><dd><pre>BadAlloc
  The server failed to allocate the requested resource or
- server memory.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XSetDeviceButtonMapping/">XSetDeviceButtonMapping</a>(3), XSetDeviceModifierMapping(__3_)</pre></dl>
+ server memory.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XSetDeviceButtonMapping(3), XSetDeviceModifierMapping(__3_)</pre></dl>

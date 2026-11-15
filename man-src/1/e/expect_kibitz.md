@@ -30,7 +30,7 @@ description: "kibitz – allow two people to interact with one shell"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>kibitz user2</p>
 <p> <code>kibitz</code> starts a new shell (or another program, if given on the command line), while prompting user2 to run <code>kibitz</code>. If user2 runs <code>kibitz</code> as directed, the keystrokes of both users become the input of the shell. Similarly, both users receive the output from the shell. </p>
 <p> To terminate <code>kibitz</code> it suffices to terminate the shell itself. For example, if either user types ^D (and the shell accepts this to be EOF), the shell terminates followed by <code>kibitz</code>. </p>
-<p> Normally, all characters are passed uninterpreted. However, if the escape character (described when <code>kibitz</code> starts) is issued, the user may talk directly to the <code>kibitz</code> interpreter. Any <code><a href="/docs/linux/man/1-expect/">Expect</a></code>(1) or <code><a href="/docs/linux/man/3-tcl/">Tcl</a></code>(3) commands may be given. Also, job control may be used while in the interpreter, to, for example, suspend or restart <code>kibitz</code>. </p>
+<p> Normally, all characters are passed uninterpreted. However, if the escape character (described when <code>kibitz</code> starts) is issued, the user may talk directly to the <code>kibitz</code> interpreter. Any <code><a href="/docs/linux/man/1-expect/">Expect</a></code>(1) or <code>Tcl</code>(3) commands may be given. Also, job control may be used while in the interpreter, to, for example, suspend or restart <code>kibitz</code>. </p>
 <p> Various processes can provide various effects. For example, you can emulate a two-way <a href="/docs/linux/man/1-write/">write</a>(1) session with the command: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>kibitz user2 sleep 1000000</p>
 <h2>ARGUMENTS</h2>
@@ -66,7 +66,7 @@ description: "kibitz – allow two people to interact with one shell"
 <p> If the environment variable EXPECT_PROMPT exists, it is taken as a regular expression which matches the end of your login prompt (but does not otherwise occur while logging in). See also CAVEATS above. </p>
 <p> If the environment variables USER or LOGNAME are defined, they are used to determine the current user name for a <code>kibitz</code> to a remote computer. See description of the <code>-proxy</code> option in ARGUMENTS above.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-tcl/">Tcl</a></code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3), <code><a href="/docs/linux/man/1-xkibitz/">xkibitz</a></code>(1)<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3), <code><a href="/docs/linux/man/1-xkibitz/">xkibitz</a></code>(1)<br />
  <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.<br />
  <i>&quot;Kibitz &#8211; Connecting Multiple Interactive Programs Together&quot;, </i>by Don Libes, Software &#8211; Practice &amp; Experience, John Wiley &amp; Sons, West Sussex, England, Vol. 23, No. 5, May, 1993.</p>
 <h2>AUTHOR</h2>

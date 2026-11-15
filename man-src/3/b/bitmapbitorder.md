@@ -43,5 +43,5 @@ description: "ImageByteOrder, BitmapBitOrder, BitmapPad, BitmapUnit, DisplayHeig
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int bits_per_pixel;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int scanline_pad; } XPixmapFormatValues;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), <a href="/docs/linux/man/3-iscursorkey/">IsCursorKey</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3)<br />
+<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), IsCursorKey(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

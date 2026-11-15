@@ -49,7 +49,7 @@ See 'pmix_common.h' for definition of the pmix_value_t structure.
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/7-pmix_constants/">PMIx_Constants</a>(7), <a HREF="/docs/linux/man/7-pmix_structures/">PMIx_Structures</a>(7)
+<a HREF="/docs/linux/man/7-pmix_constants/">PMIx_Constants</a>(7), PMIx_Structures(7)
 
 <h2>Authors</h2>
 

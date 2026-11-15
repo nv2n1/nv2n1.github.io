@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-mongoc_gridfs_file_seek/"
 description: "mongoc_gridfs_file_seek() – Adjust the file position pointer in the given file by delta, starting from the position whence. The whence argument is interpreted as in fseek(2):"
 ---
 
-<p>mongoc_gridfs_file_seek() &#8211; Adjust the file position pointer in the given file by delta, starting from the position whence. The whence argument is interpreted as in <a href="/docs/linux/man/2-fseek/">fseek</a>(2):</p>
+<p>mongoc_gridfs_file_seek() &#8211; Adjust the file position pointer in the given file by delta, starting from the position whence. The whence argument is interpreted as in fseek(2):</p>
 <h2>Synopsis</h2>
 <pre>int
 mongoc_gridfs_file_seek (mongoc_gridfs_file_t *file,
@@ -24,7 +24,7 @@ mongoc_gridfs_file_seek (mongoc_gridfs_file_t *file,
 <dt><code>whence</code></p>
 <dd>One of SEEK_SET, SEEK_CUR or SEEK_END.</dl>
 <h2>Description</h2>
-<p>Adjust the file position pointer in the given file by <code>delta</code> , starting from the position <code>whence</code> \&amp;. The <code>whence</code> argument is interpreted as in <code><a href="/docs/linux/man/2-fseek/">fseek</a>(2)</code> : </p>
+<p>Adjust the file position pointer in the given file by <code>delta</code> , starting from the position <code>whence</code> \&amp;. The <code>whence</code> argument is interpreted as in <code>fseek(2)</code> : </p>
 <dl COMPACT>
 <dt><code>SEEK_SET</code></p>
 <dd>Set the position relative to the start of the file.</dl>

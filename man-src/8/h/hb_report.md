@@ -11,7 +11,7 @@ description: "hb_report – create report for CRM based clusters (Pacemaker)"
 <h2>Synopsis</h2>
 <p><code>hb_report</code> -f {time|&quot;cts:&quot;testnum} [-t time] [-u user] [-l file] [-n nodes] [-E files] [-p patt] [-L patt] [-e prog] [-MSDCAv] dest</p>
 <h2>Description</h2>
-<p>The <a href="/docs/linux/man/1-hb_report/">hb_report</a>(1) is a utility to collect all information (logs, configuration files, system information, etc) relevant to Pacemaker (CRM) over the given period of time.</p>
+<p>The hb_report(1) is a utility to collect all information (logs, configuration files, system information, etc) relevant to Pacemaker (CRM) over the given period of time.</p>
 <h2>Options</h2>
 <p>dest</p>
 <dl>
@@ -253,6 +253,6 @@ Tue Sep 15 20:46:27 CEST 2009 (September 15th etc)</pre>
 <p> Heartbeat and other Linux HA resources: <a rel="nofollow" href="http://linux-ha.org/">http://linux-ha.org/</a> </p>
 <p> OpenAIS: <a rel="nofollow" href="http://www.openais.org/">http://www.openais.org/</a></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-date--parse/">Date::Parse</a>(3)</p>
+<p>Date::Parse(3)</p>
 <h2>Copying</h2>
 <p>Copyright (C) 2007-2009 Dejan Muhamedagic. Free use of this software is granted under the terms of the GNU General Public License (GPL).</p>

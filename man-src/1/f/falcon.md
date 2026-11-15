@@ -104,7 +104,7 @@ description: "falcon – The Falcon Programming Language command line interprete
 <h2>AUTHOR</h2>
 <p> Giancarlo Niccolai &lt;gc [at] falconpl.org&gt; </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-falrun/">falrun</a></code>(1) <code><a href="/docs/linux/man/1-faldisass/">faldisass</a></code>(1) <code><a href="/docs/linux/man/1-fallc-fal/">fallc.fal</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-falrun/">falrun</a></code>(1) <code><a href="/docs/linux/man/1-faldisass/">faldisass</a></code>(1) <code>fallc.fal</code>(1) </p>
 <h2>LICENSE</h2>
 <p> This document is released under the &quot;GNU Free Documentation License, version 1.2&quot;. On Debian systems, the complete text of the Free Documentation License, version 1.2, can be found in /usr/share/common-licenses/. </p>
 <h2>Index</h2>

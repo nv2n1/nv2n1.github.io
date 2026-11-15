@@ -58,7 +58,7 @@ int
 <dd>int <i>relief</i> (in) One of the standard Tk relief options (TK_RELIEF_RAISED, TK_RELIEF_SUNKEN, etc.). See <code>Tk_GetReliefFromObj</code>.</p>
 <dd>short <i>right</i> (in) Extra padding (in pixles) to add to the right side of a region.</p>
 <dd>Ttk_Side <i>side</i> (in) One of <code>TTK_SIDE_LEFT</code>, <code>TTK_SIDE_TOP</code>, <code>TTK_SIDE_RIGHT</code>, or <code>TTK_SIDE_BOTTOM</code>.</p>
-<dd>unsigned <i>sticky</i> (in) A bitmask containing one or more of the bits <code>TTK_STICK_W</code> (west, or left), <code>TTK_STICK_E</code> (east, or right, <code>TTK_STICK_N</code> (north, or top), and <code>TTK_STICK_S</code> (south, or bottom). <code>TTK_FILL_X</code> is defined as a synonym for (TTK_STICK_W|TTK_STICK_E), <code>TTK_FILL_Y</code> is a synonym for (TTK_STICK_N|TTK_STICK_S), and <code>TTK_FILL_BOTH</code> and <code>TTK_STICK_ALL</code> are synonyms for (TTK_FILL_X|TTK_FILL_Y). See also: <i><a href="/docs/linux/man/n-grid/">grid</a>(n)</i>.</p>
+<dd>unsigned <i>sticky</i> (in) A bitmask containing one or more of the bits <code>TTK_STICK_W</code> (west, or left), <code>TTK_STICK_E</code> (east, or right, <code>TTK_STICK_N</code> (north, or top), and <code>TTK_STICK_S</code> (south, or bottom). <code>TTK_FILL_X</code> is defined as a synonym for (TTK_STICK_W|TTK_STICK_E), <code>TTK_FILL_Y</code> is a synonym for (TTK_STICK_N|TTK_STICK_S), and <code>TTK_FILL_BOTH</code> and <code>TTK_STICK_ALL</code> are synonyms for (TTK_FILL_X|TTK_FILL_Y). See also: <i>grid(n)</i>.</p>
 <dd>Tk_Window <i>tkwin</i> (in) Window whose screen geometry determines the conversion between absolute units and pixels.</p>
 <dd>short <i>top</i> (in) Extra padding at the top of a region.</p>
 <dd>int <i>width</i> (in) The width in pixels of a region.</p>

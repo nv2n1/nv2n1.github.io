@@ -24,5 +24,5 @@ description: "mrftopbm – convert an MRF image to PBM format"
 <h2>AUTHOR</h2>
 <p> Russell Marks. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbmtomrf/">pbmtomrf</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , <code><a href="/docs/linux/man/1-mrf/">mrf</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pbmtomrf/">pbmtomrf</a></code>(1) , <code>pbm</code>(1) , <code><a href="/docs/linux/man/1-mrf/">mrf</a></code>(1) </p>
 <h2>Index</h2>

@@ -64,7 +64,7 @@ struct mlx5dv_flow_action_attr {
 <dt>action
 <dd> Flow action, to be used with type MLX5DV_FLOW_ACTION_IBV_FLOW_ACTION see <a HREF="/docs/linux/man/3-mlx5dv_create_flow_action_modify_header/">mlx5dv_create_flow_action_modify_header</a>(3) and <a HREF="/docs/linux/man/3-mlx5dv_create_flow_action_packet_reformat/">mlx5dv_create_flow_action_packet_reformat</a>(3).
 <dt>tag_value
-<dd> tag value to be passed in the work completion, to be used with type MLX5DV_FLOW_ACTION_TAG see <a HREF="/docs/linux/man/3-ibv_create_cq_ex/">ibv_create_cq_ex</a>(3).
+<dd> tag value to be passed in the work completion, to be used with type MLX5DV_FLOW_ACTION_TAG see ibv_create_cq_ex(3).
 <dt>obj
 <dd> DEVX object, to be used with type MLX5DV_FLOW_ACTION_DEST_DEVX or by MLX5DV_FLOW_ACTION_COUNTERS_DEVX.</dl>
 
@@ -78,7 +78,7 @@ struct mlx5dv_flow_action_attr {
 
  
 
- <a HREF="/docs/linux/man/3-mlx5dv_create_flow_action_modify_header/">mlx5dv_create_flow_action_modify_header</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_create_flow_action_packet_reformat/">mlx5dv_create_flow_action_packet_reformat</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_create_flow_matcher/">mlx5dv_create_flow_matcher</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_create_qp/">mlx5dv_create_qp</a>(3), <a HREF="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a>(3) <a HREF="/docs/linux/man/3-ibv_create_cq_ex/">ibv_create_cq_ex</a>(3) <a HREF="/docs/linux/man/3-ibv_create_counters/">ibv_create_counters</a>(3)
+ <a HREF="/docs/linux/man/3-mlx5dv_create_flow_action_modify_header/">mlx5dv_create_flow_action_modify_header</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_create_flow_action_packet_reformat/">mlx5dv_create_flow_action_packet_reformat</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_create_flow_matcher/">mlx5dv_create_flow_matcher</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_create_qp/">mlx5dv_create_qp</a>(3), ibv_create_qp_ex(3) ibv_create_cq_ex(3) ibv_create_counters(3)
 
 <h2>AUTHOR</h2>
 

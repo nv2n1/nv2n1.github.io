@@ -45,7 +45,7 @@ enum ibv_rate mult_to_ibv_rate(int mult);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_query_port/">ibv_query_port</a>(3)
+ ibv_query_port(3)
 
 <h2>AUTHOR</h2>
 

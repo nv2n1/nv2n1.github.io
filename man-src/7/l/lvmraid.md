@@ -736,7 +736,7 @@ Are you sure you want to convert raid6_nr LV vg/lv? [y/n]: y
  lv 128.00m raid1 2 0 lv_rimage_0(0),\
  lv_rimage_1(0)
  [lv_rimage_0] 128.00m linear 1 0 /dev/sda(0)
- [lv_rimage_1] 128.00m linear 1 0 /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhx/">sdhx</a>(1)
+ [lv_rimage_1] 128.00m linear 1 0 /dev/sdhx(1)
  [lv_rmeta_0] 4.00m linear 1 0 /dev/sda(32)
  [lv_rmeta_1] 4.00m linear 1 0 /dev/sdhx(0)</pre>
 <p>Once the raid1 LV is fully synchronized we convert it to raid5_n (only 2-way raid1 LVs can be converted to raid5). We select raid5_n here because it has dedicated parity SubLVs at the end and can be converted to striped directly without any additional conversion. </p>
@@ -749,7 +749,7 @@ Are you sure you want to convert raid6_nr LV vg/lv? [y/n]: y
  lv 128.00m raid5_n 1 64.00k 0 lv_rimage_0(0),\
  lv_rimage_1(0)
  [lv_rimage_0] 128.00m linear 1 0 0 /dev/sda(0)
- [lv_rimage_1] 128.00m linear 1 0 0 /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhx/">sdhx</a>(1)
+ [lv_rimage_1] 128.00m linear 1 0 0 /dev/sdhx(1)
  [lv_rmeta_0] 4.00m linear 1 0 /dev/sda(32)
  [lv_rmeta_1] 4.00m linear 1 0 /dev/sdhx(0)</pre>
 <p>Now we&#8217;ll change the number of data stripes from 1 to 5 and request 128K stripe size in one command. This will grow the size of the LV by a factor of 5 (we add 4 data stripes to the one given). That additonal space can be used by e.g. growing any contained filesystem or the LV can be reduced in size after the reshaping conversion has finished. </p>
@@ -771,15 +771,15 @@ Are you sure you want to convert raid6_nr LV vg/lv? [y/n]: y
  [lv_rimage_0] 132.00m linear 1 0 1 /dev/sda(33)
  [lv_rimage_0] 132.00m linear 1 0 /dev/sda(0)
  [lv_rimage_1] 132.00m linear 1 0 1 /dev/sdhx(33)
- [lv_rimage_1] 132.00m linear 1 0 /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhx/">sdhx</a>(1)
+ [lv_rimage_1] 132.00m linear 1 0 /dev/sdhx(1)
  [lv_rimage_2] 132.00m linear 1 0 1 /dev/sdhw(33)
- [lv_rimage_2] 132.00m linear 1 0 /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhw/">sdhw</a>(1)
+ [lv_rimage_2] 132.00m linear 1 0 /dev/sdhw(1)
  [lv_rimage_3] 132.00m linear 1 0 1 /dev/sdhv(33)
- [lv_rimage_3] 132.00m linear 1 0 /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhv/">sdhv</a>(1)
+ [lv_rimage_3] 132.00m linear 1 0 /dev/sdhv(1)
  [lv_rimage_4] 132.00m linear 1 0 1 /dev/sdhu(33)
- [lv_rimage_4] 132.00m linear 1 0 /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhu/">sdhu</a>(1)
+ [lv_rimage_4] 132.00m linear 1 0 /dev/sdhu(1)
  [lv_rimage_5] 132.00m linear 1 0 1 /dev/sdht(33)
- [lv_rimage_5] 132.00m linear 1 0 /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdht/">sdht</a>(1)
+ [lv_rimage_5] 132.00m linear 1 0 /dev/sdht(1)
  [lv_rmeta_0] 4.00m linear 1 0 /dev/sda(32)
  [lv_rmeta_1] 4.00m linear 1 0 /dev/sdhx(0)
  [lv_rmeta_2] 4.00m linear 1 0 /dev/sdhw(0)
@@ -798,10 +798,10 @@ Are you sure you want to convert raid6_nr LV vg/lv? [y/n]: y
  /dev/sdhv(33),\
  /dev/sdhu(33)
  lv 640.00m striped 5 128.00k /dev/sda(0),\
- /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhx/">sdhx</a>(1),\
- /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhw/">sdhw</a>(1),\
- /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhv/">sdhv</a>(1),\
- /dev/<a href="//www.systutorials.com/docs/linux/man/1-sdhu/">sdhu</a>(1)</pre>
+ /dev/sdhx(1),\
+ /dev/sdhw(1),\
+ /dev/sdhv(1),\
+ /dev/sdhu(1)</pre>
 <p>Reversing these steps will convert a given striped LV to linear. </p>
 <p> Mind the facts that stripes are removed thus the capacity of the RaidLV will shrink and that changing the RaidLV layout will influence its performance. </p>
 <p> &quot;lvconvert &#8211;stripes 1 vg/lv&quot; for converting to 1 stripe will inform upfront about the reduced size to allow for resizing the content or growing the RaidLV before actually converting to 1 stripe. The <code>&#8211;force</code> option is needed to allow stripe removing conversions to prevent data loss. </p>

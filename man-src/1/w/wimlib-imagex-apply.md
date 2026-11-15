@@ -121,11 +121,11 @@ mywim5.swm
 <dd> wimlib-imagex apply mywim.swm 1 dir &#8211;ref=&quot;mywim*.swm&quot;</dl>
 <p> As a special case, if you are applying an image from standard input from a split WIM that is also pipable (as described in <code>PIPABLE WIMS</code>), the <code>&#8211;ref</code> option is unneeded; instead you must ensure that all the split WIM parts are concatenated together on standard input. They can be provided in any order, with the exception of the first part, which must be first.</p>
 <h2>PIPABLE WIMS</h2>
-<p> Since wimlib v1.5.0, <code>wimlib-imagex apply</code> supports applying a WIM from a nonseekable file, such as a pipe, provided that the WIM was captured with <code>&#8211;pipable</code> (see <code>wimlib-imagex <a href="/docs/linux/man/1-capture/">capture</a></code>(1)). To use standard input as the WIM, specify &quot;-&quot; as <i>WIMFILE</i>. A useful use of this ability is to apply an image from a WIM while streaming it from a server. For example, to apply the first image from a WIM file available on a HTTP server to an NTFS volume on /dev/sda1, run something like: </p>
+<p> Since wimlib v1.5.0, <code>wimlib-imagex apply</code> supports applying a WIM from a nonseekable file, such as a pipe, provided that the WIM was captured with <code>&#8211;pipable</code> (see <code>wimlib-imagex capture</code>(1)). To use standard input as the WIM, specify &quot;-&quot; as <i>WIMFILE</i>. A useful use of this ability is to apply an image from a WIM while streaming it from a server. For example, to apply the first image from a WIM file available on a HTTP server to an NTFS volume on /dev/sda1, run something like: </p>
 <dl>
 <dt>
 <dd> wget -O &#8211; <a rel="nofollow" href="http://myserver/mywim.wim">http://myserver/mywim.wim</a> | wimapply &#8211; 1 /dev/sda1</dl>
-<p> (The above also used the <code>wimapply</code> abbreviation for <code>wimlib-imagex apply</code>.) Note: WIM files are <i>not</i> pipable by default; you have to explicitly capture them with <code>&#8211;pipable</code>, and they are <i>not</i> compatible with Microsoft&#8217;s software. See <code>wimlib-imagex <a href="/docs/linux/man/1-capture/">capture</a></code>(1) for more information. </p>
+<p> (The above also used the <code>wimapply</code> abbreviation for <code>wimlib-imagex apply</code>.) Note: WIM files are <i>not</i> pipable by default; you have to explicitly capture them with <code>&#8211;pipable</code>, and they are <i>not</i> compatible with Microsoft&#8217;s software. See <code>wimlib-imagex capture</code>(1) for more information. </p>
 <p> It is possible to apply an image from a pipable WIM split into multiple parts; see <code>SPLIT WIMS</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

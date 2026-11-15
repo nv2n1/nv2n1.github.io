@@ -11,7 +11,7 @@ description: "libxml – library used to parse XML files"
 <p> libxml &#8211; library used to parse XML files </p>
 <h2>DESCRIPTION</h2>
 <p> The <i>libxml</i> library is used to parse XML files. Its internal document representation is as close as possible to the <i>DOM </i> (Document Object Model) interface, an API for accessing XML or HTML structured documents. </p>
-<p> The <i>libxml</i> library also has a <i>SAX</i>-like interface, which is designed to be compatible with <i><a href="/docs/linux/man/1-expat/">expat</a></i>(1). NOTE: <i>SAX</i>, the Simple API for XML, is a standard interface for event-based XML parsing, developed collaboratively by the members of the XML-DEV mailing list, currently hosted by OASIS. The <i>expat</i> library is a XML 1.0 parser written in C, which aims to be fully conforming. It is currently not a validating XML processor. </p>
+<p> The <i>libxml</i> library also has a <i>SAX</i>-like interface, which is designed to be compatible with <i>expat</i>(1). NOTE: <i>SAX</i>, the Simple API for XML, is a standard interface for event-based XML parsing, developed collaboratively by the members of the XML-DEV mailing list, currently hosted by OASIS. The <i>expat</i> library is a XML 1.0 parser written in C, which aims to be fully conforming. It is currently not a validating XML processor. </p>
 <p> The <i>libxml </i> library now includes a nearly complete <i>XPath </i> implementation. The <i>XPath</i> (XML Path Language) is a language for addressing parts of an XML document, designed to be used by both <i>XSLT </i> and <i>XPointer</i>. </p>
 <p> The <i>libxml </i> library exports Push and Pull type parser interfaces for both XML and <i>html</i>.</p>
 <h2>FILES</h2>

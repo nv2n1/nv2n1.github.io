@@ -38,7 +38,7 @@ struct ibv_sge {
 <p> If the QP <i>qp</i> is associated with a shared receive queue, you must use the function <code>ibv_post_srq_recv()</code>, and not <code>ibv_post_recv()</code>, since the QP&#8217;s own receive queue will not be used. </p>
 <p> If a WR is being posted to a UD QP, the Global Routing Header (GRH) of the incoming message will be placed in the first 40 bytes of the buffer(s) in the scatter list. If no GRH is present in the incoming message, then the first bytes will be undefined. This means that in all cases, the actual data of the incoming message will start at an offset of 40 bytes into the buffer(s) in the scatter list.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_send/">ibv_post_send</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_srq_recv/">ibv_post_srq_recv</a></code>(3), <code><a href="/docs/linux/man/3-ibv_poll_cq/">ibv_poll_cq</a></code>(3)</p>
+<p> <code>ibv_create_qp</code>(3), <code>ibv_post_send</code>(3), <code>ibv_post_srq_recv</code>(3), <code>ibv_poll_cq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

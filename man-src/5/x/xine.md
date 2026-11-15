@@ -187,7 +187,7 @@ description: "xine – a free video player"
 <p> Unlike stream config option, you can change anything <i>before</i> playing the stream. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a href="/docs/linux/man/1-aaxine/">aaxine</a></code>(1), <code><a href="/docs/linux/man/1-gxine/">gxine</a></code>(1), <code><a href="/docs/linux/man/1-toxine/">toxine</a></code>(1), <code><a href="/docs/linux/man/1-totem/">totem</a></code>(1), <code><a href="/docs/linux/man/1-kaffeine/">kaffeine</a></code>(1) &#8230; </p>
+<p><code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a href="/docs/linux/man/1-aaxine/">aaxine</a></code>(1), <code><a href="/docs/linux/man/1-gxine/">gxine</a></code>(1), <code>toxine</code>(1), <code><a href="/docs/linux/man/1-totem/">totem</a></code>(1), <code>kaffeine</code>(1) &#8230; </p>
 <p> The programs are documented fully on the xine home page: <i><a rel="nofollow" href="http://www.xine-project.org/">http://www.xine-project.org/</a></i></p>
 <h2>Author</h2>
 <p>This text was extracted from the xine man page by Darren Salt &lt;dsalt [at] users.sourceforge.net&gt;. The xine man page was written by Siggi Langauf &lt;siggi [at] debian.org&gt; for the xine project. Lots of additions by Guenter Bartsch &lt;guenter [at] users.sourceforge.net&gt;, Daniel Caujolle-Bert &lt;f1rmb [at] users.sourceforge.net&gt;, Rocky Bernstein &lt;rocky [at] panix.com&gt;, and Philipp Hahn &lt;pmhahn [at] users.sourceforge.net&gt;.</p>

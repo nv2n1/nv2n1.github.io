@@ -64,5 +64,5 @@ description: "libpgm – libnetpbm functions to read and write PGM image files"
 <p> <code>pgm_check() </code> checks for the common file integrity error where the file is the wrong size to contain all the image data. </p>
 <p> <code>pgm_check() </code> is analogous to <code>pbm_check()</code>, but works on PGM and PBM files. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-libpbm/">libpbm</a></code>(1) , <code><a href="/docs/linux/man/1-libppm/">libppm</a></code>(1) , <code><a href="/docs/linux/man/1-libpnm/">libpnm</a></code>(1) </p>
+<p> <code>libpbm</code>(1) , <code>libppm</code>(1) , <code>libpnm</code>(1) </p>
 <h2>Index</h2>

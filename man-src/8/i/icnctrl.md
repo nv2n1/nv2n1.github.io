@@ -15,7 +15,7 @@ description: "icnctrl – configure ICN ISDN adaptor"
 <h2>Options</h2>
 <dl>
 <dt><code>-d </code><i>Driver-Id</i></p>
-<dd>selects the S0 interface named by <i>Driver-Id</i>. Driver-Ids are defined during driver initialisation. See <code><a href="/docs/linux/man/4-icn/">icn</a></code>(4) for a description of the syntax to be used for modularised and monolithic driver versions. This option <code>must</code> be used to identify the S0 interface if more than one S0 interface is existent. If a single ICN-2B is used, it may be omitted. If using more than one card, support for the other cards is enabled with the <code>add</code> action of icnctrl. Ids may <code>not</code> start with <code>digits</code> or small <code>x</code>, because these values are misinterpreted as numeric parameters by <code>insmod</code>. For loading the module, always the newest <code>modutils</code> package should be used to avoid problems during load.</dl>
+<dd>selects the S0 interface named by <i>Driver-Id</i>. Driver-Ids are defined during driver initialisation. See <code>icn</code>(4) for a description of the syntax to be used for modularised and monolithic driver versions. This option <code>must</code> be used to identify the S0 interface if more than one S0 interface is existent. If a single ICN-2B is used, it may be omitted. If using more than one card, support for the other cards is enabled with the <code>add</code> action of icnctrl. Ids may <code>not</code> start with <code>digits</code> or small <code>x</code>, because these values are misinterpreted as numeric parameters by <code>insmod</code>. For loading the module, always the newest <code>modutils</code> package should be used to avoid problems during load.</dl>
 <p> The following <i>actions</i> may be given to <code>icnctrl</code>.</p>
 <dl>
 <dt><code>add port [</code><i>id1</i><code> [</code><i>id2</i><code>]]</code></p>
@@ -62,4 +62,4 @@ description: "icnctrl – configure ICN ISDN adaptor"
 <h2>Author</h2>
 <p>&#169; 1997 by Fritz Elfert &lt;fritz [at] isdn4linux.de&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-isdnctrl/">isdnctrl</a></code>(8), <code><a href="/docs/linux/man/4-icn/">icn</a></code>(4), <code><a href="/docs/linux/man/4-isdnctrl/">isdnctrl</a></code>(4), <code><a href="/docs/linux/man/4-ttyi/">ttyI</a></code>(4). </p>
+<p><code><a href="/docs/linux/man/8-isdnctrl/">isdnctrl</a></code>(8), <code>icn</code>(4), <code><a href="/docs/linux/man/4-isdnctrl/">isdnctrl</a></code>(4), <code><a href="/docs/linux/man/4-ttyi/">ttyI</a></code>(4). </p>

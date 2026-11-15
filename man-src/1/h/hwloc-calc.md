@@ -128,5 +128,5 @@ description: "hwloc-calc – Operate on cpu mask strings and objects"
 <p> Upon successful execution, hwloc-calc displays the (physical) CPU mask string, (physical or logical) object list, or (physical or logical) object number list. The return value is 0. </p>
 <p> hwloc-calc will return nonzero if any kind of error occurs, such as (but not limited to): failure to parse the command line.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-lstopo/">lstopo</a>(1), <a href="/docs/linux/man/1-hwloc-info/">hwloc-info</a>(1), <a href="/docs/linux/man/1-hwloc-gather-topology/">hwloc-gather-topology</a>(1) </p>
+<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-info/">hwloc-info</a>(1), <a href="/docs/linux/man/1-hwloc-gather-topology/">hwloc-gather-topology</a>(1) </p>
 <h2>Index</h2>

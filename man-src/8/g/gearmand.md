@@ -154,7 +154,7 @@ Server: Gearman/0.8</pre>
 <h2>Home</h2>
 <p>To find out more information please check: <i><a rel="nofollow" href="http://gearman.info/">http://gearman.info/</a></i></p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-gearman/">gearman</a>(1)</i> <i><a href="/docs/linux/man/1-gearadmin/">gearadmin</a>(1)</i> <i><a href="/docs/linux/man/3-libgearmand/">libgearmand</a>(3)</i></p>
+<p><i><a href="/docs/linux/man/1-gearman/">gearman</a>(1)</i> <i><a href="/docs/linux/man/1-gearadmin/">gearadmin</a>(1)</i> <i>libgearmand(3)</i></p>
 <h2>Author</h2>
 <p>Data Differential <a rel="nofollow" href="http://www.datadifferential.com/">http://www.datadifferential.com/</a></p>
 <h2>Copyright</h2>

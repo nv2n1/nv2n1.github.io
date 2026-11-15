@@ -27,6 +27,6 @@ description: "XtParseAcceleratorTable, XtInstallAccelerators, XtInstallAllAccele
 <p> The <code>XtInstallAccelerators</code> function installs the accelerators from source onto destination by augmenting the destination translations with the source accelerators. If the source display_accelerator method is non-NULL, <code>XtInstallAccelerators</code> calls it with the source widget and a string representation of the accelerator table, which indicates that its accelerators have been installed and that it should display them appropriately. The string representation of the accelerator table is its canonical translation table representation. </p>
 <p> The <code>XtInstallAllAccelerators</code> function recursively descends the widget tree rooted at source and installs the accelerators of each widget encountered onto destination. A common use os to call <code>XtInstallAllAccelerators</code> and pass the application main window as the source.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-xtparsetranslationtable/">XtParseTranslationTable</a>(1)<br />
+<p>XtParseTranslationTable(1)<br />
  <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
  <i>Xlib &#8211; C Language X Interface</i></p>

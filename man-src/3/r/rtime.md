@@ -80,6 +80,6 @@ int main(void)
     exit(EXIT_SUCCESS);
 }</code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-ntpdate/">ntpdate</a></code>(1), <code><a href="/docs/linux/man/8-inetd/">inetd</a></code>(8)</p>
+<p><code>ntpdate</code>(1), <code>inetd</code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

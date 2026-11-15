@@ -7914,7 +7914,7 @@ salt-cloud -m /path/to/cloud.map -H
 salt-cloud -m /path/to/cloud.map -Q
 </pre>
 <h3>See also</h3>
-<p> <i><a href="/docs/linux/man/7-salt-cloud/">salt-cloud</a>(7)</i> <i><a href="/docs/linux/man/7-salt/">salt</a>(7)</i> <i><a href="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a href="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i></p>
+<p> <i>salt-cloud(7)</i> <i><a href="/docs/linux/man/7-salt/">salt</a>(7)</i> <i><a href="/docs/linux/man/1-salt-master/">salt-master</a>(1)</i> <i><a href="/docs/linux/man/1-salt-minion/">salt-minion</a>(1)</i></p>
 <h3>Salt Cloud basic usage</h3>
 <p> Salt Cloud needs, at least, one configured Provider and <code>Profile</code> to be functional.</p>
 <h3>Creating a VM</h3>

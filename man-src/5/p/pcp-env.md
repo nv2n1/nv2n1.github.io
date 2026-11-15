@@ -11,7 +11,7 @@ description: "pcp.env – script to set Performance Co-Pilot run-time environmen
 <h2>Synopsis</h2>
 <p><i>/etc/pcp.env</i></p>
 <h2>Description</h2>
-<p>The <i>pcp.env</i> script is sourced by assorted Performance Co-Pilot (PCP) scripts and utilities to define the PCP operating environment variables. The conjugate for executable programs using the PCP libraries is the <i><a href="/docs/linux/man/3-__pmgetconfig/">__pmGetConfig</a></i>(3) function. Typical usage of <i>pcp.env </i> in a script is as follows :</p>
+<p>The <i>pcp.env</i> script is sourced by assorted Performance Co-Pilot (PCP) scripts and utilities to define the PCP operating environment variables. The conjugate for executable programs using the PCP libraries is the <i>__pmGetConfig</i>(3) function. Typical usage of <i>pcp.env </i> in a script is as follows :</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>#!&nbsp;<wbr>/bin/sh<br />
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>source the PCP environment variables<br />
@@ -20,4 +20,4 @@ description: "pcp.env – script to set Performance Co-Pilot run-time environmen
 <h2>Environment</h2>
 <p>The <code>PCP_CONF</code> environment variable specifies an alternative path to the <i>pcp.conf</i> file.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-sudo/">sudo</a></code>(1), <code><a href="/docs/linux/man/3-pcpintro/">PCPIntro</a></code>(3), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-__pmgetconfig/">__pmGetConfig</a></code>(3) and <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5). </p>
+<p><code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-sudo/">sudo</a></code>(1), <code><a href="/docs/linux/man/3-pcpintro/">PCPIntro</a></code>(3), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code>__pmGetConfig</code>(3) and <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5). </p>

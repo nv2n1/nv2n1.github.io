@@ -58,7 +58,7 @@ description: "daemonize – run a program as a Unix daemon"
 <dd> Cause <code>daemonize</code> to write verbose messages to standard error, telling what it&#8217;s doing as it daemonizes the program.</dl>
 <h2>NOTES</h2>
 <p> If the host operating system provides the <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3) library routine, <code>daemonize</code> will use it. Otherwise, <code>daemonize</code> uses its own version of <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3). This choice is made at compile time. (BSD 4.4-derived operating systems tend to provide their own <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3) routine.) </p>
-<p> FreeBSD 5.0 introduced a <code><a href="/docs/linux/man/1-daemon/">daemon</a></code>(1) command that is similar to, but less functional, than <code>daemonize</code>.</p>
+<p> FreeBSD 5.0 introduced a <code>daemon</code>(1) command that is similar to, but less functional, than <code>daemonize</code>.</p>
 <h2>LICENSE</h2>
 <p> This program released under a BSD-style license. For more details, consult the LICENSE file accompanying the source distribution, or visit &quot;<a rel="nofollow" href="http://software.clapper.org/daemonize/LICENSE">http://software.clapper.org/daemonize/LICENSE</a>&quot;.</p>
 <h2>SEE ALSO</h2>

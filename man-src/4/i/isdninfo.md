@@ -95,4 +95,4 @@ description: "isdninfo – ISDN status device"
 <h2>Author</h2>
 <p>Fritz Elfert &lt;fritz [at] isdn4linux.de&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-isdnctrl/">isdnctrl</a></code>(4), <code><a href="/docs/linux/man/4-icnctrl/">icnctrl</a></code>(4). </p>
+<p><code><a href="/docs/linux/man/4-isdnctrl/">isdnctrl</a></code>(4), <code>icnctrl</code>(4). </p>

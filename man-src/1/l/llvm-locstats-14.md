@@ -69,7 +69,7 @@ llvm-locstats --compare file1.out file1.withentryvals.out
 </pre>
 <p> [image]</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-llvm-dwarfdump/">llvm-dwarfdump</a>(1)</code></p>
+<p> <code>llvm-dwarfdump(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
 <h2>COPYRIGHT</h2>

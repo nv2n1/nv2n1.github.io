@@ -54,5 +54,5 @@ FunParamPuts(fun, NULL, 0, "IPAR1", "INTEGER Param", 0);
 </code></pre>
 <p> The parameter routines return a 1 if the routine was successful and a 0 on failure. In general, the major reason for failure is that you did not set the append argument to a non-zero value and the parameter did not already exist in the file.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

@@ -29,6 +29,6 @@ void *
 <p><code>Tcl_LoadFile</code> loads a file from the filesystem (including potentially any virtual filesystem that has been installed) and provides a handle to it that may be used in further operations. The <i>symbols</i> array, if non-NULL, supplies a set of names of symbols (typically functions) that must be resolved from the library and which will be stored in the array indicated by <i>procPtrs</i>. If any of the symbols is not resolved, the loading of the file will fail with an error message left in the interpreter (if that is non-NULL). The result of <code>Tcl_LoadFile</code> is a standard Tcl error code. The library may be unloaded with <code>Tcl_FSUnloadFile</code>. </p>
 <p> <code>Tcl_FindSymbol</code> locates a symbol in a loaded library and returns it. If the symbol cannot be found, it returns NULL and sets an error message in the given <i>interp</i> (if that is non-NULL). Note that it is unsafe to use this operation on a handle that has been passed to <code>Tcl_FSUnloadFile</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-tcl_fsloadfile/">Tcl_FSLoadFile</a>(3), <a href="/docs/linux/man/3-tcl_fsunloadfile/">Tcl_FSUnloadFile</a>(3), <a href="/docs/linux/man/n-load/">load</a>(n), <a href="/docs/linux/man/n-unload/">unload</a>(n)</p>
+<p><a href="/docs/linux/man/3-tcl_fsloadfile/">Tcl_FSLoadFile</a>(3), <a href="/docs/linux/man/3-tcl_fsunloadfile/">Tcl_FSUnloadFile</a>(3), load(n), unload(n)</p>
 <h2>Keywords</h2>
 <p>binary code, loading, shared library</p>

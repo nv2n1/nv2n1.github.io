@@ -9,7 +9,7 @@ description: "collectd-unixsock – Documentation of collectd’s \"unixsock plu
 
 <p>collectd-unixsock &#8211; Documentation of collectd&#8217;s &quot;unixsock plugin&quot;</p>
 <h2>Synopsis</h2>
-<pre> # See <a href="//www.systutorials.com/docs/linux/man/5-collectd.conf/">collectd.conf</a>(5)
+<pre> # See collectd.conf(5)
  LoadPlugin unixsock
  # ...
  &lt;Plugin unixsock&gt;

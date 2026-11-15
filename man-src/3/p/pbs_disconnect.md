@@ -16,6 +16,6 @@ description: "pbs_disconnect – disconnect from a pbs batch server"
 <h2>Description</h2>
 <p>The virtual stream connection specified by <i> which was established with a server by a call to </i><code>pbs_connect</code>(), is closed.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/3B-pbs_connect/">pbs_connect</a>(3B)</p>
+<p>pbs_connect(3B)</p>
 <h2>Diagnostics</h2>
 <p>When the connection to batch server has been successfully closed, the routine will return zero. Otherwise, a non zero error is returned. The error number is also set in pbs_errno.</p>

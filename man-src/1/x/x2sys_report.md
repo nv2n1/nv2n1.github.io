@@ -61,7 +61,7 @@ gmt x2sys_report COE_data.txt -V -TMGD77 -R180/240/-60/-30 -Cmag &gt;
 gmt x2sys_report COE_data.txt -V -TMGD77 -Cfaa -S2345678 &gt; faa_report.txt
 </pre>
 <h2>REFERENCES</h2>
-<p> Mittal, P. K. (1984), Algorithm for error adjustment of potential field data along a survey network, <i>Geophysics</i>, <code><a href="/docs/linux/man/4-49/">49</a></code>(4), 467-469.</p>
+<p> Mittal, P. K. (1984), Algorithm for error adjustment of potential field data along a survey network, <i>Geophysics</i>, <code>49</code>(4), 467-469.</p>
 <h2>SEE ALSO</h2>
 <p> <code>x2sys_binlist</code> <code>x2sys_cross</code> <code>x2sys_datalist</code> <code>x2sys_get</code> <code>x2sys_init</code> <code>x2sys_list</code> <code>x2sys_put</code> <code>x2sys_solve</code></p>
 <h2>COPYRIGHT</h2>

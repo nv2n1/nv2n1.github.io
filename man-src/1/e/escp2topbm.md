@@ -30,7 +30,7 @@ description: "escp2topbm – convert an ESC/P2 printer file to a PBM image"
 <dd> <code>escp2topbm</code> assumes that all &quot;ESC.&quot; sequences use the same width value. If this isn&#8217;t true, the result is garbage. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbmtoescp2/">pbmtoescp2</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pbmtoescp2/">pbmtoescp2</a></code>(1) , <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2003 by Ulrich Walcher (<i>u.walcher [at] gmx.de</i>). </p>
 <h2>HISTORY</h2>

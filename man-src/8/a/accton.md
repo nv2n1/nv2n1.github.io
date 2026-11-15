@@ -31,7 +31,7 @@ description: "accton – turns process accounting on or off"
 <h2>Files</h2>
 <dl>
 <dt><i>acct</i></p>
-<dd>The system wide process accounting file. See <code><a href="/docs/linux/man/5-acct/">acct</a></code>(5) (or <code><a href="/docs/linux/man/5-pacct/">pacct</a></code>(5)) for further details.</dl>
+<dd>The system wide process accounting file. See <code><a href="/docs/linux/man/5-acct/">acct</a></code>(5) (or <code>pacct</code>(5)) for further details.</dl>
 <h2>Author</h2>
 <p>The GNU accounting utilities were written by Noel Cragg &lt;noel [at] gnu.ai.mit.edu&gt;. The man page was adapted from the accounting texinfo page by Susan Kleinmann &lt;sgk [at] sgk.tiac.net&gt;.</p>
 <h2>See Also</h2>

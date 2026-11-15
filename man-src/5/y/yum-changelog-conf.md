@@ -24,9 +24,9 @@ description: "yum-changelog.conf(5)"
 <h2>Value</h2>
 <dl>
 <dt>pre</p>
-<dd>To make <code><a href="/docs/linux/man/5-yum-changelog/">yum-changelog</a>(5)</code> show the changelog <code>before</code> the yum updates</p>
+<dd>To make <code>yum-changelog(5)</code> show the changelog <code>before</code> the yum updates</p>
 <dt>post</p>
-<dd>To make <code><a href="/docs/linux/man/5-yum-changelog/">yum-changelog</a>(5)</code> show the changelog <code>after</code> the yum updates.</dl>
+<dd>To make <code>yum-changelog(5)</code> show the changelog <code>after</code> the yum updates.</dl>
 <h2>Option</h2>
 <dl>
 <dt>always</p>

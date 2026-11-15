@@ -14,7 +14,7 @@ description: "xerbla_array.f –"
 <p> subroutine <code>xerbla_array</code> (SRNAME_ARRAY, SRNAME_LEN, INFO)<br />
  <i></i><code>XERBLA_ARRAY</code></p>
 <h2>Function/Subroutine Documentation</h2>
-<h3>subroutine xerbla_array (<a href="/docs/linux/man/1-character/">character</a>(1), dimension(srname_len)SRNAME_ARRAY, integerSRNAME_LEN, integerINFO)</h3>
+<h3>subroutine xerbla_array (character(1), dimension(srname_len)SRNAME_ARRAY, integerSRNAME_LEN, integerINFO)</h3>
 <p> <code>XERBLA_ARRAY</code> </p>
 <p> <code>Purpose: </code></p>
 <dl>
@@ -37,7 +37,7 @@ XERBLA_ARRAY assists other languages in calling XERBLA, the LAPACK and BLAS erro
 <dt>
 <dd> <i>SRNAME_ARRAY</i> </p>
 <pre>
-          SRNAME_ARRAY is <a href="//www.systutorials.com/docs/linux/man/1-CHARACTER/">CHARACTER</a>(1) array, dimension (SRNAME_LEN)
+          SRNAME_ARRAY is CHARACTER(1) array, dimension (SRNAME_LEN)
           The name of the routine which called XERBLA_ARRAY.
 </pre>
 <p> <i>SRNAME_LEN</i> </p>

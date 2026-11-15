@@ -41,8 +41,8 @@ otherwise it is between d(1) and d(2)
 <p> <i>ORGATI</i> </p>
 <pre>
           ORGATI is LOGICAL
-               If ORGATI is true, the needed root is between <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2) and
-               <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3); otherwise it is between <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) and <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2).  See
+               If ORGATI is true, the needed root is between d(2) and
+               <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3); otherwise it is between <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) and d(2).  See
                SLAED4 for further details.
 </pre>
 <p> <i>RHO</i> </p>
@@ -53,7 +53,7 @@ otherwise it is between d(1) and d(2)
 <p> <i>D</i> </p>
 <pre>
           D is REAL array, dimension (3)
-               D satisfies <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) &lt; <a href="//www.systutorials.com/docs/linux/man/2-d/">d</a>(2) &lt; <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3).
+               D satisfies <a href="//www.systutorials.com/docs/linux/man/1-d/">d</a>(1) &lt; d(2) &lt; <a href="//www.systutorials.com/docs/linux/man/3-d/">d</a>(3).
 </pre>
 <p> <i>Z</i> </p>
 <pre>

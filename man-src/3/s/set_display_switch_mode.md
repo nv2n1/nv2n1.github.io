@@ -28,4 +28,4 @@ int set_display_switch_mode(int mode);</code></pre>
 <h2>Return Value</h2>
 <p>Returns zero on success, invalidating at the same time all callbacks previously registered with set_display_switch_callback(). Returns -1 if the requested mode is not currently possible. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-set_display_switch_callback/">set_display_switch_callback</a></code>(3), <code><a href="/docs/linux/man/3-get_display_switch_mode/">get_display_switch_mode</a></code>(3), <code><a href="/docs/linux/man/3-exmidi/">exmidi</a></code>(3), <code><a href="/docs/linux/man/3-exswitch/">exswitch</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-set_display_switch_callback/">set_display_switch_callback</a></code>(3), <code>get_display_switch_mode</code>(3), <code><a href="/docs/linux/man/3-exmidi/">exmidi</a></code>(3), <code><a href="/docs/linux/man/3-exswitch/">exswitch</a></code>(3) </p>

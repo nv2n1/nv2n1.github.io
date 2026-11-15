@@ -60,7 +60,7 @@ description: "libpnm – libnetpbm functions to read and write PNM image files"
 <p> <code>pnm_readpnm()</code> is similar to <code>pnm_readpam()</code> except that it reads only PNM images and uses a different parameter list and returns an array of rows such that <code>pnm_readpnmrow()</code> would return rather than such that <code>pnm_readpamrow()</code> would return. </p>
 <h3>WRITING FILES</h3>
 <p> <code>pnm_writepnminit()</code> is similar to <code>pnm_writepaminit()</code> except that it can write only a PNM header and has a different parameter list. </p>
-<p> <i>forceplain</i> is a binary value. True (nonzero) means to write the image in the plain (ASCII) version of the selected format. False (zero) means to write it in the raw (binary) version of the selected format. See <code>PNM</code>format<code><a href="/docs/linux/man/1-specification/">specification</a></code>(1) </p>
+<p> <i>forceplain</i> is a binary value. True (nonzero) means to write the image in the plain (ASCII) version of the selected format. False (zero) means to write it in the raw (binary) version of the selected format. See <code>PNM</code>format<code>specification</code>(1) </p>
 <p> <code>pnm_writepnmrow()</code> is similar to <code>pnm_writepamrow()</code> except that it works only on PNM images and has a different parameter list and takes an array of xels instead of an array of tuples. See the description of <i>forceplain </i> above. </p>
 <p> <code>pnm_writepnm()</code> is similar to <code>pnm_writepam()</code> except that it works only on PNM image, has a different parameter list, and takes an array of rows of xels instead of an array of rows of tuples. See the description of <i>forceplain</i> above. </p>
 <h3>FORMAT PROMOTION</h3>
@@ -75,7 +75,7 @@ description: "libpnm – libnetpbm functions to read and write PNM image files"
 <p> This estimate works best when the row is the top or bottom row of the image. </p>
 <p> <code>pnm_backgroundxel()</code> does the same thing as <code>pnm_backgroundxelrow()</code>, except based on an entire image instead of just one row. This tends to do a slightly better job than <code>pnmbackgroundxelrow()</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-libnetpbm/">Libnetpbm</a></code>(1) , <code>Libnetpbm</code>User&#8217;s<code><a href="/docs/linux/man/1-guide/">Guide</a></code>(1) , <code>Libnetpbm</code><a href="/docs/linux/man/1-directory/">Directory</a><code>(1)</code> , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-libpbm/">libpbm</a></code>(1) , <code><a href="/docs/linux/man/1-libpgm/">libpgm</a></code>(1) , <code><a href="/docs/linux/man/1-libppm/">libppm</a></code>(1) </p>
+<p> <code>Libnetpbm</code>(1) , <code>Libnetpbm</code>User&#8217;s<code>Guide</code>(1) , <code>Libnetpbm</code>Directory<code>(1)</code> , <code>pbm</code>(1) , <code>pgm</code>(1) , <code>ppm</code>(1) , <code>pam</code>(1) , <code>libpbm</code>(1) , <code>libpgm</code>(1) , <code>libppm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Tony Hansen and Jef Poskanzer. </p>
 <h2>Index</h2>

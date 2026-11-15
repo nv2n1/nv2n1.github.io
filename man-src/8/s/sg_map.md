@@ -12,7 +12,7 @@ description: "sg_map – displays mapping between Linux sg and other SCSI device
 <p><code>sg_map</code> [<i>-a</i>] [<i>-h</i>] [<i>-i</i>] [<i>-n</i>] [<i>-scd</i>] [<i>-sd</i>] [<i>-sr</i>] [<i>-st</i>] [<i>-V</i>] [<i>-x</i>]</p>
 <h2>Description</h2>
 <p>Sometimes it is difficult to determine which SCSI device a sg device name (e.g. /dev/sg0) refers to. This command loops through the sg devices and finds the corresponding SCSI disk, cdrom or tape device name (if any). Scanners are an example of SCSI devices that have no alternate SCSI device name apart from their sg device name. </p>
-<p> This utility is deprecated and has not been updated for years, only very obvious bugs will be fixed. Unless a very old version of Linux is being used (e.g. 2.4 series or earlier), then please use a utility like <a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8) or the facilities offered by <a href="/docs/linux/man/8-udev/">udev</a>(8).</p>
+<p> This utility is deprecated and has not been updated for years, only very obvious bugs will be fixed. Unless a very old version of Linux is being used (e.g. 2.4 series or earlier), then please use a utility like <a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8) or the facilities offered by udev(8).</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-a</code></p>
@@ -79,4 +79,4 @@ description: "sg_map – displays mapping between Linux sg and other SCSI device
 <p>Copyright &#169; 2000-2013 Douglas Gilbert<br />
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-sg_map26/">sg_map26</a>(8)</code> , <code><a href="/docs/linux/man/8-scsi_info/">scsi_info</a>(8)</code> , <code><a href="/docs/linux/man/8-scsidev/">scsidev</a>(8)</code> , <code><a href="/docs/linux/man/8-devfsd/">devfsd</a>(8)</code> , <code><a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8)</code> , <code><a href="/docs/linux/man/7-udev/">udev</a>(7)</code> </p>
+<p><code><a href="/docs/linux/man/8-sg_map26/">sg_map26</a>(8)</code> , <code>scsi_info(8)</code> , <code>scsidev(8)</code> , <code>devfsd(8)</code> , <code><a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8)</code> , <code><a href="/docs/linux/man/7-udev/">udev</a>(7)</code> </p>

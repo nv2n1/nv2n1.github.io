@@ -75,4 +75,4 @@ Lintian::Tags - Manipulate and output Lintian tags
 <dd>Returns true if the given tag would be suppressed given the current configuration, false otherwise. This is different than <i>displayed()</i> in that a tag is only suppressed if Lintian treats the tag as if it's never been seen, doesn't update statistics, and doesn't change its exit status. Tags are suppressed via <i>profile()</i>.
 <dt><i>ignored_overrides()</i>
 <dd>Returns a hash of tags, for which overrides have been ignored. The keys are tag names and the value is the number of overrides that has been ignored.</dl><h2>Author</h2>Originally written by Russ Allbery &lt;rra [at] debian.org&gt; for Lintian.
-<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i><a HREF="/docs/linux/man/3-lintian--output/">Lintian::Output</a></i>(3), <i><a HREF="/docs/linux/man/3-lintian--tag--info/">Lintian::Tag::Info</a></i>(3)
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i>Lintian::Output</i>(3), <i>Lintian::Tag::Info</i>(3)

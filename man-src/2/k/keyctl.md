@@ -248,7 +248,7 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
 <dt>
 <dd> The arguments <i>arg4</i> and <i>arg5</i> are ignored.</p>
 <dt>
-<dd> This operation is exposed by <i>libkeyutils</i> via the function <code><a href="/docs/linux/man/3-keyctl_unlink/">keyctl_unlink</a></code>(3).</p>
+<dd> This operation is exposed by <i>libkeyutils</i> via the function <code>keyctl_unlink</code>(3).</p>
 <dt><code>KEYCTL_SEARCH</code> (since Linux 2.6.10)</p>
 <dd> Search for a key in a keyring tree, returning its ID and optionally linking it to a specified keyring.</p>
 <dt>
@@ -307,7 +307,7 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
 <dt>
 <dd> The <i>arg5</i> argument is ignored.</p>
 <dt>
-<dd> This operation is exposed by <i>libkeyutils</i> via the function <code><a href="/docs/linux/man/3-keyctl_negate/">keyctl_negate</a></code>(3).</p>
+<dd> This operation is exposed by <i>libkeyutils</i> via the function <code>keyctl_negate</code>(3).</p>
 <dt><code>KEYCTL_SET_REQKEY_KEYRING</code> (since Linux 2.6.13)</p>
 <dd> Set the default keyring to which implicitly requested keys will be linked for this thread, and return the previous setting. Implicit key requests are those made by internal kernel components, such as can occur when, for example, opening files on an AFS or NFS filesystem. Setting the default keyring also has an effect when requesting a key from user space; see <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2) for details.</p>
 <dt>
@@ -376,7 +376,7 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
 <dt>
 <dd> The arguments <i>arg3</i>, <i>arg4</i>, and <i>arg5</i> are ignored.</p>
 <dt>
-<dd> This operation is exposed by <i>libkeyutils</i> via the function <code><a href="/docs/linux/man/3-keyctl_assume_authority/">keyctl_assume_authority</a></code>(3).</p>
+<dd> This operation is exposed by <i>libkeyutils</i> via the function <code>keyctl_assume_authority</code>(3).</p>
 <dt><code>KEYCTL_GET_SECURITY</code> (since Linux 2.6.26)</p>
 <dd> Get the LSM (Linux Security Module) security label of the specified key.</p>
 <dt>
@@ -395,7 +395,7 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
 <dt>
 <dd> The <i>arg5</i> argument is ignored.</p>
 <dt>
-<dd> This operation is exposed by <i>libkeyutils</i> via the functions <code><a href="/docs/linux/man/3-keyctl_get_security/">keyctl_get_security</a></code>(3) and <code><a href="/docs/linux/man/3-keyctl_get_security_alloc/">keyctl_get_security_alloc</a></code>(3).</p>
+<dd> This operation is exposed by <i>libkeyutils</i> via the functions <code><a href="/docs/linux/man/3-keyctl_get_security/">keyctl_get_security</a></code>(3) and <code>keyctl_get_security_alloc</code>(3).</p>
 <dt><code>KEYCTL_SESSION_TO_PARENT</code> (since Linux 2.6.32)</p>
 <dd> Replace the session keyring to which the <i>parent</i> of the calling process subscribes with the session keyring of the calling process.</p>
 <dt>
@@ -419,7 +419,7 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
 <dt>
 <dd> The caller must have the appropriate authorization key, and once the uninstantiated key has been instantiated, the authorization key is revoked. In other words, this operation is available only from a <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8)-style program. See <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2) for an explanation of uninstantiated keys and key instantiation.</p>
 <dt>
-<dd> This operation is exposed by <i>libkeyutils</i> via the function <code><a href="/docs/linux/man/3-keyctl_reject/">keyctl_reject</a></code>(3).</p>
+<dd> This operation is exposed by <i>libkeyutils</i> via the function <code>keyctl_reject</code>(3).</p>
 <dt><code>KEYCTL_INSTANTIATE_IOV</code> (since Linux 2.6.39)</p>
 <dd> Instantiate an uninstantiated key with a payload specified via a vector of buffers.</p>
 <dt>
@@ -433,7 +433,7 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
 <dt>
 <dd> The <i>arg2</i> (key ID) and <i>arg5</i> (keyring ID) are interpreted as for <code>KEYCTL_INSTANTIATE</code>.</p>
 <dt>
-<dd> This operation is exposed by <i>libkeyutils</i> via the function <code><a href="/docs/linux/man/3-keyctl_instantiate_iov/">keyctl_instantiate_iov</a></code>(3).</p>
+<dd> This operation is exposed by <i>libkeyutils</i> via the function <code>keyctl_instantiate_iov</code>(3).</p>
 <dt><code>KEYCTL_INVALIDATE</code> (since Linux 3.5)</p>
 <dd> Mark a key as invalid.</p>
 <dt>
@@ -514,7 +514,7 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
 <dt>
 <dd> The KDF implementation complies with SP800-56A as well as with SP800-108 (the counter KDF).</p>
 <dt>
-<dd> This operation is exposed by <i>libkeyutils</i> (from version 1.5.10 onwards) via the functions <code><a href="/docs/linux/man/3-keyctl_dh_compute/">keyctl_dh_compute</a></code>(3) and <code><a href="/docs/linux/man/3-keyctl_dh_compute_alloc/">keyctl_dh_compute_alloc</a></code>(3).</p>
+<dd> This operation is exposed by <i>libkeyutils</i> (from version 1.5.10 onwards) via the functions <code>keyctl_dh_compute</code>(3) and <code>keyctl_dh_compute_alloc</code>(3).</p>
 <dt><code>KEYCTL_RESTRICT_KEYRING</code> (since Linux 4.12)</p>
 <dd> Apply a key-linking restriction to the keyring with the ID provided in <i>arg2</i> (cast to <i>key_serial_t</i>). The caller must have <i>setattr</i> permission on the key. If <i>arg3</i> is NULL, any attempt to add a key to the keyring is blocked; otherwise it contains a pointer to a string with a key type name and <i>arg4</i> contains a pointer to string that describes the type-specific restriction. As of Linux 4.12, only the type &quot;asymmetric&quot; has restrictions defined:</p>
 <dl>

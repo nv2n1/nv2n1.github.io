@@ -82,7 +82,7 @@ description: "ospcat – SGML print catalog"
 <dt>
 <dd> Print the effective system id for the SGML declaration for doctype <i>name</i>.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospam/">ospam</a>(1)</code>, <code><a href="/docs/linux/man/1-onsgmlnorm/">onsgmlnorm</a>(1)</code>, <code><a href="/docs/linux/man/1-ospent/">ospent</a>(1)</code></p>
+<p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code>, <code><a href="/docs/linux/man/1-ospam/">ospam</a>(1)</code>, <code>onsgmlnorm(1)</code>, <code><a href="/docs/linux/man/1-ospent/">ospent</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> <code>Ian Castle</code> &lt;ian.castle [at] openjade.org&gt;</p>
 <dl>

@@ -26,9 +26,9 @@ mongoc_socket_sendv (mongoc_socket_t *sock,
 <dd>A size_t containing the number of elements in iov.</dl>
 <dl COMPACT>
 <dt><code>expire_at</code></p>
-<dd>A int64_t with absolute timeout in monotonic time. The monotonic clock is in microseconds and can be fetched using <code><a href="/docs/linux/man/3-bson_get_monotonic_time/">bson_get_monotonic_time</a>(3)</code> \&amp;.</dl>
+<dd>A int64_t with absolute timeout in monotonic time. The monotonic clock is in microseconds and can be fetched using <code>bson_get_monotonic_time(3)</code> \&amp;.</dl>
 <h2>Description</h2>
-<p>Sends a vector of buffers to the destination. This uses <code><a href="/docs/linux/man/3-sendmsg/">sendmsg</a>(3)</code> when available to perform a gathered write. If IOV_MAX is reached, a fallback will be used. </p>
+<p>Sends a vector of buffers to the destination. This uses <code>sendmsg(3)</code> when available to perform a gathered write. If IOV_MAX is reached, a fallback will be used. </p>
 <h2>Returns</h2>
 <p>the number of bytes sent on success, or -1 on failure and errno is set. </p>
 <h2>Colophon</h2>

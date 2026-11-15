@@ -38,8 +38,8 @@ description: "sormbr.f –"
  if nq &gt;= k, Q = H(1) H(2) . . . H(k);
  if nq &lt; k, Q = H(1) H(2) . . . H(nq-1).
  If VECT = 'P', A is assumed to have been a K-by-NQ matrix:
- if k &lt; nq, P = <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) . . . G(k);
- if k &gt;= nq, P = <a href="//www.systutorials.com/docs/linux/man/1-G/">G</a>(1) <a href="//www.systutorials.com/docs/linux/man/2-G/">G</a>(2) . . . G(nq-1).</pre>
+ if k &lt; nq, P = G(1) G(2) . . . G(k);
+ if k &gt;= nq, P = G(1) G(2) . . . G(nq-1).</pre>
 <p>&nbsp;<wbr></dl>
 <p> <code>Parameters:</code></p>
 <dl>

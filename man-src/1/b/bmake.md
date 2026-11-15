@@ -12,7 +12,7 @@ description: "bmake – maintain program dependencies"
 <h2>SYNOPSIS</h2>
 <p> [-<code>BeikNnqrstWX</code> ] -words [-<code>D </code><i>variable</i> ] -words [-<code>d </code><i>flags</i> ] -words [-<code>f </code><i>makefile</i> ] -words [-<code>I </code><i>directory</i> ] -words [-<code>J </code><i>private</i> ] -words [-<code>j </code><i>max_jobs</i> ] -words [-<code>m </code><i>directory</i> ] -words [-<code>T </code><i>file</i> ] -words [-<code>V </code><i>variable</i> ] [<i>variable=value</i> ] -words [<i>target &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
-<p> is a program designed to simplify the maintenance of other programs. Its input is a list of specifications as to the files upon which programs and other files depend. If no &#8211;<code>f </code><i>makefile</i> makefile option is given, will try to open `makefile &#8216; then `Makefile &#8216; in order to find the specifications. If the file `.depend &#8216; exists, it is read (see <a href="/docs/linux/man/1-mkdep/">mkdep</a>(1)). </p>
+<p> is a program designed to simplify the maintenance of other programs. Its input is a list of specifications as to the files upon which programs and other files depend. If no &#8211;<code>f </code><i>makefile</i> makefile option is given, will try to open `makefile &#8216; then `Makefile &#8216; in order to find the specifications. If the file `.depend &#8216; exists, it is read (see mkdep(1)). </p>
 <p> This manual page is intended as a reference document only. For a more thorough description of and makefiles, please refer to <i>&quot;Make &#8211; A Tutorial&quot; .</i> </p>
 <p> will prepend the contents of the <i>MAKEFLAGS</i> environment variable to the command line arguments before parsing them. </p>
 <p> The options are as follows:</p>
@@ -560,7 +560,7 @@ b: a
 <p> The way that parallel makes are scheduled changed in Nx 4.0 so that .ORDER and .WAIT apply recursively to the dependant nodes. The algorithms used may change again in the future. </p>
 <p> The way that .for loop variables are substituted changed after Nx 5.0 so that they still appear to be variable expansions. In particular this stops them being treated as syntax, and removes some obscure problems using them in .if statements.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-mkdep/">mkdep</a>(1)</p>
+<p> mkdep(1)</p>
 <h2>HISTORY</h2>
 <p> is derived from NetBSD&#8217;s <a href="/docs/linux/man/1-make/">make</a>(1). It uses autoconf to facilitate portability to other platforms. </p>
 <h2>Index</h2>

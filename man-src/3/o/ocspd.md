@@ -19,7 +19,8 @@ url: "/docs/linux/man/3-ocspd/"
 <p> The <code>value</code> string consists of the string following the <code>=</code> character until end of line with any leading and trailing white space removed. </p>
 <p> The value string undergoes variable expansion. This can be done by including the form $var or <code>${var}</code>: this will substitute the value of the named variable in the current section. It is also possible to substitute a value from another section using the syntax $section::name or <code>${section::name}</code>. By using the form $ENV::name environment variables can be substituted. It is also possible to assign values to environment variables by using the name <code>ENV::name</code>, this will work if the program looks up environment variables using the <font SIZE="-1"><code>CONF</code></font> library instead of calling getenv() directly. </p>
 <p> It is possible to escape certain characters by using any kind of quote or the <code>\</code> character. By making the last character of a line a <code>\</code> a <code>value</code> string can be spread across multiple lines. In addition the sequences <code>
-</code>, <code></code>, <code></code> and <code>	</code> are recognized.</p>
+</code>, <code>
+</code>, <code></code> and <code>	</code> are recognized.</p>
 <h2>Notes</h2>
 <p> If a configuration file attempts to expand a variable that doesn&#8217;t exist then an error is flagged and the file will not load. This can happen if an attempt is made to expand an environment variable that doesn&#8217;t exist. For example the default OpenSSL master configuration file used the value of <font SIZE="-1"><code>HOME</code></font> which may not be defined on non Unix systems.</p>
 <h2>Example</h2>
@@ -205,7 +206,7 @@ url: "/docs/linux/man/3-ocspd/"
 <h2>Author</h2>
 <p> Massimiliano Pala &lt;madwolf [at] openca.org&gt;</p>
 <h2>See Also</h2>
-<p> <i><a href="/docs/linux/man/3-ocspd/">ocspd</a></i>(3),<i><a href="/docs/linux/man/3-openca/">openca</a></i>(3),<i><a href="/docs/linux/man/1-openssl/">openssl</a></i>(1), <i><a href="/docs/linux/man/1-ocsp/">ocsp</a></i>(1)</p>
+<p> <i><a href="/docs/linux/man/3-ocspd/">ocspd</a></i>(3),<i>openca</i>(3),<i>openssl</i>(1), <i>ocsp</i>(1)</p>
 <h2>Pod Errors</h2>
 <p> Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl COMPACT>

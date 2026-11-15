@@ -59,7 +59,7 @@ description: "cs2cs – cartographic coordinate system filter"
 &nbsp;<wbr><tt>1402285.99&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5076292.42 0.000</dl>
 <p> </tt></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/1U-proj/">proj</a>(1U),</code><br />
+<p> <code>proj(1U),</code><br />
  <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).<br />
  <i>Map Projections Used by the U. S. Geological Survey</i> (Snyder, 1984, USGS Bulletin 1532).<br />
  <i>Map Projections&#8212;A Working Manual</i> (Snyder, 1988, USGS Prof. Paper 1395).<br />

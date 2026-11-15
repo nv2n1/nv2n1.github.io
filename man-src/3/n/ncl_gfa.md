@@ -16,7 +16,7 @@ GFA (Fill area) - output primitive for filling polygonal areas.
 <dt>X (N)
 <dd>(Real Array, Integer) - The X world coordinates of the polygon.
 <dt>Y (N)
-<dd>(Real Array, Integer) - The Y world coordinates of the polygon.</dl><h2>Usage</h2>The area to be filled is delimited by the sequence of straight line segments connecting the successive points (<a HREF="/docs/linux/man/1-x/">X</a>(1), <a HREF="/docs/linux/man/1-y/">Y</a>(1)), (<a HREF="/docs/linux/man/2-x/">X</a>(2), <a HREF="/docs/linux/man/2-y/">Y</a>(2)), ..., (X(N), Y(N)). The last point in the polygon is connected to the first point with a straight line segment in the case that (X(N), Y(N)) does not equal (<a HREF="/docs/linux/man/l-x/">X</a>(l), <a HREF="/docs/linux/man/l-y/">Y</a>(l)). 
+<dd>(Real Array, Integer) - The Y world coordinates of the polygon.</dl><h2>Usage</h2>The area to be filled is delimited by the sequence of straight line segments connecting the successive points (X(1), Y(1)), (X(2), Y(2)), ..., (X(N), Y(N)). The last point in the polygon is connected to the first point with a straight line segment in the case that (X(N), Y(N)) does not equal (X(l), Y(l)). 
 
  Given a polygon whose edges cross each other, it becomes ambiguous as to what constitutes the &quot;inside&quot; of the polygon. The algorithm used in GKS is as follows: for a given point, draw a ray starting at that point and going to infinity in any direction; if the number of intersections between the ray and the polygon is odd, the point is within the polygon, otherwise it is outside. If the straight line passes through a polygon vertex tangentially, the intersection count is not affected. If a point is within the polygon, it is included in the area to be filled. 
 

@@ -29,7 +29,7 @@ description: "pmstore – modify performance metric values"
 <dt>4.</p>
 <dd> If the metric has any other type (i.e. <code>PM_TYPE_EVENT</code> or <code>PM_TYPE_AGGREGATE</code>) then no encoding of <i>value</i> from the command line makes sense, and the values of these metrics cannot be modified with <code>pmstore</code>.</dl>
 <p> The output reports the old value and the new value for each updated instance of the requested metric. </p>
-<p> When using the <code>-L</code> option to fetch metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code><a href="/docs/linux/man/3-__pmspeclocalpmda/">__pmSpecLocalPMDA</a></code>(3). More than one <code>-K</code> option may be used.</p>
+<p> When using the <code>-L</code> option to fetch metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code>__pmSpecLocalPMDA</code>(3). More than one <code>-K</code> option may be used.</p>
 <h2>FILES</h2>
 <dl>
 <dt><code>$PCP_VAR_DIR/pmns/</code><i>*</i></p>
@@ -37,7 +37,7 @@ description: "pmstore – modify performance metric values"
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmval/">pmval</a></code>(1), <code><a href="/docs/linux/man/3-__pmspeclocalpmda/">__pmSpecLocalPMDA</a></code>(3), <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3) and <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3).</p>
+<p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code>pmval</code>(1), <code>__pmSpecLocalPMDA</code>(3), <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3) and <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3).</p>
 <h2>DIAGNOSTICS</h2>
 <p> Two messages indicate a mismatch between the internal data type for <i>metricname</i> and the <i>value</i> provided. </p>
 <p> The value &quot;???&quot; is out of range for the data type (PM_TYPE_&#8230;) </p>

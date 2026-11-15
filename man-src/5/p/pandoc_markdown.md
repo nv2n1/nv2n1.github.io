@@ -649,17 +649,17 @@ orange|3.09</pre>
 <p> The man page writer extracts a title, man page section number, and other header and footer information from the title line. The title is assumed to be the first word on the title line, which may optionally end with a (single-digit) section number in parentheses. (There should be no space between the title and the parentheses.) Anything after this is assumed to be additional footer and header text. A single pipe character (|) should be used to separate the footer text from the header text. Thus,</p>
 <dl>
 <dd>
-<pre>%&nbsp;<wbr><a href="//www.systutorials.com/docs/linux/man/1-PANDOC/">PANDOC</a>(1)</pre>
+<pre>%&nbsp;<wbr>PANDOC(1)</pre>
 </dl>
 <p> will yield a man page with the title PANDOC and section 1.</p>
 <dl>
 <dd>
-<pre>%&nbsp;<wbr><a href="//www.systutorials.com/docs/linux/man/1-PANDOC/">PANDOC</a>(1)&nbsp;<wbr>Pandoc User Manuals</pre>
+<pre>%&nbsp;<wbr>PANDOC(1)&nbsp;<wbr>Pandoc User Manuals</pre>
 </dl>
 <p> will also have &quot;Pandoc User Manuals&quot; in the footer.</p>
 <dl>
 <dd>
-<pre>%&nbsp;<wbr><a href="//www.systutorials.com/docs/linux/man/1-PANDOC/">PANDOC</a>(1)&nbsp;<wbr>Pandoc User Manuals | Version 4.0</pre>
+<pre>%&nbsp;<wbr>PANDOC(1)&nbsp;<wbr>Pandoc User Manuals | Version 4.0</pre>
 </dl>
 <p> will also have &quot;Version 4.0&quot; in the header.</p>
 <h2>Yaml Metadata Block</h2>

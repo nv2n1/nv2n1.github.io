@@ -74,7 +74,7 @@ description: "infotopam – convert Amiga .info icons to PAM"
 </dl>
 <p> All options can be abbreviated to their shortest unique prefix. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) </p>
 <h2>NOTES</h2>

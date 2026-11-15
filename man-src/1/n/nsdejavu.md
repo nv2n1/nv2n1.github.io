@@ -33,7 +33,7 @@ description: "nsdejavu – DjVu browser plugin"
 <dl>
 <dt>
 <dd> <code><a rel="nofollow" href="http://.../file.djvu?djvuopts">http://&#8230;/file.djvu?djvuopts</a>&amp;</code><i>keyword=value</i><code>&amp;</code><i>keyword=value</i><code>&amp;</code><i>&#8230;</i></dl>
-<p> The DjVu browser plugin only recognizes keywords that appear after the word <code>djvuopts</code>. The keywords recognized by each viewer are listed in the man pages for <code><a href="/docs/linux/man/1-djview3/">djview3</a></code>(1) and <code><a href="/docs/linux/man/1-djview4/">djview4</a></code>(1) Unrecognized keywords are ignored. The most common keywords are:</p>
+<p> The DjVu browser plugin only recognizes keywords that appear after the word <code>djvuopts</code>. The keywords recognized by each viewer are listed in the man pages for <code><a href="/docs/linux/man/1-djview3/">djview3</a></code>(1) and <code>djview4</code>(1) Unrecognized keywords are ignored. The most common keywords are:</p>
 <dl>
 <dt><code>page=</code><i>pagenum_or_pagename</i></p>
 <dd> Specify the initial page to be displayed. Page numbers are numbered from 1.</p>
@@ -113,5 +113,5 @@ description: "nsdejavu – DjVu browser plugin"
 <h2>CREDITS</h2>
 <p> This program was written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was then improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and L&#8217;eon Bottou &lt;leonb [at] users.sourceforge.net&gt;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-ddjvu/">ddjvu</a></code>(1), <code><a href="/docs/linux/man/1-djview4/">djview4</a></code>(1) <code><a href="/docs/linux/man/1-djview3/">djview3</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-ddjvu/">ddjvu</a></code>(1), <code>djview4</code>(1) <code><a href="/docs/linux/man/1-djview3/">djview3</a></code>(1) </p>
 <h2>Index</h2>

@@ -17,4 +17,4 @@ description: "expirerm – Remove articles that have been expired"
 <p>Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; and Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt;. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> expirerm.pod 8577 2009-08-18 14:02:02Z iulius $</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-expire/">expire</a></i>(8), <i><a href="/docs/linux/man/8-fastrm/">fastrm</a></i>(8), <i><a href="/docs/linux/man/5-newslog/">newslog</a></i>(5). </p>
+<p><i><a href="/docs/linux/man/8-expire/">expire</a></i>(8), <i>fastrm</i>(8), <i><a href="/docs/linux/man/5-newslog/">newslog</a></i>(5). </p>

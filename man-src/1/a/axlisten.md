@@ -39,7 +39,7 @@ description: "axlisten – monitor AX.25 traffic"
 <h2>FILES</h2>
 <p> /etc/ax25/axports</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-axcall/">axcall</a></code>(1), <code><a href="/docs/linux/man/1-mheard/">mheard</a></code>(1), <code><a href="/docs/linux/man/1-beacon/">beacon</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8). </p>
+<p> <code><a href="/docs/linux/man/1-axcall/">axcall</a></code>(1), <code><a href="/docs/linux/man/1-mheard/">mheard</a></code>(1), <code>beacon</code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8). </p>
 <h2>BUGS</h2>
 <p> <code>Axlisten</code> does not validate the checksums of frames that support them (ie IP), therefore corrupt frames will be displayed with bogus values. The MSS of a TCP frame that contains that option is not displayed.</p>
 <h2>AUTHORS</h2>

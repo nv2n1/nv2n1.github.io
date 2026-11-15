@@ -31,7 +31,7 @@ description: "xscreensaver-getimage – put some randomly-selected image on the 
 <h2>BUGS</h2>
 <p> When grabbing desktop images, the <i>window</i> argument will be unmapped and have its contents modified, causing flicker. (This does not happen when loading image files or video frames.)</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-x/">X</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1) <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1) <code><a href="/docs/linux/man/1-xscreensaver-getimage-file/">xscreensaver-getimage-file</a></code>(1) <code><a href="/docs/linux/man/1-xscreensaver-getimage-video/">xscreensaver-getimage-video</a></code>(1)</p>
+<p> <code>X</code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1) <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1) <code><a href="/docs/linux/man/1-xscreensaver-getimage-file/">xscreensaver-getimage-file</a></code>(1) <code><a href="/docs/linux/man/1-xscreensaver-getimage-video/">xscreensaver-getimage-video</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2011 by Jamie Zawinski. Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. No representations are made about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty.</p>
 <h2>AUTHOR</h2>

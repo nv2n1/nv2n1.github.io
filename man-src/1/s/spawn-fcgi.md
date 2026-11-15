@@ -44,7 +44,7 @@ description: "spawn-fcgi – Spawns FastCGI processes"
 <dt><code>-C &lt;children&gt;</code></p>
 <dd> (PHP only) Number of children to spawn by setting the PHP_FCGI_CHILDREN environment variable. Default is not to overwrite the environment variable; php will spawn no children if the variable is not set (same as setting it to 0).</p>
 <dt><code>-F &lt;children&gt;</code></p>
-<dd> Number of children to fork, defaults to 1. This option doesn&#8217;t work with -n, have a look at <code><a href="/docs/linux/man/1-multiwatch/">multiwatch</a>(1)</code> if you want to supervise multiple forks on the same socket.</p>
+<dd> Number of children to fork, defaults to 1. This option doesn&#8217;t work with -n, have a look at <code>multiwatch(1)</code> if you want to supervise multiple forks on the same socket.</p>
 <dt><code>-P &lt;path&gt;</code></p>
 <dd> Name of the PID file for spawned processes (ignored in no-fork mode)</p>
 <dt><code>-n</code></p>
@@ -70,6 +70,6 @@ description: "spawn-fcgi – Spawns FastCGI processes"
 <dt><code>-G</code></p>
 <dd> Change group of the Unix domain socket, defaults to the primary group of the user given for -U; if -U wasn&#8217;t given, defaults to the value of -g. (only used if -s is given)</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-svc/">svc</a>(8),</code> <code><a href="/docs/linux/man/8-supervise/">supervise</a>(8),</code> see <a rel="nofollow" href="http://cr.yp.to/daemontools.html">http://cr.yp.to/daemontools.html</a> </p>
-<p> <code><a href="/docs/linux/man/1-multiwatch/">multiwatch</a>(1),</code> see <a rel="nofollow" href="http://cgit.stbuehler.de/gitosis/multiwatch/about/">http://cgit.stbuehler.de/gitosis/multiwatch/about/</a> </p>
+<p> <code>svc(8),</code> <code>supervise(8),</code> see <a rel="nofollow" href="http://cr.yp.to/daemontools.html">http://cr.yp.to/daemontools.html</a> </p>
+<p> <code>multiwatch(1),</code> see <a rel="nofollow" href="http://cgit.stbuehler.de/gitosis/multiwatch/about/">http://cgit.stbuehler.de/gitosis/multiwatch/about/</a> </p>
 <h2>Index</h2>

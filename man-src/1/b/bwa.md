@@ -71,7 +71,7 @@ description: "bwa – Burrows-Wheeler Alignment Tool"
 <dt><code>-A</code><i>&nbsp;<wbr>INT</i></p>
 <dd> Matching score. [1]</p>
 <dt><code>-B</code><i>&nbsp;<wbr>INT</i></p>
-<dd> Mismatch penalty. The sequence error rate is approximately: {.75 * exp[<a href="/docs/linux/man/4--log/">-log</a>(4) * B/A]}. [4]</p>
+<dd> Mismatch penalty. The sequence error rate is approximately: {.75 * exp[-log(4) * B/A]}. [4]</p>
 <dt><code>-O</code><i>&nbsp;<wbr>INT[,INT]</i></p>
 <dd> Gap open penalty. If two numbers are specified, the first is the penalty of openning a deletion and the second for openning an insertion. [6]</p>
 <dt><code>-E</code><i>&nbsp;<wbr>INT[,INT]</i></p>
@@ -220,7 +220,7 @@ description: "bwa – Burrows-Wheeler Alignment Tool"
 <dt><code>-T</code><i>&nbsp;<wbr>INT</i></p>
 <dd> Minimum score threshold divided by a [37]</p>
 <dt><code>-c</code><i>&nbsp;<wbr>FLOAT</i></p>
-<dd> Coefficient for threshold adjustment according to query length. Given an l-long query, the threshold for a hit to be retained is a*max{T,c*<a href="/docs/linux/man/l-log/">log</a>(l)}. [5.5]</p>
+<dd> Coefficient for threshold adjustment according to query length. Given an l-long query, the threshold for a hit to be retained is a*max{T,c*log(l)}. [5.5]</p>
 <dt><code>-z</code><i>&nbsp;<wbr>INT</i></p>
 <dd> Z-best heuristics. Higher -z increases accuracy at the cost of speed. [1]</p>
 <dt><code>-s</code><i>&nbsp;<wbr>INT</i></p>

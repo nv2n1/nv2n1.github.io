@@ -46,5 +46,5 @@ description: "zone2sql – Convert ISC Bind zones to SQL"
 <dt><code>&#8211;verbose</code></p>
 <dd> Be verbose during conversion.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-pdns_server/">pdns_server</a></code>(8) </p>
+<p> <code>pdns_server</code>(8) </p>
 <h2>Index</h2>

@@ -47,7 +47,7 @@ struct ibv_tm_cap {
 <h2>NOTES</h2>
 <p> <code>ibv_destroy_srq()</code> fails if any queue pair is still associated with this SRQ.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_modify_srq/">ibv_modify_srq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_srq/">ibv_query_srq</a></code>(3)</p>
+<p> <code>ibv_alloc_pd</code>(3), <code>ibv_modify_srq</code>(3), <code>ibv_query_srq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>

@@ -88,7 +88,7 @@ description: "rlwrap – readline wrapper"
 <dt> <code>-W, &#8211;polling </code></p>
 <dd> EXPERIMENTAL: Wake up every <i>timeout</i> millisecs, where <i>timeout</i> is the same as for the -w (&#8211;wait-before-prompt) option, 40 ms by default. This is used to sense the slave&#8217;s interrupt character and ISIG flag and to adjust stdin&#8217;s terminal settings accordingly, even before you press a key. Try this option e.g. when CTRL-C acts differently on <i>command</i> with, and without, rlwrap.</p>
 <dt> <code>-z, &#8211;filter <i>filter</i></code></p>
-<dd> Use a filter to change <code>rlwrap</code>&#8216;s behaviour. A filter can be used to keep certain input out of the history, to change the prompt, to implement simple macros or programmable completion.. <code>rlwrap</code> comes with a special <code>perl</code> module (cf. <code><a href="//www.systutorials.com/docs/linux/man/3pm-RlwrapFilter/">RlwrapFilter</a>(3pm)</code>) for easy filter writing. A number of example filters are installed in the directory /usr/share/rlwrap/filters. &quot;rlwrap -z <i>filter</i>&quot; displays information about a filter, &quot;rlwrap -z listing&quot; lists all currently installed filters. If <i>filter</i> needs arguments, you should quote the whole filter command line: </p>
+<dd> Use a filter to change <code>rlwrap</code>&#8216;s behaviour. A filter can be used to keep certain input out of the history, to change the prompt, to implement simple macros or programmable completion.. <code>rlwrap</code> comes with a special <code>perl</code> module (cf. <code>RlwrapFilter(3pm)</code>) for easy filter writing. A number of example filters are installed in the directory /usr/share/rlwrap/filters. &quot;rlwrap -z <i>filter</i>&quot; displays information about a filter, &quot;rlwrap -z listing&quot; lists all currently installed filters. If <i>filter</i> needs arguments, you should quote the whole filter command line: </p>
 <pre>
     rlwrap -z 'filter args' command
 </pre>
@@ -184,7 +184,7 @@ description: "rlwrap – readline wrapper"
 <p> The readline library (written by Brian Fox and Chet Ramey) does all the hard work behind the scenes, the pty-handling code has been taken practically unchanged from rxvt-2.7.10 (currently maintained by Geoff C. Wing), and completion word lists are managed by Damian Ivereigh&#8217;s libredblack library. The few remaining lines of code were written by Hans Lub (hanslub42 [at] gmail.com).</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/3-readline/">readline</a>(3), <a href="//www.systutorials.com/docs/linux/man/3pm-RlwrapFilter/">RlwrapFilter</a>(3pm)</code></p>
+<dt><code><a href="/docs/linux/man/3-readline/">readline</a>(3), RlwrapFilter(3pm)</code></p>
 <dd>
 </dl>
 <h2>Index</h2>

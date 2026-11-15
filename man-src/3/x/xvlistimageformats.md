@@ -84,4 +84,4 @@ int scanline_order;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;
 <dt>[XvBadPort]</p>
 <dd>Generated if the requested port does not exist.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xvcreateimage/">XvCreateImage</a></code>(3), <code><a href="/docs/linux/man/3-xvcreateshmimage/">XvCreateShmImage</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/3-xvcreateimage/">XvCreateImage</a></code>(3), <code>XvCreateShmImage</code>(3)</p>

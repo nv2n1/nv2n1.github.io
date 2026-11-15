@@ -99,15 +99,15 @@ description: "dbbcsd.f –"
 <p> <i>THETA</i> </p>
 <pre>
           THETA is DOUBLE PRECISION array, dimension (Q)
-          On entry, the angles <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1),...,THETA(Q) that, along with
-          <a href="//www.systutorials.com/docs/linux/man/1-PHI/">PHI</a>(1), ...,PHI(Q-1), define the matrix in bidiagonal-block
+          On entry, the angles THETA(1),...,THETA(Q) that, along with
+          PHI(1), ...,PHI(Q-1), define the matrix in bidiagonal-block
           form. On exit, the angles whose cosines and sines define the
           diagonal blocks in the CS decomposition.
 </pre>
 <p> <i>PHI</i> </p>
 <pre>
           PHI is DOUBLE PRECISION array, dimension (Q-1)
-          The angles <a href="//www.systutorials.com/docs/linux/man/1-PHI/">PHI</a>(1),...,PHI(Q-1) that, along with <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1),...,
+          The angles PHI(1),...,PHI(Q-1) that, along with THETA(1),...,
           THETA(Q), define the matrix in bidiagonal-block form.
 </pre>
 <p> <i>U1</i> </p>
@@ -143,7 +143,7 @@ V2T is DOUBLE PRECISION array, dimenison(LDV2T, M - Q) On entry, a LDV2T - by - 
 <p> <i>B11D</i> </p>
 <pre>
           B11D is DOUBLE PRECISION array, dimension (Q)
-          When DBBCSD converges, B11D contains the cosines of <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1),
+          When DBBCSD converges, B11D contains the cosines of THETA(1),
           ..., THETA(Q). If DBBCSD fails to converge, then B11D
           contains the diagonal of the partially reduced top-left
           block.
@@ -159,7 +159,7 @@ V2T is DOUBLE PRECISION array, dimenison(LDV2T, M - Q) On entry, a LDV2T - by - 
 <pre>
           B12D is DOUBLE PRECISION array, dimension (Q)
           When DBBCSD converges, B12D contains the negative sines of
-          <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1), ..., THETA(Q). If DBBCSD fails to converge, then
+          THETA(1), ..., THETA(Q). If DBBCSD fails to converge, then
           B12D contains the diagonal of the partially reduced top-right
           block.
 </pre>
@@ -174,7 +174,7 @@ V2T is DOUBLE PRECISION array, dimenison(LDV2T, M - Q) On entry, a LDV2T - by - 
 <pre>
           B21D is DOUBLE PRECISION  array, dimension (Q)
           When CBBCSD converges, B21D contains the negative sines of
-          <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1), ..., THETA(Q). If CBBCSD fails to converge, then
+          THETA(1), ..., THETA(Q). If CBBCSD fails to converge, then
           B21D contains the diagonal of the partially reduced bottom-left
           block.
 </pre>
@@ -189,7 +189,7 @@ V2T is DOUBLE PRECISION array, dimenison(LDV2T, M - Q) On entry, a LDV2T - by - 
 <pre>
           B22D is DOUBLE PRECISION  array, dimension (Q)
           When CBBCSD converges, B22D contains the negative sines of
-          <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1), ..., THETA(Q). If CBBCSD fails to converge, then
+          THETA(1), ..., THETA(Q). If CBBCSD fails to converge, then
           B22D contains the diagonal of the partially reduced bottom-right
           block.
 </pre>
@@ -238,7 +238,7 @@ V2T is DOUBLE PRECISION array, dimenison(LDV2T, M - Q) On entry, a LDV2T - by - 
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, <a href="/docs/linux/man/1-50/">50</a>(1):33-65, 2009.</dl>
+<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
 <p> <code>Author:</code></p>
 <dl>
 <dt>

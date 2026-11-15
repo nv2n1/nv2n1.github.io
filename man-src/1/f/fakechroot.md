@@ -113,7 +113,7 @@ description: "fakechroot – gives a fake chroot environment"
 <dt>o</p>
 <dd> Your real uid should exist in <i>/etc/passwd</i>. Create it with adduser &#8211;uid <i>realuid</i> <i>realuser</i>.</p>
 <dt>o</p>
-<dd> <i><a href="/docs/linux/man/1-debuild/">debuild</a></i>(1) cleans environment. Use &#8211;preserve-env option to prevent this behaviour.</dl>
+<dd> <i>debuild</i>(1) cleans environment. Use &#8211;preserve-env option to prevent this behaviour.</dl>
 <h2>COPYING</h2>
 <p> fakechroot is distributed under the <font SIZE="-1">GNU</font> Lesser General Public License (<font SIZE="-1">LGPL</font> 2.1 or greater).</p>
 <h2>AUTHORS</h2>
@@ -121,5 +121,5 @@ description: "fakechroot – gives a fake chroot environment"
 <p> Copyright (c) 2006-2007 Lionel Tricon &lt;lionel.tricon [at] free.fr&gt; </p>
 <p> Copyright (c) 2007 Mark Eichin &lt;eichin [at] metacarta.com&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></i>(1), <i><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></i>(1), <i><a href="/docs/linux/man/1-debuild/">debuild</a></i>(1), <i><a href="/docs/linux/man/8-debootstrap/">debootstrap</a></i>(8), <a rel="nofollow" href="http://fakechroot.alioth.debian.org/">http://fakechroot.alioth.debian.org/</a> </p>
+<p> <i><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></i>(1), <i><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></i>(1), <i>debuild</i>(1), <i><a href="/docs/linux/man/8-debootstrap/">debootstrap</a></i>(8), <a rel="nofollow" href="http://fakechroot.alioth.debian.org/">http://fakechroot.alioth.debian.org/</a> </p>
 <h2>Index</h2>

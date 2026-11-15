@@ -33,4 +33,4 @@ description: "atalkd – AppleTalk RTMP, NBP, ZIP, and AEP manager"
 <h2>Bugs</h2>
 <p>On some systems, <code>atalkd</code> can not be restarted.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-atalkd-conf/">atalkd.conf</a></code>(5) </p>
+<p><code>atalkd.conf</code>(5) </p>

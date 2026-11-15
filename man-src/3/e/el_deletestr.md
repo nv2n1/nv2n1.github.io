@@ -269,7 +269,7 @@ description: "editline, el_init, el_end, el_reset, el_gets, el_getc, el_push, el
 <dt><code>tok_str</code>()</p>
 <dd> A simpler form of <code>tok_line</code>(; ) <i>str </i> is a NUL terminated string to tokenize.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/3-signal/">signal</a></code>(3), <code><a href="/docs/linux/man/3-termcap/">termcap</a></code>(3), <code><a href="/docs/linux/man/5-editrc/">editrc</a></code>(5), <code><a href="/docs/linux/man/5-termcap/">termcap</a></code>(5)</p>
+<p> <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code>signal</code>(3), <code>termcap</code>(3), <code><a href="/docs/linux/man/5-editrc/">editrc</a></code>(5), <code><a href="/docs/linux/man/5-termcap/">termcap</a></code>(5)</p>
 <h2>HISTORY</h2>
 <p> The <code>editline</code> library first appeared in Bx 4.4 . CC_REDISPLAY appeared in Nx 1.3 . CC_REFRESH_BEEP , EL_EDITMODE and the readline emulation appeared in Nx 1.4 . EL_RPROMPT appeared in Nx 1.5 .</p>
 <h2>AUTHORS</h2>

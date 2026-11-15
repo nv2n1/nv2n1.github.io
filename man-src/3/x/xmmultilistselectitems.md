@@ -28,4 +28,4 @@ description: "XmMultiListSelectItems — A MultiList function that selects items
 <dd>Specifies a Boolean value that when TRUE invokes the selection callback for the current mode. From an application interface view, calling this function with <i>notify</i> True is indistinguishable from a user-initiated selection action. When <i>notify</i> is FALSE, no callbacks are called.</dl>
 <p> For a complete definition of MultiList and its associated resources, see <code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3) and <code><a href="/docs/linux/man/3-xmmultilistgetselectrows/">XmMultiListGetSelectRows</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3) and <code>XmMultiListGetSelectRows</code>(3).</p>

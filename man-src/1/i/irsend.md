@@ -78,5 +78,5 @@ irsend SIMULATE &quot;0000000000000476 00 OK TECHNISAT_ST3004S&quot;
 <dt>&#8211;</p>
 <dd> A hardcoded default (usually /usr/lib[64]/lirc/plugins).</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-lircd/">lircd</a>(8), <a href="/docs/linux/man/1-mode2/">mode2</a>(1), <a href="/docs/linux/man/1-xmode2/">xmode2</a>(1), <a href="/docs/linux/man/1-irrecord/">irrecord</a>(1), <a href="/docs/linux/man/1-irw/">irw</a>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/8-lircd/">lircd</a>(8), <a href="/docs/linux/man/1-mode2/">mode2</a>(1), <a href="/docs/linux/man/1-xmode2/">xmode2</a>(1), <a href="/docs/linux/man/1-irrecord/">irrecord</a>(1), irw(1)</code> </p>
 <h2>Index</h2>

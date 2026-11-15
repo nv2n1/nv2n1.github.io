@@ -86,7 +86,7 @@ description: "reformail – E-mail reformatting tool"
 <p> For the <code>-a</code>, <code>-A</code>, and <code>-I</code> options, a space after the header name and the colon is considered to be a non-empty field. </p>
 <p> Do not provide the same header to more than one family of header-modifying options, such as <code>-u</code>/<code>-U</code> and <code>-a</code>/<code>-A</code>. Doing so yields unpredictable results. It&#8217;s better to run <code>reformail</code> several times (use a pipe, perhaps).</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/8-courier/">courier</a></code>(8)m[]<font SIZE="-2">[2]</font>, <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[3]</font>.</p>
+<p> m[blue]<code>courier</code>(8)m[]<font SIZE="-2">[2]</font>, <code>sendmail</code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[3]</font>.</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
@@ -100,7 +100,7 @@ description: "reformail – E-mail reformatting tool"
 <dt>
 <dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/mailbot.html">http://www.courier-mta.org/maildrop/mailbot.html</a></dl>
 <dt> 2.</p>
-<dd> <code><a href="/docs/linux/man/8-courier/">courier</a></code>(8)</p>
+<dd> <code>courier</code>(8)</p>
 <dl>
 <dt>
 <dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/courier.html">http://www.courier-mta.org/maildrop/courier.html</a></dl>

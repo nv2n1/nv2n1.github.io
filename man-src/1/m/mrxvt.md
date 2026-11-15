@@ -13,7 +13,7 @@ description: "mrxvt – A tabbed VT102 terminal emulator for X Window System"
 <p> [options] [-<code>e </code><i>cmd</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> The program is a terminal emulator for X Window System. It provides <code>DEC VT102</code> compatible terminals for programs that cannot use the window system directly. </p>
-<p> is based on <a href="/docs/linux/man/1-rxvt/">rxvt</a>(1) version 2.7.11 CVS, and features most of functionality of rxvt, with a few major enhancements (namely multiple tabs, and transparency). Like rxvt, aims to be light, fast, flexible and desktop independent, thus KDE or GNOME are not required. </p>
+<p> is based on rxvt(1) version 2.7.11 CVS, and features most of functionality of rxvt, with a few major enhancements (namely multiple tabs, and transparency). Like rxvt, aims to be light, fast, flexible and desktop independent, thus KDE or GNOME are not required. </p>
 <p> The primary features of include (but are not limited to) multiple tabs, dynamically changeable tab titles, customisable command for each tab, input broadcasting, true translucent window, fast pseudo transparency with tinting, user supplied background images (XPM, JPEG, PNG), off-focus fading, text shadow, multiple style (NeXT, Rxvt, Xterm, SGI, Plain) scrollbars, XIM, multi-language support (Chinese, Korean, Japanese), freetype font and logging. </p>
 <p> The default behaviour can be set using the resource configuration file ~/.mrxvtrc For backward compatibility, if ~/.mrxvtrc is not found, tries to load configuration settings from the files ~/.Xdefaults or ~/.Xresources Alternately, you can specify which config file to load using the &#8211;<code>cf</code> command line option.</p>
 <h2>OPTIONS</h2>
@@ -32,7 +32,7 @@ Mrxvt.shading:                  85
 Mrxvt.transparentTabbar:        False
 </pre>
 <p> in your ~/.mrxvtrc </p>
-<p> All options are case sensitive. Some options are similar to those of other terminals, so if you find the explanation given here insufficient, we strongly recommend you look in the <a href="/docs/linux/man/1-rxvt/">rxvt</a>(1) and <a href="/docs/linux/man/1-xterm/">xterm</a>(1) manpages.</p>
+<p> All options are case sensitive. Some options are similar to those of other terminals, so if you find the explanation given here insufficient, we strongly recommend you look in the rxvt(1) and <a href="/docs/linux/man/1-xterm/">xterm</a>(1) manpages.</p>
 <h3>Terminal name and display options</h3>
 <dl>
 <dt><code>-display | -d </code><i>displayname</i></p>
@@ -52,7 +52,7 @@ Mrxvt.transparentTabbar:        False
 <dt><code>-title </code><i>string</i></p>
 <dd> title name of the window [<code>title</code> ]</p>
 <dt><code>-tn </code><i>termname</i></p>
-<dd> The type of terminal should emulate. The value of the TERM environment variable is set to this value for all child processes launched by <code>.</code> Note that rxvt and most rxvt clones including <code>,</code> have slightly different terminal capabilities than those of <a href="/docs/linux/man/1-xterm/">xterm</a>(1). Thus will not always work properly with the terminal set to <i>xterm</i> and we recommend setting this value to <i>rxvt</i> instead. However some systems have incorrect (or even missing) <a href="/docs/linux/man/1-terminfo/">terminfo</a>(1) or <a href="/docs/linux/man/1-termcap/">termcap</a>(1) entries for the terminal <i>rxvt</i> If you experience problems with this, the ideal solution would be to correct your systems termcap and terminfo entries. If you are unable to do that, then you can try setting your terminal to <i>xterm</i> and hope everything works properly. [<code>termName</code> ]</dl>
+<dd> The type of terminal should emulate. The value of the TERM environment variable is set to this value for all child processes launched by <code>.</code> Note that rxvt and most rxvt clones including <code>,</code> have slightly different terminal capabilities than those of <a href="/docs/linux/man/1-xterm/">xterm</a>(1). Thus will not always work properly with the terminal set to <i>xterm</i> and we recommend setting this value to <i>rxvt</i> instead. However some systems have incorrect (or even missing) terminfo(1) or termcap(1) entries for the terminal <i>rxvt</i> If you experience problems with this, the ideal solution would be to correct your systems termcap and terminfo entries. If you are unable to do that, then you can try setting your terminal to <i>xterm</i> and hope everything works properly. [<code>termName</code> ]</dl>
 <h3>Transparency related options</h3>
 <dl>
 <dt><code>-o </code><i>%d</i></p>
@@ -60,7 +60,7 @@ Mrxvt.transparentTabbar:        False
 <dt><code>-od %d</code></p>
 <dd> Translucent window opacity degree increase/decrease interval. <i>%d</i> is an integer between 0 and 100 [<code>opacityDegree</code> ]</p>
 <dt><code>-tr | +tr</code></p>
-<dd> Enable / disable background pseudo-transparency. To use this feature you must set your desktop wallpaper using an Esetroot compatible program ( i.e. a program that publishes the wallpaper using the <code>_XROOTPMAP_ID</code> atom). Some programs that will do this are <a href="/docs/linux/man/1-esetroot/">Esetroot</a>(1), <a href="/docs/linux/man/1-feh/">feh</a>(1), fvwm-root1 with the `<code>&#8211;retain-pixmap</code> &#8216; option, or KDE. Note: To use your precious <code>backgroundFade , tinting</code> or <code>shading</code> options, you MUST set the desktop wallpaper in an Esetroot way. [<code>transparent</code> ]</p>
+<dd> Enable / disable background pseudo-transparency. To use this feature you must set your desktop wallpaper using an Esetroot compatible program ( i.e. a program that publishes the wallpaper using the <code>_XROOTPMAP_ID</code> atom). Some programs that will do this are Esetroot(1), <a href="/docs/linux/man/1-feh/">feh</a>(1), fvwm-root1 with the `<code>&#8211;retain-pixmap</code> &#8216; option, or KDE. Note: To use your precious <code>backgroundFade , tinting</code> or <code>shading</code> options, you MUST set the desktop wallpaper in an Esetroot way. [<code>transparent</code> ]</p>
 <dt><code>-trf | +trf</code></p>
 <dd> If you choose NOT to set the background in an Esetroot compatible way, then you can still have transparency using this option. (You must also enable the <code>transparent</code> option). Background changes made by FvwmBacker, xsetbg (xli) or Esetroot compatible programs, will be automatically detected. However changes made by <a href="/docs/linux/man/1-xv/">xv</a>(1), <a href="/docs/linux/man/1-xsetroot/">xsetroot</a>(1) or other non-Esetroot compatible programs will not be detected. If you&#8217;re hell bent on non-Esetroot compatible programs to set your background, then do something like </p>
 <pre>
@@ -208,7 +208,7 @@ xsetroot -solid &quot;#202040&quot; &amp;&amp; fvwm-root -d
 <dt><code>-heT </code><i>string</i></p>
 <dd> Set the title of tabs to <i>string</i> after the process in the tab exits. (This string is escape and percent interpolated). [<code>holdExitTitle</code> ]</p>
 <dt><code>-hold </code><i>mask</i></p>
-<dd> Hold the tab open after the child process in it exits. <i>mask</i> is the mask of flags which control weather the tab will be held open based on the exit status of the child process. If the lowest bit (0x01) of <i>mask</i> is set, then the tab will always be held open after the child exits. If the next bit (0x02) is set, then the tab will only be held open if the child exits abnormally (e.g. via <a href="/docs/linux/man/1-abort/">abort</a>(1)). If the third bit (0x04) is set, then the tab will be held open if the child exits with non-zero status. </p>
+<dd> Hold the tab open after the child process in it exits. <i>mask</i> is the mask of flags which control weather the tab will be held open based on the exit status of the child process. If the lowest bit (0x01) of <i>mask</i> is set, then the tab will always be held open after the child exits. If the next bit (0x02) is set, then the tab will only be held open if the child exits abnormally (e.g. via abort(1)). If the third bit (0x04) is set, then the tab will be held open if the child exits with non-zero status. </p>
 <p> NOTE: In previous versions of this was a boolean option. For backward compatibility, the value of <i>True , On, Yes</i> will be treated as <i>1</i> and anything illegal will be treated as <i>0</i> The default is 0x06. [<code>holdExit</code> ]</p>
 <dt><code>-ht | +ht</code></p>
 <dd> Hide tabbar on initialization [<code>hideTabbar</code> ]</p>
@@ -439,7 +439,7 @@ Mrxvt.background:               black
 <dt><code>To create a menu containing a list of all open tabs, create an empty menu called</code></p>
 <dd> <code>PopupButton </code><i>N</i> (which will be popped on control click&#8217;s as described above). To include a list of all open tabs as a sub menu, create a sub-menu called `Switch to tab&#8217;</p>
 <dt><code>Menu actions are completely different in</code></p>
-<dd> than the original implementation in <a href="/docs/linux/man/1-rxvt/">rxvt</a>(1). The menu actions are exactly the same as macro actions, and are described in the section Sx Defining custom shortcuts .</p>
+<dd> than the original implementation in rxvt(1). The menu actions are exactly the same as macro actions, and are described in the section Sx Defining custom shortcuts .</p>
 <dt><code>On startup</code></p>
 <dd> reads the file default.menu which contains the default menu definitions. The file is searched for in your search path (specified by option &#8211;<code>path )</code></dl>
 <h2>KEYBOARD AND MOUSE SHORTCUTS</h2>
@@ -629,7 +629,7 @@ Mrxvt.macro.Ctrl+Shift+t:       Dummy
 <dt><code>SetTitle</code></p>
 <dd> Set title of active tab to selection. (The selection must be owned by <code>)</code></p>
 <dt><code>UseFifo </code><i>status</i></p>
-<dd> Enable or disable using a <a href="/docs/linux/man/1-fifo/">fifo</a>(1) to listen for macros on (see the <code>useFifo</code> option). The argument <i>status</i> should be <code>0 , 1 , -1</code> to disable, enable or toggle respectively.</p>
+<dd> Enable or disable using a fifo(1) to listen for macros on (see the <code>useFifo</code> option). The argument <i>status</i> should be <code>0 , 1 , -1</code> to disable, enable or toggle respectively.</p>
 <dt><code>PrintScreen </code>[-<code>psn </code>[<i>command</i> ] ]</p>
 <dd> Dump screen to printer (or <i>command )</i> If &#8211;<code>p</code> is specified, then the output is pretty printed (i.e. escape sequences are used to get the same color in the output as on your screen). If &#8211;<code>s</code> is specified, then the entire scroll back is printed (instead of just the current screen). If &#8211;<code>n</code> is specified, then every screen line is terminated with a newline char (by default screen lines that wrap to the next line are not terminated with a newline). Finally, if command is specified it is used as the printer pipe (if not the value of <code>printPipe</code> or the compiled in default is used).</p>
 <dt><code>SaveConfig </code>[<i>filename</i> ]</p>
@@ -647,7 +647,8 @@ Mrxvt.macro.Ctrl+Shift+t:       Dummy
 <dt><code>
 </code></p>
 <dd> Newline</p>
-<dt><code></code></p>
+<dt><code>
+</code></p>
 <dd> Carriage return</p>
 <dt><code>	</code></p>
 <dd> Tab</p>
@@ -684,7 +685,7 @@ Mrxvt.macro.Ctrl+Shift+t:       Dummy
 <dt><code>Moving tabs</code></p>
 <dd> Click and drag a tab to some other location on the tab-bar to move it.</dl>
 <h2>ESCAPE SEQUENCES</h2>
-<p> You have several escape sequences to control <code>.</code> All default <a href="/docs/linux/man/1-rxvt/">rxvt</a>(1) escape sequences are supported by <code>.</code> A few extra escape sequences have been added to improve DEC compatibility, and allow interaction with extra features (e.g. tabs). The supported escape sequences are listed in the file mrxvt_seq.txt included in the distribution. </p>
+<p> You have several escape sequences to control <code>.</code> All default rxvt(1) escape sequences are supported by <code>.</code> A few extra escape sequences have been added to improve DEC compatibility, and allow interaction with extra features (e.g. tabs). The supported escape sequences are listed in the file mrxvt_seq.txt included in the distribution. </p>
 <p> For omissions in the documentation, and a more complete reference to escape sequences you should look at the file ctlseqs.txt that comes with the xterm package, console_codes4 and the original rxvt documentation in the file rxvtRef.txt </p>
 <p> For basic interaction with (e.g. changing the tab title etc.) you should also look at the programs share/scripts/settitle.c and share/scripts/mrxvtset.pl that are supplied with the distribution.</p>
 <h2>ENVIRONMENT</h2>
@@ -744,7 +745,7 @@ Mrxvt.macro.Ctrl+Shift+t:       Dummy
 <dt><code>The transparentForce option does not work well with all window managers (e.g. OpenBox).</code></p>
 <dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-rxvt/">rxvt</a>(1), <a href="/docs/linux/man/1-xterm/">xterm</a>(1), <a href="/docs/linux/man/1-resize/">resize</a>(1), mrxvt_seq.txt <i>Xterm control sequences</i> (this is the file ctlseqs.ms or ctlseqs.txt ) console_codes4 </p>
+<p> rxvt(1), <a href="/docs/linux/man/1-xterm/">xterm</a>(1), <a href="/docs/linux/man/1-resize/">resize</a>(1), mrxvt_seq.txt <i>Xterm control sequences</i> (this is the file ctlseqs.ms or ctlseqs.txt ) console_codes4 </p>
 <p> <i><a rel="nofollow" href="http://materm.sourceforge.net">http://materm.sourceforge.net</a></i></p>
 <h2>AUTHORS</h2>
 <p> An Terminator &lt; Ns Mt jimmyzhou [at] users.sourceforge.net Ns &gt; An Gautam Iyer &lt; Ns Mt gi1242 [at] users.sourceforge.net Ns &gt; </p>

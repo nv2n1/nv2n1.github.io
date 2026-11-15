@@ -15,4 +15,4 @@ description: "three_finger_flag – Flag to deactivate the emergency exit key co
 <h2>Description</h2>
 <p>The DJGPP keyboard handler provides an &#8217;emergency exit&#8217; sequence which you can use to kill off your program. If you are running under DOS this is the three finger salute, ctrl+alt+del. Most multitasking OS&#8217;s will trap this combination before it reaches the Allegro handler, in which case you can use the alternative ctrl+alt+end. If you want to disable this behaviour in release versions of your program, set this flag to FALSE. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3) </p>
+<p><code>install_keyboard</code>(3) </p>

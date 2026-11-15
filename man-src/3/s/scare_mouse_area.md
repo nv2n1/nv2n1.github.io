@@ -15,4 +15,4 @@ void scare_mouse_area(int x, int y, int w, int h);</code></pre>
 <h2>Description</h2>
 <p>Like scare_mouse(), but will only hide the cursor if it is inside the specified rectangle. Otherwise the cursor will simply be frozen in place until you call unscare_mouse(), so it cannot interfere with your drawing. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-unscare_mouse/">unscare_mouse</a></code>(3), <code><a href="/docs/linux/man/3-scare_mouse/">scare_mouse</a></code>(3), <code><a href="/docs/linux/man/3-show_mouse/">show_mouse</a></code>(3) </p>
+<p><code>unscare_mouse</code>(3), <code><a href="/docs/linux/man/3-scare_mouse/">scare_mouse</a></code>(3), <code><a href="/docs/linux/man/3-show_mouse/">show_mouse</a></code>(3) </p>

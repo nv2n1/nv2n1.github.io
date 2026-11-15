@@ -517,7 +517,7 @@ The following packages will be REMOVED:
 <h2>Environment</h2>
 <p><code>HOME</code></p>
 <dl>
-<dd>If $HOME/.aptitude exists, <code>aptitude</code> will store its configuration file in $HOME/.aptitude/config. Otherwise, it will look up the current user&#8217;s home directory using <code><a href="/docs/linux/man/2-getpwuid/">getpwuid</a></code>(2) and place its configuration file there.</dl>
+<dd>If $HOME/.aptitude exists, <code>aptitude</code> will store its configuration file in $HOME/.aptitude/config. Otherwise, it will look up the current user&#8217;s home directory using <code>getpwuid</code>(2) and place its configuration file there.</dl>
 <p> <code>PAGER</code></p>
 <dl>
 <dd>If this environment variable is set, <code>aptitude</code> will use it to display changelogs when &#8220;<code>aptitude changelog</code>&#8221; is invoked. If not set, it defaults to <code>more</code>.</dl>

@@ -22,4 +22,4 @@ int next_fli_frame(int loop);</code></pre>
 <h2>Return Value</h2>
 <p>Returns FLI_OK on success, FLI_ERROR or FLI_NOT_OPEN on error, and FLI_EOF on reaching the end of the file. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-open_fli/">open_fli</a></code>(3), <code><a href="/docs/linux/man/3-fli_bitmap/">fli_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-fli_palette/">fli_palette</a></code>(3), <code><a href="/docs/linux/man/3-fli_timer/">fli_timer</a></code>(3), <code><a href="/docs/linux/man/3-fli_frame/">fli_frame</a></code>(3) </p>
+<p><code>open_fli</code>(3), <code>fli_bitmap</code>(3), <code>fli_palette</code>(3), <code><a href="/docs/linux/man/3-fli_timer/">fli_timer</a></code>(3), <code><a href="/docs/linux/man/3-fli_frame/">fli_frame</a></code>(3) </p>

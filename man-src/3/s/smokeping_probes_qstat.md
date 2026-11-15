@@ -61,11 +61,11 @@ description: "Smokeping::probes::Qstat – Qstat Probe for SmokePing"
 <dd>The game server port to check. It can also be overriden by adding :port to the host parameter in the Target config. </p>
 <p> Example value: 27970</p>
 <dt>sourceaddress</p>
-<dd>The quakestat &#8220;-srcip&#8221; parameter . From <i><a href="/docs/linux/man/1-quakestat/">quakestat</a></i>(1): </p>
+<dd>The quakestat &#8220;-srcip&#8221; parameter . From <i>quakestat</i>(1): </p>
 <p> Send packets using this <font SIZE="-1">IP</font> address </p>
 <p> Example value: 192.168.0.1</p>
 <dt>sourceport</p>
-<dd>The quakestat &#8220;-srcport&#8221; parameter . From <i><a href="/docs/linux/man/1-quakestat/">quakestat</a></i>(1): </p>
+<dd>The quakestat &#8220;-srcport&#8221; parameter . From <i>quakestat</i>(1): </p>
 <p> Send packets from these network ports </p>
 <p> Example value: 9923-9943</p>
 <dt>step</p>

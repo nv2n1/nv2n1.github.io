@@ -41,5 +41,5 @@ gs2.set_input_approver(tmp_ap);
 </code></pre>
 <p> Note that a default input string as entered by set_input_string is not checked by this function. The default approver is </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-save_input_approver/">gstream-save_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-restore_input_approver/">gstream-restore_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-get_input_approver/">gstream-get_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-set_input_string/">gstream-set_input_string</a></code>(3), <code><a href="/docs/linux/man/3-gstream-ia_allow_everything/">gstream-ia_allow_everything</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-gstream-save_input_approver/">gstream-save_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-restore_input_approver/">gstream-restore_input_approver</a></code>(3), <code>gstream-get_input_approver</code>(3), <code><a href="/docs/linux/man/3-gstream-set_input_string/">gstream-set_input_string</a></code>(3), <code>gstream-ia_allow_everything</code>(3) </p>
 <h2>Index</h2>

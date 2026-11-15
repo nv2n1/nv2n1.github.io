@@ -139,6 +139,6 @@ javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName</c
 <dd> Overrides location at which installed extensions are searched for. The default location for extensions is the value of <i>java.ext.dirs</i>.</dl>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-javac/">javac</a>(1), <a href="/docs/linux/man/1-java/">java</a>(1), <a href="/docs/linux/man/1-jdb/">jdb</a>(1), <a href="/docs/linux/man/1-javah/">javah</a>(1), <a href="/docs/linux/man/1-javadoc/">javadoc</a>(1) </p>
+<p> <a href="/docs/linux/man/1-javac/">javac</a>(1), <a href="/docs/linux/man/1-java/">java</a>(1), <a href="/docs/linux/man/1-jdb/">jdb</a>(1), javah(1), <a href="/docs/linux/man/1-javadoc/">javadoc</a>(1) </p>
 <p>&nbsp;<wbr> </p>
 <h2>Index</h2>

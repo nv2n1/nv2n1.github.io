@@ -41,7 +41,7 @@ description: "trademgen-config –"
 <p> <code>&#8211;refmanpath</code> </p>
 <p>&nbsp;<wbr>Show where the PDF documentation is located.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-trademgen/">trademgen</a>(1)</code>, <code><a href="/docs/linux/man/1-boost-config/">boost-config</a></code>(1), <code><a href="/docs/linux/man/3-trademgen-library/">trademgen-library</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/1-trademgen/">trademgen</a>(1)</code>, <code>boost-config</code>(1), <code><a href="/docs/linux/man/3-trademgen-library/">trademgen-library</a></code>(3)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright © 2009-2013 Denis Arnaud </p>
 <p> See the COPYING file for more information on the (LGPLv2+) license, or directly on Internet: </p>

@@ -33,16 +33,16 @@ description: "PAPI_read –"
 <dd>
 <pre>* do_100events();
 * if (PAPI_read(EventSet, values) != PAPI_OK)
-* <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+* handle_error(1);
 * // values[0] now equals 100
 * do_100events();
 * if (PAPI_accum(EventSet, values) != PAPI_OK)
-* <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+* handle_error(1);
 * // values[0] now equals 200
 * values[0] = -100;
 * do_100events();
 * if (PAPI_accum(EventSet, values) != PAPI_OK)
-* <a href="//www.systutorials.com/docs/linux/man/1-handle_error/">handle_error</a>(1);
+* handle_error(1);
 * // values[0] now equals 0 
 * </pre>
 </dl>

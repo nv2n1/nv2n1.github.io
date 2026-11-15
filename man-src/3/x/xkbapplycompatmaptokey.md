@@ -170,25 +170,25 @@ description: "XkbApplyCompatMapToKey – Apply the new compatibility mapping to 
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/1-xkbsi_anyofornone/">XkbSI_AnyOfOrNone</a></td>
+<td>XkbSI_AnyOfOrNone</td>
 <td>(1)</td>
 <td> Zero or more of the bits that are on in mods can be set, as well as others.
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/2-xkbsi_anyof/">XkbSI_AnyOf</a></td>
+<td>XkbSI_AnyOf</td>
 <td>(2)</td>
 <td> One or more of the bits that are on in mods can be set, as well as any others.
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/3-xkbsi_allof/">XkbSI_AllOf</a></td>
+<td>XkbSI_AllOf</td>
 <td>(3)</td>
 <td> All of the bits that are on in mods must be set, but others may be set as well.
 </td>
 </tr>
 <tr VALIGN=top>
-<td><a href="/docs/linux/man/4-xkbsi_exactly/">XkbSI_Exactly</a></td>
+<td>XkbSI_Exactly</td>
 <td>(4)</td>
 <td> All of the bits that are on in mods must be set, and no other bits may be set.
 </td>

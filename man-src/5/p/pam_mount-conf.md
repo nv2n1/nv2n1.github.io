@@ -45,7 +45,7 @@ description: "pam_mount.conf – Description of the pam_mount configuration file
 <dt><code>options=&quot;</code><i>&#8230;</i><code>&quot;</code></p>
 <dd>Specifies the mount options. If omitted and /etc/fstab is used (see <code>mountpoint</code>), the options will also be sources from fstab.</p>
 <dt><code>ssh=&quot;0&quot;</code> or <code>ssh=&quot;1&quot;</code></p>
-<dd>The <code>ssh</code> option enables an input hack wrapper (zerossh, see <code><a href="/docs/linux/man/1-pmt-fd0ssh/">pmt-fd0ssh</a></code>(1)) for this volume to hand the password to ssh over an ssh-specific mechanism. Enable this option for any mount involving the SSH binary, e.g. ccgfs or sshfs. Do <i>not</i> enable it for anything else or the login will most likely hang.</p>
+<dd>The <code>ssh</code> option enables an input hack wrapper (zerossh, see <code>pmt-fd0ssh</code>(1)) for this volume to hand the password to ssh over an ssh-specific mechanism. Enable this option for any mount involving the SSH binary, e.g. ccgfs or sshfs. Do <i>not</i> enable it for anything else or the login will most likely hang.</p>
 <dt><code>cipher=&quot;</code><i>cipher</i><code>&quot;</code></p>
 <dd>Cryptsetup cipher name for the volume. To be used with the <code>crypt</code> fstype.</p>
 <dt><code>fskeycipher=&quot;</code><i>ciphertype</i><code>&quot;</code></p>

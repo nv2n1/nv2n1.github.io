@@ -11,7 +11,7 @@ description: "dnet – dumb networking library test program"
 <h2>Synopsis</h2>
 <p><code>dnet </code><i>command args </i>[&#8230;]</p>
 <h2>Description</h2>
-<p><code>dnet Ar command Ar args Op &#8230;</code> is a simple test program for the <a href="/docs/linux/man/3-dnet/">dnet</a>(3) library. It can be used to compose and transmit network datagrams as a Unix-style filter (e.g. reading from or writing to files and pipes) or modify the local system network configuration (including the ARP cache, firewall ruleset, network interfaces, and routing table).</p>
+<p><code>dnet Ar command Ar args Op &#8230;</code> is a simple test program for the dnet(3) library. It can be used to compose and transmit network datagrams as a Unix-style filter (e.g. reading from or writing to files and pipes) or modify the local system network configuration (including the ARP cache, firewall ruleset, network interfaces, and routing table).</p>
 <h3>Payload generation commands</h3>
 <dl>
 <dt><code>addr </code><i>address </i>[&#8230;]</p>
@@ -106,6 +106,6 @@ dnet ip id 1 off 24 proto icmp src 1.2.3.4 dst 5.6.7.8 &lt; p.ab | \
 dnet send</pre>
 </blockquote>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-dnet/">dnet</a>(3)</p>
+<p>dnet(3)</p>
 <h2>Authors</h2>
 <p>Dug Song Aq dugsong [at] monkey.org</p>

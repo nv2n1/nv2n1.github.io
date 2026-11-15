@@ -19,5 +19,5 @@ description: "iv_fatal, iv_set_fatal_msg_handler – ivykis fatal error conditio
 <p> <code>iv_fatal</code> is also used internally by ivykis, whenever a fatal situation is detected. </p>
 <p> <code>iv_set_fatal_msg_handler</code> can be used to set an alternative (as opposed to <code>syslog</code>) function to call from <code>iv_fatal</code>, and its argument should be a function that does not return, and takes a single string as argument &#8211; the formatted error message.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ivykis/">ivykis</a></code>(3), <code><a href="/docs/linux/man/3-iv_examples/">iv_examples</a></code>(3) </p>
+<p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
 <h2>Index</h2>

@@ -25,6 +25,6 @@ description: "tpm_resetdalock – reset the dictionary attack lock for the user 
 <dt><code>-z</code>, <code>&#8211;well-known</code></p>
 <dd>Authenticate using 20 bytes of zeros as owner password (the default TSS Well Known Secret), instead of prompting for an owner password. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tpm_reset/">tpm_reset</a></code>(8) </p>
+<p><code>tpm_reset</code>(8) </p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt;</p>

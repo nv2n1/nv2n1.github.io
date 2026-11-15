@@ -53,7 +53,7 @@ description: "lcp_crtpol2 – create an Intel(R) TXT policy (and policy data fil
 <dt><code>&#8211;verbose</code></p>
 <dd>Enable verbose output; can be specified with any command.</dl>
 <h2>Examples</h2>
-<p>Assuming a policy list file <i>list-unsig.lst</i> has been created by the command <code><a href="/docs/linux/man/8-lcp_crtpolist/">lcp_crtpolist</a>(8).</code> The following example will create a policy and policy data file. </p>
+<p>Assuming a policy list file <i>list-unsig.lst</i> has been created by the command <code>lcp_crtpolist(8).</code> The following example will create a policy and policy data file. </p>
 <p> <code>lcp_crtpol2 &#8211;create &#8211;type </code><i>list </i><code>&#8211;pol </code><i>list.pol </i><code>&#8211;data </code><i>list.data list-unsig.lst </i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lcp_crtpol/">lcp_crtpol</a></code>(8), <code><a href="/docs/linux/man/8-lcp_mlehash/">lcp_mlehash</a></code>(8), <code><a href="/docs/linux/man/8-lcp_crtpolelt/">lcp_crtpolelt</a></code>(8), <code><a href="/docs/linux/man/8-lcp_crtpollist/">lcp_crtpollist</a></code>(8). </p>

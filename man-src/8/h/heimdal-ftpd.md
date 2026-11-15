@@ -17,7 +17,7 @@ description: "ftpd – Internet File Transfer Protocol server"
 <dd>Select the level of authentication required. Kerberised login can not be turned off. The default is to only allow kerberised login. Other possibilities can be turned on by giving a string of comma separated flags as argument to &#8211;<code>a</code> Recognised flags are:</p>
 <dl>
 <dt><i>plain</i></p>
-<dd>Allow logging in with plaintext password. The password can be <a href="/docs/linux/man/n-a/">a</a>(n) OTP or an ordinary password.</p>
+<dd>Allow logging in with plaintext password. The password can be a(n) OTP or an ordinary password.</p>
 <dt><i>otp</i></p>
 <dd>Same as <i>plain</i> but only OTP is allowed.</p>
 <dt><i>ftp</i></p>
@@ -227,7 +227,7 @@ description: "ftpd – Internet File Transfer Protocol server"
 <dt><code>~/.klogin </code></p>
 <dd>Login access for Kerberos.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-ftp/">ftp</a>(1), <a href="/docs/linux/man/1-otp/">otp</a>(1), <a href="/docs/linux/man/3-getusershell/">getusershell</a>(3), <a href="/docs/linux/man/5-ftpusers/">ftpusers</a>(5), <a href="/docs/linux/man/8-syslogd/">syslogd</a>(8)</p>
+<p><a href="/docs/linux/man/1-ftp/">ftp</a>(1), <a href="/docs/linux/man/1-otp/">otp</a>(1), <a href="/docs/linux/man/3-getusershell/">getusershell</a>(3), <a href="/docs/linux/man/5-ftpusers/">ftpusers</a>(5), syslogd(8)</p>
 <h2>Standards</h2>
 <dl>
 <dt><code>RFC 959</code></p>

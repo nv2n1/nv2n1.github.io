@@ -89,7 +89,7 @@ A is COMPLEX array, dimension(LDA, N) On entry, the Hermitian matrix A.If UPLO =
 <pre>
           RWORK is REAL array,
                                          dimension (LRWORK)
-          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-RWORK/">RWORK</a>(1) returns the optimal LRWORK.
+          On exit, if INFO = 0, RWORK(1) returns the optimal LRWORK.
 </pre>
 <p> <i>LRWORK</i> </p>
 <pre>
@@ -108,7 +108,7 @@ A is COMPLEX array, dimension(LDA, N) On entry, the Hermitian matrix A.If UPLO =
 <p> <i>IWORK</i> </p>
 <pre>
           IWORK is INTEGER array, dimension (MAX(1,LIWORK))
-          On exit, if INFO = 0, <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) returns the optimal LIWORK.
+          On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
 <pre>

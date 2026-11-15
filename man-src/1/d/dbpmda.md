@@ -193,7 +193,7 @@ dbpmda&gt;
 <p> Note that authentication checks have already been performed by PMCD by the time a PMDA is presented with these attributes, so no further verification is necessary by the PMDA.</p>
 <h2>CAVEATS</h2>
 <p> A value cannot be stored into metrics of type <code>PM_TYPE_AGGREGATE</code> or <code>PM_TYPE_EVENT</code>. </p>
-<p> <code>dbpmda</code> uses <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code><a href="/docs/linux/man/2-exec/">exec</a></code>(2) to attach to daemon PMDAs. <code>dbpmda</code> makes no attempt to detect the termination of the daemon PMDA process, so it is possible for a PMDA to exit unexpectedly without any notification. However, any further communication attempts with the PMDA will result in errors which will indicate that the PMDA is no longer responding.</p>
+<p> <code>dbpmda</code> uses <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code>exec</code>(2) to attach to daemon PMDAs. <code>dbpmda</code> makes no attempt to detect the termination of the daemon PMDA process, so it is possible for a PMDA to exit unexpectedly without any notification. However, any further communication attempts with the PMDA will result in errors which will indicate that the PMDA is no longer responding.</p>
 <h2>FILES</h2>
 <dl>
 <dt><i>./.dbpmdarc</i></p>
@@ -201,5 +201,5 @@ dbpmda&gt;
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdbg/">pmdbg</a></code>(1), <code><a href="/docs/linux/man/2-exec/">exec</a></code>(2), <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
+<p> <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdbg/">pmdbg</a></code>(1), <code>exec</code>(2), <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
 <h2>Index</h2>

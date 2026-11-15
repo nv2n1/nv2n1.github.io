@@ -64,7 +64,7 @@ description: "rawdog – an RSS Aggregator Without Delusions Of Grandeur"
 <dt><code>&#8211;help</code></p>
 <dd> Provide a brief summary of all the options <code>rawdog</code> supports.</dl>
 <h2>EXAMPLES</h2>
-<p> <code>rawdog</code> is typically invoked from <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1). The following <code><a href="/docs/linux/man/5-crontab/">crontab</a></code>(5) entry would fetch data from feeds and write it to HTML once an hour, exiting if <code>rawdog</code> is already running: </p>
+<p> <code>rawdog</code> is typically invoked from <code>cron</code>(1). The following <code><a href="/docs/linux/man/5-crontab/">crontab</a></code>(5) entry would fetch data from feeds and write it to HTML once an hour, exiting if <code>rawdog</code> is already running: </p>
 <pre>
 <dl><dt><dd>0 * * * *  rawdog -Wuw
 </dl>
@@ -72,7 +72,7 @@ description: "rawdog – an RSS Aggregator Without Delusions Of Grandeur"
 <h2>FILES</h2>
 <p> $HOME/.rawdog/config</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cron/">cron</a></code>(1).</p>
+<p> <code>cron</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> <code>rawdog</code> was mostly written by Adam Sampson &lt;ats [at] offog.org&gt;, with contributions and bug reports from many of <code>rawdog</code>&#8216;s users. See <code>rawdog</code>&#8216;s NEWS file for a complete list of contributors. </p>
 <p> This manual page was originally written by Decklin Foster &lt;decklin [at] red-bean.com&gt;, for the Debian project (but may be used by others). </p>

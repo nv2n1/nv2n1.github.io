@@ -130,7 +130,7 @@ char *inet_net_ntop(int af, const void *netp, int bits,
 &quot;, htonl(addr.s_addr)); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-inet/">inet</a></code>(3), <code><a href="/docs/linux/man/5-networks/">networks</a></code>(5)</p>
+<p> <code>inet</code>(3), <code><a href="/docs/linux/man/5-networks/">networks</a></code>(5)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

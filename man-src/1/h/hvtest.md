@@ -26,7 +26,7 @@ description: "hvtest – test cases for QDBM Hovel"
  <code>-s</code> : make the file sparse.</dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-qdbm/">qdbm</a></code>(3), <code><a href="/docs/linux/man/3-hovel/">hovel</a></code>(3) </p>
+<p> <code>qdbm</code>(3), <code>hovel</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <h2>Index</h2>

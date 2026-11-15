@@ -135,7 +135,7 @@ description: "appstreamcli – Handle AppStream metadata formats and query AppSt
 <p> <code>compose</code></p>
 <dl>
 <dt>
-<dd> Composes an AppStream metadata catalog from a directory tree with metainfo files. This command is only available if the org.freedesktop.appstream.compose component is installed. See <code><a href="/docs/linux/man/1-appstreamcli-compose/">appstreamcli-compose</a></code>(1) for more information.</dl>
+<dd> Composes an AppStream metadata catalog from a directory tree with metainfo files. This command is only available if the org.freedesktop.appstream.compose component is installed. See <code>appstreamcli-compose</code>(1) for more information.</dl>
 <p> <code>&#8211;details</code></p>
 <dl>
 <dt>

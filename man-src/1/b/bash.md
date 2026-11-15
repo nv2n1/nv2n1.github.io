@@ -73,7 +73,7 @@ description: "bash – GNU Bourne-Again SHell"
 <p> If arguments remain after option processing, and neither the <code>-c</code> nor the <code>-s</code> option has been supplied, the first argument is assumed to be the name of a file containing shell commands. If <code>bash</code> is invoked in this fashion, <code>$0</code> is set to the name of the file, and the positional parameters are set to the remaining arguments. <code>Bash</code> reads and executes commands from this file, then exits. <code>Bash</code>&#8216;s exit status is the exit status of the last command executed in the script. If no commands are executed, the exit status is 0. An attempt is first made to open the file in the current directory, and, if no file is found, then the shell searches the directories in <font SIZE="-1"><code>PATH</code> </font> for the script.</p>
 <h2>INVOCATION</h2>
 <p> A <i>login shell</i> is one whose first character of argument zero is a <code>&#8211;</code>, or one started with the <code>&#8211;login</code> option. </p>
-<p> An <i>interactive</i> shell is one started without non-option arguments (unless <code>-s</code> is specified) and without the <code>-c</code> option whose standard input and error are both connected to terminals (as determined by <i><a href="/docs/linux/man/3-isatty/">isatty</a></i>(3)), or one started with the <code>-i</code> option. <font SIZE="-1"><code>PS1</code> </font> is set and <code>$-</code> includes <code>i</code> if <code>bash</code> is interactive, allowing a shell script or a startup file to test this state. </p>
+<p> An <i>interactive</i> shell is one started without non-option arguments (unless <code>-s</code> is specified) and without the <code>-c</code> option whose standard input and error are both connected to terminals (as determined by <i>isatty</i>(3)), or one started with the <code>-i</code> option. <font SIZE="-1"><code>PS1</code> </font> is set and <code>$-</code> includes <code>i</code> if <code>bash</code> is interactive, allowing a shell script or a startup file to test this state. </p>
 <p> The following paragraphs describe how <code>bash</code> executes its startup files. If any of the files exist but cannot be read, <code>bash</code> reports an error. Tildes are expanded in filenames as described below under <code>Tilde Expansion</code> in the <font SIZE="-1"><code>EXPANSION</code> </font> section. </p>
 <p> When <code>bash</code> is invoked as an interactive login shell, or as a non-interactive shell with the <code>&#8211;login</code> option, it first reads and executes commands from the file <i>/etc/profile</i>, if that file exists. After reading that file, it looks for <i>~/.bash_profile</i>, <i>~/.bash_login</i>, and <i>~/.profile</i>, in that order, and reads and executes commands from the first one that exists and is readable. The <code>&#8211;noprofile</code> option may be used when the shell is started to inhibit this behavior. </p>
 <p> When an interactive login shell exits, or a non-interactive login shell executes the <code>exit</code> builtin command, <code>bash</code> reads and executes commands from the file <i>~/.bash_logout</i>, if it exists. </p>
@@ -234,7 +234,8 @@ description: "bash – GNU Bourne-Again SHell"
 <dt><code>
 </code></p>
 <dd> new line</p>
-<dt><code></code></p>
+<dt><code>
+</code></p>
 <dd> carriage return</p>
 <dt><code>	</code></p>
 <dd> horizontal tab</p>

@@ -58,7 +58,7 @@ description: "filesystems – Linux filesystem types: ext, ext2, ext3, ext4, hpf
 <dt><code>umsdos</code></p>
 <dd>is an extended DOS filesystem used by Linux. It adds capability for long filenames, UID/GID, POSIX permissions, and special files (devices, named pipes, etc.) under the DOS filesystem, without sacrificing compatibility with DOS.</p>
 <dt><code>tmpfs</code></p>
-<dd>is a filesystem whose contents reside in virtual memory. Since the files on such filesystems typically reside in RAM, file access is extremely fast. See <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5).</p>
+<dd>is a filesystem whose contents reside in virtual memory. Since the files on such filesystems typically reside in RAM, file access is extremely fast. See <code>tmpfs</code>(5).</p>
 <dt><code>vfat</code></p>
 <dd>is an extended FAT filesystem used by Microsoft Windows95 and Windows NT. <code>vfat</code> adds the capability to use long filenames under the MSDOS filesystem.</p>
 <dt><code>XFS</code></p>
@@ -66,6 +66,6 @@ description: "filesystems – Linux filesystem types: ext, ext2, ext3, ext4, hpf
 <dt><code>xiafs</code></p>
 <dd>was designed and implemented to be a stable, safe filesystem by extending the Minix filesystem code. It provides the basic most requested features without undue complexity. The <code>xiafs</code> filesystem is no longer actively developed or maintained. It was removed from the kernel in 2.1.21.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/4-fuse/">fuse</a></code>(4), <code><a href="/docs/linux/man/5-btrfs/">btrfs</a></code>(5), <code><a href="/docs/linux/man/5-ext2/">ext2</a></code>(5), <code><a href="/docs/linux/man/5-ext3/">ext3</a></code>(5), <code><a href="/docs/linux/man/5-ext4/">ext4</a></code>(5), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/5-sysfs/">sysfs</a></code>(5), <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5), <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/4-fuse/">fuse</a></code>(4), <code><a href="/docs/linux/man/5-btrfs/">btrfs</a></code>(5), <code><a href="/docs/linux/man/5-ext2/">ext2</a></code>(5), <code><a href="/docs/linux/man/5-ext3/">ext3</a></code>(5), <code><a href="/docs/linux/man/5-ext4/">ext4</a></code>(5), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/5-sysfs/">sysfs</a></code>(5), <code>tmpfs</code>(5), <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

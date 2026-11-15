@@ -93,7 +93,7 @@ description: "varnishd – HTTP accelerator daemon"
 <p> Persistent storage. Varnish will store objects in a file in a manner that will secure the survival of <i>most</i> of the objects in the event of a planned or unplanned shutdown of Varnish. The persistent storage backend has multiple issues with it and will likely be removed from a future version of Varnish.</p>
 <h3>Management Interface</h3>
 <p> If the -T option was specified, varnishd will offer a command-line management interface on the specified address and port. The recommended way of connecting to the command-line management interface is through <a href="/docs/linux/man/1-varnishadm/">varnishadm</a>(1). </p>
-<p> The commands available are documented in <a href="/docs/linux/man/7-varnish/">varnish</a>(7).</p>
+<p> The commands available are documented in varnish(7).</p>
 <h3>Run-Time Parameters</h3>
 <p> Runtime parameters are marked with shorthand flags to avoid repeating the same text over and over in the table below. The meaning of the flags are:</p>
 <dl>

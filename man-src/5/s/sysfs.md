@@ -43,7 +43,7 @@ description: "sysfs – a filesystem for exporting kernel objects"
 <dt><i>/sys/fs</i></p>
 <dd>This directory contains subdirectories for some filesystems. A filesystem will have a subdirectory here only if it chose to explicitly create the subdirectory.</p>
 <dt><i>/sys/fs/cgroup</i></p>
-<dd>This directory conventionally is used as a mount point for a <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5) filesystem containing mount points for <code><a href="/docs/linux/man/7-cgroups/">cgroups</a></code>(7) filesystems.</p>
+<dd>This directory conventionally is used as a mount point for a <code>tmpfs</code>(5) filesystem containing mount points for <code><a href="/docs/linux/man/7-cgroups/">cgroups</a></code>(7) filesystems.</p>
 <dt><i>/sys/fs/smackfs</i></p>
 <dd>The directory contains configuration files for the SMACK LSM. See the kernel source file <i>Documentation/admin-guide/LSM/Smack.rst</i>.</p>
 <dt><i>/sys/hypervisor</i></p>

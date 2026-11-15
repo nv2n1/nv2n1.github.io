@@ -79,7 +79,7 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 </tr>
 <tr VALIGN=top>
 <td>rate(x)</td>
-<td> Returns the difference in values for the metric x between one call to <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3) and the next divided by the elapsed time between the calls to <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3). The semantics of the derived metric are based on the semantics of the operand (x) with the dimension in the <code>time</code> domain decreased by one and scaling if required in the time utilization case where the operand is in units of time, and the derived metric is unitless. This mimics the rate conversion applied to counter metrics by tools such as <code><a href="/docs/linux/man/1-pmval/">pmval</a></code>(1), <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) and <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1). There is one value in the result for each instance that appears in both the current and the previous sample.
+<td> Returns the difference in values for the metric x between one call to <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3) and the next divided by the elapsed time between the calls to <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3). The semantics of the derived metric are based on the semantics of the operand (x) with the dimension in the <code>time</code> domain decreased by one and scaling if required in the time utilization case where the operand is in units of time, and the derived metric is unitless. This mimics the rate conversion applied to counter metrics by tools such as <code>pmval</code>(1), <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) and <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1). There is one value in the result for each instance that appears in both the current and the previous sample.
 </td>
 </tr>
 <tr VALIGN=top>
@@ -216,7 +216,7 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 </table>
 </table>
 <p></center> </p>
-<p> Because semantic checking cannot be done at the time <code>pmRegisterDerived</code> is called, errors found during semantic checking are reported using <code><a href="/docs/linux/man/3-pmprintf/">pmprintf</a></code>(3). These include:</p>
+<p> Because semantic checking cannot be done at the time <code>pmRegisterDerived</code> is called, errors found during semantic checking are reported using <code>pmprintf</code>(3). These include:</p>
 <dl>
 <dt>Error: derived metric &lt;name1&gt;: operand: &lt;name2&gt;: &lt;reason&gt;</p>
 <dd>There was a problem calling <code><a href="/docs/linux/man/3-pmlookupname/">pmLookupName</a></code>(3) to identify the operand metric &lt;name2&gt; used in the definition of the derived metric &lt;name1&gt;.</p>

@@ -46,4 +46,4 @@ description: "cyrus-master – cyrus-master Cyrus process"
 <dt><code>/etc/cyrus.conf, /etc/imapd.conf, /var/run/cyrus-master.pid</code></p>
 <dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-cyrus-conf/">cyrus.conf</a>(5)</code>, <code><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a>(5)</code>, <code><a href="/docs/linux/man/8-imapd/">imapd</a>(8)</code>, <code><a href="/docs/linux/man/8-pop3d/">pop3d</a>(8)</code>, <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8)</code>, <code><a href="/docs/linux/man/8-timsieved/">timsieved</a>(8)</code>, <code><a href="/docs/linux/man/8-idled/">idled</a>(8)</code> </p>
+<p><code><a href="/docs/linux/man/5-cyrus-conf/">cyrus.conf</a>(5)</code>, <code><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a>(5)</code>, <code>imapd(8)</code>, <code>pop3d(8)</code>, <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8)</code>, <code><a href="/docs/linux/man/8-timsieved/">timsieved</a>(8)</code>, <code><a href="/docs/linux/man/8-idled/">idled</a>(8)</code> </p>

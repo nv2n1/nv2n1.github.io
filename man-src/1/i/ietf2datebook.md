@@ -96,7 +96,7 @@ url: "/docs/linux/man/1-ietf2datebook/"
  
 
  
-&nbsp;<wbr><i><a HREF="/docs/linux/man/1-pilot-read-ical/">pilot-read-ical</a></i>(1),&nbsp;<wbr><i><a HREF="/docs/linux/man/1-pilot-xfer/">pilot-xfer</a></i>(1),&nbsp;<wbr><i><a HREF="/docs/linux/man/1-install-datebook/">install-datebook</a></i>(1),&nbsp;<wbr><i><a HREF="/docs/linux/man/7-pilot-link/">pilot-link</a></i>(7). 
+&nbsp;<wbr><i><a HREF="/docs/linux/man/1-pilot-read-ical/">pilot-read-ical</a></i>(1),&nbsp;<wbr><i><a HREF="/docs/linux/man/1-pilot-xfer/">pilot-xfer</a></i>(1),&nbsp;<wbr><i>install-datebook</i>(1),&nbsp;<wbr><i><a HREF="/docs/linux/man/7-pilot-link/">pilot-link</a></i>(7). 
 
  
 

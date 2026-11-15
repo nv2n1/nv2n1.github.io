@@ -12,8 +12,8 @@ description: "pnmtorle – convert a Netpbm image file into an RLE image file."
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtorle</code> [ <code>-h</code> ] [ <code>-v</code> ] [ <code>-a</code> ] [ <code>-o</code><i> outfile</i> ] [ <i>pnmfile</i> ]</p>
 <h2>DESCRIPTION</h2>
-<p> This program converts Netpbm image files into Utah <code><a href="/docs/linux/man/5-rle/">RLE</a></code>(5) image files. You can include an alpha mask. If the input is a multiple image file, the output consists of several concatenated RLE images. </p>
-<p> The RLE file will contain either a three channel color image (24 bits) or a single channel grayscale image (8 bits) depending upon the pnm file depth. If a converted ppm is displayed on an 8 bit display, the image must be dithered. In order to produce a better looking image (on 8 bit displays), it is recommended that the image be quantizing (to 8 bit mapped color) prior to its display. This may be done by piping the output of this program into the Utah <code><a href="/docs/linux/man/1-mcut/">mcut</a></code>(1) or <code><a href="/docs/linux/man/1-rlequant/">rlequant</a></code>(1) utilities. An example of this is shown later. </p>
+<p> This program converts Netpbm image files into Utah <code>RLE</code>(5) image files. You can include an alpha mask. If the input is a multiple image file, the output consists of several concatenated RLE images. </p>
+<p> The RLE file will contain either a three channel color image (24 bits) or a single channel grayscale image (8 bits) depending upon the pnm file depth. If a converted ppm is displayed on an 8 bit display, the image must be dithered. In order to produce a better looking image (on 8 bit displays), it is recommended that the image be quantizing (to 8 bit mapped color) prior to its display. This may be done by piping the output of this program into the Utah <code>mcut</code>(1) or <code>rlequant</code>(1) utilities. An example of this is shown later. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-v</code></p>
@@ -33,7 +33,7 @@ description: "pnmtorle – convert a Netpbm image file into an RLE image file."
 <dt>pnmtorle -h file.pgm</p>
 <dd> Dump the header information of the Netpbm file called file.pgm.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-rletopnm/">rletopnm</a></code>(1), <code><a href="/docs/linux/man/1-urt/">urt</a></code>(1), <code><a href="/docs/linux/man/5-rle/">RLE</a></code>(5).</p>
+<p> <code><a href="/docs/linux/man/1-rletopnm/">rletopnm</a></code>(1), <code>urt</code>(1), <code>RLE</code>(5).</p>
 <h2>AUTHOR</h2>
 <p> Wes Barris<br />
  Army High Performance Computing Research Center (AHPCRC)<br />

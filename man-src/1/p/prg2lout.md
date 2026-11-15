@@ -61,7 +61,7 @@ description: "prg2lout – convert computer program text into Lout"
 <dd> <code>prg2lout</code> <code>-r</code> <code>-i</code><i>&nbsp;<wbr>infile</i> <code>-o</code><i>&nbsp;<wbr>out</i> <code>-e</code><i>&nbsp;<wbr>err</i> <code>-t</code><i>&nbsp;<wbr>num</i> <code>-T</code><i>&nbsp;<wbr>width</i></dl>
 <p> Users should never need this mode; it is invoked automatically from within Lout by symbols supplied with the standard configuration (see reference).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-lout/">lout</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code><a href="/docs/linux/man/1-ghostview/">ghostview</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/1-lout/">lout</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code>ghostview</code>(1).</p>
 <h2>REFERENCES</h2>
 <p> Jeffrey H. Kingston, <i>&#8220;A User&#8217;s Guide to the Lout Document Formatting System&#8221;</i>, Chapter 11.</p>
 <h2>AUTHOR</h2>

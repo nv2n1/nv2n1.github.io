@@ -45,7 +45,7 @@ map - recode from and to various character sets.Reads from STDIN, writes to STDO
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-recode/">recode</a></i>(1), <i><a HREF="/docs/linux/man/3-unicode--map/">Unicode::Map</a></i>(3), <i><a HREF="/docs/linux/man/3-unicode--map8/">Unicode::Map8</a></i>(3), <i><a HREF="/docs/linux/man/3-unicode--string/">Unicode::String</a></i>(3)
+ <i><a HREF="/docs/linux/man/1-recode/">recode</a></i>(1), <i>Unicode::Map</i>(3), <i>Unicode::Map8</i>(3), <i>Unicode::String</i>(3)
 
 <h2>AUTHOR</h2>
 

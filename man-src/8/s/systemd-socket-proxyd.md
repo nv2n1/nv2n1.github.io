@@ -111,4 +111,4 @@ server {
 $ curl <a rel="nofollow" href="http://localhost:80/">http://localhost:80/</a></pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-socat/">socat</a></code>(1), <code><a href="/docs/linux/man/1-nginx/">nginx</a></code>(1), <code><a href="/docs/linux/man/1-curl/">curl</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-socat/">socat</a></code>(1), <code>nginx</code>(1), <code><a href="/docs/linux/man/1-curl/">curl</a></code>(1) </p>

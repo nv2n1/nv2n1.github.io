@@ -20,7 +20,7 @@ mongoc_socket_listen (mongoc_socket_t *sock,
 <dt><code>backlog</code></p>
 <dd>An int containing max backlog size.</dl>
 <h2>Description</h2>
-<p>This function is similar to the BSD sockets <code><a href="/docs/linux/man/3-listen/">listen</a>(3)</code> function. It is meant for socket servers. </p>
+<p>This function is similar to the BSD sockets <code>listen(3)</code> function. It is meant for socket servers. </p>
 <h2>Returns</h2>
 <p>0 on success, -1 on failure and errno is set. </p>
 <h2>Colophon</h2>

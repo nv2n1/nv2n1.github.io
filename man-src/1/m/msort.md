@@ -122,7 +122,7 @@ description: "msort – sort records in complex ways"
 <dd> Reverse characters of key</dl>
 <p> Note: long options may not be available on your system.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-sort/">sort</a>(1), <a href="/docs/linux/man/3-uninum/">uninum</a>(3) </p>
+<p> <a href="/docs/linux/man/1-sort/">sort</a>(1), uninum(3) </p>
 <h2>AUTHOR</h2>
 <p> Bill Poser (billposer [at] alum.mit.edu)</p>
 <h2>LICENSE</h2>

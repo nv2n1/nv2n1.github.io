@@ -19,7 +19,7 @@ description: "rwho – who is logged in on local machines"
 <dt><code>/var/spool/rwho/whod.* </code></p>
 <dd> information about other machines</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-finger/">finger</a>(1), <a href="/docs/linux/man/1-rup/">rup</a>(1), <a href="/docs/linux/man/1-ruptime/">ruptime</a>(1), <a href="/docs/linux/man/1-rusers/">rusers</a>(1), <a href="/docs/linux/man/1-who/">who</a>(1), <a href="/docs/linux/man/8-rwhod/">rwhod</a>(8)</p>
+<p> <a href="/docs/linux/man/1-finger/">finger</a>(1), rup(1), <a href="/docs/linux/man/1-ruptime/">ruptime</a>(1), rusers(1), <a href="/docs/linux/man/1-who/">who</a>(1), <a href="/docs/linux/man/8-rwhod/">rwhod</a>(8)</p>
 <h2>HISTORY</h2>
 <p> The <code>rwho</code> command appeared in BSD 4.3</p>
 <h2>BUGS</h2>

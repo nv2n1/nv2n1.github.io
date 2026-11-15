@@ -19,7 +19,7 @@ GQCLIP (Inquire clipping indicator) - retrieves the current value of the clippin
 <dd>Clipping is off, or deactivated.
 <dt>1
 <dd>Clipping is on. Data outside of the world coordinate window will not be plotted.</dl></dl><dt>CLRECT
-<dd>(Real, <a HREF="/docs/linux/man/4-array/">Array</a>(4)) - Four normalized device coordinates providing the corner points of the current clipping rectangle in the order XMIN, XMAX, YMIN, YMAX.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+<dd>(Real, Array(4)) - Four normalized device coordinates providing the corner points of the current clipping rectangle in the order XMIN, XMAX, YMIN, YMAX.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: set, gsclip, gswn, gselnt, ginq_clip 
 
  Hardcopy: &quot;User's Guide for NCAR GKS-0A Graphics&quot;

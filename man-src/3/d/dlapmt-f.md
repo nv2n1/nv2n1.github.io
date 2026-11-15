@@ -19,7 +19,7 @@ description: "dlapmt.f –"
 <dl COMPACT>
 <dd>
 <pre> DLAPMT rearranges the columns of the M by N matrix X as specified
- by the permutation <a href="//www.systutorials.com/docs/linux/man/1-K/">K</a>(1),<a href="//www.systutorials.com/docs/linux/man/2-K/">K</a>(2),...,K(N) of the integers 1,...,N.
+ by the permutation K(1),K(2),...,K(N) of the integers 1,...,N.
  If FORWRD = .TRUE., forward permutation:
  X(*,K(J)) is moved X(*,J) for J = 1,2,...,N.
  If FORWRD = .FALSE., backward permutation:

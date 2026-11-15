@@ -31,6 +31,6 @@ description: "eurephia-auth – The eurephia OpenVPN authentication plug-in"
 <dd>auth-user-pass</dl>
 <p> to their configuration file. This instructs the OpenVPN client to ask for user name and password when starting the connection.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-eurephia-sqlite/">eurephia-sqlite</a></code>(8), <code><a href="/docs/linux/man/8-eurephia_init/">eurephia_init</a></code>(8)</p>
+<p><code>eurephia-sqlite</code>(8), <code>eurephia_init</code>(8)</p>
 <h2>Author</h2>
 <p>Copyright (C) 2008-2010 David Sommerseth &lt;dazo [at] users.sourceforge.net&gt;</p>

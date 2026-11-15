@@ -17,9 +17,9 @@ description: "pmlogmv – move (rename) Performance Co-Pilot archive files"
 <p> The <code>-N</code> option performs a dry-run, checking and reporting what changes would be made without making any changes. </p>
 <p> Additional reporting verbosity may be requested with the <code>-V</code> option. </p>
 <p> Because PCP archives are important records of system activity, special care is taken to ensure the integrity of an archive&#8217;s files. For recoverable problems encountered during the execution of <code>pmlogmv</code>, all the files associated with <i>oldname</i> will be preserved, and no new files with the <i>newname</i> prefix will be created. &#8220;Recoverable problems&#8221; include signals that can be caught (such as SIGHUP, SIGINT, SIGQUIT and SIGTERM), permissions issues, new files already existing, file system full events, etc. </p>
-<p> The implementation of <code>pmlogmv</code> uses hard links in the file system and so follows the semantic restrictions of <i><a href="/docs/linux/man/2-ln/">ln</a></i>(2) which for most systems means the directories containing both the <i>oldname</i> and the <i>newname</i> PCP archive files need to be writeable and within the <code>same</code> file system.</p>
+<p> The implementation of <code>pmlogmv</code> uses hard links in the file system and so follows the semantic restrictions of <i>ln</i>(2) which for most systems means the directories containing both the <i>oldname</i> and the <i>newname</i> PCP archive files need to be writeable and within the <code>same</code> file system.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/2-ln/">ln</a></code>(2) and <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1).</p>
+<p> <code>ln</code>(2) and <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1).</p>
 <h2>DIAGNOSTICS</h2>
 <p> All error and warning messages are intended to be easily understood and errors produce a non-zero exit status. </p>
 <h2>Index</h2>

@@ -27,7 +27,7 @@ int pbs_rescrelease(int connect, resource_t resource_id)</pre>
 <dd>The <code>pbs_rescrelease</code>() call releases or frees resources reserved with the resource handle of <i> returned from a prior </i><code>pbs_rescreserve</code>() call. <i> is the connection returned by </i><code>pbs_connect</code>().</dl>
 <p> Both functions require that the issuing user have operator or administrator privilege.</p>
 <h2>See Also</h2>
-<p><a href="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_connect/">pbs_connect</a>(3B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_disconnect/">pbs_disconnect</a>(3B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_rescquery/">pbs_rescquery</a>(3B) and <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources/">pbs_resources</a>(7B)</p>
+<p>qsub(1B), pbs_connect(3B), pbs_disconnect(3B), pbs_rescquery(3B) and pbs_resources(7B)</p>
 <h2>Diagnostics</h2>
 <p>pbs_rescreserve() and pbs_rescrelease() return zero on success. Otherwise, a non zero error is returned. The error number is also set in pbs_errno.</p>
 <dl>

@@ -104,6 +104,6 @@ Tcl_ObjectMapMethodNameProc
 </dl>
 <p> If the result is TCL_OK, the remapping is assumed to have been done. If the result is TCL_ERROR, an error message will have been left in <i>interp</i> and the method call will fail. If the result is TCL_BREAK, the standard method name lookup rules will be used; the behavior of other result codes is currently undefined. The <i>object</i> parameter says which object is being processed. The <i>startClsPtr</i> parameter points to a variable that contains the first class to provide a definition in the method chain to process, or NULL if the whole chain is to be processed (the argument itself is never NULL); this variable may be updated by the callback. The <i>methodNameObj</i> parameter gives an unshared object containing the name of the method being invoked, as provided by the user; this object may be updated by the callback.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-method/">Method</a>(3), <a href="/docs/linux/man/n-oo--class/">oo::class</a>(n), <a href="/docs/linux/man/n-oo--copy/">oo::copy</a>(n), <a href="/docs/linux/man/n-oo--define/">oo::define</a>(n), <a href="/docs/linux/man/n-oo--object/">oo::object</a>(n)</p>
+<p>Method(3), oo::class(n), oo::copy(n), oo::define(n), oo::object(n)</p>
 <h2>Keywords</h2>
 <p>class, constructor, object</p>

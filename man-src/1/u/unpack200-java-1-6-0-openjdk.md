@@ -65,7 +65,7 @@ unpack200 - JAR Unpacking tool
 </dl><h2>See Also</h2><dl COMPACT><dd><dl COMPACT><dt>*
 <dd>pack200 - JAR Packing Tool
 <dt>*
-<dd><i><a HREF="/docs/linux/man/1-pack200/">pack200</a>(1)</i>, <i><a HREF="/docs/linux/man/1-jar/">jar</a>(1)</i>, <i><a HREF="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i>, <i><a HREF="/docs/linux/man/5-attributes/">attributes</a>(5)</i> man pages
+<dd><i><a HREF="/docs/linux/man/1-pack200/">pack200</a>(1)</i>, <i><a HREF="/docs/linux/man/1-jar/">jar</a>(1)</i>, <i><a HREF="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</i>, <i>attributes(5)</i> man pages
 <dt>*
 <dd>Java SE Documentation
 <dt>*
@@ -73,7 +73,7 @@ unpack200 - JAR Unpacking tool
 <dt>*
 <dd><i>jar</i> - Java Archive Tool
 <dt>*
-<dd><i>jarsigner</i> - JAR Signer tool @ <a rel="nofollow" HREF="http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html">http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html</a></dl></dl><h2>Notes</h2>This command should not be confused with <i><a HREF="/docs/linux/man/1-unpack/">unpack</a>(1)</i>. They are distinctly separate products. 
+<dd><i>jarsigner</i> - JAR Signer tool @ <a rel="nofollow" HREF="http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html">http://java.sun.com/javase/6/docs/technotes/tools/solaris/jarsigner.html</a></dl></dl><h2>Notes</h2>This command should not be confused with <i>unpack(1)</i>. They are distinctly separate products. 
 
  
 

@@ -58,7 +58,7 @@ main(int argc, char **argv) {
 <h2>Library</h2>
 <p>libproj.a &#8211; library of projections and support procedures</p>
 <h2>See Also</h2>
-<p><code><a rel="nofollow" href="http://proj.osgeo.org/ProjAPI,">http://proj.osgeo.org/ProjAPI,</a> <a href="//www.systutorials.com/docs/linux/man/1U-proj/">proj</a>(1U),</code><br />
+<p><code><a rel="nofollow" href="http://proj.osgeo.org/ProjAPI,">http://proj.osgeo.org/ProjAPI,</a> proj(1U),</code><br />
  <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).</p>
 <h2>Home Page</h2>
 <p><a rel="nofollow" href="http://proj.osgeo.org">http://proj.osgeo.org</a></p>

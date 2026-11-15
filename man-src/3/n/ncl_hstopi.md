@@ -40,26 +40,26 @@ HSTOPI - Specifies various INTEGER parameters to be used by the Histogram utilit
 <dt>ICOL
 <dd>Integer, input -- Assigns a set of RGB color indices to the eight components of a histogram graphic when 'COL=ON'. 
 
- <a HREF="/docs/linux/man/1-icol/">ICOL</a>(1) = color index used for area fill of 
+ ICOL(1) = color index used for area fill of 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>histogram bars of dataset 1. 
- <a HREF="/docs/linux/man/2-icol/">ICOL</a>(2) = color index used for area fill of 
+ ICOL(2) = color index used for area fill of 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>histogram bars of dataset 2. 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(When two datasets are compared 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>using parameter IFLAG&nbsp;<wbr>=&nbsp;<wbr>3). 
- <a HREF="/docs/linux/man/3-icol/">ICOL</a>(3) = color index used for bar outlines. 
- <a HREF="/docs/linux/man/4-icol/">ICOL</a>(4) = color index used for drawing axes. 
- <a HREF="/docs/linux/man/5-icol/">ICOL</a>(5) = color index used for drawing a median 
+ ICOL(3) = color index used for bar outlines. 
+ ICOL(4) = color index used for drawing axes. 
+ ICOL(5) = color index used for drawing a median 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>line. 
- <a HREF="/docs/linux/man/6-icol/">ICOL</a>(6) = color index used for text output 
+ ICOL(6) = color index used for text output 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(labels.) 
- <a HREF="/docs/linux/man/7-icol/">ICOL</a>(7) = color index used for titles. 
- <a HREF="/docs/linux/man/8-icol/">ICOL</a>(8) = color index used for drawing the 
+ ICOL(7) = color index used for titles. 
+ ICOL(8) = color index used for drawing the 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>perimeter box. 
 
@@ -108,14 +108,14 @@ C
 C
 C Assign color indices to the 8 components of the graphic.
 C
- <a HREF="//www.systutorials.com/docs/linux/man/1-COLORS/">COLORS</a>(1) = 8
- <a HREF="//www.systutorials.com/docs/linux/man/2-COLORS/">COLORS</a>(2) = 3
- <a HREF="//www.systutorials.com/docs/linux/man/3-COLORS/">COLORS</a>(3) = 14
- <a HREF="//www.systutorials.com/docs/linux/man/4-COLORS/">COLORS</a>(4) = 11
- <a HREF="//www.systutorials.com/docs/linux/man/5-COLORS/">COLORS</a>(5) = 6
- <a HREF="//www.systutorials.com/docs/linux/man/6-COLORS/">COLORS</a>(6) = 13
- <a HREF="//www.systutorials.com/docs/linux/man/7-COLORS/">COLORS</a>(7) = 14
- <a HREF="//www.systutorials.com/docs/linux/man/8-COLORS/">COLORS</a>(8) = 5
+ COLORS(1) = 8
+ COLORS(2) = 3
+ COLORS(3) = 14
+ COLORS(4) = 11
+ COLORS(5) = 6
+ COLORS(6) = 13
+ COLORS(7) = 14
+ COLORS(8) = 5
  CALL HSTOPI('COL=ON',3,0,COLORS,8)</pre>Example &quot;ncargex thstmv&quot; shows three examples of histograms with missing values in the input data.
 <h2>Access</h2>To use HSTOPI or c_hstopi, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the histogram man page for a description of all Histogram error messages and/or informational messages.

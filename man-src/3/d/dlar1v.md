@@ -141,7 +141,7 @@ description: "dlar1v.f –"
 <pre>
           ISUPPZ is INTEGER array, dimension (2)
            The support of the vector in Z, i.e., the vector Z is
-           nonzero only in elements <a href="//www.systutorials.com/docs/linux/man/1-ISUPPZ/">ISUPPZ</a>(1) through ISUPPZ( 2 ).
+           nonzero only in elements ISUPPZ(1) through ISUPPZ( 2 ).
 </pre>
 <p> <i>NRMINV</i> </p>
 <pre>

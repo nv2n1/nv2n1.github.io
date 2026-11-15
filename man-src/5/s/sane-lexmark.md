@@ -25,7 +25,7 @@ description: "sane-lexmark – SANE backend for Lexmark X1100/X1200 Series scann
  not fully tested in USB2.0
  Dell A920 good</pre>
 </dl>
-<p> The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br />
+<p> The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br />
  If you notice any strange behavior, please report to the backend maintainer or to the SANE mailing list. Valid command line options and their syntax can be listed by using</p>
 <dl>
 <dd>scanimage &#8211;help -d lexmark:usb:&lt;usb port&gt;</dl>
@@ -72,7 +72,7 @@ description: "sane-lexmark – SANE backend for Lexmark X1100/X1200 Series scann
 <h2>Bugs</h2>
 <p>No bugs currently known. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
+<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
 <h2>Author</h2>
 <dl>
 <dt>The backend was originally written by Fred Odendaal.</p>

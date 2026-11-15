@@ -82,7 +82,7 @@ description: "perl594delta – what is new for perl v5.9.4"
 <dt>Single char char-classes treated as literals</p>
 <dd> Classes of a single character are now treated the same as if the character had been used as a literal, meaning that code that uses char-classes as an escaping mechanism will see a speedup. (Yves Orton)</p>
 <dt>Trie optimisation of literal string alternations</p>
-<dd> Alternations, where possible, are optimised into more efficient matching structures. String literal alternations are merged into a trie and are matched simultaneously. This means that instead of O(N) time for matching N alternations at a given point the new code performs in <a href="/docs/linux/man/1-o/">O</a>(1) time. (Yves Orton) </p>
+<dd> Alternations, where possible, are optimised into more efficient matching structures. String literal alternations are merged into a trie and are matched simultaneously. This means that instead of O(N) time for matching N alternations at a given point the new code performs in O(1) time. (Yves Orton) </p>
 <p> <code>Note:</code> Much code exists that works around perl&#8217;s historic poor performance on alternations. Often the tricks used to do so will disable the new optimisations. Hopefully the utility modules used for this purpose will be educated about these new optimisations by the time 5.10 is released.</p>
 <dt>Aho-Corasick start-point optimisation</p>
 <dd> When a pattern starts with a trie-able alternation and there aren&#8217;t better optimisations available the regex engine will use Aho-Corasick matching to find the start point. (Yves Orton)</dl>

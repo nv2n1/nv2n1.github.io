@@ -42,7 +42,7 @@ description: "podgrep – grep in pod sections only"
     whose headers or items contain &quot;seek&quot;.)
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-faqpods/">faqpods</a></i>(1), <i><a href="/docs/linux/man/1-pfcat/">pfcat</a></i>(1), <i><a href="/docs/linux/man/1-pmpath/">pmpath</a></i>(1), <i><a href="/docs/linux/man/1-pod2text/">pod2text</a></i>(1), <i><a href="/docs/linux/man/1-podpath/">podpath</a></i>(1), <i><a href="/docs/linux/man/1-sitepods/">sitepods</a></i>(1), <i><a href="/docs/linux/man/1-stdpods/">stdpods</a></i>(1), and <i><a href="/docs/linux/man/1-tcgrep/">tcgrep</a></i>(1).</p>
+<p> <i><a href="/docs/linux/man/1-faqpods/">faqpods</a></i>(1), <i><a href="/docs/linux/man/1-pfcat/">pfcat</a></i>(1), <i><a href="/docs/linux/man/1-pmpath/">pmpath</a></i>(1), <i><a href="/docs/linux/man/1-pod2text/">pod2text</a></i>(1), <i><a href="/docs/linux/man/1-podpath/">podpath</a></i>(1), <i><a href="/docs/linux/man/1-sitepods/">sitepods</a></i>(1), <i><a href="/docs/linux/man/1-stdpods/">stdpods</a></i>(1), and <i>tcgrep</i>(1).</p>
 <h2>NOTE</h2>
 <p> For a pager, the author likes these environment settings (in the login startup, of course): </p>
 <pre><code>

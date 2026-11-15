@@ -38,7 +38,7 @@ description: "xcam – a graphical camera frontend for SANE"
 <dd> For each device, there is one rc-file that holds the saved settings for that particular device. Normally, this file should not be manipulated directly. Instead, the user should use the <code>xcam</code> interface to select appropriate values and then save the device settings using the &quot;Preferences-&gt;Save as default settings&quot; menubar entry. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-sane/">sane</a>(7), <a href="/docs/linux/man/1-xscanimage/">xscanimage</a>(1), <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5) and the backend manpages</p>
+<p> <a href="/docs/linux/man/7-sane/">sane</a>(7), xscanimage(1), <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5) and the backend manpages</p>
 <h2>AUTHOR</h2>
 <p> David Mosberger-Tang </p>
 <p> Gerard Klaver (2005 update) </p>

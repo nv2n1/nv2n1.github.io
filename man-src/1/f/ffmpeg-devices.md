@@ -358,7 +358,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> Linux framebuffer input device. </p>
 <p> The Linux framebuffer is a graphic hardware-independent abstraction layer to show graphics on a computer monitor, typically on the console. It is accessed through a file device node, usually <i>/dev/fb0</i>. </p>
 <p> For more detailed information read the file Documentation/fb/framebuffer.txt included in the Linux source tree. </p>
-<p> See also &lt;<code><a rel="nofollow" href="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></code>&gt;, and <code><a href="/docs/linux/man/1-fbset/">fbset</a></code>(1). </p>
+<p> See also &lt;<code><a rel="nofollow" href="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></code>&gt;, and <code>fbset</code>(1). </p>
 <p> To record from the framebuffer device <i>/dev/fb0</i> with <code>ffmpeg</code>: </p>
 <pre>
         ffmpeg -f fbdev -framerate 10 -i /dev/fb0 out.avi
@@ -1009,7 +1009,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <pre>
         ffmpeg -re -i INPUT -c:v rawvideo -pix_fmt bgra -f fbdev /dev/fb0
 </pre>
-<p> See also &lt;<code><a rel="nofollow" href="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></code>&gt;, and <code><a href="/docs/linux/man/1-fbset/">fbset</a></code>(1).</p>
+<p> See also &lt;<code><a rel="nofollow" href="http://linux-fbdev.sourceforge.net/">http://linux-fbdev.sourceforge.net/</a></code>&gt;, and <code>fbset</code>(1).</p>
 <h3>opengl</h3>
 <p> OpenGL output device. </p>
 <p> To enable this output device you need to configure FFmpeg with <tt>&quot;--enable-opengl&quot;</tt>. </p>

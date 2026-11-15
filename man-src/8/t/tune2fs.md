@@ -43,7 +43,7 @@ description: "tune2fs – adjust tunable file system parameters on ext2/ext3/ext
 <dt><code>mmp_update_interval=</code><i>interval</i></p>
 <dd>Adjust the initial MMP update interval to <i>interval</i> seconds. Specifying an <i>interval</i> of 0 means to use the default interval. The specified interval must be less than 300 seconds. Requires that the <code>mmp</code> feature be enabled.</p>
 <dt><code>stride=</code><i>stride-size</i></p>
-<dd>Configure the file system for a RAID array with <i>stride-size</i> file system blocks. This is the number of blocks read or written to disk before moving to next disk. This mostly affects placement of file system metadata like bitmaps at <code><a href="/docs/linux/man/2-mke2fs/">mke2fs</a></code>(2) time to avoid placing them on a single disk, which can hurt the performance. It may also be used by block allocator.</p>
+<dd>Configure the file system for a RAID array with <i>stride-size</i> file system blocks. This is the number of blocks read or written to disk before moving to next disk. This mostly affects placement of file system metadata like bitmaps at <code>mke2fs</code>(2) time to avoid placing them on a single disk, which can hurt the performance. It may also be used by block allocator.</p>
 <dt><code>stripe_width=</code><i>stripe-width</i></p>
 <dd>Configure the file system for a RAID array with <i>stripe-width</i> file system blocks per stripe. This is typically be stride-size * N, where N is the number of data disks in the RAID (e.g. RAID 5 N+1, RAID 6 N+2). This allows the block allocator to prevent read-modify-write of the parity in a RAID stripe if possible when the data is written.</p>
 <dt><code>hash_alg=</code><i>hash-alg</i></p>
@@ -102,7 +102,7 @@ description: "tune2fs – adjust tunable file system parameters on ext2/ext3/ext
 <dt><code>-L</code><i> volume-label</i></p>
 <dd>Set the volume label of the file system. Ext2 file system labels can be at most 16 characters long; if <i>volume-label</i> is longer than 16 characters, <code>tune2fs</code> will truncate it and print a warning. The volume label can be used by <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), and <code>/etc/<a href="/docs/linux/man/5-fstab/">fstab</a></code>(5) (and possibly others) by specifying <code>LABEL=</code><i>volume-label</i> instead of a block special device name like <code>/dev/hda5</code>.</p>
 <dt><code>-m</code><i> reserved-blocks-percentage</i></p>
-<dd>Set the percentage of the file system which may only be allocated by privileged processes. Reserving some number of file system blocks for use by privileged processes is done to avoid file system fragmentation, and to allow system daemons, such as <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8), to continue to function correctly after non-privileged processes are prevented from writing to the file system. Normally, the default percentage of reserved blocks is 5%.</p>
+<dd>Set the percentage of the file system which may only be allocated by privileged processes. Reserving some number of file system blocks for use by privileged processes is done to avoid file system fragmentation, and to allow system daemons, such as <code>syslogd</code>(8), to continue to function correctly after non-privileged processes are prevented from writing to the file system. Normally, the default percentage of reserved blocks is 5%.</p>
 <dt><code>-M</code><i> last-mounted-directory</i></p>
 <dd>Set the last-mounted directory for the file system.</p>
 <dt><code>-o</code> [^]<i>mount-option</i>[,&#8230;]</p>
@@ -230,7 +230,7 @@ description: "tune2fs – adjust tunable file system parameters on ext2/ext3/ext
 <dd>generate a new time-based UUID</dl>
 </dl>
 <dd>The UUID may be used by <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), and <code>/etc/<a href="/docs/linux/man/5-fstab/">fstab</a></code>(5) (and possibly others) by specifying <code>UUID=</code><i>uuid</i> instead of a block special device name like <code>/dev/hda1</code>.</p>
-<dd>See <code><a href="/docs/linux/man/8-uuidgen/">uuidgen</a></code>(8) for more information. If the system does not have a good random number generator such as <i>/dev/random</i> or <i>/dev/urandom</i>, <code>tune2fs</code> will automatically use a time-based UUID instead of a randomly-generated UUID.</p>
+<dd>See <code>uuidgen</code>(8) for more information. If the system does not have a good random number generator such as <i>/dev/random</i> or <i>/dev/urandom</i>, <code>tune2fs</code> will automatically use a time-based UUID instead of a randomly-generated UUID.</p>
 <dt><code>-z</code><i> undo_file</i></p>
 <dd>Before overwriting a file system block, write the old contents of the block to an undo file. This undo file can be used with <a href="/docs/linux/man/8-e2undo/">e2undo</a>(8) to restore the old contents of the file system should something go wrong. If the empty string is passed as the undo_file argument, the undo file will be written to a file named tune2fs-<i>device</i>.e2undo in the directory specified via the <i>E2FSPROGS_UNDO_DIR</i> environment variable. </p>
 <p> WARNING: The undo file cannot be used to recover from a power or system crash.</dl>

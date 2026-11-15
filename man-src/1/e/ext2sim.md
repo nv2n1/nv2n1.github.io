@@ -13,7 +13,7 @@ description: "ext2sim – convert hierarchical"
 <h2>SYNOPSIS</h2>
 <p> <code>ext2sim</code> [ <code>-a</code> <i>aliasfile</i> ] [ <code>-l</code> <i>labelsfile</i> ] [ <code>-o</code> <i>simfile</i> ] [ <code>-A</code> ] [ <code>-B</code> ] [ <code>-F</code> ] [ <code>-L</code> ] [ <code>-t</code> ] [ <i>extcheck-options</i> ] [ <i>-y num</i> ] [ <i>-f mit|lbl|su</i> ] [ <i>-J hier|flat</i> ] [ <i>-j device:sdRclass[/subRclass]/defaultSubstrate</i> ] <i>root</i> </p>
 <h2>DESCRIPTION</h2>
-<p> Ext2sim will convert an extracted circuit from the hierarchical <i><a href="/docs/linux/man/5-ext/">ext</a></i>(5) representation produced by Magic to the flat <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) representation required by many simulation tools. The root of the tree to be extracted is the file <i>root</i><code>.ext</code>; it and all the files it references are recursively flattened. The result is a single, flat representation of the circuit that is written to the file <i>root</i><code>.sim</code>, a list of node aliases written to the file <i>root</i><code>.al</code>, and a list of the locations of all nodenames in CIF format, suitable for plotting, to the file <i>root</i><code>.nodes</code>. The file <i>root</i><code>.sim</code> is suitable for use with programs such as <i><a href="/docs/linux/man/1-crystal/">crystal</a></i>(1), <i><a href="/docs/linux/man/1-esim/">esim</a></i>(1), or <i><a href="/docs/linux/man/1-sim2spice/">sim2spice</a></i>(1). </p>
+<p> Ext2sim will convert an extracted circuit from the hierarchical <i><a href="/docs/linux/man/5-ext/">ext</a></i>(5) representation produced by Magic to the flat <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) representation required by many simulation tools. The root of the tree to be extracted is the file <i>root</i><code>.ext</code>; it and all the files it references are recursively flattened. The result is a single, flat representation of the circuit that is written to the file <i>root</i><code>.sim</code>, a list of node aliases written to the file <i>root</i><code>.al</code>, and a list of the locations of all nodenames in CIF format, suitable for plotting, to the file <i>root</i><code>.nodes</code>. The file <i>root</i><code>.sim</code> is suitable for use with programs such as <i>crystal</i>(1), <i>esim</i>(1), or <i>sim2spice</i>(1). </p>
 <p> The following options are recognized:</p>
 <dl>
 <dt><code>-a&nbsp;<wbr></code><i>aliasfile</i></p>
@@ -25,7 +25,7 @@ description: "ext2sim – convert hierarchical"
 <dt><code>-A</code></p>
 <dd> Don&#8217;t produce the aliases file.</p>
 <dt><code>-B</code></p>
-<dd> Don&#8217;t output transistor or node attributes in the <code>.sim</code> file. This option will also disable the output of information such as the area and perimeter of source and drain diffusion and the fet substrate. For compatibitlity reasons the latest version of ext2sim outputs this information as node attibutes. This option is necessary when preparing input for programs that don&#8217;t know about attributes, such as <i><a href="/docs/linux/man/1-sim2spice/">sim2spice</a></i>(1) (which is actually made obsolete by <i><a href="/docs/linux/man/1-ext2spice/">ext2spice</a></i>(1), anyway), or <i><a href="/docs/linux/man/1-rsim/">rsim</a></i>(1).</p>
+<dd> Don&#8217;t output transistor or node attributes in the <code>.sim</code> file. This option will also disable the output of information such as the area and perimeter of source and drain diffusion and the fet substrate. For compatibitlity reasons the latest version of ext2sim outputs this information as node attibutes. This option is necessary when preparing input for programs that don&#8217;t know about attributes, such as <i>sim2spice</i>(1) (which is actually made obsolete by <i><a href="/docs/linux/man/1-ext2spice/">ext2spice</a></i>(1), anyway), or <i>rsim</i>(1).</p>
 <dt><code>-F</code></p>
 <dd> Don&#8217;t output nodes that aren&#8217;t connected to fets (floating nodes).</p>
 <dt><code>-L</code></p>
@@ -33,7 +33,7 @@ description: "ext2sim – convert hierarchical"
 <dt><code>-t</code><i>char</i></p>
 <dd> Trim characters from node names when writing the output file. <i>Char</i> should be either &quot;#&quot; or &quot;!&quot;. The option may be used twice if both characters are desired.</p>
 <dt><code>-f </code><i>MIT|LBL|SU</i></p>
-<dd> Select the output format. MIT is the traditional <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) format. LBL is a variant of it understood by <i><a href="/docs/linux/man/1-gemini/">gemini</a></i>(1) which includes the substrate connection as a fourth terminal before length and width. SU is the internal Stanford format which is described also in <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) and includes areas and perimeters of fet sources, drains and substrates.</p>
+<dd> Select the output format. MIT is the traditional <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) format. LBL is a variant of it understood by <i>gemini</i>(1) which includes the substrate connection as a fourth terminal before length and width. SU is the internal Stanford format which is described also in <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) and includes areas and perimeters of fet sources, drains and substrates.</p>
 <dt><code>-y </code><i>num</i></p>
 <dd> Select the precision for outputing capacitors. The default is 1 which means that the capacitors will be printed to a precision of .1 fF.</p>
 <dt><code>-J </code><i>hier|flat</i></p>
@@ -43,12 +43,12 @@ description: "ext2sim – convert hierarchical"
 </dl>
 <p> The way the extraction of node area and perimeter works in magic the total area and perimeter of the source/drain junction is summed up on a single node. That is why all the junction areas and perimeters are summed up on a single node (this should not affect simulation results however). </p>
 <p> <i>Special care must be taken when the substrate of a fet is tied to a node other than the default substrate</i> (eg in a bootstraping charge pump). To get the correct substrate info in these cases the fet(s) with separate wells should be in their own separate subcell with ext:aph attributes attached to their sensitive terminals (also all the transistors which share sensistive terminals with these should be in another subcell with the same attributes). </p>
-<p> In addition, all of the options of <i><a href="/docs/linux/man/1-extcheck/">extcheck</a></i>(1) are accepted. </p>
+<p> In addition, all of the options of <i>extcheck</i>(1) are accepted. </p>
 <h2>SCALING AND UNITS</h2>
 <p> If all of the <code>.ext</code> files in the tree read by <i>ext2sim</i> have the same geometrical scale (specified in the <code>scale</code> line in each <code>.ext</code> file), this scale is reflected through to the output, resulting in substantially smaller <code>.sim</code> files. Otherwise, the geometrical unit in the output <code>.sim</code> file is a centimicron. </p>
 <p> Resistance and capacitance are always output in ohms and femptofarads, respectively. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-extcheck/">extcheck</a>(1), <a href="/docs/linux/man/1-ext2dlys/">ext2dlys</a>(1), <a href="/docs/linux/man/1-ext2spice/">ext2spice</a>(1), <a href="/docs/linux/man/1-magic/">magic</a>(1), <a href="/docs/linux/man/1-rsim/">rsim</a>(1), <a href="/docs/linux/man/5-ext/">ext</a>(5), <a href="/docs/linux/man/5-sim/">sim</a>(5) </p>
+<p> extcheck(1), ext2dlys(1), <a href="/docs/linux/man/1-ext2spice/">ext2spice</a>(1), <a href="/docs/linux/man/1-magic/">magic</a>(1), rsim(1), <a href="/docs/linux/man/5-ext/">ext</a>(5), <a href="/docs/linux/man/5-sim/">sim</a>(5) </p>
 <h2>AUTHOR</h2>
 <p> Walter Scott additions/fixes by Stefanos Sidiropoulos. </p>
 <h2>BUGS</h2>

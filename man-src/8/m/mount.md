@@ -488,7 +488,7 @@ mount --make-unbindable /foo</pre>
 <td>
 <p> fuse </td>
 <td>
-<p> <code><a href="/docs/linux/man/8-fuse/">fuse</a></code>(8)
+<p> <code>fuse</code>(8)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -502,7 +502,7 @@ mount --make-unbindable /foo</pre>
 <td>
 <p> tmpfs </td>
 <td>
-<p> <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5)
+<p> <code>tmpfs</code>(5)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -959,7 +959,7 @@ mount --make-unbindable /foo</pre>
 <dd>Disable journaling. This will provide slight performance improvements in some situations at the cost of losing reiserfs&#8217;s fast recovery from crashes. Even with this option turned on, reiserfs still performs all journaling operations, save for actual writes into its journaling area. Implementation of <i>nolog</i> is a work in progress.</dl>
 <p> <code>notail</code></p>
 <dl>
-<dd>By default, reiserfs stores small files and &#8216;file tails&#8217; directly into its tree. This confuses some utilities such as <code><a href="/docs/linux/man/8-lilo/">lilo</a></code>(8). This option is used to disable packing of files into the tree.</dl>
+<dd>By default, reiserfs stores small files and &#8216;file tails&#8217; directly into its tree. This confuses some utilities such as <code>lilo</code>(8). This option is used to disable packing of files into the tree.</dl>
 <p> <code>replayonly</code></p>
 <dl>
 <dd>Replay the transactions which are in the journal, but do not actually mount the filesystem. Mainly used by <i>reiserfsck</i>.</dl>

@@ -49,4 +49,4 @@ description: "ggz.modules – GGZ Gaming Zone module configuration file"
 <h2>Authors</h2>
 <p>The GGZ Development Team &lt;ggz-dev [at] mail.ggzgamingzone.org&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/6-ggz-config/">ggz-config</a>(6), <a href="/docs/linux/man/7-ggz/">ggz</a>(7) </p>
+<p>ggz-config(6), <a href="/docs/linux/man/7-ggz/">ggz</a>(7) </p>

@@ -51,4 +51,4 @@ description: "Tspi_Hash_VerifySignature – verify the hash value with a given s
 <h2>Conforming To</h2>
 <p><code>Tspi_Hash_VerifySignature</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_hash_updatehash/">Tspi_Hash_UpdateHash</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sethashvalue/">Tspi_Hash_SetHashValue</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sign/">Tspi_Hash_Sign</a></code>(3), <a href="/docs/linux/man/3-tspi_hash_gethashvalue/">Tspi_Hash_GetHashValue</a>(3).</p>
+<p><code>Tspi_Hash_UpdateHash</code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sethashvalue/">Tspi_Hash_SetHashValue</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sign/">Tspi_Hash_Sign</a></code>(3), <a href="/docs/linux/man/3-tspi_hash_gethashvalue/">Tspi_Hash_GetHashValue</a>(3).</p>

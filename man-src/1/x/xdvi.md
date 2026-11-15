@@ -128,7 +128,7 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dt><code>-findstring</code> <i>string</i></p>
 <dd> This option triggers a search for <i>string</i> in the DVI file mentioned on the command-line, similar to forward search (see the description of the <code>sourceposition</code> option): If there is already another instance of <code>xdvi</code> running on the displaying that DVI file, it will cause that instance to perform the search instead. The search starts at the top of the current page of the DVI file.</p>
 <dt><code>-font</code><i> font</i></p>
-<dd> (<code>*font</code>) Sets the font used in menus, buttons etc., as described in the <i><a href="//www.systutorials.com/docs/linux/man/7x-X/">X</a>(7x)</i> man page. The font for child windows can be set separately, e.g.:</p>
+<dd> (<code>*font</code>) Sets the font used in menus, buttons etc., as described in the <i>X(7x)</i> man page. The font for child windows can be set separately, e.g.:</p>
 <dl>
 <dt>
 <dd>
@@ -144,7 +144,7 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dt><code>-gamma</code><i> gamma</i></p>
 <dd> (<code>.gamma</code>) Controls the interpolation of colors in the greyscale anti-aliasing color palette. Default value is 1.0. For 0 &lt; <i>gamma</i> &lt; 1, the fonts will be lighter (more like the background), and for <i>gamma</i> &gt; 1, the fonts will be darker (more like the foreground). Negative values behave the same way, but use a slightly different algorithm. For color and grayscale displays; for monochrome, see <code>-density</code>. See also the `<code>S</code>&#8216; keystroke.</p>
 <dt><code>-geometry</code><i> geometry</i></p>
-<dd> (<code>.geometry</code>) Specifies the initial geometry of the main window, as described in the <i><a href="//www.systutorials.com/docs/linux/man/7x-X/">X</a>(7x)</i> man page. The geometry of child windows can be set separately, e.g.:<br />
+<dd> (<code>.geometry</code>) Specifies the initial geometry of the main window, as described in the <i>X(7x)</i> man page. The geometry of child windows can be set separately, e.g.:<br />
  <i>xdvi*helpwindow.geometry: 600&#215;800</i></p>
 <dt><code>-gsalpha</code></p>
 <dd> (<code>.gsAlpha</code>) Causes <code>Ghostscript</code> to be called with the <code>x11alpha</code> driver instead of the <code>x11</code> driver. The <code>x11alpha</code> driver enables anti-aliasing in PostScript specials, for a nicer appearance. It is available on newer versions of <code>Ghostscript</code>. This option can also be toggled with the `<code>V</code>&#8216; keystroke.</p>

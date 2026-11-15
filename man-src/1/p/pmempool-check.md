@@ -53,7 +53,7 @@ description: "pmempool-check – Check and repair Persistent Memory Pool"
 <dt>pmempool check -rvN pool.bin</p>
 <dd> # Check consistency of pool.bin pool file, print what would be repaired with increased verbosity level.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-libpmemblk/">libpmemblk</a>(3) <a href="/docs/linux/man/3-libpmemlog/">libpmemlog</a>(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
+<p> <code>libpmemblk(3) libpmemlog(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
 <h2>PMEMPOOL</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code> suite. </p>
 <h2>Index</h2>

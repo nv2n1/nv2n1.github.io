@@ -31,7 +31,7 @@ description: "trampoline – closures as first-class C functions"
 <p> <code>trampoline_r_data0(</code><i>function</i><code>)</code> returns <i>data0</i>, </p>
 <p> <code>trampoline_r_data1(</code><i>function</i><code>)</code> returns <i>data1</i>.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-trampoline/">trampoline</a></code>(3), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/3-varargs/">varargs</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-trampoline/">trampoline</a></code>(3), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code>varargs</code>(3) </p>
 <h2>PORTING</h2>
 <p> The way <code>gcc</code> builds local functions is described in the gcc source, file gcc-2.6.3/config/<i>cpu</i>/<i>cpu</i>.h. </p>
 <h2>AUTHOR</h2>

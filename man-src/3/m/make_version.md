@@ -21,4 +21,4 @@ description: "MAKE_VERSION – Create a 32 bit integer from the Allegro version"
  /* Work-around */
  #endif</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-allegro_version/">ALLEGRO_VERSION</a></code>(3), <code><a href="/docs/linux/man/3-allegro_sub_version/">ALLEGRO_SUB_VERSION</a></code>(3), <code><a href="/docs/linux/man/3-allegro_wip_version/">ALLEGRO_WIP_VERSION</a></code>(3)</p>
+<p><code>ALLEGRO_VERSION</code>(3), <code>ALLEGRO_SUB_VERSION</code>(3), <code>ALLEGRO_WIP_VERSION</code>(3)</p>

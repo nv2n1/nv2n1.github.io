@@ -16,7 +16,7 @@ description: "dbmultistats – run dbcolstats over each group of inputs identifi
 <p> Assumptions and requirements are the same as dbmapreduce (this program is just a wrapper around that program): </p>
 <p> By default, data can be provided in arbitrary order and the program consumes O(number of unique tags) memory, and O(size of data) disk space. </p>
 <p> With the -S option, data must arrive group by tags (not necessarily sorted), and the program consumes O(number of tags) memory and no disk space. The program will check and abort if this precondition is not met. </p>
-<p> With two -S&#8217;s, program consumes <a href="/docs/linux/man/1-o/">O</a>(1) memory, but doesn&#8217;t verify that the data-arrival precondition is met. </p>
+<p> With two -S&#8217;s, program consumes O(1) memory, but doesn&#8217;t verify that the data-arrival precondition is met. </p>
 <p> (Note that these semantics are exactly like<br />
 &nbsp;<wbr>dbmapreduce -k KeyField &#8212; dbcolstats ValueField dbmultistats provides a simpler <font SIZE="-1">API</font> that passes through statistics-specific arguments and is optimized when data is pre-sorted and there are no quarties or medians.)</p>
 <h2>OPTIONS</h2>

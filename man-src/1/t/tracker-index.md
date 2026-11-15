@@ -34,5 +34,5 @@ tracker index-- reindex - mime - type&lt;mime1&gt;[[-m[mime2]]...] tracker index
 <p> The <i>file</i> argument can be either a local path or a URI. It also does not have to be an absolute path. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tracker/">tracker</a></code>(1). <code>Turtle.</code> </p>
+<p> <code>tracker</code>(1). <code>Turtle.</code> </p>
 <h2>Index</h2>

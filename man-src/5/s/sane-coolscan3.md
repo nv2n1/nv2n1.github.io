@@ -23,7 +23,7 @@ LS-8000 ED IEEE 1394</pre>
 </dl>
 <p> Please send mail to <i>sane-devel [at] alioth-lists.debian.net</i> to report successes or failures. </p>
 <h2>Options</h2>
-<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). </p>
+<p>The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1). </p>
 <p> Valid command line options and their syntax can be listed by using: </p>
 <dl>
 <dd>scanimage &#8211;help -d coolscan3:&lt;interface&gt;:&lt;device&gt;</dl>
@@ -82,7 +82,7 @@ LS-8000 ED IEEE 1394</pre>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) </p>
 <h2>Bugs</h2>
 <p>Currently, the SANE protocol does not allow automatically updating options whenever the hardware changes. Thus the number of choices for the <code>&#8211;frame</code> option will be fixed when the backend is initialized (usually when the user runs the frontend). In particular, if there is no film strip in the automatic film strip feeder when the backend is initialized, the <code>&#8211;frame</code> option will not appear at all. Also, restarting the frontend after swapping film adapters is strongly recommended. Linux kernels prior to 2.4.19 had a patch that truncated INQUIRY data from IEEE 1394 scanners to 36 bytes, discarding vital information about the scanner. The IEEE 1394 models therefore only work with 2.4.19 or later. No real bugs currently known, please report any to the SANE developers&#8217; list. </p>
 <h2>Authors</h2>

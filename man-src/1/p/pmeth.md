@@ -163,7 +163,7 @@ $ pmeth IO::Socket
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-perltoot/">perltoot</a></i>(1), <i><a HREF="/docs/linux/man/1-perlobj/">perlobj</a></i>(1)
+ <i>perltoot</i>(1), <i><a HREF="/docs/linux/man/1-perlobj/">perlobj</a></i>(1)
 
 <h2>AUTHORS and COPYRIGHTS</h2>
 

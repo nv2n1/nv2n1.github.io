@@ -39,7 +39,7 @@ description: "guestfs-performance – engineering libguestfs for greatest perfor
 </pre>
 <p> Run the command several times in a row and discard the first few runs, so that you are measuring a typical &#8220;hot cache&#8221; case. </p>
 <p> <i>Explanation</i> </p>
-<p> This command starts up the libguestfs appliance on the named disk image or libvirt guest, performs libguestfs inspection on it (see &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)), mounts the guest’s disks, then discards all these results and shuts down. </p>
+<p> This command starts up the libguestfs appliance on the named disk image or libvirt guest, performs libguestfs inspection on it (see &#8220;<font SIZE="-1">INSPECTION&#8221;</font> in <code>guestfs</code>(3)), mounts the guest’s disks, then discards all these results and shuts down. </p>
 <p> The first time you run the command, it will create an appliance and cache it (usually under <i>/var/tmp/.guestfs-*</i>). Subsequent runs should reuse the cached appliance. </p>
 <p> <i>Expected results</i> </p>
 <p> You should expect times which are ≤ 5 seconds greater than measured in the first baseline test above. (For example, if the first baseline test ran in 5 seconds, then this test should run in ≤ 10 seconds).</p>
@@ -67,7 +67,7 @@ description: "guestfs-performance – engineering libguestfs for greatest perfor
  export LIBGUESTFS_PATH=/usr/local/lib/guestfs/appliance
 </pre>
 <p> Now you can run libguestfs programs, virt tools, guestfish etc. as normal. The programs will use your fixed appliance, and will not ever build, rebuild, or cache their own appliance. </p>
-<p> (For detailed information on this subject, see: <code><a href="/docs/linux/man/1-libguestfs-make-fixed-appliance/">libguestfs-make-fixed-appliance</a></code>(1)).</p>
+<p> (For detailed information on this subject, see: <code>libguestfs-make-fixed-appliance</code>(1)).</p>
 <h3>Performance of the fixed appliance</h3>
 <p> In our testing we did not find that using a fixed appliance gave any measurable performance benefit, even when the appliance was located in memory (ie. on <i>/dev/shm</i>). However there are two points to consider:</p>
 <dl>
@@ -89,7 +89,7 @@ description: "guestfs-performance – engineering libguestfs for greatest perfor
 <dt>1.</p>
 <dd> Adding multiple guests to one appliance is a security problem because it may allow one guest to interfere with the disks of another guest. Only do it if you trust all the guests, or if you can group guests by trust.</p>
 <dt>2.</p>
-<dd> There is a hard limit to the number of disks you can add to a single appliance. Call &#8220;guestfs_max_disks&#8221; in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) to get this limit. For further information see &#8220;<font SIZE="-1">LIMITS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3).</p>
+<dd> There is a hard limit to the number of disks you can add to a single appliance. Call &#8220;guestfs_max_disks&#8221; in <code>guestfs</code>(3) to get this limit. For further information see &#8220;<font SIZE="-1">LIMITS&#8221;</font> in <code>guestfs</code>(3).</p>
 <dt>3.</p>
 <dd> Using libguestfs this way is complicated. Disks can have unexpected interactions: for example, if two guests use the same <font SIZE="-1">UUID</font> for a filesystem (because they were cloned), or have volume groups with the same name (but see <tt>&quot;guestfs_lvm_set_filter&quot;</tt>).</dl>
 <p> <code><a href="/docs/linux/man/1-virt-df/">virt-df</a></code>(1) adds multiple disks by default, so the source code for this program would be a good place to start.</p>
@@ -175,7 +175,7 @@ test();</p>
 &#8221;, $nr_threads, $end_t &#8211; $start_t);<br />
      }</p>
 <h2>USING USER-MODE LINUX</h2>
-<p> Since libguestfs 1.24, it has been possible to use the User-Mode Linux (uml) backend instead of <font SIZE="-1">KVM</font> (see &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3)). This section makes some general remarks about this backend, but it is <code>highly advisable</code> to measure your own workload under <font SIZE="-1">UML</font> rather than trusting comments or intuition.</p>
+<p> Since libguestfs 1.24, it has been possible to use the User-Mode Linux (uml) backend instead of <font SIZE="-1">KVM</font> (see &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <code>guestfs</code>(3)). This section makes some general remarks about this backend, but it is <code>highly advisable</code> to measure your own workload under <font SIZE="-1">UML</font> rather than trusting comments or intuition.</p>
 <dl>
 <dt>&bull;</p>
 <dd> <font SIZE="-1">UML</font> usually performs the same or slightly slower than <font SIZE="-1">KVM,</font> on baremetal.</p>
@@ -302,7 +302,7 @@ then
     exec $qemu -
     S - s "$@" fi
 </code></pre>
-<p> Now run guestfish or another libguestfs tool with the qemu wrapper (see &#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3) to understand what this is doing): </p>
+<p> Now run guestfish or another libguestfs tool with the qemu wrapper (see &#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <code>guestfs</code>(3) to understand what this is doing): </p>
 <pre>
  LIBGUESTFS_HV=/path/to/qemu-wrapper guestfish -a /dev/null -v run
 </pre>
@@ -325,7 +325,7 @@ then
  ./utils/boot-benchmark/boot-benchmark-range.pl --man
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1), <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></code>(3), <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1), <code><a href="/docs/linux/man/1-libguestfs-make-fixed-appliance/">libguestfs-make-fixed-appliance</a></code>(1), <code><a href="/docs/linux/man/1-stap/">stap</a></code>(1), <code><a href="/docs/linux/man/1-qemu/">qemu</a></code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1), <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <code>guestfs</code>(3), <code>guestfs-examples</code>(3), <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1), <code>libguestfs-make-fixed-appliance</code>(1), <code><a href="/docs/linux/man/1-stap/">stap</a></code>(1), <code><a href="/docs/linux/man/1-qemu/">qemu</a></code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>

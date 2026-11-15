@@ -21,4 +21,4 @@ description: "XmDataFieldGetSelection — A DataField function that retrieves th
 <h2>Return</h2>
 <p>Returns a character pointer to the string that is associated with the primary selection.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3) and <code><a href="/docs/linux/man/3-xmdatafieldgetselectionwcs/">XmDataFieldGetSelectionWcs</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3) and <code>XmDataFieldGetSelectionWcs</code>(3).</p>

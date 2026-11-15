@@ -14,7 +14,7 @@ This configuration file provides definition of formatting for new Bugzilla bugs 
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/1-reporter-bugzilla/">reporter-bugzilla</a>(1), <a HREF="/docs/linux/man/5-bugzilla_anaconda_events-conf/">bugzilla_anaconda_events.conf</a>(5)
+<a HREF="/docs/linux/man/1-reporter-bugzilla/">reporter-bugzilla</a>(1), bugzilla_anaconda_events.conf(5)
 
 <h2>Author</h2>
 

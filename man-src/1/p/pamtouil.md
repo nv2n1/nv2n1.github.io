@@ -29,8 +29,8 @@ description: "pamtouil – convert a PNM or PNM/alpha image into a Motif UIL ico
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamstack/">pamstack</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
+<p> <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> Before May 2002, <code>pamtouil</code> was called <code>ppmtouil</code> and had no way to specify transparency. </p>
 <h2>AUTHOR</h2>

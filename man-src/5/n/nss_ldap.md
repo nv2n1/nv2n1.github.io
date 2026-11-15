@@ -104,11 +104,11 @@ description: "nss_ldap – LDAP nameservice provider"
 <dt><code>nss_schema &lt;rfc2307bis|rfc2307&gt;</code></p>
 <dd>If the value of this option is <code>rfc2307bis</code> then support for the RFC2307bis schema (distinguished names in groups) will be enabled.</p>
 <dt><code>nss_initgroups &lt;backlink&gt;</code></p>
-<dd>This option directs the <code>nss_ldap</code> implementation of <code><a href="/docs/linux/man/3-initgroups/">initgroups</a>(3)</code> to determine a user&#8217;s group membership by reading the memberOf attribute of their directory entry (and of any nested groups), rather than querying on uniqueMember. This may provide increased performance with certain directory servers that have peculiar indexing configurations. If RFC2307bis support is disabled, then this option is ignored.</p>
+<dd>This option directs the <code>nss_ldap</code> implementation of <code>initgroups(3)</code> to determine a user&#8217;s group membership by reading the memberOf attribute of their directory entry (and of any nested groups), rather than querying on uniqueMember. This may provide increased performance with certain directory servers that have peculiar indexing configurations. If RFC2307bis support is disabled, then this option is ignored.</p>
 <dt><code>nss_initgroups_ignoreusers &lt;user1,user2,&#8230;,userN&gt;</code></p>
-<dd>This option directs the <code>nss_ldap</code> implementation of <code><a href="/docs/linux/man/3-initgroups/">initgroups</a>(3)</code> to return NSS_STATUS_NOTFOUND if called with a listed users as its argument.</p>
+<dd>This option directs the <code>nss_ldap</code> implementation of <code>initgroups(3)</code> to return NSS_STATUS_NOTFOUND if called with a listed users as its argument.</p>
 <dt><code>nss_initgroups_minimum_uid &lt;uid&gt;</code></p>
-<dd>This option directs the <code>nss_ldap</code> implementation of <code><a href="/docs/linux/man/3-initgroups/">initgroups</a>(3)</code> to return NSS_STATUS_NOTFOUND if called with a user whose UID is below the value given as the argument.</p>
+<dd>This option directs the <code>nss_ldap</code> implementation of <code>initgroups(3)</code> to return NSS_STATUS_NOTFOUND if called with a user whose UID is below the value given as the argument.</p>
 <dt><code>nss_getgrent_skipmembers &lt;yes|no&gt;</code></p>
 <dd>Specifies whether or not to populate the members list in the group structure for group lookups. If very large groups are present, enabling this option will greatly increase perforance, at the cost of some lost functionality. You should verify no local applications rely on this information before enabling this on a production system.</p>
 <dt><code>nss_srv_domain &lt;domain&gt;</code></p>

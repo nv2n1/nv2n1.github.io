@@ -37,7 +37,7 @@ description: "updatenews – post articles from outgoing spool directory and pre
  /usr/sbin/newscacheclean<br />
  /usr/sbin/updatenews</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-newscache-conf/">newscache.conf</a></code>(5), <code><a href="/docs/linux/man/8-newscacheclean/">newscacheclean</a></code>(8), <code><a href="/docs/linux/man/8-updatenews/">updatenews</a></code>(8).</p>
+<p><code>newscache.conf</code>(5), <code><a href="/docs/linux/man/8-newscacheclean/">newscacheclean</a></code>(8), <code><a href="/docs/linux/man/8-updatenews/">updatenews</a></code>(8).</p>
 <h2>Authors</h2>
 <p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br />
  2001-2004 Herbert Straub &lt;h.straub [at] aon.at&gt;</p>

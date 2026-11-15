@@ -70,7 +70,7 @@ END_SAMPLE 2.82
 </dl>
 </pre>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-dvips/">dvips</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), hbchp (1), <a href="/docs/linux/man/1-lmlchp/">lmlchp</a>(1)<br />
+<p> <a href="/docs/linux/man/1-dvips/">dvips</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), hbchp (1), lmlchp(1)<br />
  C. Runciman and D. Wakeling, <i>Heap Profiling for Lazy Functional Languages, YCS-172, University of York, 1992</i></p>
 <h2>NOTES</h2>
 <p> P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> is a registered trademark of Adobe Systems Incorporated.</p>

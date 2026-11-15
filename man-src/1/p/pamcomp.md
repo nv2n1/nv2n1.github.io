@@ -82,7 +82,7 @@ description: "pamcomp – composite (overlay) two Netpbm images together"
 &nbsp;<wbr>can help with generating an alpha mask. </p>
 <p> <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1)<br />
 &nbsp;<wbr>is an older program that runs faster, but has less function. </p>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code>pnm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamcomp</code> was new in Netpbm 10.21 (March 2004). Its predecessor, <code>pnmcomp</code>, was one of the first programs added to Netpbm when the project went global in 1993. </p>
 <h2>AUTHOR</h2>

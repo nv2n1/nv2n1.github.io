@@ -11,7 +11,7 @@ description: "upstart-udev-bridge – Bridge between Upstart and udev"
 <h2>Synopsis</h2>
 <p><code>upstart-udev-bridge</code> [<i>OPTIONS</i>]&#8230;</p>
 <h2>Description</h2>
-<p><code>upstart-udev-bridge</code> receives information about kernel uevents that <code><a href="/docs/linux/man/8-udev/">udev</a></code>(8) has completed and creates <code><a href="/docs/linux/man/8-init/">init</a></code>(8) events for them. </p>
+<p><code>upstart-udev-bridge</code> receives information about kernel uevents that <code>udev</code>(8) has completed and creates <code><a href="/docs/linux/man/8-init/">init</a></code>(8) events for them. </p>
 <p> It emits events which match the pattern &quot;<i>S</i>-device-<i>A</i>&quot; where &#8216;S&#8217; is the udev <i>subsystem</i> and &#8216;A&#8217; is one of <i>added</i>, <i>changed</i> or <i>removed</i>, which correspond to the past tense of the udev &#8216;action&#8217;. </p>
 <p> See <code><a href="/docs/linux/man/7-udev/">udev</a></code>(7) and for further details. </p>
 <p> Assuming <i>/sys</i> is mounted, possible values for <i>subsystem</i> for your system are viewable via <i>/sys/class/</i>.</p>

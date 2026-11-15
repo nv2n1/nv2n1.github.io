@@ -201,7 +201,7 @@ description: "xferstats – compiles information about file transfers from logfi
 <p> Thanks to Phil Copeland &lt;bryce [at] zen.ics.uwe.ac.uk&gt; for getting on my back constantly to add new stuff, fix nagging bugs, and speed it up. Oh, and for using it, at least someone does :). </p>
 <p> Extreme gratitude to Mark Hagler &lt;hagler [at] hagler.org&gt;, someone whom I&#8217;ve left off of this list for too long. Mark was kind enough to Amazon me a copy of O&#8217;Reillys _Pthreads Programming_ which was the catalyst for the threaded version and really helped get me interested in the project again. While the threaded version doesn&#8217;t exist anymore, the book is still terribly useful for other projects.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ftpd/">ftpd</a></code>(8), <code><a href="/docs/linux/man/8-ncftpd/">ncftpd</a></code>(8), <code><a href="/docs/linux/man/5-xferlog/">xferlog</a></code>(5) </p>
+<p><code>ftpd</code>(8), <code>ncftpd</code>(8), <code><a href="/docs/linux/man/5-xferlog/">xferlog</a></code>(5) </p>
 <h2>Location</h2>
 <p><code>xferstats</code> is available from the following locations. The old addresses are valid, but are deprecated! Please use the new addresses whenever possible.</p>
 <dl>

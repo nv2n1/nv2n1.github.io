@@ -70,7 +70,7 @@ description: "a2x – A toolchain manager for AsciiDoc (converts Asciidoc text f
 <p> <code>&#8212;epubcheck</code></p>
 <dl>
 <dt>
-<dd> Check EPUB output with <i><a href="/docs/linux/man/1-epubcheck/">epubcheck</a>(1)</i>.</dl>
+<dd> Check EPUB output with <i>epubcheck(1)</i>.</dl>
 <p> <code>-n, &#8211;dry-run</code></p>
 <dl>
 <dt>
@@ -111,7 +111,7 @@ description: "a2x – A toolchain manager for AsciiDoc (converts Asciidoc text f
 <p> <code>&#8211;fop-opts</code>=<i>FOP_OPTS</i></p>
 <dl>
 <dt>
-<dd> Additional <i><a href="/docs/linux/man/1-fop/">fop</a>(1)</i> options. If this option is specified FOP is used to generate PDFs. This option may be specified more than once.</dl>
+<dd> Additional <i>fop(1)</i> options. If this option is specified FOP is used to generate PDFs. This option may be specified more than once.</dl>
 <p> <code>&#8211;dblatex-opts</code>=<i>DBLATEX_OPTS</i></p>
 <dl>
 <dt>

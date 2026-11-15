@@ -7,4 +7,4 @@ url: "/docs/linux/man/3-logimport/"
 description: "Please check the manual page LOGIMPORT(3)."
 ---
 
-<p>Please check the manual page <code><a href="//www.systutorials.com/docs/linux/man/3-LOGIMPORT/">LOGIMPORT(3)</a></code>.</p>
+<p>Please check the manual page <code>LOGIMPORT(3)</code>.</p>

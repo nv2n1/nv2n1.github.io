@@ -83,7 +83,7 @@ uri &quot;<a href="ldap://l1.foo.com/">ldap://l1.foo.com/</a><code>dc=foo,dc=com
 <dt><code>default-target [&lt;target&gt;]</code></p>
 <dd>The &quot;default-target&quot; directive can also be used during target specification. With no arguments it marks the current target as the default. The optional number marks target &lt;target&gt; as the default one, starting from 1. Target &lt;target&gt; must be defined. </p>
 <dt><code>filter &lt;pattern&gt;</code></p>
-<dd>This directive allows specifying a <code><a href="/docs/linux/man/5-regex/">regex</a></code>(5) pattern to indicate what search filter terms are actually served by a target. </p>
+<dd>This directive allows specifying a <code>regex</code>(5) pattern to indicate what search filter terms are actually served by a target. </p>
 <p> In a search request, if the search filter matches the <i>pattern</i> the target is considered while fulfilling the request; otherwise the target is ignored. There may be multiple occurrences of the <code>filter</code> directive for each target. </p>
 <dt><code>idassert-authzFrom &lt;authz-regexp&gt;</code></p>
 <dd>if defined, selects what <i>local</i> identities are authorized to exploit the identity assertion feature. The string <code>&lt;authz-regexp&gt;</code> follows the rules defined for the <i>authzFrom</i> attribute. See <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), section related to <code>authz-policy</code>, for details on the syntax of this field. </p>
@@ -126,7 +126,7 @@ uri &quot;<a href="ldap://l1.foo.com/">ldap://l1.foo.com/</a><code>dc=foo,dc=com
 <dd>This directive allows to indicate what subtrees are actually served by a target. The syntax of the supported rules is </p>
 <p> <code>&lt;rule&gt;: [dn[.&lt;style&gt;]:]&lt;pattern&gt;</code> </p>
 <p> <code>&lt;style&gt;: subtree|children|regex</code> </p>
-<p> When <code>&lt;style&gt;</code> is either <code>subtree</code> or <code>children</code> the <code>&lt;pattern&gt;</code> is a DN that must be within the naming context served by the target. When <code>&lt;style&gt;</code> is <code>regex</code> the <code>&lt;pattern&gt;</code> is a <code><a href="/docs/linux/man/5-regex/">regex</a></code>(5) pattern. If the <code>dn.&lt;style&gt;:</code> prefix is omitted, <code>dn.subtree:</code> is implicitly assumed for backward compatibility. </p>
+<p> When <code>&lt;style&gt;</code> is either <code>subtree</code> or <code>children</code> the <code>&lt;pattern&gt;</code> is a DN that must be within the naming context served by the target. When <code>&lt;style&gt;</code> is <code>regex</code> the <code>&lt;pattern&gt;</code> is a <code>regex</code>(5) pattern. If the <code>dn.&lt;style&gt;:</code> prefix is omitted, <code>dn.subtree:</code> is implicitly assumed for backward compatibility. </p>
 <p> In the <code>subtree-exclude</code> form if the <i>request DN</i> matches at least one rule, the target is not considered while fulfilling the request; otherwise, the target is considered based on the value of the <i>request DN</i>. When the request is a search, also the <i>scope</i> is considered. </p>
 <p> In the <code>subtree-include</code> form if the <i>request DN</i> matches at least one rule, the target is considered while fulfilling the request; otherwise the target is ignored. </p>
 </dl>

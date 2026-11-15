@@ -45,7 +45,7 @@ int malloc_info(int options, FILE *stream);
 <p> This function is a GNU extension.</p>
 <h2>NOTES</h2>
 <p> The memory-allocation information is provided as an XML string (rather than a C structure) because the information may change over time (according to changes in the underlying implementation). The output XML string includes a version field. </p>
-<p> The <code><a href="/docs/linux/man/3-open_memstream/">open_memstream</a></code>(3) function can be used to send the output of <code>malloc_info</code>() directly into a buffer in memory, rather than to a file. </p>
+<p> The <code>open_memstream</code>(3) function can be used to send the output of <code>malloc_info</code>() directly into a buffer in memory, rather than to a file. </p>
 <p> The <code>malloc_info</code>() function is designed to address deficiencies in <code><a href="/docs/linux/man/3-malloc_stats/">malloc_stats</a></code>(3) and <code><a href="/docs/linux/man/3-mallinfo/">mallinfo</a></code>(3).</p>
 <h2>EXAMPLES</h2>
 <p> The program below takes up to four command-line arguments, of which the first three are mandatory. The first argument specifies the number of threads that the program should create. All of the threads, including the main thread, allocate the number of blocks of memory specified by the second argument. The third argument controls the size of the blocks to be allocated. The main thread creates blocks of this size, the second thread created by the program allocates blocks of twice this size, the third thread allocates blocks of three times this size, and so on. </p>
@@ -103,7 +103,7 @@ int malloc_info(int options, FILE *stream);
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;numBlocks;&nbsp;j++)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(malloc(blockSize)&nbsp;==&nbsp;NULL)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errExit(&quot;malloc&quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/2-sleep/">sleep</a>(2);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Give all threads a chance to<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sleep(2);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Give all threads a chance to<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;complete allocations&nbsp;*/ </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;
 ============&nbsp;After allocating blocks&nbsp;============
@@ -111,7 +111,7 @@ int malloc_info(int options, FILE *stream);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;malloc_info(0, stdout); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-mallinfo/">mallinfo</a></code>(3), <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code><a href="/docs/linux/man/3-malloc_stats/">malloc_stats</a></code>(3), <code><a href="/docs/linux/man/3-mallopt/">mallopt</a></code>(3), <code><a href="/docs/linux/man/3-open_memstream/">open_memstream</a></code>(3)</p>
+<p> <code><a href="/docs/linux/man/3-mallinfo/">mallinfo</a></code>(3), <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code><a href="/docs/linux/man/3-malloc_stats/">malloc_stats</a></code>(3), <code><a href="/docs/linux/man/3-mallopt/">mallopt</a></code>(3), <code>open_memstream</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

@@ -33,7 +33,7 @@ description: "pngtopnm – convert a Portable Network Graphics file into portabl
 <dd> Prints the tIME chunk to stderr.</dl>
 <p> All flags can be abbreviated to their shortest unique prefix.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a>(1), <a href="/docs/linux/man/1-ptot/">ptot</a>(1), <a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
+<p> <a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a>(1), ptot(1), <a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>NOTE</h2>
 <p> Instead of pngtopnm|pnmtoxxx, a specific converter should be used, if available. E.g. <i>ptot</i> (PNG to TIFF conversion), etc.</p>
 <h2>BUGS</h2>

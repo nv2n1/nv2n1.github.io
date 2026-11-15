@@ -568,7 +568,7 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
 
 <h3><font SIZE="-1">RELATIONSHIP TO .REG FILES</font></h3>
 
- The hivex C library does not care about or deal with Windows .REG files. Instead we push this complexity up to the Perl <i><a HREF="/docs/linux/man/3-win--hivex/">Win::Hivex</a></i>(3) library and the Perl programs <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1) and <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1). Nevertheless it is useful to look at the relationship between the Registry and .REG files because they are so common. 
+ The hivex C library does not care about or deal with Windows .REG files. Instead we push this complexity up to the Perl <i>Win::Hivex</i>(3) library and the Perl programs <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1) and <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1). Nevertheless it is useful to look at the relationship between the Registry and .REG files because they are so common. 
 
  A .REG file is a textual representation of the registry, or part of the registry. The actual registry hives that Windows uses are binary files. There are a number of Windows and Linux tools that let you generate .REG files, or merge .REG files back into the registry hives. Notable amongst them is Microsoft's <font SIZE="-1">REGEDIT</font> program (formerly known as <font SIZE="-1">REGEDT32</font>). 
 
@@ -578,9 +578,9 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
  [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Stack]
  &quot;@&quot;=&quot;Generic Stack&quot;
  &quot;TileInfo&quot;=&quot;prop:System.FileCount&quot;
- &quot;TilePath&quot;=<a HREF="//www.systutorials.com/docs/linux/man/2-str/">str</a>(2):&quot;%systemroot%\\system32&quot;
+ &quot;TilePath&quot;=str(2):&quot;%systemroot%\\system32&quot;
  &quot;ThumbnailCutoff&quot;=dword:00000000
- &quot;FriendlyTypeName&quot;=<a HREF="//www.systutorials.com/docs/linux/man/2-hex/">hex</a>(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,\
+ &quot;FriendlyTypeName&quot;=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,\
   6f,00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,\
   33,00,32,00,5c,00,73,00,65,00,61,00,72,00,63,00,68,00,66,00,\
   6f,00,6c,00,64,00,65,00,72,00,2e,00,64,00,6c,00,6c,00,2c,00,\
@@ -610,7 +610,7 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
  This is a regular (key, value) pair, with the value being a type 1 string. Note that inside the binary file the string is likely to be <font SIZE="-1">UTF-16LE</font> encoded. This library converts to and from <font SIZE="-1">UTF-8</font> strings transparently in some cases. 
 
  <pre>
- &quot;TilePath&quot;=<a HREF="//www.systutorials.com/docs/linux/man/2-str/">str</a>(2):&quot;%systemroot%\\system32&quot;
+ &quot;TilePath&quot;=str(2):&quot;%systemroot%\\system32&quot;
 </pre> 
 
  The value in this case has type 2 (expanded string) meaning that some %...% variables get expanded by Windows. (This library doesn't know or care about variable expansion). 
@@ -622,7 +622,7 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
  The value in this case is a dword (type 4). 
 
  <pre>
- &quot;FriendlyTypeName&quot;=<a HREF="//www.systutorials.com/docs/linux/man/2-hex/">hex</a>(2):40,00,....
+ &quot;FriendlyTypeName&quot;=hex(2):40,00,....
 </pre> 
 
  This value is an expanded string (type 2) represented in the .REG file as a series of hex bytes. In this case the string appears to be a <font SIZE="-1">UTF-16LE</font> string.
@@ -656,7 +656,7 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-hivexget/">hivexget</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexml/">hivexml</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i><a HREF="/docs/linux/man/3-win--hivex/">Win::Hivex</a></i>(3), <i><a HREF="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), &lt;<a rel="nofollow" HREF="http://libguestfs.org/">http://libguestfs.org/</a>&gt;, <i><a HREF="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), &lt;<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/Windows_Registry">http://en.wikipedia.org/wiki/Windows_Registry</a>&gt;.
+ <i><a HREF="/docs/linux/man/1-hivexget/">hivexget</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexml/">hivexml</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i>Win::Hivex</i>(3), <i>guestfs</i>(3), &lt;<a rel="nofollow" HREF="http://libguestfs.org/">http://libguestfs.org/</a>&gt;, <i><a HREF="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a HREF="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), &lt;<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/Windows_Registry">http://en.wikipedia.org/wiki/Windows_Registry</a>&gt;.
 
 <h2>AUTHORS</h2>
 

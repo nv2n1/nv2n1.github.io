@@ -39,5 +39,5 @@ description: "gml2gv,gv2gml – GML-DOT converters"
 <h2>AUTHORS</h2>
 <p> Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/3-libcgraph/">libcgraph</a>(3) </p>
+<p> <a href="/docs/linux/man/1-dot/">dot</a>(1), libcgraph(3) </p>
 <h2>Index</h2>

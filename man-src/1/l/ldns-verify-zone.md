@@ -14,7 +14,7 @@ description: "ldns-verify-zone – read a DNSSEC signed zone and verify it."
 <h2>DESCRIPTION</h2>
 <p> <code>ldns-verify-zone</code> reads a DNS zone file and verifies it. </p>
 <p> RRSIG resource records are checked against the DNSKEY set at the zone apex. </p>
-<p> Each name is checked for an <a href="/docs/linux/man/3-nsec/">NSEC</a>(3), if appropriate. </p>
+<p> Each name is checked for an NSEC(3), if appropriate. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-h</code></p>

@@ -98,5 +98,5 @@ description: "boxes – text mode box and comment drawing filter"
 <dt>/usr/share/boxes/boxes</p>
 <dd> system-wide configuration file</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-tal/">tal</a>(1)</i> , <i><a href="/docs/linux/man/1-vim/">vim</a>(1)</i> </p>
+<p> <i>tal(1)</i> , <i><a href="/docs/linux/man/1-vim/">vim</a>(1)</i> </p>
 <h2>Index</h2>

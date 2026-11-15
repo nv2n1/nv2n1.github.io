@@ -40,4 +40,4 @@ description: "calibrate_ppa – pnm2ppa calibration tool"
 <h2>Author</h2>
 <p>This manual page was written by Chad C. Walstrom &lt;chewie [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-pnm2ppa/">pnm2ppa</a></i>(1), <i><a href="/docs/linux/man/8-magicfilter/">magicfilter</a></i>(8), <i><a href="/docs/linux/man/8-apsfilter/">apsfilter</a></i>(8) </p>
+<p><i><a href="/docs/linux/man/1-pnm2ppa/">pnm2ppa</a></i>(1), <i>magicfilter</i>(8), <i>apsfilter</i>(8) </p>

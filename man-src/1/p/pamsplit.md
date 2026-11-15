@@ -29,5 +29,5 @@ description: "pamsplit – split a multi-image Netpbm file into single-image fil
 <p> To extract images from a stream and generate a single stream containing them, use <code>pampick</code>. </p>
 <p> To run a program on each image in a stream without the hassle of temporary files, use <code>pamexec</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code>cat</code> man page </p>
+<p> <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , <code>cat</code> man page </p>
 <h2>Index</h2>

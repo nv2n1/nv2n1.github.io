@@ -31,7 +31,7 @@ enum ibv_values_mask {
 <h2>NOTES</h2>
 <p> This extension verb only calls the provider, the provider has to query this value somehow and mark the queried values in the comp_mask field.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_query_device/">ibv_query_device</a></code>(3), <code><a href="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_port/">ibv_query_port</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_pkey/">ibv_query_pkey</a></code>(3), <code><a href="/docs/linux/man/3-ibv_query_gid/">ibv_query_gid</a></code>(3)</p>
+<p> <code>ibv_query_device</code>(3), <code>ibv_open_device</code>(3), <code>ibv_query_port</code>(3), <code>ibv_query_pkey</code>(3), <code>ibv_query_gid</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</p>

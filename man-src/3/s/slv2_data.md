@@ -93,7 +93,7 @@ description: "Plugin data access –"
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a shared string which must not be modified or free()&#8217;d.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_get_bundle_uri (SLV2Pluginplugin)</h3>
 <p>Get the (resolvable) URI of the plugins &#8216;main&#8217; bundle. This returns the URI of the bundle where the plugin itself was found. Note that the data for a plugin may be spread over many bundles, that is, slv2_plugin_get_data_uris may returns URIs which are not below this one. </p>
 <p> Typical hosts should not need to use this function. </p>
@@ -101,20 +101,20 @@ description: "Plugin data access –"
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a shared string which must not be modified or freed.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Values slv2_plugin_get_data_uris (SLV2Pluginplugin)</h3>
 <p>Get the (resolvable) URIs of the RDF data files that define a plugin. Typical hosts should not need to use this function. </p>
 <p> Note this always returns fully qualified URIs. If you want local filesystem paths, use slv2_uri_to_path. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a list of complete URLs eg. &#8216;file:///foo/ABundle.lv2/aplug.ttl&#8217;, which is shared and must not be modified or freed.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_get_library_uri (SLV2Pluginplugin)</h3>
 <p>Get the (resolvable) URI of the shared library for <i>plugin</i>. Note this always returns a fully qualified URI. If you want a local filesystem path, use slv2_uri_to_path. </p>
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a shared string which must not be modified or freed.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_get_name (SLV2Pluginplugin)</h3>
 <p>Get the name of <i>plugin</i>. This is guaranteed to return the untranslated name (the doap:name in the data file without a language tag). Returned value must be freed by the caller. </p>
 <p> Time = Query</p>
@@ -155,13 +155,13 @@ description: "Plugin data access –"
 <p> Return value must be freed by caller with slv2_values_free. </p>
 <p> Time = Query</p>
 <h3>uint32_t slv2_plugin_get_num_ports (SLV2Pluginp)</h3>
-<p>Get the number of ports on this plugin. Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p>Get the number of ports on this plugin. Time = O(1)</p>
 <h3>void slv2_plugin_get_port_ranges_float (SLV2Pluginp, float *min_values, float *max_values, float *def_values)</h3>
 <p>Get the port ranges (minimum, maximum and default values) for all ports. <i>min_values</i>, <i>max_values</i> and <i>def_values</i> must either point to an array of N floats, where N is the value returned by <code>slv2_plugin_get_num_ports()</code> for this plugin, or NULL. The elements of the array will be set to the the minimum, maximum and default values of the ports on this plugin, with array index corresponding to port index. If a port doesn&#8217;t have a minimum, maximum or default value, or the port&#8217;s type is not float, the corresponding array element will be set to NAN. </p>
 <p> This is a convenience method for the common case of getting the range of all float ports on a plugin, and may be significantly faster than repeated calls to slv2_port_get_range.</p>
 <h3>uint32_t slv2_plugin_get_num_ports_of_class (SLV2Pluginp, SLV2Valueclass_1, &#8230;)</h3>
 <p>Get the number of ports on this plugin that are members of some class(es). Note that this is a varargs function so ports fitting any type &#8216;profile&#8217; desired can be found quickly. REMEMBER TO TERMINATE THE PARAMETER LIST OF THIS FUNCTION WITH NULL OR VERY NASTY THINGS WILL HAPPEN. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>bool slv2_plugin_has_latency (SLV2Pluginp)</h3>
 <p>Return whether or not the plugin introduces (and reports) latency. The index of the latency port can be found with slv2_plugin_get_latency_port ONLY if this function returns true. </p>
 <p> Time = Query</p>
@@ -189,10 +189,10 @@ description: "Plugin data access –"
 <p> Time = Query</p>
 <h3>SLV2Port slv2_plugin_get_port_by_index (SLV2Pluginplugin, uint32_tindex)</h3>
 <p>Get a port on this plugin by <i>index</i>. To perform multiple calls on a port, the returned value should be cached and used repeatedly. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Port slv2_plugin_get_port_by_symbol (SLV2Pluginplugin, SLV2Valuesymbol)</h3>
 <p>Get a port on this plugin by <i>symbol</i>. To perform multiple calls on a port, the returned value should be cached and used repeatedly. Note this function is slower than slv2_plugin_get_port_by_index, especially on plugins with a very large number of ports. </p>
-<p> Time = <a href="/docs/linux/man/n-o/">O</a>(n)</p>
+<p> Time = O(n)</p>
 <h3>SLV2UIs slv2_plugin_get_uis (SLV2Pluginplugin)</h3>
 <p>Get a list of all UIs available for this plugin. Note this returns the URI of the UI, and not the path/URI to its shared library, use slv2_ui_get_library_uri with the values returned here for that. </p>
 <p> Returned value must be freed by caller using slv2_uis_free. </p>
@@ -211,13 +211,13 @@ description: "Plugin data access –"
 <p> Time = Query</p>
 <h3>SLV2Value slv2_plugin_class_get_parent_uri (SLV2PluginClassplugin_class)</h3>
 <p>Get the URI of this class&#8217; superclass. Returned value is owned by <i>plugin_class</i> and must not be freed by caller. Returned value may be NULL, if class has no parent. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_class_get_uri (SLV2PluginClassplugin_class)</h3>
 <p>Get the URI of this plugin class. Returned value is owned by <i>plugin_class</i> and must not be freed by caller. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Value slv2_plugin_class_get_label (SLV2PluginClassplugin_class)</h3>
 <p>Get the label of this plugin class, ie &#8216;Oscillators&#8217;. Returned value is owned by <i>plugin_class</i> and must not be freed by caller. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2PluginClasses slv2_plugin_class_get_children (SLV2PluginClassplugin_class)</h3>
 <p>Get the subclasses of this plugin class. Returned value must be freed by caller with slv2_plugin_classes_free. </p>
 <p> Time = O(nclasses)</p>
@@ -229,7 +229,7 @@ description: "Plugin data access –"
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a shared value which must not be modified or freed.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Values slv2_ui_get_classes (SLV2UIui)</h3>
 <p>Get the types (URIs of RDF classes) of a Plugin UI. </p>
 <p> <code>Parameters:</code></p>
@@ -238,14 +238,14 @@ description: "Plugin data access –"
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a shared value which must not be modified or freed.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>bool slv2_ui_is_a (SLV2UIui, SLV2Valueclass_uri)</h3>
 <p>Check whether a plugin UI is a given type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ui</i> The Plugin UI<br />
  <i>class_uri</i> The URI of the LV2 UI type to check this UI against</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Value slv2_ui_get_bundle_uri (SLV2UIui)</h3>
 <p>Get the URI for a Plugin UI&#8217;s bundle. </p>
 <p> <code>Parameters:</code></p>
@@ -254,7 +254,7 @@ description: "Plugin data access –"
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a shared value which must not be modified or freed.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Value slv2_ui_get_binary_uri (SLV2UIui)</h3>
 <p>Get the URI for a Plugin UI&#8217;s shared library. </p>
 <p> <code>Parameters:</code></p>
@@ -263,7 +263,7 @@ description: "Plugin data access –"
 <p> <code>Returns:</code></p>
 <dl>
 <dd>a shared value which must not be modified or freed.</dl>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>SLV2Values slv2_port_get_value (SLV2Pluginplugin, SLV2Portport, SLV2Valuepredicate)</h3>
 <p>Port analog of slv2_plugin_get_value. Time = Query</p>
 <h3>SLV2Values slv2_port_get_value_by_qname (SLV2Pluginplugin, SLV2Portport, const char *property_uri)</h3>
@@ -285,10 +285,10 @@ description: "Plugin data access –"
 <h3>SLV2Values slv2_port_get_classes (SLV2Pluginplugin, SLV2Portport)</h3>
 <p>Get all the classes of a port. This can be used to determine if a port is an input, output, audio, control, midi, etc, etc, though it&#8217;s simpler to use slv2_port_is_a. The returned list does not include lv2:Port, which is implied. </p>
 <p> Returned value is shared and must not be destroyed by caller. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>bool slv2_port_is_a (SLV2Pluginplugin, SLV2Portport, SLV2Valueport_class)</h3>
 <p>Determine if a port is of a given class (input, output, audio, etc). For convenience/performance/extensibility reasons, hosts are expected to create an SLV2Value for each port class they &#8216;care about&#8217;. Well-known type URI strings are defined (e.g. SLV2_PORT_CLASS_INPUT) for convenience, but this function is designed so that SLV2 is usable with any port types without requiring explicit support in SLV2. </p>
-<p> Time = <a href="/docs/linux/man/n-o/">O</a>(n) (n pointer comparisons where n is the number of classes of this port, so this method is suitable for realtime use on any sane port).</p>
+<p> Time = O(n) (n pointer comparisons where n is the number of classes of this port, so this method is suitable for realtime use on any sane port).</p>
 <h3>void slv2_port_get_range (SLV2Pluginplugin, SLV2Portport, SLV2Value *def, SLV2Value *min, SLV2Value *max)</h3>
 <p>Get the default, minimum, and maximum values of a port. <i>def</i>, <i>min</i>, and <i>max</i> are outputs, pass pointers to uninitialized (i.e. NOT created with slv2_value_new) SLV2Value variables. These will be set to point at new values (which must be freed by the caller using slv2_value_free), or NULL if the value does not exist. </p>
 <p> Time = Query</p>
@@ -325,29 +325,29 @@ description: "Plugin data access –"
 <p>Return this value as a Turtle/SPARQL token. Examples: <a rel="nofollow" href="http://example.org/foo">http://example.org/foo</a> doap:name &#8216;this is a string&#8217; 1.0 1 </p>
 <p> Returned string is newly allocated and must be freed by caller.</p>
 <h3>bool slv2_value_is_uri (SLV2Valuevalue)</h3>
-<p>Return whether the value is a URI (resource). Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p>Return whether the value is a URI (resource). Time = O(1)</p>
 <h3>const char* slv2_value_as_uri (SLV2Valuevalue)</h3>
 <p>Return this value as a URI string, e.g. &#8216;<a rel="nofollow" href="http://example.org/foo'.">http://example.org/foo&#8217;.</a> </p>
 <p> Valid to call only if slv2_value_is_uri(<i>value</i>) returns true. Returned value is owned by <i>value</i> and must not be freed by caller. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>bool slv2_value_is_literal (SLV2Valuevalue)</h3>
 <p>Return whether this value is a literal (i.e. not a URI). </p>
 <p> Returns true if <i>value</i> is a string or numeric value. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>bool slv2_value_is_string (SLV2Valuevalue)</h3>
 <p>Return whether this value is a string literal. Returns true if <i>value</i> is a string (but not numeric) value. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>const char* slv2_value_as_string (SLV2Valuevalue)</h3>
-<p>Return <i>value</i> as a string. Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p>Return <i>value</i> as a string. Time = O(1)</p>
 <h3>bool slv2_value_is_float (SLV2Valuevalue)</h3>
-<p>Return whether this value is a decimal literal. Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p>Return whether this value is a decimal literal. Time = O(1)</p>
 <h3>float slv2_value_as_float (SLV2Valuevalue)</h3>
 <p>Return <i>value</i> as a float. Valid to call only if slv2_value_is_float(<i>value</i>) or slv2_value_is_int(<i>value</i>) returns true. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h3>bool slv2_value_is_int (SLV2Valuevalue)</h3>
-<p>Return whether this value is an integer literal. Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p>Return whether this value is an integer literal. Time = O(1)</p>
 <h3>int slv2_value_as_int (SLV2Valuevalue)</h3>
 <p>Return <i>value</i> as an integer. Valid to call only if slv2_value_is_int(<i>value</i>) returns true. </p>
-<p> Time = <a href="/docs/linux/man/1-o/">O</a>(1)</p>
+<p> Time = O(1)</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for SLV2 from the source code.</p>

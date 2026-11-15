@@ -18,7 +18,7 @@ description: "newsx – news server exchange; post and fetch news articles"
 <p> If a username and password for use with the simple authorization protocol have been supplied, they will be sent to the server first. If the <code>-r</code> option is specified, a <code>MODE READER</code> command will be sent. </p>
 <p> When the outgoing transfer is finished, articles will be removed from the outgoing spool queue if successful transfer has been acknowledged by the NNTP host, if the article was specified by the host as a duplicate (already posted), or if a spooled article can no longer be found. </p>
 <p> The fetch phase is then initiated. Articles available from the newsserver will be fetched and placed in the incoming spool, ready to be injected into the news system by <code>newsrun</code> (C News) or <i>rnews -U </i> (INN). </p>
-<p> The groups are visited in the sequence that they appear in the host incoming state file, see <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5). This may be used actively to prioritize between newsgroups. A tag mechanism controlled by the <code>-e</code> option is available to limit the number of groups that will be fetched. </p>
+<p> The groups are visited in the sequence that they appear in the host incoming state file, see <i>in.hosts</i>(5). This may be used actively to prioritize between newsgroups. A tag mechanism controlled by the <code>-e</code> option is available to limit the number of groups that will be fetched. </p>
 <p> Group names not present in the <i>active</i> file will not be fetched. Every group name is checked against the <i>spoolname</i> entries in the <code>sys</code> (C News) or <code>newsfeeds</code> (INN) file, as well as any <code>&#8211;groups</code> option, and only groups allowed there will actually be fetched. For C News, the group name is also checked against the <code>ME</code> entry, whereas in INN the <code>ME </code> entry is just prepended to the <i>spoolname</i> entry. </p>
 <p> In this way, the sys/newsfeed file is used to control which newsgroups are actually received from the remote site, in the same manner that the local server determines which outgoing article will go where. </p>
 <p> If an <code>-e</code> option hasn&#8217;t been specified, the local <code>active</code> file is then traversed to see if there are groups not mentioned in the current host newsrc file. Again, only groups allowed by <code>sys</code> or <code>newsfeeds</code> is actually fetched. Since these groups don&#8217;t have a starting point specified, all available articles will be fetched. </p>
@@ -91,7 +91,7 @@ description: "newsx – news server exchange; post and fetch news articles"
 <dt><code>-g</code>, <code>&#8211;no-fetch</code></p>
 <dd>Do not attempt to fetch any news articles.</p>
 <dt><code>-e</code><i> end_tag</i>, <code>&#8211;end</code><i> end_tag</i></p>
-<dd>Specify a tag in the incoming host state file, see <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5). News fetching will end when a corresponding tag line has been reached. The tag line consists of a colon followed by the tag itself. This is a useful tool for dividing the newsgroups into several categories. Only a few newsgroups may be fetched during prime time, whereas the full list can be fetched once every night, for instance.</p>
+<dd>Specify a tag in the incoming host state file, see <i>in.hosts</i>(5). News fetching will end when a corresponding tag line has been reached. The tag line consists of a colon followed by the tag itself. This is a useful tool for dividing the newsgroups into several categories. Only a few newsgroups may be fetched during prime time, whereas the full list can be fetched once every night, for instance.</p>
 <dt><code>-W</code><i> winsize</i>, <code>&#8211;window</code><i> winsize</i></p>
 <dd>Specify the <i>window</i> size with respect to how many outstanding NNTP requests will be allowed at any one time. The default setting is 10. A value of 0 will disable windowing (aka. streaming) completely, making debugging easier. Increasing the window can significantly improve the article transfer speed. The effect is particulary pronounced over slow links and when many of the articles are already present in the local spool, where an improvement in speed of over 10 times has been observed compared to running with windowing disabled. All this at the penalty of an increased host newsserver load, obviously.</p>
 <dt><code>-b</code><i> minspool</i>, <code>&#8211;size</code><i> minspool</i></p>
@@ -103,11 +103,11 @@ description: "newsx – news server exchange; post and fetch news articles"
 <dt><code>&#8211;rnews-to</code><i> program</i></p>
 <dd>Like <code>&#8211;pipe-to</code>, but the pipe is continuous for each session, with article seperation is in rnews style.</p>
 <dt><code>-z</code>, <code>&#8211;sync</code></p>
-<dd>Omit actual pulling of news articles. Instead, simply update the host incoming state file to synchronize with the currently highest available article numbers from the server in question. This option can be useful when a fresh local spool is initiated. No article posting will be attempted. See also <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5).</p>
+<dd>Omit actual pulling of news articles. Instead, simply update the host incoming state file to synchronize with the currently highest available article numbers from the server in question. This option can be useful when a fresh local spool is initiated. No article posting will be attempted. See also <i>in.hosts</i>(5).</p>
 <dt><code>-Z</code>, <code>&#8211;syncnew</code></p>
 <dd>Omit actual pulling of news articles in previously unseen groups only. The net effect is that newly added groups will start fetching from <code>now on</code>, instead of from the first article available at the host server.</p>
 <dt><code>&#8211;reset</code></p>
-<dd>Ignore the latest article information in the host incoming state file and attempt fetching <code>all </code> articles available from the server, subject to the normal history lookup constraints. This option is useful if the remote spool has been reconfigured. See also <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5).</p>
+<dd>Ignore the latest article information in the host incoming state file and attempt fetching <code>all </code> articles available from the server, subject to the normal history lookup constraints. This option is useful if the remote spool has been reconfigured. See also <i>in.hosts</i>(5).</p>
 <dt><code>&#8211;filter</code><i> filterprog</i></p>
 <dd>Enable message filtering via the program <i>filterprog</i>. Uses the <code>highwind</code> interface model, where each article is given to the filter in NNTP-fashion, and the filter responds with a 335 to accept, and a 435 to reject a message.</p>
 <dt><code>&#8211;mfilter</code><i> filterprog</i></p>
@@ -119,7 +119,7 @@ description: "newsx – news server exchange; post and fetch news articles"
 <dt><code>&#8211;no-path</code></p>
 <dd>Unless the exclusion pattern is set to <code>newsx</code>, all incoming articles are checked to see if their path is consistent with the exclusions given in <code>/usr/lib/news/newsfeeds</code>. This option omits this check.</p>
 <dt><code>&#8211;forget-inactive</code></p>
-<dd>Remove information in the incoming hosts state file about newsgroups that are removed from the <code>/usr/lib/news/active</code> file. See also <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5).</p>
+<dd>Remove information in the incoming hosts state file about newsgroups that are removed from the <code>/usr/lib/news/active</code> file. See also <i>in.hosts</i>(5).</p>
 <dt><code>&#8211;minfree</code><i> N</i></p>
 <dd>Don&#8217;t fetch news if there are less than <i>N</i> kbytes free space in the news spool.</p>
 <dt><code>&#8211;group</code><i> list</i></p>
@@ -194,7 +194,7 @@ description: "newsx – news server exchange; post and fetch news articles"
 <h2>Options For Profile Files</h2>
 <dl>
 <dt><code>&#8211;profile</code> <i>file</i></p>
-<dd>Read a <code>newsx</code> profile from <i>file .</i> This file can contain command line options to specify default newsx behaviour. See <i><a href="/docs/linux/man/5-newsx-conf/">newsx.conf</a></i>(5) for an overview of the format.</dl>
+<dd>Read a <code>newsx</code> profile from <i>file .</i> This file can contain command line options to specify default newsx behaviour. See <i>newsx.conf</i>(5) for an overview of the format.</dl>
 <p> Any option may be used in profile files. Some options are really only meaningfull in profile files:</p>
 <dl>
 <dt><code>&#8211;spoolname</code><i> spoolname</i></p>
@@ -228,9 +228,9 @@ description: "newsx – news server exchange; post and fetch news articles"
 <dt><code>&#8211;incoming</code><i> incomingdir</i></p>
 <dd>Use <i>incomingdir</i> as the incoming news article spool directory instead of the default <code>/var/spool/news/incoming</code>. Fine name conventions as for <code>&#8211;active</code>, except that the default directory is <i>/var/spool/news</i>.</p>
 <dt><code>&#8211;inhosts</code><i> inhostsdir</i></p>
-<dd>Use <i>inhostsdir</i> as the news host active file directory instead of the default <code>/var/spool/news/inhosts</code>. Name conventions as for <code>&#8211;incoming</code>. See also <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5).</p>
+<dd>Use <i>inhostsdir</i> as the news host active file directory instead of the default <code>/var/spool/news/inhosts</code>. Name conventions as for <code>&#8211;incoming</code>. See also <i>in.hosts</i>(5).</p>
 <dt><code>&#8211;hostconfig</code><i> hostconfigdir</i></p>
-<dd>Use <i>hostconfigdir</i> as the directory for the host specific profile. instead of the default <code>/var/spool/news/in.hosts</code>. Name conventions as for <code>&#8211;incoming</code>. See also <i>new</i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a><i>(5)</i> and <i><a href="/docs/linux/man/5-newsx-conf/">newsx.conf</a></i>(5). </p>
+<dd>Use <i>hostconfigdir</i> as the directory for the host specific profile. instead of the default <code>/var/spool/news/in.hosts</code>. Name conventions as for <code>&#8211;incoming</code>. See also <i>new</i>in.hosts<i>(5)</i> and <i>newsx.conf</i>(5). </p>
 </dl>
 <h2>Options For Testing And Debugging</h2>
 <dl>
@@ -400,10 +400,10 @@ description: "newsx – news server exchange; post and fetch news articles"
 <h2>Bugs</h2>
 <p>Report any bugs to <a rel="nofollow" href="http://www.kvaleberg.com/bug/">http://www.kvaleberg.com/bug/</a> </p>
 <h2>Files</h2>
-<p>See also <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5).</p>
+<p>See also <i>in.hosts</i>(5).</p>
 <dl>
 <dt>/usr/lib/news/newsx.conf</p>
-<dd>Newsx standard profile. If it exists, this profile file will be read before the command line arguments are parsed. See <i><a href="/docs/linux/man/5-newsx-conf/">newsx.conf</a></i>(5).</p>
+<dd>Newsx standard profile. If it exists, this profile file will be read before the command line arguments are parsed. See <i>newsx.conf</i>(5).</p>
 <dt>/usr/lib/news/lib/innshellvars</p>
 <dd>The standard news configuration file.</dl>
 <p> For C News:</p>
@@ -458,6 +458,6 @@ description: "newsx – news server exchange; post and fetch news articles"
 <h2>Author</h2>
 <p>Egil Kvaleberg &lt;egil [at] kvaleberg.no&gt;</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-newsq/">newsq</a></i>(1), <i><a href="/docs/linux/man/5-in-hosts/">in.hosts</a></i>(5) C News: <i><a href="/docs/linux/man/5-news/">news</a></i>(5), <i><a href="/docs/linux/man/5-newsdb/">newsdb</a></i>(5), <i><a href="/docs/linux/man/5-newssys/">newssys</a></i>(5), <i><a href="/docs/linux/man/8-rnews/">rnews</a></i>(8) INN: <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1), <i><a href="/docs/linux/man/1-inews/">inews</a></i>(1), <i><a href="/docs/linux/man/3-wildmat/">wildmat</a></i>(3), <i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8) RFC-977 &#8211; Network News Transfer Protocol (NNTP)<br />
+<p><i>newsq</i>(1), <i>in.hosts</i>(5) C News: <i>news</i>(5), <i>newsdb</i>(5), <i>newssys</i>(5), <i>rnews</i>(8) INN: <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1), <i><a href="/docs/linux/man/1-inews/">inews</a></i>(1), <i>wildmat</i>(3), <i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8) RFC-977 &#8211; Network News Transfer Protocol (NNTP)<br />
  RFC-1036 &#8211; Usenet Article Format <a rel="nofollow" href="http://www.kvaleberg.com/ISP-Hookup-HOWTO.html">http://www.kvaleberg.com/ISP-Hookup-HOWTO.html</a><br />
  <a rel="nofollow" href="http://www.kvaleberg.com/newsx.html">http://www.kvaleberg.com/newsx.html</a> </p>

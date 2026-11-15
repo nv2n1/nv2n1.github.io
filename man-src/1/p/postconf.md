@@ -149,7 +149,7 @@ description: "postconf – Postfix configuration utility"
 <dt><code>internal</code></p>
 <dd> A non-shared, in-memory hash table. Its content are lost when a process terminates.</p>
 <dt><code>lmdb</code></p>
-<dd> OpenLDAP LMDB database (a memory-mapped, persistent file). Available on systems with support for LMDB databases. This is described in <code><a href="/docs/linux/man/5-lmdb_table/">lmdb_table</a></code>(5). </p>
+<dd> OpenLDAP LMDB database (a memory-mapped, persistent file). Available on systems with support for LMDB databases. This is described in <code>lmdb_table</code>(5). </p>
 <p> This feature is available with Postfix 2.11 and later.</p>
 <dt><code>ldap</code> (read-only)</p>
 <dd> LDAP database client. This is described in <code><a href="/docs/linux/man/5-ldap_table/">ldap_table</a></code>(5).</p>

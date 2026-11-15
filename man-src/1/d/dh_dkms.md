@@ -34,7 +34,7 @@ description: "dh_dkms – correctly handle DKMS usage by a kernel module package
 <p> Note that this command is not idempotent. <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) should be called between invocations of this command. Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts. </p>
 <p> IMPORTANT: binary packages using dh_dkms must have a name that ends in &#8216;-dkms&#8217;.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-debhelper/">debhelper</a></i>(1) </p>
+<p> <i>debhelper</i>(1) </p>
 <p> This program is part of the Debian <font SIZE="-1">DKMS</font> package. </p>
 <p> <i><a href="/docs/linux/man/8-dkms/">dkms</a></i>(8)</p>
 <h2>AUTHOR</h2>

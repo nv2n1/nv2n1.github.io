@@ -25,7 +25,7 @@ description: "smbspool – send a print file to an SMB printer"
 <dl>
 <dd>&bull; <a href="smb://username:password@workgroup/server[:port]/printer">smb://username:password@workgroup/server[:port]/printer</a></dl>
 <p> smbspool tries to get the URI from the environment variable <code>DEVICE_URI</code>. If <code>DEVICE_URI</code> is not present, smbspool will use argv[0] if that starts with &#8220;smb://&#8221; or argv[1] if that is not the case. </p>
-<p> Programs using the <a href="/docs/linux/man/2-exec/">exec</a>(2) functions can pass the URI in argv[0], while shell scripts must set the <code>DEVICE_URI</code> environment variable prior to running smbspool.</p>
+<p> Programs using the exec(2) functions can pass the URI in argv[0], while shell scripts must set the <code>DEVICE_URI</code> environment variable prior to running smbspool.</p>
 <h2>Options</h2>
 <dl>
 <dd>&bull; The job argument (argv[1]) contains the job ID number and is presently not used by smbspool.</dl>

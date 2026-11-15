@@ -567,5 +567,5 @@ description: "pcp-atopsar – Advanced System Activity Report (pcp-atop related)
 <dt><code>$PCP_LOG_DIR/pmlogger/HOST/YYYYMMDD</code></p>
 <dd> Daily data file, where <i>YYYYMMDD</i> are digits representing the date, and <i>HOST</i> is the hostname of the machine being logged.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-pcp-atop/">pcp-atop</a></code>(1), <code><a href="/docs/linux/man/1-mkaf/">mkaf</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger_daily/">pmlogger_daily</a></code>(1), <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/5-pcp-atoprc/">pcp-atoprc</a></code>(5). </p>
+<p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-pcp-atop/">pcp-atop</a></code>(1), <code><a href="/docs/linux/man/1-mkaf/">mkaf</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code>pmlogger_daily</code>(1), <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/5-pcp-atoprc/">pcp-atoprc</a></code>(5). </p>
 <h2>Index</h2>

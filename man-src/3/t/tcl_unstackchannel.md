@@ -37,6 +37,6 @@ Tcl_Channel
 <p> <code>Tcl_GetTopChannel</code> returns the top channel in the stack of channels the supplied channel is part of. </p>
 <p> <code>Tcl_GetStackedChannel</code> returns the channel in the stack of channels which is just below the supplied channel. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-notifier/">Notifier</a>(3), <a href="/docs/linux/man/3-tcl_createchannel/">Tcl_CreateChannel</a>(3), <a href="/docs/linux/man/3-tcl_openfilechannel/">Tcl_OpenFileChannel</a>(3), <a href="/docs/linux/man/n-vwait/">vwait</a>(n). </p>
+<p><a href="/docs/linux/man/3-notifier/">Notifier</a>(3), <a href="/docs/linux/man/3-tcl_createchannel/">Tcl_CreateChannel</a>(3), <a href="/docs/linux/man/3-tcl_openfilechannel/">Tcl_OpenFileChannel</a>(3), vwait(n). </p>
 <h2>Keywords</h2>
 <p>channel, compression</p>

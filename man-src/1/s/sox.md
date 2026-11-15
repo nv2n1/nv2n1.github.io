@@ -853,7 +853,7 @@ sox[global - options][format - options] infile1
 <p> If the SoX global option <code>-R</code> option is not given, then the pseudo-random number generator used to generate the white noise will be `reseeded&#8217;, i.e. the generated noise will be different between invocations. </p>
 <p> This effect should not be followed by any other effect that affects the audio. </p>
 <p> See also the `Dithering&#8217; section above.</p>
-<dt><code>downsample</code> [<i><a href="/docs/linux/man/2-factor/">factor</a></i>(2)]</p>
+<dt><code>downsample</code> [<i>factor</i>(2)]</p>
 <dd> Downsample the signal by an integer factor: Only the first out of each <i>factor</i> samples is retained, the others are discarded. </p>
 <p> No decimation filter is applied. If the input is not a properly bandlimited baseband signal, aliasing will occur. This may be desirable, e.g., for frequency translation. </p>
 <p> For a general resampling effect with anti-aliasing, see <code>rate</code>. See also <code>upsample</code>.</p>

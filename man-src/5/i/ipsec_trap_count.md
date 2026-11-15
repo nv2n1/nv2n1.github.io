@@ -18,7 +18,7 @@ description: "ipsec_trap_count – KLIPS statistic on number of ACQUIREs"
 <h2>Files</h2>
 <p>/proc/net/ipsec/stats/trap_count</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/5-ipsec_pf_key/">ipsec_pf_key</a></code>(5), <code><a href="/docs/linux/man/5-trap_sendcount/">trap_sendcount</a></code>(5), <code><a href="/docs/linux/man/8-pluto/">pluto</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/8-ipsec/">ipsec</a></code>(8), <code><a href="/docs/linux/man/5-ipsec_pf_key/">ipsec_pf_key</a></code>(5), <code>trap_sendcount</code>(5), <code><a href="/docs/linux/man/8-pluto/">pluto</a></code>(8)</p>
 <h2>History</h2>
 <p>Written for the Linux FreeS/WAN project &lt;m[blue]<code><a rel="nofollow" href="http://www.freeswan.org/">http://www.freeswan.org/</a></code>m[]&gt; by Michael C. Richardson &lt;mcr [at] freeswan.org&gt;</p>
 <h2>Author</h2>

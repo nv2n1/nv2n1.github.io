@@ -14,7 +14,7 @@ description: "xxd – make a hexdump or do the reverse."
  <code>xxd</code> [options] [infile [outfile]]<br />
  <code>xxd</code> -r[evert] [options] [infile [outfile]]</p>
 <h2>DESCRIPTION</h2>
-<p> <i>xxd</i> creates a hex dump of a given file or standard input. It can also convert a hex dump back to its original binary form. Like <code><a href="/docs/linux/man/1-uuencode/">uuencode</a></code>(1) and <code><a href="/docs/linux/man/1-uudecode/">uudecode</a></code>(1) it allows the transmission of binary data in a `mail-safe&#8217; ASCII representation, but has the advantage of decoding to standard output. Moreover, it can be used to perform binary file patching.</p>
+<p> <i>xxd</i> creates a hex dump of a given file or standard input. It can also convert a hex dump back to its original binary form. Like <code>uuencode</code>(1) and <code>uudecode</code>(1) it allows the transmission of binary data in a `mail-safe&#8217; ASCII representation, but has the advantage of decoding to standard output. Moreover, it can be used to perform binary file patching.</p>
 <h2>OPTIONS</h2>
 <p> If no <i>infile</i> is given, standard input is read. If <i>infile</i> is specified as a `<code>&#8211;</code>&#8216; character, then input is taken from standard input. If no <i>outfile</i> is given (or a `<code>&#8211;</code>&#8216; character is in its place), results are sent to standard output. </p>
 <p> Note that a &quot;lazy&quot; parser is used which does not check for more than the first option letter, unless the option is followed by a parameter. Spaces between a single option letter and its parameter are optional. Parameters to options can be specified in decimal, hexadecimal or octal notation. Thus <code>-c8</code>, <code>-c 8</code>, <code>-c 010</code> and <code>-cols 8</code> are all equivalent. </p>
@@ -68,7 +68,7 @@ description: "xxd – make a hexdump or do the reverse."
  <i>% sh -c &quot;dd of=plain_snippet bs=1k count=1; xxd -s +128 &gt; hex_snippet&quot; &lt; file</i> </p>
 <p> Hexdump from file position 0x100 ( = 1024-768) on.<br />
  <i>% sh -c &quot;dd of=plain_snippet bs=1k count=1; xxd -s +-768 &gt; hex_snippet&quot; &lt; file</i> </p>
-<p> However, this is a rare situation and the use of `+&#8217; is rarely needed. The author prefers to monitor the effect of xxd with <a href="/docs/linux/man/1-strace/">strace</a>(1) or <a href="/docs/linux/man/1-truss/">truss</a>(1), whenever -s is used.</p>
+<p> However, this is a rare situation and the use of `+&#8217; is rarely needed. The author prefers to monitor the effect of xxd with <a href="/docs/linux/man/1-strace/">strace</a>(1) or truss(1), whenever -s is used.</p>
 <h2>EXAMPLES</h2>
 <p> Print everything but the first three lines (hex 0x30 bytes) of <code>file</code>.<br />
  <i>% xxd -s 0x30 file</i> </p>
@@ -138,7 +138,7 @@ description: "xxd – make a hexdump or do the reverse."
 <dt>4,5</p>
 <dd> desired seek position is unreachable.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-uuencode/">uuencode</a>(1), <a href="/docs/linux/man/1-uudecode/">uudecode</a>(1), <a href="/docs/linux/man/1-patch/">patch</a>(1) </p>
+<p> uuencode(1), uudecode(1), <a href="/docs/linux/man/1-patch/">patch</a>(1) </p>
 <h2>WARNINGS</h2>
 <p> The tools weirdness matches its creators brain. Use entirely at your own risk. Copy files. Trace it. Become a wizard. </p>
 <h2>VERSION</h2>

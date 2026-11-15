@@ -10,8 +10,8 @@ description: "iv_examples – ivykis examples"
 <h2>NAME</h2>
 <p> iv_examples &#8211; ivykis examples</p>
 <h2>EXAMPLE</h2>
-<p> ivykis is initialised by calling <code><a href="/docs/linux/man/3-iv_init/">iv_init</a></code>(3). This function is the first function to call when dealing with ivykis &#8212; it has to be called before registering file descriptors or timers. </p>
-<p> The ivykis main event loop is started by calling <code><a href="/docs/linux/man/3-iv_main/">iv_main</a></code>(3). This function generally does not return, except when <code><a href="/docs/linux/man/3-iv_quit/">iv_quit</a></code>(3) is called somewhere during execution of the program. </p>
+<p> ivykis is initialised by calling <code>iv_init</code>(3). This function is the first function to call when dealing with ivykis &#8212; it has to be called before registering file descriptors or timers. </p>
+<p> The ivykis main event loop is started by calling <code>iv_main</code>(3). This function generally does not return, except when <code>iv_quit</code>(3) is called somewhere during execution of the program. </p>
 <p> An application asks ivykis to monitor a certain file descriptor by filling out a structure of type &#8216;struct iv_fd&#8217; with a file descriptor number and a callback function, and calling the function iv_fd_register. </p>
 <p> The first example program waits for data from standard input, and writes a message to standard out whenever something is received: </p>
 <pre><code>
@@ -252,7 +252,7 @@ int main()<br />
     iv_deinit();<br />
     return 0;<br />
 }</p>
-<p> The global variable &#8216;iv_now&#8217; contains the current time-of-day. However, it is updated lazily, and its contents might be stale at any given time. Before using it, <code><a href="/docs/linux/man/3-iv_validate_now/">iv_validate_now</a></code>(3) must be called.</p>
+<p> The global variable &#8216;iv_now&#8217; contains the current time-of-day. However, it is updated lazily, and its contents might be stale at any given time. Before using it, <code>iv_validate_now</code>(3) must be called.</p>
 <h2>EXAMPLE 4</h2>
 <p> The fourth example demonstrates how to use a custom fatal error handler that does not write the message to syslog. </p>
 <pre><code>
@@ -276,5 +276,5 @@ int main()
 </code></pre>
 <p> This program will abort immediately, with the error message printed to the standard error stream.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ivykis/">ivykis</a></code>(3), <code><a href="/docs/linux/man/3-iv_fatal/">iv_fatal</a></code>(3), <code><a href="/docs/linux/man/3-iv_fd/">iv_fd</a></code>(3), <code><a href="/docs/linux/man/3-iv_timer/">iv_timer</a></code>(3), <code><a href="/docs/linux/man/3-iv_task/">iv_task</a></code>(3), <code><a href="/docs/linux/man/3-iv_init/">iv_init</a></code>(3), <code><a href="/docs/linux/man/3-iv_time/">iv_time</a></code>(3) </p>
+<p> <code>ivykis</code>(3), <code>iv_fatal</code>(3), <code>iv_fd</code>(3), <code>iv_timer</code>(3), <code>iv_task</code>(3), <code>iv_init</code>(3), <code>iv_time</code>(3) </p>
 <h2>Index</h2>

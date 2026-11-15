@@ -33,7 +33,7 @@ struct ibv_rwq_ind_table_init_attr {
 <h2>NOTES</h2>
 <p> The created object should be used as part of <i>ibv_create_qp_ex()</i> to enable dispatching of incoming packets based on some RX hash configuration.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_wq/">ibv_create_wq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_modify_wq/">ibv_modify_wq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_qp_ex/">ibv_create_qp_ex</a></code>(3),</p>
+<p> <code>ibv_create_wq</code>(3), <code>ibv_modify_wq</code>(3), <code>ibv_create_qp_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>

@@ -55,7 +55,7 @@ description: "tsung-recorder – Proxy recorder for the tsung load testing tool.
 </dl>
 <p> for archives.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-erlang/">erlang</a></code>(3) and <code><a href="/docs/linux/man/1-tsung/">tsung</a></code>(1)</p>
+<p> <code>erlang</code>(3) and <code><a href="/docs/linux/man/1-tsung/">tsung</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> <code>Tsung</code> is written by Nicolas Niclausse &lt;nicolas [at] niclux.org&gt;. Contributors list is available in <i>/usr/share/doc/tsung/CONTRIBUTORS</i> </p>
 <h2>Index</h2>

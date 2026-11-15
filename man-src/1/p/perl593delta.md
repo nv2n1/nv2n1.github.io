@@ -123,7 +123,7 @@ given($foo)
 <h3>PERL_DONT_CREATE_GVSV</h3>
 <p> The new compilation flag <tt>&quot;PERL_DONT_CREATE_GVSV&quot;</tt>, introduced as an option in perl 5.8.8, is turned on by default in perl 5.9.3. It prevents perl from creating an empty scalar with every new typeglob. See perl589delta for details.</p>
 <h3>Weak references are cheaper</h3>
-<p> Weak reference creation is now <i><a href="/docs/linux/man/1-o/">O</a>(1)</i> rather than <i><a href="/docs/linux/man/n-o/">O</a>(n)</i>, courtesy of Nicholas Clark. Weak reference deletion remains <i><a href="/docs/linux/man/n-o/">O</a>(n)</i>, but if deletion only happens at program exit, it may be skipped completely.</p>
+<p> Weak reference creation is now <i>O(1)</i> rather than <i>O(n)</i>, courtesy of Nicholas Clark. Weak reference deletion remains <i>O(n)</i>, but if deletion only happens at program exit, it may be skipped completely.</p>
 <h3><i>sort()</i> enhancements</h3>
 <p> Salvador Fandin~o provided improvements to reduce the memory usage of <tt>&quot;sort&quot;</tt> and to speed up some cases.</p>
 <h2>Installation and Configuration Improvements</h2>

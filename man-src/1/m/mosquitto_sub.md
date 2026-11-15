@@ -46,7 +46,7 @@ description: "mosquitto_sub – an MQTT version 3.1 client for subscribing to to
 <p> <code>&#8211;ciphers</code></p>
 <dl>
 <dt>
-<dd> An openssl compatible list of TLS ciphers to support in the client. See <code><a href="/docs/linux/man/1-ciphers/">ciphers</a></code>(1) for more information.</dl>
+<dd> An openssl compatible list of TLS ciphers to support in the client. See <code>ciphers</code>(1) for more information.</dl>
 <p> <code>-C</code></p>
 <dl>
 <dt>

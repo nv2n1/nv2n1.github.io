@@ -31,7 +31,7 @@ description: "qtdoc – Open a Qt(TM) help page in Konqueror"
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-kdedoc/">kdedoc</a>(1), <a href="/docs/linux/man/1-assistant/">assistant</a>(1)</p>
+<p> kdedoc(1), assistant(1)</p>
 <h2>AUTHORS</h2>
 <p> This manual page was prepared by Ben Burton&lt;bab [at] debian.org&gt;</p>
 <h2>AUTHOR</h2>

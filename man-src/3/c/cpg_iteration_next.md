@@ -13,7 +13,7 @@ description: "cpg_iteration_next – Return next item in iteration of CPG"
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>cs_error_t cpg_iteration_next (cpg_iteration_handle_t </code><i>handle</i><code>, struct cpg_iteration_description_t *</code><i>description</i><code>);</code> </p>
 <h2>DESCRIPTION</h2>
-<p> The <code>cpg_iter_next</code> function is used to get next value in iteration. The <i>handle</i> argument is iterator handle obtained by <code><a href="/docs/linux/man/3-cpg_iteration_initalize/">cpg_iteration_initalize</a>(3)</code> function. <i>description</i> is pointer to structure with following definition:</p>
+<p> The <code>cpg_iter_next</code> function is used to get next value in iteration. The <i>handle</i> argument is iterator handle obtained by <code>cpg_iteration_initalize(3)</code> function. <i>description</i> is pointer to structure with following definition:</p>
 <dl>
 <dt>
 <dd>

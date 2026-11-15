@@ -65,8 +65,8 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;tanh(1.000000,0.000000) = (0.761594,0.000000) (<a href="/docs/linux/man/1-tanh/">tanh</a><code>(1)</code> = 0.761594)<br />
-&nbsp;<wbr>&nbsp;tanh(0.000000,1.000000) = (0.000000,1.557408) ( <a href="/docs/linux/man/1-tan/">tan</a><code>(1)</code> = 1.557408)</p>
+<p>&nbsp;<wbr>&nbsp;tanh(1.000000,0.000000) = (0.761594,0.000000) (tanh<code>(1)</code> = 0.761594)<br />
+&nbsp;<wbr>&nbsp;tanh(0.000000,1.000000) = (0.000000,1.557408) ( tan<code>(1)</code> = 1.557408)</p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic sine of a complex number (sh(z))<br />
 sinh(std::complex) <i>(function template)</i><br />

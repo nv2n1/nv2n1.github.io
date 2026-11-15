@@ -20,6 +20,6 @@ attached, some of which were created by the driver and/or
 server, others created by clients at runtime.</pre></dl><dl COMPACT><dd><pre>The client is expected to free the list of properties using
 XFree.</pre></dl><dl COMPACT><dd><pre>XListDeviceProperties can generate a BadDevice error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The device does not
- exist.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XChangeDeviceProperty/">XChangeDeviceProperty</a>(3),
-<a HREF="//www.systutorials.com/docs/linux/man/3-XGetDeviceProperty/">XGetDeviceProperty</a>(3),
-<a HREF="//www.systutorials.com/docs/linux/man/3-XDeleteDeviceProperty/">XDeleteDeviceProperty</a>(3)</pre></dl>
+ exist.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeDeviceProperty(3),
+XGetDeviceProperty(3),
+XDeleteDeviceProperty(3)</pre></dl>

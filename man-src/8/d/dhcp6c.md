@@ -21,7 +21,7 @@ description: "dhcp6c – DHCPv6 client daemon"
 <dt><code>-D</code></p>
 <dd>Even more debugging information is printed.</p>
 <dt><code>-f</code></p>
-<dd>Foreground mode (useful when debugging). Although usually prints warning, debugging, or error messages to <a href="/docs/linux/man/8-syslog/">syslog</a>(8), it prints the messages to standard error if this option is specified.</p>
+<dd>Foreground mode (useful when debugging). Although usually prints warning, debugging, or error messages to syslog(8), it prints the messages to standard error if this option is specified.</p>
 <dt><code>-i</code></p>
 <dd>Info-req mode. In this mode, stateless DHCPv6 is executed with the folllowing configuration, and the obtained info is written to stdout. After this output, is terminated. (suits for a use in shell-script etc). </p>
 <pre> interface (interface given in the argument) {

@@ -32,7 +32,7 @@ description: "watch – execute a program periodically, showing output fullscree
 <dt><code>-c</code>, <code>&#8211;color</code></p>
 <dd> Interpret ANSI color and style sequences.</p>
 <dt><code>-x</code>, <code>&#8211;exec</code></p>
-<dd> Pass <i>command</i> to <code><a href="/docs/linux/man/2-exec/">exec</a></code>(2) instead of <code>sh -c</code> which reduces the need to use extra quoting to get the desired effect.</p>
+<dd> Pass <i>command</i> to <code>exec</code>(2) instead of <code>sh -c</code> which reduces the need to use extra quoting to get the desired effect.</p>
 <dt><code>-w</code>, <code>&#8211;no-linewrap</code></p>
 <dd> Turn off line wrapping. Long lines will be truncated instead of wrapped to the next line.</p>
 <dt><code>-h</code>, <code>&#8211;help</code></p>

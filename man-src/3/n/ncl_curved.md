@@ -23,9 +23,9 @@ CURVED - Draws a curve through a sequence of points.
  
 
  is equivalent to the statements
-<dl COMPACT><dd>CALL FRSTD (<a HREF="/docs/linux/man/1-x/">X</a>(1),<a HREF="/docs/linux/man/1-y/">Y</a>(1)) 
- CALL VECTD (<a HREF="/docs/linux/man/2-x/">X</a>(2),<a HREF="/docs/linux/man/2-y/">Y</a>(2)) 
- CALL VECTD (<a HREF="/docs/linux/man/3-x/">X</a>(3),<a HREF="/docs/linux/man/3-y/">Y</a>(3)) 
+<dl COMPACT><dd>CALL FRSTD (X(1),Y(1)) 
+ CALL VECTD (X(2),Y(2)) 
+ CALL VECTD (X(3),Y(3)) 
  ...(et cetera)... 
  CALL VECTD (X(N),Y(N)) 
  CALL LASTD</dl>

@@ -39,6 +39,6 @@ description: "audisp-prelude – plugin for IDMEF alerts"
 <h2>Files</h2>
 <p>/etc/audisp/plugins.d/au-prelude.conf, /etc/audit/auditd.conf, /etc/audisp/audispd.conf, /etc/audisp/audisp-prelude.conf</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-audispd/">audispd</a></code>(8), <code><a href="/docs/linux/man/1-prelude-manager/">prelude-manager</a>(1),</code> <code><a href="/docs/linux/man/8-auditd-conf/">auditd.conf</a>(8),</code> <code><a href="/docs/linux/man/8-audispd-conf/">audispd.conf</a>(8),</code> <code><a href="/docs/linux/man/5-audisp-prelude-conf/">audisp-prelude.conf</a>(5).</code></p>
+<p><code><a href="/docs/linux/man/8-audispd/">audispd</a></code>(8), <code><a href="/docs/linux/man/1-prelude-manager/">prelude-manager</a>(1),</code> <code>auditd.conf(8),</code> <code>audispd.conf(8),</code> <code>audisp-prelude.conf(5).</code></p>
 <h2>Author</h2>
 <p>Steve Grubb</p>

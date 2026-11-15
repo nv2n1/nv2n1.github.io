@@ -35,7 +35,7 @@ f.o:
     $Id: f.c,v 5.4 1993/11/09 17:40:15 eggert Exp $
 </code></pre>
 </dl>
-<p> If a C program defines a string like <code>rcsid</code> above but does not use it, <code><a href="/docs/linux/man/1-lint/">lint</a></code>(1) may complain, and some C compilers will optimize away the string. The most reliable solution is to have the program use the <code>rcsid</code> string, as shown in the example above. </p>
+<p> If a C program defines a string like <code>rcsid</code> above but does not use it, <code>lint</code>(1) may complain, and some C compilers will optimize away the string. The most reliable solution is to have the program use the <code>rcsid</code> string, as shown in the example above. </p>
 <p> <code>ident</code> finds all instances of the <code>$</code><i>keyword</i><code>:</code><i>&nbsp;<wbr>text&nbsp;<wbr></i><code>$</code> pattern, even if <i>keyword</i> is not actually an <font SIZE="-1">RCS</font>-supported keyword. This gives you information about nonstandard keywords like <code>$XConsortium$</code>. </p>
 <p> The pattern normally requires a colon and a space immediately after the keyword and a space immediately before the terminating <code>$</code>, but for Subversion 1.2 (and later) compatability, <code>ident</code> will also recognize the pattern <code>$</code><i>keyword</i><code>::</code><i>&nbsp;<wbr>text&nbsp;<wbr></i><code>$</code> (i.e., two colons and a space) and the pattern <code>$</code><i>keyword</i><code>::</code><i>&nbsp;<wbr>text&nbsp;<wbr>#</i><code>$</code> (likewise, with a hash before the terminating <code>$</code>). These are the fixed-width keyword syntax. To summarize, the three recognized patterns are:</p>
 <dl>

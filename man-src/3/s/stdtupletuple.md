@@ -166,7 +166,7 @@ a &#8211; allocator to use in uses-allocator construction</p>
 <p>Conditionally-explicit constructors make it possible to construct a tuple in copy-initialization context using list-initialization syntax:<br />
 Note that if some element of the list is not implicitly convertible to the corresponding element of the target tuple, the constructors become explicit: using namespace std::chrono;</p>
 <p>void launch_rocket_at(std::tuple&lt;hours, minutes, seconds&gt;);<br />
-&nbsp;<wbr>&nbsp;launch_rocket_at({<a href="/docs/linux/man/1-hours/">hours</a><code>(1)</code>, <a href="/docs/linux/man/2-minutes/">minutes</a><code>(2)</code>, <a href="/docs/linux/man/3-seconds/">seconds</a><code>(3)</code>}); // OK<br />
+&nbsp;<wbr>&nbsp;launch_rocket_at({hours<code>(1)</code>, minutes<code>(2)</code>, seconds<code>(3)</code>}); // OK<br />
 &nbsp;<wbr>&nbsp;launch_rocket_at({1, 2, 3}); // Error: int is not implicitly convertible to duration<br />
 &nbsp;<wbr>&nbsp;launch_rocket_at(std::tuple&lt;hours, minutes, seconds&gt;{1, 2, 3}); // OK<br />
 Defect reports<br />

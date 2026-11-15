@@ -51,7 +51,7 @@ description: "systemd-sysusers, systemd-sysusers.service – Allocate system use
 <dl>
 <dd>Print a short version string and exit.</dl>
 <h2>Credentials</h2>
-<p><code>systemd-sysusers</code> supports the service credentials logic as implemented by <i>LoadCredential=</i>/<i>SetCredential=</i> (see <code><a href="/docs/linux/man/1-systemd-exec/">systemd.exec</a></code>(1) for details). The following credentials are used when passed in: </p>
+<p><code>systemd-sysusers</code> supports the service credentials logic as implemented by <i>LoadCredential=</i>/<i>SetCredential=</i> (see <code>systemd.exec</code>(1) for details). The following credentials are used when passed in: </p>
 <p> &quot;passwd.hashed-password.<i>user</i>&quot;</p>
 <dl>
 <dd>A UNIX hashed password string to use for the specified user, when creating an entry for it. This is particularly useful for the &quot;root&quot; user as it allows provisioning the default root password to use via a unit file drop-in or from a container manager passing in this credential. Note that setting this credential has no effect if the specified user account already exists. This credential is hence primarily useful in first boot scenarios or systems that are fully stateless and come up with an empty /etc/ on every boot.</dl>
@@ -71,7 +71,7 @@ description: "systemd-sysusers, systemd-sysusers.service – Allocate system use
 <h2>Exit Status</h2>
 <p>On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-sysusers-d/">sysusers.d</a></code>(5), m[blue]<code>Users, Groups, UIDs and GIDs on systemd systems</code>m[]<font SIZE="-2">[2]</font>, <code><a href="/docs/linux/man/1-systemd-exec/">systemd.exec</a></code>(1), <code><a href="/docs/linux/man/1-mkpasswd/">mkpasswd</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-sysusers-d/">sysusers.d</a></code>(5), m[blue]<code>Users, Groups, UIDs and GIDs on systemd systems</code>m[]<font SIZE="-2">[2]</font>, <code>systemd.exec</code>(1), <code><a href="/docs/linux/man/1-mkpasswd/">mkpasswd</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</p>

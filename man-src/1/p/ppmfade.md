@@ -48,7 +48,7 @@ description: "ppmfade – generate a transition between two image files using sp
 <p> <code>ppmfade -f teapot.ppm -base end</code> </p>
 <p> Fade from teapot.ppm to black generating end.0001.ppm to end.0030.ppm. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tontsc/">tontsc</a></code>(1), <code><a href="/docs/linux/man/1-sgifade/">sgifade</a></code>(1), <code><a href="/docs/linux/man/1-smart_vfr/">smart_vfr</a></code>(1), <code><a href="/docs/linux/man/1-xmorph/">xmorph</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), </p>
+<p> <code>tontsc</code>(1), <code>sgifade</code>(1), <code>smart_vfr</code>(1), <code>xmorph</code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), </p>
 <h2>AUTHOR</h2>
 <p> Wesley C. Barris (wesb [at] msc.edu)<br />
  Army High Performance Computing Research Center (AHPCRC)<br />

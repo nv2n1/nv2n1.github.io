@@ -46,4 +46,4 @@ description: "Tspi_Hash_SetHashValue – Sets the hash value of a hash object fo
 <h2>Conforming To</h2>
 <p><code>Tspi_Hash_SetHashValue</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-tspi_hash_updatehash/">Tspi_Hash_UpdateHash</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sign/">Tspi_Hash_Sign</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_gethashvalue/">Tspi_Hash_GetHashValue</a></code>(3).</p>
+<p><code>Tspi_Hash_UpdateHash</code>(3), <code><a href="/docs/linux/man/3-tspi_hash_sign/">Tspi_Hash_Sign</a></code>(3), <code><a href="/docs/linux/man/3-tspi_hash_gethashvalue/">Tspi_Hash_GetHashValue</a></code>(3).</p>

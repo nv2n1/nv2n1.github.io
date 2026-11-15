@@ -27,7 +27,7 @@ description: "btkbdd – Bluetooth Keyboard Daemon"
 <p> Use this option if you want to remember last connected device between btkbdd runs.</p>
 <dt><code>-d</code></p>
 <dd>Become a daemon. Give up controlling terminal, open file descriptors and double-fork to escape parent process control. </p>
-<p> While breaking process hierarchy has certain disadvantages and is deprecated with modern service control daemons such as <i><a href="/docs/linux/man/8-systemd/">systemd</a></i>(8)), it is necessary to do so with <i><a href="/docs/linux/man/8-udevd/">udevd</a></i>(8), otherwise btkbdd would block the whole worker process.</p>
+<p> While breaking process hierarchy has certain disadvantages and is deprecated with modern service control daemons such as <i>systemd</i>(8)), it is necessary to do so with <i><a href="/docs/linux/man/8-udevd/">udevd</a></i>(8), otherwise btkbdd would block the whole worker process.</p>
 <dt><i>device</i></p>
 <dd>Linux input subsystem event device to use as source for key presses.</dl>
 <h2>Examples</h2>

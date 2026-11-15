@@ -99,7 +99,7 @@ description: "dpkg-deb – Debian package archive (.deb) manipulation tool"
 <dt><font SIZE="-1"><code>TMPDIR</code></font></p>
 <dd> If set, <code>dpkg-deb</code> will use it as the directory in which to create temporary files and directories.</p>
 <dt><font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font></p>
-<dd> If set, it will be used as the timestamp (as seconds since the epoch) in the <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5)&#8217;s <code><a href="/docs/linux/man/5-ar/">ar</a></code>(5) container and used to clamp the mtime in the <code><a href="/docs/linux/man/5-tar/">tar</a></code>(5) file entries.</dl>
+<dd> If set, it will be used as the timestamp (as seconds since the epoch) in the <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5)&#8217;s <code>ar</code>(5) container and used to clamp the mtime in the <code><a href="/docs/linux/man/5-tar/">tar</a></code>(5) file entries.</dl>
 <h2>NOTES</h2>
 <p> Do not attempt to use just <code>dpkg-deb</code> to install software! You must use <code>dpkg</code> proper to ensure that all the files are correctly placed and the package&#8217;s scripts run and its status and contents recorded.</p>
 <h2>BUGS</h2>

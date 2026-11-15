@@ -351,7 +351,7 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 <dt><i>virt-v2v-wrapper.sh</i></p>
 <dd> <i>(during/after conversion)</i> </p>
 <p> This is the wrapper script which is used when running virt-v2v. For interest only, do not attempt to run this script yourself.</dl>
-<p> Before conversion actually begins, virt-p2v then makes one or more further ssh connections to the server for data transfer. The transfer protocol used currently is <font SIZE="-1">NBD </font>(Network Block Device), which is proxied over ssh. The server is <i><a href="/docs/linux/man/1-qemu-nbd/">qemu-nbd</a></i>(1). There is one ssh connection per physical hard disk on the source machine (the common case — a single hard disk — is shown below): </p>
+<p> Before conversion actually begins, virt-p2v then makes one or more further ssh connections to the server for data transfer. The transfer protocol used currently is <font SIZE="-1">NBD </font>(Network Block Device), which is proxied over ssh. The server is <i>qemu-nbd</i>(1). There is one ssh connection per physical hard disk on the source machine (the common case — a single hard disk — is shown below): </p>
 <pre>
  ┌──────────────┐                      ┌─────────────────┐
  │ virt-p2v     │                      │ virt-v2v        │
@@ -370,7 +370,7 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 <p> The long <tt>&quot;virt-v2v -i libvirtxml physical.xml ...&quot;</tt> command is wrapped inside a wrapper script and uploaded to the conversion server. The final step is to run this wrapper script, in turn running the virt-v2v command. The virt-v2v command references the <i>physical.xml</i> file (see above), which in turn references the <font SIZE="-1">NBD</font> listening port(s) of the data connection(s). </p>
 <p> Output from the virt-v2v command (messages, debugging etc) is saved both in the log file on the conversion server. Only informational messages are sent back over the control connection to be displayed in the graphical <font SIZE="-1">UI.</font></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></i>(1), <i><a href="/docs/linux/man/1-virt-p2v-make-kickstart/">virt-p2v-make-kickstart</a></i>(1), <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1), <i><a href="/docs/linux/man/1-qemu-nbd/">qemu-nbd</a></i>(1), <i><a href="/docs/linux/man/1-ssh/">ssh</a></i>(1), <i><a href="/docs/linux/man/8-sshd/">sshd</a></i>(8), <i><a href="/docs/linux/man/5-sshd_config/">sshd_config</a></i>(5), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></i>(1), <i><a href="/docs/linux/man/1-virt-p2v-make-kickstart/">virt-p2v-make-kickstart</a></i>(1), <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1), <i>qemu-nbd</i>(1), <i><a href="/docs/linux/man/1-ssh/">ssh</a></i>(1), <i><a href="/docs/linux/man/8-sshd/">sshd</a></i>(8), <i><a href="/docs/linux/man/5-sshd_config/">sshd_config</a></i>(5), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Matthew Booth </p>
 <p> John Eckersberg </p>

@@ -21,7 +21,7 @@ description: "metalink_parse_update, metalink_parse_final, metalink_parser_conte
 <p> In each call of <code>metalink_parse_update</code>(), <i>len</i> bytes of <i>buf</i> are processed. At the last piece of data, call <code>metalink_parse_final</code>() to get <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) structure as a result. Giving 0 as <i>len</i> is permitted. </p>
 <p> <code>metalink_parse_final</code>() calls <code>metalink_parser_context_delete</code>() internally to deallocate the memory for passed <code>metalink_parser_context_t</code>. Therefore you don&#8217;t have to call metlaink_parser_context_delete() if you call <code>metalink_parse_final</code>(). Otherwise call metalink_parser_context_delete() to free the allocated resource. </p>
 <p> You don&#8217;t have to allocate memory for <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) structure. <code>metalink_parse_final</code>() take the pointer of <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) pointer and allocate memory for that pointer. </p>
-<p> The caller must free the memory allocated for <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) structure using <code><a href="/docs/linux/man/3-metalink_delete/">metalink_delete</a></code>(3) if it is no longer used. </p>
+<p> The caller must free the memory allocated for <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) structure using <code>metalink_delete</code>(3) if it is no longer used. </p>
 <h2>RETURN VALUE</h2>
 <p> <code>metalink_parse_update</code>(), <code>metalink_parse_final</code>() return 0 for success. When error occurred, non-zero value error code is returned. If error occurred, <code>metalink_parse_final</code>() does not allocate memory for <code>metalink_t</code>. The error codes are described in metalink_error.h. </p>
 <p> In case of success, <code>metalink_parser_context_new</code>() allocates memory for <code>metalink_parser_context_t</code>() and returns the pointer to it. In case of failure, <code>metalink_parser_context_new</code>() returns NULL. </p>
@@ -142,5 +142,5 @@ int main(int argc, char **argv)
 }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-metalink_delete/">metalink_delete</a></code>(3), <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3), <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) </p>
+<p> <code>metalink_delete</code>(3), <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3), <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) </p>
 <h2>Index</h2>

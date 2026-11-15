@@ -40,9 +40,9 @@ description: "trickle – a lightweight userspace bandwidth shaper"
 <p> <code>trickle -u 10 -d 20 ncftp</code> </p>
 <p> Launch <a href="/docs/linux/man/1-ncftp/">ncftp</a>(1) limiting its upload capacity to 10 KB/s, and download capacity at 20 KB/s.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-trickled/">trickled</a>(8), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), <a href="/docs/linux/man/2-socket/">socket</a>(2), <a href="/docs/linux/man/4-netintro/">netintro</a>(4)</p>
+<p> <a href="/docs/linux/man/8-trickled/">trickled</a>(8), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), <a href="/docs/linux/man/2-socket/">socket</a>(2), netintro(4)</p>
 <h2>AUTHORS</h2>
 <p> <code>trickle</code> has been developed by Marius Aamodt Eriksen Aq marius [at] monkey.org .</p>
 <h2>BUGS</h2>
-<p> Does not support executables utilizing <a href="/docs/linux/man/2-kqueue/">kqueue</a>(2). Does not support statically linked executables. </p>
+<p> Does not support executables utilizing kqueue(2). Does not support statically linked executables. </p>
 <h2>Index</h2>

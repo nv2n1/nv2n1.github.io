@@ -551,6 +551,6 @@ description: "XmColumn — The XmColumn widget class"
 <dt><code>XmNstretchable</code></p>
 <dd>Specifies whether the child should expand in size proportionately when the XmColumn is resized vertically to be larger than its natural size.</dl>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmbulletinboard/">XmBulletinBoard</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatecolumn/">XmCreateColumn</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreatecolumn/">XmVaCreateColumn</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanagedcolumn/">XmVaCreateManagedColumn</a></code>(3). </p>
+<p><code><a href="/docs/linux/man/3-composite/">Composite</a></code>(3), <code><a href="/docs/linux/man/3-core/">Core</a></code>(3), <code><a href="/docs/linux/man/3-xmbulletinboard/">XmBulletinBoard</a></code>(3), <code>XmCreateColumn</code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), <code><a href="/docs/linux/man/3-xmvacreatecolumn/">XmVaCreateColumn</a></code>(3), and <code><a href="/docs/linux/man/3-xmvacreatemanagedcolumn/">XmVaCreateManagedColumn</a></code>(3). </p>
 <h2>Version</h2>
 <p>This manual page documents the XmColumn widget shipped in Motif version 2.2</p>

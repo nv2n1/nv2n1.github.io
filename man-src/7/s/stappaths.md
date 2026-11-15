@@ -12,7 +12,7 @@ description: "stappaths – systemtap configurable file paths"
 <p>This manual page was generated on 2017-08-03 for systemtap 3.1. The following section will list the main paths in systemtap that are important to know and may be required to reference.</p>
 <dl>
 <dt>/usr/share/systemtap/tapset/</p>
-<dd>The directory for the standard probe-alias / function tapset library, unless overridden by the <i>SYSTEMTAP_TAPSET</i> environment variable or the <i>XDG_DATA_DIRS</i> environment variable. These are described in the <i><a href="//www.systutorials.com/docs/linux/man/3stap-stapprobes/">stapprobes</a></i>(3stap), <i>probe::*</i>(3stap), and <i>function::*</i>(3stap) manual pages.</p>
+<dd>The directory for the standard probe-alias / function tapset library, unless overridden by the <i>SYSTEMTAP_TAPSET</i> environment variable or the <i>XDG_DATA_DIRS</i> environment variable. These are described in the <i>stapprobes</i>(3stap), <i>probe::*</i>(3stap), and <i>function::*</i>(3stap) manual pages.</p>
 <dt>/usr/share/systemtap/runtime/</p>
 <dd>The runtime sources, unless overridden by the <i>SYSTEMTAP_RUNTIME</i> environment variable.</p>
 <dt>/usr/bin/staprun</p>
@@ -62,10 +62,10 @@ description: "stappaths – systemtap configurable file paths"
 <h2>Files</h2>
 <p><i>/usr/share/systemtap/tapset</i></p>
 <h2>See Also</h2>
-<pre><i><a href="//www.systutorials.com/docs/linux/man/3stap-stapprobes/">stapprobes</a></i>(3stap),
+<pre><i>stapprobes</i>(3stap),
 <i><a href="//www.systutorials.com/docs/linux/man/8-staprun/">staprun</a></i>(8),
-<i><a href="//www.systutorials.com/docs/linux/man/3stap-stapvars/">stapvars</a></i>(3stap),
-<i><a href="//www.systutorials.com/docs/linux/man/3stap-stapex/">stapex</a></i>(3stap),
+<i>stapvars</i>(3stap),
+<i>stapex</i>(3stap),
 <i><a href="//www.systutorials.com/docs/linux/man/8-stap-server/">stap-server</a></i>(8),
 <i><a href="//www.systutorials.com/docs/linux/man/1-awk/">awk</a></i>(1),
 <i><a href="//www.systutorials.com/docs/linux/man/1-gdb/">gdb</a></i>(1)</pre>

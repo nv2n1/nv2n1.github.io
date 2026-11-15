@@ -519,7 +519,7 @@ description: "atopsar – Advanced System Activity Report (atop related)"
 <dt><code>/var/log/atop/atop_</code><i>YYYYMMDD</i></p>
 <dd> Daily data file, where <i>YYYYMMDD</i> are digits representing the date.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-atop/">atop</a>(1),</code> <code><a href="/docs/linux/man/5-atoprc/">atoprc</a>(5),</code> <code><a href="/docs/linux/man/8-atopacctd/">atopacctd</a>(8),</code> <code><a href="/docs/linux/man/4-netatop/">netatop</a>(4),</code> <code><a href="/docs/linux/man/8-netatopd/">netatopd</a>(8)</code><br />
+<p> <code><a href="/docs/linux/man/1-atop/">atop</a>(1),</code> <code>atoprc(5),</code> <code>atopacctd(8),</code> <code>netatop(4),</code> <code>netatopd(8)</code><br />
  <code><a rel="nofollow" href="http://www.atoptool.nl">http://www.atoptool.nl</a></code></p>
 <h2>AUTHOR</h2>
 <p> Gerlof Langeveld (gerlof.langeveld [at] atoptool.nl) </p>

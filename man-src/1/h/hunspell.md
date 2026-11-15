@@ -170,7 +170,7 @@ Hunspell 1.2.3
 <dt><code>-v, &#8211;version</code></p>
 <dd> Print version number. </p>
 <dt><code>-vv</code></p>
-<dd> Print <a href="/docs/linux/man/1-ispell/">ispell</a>(1) compatible version number. </p>
+<dd> Print ispell(1) compatible version number. </p>
 <dt><code>-w</code></p>
 <dd> Print misspelled words (= lines) from one word/line input. </p>
 </dl>
@@ -203,7 +203,7 @@ Hunspell 1.2.3
 <p> <code>hunspell (3), <a href="/docs/linux/man/4-hunspell/">hunspell</a>(4)</code></p>
 <h2>AUTHOR</h2>
 <p> Author of Hunspell executable is László Németh. For Hunspell library, see <a href="/docs/linux/man/3-hunspell/">hunspell</a>(3). </p>
-<p> This manual based on Ispell&#8217;s manual. See <a href="/docs/linux/man/1-ispell/">ispell</a>(1).</p>
+<p> This manual based on Ispell&#8217;s manual. See ispell(1).</p>
 <h2>BUGS</h2>
 <p> There are some layout problems with long lines. </p>
 <h2>Index</h2>

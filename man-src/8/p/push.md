@@ -64,6 +64,6 @@ description: "push – fetch mail via POP"
 </blockquote>
 <p> tries to fetch <code>From:</code> lines for current user at post office &#8220;havregryn&#8221; using Kerberos 5.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-from/">from</a>(1), <a href="/docs/linux/man/1-pfrom/">pfrom</a>(1), <a href="/docs/linux/man/8-movemail/">movemail</a>(8), <a href="/docs/linux/man/8-popper/">popper</a>(8)</p>
+<p><a href="/docs/linux/man/1-from/">from</a>(1), <a href="/docs/linux/man/1-pfrom/">pfrom</a>(1), movemail(8), <a href="/docs/linux/man/8-popper/">popper</a>(8)</p>
 <h2>History</h2>
 <p>was written while waiting for <code>movemail</code> to finish getting the mail.</p>

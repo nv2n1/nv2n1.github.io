@@ -88,5 +88,5 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 <p> Copyright &#169; 2004-2009 Thierry Leconte &amp; Stephane Fillod<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-hamlib/">hamlib</a></code>(3),<code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1),<code><a href="/docs/linux/man/1-rotctl/">rotctl</a></code>(1) </p>
+<p> <code>hamlib</code>(3),<code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1),<code><a href="/docs/linux/man/1-rotctl/">rotctl</a></code>(1) </p>
 <h2>Index</h2>

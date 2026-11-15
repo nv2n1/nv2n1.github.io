@@ -63,4 +63,4 @@ description: "mono-config – Mono runtime file format configuration"
  &lt;/dllmap&gt;
 &lt;/configuration&gt;</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-mono/">mono</a>(1),</code><a href="/docs/linux/man/1-monodis/">monodis</a>(1),<code><a href="/docs/linux/man/1-mint/">mint</a>(1)</code> </p>
+<p><code><a href="/docs/linux/man/1-mono/">mono</a>(1),</code><a href="/docs/linux/man/1-monodis/">monodis</a>(1),<code>mint(1)</code> </p>

@@ -12,10 +12,10 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>e.g. </p>
 <pre> pp_def(
  'sumover',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o]b();',
+ Pars =&gt; 'a(n); [o]b();',
  Code =&gt; q{
  double tmp=0;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ loop(n) %{
  tmp += $a();
  %}
  $b() = tmp;
@@ -70,27 +70,27 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  %}</pre>
 <p>The most important <font SIZE="-1">PP</font> construct is the form <tt>&quot;$array()&quot;</tt>. Consider the very simple <font SIZE="-1">PP</font> function to sum the elements of a 1D vector (in fact this is very similar to the actual code used by &#8216;sumover&#8217;): </p>
 <pre> pp_def('sumit',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o]b();',
+ Pars =&gt; 'a(n); [o]b();',
  Code =&gt; q{
  double tmp;
  tmp = 0;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ loop(n) %{
  tmp += $a();
  %}
  $b() = tmp;
  }
  );</pre>
-<p>What&#8217;s going on? The <tt>&quot;Pars =&gt;&quot;</tt> line is very important for <font SIZE="-1">PP &#8211;</font> it specifies all the arguments and their dimensionality. We call this the <i>signature</i> of the <font SIZE="-1">PP</font> function (compare also the explanations in PDL::Indexing). In this case the routine takes a 1-D function as input and returns a 0-D scalar as output. The <tt>&quot;$a()&quot;</tt> <font SIZE="-1">PP</font> construct is used to access elements of the array <a href="/docs/linux/man/n-a/">a</a>(n) for you &#8211; <font SIZE="-1">PP</font> fills in all the required C code. </p>
+<p>What&#8217;s going on? The <tt>&quot;Pars =&gt;&quot;</tt> line is very important for <font SIZE="-1">PP &#8211;</font> it specifies all the arguments and their dimensionality. We call this the <i>signature</i> of the <font SIZE="-1">PP</font> function (compare also the explanations in PDL::Indexing). In this case the routine takes a 1-D function as input and returns a 0-D scalar as output. The <tt>&quot;$a()&quot;</tt> <font SIZE="-1">PP</font> construct is used to access elements of the array a(n) for you &#8211; <font SIZE="-1">PP</font> fills in all the required C code. </p>
 <p> You will notice that we are using the <tt>&quot;q{}&quot;</tt> single-quote operator. This is not an accident. You generally want to use single quotes to denote your <font SIZE="-1">PP</font> Code sections. <font SIZE="-1">PDL::PP</font> uses <tt>&quot;$var()&quot;</tt> for its parsing and if you don&#8217;t use single quotes, Perl will try to interpolate <tt>&quot;$var()&quot;</tt>. Also, using the single quote <tt>&quot;q&quot;</tt> operator with curly braces makes it look like you are creating a code block, which is What You Mean. (Perl is smart enough to look for nested curly braces and not close the quote until it finds the matching curly brace, so it&#8217;s safe to have nested blocks.) Under other circumstances, such as when you&#8217;re stitching together a Code block using string concatenations, it&#8217;s often easiest to use real single quotes as </p>
 <pre> Code =&gt; 'something'.$interpolatable.'somethingelse;'</pre>
-<p>In the simple case here where all elements are accessed the <font SIZE="-1">PP</font> construct <tt>&quot;<a href="/docs/linux/man/n-loop/">loop</a>(n) %{ ... %}&quot;</tt> is used to loop over all elements in dimension <tt>&quot;n&quot;</tt>. Note this feature of <font SIZE="-1">PP: ALL DIMENSIONS ARE SPECIFIED BY NAME.</font> </p>
+<p>In the simple case here where all elements are accessed the <font SIZE="-1">PP</font> construct <tt>&quot;loop(n) %{ ... %}&quot;</tt> is used to loop over all elements in dimension <tt>&quot;n&quot;</tt>. Note this feature of <font SIZE="-1">PP: ALL DIMENSIONS ARE SPECIFIED BY NAME.</font> </p>
 <p> This is made clearer if we avoid the <font SIZE="-1">PP</font> <i>loop()</i> construct and write the loop explicitly using conventional C: </p>
 <pre> pp_def('sumit',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o]b();',
+ Pars =&gt; 'a(n); [o]b();',
  Code =&gt; q{
  int i,n_size;
  double tmp;
- n_size = $<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n);
+ n_size = $SIZE(n);
  tmp = 0;
  for(i=0; i&lt;n_size; i++) {
  tmp += $a(n=&gt;i);
@@ -104,7 +104,7 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  tmp += $a(m=&gt;i,n=&gt;j);
  ...</pre>
 <p>The syntax <tt>&quot;m=&gt;i&quot;</tt> borrows from Perl hashes, which are in fact used in the implementation of <font SIZE="-1">PP.</font> One could also say <tt>&quot;$a(n=&gt;j,m=&gt;i)&quot;</tt> as order is not important. </p>
-<p> You can also see in the above example the use of another <font SIZE="-1">PP</font> construct &#8211; <tt>$<a href="/docs/linux/man/n-size/">SIZE</a>(n)</tt> to get the length of the dimension <tt>&quot;n&quot;</tt>. </p>
+<p> You can also see in the above example the use of another <font SIZE="-1">PP</font> construct &#8211; <tt>$SIZE(n)</tt> to get the length of the dimension <tt>&quot;n&quot;</tt>. </p>
 <p> It should, however, be noted that you shouldn&#8217;t write an explicit C-loop when you could have used the <font SIZE="-1">PP </font><tt>&quot;loop&quot;</tt> construct since <font SIZE="-1">PDL::PP</font> checks automatically the loop limits for you, usage of <tt>&quot;loop&quot;</tt> makes the code more concise, etc. But there are certainly situations where you need explicit control of the loop and now you know how to do it ;). </p>
 <p> To revisit &#8216;Why <font SIZE="-1">PP</font>?&#8217; &#8211; the above code for <i>sumit()</i> will be generated for each data-type. It will operate on slices of arrays &#8216;in-place&#8217;. It will thread automatically &#8211; e.g. if a 2D array is given it will be called repeatedly for each 1D row (again check PDL::Indexing for the details of threading). And then b() will be a 1D array of sums of each row. We could call it with <tt>$a</tt>-&gt;xchg(0,1) to sum the columns instead. And Dataflow tracing etc. will be available. </p>
 <p> You can see <font SIZE="-1">PP</font> saves the programmer from writing a lot of needlessly repetitive C-code &#8212; in our opinion this is one of the best features of <font SIZE="-1">PDL</font> making writing new C subroutines for <font SIZE="-1">PDL</font> an amazingly concise exercise. A second reason is the ability to make <font SIZE="-1">PP</font> expand your concise code definitions into different C code based on the needs of the computer architecture in question. Imagine for example you are lucky to have a supercomputer at your hands; in that case you want <font SIZE="-1">PDL::PP</font> certainly to generate code that takes advantage of the vectorising/parallel computing features of your machine (this a project for the future). In any case, the bottom line is that your unchanged code should still expand to working <font SIZE="-1">XS</font> code even if the internals of <font SIZE="-1">PDL</font> changed. </p>
@@ -112,11 +112,11 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <pre> for({Name =&gt; 'sumit', Init =&gt; '0', Op =&gt; '+='},
  {Name =&gt; 'multit', Init =&gt; '1', Op =&gt; '*='}) {
  pp_def($_-&gt;{Name},
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o]b();',
+ Pars =&gt; 'a(n); [o]b();',
  Code =&gt; '
  double tmp;
  tmp = '.$_-&gt;{Init}.';
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ loop(n) %{
  tmp '.$_-&gt;{Op}.' $a();
  %}
  $b() = tmp;
@@ -127,11 +127,11 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p> We should mention here also the ability to get the pointer to the beginning of the data in memory &#8211; a prerequisite for interfacing <font SIZE="-1">PDL</font> to some libraries. This is handled with the <tt>&quot;$P(var)&quot;</tt> directive, see below. </p>
 <p> When starting work on a new pp_def&#8217;ined function, if you make a mistake, you will usually find a pile of compiler errors indicating line numbers in the generated <font SIZE="-1">XS</font> file. If you know how to read <font SIZE="-1">XS</font> files (or if you want to learn the hard way), you could open the generated <font SIZE="-1">XS</font> file and search for the line number with the error. However, a recent addition to <font SIZE="-1">PDL::PP</font> helps report the correct line number of your errors: <tt>&quot;pp_line_numbers&quot;</tt>. Working with the original summit example, if you had a mis-spelling of tmp in your code, you could change the (erroneos) code to something like this and the compiler would give you much more useful information: </p>
 <pre> pp_def('sumit',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o]b();',
+ Pars =&gt; 'a(n); [o]b();',
  Code =&gt; pp_line_numbers(__LINE__, q{
  double tmp;
  tmp = 0;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ loop(n) %{
  tmp += $a();
  %}
  $b() = rmp;
@@ -196,16 +196,16 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p> <tt>&quot;[o]&quot;</tt> is not the only qualifier a pdl argument can have in the signature. Another important qualifier is the <tt>&quot;[t]&quot;</tt> option which flags a pdl as temporary. What does that mean? You tell <font SIZE="-1">PDL::PP</font> that this pdl is only used for temporary results in the course of the calculation and you are not interested in its value after the computation has been completed. But why should <font SIZE="-1">PDL::PP</font> want to know about this in the first place? The reason is closely related to the concepts of pdl auto creation (you heard about that above) and implicit threading. If you use implicit threading the dimensionality of automatically created pdls is actually larger than that specified in the signature. With <tt>&quot;[o]&quot;</tt> flagged pdls will be created so that they have the additional dimensions as required by the number of implicit thread dimensions. When creating a temporary pdl, however, it will always only be made big enough so that it can hold the result for one iteration in a thread loop, i.e. as large as required by the signature. So less memory is wasted when you flag a pdl as temporary. Secondly, you can use output auto creation with temporary pdls even when you are using explicit threading which is forbidden for normal output pdls flagged with <tt>&quot;[o]&quot;</tt> (see PDL::Indexing). </p>
 <p> Here is an example where we use the [t] qualifier. We define the function <tt>&quot;callf&quot;</tt> that calls a C routine <tt>&quot;f&quot;</tt> which needs a temporary array of the same size and type as the array <tt>&quot;a&quot;</tt> (sorry about the forward reference for <tt>$P</tt>; it&#8217;s a pointer access, see below) : </p>
 <pre> pp_def('callf',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [t] <a href="//www.systutorials.com/docs/linux/man/n-tmp/">tmp</a>(n); [o] b()',
- Code =&gt; 'int ns = $<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n);
+ Pars =&gt; 'a(n); [t] tmp(n); [o] b()',
+ Code =&gt; 'int ns = $SIZE(n);
  f($P(a),$P(b),$P(tmp),ns);
  '
  );</pre>
 <h3>Argument dimensions and the signature</h3>
 <p>Now we have just talked about dimensions of pdls and the signature. How are they related? Let&#8217;s say that we want to add a scalar + the index number to a vector: </p>
 <pre> pp_def('add2',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); b(); [o]<a href="//www.systutorials.com/docs/linux/man/n-c/">c</a>(n);',
- Code =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ Pars =&gt; 'a(n); b(); [o]c(n);',
+ Code =&gt; 'loop(n) %{
  $c() = $a() + $b() + n;
  %}'
  );</pre>
@@ -221,10 +221,10 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p> These type conversions are correct for most functions you normally define with <tt>&quot;pp_def&quot;</tt>. However, there are certain cases where slightly modified type conversion behaviour is desired. For these cases additional qualifiers in the signature can be used to specify the desired properties with regard to type conversion. These qualifiers can be combined with those we have encountered already (the <i>creation qualifiers</i> <tt>&quot;[o]&quot;</tt> and <tt>&quot;[t]&quot;</tt>). Let&#8217;s go through the list of qualifiers that change type conversion behaviour. </p>
 <p> The most important is the <tt>&quot;int&quot;</tt> qualifier which comes in handy when a pdl argument represents indices into another pdl. Let&#8217;s take a look at an example from <tt>&quot;PDL::Ufunc&quot;</tt>: </p>
 <pre> pp_def('maximum_ind',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); int [o] b()',
+ Pars =&gt; 'a(n); int [o] b()',
  Code =&gt; '$GENERIC() cur;
  int curind;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ loop(n) %{
  if (!n || $a() &gt; cur) {cur = $a(); curind = n;}
  %}
  $b() = curind;',
@@ -238,17 +238,17 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  sumover($large_pdl,($sums = zeroes(double,@dims)));</pre>
 <p>is not a good alternative either. Now we don&#8217;t have overflow problems with <tt>$sums</tt> but at the expense of a type conversion of <tt>$large_pdl</tt> to double, something bad if this is really a large pdl. That&#8217;s where <tt>&quot;double&quot;</tt> comes in handy: </p>
 <pre> pp_def('sumoverd',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); double [o] b()',
+ Pars =&gt; 'a(n); double [o] b()',
  Code =&gt; 'double tmp=0;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{ tmp += a(); %}
+ loop(n) %{ tmp += a(); %}
  $b() = tmp;',
  );</pre>
 <p>This gets us around the type conversion and overflow problems. Again, analogous to the <tt>&quot;int&quot;</tt> qualifier <tt>&quot;double&quot;</tt> results in <tt>&quot;b&quot;</tt> always being of type double regardless of the type of <tt>&quot;a&quot;</tt> without leading to a type conversion of <tt>&quot;a&quot;</tt> as a side effect. </p>
 <p> Finally, there are the <tt>&quot;type+&quot;</tt> qualifiers where type is one of <tt>&quot;int&quot;</tt> or <tt>&quot;float&quot;</tt>. What shall that mean. Let&#8217;s illustrate the <tt>&quot;int+&quot;</tt> qualifier with the actual definition of sumover: </p>
 <pre> pp_def('sumover',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); int+ [o] b()',
+ Pars =&gt; 'a(n); int+ [o] b()',
  Code =&gt; '$GENERIC(b) tmp=0;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{ tmp += a(); %}
+ loop(n) %{ tmp += a(); %}
  $b() = tmp;',
  );</pre>
 <p>As we had already seen for the <tt>&quot;int&quot;</tt>, <tt>&quot;float&quot;</tt> and <tt>&quot;double&quot;</tt> qualifiers, a pdl marked with a <tt>&quot;type+&quot;</tt> qualifier does not influence the datatype of the pdl operation. Its meaning is &quot;make this pdl at least of type <tt>&quot;type&quot;</tt> or higher, as required by the type of the operation&quot;. In the sumover example this means that when you call the function with an <tt>&quot;a&quot;</tt> of type PDL_Short the output pdl will be of type PDL_Long (just as would have been the case with the <tt>&quot;int&quot;</tt> qualifier). This again tries to avoid overflow problems when using small datatypes (e.g. byte images). However, when the datatype of the operation is higher than the type specified in the <tt>&quot;type+&quot;</tt> qualifier <tt>&quot;b&quot;</tt> will be created with the datatype of the operation, e.g. when <tt>&quot;a&quot;</tt> is of type double then <tt>&quot;b&quot;</tt> will be double as well. We hope you agree that this is sensible behaviour for <tt>&quot;sumover&quot;</tt>. It should be obvious how the <tt>&quot;float+&quot;</tt> qualifier works by analogy. It may become necessary to be able to specify a set of alternative types for the parameters. However, this will probably not be implemented until someone comes up with a reasonable use for it. </p>
@@ -259,9 +259,9 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>The <tt>&quot;Code&quot;</tt> section contains the actual <font SIZE="-1">XS</font> code that will be in the innermost part of a thread loop (if you don&#8217;t know what a thread loop is then you still haven&#8217;t read PDL::Indexing; do it now ;) after any <font SIZE="-1">PP</font> macros (like <tt>$GENERIC</tt>) and <font SIZE="-1">PP</font> functions have been expanded (like the <tt>&quot;loop&quot;</tt> function we are going to explain next). </p>
 <p> Let&#8217;s quickly reiterate the <tt>&quot;sumover&quot;</tt> example: </p>
 <pre> pp_def('sumover',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); int+ [o] b()',
+ Pars =&gt; 'a(n); int+ [o] b()',
  Code =&gt; '$GENERIC(b) tmp=0;
- <a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{ tmp += a(); %}
+ loop(n) %{ tmp += a(); %}
  $b() = tmp;',
  );</pre>
 <p>The <tt>&quot;loop&quot;</tt> construct in the <tt>&quot;Code&quot;</tt> section also refers to the dimension name so you don&#8217;t need to specify any limits: the loop is correctly sized and everything is done for you, again. </p>
@@ -269,9 +269,9 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p> This feature comes in very handy in many places and makes for much shorter code. Of course, there are times when you want to circumvent this; here is a function which make a matrix symmetric and serves as an example of how to code explicit looping: </p>
 <pre> pp_def('symm',
  Pars =&gt; 'a(n,n); [o]c(n,n);',
- Code =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{
+ Code =&gt; 'loop(n) %{
  int n2;
- for(n2=n; n2&lt;$<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n); n2++) {
+ for(n2=n; n2&lt;$SIZE(n); n2++) {
  $c(n0 =&gt; n, n1 =&gt; n2) =
  $c(n0 =&gt; n2, n1 =&gt; n) =
  $a(n0 =&gt; n, n1 =&gt; n2);
@@ -365,23 +365,23 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <pre> void myfunc(int n,double *v1,double *v2);</pre>
 <p>The correct way of defining the <font SIZE="-1">PDL</font> function is </p>
 <pre> pp_def('myfunc',
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o]<a href="//www.systutorials.com/docs/linux/man/n-b/">b</a>(n);',
+ Pars =&gt; 'a(n); [o]b(n);',
  GenericTypes =&gt; ['D'],
- Code =&gt; 'myfunc($<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n),$P(a),$P(b));'
+ Code =&gt; 'myfunc($SIZE(n),$P(a),$P(b));'
  );</pre>
 <p>The <tt>&quot;$P(&quot;</tt><i>par</i><tt>&quot;)&quot;</tt> syntax returns a pointer to the first element and the other elements are guaranteed to lie after that. </p>
-<p> Notice that here it is possible to make many mistakes. First, <tt>$<a href="/docs/linux/man/n-size/">SIZE</a>(n)</tt> must be used instead of <tt>&quot;n&quot;</tt>. Second, you shouldn&#8217;t put any loops in this code. Third, here we encounter a new hash key recognised by <font SIZE="-1">PDL::PP :</font> the <tt>&quot;GenericTypes&quot;</tt> declaration tells <font SIZE="-1">PDL::PP</font> to <font SIZE="-1">ONLY GENERATE THE TYPELOOP FOP THE LIST OF TYPES SPECIFIED.</font> In this case <tt>&quot;double&quot;</tt>. This has two advantages. Firstly the size of the compiled code is reduced vastly, secondly if non-double arguments are passed to <tt>&quot;myfunc()&quot;</tt> <font SIZE="-1">PDL</font> will automatically convert them to double before passing to the external C routine and convert them back afterwards. </p>
+<p> Notice that here it is possible to make many mistakes. First, <tt>$SIZE(n)</tt> must be used instead of <tt>&quot;n&quot;</tt>. Second, you shouldn&#8217;t put any loops in this code. Third, here we encounter a new hash key recognised by <font SIZE="-1">PDL::PP :</font> the <tt>&quot;GenericTypes&quot;</tt> declaration tells <font SIZE="-1">PDL::PP</font> to <font SIZE="-1">ONLY GENERATE THE TYPELOOP FOP THE LIST OF TYPES SPECIFIED.</font> In this case <tt>&quot;double&quot;</tt>. This has two advantages. Firstly the size of the compiled code is reduced vastly, secondly if non-double arguments are passed to <tt>&quot;myfunc()&quot;</tt> <font SIZE="-1">PDL</font> will automatically convert them to double before passing to the external C routine and convert them back afterwards. </p>
 <p> One can also use <tt>&quot;Pars&quot;</tt> to qualify the types of individual arguments. Thus one could also write this as: </p>
 <pre> pp_def('myfunc',
- Pars =&gt; 'double <a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); double [o]<a href="//www.systutorials.com/docs/linux/man/n-b/">b</a>(n);',
- Code =&gt; 'myfunc($<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n),$P(a),$P(b));'
+ Pars =&gt; 'double a(n); double [o]b(n);',
+ Code =&gt; 'myfunc($SIZE(n),$P(a),$P(b));'
  );</pre>
 <p>The type specification in <tt>&quot;Pars&quot;</tt> exempts the argument from variation in the typeloop &#8211; rather it is automatically converted too and from the type specified. This is obviously useful in a more general example, e.g.: </p>
 <pre> void myfunc(int n,float *v1,long *v2);
  pp_def('myfunc',
- Pars =&gt; 'float <a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); long [o]<a href="//www.systutorials.com/docs/linux/man/n-b/">b</a>(n);',
+ Pars =&gt; 'float a(n); long [o]b(n);',
  GenericTypes =&gt; ['F'],
- Code =&gt; 'myfunc($<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n),$P(a),$P(b));'
+ Code =&gt; 'myfunc($SIZE(n),$P(a),$P(b));'
  );</pre>
 <p>Note we still use <tt>&quot;GenericTypes&quot;</tt> to reduce the size of the type loop, obviously <font SIZE="-1">PP</font> could in principle spot this and do it automatically though the code has yet to attain that level of sophistication! </p>
 <p> Finally note when types are converted automatically one <font SIZE="-1">MUST</font> use the <tt>&quot;[o]&quot;</tt> qualifier for output variables or you hard one changes will get optimised away by <font SIZE="-1">PP</font>! </p>
@@ -400,7 +400,7 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  void double_func(double *in, double *out);</pre>
 <p>which do basically the same thing but one accepts float and the other double pointers. You could interface them to <font SIZE="-1">PDL</font> by defining a generic function <tt>&quot;foofunc&quot;</tt> (which will call the correct function depending on the type of the transformation): </p>
 <pre> pp_def('foofunc',
- Pars =&gt; ' <a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o] b();',
+ Pars =&gt; ' a(n); [o] b();',
  Code =&gt; ' $TFD(float_func,double_func) ($P(a),$P(b));'
  GenericTypes =&gt; [qw(F D)],
  );</pre>
@@ -431,9 +431,9 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>When you want to access this parameter inside the code section you have to tell <font SIZE="-1">PP</font> by using the <tt>$COMP</tt> macro, i.e. you write <tt>&quot;$COMP(fd)&quot;</tt> as in the example. Otherwise <font SIZE="-1">PP</font> wouldn&#8217;t know that the <tt>&quot;fd&quot;</tt> you are referring to is the same as that specified in the <tt>&quot;OtherPars&quot;</tt> section. </p>
 <p> Another use for the <tt>&quot;OtherPars&quot;</tt> section is to set a named dimension in the signature. Let&#8217;s have an example how that is done: </p>
 <pre> pp_def('setdim',
- Pars =&gt; '[o] <a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n)',
+ Pars =&gt; '[o] a(n)',
  OtherPars =&gt; 'int ns =&gt; n',
- Code =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-loop/">loop</a>(n) %{ $a() = n; %}',
+ Code =&gt; 'loop(n) %{ $a() = n; %}',
  );</pre>
 <p>This says that the named dimension <tt>&quot;n&quot;</tt> will be initialised from the value of the <i>other parameter</i> <tt>&quot;ns&quot;</tt> which is of integer type (I guess you have realised that we use the <tt>&quot;CType From =&gt; named_dim&quot;</tt> syntax). Now you can call this function in the usual way: </p>
 <pre> setdim(($a=null),5);
@@ -499,12 +499,12 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 </dl>
 <h3>The RedoDimsCode Section</h3>
 <p>The <tt>&quot;RedoDimsCode&quot;</tt> key is an optional key that is used to compute dimensions of piddles at runtime in case the standard rules for computing dimensions from the signature are not sufficient. The contents of the <tt>&quot;RedoDimsCode&quot;</tt> entry is interpreted in the same way that the Code section is interpreted&#8212; <i>i.e.</i>, <font SIZE="-1">PP</font> macros are expanded and the result is interpreted as C code. The purpose of the code is to set the size of some dimensions that appear in the signature. Storage allocation and threadloops and so forth will be set up as if the computed dimension had appeared in the signature. In your code, you first compute the desired size of a named dimension in the signature according to your needs and then assign that value to it via the $<i>SIZE()</i> macro. </p>
-<p> As an example, consider the following situation. You are interfacing an external library routine that requires an temporary array for workspace to be passed as an argument. Two input data arrays that are passed are <tt>p(m)</tt> and <tt><a href="/docs/linux/man/n-x/">x</a>(n)</tt>. The output data array is <tt><a href="/docs/linux/man/n-y/">y</a>(n)</tt>. The routine requires a workspace array with a length of n+m*m, and you&#8217;d like the storage created automatically just like it would be for any piddle flagged with [t] or [o]. What you&#8217;d like is to say something like </p>
+<p> As an example, consider the following situation. You are interfacing an external library routine that requires an temporary array for workspace to be passed as an argument. Two input data arrays that are passed are <tt>p(m)</tt> and <tt>x(n)</tt>. The output data array is <tt>y(n)</tt>. The routine requires a workspace array with a length of n+m*m, and you&#8217;d like the storage created automatically just like it would be for any piddle flagged with [t] or [o]. What you&#8217;d like is to say something like </p>
 <pre> pp_def( &quot;myexternalfunc&quot;,
- Pars =&gt; &quot; p(m); <a href="//www.systutorials.com/docs/linux/man/n-x/">x</a>(n); [o] y; [t] work(n+m*m); &quot;, ...</pre>
+ Pars =&gt; &quot; p(m); x(n); [o] y; [t] work(n+m*m); &quot;, ...</pre>
 <p>but that won&#8217;t work, because <font SIZE="-1">PP</font> can&#8217;t interpret expressions with arithmetic in the signature. Instead you write </p>
 <pre> pp_def( &quot;myexternalfunc&quot;,
- Pars =&gt; &quot; p(m); <a href="//www.systutorials.com/docs/linux/man/n-x/">x</a>(n); [o] y; [t] work(wn); &quot;,
+ Pars =&gt; &quot; p(m); x(n); [o] y; [t] work(wn); &quot;,
  RedoDimsCode =&gt; &quot;
  int im = $PDL(p)-&gt;dims[0];
  int in = $PDL(x)-&gt;dims[0];
@@ -512,12 +512,12 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  int inw = $PDL(work)-&gt;dims[0];
  $SIZE(wn) = inw &gt;= min ? inw : min; &quot;,
  Code =&gt; &quot;
- externalfunc($P(p),$P(x),$SIZE(m),$<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n),$P(work));
+ externalfunc($P(p),$P(x),$SIZE(m),$SIZE(n),$P(work));
  &quot;;)</pre>
 <p>This code works as follows: The macro <tt>$PD</tt>L(p) expands to a pointer to the pdl struct for the piddle p. You don&#8217;t want a pointer to the data ( ie <tt>$P</tt> ) in this case, because you want to access the methods for the piddle on the C level. You get the first dimension of each of the piddles and store them in integers. Then you compute the minimum length the work array can be. If the user sent a piddle <tt>&quot;work&quot;</tt> with sufficient storage, then leave it alone. If the user sent, say a null pdl, or no pdl at all, then the size of wn will be zero and you reset it to the minimum value. Before the code in the Code section is executed <font SIZE="-1">PP</font> will create the proper storage for <tt>&quot;work&quot;</tt> if it does not exist. Note that you only took the first dimension of <tt>&quot;p&quot;</tt> and <tt>&quot;x&quot;</tt> because the user may have sent piddles with extra threading dimensions. Of course, the temporary piddle <tt>&quot;work&quot;</tt> (note the [t] flag) should not be given any thread dimensions anyway. </p>
 <p> You can also use <tt>&quot;RedoDimsCode&quot;</tt> to set the dimension of a piddle flagged with [o]. In this case you set the dimensions for the named dimension in the signature using $<i>SIZE()</i> as in the preceeding example. However, because the piddle is flagged with [o] instead of [t], threading dimensions will be added if required just as if the size of the dimension were computed from the signature according to the usual rules. Here is an example from PDL::Math </p>
 <pre> pp_def(&quot;polyroots&quot;,
- Pars =&gt; '<a href="//www.systutorials.com/docs/linux/man/n-cr/">cr</a>(n); <a href="//www.systutorials.com/docs/linux/man/n-ci/">ci</a>(n); [o]rr(m); [o]ri(m);',
+ Pars =&gt; 'cr(n); ci(n); [o]rr(m); [o]ri(m);',
  RedoDimsCode =&gt; 'int sn = $PDL(cr)-&gt;dims[0]; $SIZE(m) = sn-1;',</pre>
 <p>The input piddles are the real and imaginary parts of complex coefficients of a polynomial. The output piddles are real and imaginary parts of the roots. There are <tt>&quot;n&quot;</tt> roots to an <tt>&quot;n&quot;</tt>th order polynomial and such a polynomial has <tt>&quot;n+1&quot;</tt> coefficients (the zeoreth through the <tt>&quot;n&quot;</tt>th). In this example, threading will work correctly. That is, the first dimension of the output piddle with have its dimension adjusted, but other threading dimensions will be assigned just as if there were no <tt>&quot;RedoDimsCode&quot;</tt>.</p>
 <h3>Typemap handling in the OtherPars section</h3>
@@ -537,10 +537,10 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <pre> INT2PTR(gsl_spline *, $COMP(spl))</pre>
 <p>where the Perl <font SIZE="-1">API</font> macro <tt>&quot;INT2PTR&quot;</tt> has been used to handle the pointer cast to avoid compiler warnings and problems for machines with mixed 32bit and 64bit Perl configurations. Putting this together as Andres Jordan has done (with the modification using <tt>&quot;IV&quot;</tt> by Judd Taylor) in the <tt>&quot;gsl_interp.pd&quot;</tt> in the distribution source you get: </p>
 <pre> pp_def('init_meat',
- Pars =&gt; 'double <a href="//www.systutorials.com/docs/linux/man/n-x/">x</a>(n); double <a href="//www.systutorials.com/docs/linux/man/n-y/">y</a>(n);',
+ Pars =&gt; 'double x(n); double y(n);',
  OtherPars =&gt; 'IV spl',
  Code =&gt;'
- gsl_spline_init,( INT2PTR(gsl_spline *, $COMP(spl)), $P(x),$P(y),$<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n)));'
+ gsl_spline_init,( INT2PTR(gsl_spline *, $COMP(spl)), $P(x),$P(y),$SIZE(n)));'
  );</pre>
 <p>where I have removed a macro wrapper call, but that would obscure the discussion. </p>
 <p> The other minor difference as compared to the standard typemap handling in Perl, is that the user cannot specify non-standard typemap locations or typemap filenames using the <tt>&quot;TYPEMAPS&quot;</tt> option in MakeMaker&#8230; Thus you can only use a file called <tt>&quot;typemap&quot;</tt> and/or the <tt>&quot;IV&quot;</tt> trick above.</p>
@@ -594,9 +594,9 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  ');</pre>
 <p>This ensures that all the constants and prototypes you need will be properly included and that you can use the internal functions defined here in the <tt>&quot;pp_def&quot;</tt>s, e.g.: </p>
 <pre> pp_def('barfoo',
- Pars =&gt; ' <a href="//www.systutorials.com/docs/linux/man/n-a/">a</a>(n); [o] <a href="//www.systutorials.com/docs/linux/man/n-b/">b</a>(n)',
+ Pars =&gt; ' a(n); [o] b(n)',
  GenericTypes =&gt; ['B'],
- Code =&gt; ' int ns = $<a href="//www.systutorials.com/docs/linux/man/n-SIZE/">SIZE</a>(n);
+ Code =&gt; ' int ns = $SIZE(n);
  do_the_real_work($P(a),$P(b),ns);
  ',
  );</pre>
@@ -820,7 +820,7 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <dd>access a pdl (by its name) that was specified in the signature</p>
 <dt>$COMP(x)</p>
 <dd>access a value in the private data structure of this transformation (mainly used to use an argument that is specified in the <tt>&quot;OtherPars&quot;</tt> section)</p>
-<dt>$<a href="/docs/linux/man/n-size/">SIZE</a>(n)</p>
+<dt>$SIZE(n)</p>
 <dd>replaced at runtime by the actual size of a <i>named</i> dimension (as specified in the <i>signature</i>)</p>
 <dt>$<i>GENERIC()</i></p>
 <dd>replaced by the C type that is equal to the runtime type of the operation</p>

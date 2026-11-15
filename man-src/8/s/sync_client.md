@@ -42,7 +42,7 @@ description: "sync_client – client side of the synchronization (replication) e
 <dt><code>-d</code><i> delay</i></p>
 <dd>Minimum delay between replication runs in rolling replication mode. Larger values provide better efficiency as transactions can be merged. Smaller values mean that the replica system is more up to date and that you don&#8217;t end up with large blocks of replication transactions as a single group. Default: 3 seconds.</p>
 <dt><code>-r</code></p>
-<dd>Rolling (repeat) replication mode. Pick up a list of actions recorded by the <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8), <a href="/docs/linux/man/8-imapd/">imapd</a>(8), <a href="/docs/linux/man/8-popd/">popd</a>(8) and <a href="/docs/linux/man/8-nntpd/">nntpd</a>(8)</code> daemons from the file specified in <i>sync_log_file.</i> Repeat until <i>sync_shutdwon_file</i> appears.</p>
+<dd>Rolling (repeat) replication mode. Pick up a list of actions recorded by the <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8), imapd(8), popd(8) and <a href="/docs/linux/man/8-nntpd/">nntpd</a>(8)</code> daemons from the file specified in <i>sync_log_file.</i> Repeat until <i>sync_shutdwon_file</i> appears.</p>
 <dt><code>-n</code></p>
 <dd>Use the named channel for rolling replication mode. If multiple channels are specified in <i>sync_log_channels</i> then use one of them. This option is probably best combined with -S to connect to a different server with each channel.</p>
 <dt><code>-u</code></p>

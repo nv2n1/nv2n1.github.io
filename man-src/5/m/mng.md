@@ -15,7 +15,7 @@ MNG (Multiple-image Network Graphics) is the animation extension of the popular 
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/5-png/">png</a>(5)</i>, <i><a HREF="/docs/linux/man/5-jng/">jng</a>(5)</i>, <i><a HREF="/docs/linux/man/3-libmng/">libmng</a>(3)</i>, <i><a HREF="/docs/linux/man/3-libpng/">libpng</a>(3)</i>, <i><a HREF="/docs/linux/man/3-zlib/">zlib</a>(3)</i>, <a HREF="/docs/linux/man/5-deflate/">deflate</a>(5) &quot;, &quot; <a HREF="/docs/linux/man/5-zlib/">zlib</a>(5) &quot;, &quot; <a HREF="/docs/linux/man/5-jpeg/">jpeg</a>(5) 
+<i><a HREF="/docs/linux/man/5-png/">png</a>(5)</i>, <i><a HREF="/docs/linux/man/5-jng/">jng</a>(5)</i>, <i><a HREF="/docs/linux/man/3-libmng/">libmng</a>(3)</i>, <i><a HREF="/docs/linux/man/3-libpng/">libpng</a>(3)</i>, <i><a HREF="/docs/linux/man/3-zlib/">zlib</a>(3)</i>, deflate(5) &quot;, &quot; zlib(5) &quot;, &quot; jpeg(5) 
 
  MNG 1.00, Februari 9, 2001:
 <dl><dd><a rel="nofollow" HREF="http://www.libpng.org/pub/mng">http://www.libpng.org/pub/mng</a></dl>

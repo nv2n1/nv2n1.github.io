@@ -33,7 +33,7 @@ url: "/docs/linux/man/1-modemtest/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/3-device--serialport/">Device::SerialPort</a></i>(3) 
+ <i>Device::SerialPort</i>(3) 
 
  <i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1)
 

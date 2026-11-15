@@ -100,6 +100,6 @@ account include password-auth</pre>
 </dl>
 <p> Keep in mind while editing, that <i>/etc/pam.d/smtp</i> could be a symbolic link at various Linux systems.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8), <code><a href="/docs/linux/man/5-kopano-server-cfg/">kopano-server.cfg</a></code>(5), <code><a href="/docs/linux/man/1-kopano-server/">kopano-server</a></code>(1), <code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5), <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1), <code><a href="/docs/linux/man/8-saslauthd/">saslauthd</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8), <code>kopano-server.cfg</code>(5), <code>kopano-server</code>(1), <code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5), <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1), <code><a href="/docs/linux/man/8-saslauthd/">saslauthd</a></code>(8)</p>
 <h2>Author</h2>
 <p>pam_mapi was written by Robert Scheck &lt;kopano [at] robert-scheck.de&gt;.</p>

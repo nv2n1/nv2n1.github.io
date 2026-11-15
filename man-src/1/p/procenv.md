@@ -27,7 +27,7 @@ description: "procenv – display process environment details"
 <dt><code>-c</code>, <code>&#8211;cgroups</code></p>
 <dd> Display cgroup details (Linux only). See <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5).</p>
 <dt><code>-C</code>, <code>&#8211;cpu</code></p>
-<dd> Display CPU and scheduler details. See <code><a href="/docs/linux/man/3-kvm_getprocs/">kvm_getprocs</a></code>(3) (BSD), <code><a href="/docs/linux/man/3-pthread_getaffinity_np/">pthread_getaffinity_np</a></code>(3)<code>, </code> <code><a href="/docs/linux/man/3-sched_getcpu/">sched_getcpu</a></code>(3) (Linux).</p>
+<dd> Display CPU and scheduler details. See <code>kvm_getprocs</code>(3) (BSD), <code><a href="/docs/linux/man/3-pthread_getaffinity_np/">pthread_getaffinity_np</a></code>(3)<code>, </code> <code><a href="/docs/linux/man/3-sched_getcpu/">sched_getcpu</a></code>(3) (Linux).</p>
 <dt><code>&#8211;crumb-separator=</code><i>str</i> (*)</p>
 <dd> Specify string <i>str</i> as alternate delimiter for crumb format output (default=&#8217;:&#8217;).</p>
 <dt><code>-d</code>, <code>&#8211;compiler</code></p>
@@ -39,7 +39,7 @@ description: "procenv – display process environment details"
 <dt><code>&#8211;exec</code> (*)</p>
 <dd> Treat non-option arguments as program to execute after running <code>procenv</code>. See <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3).</p>
 <dt><code>-f</code>, <code>&#8211;fds</code></p>
-<dd> Display file descriptor details. Under FreeBSD, file descriptor capabilities will also be displayed assuming the kernel has Capsicum support. See <code><a href="/docs/linux/man/2-cap_getmode/">cap_getmode</a></code>(2) (BSD), <code><a href="/docs/linux/man/2-cap_rights_get/">cap_rights_get</a></code>(2) (BSD), <code><a href="/docs/linux/man/3-cap_rights_is_set/">cap_rights_is_set</a></code>(3) (BSD), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code><a href="/docs/linux/man/5-isatty/">isatty</a></code>(5).</p>
+<dd> Display file descriptor details. Under FreeBSD, file descriptor capabilities will also be displayed assuming the kernel has Capsicum support. See <code>cap_getmode</code>(2) (BSD), <code>cap_rights_get</code>(2) (BSD), <code>cap_rights_is_set</code>(3) (BSD), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code>isatty</code>(5).</p>
 <dt><code>-F</code>, <code>&#8211;namespaces</code></p>
 <dd> Display namespace details (Linux only). See <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5).</p>
 <dt><code>&#8211;file=</code><i>FILE</i> (*)</p>
@@ -67,7 +67,7 @@ description: "procenv – display process environment details"
 <dt><code>-h</code>, <code>&#8211;help</code></p>
 <dd> This help text.</p>
 <dt><code>-i</code>, <code>&#8211;misc</code></p>
-<dd> Display miscellaneous details. See <code>umask</code>(P), <code><a href="/docs/linux/man/3-getcwd/">getcwd</a></code>(3), <code><a href="/docs/linux/man/2-personality/">personality</a></code>(2) (Linux), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2), <code><a href="/docs/linux/man/2-aa_getcon/">aa_getcon</a></code>(2) (Linux), <code><a href="/docs/linux/man/3-getpidcon/">getpidcon</a></code>(3) (Linux), <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3), <code><a href="/docs/linux/man/3-kvm_getprocs/">kvm_getprocs</a></code>(3) (BSD), <code><a href="/docs/linux/man/2-getpriority/">getpriority</a></code>(2).</p>
+<dd> Display miscellaneous details. See <code>umask</code>(P), <code><a href="/docs/linux/man/3-getcwd/">getcwd</a></code>(3), <code><a href="/docs/linux/man/2-personality/">personality</a></code>(2) (Linux), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2), <code>aa_getcon</code>(2) (Linux), <code><a href="/docs/linux/man/3-getpidcon/">getpidcon</a></code>(3) (Linux), <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3), <code>kvm_getprocs</code>(3) (BSD), <code><a href="/docs/linux/man/2-getpriority/">getpriority</a></code>(2).</p>
 <dt><code>&#8211;indent</code> (*)</p>
 <dd> Number of indent characters to use for each indent (default=2).</p>
 <dt><code>&#8211;indent-char=</code><i>c</i> (*)</p>
@@ -81,12 +81,12 @@ description: "procenv – display process environment details"
 <dt><code>-L</code>, <code>&#8211;locale</code></p>
 <dd> Display locale details. See <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3) and <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7).</p>
 <dt><code>-m</code>, <code>&#8211;mounts</code></p>
-<dd> Display mount details. See <code><a href="/docs/linux/man/3-getmntent/">getmntent</a></code>(3) and <code><a href="/docs/linux/man/2-statfs/">statfs</a></code>(2) (Linux), and <code><a href="/docs/linux/man/3-getmntinfo/">getmntinfo</a></code>(3) (BSD).</dl>
+<dd> Display mount details. See <code><a href="/docs/linux/man/3-getmntent/">getmntent</a></code>(3) and <code><a href="/docs/linux/man/2-statfs/">statfs</a></code>(2) (Linux), and <code>getmntinfo</code>(3) (BSD).</dl>
 <dl>
 <dt><code>-M</code>, <code>&#8211;message-queues</code></p>
 <dd> Display message queue details (not queryable on BSD). See <code><a href="/docs/linux/man/2-msgctl/">msgctl</a></code>(2).</p>
 <dt><code>-n</code>, <code>&#8211;confstr</code></p>
-<dd> Display confstr details. See <code><a href="/docs/linux/man/5-confstr/">confstr</a></code>(5).</dl>
+<dd> Display confstr details. See <code>confstr</code>(5).</dl>
 <dl>
 <dt><code>-N</code>, <code>&#8211;network</code></p>
 <dd> Display network details. See <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3), <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), and <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2)<code> (Linux)</code>.</dl>
@@ -254,5 +254,5 @@ procenv - l
 <p> GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7) (Linux), <code><a href="/docs/linux/man/4-capsicum/">capsicum</a></code>(4) (BSD), <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7), <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/1-env/">env</a></code>(1), <code>exec</code>(P), <code><a href="/docs/linux/man/1-getconf/">getconf</a></code>(1), <code><a href="/docs/linux/man/1-groups/">groups</a></code>(1), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/9-ip/">ip</a></code>(9), <code><a href="/docs/linux/man/1-ipcs/">ipcs</a></code>(1), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-ldd/">ldd</a></code>(1), <code><a href="/docs/linux/man/1-locale/">locale</a></code>(1), <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-mount/">mount</a></code>(1), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/4-rights/">rights</a></code>(4)(BSD), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-stat/">stat</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code>umask</code>(P), <code><a href="/docs/linux/man/1-uname/">uname</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7) (Linux), <code>capsicum</code>(4) (BSD), <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7), <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/1-env/">env</a></code>(1), <code>exec</code>(P), <code><a href="/docs/linux/man/1-getconf/">getconf</a></code>(1), <code><a href="/docs/linux/man/1-groups/">groups</a></code>(1), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code>ip</code>(9), <code><a href="/docs/linux/man/1-ipcs/">ipcs</a></code>(1), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-ldd/">ldd</a></code>(1), <code><a href="/docs/linux/man/1-locale/">locale</a></code>(1), <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-mount/">mount</a></code>(1), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code>rights</code>(4)(BSD), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-stat/">stat</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code>umask</code>(P), <code><a href="/docs/linux/man/1-uname/">uname</a></code>(1) </p>
 <h2>Index</h2>

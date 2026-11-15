@@ -17,7 +17,7 @@ description: "pamtopam – copy PAM image"
 <p> Even that is of limited usefulness because of the fact that almost any program to which you would feed the resulting PAM image could also just take the original image directly. However, sometimes you really want a true PAM image. </p>
 <p> You can do a more general job of translating PAM/PNM to PAM with <code>pamchannel</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtoppm/">ppmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtoppm/">ppmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code>ppm</code>(1) , <code>pgm</code>(1) , <code>pbm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.41 (December 2007). </p>
 <h2>Index</h2>

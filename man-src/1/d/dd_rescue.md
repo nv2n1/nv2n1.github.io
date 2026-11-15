@@ -212,7 +212,7 @@ description: "dd_rescue – Data recovery and protection tool"
  For securely destroying single files, your mileage may vary. The more advanced your file system, the less likely dd_rescue&#8217;s destruction will be effective. In particular, journaling file systems may carry old data in the journal. File systems that do copy-on-write (COW) such as btrfs, are very likely to have old copies of your supposedly erased file. It might help somewhat to fill the file systems with zeros (dd_rescue -u /dev/zero /path/to/fs/DUMMYNAME) to force the file system to release and overwrite non-current data after overwriting critical files with random numbers. If you can, better destroy a whole partition or disk.</p>
 <h2>SEE ALSO</h2>
 <p> <code>README.dd_rescue</code> <code>README.dd_rhelp</code> <code><a href="/docs/linux/man/1-ddr_lzo/">ddr_lzo</a></code>(1)<br />
- <code><a href="/docs/linux/man/1-wipe/">wipe</a></code>(1) <code><a href="/docs/linux/man/1-shred/">shred</a></code>(1) <code><a href="/docs/linux/man/1-ddrescue/">ddrescue</a></code>(1) <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1)</p>
+ <code>wipe</code>(1) <code><a href="/docs/linux/man/1-shred/">shred</a></code>(1) <code><a href="/docs/linux/man/1-ddrescue/">ddrescue</a></code>(1) <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Kurt Garloff &lt;kurt [at] garloff.de&gt;</p>
 <h2>CREDITS</h2>

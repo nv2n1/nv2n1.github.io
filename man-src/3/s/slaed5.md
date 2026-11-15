@@ -41,7 +41,7 @@ description: "slaed5.f –"
 <p> <i>D</i> </p>
 <pre>
           D is REAL array, dimension (2)
-         The original eigenvalues.  We assume <a href="//www.systutorials.com/docs/linux/man/1-D/">D</a>(1) &lt; <a href="//www.systutorials.com/docs/linux/man/2-D/">D</a>(2).
+         The original eigenvalues.  We assume D(1) &lt; D(2).
 </pre>
 <p> <i>Z</i> </p>
 <pre>

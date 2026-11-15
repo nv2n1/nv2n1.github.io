@@ -26,7 +26,7 @@ int ibv_dealloc_td(struct ibv_td *td);
 <p> <code>ibv_alloc_td()</code> returns a pointer to the allocated struct <i>ibv_td</i> object, or NULL if the request fails (and sets errno to indicate the failure reason). </p>
 <p> <code>ibv_dealloc_td()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_parent_domain/">ibv_alloc_parent_domain</a></code>(3),</p>
+<p> <code>ibv_alloc_parent_domain</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Alex Rosenbaum &lt;alexr [at] mellanox.com&gt;</p>

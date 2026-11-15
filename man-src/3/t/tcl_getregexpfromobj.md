@@ -107,6 +107,6 @@ void
 <p> The <i>start</i> and <i>end</i> values are Unicode character indices relative to the offset location within <i>objPtr</i> where matching began. The <i>start</i> index identifies the first character of the matched subexpression. The <i>end</i> index identifies the first character after the matched subexpression. If the subexpression matched the empty string, then <i>start</i> and <i>end</i> will be equal. If the subexpression did not participate in the match, then <i>start</i> and <i>end</i> will be set to -1. </p>
 <p> The <i>extendStart</i> field in <code>Tcl_RegExpInfo</code> is only set if the <code>TCL_REG_CANMATCH</code> flag was used. It indicates the first character in the string where a match could occur. If a match was found, this will be the same as the beginning of the current match. If no match was found, then it indicates the earliest point at which a match might occur if additional text is appended to the string. If it is no match is possible even with further text, this field will be set to -1.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-re_syntax/">re_syntax</a>(n)</p>
+<p>re_syntax(n)</p>
 <h2>Keywords</h2>
 <p>match, pattern, regular expression, string, subexpression, Tcl_RegExpIndices, Tcl_RegExpInfo</p>

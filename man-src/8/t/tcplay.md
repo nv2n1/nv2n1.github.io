@@ -31,9 +31,9 @@ description: "tcplay – tool to manage TrueCrypt volumes"
 <dt><code>&#8211;modify</code></p>
 <dd>Modify the volume header. This mode allows changing passphrase, keyfiles, PBKDF2 PRF as well as restoring from a backup header.</p>
 <dt><code>-m </code><i>mapping , &#8211;</i><code>-map = </code><i>mapping</i></p>
-<dd>Map the encrypted TrueCrypt volume on the device specified by &#8211;<code>-device</code> as a <a href="/docs/linux/man/4-dm/">dm</a>(4) mapping called <i>mapping</i> The <i>mapping</i> argument should not contain any spaces or special characters.</p>
+<dd>Map the encrypted TrueCrypt volume on the device specified by &#8211;<code>-device</code> as a dm(4) mapping called <i>mapping</i> The <i>mapping</i> argument should not contain any spaces or special characters.</p>
 <dt><code>-u </code><i>mapping , &#8211;</i><code>-unmap = </code><i>mapping</i></p>
-<dd>Removes (unmaps) the <a href="/docs/linux/man/4-dm/">dm</a>(4) mapping specified by <i>mapping</i> as well as any related cascade mappings. If you mapped a volume using full disk encryption and created mapping for individual partitions using <a href="/docs/linux/man/8-kpartx/">kpartx</a>(8), you must remove these prior to unmapping the volume.</p>
+<dd>Removes (unmaps) the dm(4) mapping specified by <i>mapping</i> as well as any related cascade mappings. If you mapped a volume using full disk encryption and created mapping for individual partitions using <a href="/docs/linux/man/8-kpartx/">kpartx</a>(8), you must remove these prior to unmapping the volume.</p>
 <dt><code>-v, &#8211;version</code></p>
 <dd>Print version message and exit.</dl>
 <p> Options common to all commands are:</p>

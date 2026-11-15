@@ -15,7 +15,7 @@ description: "FreeHDL-GENNODES – Abstract syntax tree generator used by the VH
 <p> <code>FreeHDL-GENNODES</code> is an extensible framework for representing an abstract syntax tree. The program reads the IN-FILE and generates output for CHUNK in OUT-FILE, according to CMD. </p>
 <p> When CMD is `header&#8217;, FreeHDL-GENNODES writes a header file to OUT-FILE that should be included by the users of the CHUNK. When it is `impl&#8217;, it writes the implementation of CHUNK.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-freehdl-v2cc/">freehdl-v2cc</a>(1), <a href="/docs/linux/man/1-freehdl-config/">freehdl-config</a>(1), <a href="/docs/linux/man/5-v2cc-libs/">v2cc.libs</a>(5)</p>
+<p> <a href="/docs/linux/man/1-freehdl-v2cc/">freehdl-v2cc</a>(1), <a href="/docs/linux/man/1-freehdl-config/">freehdl-config</a>(1), v2cc.libs(5)</p>
 <h2>AVAILABILITY</h2>
 <p> The latest version of FreeHDL can always be obtained from <code><a rel="nofollow" href="http://www.freehdl.seul.org">www.freehdl.seul.org</a></code></p>
 <h2>REPORTING BUGS</h2>

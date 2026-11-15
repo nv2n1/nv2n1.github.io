@@ -23,7 +23,7 @@ description: "ieee1284_find_ports – find ports on the system"
 <p> <code>E1284_OK</code></p>
 <dl>
 <dt>
-<dd> Success. <i>list</i> is filled in and must be destroyed using <code><a href="/docs/linux/man/3-ieee1284_free_ports/">ieee1284_free_ports</a></code>(3).</dl>
+<dd> Success. <i>list</i> is filled in and must be destroyed using <code>ieee1284_free_ports</code>(3).</dl>
 <p> <code>E1284_NOMEM</code></p>
 <dl>
 <dt>

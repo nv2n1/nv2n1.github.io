@@ -83,4 +83,4 @@ XGetDeviceProperty, XChangeDeviceProperty, XDeleteDeviceProperty - Get, change o
  the client attempted to remove a driver-allocated
  property.</pre></dl><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The device does not
- exist.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XListDeviceProperties/">XListDeviceProperties</a>(3)</pre></dl>
+ exist.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XListDeviceProperties(3)</pre></dl>

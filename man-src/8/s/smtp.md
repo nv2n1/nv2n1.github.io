@@ -44,7 +44,7 @@ description: "smtp – Postfix SMTP+LMTP client"
 <dt><code>inet</code>:[<i>address</i>]</p>
 <dd>
 <dt><code>inet</code>:[<i>address</i>]:<i>port</i></p>
-<dd>Connect to the specified TCP port on the specified local or remote host. If no port is specified, connect to the port defined as <code>lmtp</code> in <code><a href="/docs/linux/man/4-services/">services</a></code>(4). If no such service is found, the <code>lmtp_tcp_port</code> configuration parameter (default value of 24) will be used. An IPv6 address must be formatted as [<code>ipv6</code>:<i>address</i>].</dl>
+<dd>Connect to the specified TCP port on the specified local or remote host. If no port is specified, connect to the port defined as <code>lmtp</code> in <code>services</code>(4). If no such service is found, the <code>lmtp_tcp_port</code> configuration parameter (default value of 24) will be used. An IPv6 address must be formatted as [<code>ipv6</code>:<i>address</i>].</dl>
 <h2>Security</h2>
 <p>The SMTP+LMTP client is moderately security-sensitive. It talks to SMTP or LMTP servers and to DNS servers on the network. The SMTP+LMTP client can be run chrooted at fixed low privilege.</p>
 <h2>Standards</h2>
@@ -66,7 +66,7 @@ RFC 3463 (Enhanced Status Codes)
 RFC 4954 (AUTH command)
 RFC 5321 (SMTP protocol)</pre>
 <h2>Diagnostics</h2>
-<p>Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue for further inspection. </p>
+<p>Problems and transactions are logged to <code>syslogd</code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue for further inspection. </p>
 <p> Depending on the setting of the <code>notify_classes</code> parameter, the postmaster is notified of bounces, protocol problems, and of other trouble.</p>
 <h2>Bugs</h2>
 <p>SMTP and LMTP connection caching does not work with TLS. The necessary support for TLS object passivation and re-activation does not exist without closing the session, which defeats the purpose. </p>
@@ -135,9 +135,9 @@ RFC 5321 (SMTP protocol)</pre>
 <dt><code>smtp_header_checks (empty)</code></p>
 <dd>Restricted <code><a href="/docs/linux/man/5-header_checks/">header_checks</a></code>(5) tables for the Postfix SMTP client.</p>
 <dt><code>smtp_mime_header_checks (empty)</code></p>
-<dd>Restricted <code><a href="/docs/linux/man/5-mime_header_checks/">mime_header_checks</a></code>(5) tables for the Postfix SMTP client.</p>
+<dd>Restricted <code>mime_header_checks</code>(5) tables for the Postfix SMTP client.</p>
 <dt><code>smtp_nested_header_checks (empty)</code></p>
-<dd>Restricted <code><a href="/docs/linux/man/5-nested_header_checks/">nested_header_checks</a></code>(5) tables for the Postfix SMTP client.</p>
+<dd>Restricted <code>nested_header_checks</code>(5) tables for the Postfix SMTP client.</p>
 <dt><code>smtp_body_checks (empty)</code></p>
 <dd>Restricted <code><a href="/docs/linux/man/5-body_checks/">body_checks</a></code>(5) tables for the Postfix SMTP client.</dl>
 <p> Available in Postfix version 2.6 and later:</p>
@@ -435,7 +435,7 @@ RFC 5321 (SMTP protocol)</pre>
 <a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
 <a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
 <a href="//www.systutorials.com/docs/linux/man/8-tlsmgr/">tlsmgr</a>(8), TLS session and PRNG management
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme Files</h2>
 <p>Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>
 <pre>SASL_README, Postfix SASL howto

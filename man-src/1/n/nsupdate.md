@@ -143,7 +143,7 @@ description: "nsupdate – dynamic DNS update utility"
 <dt><code>K{name}.+157.+{random}.private</code></p>
 <dd> Base-64 encoding of the HMAC-MD5 key created by <i>dnssec-keygen</i>.</dl>
 <h2>SEE ALSO</h2>
-<p> <i>RFC 2136</i>, <i>RFC 3007</i>, <i>RFC 2104</i>, <i>RFC 2845</i>, <i>RFC 1034</i>, <i>RFC 2535</i>, <i>RFC 2931</i>, <i><a href="/docs/linux/man/8-named/">named</a>(8)</i>, <i><a href="/docs/linux/man/8-dnssec-keygen/">dnssec-keygen</a>(8)</i>, <i><a href="/docs/linux/man/8-tsig-keygen/">tsig-keygen</a>(8)</i>.</p>
+<p> <i>RFC 2136</i>, <i>RFC 3007</i>, <i>RFC 2104</i>, <i>RFC 2845</i>, <i>RFC 1034</i>, <i>RFC 2535</i>, <i>RFC 2931</i>, <i><a href="/docs/linux/man/8-named/">named</a>(8)</i>, <i><a href="/docs/linux/man/8-dnssec-keygen/">dnssec-keygen</a>(8)</i>, <i>tsig-keygen(8)</i>.</p>
 <h2>BUGS</h2>
 <p> The TSIG key is redundantly stored in two separate files. This is a consequence of <code>nsupdate</code> using the DST library for its cryptographic operations, and may change in future releases.</p>
 <h2>AUTHOR</h2>

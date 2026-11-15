@@ -77,5 +77,5 @@ description: "tftp – IPv4 Trivial File Transfer Protocol client"
 <h2>AUTHOR</h2>
 <p> This version of <code>tftp</code> is maintained by H. Peter Anvin &lt;hpa [at] zytor.com&gt;. It was derived from, but has substantially diverged from, an OpenBSD source base, with added patches by Markus Gutschke and Gero Kulhman.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-tftpd/">tftpd</a></code>(8). </p>
+<p> <code>tftpd</code>(8). </p>
 <h2>Index</h2>

@@ -28,7 +28,7 @@ description: "pbmtoln03 – convert PBM image to DEC LN03+ Sixel output"
 <dd> Use &#8216;nn&#8217; as value for form length (default 3400). </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) </p>
+<p> <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Tim Cook, 26 Feb 1992 </p>
 <h2>Index</h2>

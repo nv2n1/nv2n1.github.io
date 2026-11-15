@@ -43,7 +43,7 @@ description: "sane-magicolor – SANE backend for KONICA MINOLTA magicolor scann
 <dt><code>SANE_DEBUG_MAGICOLOR</code></p>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
 <p> Example: export SANE_DEBUG_MAGICOLOR=127 </p>
-<p> To obtain debug messages from the backend, set this environment variable before calling your favorite frontend (e.g. <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1)). </p>
+<p> To obtain debug messages from the backend, set this environment variable before calling your favorite frontend (e.g. <code>xscanimage</code>(1)). </p>
 <p> Example: SANE_DEBUG_MAGICOLOR=65 xscanimage</dl>
 <h2>Known Bugs And Restrictions</h2>
 <p>Large color scans may sometimes timeout due to unknown reasons (the scanner simply stops returning data). </p>

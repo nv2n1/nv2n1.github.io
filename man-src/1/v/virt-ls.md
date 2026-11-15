@@ -21,7 +21,7 @@ virt - ls[--options] domname directory virt - ls[--options] disk.img[disk.img...
 <p> <tt>&quot;virt-ls&quot;</tt> lists filenames, file sizes, checksums, extended attributes and more from a virtual machine or disk image. </p>
 <p> Multiple directory names can be given, in which case the output from each is concatenated. </p>
 <p> To list directories from a libvirt guest use the <i>-d</i> option to specify the name of the guest. For a disk image, use the <i>-a</i> option. </p>
-<p> <tt>&quot;virt-ls&quot;</tt> can do many simple file listings. For more complicated cases you may need to use <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), or write a program directly to the <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) <font SIZE="-1">API.</font></p>
+<p> <tt>&quot;virt-ls&quot;</tt> can do many simple file listings. For more complicated cases you may need to use <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), or write a program directly to the <i>guestfs</i>(3) <font SIZE="-1">API.</font></p>
 <h2>EXAMPLES</h2>
 <p> Get a list of all files and directories in a virtual machine: </p>
 <pre>

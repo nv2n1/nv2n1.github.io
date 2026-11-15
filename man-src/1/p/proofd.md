@@ -10,12 +10,12 @@ description: "proofd – PROOF (The Parallel ROOT Facility)"
 <h2 class="name">NAME</h2>
 <p> proofd &#8211; PROOF (The Parallel ROOT Facility)</p>
 <h2>DESCRIPTION</h2>
-<p> Using <code>PROOF</code><i> (The P</i>arallel <i>ROO</i>T <i>F</i>acility) one can analyze trees in parallel on a cluster of computers. The <code>PROOF</code> system consists of the <i><a href="/docs/linux/man/1-proofd/">proofd</a></i>(1) from-end program which is started via <i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8). </p>
+<p> Using <code>PROOF</code><i> (The P</i>arallel <i>ROO</i>T <i>F</i>acility) one can analyze trees in parallel on a cluster of computers. The <code>PROOF</code> system consists of the <i><a href="/docs/linux/man/1-proofd/">proofd</a></i>(1) from-end program which is started via <i>inetd</i>(8). </p>
 <p> <i>proofd</i> takes care of user authentication and overlays itself then with the desired version of the <i><a href="/docs/linux/man/1-proofserv/">proofserv</a></i>(1) executable. </p>
 <p> The <i><a href="/docs/linux/man/1-proofserv/">proofserv</a></i>(1) is a basically the same as the <code>ROOT</code> interactive module <i><a href="/docs/linux/man/1-root/">root</a></i>(1), except that it reads its commands from a socket instead of from the terminal. </p>
 <p> Since it is a remote server it will not do graphics and therefore is not linked with any graphics libraries (Motif, X11, etc.). </p>
 <h2>SETTING UP PROOF</h2>
-<p> Since you need to handle sensitive system files, you need to have root (the user, not the program!) privileges. Also, it&#8217;s recommended that you read the appropriate <i><a href="/docs/linux/man/1-man/">man</a></i>(1) pages first. These are <i><a href="/docs/linux/man/8-inetd/">inetd</a></i>(8) (the internet daemon), <i><a href="/docs/linux/man/8-sysklogd/">sysklogd</a></i>(8) and <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3) (the system logger daemon), and <i><a href="/docs/linux/man/8-init/">init</a></i>(8) (the SYSV process control initializer). </p>
+<p> Since you need to handle sensitive system files, you need to have root (the user, not the program!) privileges. Also, it&#8217;s recommended that you read the appropriate <i><a href="/docs/linux/man/1-man/">man</a></i>(1) pages first. These are <i>inetd</i>(8) (the internet daemon), <i>sysklogd</i>(8) and <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3) (the system logger daemon), and <i><a href="/docs/linux/man/8-init/">init</a></i>(8) (the SYSV process control initializer). </p>
 <p> In other words:</p>
 <dl>
 <dt>
@@ -84,7 +84,7 @@ description: "proofd – PROOF (The Parallel ROOT Facility)"
 <dt>9</p>
 <dd> Edit &lt;<i>proofdir</i>&gt;<i>/etc/proof.conf</i> to reflect your cluster configuration. See the example <i>proof.conf</i> file for more information.</dl>
 <p> If you installed <code>ROOT</code> using some precompiled package (for example a <code>Redhat Linux</code> or a <code>Debian GNU/Linux</code> package), steps 2 to 4 may already be done for you. </p>
-<p> If you&#8217;re running <code>Linux</code>, Steps 5 to 7 can be somewhat automated using the script <i>proof-facility</i> in &lt;<i>proofdir</i>&gt; of your distribution. This script uses <i><a href="/docs/linux/man/1-syslog-facility/">syslog-facility</a></i>(1), from the <code>Linux</code> <i><a href="/docs/linux/man/1-syslog/">syslog</a></i>(1) distribution, and may run on other platforms as well &#8211; but no warrenties mind you! </p>
+<p> If you&#8217;re running <code>Linux</code>, Steps 5 to 7 can be somewhat automated using the script <i>proof-facility</i> in &lt;<i>proofdir</i>&gt; of your distribution. This script uses <i>syslog-facility</i>(1), from the <code>Linux</code> <i>syslog</i>(1) distribution, and may run on other platforms as well &#8211; but no warrenties mind you! </p>
 <p> Step 9 is completely up to the user.</p>
 <h2>EXAMPLE</h2>
 <p> That&#8217;s it. To test PROOF try the following: </p>
@@ -110,7 +110,7 @@ root[1] gROOT-&gt;Proof("&lt;master hostname&gt;")
 <dt><code>~/.rootnetrc.conf</code></p>
 <dd> Configuration file for network access. Here you specify login names and pass word, so it <code>MUST</code><i> be read/write-able only by the user. See &lt;proofdir</i><code>&gt;/etc/rootnetrc.conf.sample</code> for an example.</p>
 <dt>&lt;<i>proofdir</i><code>&gt;/log</code></p>
-<dd> This directory holds the log files from the master and slaves. &lt;<i>proofdir</i><code>&gt;/log/proof.log</code> <i><a href="/docs/linux/man/1-syslog/">Syslog</a></i>(1) log file for <code>PROOF</code>.</dl>
+<dd> This directory holds the log files from the master and slaves. &lt;<i>proofdir</i><code>&gt;/log/proof.log</code> <i>Syslog</i>(1) log file for <code>PROOF</code>.</dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-proofserv/">proofserv</a></i>(1) , <i><a href="/docs/linux/man/1-root/">root</a></i>(1) , <i><a href="/docs/linux/man/1-rootd/">rootd</a></i>(1) </p>
 <p> More information can be found at the <code>ROOT</code> website: <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i></p>

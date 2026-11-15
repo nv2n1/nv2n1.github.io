@@ -211,7 +211,7 @@ id-assoc pd {
  keyid 1;
  secret &quot;5pvW2g48OHPvkYMJSw0vZA==&quot;;
 };</pre>
-<p>One easy way of generating a new secret in the base64 format is to execute the <a href="/docs/linux/man/1-openssl/">openssl</a>(1) command (when available) as follows, </p>
+<p>One easy way of generating a new secret in the base64 format is to execute the openssl(1) command (when available) as follows, </p>
 <pre>% openssl rand -base64 16</pre>
 <p>and copy the output to the <code>dhcp6c.conf</code> file. </p>
 <p> To include an authentication option for DHCPv6 authentication, the <code>interface</code> statement should be modified and an <code>authentication</code> statement should be added as follows: </p>

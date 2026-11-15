@@ -208,7 +208,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <dd>Specifies how much memory should be allocated for the internal compression state. <i>mem_level=1</i> uses minimum memory but is slow and reduces compression ratio; <i>mem_level=9</i> uses maximum memory for optimal speed. The default value is <i>8</i>.</dl>
 <dd><code>strategy = default | filtered | huffman_only</code></p>
 <dl>
-<dd>This parameter is used to tune the compression algorithm. See <code><a href="//www.systutorials.com/docs/linux/man/3erl-zlib/">zlib</a>(3erl)</code> for more details on the <i>strategy</i> parameter. The default value is <i>default</i>.</dl>
+<dd>This parameter is used to tune the compression algorithm. See <code>zlib(3erl)</code> for more details on the <i>strategy</i> parameter. The default value is <i>default</i>.</dl>
 <dd><code>use_gzip_static = true | false</code></p>
 <dl>
 <dd>If true, Yaws will try to serve precompressed versions of static files. It will look for precompressed files in the same location as original files that end in &quot;.gz&quot;. Only files that do not fit in the cache are concerned. The default value is <i>false</i>.</dl>
@@ -550,4 +550,4 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <h2>Author</h2>
 <p>Written by Claes Wikstrom</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-yaws/">yaws</a></code>(1) <code><a href="/docs/linux/man/1-erl/">erl</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/1-yaws/">yaws</a></code>(1) <code>erl</code>(1) </p>

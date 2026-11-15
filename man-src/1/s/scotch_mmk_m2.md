@@ -20,7 +20,7 @@ mmk_m2[options][-gcfile] dimX dimY[ofile] mmk_m3[options][-gcfile] dimX dimY dim
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-g</code><i>cfile</i></p>
-<dd> Output graph vertex coordinates (that is, geometry data to be used by <code><a href="/docs/linux/man/1-gout/">gout</a></code>(1)) in file <i>cfile</i>.</p>
+<dd> Output graph vertex coordinates (that is, geometry data to be used by <code>gout</code>(1)) in file <i>cfile</i>.</p>
 <dt><code>-h</code></p>
 <dd> Display some help.</p>
 <dt><code>-V</code></p>
@@ -31,7 +31,7 @@ mmk_m2[options][-gcfile] dimX dimY[ofile] mmk_m3[options][-gcfile] dimX dimY dim
     $ mmk_m2 5 7 -g/tmp/m5x7.xyz /tmp/m5x7.msh
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mord/">mord</a></code>(1), <code><a href="/docs/linux/man/1-mtst/">mtst</a></code>(1), <code><a href="/docs/linux/man/1-gmk_msh/">gmk_msh</a></code>(1). </p>
+<p> <code>mord</code>(1), <code>mtst</code>(1), <code>gmk_msh</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

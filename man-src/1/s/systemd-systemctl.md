@@ -349,7 +349,7 @@ description: "systemctl, systemd-systemctl – Control the systemd system and se
 <dt>
 <dd> Pager to use when <code>&#8211;no-pager</code> is not given; overrides <i>$PAGER</i>. Setting this to an empty string or the value cat is equivalent to passing <code>&#8211;no-pager</code>.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemadm/">systemadm</a></code>(1), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/1-loginctl/">loginctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/1-wall/">wall</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code>systemadm</code>(1), <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/1-loginctl/">loginctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/1-wall/">wall</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> <code>Lennart Poettering</code> &lt;lennart [at] poettering.net&gt;</p>
 <dl>

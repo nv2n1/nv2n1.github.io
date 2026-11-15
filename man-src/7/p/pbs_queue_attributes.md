@@ -50,11 +50,11 @@ description: "pbs_queue_attributes – pbs queue attributes"
 <dt>queue_type</i></p>
 <dd>The type of the queue: execution or route. Format: &quot;execution&quot;, &quot;e&quot;, &quot;route&quot;, &quot;r&quot;. This attribute must be explicitly set. <i></p>
 <dt>resources_max</i></p>
-<dd>The maximum amount of each resource which can be requested by a single job in this queue. The queue value supersedes any server wide maximum limit. Format: &quot;resources_max.resource_name=value&quot;, see <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B); default value: infinite usage. <i></p>
+<dd>The maximum amount of each resource which can be requested by a single job in this queue. The queue value supersedes any server wide maximum limit. Format: &quot;resources_max.resource_name=value&quot;, see qmgr(1B); default value: infinite usage. <i></p>
 <dt>resources_min</i></p>
 <dd>The minimum amount of each resource which can be requested by a single job in this queue. Format: see resources_max, default value: zero usage. <i></p>
 <dt>resources_default</i></p>
-<dd>The list of default resource values which are set as limits for a job residing in this queue and for which the job did not specify a limit. Format: &quot;resources_default.resource_name=value&quot;, see <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B); default value: none; if not set, the default limit for a job is determined by the first of the following attributes which is set: server&#8217;s resources_default, queue&#8217;s resources_max, server&#8217;s resources_max. If none of these are set, the job will unlimited resource usage. <i></p>
+<dd>The list of default resource values which are set as limits for a job residing in this queue and for which the job did not specify a limit. Format: &quot;resources_default.resource_name=value&quot;, see qmgr(1B); default value: none; if not set, the default limit for a job is determined by the first of the following attributes which is set: server&#8217;s resources_default, queue&#8217;s resources_max, server&#8217;s resources_max. If none of these are set, the job will unlimited resource usage. <i></p>
 <dt>started&nbsp;<wbr></i></p>
 <dd>Jobs may be scheduled for execution from this queue. When false, the queue is considered stopped. Advisory to the Scheduler, not enforced by the server. [default value: false, but depends on scheduler interpretation] Format: boolean (see acl_group_enable).</dl>
 </dl>
@@ -67,7 +67,7 @@ description: "pbs_queue_attributes – pbs queue attributes"
 <dt>checkpoint_min</i></p>
 <dd>Specifies the minimum interval of cpu time, in minutes, which is allowed between checkpoints of a job. If a user specifies a time less than this value, this value is used instead. Format: integer; default value: no minimum. <i></p>
 <dt>resources_available</i></p>
-<dd>The list of resource and amounts available to jobs running in this queue. The sum of the resource of each type used by all jobs running from this queue cannot exceed the total amount listed here. Advisory to the Scheduler, not enforced by the server. Format: &quot;resources_available.resource_name=value&quot;, see <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B). <i></p>
+<dd>The list of resource and amounts available to jobs running in this queue. The sum of the resource of each type used by all jobs running from this queue cannot exceed the total amount listed here. Advisory to the Scheduler, not enforced by the server. Format: &quot;resources_available.resource_name=value&quot;, see qmgr(1B). <i></p>
 <dt>keep_completed</i></p>
 <dd>Number of seconds to retain completed jobs in the C state. This overrides the server attribute of the same name. EXPERIMENTAL Format: integer; default value: 0. <i></p>
 <dt>kill_delay</i></p>
@@ -113,4 +113,4 @@ description: "pbs_queue_attributes – pbs queue attributes"
 </dl>
 <p> </font></p>
 <h2>See Also</h2>
-<p>the PBS ERS, <a href="//www.systutorials.com/docs/linux/man/1B-qmgr/">qmgr</a>(1B), <a href="//www.systutorials.com/docs/linux/man/7B-pbs_resources/">pbs_resources</a>(7B) </p>
+<p>the PBS ERS, qmgr(1B), pbs_resources(7B) </p>

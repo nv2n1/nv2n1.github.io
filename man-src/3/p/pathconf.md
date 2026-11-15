@@ -89,6 +89,6 @@ long pathconf(const char *path, int name);</code></pre>
 <p>Files with name lengths longer than the value returned for <i>name</i> equal to <code>_PC_NAME_MAX</code> may exist in the given directory. </p>
 <p> Some returned values may be huge; they are not suitable for allocating memory.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-getconf/">getconf</a></code>(1), <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-statfs/">statfs</a></code>(2), <code><a href="/docs/linux/man/3-confstr/">confstr</a></code>(3), <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/1-getconf/">getconf</a></code>(1), <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-statfs/">statfs</a></code>(2), <code>confstr</code>(3), <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

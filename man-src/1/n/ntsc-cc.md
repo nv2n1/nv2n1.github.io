@@ -14,7 +14,7 @@ description: "ntsc-cc – closed caption decoder"
 <h2>DESCRIPTION</h2>
 <p> <code>ntsc-cc</code> reads vbi data from /dev/vbi0 and decodes the enclosed cc data. Start it with &#8216;-h&#8217; to get a list of cmd line options.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-alevt/">alevt</a>(1)</p>
+<p> alevt(1)</p>
 <h2>AUTHORS</h2>
 <p> timecop [at] japan.co.jp<br />
  Mike Baker &lt;mbm [at] linux.com&gt;<br />

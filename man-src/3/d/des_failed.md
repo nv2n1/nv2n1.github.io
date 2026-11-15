@@ -52,6 +52,6 @@ description: "des_crypt, ecb_crypt, cbc_crypt, des_setparity, DES_FAILED – fas
 <h2>Conforming To</h2>
 <p>4.3BSD. Not in POSIX.1.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-des/">des</a></code>(1), <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), <code><a href="/docs/linux/man/3-xcrypt/">xcrypt</a></code>(3)</p>
+<p><code>des</code>(1), <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), <code><a href="/docs/linux/man/3-xcrypt/">xcrypt</a></code>(3)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a></p>

@@ -46,7 +46,7 @@ int ibv_req_notify_cq(struct ibv_cq *cq, int solicited_only);
 
  
 
- <a HREF="/docs/linux/man/3-ibv_create_comp_channel/">ibv_create_comp_channel</a>(3), <a HREF="/docs/linux/man/3-ibv_create_cq/">ibv_create_cq</a>(3), <a HREF="/docs/linux/man/3-ibv_get_cq_event/">ibv_get_cq_event</a>(3)
+ ibv_create_comp_channel(3), ibv_create_cq(3), ibv_get_cq_event(3)
 
 <h2>AUTHOR</h2>
 

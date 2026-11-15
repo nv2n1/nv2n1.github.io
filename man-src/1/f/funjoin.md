@@ -80,5 +80,5 @@ description: "funjoin – join two or more FITS binary tables on specified colum
 AKEY KEY A AKEY_2 KEY_2 C AKEY_3 KEY_3 F G JFILES-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- --aaa 0 0 aaa 0 0 aaa 0 1 300.30 7 bbb 1 3 ? ? ? 0 0 ? ? ? 0 - 100 nan 1 ccc 2 6 ccc 2 6 ? ? ? 0 - 100 nan 3 ddd 3 9 ? ? ? 0 0 ddd 3 10 400.40 5 eee 4 12 eee 4 12 ? ? ? 0 - 100 nan 3 fff 5 15 ? ? ? 0 0 ? ? ? 0 - 100 nan 1 ggg 6 18 ggg 6 18 ggg 6 19 100.10 7 hhh 7 21 ? ? ? 0 0 ? ? ? 0 - 100 nan 1 XXX 0 255 iii 8 24 ? ? ? 0 - 100 nan 2 XXX 0 255 ? ? ? 0 0 jjj 9 28 200.20 4
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

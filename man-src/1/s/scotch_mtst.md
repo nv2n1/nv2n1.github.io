@@ -29,7 +29,7 @@ mtst[options][mfile][lfile]
     $ mtst brol.msh
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mord/">mord</a></code>(1), <code><a href="/docs/linux/man/1-grf_msh/">grf_msh</a></code>(1). </p>
+<p> <code>mord</code>(1), <code>grf_msh</code>(1). </p>
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>

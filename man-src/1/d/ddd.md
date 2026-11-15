@@ -34,7 +34,7 @@ description: "ddd – The Data Display Debugger"
 <p> More information on <font SIZE="-1">DDD</font> is contained in the <font SIZE="-1">DDD</font> Manual. You can read the text-only version in <font SIZE="-1">DDD</font> (via `<code>Help&rarr;DDD Reference</code>&#8216;) or in Emacs (as Info file). Full-fledged HTML, PostScript, and PDF versions are available online via the <font SIZE="-1">DDD</font> WWW page, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code><a rel="nofollow" href="http://www.gnu.org/software/ddd/">http://www.gnu.org/software/ddd/</a></code> </p>
 <h2>OPTIONS</h2>
-<p> These are the most important options used when starting <font SIZE="-1">DDD</font>. All options may be abbreviated, as long as they are unambiguous; single dashes may also be used. <font SIZE="-1">DDD</font> also understands the usual X options such as `<code>-display</code>&#8216; or `<code>-geometry</code>&#8216;; see <code><a href="/docs/linux/man/1-x/">X</a>(1)</code> for details. </p>
+<p> These are the most important options used when starting <font SIZE="-1">DDD</font>. All options may be abbreviated, as long as they are unambiguous; single dashes may also be used. <font SIZE="-1">DDD</font> also understands the usual X options such as `<code>-display</code>&#8216; or `<code>-geometry</code>&#8216;; see <code>X(1)</code> for details. </p>
 <p> All arguments and options not handled by <font SIZE="-1">DDD</font> are passed to the inferior debugger. To pass an option to the inferior debugger that conflicts with an X option, or with a <font SIZE="-1">DDD</font> option listed here, use the `<code>&#8211;debugger</code>&#8216; option, below. </p>
 <dl>
 <dt><code>&#8211;configuration</code></p>
@@ -72,7 +72,7 @@ description: "ddd – The Data Display Debugger"
 <dd> Run <font SIZE="-1">XDB</font> as inferior debugger.</dl>
 <p> A full list of options, including important options of the inferior debugger, can be found in the <font SIZE="-1">DDD</font> manual.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-x/">X</a></code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/1-dbx/">dbx</a></code>(1), <code><a href="/docs/linux/man/1-wdb/">wdb</a></code>(1), <code><a href="/docs/linux/man/1-xdb/">xdb</a></code>(1), <code><a href="/docs/linux/man/1-perldebug/">perldebug</a></code>(1) </p>
+<p> <code>X</code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code>dbx</code>(1), <code>wdb</code>(1), <code>xdb</code>(1), <code><a href="/docs/linux/man/1-perldebug/">perldebug</a></code>(1) </p>
 <p> `<code>ddd</code>&#8216; entry in <code>info</code>. </p>
 <p> `<code>gdb</code>&#8216; entry in <code>info</code>. </p>
 <p> <i>Debugging with </i><font SIZE="-1"><i>DDD</i></font><i>: User&#8217;s Guide and Reference Manual</i>, by Andreas Zeller. </p>

@@ -73,7 +73,7 @@ description: "tv_grep – Filter programmes and channels from an XMLTV listings 
 <p> <code>&#8211;not </code><font SIZE="-1"><code>EXPR</code></font>, <code>-not </code><font SIZE="-1"><code>EXPR</code></font>, <code>! </code><font SIZE="-1"><code>EXPR</code></font> </p>
 <p> Of these, &#8216;not&#8217; binds tightest, affecting the following predicate only. &#8216;and&#8217; is next, and &#8216;or&#8217; binds loosest.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <font SIZE="-1"><i><a href="/docs/linux/man/3-xmltv/">XMLTV</a></i></font><i></i>(3).</p>
+<p> <i>xmltv</i>(5), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <font SIZE="-1"><i><a href="/docs/linux/man/3-xmltv/">XMLTV</a></i></font><i></i>(3).</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com</p>
 <h2>BUGS</h2>

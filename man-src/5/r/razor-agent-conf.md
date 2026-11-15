@@ -44,4 +44,4 @@ description: "\"razor-agent.conf\" – Configuration file for Razor Agents"
 <h2>Authors</h2>
 <p>Vipul Ved Prakash, &lt;mail [at] vipul.net&gt; and Chad Norwood &lt;chad [at] samo.org&gt;</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-razor-agents/">razor-agents</a></i>(1), <i><a href="/docs/linux/man/1-razor-check/">razor-check</a></i>(1), <i><a href="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1), <i><a href="/docs/linux/man/1-razor-report/">razor-report</a></i>(1), <i><a href="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1), <i><a href="/docs/linux/man/5-razor-whitelist/">razor-whitelist</a></i>(5) </p>
+<p><i>razor-agents</i>(1), <i><a href="/docs/linux/man/1-razor-check/">razor-check</a></i>(1), <i><a href="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1), <i><a href="/docs/linux/man/1-razor-report/">razor-report</a></i>(1), <i><a href="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1), <i><a href="/docs/linux/man/5-razor-whitelist/">razor-whitelist</a></i>(5) </p>

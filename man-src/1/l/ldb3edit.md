@@ -95,7 +95,7 @@ ldbedit - Edit LDB databases using your preferred editor
 
  
 
- <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7), <a HREF="/docs/linux/man/1-ldbmodify/">ldbmodify</a>(1), <a HREF="/docs/linux/man/1-ldbdel/">ldbdel</a>(1), <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5), <a HREF="/docs/linux/man/1-vi/">vi</a>(1)
+ ldb(7), <a HREF="/docs/linux/man/1-ldbmodify/">ldbmodify</a>(1), <a HREF="/docs/linux/man/1-ldbdel/">ldbdel</a>(1), <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5), <a HREF="/docs/linux/man/1-vi/">vi</a>(1)
 
 <h2>AUTHOR</h2>
 

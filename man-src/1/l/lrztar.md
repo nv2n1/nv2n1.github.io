@@ -38,7 +38,7 @@ lrztar[options] DIRECTORY
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/5-lrzip-conf/">lrzip.conf</a></i>(5), <i><a HREF="/docs/linux/man/1-lrzuntar/">lrzuntar</a></i>(1), <i><a HREF="/docs/linux/man/1-lrzip/">lrzip</a></i>(1), <i><a HREF="/docs/linux/man/1-lrunzip/">lrunzip</a></i>(1), <i><a HREF="/docs/linux/man/1-lrzcat/">lrzcat</a></i>(1), <i><a HREF="/docs/linux/man/1-bzip2/">bzip2</a></i>(1), <i><a HREF="/docs/linux/man/1-gzip/">gzip</a></i>(1), <i><a HREF="/docs/linux/man/1-lzop/">lzop</a></i>(1), <i><a HREF="/docs/linux/man/1-rzip/">rzip</a></i>(1), <i><a HREF="/docs/linux/man/1-zip/">zip</a></i>(1)
+ <i><a HREF="/docs/linux/man/5-lrzip-conf/">lrzip.conf</a></i>(5), <i><a HREF="/docs/linux/man/1-lrzuntar/">lrzuntar</a></i>(1), <i><a HREF="/docs/linux/man/1-lrzip/">lrzip</a></i>(1), <i><a HREF="/docs/linux/man/1-lrunzip/">lrunzip</a></i>(1), <i><a HREF="/docs/linux/man/1-lrzcat/">lrzcat</a></i>(1), <i><a HREF="/docs/linux/man/1-bzip2/">bzip2</a></i>(1), <i><a HREF="/docs/linux/man/1-gzip/">gzip</a></i>(1), <i><a HREF="/docs/linux/man/1-lzop/">lzop</a></i>(1), <i>rzip</i>(1), <i><a HREF="/docs/linux/man/1-zip/">zip</a></i>(1)
 
 <h2>AUTHORS</h2>
 

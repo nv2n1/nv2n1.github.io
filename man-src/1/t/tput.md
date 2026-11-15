@@ -36,7 +36,7 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <dt><code>-S</code></p>
 <dd> allows more than one capability per invocation of <code>tput</code>. The capabilities must be passed to <code>tput</code> from the standard input instead of from the command line (see example). Only one <i>capname</i> is allowed per line. The <code>-S</code> option changes the meaning of the <code>0</code> and <code>1</code> boolean and string exit codes (see the EXIT CODES section).</p>
 <dt>
-<dd> Because some capabilities may use <i>string</i> parameters rather than <i>numbers</i>, <code>tput</code> uses a table and the presence of parameters in its input to decide whether to use <code><a href="//www.systutorials.com/docs/linux/man/3X-tparm/">tparm</a></code>(3X), and how to interpret the parameters.</p>
+<dd> Because some capabilities may use <i>string</i> parameters rather than <i>numbers</i>, <code>tput</code> uses a table and the presence of parameters in its input to decide whether to use <code>tparm</code>(3X), and how to interpret the parameters.</p>
 <dt><code>-T</code><i>type</i></p>
 <dd> indicates the <i>type</i> of terminal. Normally this option is unnecessary, because the default is taken from the environment variable <code>TERM</code>. If <code>-T</code> is specified, then the shell variables <code>LINES</code> and <code>COLUMNS</code> will also be ignored.</p>
 <dt><code>-V</code></p>
@@ -51,7 +51,7 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <dt>
 <dd> If the capability is a string that takes parameters, the arguments following the capability will be used as parameters for the string.</p>
 <dt>
-<dd> Most parameters are numbers. Only a few terminal capabilities require string parameters; <code>tput</code> uses a table to decide which to pass as strings. Normally <code>tput</code> uses <code><a href="//www.systutorials.com/docs/linux/man/3X-tparm/">tparm</a></code>(3X) to perform the substitution. If no parameters are given for the capability, <code>tput</code> writes the string without performing the substitution.</p>
+<dd> Most parameters are numbers. Only a few terminal capabilities require string parameters; <code>tput</code> uses a table to decide which to pass as strings. Normally <code>tput</code> uses <code>tparm</code>(3X) to perform the substitution. If no parameters are given for the capability, <code>tput</code> writes the string without performing the substitution.</p>
 <dt><code>init</code></p>
 <dd> If the terminal database is present and an entry for the user&#8217;s terminal exists (see <code>-T</code><i>type</i>, above), the following will occur:</p>
 <dl>
@@ -123,7 +123,7 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <dd> <code>Note:</code> although these programs write to different streams, redirecting their output to a file will capture only part of their actions. The changes to the terminal modes are not affected by redirecting the output.</dl>
 <p> If <code>tput</code> is invoked by a link named <code>init</code>, this has the same effect as <code>tput init</code>. Again, you are less likely to use that link because another program named <code>init</code> has a more well-established use.</p>
 <h3>Terminal Size</h3>
-<p> Besides the special commands (e.g., <code>clear</code>), tput treats certain terminfo capabilities specially: <code>lines</code> and <code>cols</code>. tput calls <code><a href="//www.systutorials.com/docs/linux/man/3X-setupterm/">setupterm</a></code>(3X) to obtain the terminal size:<br />
+<p> Besides the special commands (e.g., <code>clear</code>), tput treats certain terminfo capabilities specially: <code>lines</code> and <code>cols</code>. tput calls <code>setupterm</code>(3X) to obtain the terminal size:<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 first, it gets the size from the terminal database (which generally is not provided for terminal emulators which do not have a fixed window size)<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 then it asks the operating system for the terminal&#8217;s size (which generally works, unless connecting via a serial line which does not support <i>NAWS</i>: negotiations about window size).<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 finally, it inspects the environment variables <code>LINES</code> and <code>COLUMNS</code> which may override the terminal size. </p>
@@ -131,7 +131,7 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <h2>EXAMPLES</h2>
 <dl>
 <dt><code>tput init</code></p>
-<dd> Initialize the terminal according to the type of terminal in the environmental variable <code>TERM</code>. This command should be included in everyone&#8217;s .profile after the environmental variable <code>TERM</code> has been exported, as illustrated on the <code><a href="/docs/linux/man/5-profile/">profile</a></code>(5) manual page.</p>
+<dd> Initialize the terminal according to the type of terminal in the environmental variable <code>TERM</code>. This command should be included in everyone&#8217;s .profile after the environmental variable <code>TERM</code> has been exported, as illustrated on the <code>profile</code>(5) manual page.</p>
 <dt><code>tput -T5620 reset</code></p>
 <dd> Reset an AT&amp;T 5620 terminal, overriding the type of terminal in the environmental variable <code>TERM</code>.</p>
 <dt><code>tput cup 0 0</code></p>

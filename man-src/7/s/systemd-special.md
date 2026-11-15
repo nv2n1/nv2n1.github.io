@@ -91,16 +91,16 @@ description: "systemd.special – Special systemd units"
 <dd>This is the default target in the initramfs, similar to default.target in the main system. It is used to mount the real root and transition to it. See <code><a href="/docs/linux/man/7-bootup/">bootup</a></code>(7) for more discussion.</dl>
 <p> initrd-fs.target</p>
 <dl>
-<dd><code><a href="/docs/linux/man/3-systemd-fstab-generator/">systemd-fstab-generator</a></code>(3) automatically adds dependencies of type <i>Before=</i> to sysroot-usr.mount and all mount points found in /etc/fstab that have the <code>x-initrd.mount</code> mount option set and do not have the <code>noauto</code> mount option set. It is also indirectly ordered after sysroot.mount. Thus, once this target is reached the /sysroot/ hierarchy is fully set up, in preparation for the transition to the host OS.</dl>
+<dd><code>systemd-fstab-generator</code>(3) automatically adds dependencies of type <i>Before=</i> to sysroot-usr.mount and all mount points found in /etc/fstab that have the <code>x-initrd.mount</code> mount option set and do not have the <code>noauto</code> mount option set. It is also indirectly ordered after sysroot.mount. Thus, once this target is reached the /sysroot/ hierarchy is fully set up, in preparation for the transition to the host OS.</dl>
 <p> initrd-root-device.target</p>
 <dl>
-<dd>A special initrd target unit that is reached when the root filesystem device is available, but before it has been mounted. <code><a href="/docs/linux/man/3-systemd-fstab-generator/">systemd-fstab-generator</a></code>(3) and <code><a href="/docs/linux/man/3-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(3) automatically setup the appropriate dependencies to make this happen.</dl>
+<dd>A special initrd target unit that is reached when the root filesystem device is available, but before it has been mounted. <code>systemd-fstab-generator</code>(3) and <code>systemd-gpt-auto-generator</code>(3) automatically setup the appropriate dependencies to make this happen.</dl>
 <p> initrd-root-fs.target</p>
 <dl>
-<dd><code><a href="/docs/linux/man/3-systemd-fstab-generator/">systemd-fstab-generator</a></code>(3) automatically adds dependencies of type <i>Before=</i> to the sysroot.mount unit, which is generated from the kernel command line&#8217;s <i>root=</i> setting (or equivalent).</dl>
+<dd><code>systemd-fstab-generator</code>(3) automatically adds dependencies of type <i>Before=</i> to the sysroot.mount unit, which is generated from the kernel command line&#8217;s <i>root=</i> setting (or equivalent).</dl>
 <p> initrd-usr-fs.target</p>
 <dl>
-<dd><code><a href="/docs/linux/man/3-systemd-fstab-generator/">systemd-fstab-generator</a></code>(3) automatically adds dependencies of type <i>Before=</i> to the sysusr-usr.mount unit, which is generated from the kernel command line&#8217;s <i>usr=</i> switch. Services may order themselves after this target unit in order to run once the /sysusr/ hierarchy becomes available, on systems that come up initially without a root file system, but with an initialized /usr/ and need to access that before setting up the root file system to ultimately switch to. On systems where <i>usr=</i> is not used this target is ordered after sysroot.mount and thus mostly equivalent to initrd-root-fs.target. In effect on any system once this target is reached the file system backing /usr/ is mounted, though possibly at two different locations, either below the /sysusr/ or the /sysroot/ hierarchies.</dl>
+<dd><code>systemd-fstab-generator</code>(3) automatically adds dependencies of type <i>Before=</i> to the sysusr-usr.mount unit, which is generated from the kernel command line&#8217;s <i>usr=</i> switch. Services may order themselves after this target unit in order to run once the /sysusr/ hierarchy becomes available, on systems that come up initially without a root file system, but with an initialized /usr/ and need to access that before setting up the root file system to ultimately switch to. On systems where <i>usr=</i> is not used this target is ordered after sysroot.mount and thus mostly equivalent to initrd-root-fs.target. In effect on any system once this target is reached the file system backing /usr/ is mounted, though possibly at two different locations, either below the /sysusr/ or the /sysroot/ hierarchies.</dl>
 <p> kbrequest.target</p>
 <dl>
 <dd>systemd starts this target whenever Alt+ArrowUp is pressed on the console. Note that any user with physical access to the machine will be able to do this, without authentication, so this should be used carefully.</dl>
@@ -110,7 +110,7 @@ description: "systemd.special – Special systemd units"
 <p> Applications wanting to reboot the system should not start this unit directly, but should instead execute <code>systemctl kexec</code> (possibly with the <code>&#8211;no-block</code> option) or call <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)&#8217;s <code>org.freedesktop.systemd1.Manager.KExec</code> D-Bus method directly.</dl>
 <p> local-fs.target</p>
 <dl>
-<dd><code><a href="/docs/linux/man/3-systemd-fstab-generator/">systemd-fstab-generator</a></code>(3) automatically adds dependencies of type <i>Before=</i> to all mount units that refer to local mount points for this target unit. In addition, it adds dependencies of type <i>Wants=</i> to this target unit for those mounts listed in /etc/fstab that have the <code>auto</code> mount option set.</dl>
+<dd><code>systemd-fstab-generator</code>(3) automatically adds dependencies of type <i>Before=</i> to all mount units that refer to local mount points for this target unit. In addition, it adds dependencies of type <i>Wants=</i> to this target unit for those mounts listed in /etc/fstab that have the <code>auto</code> mount option set.</dl>
 <p> machines.target</p>
 <dl>
 <dd>A standard target unit for starting all the containers and other virtual machines. See systemd-nspawn [at] .service for an example.</dl>
@@ -141,10 +141,10 @@ description: "systemd.special – Special systemd units"
 <p> runlevel6.target is an alias for this target unit, for compatibility with SysV.</dl>
 <p> remote-cryptsetup.target</p>
 <dl>
-<dd>Similar to cryptsetup.target, but for encrypted devices which are accessed over the network. It is used for <code><a href="/docs/linux/man/8-crypttab/">crypttab</a></code>(8) entries marked with <code>_netdev</code>.</dl>
+<dd>Similar to cryptsetup.target, but for encrypted devices which are accessed over the network. It is used for <code>crypttab</code>(8) entries marked with <code>_netdev</code>.</dl>
 <p> remote-veritysetup.target</p>
 <dl>
-<dd>Similar to veritysetup.target, but for verity integrity protected devices which are accessed over the network. It is used for <code><a href="/docs/linux/man/8-veritytab/">veritytab</a></code>(8) entries marked with <code>_netdev</code>.</dl>
+<dd>Similar to veritysetup.target, but for verity integrity protected devices which are accessed over the network. It is used for <code>veritytab</code>(8) entries marked with <code>_netdev</code>.</dl>
 <p> remote-fs.target</p>
 <dl>
 <dd>Similar to local-fs.target, but for remote mount points. </p>
@@ -314,7 +314,7 @@ description: "systemd.special – Special systemd units"
 </table>
 </dl>
 <h3>Special Slice Units</h3>
-<p>There are four &quot;.slice&quot; units which form the basis of the hierarchy for assignment of resources for services, users, and virtual machines or containers. See <code><a href="/docs/linux/man/7-systemd-slice/">systemd.slice</a></code>(7) for details about slice units. </p>
+<p>There are four &quot;.slice&quot; units which form the basis of the hierarchy for assignment of resources for services, users, and virtual machines or containers. See <code>systemd.slice</code>(7) for details about slice units. </p>
 <p> -.slice</p>
 <dl>
 <dd>The root slice is the root of the slice hierarchy. It usually does not contain units directly, but may be used to set defaults for the whole tree.</dl>
@@ -364,7 +364,7 @@ PartOf=graphical-session.target
 <dl>
 <dd>The XDG specification defines a way to autostart applications using XDG desktop files. systemd ships <code><a href="/docs/linux/man/8-systemd-xdg-autostart-generator/">systemd-xdg-autostart-generator</a></code>(8) for the XDG desktop files in autostart directories. Desktop Environments can opt-in to use this service by adding a <i>Wants=</i> dependency on xdg-desktop-autostart.target.</dl>
 <h3>Special User Slice Units</h3>
-<p>There are four &quot;.slice&quot; units which form the basis of the user hierarchy for assignment of resources for user applications and services. See <code><a href="/docs/linux/man/7-systemd-slice/">systemd.slice</a></code>(7) for details about slice units and the documentation about m[blue]<code>Desktop Environments</code>m[]<font SIZE="-2">[3]</font> for further information. </p>
+<p>There are four &quot;.slice&quot; units which form the basis of the user hierarchy for assignment of resources for user applications and services. See <code>systemd.slice</code>(7) for details about slice units and the documentation about m[blue]<code>Desktop Environments</code>m[]<font SIZE="-2">[3]</font> for further information. </p>
 <p> -.slice</p>
 <dl>
 <dd>The root slice is the root of the user&#8217;s slice hierarchy. It usually does not contain units directly, but may be used to set defaults for the whole tree.</dl>

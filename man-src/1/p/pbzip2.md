@@ -75,7 +75,7 @@ description: "pbzip2 – parallel bzip2 file compressor, v1.1.10"
 <p> Example 7: pbzip2 -c &lt; myfile.txt &gt; myfile.txt.bz2 </p>
 <p> This example will read myfile.txt from standard input compressing it to standard output which is redirected to to myfile.txt.bz2.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1) <a href="/docs/linux/man/1-gzip/">gzip</a>(1) <a href="/docs/linux/man/1-lzip/">lzip</a>(1) <a href="/docs/linux/man/1-rzip/">rzip</a>(1) <a href="/docs/linux/man/1-zip/">zip</a>(1)</p>
+<p> <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1) <a href="/docs/linux/man/1-gzip/">gzip</a>(1) <a href="/docs/linux/man/1-lzip/">lzip</a>(1) rzip(1) <a href="/docs/linux/man/1-zip/">zip</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Jeff Gilchrist </p>
 <p> <a rel="nofollow" href="http://compression.ca">http://compression.ca</a> </p>

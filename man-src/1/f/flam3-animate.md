@@ -20,7 +20,7 @@ description: "flam3-animate flam3-render flam3-genome flam3-convert – render a
 <h2>ENVIRONMENT</h2>
 <p> The environment variables are in the documention written to standard out given any command line option. </p>
 <h2>SEE ALSO</h2>
-<p> <code>WWW.FLAM3.COM,</code> <code><a href="/docs/linux/man/1-electricsheep/">electricsheep</a></code>(1), </p>
+<p> <code>WWW.FLAM3.COM,</code> <code>electricsheep</code>(1), </p>
 <h2>AUTHOR</h2>
 <p> spot aka Scott Draves, Erik Reckase </p>
 <h2>Index</h2>

@@ -34,4 +34,4 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_FTP_FILEMETHOD,
 <h2>Return Value</h2>
 <p>Returns CURLE_OK if the option is supported, and CURLE_UNKNOWN_OPTION if not.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-curlopt_ftplistonly/">CURLOPT_FTPLISTONLY</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_ftp_skip_pasv_ip/">CURLOPT_FTP_SKIP_PASV_IP</a></code>(3),</p>
+<p><code>CURLOPT_FTPLISTONLY</code>(3), <code><a href="/docs/linux/man/3-curlopt_ftp_skip_pasv_ip/">CURLOPT_FTP_SKIP_PASV_IP</a></code>(3),</p>

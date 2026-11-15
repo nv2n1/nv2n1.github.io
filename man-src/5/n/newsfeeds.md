@@ -160,7 +160,7 @@ description: "newsfeeds – Determine where Usenet articles are sent"
 <dt>p</p>
 <dd>The time the article was posted a seconds since epoch.</p>
 <dt>s</p>
-<dd>The site that fed the article to the server. This is taken from either the Path: header or the <font SIZE="-1">IP</font> address of the sending site depending on the value of <i>logipaddr</i> in <i>inn.conf</i>. If <i>logipaddr</i> is true and the <font SIZE="-1">IP</font> address is <tt>0.0.0.0</tt> (meaning that the article was fed from localhost by a program like <i><a href="/docs/linux/man/8-rnews/">rnews</a></i>(8)), the Path: header value will be sent instead.</p>
+<dd>The site that fed the article to the server. This is taken from either the Path: header or the <font SIZE="-1">IP</font> address of the sending site depending on the value of <i>logipaddr</i> in <i>inn.conf</i>. If <i>logipaddr</i> is true and the <font SIZE="-1">IP</font> address is <tt>0.0.0.0</tt> (meaning that the article was fed from localhost by a program like <i>rnews</i>(8)), the Path: header value will be sent instead.</p>
 <dt>t</p>
 <dd>The time the article was received as seconds since epoch.</p>
 <dt>*</p>

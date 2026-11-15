@@ -22,4 +22,4 @@ description: "ccs_config_dump – Tool to generate XML output of running configu
 <dd>Force config dump from running cluster. This option is only for expert users and debugging sessions. Don&#8217;t use it for random purposes. ccs_config_dump can be configured to use different configuration sources via environment variables. This option will clear them to use the default and use only the runtime configuration. </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-ccs_config_validate/">ccs_config_validate</a>(8), <a href="/docs/linux/man/5-cluster-conf/">cluster.conf</a>(5) </p>
+<p><a href="/docs/linux/man/8-ccs_config_validate/">ccs_config_validate</a>(8), cluster.conf(5) </p>

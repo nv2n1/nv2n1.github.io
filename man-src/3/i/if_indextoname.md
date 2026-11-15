@@ -51,7 +51,7 @@ char *if_indextoname(unsigned int ifindex, char *ifname);
 <p> POSIX.1-2001, POSIX.1-2008, RFC 3493. </p>
 <p> This function first appeared in BSDi.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3), <code><a href="/docs/linux/man/3-if_nameindex/">if_nameindex</a></code>(3), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8)</p>
+<p> <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3), <code>if_nameindex</code>(3), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

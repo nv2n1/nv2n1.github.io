@@ -30,7 +30,7 @@ description: "tv_grab_pt – Grab TV listings for Portugal."
 <p> <code>&#8211;version</code> Show the version of the grabber. </p>
 <p> <code>&#8211;help</code> Print a help message and exit.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Bruno Tavares, gawen [at] users.sourceforge.net, based on tv_grab_es, from Ramon Roca. </p>
 <p> Grabber Site : <a rel="nofollow" href="http://bat.is-a-geek.com/XMLGrabPt">http://bat.is-a-geek.com/XMLGrabPt</a></p>

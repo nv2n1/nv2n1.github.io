@@ -78,7 +78,7 @@ deb <a rel="nofollow" href="http://security.debian.org/">http://security.debian.
 <dd>The rsh/ssh method invokes RSH/SSH to connect to a remote host and access the files as a given user. Prior configuration of rhosts or RSA keys is recommended. The standard <code>find</code> and <code>dd</code> commands are used to perform the file transfers from the remote host.</dl>
 <p> adding more recognizable URI types</p>
 <dl>
-<dd>APT can be extended with more methods shipped in other optional packages, which should follow the naming scheme apt-transport-<i>method</i>. For instance, the APT team also maintains the package apt-transport-https, which provides access methods for HTTPS URIs with features similar to the http method. Methods for using e.g. debtorrent are also available &#8211; see <code><a href="/docs/linux/man/1-apt-transport-debtorrent/">apt-transport-debtorrent</a></code>(1).</dl>
+<dd>APT can be extended with more methods shipped in other optional packages, which should follow the naming scheme apt-transport-<i>method</i>. For instance, the APT team also maintains the package apt-transport-https, which provides access methods for HTTPS URIs with features similar to the http method. Methods for using e.g. debtorrent are also available &#8211; see <code>apt-transport-debtorrent</code>(1).</dl>
 <h2>Examples</h2>
 <p>Uses the archive stored locally (or NFS mounted) at /home/jason/debian for stable/main, stable/contrib, and stable/non-free.</p>
 <dl>
@@ -124,7 +124,7 @@ deb [ arch=amd64,armel ] <a rel="nofollow" href="http://ftp.debian.org/debian">h
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apt-cache/">apt-cache</a></code>(8)<code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5)</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Authors</h2>
 <p><code>Jason Gunthorpe</code></p>
 <dl>

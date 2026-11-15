@@ -14,7 +14,7 @@ description: "xisdnload – ISDN load average display for X"
 <h2>DESCRIPTION</h2>
 <p> The <i>xisdnload </i> program displays a periodically updating histogram of the ISDN load average.</p>
 <h2>OPTIONS</h2>
-<p> <i>Xisdnload</i> accepts all of the standard X Toolkit command line options (see <i><a href="/docs/linux/man/1-x/">X</a>(1)</i>). The order of the options in unimportant. <i>xisdnload also accepts the following additional options: </p>
+<p> <i>Xisdnload</i> accepts all of the standard X Toolkit command line options (see <i>X(1)</i>). The order of the options in unimportant. <i>xisdnload also accepts the following additional options: </p>
 <dl>
 <dt></i><code>-hl </code><i>color</i> or -highlight <i>color</i></p>
 <dd> This option specifies the color of the scale lines.</p>
@@ -67,11 +67,11 @@ XISDNLoad  xisdnload
 <p> &lt;XRoot&gt;/lib/X11/app-defaults/XISDNLoad &#8211; specifies required resources.<br />
  /proc/net/route &#8211; kernel routing table. The proc filesystem is needed by xisdnload to detect wheather a dial-on-demand is active. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-x/">X</a>(1), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/1-xload/">xload</a>(1), <a href="/docs/linux/man/4-mem/">mem</a>(4), Athena StripChart Widget.</p>
+<p> X(1), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/1-xload/">xload</a>(1), <a href="/docs/linux/man/4-mem/">mem</a>(4), Athena StripChart Widget.</p>
 <h2>BUGS</h2>
 <p> Certainly a lot.</p>
 <h2>COPYRIGHT</h2>
-<p> This program is based on <i>xload</i> which is Copyright (1988) X Consortium. See <i><a href="/docs/linux/man/1-x/">X</a>(1)</i> for a full statement of rights and permissions.</p>
+<p> This program is based on <i>xload</i> which is Copyright (1988) X Consortium. See <i>X(1)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
 <p> Besides the basic xload stuff, the ISDN parts are added by<br />
  Frank Strauss &lt;strauss [at] escape.de&gt; (escape e.V., Braunschweig, Germany). In January 1998 Michael Deindl &lt;olmur [at] dwarf.bb.bawue.de&gt; contributed the `yellow&#8217; patch to make xisdnload recognize the phase of trying to connect and show this by a different background color. Markus Pilzecker &lt;mp [at] timesink.pilzecker.de&gt; detected a bug in the color assignment code resulting in seg faults which has been fixed in January 1998. </p>

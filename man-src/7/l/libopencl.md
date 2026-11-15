@@ -33,11 +33,11 @@ description: "libOpenCL, libOpenCL.so – OCL-ICD implementation of OpenCL ICD l
 <dd>This variable allows one to specify a colon separated list of layers to load, specifying their path. This support is experimental.</dl>
 <p> <code>OCL_ICD_ASSUME_ICD_EXTENSION</code></p>
 <dl>
-<dd>If set to an non-empty value, contrary the Khronos specification, the loader will not check that the loaded ICDs declare the cl_khr_icd extension. It will also use the clGetPlatformInfo from the dispatch table if no such function is globally available. You may need to define this environment variable if you are using not (fully) compliant ICD, or if you are using the Intel ICD together with <code><a href="/docs/linux/man/1-optirun/">optirun</a></code>(1). In the latter case, a bug into the Intel ICD will make the application crash.</dl>
+<dd>If set to an non-empty value, contrary the Khronos specification, the loader will not check that the loaded ICDs declare the cl_khr_icd extension. It will also use the clGetPlatformInfo from the dispatch table if no such function is globally available. You may need to define this environment variable if you are using not (fully) compliant ICD, or if you are using the Intel ICD together with <code>optirun</code>(1). In the latter case, a bug into the Intel ICD will make the application crash.</dl>
 <p> If set to the <i>debug</i> value, some additional messages will be printed in debug mode (see <code>OCL_ICD_DEBUG</code> below). </p>
 <p> <code>OCL_ICD_PLATFORM_SORT</code></p>
 <dl>
-<dd>Allows one to choose the way platforms are sorted when presented to programs through <code><a href="/docs/linux/man/3-clgetplatformids/">clGetPlatformIDs</a></code>(3). Current provided algorithms are: </p>
+<dd>Allows one to choose the way platforms are sorted when presented to programs through <code>clGetPlatformIDs</code>(3). Current provided algorithms are: </p>
 <dl>
 <dd>&bull; <code>devices</code>: first, list platforms that support most GPU, then most CPU then most accelerators. If <code>OCL_ICD_PLATFORM_SORT</code> is not set or set to an unknown value, this algorithm is used.</dl>
 <dl>

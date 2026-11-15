@@ -312,7 +312,7 @@ description: "ssh – OpenSSH remote login client"
 <dd> Requests that standard input and output on the client be forwarded to <i>host</i> on <i>port</i> over the secure channel. Implies &#8211;<code>N</code> &#8211;<code>T</code> <code>ExitOnForwardFailure</code> and <code>ClearAllForwardings</code> though these can be overridden in the configuration file or using &#8211;<code>o</code> command line options. </p>
 <dt><code>-w </code> <i>local_tun </i>[: <i>remote_tun</i> ]</p>
 <dd>
-<dd>Requests tunnel device forwarding with the specified <a href="/docs/linux/man/4-tun/">tun</a>(4) devices between the client (<i>local_tun</i> ) and the server (<i>remote_tun</i> ) </p>
+<dd>Requests tunnel device forwarding with the specified tun(4) devices between the client (<i>local_tun</i> ) and the server (<i>remote_tun</i> ) </p>
 <p> The devices may be specified by numerical ID or the keyword &#8220;any&#8221; which uses the next available tunnel device. If <i>remote_tun</i> is not specified, it defaults to &#8220;any&#8221; See also the <code>Tunnel</code> and <code>TunnelDevice</code> directives in ssh_config5. </p>
 <p> If the <code>Tunnel</code> directive is unset, it will be set to the default tunnel mode, which is &#8220;point-to-point&#8221; If a different <code>Tunnel</code> forwarding mode it desired, then it should be specified before &#8211;<code>w</code> </p>
 <dt><code>-X</code></p>
@@ -332,7 +332,7 @@ description: "ssh – OpenSSH remote login client"
 <p> The OpenSSH SSH client supports SSH protocol 2. </p>
 <p> The methods available for authentication are: GSSAPI-based authentication, host-based authentication, public key authentication, keyboard-interactive authentication, and password authentication. Authentication methods are tried in the order specified above, though <code>PreferredAuthentications</code> can be used to change the default order. </p>
 <p> Host-based authentication works as follows: If the machine the user logs in from is listed in /etc/hosts.equiv or /etc/ssh/shosts.equiv on the remote machine, the user is non-root and the user names are the same on both sides, or if the files ~/.rhosts or ~/.shosts exist in the user&#8217;s home directory on the remote machine and contain a line containing the name of the client machine and the name of the user on that machine, the user is considered for login. Additionally, the server <i>must</i> be able to verify the client&#8217;s host key (see the description of /etc/ssh/ssh_known_hosts and ~/.ssh/known_hosts below) for login to be permitted. This authentication method closes security holes due to IP spoofing, DNS spoofing, and routing spoofing. [Note to the administrator: /etc/hosts.equiv ~/.rhosts and the rlogin/rsh protocol in general, are inherently insecure and should be disabled if security is desired.] </p>
-<p> Public key authentication works as follows: The scheme is based on public-key cryptography, using cryptosystems where encryption and decryption are done using separate keys, and it is unfeasible to derive the decryption key from the encryption key. The idea is that each user creates a public/private key pair for authentication purposes. The server knows the public key, and only the user knows the private key. <code>ssh</code> implements public key authentication protocol automatically, using one of the DSA, ECDSA, Ed25519 or RSA algorithms. The HISTORY section of <a href="/docs/linux/man/8-ssl/">ssl</a>(8) (on non-OpenBSD systems, see <a rel="nofollow" href="http://www.openbsd.org/cgi-bin/man.cgi?query=ssl">http://www.openbsd.org/cgi-bin/man.cgi?query=ssl</a>&amp;sektion=8#HISTORY) contains a brief discussion of the DSA and RSA algorithms. </p>
+<p> Public key authentication works as follows: The scheme is based on public-key cryptography, using cryptosystems where encryption and decryption are done using separate keys, and it is unfeasible to derive the decryption key from the encryption key. The idea is that each user creates a public/private key pair for authentication purposes. The server knows the public key, and only the user knows the private key. <code>ssh</code> implements public key authentication protocol automatically, using one of the DSA, ECDSA, Ed25519 or RSA algorithms. The HISTORY section of ssl(8) (on non-OpenBSD systems, see <a rel="nofollow" href="http://www.openbsd.org/cgi-bin/man.cgi?query=ssl">http://www.openbsd.org/cgi-bin/man.cgi?query=ssl</a>&amp;sektion=8#HISTORY) contains a brief discussion of the DSA and RSA algorithms. </p>
 <p> The file ~/.ssh/authorized_keys lists the public keys that are permitted for logging in. When the user logs in, the <code>ssh</code> program tells the server which key pair it would like to use for authentication. The client proves that it has access to the private key and the server checks that the corresponding public key is authorized to accept the account. </p>
 <p> The server may inform the client of errors that prevented public key authentication from succeeding after authentication completes using a different method. These may be viewed by increasing the <code>LogLevel</code> to <code>DEBUG</code> or higher (e.g. by using the &#8211;<code>v</code> flag). </p>
 <p> The user creates their key pair by running ssh-keygen1. This stores the private key in ~/.ssh/id_dsa (DSA), ~/.ssh/id_ecdsa (ECDSA), ~/.ssh/id_ecdsa_sk (authenticator-hosted ECDSA), ~/.ssh/id_ed25519 (Ed25519), ~/.ssh/id_ed25519_sk (authenticator-hosted Ed25519), or ~/.ssh/id_rsa (RSA) and stores the public key in ~/.ssh/id_dsa.pub (DSA), ~/.ssh/id_ecdsa.pub (ECDSA), ~/.ssh/id_ecdsa_sk.pub (authenticator-hosted ECDSA), ~/.ssh/id_ed25519.pub (Ed25519), ~/.ssh/id_ed25519_sk.pub (authenticator-hosted Ed25519), or ~/.ssh/id_rsa.pub (RSA) in the user&#8217;s home directory. The user should then copy the public key to ~/.ssh/authorized_keys in their home directory on the remote machine. The authorized_keys file corresponds to the conventional ~/.rhosts file, and has one key per line, though the lines can be very long. After this, the user can log in without giving the password. </p>
@@ -412,7 +412,7 @@ Are you sure you want to continue connecting (yes/no)?
 </blockquote>
 <p> See the <code>VerifyHostKeyDNS</code> option in ssh_config5 for more information.</p>
 <h2>SSH-BASED VIRTUAL PRIVATE NETWORKS</h2>
-<p> <code>ssh</code> contains support for Virtual Private Network (VPN) tunnelling using the <a href="/docs/linux/man/4-tun/">tun</a>(4) network pseudo-device, allowing two networks to be joined securely. The sshd_config5 configuration option <code>PermitTunnel</code> controls whether the server supports this, and at what level (layer 2 or 3 traffic). </p>
+<p> <code>ssh</code> contains support for Virtual Private Network (VPN) tunnelling using the tun(4) network pseudo-device, allowing two networks to be joined securely. The sshd_config5 configuration option <code>PermitTunnel</code> controls whether the server supports this, and at what level (layer 2 or 3 traffic). </p>
 <p> The following example would connect client network 10.0.50.0/24 with remote network 10.0.99.0/24 using a point-to-point connection from 10.1.1.1 to 10.1.1.2, provided that the SSH server running on the gateway to the remote network, at 192.168.1.15, allows it. </p>
 <p> On the client: </p>
 <blockquote>
@@ -429,12 +429,12 @@ Are you sure you want to continue connecting (yes/no)?
 # route add 10.0.50.0/24 10.1.1.1
 </pre>
 </blockquote>
-<p> Client access may be more finely tuned via the /root/.ssh/authorized_keys file (see below) and the <code>PermitRootLogin</code> server option. The following entry would permit connections on <a href="/docs/linux/man/4-tun/">tun</a>(4) device 1 from user &#8220;jane&#8221; and on tun device 2 from user &#8220;john&#8221; if <code>PermitRootLogin</code> is set to &#8220;forced-commands-only&#8221; </p>
+<p> Client access may be more finely tuned via the /root/.ssh/authorized_keys file (see below) and the <code>PermitRootLogin</code> server option. The following entry would permit connections on tun(4) device 1 from user &#8220;jane&#8221; and on tun device 2 from user &#8220;john&#8221; if <code>PermitRootLogin</code> is set to &#8220;forced-commands-only&#8221; </p>
 <pre>
 tunnel=&quot;1&quot;,command=&quot;sh /etc/netstart tun1&quot; ssh-rsa ... jane
 tunnel=&quot;2&quot;,command=&quot;sh /etc/netstart tun2&quot; ssh-rsa ... john
 </pre>
-<p> Since an SSH-based setup entails a fair amount of overhead, it may be more suited to temporary setups, such as for wireless VPNs. More permanent VPNs are better provided by tools such as <a href="/docs/linux/man/8-ipsecctl/">ipsecctl</a>(8) and <a href="/docs/linux/man/8-isakmpd/">isakmpd</a>(8).</p>
+<p> Since an SSH-based setup entails a fair amount of overhead, it may be more suited to temporary setups, such as for wireless VPNs. More permanent VPNs are better provided by tools such as ipsecctl(8) and isakmpd(8).</p>
 <h2>ENVIRONMENT</h2>
 <p> <code>ssh</code> will normally set the following environment variables:</p>
 <dl>
@@ -534,7 +534,7 @@ tunnel=&quot;2&quot;,command=&quot;sh /etc/netstart tun2&quot; ssh-rsa ... john
 <h2>EXIT STATUS</h2>
 <p> <code>ssh</code> exits with the exit status of the remote command or with 255 if an error occurred.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-scp/">scp</a>(1), <a href="/docs/linux/man/1-sftp/">sftp</a>(1), ssh-add1, ssh-agent1, ssh-argv01, ssh-keygen1, ssh-keyscan1, <a href="/docs/linux/man/4-tun/">tun</a>(4), ssh_config5, ssh-keysign8, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
+<p> <a href="/docs/linux/man/1-scp/">scp</a>(1), <a href="/docs/linux/man/1-sftp/">sftp</a>(1), ssh-add1, ssh-agent1, ssh-argv01, ssh-keygen1, ssh-keyscan1, tun(4), ssh_config5, ssh-keysign8, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
 <h2>STANDARDS</h2>
 <dl>
 <dt>

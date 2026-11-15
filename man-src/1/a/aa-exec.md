@@ -32,5 +32,5 @@ description: "aa-exec – confine a program with the specified AppArmor profile"
 <h2>BUGS</h2>
 <p> If you find any bugs, please report them at &lt;<a rel="nofollow" href="https://gitlab.com/apparmor/apparmor/-/issues">https://gitlab.com/apparmor/apparmor/-/issues</a>&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-aa-stack/">aa-stack</a></code>(8), <code><a href="/docs/linux/man/8-aa-namespace/">aa-namespace</a></code>(8), <code><a href="/docs/linux/man/7-apparmor/">apparmor</a></code>(7), <code><a href="/docs/linux/man/5-apparmor-d/">apparmor.d</a></code>(5), <code><a href="/docs/linux/man/3-aa_change_profile/">aa_change_profile</a></code>(3), <code><a href="/docs/linux/man/3-aa_change_onexec/">aa_change_onexec</a></code>(3) and &lt;<a rel="nofollow" href="https://wiki.apparmor.net">https://wiki.apparmor.net</a>&gt;. </p>
+<p> <code>aa-stack</code>(8), <code>aa-namespace</code>(8), <code><a href="/docs/linux/man/7-apparmor/">apparmor</a></code>(7), <code><a href="/docs/linux/man/5-apparmor-d/">apparmor.d</a></code>(5), <code>aa_change_profile</code>(3), <code>aa_change_onexec</code>(3) and &lt;<a rel="nofollow" href="https://wiki.apparmor.net">https://wiki.apparmor.net</a>&gt;. </p>
 <h2>Index</h2>

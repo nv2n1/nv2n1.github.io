@@ -45,6 +45,6 @@ description: "g_mdmat – calculates residue contact maps"
 <p> <code>-nlevels</code><i> int</i><code> 40</code><br />
 &nbsp;<wbr>Discretize distance in&nbsp;<wbr>&nbsp;<wbr>levels </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

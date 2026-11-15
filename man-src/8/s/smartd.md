@@ -50,7 +50,7 @@ description: "smartd – SMART Disk Monitoring Daemon"
 <dt><code>-l FACILITY, &#8211;logfacility=FACILITY</code></p>
 <dd>Uses syslog facility FACILITY to log the messages from <code>smartd</code>. Here FACILITY is one of <i>local0</i>, <i>local1</i>, &#8230;, <i>local7</i>, or <i>daemon</i> [default]. If this command-line option is not used, then by default messages from <code>smartd</code> are logged to the facility <i>daemon</i>. </p>
 <p> If you would like to have <code>smartd</code> messages logged somewhere other than the default location, include (for example) &#8216;-l local3&#8217; in its start up argument list. Tell the syslog daemon to log all messages from facility <code>local3</code> to (for example) &#8216;/var/log/smartd.log&#8217;. </p>
-<p> For more detailed information, please refer to the man pages for the local syslog daemon, typically <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8), <code><a href="/docs/linux/man/8-syslog-ng/">syslog-ng</a></code>(8) or <code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a></code>(8).</p>
+<p> For more detailed information, please refer to the man pages for the local syslog daemon, typically <code>syslogd</code>(8), <code><a href="/docs/linux/man/8-syslog-ng/">syslog-ng</a></code>(8) or <code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a></code>(8).</p>
 <dt><code>-n, &#8211;no-fork</code></p>
 <dd>Do not fork into background; this is useful when executed from modern init methods like initng, minit, supervise or systemd.</p>
 <dt><code>-p NAME, &#8211;pidfile=NAME</code></p>

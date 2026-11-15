@@ -38,6 +38,6 @@ description: "fax2ps – convert a TIFF facsimile to compressed PostScript™"
 <h2>BUGS</h2>
 <p> <i>fax2ps</i> should probably figure out when it is doing a poor job of compressing the output and just generate PostScript to image the bitmap raster instead.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tiff2ps/">tiff2ps</a></code>(1), <code><a href="/docs/linux/man/3-libtiff/">libtiff</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/1-tiff2ps/">tiff2ps</a></code>(1), <code>libtiff</code>(3) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
 <h2>Index</h2>

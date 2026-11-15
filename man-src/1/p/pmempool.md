@@ -52,5 +52,5 @@ description: "pmempool – Persistent Memory Pool Management Tool"
 <dd> Updates the pool to the latest available layout version.</dl>
 <p> In order to get more information about specific <i>command</i> you can use <code>pmempool help &lt;command&gt;.</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-libpmemlog/">libpmemlog</a>(3) <a href="/docs/linux/man/3-libpmemblk/">libpmemblk</a>(3) <a href="/docs/linux/man/3-libpmemobj/">libpmemobj</a>(3)</code> </p>
+<p> <code>libpmemlog(3) libpmemblk(3) libpmemobj(3)</code> </p>
 <h2>Index</h2>

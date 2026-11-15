@@ -16,7 +16,7 @@ description: "dbcolstatscores – compute z-scores or t-scores for each value in
 <p> You may recall from your statistics class that a z-score is simply the value normalized by mean and standard deviation, so that 0.0 is the mean and positive or negative values are multiples of the standard deviation. It assumes data follows a normal (Gaussian) distribution. </p>
 <p> T-score scales the z-score to match a mean of 50 and a standard deviation of 10. This program allows generalized t-scores that use any mean and standard deviation. </p>
 <p> Other scales are sometimes used as well. The Wechsler Adult Intelligence Scale (one type of <font SIZE="-1">IQ</font> test) is adjusted to a mean of 100 and a standard deviation of 15. Other tests scale to other standard deviations. </p>
-<p> This program requires two passes over the data, and consumes <a href="/docs/linux/man/1-o/">O</a>(1) memory and O(number of rows) disk space.</p>
+<p> This program requires two passes over the data, and consumes O(1) memory and O(number of rows) disk space.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code> or <code>&#8211;include-non-numeric</code></p>

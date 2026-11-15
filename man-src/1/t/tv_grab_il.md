@@ -48,5 +48,5 @@ description: "tv_grab_il – Grab TV listings for Israel."
 <h2>AUTHOR</h2>
 <p> lightpriest. This documentation and parts of the code based on various other tv_grabbers from the XMLTV-project.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5). </p>
+<p> <i>xmltv</i>(5). </p>
 <h2>Index</h2>

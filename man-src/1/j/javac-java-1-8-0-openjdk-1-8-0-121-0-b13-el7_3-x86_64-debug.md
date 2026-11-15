@@ -510,7 +510,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <dt>&bull;</p>
 <dd><a href="/docs/linux/man/1-jdb/">jdb</a>(1)</p>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-javah/">javah</a>(1)</p>
+<dd>javah(1)</p>
 <dt>&bull;</p>
 <dd><a href="/docs/linux/man/1-javadoc/">javadoc</a>(1)</p>
 <dt>&bull;</p>

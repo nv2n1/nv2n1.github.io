@@ -13,7 +13,7 @@ description: "omshell – OMAPI Command Shell"
 <p> <code>omshell</code></p>
 <h2>DESCRIPTION</h2>
 <p> The OMAPI Command Shell, omshell, provides an interactive way to connect to, query, and possibly change, the ISC DHCP Server&#8217;s state via OMAPI, the Object Management API. By using OMAPI and omshell, you do not have to stop, make changes, and then restart the DHCP server, but can make the changes while the server is running. Omshell provides a way of accessing OMAPI. </p>
-<p> OMAPI is simply a communications mechanism that allows you to manipulate objects. In order to actually <i>use</i> omshell, you <i>must</i> understand what objects are available and how to use them. Documentation for OMAPI objects can be found in the documentation for the server that provides them &#8211; for example, in the <code><a href="/docs/linux/man/1-dhcpd/">dhcpd</a>(1)</code> manual page and the <code><a href="/docs/linux/man/1-dhclient/">dhclient</a>(1)</code> manual page.</p>
+<p> OMAPI is simply a communications mechanism that allows you to manipulate objects. In order to actually <i>use</i> omshell, you <i>must</i> understand what objects are available and how to use them. Documentation for OMAPI objects can be found in the documentation for the server that provides them &#8211; for example, in the <code>dhcpd(1)</code> manual page and the <code>dhclient(1)</code> manual page.</p>
 <h2>CONTRIBUTIONS</h2>
 <p> This software is free software. At various times its development has been underwritten by various organizations, including the ISC and Vixie Enterprises. The development of 3.0 has been funded almost entirely by Nominum, Inc. </p>
 <p> At this point development is being shepherded by Ted Lemon, and hosted by the ISC, but the future of this project depends on you. If you have features you want, please consider implementing them.</p>
@@ -195,7 +195,7 @@ obj: &lt;null&gt;
 <h2>HELP</h2>
 <p> The <code>help</code> command will print out all of the commands available in omshell, with some syntax pointers.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-dhcpctl/">dhcpctl</a>(3), <a href="/docs/linux/man/3-omapi/">omapi</a>(3), <a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8), <a href="/docs/linux/man/8-dhclient/">dhclient</a>(8), <a href="/docs/linux/man/5-dhcpd-conf/">dhcpd.conf</a>(5), <a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a>(5).</p>
+<p> <a href="/docs/linux/man/3-dhcpctl/">dhcpctl</a>(3), omapi(3), <a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8), <a href="/docs/linux/man/8-dhclient/">dhclient</a>(8), <a href="/docs/linux/man/5-dhcpd-conf/">dhcpd.conf</a>(5), <a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a>(5).</p>
 <h2>AUTHOR</h2>
 <p> <code>omshell</code> was written by Ted Lemon of Nominum, Inc. Information about Nominum can be found at <code><a rel="nofollow" href="http://www.nominum.com.">http://www.nominum.com.</a></code> This preliminary documentation was written by Wendy Verschoor of Nominum, Inc., while she was testing omshell. </p>
 <h2>Index</h2>

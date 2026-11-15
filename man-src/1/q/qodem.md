@@ -154,7 +154,7 @@ description: "qodem – Qodem Terminal Emulator"
 <dt><code>Alt-9 Serial Port</code></p>
 <dd> This opens or closes the serial port. If already connected to a non-serial/modem remote host, this does nothing.</p>
 <dt><code>Alt-B Beeps &amp; Bells</code></p>
-<dd> This toggles beep support on or off. When beep support is on, beeps from the remote host will be played by qodem. In LINUX emulation, qodem supports setting the tone and duration of the beep as specified in <code><a href="/docs/linux/man/4-console-codes/">console-codes</a></code>(4).</p>
+<dd> This toggles beep support on or off. When beep support is on, beeps from the remote host will be played by qodem. In LINUX emulation, qodem supports setting the tone and duration of the beep as specified in <code>console-codes</code>(4).</p>
 <dt><code>Alt-E Half/Full Duplex</code></p>
 <dd> This toggles between half and full duplex.</p>
 <dt><code>Alt-I Qodem Information</code></p>
@@ -192,11 +192,13 @@ recorded in the session log. </p>
 <p> Since scripts are communicating with the remote system and not Qodem itself, they are unable to script Qodem&#8217;s behavior, e.g. change the terminal emulation, hangup and dial another phonebook entry, download a file, etc. However, they can be written in any language, and they can be tested outside Qodem. </p>
 <p> Scripts replace the user, and as such have similar constraints: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Script standard input, output, and error must all be in UTF-8 encoding. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Scripts should send carriage return&nbsp;<wbr>(0x0D, or&nbsp;<wbr>)&nbsp;<wbr>instead of new<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Scripts should send carriage return&nbsp;<wbr>(0x0D, or&nbsp;<wbr>
+)&nbsp;<wbr>instead of new<br />
 &nbsp;<wbr>line&nbsp;<wbr>(0x0A, or&nbsp;<wbr>
 )&nbsp;<wbr>to the remote side &#8211; the same as if a user<br />
 &nbsp;<wbr>pressed the Enter key.&nbsp;<wbr>&nbsp;<wbr>They should expect to see either bare<br />
-&nbsp;<wbr>carriage return&nbsp;<wbr>(0x0D, or&nbsp;<wbr>)&nbsp;<wbr>or carriage return followed by<br />
+&nbsp;<wbr>carriage return&nbsp;<wbr>(0x0D, or&nbsp;<wbr>
+)&nbsp;<wbr>or carriage return followed by<br />
 &nbsp;<wbr>newline&nbsp;<wbr>(0x0D 0x0A, or&nbsp;<wbr>
 )&nbsp;<wbr>from the remote side. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Input and output translate byte translation&nbsp;<wbr>(the Alt-A Translate Tables)&nbsp;<wbr>are honored for scripts. </p>
@@ -254,7 +256,7 @@ recorded in the session log. </p>
 <dd> Qodem options/configuration file. Inline comments describe the options. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xqodem/">xqodem</a>(1),</code> <a href="/docs/linux/man/1-mm/">mm</a>(1),<code> <a href="/docs/linux/man/1-kermit/">kermit</a>(1),</code> <a href="/docs/linux/man/1-gkermit/">gkermit</a>(1),<code> <a href="/docs/linux/man/1-minicom/">minicom</a>(1),</code> <a href="/docs/linux/man/1-rlogin/">rlogin</a>(1),<code> <a href="/docs/linux/man/1-rsh/">rsh</a>(1),</code> <a href="/docs/linux/man/1-ssh/">ssh</a>(1),<code> <a href="/docs/linux/man/1-telnet/">telnet</a>(1),</code> <a href="/docs/linux/man/1-xterm/">xterm</a>(1),<code> <a href="/docs/linux/man/1-vttest/">vttest</a>(1),</code> <a href="/docs/linux/man/4-console-codes/">console-codes</a>(4) </p>
+<p> <code><a href="/docs/linux/man/1-xqodem/">xqodem</a>(1),</code> mm(1),<code> <a href="/docs/linux/man/1-kermit/">kermit</a>(1),</code> <a href="/docs/linux/man/1-gkermit/">gkermit</a>(1),<code> <a href="/docs/linux/man/1-minicom/">minicom</a>(1),</code> <a href="/docs/linux/man/1-rlogin/">rlogin</a>(1),<code> <a href="/docs/linux/man/1-rsh/">rsh</a>(1),</code> <a href="/docs/linux/man/1-ssh/">ssh</a>(1),<code> <a href="/docs/linux/man/1-telnet/">telnet</a>(1),</code> <a href="/docs/linux/man/1-xterm/">xterm</a>(1),<code> vttest(1),</code> console-codes(4) </p>
 <h2>BUGS</h2>
 <p> The screensaver might not load under all circumstances even after the timeout has passed. </p>
 <h2>HOMEPAGE</h2>

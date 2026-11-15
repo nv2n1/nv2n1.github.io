@@ -41,4 +41,4 @@ description: "gshadow – shadowed group file"
 <dl>
 <dd>Secure group account information.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-gpasswd/">gpasswd</a></code>(5), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/8-grpck/">grpck</a></code>(8), <code><a href="/docs/linux/man/8-grpconv/">grpconv</a></code>(8), <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1). </p>
+<p><code>gpasswd</code>(5), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/8-grpck/">grpck</a></code>(8), <code><a href="/docs/linux/man/8-grpconv/">grpconv</a></code>(8), <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1). </p>

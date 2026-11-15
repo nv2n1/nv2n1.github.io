@@ -86,7 +86,7 @@ int main()
 &nbsp;<wbr>&nbsp;log2(0.125) = -3<br />
 &nbsp;<wbr>&nbsp;log2(0x020f) = 9.04166 (highest set bit is in position 9)<br />
 &nbsp;<wbr>&nbsp;base-5 logarithm of 125 = 3<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-log2/">log2</a><code>(1)</code> = 0<br />
+&nbsp;<wbr>&nbsp;log2<code>(1)</code> = 0<br />
 &nbsp;<wbr>&nbsp;log2(+Inf) = inf<br />
 &nbsp;<wbr>&nbsp;log2<code>(0)</code> = -inf<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errno == ERANGE: Numerical result out of range<br />

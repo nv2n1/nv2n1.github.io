@@ -69,7 +69,7 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;Before <a href="/docs/linux/man/2-seekpos/">seekpos</a><code>(2)</code>, size of the get area is 5 with 5 read positions available<br />
+<p>&nbsp;<wbr>&nbsp;Before seekpos<code>(2)</code>, size of the get area is 5 with 5 read positions available<br />
 &nbsp;<wbr>&nbsp;seekpos() returns 2.<br />
 &nbsp;<wbr>&nbsp;After the call, size of the get area is 5 with 3 read positions available</p>
 <h2>See also</h2>

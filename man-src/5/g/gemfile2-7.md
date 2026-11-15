@@ -22,7 +22,7 @@ description: "Gemfile – A format for describing gem dependencies for Ruby prog
 <p> It is possible, but not recommended as of Bundler 1.7, to add multiple global <code>source</code> lines. Each of these <code>source</code>s <code>MUST</code> be a valid Rubygems repository. </p>
 <p> Sources are checked for gems following the heuristics described in <i>SOURCE PRIORITY</i>. If a gem is found in more than one global source, Bundler will print a warning after installing the gem indicating which source was used, and listing the other sources where the gem is available. A specific source can be selected for gems that need to use a non-standard repository, suppressing this warning, by using the <i></i><code>:source</code> option or a <i></i><code>source</code> block.</p>
 <h3>Credentials</h3>
-<p>Some gem sources require a username and password. Use bundle <a href="/docs/linux/man/1-config/">config</a>(1) <i>bundle-config.1.html</i> to set the username and password for any of the sources that need it. The command must be run once on each computer that will install the Gemfile, but this keeps the credentials from being stored in plain text in version control.</p>
+<p>Some gem sources require a username and password. Use bundle config(1) <i>bundle-config.1.html</i> to set the username and password for any of the sources that need it. The command must be run once on each computer that will install the Gemfile, but this keeps the credentials from being stored in plain text in version control.</p>
 <dl>
 <dd>
 <pre>bundle config gems.example.com user:password</pre>

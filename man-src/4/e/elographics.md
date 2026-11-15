@@ -49,7 +49,7 @@ description: "elographics – Elographics input driver"
 <dt><code>Option N&#8217;34&#8217;ModelN&#8217;34&#8217; N&#8217;34&#8217;</code><i>string</i><code>N&#8217;34&#8217;</code></p>
 <dd>The touchscreen model. Default: unset. Supported models: &quot;Sunit dSeries&quot;.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xorgconfig/">xorgconfig</a>(1), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
+<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), xorgconfig(1), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>Authors</h2>
 <p>Authors include:<br />
 &nbsp;<wbr>Patrick Lecoanet </p>

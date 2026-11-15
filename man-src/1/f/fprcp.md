@@ -41,6 +41,6 @@ description: "fprcp – Free Pascal windres preprocessor program."
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-windres/">windres</a></code>(1) </p>
+<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code>windres</code>(1) </p>
 </dl>
 <h2>Index</h2>

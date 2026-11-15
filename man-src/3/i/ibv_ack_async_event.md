@@ -122,7 +122,7 @@ if (ibv_get_async_event(ctx, &amp;async_event)) {
 ibv_ack_async_event(&amp;async_event);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a></code>(3)</p>
+<p> <code>ibv_open_device</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

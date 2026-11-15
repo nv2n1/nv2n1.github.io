@@ -649,5 +649,5 @@ Tcl_DecrRefCount(path);</pre></dl>
  
 
  The <b>Tcl_FSChdirProc</b> changes the applications current working directory to the value specified in <i>pathPtr</i>. The function returns -1 on error or 0 on success.
-<h2>See Also</h2><a HREF="/docs/linux/man/n-cd/">cd</a>(n), <a HREF="/docs/linux/man/n-file/">file</a>(n), <a HREF="/docs/linux/man/n-filename/">filename</a>(n), <a HREF="/docs/linux/man/n-load/">load</a>(n), <a HREF="/docs/linux/man/n-open/">open</a>(n), <a HREF="/docs/linux/man/n-pwd/">pwd</a>(n), <a HREF="/docs/linux/man/n-source/">source</a>(n), <a HREF="/docs/linux/man/n-unload/">unload</a>(n)
+<h2>See Also</h2>cd(n), file(n), filename(n), load(n), open(n), pwd(n), source(n), unload(n)
 <h2>Keywords</h2>stat, access, filesystem, vfs, virtual filesystem

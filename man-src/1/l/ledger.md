@@ -673,7 +673,7 @@ Here follows a note describing the posting.Liabilities : MasterCard $ - 200.00
 <dt><code>~/.ledgerrc </code></p>
 <dd> Your personal initializations.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-beancount/">beancount</a>(1), <a href="/docs/linux/man/1-hledger/">hledger</a>(1)</p>
+<p> beancount(1), hledger(1)</p>
 <h2>AUTHORS</h2>
 <p> An John Wiegley Aq johnw [at] newartisans.com </p>
 <h2>Index</h2>

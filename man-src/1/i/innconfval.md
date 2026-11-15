@@ -59,5 +59,5 @@ export MAXFORKS;
 <p> Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. </p>
 <p> <tt>$Id:</tt> innconfval.pod 9311 2011-08-06 20:18:42Z iulius $</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="//www.systutorials.com/docs/linux/man/3pm-INN::Config/">INN::Config</a></i>(3pm). </p>
+<p> <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i>INN::Config</i>(3pm). </p>
 <h2>Index</h2>

@@ -13,7 +13,7 @@ description: "mlx5dv_query_device – Query device capabilities specific to mlx5
 <code>int mlx5dv_query_device(struct ibv_context *ctx_in,</code>
 <code> struct mlx5dv_context *attrs_out);</code></pre>
 <h2>Description</h2>
-<p><code>mlx5dv_query_device()</code> Query HW device-specific information which is important for data-path, but isn&#8217;t provided by <code><a href="/docs/linux/man/3-ibv_query_device/">ibv_query_device</a></code>(3). </p>
+<p><code>mlx5dv_query_device()</code> Query HW device-specific information which is important for data-path, but isn&#8217;t provided by <code>ibv_query_device</code>(3). </p>
 <p> This function returns version, flags and compatibility mask. The version represents the format of the internal hardware structures that mlx5dv.h represents. Additions of new fields to the existed structures are handled by comp_mask field. </p>
 <pre>struct mlx5dv_sw_parsing_caps {
 uint32_t sw_parsing_offloads; /* Use enum mlx5dv_sw_parsing_offloads */
@@ -84,7 +84,7 @@ MLX5DV_FLOW_ACTION_FLAGS_ESP_AES_GCM_TX_IV_IS_ESN = 1 &lt;&lt; 4, /* Flow action
 <h2>Notes</h2>
 <p>&nbsp;*&nbsp;Compatibility mask&nbsp;(comp_mask)&nbsp;is in/out field.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7), <code><a href="/docs/linux/man/3-ibv_query_device/">ibv_query_device</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7), <code>ibv_query_device</code>(3)</p>
 <h2>Authors</h2>
 <dl COMPACT>
 <dt>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</p>

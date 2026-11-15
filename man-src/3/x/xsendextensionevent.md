@@ -27,7 +27,7 @@ XSendExtensionEvent - send input extension events to a client
 window, determines which clients should receive the specified
 events, and ignores any active grabs. This request requires you
 to pass an event class list. For a discussion of the valid
-event class names, see <a HREF="//www.systutorials.com/docs/linux/man/3-XOpenDevice/">XOpenDevice</a>(3) This
+event class names, see XOpenDevice(3) This
 request uses the w argument to identify the destination window
 as follows:
  * If w is PointerWindow,the destination window is the window

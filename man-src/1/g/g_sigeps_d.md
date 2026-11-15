@@ -49,6 +49,6 @@ description: "sigeps – convert c6/12 or c6/cn combinations to and from sigma/e
 <p> <code>-sigfac</code><i> real</i><code> 0.7 </code><br />
 &nbsp;<wbr>Factor in front of sigma for starting the plot </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

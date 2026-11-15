@@ -25,5 +25,5 @@ description: "hwloc-dump-hwdata – Dump topology and locality information from 
 <dt><code>Intel Knights Landing memory-side cache characteristics</code></p>
 <dd> gathered from specific SMBIOS entries such as <i>/sys/firmware/dmi/entries/14-*</i> and <i>/sys/firmware/dmi/entries/160-*</i>, and saved in file <i>knl_memoryside_cache</i>.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-lstopo/">lstopo</a>(1) </p>
+<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1) </p>
 <h2>Index</h2>

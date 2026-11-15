@@ -14,7 +14,7 @@ description: "sserver – sample Kerberos version 5 server"
 <p>sserver and <i><a href="/docs/linux/man/1-sclient/">sclient</a>(1)</i> are a simple demonstration client/server application. When sclient connects to sserver, it performs a Kerberos authentication, and then sserver returns to sclient the Kerberos principal which was used for the Kerberos authentication. It makes a good test that Kerberos has been successfully installed on a machine. </p>
 <p> The service name used by sserver and sclient is sample. Hence, sserver will require that there be a keytab entry for the service <code>sample/hostname.domain.name [at] REALM.NAME</code>. This keytab is generated using the <i><a href="/docs/linux/man/1-kadmin/">kadmin</a>(1)</i> program. The keytab file is usually installed as <code>FILE:/etc/krb5.keytab</code>. </p>
 <p> The <code>-S</code> option allows for a different keytab than the default. </p>
-<p> sserver is normally invoked out of <a href="/docs/linux/man/8-inetd/">inetd</a>(8), using a line in <code>/etc/inetd.conf</code> that looks like this: </p>
+<p> sserver is normally invoked out of inetd(8), using a line in <code>/etc/inetd.conf</code> that looks like this: </p>
 <pre>sample stream tcp nowait root /usr/local/sbin/sserver sserver</pre>
 <p>Since <code>sample</code> is normally not a port defined in <code>/etc/services</code>, you will usually have to add a line to <code>/etc/services</code> which looks like this: </p>
 <pre>sample 13135/tcp</pre>
@@ -49,7 +49,7 @@ You are nlgilman [at] JIMI.MIT.EDU</pre>
  &quot;No such file or directory&quot;</pre>
 <p>This probably means sserver couldn&#8217;t find the keytab file. It was probably not installed in the proper directory.</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-sclient/">sclient</a>(1)</i>, <a href="/docs/linux/man/5-services/">services</a>(5), <a href="/docs/linux/man/8-inetd/">inetd</a>(8)</p>
+<p><i><a href="/docs/linux/man/1-sclient/">sclient</a>(1)</i>, <a href="/docs/linux/man/5-services/">services</a>(5), inetd(8)</p>
 <h2>Author</h2>
 <p>MIT</p>
 <h2>Copyright</h2>

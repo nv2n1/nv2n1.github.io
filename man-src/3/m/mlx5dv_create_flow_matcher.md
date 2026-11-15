@@ -36,7 +36,7 @@ mlx5dv_create_flow_matcher(struct ibv_context *context,
 
  
 
- Please see <a HREF="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a>(3) for context.
+ Please see ibv_open_device(3) for context.
 
 <h3>attr</h3>
 
@@ -58,7 +58,7 @@ struct mlx5dv_flow_matcher_attr {
 <dt>flags
 <dd> special flags to control rule: 0: Nothing or zero value means matcher will store ingress flow rules. IBV_FLOW_ATTR_FLAGS_EGRESS: Specified this matcher will store egress flow rules.
 <dt>priority
-<dd> See <a HREF="/docs/linux/man/3-ibv_create_flow/">ibv_create_flow</a>(3).
+<dd> See ibv_create_flow(3).
 <dt>match_criteria_enable
 <dd> What match criteria is configured in match_mask, passed in device spec format.</dl>
 
@@ -95,7 +95,7 @@ struct mlx5dv_flow_match_parameters {
 
  
 
- <a HREF="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a>(3), <a HREF="/docs/linux/man/3-ibv_create_flow/">ibv_create_flow</a>(3)
+ ibv_open_device(3), ibv_create_flow(3)
 
 <h2>AUTHOR</h2>
 

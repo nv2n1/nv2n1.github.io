@@ -37,9 +37,9 @@ description: "smidiff – check differences between a pair of SMI or SPPI module
 <dd> The original module.</p>
 <dt><i>newmodule</i></p>
 <dd> The updated module.</dl>
-<p> If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code><a href="/docs/linux/man/3-smi_config/">smi_config</a>(3)</code> for more details.</p>
+<p> If a module argument represents a path name (identified by containing at least one dot or slash character), this is assumed to be the exact file to read. Otherwise, if a module is identified by its plain module name, it is searched according to libsmi internal rules. See <code>smi_config(3)</code> for more details.</p>
 <h2>SEE ALSO</h2>
-<p> The <code><a href="/docs/linux/man/3-libsmi/">libsmi</a></code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>.</p>
+<p> The <code>libsmi</code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>.</p>
 <h2>AUTHOR</h2>
 <p> (C) 2001 T. Klie, TU Braunschweig, Germany &lt;tklie [at] ibr.cs.tu-bs.de&gt;<br />
  (C) 2001 J. Schoenwaelder, TU Braunschweig, Germany &lt;schoenw [at] ibr.cs.tu-bs.de&gt;<br />

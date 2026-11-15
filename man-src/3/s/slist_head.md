@@ -27,7 +27,7 @@ description: "SLIST_EMPTY, SLIST_ENTRY, SLIST_FIRST, SLIST_FOREACH, SLIST_HEAD, 
 <h2>Description</h2>
 <p>These macros define and operate on doubly linked lists. </p>
 <p> In the macro definitions, <i>TYPE</i> is the name of a user-defined structure, that must contain a field of type <i>SLIST_ENTRY</i>, named <i>NAME</i>. The argument <i>HEADNAME</i> is the name of a user-defined structure that must be declared using the macro <code>SLIST_HEAD</code>(). </p>
-<p> A singly linked list is headed by a structure defined by the <code>SLIST_HEAD</code>() macro. This structure contains a single pointer to the first element on the list. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of <a href="/docs/linux/man/n-o/">O</a>(n) removal for arbitrary elements. New elements can be added to the list after an existing element or at the head of the list. An <i>SLIST_HEAD</i> structure is declared as follows: </p>
+<p> A singly linked list is headed by a structure defined by the <code>SLIST_HEAD</code>() macro. This structure contains a single pointer to the first element on the list. The elements are singly linked for minimum space and pointer manipulation overhead at the expense of O(n) removal for arbitrary elements. New elements can be added to the list after an existing element or at the head of the list. An <i>SLIST_HEAD</i> structure is declared as follows: </p>
 <p> SLIST_HEAD(HEADNAME, TYPE) head; </p>
 <p> where <i>struct HEADNAME</i> is the structure to be defined, and <i>struct TYPE</i> is the type of the elements to be linked into the list. A pointer to the head of the list can later be declared as: </p>
 <p> struct HEADNAME *headp; </p>
@@ -88,6 +88,6 @@ description: "SLIST_EMPTY, SLIST_ENTRY, SLIST_FIRST, SLIST_FOREACH, SLIST_HEAD, 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SLIST_INIT(&amp;head); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-insque/">insque</a></code>(3), <code><a href="/docs/linux/man/7-queue/">queue</a></code>(7)</p>
+<p><code>insque</code>(3), <code><a href="/docs/linux/man/7-queue/">queue</a></code>(7)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a></p>

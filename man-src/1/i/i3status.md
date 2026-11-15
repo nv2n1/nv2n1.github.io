@@ -117,7 +117,7 @@ i3status-xmobar | xmobar -o -t &quot;%StdinReader%&quot; -c &quot;[Run StdinRead
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-strftime/">strftime</a>(3), <a href="/docs/linux/man/1-date/">date</a>(1), <a href="/docs/linux/man/3-glob/">glob</a>(3), <a href="/docs/linux/man/1-dzen2/">dzen2</a>(1), <a href="/docs/linux/man/1-xmobar/">xmobar</a>(1)</p>
+<p> <a href="/docs/linux/man/3-strftime/">strftime</a>(3), <a href="/docs/linux/man/1-date/">date</a>(1), <a href="/docs/linux/man/3-glob/">glob</a>(3), <a href="/docs/linux/man/1-dzen2/">dzen2</a>(1), xmobar(1)</p>
 <h2>AUTHORS</h2>
 <p> Michael Stapelberg and contributors </p>
 <p> Thorsten Toepper </p>

@@ -153,7 +153,7 @@ end</p>
 <pre>
   funcalc -a &quot;1 2&quot; ...
 </pre>
-<p> The arguments are stored in an internal array and are accessed as strings via the <font SIZE="-1"><a href="/docs/linux/man/n-argv/">ARGV</a></font>(n) macro. For example, consider the following expression: </p>
+<p> The arguments are stored in an internal array and are accessed as strings via the <font SIZE="-1">ARGV</font>(n) macro. For example, consider the following expression: </p>
 <pre>
   local
     int pmin, pmax;
@@ -181,7 +181,7 @@ end</p>
   512 512 5
   512 512 5
 </pre>
-<p> Note that it is the user&#8217;s responsibility to ensure that the correct number of arguments are passed. The <font SIZE="-1"><a href="/docs/linux/man/n-argv/">ARGV</a></font>(n) macro returns a <font SIZE="-1">NULL</font> if a requested argument is outside the limits of the actual number of args, usually resulting in a <font SIZE="-1">SEGV</font> if processed blindly. To check the argument count, use the <font SIZE="-1">ARGC</font> macro: </p>
+<p> Note that it is the user&#8217;s responsibility to ensure that the correct number of arguments are passed. The <font SIZE="-1">ARGV</font>(n) macro returns a <font SIZE="-1">NULL</font> if a requested argument is outside the limits of the actual number of args, usually resulting in a <font SIZE="-1">SEGV</font> if processed blindly. To check the argument count, use the <font SIZE="-1">ARGC</font> macro: </p>
 <p>local long int seed = 1;<br />
 double limit = 0.8;<br />
 end</p>
@@ -239,5 +239,5 @@ cur-&gt;avg : E = (cur-&gt;x + cur-&gt;y) / 2.0;
 <p> will ensure that the pi and pha columns are read for each row, even if they are not processed in the inner event loop. The <code>explicit</code> statement can be placed anywhere. </p>
 <p> Finally, note that <code>funcalc</code> currently works on expressions involving <font SIZE="-1">FITS</font> binary tables and raw event files. We will consider adding support for image expressions at a later point, if there is demand for such support from the community.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

@@ -326,7 +326,7 @@ description: "fio – flexible I/O tester"
 <dd>
 <dl>
 <dt><code>sync</code></p>
-<dd> Basic <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2) I/O. <code><a href="/docs/linux/man/2-fseek/">fseek</a></code>(2) is used to position the I/O location.</p>
+<dd> Basic <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2) I/O. <code>fseek</code>(2) is used to position the I/O location.</p>
 <dt><code>psync</code></p>
 <dd> Basic <code><a href="/docs/linux/man/2-pread/">pread</a></code>(2) or <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2) I/O.</p>
 <dt><code>vsync</code></p>

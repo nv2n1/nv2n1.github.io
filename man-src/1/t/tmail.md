@@ -12,7 +12,7 @@ description: "tmail – Mail Delivery Module"
 <h2>SYNOPSIS</h2>
 <p> <code>tmail</code> <i>[-b format] [-D] [-f from_name] [-I inbox_specifier] user[+folder] &#8230;</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>tmail</i> delivers mail to a user&#8217;s INBOX or a designated folder. <i>tmail</i> may be configured as a drop-in replacement for <i><a href="/docs/linux/man/1-binmail/">binmail</a></i>(1), <i><a href="/docs/linux/man/1-mail-local/">mail.local</a></i>(1) or any program intended for use for mail delivery by a mail delivery program such as <i><a href="/docs/linux/man/8-sendmail/">sendmail</a></i>(8). </p>
+<p> <i>tmail</i> delivers mail to a user&#8217;s INBOX or a designated folder. <i>tmail</i> may be configured as a drop-in replacement for <i>binmail</i>(1), <i>mail.local</i>(1) or any program intended for use for mail delivery by a mail delivery program such as <i>sendmail</i>(8). </p>
 <p> <i>tmail</i> is intended to be used for direct delivery by the mailer daemon; <i><a href="/docs/linux/man/1-dmail/">dmail</a></i>(1) is the preferred tool for user applications, e.g. a mail delivery filter such as <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1)<i>.</i> If <i>tmail</i> is used for a user application, then the calling program must be aware of the restrictions noted below. </p>
 <p> When <i>tmail</i> exits, it returns exit status values to enable the mail delivery program to determine whether a message was delivered successfully or had a temporary (requeue for later delivery) or permanent (return to sender) failure. </p>
 <p> If the <i>+folder</i> extension is included in the user argument, <i>tmail</i> will attempt to deliver to the designated folder. If the folder does not exist or the extension is not included, the message is delivered to the user&#8217;s INBOX. If delivery is to INBOX and no INBOX currently exists, <i>tmail</i> will create a new INBOX, using the <code>-I</code> or <code>-b</code> flag if specified. <i>tmail</i> recognizes the format of an existing INBOX or folder, and appends the new message in that format. </p>
@@ -51,11 +51,11 @@ Mlocal, P=/usr/local/etc/tmail, F=lsDFMAw5:/|@qPrn+,
 <p> Absolute pathnames and <i>~user</i> specifications are not permitted in <i>+folder</i> extensions. </p>
 <p> Ordinary users are not permitted to use the <code>-I</code> flag. </p>
 <p> IMAP4 namespace names are not yet supported in <i>+folder</i> extensions. </p>
-<p> It is not possible to use <i>tmail</i> to deliver to <i><a href="/docs/linux/man/1-mh/">mh</a></i>(1) format mailboxes. </p>
-<p> If delivery to multiple users is specified and delivery to any single user fails, the entire delivery will be reported as having failed, even though delivery to other users may have succeeded. If <i>tmail</i> is used for mail delivery from <i><a href="/docs/linux/man/8-sendmail/">sendmail</a></i>(8), a separate tmail invocation should be done for each user. Otherwise a delivery failure for a single user in a message going to multiple users will cause multiple deliveries to all the other users every time <i><a href="/docs/linux/man/8-sendmail/">sendmail</a></i>(8), retries.</p>
+<p> It is not possible to use <i>tmail</i> to deliver to <i>mh</i>(1) format mailboxes. </p>
+<p> If delivery to multiple users is specified and delivery to any single user fails, the entire delivery will be reported as having failed, even though delivery to other users may have succeeded. If <i>tmail</i> is used for mail delivery from <i>sendmail</i>(8), a separate tmail invocation should be done for each user. Otherwise a delivery failure for a single user in a message going to multiple users will cause multiple deliveries to all the other users every time <i>sendmail</i>(8), retries.</p>
 <h2>AUTHOR</h2>
 <p> Mark Crispin, MRC [at] CAC.Washington.EDU</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-binmail/">binmail</a>(1)<br />
- <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8) </p>
+<p> binmail(1)<br />
+ sendmail(8) </p>
 <h2>Index</h2>

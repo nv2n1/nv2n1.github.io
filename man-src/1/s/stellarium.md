@@ -67,7 +67,7 @@ description: "stellarium – A real-time realistic planetarium"
 <dt><i>$HOME/</i></p>
 <dd> The default screenshot directory. Refer to <code>&#8211;screenshot-dir</code> to use a different path.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-celestia/">celestia</a></i>(1).</p>
+<p> <i>celestia</i>(1).</p>
 <h2>NOTES</h2>
 <p> Sources of more information:</p>
 <dl>

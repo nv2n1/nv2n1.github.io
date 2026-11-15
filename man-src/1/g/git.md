@@ -651,7 +651,7 @@ git&#8211; git &#8211; dir = a.git&#8211; work &#8211; tree = b &#8211; C c stat
 <dl>
 <dt>
 <dd> Push objects over Git protocol to another repository.</dl>
-<p> <code><a href="/docs/linux/man/1-git-update-server-info/">git-update-server-info</a></code>(1)</p>
+<p> <code>git-update-server-info</code>(1)</p>
 <dl>
 <dt>
 <dd> Update auxiliary info file to help dumb servers.</dl>

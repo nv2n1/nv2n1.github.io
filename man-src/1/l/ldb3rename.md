@@ -32,7 +32,7 @@ ldbrename - Edit LDB databases using your favorite editor
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. See <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7) for details.</dl>
+<dd> LDB URL to connect to. See ldb(7) for details.</dl>
  
 
  -o options
@@ -59,7 +59,7 @@ ldbrename - Edit LDB databases using your favorite editor
 
  
 
- <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7), ldbmodify, ldbdel, <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5)
+ ldb(7), ldbmodify, ldbdel, <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5)
 
 <h2>AUTHOR</h2>
 

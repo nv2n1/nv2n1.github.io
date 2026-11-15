@@ -32,5 +32,5 @@ description: "qmsg – send message to pbs batch jobs"
 <p> Upon successful processing of all the operands presented to the qmsg command, the exit status will be a value of zero. </p>
 <p> If the qmsg command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="//www.systutorials.com/docs/linux/man/1B-qsub/">qsub</a>(1B), <a href="//www.systutorials.com/docs/linux/man/3B-pbs_msgjob/">pbs_msgjob</a>(3B) </p>
+<p> qsub(1B), pbs_msgjob(3B) </p>
 <h2>Index</h2>

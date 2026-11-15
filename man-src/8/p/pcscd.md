@@ -59,6 +59,6 @@ description: "pcscd – PC/SC Smart Card Daemon"
 <p> <i>/var/run/pcscd/pcscd.pid</i> : process id of the running pcscd </p>
 <p> <i>/usr/lib64/pcsc/drivers</i> : directory containing bundles for USB drivers</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-bundletool/">bundleTool</a></code>(8), <code><a href="/docs/linux/man/5-reader-conf/">reader.conf</a></code>(5), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)</p>
+<p><code>bundleTool</code>(8), <code><a href="/docs/linux/man/5-reader-conf/">reader.conf</a></code>(5), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)</p>
 <h2>Authors</h2>
 <p>David Corcoran &lt;corcoran [at] musclecard.com&gt; and Ludovic Rousseau &lt;ludovic.rousseau [at] free.fr&gt;</p>

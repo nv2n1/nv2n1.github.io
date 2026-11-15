@@ -59,7 +59,7 @@ description: "cpio – copy files to and from archives"
 <dd> The POSIX.1 pax format, an extension of the ustar format.</p>
 <dt><i>ustar</i></p>
 <dd> The POSIX.1 tar format.</dl>
-<p> The default format is <i>odc</i> See libarchive-formats5 for more complete information about the formats currently supported by the underlying <a href="/docs/linux/man/3-libarchive/">libarchive</a>(3) library.</p>
+<p> The default format is <i>odc</i> See libarchive-formats5 for more complete information about the formats currently supported by the underlying libarchive(3) library.</p>
 <dt><code>-h , &#8211;help</code></p>
 <dd> Print usage information.</p>
 <dt><code>-I </code><i>file</i></p>
@@ -138,13 +138,13 @@ description: "cpio – copy files to and from archives"
 <p> The mode options i, o, and p and the options a, B, c, d, f, l, m, r, t, u, and v comply with SUSv2. </p>
 <p> The old POSIX.1 standard specified that only &#8211;<code>i</code> &#8211;<code>o</code> and &#8211;<code>p</code> were interpreted as command-line options. Each took a single argument of a list of modifier characters. For example, the standard syntax allows &#8211;<code>imu</code> but does not support &#8211;<code>miu</code> or &#8211;<code>i -m -u</code> since <i>m</i> and <i>u</i> are only modifiers to &#8211;<code>i</code> they are not command-line options in their own right. The syntax supported by this implementation is backwards-compatible with the standard. For best compatibility, scripts should limit themselves to the standard syntax.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-tar/">tar</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-mt/">mt</a>(1), <a href="/docs/linux/man/1-pax/">pax</a>(1), <a href="/docs/linux/man/3-libarchive/">libarchive</a>(3), <a href="/docs/linux/man/5-cpio/">cpio</a>(5), libarchive-formats5, <a href="/docs/linux/man/5-tar/">tar</a>(5)</p>
+<p> <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-tar/">tar</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-mt/">mt</a>(1), pax(1), libarchive(3), <a href="/docs/linux/man/5-cpio/">cpio</a>(5), libarchive-formats5, <a href="/docs/linux/man/5-tar/">tar</a>(5)</p>
 <h2>STANDARDS</h2>
 <p> There is no current POSIX standard for the cpio command; it appeared in St -p1003.1-96 but was dropped from St -p1003.1-2001 . </p>
 <p> The cpio, ustar, and pax interchange file formats are defined by St -p1003.1-2001 for the pax command.</p>
 <h2>HISTORY</h2>
 <p> The original <code>cpio</code> and <code>find</code> utilities were written by Dick Haight while working in AT&amp;T&#8217;s Unix Support Group. They first appeared in 1977 in PWB/UNIX 1.0, the &#8220;Programmer&#8217;s Work Bench&#8221; system developed for use within AT&amp;T. They were first released outside of AT&amp;T as part of System III Unix in 1981. As a result, <code>cpio</code> actually predates <code>tar</code> even though it was not well-known outside of AT&amp;T until some time later. </p>
-<p> This is a complete re-implementation based on the <a href="/docs/linux/man/3-libarchive/">libarchive</a>(3) library.</p>
+<p> This is a complete re-implementation based on the libarchive(3) library.</p>
 <h2>BUGS</h2>
 <p> The cpio archive format has several basic limitations: It does not store user and group names, only numbers. As a result, it cannot be reliably used to transfer files between systems with dissimilar user and group numbering. Older cpio formats limit the user and group numbers to 16 or 18 bits, which is insufficient for modern systems. The cpio archive formats cannot support files over 4 gigabytes, except for the &#8220;odc&#8221; variant, which can support files up to 8 gigabytes. </p>
 <h2>Index</h2>

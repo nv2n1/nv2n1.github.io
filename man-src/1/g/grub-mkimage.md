@@ -54,7 +54,7 @@ description: "grub-mkimage – make a bootable image of GRUB"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-grub [at] gnu.org&gt;.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-grub-install/">grub-install</a></code>(8), <code><a href="/docs/linux/man/1-grub-mkrescue/">grub-mkrescue</a></code>(1), <code><a href="/docs/linux/man/8-grub-mknetdir/">grub-mknetdir</a></code>(8) </p>
+<p> <code><a href="/docs/linux/man/8-grub-install/">grub-install</a></code>(8), <code><a href="/docs/linux/man/1-grub-mkrescue/">grub-mkrescue</a></code>(1), <code>grub-mknetdir</code>(8) </p>
 <p> The full documentation for <code>grub-mkimage</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-mkimage</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>

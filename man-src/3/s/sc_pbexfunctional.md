@@ -41,8 +41,8 @@ double kappa</code></pre>
 <p> John P. Perdew, Kieron Burke, and Yue Wang, Phys. Rev. B, 54(23), pp. 16533-16539, 1996. </p>
 <p> John P. Perdew, Kieron Burke, and Matthias Ernzerhof, Phys. Rev. Lett., 77(18), pp. 3865-3868 1996. </p>
 <p> See also the comment and reply discussing the revPBE modification which adjusts the value of kappa: </p>
-<p> Yingkai Zhang and Weitao Yang, Phys. Rev. Lett., <a href="/docs/linux/man/4-80/">80</a>(4), pp. 890, 1998. </p>
-<p> John P. Perdew, Kieron Burke, and Matthias Ernzerhof, Phys. Rev. Lett., <a href="/docs/linux/man/4-80/">80</a>(4), pp. 891, 1998.</p>
+<p> Yingkai Zhang and Weitao Yang, Phys. Rev. Lett., 80(4), pp. 890, 1998. </p>
+<p> John P. Perdew, Kieron Burke, and Matthias Ernzerhof, Phys. Rev. Lett., 80(4), pp. 891, 1998.</p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::PBEXFunctional::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

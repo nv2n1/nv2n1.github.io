@@ -83,7 +83,7 @@ description: "aiptek – Aiptek USB Digital Tablet Input Driver for Linux"
 </dl>
 <p> This driver is currently Linux specific.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/4-hyperpen/">hyperpen</a>(4).</p>
+<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7), hyperpen(4).</p>
 <h2>Authors</h2>
 <p>Bryan W. Headley &lt;bheadley [at] earthlink.net&gt;</p>
 <h2>Project Page</h2>

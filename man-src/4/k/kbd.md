@@ -18,7 +18,7 @@ description: "kbd – Keyboard input driver"
 <p><code>kbd </code> is an Xorg input driver for keyboards. The driver supports the standard OS-provided keyboard interface, but these are currently only available to this driver module for Linux, BSD, and Solaris. This driver is the replacement for the built-in <code>keyboard</code> driver formerly included in Xorg. </p>
 <p> The <code>kbd</code> driver functions as a keyboard input device.</p>
 <h2>Configuration Details</h2>
-<p>Depending on the X server version in use, input device options may be set in either a xorg.conf file, an xorg.conf.d snippet, or in the configuration files read by the Hardware Abstraction Layer (HAL) daemon, <a href="/docs/linux/man/1-hald/">hald</a>(1). </p>
+<p>Depending on the X server version in use, input device options may be set in either a xorg.conf file, an xorg.conf.d snippet, or in the configuration files read by the Hardware Abstraction Layer (HAL) daemon, hald(1). </p>
 <p> Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details and for options that can be used with all input drivers. This section only covers configuration details specific to this driver. </p>
 <p> The following driver <code>Options</code> are supported:</p>
 <dl>
@@ -60,4 +60,4 @@ Option &quot;XkbOptions&quot; &quot;grp:menu_toggle,grp_led:scroll&quot;
 EndSection
 </dl></pre>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7). <a href="/docs/linux/man/7-hal/">hal</a>(7), <a href="/docs/linux/man/8-hald/">hald</a>(8), <a href="/docs/linux/man/5-fdi/">fdi</a>(5). <a href="/docs/linux/man/7-xkeyboard-config/">xkeyboard-config</a>(7). </p>
+<p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7). hal(7), <a href="/docs/linux/man/8-hald/">hald</a>(8), fdi(5). <a href="/docs/linux/man/7-xkeyboard-config/">xkeyboard-config</a>(7). </p>

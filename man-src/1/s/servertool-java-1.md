@@ -65,6 +65,6 @@ servertool - ORBInitialPort nameserverport[options][commands]
 <h2>SEE ALSO</h2>
 <dl>
 <dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-orbd/">orbd</a>(1) </p>
+<dd> orbd(1) </p>
 </dl>
 <h2>Index</h2>

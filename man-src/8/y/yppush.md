@@ -27,7 +27,7 @@ description: "yppush – force propagation of changed NIS databases"
 <dd><code>yppush</code> normally performs transfers serially, meaning that it will send a map transfer request to one slave server and then wait for it to respond before sending the next map transfer request to the next slave server. In environments with many slaves, it is more efficient to initiate several map transfers at once so that the transfers can take place in parallel. It is not possible to run in parallel and assign a fixed port with the <code>&#8211;port</code> flag</dl>
 <p> <code>&#8211;port </code><i>port</i></p>
 <dl>
-<dd>specify a port for <code>yppush</code> to listen on. By default, <code>yppush</code> will ask <code><a href="/docs/linux/man/8-portmap/">portmap</a>(8)</code> to assign it a random port number. It is not possible to assign a port with this option and run in parallel with the <code>&#8211;parallel</code> or <code>-p</code> flag</dl>
+<dd>specify a port for <code>yppush</code> to listen on. By default, <code>yppush</code> will ask <code>portmap(8)</code> to assign it a random port number. It is not possible to assign a port with this option and run in parallel with the <code>&#8211;parallel</code> or <code>-p</code> flag</dl>
 <p> <code>-h </code><i>host</i></p>
 <dl>
 <dd>The host flag can be used to transfer a map to a user-specified machine or group of machines instead of the list of servers contained in the <code>ypservers</code> map. A list of hosts can be specified by using multiple instances of the <code>-h</code> flag.</dl>

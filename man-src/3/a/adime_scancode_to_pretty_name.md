@@ -15,5 +15,5 @@ description: "adime_scancode_to_pretty_name"
 <h2>DESCRIPTION</h2>
 <p> The result from `adime_scancode_to_short_name()&#8217; is sometimes an abbreviation and may contain underscores. You may want to use this function instead if you are going to display the result for the user: it returns more user-friendly strings. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-adime_scancode_to_short_name/">adime_scancode_to_short_name</a></code>(3), <code><a href="/docs/linux/man/3-adime_short_name_to_scancode/">adime_short_name_to_scancode</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-adime_scancode_to_short_name/">adime_scancode_to_short_name</a></code>(3), <code>adime_short_name_to_scancode</code>(3) </p>
 <h2>Index</h2>

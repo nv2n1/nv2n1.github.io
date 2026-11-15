@@ -9,7 +9,7 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
 
 <p>org.freedesktop.portable1 &#8211; The D-Bus interface of systemd-portabled</p>
 <h2>Introduction</h2>
-<p><code><a href="/docs/linux/man/8-systemd-portabled-service/">systemd-portabled.service</a></code>(8) is a system service that may be used to attach, detach and inspect portable services. This page describes the D-Bus interface.</p>
+<p><code>systemd-portabled.service</code>(8) is a system service that may be used to attach, detach and inspect portable services. This page describes the D-Bus interface.</p>
 <h2>The Manager Object</h2>
 <p>The service exposes the following interfaces on the Manager object on the bus: </p>
 <dl>
@@ -146,7 +146,7 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
 <p> The <code>AttachImageWithExtensions()</code>, <code>DetachImageWithExtensions()</code> and <code>ReattachImageWithExtensions()</code> methods take in options as flags instead of booleans to allow for extendability, defined as follows: </p>
 <dl>
 <dd>
-<pre>#define SD_SYSTEMD_PORTABLE_RUNTIME (<a href="//www.systutorials.com/docs/linux/man/1-UINT64_C/">UINT64_C</a>(1) &lt;&lt; 0)</pre>
+<pre>#define SD_SYSTEMD_PORTABLE_RUNTIME (UINT64_C(1) &lt;&lt; 0)</pre>
 </dl>
 <h3>Properties</h3>
 <p><i>PoolPath</i> specifies the file system path where images are written to. </p>

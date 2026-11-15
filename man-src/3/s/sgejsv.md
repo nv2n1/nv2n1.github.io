@@ -124,7 +124,7 @@ SGEJSV computes the singular value decomposition(SVD) of a real M-by-N
          If the matrix is not square, JOBT is ignored. This is subject to
          changes in the future.
          The decision is based on two values of entropy over the adjoint
-         orbit of A^t * A. See the descriptions of <a href="//www.systutorials.com/docs/linux/man/6-WORK/">WORK</a>(6) and <a href="//www.systutorials.com/docs/linux/man/7-WORK/">WORK</a>(7).
+         orbit of A^t * A. See the descriptions of WORK(6) and WORK(7).
        = 'T': transpose if entropy test indicates possibly faster
          convergence of Jacobi process if A^t is taken as input. If A is
          replaced with A^t, then the row pivoting is included automatically.
@@ -172,11 +172,11 @@ SGEJSV computes the singular value decomposition(SVD) of a real M-by-N
 <pre>
           SVA is REAL array, dimension (N)
           On exit,
-          - For WORK(1)/<a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2) = ONE: The singular values of A. During the
+          - For WORK(1)/WORK(2) = ONE: The singular values of A. During the
             computation SVA contains Euclidean column norms of the
             iterated matrices in the array A.
-          - For WORK(1) .NE. <a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2): The singular values of A are
-            (WORK(1)/<a href="//www.systutorials.com/docs/linux/man/2-WORK/">WORK</a>(2)) * SVA(1:N). This factored form is used if
+          - For WORK(1) .NE. WORK(2): The singular values of A are
+            (WORK(1)/WORK(2)) * SVA(1:N). This factored form is used if
             sigma_max(A) overflows or if small singular values have been
             saved from underflow by scaling the input matrix A.
           - If JOBR='R' then some of the singular values may be returned
@@ -300,12 +300,12 @@ If JOBV = &#8216;W&#8217;, AND(JOBU.EQ.&#8217;U&#8217; AND JOBT.EQ.&#8217;T&#821
 <pre>
           IWORK is INTEGER array, dimension M+3*N.
           On exit,
-          <a href="//www.systutorials.com/docs/linux/man/1-IWORK/">IWORK</a>(1) = the numerical rank determined after the initial
+          IWORK(1) = the numerical rank determined after the initial
                      QR factorization with pivoting. See the descriptions
                      of JOBA and JOBR.
-          <a href="//www.systutorials.com/docs/linux/man/2-IWORK/">IWORK</a>(2) = the number of the computed nonzero singular values
-          <a href="//www.systutorials.com/docs/linux/man/3-IWORK/">IWORK</a>(3) = if nonzero, a warning message:
-                     If <a href="//www.systutorials.com/docs/linux/man/3-IWORK/">IWORK</a>(3).EQ.1 then some of the column norms of A
+          IWORK(2) = the number of the computed nonzero singular values
+          IWORK(3) = if nonzero, a warning message:
+                     If IWORK(3).EQ.1 then some of the column norms of A
                      were denormalized floats. The requested high accuracy
                      is not warranted by the data.
 </pre>

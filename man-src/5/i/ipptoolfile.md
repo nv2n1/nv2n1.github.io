@@ -69,7 +69,7 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>{ </code><i>test </i><code>}</code></p>
 <dd>Defines a test.</p>
 <dt><code>DEFINE </code><i>variable-name value</i></p>
-<dd>Defines the named variable to the given value. This is equivalent to specifying <i>-d variable-name=value</i> on the <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) command-line.</p>
+<dd>Defines the named variable to the given value. This is equivalent to specifying <i>-d variable-name=value</i> on the <code>ipptool</code>(8) command-line.</p>
 <dt><code>DEFINE-DEFAULT </code><i>variable-name value</i></p>
 <dd>Defines the named variable to the given value if it does not already have a value.</p>
 <dt><code>FILE-ID &quot;</code><i>identifier</i><code>&quot;</code></p>
@@ -77,19 +77,19 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>IGNORE-ERRORS yes</code></p>
 <dd>
 <dt><code>IGNORE-ERRORS no</code></p>
-<dd>Specifies whether, by default, <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) will ignore errors and continue with subsequent tests.</p>
+<dd>Specifies whether, by default, <code>ipptool</code>(8) will ignore errors and continue with subsequent tests.</p>
 <dt><code>INCLUDE &quot;</code><i>filename</i><code>&quot;</code></p>
 <dd>
 <dt><code>INCLUDE &lt;</code><i>filename</i><code>&gt;</code></p>
-<dd>Includes another test file. The first form includes a file relative to the current test file, while the second form includes a file from the <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) include directory.</p>
+<dd>Includes another test file. The first form includes a file relative to the current test file, while the second form includes a file from the <code>ipptool</code>(8) include directory.</p>
 <dt><code>INCLUDE-IF-DEFINED </code><i>name </i><code>&quot;</code><i>filename</i><code>&quot;</code></p>
 <dd>
 <dt><code>INCLUDE-IF-DEFINED </code><i>name </i><code>&lt;</code><i>filename</i><code>&gt;</code></p>
-<dd>Includes another test file if the named variable is defined. The first form includes a file relative to the current test file, while the second form includes a file from the <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) include directory.</p>
+<dd>Includes another test file if the named variable is defined. The first form includes a file relative to the current test file, while the second form includes a file from the <code>ipptool</code>(8) include directory.</p>
 <dt><code>INCLUDE-IF-NOT-DEFINED </code><i>name </i><code>&quot;</code><i>filename</i><code>&quot;</code></p>
 <dd>
 <dt><code>INCLUDE-IF-NOT-DEFINED </code><i>name </i><code>&lt;</code><i>filename</i><code>&gt;</code></p>
-<dd>Includes another test file if the named variable is not defined. The first form includes a file relative to the current test file, while the second form includes a file from the <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) include directory.</p>
+<dd>Includes another test file if the named variable is not defined. The first form includes a file relative to the current test file, while the second form includes a file from the <code>ipptool</code>(8) include directory.</p>
 <dt><code>SKIP-IF-DEFINED </code><i>variable-name</i></p>
 <dd>
 <dt><code>SKIP-IF-NOT-DEFINED </code><i>variable-name</i></p>
@@ -101,9 +101,9 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>TRANSFER auto</code></p>
 <dd>Specifies that tests will, by default, use &quot;Transfer-Encoding: chunked&quot; for requests with attached files and &quot;Content-Length:&quot; for requests without attached files.</p>
 <dt><code>TRANSFER chunked</code></p>
-<dd>Specifies that tests will, by default, use the HTTP/1.1 &quot;Transfer-Encoding: chunked&quot; header. This is the default and is equivalent to specifying <i>-c</i> on the <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) command-line. Support for chunked requests is required for conformance with all versions of IPP.</p>
+<dd>Specifies that tests will, by default, use the HTTP/1.1 &quot;Transfer-Encoding: chunked&quot; header. This is the default and is equivalent to specifying <i>-c</i> on the <code>ipptool</code>(8) command-line. Support for chunked requests is required for conformance with all versions of IPP.</p>
 <dt><code>TRANSFER length</code></p>
-<dd>Specifies that tests will, by default, use the HTTP/1.0 &quot;Content-Length:&quot; header. This is equivalent to specifying <i>-l</i> on the <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) command-line. Support for content length requests is required for conformance with all versions of IPP.</p>
+<dd>Specifies that tests will, by default, use the HTTP/1.0 &quot;Content-Length:&quot; header. This is equivalent to specifying <i>-l</i> on the <code>ipptool</code>(8) command-line. Support for content length requests is required for conformance with all versions of IPP.</p>
 <dt><code>VERSION 1.0</code></p>
 <dd>
 <dt><code>VERSION 1.1</code></p>
@@ -150,7 +150,7 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>IGNORE-ERRORS yes</code></p>
 <dd>
 <dt><code>IGNORE-ERRORS no</code></p>
-<dd>Specifies whether <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) will ignore errors and continue with subsequent tests.</p>
+<dd>Specifies whether <code>ipptool</code>(8) will ignore errors and continue with subsequent tests.</p>
 <dt><code>MONITOR-PRINTER-STATE </code>[ <i>printer-uri </i>] <code>{ EXPECT </code><i>attribute-name </i>[ <i>predicate(s) </i>] <code>}</code></p>
 <dd>Specifies printer state monitoring tests to run in parallel with the test operation. The monitoring tests will run until all of the <code>EXPECT</code> conditions are satisfied or the primary test operation has completed, whichever occurs first.</p>
 <dt><code>NAME &quot;</code><i>literal string</i><code>&quot;</code></p>
@@ -168,7 +168,7 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>REQUEST-ID random</code></p>
 <dd>Specifies the request-id value to use in the request, either an integer or the word &quot;random&quot; to use a randomly generated value (the default).</p>
 <dt><code>RESOURCE </code><i>path</i></p>
-<dd>Specifies an alternate resource path that is used for the HTTP POST request. The default is the resource from the URI provided to the <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) program.</p>
+<dd>Specifies an alternate resource path that is used for the HTTP POST request. The default is the resource from the URI provided to the <code>ipptool</code>(8) program.</p>
 <dt><code>SKIP-IF-DEFINED </code><i>variable-name</i></p>
 <dd>
 <dt><code>SKIP-IF-NOT-DEFINED </code><i>variable-name</i></p>
@@ -176,7 +176,7 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>SKIP-PREVIOUS-ERROR yes</code></p>
 <dd>
 <dt><code>SKIP-PREVIOUS-ERROR no</code></p>
-<dd>Specifies whether <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) will skip the current test if the previous test resulted in an error/failure.</p>
+<dd>Specifies whether <code>ipptool</code>(8) will skip the current test if the previous test resulted in an error/failure.</p>
 <dt><code>STATUS </code><i>status-code </i>[ <i>predicate</i> ]</p>
 <dd>Specifies an expected response status-code value. Additional requirements can be added as predicates &#8211; see the &quot;STATUS PREDICATES&quot; section for more information on predicates.</p>
 <dt><code>TEST-ID &quot;</code><i>identifier</i>&quot;</p>
@@ -304,7 +304,7 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>REPEAT-NO-MATCH</code></p>
 <dd>Specifies that the current test should be repeated when the response status-code matches or does not match the value specified by the STATUS directive.</dl>
 <h3>Operation Codes</h3>
-<p>Operation codes correspond to the hexadecimal numbers (0xHHHH) and names from RFC 8011 and other IPP extension specifications. Here is a complete list of names supported by <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8): </p>
+<p>Operation codes correspond to the hexadecimal numbers (0xHHHH) and names from RFC 8011 and other IPP extension specifications. Here is a complete list of names supported by <code>ipptool</code>(8): </p>
 <pre> Acknowledge-Document
  Acknowledge-Identify-Printer
  Acknowledge-Job
@@ -414,7 +414,7 @@ description: "ipptoolfile – ipptool file format"
  Validate-Document
  Validate-Job</pre>
 <h3>Status Codes</h3>
-<p>Status codes correspond to the hexadecimal numbers (0xHHHH) and names from RFC 8011 and other IPP extension specifications. Here is a complete list of the names supported by <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8): </p>
+<p>Status codes correspond to the hexadecimal numbers (0xHHHH) and names from RFC 8011 and other IPP extension specifications. Here is a complete list of the names supported by <code>ipptool</code>(8): </p>
 <pre> client-error-account-authorization-failed
  client-error-account-closed
  client-error-account-info-needed
@@ -509,7 +509,7 @@ description: "ipptoolfile – ipptool file format"
  uri
  uriScheme</pre>
 <h3>Variables</h3>
-<p>The <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) program maintains a list of variables that can be used in any literal string or attribute value by specifying &quot;<i>$variable-name</i>&quot;. Aside from variables defined using the <i>-d</i> option or <code>DEFINE</code> directive, the following pre-defined variables are available:</p>
+<p>The <code>ipptool</code>(8) program maintains a list of variables that can be used in any literal string or attribute value by specifying &quot;<i>$variable-name</i>&quot;. Aside from variables defined using the <i>-d</i> option or <code>DEFINE</code> directive, the following pre-defined variables are available:</p>
 <dl>
 <dt><code>$$</code></p>
 <dd>Inserts a single &quot;$&quot; character.</p>
@@ -520,11 +520,11 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>$date-start</code></p>
 <dd>Inserts the starting date and time using the ISO-8601 format (&quot;yyyy-mm-ddThh:mm:ssZ&quot;).</p>
 <dt><code>$filename</code></p>
-<dd>Inserts the filename provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) with the <i>-f</i> option.</p>
+<dd>Inserts the filename provided to <code>ipptool</code>(8) with the <i>-f</i> option.</p>
 <dt><code>$filetype</code></p>
-<dd>Inserts the MIME media type for the filename provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8) with the <i>-f</i> option.</p>
+<dd>Inserts the MIME media type for the filename provided to <code>ipptool</code>(8) with the <i>-f</i> option.</p>
 <dt><code>$hostname</code></p>
-<dd>Inserts the hostname from the URI provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8).</p>
+<dd>Inserts the hostname from the URI provided to <code>ipptool</code>(8).</p>
 <dt><code>$job-id</code></p>
 <dd>Inserts the last &quot;job-id&quot; attribute value returned in a test response or 0 if no &quot;job-id&quot; attribute has been seen.</p>
 <dt><code>$job-uri</code></p>
@@ -532,15 +532,15 @@ description: "ipptoolfile – ipptool file format"
 <dt><code>$notify-subscription-id</code></p>
 <dd>Inserts the last &quot;notify-subscription-id&quot; attribute value returned in a test response or 0 if no &quot;notify-subscription-id&quot; attribute has been seen.</p>
 <dt><code>$port</code></p>
-<dd>Inserts the port number from the URI provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8).</p>
+<dd>Inserts the port number from the URI provided to <code>ipptool</code>(8).</p>
 <dt><code>$resource</code></p>
-<dd>Inserts the resource path from the URI provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8).</p>
+<dd>Inserts the resource path from the URI provided to <code>ipptool</code>(8).</p>
 <dt><code>$scheme</code></p>
-<dd>Inserts the scheme from the URI provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8).</p>
+<dd>Inserts the scheme from the URI provided to <code>ipptool</code>(8).</p>
 <dt><code>$uri</code></p>
-<dd>Inserts the URI provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8).</p>
+<dd>Inserts the URI provided to <code>ipptool</code>(8).</p>
 <dt><code>$uriuser</code></p>
-<dd>Inserts the username from the URI provided to <code><a href="/docs/linux/man/8-ipptool/">ipptool</a></code>(8), if any.</p>
+<dd>Inserts the username from the URI provided to <code>ipptool</code>(8), if any.</p>
 <dt><code>$user</code></p>
 <dd>Inserts the current user&#8217;s login name.</dl>
 <h2>See Also</h2>

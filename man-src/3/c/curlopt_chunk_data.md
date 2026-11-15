@@ -12,7 +12,7 @@ description: "CURLOPT_CHUNK_DATA – custom pointer to the FTP chunk callbacks"
 <p>#include &lt;curl/curl.h&gt; </p>
 <p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_CHUNK_DATA, void *pointer);</p>
 <h2>Description</h2>
-<p>Pass a <i>pointer</i> that will be untouched by libcurl and passed as the ptr argument to the <i><a href="/docs/linux/man/3-curl_chunk_bgn_funtion/">CURL_CHUNK_BGN_FUNTION</a>(3)</i> and <i><a href="/docs/linux/man/3-curl_chunk_end_funtion/">CURL_CHUNK_END_FUNTION</a>(3)</i>.</p>
+<p>Pass a <i>pointer</i> that will be untouched by libcurl and passed as the ptr argument to the <i>CURL_CHUNK_BGN_FUNTION(3)</i> and <i>CURL_CHUNK_END_FUNTION(3)</i>.</p>
 <h2>Default</h2>
 <p>NULL</p>
 <h2>Protocols</h2>

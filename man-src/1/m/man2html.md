@@ -13,11 +13,11 @@ description: "man2html – format a manual page in html"
 <p> man2html [options] [file]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>man2html</code> converts a manual page as found in <i>file</i> (or stdin, in case no file argument, or the argument &quot;-&quot;, is given) from man-style nroff into html, and prints the result on stdout. It does support tbl but does not know about eqn. The exit status is 0. If something goes wrong, an error page is printed on stdout. </p>
-<p> This can be used as a stand-alone utility, but is mainly intended as an auxiliary, to enable users to browse their man pages using a html browser like <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-xmosaic/">xmosaic</a></code>(1) or <code><a href="/docs/linux/man/1-netscape/">netscape</a></code>(1). </p>
+<p> This can be used as a stand-alone utility, but is mainly intended as an auxiliary, to enable users to browse their man pages using a html browser like <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code>xmosaic</code>(1) or <code>netscape</code>(1). </p>
 <p> The main part of <code>man2html</code> is the troff-to-html engine written by Richard Verhoeven (rcb5 [at] win.tue.nl). It adds hyperlinks for the following constructs: </p>
 <table>
 <tr VALIGN=top>
-<td><a href="//www.systutorials.com/docs/linux/man/3x-foo/">foo</a>(3x)</td>
+<td>foo(3x)</td>
 <td>&quot;<a rel="nofollow" href="http://localhost/cgi-bin/man/man2html?3x+foo">http://localhost/cgi-bin/man/man2html?3x+foo</a>&quot;
 </td>
 </tr>

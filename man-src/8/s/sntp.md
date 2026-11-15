@@ -56,7 +56,7 @@ description: "sntp – standard Simple Network Time Protocol program"
 <p> keyid keytype key </p>
 <p> Where<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>keyid is a number identifying this key<br />
  keytype is one of the follow: S Key in 64 Bit hexadecimal number as specified in in the DES specification. N Key in 64 Bit hexadecimal number as specified in the NTP standard. A Key in a 1-to-8 character ASCII string. M Key in a 1-to-8 character ASCII string using the MD5 authentication scheme. </p>
-<p> For more information see <a href="/docs/linux/man/5-ntp-keys/">ntp.keys</a>(5).</p>
+<p> For more information see ntp.keys(5).</p>
 <dt><code>-?</code>,<code> &#8211;help</code></p>
 <dd>Display extended usage information and exit.</p>
 <dt><code>-!</code>,<code> &#8211;more-help</code></p>

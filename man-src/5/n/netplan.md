@@ -133,14 +133,14 @@ description: "netplan – YAML network configuration abstraction for various bac
 <dt>accept-ra (bool)</p>
 <dd>Accept Router Advertisement that would have the kernel configure IPv6 by itself. When enabled, accept Router Advertisements. When disabled, do not respond to Router Advertisements. If unset use the host kernel default setting.</p>
 <dt>addresses (sequence of scalars)</p>
-<dd>Add static addresses to the interface in addition to the ones received through DHCP or RA. Each sequence entry is in CIDR notation, i. e. of the form addr/prefixlen. addr is an IPv4 or IPv6 address as recognized by <a href="/docs/linux/man/3-inet_pton/">inet_pton</a>(3) and prefixlen the number of bits of the subnet.</p>
+<dd>Add static addresses to the interface in addition to the ones received through DHCP or RA. Each sequence entry is in CIDR notation, i. e. of the form addr/prefixlen. addr is an IPv4 or IPv6 address as recognized by inet_pton(3) and prefixlen the number of bits of the subnet.</p>
 <dl>
 <dd>For virtual devices (bridges, bonds, vlan) if there is no address configured and DHCP is disabled, the interface may still be brought online, but will not be addressable from the network. </p>
 <p> Example: addresses: [192.168.14.2/24, &quot;2001:1::1/64&quot;]</dl>
 <dt>ipv6-address-generation (scalar)</p>
 <dd>Configure method for creating the address for use with RFC4862 IPv6 Stateless Address Autoconfiguration. Possible values are eui64 or stable-privacy.</p>
 <dt>gateway4, gateway6 (scalar)</p>
-<dd>Set default gateway for IPv4/6, for manual address configuration. This requires setting addresses too. Gateway IPs must be in a form recognized by <a href="/docs/linux/man/3-inet_pton/">inet_pton</a>(3).</p>
+<dd>Set default gateway for IPv4/6, for manual address configuration. This requires setting addresses too. Gateway IPs must be in a form recognized by inet_pton(3).</p>
 <dl>
 <dd>Example for IPv4: gateway4: 172.16.0.1 Example for IPv6: gateway6: &quot;2001:4::1&quot;</dl>
 <dt>nameservers (mapping)</p>

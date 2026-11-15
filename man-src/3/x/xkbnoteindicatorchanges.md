@@ -43,4 +43,4 @@ description: "XkbNoteIndicatorChanges – Notes the changes in a changes structu
 } XkbIndicatorNotifyEvent;</pre>
 <p><i>xkb_type </i> is either XkbIndicatorStateNotify or XkbIndicatorMapNotify, depending on whether the event is a kbIndicatorStateNotify event or kbIndicatorMapNotify event.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkbindicatormapmask/">XkbIndicatorMapMask</a></code>(3), <code><a href="/docs/linux/man/3-xkbindicatorstatemask/">XkbIndicatorStateMask</a></code>(3), <code><a href="/docs/linux/man/3-xkbselecteventdetails/">XkbSelectEventDetails</a></code>(3), <code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3)</p>
+<p><code>XkbIndicatorMapMask</code>(3), <code>XkbIndicatorStateMask</code>(3), <code><a href="/docs/linux/man/3-xkbselecteventdetails/">XkbSelectEventDetails</a></code>(3), <code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3)</p>

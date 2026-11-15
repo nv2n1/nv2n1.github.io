@@ -20,6 +20,6 @@ description: "rlm_idn – FreeRADIUS Module"
 <h2>References</h2>
 <p>RFC 3490</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5) <code><a href="/docs/linux/man/3-idna_to_ascii_8z/">idna_to_ascii_8z</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5) <code>idna_to_ascii_8z</code>(3)</p>
 <h2>Author</h2>
 <p>Brian S. Julin, bjulin [at] clarku.edu</p>

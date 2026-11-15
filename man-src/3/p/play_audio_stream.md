@@ -24,4 +24,4 @@ if (!stream)
 <h2>Return Value</h2>
 <p>This function returns a pointer to the audio stream or NULL if it could not be created. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-install_sound/">install_sound</a></code>(3), <code><a href="/docs/linux/man/3-get_audio_stream_buffer/">get_audio_stream_buffer</a></code>(3), <code><a href="/docs/linux/man/3-stop_audio_stream/">stop_audio_stream</a></code>(3), <code><a href="/docs/linux/man/3-audiostream/">AUDIOSTREAM</a></code>(3), <code><a href="/docs/linux/man/3-exstream/">exstream</a></code>(3) </p>
+<p><code>install_sound</code>(3), <code><a href="/docs/linux/man/3-get_audio_stream_buffer/">get_audio_stream_buffer</a></code>(3), <code>stop_audio_stream</code>(3), <code><a href="/docs/linux/man/3-audiostream/">AUDIOSTREAM</a></code>(3), <code><a href="/docs/linux/man/3-exstream/">exstream</a></code>(3) </p>

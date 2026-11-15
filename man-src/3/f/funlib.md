@@ -203,5 +203,5 @@ FunClose(fun);</p>
 <p> void FunFlush(Fun fun, char *plist) </p>
 <p> void FunClose(Fun fun)</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

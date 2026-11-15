@@ -34,7 +34,7 @@ description: "burst – explode digests into messages"
 <dt>Msg-Protect:</p>
 <dd> To set mode when creating a new message.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-inc/">inc</a></i>(1), <i><a href="/docs/linux/man/1-msh/">msh</a></i>(1), <i><a href="/docs/linux/man/1-pack/">pack</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-inc/">inc</a></i>(1), <i><a href="/docs/linux/man/1-msh/">msh</a></i>(1), <i>pack</i>(1) </p>
 <p> <i>Proposed Standard for Message Encapsulation</i> (RFC 934)</p>
 <h2>DEFAULTS</h2>
 <dl>

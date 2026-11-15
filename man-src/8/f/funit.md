@@ -70,6 +70,6 @@ description: "funit – runs frysk’s JUnit testsuite"
 <pre>/usr/lib64/frysk/funit</pre>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/7-frysk/">frysk</a>(7) <a href="/docs/linux/man/8-funit-child/">funit-child</a>(8) <a href="/docs/linux/man/8-funit-exec/">funit-exec</a>(8) <a href="/docs/linux/man/8-funit-exit/">funit-exit</a>(8) <a href="/docs/linux/man/8-funit-threads/">funit-threads</a>(8)</p>
+<p><a href="/docs/linux/man/7-frysk/">frysk</a>(7) funit-child(8) <a href="/docs/linux/man/8-funit-exec/">funit-exec</a>(8) <a href="/docs/linux/man/8-funit-exit/">funit-exit</a>(8) <a href="/docs/linux/man/8-funit-threads/">funit-threads</a>(8)</p>
 <h2>Bugs</h2>
 <p>Report bugs to m[blue]<code>http:/sources.redhat.com/frysk</code>m[] </p>

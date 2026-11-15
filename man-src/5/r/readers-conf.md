@@ -317,4 +317,4 @@ description: "readers.conf – Access control and configuration for nnrpd"
 <p>Written by Aidan Cully &lt;aidan [at] panix.com&gt; for InterNetNews. Substantially expanded by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> <tt>$Id:</tt> readers.conf.pod 9799 2015-03-21 13:31:06Z iulius $</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-auth_krb5/">auth_krb5</a></i>(8), <i><a href="/docs/linux/man/8-ckpasswd/">ckpasswd</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>
+<p><i>auth_krb5</i>(8), <i><a href="/docs/linux/man/8-ckpasswd/">ckpasswd</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>

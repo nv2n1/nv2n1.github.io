@@ -150,7 +150,7 @@ int fts_close(FTS *ftsp);
 <h2>ERRORS</h2>
 <p> The function <code>fts_open</code>() may fail and set <i>errno</i> for any of the errors specified for <code><a href="/docs/linux/man/2-open/">open</a></code>(2) and <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3). </p>
 <p> The function <code>fts_close</code>() may fail and set <i>errno</i> for any of the errors specified for <code><a href="/docs/linux/man/2-chdir/">chdir</a></code>(2) and <code><a href="/docs/linux/man/2-close/">close</a></code>(2). </p>
-<p> The functions <code>fts_read</code>() and <code>fts_children</code>() may fail and set <i>errno</i> for any of the errors specified for <code><a href="/docs/linux/man/2-chdir/">chdir</a></code>(2), <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3), <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3), and <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2). </p>
+<p> The functions <code>fts_read</code>() and <code>fts_children</code>() may fail and set <i>errno</i> for any of the errors specified for <code><a href="/docs/linux/man/2-chdir/">chdir</a></code>(2), <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code>opendir</code>(3), <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3), and <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2). </p>
 <p> In addition, <code>fts_children</code>(), <code>fts_open</code>(), and <code>fts_set</code>() may fail and set <i>errno</i> as follows:</p>
 <dl>
 <dt><code>EINVAL</code></p>

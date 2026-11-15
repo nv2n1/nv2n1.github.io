@@ -12,7 +12,7 @@ description: "grap2graph – convert a GRAP diagram into a cropped image"
 <h2>SYNOPSIS</h2>
 <p> [ <code>-unsafe</code> ] [ <code>-format </code><i>output-format</i> ] [<i>convert-arguments</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>
-<p> <i>grap2graph</i> reads a <i><a href="/docs/linux/man/1-grap/">grap</a></i>(1) program from the standard input and writes an image file, by default in Portable Network Graphics (PNG) format, to the standard output. </p>
+<p> <i>grap2graph</i> reads a <i>grap</i>(1) program from the standard input and writes an image file, by default in Portable Network Graphics (PNG) format, to the standard output. </p>
 <p> The input GRAP code should <i>not</i> be wrapped with the <code>.G1</code> and <code>.G2</code> macros that normally guard it within <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1) documents. </p>
 <p> Arguments not recognized by <i>grap2graph</i> are passed to the ImageMagick or GraphicsMagick program <i><a href="/docs/linux/man/1-convert/">convert</a></i>(1). By specifying these, you can give your image a border, set the image&#8217;s pixel density, or perform other useful transformations. </p>
 <p> The output image is clipped using <i>convert</i>&#8216;s <code>-trim</code> option to the smallest possible bounding box that contains all the black pixels.</p>
@@ -33,5 +33,5 @@ description: "grap2graph – convert a GRAP diagram into a cropped image"
 <h2>AUTHORS</h2>
 <p> <code>grap2graph</code> was written by Eric S. Raymond based on a recipe for <i><a href="/docs/linux/man/1-pic2graph/">pic2graph</a></i>(1), by W. Richard Stevens.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-pic2graph/">pic2graph</a></i>(1), <i><a href="/docs/linux/man/1-eqn2graph/">eqn2graph</a></i>(1), <i><a href="/docs/linux/man/1-grap/">grap</a></i>(1), <i><a href="/docs/linux/man/1-pic/">pic</a></i>(1), <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-convert/">convert</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-pic2graph/">pic2graph</a></i>(1), <i><a href="/docs/linux/man/1-eqn2graph/">eqn2graph</a></i>(1), <i>grap</i>(1), <i><a href="/docs/linux/man/1-pic/">pic</a></i>(1), <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-convert/">convert</a></i>(1) </p>
 <h2>Index</h2>

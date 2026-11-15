@@ -609,7 +609,7 @@ sub square
  Then use it like: 
 
  <pre>
- $sq = <a HREF="//www.systutorials.com/docs/linux/man/8-square/">square</a>(8);
+ $sq = square(8);
 </pre> 
 
  For more information on writing subroutines, see perlsub.

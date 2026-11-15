@@ -352,7 +352,7 @@ make without-libsensors=yes
 <p> <code>FreeBSD:</code><br />
  Builtin sensor reporting is available for some sensor chips. FreeBSD systems can also read sensor data from the mbmon daemon as described in the Linux section above. </p>
 <p> <code>NetBSD:</code><br />
- Builtin sensor reporting is available for some sensor chips. NetBSD uses the <a href="/docs/linux/man/4-envsys/">envsys</a>(4) interface and sensors reading is automatically enabled if you have either a <a href="/docs/linux/man/4-lm/">lm</a>(4) or <a href="/docs/linux/man/4-viaenv/">viaenv</a>(4) chip configured in your kernel. </p>
+ Builtin sensor reporting is available for some sensor chips. NetBSD uses the envsys(4) interface and sensors reading is automatically enabled if you have either a lm(4) or viaenv(4) chip configured in your kernel. </p>
 <p> <code>General Setup:</code><br />
  Temperature and fan sensor displays may be optionally located on the CPU or Proc panels to save some vertical space while voltages are always displayed on their own panel. If you set up to monitor both a temperature and a fan on a single CPU or Proc panel, they can be displayed optionally as an alternating single display or as separate displays. If separate, the fan display will replace the panel label. The configuration for this is under the CPU and Proc config pages. </p>
 <p> If not using libsensors, in the Setup page for the Sensors config enter any correction factors and offsets for each of the sensors you are monitoring (see below and lm_sensor documentation). For Linux, default values are automatically provided for many sensor chips. </p>
@@ -369,8 +369,8 @@ Note for NetBSD users:
 </pre>
 <dl>
 <dt>
-<dd> The current implementation of the sensor reading under NetBSD opens /dev/sysmon and never closes it. Since that device does not support concurrent accesses, you won&#8217;t be able to run other apps such as <a href="/docs/linux/man/8-envstat/">envstat</a>(8) while GKrellM is running. This might change if this happens to be an issue. </p>
-<p> The reasons for this choice are a) efficiency (though it might be possible to open/close /dev/sysmon each time a reading is needed without major performance issue) and b) as of October 2001, there&#8217;s a bug in the <a href="/docs/linux/man/4-envsys/">envsys</a>(4) driver which sometimes causes deadlocks when processes try to access simultaneously /dev/sysmon (see NetBSD PR#14368). A (quick and dirty) workaround for this is to monopolize the driver :)</dl>
+<dd> The current implementation of the sensor reading under NetBSD opens /dev/sysmon and never closes it. Since that device does not support concurrent accesses, you won&#8217;t be able to run other apps such as envstat(8) while GKrellM is running. This might change if this happens to be an issue. </p>
+<p> The reasons for this choice are a) efficiency (though it might be possible to open/close /dev/sysmon each time a reading is needed without major performance issue) and b) as of October 2001, there&#8217;s a bug in the envsys(4) driver which sometimes causes deadlocks when processes try to access simultaneously /dev/sysmon (see NetBSD PR#14368). A (quick and dirty) workaround for this is to monopolize the driver :)</dl>
 <h3>CPU/Motherboard Temperatures</h3>
 <p> Most modern motherboards will not require setting temperature correction factors and offsets other than the defaults. However, for lm_sensors it is necessary to have a correct &quot;set sensor&quot; line in <i>/etc/sensors.conf</i> if the temperature sensor type is other than the default thermistor. If using Linux sysfs sensors, this sensor type would be set by writing to a sysfs file. For example, you might at boot set a sysfs temperature sensor type with: </p>
 <dl>

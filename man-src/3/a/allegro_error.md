@@ -30,5 +30,5 @@ Last Allegro error `%s'
     abort_on_error("Error calling some function!");
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-install_sound/">install_sound</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code>install_sound</code>(3) </p>
 <h2>Index</h2>

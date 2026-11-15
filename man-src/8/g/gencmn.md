@@ -42,4 +42,4 @@ description: "gencmn – generate an ICU memory-mappable data file"
 <h2>Copyright</h2>
 <p>Copyright (C) 2000-2001 IBM, Inc. and others.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-decmn/">decmn</a></code>(8) </p>
+<p><code>decmn</code>(8) </p>

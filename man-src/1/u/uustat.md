@@ -133,7 +133,7 @@ uustat-- command rmail-- older - than 168 --kill - all-- no - list-- mail-- noti
 </code></pre>
 <p> This will kill all <i>rmail</i> commands that have been queued up waiting for delivery for over 1 week (168 hours). For each such command, mail will be sent both to the UUCP administrator and to the user who requested the rmail execution. The mail message sent will include the string given by the <code>&#8211;comment</code> option. The <code>&#8211;no-list</code> option prevents any of the jobs from being listed on the terminal, so any output from the program will be error messages.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-rmail/">rmail</a>(1), <a href="/docs/linux/man/1-uucp/">uucp</a>(1), <a href="/docs/linux/man/1-uux/">uux</a>(1), <a href="/docs/linux/man/8-uucico/">uucico</a>(8), <a href="/docs/linux/man/8-uuxqt/">uuxqt</a>(8)</p>
+<p> <a href="/docs/linux/man/1-ps/">ps</a>(1), rmail(1), <a href="/docs/linux/man/1-uucp/">uucp</a>(1), <a href="/docs/linux/man/1-uux/">uux</a>(1), <a href="/docs/linux/man/8-uucico/">uucico</a>(8), <a href="/docs/linux/man/8-uuxqt/">uuxqt</a>(8)</p>
 <h2>AUTHOR</h2>
 <p> Ian Lance Taylor (ian [at] airs.com) </p>
 <h2>Index</h2>

@@ -194,7 +194,7 @@ makemime -j                                                 \
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code><a href="/docs/linux/man/5-maildropfilter/">maildropfilter</a></code>(5)m[]<font SIZE="-2">[6]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[7]</font>, m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[]<font SIZE="-2">[8]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), m[blue]<code><a href="/docs/linux/man/8-courier/">courier</a></code>(8)m[]<font SIZE="-2">[9]</font>, <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8), m[blue]<code>RFC 2045</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>RFC 2046</code>m[]<font SIZE="-2">[2]</font>, m[blue]<code>RFC 2047</code>m[]<font SIZE="-2">[3]</font>, m[blue]<code>RFC 2048</code>m[]<font SIZE="-2">[4]</font>, m[blue]<code>RFC 2049</code>m[]<font SIZE="-2">[4]</font>.</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code>maildropfilter</code>(5)m[]<font SIZE="-2">[6]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[7]</font>, m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[]<font SIZE="-2">[8]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), m[blue]<code>courier</code>(8)m[]<font SIZE="-2">[9]</font>, <code>sendmail</code>(8), m[blue]<code>RFC 2045</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>RFC 2046</code>m[]<font SIZE="-2">[2]</font>, m[blue]<code>RFC 2047</code>m[]<font SIZE="-2">[3]</font>, m[blue]<code>RFC 2048</code>m[]<font SIZE="-2">[4]</font>, m[blue]<code>RFC 2049</code>m[]<font SIZE="-2">[4]</font>.</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
@@ -228,7 +228,7 @@ makemime -j                                                 \
 <dt>
 <dd> [set $man.base.url.for.relative.links]/maildrop.html</dl>
 <dt> 6.</p>
-<dd> <code><a href="/docs/linux/man/5-maildropfilter/">maildropfilter</a></code>(5)</p>
+<dd> <code>maildropfilter</code>(5)</p>
 <dl>
 <dt>
 <dd> [set $man.base.url.for.relative.links]/maildropfilter.html</dl>
@@ -243,7 +243,7 @@ makemime -j                                                 \
 <dt>
 <dd> [set $man.base.url.for.relative.links]/reformime.html</dl>
 <dt> 9.</p>
-<dd> <code><a href="/docs/linux/man/8-courier/">courier</a></code>(8)</p>
+<dd> <code>courier</code>(8)</p>
 <dl>
 <dt>
 <dd> [set $man.base.url.for.relative.links]/courier.html</dl>

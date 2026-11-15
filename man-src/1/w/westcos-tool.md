@@ -71,7 +71,7 @@ description: "westcos-tool – utility for manipulating data structure on westco
 <dt>
 <dd> Print help message on screen.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-opensc/">opensc</a>(7)</p>
+<p> opensc(7)</p>
 <h2>AUTHORS</h2>
 <p> <code>westcos-tool</code> was written by Francois Leblanc &lt;francois.leblanc [at] cev-sa.com&gt;. </p>
 <h2>Index</h2>

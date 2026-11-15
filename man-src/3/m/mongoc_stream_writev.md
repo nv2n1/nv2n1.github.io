@@ -27,7 +27,7 @@ mongoc_stream_writev (mongoc_stream_t *stream,
 <dl COMPACT>
 <dt><code>timeout_msec</code></p>
 <dd>The number of milliseconds to block before indicating failure, or 0 for non-blocking. Negative values indicate the default timeout.</dl>
-<p> The <code><a href="/docs/linux/man/3-mongoc_stream_writev/">mongoc_stream_writev</a>(3)</code> function shall perform a write to a <code>mongoc_stream_t</code> \&amp;. It&#8217;s modeled on the API and semantics of <code><a href="/docs/linux/man/3-writev/">writev</a>(3)</code> , though the parameters map only loosely. </p>
+<p> The <code><a href="/docs/linux/man/3-mongoc_stream_writev/">mongoc_stream_writev</a>(3)</code> function shall perform a write to a <code>mongoc_stream_t</code> \&amp;. It&#8217;s modeled on the API and semantics of <code>writev(3)</code> , though the parameters map only loosely. </p>
 <h2>Returns</h2>
 <p>The number of bytes written on success, or <code>-1</code> upon failure and <code>errno</code> is set. </p>
 <h2>Colophon</h2>

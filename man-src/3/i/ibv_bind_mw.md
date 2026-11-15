@@ -54,7 +54,7 @@ struct ibv_mw_bind_info {
 <p> The bind does not complete when the function return &#8211; it is merely posted to the QP. The user should keep a copy of the old R_key, and fix the mw structure if the subsequent CQE for the bind operation indicates a failure. The user may safely send the R_key using a send request on the same QP, (based on QP ordering rules: a send after a bind request on the same QP are always ordered), but must not transfer it to the remote in any other manner before reading a successful CQE. </p>
 <p> Note that for type 2 MW, one should directly post bind WR to the QP, using ibv_post_send.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_mw/">ibv_alloc_mw</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_send/">ibv_post_send</a></code>(3), <code><a href="/docs/linux/man/3-ibv_poll_cq/">ibv_poll_cq</a></code>(3) <code><a href="/docs/linux/man/3-ibv_reg_mr/">ibv_reg_mr</a></code>(3),</p>
+<p> <code>ibv_alloc_mw</code>(3), <code>ibv_post_send</code>(3), <code>ibv_poll_cq</code>(3) <code>ibv_reg_mr</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</p>

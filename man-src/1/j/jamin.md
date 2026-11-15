@@ -101,7 +101,7 @@ description: "jamin – JACK Audio Mastering interface"
  <code>&lt;<a rel="nofollow" href="http://www.ardour.org">http://www.ardour.org</a></code>&gt;<br />
  <code>&lt;<a rel="nofollow" href="http://rezound.sourceforge.net">http://rezound.sourceforge.net</a></code>&gt;<br />
  <code><a href="/docs/linux/man/1-jackd/">jackd</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-alsaplayer/">alsaplayer</a>(1)</code><br />
+ <code>alsaplayer(1)</code><br />
  <code><a href="/docs/linux/man/1-ardour/">ardour</a>(1)</code></p>
 <h2>BUGS</h2>
 <p> Please send bug reports to &lt;<code>jamin-devel [at] lists.sourceforge.net</code>&gt;.</p>

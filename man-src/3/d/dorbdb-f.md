@@ -166,7 +166,7 @@ description: "dorbdb.f –"
 <dl COMPACT>
 <dd>
 <pre> The bidiagonal blocks B11, B12, B21, and B22 are represented
- implicitly by angles <a href="//www.systutorials.com/docs/linux/man/1-THETA/">THETA</a>(1), ..., THETA(Q) and <a href="//www.systutorials.com/docs/linux/man/1-PHI/">PHI</a>(1), ...,
+ implicitly by angles THETA(1), ..., THETA(Q) and PHI(1), ...,
  PHI(Q-1). B11 and B21 are upper bidiagonal, while B21 and B22 are
  lower bidiagonal. Every entry in each bidiagonal band is a product
  of a sine or cosine of a THETA with a sine or cosine of a PHI. See
@@ -177,7 +177,7 @@ description: "dorbdb.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
-<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, <a href="/docs/linux/man/1-50/">50</a>(1):33-65, 2009.</dl>
+<dd>[1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
 <p> Definition at line 286 of file dorbdb.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

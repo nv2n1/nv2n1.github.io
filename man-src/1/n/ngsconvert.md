@@ -32,7 +32,7 @@ Old : What Size in Bytes
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          a vector of real - imaginary pairs of doubles if the data is complex.
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-nutmeg/">nutmeg</a>(1), <a href="/docs/linux/man/1-spice/">spice</a>(1), <a href="/docs/linux/man/3-writedata/">writedata</a>(3)</p>
+<p> nutmeg(1), spice(1), writedata(3)</p>
 <h2>AUTHOR</h2>
 <p> Wayne Christopher (faustus [at] cad.berkeley.edu)</p>
 <h2>BUGS</h2>

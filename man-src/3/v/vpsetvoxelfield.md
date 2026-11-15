@@ -73,8 +73,8 @@ have to insert padding for you, resulting in wasted memory.
 Some of the VolPack routines require you to declare fields of a
 particular size in order to store their results. The functions to
 precompute surface normals and gradient magnitudes (see
-<a href="//www.systutorials.com/docs/linux/man/3-vpVolumeNormals/">vpVolumeNormals</a>(3), <a href="//www.systutorials.com/docs/linux/man/3-vpScanlineNormals/">vpScanlineNormals</a>(3), <a href="//www.systutorials.com/docs/linux/man/3-vpClassifyVolume/">vpClassifyVolume</a>(3),
-<a href="//www.systutorials.com/docs/linux/man/3-vpClassifyScalars/">vpClassifyScalars</a>(3) and <a href="//www.systutorials.com/docs/linux/man/3-vpClassifyScanline/">vpClassifyScanline</a>(3)) can optionally store a
+vpVolumeNormals(3), vpScanlineNormals(3), vpClassifyVolume(3),
+vpClassifyScalars(3) and vpClassifyScanline(3)) can optionally store a
 one-byte scalar value, a one-byte
 gradient magnitude, and a two-byte surface normal value in each voxel.
 The following constants defined in volpack.h give the corresponding
@@ -83,7 +83,7 @@ If you choose not to use these functions then there is no need to
 declare these fields.
 It is usually not necessary to declare a field for the voxel opacity
 if the opacity can be computed from the other voxel fields. See
-<a href="//www.systutorials.com/docs/linux/man/3-vpSetClassifierTable/">vpSetClassifierTable</a>(3) for further discussion.
+vpSetClassifierTable(3) for further discussion.
 If the call to <code>vpSetVoxelSize</code> succeeds, any existing precomputed
 volume data structures in the context are destroyed.</pre>
 <h2>State Variables</h2>

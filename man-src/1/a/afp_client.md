@@ -14,7 +14,7 @@ description: "afp_client- Mount, unmount and control Apple Filing Protocol (AFP)
 <h2>DESCRIPTION</h2>
 <p> <code>afp_client</code> command allows you to perform some basic functions to access AFP volumes, such as mount, unmount, get status, suspend and resume. </p>
 <p> Do not confuse this with afpcmd; afp_client is to be used only for the FUSE client, in conjunction with <a href="/docs/linux/man/1-afpfsd/">afpfsd</a>(1). afpcmd is a batch-mode file transferring client. Both of them use the afpfs-ng libraries. </p>
-<p> <a href="/docs/linux/man/1-afp_mount/">afp_mount</a>(1) is normally a symlink to afp_client. It only handles mounting commands with a fully formed AFP URL. </p>
+<p> afp_mount(1) is normally a symlink to afp_client. It only handles mounting commands with a fully formed AFP URL. </p>
 <h2>COMMANDS</h2>
 <dl>
 <dt><code>mount</code></p>

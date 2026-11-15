@@ -33,4 +33,4 @@ description: "nodm – X display manager for automatic logins"
 <h2>Author</h2>
 <p><code>nodm</code> is written and maintained by Enrico Zini &lt;enrico [at] enricozini.org&gt; and Joachim Breitner &lt;nomeata [at] debian.org&gt;.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-xinit/">xinit</a></code>(1), <code><a href="/docs/linux/man/1-xdm/">xdm</a></code>(1), <code><a href="/docs/linux/man/1-gdm/">gdm</a></code>(1), <code><a href="/docs/linux/man/1-kdm/">kdm</a></code>(1). </p>
+<p><code><a href="/docs/linux/man/1-xinit/">xinit</a></code>(1), <code><a href="/docs/linux/man/1-xdm/">xdm</a></code>(1), <code>gdm</code>(1), <code>kdm</code>(1). </p>

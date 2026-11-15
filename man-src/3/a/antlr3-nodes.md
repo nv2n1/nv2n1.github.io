@@ -33,7 +33,7 @@ description: "ANTLR3_COMMON_TREE_NODE_STREAM_struct –"
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>hasNext</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>hasUniqueNavigationNodes</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>ANTLR3_UINT32</code> <code>head</code><br />
- <i>lookAhead[head] is the first symbol of lookahead, <a href="/docs/linux/man/1-lt/">LT</a>(1). </i><br />
+ <i>lookAhead[head] is the first symbol of lookahead, LT(1). </i><br />
  <code>ANTLR3_COMMON_TREE</code> <code>INVALID_NODE</code><br />
  <i>Dummy node that is returned if we need to indicate an invalid node for any reason. </i><br />
  <code>ANTLR3_BOOLEAN</code> <code>isRewriter</code><br />
@@ -103,7 +103,7 @@ description: "ANTLR3_COMMON_TREE_NODE_STREAM_struct –"
 <h3><code>ANTLR3_BOOLEAN</code>(* <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct::hasUniqueNavigationNodes</code>)(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns)</h3>
 <p> Referenced by antlr3CommonTreeNodeStreamNew(), and antlr3CommonTreeNodeStreamNewStream().</p>
 <h3><code>ANTLR3_UINT32</code> <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct::head</code></h3>
-<p> lookAhead[head] is the first symbol of lookahead, <a href="/docs/linux/man/1-lt/">LT</a>(1).</p>
+<p> lookAhead[head] is the first symbol of lookahead, LT(1).</p>
 <h3><code>ANTLR3_COMMON_TREE</code> <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct::INVALID_NODE</code></h3>
 <p> Dummy node that is returned if we need to indicate an invalid node for any reason. </p>
 <p> Referenced by antlr3CommonTreeNodeStreamFree(), antlr3CommonTreeNodeStreamNew(), antlr3CommonTreeNodeStreamNewStream(), and LB().</p>

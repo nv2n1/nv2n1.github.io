@@ -52,4 +52,4 @@ enum uwildmat uwildmat_poison(const char *text, const char *pattern);</code></pr
 <p> Please note that the interfaces to these functions are named <code>uwildmat</code> and the like rather than <code>wildmat</code> to distinguish them from the <code>wildmat</code> function provided by Rich <tt>$alz</tt>&#8216;s original implementation. While this code is heavily based on Rich&#8217;s original code, it has substantial differences, including the extension to support <font SIZE="-1">UTF-8</font> characters, and has noticable functionality changes. Any bugs present in it aren&#8217;t Rich&#8217;s fault. </p>
 <p> <tt>$Id:</tt> uwildmat.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-grep/">grep</a></i>(1), <i><a href="/docs/linux/man/3-fnmatch/">fnmatch</a></i>(3), <i><a href="/docs/linux/man/3-regex/">regex</a></i>(3), <i><a href="/docs/linux/man/3-regexp/">regexp</a></i>(3). </p>
+<p><i><a href="/docs/linux/man/1-grep/">grep</a></i>(1), <i><a href="/docs/linux/man/3-fnmatch/">fnmatch</a></i>(3), <i><a href="/docs/linux/man/3-regex/">regex</a></i>(3), <i>regexp</i>(3). </p>

@@ -163,7 +163,7 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p>&nbsp;<wbr>&nbsp;&#8211;disable-stack-for-recursion </p>
 <p> was set, memory on the heap was used. From release 10.30 onwards this has changed (the stack is no longer used) and this option now does nothing except give a warning.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pcre2api/">pcre2api</a></code>(3), <code><a href="/docs/linux/man/3-pcre2-config/">pcre2-config</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-pcre2api/">pcre2api</a></code>(3), <code>pcre2-config</code>(3).</p>
 <h2>Author</h2>
 <pre>Philip Hazel
 University Computing Service

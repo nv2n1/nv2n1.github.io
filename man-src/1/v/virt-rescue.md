@@ -60,7 +60,7 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <p> Virt-rescue can be used on <i>any</i> disk image file or device, not just a virtual machine. For example you can use it on a blank file if you want to partition that file (although we would recommend using <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) instead as it is more suitable for this purpose). You can even use virt-rescue on things like <font SIZE="-1">SD</font> cards. </p>
 <p> You can get virt-rescue to give you scratch disk(s) to play with. This is useful for testing out Linux utilities (see <i>&#8211;scratch</i>). </p>
 <p> Virt-rescue does not require root. You only need to run it as root if you need root to open the disk image. </p>
-<p> This tool is just designed for quick interactive hacking on a virtual machine. For more structured access to a virtual machine disk image, you should use <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3). To get a structured shell that you can use to make scripted changes to guests, use <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
+<p> This tool is just designed for quick interactive hacking on a virtual machine. For more structured access to a virtual machine disk image, you should use <i>guestfs</i>(3). To get a structured shell that you can use to make scripted changes to guests, use <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></p>
@@ -209,7 +209,7 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 </pre>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
-<p> Several environment variables affect virt-rescue. See &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3) for the complete list.</p>
+<p> Several environment variables affect virt-rescue. See &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3) for the complete list.</p>
 <h2>FILES</h2>
 <dl>
 <dt>$XDG_CONFIG_HOME/libguestfs/libguestfs-tools.conf</p>
@@ -222,7 +222,7 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <dd> This configuration file controls the default read-only or read-write mode (<i>&#8211;ro</i> or <i>&#8211;rw</i>). </p>
 <p> See <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5).</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1), <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
 <h2>COPYRIGHT</h2>

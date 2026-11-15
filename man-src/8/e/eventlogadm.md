@@ -14,7 +14,7 @@ description: "eventlogadm – push records into the Samba event log store"
 <dd>eventlogadm [<code>-s</code>] [<code>-d</code>] [<code>-h</code>] <code>-o</code>&nbsp;<wbr>write&nbsp;<wbr><i>EVENTLOG</i></p>
 <dd>eventlogadm [<code>-s</code>] [<code>-d</code>] [<code>-h</code>] <code>-o</code>&nbsp;<wbr>dump&nbsp;<wbr><i>EVENTLOG</i>&nbsp;<wbr><i>RECORD_NUMBER</i></dl>
 <h2>Description</h2>
-<p>This tool is part of the <code><a href="/docs/linux/man/1-samba/">samba</a></code>(1) suite. </p>
+<p>This tool is part of the <code>samba</code>(1) suite. </p>
 <p> eventlogadm is a filter that accepts formatted event log records on standard input and writes them to the Samba event log store. Windows client can then manipulate these record using the usual administration tools.</p>
 <h2>Options</h2>
 <p><code>-s</code> <i>FILENAME</i></p>

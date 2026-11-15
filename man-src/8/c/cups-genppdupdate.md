@@ -32,7 +32,7 @@ description: "cups-genppdupdate – update CUPS+Gutenprint PPD files"
 <dt><code>-N</code></p>
 <dd>Reset all options to their defaults (do not merge options from the current PPD file)</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-cups-genppd/">cups-genppd</a></code>(8), <code><a href="/docs/linux/man/8-cups-genppdconfig/">cups-genppdconfig</a></code>(8), CUPS Software Administrators Manual, <a rel="nofollow" href="http://localhost:631/documentation.html">http://localhost:631/documentation.html</a></p>
+<p><code><a href="/docs/linux/man/8-cups-genppd/">cups-genppd</a></code>(8), <code>cups-genppdconfig</code>(8), CUPS Software Administrators Manual, <a rel="nofollow" href="http://localhost:631/documentation.html">http://localhost:631/documentation.html</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2002-2006 Roger Leigh (rleigh [at] debian.org) and Robert Krawitz (rlk [at] alum.mit.edu) </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 2, as published by the Free Software Foundation. </p>

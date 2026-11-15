@@ -15,5 +15,5 @@ description: "check_cpu – Detects the CPU type. Allegro game programming libra
 <h2>DESCRIPTION</h2>
 <p> Detects the CPU type, setting the following global variables. You don&#8217;t normally need to call this, because allegro_init() will do it for you. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-cpu_vendor/">cpu_vendor</a></code>(3), <code><a href="/docs/linux/man/3-cpu_family/">cpu_family</a></code>(3), <code><a href="/docs/linux/man/3-cpu_model/">cpu_model</a></code>(3), <code><a href="/docs/linux/man/3-cpu_capabilities/">cpu_capabilities</a></code>(3), <code><a href="/docs/linux/man/3-allegro_init/">allegro_init</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-cpu_vendor/">cpu_vendor</a></code>(3), <code><a href="/docs/linux/man/3-cpu_family/">cpu_family</a></code>(3), <code><a href="/docs/linux/man/3-cpu_model/">cpu_model</a></code>(3), <code><a href="/docs/linux/man/3-cpu_capabilities/">cpu_capabilities</a></code>(3), <code>allegro_init</code>(3) </p>
 <h2>Index</h2>

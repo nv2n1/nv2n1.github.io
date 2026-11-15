@@ -16,7 +16,7 @@ description: "tv_augment_tz – Convert floating time to explicit time."
 <p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output </p>
 <p> <code>&#8211;tz </code><font SIZE="-1"><code>TIMEZONE</code></font> use <font SIZE="-1">TIMEZONE </font>(e.g. Europe/Berlin) rather then the default of <font SIZE="-1">UTC</font></p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Karl Dietz, &lt;dekarl [at] spaetfruehstuecken.org&gt;</p>
 <h2>BUGS</h2>

@@ -31,7 +31,7 @@ description: "sd-daemon, SD_EMERG, SD_ALERT, SD_CRIT, SD_ERR, SD_WARNING, SD_NOT
 #define SD_DEBUG   &quot;&lt;7&gt;&quot;  /* debug-level messages */
 </pre>
 </dl>
-<p> These prefixes are intended to be used in conjunction with stderr-based logging as implemented by systemd. If a systemd service definition file is configured with <i>StandardError=journal</i>, <i>StandardError=syslog</i> or <i>StandardError=kmsg</i>, these prefixes can be used to encode a log level in lines printed. This is similar to the kernel <code>printk()</code>-style logging. See <code><a href="/docs/linux/man/2-klogctl/">klogctl</a></code>(2) for more information. </p>
+<p> These prefixes are intended to be used in conjunction with stderr-based logging as implemented by systemd. If a systemd service definition file is configured with <i>StandardError=journal</i>, <i>StandardError=syslog</i> or <i>StandardError=kmsg</i>, these prefixes can be used to encode a log level in lines printed. This is similar to the kernel <code>printk()</code>-style logging. See <code>klogctl</code>(2) for more information. </p>
 <p> The log levels are identical to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)&#8217;s log level system. To use these prefixes simply prefix every line with one of these strings. A line that is not prefixed will be logged at the default log level SD_INFO. </p>
 <p> <code>Example 1. Hello World</code> </p>
 <p> A daemon may log with the log level NOTICE by issuing this call: </p>

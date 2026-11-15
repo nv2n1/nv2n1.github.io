@@ -39,7 +39,7 @@ description: "prosodyctl – Manage a Prosody XMPP server"
 <dd> Prints the current execution status of the <code>prosody</code> server daemon. </p>
 </dl>
 <h3>Ejabberd Compatibility</h3>
-<p> <code>ejabberd</code> is another XMPP server which provides a comparable control tool, <code>ejabberdctl</code>, to control its server&#8217;s operations. <code>prosodyctl</code> implements some commands which are compatible with <code>ejabberdctl</code>. For details of how these commands work you should see <code><a href="/docs/linux/man/8-ejabberdctl/">ejabberdctl</a></code>(8). </p>
+<p> <code>ejabberd</code> is another XMPP server which provides a comparable control tool, <code>ejabberdctl</code>, to control its server&#8217;s operations. <code>prosodyctl</code> implements some commands which are compatible with <code>ejabberdctl</code>. For details of how these commands work you should see <code>ejabberdctl</code>(8). </p>
 <dl>
 <dt><code>register</code> <i>user server password</i></p>
 <dd>

@@ -13,7 +13,7 @@ description: "tangle – translate WEB to Pascal"
 <p> <code>tangle</code> [<i>options</i>] <i>webfile</i>[<i></i><code>.web</code>] [<i>changefile</i>[<i></i><code>.ch</code>]]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
-<p> The <code>tangle</code> program converts a Web source document into a Pascal program that may be compiled in the usual way with the on-line Pascal compiler (e.g., <code><a href="/docs/linux/man/1-pc/">pc</a></code>(1)). The output file is packed into lines of 72 characters or less, with the only concession to readability being the termination of lines at semicolons when this can be done conveniently. </p>
+<p> The <code>tangle</code> program converts a Web source document into a Pascal program that may be compiled in the usual way with the on-line Pascal compiler (e.g., <code>pc</code>(1)). The output file is packed into lines of 72 characters or less, with the only concession to readability being the termination of lines at semicolons when this can be done conveniently. </p>
 <p> The Web language allows you to prepare a single document containing all the information that is needed both to produce a compilable Pascal program and to produce a well-formatted document describing the program in as much detail as the writer may desire. The user of Web must be familiar with both TeX and Pascal. Web also provides a relatively simple, although adequate, macro facility that permits a Pascal program to be written in small easily-understood modules. </p>
 <p> The command line should have either one or two names on it. The first is taken as the Web file (and <code>.web</code> is added if there is no extension). If there is another name, it is a change file (and <code>.ch</code> is added if there is no extension). The change file overrides parts of the Web file, as described in the Web system documentation. </p>
 <p> The output files are a Pascal file and a string pool file, whose names are formed by adding <code>.p</code> and <code>.pool</code> respectively to the root of the Web file name.</p>
@@ -41,7 +41,7 @@ description: "tangle – translate WEB to Pascal"
 <h2>ENVIRONMENT</h2>
 <p> The environment variable WEBINPUTS is used to search for the input files, or the system default if WEBINPUTS is not set. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pc/">pc</a></code>(1), <code><a href="/docs/linux/man/1-pxp/">pxp</a></code>(1) (for formatting <code>tangle</code> output when debugging), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1). </p>
+<p> <code>pc</code>(1), <code>pxp</code>(1) (for formatting <code>tangle</code> output when debugging), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1). </p>
 <p> Donald E. Knuth, <i>The Web System of Structured Documentation</i>. </p>
 <p> Donald E. Knuth, <i>Literate Programming</i>, Computer Journal <code>27</code>, 97-111, 1984. </p>
 <p> Wayne Sewell, <i>Weaving a Program</i>, Van Nostrand Reinhold, 1989, ISBN 0-442-31946-0. </p>

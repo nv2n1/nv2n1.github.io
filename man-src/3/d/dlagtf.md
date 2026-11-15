@@ -94,12 +94,12 @@ description: "dlagtf.f –"
           IN is INTEGER array, dimension (N)
           On exit, IN contains details of the permutation matrix P. If
           an interchange occurred at the kth step of the elimination,
-          then IN(k) = 1, otherwise IN(k) = 0. The element <a href="//www.systutorials.com/docs/linux/man/n-IN/">IN</a>(n)
+          then IN(k) = 1, otherwise IN(k) = 0. The element IN(n)
           returns the smallest positive integer j such that
              abs( u(j,j) ).le. norm( (T - lambda*I)(j) )*TOL,
           where norm( A(j) ) denotes the sum of the absolute values of
-          the jth row of the matrix A. If no such j exists then <a href="//www.systutorials.com/docs/linux/man/n-IN/">IN</a>(n)
-          is returned as zero. If <a href="//www.systutorials.com/docs/linux/man/n-IN/">IN</a>(n) is returned as positive, then a
+          the jth row of the matrix A. If no such j exists then IN(n)
+          is returned as zero. If IN(n) is returned as positive, then a
           diagonal element of U is small, indicating that
           (T - lambda*I) is singular or nearly singular,
 </pre>

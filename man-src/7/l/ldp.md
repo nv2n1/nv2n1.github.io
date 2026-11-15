@@ -42,4 +42,4 @@ description: "LDP – Intro to the Linux Documentation Project, with help, guide
 <dt><i>/usr/share/doc/HOWTO/mini/</i> (mini-HOWTO files)</p>
 <dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-info/">info</a></code>(1), <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/1x-xman/">xman</a></code>(1x) <code>info</code> pages as read with <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1) or <code><a href="/docs/linux/man/1-info/">info</a></code>(1) </p>
+<p><code><a href="/docs/linux/man/1-info/">info</a></code>(1), <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code>xman</code>(1x) <code>info</code> pages as read with <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1) or <code><a href="/docs/linux/man/1-info/">info</a></code>(1) </p>

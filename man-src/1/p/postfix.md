@@ -116,7 +116,7 @@ description: "postfix – Postfix control program"
 <p> Available in Postfix version 3.1 and later:</p>
 <dl>
 <dt><code>openssl_path (openssl)</code></p>
-<dd> The location of the OpenSSL command line program <code><a href="/docs/linux/man/1-openssl/">openssl</a></code>(1).</dl>
+<dd> The location of the OpenSSL command line program <code>openssl</code>(1).</dl>
 <p> Other configuration parameters:</p>
 <dl>
 <dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></p>
@@ -140,7 +140,7 @@ description: "postfix – Postfix control program"
 <p> Available in Postfix version 3.4 and later:</p>
 <dl>
 <dt><code>maillog_file (empty)</code></p>
-<dd> The name of an optional logfile that is written by the Postfix <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8) service.</p>
+<dd> The name of an optional logfile that is written by the Postfix <code>postlogd</code>(8) service.</p>
 <dt><code>maillog_file_compressor (gzip)</code></p>
 <dd> The program to run after rotating $maillog_file with &quot;postfix logrotate&quot;.</p>
 <dt><code>maillog_file_prefixes (/var, /dev/stdout)</code></p>
@@ -148,7 +148,7 @@ description: "postfix – Postfix control program"
 <dt><code>maillog_file_rotate_suffix (%Y%M%d-%H%M%S)</code></p>
 <dd> The format of the suffix to append to $maillog_file while rotating the file with &quot;postfix logrotate&quot;.</p>
 <dt><code>postlog_service_name (postlog)</code></p>
-<dd> The name of the <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8) service entry in master.cf.</dl>
+<dd> The name of the <code>postlogd</code>(8) service entry in master.cf.</dl>
 <h2>FILES</h2>
 <p> Prior to Postfix version 2.6, all of the following files were in <code>$config_directory</code>. Some files are now in <code>$daemon_directory</code> so that they can be shared among multiple instances that run the same Postfix version. </p>
 <p> Use the command &quot;<code>postconf config_directory</code>&quot; or &quot;<code>postconf daemon_directory</code>&quot; to expand the names into their actual values. </p>
@@ -195,7 +195,7 @@ Table-driven mechanisms:
 Table lookup mechanisms:
 <a href="//www.systutorials.com/docs/linux/man/5-cidr_table/">cidr_table</a>(5), Associate CIDR pattern with value
 <a href="//www.systutorials.com/docs/linux/man/5-ldap_table/">ldap_table</a>(5), Postfix LDAP client
-<a href="//www.systutorials.com/docs/linux/man/5-lmdb_table/">lmdb_table</a>(5), Postfix LMDB database driver
+lmdb_table(5), Postfix LMDB database driver
 <a href="//www.systutorials.com/docs/linux/man/5-memcache_table/">memcache_table</a>(5), Postfix memcache client
 <a href="//www.systutorials.com/docs/linux/man/5-mysql_table/">mysql_table</a>(5), Postfix MYSQL client
 <a href="//www.systutorials.com/docs/linux/man/5-nisplus_table/">nisplus_table</a>(5), Postfix NIS+ client
@@ -218,7 +218,7 @@ Daemon processes:
 <a href="//www.systutorials.com/docs/linux/man/8-oqmgr/">oqmgr</a>(8), old Postfix queue manager
 <a href="//www.systutorials.com/docs/linux/man/8-pickup/">pickup</a>(8), Postfix local mail pickup
 <a href="//www.systutorials.com/docs/linux/man/8-pipe/">pipe</a>(8), deliver mail to non-Postfix command
-<a href="//www.systutorials.com/docs/linux/man/8-postlogd/">postlogd</a>(8), Postfix internal logging service
+postlogd(8), Postfix internal logging service
 <a href="//www.systutorials.com/docs/linux/man/8-postscreen/">postscreen</a>(8), Postfix zombie blocker
 <a href="//www.systutorials.com/docs/linux/man/8-proxymap/">proxymap</a>(8), Postfix lookup table proxy server
 <a href="//www.systutorials.com/docs/linux/man/8-qmgr/">qmgr</a>(8), Postfix queue manager
@@ -234,7 +234,7 @@ Daemon processes:
 <a href="//www.systutorials.com/docs/linux/man/8-verify/">verify</a>(8), Postfix address verification
 <a href="//www.systutorials.com/docs/linux/man/8-virtual/">virtual</a>(8), Postfix virtual delivery agent
 Other:
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging
+syslogd(8), system logging
 </pre>
 <h2>README FILES</h2>
 <p> Use &quot;<code>postconf readme_directory</code>&quot; or &quot;<code>postconf html_directory</code>&quot; to locate this information. </p>

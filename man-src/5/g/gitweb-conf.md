@@ -193,7 +193,7 @@ $highlight_ext{'phtml'} = 'php';</pre>
 <dd>Default charset for text files. If this is not set, the web server configuration will be used. Unset by default.</dl>
 <p> $fallback_encoding</p>
 <dl>
-<dd>Gitweb assumes this charset when a line contains non-UTF-8 characters. The fallback decoding is used without error checking, so it can be even &quot;utf-8&quot;. The value must be a valid encoding; see the <code><a href="//www.systutorials.com/docs/linux/man/3pm-Encoding::Supported/">Encoding::Supported</a></code>(3pm) man page for a list. The default is &quot;latin1&quot;, aka. &quot;iso-8859-1&quot;.</dl>
+<dd>Gitweb assumes this charset when a line contains non-UTF-8 characters. The fallback decoding is used without error checking, so it can be even &quot;utf-8&quot;. The value must be a valid encoding; see the <code>Encoding::Supported</code>(3pm) man page for a list. The default is &quot;latin1&quot;, aka. &quot;iso-8859-1&quot;.</dl>
 <p> @diff_opts</p>
 <dl>
 <dd>Rename detection options for git-diff and git-diff-tree. The default is (&#8216;-M&#8217;); set it to (&#8216;-C&#8217;) or (&#8216;-C&#8217;, &#8216;-C&#8217;) to also detect copies, or set it to () i.e. empty list if you don&#8217;t want to have renames detection. </p>

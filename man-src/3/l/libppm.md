@@ -261,7 +261,7 @@ ppm_name_from_bk_color(bk_color bkColor);
 <dt>&bull;</p>
 <dd> A triplet of decimal floating point numbers from 0.0 to 1.0, representing red, green, and blue intensities respectively, separated by commas. E.g. <tt>1.0,0.5,.25</tt>. This is for backwards compatibility; it was in use before MIT came up with the similar and preferred rgbi style). </p>
 </dl>
-<p> If the color specification does not conform to any of these formats, including the case that it is a name, but is not in the system color dictionary, <code>ppm_parsecolor()</code> <code>throws</code>an<code><a href="/docs/linux/man/1-error/">error</a></code>(1) </p>
+<p> If the color specification does not conform to any of these formats, including the case that it is a name, but is not in the system color dictionary, <code>ppm_parsecolor()</code> <code>throws</code>an<code>error</code>(1) </p>
 <p> <code>ppm_colorname</code> </p>
 <p> <code>ppm_colorname()</code> returns a string that describes the color of the given pixel. If a system color dictionary is available and the color appears in it, <code>ppm_colorname()</code> returns the name of the color from the file. If the color does not appear in a system color dictionary and <i>hexok</i> is true, <code>ppm_colorname()</code> returns a hexadecimal color specification triple (#rrggbb). If a system color dictionary is available but the color does not appear in it and <i>hexok</i> is false, <code>ppm_colorname()</code> returns the name of the closest matching color in the color file. Finally, if there is no system color dictionary available and <i>hexok</i> is false, <code>ppm_colorname()</code> fails and throws an error . </p>
 <p> The string returned is in static libppm library storage which is overwritten by every call to <code>ppm_colorname()</code>. </p>
@@ -320,7 +320,7 @@ ppm_name_from_bk_color(bk_color bkColor);
 <p> <code>colorhist_vector ppm_computecolorhist2( FILE * ifp, int cols, int rows, int maxcolors, pixval maxval, int format, int * colorsP )</code> </p>
 <p> This is the same as <code>ppm_computecolorhist()</code> except that instead of feeding it an array of pixels in storage, you give it an open file stream and it reads the image from the file. The file must be positioned after the header, at the raster. Upon return, the file is still open, but its position is undefined. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , <code><a href="/docs/linux/man/1-libpbm/">libpbm</a></code>(1) </p>
+<p> <code>pbm</code>(1) , <code>pgm</code>(1) , <code>libpbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Tony Hansen and Jef Poskanzer. </p>
 <h2>Index</h2>

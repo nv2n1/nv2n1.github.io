@@ -15,7 +15,7 @@ description: "ssldump – dump SSL traffic on a network"
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-S</code> [<i>crypto</i>|<i>d</i>|<i>ht</i>|<i>H</i>|<i>nroff</i>] ] [ <i>expression</i> ] </p>
 <h2>DESCRIPTION</h2>
 <p> <i>ssldump</i> is an SSL/TLS network protocol analyzer. It identifies TCP connections on the chosen network interface and attempts to interpret them as SSL/TLS traffic. When it identifies SSL/TLS traffic, it decodes the records and displays them in a textual form to stdout. If provided with the appropriate keying material, it will also decrypt the connections and display the application data traffic. </p>
-<p> ssldump has been tested on FreeBSD, Linux, Solaris, and HP/UX. Since it&#8217;s based on PCAP, it should work on most platforms. However, unlike tcpdump, ssldump needs to be able to see both sides of the data transmission so you may have trouble using it with network taps such as SunOS nit that don&#8217;t permit you to see transmitted data. <code>Under SunOS with nit or bpf:</code> To run <i>tcpdump</i> you must have read access to <i>/dev/nit</i> or <i>/dev/bpf*</i>. <code>Under Solaris with dlpi:</code> You must have read access to the network pseudo device, e.g. <i>/dev/le</i>. <code>Under HP-UX with dlpi:</code> You must be root or it must be installed setuid to root. <code>Under IRIX with snoop:</code> You must be root or it must be installed setuid to root. <code>Under Linux:</code> You must be root or it must be installed setuid to root. <code>Under Ultrix and Digital UNIX:</code> Once the super-user has enabled promiscuous-mode operation using <i><a href="/docs/linux/man/8-pfconfig/">pfconfig</a></i>(8), any user may run <code>ssldump</code> <code>Under BSD:</code> You must have read access to <i>/dev/bpf*</i>.</p>
+<p> ssldump has been tested on FreeBSD, Linux, Solaris, and HP/UX. Since it&#8217;s based on PCAP, it should work on most platforms. However, unlike tcpdump, ssldump needs to be able to see both sides of the data transmission so you may have trouble using it with network taps such as SunOS nit that don&#8217;t permit you to see transmitted data. <code>Under SunOS with nit or bpf:</code> To run <i>tcpdump</i> you must have read access to <i>/dev/nit</i> or <i>/dev/bpf*</i>. <code>Under Solaris with dlpi:</code> You must have read access to the network pseudo device, e.g. <i>/dev/le</i>. <code>Under HP-UX with dlpi:</code> You must be root or it must be installed setuid to root. <code>Under IRIX with snoop:</code> You must be root or it must be installed setuid to root. <code>Under Linux:</code> You must be root or it must be installed setuid to root. <code>Under Ultrix and Digital UNIX:</code> Once the super-user has enabled promiscuous-mode operation using <i>pfconfig</i>(8), any user may run <code>ssldump</code> <code>Under BSD:</code> You must have read access to <i>/dev/bpf*</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code></p>
@@ -100,7 +100,7 @@ description: "ssldump – dump SSL traffic on a network"
 </pre>
 <p> If <i>host</i> is a name with multiple IP addresses, each address will be checked for a match.</p>
 <dt><code>ether dst </code><i>ehost</i></p>
-<dd> True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i><a href="//www.systutorials.com/docs/linux/man/3N-ethers/">ethers</a></i>(3N) for numeric format).</p>
+<dd> True if the ethernet destination address is <i>ehost</i>. <i>Ehost</i> may be either a name from /etc/ethers or a number (see <i>ethers</i>(3N) for numeric format).</p>
 <dt><code>ether src </code><i>ehost</i></p>
 <dd> True if the ethernet source address is <i>ehost</i>.</p>
 <dt><code>ether host </code><i>ehost</i></p>
@@ -112,7 +112,7 @@ description: "ssldump – dump SSL traffic on a network"
 </pre>
 <p> which can be used with either names or numbers for <i>host / ehost</i>.) This syntax does not work in IPv6-enabled configuration at this moment.</p>
 <dt><code>dst net </code><i>net</i></p>
-<dd> True if the IPv4/v6 destination address of the packet has a network number of <i>net</i>. <i>Net</i> may be either a name from /etc/networks or a network number (see <i><a href="/docs/linux/man/4-networks/">networks</a>(4)</i> for details).</p>
+<dd> True if the IPv4/v6 destination address of the packet has a network number of <i>net</i>. <i>Net</i> may be either a name from /etc/networks or a network number (see <i>networks(4)</i> for details).</p>
 <dt><code>src net </code><i>net</i></p>
 <dd> True if the IPv4/v6 source address of the packet has a network number of <i>net</i>.</p>
 <dt><code>net </code><i>net</i></p>
@@ -122,7 +122,7 @@ description: "ssldump – dump SSL traffic on a network"
 <dt><code>net </code><i>net</i>/<i>len</i></p>
 <dd> True if the IPv4/v6 address matches <i>net</i> a netmask <i>len</i> bits wide. May be qualified with <code>src</code> or <code>dst</code>.</p>
 <dt><code>dst port </code><i>port</i></p>
-<dd> True if the packet is ip/tcp, ip/udp, ip6/tcp or ip6/udp and has a destination port value of <i>port</i>. The <i>port</i> can be a number or a name used in /etc/services (see <i><a href="//www.systutorials.com/docs/linux/man/4P-tcp/">tcp</a></i>(4P) and <i><a href="//www.systutorials.com/docs/linux/man/4P-udp/">udp</a></i>(4P)). If a name is used, both the port number and protocol are checked. If a number or ambiguous name is used, only the port number is checked (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will print both tcp/domain and udp/domain traffic).</p>
+<dd> True if the packet is ip/tcp, ip/udp, ip6/tcp or ip6/udp and has a destination port value of <i>port</i>. The <i>port</i> can be a number or a name used in /etc/services (see <i>tcp</i>(4P) and <i>udp</i>(4P)). If a name is used, both the port number and protocol are checked. If a number or ambiguous name is used, only the port number is checked (e.g., <code>dst port 513</code> will print both tcp/login traffic and udp/who traffic, and <code>port domain</code> will print both tcp/domain and udp/domain traffic).</p>
 <dt><code>src port </code><i>port</i></p>
 <dd> True if the packet has a source port value of <i>port</i>.</p>
 <dt><code>port </code><i>port</i></p>
@@ -234,7 +234,7 @@ description: "ssldump – dump SSL traffic on a network"
 <p> Support is provided for only for Ethernet and loopback interfaces because that&#8217;s all that I have. If you have another kind of network you will need to modify pcap_cb in base/pcap-snoop.c. If you have direct experience with ssldump on other networks, please send me patches. </p>
 <p> ssldump doesn&#8217;t implement session caching and therefore can&#8217;t decrypt resumed sessions. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a></code>(1) </p>
+<p> <code>tcpdump</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> ssldump was written by Eric Rescorla &lt;ekr [at] rtfm.com&gt;. </p>
 <h2>Index</h2>

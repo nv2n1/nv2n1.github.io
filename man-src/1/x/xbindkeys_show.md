@@ -33,9 +33,9 @@ description: "xbindkeys_show – a program to show the grabbing keys used in xbi
 <pre>
 <code>xbindkeys</code>
     A grabbing keys program for X.
-<code><a href="//www.systutorials.com/docs/linux/man/1x-xmodmap/">xmodmap</a>(1x)</code>
+<code>xmodmap(1x)</code>
     Utility for modifying keymap &amp; button mappings in X.
-<code><a href="//www.systutorials.com/docs/linux/man/1x-xev/">xev</a>(1x)</code>
+<code>xev(1x)</code>
     Print contents of X events.
 <code>/usr/include/X11/keysymdef.h</code>
     X11 KeySym definitions.

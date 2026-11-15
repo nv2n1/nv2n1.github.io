@@ -44,9 +44,9 @@ description: "setarch – change reported architecture in new program environmen
 <dt><code>-T</code>, <code>&#8211;sticky-timeouts</code></p>
 <dd> This makes <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2), and <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2) system calls preserve the timeout value instead of modifying it to reflect the amount of time not slept when interrupted by a signal handler. Use when <i>program</i> depends on this behavior. For more details see the timeout description in <code><a href="/docs/linux/man/2-select/">select</a></code>(2) manual page. Turns on STICKY_TIMEOUTS.</p>
 <dt><code>-X</code>, <code>&#8211;read-implies-exec</code></p>
-<dd> If this is set then <code><a href="/docs/linux/man/3-mmap/">mmap</a></code>(3) PROT_READ will also add the PROT_EXEC bit &#8211; as expected by legacy x86 binaries. Notice that the ELF loader will automatically set this bit when it encounters a legacy binary. Turns on READ_IMPLIES_EXEC.</p>
+<dd> If this is set then <code>mmap</code>(3) PROT_READ will also add the PROT_EXEC bit &#8211; as expected by legacy x86 binaries. Notice that the ELF loader will automatically set this bit when it encounters a legacy binary. Turns on READ_IMPLIES_EXEC.</p>
 <dt><code>-Z</code>, <code>&#8211;mmap-page-zero</code></p>
-<dd> SVr4 bug emulation that will set <code><a href="/docs/linux/man/3-mmap/">mmap</a></code>(3) page zero as read-only. Use when <i>program</i> depends on this behavior, and the source code is not available to be fixed. Turns on MMAP_PAGE_ZERO.</p>
+<dd> SVr4 bug emulation that will set <code>mmap</code>(3) page zero as read-only. Use when <i>program</i> depends on this behavior, and the source code is not available to be fixed. Turns on MMAP_PAGE_ZERO.</p>
 <dt><code>-V</code>,<code> &#8211;version</code></p>
 <dd> Display version information and exit.</p>
 <dt><code>-h</code>,<code> &#8211;help</code></p>

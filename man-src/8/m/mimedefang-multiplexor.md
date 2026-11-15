@@ -85,7 +85,7 @@ description: "mimedefang-multiplexor – Process pool controller for mail filter
 <p>Here, &quot;Stopped&quot; is the number of non-running slaves, &quot;Idle&quot; is the number of idle slaves, &quot;Busy&quot; is the number of busy slaves, &quot;Killed&quot; is the number of killed slaves yet to be reaped, &quot;Queued&quot; is the number of queued requests, &quot;Msgs&quot; is the total number of messages processed since the multiplexor began running, and &quot;Activations&quot; is the number of times a Perl process has been started since the multiplexor began running. </p>
 <p> If you supply an <i>interval</i> of 0 (which is the default), no periodic status logging is performed. If you supply an <i>interval</i> of less than 5 seconds, it is silently reset to 5 seconds. </p>
 <dt><code>-S </code><i>facility</i></p>
-<dd>Specifies the syslog facility for log messages. The default is <i>mail</i>. See <code><a href="/docs/linux/man/3-openlog/">openlog</a></code>(3) for a list of valid facilities. You can use either the short name (&quot;mail&quot;) or long name (&quot;LOG_MAIL&quot;) for the facility name. </p>
+<dd>Specifies the syslog facility for log messages. The default is <i>mail</i>. See <code>openlog</code>(3) for a list of valid facilities. You can use either the short name (&quot;mail&quot;) or long name (&quot;LOG_MAIL&quot;) for the facility name. </p>
 <dt><code>-E</code></p>
 <dd>Specifies that the multiplexor should create an embedded Perl interpreter. This can improve performance dramatically. But see the section &quot;EMBEDDING PERL&quot; for more information. </p>
 <dt><code>-X</code> <i>n</i></p>

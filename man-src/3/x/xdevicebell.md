@@ -38,4 +38,4 @@ XChangeFeedbackControl.</pre></dl><dl COMPACT><dd><pre>XDeviceBell can generate 
  does not exist, or has not been opened by this client
  via XOpenInputDevice.</pre></dl><dl COMPACT><dd><pre>BadValue
  An invalid feedbackclass, feedbackid, or percent value
- was specified.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre><a HREF="//www.systutorials.com/docs/linux/man/3-XChangeFeedbackControl/">XChangeFeedbackControl</a>(3), <a HREF="//www.systutorials.com/docs/linux/man/3-XBell/">XBell</a>(3)</pre></dl>
+ was specified.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeFeedbackControl(3), XBell(3)</pre></dl>

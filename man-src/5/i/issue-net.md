@@ -32,4 +32,4 @@ description: "issue.net – identification file for telnet sessions"
 <h2>Files</h2>
 <p>/etc/issue.net</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-telnetd/">telnetd</a>(8) </p>
+<p>telnetd(8) </p>

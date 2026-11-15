@@ -253,4 +253,4 @@ description: "_Xm* – LessTif Internal Functions"
 <p> <code>void _XmVirtKeysHandler(Widget w, XtPointer Data, XEvent *Event, Boolean *ContDispatch);</code> </p>
 <p> This handler is installed on every widget. It just records the current key press event in an widget instance field private to a XmDisplay widget.</p>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/1x-lesstif/">lesstif</a></code>(1x)</p>
+<p><code>lesstif</code>(1x)</p>

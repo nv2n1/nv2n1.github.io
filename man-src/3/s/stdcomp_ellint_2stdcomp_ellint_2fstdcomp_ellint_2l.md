@@ -58,7 +58,7 @@ int main()
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;E<code>(0)</code> = 1.5708<br />
 &nbsp;<wbr>&nbsp;π/2 = 1.5708<br />
-&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-e/">E</a><code>(1)</code> = 1<br />
+&nbsp;<wbr>&nbsp;E<code>(1)</code> = 1<br />
 &nbsp;<wbr>&nbsp;E(1, π/2) = 1</p>
 <h2>External links</h2>
 <p>Weisstein,_Eric_W._&quot;Complete_Elliptic_Integral_of_the_Second_Kind.&quot; From MathWorld&#8211;A Wolfram Web Resource.</p>

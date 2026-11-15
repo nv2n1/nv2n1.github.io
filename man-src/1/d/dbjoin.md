@@ -35,7 +35,7 @@ cat table1.fsdb | dbjoin[-Sid]-- input table2.fsdb[-nNrR] column[column...]
     dbjoin -i countries.fsdb -i people.fsdb iso_country_code
 </pre>
 <p> if there are many people per country (as one would expect). If warning &#8220;lots of matching rows accumulating in memory&#8221; appears, this is the cause and try swapping join order. </p>
-<p> For <i>hash joins</i> (that is, with <tt>&quot;-m righthash&quot;</tt> or <tt>&quot;-m lefthash&quot;</tt>): all of the right table (the second input) or the left (the first) is loaded into memory (and &#8220;hashed&#8221;). The other table need not be sorted. Runtime is <a href="/docs/linux/man/n-o/">O</a>(n), but memory is O(size of hashed table).</p>
+<p> For <i>hash joins</i> (that is, with <tt>&quot;-m righthash&quot;</tt> or <tt>&quot;-m lefthash&quot;</tt>): all of the right table (the second input) or the left (the first) is loaded into memory (and &#8220;hashed&#8221;). The other table need not be sorted. Runtime is O(n), but memory is O(size of hashed table).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code> or <code>&#8211;all</code></p>

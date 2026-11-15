@@ -508,7 +508,7 @@ epsv4 off
 <blockquote><p><tt>229 Entering Extended Passive Mode (|||58551|)</tt></p></blockquote>
 <p> then you will need to disable extended passive mode with <code>epsv4 off</code> See the above section Sx The .netrc File for an example of how to make this automatic.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-getservbyname/">getservbyname</a>(3), <a href="/docs/linux/man/5-editrc/">editrc</a>(5), <a href="/docs/linux/man/5-services/">services</a>(5), <a href="/docs/linux/man/8-ftpd/">ftpd</a>(8)</p>
+<p> <a href="/docs/linux/man/3-getservbyname/">getservbyname</a>(3), <a href="/docs/linux/man/5-editrc/">editrc</a>(5), <a href="/docs/linux/man/5-services/">services</a>(5), ftpd(8)</p>
 <h2>STANDARDS</h2>
 <p> <code>tnftp</code> attempts to be compliant with:</p>
 <dl>

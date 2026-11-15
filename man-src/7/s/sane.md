@@ -13,7 +13,7 @@ description: "sane – Scanner Access Now Easy: API for accessing scanners"
 <h2>Terminology</h2>
 <p>An application that uses the <code>SANE</code> interface is called a <code>SANE frontend.</code> A driver that implements the <code>SANE</code> interface is called a <code>SANE backend.</code> A <code>meta backend</code> provides some means to manage one or more other backends.</p>
 <h2>Software Packages</h2>
-<p>The package <code>sane-backends</code> contains backends, documentation, networking support, and the command line frontend <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1). The frontends <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), and <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1) are included in the package <code>sane-frontends</code>. Both packages can be downloaded from the <code>SANE</code> homepage (<i><a rel="nofollow" href="http://www.sane-project.org/">http://www.sane-project.org/</a></i>). Information about other frontends and backends can also be found on the <code>SANE</code> homepage.</p>
+<p>The package <code>sane-backends</code> contains backends, documentation, networking support, and the command line frontend <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1). The frontends <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), and <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1) are included in the package <code>sane-frontends</code>. Both packages can be downloaded from the <code>SANE</code> homepage (<i><a rel="nofollow" href="http://www.sane-project.org/">http://www.sane-project.org/</a></i>). Information about other frontends and backends can also be found on the <code>SANE</code> homepage.</p>
 <h2>General Information</h2>
 <p>The following sections provide short descriptions and links to more information about several aspects of <code>SANE.</code> A name with a number in parenthesis (e.g. <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5)) points to a manual page. In this case <i>man 5 sane-dll</i> will display the page. Entries like <i>/usr/share/doc/libsane/README</i> are references to text files that were copied to the <code>SANE</code> documentation directory (<i>/usr/share/doc/libsane/</i>) during installation. Everything else is a URL to a resource on the web. </p>
 <dl>
@@ -40,7 +40,7 @@ description: "sane – Scanner Access Now Easy: API for accessing scanners"
 <dd><code>SANE</code> network daemon that allows remote clients to access image acquisition devices available on the local host. See <code><a href="/docs/linux/man/8-saned/">saned</a></code>(8).</p>
 <dt><code>sane-find-scanner</code></p>
 <dd>Command-line tool to find SCSI and USB scanners and determine their UNIX device files. See <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1).</dl>
-<p> Also, have a look at the <code>sane-frontends</code> package (which includes <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), and <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1)) and the frontend information page at <i><a rel="nofollow" href="http://www.sane-project.org/sane-frontends.html">http://www.sane-project.org/sane-frontends.html</a></i>.</p>
+<p> Also, have a look at the <code>sane-frontends</code> package (which includes <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), and <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1)) and the frontend information page at <i><a rel="nofollow" href="http://www.sane-project.org/sane-frontends.html">http://www.sane-project.org/sane-frontends.html</a></i>.</p>
 <h2>Backends For Scanners</h2>
 <dl>
 <dt><code>abaton</code></p>
@@ -188,17 +188,17 @@ description: "sane – Scanner Access Now Easy: API for accessing scanners"
 <dt><code>dc210</code></p>
 <dd>Supports the Kodak DC210 Digital Camera. See <code><a href="/docs/linux/man/5-sane-dc210/">sane-dc210</a></code>(5).</p>
 <dt><code>dc240</code></p>
-<dd>Supports the Kodak DC240 Digital Camera. See <code><a href="/docs/linux/man/5-dc240/">dc240</a></code>(5).</p>
+<dd>Supports the Kodak DC240 Digital Camera. See <code>dc240</code>(5).</p>
 <dt><code>dc25</code></p>
-<dd>Supports Kodak DC20/DC25 Digital Cameras. See <code><a href="/docs/linux/man/5-dc25/">dc25</a></code>(5).</p>
+<dd>Supports Kodak DC20/DC25 Digital Cameras. See <code>dc25</code>(5).</p>
 <dt><code>dmc</code></p>
-<dd>Supports the Polaroid Digital Microscope Camera. See <code><a href="/docs/linux/man/5-dmc/">dmc</a></code>(5).</p>
+<dd>Supports the Polaroid Digital Microscope Camera. See <code>dmc</code>(5).</p>
 <dt><code>gphoto2</code></p>
-<dd>Supports digital cameras supported by the gphoto2 library package. (See <i><a rel="nofollow" href="http://www.gphoto.org">http://www.gphoto.org</a></i> for more information and a list of supported cameras.) Gphoto2 supports over 140 different camera models. However, please note that more development and testing is needed before all of these cameras will be supported by <code>SANE</code> backend. See <code><a href="/docs/linux/man/5-gphoto2/">gphoto2</a></code>(5).</p>
+<dd>Supports digital cameras supported by the gphoto2 library package. (See <i><a rel="nofollow" href="http://www.gphoto.org">http://www.gphoto.org</a></i> for more information and a list of supported cameras.) Gphoto2 supports over 140 different camera models. However, please note that more development and testing is needed before all of these cameras will be supported by <code>SANE</code> backend. See <code>gphoto2</code>(5).</p>
 <dt><code>qcam</code></p>
-<dd>Supports Connectix QuickCam cameras. See <code><a href="/docs/linux/man/5-qcam/">qcam</a></code>(5).</p>
+<dd>Supports Connectix QuickCam cameras. See <code>qcam</code>(5).</p>
 <dt><code>stv680</code></p>
-<dd>Supports webcams with a stv680 chip. See <code><a href="/docs/linux/man/5-stv680/">stv680</a></code>(5) for details.</dl>
+<dd>Supports webcams with a stv680 chip. See <code>stv680</code>(5) for details.</dl>
 <p> Also, have a look at the backend information page at <i><a rel="nofollow" href="http://www.sane-project.org/sane-supported-devices.html">http://www.sane-project.org/sane-supported-devices.html</a></i> and the list of projects in <i>/usr/share/doc/libsane/PROJECTS</i>.</p>
 <h2>Miscellaneous Backends</h2>
 <dl>
@@ -244,7 +244,7 @@ description: "sane – Scanner Access Now Easy: API for accessing scanners"
 <dl>
 <dd>scanimage -d test -T</dl>
 <p> You should get a list of PASSed tests. You can do the same with your backend by changing &quot;test&quot; to your backend&#8217;s name. </p>
-<p> So now scanning with <code>scanimage (1)</code> works and you want to use one of the graphical frontends like <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1)<code>,</code> <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1)<code>, or</code> <code>quiteinsane (1)</code> but those frontends don&#8217;t detect your scanner? One reason may be that you installed two versions of <code>SANE</code>. E.g. the version that was installed by your distribution in <i>/usr</i> and one you installed from source in <i>/usr/local/</i>. Make sure that only one version is installed. Another possible reason is, that your system&#8217;s dynamic loader can&#8217;t find the <code>SANE</code> libraries. For Linux, make sure that <i>/etc/ld.so.conf</i> contains <i>/usr/local/lib</i> and does <code>not</code> contain <i>/usr/local/lib/sane</i>. See also the documentation of the frontends.</p>
+<p> So now scanning with <code>scanimage (1)</code> works and you want to use one of the graphical frontends like <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1)<code>,</code> <code>xscanimage</code>(1)<code>, or</code> <code>quiteinsane (1)</code> but those frontends don&#8217;t detect your scanner? One reason may be that you installed two versions of <code>SANE</code>. E.g. the version that was installed by your distribution in <i>/usr</i> and one you installed from source in <i>/usr/local/</i>. Make sure that only one version is installed. Another possible reason is, that your system&#8217;s dynamic loader can&#8217;t find the <code>SANE</code> libraries. For Linux, make sure that <i>/etc/ld.so.conf</i> contains <i>/usr/local/lib</i> and does <code>not</code> contain <i>/usr/local/lib/sane</i>. See also the documentation of the frontends.</p>
 <h2>How Can You Help Sane</h2>
 <p>We appreciate any help we can get. Please have a look at our web page about contributing to <code>SANE</code>: <i><a rel="nofollow" href="http://www.sane-project.org/contrib.html">http://www.sane-project.org/contrib.html</a></i></p>
 <h2>Contact</h2>

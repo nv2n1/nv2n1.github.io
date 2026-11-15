@@ -56,7 +56,7 @@ For large scale runs one can use these environment variables to set the default 
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/7-fabric/">fabric</a>(7), <a HREF="/docs/linux/man/7-fi_provider/">fi_provider</a>(7), <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3)
+<a HREF="/docs/linux/man/7-fabric/">fabric</a>(7), <a HREF="/docs/linux/man/7-fi_provider/">fi_provider</a>(7), fi_getinfo(3)
 
 <h2>Authors</h2>
 

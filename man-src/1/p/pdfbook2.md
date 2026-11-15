@@ -79,7 +79,7 @@ description: "pdfbook2 – transform pdf files into booklets for double-sided pr
 <dd> Resolution used by ghostscript in bp (default: 72) </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pdfbook/">pdfbook</a></code>(1), <code><a href="/docs/linux/man/1-pdfjam/">pdfjam</a></code>(1), <code><a href="/docs/linux/man/1-pdfcrop/">pdfcrop</a></code>(1) </p>
+<p> <code>pdfbook</code>(1), <code><a href="/docs/linux/man/1-pdfjam/">pdfjam</a></code>(1), <code>pdfcrop</code>(1) </p>
 <h2>ABOUT</h2>
 <p> pdfbook2 v1.4 (<a rel="nofollow" href="https://github.com/jenom/pdfbook2)">https://github.com/jenom/pdfbook2)</a><br />
  (c) 2015 &#8211; 2020 Johannes Neumann (<a rel="nofollow" href="http://www.neumannjo.de)">http://www.neumannjo.de)</a><br />

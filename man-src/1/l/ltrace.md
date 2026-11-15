@@ -90,7 +90,7 @@ description: "ltrace – A library call tracer"
 <h2>BUGS</h2>
 <p> It has most of the bugs stated in <code><a href="/docs/linux/man/1-strace/">strace</a>(1)</code>. </p>
 <p> It only works on Linux and in a small subset of architectures. </p>
-<p> If you would like to report a bug, send a message to the mailing list (ltrace-devel [at] lists.alioth.debian.org), or use the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a>(1)</code> program if you are under the Debian GNU/Linux distribution. </p>
+<p> If you would like to report a bug, send a message to the mailing list (ltrace-devel [at] lists.alioth.debian.org), or use the <code>reportbug(1)</code> program if you are under the Debian GNU/Linux distribution. </p>
 <h2>FILES</h2>
 <dl>
 <dt><i>/etc/ltrace.conf</i></p>

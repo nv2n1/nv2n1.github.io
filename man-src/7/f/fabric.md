@@ -113,7 +113,7 @@ Because libfabric is designed to provide applications direct access to fabric ha
 
 <h2>See Also</h2>
 
-<a HREF="/docs/linux/man/7-fi_provider/">fi_provider</a>(7), <a HREF="/docs/linux/man/3-fi_getinfo/">fi_getinfo</a>(3), <a HREF="/docs/linux/man/3-fi_endpoint/">fi_endpoint</a>(3), <a HREF="/docs/linux/man/3-fi_domain/">fi_domain</a>(3), <a HREF="/docs/linux/man/3-fi_av/">fi_av</a>(3), <a HREF="/docs/linux/man/3-fi_eq/">fi_eq</a>(3), <a HREF="/docs/linux/man/3-fi_cq/">fi_cq</a>(3), <a HREF="/docs/linux/man/3-fi_cntr/">fi_cntr</a>(3), <a HREF="/docs/linux/man/3-fi_mr/">fi_mr</a>(3)
+<a HREF="/docs/linux/man/7-fi_provider/">fi_provider</a>(7), fi_getinfo(3), fi_endpoint(3), fi_domain(3), fi_av(3), fi_eq(3), fi_cq(3), fi_cntr(3), fi_mr(3)
 
 <h2>Authors</h2>
 

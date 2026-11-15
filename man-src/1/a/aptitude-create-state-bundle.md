@@ -54,7 +54,7 @@ description: "aptitude-create-state-bundle – bundle the current aptitude state
 <h2>FILE FORMAT</h2>
 <p> The bundle file is simply a <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) file compressed with <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) or <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), with each of the input directory trees rooted at &#8220;.&#8221;.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-aptitude-run-state-bundle/">aptitude-run-state-bundle</a></code>(1), <code><a href="/docs/linux/man/8-aptitude/">aptitude</a></code>(8), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8)</p>
+<p> <code><a href="/docs/linux/man/1-aptitude-run-state-bundle/">aptitude-run-state-bundle</a></code>(1), <code>aptitude</code>(8), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8)</p>
 <h2>AUTHOR</h2>
 <p> <code>Daniel Burrows</code> &lt;dburrows [at] debian.org&gt;</p>
 <dl>

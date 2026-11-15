@@ -19,6 +19,6 @@ int
 <h2>Description</h2>
 <p><code>Tcl_PutEnv</code> sets an environment variable. The information is passed in a single string of the form &#8220;<i>NAME</i><code>=</code><i>value</i>&#8221;. This procedure is intended to be a stand-in for the UNIX <code>putenv</code> system call. All Tcl-based applications using <code>putenv</code> should redefine it to <code>Tcl_PutEnv</code> so that they will interface properly to the Tcl runtime.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-tclvars/">tclvars</a>(n)</p>
+<p>tclvars(n)</p>
 <h2>Keywords</h2>
 <p>environment, variable</p>

@@ -15,7 +15,7 @@ description: "exit_group – exit all threads in a process"
 void exit_group(int status);
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> This system call is equivalent to <code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2) except that it terminates not only the calling thread, but all threads in the calling process&#8217;s thread group.</p>
+<p> This system call is equivalent to <code>_exit</code>(2) except that it terminates not only the calling thread, but all threads in the calling process&#8217;s thread group.</p>
 <h2>RETURN VALUE</h2>
 <p> This system call does not return.</p>
 <h2>VERSIONS</h2>
@@ -23,7 +23,7 @@ void exit_group(int status);
 <h2>CONFORMING TO</h2>
 <p> This call is Linux-specific.</p>
 <h2>NOTES</h2>
-<p> Since glibc 2.3, this is the system call invoked when the <code><a href="/docs/linux/man/2-_exit/">_exit</a></code>(2) wrapper function is called.</p>
+<p> Since glibc 2.3, this is the system call invoked when the <code>_exit</code>(2) wrapper function is called.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-exit/">exit</a></code>(2)</p>
 <h2>COLOPHON</h2>

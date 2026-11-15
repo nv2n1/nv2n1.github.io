@@ -71,7 +71,7 @@ description: "pngtopam – convert a PNG image into a Netpbm image"
 <p> But if the TIFF raster is oriented any other way, it can take a considerable amount of processing for <code>tifftopnm</code> to convert it to Netpbm format. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1) , <code>ptot</code>, <code><a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1) , <code>ptot</code>, <code><a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a></code>(1) , <code>pnm</code>(1) </p>
 <p> For information on the PNG format, see <a rel="nofollow" href="http://schaik.com/png">http://schaik.com/png</a> . </p>
 <h2>NOTE</h2>
 <p> A PNG image contains a lot of information that can&#8217;t be represented in Netpbm formats. Therefore, you lose information when you convert to another format with &quot;pngtopam | pnmtoxxx&quot;. If there is a specialized converter that converts directly to the other format, e.g. <code>ptot</code> to convert from PNG to TIFF, you&#8217;ll get better results using that. </p>

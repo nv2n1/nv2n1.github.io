@@ -48,5 +48,5 @@ description: "gimpsvg – convert a GIMP gradient (ggr) to the SVG format."
 <h2>AUTHOR</h2>
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1), <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1), <code><a href="/docs/linux/man/1-svggimp/">svggimp</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1), <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1), <code>svggimp</code>(1). </p>
 <h2>Index</h2>

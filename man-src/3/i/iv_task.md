@@ -28,7 +28,7 @@ struct iv_task {
 <p> The application is allowed to change the <code>-&gt;cookie</code> and <code>-&gt;handler</code> members at any time. </p>
 <p> A given <code>struct iv_task</code> can only be registered in one thread at a time, and a task can only be unregistered in the thread that it was registered from. </p>
 <p> There is no limit on the number of tasks registered at once. </p>
-<p> See <code><a href="/docs/linux/man/3-iv_examples/">iv_examples</a></code>(3) for programming examples.</p>
+<p> See <code>iv_examples</code>(3) for programming examples.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ivykis/">ivykis</a></code>(3), <code><a href="/docs/linux/man/3-iv_examples/">iv_examples</a></code>(3) </p>
+<p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
 <h2>Index</h2>

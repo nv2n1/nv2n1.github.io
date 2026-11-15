@@ -31,17 +31,17 @@ description: "capsh – capability shell wrapper"
 <dt><code>&#8211;inh=</code><i>cap-list</i></p>
 <dd> Set the inheritable set of capabilities for the current process to equal those provided in the comma separated list. For this action to succeed, the prevailing process should already have each of these capabilities in the union of the current inheritable and permitted capability sets, or <code>capsh</code> should be operating with <code>CAP_SETPCAP</code> in its effective set.</p>
 <dt><code>&#8211;user=</code><i>username</i></p>
-<dd> Assume the identity of the named user. That is, look up the user&#8217;s UID and GID with <code><a href="/docs/linux/man/3-getpwuid/">getpwuid</a></code>(3) and their group memberships with <code><a href="/docs/linux/man/3-getgrouplist/">getgrouplist</a></code>(3) and set them all using <code><a href="/docs/linux/man/3-cap_setuid/">cap_setuid</a></code>(3) and <code><a href="/docs/linux/man/3-cap_setgroups/">cap_setgroups</a></code>(3). Following this command, the effective capabilities will be cleared, but the permitted set will not be, so the running program is still privileged.</p>
+<dd> Assume the identity of the named user. That is, look up the user&#8217;s UID and GID with <code><a href="/docs/linux/man/3-getpwuid/">getpwuid</a></code>(3) and their group memberships with <code><a href="/docs/linux/man/3-getgrouplist/">getgrouplist</a></code>(3) and set them all using <code>cap_setuid</code>(3) and <code>cap_setgroups</code>(3). Following this command, the effective capabilities will be cleared, but the permitted set will not be, so the running program is still privileged.</p>
 <dt><code>&#8211;modes</code></p>
 <dd> Lists all of the libcap modes supported by <code>&#8211;mode</code>.</p>
 <dt><code>&#8211;mode=</code>&lt;mode&gt;</p>
-<dd> Force the program into a <code><a href="/docs/linux/man/3-cap_set_mode/">cap_set_mode</a></code>(3) security mode. This is a set of securebits and prevailing capability arrangement recommended for its pre-determined security stance.</p>
+<dd> Force the program into a <code>cap_set_mode</code>(3) security mode. This is a set of securebits and prevailing capability arrangement recommended for its pre-determined security stance.</p>
 <dt><code>&#8211;inmode=</code>&lt;mode&gt;</p>
 <dd> Confirm that the prevailing mode is that specified in <i>&lt;mode&gt;</i>, or exit with a status 1.</p>
 <dt><code>&#8211;uid=</code><i>id</i></p>
 <dd> Force all UID values to equal <i>id</i> using the <code><a href="/docs/linux/man/2-setuid/">setuid</a></code>(2) system call. This argument may require explicit preparation of the effective set.</p>
 <dt><code>&#8211;cap-uid=</code>&lt;uid&gt;</p>
-<dd> use the <code><a href="/docs/linux/man/3-cap_setuid/">cap_setuid</a></code>(3) function to set the UID of the current process. This performs all preparations for setting the UID without dropping capabilities in the process. Following this command the prevailing effective capabilities will be lowered.</p>
+<dd> use the <code>cap_setuid</code>(3) function to set the UID of the current process. This performs all preparations for setting the UID without dropping capabilities in the process. Following this command the prevailing effective capabilities will be lowered.</p>
 <dt><code>&#8211;is-uid=</code><i>&lt;id&gt;</i></p>
 <dd> Exit with status 1 unless the current UID equals <i>&lt;id&gt;</i>.</p>
 <dt><code>&#8211;gid=</code><i>&lt;id&gt;</i></p>

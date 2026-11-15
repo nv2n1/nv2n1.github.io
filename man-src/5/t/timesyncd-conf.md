@@ -31,14 +31,14 @@ description: "timesyncd.conf, timesyncd.conf.d – Network Time Synchronization 
 <p> <i>RootDistanceMaxSec=</i></p>
 <dl>
 <dd>Maximum acceptable root distance, i.e. the maximum estimated time required for a packet to travel to the server we are connected to from the server with the reference clock. If the current server does not satisfy this limit, <code>systemd-timesyncd</code> will switch to a different server. </p>
-<p> Takes a time span value. The default unit is seconds, but other units may be specified, see <code><a href="/docs/linux/man/5-systemd-time/">systemd.time</a></code>(5). Defaults to 5 seconds.</dl>
+<p> Takes a time span value. The default unit is seconds, but other units may be specified, see <code>systemd.time</code>(5). Defaults to 5 seconds.</dl>
 <p> <i>PollIntervalMinSec=</i>, <i>PollIntervalMaxSec=</i></p>
 <dl>
 <dd>The minimum and maximum poll intervals for NTP messages. Polling starts at the minimum poll interval, and is adjusted within the specified limits in response to received packets. </p>
-<p> Each setting takes a time span value. The default unit is seconds, but other units may be specified, see <code><a href="/docs/linux/man/5-systemd-time/">systemd.time</a></code>(5). <i>PollIntervalMinSec=</i> defaults to 32 seconds and must not be smaller than 16 seconds. <i>PollIntervalMaxSec=</i> defaults to 34 min 8 s (2048 seconds) and must be larger than <i>PollIntervalMinSec=</i>.</dl>
+<p> Each setting takes a time span value. The default unit is seconds, but other units may be specified, see <code>systemd.time</code>(5). <i>PollIntervalMinSec=</i> defaults to 32 seconds and must not be smaller than 16 seconds. <i>PollIntervalMaxSec=</i> defaults to 34 min 8 s (2048 seconds) and must be larger than <i>PollIntervalMinSec=</i>.</dl>
 <p> <i>ConnectionRetrySec=</i></p>
 <dl>
 <dd>Specifies the minimum delay before subsequent attempts to contact a new NTP server are made. </p>
-<p> Takes a time span value. The default unit is seconds, but other units may be specified, see <code><a href="/docs/linux/man/5-systemd-time/">systemd.time</a></code>(5). Defaults to 30 seconds and must not be smaller than 1 second.</dl>
+<p> Takes a time span value. The default unit is seconds, but other units may be specified, see <code>systemd.time</code>(5). Defaults to 30 seconds and must not be smaller than 1 second.</dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-timesyncd-service/">systemd-timesyncd.service</a></code>(8), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) </p>

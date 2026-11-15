@@ -18,7 +18,7 @@ description: "dhcp6relay – DHCPv6 relay agent"
 <dt><code>-D</code></p>
 <dd>Even more debugging information is printed.</p>
 <dt><code>-f</code></p>
-<dd>Foreground mode (useful when debugging). Although usually prints warning, debugging, or error messages to <a href="/docs/linux/man/8-syslog/">syslog</a>(8), it prints the messages to standard error if this option is specified.</p>
+<dd>Foreground mode (useful when debugging). Although usually prints warning, debugging, or error messages to syslog(8), it prints the messages to standard error if this option is specified.</p>
 <dt><code>-b </code><i>boundaddr</i></p>
 <dd>Specifies the source address to relay packets to servers (or other agents).</p>
 <dt><code>-H </code><i>hoplim</i></p>

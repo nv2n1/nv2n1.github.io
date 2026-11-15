@@ -20,4 +20,4 @@ description: "tpm_getpcrhash"
 <dt>-v</p>
 <dd>Display command version info.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tpm_quote_tools/">tpm_quote_tools</a></code>(8), <code><a href="/docs/linux/man/8-tpm_loadkey/">tpm_loadkey</a></code>(8), <code><a href="/docs/linux/man/8-tpm_getquote/">tpm_getquote</a></code>(8), <code><a href="/docs/linux/man/8-tpm_verifyquote/">tpm_verifyquote</a></code>(8), <code><a href="/docs/linux/man/8-tpm_updateprchash/">tpm_updateprchash</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-tpm_quote_tools/">tpm_quote_tools</a></code>(8), <code><a href="/docs/linux/man/8-tpm_loadkey/">tpm_loadkey</a></code>(8), <code><a href="/docs/linux/man/8-tpm_getquote/">tpm_getquote</a></code>(8), <code><a href="/docs/linux/man/8-tpm_verifyquote/">tpm_verifyquote</a></code>(8), <code>tpm_updateprchash</code>(8) </p>

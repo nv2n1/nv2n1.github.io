@@ -29,7 +29,7 @@ description: "pdcp – copy files to groups of hosts in parallel rpdcp – (reve
 <dt>ssh</p>
 <dd> Uses a variant of <a href="/docs/linux/man/3-popen/">popen</a>(3) to run multiple copies of the <a href="/docs/linux/man/1-ssh/">ssh</a>(1) command.</p>
 <dt>mrsh</p>
-<dd> This module uses the <a href="/docs/linux/man/1-mrsh/">mrsh</a>(1) protocol to execute jobs on remote hosts. The mrsh protocol uses a credential based authentication, forgoing the need to allocate reserved ports. In other aspects, it acts just like rsh.</p>
+<dd> This module uses the mrsh(1) protocol to execute jobs on remote hosts. The mrsh protocol uses a credential based authentication, forgoing the need to allocate reserved ports. In other aspects, it acts just like rsh.</p>
 <dt>krb4</p>
 <dd> The krb4 module allows users to execute remote commands after authenticating with kerberos. Of course, the remote rshd daemons must be kerberized.</p>
 <dt>xcpu</p>
@@ -87,7 +87,7 @@ Copy / etc / hosts to foo01, foo02, ..., foo05 pdcp - w foo[01 - 05] / etc / hos
 <p> As a reminder to the reader, some shells will interpret brackets (&#8216;[&#8216; and &#8216;]&#8217;) for pattern matching. Depending on your shell, it may be necessary to enclose ranged lists within quotes. For example, in tcsh, the first example above should be executed as: </p>
 <p>&nbsp;<wbr>pdcp -w&nbsp;<wbr>&quot;foo[01-05]&quot;&nbsp;<wbr>/etc/hosts&nbsp;<wbr>/etc </p>
 <h2>ORIGIN</h2>
-<p> Pdsh/pdcp was originally a rewrite of IBM <a href="/docs/linux/man/1-dsh/">dsh</a>(1) by Jim Garlick &lt;garlick [at] llnl.gov&gt; on LLNL&#8217;s ASCI Blue-Pacific IBM SP system. It is now also used on Linux clusters at LLNL. </p>
+<p> Pdsh/pdcp was originally a rewrite of IBM dsh(1) by Jim Garlick &lt;garlick [at] llnl.gov&gt; on LLNL&#8217;s ASCI Blue-Pacific IBM SP system. It is now also used on Linux clusters at LLNL. </p>
 <h2>LIMITATIONS</h2>
 <p> When using <code>ssh </code> for remote execution, stderr of ssh to be folded in with that of the remote command. When invoked by pdcp, it is not possible for ssh to prompt for confirmation if a host key changes, prompt for passwords if RSA keys are not configured properly, etc.. Finally, the connect timeout is only adjustable with ssh when the underlying ssh implementation supports it, and pdsh has been built to use the correct option. </p>
 <h2>SEE ALSO</h2>

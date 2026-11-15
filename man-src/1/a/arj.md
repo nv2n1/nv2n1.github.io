@@ -784,7 +784,7 @@ The "dc" command is an abbreviation for "d -jb"
 <p> If the first two characters of an <code>arj</code> comment are &quot;<code>))</code>&quot; in a self-extractor, then the self-extractor will accept the appended line as its command line. </p>
 <p> &quot;<code>)) -o</code>&quot; will force the self-extractor to overwrite existing files.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-rearj/">rearj</a></code>(1), <code><a href="/docs/linux/man/1-unarj/">unarj</a></code>(1), <code><a href="/docs/linux/man/1-arj-register/">arj-register</a></code>(1).</p>
+<p> <code><a href="/docs/linux/man/1-rearj/">rearj</a></code>(1), <code><a href="/docs/linux/man/1-unarj/">unarj</a></code>(1), <code>arj-register</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ola Lundqvist &lt;opal [at] debian.org&gt; in pod format, then converted by Guillem Jover &lt;guillem [at] debian.org&gt; to nroff format. </p>
 <h2>Index</h2>

@@ -116,4 +116,4 @@ Specify custom&nbsp;<wbr><font SIZE="-1">LDAP</font>&nbsp;<wbr>attributes, using
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/1-useradd/">useradd</a></i>(1) 
+<i>useradd</i>(1) 

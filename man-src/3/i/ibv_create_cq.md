@@ -28,7 +28,7 @@ int ibv_destroy_cq(struct ibv_cq *cq);
 <p> <code>ibv_create_cq()</code> may create a CQ with size greater than or equal to the requested size. Check the cqe attribute in the returned CQ for the actual size. </p>
 <p> <code>ibv_destroy_cq()</code> fails if any queue pair is still associated with this CQ.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_resize_cq/">ibv_resize_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_req_notify_cq/">ibv_req_notify_cq</a></code>(3), <code><a href="/docs/linux/man/3-ibv_ack_cq_events/">ibv_ack_cq_events</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_qp/">ibv_create_qp</a></code>(3)</p>
+<p> <code>ibv_resize_cq</code>(3), <code>ibv_req_notify_cq</code>(3), <code>ibv_ack_cq_events</code>(3), <code>ibv_create_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

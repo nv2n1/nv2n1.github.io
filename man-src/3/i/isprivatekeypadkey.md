@@ -29,5 +29,5 @@ description: "IsCursorKey, IsFunctionKey, IsKeypadKey, IsMiscFunctionKey, IsModi
 <p> The <code>IsPFKey</code> macro returns <code>True</code> if the specified KeySym is a PF key. </p>
 <p> The <code>IsPrivateKeypadKey</code> macro returns <code>True</code> if the specified KeySym is a vendor-private keypad key.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xkbkeytypesforcoresymbols/">XkbKeyTypesForCoreSymbols</a>(3), <a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), <a href="/docs/linux/man/3-imagebyteorder/">ImageByteOrder</a>(3)<br />
+<p><a href="/docs/linux/man/3-xkbkeytypesforcoresymbols/">XkbKeyTypesForCoreSymbols</a>(3), <a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), ImageByteOrder(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

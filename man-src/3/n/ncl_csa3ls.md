@@ -29,7 +29,7 @@ CSA3LS - cubic spline approximation, simple entry for three-dimensional input, l
 <dt>UO
 <dd>(real, output) An array dimensioned for NO containing the calculated function values for the output spline. UO(I) is the calculated functional value at (XO(I),YO(I),ZO(I)) for I=1,NO.
 <dt>NWRK
-<dd>(integer, input) The size of the WORK array. NWRK must be at least NK * (NK+3) where NK = <a HREF="/docs/linux/man/1-knots/">KNOTS</a>(1) * <a HREF="/docs/linux/man/2-knots/">KNOTS</a>(2) * <a HREF="/docs/linux/man/3-knots/">KNOTS</a>(3).
+<dd>(integer, input) The size of the WORK array. NWRK must be at least NK * (NK+3) where NK = KNOTS(1) * KNOTS(2) * KNOTS(3).
 <dt>WORK
 <dd>(real, input) A work array dimensioned for NWRK.
 <dt>IER

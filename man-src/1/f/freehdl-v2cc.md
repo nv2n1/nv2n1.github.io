@@ -43,7 +43,7 @@ description: "FreeHDL-V2CC – A VHDL to C++ converter."
 <dt>V2CC_LIBRARY_PATH</p>
 <dd> The variable V2CC_LIBRARY_PATH consists of &quot;:&quot; separated filenames. In addition to the environment variable, you can use the &quot;-L libdir&quot; command line option with v2cc. The directories specified with &quot;-L&quot; are added in front of the ones specified by V2CC_LIBRARY_PATH. In the final library path, they appear in the same order as on the command line.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gvhdl/">gvhdl</a>(1), <a href="/docs/linux/man/1-freehdl-config/">freehdl-config</a>(1), <a href="/docs/linux/man/5-v2cc-libs/">v2cc.libs</a>(5)</p>
+<p> <a href="/docs/linux/man/1-gvhdl/">gvhdl</a>(1), <a href="/docs/linux/man/1-freehdl-config/">freehdl-config</a>(1), v2cc.libs(5)</p>
 <h2>AVAILABILITY</h2>
 <p> The latest version of FreeHDL can always be obtained from <code><a rel="nofollow" href="http://www.freehdl.seul.org">www.freehdl.seul.org</a></code></p>
 <h2>REPORTING BUGS</h2>

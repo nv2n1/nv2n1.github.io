@@ -41,5 +41,5 @@ destroy_font(tempfont);
 <h2>RETURN VALUE</h2>
 <p> Returns a pointer to the new font or NULL on error. Remember that you are responsible for destroying the font when you are finished with it to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-extract_font_range/">extract_font_range</a></code>(3), <code><a href="/docs/linux/man/3-is_trans_font/">is_trans_font</a></code>(3), <code><a href="/docs/linux/man/3-is_color_font/">is_color_font</a></code>(3), <code><a href="/docs/linux/man/3-is_mono_font/">is_mono_font</a></code>(3), <code><a href="/docs/linux/man/3-exfont/">exfont</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-extract_font_range/">extract_font_range</a></code>(3), <code>is_trans_font</code>(3), <code>is_color_font</code>(3), <code>is_mono_font</code>(3), <code><a href="/docs/linux/man/3-exfont/">exfont</a></code>(3) </p>
 <h2>Index</h2>

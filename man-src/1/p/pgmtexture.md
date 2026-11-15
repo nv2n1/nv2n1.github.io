@@ -29,11 +29,11 @@ description: "pgmtexture – calculate textural features on a portable graymap"
  (12, 13) Information Measures of Correlation, and<br />
  (14) Maximal Correlation Coefficient.</dl>
 <p> Algorithm taken from:<br />
- Haralick, R.M., K. Shanmugam, and I. Dinstein. 1973. Textural features for image classification. <i>IEEE Transactions on Systems, Man, </i> <i>and Cybertinetics,</i> <a href="/docs/linux/man/6-smc-3/">SMC-3</a>(6):610-621.</p>
+ Haralick, R.M., K. Shanmugam, and I. Dinstein. 1973. Textural features for image classification. <i>IEEE Transactions on Systems, Man, </i> <i>and Cybertinetics,</i> SMC-3(6):610-621.</p>
 <h2>BUGS</h2>
 <p> The program can run incredibly slow for large images (larger than 64 x 64) and command line options are limited. The method for finding (14) the maximal correlation coefficient, which requires finding the second largest eigenvalue of a matrix Q, does not always converge.</p>
 <h2>REFERENCES</h2>
-<p> <i>IEEE Transactions on Systems, Man, </i> <i>and Cybertinetics,</i> <a href="/docs/linux/man/6-smc-3/">SMC-3</a>(6):610-621.</p>
+<p> <i>IEEE Transactions on Systems, Man, </i> <i>and Cybertinetics,</i> SMC-3(6):610-621.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-pgm/">pgm</a>(5), <a href="/docs/linux/man/1-pnmcut/">pnmcut</a>(1)</p>
 <h2>AUTHOR</h2>

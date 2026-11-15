@@ -108,6 +108,6 @@ MYSQL_PASSWORD=[Edited] glite-lb-setup
 <h2>Bugs</h2>
 <p>Please report all bugs to CESNET gLite L&amp;B issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/glite-lb/issues">https://github.com/CESNET/glite-lb/issues</a></i> </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-yaim/">yaim</a></code>(1) <code><a href="/docs/linux/man/8-glite-lb-bkindex/">glite-lb-bkindex</a></code>(8) <code><a href="/docs/linux/man/8-glite-lb-bkserverd/">glite-lb-bkserverd</a></code>(8) <code><a href="/docs/linux/man/8-glite-lb-interlogd/">glite-lb-interlogd</a></code>(8) <code><a href="/docs/linux/man/8-glite-lb-logd/">glite-lb-logd</a></code>(8) <code><a href="/docs/linux/man/8-glite-lb-harvester/">glite-lb-harvester</a></code>(8) </p>
+<p><code>yaim</code>(1) <code><a href="/docs/linux/man/8-glite-lb-bkindex/">glite-lb-bkindex</a></code>(8) <code><a href="/docs/linux/man/8-glite-lb-bkserverd/">glite-lb-bkserverd</a></code>(8) <code><a href="/docs/linux/man/8-glite-lb-interlogd/">glite-lb-interlogd</a></code>(8) <code><a href="/docs/linux/man/8-glite-lb-logd/">glite-lb-logd</a></code>(8) <code>glite-lb-harvester</code>(8) </p>
 <h2>Author</h2>
 <p>L&amp;B Product Team, JRA1, EMI.</p>

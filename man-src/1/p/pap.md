@@ -17,7 +17,7 @@ description: "pap – client interface to remote printers using Printer Access P
 <dd>is used to connect and send files to an AppleTalk connected printer using the Apple Printer Access Protocol (PAP). When <code>pap</code> starts execution, it tries to open a session with the printer using PAP, and then downloads the <i>files</i> to the printer. </p>
 <p> If no <i>files</i> are given on the command line, <code>pap</code> begins reading from standard input. </p>
 <p> If no printer is specified on the command line, <code>pap</code> looks for a file called <code>.paprc</code> in the current working directory and reads it to obtain the <i>nbpname</i> of a printer. Blank lines and lines that begin with a `<code>#</code>&#8216; are ignored. <i>type</i> and <i>zone</i> default to <code>LaserWriter</code> and the zone of the local host, respectively. </p>
-<p> Note that <code>pap</code> is designed to be useful as a communication filter for sending <code><a href="/docs/linux/man/8-lpd/">lpd</a></code>(8) spooled print jobs to AppleTalk connected printers. See <code><a href="/docs/linux/man/8-psf/">psf</a></code>(8) for hints on how to use it this way.</p>
+<p> Note that <code>pap</code> is designed to be useful as a communication filter for sending <code>lpd</code>(8) spooled print jobs to AppleTalk connected printers. See <code><a href="/docs/linux/man/8-psf/">psf</a></code>(8) for hints on how to use it this way.</p>
 <h2>OPTIONS</h2>
 <p> <code>-A </code><i>address</i></p>
 <dl>
@@ -61,5 +61,5 @@ description: "pap – client interface to remote printers using Printer Access P
 <dt>
 <dd> file read to obtain printer name if not specified on command line</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3), <code><a href="/docs/linux/man/8-lpd/">lpd</a></code>(8), <code><a href="/docs/linux/man/8-psf/">psf</a></code>(8). </p>
+<p> <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3), <code>lpd</code>(8), <code><a href="/docs/linux/man/8-psf/">psf</a></code>(8). </p>
 <h2>Index</h2>

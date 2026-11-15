@@ -36,7 +36,7 @@ description: "uconv – convert data from one encoding to another"
 <dt><code>-L</code>, <code>&#8211;list-transliterators</code></p>
 <dd> List all the available transliterators and exit.</p>
 <dt><code>&#8211;canon</code></p>
-<dd> If used with <code>-l</code>, <code>&#8211;list</code> or <code>&#8211;default-code</code>, the list of encodings is produced in a format compatible with <code><a href="/docs/linux/man/5-convrtrs-txt/">convrtrs.txt</a></code>(5). If used with <code>-L</code>, <code>&#8211;list-transliterators</code>, print only one transliterator name per line.</p>
+<dd> If used with <code>-l</code>, <code>&#8211;list</code> or <code>&#8211;default-code</code>, the list of encodings is produced in a format compatible with <code>convrtrs.txt</code>(5). If used with <code>-L</code>, <code>&#8211;list-transliterators</code>, print only one transliterator name per line.</p>
 <dt><code>-x</code><i> transliteration</i></p>
 <dd> Run the given <i>transliteration</i> on the transcoded Unicode data, and use the transliterated data as input for the transcoding to the destination encoding.</p>
 <dt><code>&#8211;to-callback</code><i> callback</i></p>

@@ -13,7 +13,7 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <h2>Entrypoints</h2>
 <p>The httpd_t SELinux type can be entered via the <code>httpd_exec_t</code> file type. </p>
 <p> The default entrypoint paths for the httpd_t domain are the following: </p>
-<p> /usr/sbin/httpd(.worker)?, /usr/sbin/<a href="/docs/linux/man/2-apache/">apache</a>(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/<a href="/docs/linux/man/2-apache-ssl/">apache-ssl</a>(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean</p>
+<p> /usr/sbin/httpd(.worker)?, /usr/sbin/apache(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/apache-ssl(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean</p>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux httpd policy is very flexible allowing users to setup their httpd processes in as secure a method as possible. </p>
@@ -426,13 +426,13 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> &#8211; Set files with the httpd_config_t type, if you want to treat the files as httpd configuration data, usually stored under the /etc directory. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/etc/httpd(/.*)?, /etc/nginx(/.*)?, /etc/<a href="/docs/linux/man/2-apache/">apache</a>(2)?(/.*)?, /etc/cherokee(/.*)?, /etc/lighttpd(/.*)?, /etc/<a href="/docs/linux/man/2-apache-ssl/">apache-ssl</a>(2)?(/.*)?, /var/lib/openshift/.httpd.d(/.*)?, /etc/opt/rh/rh-nginx18/nginx(/.*)?, /var/lib/stickshift/.httpd.d(/.*)?, /etc/vhosts, /etc/thttpd.conf </p>
+<dd>/etc/httpd(/.*)?, /etc/nginx(/.*)?, /etc/apache(2)?(/.*)?, /etc/cherokee(/.*)?, /etc/lighttpd(/.*)?, /etc/apache-ssl(2)?(/.*)?, /var/lib/openshift/.httpd.d(/.*)?, /etc/opt/rh/rh-nginx18/nginx(/.*)?, /var/lib/stickshift/.httpd.d(/.*)?, /etc/vhosts, /etc/thttpd.conf </p>
 </dl>
 <p> <code>httpd_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_exec_t type, if you want to transition an executable to the httpd_t domain. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/usr/sbin/httpd(.worker)?, /usr/sbin/<a href="/docs/linux/man/2-apache/">apache</a>(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/<a href="/docs/linux/man/2-apache-ssl/">apache-ssl</a>(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean </p>
+<dd>/usr/sbin/httpd(.worker)?, /usr/sbin/apache(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/apache-ssl(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean </p>
 </dl>
 <p> <code>httpd_helper_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_helper_exec_t type, if you want to transition an executable to the httpd_helper_t domain. </p>
@@ -450,7 +450,7 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> &#8211; Set files with the httpd_log_t type, if you want to treat the data as httpd log data, usually stored under the /var/log directory. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/srv/([^/]*/)?www/logs(/.*)?, /var/www(/.*)?/logs(/.*)?, /var/log/glpi(/.*)?, /var/log/cacti(/.*)?, /var/log/httpd(/.*)?, /var/log/nginx(/.*)?, /var/log/<a href="/docs/linux/man/2-apache/">apache</a>(2)?(/.*)?, /var/log/horizon(/.*)?, /var/log/php-fpm(/.*)?, /var/log/cherokee(/.*)?, /var/log/lighttpd(/.*)?, /var/log/suphp.log.*, /var/log/thttpd.log.*, /var/log/<a href="/docs/linux/man/2-apache-ssl/">apache-ssl</a>(2)?(/.*)?, /var/log/cgiwrap.log.*, /var/www/stickshift/[^/]*/log(/.*)?, /var/log/graphite-web(/.*)?, /var/www/miq/vmdb/log(/.*)?, /var/log/roundcubemail(/.*)?, /var/log/php_errors.log.*, /var/opt/rh/rh-nginx18/log(/.*)?, /var/log/dirsrv/admin-serv(/.*)?, /var/lib/openshift/.log/httpd(/.*)?, /var/www/openshift/console/log(/.*)?, /var/www/openshift/broker/httpd/logs(/.*)?, /var/www/openshift/console/httpd/logs(/.*)?, /etc/httpd/logs </p>
+<dd>/srv/([^/]*/)?www/logs(/.*)?, /var/www(/.*)?/logs(/.*)?, /var/log/glpi(/.*)?, /var/log/cacti(/.*)?, /var/log/httpd(/.*)?, /var/log/nginx(/.*)?, /var/log/apache(2)?(/.*)?, /var/log/horizon(/.*)?, /var/log/php-fpm(/.*)?, /var/log/cherokee(/.*)?, /var/log/lighttpd(/.*)?, /var/log/suphp.log.*, /var/log/thttpd.log.*, /var/log/apache-ssl(2)?(/.*)?, /var/log/cgiwrap.log.*, /var/www/stickshift/[^/]*/log(/.*)?, /var/log/graphite-web(/.*)?, /var/www/miq/vmdb/log(/.*)?, /var/log/roundcubemail(/.*)?, /var/log/php_errors.log.*, /var/opt/rh/rh-nginx18/log(/.*)?, /var/log/dirsrv/admin-serv(/.*)?, /var/lib/openshift/.log/httpd(/.*)?, /var/www/openshift/console/log(/.*)?, /var/www/openshift/broker/httpd/logs(/.*)?, /var/www/openshift/console/httpd/logs(/.*)?, /etc/httpd/logs </p>
 </dl>
 <p> <code>httpd_modules_t</code> </p>
 <p> &#8211; Set files with the httpd_modules_t type, if you want to treat the files as httpd modules. </p>
@@ -472,7 +472,7 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> &#8211; Set files with the httpd_suexec_exec_t type, if you want to transition an executable to the httpd_suexec_t domain. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/usr/lib/<a href="/docs/linux/man/2-apache/">apache</a>(2)?/<a href="/docs/linux/man/2-suexec/">suexec</a>(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </p>
+<dd>/usr/lib/apache(2)?/suexec(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </p>
 </dl>
 <p> <code>httpd_suexec_tmp_t</code> </p>
 <p> &#8211; Set files with the httpd_suexec_tmp_t type, if you want to store httpd suexec temporary files in the /tmp directories. </p>

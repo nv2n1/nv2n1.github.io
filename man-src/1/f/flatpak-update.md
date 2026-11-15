@@ -18,7 +18,7 @@ description: "flatpak-update – Update an application or runtime"
 <p> Each REF argument is a full or partial identifier in the flatpak ref format, which looks like &quot;(app|runtime)/ID/ARCH/BRANCH&quot;. All elements except ID are optional and can be left out, including the slashes, so most of the time you need only specify ID. Any part left out will be matched against what is installed, and if there are multiple matches an error message will list the alternatives. </p>
 <p> By default this looks for both apps and runtimes with the given REF, but you can limit this by using the <code>&#8211;app</code> or <code>&#8211;runtime</code> option, or by supplying the initial element in the REF. </p>
 <p> Normally, this command updates the application to the tip of its branch. But it is possible to check out another commit, with the &#8211;commit option. </p>
-<p> If the configured remote for a ref being updated has a collection ID configured on it, flatpak will search mounted filesystems such as USB drives as well as Avahi services advertised on the local network for the needed refs, in order to support offline updates. See <code><a href="/docs/linux/man/1-ostree-find-remotes/">ostree-find-remotes</a></code>(1) for more information. </p>
+<p> If the configured remote for a ref being updated has a collection ID configured on it, flatpak will search mounted filesystems such as USB drives as well as Avahi services advertised on the local network for the needed refs, in order to support offline updates. See <code>ostree-find-remotes</code>(1) for more information. </p>
 <p> Note that updating a runtime is different from installing a different branch, and runtime updates are expected to keep strict compatibility. If an application update does cause a problem, it is possible to go back to the previous version, with the <code>&#8211;commit</code> option. </p>
 <p> Unless overridden with the <code>&#8211;user</code>, <code>&#8211;system</code> or <code>&#8211;installation</code> option, this command updates any matching refs in the standard system-wide installation and the per-user one.</p>
 <h2>OPTIONS</h2>
@@ -102,5 +102,5 @@ description: "flatpak-update – Update an application or runtime"
 <h2>EXAMPLES</h2>
 <p> <code>$ flatpak &#8211;user update org.gnome.gedit</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-install/">flatpak-install</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-list/">flatpak-list</a></code>(1), <code><a href="/docs/linux/man/1-ostree-find-remotes/">ostree-find-remotes</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-install/">flatpak-install</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-list/">flatpak-list</a></code>(1), <code>ostree-find-remotes</code>(1) </p>
 <h2>Index</h2>

@@ -38,7 +38,7 @@ description: "faxrunq – send fax jobs queued by"
 <dt><code>failure-send-mail [y/n]</code></p>
 <dd> A boolean parameter that controls whether a mail will be sent after the fax job has failed more than the maximum number of times. </p>
 <dt><code>success-call-program &lt;name&gt;</code></p>
-<dd> Here, you can specify a program that will be run when the fax has been successfully sent. It will be passed two command line parameters. The first is the full path to the fax JOB file (see <a href="/docs/linux/man/5-faxq/">faxq</a>(5)), the second is the last exit code from <i>sendfax</i> (for success-call-program, this is always &quot;0&quot;). </p>
+<dd> Here, you can specify a program that will be run when the fax has been successfully sent. It will be passed two command line parameters. The first is the full path to the fax JOB file (see faxq(5)), the second is the last exit code from <i>sendfax</i> (for success-call-program, this is always &quot;0&quot;). </p>
 <dt><code>failure-call-program &lt;name&gt;</code></p>
 <dd> Similar to the &quot;success-call-program&quot;, this program will be run when the fax has been failed too often and <i>faxrunq</i> gives up. This script could, for example, print out the fax on a printer so that it can be sent manually on a paper fax machine. </p>
 <dt><code>maxfail-costly &lt;n&gt;</code></p>

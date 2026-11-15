@@ -27,8 +27,8 @@ description: "pamvalidate – validate Netpbm image format"
 <h2>OPTIONS</h2>
 <p> None. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) </p>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code>pam</code>(1) </p>
+<p> <code>pnm</code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pamfix/">pamfix</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamvalidate</code> was new in Netpbm 10.66 (March 2014). </p>

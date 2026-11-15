@@ -12,7 +12,7 @@ description: "mkzftree – Create a zisofs/RockRidge compressed file tree"
 <h2>SYNOPSIS</h2>
 <p> <code>mkzftree</code> [<i>OPTIONS</i>]&#8230; <i>INPUT</i> <i>OUTPUT</i></p>
 <h2>DESCRIPTION</h2>
-<p> Takes an input file tree (<i>INPUT</i>) and create a corresponding compressed file tree (<i>OUTPUT</i>) that can be used with an appropriately patched <code><a href="/docs/linux/man/8-mkisofs/">mkisofs</a></code>(8) to create a transparent-compression ISO 9660/Rock Ridge filesystem using the &quot;ZF&quot; compression records.</p>
+<p> Takes an input file tree (<i>INPUT</i>) and create a corresponding compressed file tree (<i>OUTPUT</i>) that can be used with an appropriately patched <code>mkisofs</code>(8) to create a transparent-compression ISO 9660/Rock Ridge filesystem using the &quot;ZF&quot; compression records.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-f</code>, <code>&#8211;force</code></p>
@@ -57,5 +57,5 @@ description: "mkzftree – Create a zisofs/RockRidge compressed file tree"
 <p> Copyright &#169; 2001-2002 H. Peter Anvin.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-mkisofs/">mkisofs</a></code>(8) </p>
+<p> <code>mkisofs</code>(8) </p>
 <h2>Index</h2>

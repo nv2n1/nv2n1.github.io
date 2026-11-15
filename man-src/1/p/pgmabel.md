@@ -42,7 +42,7 @@ description: "pgmabel – create cross section using Abel Integration for Deconv
     pnmrotate 90 file.pgm | pgmabel -axis 140 &gt;cross_section.pgm
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code>pgm</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.3 (June 2002). </p>
 <h2>AUTHOR</h2>

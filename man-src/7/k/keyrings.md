@@ -64,7 +64,7 @@ description: "keyrings – in-kernel key management and retention facility"
 <dd>All the links may be removed from a keyring.</p>
 <dt>Searching</p>
 <dd>A keyring may be considered the root of a tree or subtree in which keyrings form the branches and non-keyrings the leaves. This tree may be searched for a key matching a particular type and description.</dl>
-<p> See <code><a href="/docs/linux/man/3-keyctl_clear/">keyctl_clear</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_link/">keyctl_link</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_search/">keyctl_search</a></code>(3), and <code><a href="/docs/linux/man/3-keyctl_unlink/">keyctl_unlink</a></code>(3) for more information.</p>
+<p> See <code><a href="/docs/linux/man/3-keyctl_clear/">keyctl_clear</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_link/">keyctl_link</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_search/">keyctl_search</a></code>(3), and <code>keyctl_unlink</code>(3) for more information.</p>
 <h3>Anchoring keys</h3>
 <p>To prevent a key from being garbage collected, it must be anchored to keep its reference count elevated when it is not in active use by the kernel. </p>
 <p> Keyrings are used to anchor other keys: each link is a reference on a key. Note that keyrings themselves are just keys and are also subject to the same anchoring requirement to prevent them being garbage collected. </p>
@@ -163,7 +163,7 @@ description: "keyrings – in-kernel key management and retention facility"
 <p>If a key cannot be found, <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2) will, if given a <i>callout_info</i> argument, create a new key and then upcall to user space to instantiate the key. This allows keys to be created on an as-needed basis. </p>
 <p> Typically, this will involve the kernel creating a new process that executes the <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) program, which will then execute the appropriate handler based on its configuration. </p>
 <p> The handler is passed a special authorization key that allows it and only it to instantiate the new key. This is also used to permit searches performed by the handler program to also search the requester&#8217;s keyrings. </p>
-<p> See <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2), <code><a href="/docs/linux/man/3-keyctl_assume_authority/">keyctl_assume_authority</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_instantiate/">keyctl_instantiate</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_negate/">keyctl_negate</a></code>(3), <code><a href="/docs/linux/man/3-keyctl_reject/">keyctl_reject</a></code>(3), <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8), and <code><a href="/docs/linux/man/5-request-key-conf/">request-key.conf</a></code>(5) for more information.</p>
+<p> See <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2), <code>keyctl_assume_authority</code>(3), <code><a href="/docs/linux/man/3-keyctl_instantiate/">keyctl_instantiate</a></code>(3), <code>keyctl_negate</code>(3), <code>keyctl_reject</code>(3), <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8), and <code><a href="/docs/linux/man/5-request-key-conf/">request-key.conf</a></code>(5) for more information.</p>
 <h3>/proc files</h3>
 <p>The kernel provides various <i>/proc</i> files that expose information about keys or define limits on key usage.</p>
 <dl>
@@ -192,7 +192,7 @@ description: "keyrings – in-kernel key management and retention facility"
 <dt>Q</p>
 <dd>The key contributes to the user&#8217;s quota.</p>
 <dt>U</p>
-<dd>The key is under construction via a callback to user space; see <code><a href="/docs/linux/man/2-request-key/">request-key</a></code>(2).</p>
+<dd>The key is under construction via a callback to user space; see <code>request-key</code>(2).</p>
 <dt>N</p>
 <dd>The key is negatively instantiated.</p>
 <dt>i</p>
@@ -239,7 +239,7 @@ description: "keyrings – in-kernel key management and retention facility"
 <dt><i>&quot;keyring&quot;</i></p>
 <dd>The number of keys linked to the keyring, or the string <i>empty</i> if there are no keys linked to the keyring.</p>
 <dt><i>&quot;big_key&quot;</i></p>
-<dd>The payload size in bytes, followed either by the string <i>[file]</i>, if the key payload exceeds the threshold that means that the payload is stored in a (swappable) <code><a href="/docs/linux/man/5-tmpfs/">tmpfs</a></code>(5) filesystem, or otherwise the string <i>[buff]</i>, indicating that the key is small enough to reside in kernel memory.</dl>
+<dd>The payload size in bytes, followed either by the string <i>[file]</i>, if the key payload exceeds the threshold that means that the payload is stored in a (swappable) <code>tmpfs</code>(5) filesystem, or otherwise the string <i>[buff]</i>, indicating that the key is small enough to reside in kernel memory.</dl>
 </dl>
 <dd>For the <i>&quot;.request_key_auth&quot;</i> key type (authorization key; see <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2)), the description field has the form shown in the following example:</p>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;key:c9a9b19 pid:28880 ci:10</p>

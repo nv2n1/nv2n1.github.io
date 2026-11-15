@@ -15,7 +15,7 @@ description: "iswlower – test for lowercase wide character"
 int iswlower(wint_t wc);
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The <code>iswlower</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-islower/">islower</a></code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;lower&quot;. </p>
+<p> The <code>iswlower</code>() function is the wide-character equivalent of the <code>islower</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;lower&quot;. </p>
 <p> The wide-character class &quot;lower&quot; is a subclass of the wide-character class &quot;alpha&quot;, and therefore also a subclass of the wide-character class &quot;alnum&quot;, of the wide-character class &quot;graph&quot; and of the wide-character class &quot;print&quot;. </p>
 <p> Being a subclass of the wide-character class &quot;print&quot;, the wide-character class &quot;lower&quot; is disjoint from the wide-character class &quot;cntrl&quot;. </p>
 <p> Being a subclass of the wide-character class &quot;graph&quot;, the wide-character class &quot;lower&quot; is disjoint from the wide-character class &quot;space&quot; and its subclass &quot;blank&quot;. </p>
@@ -47,7 +47,7 @@ int iswlower(wint_t wc);
 <p> The behavior of <code>iswlower</code>() depends on the <code>LC_CTYPE</code> category of the current locale. </p>
 <p> This function is not very appropriate for dealing with Unicode characters, because Unicode knows about three cases: upper, lower and title case.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-islower/">islower</a></code>(3), <code><a href="/docs/linux/man/3-iswctype/">iswctype</a></code>(3), <code><a href="/docs/linux/man/3-towlower/">towlower</a></code>(3)</p>
+<p> <code>islower</code>(3), <code>iswctype</code>(3), <code><a href="/docs/linux/man/3-towlower/">towlower</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

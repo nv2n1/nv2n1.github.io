@@ -37,7 +37,7 @@ description: "killpg – send signal to a process group"
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD (<code>killpg</code>() first appeared in 4BSD).</p>
 <h2>NOTES</h2>
-<p> There are various differences between the permission checking in BSD-type systems and System V-type systems. See the POSIX rationale for <code><a href="//www.systutorials.com/docs/linux/man/3p-kill/">kill</a></code>(3p). A difference not mentioned by POSIX concerns the return value <code>EPERM</code>: BSD documents that no signal is sent and <code>EPERM</code> returned when the permission check failed for at least one target process, while POSIX documents <code>EPERM</code> only when the permission check failed for all target processes.</p>
+<p> There are various differences between the permission checking in BSD-type systems and System V-type systems. See the POSIX rationale for <code>kill</code>(3p). A difference not mentioned by POSIX concerns the return value <code>EPERM</code>: BSD documents that no signal is sent and <code>EPERM</code> returned when the permission check failed for at least one target process, while POSIX documents <code>EPERM</code> only when the permission check failed for all target processes.</p>
 <h3>C library/kernel differences</h3>
 <p> On Linux, <code>killpg</code>() is implemented as a library function that makes the call <i>kill(-pgrp, sig)</i>.</p>
 <h2>SEE ALSO</h2>

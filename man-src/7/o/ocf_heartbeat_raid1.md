@@ -44,7 +44,7 @@ description: "ocf_heartbeat_Raid1 – Manages a software RAID1 device on shared 
 <dl>
 <dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
 <h2>Example</h2>
-<p>The following is an example configuration for a Raid1 resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a Raid1 resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_Raid1 ocf:heartbeat:Raid1 \
 params \
 raidconf=string \

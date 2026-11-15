@@ -148,7 +148,7 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </table>
 <dl COMPACT>
 <dt><code>XmNfontList</code></p>
-<dd>Specifies the font of the text used in the caption label. If this value is <font SIZE="-1">NULL</font> at initialization, it is initialized by looking up the parent hierarchy of the widget for an ancestor that is a subclass of the <code>XmBulletinBoard</code>, <code>VendorShell</code> or <code>XmMenuShell</code> widget class. If such an ancestor is found, the font list is initialized to the appropriate default font list of the ancestor widget <code>XmNdefaultFontList for</code> <code>VendorShell</code> and <code>XmMenuShell</code>, <code>XmNlabelFontList</code> or <code>XmNbuttonFontList</code> for <code>XmBulletinBoard.</code> Refer to <code><a href="//www.systutorials.com/docs/linux/man/3X-XmFontList/">XmFontList</a>(3X)</code> for more information on the creation and structure of a font list. This resource is copied.</p>
+<dd>Specifies the font of the text used in the caption label. If this value is <font SIZE="-1">NULL</font> at initialization, it is initialized by looking up the parent hierarchy of the widget for an ancestor that is a subclass of the <code>XmBulletinBoard</code>, <code>VendorShell</code> or <code>XmMenuShell</code> widget class. If such an ancestor is found, the font list is initialized to the appropriate default font list of the ancestor widget <code>XmNdefaultFontList for</code> <code>VendorShell</code> and <code>XmMenuShell</code>, <code>XmNlabelFontList</code> or <code>XmNbuttonFontList</code> for <code>XmBulletinBoard.</code> Refer to <code>XmFontList(3X)</code> for more information on the creation and structure of a font list. This resource is copied.</p>
 <dt><code>XmNlabelAlignment</code></p>
 <dd>Specifies the alignment of the caption label along the side of the caption child. Must be one of the enumerated <code>XbaeLabelAlignment</code> types: <code>XbaeAlignmentTopOrLeft</code>, <code>XbaeAlignmentCenter</code>, <code>XbaeAlignmentBottomOrRight</code>.</p>
 <dt><code>XmNlabelOffset</code></p>
@@ -158,7 +158,7 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <dt><code>XmNlabelPosition</code></p>
 <dd>Specifies on which side of the caption child the caption label should be placed. Must be one of the enumerated <code>XbaeLabelPosition</code> types: <code>XbaePositionLeft</code>, <code>XbaePositionRight</code>, <code>XbaePositionTop</code>, <code>XbaePositionBottom</code>.</p>
 <dt><code>XmNlabelString</code></p>
-<dd>Specifies the compound string when the <code>XmNlabelType is</code> <code>XmSTRING</code>. If this value is <font SIZE="-1">NULL,</font> it is initialized by converting the name of the widget to a compound string. Refer to <code><a href="//www.systutorials.com/docs/linux/man/3X-XmString/">XmString</a>(3X)</code> for more information on the creation and structure of compound strings.</p>
+<dd>Specifies the compound string when the <code>XmNlabelType is</code> <code>XmSTRING</code>. If this value is <font SIZE="-1">NULL,</font> it is initialized by converting the name of the widget to a compound string. Refer to <code>XmString(3X)</code> for more information on the creation and structure of compound strings.</p>
 <dt><code>XmNlabelTextAlignment</code></p>
 <dd>Specifies the text alignment for the caption label. This resource is only useful for multi line caption labels. Valid values are: <code>XmALIGNMENT_BEGINNING</code> left alignment causes the left sides of the lines of text to be vertically aligned. <code>XmALIGNMENT_CENTER</code> center alignment causes the centers of the lines of text to be vertically aligned. <code>XmALIGNMENT_END</code> right alignment causes the right sides of the lines of text to be vertically aligned.</p>
 <dt><code>XmNlabelType</code></p>
@@ -762,7 +762,7 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <p> <code>XbaeCreateCaption()</code> creates an instance of an XbaeCaption widget and returns the associated widget ID. </p>
 </dl>
 <h3>Virtual Bindings</h3>
-<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="//www.systutorials.com/docs/linux/man/3X-VirtualBindings/">VirtualBindings</a>(3X)</code>.</p>
+<p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code>VirtualBindings(3X)</code>.</p>
 <h2>Author</h2>
 <p><code>Andrew Wason,</code> Bellcore, Piscataway NJ; author<br />
  (aw [at] bae.bellcore.com) </p>
@@ -771,7 +771,7 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <h2>Release</h2>
 <p>This document describes XbaeCaption from Xbae Version 4.9.</p>
 <h2>See Also</h2>
-<p><code><a href="//www.systutorials.com/docs/linux/man/3X-Core/">Core</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-Composite/">Composite</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-XmManager/">XmManager</a>(3X), <a href="//www.systutorials.com/docs/linux/man/3X-XmLabel/">XmLabel</a>(3X)</code></p>
+<p><code>Core(3X), Composite(3X), XmManager(3X), XmLabel(3X)</code></p>
 <h2>Notice of Limitation</h2>
 <p>Bellcore, previous and current maintainers of the Xbae widgets (collectively &#8216;authors&#8217;) provide this information solely to professionals who have the appropriate degree of experience to understand and interpret its contents in accordance with generally accepted engineering or other professional standards and applicable regulations. No recommendations as to products or vendors is made or should be implied. </p>
 <p> While the information contained herein has been prepared from sources deemed to be reliable, the authors reserve the right to revise the information without notice, but have no obligation to do so. Unless the recipient has been expressly granted a license by Bellcore under separate applicable written agreement with Bellcore, no license, expressed or implied, is granted under any patents, copyrights or other intellectual property rights. Use of the information is at your discretion and shall not be deemed an inducement by Bellcore to infringe any existing or later-issued patent, copyrights or other intellectual property right. </p>

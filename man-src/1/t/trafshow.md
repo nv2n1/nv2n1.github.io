@@ -51,7 +51,7 @@ description: "trafshow – full screen show network traffic"
 <dt><i>expr</i></p>
 <dd> Select which packets will be displayed. If no <i>expression</i> is given, all packets on the net will be displayed. Otherwise, only packets for which <i>expression</i> is `true&#8217; will be displayed.<br />
  The <code>filter expression</code> can be changed during a show by pressing the `<code>F</code>&#8216; key, and turned Off by empty string.<br />
- Please see <code><a href="/docs/linux/man/1-tcpdump/">tcpdump</a></code>(1) man page for syntax of <code>filter expression</code>.</dl>
+ Please see <code>tcpdump</code>(1) man page for syntax of <code>filter expression</code>.</dl>
 <h2>FILES</h2>
 <dl>
 <dt><i>/etc/trafshow</i></p>
@@ -75,7 +75,7 @@ description: "trafshow – full screen show network traffic"
 <dd> It posible to indicate color as number from 0 to 7.</dl>
 <p> The upper-case <i>F</i>color mean <code>bright on</code>. The upper-case <i>B</i>color mean <code>blink on</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-pcap/">pcap</a>(3), <a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1), <a href="/docs/linux/man/4-bpf/">bpf</a>(4)</p>
+<p> pcap(3), tcpdump(1), bpf(4)</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Thanks to Van Jacobson &lt;van(at)helios.ee.lbl.gov&gt; and Steven McCanne &lt;mccanne(at)helios.ee.lbl.gov&gt;, all of Lawrence Berkeley Laboratory, University of California, Berkeley. Special thank to Jun-ichiro itojun Hagino &lt;itojun(at)iijlab.net&gt; for IPv6 patches.</p>
 <h2>AUTHOR</h2>

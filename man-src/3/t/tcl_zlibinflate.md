@@ -88,6 +88,6 @@ int
 <h2>Portability Notes</h2>
 <p>These functions will fail gracefully if Tcl is not linked with the zlib library.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-tcl_newbytearrayobj/">Tcl_NewByteArrayObj</a>(3), <a href="/docs/linux/man/n-zlib/">zlib</a>(n)</p>
+<p><a href="/docs/linux/man/3-tcl_newbytearrayobj/">Tcl_NewByteArrayObj</a>(3), zlib(n)</p>
 <h2>Keywords</h2>
 <p>compress, decompress, deflate, gzip, inflate</p>

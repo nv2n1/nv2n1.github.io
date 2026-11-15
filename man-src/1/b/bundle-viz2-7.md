@@ -11,7 +11,7 @@ description: "bundle-viz – Generates a visual dependency graph for your Gemfil
 <h2>Synopsis</h2>
 <p><code>bundle viz</code> [&#8211;file=FILE] [&#8211;format=FORMAT] [&#8211;requirements] [&#8211;version] [&#8211;without=GROUP GROUP]</p>
 <h2>Description</h2>
-<p><code>viz</code> generates a PNG file of the current <code><a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5)</code> as a dependency graph. <code>viz</code> requires the ruby-graphviz gem (and its dependencies). </p>
+<p><code>viz</code> generates a PNG file of the current <code>Gemfile(5)</code> as a dependency graph. <code>viz</code> requires the ruby-graphviz gem (and its dependencies). </p>
 <p> The associated gems must also be installed via <code>bundle <a href="/docs/linux/man/1-install/">install</a>(1)</code> <i>bundle-install.1.html</i>.</p>
 <h2>Options</h2>
 <dl>

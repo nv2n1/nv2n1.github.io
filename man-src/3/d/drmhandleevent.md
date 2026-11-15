@@ -36,4 +36,4 @@ description: "drmHandleEvent – read and process pending DRM events"
 <h2>Reporting Bugs</h2>
 <p>Bugs in this function should be reported to <a rel="nofollow" href="http://bugs.freedesktop.org">http://bugs.freedesktop.org</a> under the &quot;Mesa&quot; product, with &quot;Other&quot; or &quot;libdrm&quot; as the component.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-drm/">drm</a></code>(7), <code><a href="/docs/linux/man/7-drm-kms/">drm-kms</a></code>(7), <code><a href="/docs/linux/man/3-drmmodepageflip/">drmModePageFlip</a></code>(3), <code><a href="/docs/linux/man/3-drmwaitvblank/">drmWaitVBlank</a></code>(3)</p>
+<p><code><a href="/docs/linux/man/7-drm/">drm</a></code>(7), <code><a href="/docs/linux/man/7-drm-kms/">drm-kms</a></code>(7), <code>drmModePageFlip</code>(3), <code>drmWaitVBlank</code>(3)</p>

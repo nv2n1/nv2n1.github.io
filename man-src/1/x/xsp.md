@@ -155,7 +155,7 @@ description: "XSP – Mono ASP.NET Web Server (xsp and xsp2)"
 <dt><code>Web.config, web.config</code></p>
 <dd> ASP.NET applications are configured through these files, the configuration is done on a per-directory basis. For more information on this subject see the <a rel="nofollow" href="http://www.mono-project.com/Config_system.web">http://www.mono-project.com/Config_system.web</a> page.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mono/">mono</a></code>(1),<code><a href="/docs/linux/man/1-dbsessmgr/">dbsessmgr</a></code>(1),<code><a href="/docs/linux/man/1-asp-state/">asp-state</a></code>(1),<code><a href="/docs/linux/man/8-mod_mono/">mod_mono</a></code>(8),<code><a href="/docs/linux/man/1-makecert/">makecert</a>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-mono/">mono</a></code>(1),<code><a href="/docs/linux/man/1-dbsessmgr/">dbsessmgr</a></code>(1),<code>asp-state</code>(1),<code>mod_mono</code>(8),<code><a href="/docs/linux/man/1-makecert/">makecert</a>(1)</code> </p>
 <p> For more information on creating certificates, see: <a rel="nofollow" href="http://pages.infinit.net/ctech/20050701-1048.html">http://pages.infinit.net/ctech/20050701-1048.html</a> </p>
 <p> System.Web, System.Web.Hosting namespaces. </p>
 <p> <a rel="nofollow" href="http://www.asp.net">http://www.asp.net</a> is Microsoft&#8217;s official site for ASP.NET</p>

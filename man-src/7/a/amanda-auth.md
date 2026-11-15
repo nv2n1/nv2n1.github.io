@@ -253,7 +253,7 @@ define dumptype rsh_example {
 <p>&nbsp;<wbr>&nbsp;<wbr>amandad-path&nbsp;<wbr>&quot;/client/amandad/path&quot; </p>
 <p> For a marginal increase in security, prepend the keys used for AMANDA in the clients&#8217; authorized_keys file with the following: </p>
 <pre> from=&quot;amanda_server.your.domain.com&quot;,no-port-forwarding,no-X11-forwarding,no-agent-forwarding,command=&quot;/absolute/path/to/amandad -auth=ssh amdump&quot;</pre>
-<p>This will limit that key to connect only from Amanda server and only be able to execute <code><a href="/docs/linux/man/8-amandad/">amandad</a></code>(8). </p>
+<p>This will limit that key to connect only from Amanda server and only be able to execute <code>amandad</code>(8). </p>
 <p> In the same way, prepend the key used for AMANDA in the server&#8217;s authorized_keys file with: </p>
 <pre> from=&quot;amanda_client.your.domain.com&quot;,no-port-forwarding,no-X11-forwarding,no-agent-forwarding,command=&quot;/absolute/path/to/amandad -auth=ssh amindexd amidxtaped&quot;</pre>
 <p>You can omit the from=.. option if you have too many clients to list, although this has obvious security implications. </p>

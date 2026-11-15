@@ -38,7 +38,7 @@ description: "ppmglobe – generate strips to glue onto a sphere"
 <p> This option was new in Netpbm 10.31 (December 2005). </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code>ppm</code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-pnmmercator/">pnmmercator</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>ppmglobe</code> was new in Netpbm 10.16 (June 2003). </p>

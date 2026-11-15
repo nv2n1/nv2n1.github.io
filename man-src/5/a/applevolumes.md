@@ -235,4 +235,4 @@ description: "AppleVolumes.default – Configuration file used by"
 <dd>Provides compatibility with Apple II clients.</dl>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-afpd-conf/">afpd.conf</a></code>(5), <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) </p>
+<p><code>afpd.conf</code>(5), <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) </p>

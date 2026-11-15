@@ -54,5 +54,5 @@ description: "hwloc-annotate – Add info attributes to a XML topology"
 <p> Upon successful execution, hwloc-annotate generates the output topology. The return value is 0. </p>
 <p> hwloc-annotate will return nonzero if any kind of error occurs, such as (but not limited to) failure to parse the command line.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-lstopo/">lstopo</a>(1), <a href="/docs/linux/man/1-hwloc-info/">hwloc-info</a>(1) </p>
+<p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-info/">hwloc-info</a>(1) </p>
 <h2>Index</h2>

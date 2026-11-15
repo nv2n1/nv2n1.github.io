@@ -17,7 +17,7 @@ ldbadd - Command-line utility for adding records to an LDB
 
  
 
-<dd>ldbadd adds records to an <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7) database. It reads the <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5) files specified on the command line and adds the records from these files to the LDB database, which is specified by the -H option or the LDB_URL environment variable. 
+<dd>ldbadd adds records to an ldb(7) database. It reads the <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5) files specified on the command line and adds the records from these files to the LDB database, which is specified by the -H option or the LDB_URL environment variable. 
 
  If - is specified as a ldb file, the ldif input is read from standard input.
 
@@ -34,7 +34,7 @@ ldbadd - Command-line utility for adding records to an LDB
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. See <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7) for details.</dl>
+<dd> LDB URL to connect to. See ldb(7) for details.</dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -55,7 +55,7 @@ ldbadd - Command-line utility for adding records to an LDB
 
  
 
- <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7), ldbmodify, ldbdel, <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5)
+ ldb(7), ldbmodify, ldbdel, <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5)
 
 <h2>AUTHOR</h2>
 

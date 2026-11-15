@@ -98,9 +98,9 @@ description: "PDL::MATLAB – A guide for MATLAB users."
 <dd>
 <pre> MATLAB PDL
  ------ ------
- Matrix of ones <a href="//www.systutorials.com/docs/linux/man/5-ones/">ones</a>(5) ones 5,5
- Matrix of zeros <a href="//www.systutorials.com/docs/linux/man/5-zeros/">zeros</a>(5) zeros 5,5
- Random matrix <a href="//www.systutorials.com/docs/linux/man/5-rand/">rand</a>(5) random 5,5
+ Matrix of ones ones(5) ones 5,5
+ Matrix of zeros zeros(5) zeros 5,5
+ Random matrix rand(5) random 5,5
  Linear vector 1:5 sequence 5</pre>
 <p>Notice that in <font SIZE="-1">PDL</font> the parenthesis in a function call are often optional. It is important to keep an eye out for possible ambiguities. For example: </p>
 <pre> pdl&gt; p zeros 2, 2 + 2</pre>
@@ -123,7 +123,7 @@ description: "PDL::MATLAB – A guide for MATLAB users."
 <pre> MATLAB: &gt;&gt; linspace(2,10,5)
  ans = 2 4 6 8 10
  
- PerlDL: pdl&gt; p <a href="//www.systutorials.com/docs/linux/man/5-zeroes/">zeroes</a>(5)-&gt;xlinvals(2,10)
+ PerlDL: pdl&gt; p zeroes(5)-&gt;xlinvals(2,10)
  [2 4 6 8 10]</pre>
 <p><code>Explanation</code>: Start with a 1-dimensional piddle of 5 elements and give it equally spaced values from 2 to 10. </p>
 <p> <font SIZE="-1">MATLAB</font> has a single function call for this. On the other hand, <font SIZE="-1">PDL</font>&#8216;s method is more flexible: </p>
@@ -310,7 +310,7 @@ description: "PDL::MATLAB – A guide for MATLAB users."
 <p>It is important to note the difference between a <i>Piddle</i> and a Perl array. Perl has a general-purpose array object that can hold any type of element: </p>
 <pre> @perl_array = 1..10;
  @perl_array = ( 12, &quot;Hello&quot; );
- @perl_array = ( 1, 2, 3, \@another_perl_array, <a href="//www.systutorials.com/docs/linux/man/5-sequence/">sequence</a>(5) );</pre>
+ @perl_array = ( 1, 2, 3, \@another_perl_array, sequence(5) );</pre>
 <p>Perl arrays allow you to create powerful data structures (see <code>Data structures</code> below), <code>but they are not designed for numerical work</code>. For that, use <i>piddles</i>: </p>
 <pre> $pdl = pdl [ 1, 2, 3, 4 ];
  $pdl = sequence 10_000_000; 
@@ -404,9 +404,9 @@ description: "PDL::MATLAB – A guide for MATLAB users."
 <dd>Perl arrays are similar to <font SIZE="-1">MATLAB</font>&#8216;s cell arrays, but more flexible. For example, in <font SIZE="-1">MATLAB,</font> a cell array is still fundamentally a matrix. It is made of rows, and rows must have the same length. </p>
 <pre> MATLAB
  ------
- array = {1, 12, 'hello'; rand(3, 2), <a href="//www.systutorials.com/docs/linux/man/3-ones/">ones</a>(3), 'junk'}
+ array = {1, 12, 'hello'; rand(3, 2), ones(3), 'junk'}
  =&gt; OK
- array = {1, 12, 'hello'; rand(3, 2), <a href="//www.systutorials.com/docs/linux/man/3-ones/">ones</a>(3) }
+ array = {1, 12, 'hello'; rand(3, 2), ones(3) }
  =&gt; ERROR</pre>
 <p>A Perl array is a general purpose, sequential data structure. It can contain any data type. </p>
 <pre> PerlDL

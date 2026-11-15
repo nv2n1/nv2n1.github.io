@@ -14,7 +14,7 @@ description: "postlog – Postfix-compatible logging utility"
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postlog/">postlog</a></code>(1) command implements a Postfix-compatible logging interface for use in, for example, shell scripts. </p>
 <p> By default, <code><a href="/docs/linux/man/1-postlog/">postlog</a></code>(1) logs the <i>text</i> given on the command line as one record. If no <i>text</i> is specified on the command line, <code><a href="/docs/linux/man/1-postlog/">postlog</a></code>(1) reads from standard input and logs each input line as one record. </p>
-<p> By default, logging is sent to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8) or <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8); when the standard error stream is connected to a terminal, logging is sent there as well. </p>
+<p> By default, logging is sent to <code>syslogd</code>(8) or <code>postlogd</code>(8); when the standard error stream is connected to a terminal, logging is sent there as well. </p>
 <p> The following options are implemented:</p>
 <dl>
 <dt><code>-c </code><i>config_dir</i></p>
@@ -46,14 +46,14 @@ description: "postlog – Postfix-compatible logging utility"
 <p> Available in Postfix 3.4 and later:</p>
 <dl>
 <dt><code>maillog_file (empty)</code></p>
-<dd> The name of an optional logfile that is written by the Postfix <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8) service.</p>
+<dd> The name of an optional logfile that is written by the Postfix <code>postlogd</code>(8) service.</p>
 <dt><code>postlog_service_name (postlog)</code></p>
-<dd> The name of the <code><a href="/docs/linux/man/8-postlogd/">postlogd</a></code>(8) service entry in master.cf.</dl>
+<dd> The name of the <code>postlogd</code>(8) service entry in master.cf.</dl>
 <h2>SEE ALSO</h2>
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
-<a href="//www.systutorials.com/docs/linux/man/8-postlogd/">postlogd</a>(8), Postfix logging
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging
+postlogd(8), Postfix logging
+syslogd(8), system logging
 </pre>
 <h2>LICENSE</h2>
 <p> The Secure Mailer license must be distributed with this software.</p>

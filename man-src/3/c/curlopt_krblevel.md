@@ -24,4 +24,4 @@ description: "CURLOPT_KRBLEVEL – set FTP kerberos security level"
 <h2>Return Value</h2>
 <p>Returns CURLE_OK if the option is supported, CURLE_UNKNOWN_OPTION if not, or CURLE_OUT_OF_MEMORY if there was insufficient heap space.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-curlopt_krblevel/">CURLOPT_KRBLEVEL</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_ftp_ssl/">CURLOPT_FTP_SSL</a></code>(3),</p>
+<p><code><a href="/docs/linux/man/3-curlopt_krblevel/">CURLOPT_KRBLEVEL</a></code>(3), <code>CURLOPT_FTP_SSL</code>(3),</p>

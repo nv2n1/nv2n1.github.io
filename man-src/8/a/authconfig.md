@@ -74,7 +74,7 @@ description: "authconfig, authconfig-tui – an interface for configuring system
 <dd>Contains the actual PAM configuration for system services and is the default target of the <code>/etc/pam.d/system-auth</code> symlink. If a local configuration of PAM is created (and symlinked from <code>system-auth</code> file) this file can be <code>include</code>d there. </p>
 </dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-authconfig-gtk/">authconfig-gtk</a>(8), <a href="/docs/linux/man/5-system-auth-ac/">system-auth-ac</a>(5), <a href="/docs/linux/man/5-passwd/">passwd</a>(5), <a href="/docs/linux/man/5-shadow/">shadow</a>(5), <a href="/docs/linux/man/1-pwconv/">pwconv</a>(1), <a href="/docs/linux/man/1-domainname/">domainname</a>(1), <a href="/docs/linux/man/8-ypbind/">ypbind</a>(8), <a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a>(5), <a href="/docs/linux/man/5-smb-conf/">smb.conf</a>(5), <a href="/docs/linux/man/8-sssd/">sssd</a>(8) </p>
+<p><a href="/docs/linux/man/8-authconfig-gtk/">authconfig-gtk</a>(8), <a href="/docs/linux/man/5-system-auth-ac/">system-auth-ac</a>(5), <a href="/docs/linux/man/5-passwd/">passwd</a>(5), <a href="/docs/linux/man/5-shadow/">shadow</a>(5), pwconv(1), <a href="/docs/linux/man/1-domainname/">domainname</a>(1), <a href="/docs/linux/man/8-ypbind/">ypbind</a>(8), <a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a>(5), <a href="/docs/linux/man/5-smb-conf/">smb.conf</a>(5), <a href="/docs/linux/man/8-sssd/">sssd</a>(8) </p>
 <h2>Authors</h2>
 <pre>Nalin Dahyabhai &lt;nalin [at] redhat.com&gt;, Preston Brown &lt;pbrown [at] redhat.com&gt;,
 Matt Wilson &lt;msw [at] redhat.com&gt;, Tomas Mraz &lt;tmraz [at] redhat.com&gt;</pre>

@@ -29,7 +29,7 @@ description: "root – Interpretor of C++ for the ROOT framework"
 <dt><code>-l</code></p>
 <dd> Do not show splash screen</dl>
 <h2>SEE ALSO</h2>
-<p> <font SIZE="-1"></font> <i><a href="/docs/linux/man/1-rootcling/">rootcling</a></i>(1), <i><a href="/docs/linux/man/1-cling/">cling</a></i>(1), <i><a href="/docs/linux/man/1-root-config/">root-config</a></i>(1), <i><a href="/docs/linux/man/1-rootd/">rootd</a></i>(1), <i><a href="/docs/linux/man/1-h2root/">h2root</a></i>(1), <i><a href="/docs/linux/man/1-g2root/">g2root</a></i>(1) </p>
+<p> <font SIZE="-1"></font> <i>rootcling</i>(1), <i>cling</i>(1), <i><a href="/docs/linux/man/1-root-config/">root-config</a></i>(1), <i><a href="/docs/linux/man/1-rootd/">rootd</a></i>(1), <i><a href="/docs/linux/man/1-h2root/">h2root</a></i>(1), <i><a href="/docs/linux/man/1-g2root/">g2root</a></i>(1) </p>
 <p> For extensive documentation on the <code>ROOT</code> system, see <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i> </p>
 <p> A <code>Users Guide</code> is available online. </p>
 <p> The classes of ROOT are all documented by the automatic documentation system, and is available online.</p>

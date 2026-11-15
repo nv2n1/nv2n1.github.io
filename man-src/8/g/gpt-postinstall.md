@@ -25,6 +25,6 @@ description: "gpt-postinstall – Searches for post install scripts and executes
 <dt><code>-location</code></p>
 <dd>Location indicates the path to the Globus installation that will be used.</dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-gpt-install/">gpt-install</a></i>(1) <i><a href="/docs/linux/man/1-gpt-uninstall/">gpt-uninstall</a></i>(1) <i><a href="/docs/linux/man/1-gpt-verify/">gpt-verify</a></i>(1)</p>
+<p><i>gpt-install</i>(1) <i>gpt-uninstall</i>(1) <i>gpt-verify</i>(1)</p>
 <h2>Author</h2>
 <p>Michael Bletzinger &lt;mbletzin.ncsa.uiuc.edu&gt; and Eric Blau &lt;eblau.ncsa.uiuc.edu&gt;</p>

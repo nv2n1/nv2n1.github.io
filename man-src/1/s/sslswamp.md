@@ -31,7 +31,7 @@ description: "swamp – SSL/TLS load-tester based on OpenSSL"
 <p> This man page is utterly incomplete.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><i><a href="/docs/linux/man/2-nal_address_new/">NAL_ADDRESS_new</a></i>(2)</p>
+<dt><i>NAL_ADDRESS_new</i>(2)</p>
 <dd> Information on the <i>libnal</i> network abstraction library used by swamp. This provides some information about the syntax used for <code>-connect</code>.</p>
 <dt><i><a href="/docs/linux/man/8-distcache/">distcache</a></i>(8)</p>
 <dd> Overview of the distcache architecture, of which swamp is a component.</p>

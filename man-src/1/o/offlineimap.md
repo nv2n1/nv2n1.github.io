@@ -359,7 +359,7 @@ John Goerzen, Sebastian Spaetz, Eygene Ryabinkin, Nicolas Sebrecht.
 <dt>
 <dd>
 <pre>
-<a href="//www.systutorials.com/docs/linux/man/7-offlineimapui/">offlineimapui</a>(7), <a href="//www.systutorials.com/docs/linux/man/1-openssl/">openssl</a>(1), <a href="//www.systutorials.com/docs/linux/man/7-signal/">signal</a>(7), <a href="//www.systutorials.com/docs/linux/man/1-sqlite3/">sqlite3</a>(1).
+<a href="//www.systutorials.com/docs/linux/man/7-offlineimapui/">offlineimapui</a>(7), openssl(1), <a href="//www.systutorials.com/docs/linux/man/7-signal/">signal</a>(7), <a href="//www.systutorials.com/docs/linux/man/1-sqlite3/">sqlite3</a>(1).
 <a rel="nofollow" href="http://www.offlineimap.org">http://www.offlineimap.org</a>
 </pre>
 </dl>

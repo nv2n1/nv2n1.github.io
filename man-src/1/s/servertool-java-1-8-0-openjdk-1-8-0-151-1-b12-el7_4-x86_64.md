@@ -56,5 +56,5 @@ description: "servertool – Provides an easy-to-use interface for developers to
 <h2>See Also</h2>
 <dl COMPACT>
 <dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-orbd/">orbd</a>(1) </p>
+<dd>orbd(1) </p>
 </dl>

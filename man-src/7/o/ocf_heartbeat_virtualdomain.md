@@ -98,7 +98,7 @@ description: "ocf_heartbeat_VirtualDomain – Manages virtual domains through th
 <dl>
 <dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
 <h2>Example Crm Shell</h2>
-<p>The following is an example configuration for a VirtualDomain resource using the <code><a href="/docs/linux/man/8-crm/">crm</a></code>(8) shell: </p>
+<p>The following is an example configuration for a VirtualDomain resource using the <code>crm</code>(8) shell: </p>
 <dl>
 <dd>
 <pre>primitive p_VirtualDomain ocf:heartbeat:VirtualDomain \

@@ -62,6 +62,6 @@ description: "g_rmsf – calculates atomic fluctuations"
 <p> <code>-[no]fit</code><i>yes </i><br />
 &nbsp;<wbr>Do a least squares superposition before computing RMSF. Without this you must make sure that the reference structure and the trajectory match. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gromacs/">gromacs</a>(7)</code> </p>
+<p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
 <h2>Index</h2>

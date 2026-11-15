@@ -102,5 +102,5 @@ description: "gmtdigitize – Digitizing and Inverse map transformation of map x
  Emulation: CalComp 2000 ASCII<br />
  (A)We need to make a slight modification to the Preset No 3 settings: (1) 2450 LPI instead of 200, and (2) None instead of yes for added CR. These modifications can be changed and saved to Preset 3 on the digitizer but a power outage may reset in back to the factory defaults, necessitating a manual reset of those two settings. (B) Setup tty port. stty -F /dev/ttyS0 evenp (C) Run gmtdigitize. Map scale does not matter; it is computed from the region and plot size.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/l-gmtdefaults/">gmtdefaults</a></i>(l), <i><a href="/docs/linux/man/l-gmt/">GMT</a></i>(l), <i><a href="/docs/linux/man/l-gmtstitch/">gmtstitch</a></i>(l), <i><a href="/docs/linux/man/l-mapproject/">mapproject</a></i>(l), <i><a href="/docs/linux/man/l-project/">project</a></i>(l) </p>
+<p> <i>gmtdefaults</i>(l), <i>GMT</i>(l), <i>gmtstitch</i>(l), <i>mapproject</i>(l), <i>project</i>(l) </p>
 <h2>Index</h2>

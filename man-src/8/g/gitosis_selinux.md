@@ -39,7 +39,7 @@ description: "gitosis_selinux – Security Enhanced Linux Policy for the gitosis
 <p> <code>gitosis_var_lib_t</code> </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/srv/lib/gitosis(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/gitosis(/.*)?</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/<a href="/docs/linux/man/3-gitolite/">gitolite</a>(3)?(/.*)?</p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/gitolite(3)?(/.*)?</p>
 <h2>File Contexts</h2>
 <p>SELinux requires files to have an extended attribute to define the file type. </p>
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux gitosis policy is very flexible allowing users to setup their gitosis processes in as secure a method as possible. </p>
@@ -59,7 +59,7 @@ description: "gitosis_selinux – Security Enhanced Linux Policy for the gitosis
 <p> &#8211; Set files with the gitosis_var_lib_t type, if you want to store the gitosis files under the /var/lib directory. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/srv/lib/gitosis(/.*)?, /var/lib/gitosis(/.*)?, /var/lib/<a href="/docs/linux/man/3-gitolite/">gitolite</a>(3)?(/.*)? </p>
+<dd>/srv/lib/gitosis(/.*)?, /var/lib/gitosis(/.*)?, /var/lib/gitolite(3)?(/.*)? </p>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>
@@ -71,4 +71,4 @@ description: "gitosis_selinux – Security Enhanced Linux Policy for the gitosis
 <h2>Author</h2>
 <p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-gitosis/">gitosis</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), gitosis(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>

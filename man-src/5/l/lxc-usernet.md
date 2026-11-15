@@ -24,6 +24,6 @@ description: "lxc-usernet – unprivileged user network administration file."
 <dt><code>number</code></p>
 <dd>is the number of network interfaces of the given type which the given user may attach to the given bridge, for instance <i>2</i>.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-lxc/">lxc</a></code>(1), <code><a href="/docs/linux/man/1-lxc-user-nic/">lxc-user-nic</a></code>(1)</p>
+<p><code>lxc</code>(1), <code><a href="/docs/linux/man/1-lxc-user-nic/">lxc-user-nic</a></code>(1)</p>
 <h2>Author</h2>
 <p>Daniel Lezcano &lt;daniel.lezcano [at] free.fr&gt;</p>

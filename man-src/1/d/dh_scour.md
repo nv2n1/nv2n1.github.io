@@ -16,7 +16,7 @@ description: "dh_scour – run scour optimizer on shipped SVG files"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8212;</code> <i>params</i></p>
-<dd> Pass &#8220;params&#8221; to <i><a href="/docs/linux/man/1-scour/">scour</a></i>(1). By default, no extra arguments are passed.</dl>
+<dd> Pass &#8220;params&#8221; to <i>scour</i>(1). By default, no extra arguments are passed.</dl>
 <h2>SEE ALSO</h2>
 <p> debhelper</p>
 <h2>AUTHOR</h2>

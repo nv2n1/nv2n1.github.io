@@ -234,5 +234,5 @@ description: "grep-dctrl, grep-status, grep-available, grep-aptavail, grep-debta
 <p> The program and this manual page were written by Antti-Juhani Kaijanaho &lt;<i>gaia [at] iki.fi</i>&gt;. Bill Allombert &lt;<i>ballombe [at] debian.org</i>&gt; provided one of the examples in the manual page.</p>
 <h2>SEE ALSO</h2>
 <p> Debian Policy Manual. Published as the Debian package <code>debian-policy</code>. Also available in the Debian website. </p>
-<p> <code><a href="/docs/linux/man/1-apt-cache/">apt-cache</a></code>(1), <code><a href="/docs/linux/man/1-ara/">ara</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-awk/">dpkg-awk</a></code>(1), <code><a href="/docs/linux/man/1-sgrep/">sgrep</a></code>(1), <code><a href="/docs/linux/man/8-dpkg/">dpkg</a></code>(8) </p>
+<p> <code>apt-cache</code>(1), <code>ara</code>(1), <code>dpkg-awk</code>(1), <code>sgrep</code>(1), <code>dpkg</code>(8) </p>
 <h2>Index</h2>

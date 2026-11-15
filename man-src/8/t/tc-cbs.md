@@ -11,7 +11,7 @@ description: "CBS – Credit Based Shaper (CBS) Qdisc"
 <h2>Synopsis</h2>
 <p><code>tc qdisc &#8230; dev</code> dev <code>parent</code> classid <code>[ handle</code> major: <code>] cbs idleslope</code> idleslope <code>sendslope</code> sendslope <code>hicredit</code> hicredit <code>locredit</code> locredit <code>[ offload</code> 0|1 <code>]</code> </p>
 <h2>Description</h2>
-<p>The CBS (Credit Based Shaper) qdisc implements the shaping algorithm defined by the IEEE 802.1Q-2014 Section 8.6.8.2, which applies a well defined rate limiting method to the traffic. This queueing discipline is intended to be used by TSN (Time Sensitive Networking) applications, the CBS parameters are derived directly by what is described by the Annex L of the IEEE 802.1Q-2014 Specification. The algorithm and how it affects the latency are detailed there. CBS is meant to be installed under another qdisc that maps packet flows to traffic classes, one example is <code><a href="/docs/linux/man/8-mqprio/">mqprio</a>(8).</code> </p>
+<p>The CBS (Credit Based Shaper) qdisc implements the shaping algorithm defined by the IEEE 802.1Q-2014 Section 8.6.8.2, which applies a well defined rate limiting method to the traffic. This queueing discipline is intended to be used by TSN (Time Sensitive Networking) applications, the CBS parameters are derived directly by what is described by the Annex L of the IEEE 802.1Q-2014 Specification. The algorithm and how it affects the latency are detailed there. CBS is meant to be installed under another qdisc that maps packet flows to traffic classes, one example is <code>mqprio(8).</code> </p>
 <h2>Parameters</h2>
 <dl>
 <dt>idleslope</p>
@@ -27,10 +27,10 @@ description: "CBS – Credit Based Shaper (CBS) Qdisc"
 <dd>Locredit is the minimum amount of credits that can be reached. It is a function of the traffic flowing through this qdisc (IEEE 802.1Q-2014 Annex L, Equation L-2): </p>
 <p> locredit = max_frame_size * (sendslope / port_transmit_rate) </p>
 <dt>offload</p>
-<dd>When <code>offload</code> is 1, <code><a href="/docs/linux/man/8-cbs/">cbs</a>(8)</code> will try to configure the network interface so the CBS algorithm runs in the controller. The default is 0. </p>
+<dd>When <code>offload</code> is 1, <code>cbs(8)</code> will try to configure the network interface so the CBS algorithm runs in the controller. The default is 0. </p>
 </dl>
 <h2>Examples</h2>
-<p>CBS is used to enforce a Quality of Service by limiting the data rate of a traffic class, to separate packets into traffic classes the user may choose <code><a href="/docs/linux/man/8-mqprio/">mqprio</a>(8),</code> and configure it like this: # tc qdisc add dev eth0 handle 100: parent root mqprio num_tc 3 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>map 2 2 1 0 2 2 2 2 2 2 2 2 2 2 2 2 \<br />
+<p>CBS is used to enforce a Quality of Service by limiting the data rate of a traffic class, to separate packets into traffic classes the user may choose <code>mqprio(8),</code> and configure it like this: # tc qdisc add dev eth0 handle 100: parent root mqprio num_tc 3 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>map 2 2 1 0 2 2 2 2 2 2 2 2 2 2 2 2 \<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>queues 1@0 1@1 2@2 \<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>hw 0<br />
  To replace the current queuing disciple by CBS in the current queueing discipline connected to traffic class number 0, issue: # tc qdisc replace dev eth0 parent 100:4 cbs \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>locredit -1470 hicredit 30 sendslope -980000 idleslope 20000<br />

@@ -42,4 +42,4 @@ description: "ifplugstatus – A link beat detection tool"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-mii-diag/">mii-diag</a>(8)</code>, <code><a href="/docs/linux/man/8-mii-tool/">mii-tool</a>(8)</code>, <code><a href="/docs/linux/man/8-ethtool/">ethtool</a>(8)</code>, <code><a href="/docs/linux/man/8-ifplugd/">ifplugd</a>(8)</code></p>
 <h2>Comments</h2>
-<p>This man page was written using <code><a href="/docs/linux/man/1-xml2man/">xml2man</a>(1)</code> by Oliver Kurth.</p>
+<p>This man page was written using <code>xml2man(1)</code> by Oliver Kurth.</p>

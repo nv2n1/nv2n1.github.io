@@ -21,7 +21,7 @@ url: "/docs/linux/man/1-pbmpscale/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-pnmenlarge/">pnmenlarge</a>(1), <a HREF="/docs/linux/man/1-ppmscale/">ppmscale</a>(1), <a HREF="/docs/linux/man/5-pbm/">pbm</a>(5)
+ <a HREF="/docs/linux/man/1-pnmenlarge/">pnmenlarge</a>(1), ppmscale(1), <a HREF="/docs/linux/man/5-pbm/">pbm</a>(5)
 
 <h2>AUTHOR</h2>
 

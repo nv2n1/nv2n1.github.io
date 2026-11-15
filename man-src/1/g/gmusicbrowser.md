@@ -103,7 +103,7 @@ description: "gmusicbrowser – Jukebox for large collections of audio files"
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://squentin.free.fr/gmusicbrowser/gmusicbrowser.html,">http://squentin.free.fr/gmusicbrowser/gmusicbrowser.html,</a> </p>
 <h2>BUGS</h2>
-<p> If you wish to report a bug please use the <a href="/docs/linux/man/1-reportbug/">reportbug</a>(1) command. </p>
+<p> If you wish to report a bug please use the reportbug(1) command. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (c) 2005-2008 Quentin Sculo &lt;squentin [at] free.fr&gt; </p>
 <h2>Index</h2>

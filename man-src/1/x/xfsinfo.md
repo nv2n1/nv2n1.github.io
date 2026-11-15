@@ -40,7 +40,7 @@ number of extensions:   0
 <dt><code>FONTSERVER</code></p>
 <dd> To get the default fontserver. The server name must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7).</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-xfs/">xfs</a>(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
+<p> xfs(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>AUTHOR</h2>
 <p> Dave Lemke, Network Computing Devices, Inc </p>
 <h2>Index</h2>

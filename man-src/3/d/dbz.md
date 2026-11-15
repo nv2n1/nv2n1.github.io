@@ -33,7 +33,7 @@ bool dbzinit(const char *base) bool dbzclose(void) bool dbzfresh(const char *bas
 <p> Concurrent reading of databases is fairly safe, but there is no (inter)locking, so concurrent updating is not. </p>
 <p> An open database occupies three <i>stdio</i> streams and two file descriptors; Memory consumption is negligible (except for <i>stdio</i> buffers) except for in-memory databases.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-dbm/">dbm</a>(3), <a href="/docs/linux/man/5-history/">history</a>(5), <a href="/docs/linux/man/3-libinn/">libinn</a>(3)</p>
+<p> dbm(3), <a href="/docs/linux/man/5-history/">history</a>(5), <a href="/docs/linux/man/3-libinn/">libinn</a>(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Functions returning <i>bool</i> values return &#8220;true&#8221; for success, &#8220;false&#8221; for failure. Functions returning <i>off_t</i> values return a value with <i>-1</i> for failure. <i>Dbzinit</i> attempts to have <i>errno</i> set plausibly on return, but otherwise this is not guaranteed. An <i>errno</i> of <code>EDOM</code> from <i>dbzinit</i> indicates that the database did not appear to be in <i>dbz</i> format. </p>
 <p> If <font SIZE="-1">DBZTEST</font> is defined at compile-time then a <i>main()</i> function will be included. This will do performance tests and integrity test.</p>

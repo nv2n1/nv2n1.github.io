@@ -230,14 +230,14 @@ i18ncheckarg: Check validity of i18n calls<br />
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA</font> 02110-1301, <font SIZE="-1">USA</font>.</p>
 <h2>FILES</h2>
-<p> <i>.krazy</i> (see <i><a href="/docs/linux/man/5-krazyrc/">krazyrc</a></i>(5)) </p>
+<p> <i>.krazy</i> (see <i>krazyrc</i>(5)) </p>
 <p> krazy2 first parses a <i>.krazy</i> file found in the user&#8217;s home directory, if such a file exists. </p>
 <p> Next, krazy2 searches up the current working directory tree for a project specific <i>.krazy</i> file. If one is found, its settings are merged with (or override) those already found from <i></i>$HOME<i>/.krazy</i>. </p>
 <p> [For example, if the current working dir is <i>/my/kde/trunk/KDE/kdepimlibs/kcal/versit</i>, then krazy2 will look for <i>/my/kde/trunk/KDE/kdepimlibs/kcal/.krazy</i>, since kcal is the project within the kdepimlibs module.] </p>
 <p> If krazy2 determines that the current working directory is not located within the <font SIZE="-1">KDE</font> directory structure, then it simply reads the settings from the <i>.krazy</i> file found in the current working directory, if such a file exists. </p>
 <p> If krazy2 determines that the current working directory is located within the <font SIZE="-1">KDE</font> directory structure but above a project subdir (eg. <i>trunk/KDE/kdepim</i>), then it assumes no project specific <i>/.krazy</i> file.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-krazyrc/">krazyrc</a></i>(5), <i><a href="/docs/linux/man/1-krazy2all/">krazy2all</a></i>(1), <i><a href="/docs/linux/man/1-krazy2xml/">krazy2xml</a></i>(1) </p>
+<p> <i>krazyrc</i>(5), <i><a href="/docs/linux/man/1-krazy2all/">krazy2all</a></i>(1), <i><a href="/docs/linux/man/1-krazy2xml/">krazy2xml</a></i>(1) </p>
 <p> Ben Meyer&#8217;s kdetestscripts &#8211; Automated scripts are to catch problems in <font SIZE="-1">KDE</font>, &lt;<a rel="nofollow" href="http://websvn.kde.org/trunk/playground/base/kdetestscripts">http://websvn.kde.org/trunk/playground/base/kdetestscripts</a>&gt;. </p>
 <p> flawfinder &#8211; Examines source code looking for security weaknesses, &lt;<a rel="nofollow" href="http://www.dwheeler.com/flawfinder">http://www.dwheeler.com/flawfinder</a>&gt;.</p>
 <h2>AUTHORS</h2>

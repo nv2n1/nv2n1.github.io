@@ -35,6 +35,6 @@ Priority = 8
 Time-Smoothing = 5
 Length-Smoothing = 20</pre>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-trickle/">trickle</a>(1), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), <a href="/docs/linux/man/4-netintro/">netintro</a>(4)</p>
+<p><a href="/docs/linux/man/1-trickle/">trickle</a>(1), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), netintro(4)</p>
 <h2>Authors</h2>
 <p>has been developed by Marius Aamodt Eriksen Aq marius [at] monkey.org .</p>

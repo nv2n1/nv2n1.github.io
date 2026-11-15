@@ -21,7 +21,7 @@ description: "metalink_parse_file, metalink_parse_fp, metalink_parse_fd, metalin
 <p> <code>metalink_parse_fp</code>() reads data from file stream <i>docfp</i> and construtcts metalink_t structure. </p>
 <p> <code>metalink_parse_fd</code>() reads data from file descriptor <i>docfd</i> and constructs metalink_t structure. </p>
 <p> <code>metalink_parse_memory</code>() parses <i>len</i> bytes of <i>buf</i> and constructs metalink_t structure. </p>
-<p> The caller must free the memory allocated for metalink_t structure using <code><a href="/docs/linux/man/3-metalink_delete/">metalink_delete</a></code>(3) if it is no longer used. </p>
+<p> The caller must free the memory allocated for metalink_t structure using <code>metalink_delete</code>(3) if it is no longer used. </p>
 <h2>RETURN VALUE</h2>
 <p> All functions return 0 for success. When error occurred, non-zero value error code is returned and metalink_t structure is not allocated. The error codes are described in metalink_error.h. </p>
 <h2>EXAMPLE</h2>
@@ -101,5 +101,5 @@ int main(int argc, char **argv)
 }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-metalink_delete/">metalink_delete</a></code>(3), <code><a href="/docs/linux/man/3-metalink_parse_update/">metalink_parse_update</a></code>(3), <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) </p>
+<p> <code>metalink_delete</code>(3), <code><a href="/docs/linux/man/3-metalink_parse_update/">metalink_parse_update</a></code>(3), <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) </p>
 <h2>Index</h2>

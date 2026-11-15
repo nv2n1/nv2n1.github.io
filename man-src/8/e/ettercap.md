@@ -114,7 +114,7 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
 <dt><code>-o</code>, <code>&#8211;only-mitm</code></p>
 <dd>This options disables the sniffing thread and enables only the mitm attack. Useful if you want to use ettercap to perform mitm attacks and another sniffer (such as ethereal) to sniff the traffic. Keep in mind that the packets are not forwarded by ettercap. The kernel will be responsible for the forwarding. Remember to activate the &quot;ip forwarding&quot; feature in your kernel. </p>
 <dt><code>-f</code>, <code>&#8211;pcapfilter &lt;FILTER&gt;</code></p>
-<dd>Set a capturing filter in the pcap library. The format is the same as <a href="/docs/linux/man/1-tcpdump/">tcpdump</a>(1). Remember that this kind of filter will not sniff packets out of the wire, so if you want to perform a mitm attack, ettercap will not be able to forward hijacked packets.<br />
+<dd>Set a capturing filter in the pcap library. The format is the same as tcpdump(1). Remember that this kind of filter will not sniff packets out of the wire, so if you want to perform a mitm attack, ettercap will not be able to forward hijacked packets.<br />
  These filters are useful to decrease the network load impact into ettercap decoding module. </p>
 <dt><code>-B</code>, <code>&#8211;bridge &lt;IFACE&gt;</code></p>
 <dd>BRIDGED sniffing<br />
@@ -187,7 +187,7 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
  In console mode (-C option), standalone plugins are executed and then the application exits. Hook plugins are activated and the normal sniffing is performed.<br />
  To have a list of the available external plugins use &quot;list&quot; (without quotes) as plugin name (e.g. ./ettercap -P list). </p>
 <p> NOTE: you can also activate plugins directly from the interfaces (always press &quot;h&quot; to get the inline help) </p>
-<p> More detailed info about plugins and about how to write your own are found in the man page <a href="/docs/linux/man/8-ettercap_plugin/">ettercap_plugin</a>(8) </p>
+<p> More detailed info about plugins and about how to write your own are found in the man page ettercap_plugin(8) </p>
 <dt><code>-F</code>, <code>&#8211;filter &lt;FILE&gt;</code></p>
 <dd>Load the filter from the file &lt;FILE&gt;. The filter must be compiled with <a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8). The utility will compile the filter script and produce an ettercap-compliant binary filter file. Read the <a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8) man page for the list of functions you can use inside a filter script.<br />
  NOTE: these filters are different from those set with &#8211;pcapfilter. An ettercap filter is a content filter and can modify the payload of a packet before forwarding it. Pcap filter are used to capture only certain packets.<br />
@@ -231,7 +231,7 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
 <p> &lt;title&gt;This is the title&lt;/title&gt;, but the following &lt;string&gt; will not be displayed. </p>
 <p> This is the title, but the following will not be displayed. </p>
 <dt><code>utf8</code></p>
-<dd>Print the packets in UTF-8 format. The encoding used while performing the conversion is declared in the <a href="/docs/linux/man/5-etter-conf/">etter.conf</a>(5) file. </p>
+<dd>Print the packets in UTF-8 format. The encoding used while performing the conversion is declared in the etter.conf(5) file. </p>
 </dl>
 </dl>
 <dt><code>-d</code>, <code>&#8211;dns</code></p>
@@ -297,7 +297,7 @@ description: "ettercap NG-0.7.3 – A multipurpose sniffer/content filter for ma
 <p>Alberto Ornaghi (ALoR) &lt;alor [at] users.sf.net&gt;<br />
  Marco Valleri (NaGA) &lt;naga [at] antifork.org&gt;</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/5-etter-conf/">etter.conf</a>(5)</i> <i><a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8)</i> <i><a href="/docs/linux/man/8-ettercap_plugins/">ettercap_plugins</a>(8)</i> <i><a href="/docs/linux/man/8-etterlog/">etterlog</a>(8)</i> <i><a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8)</i> </p>
+<p><i>etter.conf(5)</i> <i><a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8)</i> <i><a href="/docs/linux/man/8-ettercap_plugins/">ettercap_plugins</a>(8)</i> <i><a href="/docs/linux/man/8-etterlog/">etterlog</a>(8)</i> <i><a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8)</i> </p>
 <h2>Availability</h2>
 <p><a rel="nofollow" href="http://ettercap.sourceforge.net/download/">http://ettercap.sourceforge.net/download/</a></p>
 <h2>Cvs</h2>

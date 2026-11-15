@@ -17,7 +17,7 @@ description: "dh_installmenu – install Debian menu files into package build di
 <h2>FILES</h2>
 <dl>
 <dt>debian/<i>package</i>.menu</p>
-<dd> Debian menu files, installed into usr/share/menu/<i>package</i> in the package build directory. See <i><a href="/docs/linux/man/5-menufile/">menufile</a></i>(5) for its format.</p>
+<dd> Debian menu files, installed into usr/share/menu/<i>package</i> in the package build directory. See <i>menufile</i>(5) for its format.</p>
 <dt>debian/<i>package</i>.menu-method</p>
 <dd> Debian menu method files, installed into etc/menu-methods/<i>package</i> in the package build directory.</dl>
 <h2>OPTIONS</h2>
@@ -25,7 +25,7 @@ description: "dh_installmenu – install Debian menu files into package build di
 <dt><code>-n</code>, <code>&#8211;no-scripts</code></p>
 <dd> Do not modify <i>postinst</i>/<i>postrm</i> scripts.</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) <i><a href="/docs/linux/man/1-update-menus/">update-menus</a></i>(1) <i><a href="/docs/linux/man/5-menufile/">menufile</a></i>(5) </p>
+<p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) <i>update-menus</i>(1) <i>menufile</i>(5) </p>
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>

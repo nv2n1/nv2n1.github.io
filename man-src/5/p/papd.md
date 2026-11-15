@@ -79,4 +79,4 @@ Boss' LaserWriter@2nd floor:\
  :pr=laserwriter-chief:</pre>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-papd/">papd</a></code>(8), <code><a href="/docs/linux/man/5-atalkd-conf/">atalkd.conf</a></code>(5), <code><a href="/docs/linux/man/8-lpd/">lpd</a></code>(8), <code><a href="/docs/linux/man/8-lpoptions/">lpoptions</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/8-papd/">papd</a></code>(8), <code>atalkd.conf</code>(5), <code>lpd</code>(8), <code>lpoptions</code>(8) </p>

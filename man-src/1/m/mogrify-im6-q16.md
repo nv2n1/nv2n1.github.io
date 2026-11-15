@@ -14,7 +14,7 @@ description: "mogrify – resize an image, blur, crop, despeckle, dither, draw o
 <dt><code>mogrify-im6.q16</code> [<i>options</i>] <i>input-file</i></p>
 <dd></dl>
 <h2>Overview</h2>
-<p>The <code>mogrify-im6.q16</code> program is a member of the <a href="/docs/linux/man/1-imagemagick-ims6-q16/">ImageMagick-ims6.q16</a>(1) suite of tools. Use it to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. This tool is similar to <a href="/docs/linux/man/1-convert-im6-q16/">convert-im6.q16</a>(1) except the original image file is overwritten with any changes you request. </p>
+<p>The <code>mogrify-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. This tool is similar to <a href="/docs/linux/man/1-convert-im6-q16/">convert-im6.q16</a>(1) except the original image file is overwritten with any changes you request. </p>
 <p> For more information about the mogrify command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/mogrify.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/mogrify.php.">https://www.imagemagick.org/script/mogrify.php.</a></p>
 <h2>Description</h2>
 <p>Image Settings:<br />

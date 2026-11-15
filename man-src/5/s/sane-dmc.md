@@ -27,7 +27,7 @@ description: "sane-dmc – SANE backend for the Polaroid Digital Microscope Came
 <dt><code>Thumbnail</code></p>
 <dd>This mode corresponds to the 80-by-60 pixel full-color thumbnail image.</p>
 <dt><code>Super Resolution</code></p>
-<dd>This image is a 1599-by-1200 pixel full-color image constructed by filtering and interpolating the &quot;raw&quot; image. The filtering and interpolation is done in software, so this mode is very slow. Also, this mode places restrictions on how the image is read which means that the &quot;preview&quot; mode of xscanimage does not work in Super Resolution mode. (<code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1) and the non-preview modes of <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) and <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1) work fine, however.)</dl>
+<dd>This image is a 1599-by-1200 pixel full-color image constructed by filtering and interpolating the &quot;raw&quot; image. The filtering and interpolation is done in software, so this mode is very slow. Also, this mode places restrictions on how the image is read which means that the &quot;preview&quot; mode of xscanimage does not work in Super Resolution mode. (<code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1) and the non-preview modes of <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) and <code>xscanimage</code>(1) work fine, however.)</dl>
 <h2>Other Settings</h2>
 <dl>
 <dt><code>ASA Setting</code></p>

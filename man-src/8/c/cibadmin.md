@@ -122,7 +122,7 @@ Remove all 'is-managed' settings:
 <dd># cibadmin &#8211;replace &#8211;xml-file $HOME/local.xml</dl>
 <h3>See Also:</h3>
 <dl>
-<dd><a href="/docs/linux/man/8-crm/">crm</a>(8), <a href="/docs/linux/man/8-pcs/">pcs</a>(8), <a href="/docs/linux/man/8-crm_shadow/">crm_shadow</a>(8), <a href="/docs/linux/man/8-crm_diff/">crm_diff</a>(8)</dl>
+<dd>crm(8), <a href="/docs/linux/man/8-pcs/">pcs</a>(8), <a href="/docs/linux/man/8-crm_shadow/">crm_shadow</a>(8), <a href="/docs/linux/man/8-crm_diff/">crm_diff</a>(8)</dl>
 <h2>Author</h2>
 <p>Written by Andrew Beekhof</p>
 <h2>Reporting Bugs</h2>

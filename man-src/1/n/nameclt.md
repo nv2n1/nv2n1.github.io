@@ -53,7 +53,7 @@ description: "nameclt – Naming Service client"
 </dl>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-omninames/">omniNames</a>(1) </p>
+<p> omniNames(1) </p>
 <h2>AUTHOR</h2>
 <p> Tristan Richardson, ORL (Olivetti &amp; Oracle Research Laboratory) </p>
 <h2>Index</h2>

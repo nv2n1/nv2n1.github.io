@@ -131,7 +131,7 @@ S2 - *-symbol -
 <h2>USING XDITVIEW WITH DITROFF</h2>
 <p> You can use any ditroff output file with <i>xditview,</i> although files which use the fonts appropriate to the fontMap will look more accurate on the screen. On servers which support scaled fonts, all requested font sizes will be accurately reflected on the screen; for servers which do not support scaled <i>xditview</i> will use the closest font from the same family.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-xrdb/">xrdb</a></i>(1), <i><a href="/docs/linux/man/1-ditroff/">ditroff</a></i>(1), <i>X Logical Font Description Conventions</i></p>
+<p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-xrdb/">xrdb</a></i>(1), <i>ditroff</i>(1), <i>X Logical Font Description Conventions</i></p>
 <h2>ORIGIN</h2>
 <p> Portions of this program originated in <i>xtroff which was derived</i> from <i>suntroff.</i></p>
 <h2>COPYRIGHT</h2>

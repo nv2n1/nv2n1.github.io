@@ -148,7 +148,7 @@ description: "vncviewer – an X viewer client for VNC"
 <dt><code>%R</code></p>
 <dd> remote TCP port number.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncconnect/">vncconnect</a></code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code>vncconnect</code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> Original VNC was developed in AT&amp;T Laboratories Cambridge. TightVNC additions were implemented by Constantin Kaplinsky. Many other people participated in development, testing and support. </p>
 <p> <code>Man page authors:</code><br />

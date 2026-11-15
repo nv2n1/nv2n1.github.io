@@ -100,4 +100,4 @@ pmdaEventResetArray(myarray);
 // finish up
 eap = pmdaEventGetAddr(myarray);</code></pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2), <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2), <code><a href="/docs/linux/man/3-pmdaeventnewqueue/">pmdaEventNewQueue</a></code>(3), <code><a href="/docs/linux/man/3-pmdaeventnewclient/">pmdaEventNewClient</a></code>(3), <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) and <code><a href="/docs/linux/man/3-pmeventflagsstr/">pmEventFlagsStr</a></code>(3). </p>
+<p><code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2), <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2), <code>pmdaEventNewQueue</code>(3), <code>pmdaEventNewClient</code>(3), <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) and <code><a href="/docs/linux/man/3-pmeventflagsstr/">pmEventFlagsStr</a></code>(3). </p>

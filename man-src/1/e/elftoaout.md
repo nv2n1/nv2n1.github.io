@@ -32,5 +32,5 @@ description: "elftoaout – ELF to a.out convertor"
 <h2>AVAILABILITY</h2>
 <p> <code>elftoaout</code> is available for anonymous ftp from sunsite.mff.cuni.cz in /OS/Linux/Sparc/local/elftoaout/.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-silo/">silo</a></code>(8) </p>
+<p> <code>silo</code>(8) </p>
 <h2>Index</h2>

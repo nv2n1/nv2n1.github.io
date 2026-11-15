@@ -29,5 +29,5 @@ description: "pdns_server – The PowerDNS nameserver"
 <dt><i>&lt;socket&gt;</i></p>
 <dd> Control socket used to communicate with <code>pdns_server</code>.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-pdns_control/">pdns_control</a></code>(8) </p>
+<p> <code>pdns_control</code>(8) </p>
 <h2>Index</h2>

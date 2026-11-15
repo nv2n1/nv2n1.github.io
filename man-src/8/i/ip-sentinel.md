@@ -101,7 +101,7 @@ description: "ip-sentinel – keeps your IP space clean"
 <p> To be switch-friendly, there are only a few random MACs possible which are having the format &quot;de:ad:be:ef:00:XX&quot;. Within a short timespan only 32 values are possible for <i>XX</i>. </p>
 <p> When having overlapping networks and/or single IPs, this one with the most specified netmask (count of 1&#8217;s) takes precedence. When netmasks are equal, networks which are using the &quot;@srcmac&quot; or &quot;@!srcmac&quot; syntax are taking precedence over those without source-macs. This &quot;@&#8230;&quot; rule <code>does not</code> apply to IPs. The behavior is unspecified when having overlapping networks with the same count of 1&#8217;s and &quot;@&#8230;&quot; specification, or when having duplicate IPs.</p>
 <h3>Performance</h3>
-<p>The lookup of single IPs has a complexity of O(log n) and this of netmasks a complexity of <a href="/docs/linux/man/n-o/">O</a>(n).</p>
+<p>The lookup of single IPs has a complexity of O(log n) and this of netmasks a complexity of O(n).</p>
 <h3>Special Mac Addresses</h3>
 <p>Beside the usual hex-octets-delimited-by-colons mac addresses, ip-sentinel understands some special strings both on the commandline and in the configuration file:</p>
 <dl>

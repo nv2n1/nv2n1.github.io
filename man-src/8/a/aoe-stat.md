@@ -59,6 +59,6 @@ nai:~# aoe-stat
 nai:~# </pre>
 </dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-aoe-discover/">aoe-discover</a></i>(8), <i><a href="/docs/linux/man/8-aoe-interfaces/">aoe-interfaces</a></i>(8), <i><a href="/docs/linux/man/8-aoe-mkdevs/">aoe-mkdevs</a></i>(8), <i><a href="/docs/linux/man/8-aoe-mkshelf/">aoe-mkshelf</a></i>(8), <i><a href="/docs/linux/man/8-aoetools/">aoetools</a></i>(8), <i><a href="/docs/linux/man/7-udev/">udev</a></i>(7).</p>
+<p><i><a href="/docs/linux/man/8-aoe-discover/">aoe-discover</a></i>(8), <i><a href="/docs/linux/man/8-aoe-interfaces/">aoe-interfaces</a></i>(8), <i><a href="/docs/linux/man/8-aoe-mkdevs/">aoe-mkdevs</a></i>(8), <i><a href="/docs/linux/man/8-aoe-mkshelf/">aoe-mkshelf</a></i>(8), <i>aoetools</i>(8), <i><a href="/docs/linux/man/7-udev/">udev</a></i>(7).</p>
 <h2>Author</h2>
 <p>Ed L. Cashin (ecashin [at] coraid.com)</p>

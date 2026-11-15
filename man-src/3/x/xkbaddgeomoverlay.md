@@ -35,4 +35,4 @@ description: "XkbAddGeomOverlay – Add one overlay to a section"
  XkbBoundsPtr bounds; /* bounding box for the overlay */
  } XkbOverlayRec,*XkbOverlayPtr;</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xkballocgeomoverlay/">XkbAllocGeomOverlay</a></code>(3)</p>
+<p><code>XkbAllocGeomOverlay</code>(3)</p>

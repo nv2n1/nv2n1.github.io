@@ -135,7 +135,7 @@ description: "wimlib-imagex-capture, wimlib-imagex-append – Create or append a
 <dt><code>&#8211;threads</code>=<i>NUM_THREADS</i></p>
 <dd> Number of threads to use for compressing data. Default: autodetect (number of available CPUs).</p>
 <dt><code>&#8211;rebuild</code></p>
-<dd> For <code>wimlib-imagex append</code>: rebuild the entire WIM rather than appending the new data to the end of it. Rebuilding the WIM is slower, but will save a little bit of space that would otherwise be left as a hole in the WIM. Also see <code>wimlib-imagex <a href="/docs/linux/man/1-optimize/">optimize</a></code>(1).</p>
+<dd> For <code>wimlib-imagex append</code>: rebuild the entire WIM rather than appending the new data to the end of it. Rebuilding the WIM is slower, but will save a little bit of space that would otherwise be left as a hole in the WIM. Also see <code>wimlib-imagex optimize</code>(1).</p>
 <dt><code>&#8211;flags</code>=<i>EDITIONID</i></p>
 <dd> Specify a string to use in the &lt;FLAGS&gt; element of the XML data for the new image.</p>
 <dt><code>&#8211;image-property</code> <i>NAME</i>=<i>VALUE</i></p>
@@ -232,7 +232,7 @@ overlay /overlay
 <dt>
 <dd> The NTFS volume capture mode on UNIX-like systems cannot be used with <code>&#8211;source-list</code>, as only capturing a full NTFS volume is supported.</p>
 <dt><code>&#8211;pipable</code></p>
-<dd> Create a &quot;pipable&quot; WIM, which can be applied fully sequentially, including from a pipe. An image in the resulting WIM can be applied with <code>wimlib-imagex apply</code>, either normally by specifying the WIM file name, or with <code>wimlib-imagex apply &#8211;</code> to read the WIM from standard input. See <code>wimlib-imagex <a href="/docs/linux/man/1-apply/">apply</a></code>(1) for more details.</p>
+<dd> Create a &quot;pipable&quot; WIM, which can be applied fully sequentially, including from a pipe. An image in the resulting WIM can be applied with <code>wimlib-imagex apply</code>, either normally by specifying the WIM file name, or with <code>wimlib-imagex apply &#8211;</code> to read the WIM from standard input. See <code>wimlib-imagex apply</code>(1) for more details.</p>
 <dt>
 <dd> For append operations, this option will result in a full rebuild of the WIM to make it pipable. For capture operations, the captured WIM is simply created as pipable. Beware that the more images you add to a pipable WIM, the less efficient piping it will be, since more unneeded data will be sent through the pipe.</p>
 <dt>

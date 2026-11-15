@@ -63,7 +63,7 @@ description: "tar – manipulate tape archives"
 <dt><code>&#8211;chroot</code></p>
 <dd> (x mode only) Fn chroot to the current directory after processing any &#8211;<code>C</code> options and before extracting any files.</p>
 <dt><code>&#8211;disable-copyfile</code></p>
-<dd> Mac OS X specific. Disable the use of <a href="/docs/linux/man/3-copyfile/">copyfile</a>(3).</p>
+<dd> Mac OS X specific. Disable the use of copyfile(3).</p>
 <dt><code>&#8211;exclude </code><i>pattern</i></p>
 <dd> Do not process files or directories that match the specified pattern. Note that exclusions take precedence over patterns or filenames specified on the command line.</p>
 <dt><code>&#8211;format </code><i>format</i></p>
@@ -288,13 +288,13 @@ description: "tar – manipulate tape archives"
 <blockquote><p><tt></tt><code>-tf filename </code> </p></blockquote>
 <p> before extraction. You should use the &#8211;<code>k</code> option to ensure that will not overwrite any existing files or the &#8211;<code>U</code> option to remove any pre-existing files. You should generally not extract archives while running with super-user privileges. Note that the &#8211;<code>P</code> option to disables the security checks above and allows you to extract an archive while preserving any absolute pathnames, .. components, or symlinks to other directories.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-compress/">compress</a>(1), <a href="/docs/linux/man/1-cpio/">cpio</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-mt/">mt</a>(1), <a href="/docs/linux/man/1-pax/">pax</a>(1), <a href="/docs/linux/man/1-shar/">shar</a>(1), <a href="/docs/linux/man/1-xz/">xz</a>(1), <a href="/docs/linux/man/3-libarchive/">libarchive</a>(3), libarchive-formats5, <a href="/docs/linux/man/5-tar/">tar</a>(5)</p>
+<p> <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-compress/">compress</a>(1), <a href="/docs/linux/man/1-cpio/">cpio</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-mt/">mt</a>(1), pax(1), shar(1), <a href="/docs/linux/man/1-xz/">xz</a>(1), libarchive(3), libarchive-formats5, <a href="/docs/linux/man/5-tar/">tar</a>(5)</p>
 <h2>STANDARDS</h2>
 <p> There is no current POSIX standard for the tar command; it appeared in St -p1003.1-96 but was dropped from St -p1003.1-2001 . The options supported by this implementation were developed by surveying a number of existing tar implementations as well as the old POSIX specification for tar and the current POSIX specification for pax. </p>
 <p> The ustar and pax interchange file formats are defined by St -p1003.1-2001 for the pax command.</p>
 <h2>HISTORY</h2>
 <p> A <code>tar</code> command appeared in Seventh Edition Unix, which was released in January, 1979. There have been numerous other implementations, many of which extended the file format. John Gilmore&#8217;s <code>pdtar</code> public-domain implementation (circa November, 1987) was quite influential, and formed the basis of GNU tar. GNU tar was included as the standard system tar in Fx beginning with Fx 1.0 . </p>
-<p> This is a complete re-implementation based on the <a href="/docs/linux/man/3-libarchive/">libarchive</a>(3) library. It was first released with Fx 5.4 in May, 2005.</p>
+<p> This is a complete re-implementation based on the libarchive(3) library. It was first released with Fx 5.4 in May, 2005.</p>
 <h2>BUGS</h2>
 <p> This program follows St -p1003.1-96 for the definition of the &#8211;<code>l</code> option. Note that GNU tar prior to version 1.15 treated &#8211;<code>l</code> as a synonym for the &#8211;<code>-one-file-system</code> option. </p>
 <p> The &#8211;<code>C dir </code> option may differ from historic implementations. </p>

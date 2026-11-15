@@ -15,5 +15,5 @@ description: "key_led_flag – Flag to prevent the keyboard LEDs from being upda
 <h2>DESCRIPTION</h2>
 <p> By default, the capslock, numlock, and scroll-lock keys toggle the keyboard LED indicators when they are pressed. If you are using these keys for input in your game (eg. capslock to fire) this may not be desirable, so you can clear this flag to prevent the LED&#8217;s being updated. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_keyboard/">install_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-set_leds/">set_leds</a></code>(3) </p>
+<p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-set_leds/">set_leds</a></code>(3) </p>
 <h2>Index</h2>

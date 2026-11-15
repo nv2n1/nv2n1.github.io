@@ -98,7 +98,7 @@ description: "msynctool – Command line interface for OpenSync"
 <dt>
 <dd> export OSYNC_PRIVACY=1</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-convcard/">convcard</a></code>(1),<code><a href="/docs/linux/man/5-file-sync-conf/">file-sync.conf</a></code>(5)</p>
+<p> <code><a href="/docs/linux/man/1-convcard/">convcard</a></code>(1),<code>file-sync.conf</code>(5)</p>
 <h2>AUTHORS</h2>
 <p> This manual page was written for the Debian GNU/Linux project by Matthias Jahn &lt;jahn.matthias [at] freenet.de&gt;. But it may be used by other distributions. </p>
 <p> msynctool was written by Armin Bauer and the OpenSync project </p>

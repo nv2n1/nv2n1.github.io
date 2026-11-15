@@ -34,7 +34,7 @@ description: "icewm – lightweight X11 window manager"
 <p> <i>DISPLAY=NAME</i></p>
 <dl>
 <dt>
-<dd> Name of the X server to use, depends on Xlib by default. See <a href="/docs/linux/man/1-x/">X</a>(1).</dl>
+<dd> Name of the X server to use, depends on Xlib by default. See X(1).</dl>
 <p> <i>MAIL=URL</i></p>
 <dl>
 <dt>
@@ -118,7 +118,7 @@ description: "icewm – lightweight X11 window manager"
 <h2>EXAMPLES</h2>
 <p> Examples of above configuration files you can find in default instalation path or in system-wide customizable defaults.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-xinit/">xinit</a></i>(1), <i><a href="/docs/linux/man/1-x/">X</a></i>(1), </p>
+<p> <i><a href="/docs/linux/man/1-xinit/">xinit</a></i>(1), <i>X</i>(1), </p>
 <p> <i><a rel="nofollow" href="http://www.icewm.org/manual/">http://www.icewm.org/manual/</a></i> </p>
 <p> <i><a rel="nofollow" href="http://www.icewm.org/FAQ/">http://www.icewm.org/FAQ/</a></i> </p>
 <p> <i><a rel="nofollow" href="http://www.icewm.org/themes/">http://www.icewm.org/themes/</a></i></p>

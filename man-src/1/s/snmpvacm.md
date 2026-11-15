@@ -143,7 +143,7 @@ description: "snmpvacm – creates and maintains SNMPv3 View-based Access Contro
 <dd> snmpvacm localhost createView all .1 80</p>
 <dt>
 <dd> snmpvacm localhost createAccess RWGroup 3 1 1 all all none</dl>
-<p> This creates a new security group named &quot;RWGroup&quot; containing the SNMPv3 user &quot;dave&quot;, a new view &quot;all&quot; containing the full OID tree based on <i><a href="/docs/linux/man/1--iso/">.iso</a>(1)</i> , and then allows those users in the group &quot;RWGroup&quot; (i.e. &quot;dave&quot;) both read- and write-access to the view &quot;all&quot; (i.e. the full OID tree) when using authenticated SNMPv3 requests. </p>
+<p> This creates a new security group named &quot;RWGroup&quot; containing the SNMPv3 user &quot;dave&quot;, a new view &quot;all&quot; containing the full OID tree based on <i>.iso(1)</i> , and then allows those users in the group &quot;RWGroup&quot; (i.e. &quot;dave&quot;) both read- and write-access to the view &quot;all&quot; (i.e. the full OID tree) when using authenticated SNMPv3 requests. </p>
 <p> As a second example, we could set up read-only access to a portion of the OID tree using the commands: </p>
 <dl>
 <dt>
@@ -152,7 +152,7 @@ description: "snmpvacm – creates and maintains SNMPv3 View-based Access Contro
 <dd> snmpvacm localhost createView sysView system fe</p>
 <dt>
 <dd> snmpvacm localhost createAccess ROGroup 3 0 1 sysView none none</dl>
-<p> This creates a new security group named &quot;ROGroup&quot; containing the (pre-existing) user &quot;wes&quot;, a new view &quot;sysView&quot; containing just the OID tree based on <i><a href="/docs/linux/man/1--iso/">.iso</a>(1)<a href="/docs/linux/man/3--org/">.org</a>(3)<a href="/docs/linux/man/6--dod/">.dod</a>(6)<a href="/docs/linux/man/1--inet/">.inet</a>(1)<a href="/docs/linux/man/2--mgmt/">.mgmt</a>(2)<a href="/docs/linux/man/1--mib-2/">.mib-2</a>(1)<a href="/docs/linux/man/1--system/">.system</a>(1)</i> , and then allows those users in the group &quot;ROGroup&quot; (i.e. &quot;wes&quot;) read-access, but not write-access to the view &quot;sysView&quot; (i.e. the system group). </p>
+<p> This creates a new security group named &quot;ROGroup&quot; containing the (pre-existing) user &quot;wes&quot;, a new view &quot;sysView&quot; containing just the OID tree based on <i>.iso(1).org(3).dod(6).inet(1).mgmt(2).mib-2(1).system(1)</i> , and then allows those users in the group &quot;ROGroup&quot; (i.e. &quot;wes&quot;) read-access, but not write-access to the view &quot;sysView&quot; (i.e. the system group). </p>
 <h2>EXIT STATUS</h2>
 <p> The following exit values are returned: </p>
 <p> 0 &#8211; Successful completion </p>

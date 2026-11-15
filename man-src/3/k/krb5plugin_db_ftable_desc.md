@@ -14,7 +14,7 @@ description: "krb5plugin_db_ftable_desc –"
 <p> #include &lt;db_plugin.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Description of the krb5 DB plugin facility. </p>
-<p> The <a href="/docs/linux/man/3-krb5_aname_to_lname/">krb5_aname_to_lname</a>(3) function&#8217;s DB rule is pluggable. The plugin is named KRB5_PLUGIN_DB (&#8216;krb5_db_plug&#8217;), with a single minor version, KRB5_PLUGIN_DB_VERSION_0 (0). </p>
+<p> The krb5_aname_to_lname(3) function&#8217;s DB rule is pluggable. The plugin is named KRB5_PLUGIN_DB (&#8216;krb5_db_plug&#8217;), with a single minor version, KRB5_PLUGIN_DB_VERSION_0 (0). </p>
 <p> The plugin consists of a data symbol referencing a structure of type <code>krb5plugin_db_ftable_desc</code>, with three fields: </p>
 <p> <code>Parameters:</code></p>
 <dl>

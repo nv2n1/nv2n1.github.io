@@ -12,7 +12,7 @@ description: "gperl – groff preprocessor for Perl parts in roff files"
 <h2>SYNOPSIS</h2>
 <p> [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>
-<p> This is a preprocessor for <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1). It allows the use of <code><a href="/docs/linux/man/7-perl/">perl</a></code>(7) code in <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7) files. The result of a <i>Perl part</i> can be stored in groff <i>strings</i> or <i>numerical registers</i> based on the arguments at a final line of a <i>Perl part</i>.</p>
+<p> This is a preprocessor for <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1). It allows the use of <code>perl</code>(7) code in <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7) files. The result of a <i>Perl part</i> can be stored in groff <i>strings</i> or <i>numerical registers</i> based on the arguments at a final line of a <i>Perl part</i>.</p>
 <h2>OPTIONS</h2>
 <p> So far, there are only <i>filespec</i> or <i>breaking</i> options. </p>
 <p> <i>filespec</i> are file names or the minus character <code>&#8211;</code> character for standard input. As usual, the argument <code>&#8212;</code> can be used in order to let all following arguments mean file names, even if the names begin with a minus character <code>&#8211;</code>. </p>
@@ -132,5 +132,5 @@ description: "gperl – groff preprocessor for Perl parts in roff files"
 <p> <code>gperl</code> was written by Bernd Warken</p>
 <h2>SEE ALSO</h2>
 <p> Man pages related to <i>groff</i> are <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7), <code><a href="/docs/linux/man/1-grog/">grog</a></code>(1), and <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1). </p>
-<p> Documents related to <i>Perl</i> are <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/7-perl/">perl</a></code>(7). </p>
+<p> Documents related to <i>Perl</i> are <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code>perl</code>(7). </p>
 <h2>Index</h2>

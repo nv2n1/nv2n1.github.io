@@ -65,4 +65,4 @@ description: "fence_drac – fencing agent for Dell Remote Access Card"
 <dd>Wait X seconds before fencing is started</p>
 <dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-fence/">fence</a>(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8) </p>
+<p>fence(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8) </p>

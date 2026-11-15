@@ -16,5 +16,5 @@ description: "set_line_spacing"
 <p> Sets the line spacing in pixels. The supplied value is added to the height of the font so if your font is 12 pixels high, and you call this function with 4, then the outputter will go 16 pixels down each time a newline is encountered, effectively making the space between the lines be 4 pixels. Note that nothing prevents you from supplying a negative value which, for instance, could cause the lines to overlap. </p>
 <p> Every time you select a new font, the gstream will call this function with 1. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-get_line_spacing/">gstream-get_line_spacing</a></code>(3) </p>
+<p> <code>gstream-get_line_spacing</code>(3) </p>
 <h2>Index</h2>

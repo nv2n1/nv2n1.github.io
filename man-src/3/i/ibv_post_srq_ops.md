@@ -52,7 +52,7 @@ struct ibv_ops_wr {
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_post_srq_ops()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_create_srq_ex/">ibv_create_srq_ex</a></code>(3),</p>
+<p> <code>ibv_create_srq_ex</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Artemy Kovalyov &lt;artemyko [at] mellanox.com&gt;</p>

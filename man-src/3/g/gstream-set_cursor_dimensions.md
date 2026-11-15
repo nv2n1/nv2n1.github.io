@@ -23,5 +23,5 @@ description: "set_cursor_dimensions"
 <p> It is important that you remember to call this function when you are using custom cursor drawers &#8211; else the inputter doesn&#8217;t know how much of the background below the cursor to save and recover. </p>
 <p> The default dimensions are the dimensions that are suited for the default cursor. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gstream-get_cursor_w/">gstream-get_cursor_w</a></code>(3), <code><a href="/docs/linux/man/3-gstream-get_cursor_h/">gstream-get_cursor_h</a></code>(3), <code><a href="/docs/linux/man/3-gstream-set_cursor_drawer/">gstream-set_cursor_drawer</a></code>(3) </p>
+<p> <code>gstream-get_cursor_w</code>(3), <code>gstream-get_cursor_h</code>(3), <code><a href="/docs/linux/man/3-gstream-set_cursor_drawer/">gstream-set_cursor_drawer</a></code>(3) </p>
 <h2>Index</h2>

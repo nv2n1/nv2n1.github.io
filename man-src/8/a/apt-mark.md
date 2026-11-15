@@ -66,11 +66,11 @@ description: "apt-mark – show, set and unset various settings for a package"
 <dl>
 <dd>Status list of auto-installed packages. Configuration Item: Dir::State::extended_states.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8),<code><a href="/docs/linux/man/8-aptitude/">aptitude</a></code>(8),<code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5)</p>
+<p><code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8),<code>aptitude</code>(8),<code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5)</p>
 <h2>Diagnostics</h2>
 <p><code>apt-mark</code> returns zero on normal operation, non-zero on error.</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code><a href="/docs/linux/man/1-reportbug/">reportbug</a></code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Authors</h2>
 <p><code>Mike O&#8217;Connor</code></p>
 <dl>

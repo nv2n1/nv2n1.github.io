@@ -11,7 +11,7 @@ KURVD - interpolation and derivatives for parametric curves
 
  This subroutine behaves like KURV2 except that in addition it returns the first and second derivatives of the component functions in the parameterization. The interval [0.,1.] maps onto a curve in the plane. The resulting curve has a parametric representation both of whose components are splines under tension and functions of the polygonal arc length. KURV1 must be called before calling KURVD.
 <h2>Description</h2><dl COMPACT><dt>T
-<dd>(real,input) A value to be mapped to a point on the curve. The interval [0.,1.] is mapped onto the curve such that 0. is mapped to (<a HREF="/docs/linux/man/1-x/">X</a>(1),<a HREF="/docs/linux/man/1-y/">Y</a>(1)) and 1. is mapped to (X(N),Y(N)). Values outside of [0.,1.] result in extrapolation.
+<dd>(real,input) A value to be mapped to a point on the curve. The interval [0.,1.] is mapped onto the curve such that 0. is mapped to (X(1),Y(1)) and 1. is mapped to (X(N),Y(N)). Values outside of [0.,1.] result in extrapolation.
 <dt>XS
 <dd>(real,output) Contains the X coordinate of the point that T maps to.
 <dt>YS

@@ -33,4 +33,4 @@ description: "XmVaCreateColorSelector, XmVaCreateManagedColorSelector — A Colo
 <h2>Return</h2>
 <p>Returns the ColorSelector widget ID.</p>
 <h2>Related</h2>
-<p><code><a href="/docs/linux/man/3-xmcolorselector/">XmColorSelector</a></code>(3), <code><a href="/docs/linux/man/3-xmcreatecolorselector/">XmCreateColorSelector</a></code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>
+<p><code><a href="/docs/linux/man/3-xmcolorselector/">XmColorSelector</a></code>(3), <code>XmCreateColorSelector</code>(3), <code><a href="/docs/linux/man/3-xtcreatewidget/">XtCreateWidget</a></code>(3), and <code><a href="/docs/linux/man/3-xtcreatemanagedwidget/">XtCreateManagedWidget</a></code>(3).</p>

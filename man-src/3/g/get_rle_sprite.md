@@ -34,5 +34,5 @@ destroy_bitmap(bmp);
 <h2>RETURN VALUE</h2>
 <p> Returns a pointer to the created RLE sprite, or NULL if the RLE sprite could not be created. Remember to free this RLE sprite later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-draw_rle_sprite/">draw_rle_sprite</a></code>(3), <code><a href="/docs/linux/man/3-destroy_rle_sprite/">destroy_rle_sprite</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-draw_rle_sprite/">draw_rle_sprite</a></code>(3), <code>destroy_rle_sprite</code>(3) </p>
 <h2>Index</h2>

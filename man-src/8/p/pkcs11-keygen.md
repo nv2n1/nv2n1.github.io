@@ -46,7 +46,7 @@ description: "pkcs11-keygen – generate keys on a PKCS#11 device"
 <dl>
 <dd>Open the session with the given PKCS#11 slot. The default is slot 0.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-pkcs11-rsagen/">pkcs11-rsagen</a></code>(3), <code><a href="/docs/linux/man/3-pkcs11-dsagen/">pkcs11-dsagen</a></code>(3), <code><a href="/docs/linux/man/3-pkcs11-list/">pkcs11-list</a></code>(3), <code><a href="/docs/linux/man/3-pkcs11-destroy/">pkcs11-destroy</a></code>(3), <code><a href="/docs/linux/man/3-dnssec-keyfromlabel/">dnssec-keyfromlabel</a></code>(3),</p>
+<p><code>pkcs11-rsagen</code>(3), <code>pkcs11-dsagen</code>(3), <code>pkcs11-list</code>(3), <code>pkcs11-destroy</code>(3), <code>dnssec-keyfromlabel</code>(3),</p>
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>

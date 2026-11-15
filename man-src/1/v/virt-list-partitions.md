@@ -15,7 +15,7 @@ virt - list - partitions[--options] domname virt - list - partitions[--options] 
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-list-partitions&quot;</tt> is a command line tool to list the partitions that are contained in a virtual machine or disk image. It is mainly useful as a first step to using <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1). </p>
-<p> <tt>&quot;virt-list-partitions&quot;</tt> is just a simple wrapper around <i><a href="/docs/linux/man/3-libguestfs/">libguestfs</a></i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
+<p> <tt>&quot;virt-list-partitions&quot;</tt> is just a simple wrapper around <i>libguestfs</i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></p>
@@ -30,7 +30,7 @@ virt - list - partitions[--options] domname virt - list - partitions[--options] 
 <dt><code>-h</code> | <code>&#8211;human-readable</code></p>
 <dd> Show sizes in human-readable form (eg. &#8220;1G&#8221;).</dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-filesystems/">virt-list-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i><a href="/docs/linux/man/3-sys--guestfs/">Sys::Guestfs</a></i>(3), <i><a href="/docs/linux/man/3-sys--guestfs--lib/">Sys::Guestfs::Lib</a></i>(3), <i><a href="/docs/linux/man/3-sys--virt/">Sys::Virt</a></i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-list-filesystems/">virt-list-filesystems</a></i>(1), <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1), <i>Sys::Guestfs</i>(3), <i>Sys::Guestfs::Lib</i>(3), <i>Sys::Virt</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
 <h2>COPYRIGHT</h2>

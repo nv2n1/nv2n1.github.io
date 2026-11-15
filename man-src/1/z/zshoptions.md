@@ -331,7 +331,7 @@ toplevel(){
 <dt><code>PATH_SCRIPT</code> &lt;K&gt; &lt;S&gt;</p>
 <dd> If this option is not set, a script passed as the first non-option argument to the shell must contain the name of the file to open. If this option is set, and the script does not specify a directory path, the script is looked for first in the current directory, then in the command path. See the section INVOCATION in <i><a href="/docs/linux/man/1-zsh/">zsh</a></i>(1).</p>
 <dt><code>PRINT_EIGHT_BIT</code></p>
-<dd> Print eight bit characters literally in completion lists, etc. This option is not necessary if your system correctly returns the printability of eight bit characters (see <i><a href="/docs/linux/man/3-ctype/">ctype</a></i>(3)).</p>
+<dd> Print eight bit characters literally in completion lists, etc. This option is not necessary if your system correctly returns the printability of eight bit characters (see <i>ctype</i>(3)).</p>
 <dt><code>PRINT_EXIT_VALUE</code> (<code>-1</code>)</p>
 <dd> Print the exit value of programs with non-zero exit status. This is only available at the command line in interactive shells.</p>
 <dt><code>RC_QUOTES</code></p>

@@ -35,5 +35,5 @@ if (al_findfirst("*.pcx", &amp;info, FA_ALL) != 0) {
 <h2>RETURN VALUE</h2>
 <p> The function returns non-zero if no match is found or if an error occurred and, in the latter case, sets `errno&#8217; accordingly. It returns zero if a match is found, allocating some memory for internal use in the structure. Therefore you have to close your search when you are finished to avoid memory leaks in your program. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-al_findnext/">al_findnext</a></code>(3), <code><a href="/docs/linux/man/3-al_findclose/">al_findclose</a></code>(3), <code><a href="/docs/linux/man/3-al_ffblk_get_size/">al_ffblk_get_size</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-al_findnext/">al_findnext</a></code>(3), <code>al_findclose</code>(3), <code>al_ffblk_get_size</code>(3) </p>
 <h2>Index</h2>

@@ -23,6 +23,6 @@ description: "xcb-examples – manpage examples"
 <p> Comments are in asterisks, like /* this */. </p>
 <p> No line is longer than 80 characters (including indentation).</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xcb_connect/">xcb_connect</a></code>(3), <code><a href="/docs/linux/man/3-xcb_get_property/">xcb_get_property</a></code>(3), <code><a href="/docs/linux/man/3-xcb_flush/">xcb_flush</a></code>(3)</p>
+<p><code>xcb_connect</code>(3), <code><a href="/docs/linux/man/3-xcb_get_property/">xcb_get_property</a></code>(3), <code>xcb_flush</code>(3)</p>
 <h2>Author</h2>
 <p>Michael Stapelberg &lt;michael+xcb at stapelberg dot de&gt;</p>

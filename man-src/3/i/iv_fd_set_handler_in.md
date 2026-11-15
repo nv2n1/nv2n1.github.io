@@ -43,7 +43,7 @@ struct iv_fd {
 <p> An application is allowed to unregister a file descriptor from within any callback function, including callback functions triggered by that file descriptor itself, and even to free the memory corresponding to that file descriptor from any callback function, but a <code>struct iv_fd</code> can only be unregistered in the thread that it was registered from. </p>
 <p> It is allowed to register the same underlying OS file descriptor in multiple threads, but a given <code>struct iv_fd</code> can only be registered in one thread at a time. </p>
 <p> <code>iv_fd_register</code> does not return errors to the caller, and in case of an error while registering the file descriptor, for example if it isn&#8217;t open or is unpollable, <code><a href="/docs/linux/man/3-abort/">abort</a></code>(3) will be invoked. If it is not known whether registering the file descriptor with the kernel will be successful or not, use <code>iv_fd_register_try</code> instead, which is a variant on <code>iv_fd_register</code> which returns a nonzero value in case of a registration error. Since <code>iv_fd_register_try</code> disables various internal optimisations, it is recommended to use <code>iv_fd_register</code> whenever possible. </p>
-<p> See <code><a href="/docs/linux/man/3-iv_examples/">iv_examples</a></code>(3) for programming examples.</p>
+<p> See <code>iv_examples</code>(3) for programming examples.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ivykis/">ivykis</a></code>(3), <code><a href="/docs/linux/man/3-iv_examples/">iv_examples</a></code>(3) </p>
+<p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
 <h2>Index</h2>

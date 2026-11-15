@@ -34,7 +34,7 @@ struct ibv_cq_ex *mlx5dv_create_cq(struct ibv_context *context,
 
  
 
- Please see <a HREF="/docs/linux/man/3-ibv_create_cq_ex/">ibv_create_cq_ex</a>(3) man page for context and cq_attr
+ Please see ibv_create_cq_ex(3) man page for context and cq_attr
 
 <h3>mlx5_cq_attr</h3>
 
@@ -93,7 +93,7 @@ struct mlx5dv_cq_init_attr {
 
  
 
- <a HREF="/docs/linux/man/3-ibv_create_cq_ex/">ibv_create_cq_ex</a>(3),
+ ibv_create_cq_ex(3),
 
 <h2>AUTHOR</h2>
 

@@ -40,6 +40,6 @@ description: "rlm_counter – FreeRADIUS Module"
 <h2>Files</h2>
 <p><i>/etc/raddb/radiusd.conf</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5) <code><a href="/docs/linux/man/5-rlm_sqlcounter/">rlm_sqlcounter</a></code>(5)</p>
+<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5) <code>rlm_sqlcounter</code>(5)</p>
 <h2>Author</h2>
 <p>Chris Parker, cparker [at] segv.org</p>

@@ -12,7 +12,7 @@ description: "ocamllex – The OCaml lexer generator"
 <h2>SYNOPSIS</h2>
 <p> <code>ocamllex</code> [ <code>-o</code><i>&nbsp;<wbr>output-file</i> ] [ <code>-ml</code> ] <i>filename.mll</i> </p>
 <h2>DESCRIPTION</h2>
-<p> The <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1) command generates OCaml lexers from a set of regular expressions with associated semantic actions, in the style of <code><a href="/docs/linux/man/1-lex/">lex</a></code>(1). </p>
+<p> The <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1) command generates OCaml lexers from a set of regular expressions with associated semantic actions, in the style of <code>lex</code>(1). </p>
 <p> Running <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1) on the input file <i>lexer</i>.mll produces OCaml code for a lexical analyzer in file <i>lexer</i>.ml. </p>
 <p> This file defines one lexing function per entry point in the lexer definition. These functions have the same names as the entry points. Lexing functions take as argument a lexer buffer, and return the semantic attribute of the corresponding entry point. </p>
 <p> Lexer buffers are an abstract data type implemented in the standard library module Lexing. The functions Lexing.from_channel, Lexing.from_string and Lexing.from_function create lexer buffers that read from an input channel, a character string, or any reading function, respectively. </p>

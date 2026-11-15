@@ -138,7 +138,7 @@ description: "spamc – client for spamd"
     EX_TOOBIG       98  message was too big to process (see --max-size)
 </pre>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i><a href="/docs/linux/man/3-mail--spamassassin/">Mail::SpamAssassin</a></i>(3)</p>
+<p> <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1) <i><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></i>(1) <i>Mail::SpamAssassin</i>(3)</p>
 <h2>PREREQUISITES</h2>
 <p> <tt>&quot;Mail::SpamAssassin&quot;</tt></p>
 <h2>AUTHORS</h2>

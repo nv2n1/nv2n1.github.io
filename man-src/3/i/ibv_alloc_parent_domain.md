@@ -48,7 +48,7 @@ struct ibv_parent_domain_init_attr {
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_alloc_parent_domain()</code> returns a pointer to the allocated struct <i>ibv_pd</i> object, or NULL if the request fails (and sets errno to indicate the failure reason). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_alloc_parent_domain/">ibv_alloc_parent_domain</a></code>(3), <code><a href="/docs/linux/man/3-ibv_dealloc_pd/">ibv_dealloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_alloc_td/">ibv_alloc_td</a></code>(3)</p>
+<p> <code>ibv_alloc_parent_domain</code>(3), <code>ibv_dealloc_pd</code>(3), <code>ibv_alloc_pd</code>(3), <code>ibv_alloc_td</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Alex Rosenbaum &lt;alexr [at] mellanox.com&gt;</p>

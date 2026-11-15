@@ -21,5 +21,5 @@ description: "pnmquantall – run Pnmquant on a bunch of files all at once, so t
 <p> Note that another approach to this problem is to pre-select a set of colors and then use <code>pnmremap</code> to separately quantize each PPM to that set.) </p>
 <p> This is a rather simple program that runs <code>pnmcolormap</code> and <code>pnmremap</code>. If you are considering using it in a program of any sophistication, you should probably just run those programs directly. Even if you are typing it, you may want to do the steps manually because it gives you access to the various options of <code>pnmcolormap</code> and <code>pnmremap</code> for doing the quantization differently. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcolormap/">pnmcolormap</a></code>(1) , <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1) , <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcolormap/">pnmcolormap</a></code>(1) , <code>pnm</code>(1) </p>
 <h2>Index</h2>

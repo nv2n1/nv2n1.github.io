@@ -21,6 +21,6 @@ description: "Tk_InitConsoleChannels – Install the console channels as standar
 <p> The <i>interp</i> argument is the interpreter in which to create and install the console channels. </p>
 <p> <code>NOTE:</code> If this function is used it has to be called before the first call to <code>Tcl_RegisterChannel</code>, directly, or indirectly through other channel functions. Because otherwise the standard channels will be already initialized to the system defaults, which will be nonsensical for the case <code>Tk_InitConsoleChannels</code> is for.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/n-console/">console</a>(n)</p>
+<p>console(n)</p>
 <h2>Keywords</h2>
 <p>standard channels, console</p>

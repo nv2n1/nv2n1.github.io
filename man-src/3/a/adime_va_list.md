@@ -34,5 +34,5 @@ int adime_dialogf(char *title, int x, int y, int edit_w,
 </code></pre>
 <p> See documentation for the standard `va_list&#8217;, `va_start()&#8217;, `va_arg()&#8217; and `va_end()&#8217; for more information. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-adime_vdialogf/">adime_vdialogf</a></code>(3), <code><a href="/docs/linux/man/3-adime_dialogf/">adime_dialogf</a></code>(3), <code><a href="/docs/linux/man/3-adime_lowlevel_vdialogf/">adime_lowlevel_vdialogf</a></code>(3) </p>
+<p> <code>adime_vdialogf</code>(3), <code><a href="/docs/linux/man/3-adime_dialogf/">adime_dialogf</a></code>(3), <code>adime_lowlevel_vdialogf</code>(3) </p>
 <h2>Index</h2>

@@ -29,7 +29,7 @@ struct ibv_ah *ibv_create_ah_from_wc(struct ibv_pd *pd,
 <h2>NOTES</h2>
 <p> The filled structure <i>ah_attr</i> returned from <code>ibv_init_ah_from_wc()</code> can be used to create a new AH using <code>ibv_create_ah()</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_open_device/">ibv_open_device</a></code>(3), <code><a href="/docs/linux/man/3-ibv_alloc_pd/">ibv_alloc_pd</a></code>(3), <code><a href="/docs/linux/man/3-ibv_create_ah/">ibv_create_ah</a></code>(3), <code><a href="/docs/linux/man/3-ibv_destroy_ah/">ibv_destroy_ah</a></code>(3), <code><a href="/docs/linux/man/3-ibv_poll_cq/">ibv_poll_cq</a></code>(3)</p>
+<p> <code>ibv_open_device</code>(3), <code>ibv_alloc_pd</code>(3), <code>ibv_create_ah</code>(3), <code>ibv_destroy_ah</code>(3), <code>ibv_poll_cq</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

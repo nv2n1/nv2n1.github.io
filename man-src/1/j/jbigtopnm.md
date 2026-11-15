@@ -35,7 +35,7 @@ description: "jbigtopnm – JBIG to PNM image file converter"
 <p> <code>jbigtopnm</code> is based on the JBIG library by Markus Kuhn, part of his <code>JBIG-KIT</code> package . The <code>jbgtopbm</code> program is part of the <code>JBIG-KIT</code> package. </p>
 <p> <code>jbigtopnm</code> is part of the Netpbm package of graphics tools. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pnm/">pnm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtojbig/">pnmtojbig</a></code>(1) </p>
+<p> <code>pnm</code>(1) , <code><a href="/docs/linux/man/1-pnmtojbig/">pnmtojbig</a></code>(1) </p>
 <h2>LICENSE</h2>
 <p> If you use <code>jbigtopnm</code>, you are using various patents, particularly on its arithmetic encoding method, and in all probability you do not have a license from the patent owners to do so. </p>
 <h2>Index</h2>

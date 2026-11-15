@@ -15,7 +15,7 @@ CURV1 - does set-up for CURV2.
 <dt>Y
 <dd>(real, input) An array containing the functional values of the input data -- (Y(K) is the functional value at X(K) for K=1,N).
 <dt>SLP1
-<dd>(real, input) A user-specified value for the desired slope at <a HREF="/docs/linux/man/1-x/">X</a>(1). See ISLPSW below if you want to have a value calculated internally.
+<dd>(real, input) A user-specified value for the desired slope at X(1). See ISLPSW below if you want to have a value calculated internally.
 <dt>SLPN
 <dd>(real, input) A user-specified value for the desired slope at X(N). See ISLPSW below if you want to have a value calculated internally.
 <dt>ISLPSW

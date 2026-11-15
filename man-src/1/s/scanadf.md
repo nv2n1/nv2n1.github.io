@@ -48,7 +48,7 @@ description: "scanadf – acquire multiple images from a scanner equipped with a
 <dt><i>/etc/sane.d</i></p>
 <dd> This directory holds various configuration files. For details, please refer to the manual pages listed below.</dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/1-xscanimage/">xscanimage</a>(1), <a href="/docs/linux/man/7-sane/">sane</a>(7) </p>
+<p> <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), xscanimage(1), <a href="/docs/linux/man/7-sane/">sane</a>(7) </p>
 <h2>AUTHOR</h2>
 <p> scanadf is an adaptation by Tom Martone of scanimage by David Mosberger, Andreas Beck, and Gordon Matzigkeit following closely the features of bnhscan by Sean Reifschneider of tummy.com, ltd. </p>
 <h2>BUGS</h2>

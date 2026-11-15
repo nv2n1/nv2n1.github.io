@@ -129,7 +129,7 @@ gitk[&lt;options&gt;][&lt;revision range&gt;][--][&lt;path&gt;...]
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-qgit/">qgit</a>(1)</i></p>
+<p> <i>qgit(1)</i></p>
 <dl>
 <dt>
 <dd> A repository browser written in C++ using Qt.</dl>

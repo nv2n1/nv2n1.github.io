@@ -16,7 +16,7 @@ description: "lircd – LIRC daemon decodes infrared signals and provides them o
 <dl>
 <dt><code>config file</code></p>
 <dd>The configuration file, by default /etc/lirc/lircd.conf. A relative path is interpreted from /etc/lirc.</p>
-<dd>The file is specific for the remote(s) that lircd should decode. The format is described in <a href="/docs/linux/man/5-lircd-conf/">lircd.conf</a>(5). Configuration files could be found using <a href="/docs/linux/man/1-irdb-get/">irdb-get</a>(1) or <a href="/docs/linux/man/1-lirc-setup/">lirc-setup</a>(1). It&#8217;s also possible to generate a config file using <a href="/docs/linux/man/1-irrecord/">irrecord</a>(1) </p>
+<dd>The file is specific for the remote(s) that lircd should decode. The format is described in <a href="/docs/linux/man/5-lircd-conf/">lircd.conf</a>(5). Configuration files could be found using irdb-get(1) or lirc-setup(1). It&#8217;s also possible to generate a config file using <a href="/docs/linux/man/1-irrecord/">irrecord</a>(1) </p>
 </dl>
 <h2>Options</h2>
 <p>Common options:</p>
@@ -43,7 +43,7 @@ description: "lircd – LIRC daemon decodes infrared signals and provides them o
 <dt><code>-l, &#8211;listen [[address:]port]]</code></p>
 <dd>Let lircd listen for network connections on the given address/port. The default address is 0.0.0.0, which means that connections on all network interfaces will be accepted. The default port is 8765. No security checks are currently implemented. The listening lircd instance will send all IR events to the connecting lircd instances.</p>
 <dt><code>-L, &#8211;logfile &lt;logfile path&gt;</code></p>
-<dd>Select the lircd daemon log file. logfile is either the string &#8216;syslog&#8217; indicating that <a href="/docs/linux/man/1-syslog/">syslog</a>(1) should be used or a log file path. The default is to use syslog.</p>
+<dd>Select the lircd daemon log file. logfile is either the string &#8216;syslog&#8217; indicating that syslog(1) should be used or a log file path. The default is to use syslog.</p>
 <dt><code>-o, &#8211;output &lt;output socket&gt;</code></p>
 <dd>Select Unix domain socket, which lircd will write remote key codes to. The default currently is /var/run/lirc/lircd.</p>
 <dt><code>-p, &#8211;permission</code></p>
@@ -100,6 +100,6 @@ description: "lircd – LIRC daemon decodes infrared signals and provides them o
 <h2>Daemons</h2>
 <p>lircd is a daemon. You should start it in some init script depending on your system. Besides the preferred systemd setup which is installed by default there are also example scripts for other distros and init systems in the contrib directory.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-irdb-get/">irdb-get</a>(1)<br />
- <a href="/docs/linux/man/1-lirc-setup/">lirc-setup</a>(1)<br />
+<p>irdb-get(1)<br />
+ lirc-setup(1)<br />
  <a href="/docs/linux/man/5-lircd-conf/">lircd.conf</a>(5) </p>

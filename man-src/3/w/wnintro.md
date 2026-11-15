@@ -159,7 +159,7 @@ description: "wnintro – introduction to WordNet library functions"
 <dt><code>wn.h</code></p>
 <dd>WordNet include file of constants, data structures, external declarations for global variables initialized in <code>wnglobal.c</code>. Also lists function prototypes for library API. It must be included to use any WordNet library functions.</dl>
 <h2>Notes</h2>
-<p>All library functions that access the database files expect the files to be open. The function <code><a href="/docs/linux/man/3-wninit/">wninit</a></code>(3) must be called before other database access functions such as <code><a href="/docs/linux/man/3-findtheinfo/">findtheinfo</a></code>(3) or <code><a href="/docs/linux/man/3-read_synset/">read_synset</a></code>(3). </p>
+<p>All library functions that access the database files expect the files to be open. The function <code>wninit</code>(3) must be called before other database access functions such as <code>findtheinfo</code>(3) or <code>read_synset</code>(3). </p>
 <p> Inclusion of the header file <code>wn.h</code> is necessary. </p>
 <p> The command line interface is a good example of a simple application that uses several WordNet library functions. </p>
 <p> Many of the library functions are passed or return syntactic category or synset type information. The following table lists the possible categories as integer codes, synset type constant names, syntactic category constant names, single characters and character strings. </p>

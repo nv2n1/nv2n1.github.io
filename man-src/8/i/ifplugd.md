@@ -85,6 +85,6 @@ description: "ifplugd – A link detection daemon for ethernet devices"
 <h2>Author</h2>
 <p>ifplugd was written by Lennart Poettering &lt;mzvscyhtq (at) 0pointer (dot) de&gt;. ifplugd is available at <code><a rel="nofollow" href="http://0pointer.de/lennart/projects/ifplugd/">http://0pointer.de/lennart/projects/ifplugd/</a></code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-ifplugd-conf/">ifplugd.conf</a>(5)</code>, <code><a href="/docs/linux/man/8-ifup/">ifup</a>(8)</code>, <code><a href="/docs/linux/man/5-interfaces/">interfaces</a>(5)</code>, <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8)</code>, <code><a href="/docs/linux/man/8-ifplugstatus/">ifplugstatus</a>(8)</code></p>
+<p><code>ifplugd.conf(5)</code>, <code><a href="/docs/linux/man/8-ifup/">ifup</a>(8)</code>, <code><a href="/docs/linux/man/5-interfaces/">interfaces</a>(5)</code>, <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8)</code>, <code><a href="/docs/linux/man/8-ifplugstatus/">ifplugstatus</a>(8)</code></p>
 <h2>Comments</h2>
 <p>This man page was written using <code><a href="/docs/linux/man/1-xmltoman/">xmltoman</a>(1)</code> by Oliver Kurth.</p>

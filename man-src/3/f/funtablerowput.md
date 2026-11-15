@@ -93,5 +93,5 @@ Ev buf, ev;
 <p> As shown above, successive calls to <i>FunTableRowPut()</i> will write rows sequentially. When you are finished writing all rows in a table, you should call <i>FunFlush()</i> to write out the <font SIZE="-1">FITS</font> binary table padding. However, this is not necessary if you subsequently call <i>FunClose()</i> without doing any other I/O to the <font SIZE="-1">FITS</font> file. </p>
 <p> Note that <i>FunTableRowPut()</i> also can be called as <i>FunEventsPut()</i>, for backward compatibility.</p>
 <h2>SEE ALSO</h2>
-<p> See <a href="/docs/linux/man/n-funtools/">funtools</a>(n) for a list of Funtools help pages </p>
+<p> See funtools(n) for a list of Funtools help pages </p>
 <h2>Index</h2>

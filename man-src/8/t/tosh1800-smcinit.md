@@ -48,7 +48,7 @@ description: "tosh1800-smcinit – initialize the IrDA controler on Toshiba lapt
 <p> Paul Hampson for its Linux IrDA mailing list messages. </p>
 <p> Manual page written by Claudiu Costin &lt;claudiuc [at] kde.org&gt;. Documentation based on original README by Daniele Peri.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-irattach/">irattach</a></code>(1),<br />
- <code><a href="/docs/linux/man/1-irdadump/">irdadump</a></code>(1),<br />
+<p><code>irattach</code>(1),<br />
+ <code>irdadump</code>(1),<br />
  <code><a rel="nofollow" href="http://lancelot.csai.unipa.it/~peri/">http://lancelot.csai.unipa.it/~peri/</a></code> Daniele Peri&#8217;s home page,<br />
  <code><a rel="nofollow" href="http://irda.sourceforge.net/smcinit/">http://irda.sourceforge.net/smcinit/</a></code> the SMCINIT package home page. </p>

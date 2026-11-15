@@ -36,10 +36,10 @@ description: "jpeg2ktopam – convert JPEG-2000 code stream to PAM/PNM"
   jpeg2ktopam myimg.jpc &gt;myimg.ppm
 </pre>
 <h2>ABOUT JPEG-2000</h2>
-<p> See <code>the</code><code>pamtojpeg2k</code><code><a href="/docs/linux/man/1-manual/">manual</a></code>(1) </p>
+<p> See <code>the</code><code>pamtojpeg2k</code><code>manual</code>(1) </p>
 <p> for general information on JPEG-2000 compression and the JPEG-2000 formats. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pamtojpeg2k/">pamtojpeg2k</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtopeg/">pnmtopeg</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) , <code><a href="/docs/linux/man/1-pgm/">pgm</a></code>(1) , <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , <code><a href="/docs/linux/man/1-pam/">pam</a></code>(1) , </p>
+<p> <code><a href="/docs/linux/man/1-pamtojpeg2k/">pamtojpeg2k</a></code>(1) , <code>pnmtopeg</code>(1) , <code>ppm</code>(1) , <code>pgm</code>(1) , <code>pbm</code>(1) , <code>pam</code>(1) , </p>
 <h2>History</h2>
 <p> <code>jpeg2ktopam</code> was added to Netpbm in Release 10.12 (November 2002). </p>
 <p> Before Netpbm 10.49 (December 2009), <code>jpeg2ktopam</code> could not convert a JP2 file &#8212; only JPC. </p>

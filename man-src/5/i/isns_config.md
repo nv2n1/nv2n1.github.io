@@ -21,7 +21,7 @@ description: "isns_config – iSNS configuration file"
 <h3>Generic Options</h3>
 <dl>
 <dt><code>HostName</code></p>
-<dd>By default, Open-iSNS applications will retrieve the machine&#8217;s hostname using the <code><a href="/docs/linux/man/3-gethostname/">gethostname</a></code>(3) system call, and use a DNS lookup to look up the canonical name. Using the <code>HostName</code> option, you can overried this. This option is rarely needed.</p>
+<dd>By default, Open-iSNS applications will retrieve the machine&#8217;s hostname using the <code>gethostname</code>(3) system call, and use a DNS lookup to look up the canonical name. Using the <code>HostName</code> option, you can overried this. This option is rarely needed.</p>
 <dt><code>SourceName</code></p>
 <dd>This option is mandatory for all Open-iSNS applications. This should be a name which identifies the client uniquely. There are two readings of RFC 4171; one requires that this is an iSCSI qualified name such as <code>iqn.2001-04.com.example.host</code>, whereas other language in the RFC suggests that this is pretty much a free-format string that just has to be unique (using e.g. the client&#8217;s fully qualified domain name).</p>
 <dd>When using DSA authentication, Open-iSNS currently requires the source name to match the key identifier (SPI) of the client&#8217;s public key.</p>

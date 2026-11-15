@@ -280,7 +280,7 @@ nvidia - settings-- assign FSAA = 2 nvidia - settings-- assign[CRT - 1] / Digita
 <p> Aaron Plattner<br />
  NVIDIA Corporation</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-nvidia-xconfig/">nvidia-xconfig</a></code>(1), <code><a href="/docs/linux/man/1-nvidia-installer/">nvidia-installer</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-nvidia-xconfig/">nvidia-xconfig</a></code>(1), <code>nvidia-installer</code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2010 NVIDIA Corporation. </p>
 <h2>Index</h2>

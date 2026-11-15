@@ -24,5 +24,5 @@ return shutdown_dialog(player);
 </code></pre>
 <p> Note that you are responsible for showing and hiding the mouse cursor, which do_dialog would otherwise do for you, or saving and restoring the screen contents, as popup_dialog would do for you. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-update_dialog/">update_dialog</a></code>(3), <code><a href="/docs/linux/man/3-shutdown_dialog/">shutdown_dialog</a></code>(3), <code><a href="/docs/linux/man/3-do_dialog/">do_dialog</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-update_dialog/">update_dialog</a></code>(3), <code>shutdown_dialog</code>(3), <code><a href="/docs/linux/man/3-do_dialog/">do_dialog</a></code>(3) </p>
 <h2>Index</h2>

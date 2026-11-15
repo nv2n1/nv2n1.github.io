@@ -17,7 +17,7 @@ bool waffle_make_current(struct waffle_display *display, struct waffle_window *w
 <dl>
 <dd>
 <dd>Bind the given <i>window</i> and <i>context</i> for rendering on the current thread. <i>window</i> and <i>context</i> must both have been created on the given <i>display</i>. To unbind the current context without binding a new one, set <i>window</i> and <i>context</i> to <code>NULL</code>. </p>
-<p> This function is analogous to <code><a href="/docs/linux/man/3-glxmakecurrent/">glXMakeCurrent</a></code>(3), <code><a href="/docs/linux/man/3-eglmakecurrent/">eglMakeCurrent</a></code>(3), and <code>[NSOpenGLContext makeCurrentContext]</code>.</dl>
+<p> This function is analogous to <code>glXMakeCurrent</code>(3), <code>eglMakeCurrent</code>(3), and <code>[NSOpenGLContext makeCurrentContext]</code>.</dl>
 <h2>Return Value</h2>
 <p>Functions whose return type is <code>bool</code> return true on success and false on failure. Functions whose return type is a pointer return <code>NULL</code> on failure. Use <code><a href="/docs/linux/man/3-waffle_error_get_info/">waffle_error_get_info</a></code>(3) to get information about any errors.</p>
 <h2>Errors</h2>

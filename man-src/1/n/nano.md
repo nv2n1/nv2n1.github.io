@@ -123,7 +123,7 @@ description: "nano – Nano’s ANOther editor, inspired by Pico"
 <dt><code>-r&nbsp;</code><i>number</i>, <code>&#8211;fill=</code><i>number</i></p>
 <dd> Set the target width for justifying and automatic hard-wrapping at this <i>number</i> of columns. If the value is 0 or less, wrapping will occur at the width of the screen minus <i>number</i> columns, allowing the wrap point to vary along with the width of the screen if the screen is resized. The default value is <code>-8</code>.</p>
 <dt><code>-s </code><i>program</i> [<i>argument </i>&#8230;], <code>&#8211;speller=</code><i>program</i> [<i>argument </i>&#8230;]</p>
-<dd> Use this command to perform spell checking and correcting, instead of using the built-in corrector that calls <code><a href="/docs/linux/man/1-hunspell/">hunspell</a></code>(1) or <code><a href="/docs/linux/man/1-spell/">spell</a></code>(1).</p>
+<dd> Use this command to perform spell checking and correcting, instead of using the built-in corrector that calls <code><a href="/docs/linux/man/1-hunspell/">hunspell</a></code>(1) or <code>spell</code>(1).</p>
 <dt><code>-t</code>, <code>&#8211;saveonexit</code></p>
 <dd> Save a changed buffer without prompting (when exiting with <code>^X</code>). (The old form of the long option, <code>&#8211;tempfile</code>, is deprecated.)</p>
 <dt><code>-u</code>, <code>&#8211;unix</code></p>

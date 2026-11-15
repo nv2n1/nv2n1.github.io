@@ -58,6 +58,6 @@ description: "eurephiadm attempts – Manage the attempts log in eurephia"
 <dt><code>-i</code> | <code>&#8211;ipaddr</code> &lt;IP address&gt;</p>
 <dd>List only attempts matching the given IP address</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-eurephiadm-blacklist/">eurephiadm-blacklist</a></code>(7), <code><a href="/docs/linux/man/7-eurephia-config/">eurephia-config</a></code>(7)</p>
+<p><code><a href="/docs/linux/man/7-eurephiadm-blacklist/">eurephiadm-blacklist</a></code>(7), <code>eurephia-config</code>(7)</p>
 <h2>Author</h2>
 <p>Copyright (C) 2008-2010 David Sommerseth &lt;dazo [at] users.sourceforge.net&gt;</p>

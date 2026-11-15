@@ -189,5 +189,5 @@ description: "wbemcli – independent command line CIM Client"
 <dt>
 <dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cimserver/">cimserver</a></code>(1) </p>
+<p> <code>cimserver</code>(1) </p>
 <h2>Index</h2>

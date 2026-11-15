@@ -763,9 +763,9 @@ description: "ffmpeg-utils – FFmpeg utilities"
 <dt><font SIZE="-1"><code>PI</code></font></p>
 <dd> area of the unit disc, approximately 3.14</p>
 <dt><code>E</code></p>
-<dd> <code><a href="/docs/linux/man/1-exp/">exp</a></code>(1) (Euler&#8217;s number), approximately 2.718</p>
+<dd> <code>exp</code>(1) (Euler&#8217;s number), approximately 2.718</p>
 <dt><font SIZE="-1"><code>PHI</code></font></p>
-<dd> golden ratio (1+<code><a href="/docs/linux/man/5-sqrt/">sqrt</a></code>(5))/2, approximately 1.618</dl>
+<dd> golden ratio (1+<code>sqrt</code>(5))/2, approximately 1.618</dl>
 <p> Assuming that an expression is considered &#8220;true&#8221; if it has a non-zero value, note that: </p>
 <p> <tt>&quot;*&quot;</tt> works like <font SIZE="-1">AND</font> </p>
 <p> <tt>&quot;+&quot;</tt> works like <font SIZE="-1">OR</font> </p>

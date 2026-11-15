@@ -203,7 +203,7 @@ if ((p = GetModeratorAddress("comp.sources.unix")) == NULL)
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/5-active/">active</a>(5), <a HREF="//www.systutorials.com/docs/linux/man/3z-dbz/">dbz</a>(3z), <a HREF="/docs/linux/man/5-inn-conf/">inn.conf</a>(5), <a HREF="/docs/linux/man/3-inndcomm/">inndcomm</a>(3), <a HREF="/docs/linux/man/5-moderators/">moderators</a>(5), <a HREF="/docs/linux/man/5-passwd-nntp/">passwd.nntp</a>(5). 
+ <a HREF="/docs/linux/man/5-active/">active</a>(5), dbz(3z), <a HREF="/docs/linux/man/5-inn-conf/">inn.conf</a>(5), inndcomm(3), <a HREF="/docs/linux/man/5-moderators/">moderators</a>(5), <a HREF="/docs/linux/man/5-passwd-nntp/">passwd.nntp</a>(5). 
 
 <h2>Index</h2>
 

@@ -68,7 +68,7 @@ description: "swatch – simple watcher"
         swatch --config-file=~/.swatchrc --tail-file=/var/log/messages
 </pre>
 <h2>THE CONFIGURATION FILE</h2>
-<p> The configuration file is used by the <a href="/docs/linux/man/8-swatch/">swatch</a><code>(8)</code> program to determine what types of expression patterns to look for and what type of action(s) should be taken when a pattern is matched. </p>
+<p> The configuration file is used by the swatch<code>(8)</code> program to determine what types of expression patterns to look for and what type of action(s) should be taken when a pattern is matched. </p>
 <p> Each line should contain a keyword and a, sometimes optional, value for that keyword. The keyword and value are separated by a space or an equal (=) sign. </p>
 <p> watchfor regex </p>
 <p> ignore regex</p>
@@ -182,7 +182,7 @@ description: "swatch – simple watcher"
 &nbsp;<wbr>bell</dl>
 <p> In this example, a line which contains the string &#8220;file system full&#8221; will be echoed and the screen bell will sound. Also, <code>threshold</code> will use what is matched within the parentheses as its key rather than trying to use the log message with its time stamp cut out. Multiple instances of the message will not be echoed if they appear within a minute of the first one. Instead the following message will be acted upon after the time interval has expired.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-signal/">signal</a><code>(3)</code>, <a href="/docs/linux/man/1-perl/">perl</a><code>(1)</code>, <a href="/docs/linux/man/1-perlre/">perlre</a><code>(1)</code></p>
+<p> signal<code>(3)</code>, <a href="/docs/linux/man/1-perl/">perl</a><code>(1)</code>, <a href="/docs/linux/man/1-perlre/">perlre</a><code>(1)</code></p>
 <h2>NOTES</h2>
 <p> Upon receiving an <font SIZE="-1">ALRM</font> or <font SIZE="-1">HUP</font> signal swatch will re-read the configuration file and restart, except when used with the <i>&#8211;daemon</i> command line option where it will simply exit. Swatch will terminate gracefully when it receives a <font SIZE="-1">QUIT, TERM,</font> or <font SIZE="-1">INT</font> signal.</p>
 <h2>AUTHOR</h2>

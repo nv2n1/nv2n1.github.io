@@ -286,9 +286,9 @@ LINTIAN_PROFILE = debian
 <dt>..</p>
 <dd> Used by <code><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></code>(1).</p>
 <dt>../build-area</p>
-<dd> Used by <code><a href="/docs/linux/man/1-svn-buildpackage/">svn-buildpackage</a></code>(1).</p>
+<dd> Used by <code>svn-buildpackage</code>(1).</p>
 <dt>/var/cache/pbuilder/result</p>
-<dd> Used by <code><a href="/docs/linux/man/1-pbuilder/">pbuilder</a></code>(1) and <code><a href="/docs/linux/man/1-cowbuilder/">cowbuilder</a></code>(1).</dl>
+<dd> Used by <code>pbuilder</code>(1) and <code>cowbuilder</code>(1).</dl>
 <p> In each directory, Lintian will attempt to find a <i>.changes</i> file using the following values as architecture (in order):</p>
 <dl>
 <dt><i></i>$DEB_BUILD_ARCH<i></i> (or <i>dpkg &#8211;print-architecture</i>)</p>
@@ -298,7 +298,7 @@ LINTIAN_PROFILE = debian
 <dt><i>dpkg &#8211;print-foreign-architectures</i></p>
 <dd> If <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1) appears to support multi-arch, then any architecture listed by &#8220;dpkg &#8211;print-foreign-architectures&#8221; will be used (in the order returned by dpkg).</p>
 <dt><i>multi</i></p>
-<dd> Pseudo architecture used by <code><a href="/docs/linux/man/1-mergechanges/">mergechanges</a></code>(1).</p>
+<dd> Pseudo architecture used by <code>mergechanges</code>(1).</p>
 <dt><i>all</i></p>
 <dd> Used when building architecture indep packages only (e.g. dpkg-buildpackage -A).</p>
 <dt><i>source</i></p>
@@ -323,7 +323,7 @@ LINTIAN_PROFILE = debian
 <p> If you discover any other bugs in lintian, please contact the authors.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lintian-info/">lintian-info</a></code>(1), Lintian User Manual (/usr/share/doc/lintian/lintian.html) </p>
-<p> Packaging tools: <code><a href="/docs/linux/man/7-debhelper/">debhelper</a></code>(7), <code><a href="/docs/linux/man/8-dh_make/">dh_make</a></code>(8), <code><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></code>(1).</p>
+<p> Packaging tools: <code><a href="/docs/linux/man/7-debhelper/">debhelper</a></code>(7), <code>dh_make</code>(8), <code><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></code>(1).</p>
 <h2>AUTHORS</h2>
 <p> Niels Thykier &lt;niels [at] thykier.net&gt; </p>
 <p> Richard Braakman &lt;dark [at] xs4all.nl&gt; </p>

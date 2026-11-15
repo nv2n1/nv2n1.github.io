@@ -16,5 +16,5 @@ description: "get_scaling_matrix, get_scaling_matrix_f – Constructs a scaling 
 <h2>DESCRIPTION</h2>
 <p> Constructs a scaling matrix, storing it in m. When applied to the point (px, py, pz), this matrix will produce the point (px*x, py*y, pz*z). In other words, it stretches or shrinks things. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_transformation_matrix/">get_transformation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-qscale_matrix/">qscale_matrix</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_transformation_matrix/">get_transformation_matrix</a></code>(3), <code>qscale_matrix</code>(3) </p>
 <h2>Index</h2>

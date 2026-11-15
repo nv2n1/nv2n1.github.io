@@ -83,7 +83,7 @@ Smokeping::probes::CiscoRTTMonDNS.pm - Probe for SmokePing
 
  Default value: 15</dl><h2>Authors</h2>Joerg.Kummer at Roche.com
 <h2>Notes</h2><h3>host parameter</h3>The host parameter specifies the <font SIZE="-1">DNS</font> server, which the router will use.
-<h3><font SIZE="-1">IOS VERSIONS</font></h3>This probe only works with <font SIZE="-1">IOS 12.0\<a HREF="/docs/linux/man/3-fis0/">fIs0</a>(3)T or higher. It is recommended to test it on less critical routers first. </font>
+<h3><font SIZE="-1">IOS VERSIONS</font></h3>This probe only works with <font SIZE="-1">IOS 12.0\fIs0(3)T or higher. It is recommended to test it on less critical routers first. </font>
 <h3><font SIZE="-1">INSTALLATION</font></h3>To install this probe copy ciscoRttMonMIB.pm to ($SMOKEPINGINSTALLDIR)/lib/Smokeping and CiscoRTTMonDNS.pm to ($SMOKEPINGINSTALLDIR)/lib/Smokeping/probes. 
 
  The router(s) must be configured to allow read/write <font SIZE="-1">SNMP</font> access. Sufficient is: 

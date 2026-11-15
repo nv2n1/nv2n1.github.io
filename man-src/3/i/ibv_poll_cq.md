@@ -55,7 +55,7 @@ struct ibv_wc {
 <p> The user should consume work completions at a rate that prevents CQ overrun from occurrence. In case of a CQ overrun, the async event <code>IBV_EVENT_CQ_ERR</code> will be triggered, and the CQ cannot be used. </p>
 <p> IBV_WC_DRIVER1 will be reported as a response to IBV_WR_DRIVER1 opcode.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-ibv_post_send/">ibv_post_send</a></code>(3), <code><a href="/docs/linux/man/3-ibv_post_recv/">ibv_post_recv</a></code>(3)</p>
+<p> <code>ibv_post_send</code>(3), <code>ibv_post_recv</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>

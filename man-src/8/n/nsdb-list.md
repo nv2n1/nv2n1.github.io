@@ -76,12 +76,12 @@ description: "nsdb-list – list file set name and location entries on an NSDB"
 <p>&nbsp;<wbr>FSN UUID: c1c21720-1fcd-4ad6-a837-f57af4cf2972 </p>
 <p>FSL UUID: 4c887035-ad2f-4ba8-ab75-7118df9714cd </p>
 <p>FSL UUID: 84445758-b5fb-4acc-814b-cc121b3bafe9</dl>
-<p> There is a single file set name, with two file set location records, registered under &quot;o=fedfs&quot; on this NSDB. To resolve the listed FSN UUID, use the <code><a href="/docs/linux/man/8-nsdb-resolve-junction/">nsdb-resolve-junction</a></code>(8) command.</p>
+<p> There is a single file set name, with two file set location records, registered under &quot;o=fedfs&quot; on this NSDB. To resolve the listed FSN UUID, use the <code>nsdb-resolve-junction</code>(8) command.</p>
 <h2>Security</h2>
 <p>The NSDB protocol draft standard requires that FedFS FSN and FSL records are readable by everyone. The <code><a href="/docs/linux/man/8-nsdb-list/">nsdb-list</a></code>(8) command uses anonymous binding when performing LDAP queries. </p>
 <p> The target LDAP server must be registered in the local NSDB connection parameter database. The connection security mode listed in the NSDB connection parameter database for the target LDAP server is used during this operation. See <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8) for details on how to register an NSDB in the local NSDB connection parameter database.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/8-nsdb-resolve-junction/">nsdb-resolve-junction</a></code>(8), <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8) </p>
+<p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code>nsdb-resolve-junction</code>(8), <code><a href="/docs/linux/man/8-nsdbparams/">nsdbparams</a></code>(8) </p>
 <p> RFC 5716 for FedFS requirements and overview </p>
 <p> RFC 4510 for an introduction to LDAP</p>
 <h2>Colophon</h2>

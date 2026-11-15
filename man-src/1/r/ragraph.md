@@ -120,5 +120,5 @@ description: "ragraph – graph argus(8) data."
 Carter Bullard (carter [at] qosient.com).
 </pre>
 <h2>SEE ALSO</h2>
-<p> <code>rrdtool</code><a rel="nofollow" href="http://oss.oetiker.sh/rrdtool">http://oss.oetiker.sh/rrdtool</a> <code><a href="/docs/linux/man/5-ragraph/">ragraph</a></code>(5), <code><a href="/docs/linux/man/1-ra/">ra</a></code>(1), <code><a href="/docs/linux/man/5-rarc/">rarc</a></code>(5), <code><a href="/docs/linux/man/8-argus/">argus</a></code>(8) </p>
+<p> <code>rrdtool</code><a rel="nofollow" href="http://oss.oetiker.sh/rrdtool">http://oss.oetiker.sh/rrdtool</a> <code>ragraph</code>(5), <code><a href="/docs/linux/man/1-ra/">ra</a></code>(1), <code><a href="/docs/linux/man/5-rarc/">rarc</a></code>(5), <code><a href="/docs/linux/man/8-argus/">argus</a></code>(8) </p>
 <h2>Index</h2>

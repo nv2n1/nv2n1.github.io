@@ -26,4 +26,4 @@ description: "clamav-milter – milter compatible mail scanner"
 <h2>Author</h2>
 <p>aCaB &lt;acab [at] clamav.net&gt;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-sendmail/">sendmail</a>(8), <a href="/docs/linux/man/5-clamav-milter-conf/">clamav-milter.conf</a>(5), <a href="/docs/linux/man/8-clamd/">clamd</a>(8), <a href="/docs/linux/man/5-clamd-conf/">clamd.conf</a>(5) </p>
+<p>sendmail(8), <a href="/docs/linux/man/5-clamav-milter-conf/">clamav-milter.conf</a>(5), <a href="/docs/linux/man/8-clamd/">clamd</a>(8), <a href="/docs/linux/man/5-clamd-conf/">clamd.conf</a>(5) </p>

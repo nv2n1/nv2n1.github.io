@@ -35,7 +35,7 @@ description: "alevt-date – display/set time received via Teletext"
 <h2>FILES</h2>
 <p> <i>/dev/vbi*</i> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="//www.systutorials.com/docs/linux/man/1x-alevt/">alevt</a></code>(1x), <code><a href="/docs/linux/man/1-alevt-cap/">alevt-cap</a></code>(1), <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3), <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/8-clock/">clock</a></code>(8). </p>
+<p> <code>alevt</code>(1x), <code><a href="/docs/linux/man/1-alevt-cap/">alevt-cap</a></code>(1), <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3), <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/8-clock/">clock</a></code>(8). </p>
 <h2>BUGS</h2>
 <p> This program is just a toy. The time transmitted by the TV stations is more than inaccurate. Some are within a few seconds of your local time reference but others are more then 15 minutes off. You&#8217;ve been warned. (And don&#8217;t assume the pkt8/30 time is better. It&#8217;s even worse.) </p>
 <p> No bug reports to &lt;froese [at] gmx.de&gt; *g*. </p>

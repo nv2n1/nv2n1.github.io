@@ -28,7 +28,7 @@ description: "jstack – Stack Trace"
 <dt>core</p>
 <dd>core file for which the stack trace is to be printed. </p>
 <dt>remote-hostname-or-IP</p>
-<dd>remote debug server&#8217;s (see <a href="/docs/linux/man/1-jsadebugd/">jsadebugd</a>(1)) hostname or IP address. </p>
+<dd>remote debug server&#8217;s (see jsadebugd(1)) hostname or IP address. </p>
 <dt>server-id</p>
 <dd>optional unique id, if multiple debug servers are running on the same remote host.</dl>
 </dl>

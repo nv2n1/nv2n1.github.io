@@ -17,5 +17,5 @@ description: "install_sound_input – Initialises the sound recorder module. All
 <h2>RETURN VALUE</h2>
 <p> This function returns zero on success, and any other value if the machine or driver doesn&#8217;t support sound recording. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-install_sound/">install_sound</a></code>(3), <code><a href="/docs/linux/man/3-start_sound_input/">start_sound_input</a></code>(3), <code><a href="/docs/linux/man/3-midi_recorder/">midi_recorder</a></code>(3) </p>
+<p> <code>install_sound</code>(3), <code><a href="/docs/linux/man/3-start_sound_input/">start_sound_input</a></code>(3), <code><a href="/docs/linux/man/3-midi_recorder/">midi_recorder</a></code>(3) </p>
 <h2>Index</h2>

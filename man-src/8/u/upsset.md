@@ -26,7 +26,7 @@ description: "upsset.cgi – Web-based UPS administration program"
 <p> To actually turn off the load, you have to send the command once, then send it again after 3 seconds elapse but before 15 seconds pass. If you do it too quickly or slowly, you have to wait at least 3 seconds but not 15 seconds again. </p>
 <p> You can also invoke instant commands from the command line with <code><a href="/docs/linux/man/8-upscmd/">upscmd</a></code>(8).</p>
 <h2>Access Control</h2>
-<p>upsset will only talk to <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) servers that have been defined in your <code><a href="/docs/linux/man/8-hosts-conf/">hosts.conf</a></code>(8). If it complains about &quot;Access to that host is not authorized&quot;, check your hosts.conf first.</p>
+<p>upsset will only talk to <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) servers that have been defined in your <code>hosts.conf</code>(8). If it complains about &quot;Access to that host is not authorized&quot;, check your hosts.conf first.</p>
 <h2>Security</h2>
 <p>upsset will not run until you convince it that your CGI directory has been secured. This is due to the possibility of someone using upsset to try password combinations against your <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) server. </p>
 <p> See the example upsset.conf file for more information on how you do this. The short explanation is &#8211; if you can&#8217;t lock it down, don&#8217;t try to run it.</p>

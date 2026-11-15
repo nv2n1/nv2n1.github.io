@@ -41,5 +41,5 @@ description: "disktype – disk format detector"
 <h2>AUTHOR</h2>
 <p> Christoph Pfisterer &lt;chrisp [at] users.sourceforge.net&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-file/">file</a>(1), <a href="/docs/linux/man/8-gpart/">gpart</a>(8) </p>
+<p> <a href="/docs/linux/man/1-file/">file</a>(1), gpart(8) </p>
 <h2>Index</h2>

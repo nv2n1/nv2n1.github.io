@@ -43,7 +43,7 @@ description: "snmpcheck – enumerate information via SNMP protocol"
 <dd> show help menu </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-snmpwalk/">snmpwalk</a></code>(1), <code><a href="/docs/linux/man/1-snmpget/">snmpget</a></code>(1), <code><a href="/docs/linux/man/1-onesixtyone/">onesixtyone</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-snmpwalk/">snmpwalk</a></code>(1), <code><a href="/docs/linux/man/1-snmpget/">snmpget</a></code>(1), <code>onesixtyone</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (c) 2005-2011 by Matteo Cantoni &lt;matteo.cantoni [at] nothink.org&gt; </p>
 <h2>Index</h2>

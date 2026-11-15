@@ -26,16 +26,16 @@ description: "pki-server – Command-Line Interface for performing administrativ
 <h2>Files</h2>
 <p><i>/usr/sbin/pki-server</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-pki-server-instance/">pki-server-instance</a></code>(1)</p>
+<p><code>pki-server-instance</code>(1)</p>
 <dl>
 <dd>Certificate Server instance management commands</dl>
-<p> <code><a href="/docs/linux/man/1-pki-server-subsystem/">pki-server-subsystem</a></code>(1)</p>
+<p> <code>pki-server-subsystem</code>(1)</p>
 <dl>
 <dd>Certificate Server subsystem management commands</dl>
-<p> <code><a href="/docs/linux/man/1-pki-server-migrate/">pki-server-migrate</a></code>(1)</p>
+<p> <code>pki-server-migrate</code>(1)</p>
 <dl>
 <dd>Certificate server migration script management commands</dl>
-<p> <code><a href="/docs/linux/man/1-pki-server-nuxwdog/">pki-server-nuxwdog</a></code>(1)</p>
+<p> <code>pki-server-nuxwdog</code>(1)</p>
 <dl>
 <dd>Commands to enable/disable startup using <code>nuxwdog</code>.</dl>
 <h2>Authors</h2>

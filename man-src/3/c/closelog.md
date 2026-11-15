@@ -28,7 +28,7 @@ description: "closelog, openlog, syslog, vsyslog – send messages to the system
 <p> The <i>option</i> argument specifies flags which control the operation of <code>openlog</code>() and subsequent calls to <code>syslog</code>(). The <i>facility</i> argument establishes a default to be used if none is specified in subsequent calls to <code>syslog</code>(). The values that may be specified for <i>option</i> and <i>facility</i> are described below. </p>
 <p> The use of <code>openlog</code>() is optional; it will automatically be called by <code>syslog</code>() if necessary, in which case <i>ident</i> will default to NULL.</p>
 <h3>syslog() and vsyslog()</h3>
-<p> <code>syslog</code>() generates a log message, which will be distributed by <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). </p>
+<p> <code>syslog</code>() generates a log message, which will be distributed by <code>syslogd</code>(8). </p>
 <p> The <i>priority</i> argument is formed by ORing together a <i>facility</i> value and a <i>level</i> value (described below). If no <i>facility</i> value is ORed into <i>priority</i>, then the default value set by <code>openlog</code>() is used, or, if there was no preceding <code>openlog</code>() call, a default of <code>LOG_USER</code> is employed. </p>
 <p> The remaining arguments are a <i>format</i>, as in <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), and any arguments required by the <i>format</i>, except that the two-character sequence <code>%m</code> will be replaced by the error message string <i>strerror</i>(<i>errno</i>). The format string need not include a terminating newline character. </p>
 <p> The function <code>vsyslog</code>() performs the same task as <code>syslog</code>() with the difference that it takes a set of arguments which have been obtained using the <code><a href="/docs/linux/man/3-stdarg/">stdarg</a></code>(3) variable argument list macros.</p>
@@ -73,7 +73,7 @@ description: "closelog, openlog, syslog, vsyslog – send messages to the system
 <dt><code>LOG_NEWS</code></p>
 <dd> USENET news subsystem</p>
 <dt><code>LOG_SYSLOG</code></p>
-<dd> messages generated internally by <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8)</p>
+<dd> messages generated internally by <code>syslogd</code>(8)</p>
 <dt><code>LOG_USER</code> (default)</p>
 <dd> generic user-level messages</p>
 <dt><code>LOG_UUCP</code></p>
@@ -129,7 +129,7 @@ description: "closelog, openlog, syslog, vsyslog – send messages to the system
 <p> Never pass a string with user-supplied data as a format, use the following instead: </p>
 <p> syslog(priority, &quot;%s&quot;, string);</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1), <code><a href="/docs/linux/man/3-setlogmask/">setlogmask</a></code>(3), <code><a href="/docs/linux/man/5-syslog-conf/">syslog.conf</a></code>(5), <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8)</p>
+<p> <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1), <code><a href="/docs/linux/man/3-setlogmask/">setlogmask</a></code>(3), <code>syslog.conf</code>(5), <code>syslogd</code>(8)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>

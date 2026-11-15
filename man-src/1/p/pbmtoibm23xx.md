@@ -31,7 +31,7 @@ description: "pbmtoibm23xx – convert a PBM image to IBM 23XX printer stream"
 <h2>HISTORY</h2>
 <p> <code>pbmtoibm23xx</code> was new in Netpbm 10.25 (October 2004). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pbm/">pbm</a></code>(1) , Ghostscript (<code>gs</code>). </p>
+<p> <code>pbm</code>(1) , Ghostscript (<code>gs</code>). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2004 Jorrit Fahlke &lt;jorrit [at] jorrit.de&gt;. Copying policy: GNU GPL version 2 </p>
 <h2>Index</h2>

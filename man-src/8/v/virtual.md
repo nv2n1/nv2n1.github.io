@@ -52,7 +52,7 @@ description: "virtual – Postfix virtual domain mail delivery agent"
 <pre>RFC 822 (ARPA Internet Text Messages)</pre>
 <h2>Diagnostics</h2>
 <p>Mail bounces when the recipient has no mailbox or when the recipient is over disk quota. In all other cases, mail for an existing recipient is deferred and a warning is logged. </p>
-<p> Problems and transactions are logged to <code><a href="/docs/linux/man/8-syslogd/">syslogd</a></code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue afterwards. </p>
+<p> Problems and transactions are logged to <code>syslogd</code>(8). Corrupted message files are marked so that the queue manager can move them to the <code>corrupt</code> queue afterwards. </p>
 <p> Depending on the setting of the <code>notify_classes</code> parameter, the postmaster is notified of bounces and of other trouble.</p>
 <h2>Bugs</h2>
 <p>This delivery agent supports address extensions in email addresses and in lookup table keys, but does not propagate address extension information to the result of table lookup. </p>
@@ -128,7 +128,7 @@ description: "virtual – Postfix virtual domain mail delivery agent"
 <pre><a href="//www.systutorials.com/docs/linux/man/8-qmgr/">qmgr</a>(8), queue manager
 <a href="//www.systutorials.com/docs/linux/man/8-bounce/">bounce</a>(8), delivery status reports
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
-<a href="//www.systutorials.com/docs/linux/man/8-syslogd/">syslogd</a>(8), system logging</pre>
+syslogd(8), system logging</pre>
 <h2>Readme_Files</h2>
 <pre>Use &quot;<code>postconf readme_directory</code>&quot; or
 &quot;<code>postconf html_directory</code>&quot; to locate this information.

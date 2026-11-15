@@ -1031,7 +1031,7 @@ bpf_clone_redirect(skb, vxlan_dev_ifindex, 0);</pre>
 <dd>
 <dt><code>Description</code></p>
 <dd>Convert the initial part of the string from buffer <i>buf</i> of size <i>buf_len</i> to a long integer according to the given base and save the result in <i>res</i>. </p>
-<p> The string may begin with an arbitrary amount of white space (as determined by <code><a href="/docs/linux/man/3-isspace/">isspace</a></code>(3)) followed by a single optional &#8216;<code>&#8211;</code>&#8216; sign. </p>
+<p> The string may begin with an arbitrary amount of white space (as determined by <code>isspace</code>(3)) followed by a single optional &#8216;<code>&#8211;</code>&#8216; sign. </p>
 <p> Five least significant bits of <i>flags</i> encode base, other bits are currently unused. </p>
 <p> Base must be either 8, 10, 16 or 0 to detect it automatically similar to user space <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3).</p>
 <dt><code>Return</code></p>
@@ -1042,7 +1042,7 @@ bpf_clone_redirect(skb, vxlan_dev_ifindex, 0);</pre>
 <dd>
 <dt><code>Description</code></p>
 <dd>Convert the initial part of the string from buffer <i>buf</i> of size <i>buf_len</i> to an unsigned long integer according to the given base and save the result in <i>res</i>. </p>
-<p> The string may begin with an arbitrary amount of white space (as determined by <code><a href="/docs/linux/man/3-isspace/">isspace</a></code>(3)). </p>
+<p> The string may begin with an arbitrary amount of white space (as determined by <code>isspace</code>(3)). </p>
 <p> Five least significant bits of <i>flags</i> encode base, other bits are currently unused. </p>
 <p> Base must be either 8, 10, 16 or 0 to detect it automatically similar to user space <code><a href="/docs/linux/man/3-strtoul/">strtoul</a></code>(3).</p>
 <dt><code>Return</code></p>
@@ -1402,11 +1402,11 @@ void bpf_sys_open(struct pt_regs *ctx)
 <dt>&bull;</p>
 <dd><i>kernel/bpf/</i> directory contains other files in which additional helpers are defined (for cgroups, sockmaps, etc.).</p>
 <dt>&bull;</p>
-<dd>The bpftool utility can be used to probe the availability of helper functions on the system (as well as supported program and map types, and a number of other parameters). To do so, run <code>bpftool feature probe</code> (see <code><a href="/docs/linux/man/8-bpftool-feature/">bpftool-feature</a></code>(8) for details). Add the <code>unprivileged</code> keyword to list features available to unprivileged users. </p>
+<dd>The bpftool utility can be used to probe the availability of helper functions on the system (as well as supported program and map types, and a number of other parameters). To do so, run <code>bpftool feature probe</code> (see <code>bpftool-feature</code>(8) for details). Add the <code>unprivileged</code> keyword to list features available to unprivileged users. </p>
 <p> Compatibility between helper functions and program types can generally be found in the files where helper functions are defined. Look for the <code>struct bpf_func_proto</code> objects and for functions returning them: these functions contain a list of helpers that a given program type can call. Note that the <code>default:</code> label of the <code>switch &#8230; case</code> used to filter helpers can call other functions, themselves allowing access to additional helpers. The requirement for GPL license is also in those <code>struct bpf_func_proto</code>. </p>
 <p> Compatibility between helper functions and map types can be found in the <code>check_map_func_compatibility</code>() function in file <i>kernel/bpf/verifier.c</i>. </p>
 <p> Helper functions that invalidate the checks on <code>data</code> and <code>data_end</code> pointers for network processing are listed in function <code>bpf_helper_changes_pkt_data</code>() in file <i>net/core/filter.c</i>.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/2-bpf/">bpf</a></code>(2), <code><a href="/docs/linux/man/8-bpftool/">bpftool</a></code>(8), <code><a href="/docs/linux/man/7-cgroups/">cgroups</a></code>(7), <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8), <code><a href="/docs/linux/man/2-perf_event_open/">perf_event_open</a></code>(2), <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7), <code><a href="/docs/linux/man/8-tc-bpf/">tc-bpf</a></code>(8)</p>
+<p><code><a href="/docs/linux/man/2-bpf/">bpf</a></code>(2), <code>bpftool</code>(8), <code><a href="/docs/linux/man/7-cgroups/">cgroups</a></code>(7), <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8), <code><a href="/docs/linux/man/2-perf_event_open/">perf_event_open</a></code>(2), <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7), <code><a href="/docs/linux/man/8-tc-bpf/">tc-bpf</a></code>(8)</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

@@ -6,7 +6,7 @@ letter: "a"
 url: "/docs/linux/man/7-abrt-bugzilla/"
 ---
 
-Bugzilla plugin for <a HREF="/docs/linux/man/8-abrt/">abrt</a>(8)
+Bugzilla plugin for abrt(8)
 
 <h2>Description</h2>
 
@@ -39,7 +39,7 @@ This is a snippet from the <i>abrt.conf</i> configuration file. When something c
 
 <h2>See Also</h2>
 
-<i><a HREF="/docs/linux/man/8-abrt/">abrt</a></i>(8), <i><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a HREF="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7)
+<i>abrt</i>(8), <i><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a HREF="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7)
 
 <h2>Author</h2>
 

@@ -17,7 +17,7 @@ ldbdel - Command-line program for deleting LDB records
 
  
 
-<dd>ldbdel deletes records from an <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7) database. It deletes the records identified by the dn's specified on the command-line. 
+<dd>ldbdel deletes records from an ldb(7) database. It deletes the records identified by the dn's specified on the command-line. 
 
  ldbdel uses either the database that is specified with the -H option or the database specified by the LDB_URL environment variable.
 
@@ -34,7 +34,7 @@ ldbdel - Command-line program for deleting LDB records
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. See <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7) for details.</dl>
+<dd> LDB URL to connect to. See ldb(7) for details.</dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -55,7 +55,7 @@ ldbdel - Command-line program for deleting LDB records
 
  
 
- <a HREF="/docs/linux/man/7-ldb/">ldb</a>(7), ldbmodify, ldbadd, <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5)
+ ldb(7), ldbmodify, ldbadd, <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5)
 
 <h2>AUTHOR</h2>
 

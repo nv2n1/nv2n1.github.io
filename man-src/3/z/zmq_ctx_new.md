@@ -12,7 +12,7 @@ description: "zmq_ctx_new – create new 0MQ context"
 <pre><code>void *zmq_ctx_new();</code></pre>
 <h2>Description</h2>
 <p>The <i>zmq_ctx_new()</i> function creates a new 0MQ <i>context</i>. </p>
-<p> This function replaces the deprecated function <code><a href="/docs/linux/man/3-zmq_init/">zmq_init</a></code>(3). </p>
+<p> This function replaces the deprecated function <code>zmq_init</code>(3). </p>
 <p> <code>Thread safety</code>. A 0MQ <i>context</i> is thread safe and may be shared among as many application threads as necessary, without any additional locking required on the part of the caller.</p>
 <h2>Return Value</h2>
 <p>The <i>zmq_ctx_new()</i> function shall return an opaque handle to the newly created <i>context</i> if successful. Otherwise it shall return NULL and set <i>errno</i> to one of the values defined below.</p>

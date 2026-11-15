@@ -25,7 +25,7 @@ description: "pm-action – Suspend or Hibernate your computer"
 <dd>During hibernate the system is fully powered off, and system state is saved to disk. The system does not require power, and can stay in hibernate mode indefinitely. Most modern systems require 15 to 45 seconds to enter and leave hibernate, and entering and leaving hibernate takes longer when you have more memory.</dl>
 <p> <code>pm-suspend-hybrid</code></p>
 <dl>
-<dd>Hybrid-suspend is the process where the system does everything it needs to hibernate, but suspends instead of shutting down. This means that your computer can wake up quicker than for normal hibernation if you do not run out of power, and you can resume even if you run out of power. <a href="/docs/linux/man/8-s2both/">s2both</a>(8) is an hybrid-suspend implementation.</dl>
+<dd>Hybrid-suspend is the process where the system does everything it needs to hibernate, but suspends instead of shutting down. This means that your computer can wake up quicker than for normal hibernation if you do not run out of power, and you can resume even if you run out of power. s2both(8) is an hybrid-suspend implementation.</dl>
 <h2>Options</h2>
 <p>On some hardware putting the video card in the suspend state and recovering from it needs some special quirk handling. With the &#8211;quirk-* options of the <code>pm-suspend</code> and <code>pm-suspend-hybrid</code> commands you can select which quirks should be used. </p>
 <p> If <code>pm-suspend</code>, <code>pm-hibernate</code>, or <code>pm-suspend-hybrid</code> are invoked without any commandline parameters, they will try to grab the correct quirks from the internal quirk database. </p>
@@ -131,7 +131,7 @@ description: "pm-action – Suspend or Hibernate your computer"
 <h2>Bugs</h2>
 <p>The upstream BTS can be found at m[blue]<code><a rel="nofollow" href="https://bugs.freedesktop.org/">https://bugs.freedesktop.org/</a></code>m[]. Select &#8216;pm-utils&#8217; as product.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-s2ram/">s2ram</a></code>(8), <code><a href="/docs/linux/man/8-s2disk/">s2disk</a></code>(8), <code><a href="/docs/linux/man/8-s2both/">s2both</a></code>(8), <code><a href="/docs/linux/man/1-pm-is-supported/">pm-is-supported</a></code>(1), <code><a href="/docs/linux/man/8-pm-powersave/">pm-powersave</a></code>(8), <code><a href="/docs/linux/man/8-vbetool/">vbetool</a></code>(8), <code><a href="/docs/linux/man/8-radeontool/">radeontool</a></code>(8)</p>
+<p><code>s2ram</code>(8), <code>s2disk</code>(8), <code>s2both</code>(8), <code><a href="/docs/linux/man/1-pm-is-supported/">pm-is-supported</a></code>(1), <code><a href="/docs/linux/man/8-pm-powersave/">pm-powersave</a></code>(8), <code>vbetool</code>(8), <code><a href="/docs/linux/man/8-radeontool/">radeontool</a></code>(8)</p>
 <h2>Author</h2>
 <p><code>Tim Dijkstra</code> &lt;tim [at] famdijkstra.org&gt;</p>
 <dl>

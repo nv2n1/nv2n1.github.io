@@ -55,7 +55,7 @@ rancid-admin-usfs: joe,bob</pre>
 <p> Example: Precedence: bulk
 X-clamation: beef cake</p>
 <dt><code>MAILOPTS</code></p>
-<dd>Define additional options used to invoke <code><a href="/docs/linux/man/8-sendmail/">sendmail</a></code>(8). By default, this is not set. </p>
+<dd>Define additional options used to invoke <code>sendmail</code>(8). By default, this is not set. </p>
 <p> Example: MAILOPTS=&quot;-f bounces.go.here [at] example.com&quot;</p>
 <dt><code>MAILSPLIT</code></p>
 <dd>Defines the maximum BODY size of diffs in kilobytes, such that diffs are split clunks no larger than N kbytes. The minimum is 0, which disables splitting. </p>

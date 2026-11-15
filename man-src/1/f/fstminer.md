@@ -37,5 +37,5 @@ description: "fst2miner – Data mining of FST files"
 <h2>AUTHORS</h2>
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-vztminer/">vztminer</a></i>(1) <i><a href="/docs/linux/man/1-lxt2miner/">lxt2miner</a></i>(1) <i><a href="/docs/linux/man/1-fst2vcd/">fst2vcd</a></i>(1) <i><a href="/docs/linux/man/1-vcd2fst2/">vcd2fst2</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
+<p> <i><a href="/docs/linux/man/1-vztminer/">vztminer</a></i>(1) <i><a href="/docs/linux/man/1-lxt2miner/">lxt2miner</a></i>(1) <i><a href="/docs/linux/man/1-fst2vcd/">fst2vcd</a></i>(1) <i>vcd2fst2</i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
 <h2>Index</h2>

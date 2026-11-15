@@ -262,7 +262,7 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <p> &lt;Eterm-VERSION&gt; </p>
 <p> where VERSION is the Eterm version for which the config file is intended. For example, config files written for Eterm 0.9 should have &quot;&lt;Eterm-0.9&gt;&quot; as their first line, followed immediately by a newline.</p>
 <dt>COLOR CONTEXT</p>
-<dd>This context contains color specifications. With the exception of the terminal colors 0-15, all <i>color</i>s should be either a valid color name or an RGB string as outlined in the <i><a href="/docs/linux/man/7-x11/">X11</a></i>(7) man page. </p>
+<dd>This context contains color specifications. With the exception of the terminal colors 0-15, all <i>color</i>s should be either a valid color name or an RGB string as outlined in the <i>X11</i>(7) man page. </p>
 <dl>
 <dd><code>foreground</code><i> color</i></p>
 <dl>

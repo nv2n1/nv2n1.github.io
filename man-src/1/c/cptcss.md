@@ -36,5 +36,5 @@ description: "cptcss – create CSS fragment for colouring HTML tables."
 <h2>AUTHOR</h2>
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1), <code><a href="/docs/linux/man/1-svgcss3/">svgcss3</a></code>(1). </p>
+<p> <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1), <code>svgcss3</code>(1). </p>
 <h2>Index</h2>

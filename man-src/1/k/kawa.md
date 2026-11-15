@@ -42,5 +42,5 @@ description: "kawa – Scheme language implemented using on a Java VM"
 <h2>AUTHOR</h2>
 <p> Per Bothner &lt;per [at] bothner.com&gt;.</p>
 <h2>SEE ALSO</h2>
-<p> <code>info kawa</code> &#8211; the complete Kawa manual. <i><a rel="nofollow" href="http://www.gnu.org/software/kawa/">http://www.gnu.org/software/kawa/</a></i> &#8211; the <code>kawa</code> home page, based on the same Kawa manual. <code><a href="/docs/linux/man/1-qexo/">qexo</a>(1)</code> &#8211; an implementation of XQuery using the same engine. </p>
+<p> <code>info kawa</code> &#8211; the complete Kawa manual. <i><a rel="nofollow" href="http://www.gnu.org/software/kawa/">http://www.gnu.org/software/kawa/</a></i> &#8211; the <code>kawa</code> home page, based on the same Kawa manual. <code>qexo(1)</code> &#8211; an implementation of XQuery using the same engine. </p>
 <h2>Index</h2>

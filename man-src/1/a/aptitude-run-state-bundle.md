@@ -14,7 +14,7 @@ description: "aptitude-run-state-bundle – unpack an aptitude state bundle and 
 <dt> <code>aptitude-run-state-bundle</code> [&lt;<i>options</i>&gt;&#8230;] &lt;<i>input-file</i>&gt; [&lt;<i>program</i>&gt;&nbsp;<wbr>[&lt;<i>arguments</i>&gt;&#8230;]]</dl>
 <h2>DESCRIPTION</h2>
 <p> <code>aptitude-run-state-bundle</code></p>
-<dd>unpacks the given aptitude state bundle created by <code><a href="/docs/linux/man/1-aptitude-create-state-bundle/">aptitude-create-state-bundle</a></code>(1) to a temporary directory, invokes &lt;<i>program</i>&gt; on it with the supplied &lt;<i>arguments</i>&gt;, and removes the temporary directory afterwards. If &lt;<i>program</i>&gt; is not supplied, it defaults to <code><a href="/docs/linux/man/8-aptitude/">aptitude</a></code>(8).</p>
+<dd>unpacks the given aptitude state bundle created by <code><a href="/docs/linux/man/1-aptitude-create-state-bundle/">aptitude-create-state-bundle</a></code>(1) to a temporary directory, invokes &lt;<i>program</i>&gt; on it with the supplied &lt;<i>arguments</i>&gt;, and removes the temporary directory afterwards. If &lt;<i>program</i>&gt; is not supplied, it defaults to <code>aptitude</code>(8).</p>
 <h2>OPTIONS</h2>
 <p> The following options may occur on the command-line before the input file. Options following the input file are presumed to be arguments to <code>aptitude</code>. </p>
 <p> <code>&#8211;append-args</code></p>
@@ -47,7 +47,7 @@ description: "aptitude-run-state-bundle – unpack an aptitude state bundle and 
 <dt>
 <dd> Unpack the input file to a temporary directory, but don&#8217;t actually run <code>aptitude</code>.</dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-aptitude-create-state-bundle/">aptitude-create-state-bundle</a></code>(1), <code><a href="/docs/linux/man/8-aptitude/">aptitude</a></code>(8), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8)</p>
+<p> <code><a href="/docs/linux/man/1-aptitude-create-state-bundle/">aptitude-create-state-bundle</a></code>(1), <code>aptitude</code>(8), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8)</p>
 <h2>AUTHOR</h2>
 <p> <code>Daniel Burrows</code> &lt;dburrows [at] debian.org&gt;</p>
 <dl>

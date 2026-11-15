@@ -595,7 +595,7 @@ nomod() = 5;<br />
 </pre>
 <p> and in: </p>
 <pre>
-    (<a href="//www.systutorials.com/docs/linux/man/2-data/">data</a>(2),<a href="//www.systutorials.com/docs/linux/man/3-data/">data</a>(3)) = get_data(3,4);
+    (data(2),<a href="//www.systutorials.com/docs/linux/man/3-data/">data</a>(3)) = get_data(3,4);
 </pre>
 <p> all the subroutines are called in a list context. </p>
 <p> Lvalue subroutines are convenient, but you have to keep in mind that, when used with objects, they may violate encapsulation. A normal mutator can check the supplied argument before setting the attribute it is protecting, an lvalue subroutine cannot. If you require any special processing when storing and retrieving the values, consider using the <font SIZE="-1">CPAN</font> module Sentinel or something similar.</p>
@@ -879,7 +879,7 @@ sub foo(*)<br />
 <pre>
     mytime +2;
 </pre>
-<p> you&#8217;ll get <tt>&quot;mytime() + 2&quot;</tt>, not <tt><a href="/docs/linux/man/2-mytime/">mytime</a>(2)</tt>, which is how it would be parsed without a prototype. If you want to force a unary function to have the same precedence as a list operator, add <tt>&quot;;&quot;</tt> to the end of the prototype: </p>
+<p> you&#8217;ll get <tt>&quot;mytime() + 2&quot;</tt>, not <tt>mytime(2)</tt>, which is how it would be parsed without a prototype. If you want to force a unary function to have the same precedence as a list operator, add <tt>&quot;;&quot;</tt> to the end of the prototype: </p>
 <p>sub mygetprotobynumber($;);<br />
 mygetprotobynumber $a &gt; $b;<br />
 #parsed as mygetprotobynumber($a &gt; $b)</p>

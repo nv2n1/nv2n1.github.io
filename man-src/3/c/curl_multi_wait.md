@@ -23,7 +23,7 @@ CURLMcode curl_multi_wait(CURLM *multi_handle,
 <p> The calling application may pass additional curl_waitfd structures which are similar to <i><a href="/docs/linux/man/2-poll/">poll</a>(2)</i>&#8216;s pollfd structure to be waited on in the same call. </p>
 <p> On completion, if <i>numfds</i> is supplied, it will be populated with the number of file descriptors on which interesting events occured. </p>
 <p> If no extra file descriptors are provided and libcurl has no file descriptor to offer to wait for, this function will return immediately. </p>
-<p> This function is encouraged to be used instead of <a href="/docs/linux/man/3-select/">select</a>(3) when using the multi interface to allow applications to easier circumvent the common problem with 1024 maximum file descriptors.</p>
+<p> This function is encouraged to be used instead of select(3) when using the multi interface to allow applications to easier circumvent the common problem with 1024 maximum file descriptors.</p>
 <h2>curl_waitfd</h2>
 <pre><code>
 struct curl_waitfd {

@@ -50,7 +50,7 @@ description: "cgtsv.f –"
           A.
           On exit, DL is overwritten by the (n-2) elements of the
           second superdiagonal of the upper triangular matrix U from
-          the LU factorization of A, in <a href="//www.systutorials.com/docs/linux/man/1-DL/">DL</a>(1), ..., DL(n-2).
+          the LU factorization of A, in DL(1), ..., DL(n-2).
 </pre>
 <p> <i>D</i> </p>
 <pre>

@@ -47,13 +47,13 @@ description: "pki-server-instance – Command-Line Interface for managing Certif
 <dd>This command is to stop a CS instance. Note that currently this command cannot be used to stop <code>nuxwdog</code>-enabled instances.</dl>
 <p> <code>pki-server [CLI options] instance-migrate</code> &#8211;tomcat &lt;version&gt; &lt;instance_ID&gt;</p>
 <dl>
-<dd>There are differences in configuration between Apache Tomcat 7 and Apache Tomcat 8. This command reconfigures a CS instance to match the specified Tomcat version. This command can be used to migrate initially created under Tomcat 7 when Tomcat is upgraded.. See <code>pki-server <a href="/docs/linux/man/8-migrate/">migrate</a></code>(8) for further details.</dl>
+<dd>There are differences in configuration between Apache Tomcat 7 and Apache Tomcat 8. This command reconfigures a CS instance to match the specified Tomcat version. This command can be used to migrate initially created under Tomcat 7 when Tomcat is upgraded.. See <code>pki-server migrate</code>(8) for further details.</dl>
 <p> <code>pki-server [CLI options] instance-nuxwdog-enable</code> &lt;instance ID&gt;</p>
 <dl>
-<dd>This command is to convert a CS instance to start without access to a password file, using the <code>nuxwdog</code> daemon. See <code>pki-server <a href="/docs/linux/man/8-nuxwdog/">nuxwdog</a></code>(8) for further details.</dl>
+<dd>This command is to convert a CS instance to start without access to a password file, using the <code>nuxwdog</code> daemon. See <code>pki-server nuxwdog</code>(8) for further details.</dl>
 <p> <code>pki-server [CLI options] instance-nuxwdog-disable</code> &lt;instance ID&gt;</p>
 <dl>
-<dd>This command is to convert a CS instance to start with access to a password file, rather than using the <code>nuxwdog</code> daemon. See <code>pki-server <a href="/docs/linux/man/8-nuxwdog/">nuxwdog</a></code>(8) for further details.</dl>
+<dd>This command is to convert a CS instance to start with access to a password file, rather than using the <code>nuxwdog</code> daemon. See <code>pki-server nuxwdog</code>(8) for further details.</dl>
 <p> <code>pki-server [CLI options] instance-externalcert-add</code> -i &lt;instance ID&gt;<br />
 &nbsp;<wbr>&#8211;cert-file&nbsp;<wbr>&lt;path&gt;&nbsp;<wbr>&#8211;trust-args&nbsp;<wbr>&lt;args&gt;&nbsp;<wbr>&#8211;nickname&nbsp;<wbr>&lt;nickname&gt;&nbsp;<wbr>&#8211;token&nbsp;<wbr>&lt;token&gt;</p>
 <dl>

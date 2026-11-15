@@ -63,7 +63,7 @@ description: "bundle-config – Set bundler configuration options"
 <p> After running this command, every time bundler needs to install the <code>mysql</code> gem, it will pass along the flags you specified.</p>
 <h2>Configuration Keys</h2>
 <p>Configuration keys in bundler have two forms: the canonical form and the environment variable form. </p>
-<p> For instance, passing the <code>&#8211;without</code> flag to bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> prevents Bundler from installing certain groups specified in the <a href="/docs/linux/man/5-gemfile/">Gemfile</a>(5). Bundler persists this value in <code>app/.bundle/config</code> so that calls to <code>Bundler.setup</code> do not try to find gems from the <code>Gemfile</code> that you didn&#8217;t install. Additionally, subsequent calls to bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> remember this setting and skip those groups. </p>
+<p> For instance, passing the <code>&#8211;without</code> flag to bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> prevents Bundler from installing certain groups specified in the Gemfile(5). Bundler persists this value in <code>app/.bundle/config</code> so that calls to <code>Bundler.setup</code> do not try to find gems from the <code>Gemfile</code> that you didn&#8217;t install. Additionally, subsequent calls to bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> remember this setting and skip those groups. </p>
 <p> The canonical form of this configuration is <code>&quot;without&quot;</code>. To convert the canonical form to the environment variable form, capitalize it, and prepend <code>BUNDLE_</code>. The environment variable form of <code>&quot;without&quot;</code> is <code>BUNDLE_WITHOUT</code>. </p>
 <p> Any periods in the configuration keys must be replaced with two underscores when setting it via environment variables. The configuration key <code>local.rack</code> becomes the environment variable <code>BUNDLE_LOCAL__RACK</code>.</p>
 <h2>List Of Available Keys</h2>
@@ -182,7 +182,7 @@ description: "bundle-config – Set bundler configuration options"
 <dt>&bull;</p>
 <dd><code>without</code> (<code>BUNDLE_WITHOUT</code>): A <code>:</code>-separated list of groups whose gems bundler should not install.</p>
 <dd></dl>
-<p> In general, you should set these settings per-application by using the applicable flag to the bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> or bundle <a href="/docs/linux/man/1-package/">package</a>(1) <i>bundle-package.1.html</i> command. </p>
+<p> In general, you should set these settings per-application by using the applicable flag to the bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i> or bundle package(1) <i>bundle-package.1.html</i> command. </p>
 <p> You can set them globally either via environment variables or <code>bundle config</code>, whichever is preferable for your setup. If you use both, environment variables will take preference over global settings.</p>
 <h2>Local Git Repos</h2>
 <p>Bundler also allows you to work against a git repository locally instead of using the remote version. This can be achieved by setting up a local override:</p>

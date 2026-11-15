@@ -14,7 +14,7 @@ description: "composite – overlaps one image over another."
 <dt><code>composite-im6.q16</code> <code>[</code> <i>options</i> <code>&#8230; ]</code> <i>change-file base-file</i> <code>[</code> <i>mask-file</i> <code>]</code> <i>output-image</i></p>
 <dd></dl>
 <h2>OVERVIEW</h2>
-<p> The <code>composite-im6.q16</code> program is a member of the <a href="/docs/linux/man/1-imagemagick-ims6-q16/">ImageMagick-ims6.q16</a>(1) suite of tools. Use it to overlap one image over another. </p>
+<p> The <code>composite-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to overlap one image over another. </p>
 <p> For more information about the composite command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/composite.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="http://imagemagick.org/script/composite.php.">http://imagemagick.org/script/composite.php.</a></p>
 <h2>DESCRIPTION</h2>
 <p> Image Settings:<br />

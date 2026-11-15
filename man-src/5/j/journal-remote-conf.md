@@ -37,4 +37,4 @@ description: "journal-remote.conf, journal-remote.conf.d – Journal remote serv
 <dl>
 <dd>SSL CA certificate.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd-journal-remote/">systemd-journal-remote</a></code>(1), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8) </p>
+<p><code>systemd-journal-remote</code>(1), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8) </p>

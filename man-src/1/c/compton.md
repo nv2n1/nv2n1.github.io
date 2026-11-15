@@ -507,5 +507,5 @@ $ compton --backend glx --vsync opengl-swc
 <h2>RESOURCES</h2>
 <p> Homepage: <a rel="nofollow" href="https://github.com/chjj/compton">https://github.com/chjj/compton</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xcompmgr/">xcompmgr</a></code>(1), <code><a href="/docs/linux/man/1-compton-trans/">compton-trans</a></code>(1) </p>
+<p> <code>xcompmgr</code>(1), <code><a href="/docs/linux/man/1-compton-trans/">compton-trans</a></code>(1) </p>
 <h2>Index</h2>

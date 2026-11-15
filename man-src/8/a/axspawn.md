@@ -64,6 +64,6 @@ read-/writable. Has to be owned by the user or uid 0&nbsp;<wbr>(root).<br />
 /etc/ax25/axspawn.conf</pre>
 <p>/etc/ax25/bcpasswd ~/.bcpasswd</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-axspawn-conf/">axspawn.conf</a></code>(5), <code><a href="/docs/linux/man/8-ax25d/">ax25d</a></code>(8).</p>
+<p><code>axspawn.conf</code>(5), <code><a href="/docs/linux/man/8-ax25d/">ax25d</a></code>(8).</p>
 <h2>Author</h2>
 <p>Joerg Reuter DL1BKE &lt;jreuter [at] poboxes.com&gt;</p>

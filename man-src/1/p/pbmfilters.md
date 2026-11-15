@@ -144,7 +144,7 @@ description: "pbmfilters – list of all programs in the netpbm package"
 <dt><code>pbmtopi3</code></p>
 <dd> convert a portable bitmap into an Atari Degas .pi3 file</p>
 <dt><code>pbmtoplot</code></p>
-<dd> convert a portable bitmap into a Unix <a href="/docs/linux/man/5-plot/">plot</a>(5) file</p>
+<dd> convert a portable bitmap into a Unix plot(5) file</p>
 <dt><code>pbmtoppa</code></p>
 <dd> convert PBM image to HP Printer Performance Architecture (PPA)</p>
 <dt><code>pbmtopsg3</code></p>

@@ -238,7 +238,7 @@ stg[--version | --help] stg[--help&lt;command&gt; | &lt;command&gt; --help] stg&
 <dt>
 <dd> Show the tree diff</dl>
 <h2>CONFIGURATION MECHANISM</h2>
-<p> StGit uses the same configuration mechanism as Git. See <code><a href="/docs/linux/man/7-git/">git</a></code>(7) for more details.</p>
+<p> StGit uses the same configuration mechanism as Git. See <code>git</code>(7) for more details.</p>
 <h2>TEMPLATES</h2>
 <p> A number of StGit commands make use of template files to provide useful default texts to be edited by the user. These &lt;name&gt;.tmpl template files are searched in the following directories: </p>
 <dl>

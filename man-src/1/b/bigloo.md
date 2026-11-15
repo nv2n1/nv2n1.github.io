@@ -45,7 +45,7 @@ description: "bigloo v2.3 – `a practical Scheme compiler’"
  ~/.bigloorc &#8212; user `runtime-command&#8217; configuration file.<br />
  /&#8230;/.bigloorc &#8212; idem. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-bglafile/">bglafile</a>(1), <a href="/docs/linux/man/1-bgljfile/">bgljfile</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-bglmake/">bglmake</a>(1), <a href="/docs/linux/man/1-bglpp/">bglpp</a>(1), <a href="/docs/linux/man/1-bglprof/">bglprof</a>(1), <a href="/docs/linux/man/1-bgltags/">bgltags</a>(1), <a href="/docs/linux/man/1-bglmco/">bglmco</a>(1), <a href="/docs/linux/man/1-gcc/">gcc</a>(1), <a href="/docs/linux/man/1-camloo/">camloo</a>(1), <a href="/docs/linux/man/1-cigloo/">cigloo</a>(1), <a href="/docs/linux/man/1-jigloo/">jigloo</a>(1). </p>
+<p> <a href="/docs/linux/man/1-bglafile/">bglafile</a>(1), <a href="/docs/linux/man/1-bgljfile/">bgljfile</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-bglmake/">bglmake</a>(1), <a href="/docs/linux/man/1-bglpp/">bglpp</a>(1), <a href="/docs/linux/man/1-bglprof/">bglprof</a>(1), <a href="/docs/linux/man/1-bgltags/">bgltags</a>(1), <a href="/docs/linux/man/1-bglmco/">bglmco</a>(1), <a href="/docs/linux/man/1-gcc/">gcc</a>(1), camloo(1), cigloo(1), jigloo(1). </p>
 <h2>AUTHOR</h2>
 <p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
 <h2>Index</h2>

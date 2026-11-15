@@ -15,4 +15,4 @@ void set_zbuffer(ZBUFFER *zbuf);</code></pre>
 <h2>Description</h2>
 <p>Makes the given Z-buffer be the active one. This should have been previously created with create_zbuffer(). </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-create_zbuffer/">create_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-clear_zbuffer/">clear_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-destroy_zbuffer/">destroy_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/3-create_zbuffer/">create_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-clear_zbuffer/">clear_zbuffer</a></code>(3), <code>destroy_zbuffer</code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3) </p>

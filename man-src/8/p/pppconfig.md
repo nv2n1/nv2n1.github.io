@@ -40,7 +40,7 @@ description: "pppconfig – configure pppd to connect to the Internet"
 <h2>Bugs</h2>
 <p>Don&#8217;t tell pppconfig to find your modem while pppd is running.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-chat/">chat</a>(8), <a href="/docs/linux/man/1-gpppon/">gpppon</a>(1), <a href="/docs/linux/man/1-plog/">plog</a>(1), <a href="/docs/linux/man/1-poff/">poff</a>(1), <a href="/docs/linux/man/1-pon/">pon</a>(1), <a href="/docs/linux/man/8-pppd/">pppd</a>(8), </code> and <code><a href="/docs/linux/man/1-whiptail/">whiptail</a>(1).</code></p>
+<p><code><a href="/docs/linux/man/8-chat/">chat</a>(8), gpppon(1), <a href="/docs/linux/man/1-plog/">plog</a>(1), <a href="/docs/linux/man/1-poff/">poff</a>(1), <a href="/docs/linux/man/1-pon/">pon</a>(1), <a href="/docs/linux/man/8-pppd/">pppd</a>(8), </code> and <code><a href="/docs/linux/man/1-whiptail/">whiptail</a>(1).</code></p>
 <h2>Author</h2>
 <p><code>pppconfig</code> was written by John Hasler &lt;jhasler [at] debian.org&gt;.</p>
 <h2>Copyright</h2>

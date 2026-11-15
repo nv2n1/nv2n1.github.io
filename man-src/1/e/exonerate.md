@@ -589,5 +589,5 @@ description: "exonerate – a generic tool for sequence comparison"
 <p> Please see the file COPYING which was distrubuted with this package, or <a rel="nofollow" href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a> for details. </p>
 <p> This package has been developed as part of the ensembl project. Please see <a rel="nofollow" href="http://www.ensembl.org/">http://www.ensembl.org/</a> for more information.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-exonerate-server/">exonerate-server</a></code>(1), <code><a href="/docs/linux/man/1-ipcress/">ipcress</a></code>(1), <code><a href="//www.systutorials.com/docs/linux/man/1L-blast/">blast</a></code>(1L). </p>
+<p> <code><a href="/docs/linux/man/1-exonerate-server/">exonerate-server</a></code>(1), <code><a href="/docs/linux/man/1-ipcress/">ipcress</a></code>(1), <code>blast</code>(1L). </p>
 <h2>Index</h2>

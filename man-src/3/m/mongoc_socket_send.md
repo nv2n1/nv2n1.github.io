@@ -26,7 +26,7 @@ mongoc_socket_send (mongoc_socket_t *sock,
 <dd>A size_t with the number of bytes in buf.</dl>
 <dl COMPACT>
 <dt><code>expire_at</code></p>
-<dd>A int64_t with an absolute timeout for the operation or 0. The timeout is in monotonic time using microseconds. You can retrieve the current monotonic time with <code><a href="/docs/linux/man/3-bson_get_monotonic_time/">bson_get_monotonic_time</a>(3)</code> \&amp;.</dl>
+<dd>A int64_t with an absolute timeout for the operation or 0. The timeout is in monotonic time using microseconds. You can retrieve the current monotonic time with <code>bson_get_monotonic_time(3)</code> \&amp;.</dl>
 <h2>Description</h2>
 <p>Sends buflen bytes in buf to the destination. If a timeout expired, the number of bytes sent will be returned or -1 if no bytes were sent. </p>
 <h2>Returns</h2>

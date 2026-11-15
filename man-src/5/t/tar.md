@@ -296,9 +296,9 @@ description: "tar – format of tape archive files"
 <dt><code>x</code></p>
 <dd>POSIX pax interchange format per-file extensions.</dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-ar/">ar</a>(1), <a href="/docs/linux/man/1-pax/">pax</a>(1), <a href="/docs/linux/man/1-tar/">tar</a>(1)</p>
+<p><a href="/docs/linux/man/1-ar/">ar</a>(1), pax(1), <a href="/docs/linux/man/1-tar/">tar</a>(1)</p>
 <h2>Standards</h2>
-<p>The <code>tar</code> utility is no longer a part of POSIX or the Single Unix Standard. It last appeared in St -susv2 . It has been supplanted in subsequent standards by <a href="/docs/linux/man/1-pax/">pax</a>(1). The ustar format is currently part of the specification for the <a href="/docs/linux/man/1-pax/">pax</a>(1) utility. The pax interchange file format is new with St -p1003.1-2001 .</p>
+<p>The <code>tar</code> utility is no longer a part of POSIX or the Single Unix Standard. It last appeared in St -susv2 . It has been supplanted in subsequent standards by pax(1). The ustar format is currently part of the specification for the pax(1) utility. The pax interchange file format is new with St -p1003.1-2001 .</p>
 <h2>History</h2>
 <p>A <code>tar</code> command appeared in Seventh Edition Unix, which was released in January, 1979. It replaced the <code>tp</code> program from Fourth Edition Unix which in turn replaced the <code>tap</code> program from First Edition Unix. John Gilmore&#8217;s <code>pdtar</code> public-domain implementation (circa 1987) was highly influential and formed the basis of <code>GNU tar</code> (circa 1988). Joerg Shilling&#8217;s <code>star</code> archiver is another open-source (GPL) archiver (originally developed circa 1985) which features complete support for pax interchange format. </p>
 <p> This documentation was written as part of the <code>libarchive</code> and <code>bsdtar</code> project by An Tim Kientzle Aq kientzle [at] FreeBSD.org .</p>

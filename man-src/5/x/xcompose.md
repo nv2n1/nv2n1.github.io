@@ -71,5 +71,5 @@ description: "Compose – X client mappings for multi-key input sequences"
 <dt><i>$HOME/.compose-cache/</i></p>
 <dd>Per-user cache directory for compiled compose files.</dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xlookupstring/">XLookupString</a></code>(3), <code><a href="/docs/linux/man/3-xmblookupstring/">XmbLookupString</a></code>(3), <code><a href="/docs/linux/man/3-xwclookupstring/">XwcLookupString</a></code>(3), <code><a href="/docs/linux/man/3-xutf8lookupstring/">Xutf8LookupString</a></code>(3), <code><a href="/docs/linux/man/1-mkcomposecache/">mkcomposecache</a></code>(1), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7).<br />
+<p><code><a href="/docs/linux/man/3-xlookupstring/">XLookupString</a></code>(3), <code><a href="/docs/linux/man/3-xmblookupstring/">XmbLookupString</a></code>(3), <code><a href="/docs/linux/man/3-xwclookupstring/">XwcLookupString</a></code>(3), <code><a href="/docs/linux/man/3-xutf8lookupstring/">Xutf8LookupString</a></code>(3), <code>mkcomposecache</code>(1), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7).<br />
  <i>Xlib &#8211; C Language X Interface</i> </p>

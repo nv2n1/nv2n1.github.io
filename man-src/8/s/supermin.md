@@ -36,8 +36,8 @@ description: "supermin – Tool for creating supermin appliances"
 <dd>Select the output directory where the two supermin appliance files are written (<tt>&quot;hostfiles&quot;</tt> and <tt>&quot;base.img&quot;</tt>). The default directory is the current directory. Note that if this files exist already in the output directory then they will be overwritten.</p>
 <dt><code>&#8211;packager-config </code><font SIZE="-1"><code>CONFIGFILE</code></font></p>
 <dd>Set the configuration file for the package manager. This allows you to specify alternate software repositories. </p>
-<p> For ArchLinux, this sets the pacman configuration file (default <tt>&quot;/etc/pacman.conf&quot;</tt>). See <i><a href="/docs/linux/man/5-pacman-conf/">pacman.conf</a></i>(5). </p>
-<p> For Yum/RPM distributions, this sets the yum configuration file (default <tt>&quot;/etc/yum.conf&quot;</tt>). See <i><a href="/docs/linux/man/5-yum-conf/">yum.conf</a></i>(5).</p>
+<p> For ArchLinux, this sets the pacman configuration file (default <tt>&quot;/etc/pacman.conf&quot;</tt>). See <i>pacman.conf</i>(5). </p>
+<p> For Yum/RPM distributions, this sets the yum configuration file (default <tt>&quot;/etc/yum.conf&quot;</tt>). See <i>yum.conf</i>(5).</p>
 <dt><code>&#8211;save-temps</code></p>
 <dd>Don&#8217;t remove temporary files and directories on exit. This is useful for debugging.</p>
 <dt><code>&#8211;use-installed</code></p>
@@ -118,7 +118,7 @@ usr/sbin/serviced&quot; |
 <h3><font SIZE="-1">ENFORCING AVAILABILITY OF HOSTFILES</font></h3>
 <p>supermin-helper builds the appliance by copying in host files as listed in <tt>&quot;hostfiles&quot;</tt>. For this to work those host files must be available. We usually enforce this by adding requirements (eg. <font SIZE="-1">RPM </font><tt>&quot;Requires:&quot;</tt> lines) on the package that uses the supermin appliance, so that package cannot be installed without pulling in the dependent packages and thus making sure the host files are available.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/8-supermin-helper/">supermin-helper</a></i>(8), &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/supermin/">http://people.redhat.com/~rjones/supermin/</a>&gt;, <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
+<p><i><a href="/docs/linux/man/8-supermin-helper/">supermin-helper</a></i>(8), &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/supermin/">http://people.redhat.com/~rjones/supermin/</a>&gt;, <i>guestfs</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>Authors</h2>
 <dl>
 <dt>&bull;</p>

@@ -62,5 +62,5 @@ description: "marked – a javascript markdown parser"
 <h2>LICENSE</h2>
 <p> Copyright (c) 2011-2014, Christopher Jeffrey (MIT License). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-markdown/">markdown</a>(1),</code> <code><a href="/docs/linux/man/1-node-js/">node.js</a>(1)</code> </p>
+<p> <code><a href="/docs/linux/man/1-markdown/">markdown</a>(1),</code> <code>node.js(1)</code> </p>
 <h2>Index</h2>

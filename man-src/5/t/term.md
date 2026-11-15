@@ -22,7 +22,7 @@ description: "term – format of compiled term file."
 <dd><code>ncurses</code> distinguishes the two cases in the TERMINFO and TERMINFO_DIRS environment variable by assuming a directory tree for entries that correspond to an existing directory, and hashed database otherwise.</dl>
 <h3>Legacy Storage Format</h3>
 <p>The format has been chosen so that it will be the same on all hardware. An 8 or more bit byte is assumed, but no assumptions about byte ordering or sign extension are made. </p>
-<p> The compiled file is created with the <code>tic</code> program, and read by the routine <code><a href="//www.systutorials.com/docs/linux/man/3X-setupterm/">setupterm</a></code>(3X). The file is divided into six parts:</p>
+<p> The compiled file is created with the <code>tic</code> program, and read by the routine <code>setupterm</code>(3X). The file is divided into six parts:</p>
 <dl>
 <dd>
 <dl>

@@ -16,7 +16,7 @@ description: "tv_to_potatoe – Convert XMLTV listings to potatoe format."
 <p> <code>&#8211;outdir </code><font SIZE="-1"><code>PATH</code></font> write to <font SIZE="-1">PATH</font> rather than current working directory </p>
 <p> <code>&#8211;lang </code><font SIZE="-1"><code>LANGUAGE</code></font> the <font SIZE="-1">LANGUAGE</font> you prefer. This argument may be specified multiple times. If no <code>&#8211;lang</code> arguments are provided, German is used as the language of choice, followed by English.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/5-xmltv/">xmltv</a></i>(5).</p>
+<p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Stefan Siegl, ssiegl [at] gmx.de </p>
 <h2>Index</h2>

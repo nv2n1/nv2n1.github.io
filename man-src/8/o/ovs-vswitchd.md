@@ -357,7 +357,7 @@ description: "ovs-vswitchd – Open vSwitch daemon"
 <dt><code>-generate</code></p>
 <dd>This option, added to one of the ways to specify a flow already described, causes Open vSwitch to internally generate a packet with the flow described and then to use that packet. If your goal is to execute side effects, then <code>-generate</code> is the easiest way to do it, but <code>-generate</code> is not a good way to fill in incomplete information, because it generates packets based on only the flow information, which means that the packets really do not have any more information than the flow.</p>
 <dt><i>packet</i></p>
-<dd>This form supplies an explicit <i>packet</i> as a sequence of hex digits. An Ethernet frame is at least 14 bytes long, so there must be at least 28 hex digits. Obviously, it is inconvenient to type in the hex digits by hand, so the <code><a href="/docs/linux/man/1-ovs-pcap/">ovs-pcap</a></code>(1) and <code><a href="/docs/linux/man/1-ovs-tcpundump/">ovs-tcpundump</a></code>(1) utilities provide easier ways.</p>
+<dd>This form supplies an explicit <i>packet</i> as a sequence of hex digits. An Ethernet frame is at least 14 bytes long, so there must be at least 28 hex digits. Obviously, it is inconvenient to type in the hex digits by hand, so the <code>ovs-pcap</code>(1) and <code>ovs-tcpundump</code>(1) utilities provide easier ways.</p>
 <dd>With this form, packet headers are extracted directly from <i>packet</i>, so the <i>odp_flow</i> or <i>br_flow</i> should specify only metadata. The metadata can be:</p>
 <dl>
 <dd>

@@ -13,7 +13,7 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <h2>Entrypoints</h2>
 <p>The xdm_t SELinux type can be entered via the <code>xdm_exec_t</code> file type. </p>
 <p> The default entrypoint paths for the xdm_t domain are the following: </p>
-<p> /usr/s?bin/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?, /usr/s?bin/lightdm*, /usr/s?bin/[mxgkw]dm, /usr/s?bin/gdm-binary, /usr/s?bin/lxdm(-binary)?, /usr/X11R6/bin/[xgkw]dm, /usr/bin/razor-lightdm-.*, /usr/bin/sddm, /usr/bin/slim, /usr/bin/gpe-dm, /opt/kde3/bin/kdm, /usr/sbin/mdm-binary, /usr/bin/sddm-greeter, /etc/rc.d/init.d/x11-common</p>
+<p> /usr/s?bin/gdm(3)?, /usr/s?bin/lightdm*, /usr/s?bin/[mxgkw]dm, /usr/s?bin/gdm-binary, /usr/s?bin/lxdm(-binary)?, /usr/X11R6/bin/[xgkw]dm, /usr/bin/razor-lightdm-.*, /usr/bin/sddm, /usr/bin/slim, /usr/bin/gpe-dm, /opt/kde3/bin/kdm, /usr/sbin/mdm-binary, /usr/bin/sddm-greeter, /etc/rc.d/init.d/x11-common</p>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux xdm policy is very flexible allowing users to setup their xdm processes in as secure a method as possible. </p>
@@ -254,7 +254,7 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> <code>xdm_var_lib_t</code> </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/[mxkwg]dm(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/cache/[mg]dm(/.*)?</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?(/.*)?</p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/gdm(3)?(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/sddm(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/lxdm(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/lib/lightdm(/.*)?</p>
@@ -263,8 +263,8 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> <code>xdm_var_run_t</code> </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/etc/kde[34]?/kdm/backgroundrc</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/[kgm]dm(/.*)?</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?.pid</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?(/.*)?</p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/gdm(3)?.pid</p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/gdm(3)?(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/usr/lib/qt-.*/etc/settings(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/slim.*</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/run/lxdm(/.*)?</p>
@@ -284,7 +284,7 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> <code>xserver_log_t</code> </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/[xgkw]dm(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/usr/var/[xgkw]dm(/.*)?</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/log/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?(/.*)?</p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/log/gdm(3)?(/.*)?</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/log/Xorg.*</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/log/XFree86.*</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/var/log/lightdm(/.*)?</p>
@@ -294,9 +294,9 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p>SELinux requires files to have an extended attribute to define the file type. </p>
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux xdm policy is very flexible allowing users to setup their xdm processes in as secure a method as possible. </p>
 <p> EQUIVALENCE DIRECTORIES</code> </p>
-<p> xdm policy stores data with multiple different file context types under the /var/run/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)? directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/run/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)? /srv/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?</code><br />
- <code>restorecon -R -v /srv/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?</code> </p>
+<p> xdm policy stores data with multiple different file context types under the /var/run/gdm(3)? directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
+<p> <code>semanage fcontext -a -e /var/run/gdm(3)? /srv/gdm(3)?</code><br />
+ <code>restorecon -R -v /srv/gdm(3)?</code> </p>
 <p> xdm policy stores data with multiple different file context types under the /var/lib/lightdm directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
 <p> <code>semanage fcontext -a -e /var/lib/lightdm /srv/lightdm</code><br />
  <code>restorecon -R -v /srv/lightdm</code> </p>
@@ -315,7 +315,7 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> &#8211; Set files with the xdm_exec_t type, if you want to transition an executable to the xdm_t domain. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/usr/s?bin/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?, /usr/s?bin/lightdm*, /usr/s?bin/[mxgkw]dm, /usr/s?bin/gdm-binary, /usr/s?bin/lxdm(-binary)?, /usr/X11R6/bin/[xgkw]dm, /usr/bin/razor-lightdm-.*, /usr/bin/sddm, /usr/bin/slim, /usr/bin/gpe-dm, /opt/kde3/bin/kdm, /usr/sbin/mdm-binary, /usr/bin/sddm-greeter, /etc/rc.d/init.d/x11-common </p>
+<dd>/usr/s?bin/gdm(3)?, /usr/s?bin/lightdm*, /usr/s?bin/[mxgkw]dm, /usr/s?bin/gdm-binary, /usr/s?bin/lxdm(-binary)?, /usr/X11R6/bin/[xgkw]dm, /usr/bin/razor-lightdm-.*, /usr/bin/sddm, /usr/bin/slim, /usr/bin/gpe-dm, /opt/kde3/bin/kdm, /usr/sbin/mdm-binary, /usr/bin/sddm-greeter, /etc/rc.d/init.d/x11-common </p>
 </dl>
 <p> <code>xdm_home_t</code> </p>
 <p> &#8211; Set files with the xdm_home_t type, if you want to store xdm files in the users home directory. </p>
@@ -351,13 +351,13 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <p> &#8211; Set files with the xdm_var_lib_t type, if you want to store the xdm files under the /var/lib directory. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/var/lib/[mxkwg]dm(/.*)?, /var/cache/[mg]dm(/.*)?, /var/lib/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?(/.*)?, /var/lib/sddm(/.*)?, /var/lib/lxdm(/.*)?, /var/lib/lightdm(/.*)?, /var/cache/lightdm(/.*)?, /var/lib/lightdm-data(/.*)? </p>
+<dd>/var/lib/[mxkwg]dm(/.*)?, /var/cache/[mg]dm(/.*)?, /var/lib/gdm(3)?(/.*)?, /var/lib/sddm(/.*)?, /var/lib/lxdm(/.*)?, /var/lib/lightdm(/.*)?, /var/cache/lightdm(/.*)?, /var/lib/lightdm-data(/.*)? </p>
 </dl>
 <p> <code>xdm_var_run_t</code> </p>
 <p> &#8211; Set files with the xdm_var_run_t type, if you want to store the xdm files under the /run or /var/run directory. </p>
 <dl>
 <dt>Paths:</p>
-<dd>/etc/kde[34]?/kdm/backgroundrc, /var/run/[kgm]dm(/.*)?, /var/run/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?.pid, /var/run/<a href="/docs/linux/man/3-gdm/">gdm</a>(3)?(/.*)?, /usr/lib/qt-.*/etc/settings(/.*)?, /var/run/slim.*, /var/run/lxdm(/.*)?, /var/run/sddm(/.*)?, /var/run/xauth(/.*)?, /var/run/xdmctl(/.*)?, /var/run/lightdm(/.*)?, /var/run/systemd/multi-session-x(/.*)?, /var/run/xdm.pid, /var/run/lxdm.pid, /var/run/lxdm.auth, /var/run/gdm_socket </p>
+<dd>/etc/kde[34]?/kdm/backgroundrc, /var/run/[kgm]dm(/.*)?, /var/run/gdm(3)?.pid, /var/run/gdm(3)?(/.*)?, /usr/lib/qt-.*/etc/settings(/.*)?, /var/run/slim.*, /var/run/lxdm(/.*)?, /var/run/sddm(/.*)?, /var/run/xauth(/.*)?, /var/run/xdmctl(/.*)?, /var/run/lightdm(/.*)?, /var/run/systemd/multi-session-x(/.*)?, /var/run/xdm.pid, /var/run/lxdm.pid, /var/run/lxdm.auth, /var/run/gdm_socket </p>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>
@@ -370,4 +370,4 @@ description: "xdm_selinux – Security Enhanced Linux Policy for the xdm process
 <h2>Author</h2>
 <p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-xdm/">xdm</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8), <a href="/docs/linux/man/8-xdm_unconfined_selinux/">xdm_unconfined_selinux</a>(8), <a href="/docs/linux/man/8-xdm_unconfined_selinux/">xdm_unconfined_selinux</a>(8) </p>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), xdm(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8), <a href="/docs/linux/man/8-xdm_unconfined_selinux/">xdm_unconfined_selinux</a>(8), <a href="/docs/linux/man/8-xdm_unconfined_selinux/">xdm_unconfined_selinux</a>(8) </p>

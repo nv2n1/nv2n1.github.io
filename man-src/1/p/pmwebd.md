@@ -44,7 +44,7 @@ description: "pmwebd – web access to PCP"
 <dt><code>-N</code></p>
 <dd> Disable creation of new PMWEBAPI contexts via HTTP requests, leaving only permanent ones accessible.</p>
 <dt><code>-K</code> <i>spec</i></p>
-<dd> When fetching metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code><a href="/docs/linux/man/3-__pmspeclocalpmda/">__pmSpecLocalPMDA</a></code>(3). More than one <code>-K</code> option may be used.</p>
+<dd> When fetching metrics from a local context, the <code>-K</code> option may be used to control the DSO PMDAs that should be made accessible. The <i>spec</i> argument conforms to the syntax described in <code>__pmSpecLocalPMDA</code>(3). More than one <code>-K</code> option may be used.</p>
 <dt><code>-l</code> <i>logfile</i></p>
 <dd> By default, logging goes to standard output/error file handles. The verbosity flag <code>-v</code> affects the amount of traffic. The <code>-l</code> option causes the log file to be written to <i>logfile</i> instead. If the log file cannot be created or is not writable, output is written to the standard error instead.</p>
 <dt><code>-U</code> <i>username</i></p>

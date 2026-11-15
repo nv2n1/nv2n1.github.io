@@ -504,6 +504,6 @@ description: "check_openmanage – Nagios plugin for checking the hardware statu
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
 <p> You should have received a copy of the GNU General Public License along with this program. If not, see <a rel="nofollow" href="http://www.gnu.org/licenses/.">http://www.gnu.org/licenses/.</a></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-check_openmanage-conf/">check_openmanage.conf</a></code>(5), <code><a href="/docs/linux/man/3-net--snmp/">Net::SNMP</a></code>(3), <a rel="nofollow" href="http://folk.uio.no/trondham/software/check_openmanage.html">http://folk.uio.no/trondham/software/check_openmanage.html</a></p>
+<p><code><a href="/docs/linux/man/5-check_openmanage-conf/">check_openmanage.conf</a></code>(5), <code>Net::SNMP</code>(3), <a rel="nofollow" href="http://folk.uio.no/trondham/software/check_openmanage.html">http://folk.uio.no/trondham/software/check_openmanage.html</a></p>
 <h2>Authors</h2>
 <p><code>Trond Hasle Amundsen &lt;t.h.amundsen [at] usit.uio.no&gt;</code></p>

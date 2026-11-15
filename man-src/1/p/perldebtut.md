@@ -152,7 +152,7 @@ print &#8220;done: &#8216;$data{$key}&#8217;
 <p> Using &#8216;X&#8217; and cousins requires you not to use the type identifiers ($@%), just the &#8216;name&#8217;: </p>
 <pre>
         DM&lt;3&gt;X ~err
-        FileHandle(stderr) =&gt; <a href="//www.systutorials.com/docs/linux/man/2-fileno/">fileno</a>(2)
+        FileHandle(stderr) =&gt; fileno(2)
 </pre>
 <p> Remember we&#8217;re in our tiny program with a problem, we should have a look at where we are, and what our data looks like. First of all let&#8217;s view some code at our present position (the first line of code in this case), via &#8216;<code>v</code>&#8216;: </p>
 <p>DB&lt;4&gt; v 1 #! / usr / bin / perl 2 : use strict;<br />

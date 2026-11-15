@@ -99,7 +99,7 @@ description: "xscreensaver-demo – interactively control the background xscreen
 <dt><code>Host Name and Time</code></p>
 <dd> If this checkbox is selected, then the text used by the screen savers will be the local host name, OS version, date, time, and system load.</p>
 <dt><code>Text</code></p>
-<dd> If this checkbox is selected, then the literal text typed in the field to its right will be used. If it contains % escape sequences, they will be expanded as per <code><a href="/docs/linux/man/2-strftime/">strftime</a></code>(2).</p>
+<dd> If this checkbox is selected, then the literal text typed in the field to its right will be used. If it contains % escape sequences, they will be expanded as per <code>strftime</code>(2).</p>
 <dt><code>Text File</code></p>
 <dd> If this checkbox is selected, then the contents of the corresponding file will be displayed.</p>
 <dt><code>Program</code></p>
@@ -168,7 +168,7 @@ description: "xscreensaver-demo – interactively control the background xscreen
 <h2>UPGRADES</h2>
 <p> The latest version of xscreensaver, an online version of this manual, and a FAQ can always be found at <a rel="nofollow" href="https://www.jwz.org/xscreensaver/">https://www.jwz.org/xscreensaver/</a></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-x/">X</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-command/">xscreensaver-command</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-text/">xscreensaver-text</a></code>(1)</p>
+<p> <code>X</code>(1), <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-command/">xscreensaver-command</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1), <code><a href="/docs/linux/man/1-xscreensaver-text/">xscreensaver-text</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1992-2015 by Jamie Zawinski. Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. No representations are made about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty.</p>
 <h2>AUTHOR</h2>

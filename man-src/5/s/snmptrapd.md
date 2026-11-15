@@ -127,4 +127,4 @@ description: "snmptrapd.conf – configuration file for the Net-SNMP notificatio
 <h2>Files</h2>
 <p>/etc/snmp/snmptrapd.conf</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/5-snmp_config/">snmp_config</a>(5), <a href="/docs/linux/man/8-snmptrapd/">snmptrapd</a>(8), <a href="/docs/linux/man/8-syslog/">syslog</a>(8), <a href="/docs/linux/man/5-variables/">variables</a>(5), <a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5), <a href="/docs/linux/man/3-netsnmp_config_api/">netsnmp_config_api</a>(3). </p>
+<p><a href="/docs/linux/man/5-snmp_config/">snmp_config</a>(5), <a href="/docs/linux/man/8-snmptrapd/">snmptrapd</a>(8), syslog(8), <a href="/docs/linux/man/5-variables/">variables</a>(5), <a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5), <a href="/docs/linux/man/3-netsnmp_config_api/">netsnmp_config_api</a>(3). </p>

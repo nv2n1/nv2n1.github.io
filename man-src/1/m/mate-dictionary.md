@@ -40,5 +40,5 @@ description: "mate-dictionary – Look up words on dictionaries"
 <p> Emmanuele Bassi (&lt;ebassi [at] gmail.com&gt;) rewrote it from scratch. </p>
 <p> This manual page was originally written by Jochen Voss &lt;voss [at] mathematik.uni-kl.de&gt;. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dict/">dict</a></code>(1), <code><a href="/docs/linux/man/8-dictd/">dictd</a></code>(8), <code><a rel="nofollow" href="http://www.dict.org/">http://www.dict.org/</a></code>, <code>RFC 2229</code> </p>
+<p> <code>dict</code>(1), <code>dictd</code>(8), <code><a rel="nofollow" href="http://www.dict.org/">http://www.dict.org/</a></code>, <code>RFC 2229</code> </p>
 <h2>Index</h2>

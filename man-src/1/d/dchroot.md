@@ -15,7 +15,7 @@ description: "dchroot – enter a chroot environment"
 <p> <code>dchroot</code> allows the user to run a command or a login shell in a chroot environment. If no command is specified, a login shell will be started in the user&#8217;s home directory inside the chroot. </p>
 <p> The command is one or more arguments which will be run in the user&#8217;s default shell using its <i>-c</i> option. As a result, shell code may be embedded in this argument. If multiple command options are used, they are concatenated together, separated by spaces. Users should be aware of the shell quoting issues this presents, and should use <code>schroot</code> if necessary, which does not have any quoting issues. </p>
 <p> The directory the command or login shell is run in depends upon the context. See <i>&#8211;directory</i> option below for a complete description. </p>
-<p> This version of dchroot is a compatibility wrapper around the <code><a href="/docs/linux/man/1-schroot/">schroot</a></code>(1) program. It is provided for backward compatibility with the dchroot command-line options, but schroot is recommended for future use. See the section &#8220;<i>Incompatibilities</i>&#8221; below for known incompatibilities with older versions of dchroot. </p>
+<p> This version of dchroot is a compatibility wrapper around the <code>schroot</code>(1) program. It is provided for backward compatibility with the dchroot command-line options, but schroot is recommended for future use. See the section &#8220;<i>Incompatibilities</i>&#8221; below for known incompatibilities with older versions of dchroot. </p>
 <p> If no chroot is specified, the chroot name or alias &#8216;default&#8217; will be used as a fallback.</p>
 <h2>OPTIONS</h2>
 <p> <code>dchroot</code> accepts the following options:</p>
@@ -204,5 +204,5 @@ description: "dchroot – enter a chroot environment"
 <p> Copyright &#169; 2005-2012 Roger Leigh &lt;rleigh [at] debian.org&gt; </p>
 <p> is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-schroot/">schroot</a></code>(1), <code><a href="/docs/linux/man/1-sbuild/">sbuild</a></code>(1), <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2), <code><a href="/docs/linux/man/5-schroot-setup/">schroot-setup</a></code>(5), <code><a href="/docs/linux/man/5-schroot-conf/">schroot.conf</a></code>(5). </p>
+<p> <code>schroot</code>(1), <code>sbuild</code>(1), <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2), <code>schroot-setup</code>(5), <code>schroot.conf</code>(5). </p>
 <h2>Index</h2>

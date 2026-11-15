@@ -30,7 +30,7 @@ description: "ppmtospu – convert a PPM image to an Atari Spectrum 512 image"
 &nbsp;<wbr> </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-sputoppm/">sputoppm</a></code>(1) , <code><a href="/docs/linux/man/1-sputoppm/">sputoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-ppm/">ppm</a></code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-sputoppm/">sputoppm</a></code>(1) , <code><a href="/docs/linux/man/1-sputoppm/">sputoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code>ppm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1990 by Steve Belczyk </p>
 <h2>HISTORY</h2>

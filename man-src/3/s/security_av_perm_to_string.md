@@ -34,4 +34,4 @@ int security_av_string(security_class_t tclass, access_vector_t av, char **resul
 <h2>Author</h2>
 <p>Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-getcon/">getcon</a></code>(3), <code><a href="/docs/linux/man/3-getfilecon/">getfilecon</a></code>(3) <code><a href="/docs/linux/man/3-stat/">stat</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-getcon/">getcon</a></code>(3), <code><a href="/docs/linux/man/3-getfilecon/">getfilecon</a></code>(3) <code>stat</code>(3) </p>

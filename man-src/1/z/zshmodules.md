@@ -1600,7 +1600,7 @@ ztcp -c $fd</code>
 <p> The <code>zsh/zselect</code> module makes available one builtin command: </p>
 <dl>
 <dt>
-<dd> <code>zselect</code> [ <code>-rwe</code> ] [ <code>-t</code> <i>timeout</i> ] [ <code>-a</code> <i>array</i> ] [ <code>-A</code> <i>assoc</i> ] [ <i>fd</i> &#8230; ] The <code>zselect</code> builtin is a front-end to the `select&#8217; system call, which blocks until a file descriptor is ready for reading or writing, or has an error condition, with an optional timeout. If this is not available on your system, the command prints an error message and returns status 2 (normal errors return status 1). For more information, see your systems documentation for <i><a href="/docs/linux/man/3-select/">select</a></i>(3). Note there is no connection with the shell builtin of the same name.</p>
+<dd> <code>zselect</code> [ <code>-rwe</code> ] [ <code>-t</code> <i>timeout</i> ] [ <code>-a</code> <i>array</i> ] [ <code>-A</code> <i>assoc</i> ] [ <i>fd</i> &#8230; ] The <code>zselect</code> builtin is a front-end to the `select&#8217; system call, which blocks until a file descriptor is ready for reading or writing, or has an error condition, with an optional timeout. If this is not available on your system, the command prints an error message and returns status 2 (normal errors return status 1). For more information, see your systems documentation for <i>select</i>(3). Note there is no connection with the shell builtin of the same name.</p>
 <dl>
 <dt>
 <dd>

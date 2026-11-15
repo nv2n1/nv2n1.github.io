@@ -46,7 +46,7 @@ description: "sane-gphoto2 – SANE backend for gphoto2 supported cameras"
 <dd>Set to 1, 2, or 3, to enable various levels of debugging within the gphoto2 libraries. </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7)<code>,</code> <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<code>,</code> <code><a href="/docs/linux/man/1-xscanimage/">xscanimage</a></code>(1)<code>,</code> <code><a href="/docs/linux/man/3-libgphoto2/">libgphoto2</a></code>(3) </p>
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7)<code>,</code> <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<code>,</code> <code>xscanimage</code>(1)<code>,</code> <code><a href="/docs/linux/man/3-libgphoto2/">libgphoto2</a></code>(3) </p>
 <h2>Author</h2>
 <p>Peter S. Fales </p>
 <p> The manpage was largely copied from the <code><a href="/docs/linux/man/5-sane-dc210/">sane-dc210</a></code>(5) manpage.</p>

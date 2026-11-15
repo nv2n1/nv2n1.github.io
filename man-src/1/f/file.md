@@ -91,7 +91,7 @@ description: "file – determine file type"
 <dt><code>-n , &#8211;no-buffer</code></p>
 <dd> Force stdout to be flushed after checking each file. This is only useful if checking a list of files. It is intended to be used by programs that want filetype output from a pipe.</p>
 <dt><code>-p , &#8211;preserve-date</code></p>
-<dd> On systems that support <a href="/docs/linux/man/3-utime/">utime</a>(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analyzed, to pretend that <code>file</code> never read them.</p>
+<dd> On systems that support utime(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analyzed, to pretend that <code>file</code> never read them.</p>
 <dt><code>-P , &#8211;parameter </code><i>name=value</i></p>
 <dd> Set various parameter limits.</p>
 <dl>

@@ -122,5 +122,5 @@ description: "cimprovider – disable, enable, remove , group, list or display s
 <dt>
 <dd> <code>cimprovider -g -m OperatingSystemProvider</code></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-cimmof/">cimmof</a>(1), <a href="/docs/linux/man/1-cimserver/">cimserver</a>(1). </p>
+<p> <a href="/docs/linux/man/1-cimmof/">cimmof</a>(1), cimserver(1). </p>
 <h2>Index</h2>

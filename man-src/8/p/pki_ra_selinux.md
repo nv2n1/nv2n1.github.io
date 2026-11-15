@@ -13,7 +13,7 @@ description: "pki_ra_selinux – Security Enhanced Linux Policy for the pki_ra p
 <h2>Entrypoints</h2>
 <p>The pki_ra_t SELinux type can be entered via the <code>pki_ra_exec_t, httpd_exec_t</code> file types. </p>
 <p> The default entrypoint paths for the pki_ra_t domain are the following: </p>
-<p> /var/lib/pki-ra/pki-ra, /usr/sbin/httpd(.worker)?, /usr/sbin/<a href="/docs/linux/man/2-apache/">apache</a>(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/<a href="/docs/linux/man/2-apache-ssl/">apache-ssl</a>(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean</p>
+<p> /var/lib/pki-ra/pki-ra, /usr/sbin/httpd(.worker)?, /usr/sbin/apache(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/apache-ssl(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean</p>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux pki_ra policy is very flexible allowing users to setup their pki_ra processes in as secure a method as possible. </p>
@@ -153,4 +153,4 @@ description: "pki_ra_selinux – Security Enhanced Linux Policy for the pki_ra p
 <h2>Author</h2>
 <p>This manual page was auto-generated using <code>sepolicy manpage.</code></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-pki_ra/">pki_ra</a>(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), pki_ra(8), <a href="/docs/linux/man/8-semanage/">semanage</a>(8), <a href="/docs/linux/man/8-restorecon/">restorecon</a>(8), <a href="/docs/linux/man/1-chcon/">chcon</a>(1), <a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8) , <a href="/docs/linux/man/8-setsebool/">setsebool</a>(8) </p>

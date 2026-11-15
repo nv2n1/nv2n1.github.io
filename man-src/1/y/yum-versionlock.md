@@ -42,5 +42,5 @@ description: "yum-versionlock – Version lock rpm packages"
  Documentation modified by:<br />
  Gerhardus Geldenhuis &lt;gerhardus.geldenhuis [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-yum/">yum</a>(1)</code> </p>
+<p> <code>yum(1)</code> </p>
 <h2>Index</h2>

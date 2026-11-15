@@ -26,5 +26,5 @@ show_video_bitmap(page[0]);
 gui_set_screen(page[0]);
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-gui_get_screen/">gui_get_screen</a></code>(3) </p>
+<p> <code>gui_get_screen</code>(3) </p>
 <h2>Index</h2>

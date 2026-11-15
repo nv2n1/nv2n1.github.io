@@ -218,7 +218,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p>Please also note that the <i>LeftClick Shift-LeftClick</i> combination also selects words like the old code. </p>
 <p> <i>I don&#8217;t like the new selection/popups/hotkeys/perl, how do I change/disable it?</i> </p>
 <p> You can disable the perl extension completely by setting the <code>perl-ext-common</code> resource to the empty string, which also keeps rxvt-unicode from initialising perl, saving memory. </p>
-<p> If you only want to disable specific features, you first have to identify which perl extension is responsible. For this, read the section <font SIZE="-1"><code>PREPACKAGED EXTENSIONS</code></font> in the urxvt<i><a href="/docs/linux/man/3-perl/">perl</a></i>(3) manpage. For example, to disable the <code>selection-popup</code> and <code>option-popup</code>, specify this <code>perl-ext-common</code> resource: </p>
+<p> If you only want to disable specific features, you first have to identify which perl extension is responsible. For this, read the section <font SIZE="-1"><code>PREPACKAGED EXTENSIONS</code></font> in the urxvt<i>perl</i>(3) manpage. For example, to disable the <code>selection-popup</code> and <code>option-popup</code>, specify this <code>perl-ext-common</code> resource: </p>
 <pre> URxvt.perl-ext-common: default,-selection-popup,-option-popup</pre>
 <p>This will keep the default extensions, but disable the two popup extensions. Some extensions can also be configured, for example, scrollback search mode is triggered by <code>M-s</code>. You can move it to any other combination either by setting the <code>searchable-scrollback</code> resource: </p>
 <pre> URxvt.searchable-scrollback: CM-s</pre>
@@ -2421,7 +2421,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <dt>&#8211;enable-pointer-blank (default: on)</p>
 <dd>Add support to have the pointer disappear when typing or inactive.</p>
 <dt>&#8211;enable-perl (default: on)</p>
-<dd>Enable an embedded perl interpreter. See the <code>urxvt256c-ml</code><a href="/docs/linux/man/3-perl/">perl</a><code>(3)</code> manpage for more info on this feature, or the files in <i>src/perl/</i> for the extensions that are installed by default. The perl interpreter that is used can be specified via the <tt>&quot;PERL&quot;</tt> environment variable when running configure. Even when compiled in, perl will <i>not</i> be initialised when all extensions have been disabled <tt>&quot;-pe &quot;&quot; --perl-ext-common &quot;&quot;&quot;</tt>, so it should be safe to enable from a resource standpoint.</p>
+<dd>Enable an embedded perl interpreter. See the <code>urxvt256c-ml</code>perl<code>(3)</code> manpage for more info on this feature, or the files in <i>src/perl/</i> for the extensions that are installed by default. The perl interpreter that is used can be specified via the <tt>&quot;PERL&quot;</tt> environment variable when running configure. Even when compiled in, perl will <i>not</i> be initialised when all extensions have been disabled <tt>&quot;-pe &quot;&quot; --perl-ext-common &quot;&quot;&quot;</tt>, so it should be safe to enable from a resource standpoint.</p>
 <dt>&#8211;enable-assert (default: off)</p>
 <dd>Enables the assertions in the code, normally disabled. This switch is only useful when developing rxvt-unicode.</p>
 <dt>&#8211;enable-256-color (default: off)</p>

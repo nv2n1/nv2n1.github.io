@@ -30,6 +30,6 @@ description: "deweb – strips away C & CWEB commands from CWEB sources"
 <h2>AUTHOR</h2>
 <p> Jens T. Berger Thielemann, <i>&lt;jensthi [at] ifi.uio.no&gt;</i></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cweave/">cweave</a>(1), <a href="/docs/linux/man/1-perl/">perl</a>(1), chktex, <a href="/docs/linux/man/1-lacheck/">lacheck</a>(1), <a href="/docs/linux/man/1-ispell/">ispell</a>(1)</code></p>
+<p> <code><a href="/docs/linux/man/1-cweave/">cweave</a>(1), <a href="/docs/linux/man/1-perl/">perl</a>(1), chktex, <a href="/docs/linux/man/1-lacheck/">lacheck</a>(1), ispell(1)</code></p>
 <h2>BUGS</h2>
 <p> Doesn&#8217;t even <code>compile</code> under <i>Perl</i> versions before perl v5. Unfortunately, this means that we can&#8217;t even tell the user why we failed;</p>

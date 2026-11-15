@@ -17,5 +17,5 @@ description: "create_zbuffer – Creates a Z-buffer for a bitmap. Allegro game p
 <h2>RETURN VALUE</h2>
 <p> Returns the pointer to the ZBUFFER or NULL if there was an error. Remember to destroy the ZBUFFER once you are done with it, to avoid having memory leaks. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-create_sub_zbuffer/">create_sub_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-set_zbuffer/">set_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-clear_zbuffer/">clear_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-destroy_zbuffer/">destroy_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3) </p>
+<p> <code><a href="/docs/linux/man/3-create_sub_zbuffer/">create_sub_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-set_zbuffer/">set_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-clear_zbuffer/">clear_zbuffer</a></code>(3), <code>destroy_zbuffer</code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3) </p>
 <h2>Index</h2>
