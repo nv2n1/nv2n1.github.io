@@ -189,9 +189,9 @@ def main():
     # root index: the man pages landing page
     with open(os.path.join(out_root, '_index.md'), 'w', encoding='utf-8') as out:
         out.write('---\n')
-        out.write(f'title: {yaml_str("Linux man pages")}\n')
+        out.write(f'title: {yaml_str("Linux Manual Pages")}\n')
         out.write('url: /docs/linux/man/\n')
-        out.write(f'description: {yaml_str("Online Linux man pages: user commands, system calls, library functions, file formats, and administration commands.")}\n')
+        out.write(f'description: {yaml_str("Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands.")}\n')
         out.write('outputs: [HTML, SearchJSON]\n')
         out.write('layout: man-landing\n')
         out.write('---\n')

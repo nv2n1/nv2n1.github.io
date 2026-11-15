@@ -1,6 +1,5 @@
 {{ define "main" }}
-<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › Section {{ .Params.sec }}</p>
-<h1>{{ .Title }}</h1>
+<h1 class="section-title"><a href="/docs/linux/man/">Linux Manual Pages</a> › {{ .Title }}</h1>
 {{ $pages := where .Site.RegularPages "Params.section" .Params.sec }}
 <p>{{ len $pages }} manual pages.</p>
 {{ range $pages.GroupByParam "letter" }}
