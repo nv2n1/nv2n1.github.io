@@ -18,7 +18,7 @@ header.site {
   align-items: center;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 header.site .site-name, header.site nav a { white-space: nowrap; }
 header.site .site-name { font-weight: 700; font-size: 1.2rem; color: inherit; text-decoration: none; }
